@@ -1,0 +1,64 @@
+{
+  "project": {
+    "name": "Wrap Skirt",
+    "slug": "wrap-skirt",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #81. A-line wrap skirt with no zipper: the back cuts on fold, one front piece cuts twice mirrored — its center edge extends past CF by the wrap extension, so the pair becomes the overlap and underlap panels — and two waist ties close the wrap. Flare replaces the darts; a front-waist notch marks the CF wrap line.",
+      "es": "Rango #81 del FC-100. Falda cruzada en línea A sin cierre: el trasero se corta al doblez, un solo delantero se corta dos veces en espejo — su orilla central se extiende más allá del centro delantero por el cruce, de modo que el par se vuelve el panel superior y el panel inferior del cruce — y dos cintas de cintura cierran la falda. El vuelo sustituye a las pinzas; un piquete en la cintura delantera marca la línea del centro delantero."
+    },
+    "difficulty": "beginner",
+    "tags": ["skirt", "wrap", "a-line", "woven", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" },
+        { "source": "fashion-cabinet skirt-block (parent side-seam geometry)", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [{ "id": "wrap", "label": { "en": "Wrap skirt (all pieces)", "es": "Falda cruzada (todas las piezas)" }, "script_file": "main.py", "pieces": ["front", "back", "tie"] }],
+  "pieces": [
+    { "id": "front", "label": { "en": "Wrap Front", "es": "Delantero Cruzado" }, "default_color": "#5d6c9e", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "back", "label": { "en": "Skirt Back", "es": "Falda Trasera" }, "default_color": "#48577f", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "tie", "label": { "en": "Waist Tie", "es": "Cinta de Cintura" }, "default_color": "#8b97c4", "cut": { "quantity": 2 } }
+  ],
+  "parameters": [
+    { "id": "waist_girth", "type": "slider", "default": 700, "min": 450, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
+    { "id": "hip_girth", "type": "slider", "default": 940, "min": 600, "max": 1700, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
+    { "id": "skirt_length", "type": "slider", "default": 600, "min": 350, "max": 950, "step": 10, "label": { "en": "Skirt length (mm)", "es": "Largo de falda (mm)" } },
+    { "id": "wrap_extension", "type": "slider", "default": 180, "min": 80, "max": 300, "step": 10, "label": { "en": "Wrap extension past CF (mm)", "es": "Cruce más allá del CF (mm)" } },
+    { "id": "flare_mm", "type": "slider", "default": 70, "min": 0, "max": 200, "step": 10, "label": { "en": "A-line flare per side (mm)", "es": "Vuelo línea A por costado (mm)" } },
+    { "id": "waist_ease", "type": "slider", "default": 20, "min": 0, "max": 80, "step": 5, "label": { "en": "Waist ease (mm)", "es": "Holgura de cintura (mm)" } },
+    { "id": "hip_ease", "type": "slider", "default": 40, "min": 0, "max": 150, "step": 5, "label": { "en": "Hip ease (mm)", "es": "Holgura de cadera (mm)" } },
+    { "id": "tie_length", "type": "slider", "default": 800, "min": 400, "max": 1400, "step": 50, "label": { "en": "Waist tie length (mm)", "es": "Largo de cinta (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 12, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 30, "min": 0, "max": 60, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": {} },
+    { "id": "midi-full-wrap", "label": { "en": "Midi, generous wrap", "es": "Midi, cruce amplio" }, "values": { "skirt_length": 700, "wrap_extension": 220, "flare_mm": 100 } }
+  ],
+  "constraints": [
+    { "expression": "wrap_extension <= waist_girth / 3", "severity": "error", "message": { "en": "Wrap extension past CF must stay within a third of the waist girth", "es": "El cruce más allá del centro delantero debe quedar dentro de un tercio del contorno de cintura" } },
+    { "expression": "hip_girth >= waist_girth", "severity": "error", "message": { "en": "Hip must be at least the waist", "es": "La cadera debe ser al menos la cintura" } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["popelina-algodon", "mezclilla-denim"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "waistband", "type": "waistband", "edges": [{ "piece": "front", "edge": "waist" }, { "piece": "back", "edge": "waist" }], "parameters": ["waist_girth", "waist_ease"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["skirt_length", "hem_allowance"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "The FC-100 skirt family's first garment: a zipper-free closure anyone can sew and any body can adjust by how far it wraps — made-to-measure without hardware.",
+      "es": "La primera prenda de la familia de faldas del FC-100: un cierre sin cremallera que cualquiera puede coser y cualquier cuerpo puede ajustar según cuánto cruza — a la medida sin herrajes."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
