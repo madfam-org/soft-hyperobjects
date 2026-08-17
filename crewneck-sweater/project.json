@@ -1,0 +1,85 @@
+{
+  "project": {
+    "name": "Crewneck Sweater",
+    "slug": "crewneck-sweater",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #38, the knitwear family's cut-and-sew entry: the sweatshirt architecture slimmed for sweater knit — 100 mm ease, higher set-in-feel armhole, long sleeve — with neckband, deep cuffs, and hem band derived from measured openings times sweater-rib recovery ratios, and a tape-shoulder-seam marking inside each shoulder edge. Fully-fashioned Knitout knitting is the slot's future branch.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #38 del FC-100, la entrada corte-y-confección de la familia de punto: la arquitectura de sudadera afinada para tejido de suéter — 100 mm de holgura, sisa más alta de sensación montada, manga larga — con cuello, puños profundos y pretina derivados de aberturas medidas por proporciones de recuperación del rib, y una marca de estabilizar hombro dentro de cada hombro. El tejido a la forma con Knitout es la rama futura de esta casilla.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["sweater", "crewneck", "knitwear", "cut-and-sew", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "sweatshirt-crewneck (FC-100 rank #6) block family — body, solved sleeve cap, derived ribs", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "sweater",
+      "label": { "en": "Sweater (all pieces)", "es": "Suéter (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "sleeve", "neckband", "cuff", "hem_band"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#8a7e6f", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "back", "label": { "en": "Back", "es": "Trasero" }, "default_color": "#6e6457", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#a09383", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "neckband", "label": { "en": "Neckband (rib)", "es": "Cuello (rib)" }, "default_color": "#c0b5a4", "cut": { "quantity": 1 } },
+    { "id": "cuff", "label": { "en": "Cuff (rib)", "es": "Puño (rib)" }, "default_color": "#c0b5a4", "cut": { "quantity": 2 } },
+    { "id": "hem_band", "label": { "en": "Hem Band (rib)", "es": "Pretina (rib)" }, "default_color": "#c0b5a4", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "default": 980, "min": 650, "max": 1900, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
+    { "id": "body_length", "type": "slider", "default": 660, "min": 420, "max": 950, "step": 10, "label": { "en": "Body length to band seam (mm)", "es": "Largo de cuerpo hasta pretina (mm)" } },
+    { "id": "neck_girth", "type": "slider", "default": 385, "min": 300, "max": 520, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "default": 600, "min": 200, "max": 760, "step": 10, "measurement": { "standard": "iso_8559", "code": "arm_length" }, "label": { "en": "Sleeve length to cuff seam (mm)", "es": "Largo de manga hasta puño (mm)" } },
+    { "id": "sweater_ease", "type": "slider", "default": 100, "min": 40, "max": 300, "step": 10, "label": { "en": "Total ease (mm)", "es": "Holgura total (mm)" } },
+    { "id": "cuff_ratio", "type": "slider", "default": 0.72, "min": 0.6, "max": 0.95, "step": 0.01, "advanced": true, "label": { "en": "Cuff/opening ratio", "es": "Proporción puño/abertura" } },
+    { "id": "hemband_ratio", "type": "slider", "default": 0.88, "min": 0.7, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Hem band/hem ratio", "es": "Proporción pretina/dobladillo" } },
+    { "id": "neckband_ratio", "type": "slider", "default": 0.8, "min": 0.7, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Neckband/opening ratio", "es": "Proporción cuello/abertura" } },
+    { "id": "cuff_height", "type": "slider", "default": 70, "min": 30, "max": 100, "step": 5, "label": { "en": "Cuff height (mm)", "es": "Alto de puño (mm)" } },
+    { "id": "hemband_height", "type": "slider", "default": 50, "min": 30, "max": 100, "step": 5, "label": { "en": "Hem band height (mm)", "es": "Alto de pretina (mm)" } },
+    { "id": "neckband_width", "type": "slider", "default": 30, "min": 12, "max": 40, "step": 1, "label": { "en": "Neckband width (mm)", "es": "Ancho de cuello (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 8, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 980, "body_length": 660, "sleeve_length": 600 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1060, "body_length": 690, "sleeve_length": 620 } }
+  ],
+  "constraints": [
+    {
+      "expression": "sweater_ease >= 60",
+      "severity": "warning",
+      "message": { "en": "Sweater knits need room to hang; below 60 mm ease the body reads fitted and seams strain", "es": "El tejido de suéter necesita caída; debajo de 60 mm de holgura el cuerpo queda entallado y las costuras sufren" }
+    },
+    {
+      "expression": "cuff_ratio <= 0.8",
+      "severity": "warning",
+      "message": { "en": "Sweater-rib cuffs rely on strong negative ease; above 0.80 the deep cuff bells open", "es": "Los puños de rib de suéter dependen de holgura negativa fuerte; arriba de 0.80 el puño profundo se acampana" }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["felpa-algodon"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "neck" }, { "piece": "back", "edge": "neck" }], "parameters": ["neck_girth", "neckband_ratio"] },
+      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }, { "piece": "sleeve", "edge": "cap" }], "parameters": ["chest_girth", "sweater_ease"] },
+      { "id": "cuff", "type": "cuff", "edges": [{ "piece": "sleeve", "edge": "hem" }], "parameters": ["cuff_ratio", "cuff_height"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["hemband_ratio", "hemband_height"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false, "seam_stabilization": true },
+    "societal_benefit": {
+      "en": "Opens the commons' knitwear tier with ordinary tools: a sweater cut and sewn from yardage on the same machines as a sweatshirt — no knitting machine required. Its taped-shoulder rule and deeper rib ratios are the reference the cardigan and turtleneck reuse, and the future fully-fashioned Knitout branch starts from the same measurements.",
+      "es": "Abre el nivel de punto del commons con herramientas comunes: un suéter cortado y confeccionado de tela en las mismas máquinas que una sudadera — sin máquina de tejer. Su regla de hombro estabilizado y proporciones de rib más profundas son la referencia que reutilizan el cárdigan y el cuello alto, y la futura rama Knitout tejida a la forma parte de las mismas medidas."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
