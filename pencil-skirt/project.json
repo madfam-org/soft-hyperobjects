@@ -1,0 +1,66 @@
+{
+  "project": {
+    "name": "Pencil Skirt",
+    "slug": "pencil-skirt",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #32. The mini-skirt straight block carried to knee length with a stronger pencil taper, a CB back vent restoring the walking ease the taper removes, and a CB zipper with a hook & eye cross-mark above the top stop. Front on fold with one long dart per half; back in two panels with zipper-stop and vent-top notches and one long dart per panel. A waistband-style select swaps the finish: straight cut-1 overlap band or clean single-layer waist facing, each verified against the full waist seam.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #32 del FC-100. El bloque recto de la minifalda llevado a la rodilla con un entubado lápiz más marcado, abertura trasera en CB que devuelve la soltura de paso que el entubado quita, y cierre en CB con marca en cruz para gancho arriba del tope. Delantero al doblez con una pinza larga por mitad; trasero en dos paneles con piquetes de tope de cierre y alto de abertura y una pinza larga por panel. Un selector de estilo de pretina cambia el acabado: pretina recta de un corte con traslape o vista limpia de una capa, cada una verificada contra la costura completa de cintura.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["skirt", "pencil", "taper", "vent", "woven", "fc100", "hyperobject", "commons"],
+    "attribution": { "author": "Innovaciones MADFAM", "license": "LicenseRef-FC1-pending", "lineage": [{ "source": "Original draft for Fashion Cabinet (skirt-block / mini-skirt family)", "license": "original" }] }
+  },
+  "modes": [{ "id": "pencil", "label": { "en": "Pencil skirt (all pieces)", "es": "Falda lápiz (todas las piezas)" }, "script_file": "main.py", "pieces": ["front", "back", "waistband", "facing"] }],
+  "pieces": [
+    { "id": "front", "label": { "en": "Pencil Skirt Front", "es": "Falda Lápiz Delantera" }, "default_color": "#55606e", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "back", "label": { "en": "Pencil Skirt Back", "es": "Falda Lápiz Trasera" }, "default_color": "#414b57", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "waistband", "label": { "en": "Waistband", "es": "Pretina" }, "default_color": "#76808f", "cut": { "quantity": 1 } },
+    { "id": "facing", "label": { "en": "Waist Facing", "es": "Vista de Cintura" }, "default_color": "#8d97a5", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "waist_girth", "type": "slider", "default": 700, "min": 450, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
+    { "id": "hip_girth", "type": "slider", "default": 940, "min": 600, "max": 1700, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
+    { "id": "skirt_length", "type": "slider", "default": 580, "min": 480, "max": 720, "step": 10, "label": { "en": "Skirt length (mm)", "es": "Largo de falda (mm)" } },
+    { "id": "hip_depth", "type": "slider", "default": 200, "min": 150, "max": 280, "step": 5, "label": { "en": "Waist-to-hip depth (mm)", "es": "Altura de cadera (mm)" } },
+    { "id": "taper_mm", "type": "slider", "default": 25, "min": 0, "max": 50, "step": 1, "tooltip": { "en": "How far the hem half-width pulls in from the hip half-width", "es": "Cuánto se entuba el medio dobladillo respecto a la media cadera" }, "label": { "en": "Pencil taper (mm)", "es": "Entubado lápiz (mm)" } },
+    { "id": "hip_ease", "type": "slider", "default": 30, "min": 0, "max": 150, "step": 5, "label": { "en": "Hip ease (mm)", "es": "Holgura de cadera (mm)" } },
+    { "id": "waist_ease", "type": "slider", "default": 15, "min": 0, "max": 80, "step": 5, "label": { "en": "Waist ease (mm)", "es": "Holgura de cintura (mm)" } },
+    { "id": "front_dart", "type": "slider", "default": 20, "min": 0, "max": 45, "step": 1, "advanced": true, "label": { "en": "Front dart intake (mm)", "es": "Pinza delantera (mm)" } },
+    { "id": "back_dart", "type": "slider", "default": 25, "min": 0, "max": 50, "step": 1, "advanced": true, "label": { "en": "Back dart intake (mm)", "es": "Pinza trasera (mm)" } },
+    { "id": "vent_height", "type": "slider", "default": 160, "min": 80, "max": 260, "step": 10, "label": { "en": "Back vent height (mm)", "es": "Alto de abertura trasera (mm)" } },
+    { "id": "zipper_length", "type": "slider", "default": 200, "min": 120, "max": 280, "step": 10, "label": { "en": "Zipper length (mm)", "es": "Largo de cierre (mm)" } },
+    { "id": "waistband_style", "type": "select", "default": "band", "options": [
+      { "value": "band", "label": { "en": "Straight waistband", "es": "Pretina recta" } },
+      { "value": "facing", "label": { "en": "Clean waist facing", "es": "Vista limpia de cintura" } }
+    ], "label": { "en": "Waist finish", "es": "Acabado de cintura" } },
+    { "id": "seam_allowance", "type": "slider", "default": 12, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 40, "min": 0, "max": 60, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": {} },
+    { "id": "midi-facing", "label": { "en": "Midi, faced waist", "es": "Midi con vista" }, "values": { "skirt_length": 660, "vent_height": 200, "waistband_style": "facing" } }
+  ],
+  "constraints": [
+    { "expression": "hip_girth >= waist_girth", "severity": "error", "message": { "en": "Hip must be at least the waist for a pencil skirt", "es": "La cadera debe ser al menos la cintura para una falda lápiz" } },
+    { "expression": "vent_height >= 120", "severity": "warning", "message": { "en": "A vent under 120 mm leaves little walking ease at a tapered knee-length hem", "es": "Una abertura menor a 120 mm deja poca soltura de paso en un dobladillo entubado a la rodilla" } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["popelina-algodon", "mezclilla-denim"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "waistband", "type": "waistband", "edges": [{ "piece": "front", "edge": "waist" }, { "piece": "back", "edge": "waist" }], "parameters": ["waist_girth", "waist_ease", "waistband_style"] },
+      { "id": "zipper_tape", "type": "zipper_tape", "edges": [{ "piece": "back", "edge": "center" }], "parameters": ["zipper_length"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["skirt_length", "taper_mm", "hem_allowance"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "First finish-select of the FC-100 skirt family: one cartridge carries two verified waist constructions — overlap band and clean facing — proving alternate finishes can share a block, its darts and its vent while every branch stays seam-checked.",
+      "es": "Primer selector de acabado de la familia de faldas del FC-100: un solo cartucho lleva dos construcciones de cintura verificadas — pretina con traslape y vista limpia — demostrando que acabados alternos comparten bloque, pinzas y abertura mientras cada rama queda verificada en costura."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

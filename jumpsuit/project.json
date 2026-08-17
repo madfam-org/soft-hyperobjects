@@ -1,0 +1,95 @@
+{
+  "project": {
+    "name": "Jumpsuit",
+    "slug": "jumpsuit",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #47. One-piece woven jumpsuit: a sleeveless bodice (front on fold, back cut 2 with a CB invisible zipper and derived neck/armhole facings) joins a side-seamed trouser with a solved front-inseam bow at a declared waist seam. Bodice hems and pant waists are driven by the same waist formulas, so the eight-reference waist seam closes with zero delta by construction; a waist tie threads a marked channel at the seam.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #47 del FC-100. Jumpsuit (mono) de una pieza en tela plana: un talle sin mangas (delantero al doblez, trasero al par con cierre invisible en CB y vistas de escote y sisa derivadas) se une a un pantalón con costados y arco de entrepierna delantero resuelto en una costura de cintura declarada. Los dobladillos del talle y las cinturas del pantalón se derivan de las mismas fórmulas de cintura, así que la costura de ocho referencias cierra con delta cero por construcción; un cinturón de tela pasa por una jareta marcada en la costura.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["jumpsuit", "one-piece", "sleeveless", "woven", "zipper", "waist-seam", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet (bodice + trouser families joined at the waist)", "license": "original" },
+        { "source": "Fashion Cabinet a-line-dress cartridge (sleeveless bodice, CB zipper, derived facings)", "license": "LicenseRef-FC1-pending" },
+        { "source": "Fashion Cabinet sweatpants cartridge (side-seamed pant block, solved inseam bow)", "license": "LicenseRef-FC1-pending" },
+        { "source": "Fashion Cabinet maxi-dress cartridge (joined-seam accounting across assemblies)", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "jumpsuit",
+      "label": { "en": "Jumpsuit (all pieces)", "es": "Jumpsuit (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["bodice_front", "bodice_back", "pant_front", "pant_back", "neck_facing", "armhole_facing", "waist_tie"]
+    }
+  ],
+  "pieces": [
+    { "id": "bodice_front", "label": { "en": "Bodice Front", "es": "Talle Delantero" }, "default_color": "#3f5570", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "bodice_back", "label": { "en": "Bodice Back", "es": "Talle Trasero" }, "default_color": "#33465e", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "pant_front", "label": { "en": "Pant Front", "es": "Pantalón Delantero" }, "default_color": "#52708f", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "pant_back", "label": { "en": "Pant Back", "es": "Pantalón Trasero" }, "default_color": "#43607c", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "neck_facing", "label": { "en": "Neck Facing", "es": "Vista de Escote" }, "default_color": "#7a92ab", "cut": { "quantity": 1 } },
+    { "id": "armhole_facing", "label": { "en": "Armhole Facing", "es": "Vista de Sisa" }, "default_color": "#8fa5bc", "cut": { "quantity": 2 } },
+    { "id": "waist_tie", "label": { "en": "Waist Tie", "es": "Cinturón de Tela" }, "default_color": "#a8bccf", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "bust_girth", "type": "slider", "default": 940, "min": 600, "max": 1700, "step": 10, "measurement": { "standard": "iso_8559", "code": "bust_girth" }, "label": { "en": "Bust girth (mm)", "es": "Contorno de busto (mm)" } },
+    { "id": "waist_girth", "type": "slider", "default": 760, "min": 450, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "tooltip": { "en": "Drives BOTH sides of the waist seam; clamped to the hip girth", "es": "Determina AMBOS lados de la costura de cintura; se limita al contorno de cadera" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
+    { "id": "hip_girth", "type": "slider", "default": 980, "min": 650, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
+    { "id": "bodice_length", "type": "slider", "default": 420, "min": 300, "max": 600, "step": 10, "label": { "en": "Bodice length, nape to waist seam (mm)", "es": "Largo de talle, nuca a costura de cintura (mm)" } },
+    { "id": "inseam_length", "type": "slider", "default": 700, "min": 300, "max": 950, "step": 10, "label": { "en": "Inseam length (mm)", "es": "Largo de entrepierna (mm)" } },
+    { "id": "front_rise", "type": "slider", "default": 270, "min": 190, "max": 380, "step": 5, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)" } },
+    { "id": "back_rise", "type": "slider", "default": 300, "min": 190, "max": 470, "step": 5, "tooltip": { "en": "Clamped between front rise and front rise + 90", "es": "Se limita entre el tiro delantero y el tiro delantero + 90" }, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)" } },
+    { "id": "jumpsuit_ease", "type": "slider", "default": 120, "min": 40, "max": 300, "step": 10, "label": { "en": "Total woven ease (mm)", "es": "Holgura total en tela plana (mm)" } },
+    { "id": "hem_width", "type": "slider", "default": 120, "min": 90, "max": 260, "step": 5, "label": { "en": "Pant half-hem width (mm)", "es": "Ancho de medio dobladillo del pantalón (mm)" } },
+    { "id": "zipper_length", "type": "slider", "default": 450, "min": 250, "max": 600, "step": 10, "tooltip": { "en": "Measured from the neck down; past the bodice CB it continues into the pant back CB", "es": "Medido desde el cuello hacia abajo; tras el CB del talle continúa en el CB trasero del pantalón" }, "label": { "en": "Zipper length (mm)", "es": "Largo de cierre (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 30, "min": 0, "max": 60, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-s", "label": { "en": "S", "es": "CH" }, "values": { "bust_girth": 880, "waist_girth": 700, "hip_girth": 920 } },
+    { "id": "tall", "label": { "en": "Tall", "es": "Alto" }, "values": { "bodice_length": 460, "inseam_length": 780 } }
+  ],
+  "constraints": [
+    {
+      "expression": "back_rise >= front_rise",
+      "severity": "warning",
+      "message": { "en": "A back rise below the front rise is clamped up to the front rise by the draft", "es": "Un tiro trasero menor al delantero se eleva al tiro delantero en el trazo" }
+    },
+    {
+      "expression": "zipper_length <= bodice_length + 150",
+      "severity": "warning",
+      "message": { "en": "The zipper runs from the neck down; far past the bodice CB it would end deep in the pant back CB — the stop notch is clamped above the fork", "es": "El cierre corre del cuello hacia abajo; mucho más allá del CB del talle terminaría muy adentro del CB trasero del pantalón — la muesca de tope se limita sobre el tiro" }
+    },
+    {
+      "expression": "waist_girth <= hip_girth",
+      "severity": "warning",
+      "message": { "en": "A fitted woven waist beyond the hip girth is clamped to the hip by the draft", "es": "Una cintura entallada en tela plana mayor a la cadera se limita a la cadera en el trazo" }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["popelina-algodon"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "bodice_front", "edge": "neck" }, { "piece": "bodice_back", "edge": "neck" }], "parameters": ["bodice_length"] },
+      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "bodice_front", "edge": "armhole" }, { "piece": "bodice_back", "edge": "armhole" }], "parameters": ["bust_girth", "jumpsuit_ease"] },
+      { "id": "waist_seam", "type": "waistband", "edges": [{ "piece": "bodice_front", "edge": "hem" }, { "piece": "bodice_back", "edge": "hem" }, { "piece": "pant_front", "edge": "waist" }, { "piece": "pant_back", "edge": "waist" }], "parameters": ["waist_girth", "jumpsuit_ease"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "pant_front", "edge": "hem" }, { "piece": "pant_back", "edge": "hem" }], "parameters": ["hem_width", "hem_allowance"] },
+      { "id": "cb_zipper", "type": "zipper_tape", "edges": [{ "piece": "bodice_back", "edge": "center" }], "parameters": ["zipper_length"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "The commons' first full-body garment: a bodice lineage and a trouser lineage joined by one declared eight-reference waist seam whose two sides are computed from the same waist formulas — the verified top-to-bottom join every jumpsuit, coverall, and boilersuit after it reuses.",
+      "es": "La primera prenda de cuerpo completo del commons: un linaje de talle y uno de pantalón unidos por una costura de cintura declarada de ocho referencias cuyos dos lados se calculan con las mismas fórmulas de cintura — la unión verificada de arriba a abajo que reutilizará cada jumpsuit, overol y mono posterior."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
