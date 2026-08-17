@@ -1,0 +1,57 @@
+{
+  "project": {
+    "name": "Joggers",
+    "slug": "joggers",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #16. The sweatpants block tapered to the ankle with a lower rise, solved front-inseam bow, and derived rib ankle cuffs plus waistband casing.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #16 del FC-100. El bloque de pants entallado al tobillo con tiro más bajo, curva de entrepierna resuelta y puños de rib derivados más pretina de casing.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": ["joggers", "fleece", "tapered", "fc100", "hyperobject", "commons"],
+    "attribution": { "author": "Innovaciones MADFAM", "license": "LicenseRef-FC1-pending", "lineage": [{ "source": "Original draft for Fashion Cabinet (sweatpants block family)", "license": "original" }] }
+  },
+  "modes": [{ "id": "joggers", "label": { "en": "Joggers (all pieces)", "es": "Joggers (todas las piezas)" }, "script_file": "main.py", "pieces": ["front", "back", "cuff", "waistband"] }],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front Leg", "es": "Pierna Delantera" }, "default_color": "#77808a", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "back", "label": { "en": "Back Leg", "es": "Pierna Trasera" }, "default_color": "#5e6770", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "cuff", "label": { "en": "Ankle Cuff (rib)", "es": "Puño de tobillo (rib)" }, "default_color": "#99a2ac", "cut": { "quantity": 2 } },
+    { "id": "waistband", "label": { "en": "Waistband Casing", "es": "Pretina (casing)" }, "default_color": "#b3bcc6", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "hip_girth", "type": "slider", "default": 1000, "min": 650, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
+    { "id": "inseam_length", "type": "slider", "default": 700, "min": 300, "max": 950, "step": 10, "measurement": { "standard": "iso_8559", "code": "inside_leg_length" }, "label": { "en": "Inseam (mm)", "es": "Entrepierna (mm)" } },
+    { "id": "front_rise", "type": "slider", "default": 255, "min": 180, "max": 370, "step": 5, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)" } },
+    { "id": "back_rise", "type": "slider", "default": 295, "min": 180, "max": 450, "step": 5, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)" } },
+    { "id": "fleece_ease", "type": "slider", "default": 110, "min": 40, "max": 350, "step": 10, "label": { "en": "Total ease (mm)", "es": "Holgura total (mm)" } },
+    { "id": "hem_width", "type": "slider", "default": 95, "min": 70, "max": 200, "step": 5, "label": { "en": "Ankle half-width, flat (mm)", "es": "Medio tobillo, extendido (mm)" } },
+    { "id": "cuff_ratio", "type": "slider", "default": 0.75, "min": 0.6, "max": 0.95, "step": 0.01, "advanced": true, "label": { "en": "Cuff/ankle ratio", "es": "Proporción puño/tobillo" } },
+    { "id": "cuff_height", "type": "slider", "default": 55, "min": 30, "max": 90, "step": 5, "label": { "en": "Cuff height (mm)", "es": "Alto de puño (mm)" } },
+    { "id": "elastic_width", "type": "slider", "default": 35, "min": 20, "max": 60, "step": 5, "label": { "en": "Elastic width (mm)", "es": "Ancho de elástico (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 8, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "hip_girth": 1000 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "hip_girth": 1080, "inseam_length": 720 } }
+  ],
+  "constraints": [
+    { "expression": "back_rise >= front_rise", "severity": "error", "message": { "en": "Back rise must be at least the front rise", "es": "El tiro trasero debe ser al menos el delantero" } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["felpa-algodon"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "waistband", "type": "waistband", "edges": [{ "piece": "front", "edge": "waist" }, { "piece": "back", "edge": "waist" }], "parameters": ["hip_girth", "elastic_width"] },
+      { "id": "cuff", "type": "cuff", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["cuff_ratio", "cuff_height"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "Proves the trouser block family scales across silhouettes: same geometry, tapered and cuffed, with every finish still derived from measured edges.",
+      "es": "Demuestra que la familia del bloque de pantalón escala entre siluetas: la misma geometría, entallada y con puños, con cada acabado derivado de bordes medidos."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
