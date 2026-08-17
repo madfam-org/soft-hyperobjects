@@ -1,0 +1,81 @@
+{
+  "project": {
+    "name": "Slip Dress",
+    "slug": "slip-dress",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #46. The nightgown refined into outerwear: a woven bias-cut slip whose grainline is drawn at a true 45 degrees, with a cowl-ish gently sagging front neck, a nearly straight back edge whose fold mirror leaves a small V dip at CB, bound top edges with a derived binding strip, narrow spaghetti straps, and a two-bezier shaped side seam through a gentle waist suppression so the dress skims. French seams throughout; no slits, no gather zone.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #46 del FC-100. El camisón refinado en prenda exterior: un vestido lencero de tejido plano cortado al bies con la hebra trazada a 45 grados exactos, escote delantero con suave caída tipo cowl, borde trasero casi recto cuyo espejo al doblez deja una pequeña V en CB, bordes superiores con vivo derivado, tirantes espagueti angostos y costura lateral moldeada con dos curvas Bézier mediante una suave reducción de cintura para que el vestido roce sin ceñir. Costuras francesas en todo; sin aberturas ni zona de fruncido.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["slip-dress", "dress", "bias-cut", "cowl-neck", "straps", "woven", "french-seams", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Fashion Cabinet camisole/nightgown family — strap-point, bound-edge construction (FC-100 #44 camisole, #43 nightgown)", "license": "LicenseRef-FC1-pending" },
+        { "source": "blouse (FC-100 #21), Fashion Cabinet commons — two-bezier fitted side seam over shared front/back geometry", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "slip-dress",
+      "label": { "en": "Slip dress (all pieces)", "es": "Vestido lencero (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "strap", "top_binding"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#b78a95", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "back", "label": { "en": "Back", "es": "Trasero" }, "default_color": "#9d6f7d", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "strap", "label": { "en": "Strap", "es": "Tirante" }, "default_color": "#d0a8b2", "cut": { "quantity": 2 } },
+    { "id": "top_binding", "label": { "en": "Top Binding", "es": "Vivo Superior" }, "default_color": "#e3c6cd", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "bust_girth", "type": "slider", "default": 900, "min": 600, "max": 1600, "step": 10, "measurement": { "standard": "iso_8559", "code": "bust_girth" }, "label": { "en": "Bust girth (mm)", "es": "Contorno de busto (mm)" } },
+    { "id": "waist_girth", "type": "slider", "default": 720, "min": 500, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
+    { "id": "dress_length", "type": "slider", "default": 1150, "min": 700, "max": 1500, "step": 10, "label": { "en": "Dress length, strap point to hem (mm)", "es": "Largo del vestido, tirante a dobladillo (mm)" } },
+    { "id": "front_drop", "type": "slider", "default": 115, "min": 60, "max": 200, "step": 5, "label": { "en": "Front cowl drop at CF (mm)", "es": "Caída del cowl delantero en CF (mm)" } },
+    { "id": "back_drop", "type": "slider", "default": 55, "min": 20, "max": 120, "step": 5, "label": { "en": "Back V dip at CB (mm)", "es": "Caída de la V trasera en CB (mm)" } },
+    { "id": "strap_length", "type": "slider", "default": 420, "min": 250, "max": 600, "step": 10, "label": { "en": "Strap cut length (mm)", "es": "Largo de corte del tirante (mm)" } },
+    { "id": "flare_mm", "type": "slider", "default": 70, "min": 0, "max": 200, "step": 5, "label": { "en": "Skimming flare per quarter (mm)", "es": "Vuelo ligero por cuarto (mm)" } },
+    { "id": "binding_ratio", "type": "slider", "default": 0.95, "min": 0.85, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Binding/opening ratio", "es": "Proporción vivo/abertura" } },
+    { "id": "binding_width", "type": "slider", "default": 10, "min": 6, "max": 20, "step": 1, "label": { "en": "Binding finished width (mm)", "es": "Ancho terminado del vivo (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 12, "min": 0, "max": 20, "step": 1, "label": { "en": "French seam allowance (mm, sewn 6 + 6)", "es": "Margen de costura francesa (mm, cosido 6 + 6)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 15, "min": 0, "max": 50, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+  ],
+  "presets": [
+    { "id": "midi", "label": { "en": "Midi", "es": "Midi" }, "values": { "dress_length": 950 } },
+    { "id": "maxi", "label": { "en": "Maxi", "es": "Maxi" }, "values": { "dress_length": 1250 } }
+  ],
+  "constraints": [
+    {
+      "expression": "waist_girth <= bust_girth",
+      "severity": "warning",
+      "message": { "en": "Waist girths above the bust flatten the side shaping; the draft clamps suppression and the side seam goes straight", "es": "Cinturas mayores que el busto anulan el moldeado lateral; el trazo limita la reducción y la costura queda recta" }
+    },
+    {
+      "expression": "front_drop >= back_drop",
+      "severity": "warning",
+      "message": { "en": "A cowl front shallower than the back V reads inverted; keep the front drop at or below the back dip", "es": "Un cowl delantero menos profundo que la V trasera se ve invertido; mantén la caída delantera igual o mayor que la trasera" }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["popelina-algodon", "jersey-algodon"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "top" }, { "piece": "back", "edge": "top" }], "parameters": ["front_drop", "back_drop", "binding_ratio"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["dress_length", "flare_mm", "hem_allowance"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "bias_cutting": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "The dress that teaches bias behaviour: a true 45-degree grainline drawn on the pattern instead of assumed, a waist suppression computed from two body measurements so the skim is repeatable, and French-seam allowances sized for fray-prone wovens — couture-lingerie technique made measurable and reproducible.",
+      "es": "El vestido que enseña el comportamiento del bies: una hebra a 45 grados exactos trazada en el patrón en vez de supuesta, una reducción de cintura calculada a partir de dos medidas corporales para que el roce sea repetible, y márgenes de costura francesa dimensionados para tejidos que deshilachan — técnica de lencería de alta costura hecha medible y reproducible."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

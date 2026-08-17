@@ -1,0 +1,175 @@
+{
+  "project": {
+    "name": "Raglan Baseball Tee",
+    "slug": "raglan-baseball-tee",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #74 — the commons' first raglan geometry: no shoulder seam, the sleeve runs to the neckline. Front and back cut on fold with a shortened neckline and a long raglan edge; each of the sleeve's two raglan edges is solved numerically to match its measured body raglan (front and back differ), and the neckband is derived from the three-arc neck opening. Classic baseball styling: contrast sleeves and band.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #74 del FC-100 — la primera geometría raglán del commons: sin costura de hombro, la manga llega hasta el escote. Delantero y trasero al doblez con escote acortado y un largo borde raglán; cada uno de los dos bordes raglán de la manga se resuelve numéricamente para coincidir con su raglán medido del cuerpo (delantero y trasero difieren), y el cuello se deriva de la abertura de tres arcos. Estilo béisbol clásico: mangas y cuello en contraste.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": ["raglan", "baseball-tee", "tee", "knit", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet; flat raglan knit block from standard industry practice",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "baseball-tee",
+      "label": { "en": "Baseball tee (all pieces)", "es": "Playera de béisbol (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "sleeve", "neckband"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#ece8dc", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "back", "label": { "en": "Back", "es": "Trasero" }, "default_color": "#e0dbcb", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "sleeve", "label": { "en": "Sleeve (raglan, contrast)", "es": "Manga (raglán, contraste)" }, "default_color": "#35476b", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "neckband", "label": { "en": "Neckband (contrast rib)", "es": "Cuello (rib en contraste)" }, "default_color": "#465982", "cut": { "quantity": 1 } }
+  ],
+  "parameter_groups": [
+    { "id": "body", "label": { "en": "Body Measurements", "es": "Medidas Corporales" } },
+    { "id": "fit", "label": { "en": "Fit & Style", "es": "Ajuste y Estilo" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción" } }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth", "type": "slider", "default": 980, "min": 600, "max": 1800, "step": 10,
+      "group": "body", "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" },
+      "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" }
+    },
+    {
+      "id": "body_length", "type": "slider", "default": 720, "min": 400, "max": 1000, "step": 10,
+      "group": "body", "label": { "en": "Body length, nape to hem (mm)", "es": "Largo de cuerpo, nuca a dobladillo (mm)" }
+    },
+    {
+      "id": "neck_girth", "type": "slider", "default": 390, "min": 300, "max": 520, "step": 5,
+      "group": "body", "measurement": { "standard": "iso_8559", "code": "neck_girth" },
+      "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" }
+    },
+    {
+      "id": "sleeve_length", "type": "slider", "default": 480, "min": 340, "max": 700, "step": 5,
+      "group": "body", "label": { "en": "Sleeve length, neck edge to hem (mm)", "es": "Largo de manga, del escote al dobladillo (mm)" }
+    },
+    {
+      "id": "knit_ease", "type": "slider", "default": 70, "min": -80, "max": 300, "step": 10,
+      "group": "fit", "label": { "en": "Total ease (mm, negative = compression)", "es": "Holgura total (mm, negativa = compresión)" }
+    },
+    {
+      "id": "raglan_neck_w", "type": "slider", "default": 45, "min": 25, "max": 70, "step": 1,
+      "group": "fit", "advanced": true,
+      "label": { "en": "Raglan point from center (mm)", "es": "Punto raglán desde el centro (mm)" }
+    },
+    {
+      "id": "sleeve_neck_len", "type": "slider", "default": 70, "min": 40, "max": 120, "step": 5,
+      "group": "fit", "advanced": true,
+      "label": { "en": "Sleeve neckline arc (mm)", "es": "Arco de escote en la manga (mm)" }
+    },
+    {
+      "id": "wrist_opening", "type": "slider", "default": 200, "min": 140, "max": 400, "step": 5,
+      "group": "fit", "label": { "en": "Sleeve hem opening, flat (mm)", "es": "Abertura de puño, extendida (mm)" }
+    },
+    {
+      "id": "neckband_ratio", "type": "slider", "default": 0.85, "min": 0.7, "max": 1.0, "step": 0.01,
+      "group": "construction", "advanced": true,
+      "label": { "en": "Neckband/opening ratio", "es": "Proporción cuello/abertura" }
+    },
+    {
+      "id": "neckband_width", "type": "slider", "default": 18, "min": 10, "max": 40, "step": 1,
+      "group": "construction",
+      "label": { "en": "Neckband finished width (mm)", "es": "Ancho terminado del cuello (mm)" }
+    },
+    {
+      "id": "seam_allowance", "type": "slider", "default": 7, "min": 0, "max": 20, "step": 1,
+      "group": "construction",
+      "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" }
+    },
+    {
+      "id": "hem_allowance", "type": "slider", "default": 25, "min": 0, "max": 50, "step": 5,
+      "group": "construction",
+      "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" }
+    }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 980, "body_length": 720, "neck_girth": 390, "sleeve_length": 480 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1060, "body_length": 750, "neck_girth": 405, "sleeve_length": 495 } }
+  ],
+  "constraints": [
+    {
+      "expression": "sleeve_length >= (chest_girth + knit_ease) * 0.24 + 100",
+      "severity": "warning",
+      "message": {
+        "en": "Sleeve too short for this chest — the raglan underarm would reach the sleeve hem; lengthen the sleeve",
+        "es": "Manga demasiado corta para este pecho — la sisa raglán alcanzaría el dobladillo; alarga la manga"
+      }
+    },
+    {
+      "expression": "neck_girth >= raglan_neck_w * 8",
+      "severity": "warning",
+      "message": {
+        "en": "Raglan points sit very wide for this neck girth; the neckline will distort",
+        "es": "Los puntos raglán quedan muy anchos para este contorno de cuello; el escote se deformará"
+      }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["jersey-algodon"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "edges": [
+          { "piece": "front", "edge": "neck" },
+          { "piece": "back", "edge": "neck" },
+          { "piece": "sleeve", "edge": "sleeve_neck" }
+        ],
+        "parameters": ["neck_girth", "raglan_neck_w", "sleeve_neck_len", "neckband_ratio"]
+      },
+      {
+        "id": "raglan",
+        "type": "custom",
+        "label": { "en": "Raglan seam", "es": "Costura raglán" },
+        "edges": [
+          { "piece": "front", "edge": "raglan" },
+          { "piece": "back", "edge": "raglan" },
+          { "piece": "sleeve", "edge": "front_raglan" },
+          { "piece": "sleeve", "edge": "back_raglan" }
+        ],
+        "parameters": ["chest_girth", "knit_ease", "raglan_neck_w"]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          { "piece": "front", "edge": "hem" },
+          { "piece": "back", "edge": "hem" }
+        ],
+        "parameters": ["body_length", "hem_allowance"]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "raglan_construction": true,
+      "contrast_colorblocking": true,
+      "knit_negative_ease": true,
+      "fabric_compensation": false
+    },
+    "societal_benefit": {
+      "en": "A raglan has no shoulder seam — nothing presses under a backpack strap, a seatbelt, or a wheelchair backrest, which makes it a staple of adaptive and sensory-friendly dressing. As the commons' first raglan geometry it also teaches the FC-100's sleeve-to-neckline interface: solved seams that later raglan garments reuse.",
+      "es": "Un raglán no tiene costura de hombro — nada presiona bajo la correa de una mochila, un cinturón de seguridad o el respaldo de una silla de ruedas, lo que lo hace básico del vestir adaptativo y sensorialmente amable. Como primera geometría raglán del commons, además enseña la interfaz manga-escote del FC-100: costuras resueltas que las próximas prendas raglán reutilizan."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

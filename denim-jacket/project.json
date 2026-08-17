@@ -1,0 +1,96 @@
+{
+  "project": {
+    "name": "Denim Jacket",
+    "slug": "denim-jacket",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #28. Trucker-style denim jacket on the dress-shirt architecture, cropped and boxy: front and back both split at the chest line into yokes and bodies, button-stand fronts with six buttonhole marks and chest flap-pocket markings, armholes drafted fully on the body pieces below the yoke seams, a long sleeve solved to the measured armholes and closed by buttoned cuffs, a band collar solved to the measured neckline plus button overlap, and a two-half hem waistband whose crossover tab is verified as declared seam ease.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #28 del FC-100. Chamarra de mezclilla estilo trucker sobre la arquitectura de la camisa de vestir, corta y holgada: delantero y espalda divididos en la línea de pecho en canesúes y cuerpos, delanteros con tapeta y seis marcas de ojal más marcas de bolsillo de cartera en el pecho, sisas trazadas por completo en los cuerpos bajo las costuras de canesú, manga larga resuelta a las sisas medidas y cerrada con puños abotonados, cuello de banda resuelto al escote medido más el cruce de botón, y una pretina de dos mitades en el bajo cuya lengüeta de cruce se verifica como holgura declarada de costura.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["jacket", "denim", "trucker", "yoke", "band-collar", "cuff", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" },
+        { "source": "dress-shirt (rank #4) — yoke split, button stand, cuff, and solved-collar architecture", "license": "LicenseRef-FC1-pending" },
+        { "source": "collar-band enabler — band-collar neck-edge bisection method", "license": "LicenseRef-FC1-pending" },
+        { "source": "dress-trousers (rank #36) — two-half waistband with crossover tab declared as seam ease", "license": "LicenseRef-FC1-pending" },
+        { "source": "denim-shorts (rank #19) — denim fabric and topstitch conventions", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "jacket",
+      "label": { "en": "Denim jacket (all pieces)", "es": "Chamarra de mezclilla (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["front_yoke", "front_body", "back_yoke", "back_body", "sleeve", "cuff", "collar", "band_tab", "band_plain"]
+    }
+  ],
+  "pieces": [
+    { "id": "front_yoke", "label": { "en": "Front Yoke", "es": "Canesú Delantero" }, "default_color": "#34507c", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "front_body", "label": { "en": "Front Body", "es": "Cuerpo Delantero" }, "default_color": "#3f5d8c", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "back_yoke", "label": { "en": "Back Yoke", "es": "Canesú Trasero" }, "default_color": "#2e4a76", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "back_body", "label": { "en": "Back Body", "es": "Cuerpo Trasero" }, "default_color": "#365484", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#4a6798", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "cuff", "label": { "en": "Cuff", "es": "Puño" }, "default_color": "#5a76a6", "cut": { "quantity": 2 } },
+    { "id": "collar", "label": { "en": "Collar", "es": "Cuello" }, "default_color": "#6681ae", "cut": { "quantity": 2, "on_fold": true, "mirror": true } },
+    { "id": "band_tab", "label": { "en": "Waistband Half (tab)", "es": "Media Pretina (lengüeta)" }, "default_color": "#7189b5", "cut": { "quantity": 1 } },
+    { "id": "band_plain", "label": { "en": "Waistband Half (plain)", "es": "Media Pretina (lisa)" }, "default_color": "#7f95bd", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "default": 1020, "min": 700, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
+    { "id": "body_length", "type": "slider", "default": 620, "min": 450, "max": 900, "step": 10, "label": { "en": "Body length, nape to band hem (mm)", "es": "Largo de cuerpo hasta la pretina (mm)" } },
+    { "id": "neck_girth", "type": "slider", "default": 400, "min": 300, "max": 520, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "default": 610, "min": 400, "max": 750, "step": 10, "measurement": { "standard": "iso_8559", "code": "arm_length" }, "label": { "en": "Sleeve length, cap to wrist (mm)", "es": "Largo de manga (mm)" } },
+    { "id": "wrist_opening", "type": "slider", "default": 230, "min": 180, "max": 300, "step": 10, "label": { "en": "Wrist opening (mm)", "es": "Abertura de puño (mm)" } },
+    { "id": "woven_ease", "type": "slider", "default": 200, "min": 100, "max": 400, "step": 10, "label": { "en": "Total ease (mm)", "es": "Holgura total (mm)" } },
+    { "id": "chest_line", "type": "slider", "default": 150, "min": 120, "max": 220, "step": 5, "advanced": true, "label": { "en": "Chest line, HPS to yoke seams (mm)", "es": "Línea de pecho, hombro a costuras de canesú (mm)" } },
+    { "id": "button_stand", "type": "slider", "default": 35, "min": 20, "max": 50, "step": 1, "label": { "en": "Button stand width (mm)", "es": "Ancho de tapeta (mm)" } },
+    { "id": "collar_height", "type": "slider", "default": 70, "min": 40, "max": 90, "step": 5, "label": { "en": "Collar height (mm)", "es": "Alto de cuello (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1020, "body_length": 620, "neck_girth": 400, "sleeve_length": 610 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1100, "body_length": 640, "neck_girth": 420, "sleeve_length": 635, "wrist_opening": 240 } }
+  ],
+  "constraints": [
+    {
+      "expression": "button_stand >= 25",
+      "severity": "warning",
+      "message": { "en": "Narrow button stands crowd 17 mm jean tack buttons", "es": "Tapetas angostas aprietan los botones de presión de 17 mm" }
+    },
+    {
+      "expression": "woven_ease >= 140",
+      "severity": "warning",
+      "message": { "en": "A jacket needs at least 140 mm of ease to layer over other garments", "es": "Una chamarra necesita al menos 140 mm de holgura para llevarse sobre otras prendas" }
+    },
+    {
+      "expression": "chest_line >= 120",
+      "severity": "warning",
+      "message": { "en": "Very high chest lines leave no room for the front neck drop on the yoke", "es": "Líneas de pecho muy altas no dejan espacio para el escote delantero en el canesú" }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["mezclilla-denim"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front_yoke", "edge": "neck" }, { "piece": "back_yoke", "edge": "neck" }], "parameters": ["neck_girth"] },
+      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "front_body", "edge": "armhole" }, { "piece": "back_body", "edge": "armhole" }], "parameters": ["chest_girth", "woven_ease"] },
+      { "id": "cuff", "type": "cuff", "edges": [{ "piece": "sleeve", "edge": "hem" }], "parameters": ["wrist_opening"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "front_body", "edge": "hem" }, { "piece": "back_body", "edge": "hem" }], "parameters": ["chest_girth", "woven_ease"] },
+      { "id": "button_stand", "type": "button_stand", "edges": [{ "piece": "front_yoke", "edge": "center" }, { "piece": "front_body", "edge": "center" }], "parameters": ["button_stand", "body_length"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "The most-repaired, longest-lived jacket in the everyday wardrobe, opened as a made-to-measure commons draft: the double yoke split, the collar solved to the measured neckline, and the two-half band show how outerwear derives from the shirt architecture, and every piece regenerates true when the body measurements change — a repair-first primer for the garment most likely to be patched, not discarded.",
+      "es": "La chamarra más reparada y duradera del guardarropa cotidiano, abierta como trazo del común a medida: la doble división de canesú, el cuello resuelto al escote medido y la pretina de dos mitades muestran cómo la ropa exterior deriva de la arquitectura de camisa, y cada pieza se regenera fiel cuando cambian las medidas del cuerpo — una cartilla de reparar primero para la prenda que se parcha, no se desecha."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
