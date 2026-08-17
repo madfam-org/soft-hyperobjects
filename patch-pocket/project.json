@@ -1,0 +1,44 @@
+{
+  "project": {
+    "name": "Patch Pocket",
+    "slug": "patch-pocket",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "Enabler block (not FC-100 counted): a rectangular patch pocket with 45° chamfered bottom corners, a hem-faced opening, and a topstitch guide inset 8 mm from the sides and bottom. Provider half of the pocket interface reused across the FC-100.",
+      "es": "Bloque habilitador (no cuenta en el FC-100): bolsillo de parche rectangular con esquinas inferiores achaflanadas a 45°, abertura con vista de dobladillo y guía de pespunte a 8 mm de lados y fondo. Mitad proveedora de la interfaz de bolsillo reutilizada en el FC-100."
+    },
+    "difficulty": "beginner",
+    "tags": ["pocket", "patch", "block", "enabler", "interface", "commons"],
+    "attribution": { "author": "Innovaciones MADFAM", "license": "LicenseRef-FC1-pending", "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }] }
+  },
+  "modes": [{ "id": "pocket", "label": { "en": "Patch pocket", "es": "Bolsillo de parche" }, "script_file": "main.py", "pieces": ["pocket"] }],
+  "pieces": [
+    { "id": "pocket", "label": { "en": "Patch Pocket", "es": "Bolsillo de Parche" }, "default_color": "#99816a", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "pocket_width", "type": "slider", "default": 160, "min": 80, "max": 400, "step": 5, "label": { "en": "Pocket width (mm)", "es": "Ancho de bolsillo (mm)" } },
+    { "id": "pocket_height", "type": "slider", "default": 180, "min": 80, "max": 400, "step": 5, "label": { "en": "Pocket height (mm)", "es": "Alto de bolsillo (mm)" } },
+    { "id": "corner_chamfer", "type": "slider", "default": 30, "min": 5, "max": 60, "step": 1, "label": { "en": "Bottom corner chamfer (mm)", "es": "Chaflán de esquinas inferiores (mm)" } },
+    { "id": "hem_facing", "type": "slider", "default": 25, "min": 0, "max": 60, "step": 1, "label": { "en": "Opening hem facing (mm)", "es": "Vista de dobladillo de la abertura (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 25, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } }
+  ],
+  "presets": [{ "id": "default", "label": { "en": "Default", "es": "Predeterminado" }, "values": {} }],
+  "constraints": [
+    { "expression": "corner_chamfer * 3 < pocket_width", "severity": "warning", "message": { "en": "Oversized chamfers are clamped below a third of the smaller side", "es": "Chaflanes excesivos se limitan a menos de un tercio del lado menor" } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "block",
+    "interfaces": [
+      { "id": "pocket", "type": "pocket", "edges": [{ "piece": "pocket", "edge": "top" }], "parameters": ["pocket_width"] }
+    ],
+    "capabilities": { "made_to_measure": false, "fold_cutting": false, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "Proves the pocket interface from the provider side: chore coats, aprons, and shirts across the FC-100 reuse this chamfered patch rule instead of redrafting it.",
+      "es": "Demuestra la interfaz de bolsillo desde el lado proveedor: chamarras de trabajo, delantales y camisas del FC-100 reutilizan esta regla de parche achaflanado en vez de redibujarla."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

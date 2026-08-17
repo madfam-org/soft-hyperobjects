@@ -1,0 +1,54 @@
+{
+  "project": {
+    "name": "Straight Skirt Block",
+    "slug": "skirt-block",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "Enabler block (not FC-100 counted): the woven bottom primitive — front on fold, back in two panels with a CB zipper notch, waist darts as internals, curved side seams over the hip. Provider of the waistband interface and parent geometry of the FC-100 skirt family.",
+      "es": "Bloque habilitador (no cuenta en el FC-100): la primitiva de tela para abajo — delantero al doblez, trasero en dos paneles con piquete de cierre en CB, pinzas de cintura como marcas internas, costados curvos sobre la cadera. Proveedor de la interfaz de pretina y geometría madre de la familia de faldas del FC-100."
+    },
+    "difficulty": "intermediate",
+    "tags": ["skirt", "block", "enabler", "interface", "commons"],
+    "attribution": { "author": "Innovaciones MADFAM", "license": "LicenseRef-FC1-pending", "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }] }
+  },
+  "modes": [{ "id": "skirt", "label": { "en": "Straight skirt", "es": "Falda recta" }, "script_file": "main.py", "pieces": ["front", "back"] }],
+  "pieces": [
+    { "id": "front", "label": { "en": "Skirt Front", "es": "Falda Delantera" }, "default_color": "#9a5a6a", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "back", "label": { "en": "Skirt Back", "es": "Falda Trasera" }, "default_color": "#7d4655", "cut": { "quantity": 2, "mirror": true } }
+  ],
+  "parameters": [
+    { "id": "waist_girth", "type": "slider", "default": 700, "min": 450, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
+    { "id": "hip_girth", "type": "slider", "default": 940, "min": 600, "max": 1700, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
+    { "id": "skirt_length", "type": "slider", "default": 600, "min": 300, "max": 950, "step": 10, "label": { "en": "Skirt length (mm)", "es": "Largo de falda (mm)" } },
+    { "id": "hip_depth", "type": "slider", "default": 200, "min": 140, "max": 260, "step": 5, "label": { "en": "Waist-to-hip depth (mm)", "es": "Altura de cadera (mm)" } },
+    { "id": "hip_ease", "type": "slider", "default": 40, "min": 0, "max": 150, "step": 5, "label": { "en": "Hip ease (mm)", "es": "Holgura de cadera (mm)" } },
+    { "id": "waist_ease", "type": "slider", "default": 20, "min": 0, "max": 80, "step": 5, "label": { "en": "Waist ease (mm)", "es": "Holgura de cintura (mm)" } },
+    { "id": "front_dart", "type": "slider", "default": 20, "min": 0, "max": 45, "step": 1, "advanced": true, "label": { "en": "Front dart intake (mm)", "es": "Pinza delantera (mm)" } },
+    { "id": "back_dart", "type": "slider", "default": 28, "min": 0, "max": 50, "step": 1, "advanced": true, "label": { "en": "Back dart intake (mm)", "es": "Pinza trasera (mm)" } },
+    { "id": "zipper_length", "type": "slider", "default": 180, "min": 100, "max": 400, "step": 10, "label": { "en": "Zipper length (mm)", "es": "Largo de cierre (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 12, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 30, "min": 0, "max": 60, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+  ],
+  "presets": [{ "id": "size-m", "label": { "en": "M", "es": "M" }, "values": {} }, { "id": "knee", "label": { "en": "Knee length", "es": "A la rodilla" }, "values": { "skirt_length": 550 } }],
+  "constraints": [
+    { "expression": "hip_girth >= waist_girth", "severity": "error", "message": { "en": "Hip must be at least the waist for a straight skirt", "es": "La cadera debe ser al menos la cintura para falda recta" } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["popelina-algodon", "mezclilla-denim"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "block",
+    "interfaces": [
+      { "id": "waistband", "type": "waistband", "edges": [{ "piece": "front", "edge": "waist" }, { "piece": "back", "edge": "waist" }], "parameters": ["waist_girth", "waist_ease"] },
+      { "id": "zipper_tape", "type": "zipper_tape", "edges": [{ "piece": "back", "edge": "center" }], "parameters": ["zipper_length"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["skirt_length", "hem_allowance"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "The bottom-block primitive that the pencil, A-line, mini, and maxi skirts of the FC-100 all derive from — with the commons' first zipper-ready seam.",
+      "es": "La primitiva de bloque inferior de la que derivan las faldas lápiz, línea A, mini y maxi del FC-100 — con la primera costura lista para cierre del commons."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

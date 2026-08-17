@@ -1,0 +1,44 @@
+{
+  "project": {
+    "name": "Waistband Block",
+    "slug": "waistband-block",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "Enabler block (not FC-100 counted): a straight fold-over waistband strip drafted cut-ready — allowances included, fold line at mid-height — whose bottom edge is the waist-seam interface that skirts, trousers, and shorts consume.",
+      "es": "Bloque habilitador (no cuenta en el FC-100): pretina recta doblada, dibujada lista para corte — márgenes incluidos, línea de doblez a media altura — cuyo borde inferior es la interfaz de costura de cintura que consumen faldas, pantalones y shorts."
+    },
+    "difficulty": "beginner",
+    "tags": ["waistband", "band", "block", "enabler", "interface", "commons"],
+    "attribution": { "author": "Innovaciones MADFAM", "license": "LicenseRef-FC1-pending", "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }] }
+  },
+  "modes": [{ "id": "waistband", "label": { "en": "Fold-over waistband", "es": "Pretina doblada" }, "script_file": "main.py", "pieces": ["waistband"] }],
+  "pieces": [
+    { "id": "waistband", "label": { "en": "Waistband", "es": "Pretina" }, "default_color": "#7a6d5a", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "waist_length", "type": "slider", "default": 0, "min": 0, "max": 1600, "step": 5, "label": { "en": "Target waist seam length (mm, 0 = auto)", "es": "Largo objetivo de costura de cintura (mm, 0 = auto)" } },
+    { "id": "waist_girth", "type": "slider", "default": 700, "min": 400, "max": 1400, "step": 5, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth for auto mode (mm)", "es": "Contorno de cintura para modo auto (mm)" } },
+    { "id": "standing_ease", "type": "slider", "default": 20, "min": 0, "max": 60, "step": 2, "label": { "en": "Standing ease (mm)", "es": "Holgura de uso (mm)" } },
+    { "id": "band_height", "type": "slider", "default": 40, "min": 20, "max": 80, "step": 2, "label": { "en": "Finished band height (mm)", "es": "Alto terminado de pretina (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 8, "min": 0, "max": 15, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } }
+  ],
+  "presets": [{ "id": "default", "label": { "en": "Default", "es": "Predeterminado" }, "values": {} }],
+  "constraints": [
+    { "expression": "band_height >= 20", "severity": "warning", "message": { "en": "Very narrow bands curl and read as binding, not waistband", "es": "Pretinas muy angostas se enrollan y se leen como ribete, no como pretina" } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "block",
+    "interfaces": [
+      { "id": "waistband", "type": "waistband", "edges": [{ "piece": "waistband", "edge": "bottom" }], "parameters": ["waist_length", "standing_ease"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "Proves the waistband interface from the provider side: joggers, skirts, and trousers in the FC-100 all bind their waist seams to this solved strip rule.",
+      "es": "Demuestra la interfaz de pretina desde el lado proveedor: los joggers, faldas y pantalones del FC-100 atan sus costuras de cintura a esta regla de tira resuelta."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
