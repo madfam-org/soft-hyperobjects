@@ -1,0 +1,119 @@
+{
+  "project": {
+    "name": "Blouse",
+    "slug": "blouse",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #21 — the darted woven top, parametric. Fitted front and back cut on fold with a scoop front neck and shallow back neck, side bust darts and back waist darts kept as internal markings over a common fitted side seam, a gently curved shirttail-lite hem, a short sleeve whose gathered cap is solved numerically to the front + back armholes plus the gather ease, a CB button-loop keyhole, and a neck facing strip derived from the measured opening.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #21 del FC-100 — la blusa de tejido plano con pinzas, paramétrica. Delantero y trasero entallados cortados al doblez con escote redondo delantero y escote trasero poco profundo, pinzas de busto laterales y pinzas de talle traseras como marcas internas sobre una costura lateral común entallada, un dobladillo ligeramente curvo, una manga corta cuya copa fruncida se resuelve numéricamente a las sisas delantera + trasera más el embebido de frunce, un ojal de presilla con botón en el centro trasero y una vista del escote derivada de la abertura medida.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["blouse", "blusa", "woven", "darts", "gathered-cap", "keyhole", "woven-tops", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet; darted woven blouse block from standard industry practice",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "blouse",
+      "label": { "en": "Blouse (all pieces)", "es": "Blusa (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "sleeve", "facing"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#a85d7c", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "back", "label": { "en": "Back", "es": "Trasero" }, "default_color": "#8c4a67", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#c27f9d", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "facing", "label": { "en": "Neck Facing", "es": "Vista del Escote" }, "default_color": "#dcaabf", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "bust_girth", "type": "slider", "default": 940, "min": 600, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "bust_girth" }, "label": { "en": "Bust girth (mm)", "es": "Contorno de busto (mm)" } },
+    { "id": "body_length", "type": "slider", "default": 640, "min": 420, "max": 900, "step": 10, "label": { "en": "Body length, nape to hem (mm)", "es": "Largo de cuerpo, nuca a dobladillo (mm)" } },
+    { "id": "neck_girth", "type": "slider", "default": 380, "min": 300, "max": 520, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "default": 180, "min": 80, "max": 400, "step": 5, "label": { "en": "Sleeve length, shoulder to hem (mm)", "es": "Largo de manga, hombro a dobladillo (mm)" } },
+    { "id": "woven_ease", "type": "slider", "default": 110, "min": 40, "max": 300, "step": 10, "label": { "en": "Total ease (mm; semi-fitted woven)", "es": "Holgura total (mm; tejido plano semientallado)" } },
+    { "id": "bust_dart_intake", "type": "slider", "default": 25, "min": 0, "max": 45, "step": 1, "label": { "en": "Side bust dart intake (mm)", "es": "Profundidad de pinza de busto lateral (mm)" } },
+    { "id": "back_dart_intake", "type": "slider", "default": 12, "min": 0, "max": 40, "step": 1, "label": { "en": "Back waist dart intake (mm, each)", "es": "Profundidad de pinza de talle trasera (mm, cada una)" } },
+    { "id": "gather_ease", "type": "slider", "default": 30, "min": 0, "max": 80, "step": 5, "label": { "en": "Sleeve cap gather ease (mm)", "es": "Embebido de frunce en la copa (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 15, "min": 0, "max": 40, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "bust_girth": 940, "body_length": 640, "neck_girth": 380, "sleeve_length": 180 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "bust_girth": 1020, "body_length": 665, "neck_girth": 395, "sleeve_length": 190 } }
+  ],
+  "constraints": [
+    {
+      "expression": "gather_ease <= 60",
+      "severity": "warning",
+      "message": {
+        "en": "Beyond ~60 mm of cap ease the gathers read as a full puff sleeve — draft that as its own tier-3 variant",
+        "es": "Más allá de ~60 mm de embebido los frunces se leen como manga bombacha — trázala como su propia variante de nivel 3"
+      }
+    },
+    {
+      "expression": "bust_dart_intake <= 35",
+      "severity": "warning",
+      "message": {
+        "en": "Intakes past ~35 mm want dart rotation into the outline (kernel v0.2), not a straight internal side dart",
+        "es": "Profundidades mayores a ~35 mm requieren rotación de pinza al contorno (kernel v0.2), no una pinza lateral interna recta"
+      }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["popelina-algodon"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "edges": [
+          { "piece": "front", "edge": "neck" },
+          { "piece": "back", "edge": "neck" }
+        ],
+        "parameters": ["neck_girth"]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "edges": [
+          { "piece": "front", "edge": "armhole" },
+          { "piece": "back", "edge": "armhole" },
+          { "piece": "sleeve", "edge": "cap" }
+        ],
+        "parameters": ["bust_girth", "woven_ease", "gather_ease"]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          { "piece": "front", "edge": "hem" },
+          { "piece": "back", "edge": "hem" }
+        ],
+        "parameters": ["body_length", "hem_allowance"]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
+    "societal_benefit": {
+      "en": "The blouse is the workhorse of everyday and formal wardrobes worldwide; a verified parametric draft lets sewing co-ops, small ateliers and home sewists cut a made-to-measure darted top for any body — fitted without standard-size waste, repairable, and free of fast-fashion sizing lock-in.",
+      "es": "La blusa es la pieza de batalla del guardarropa diario y formal en todo el mundo; un trazo paramétrico verificado permite a cooperativas de costura, talleres pequeños y costureras caseras cortar una blusa con pinzas a la medida de cualquier cuerpo — entallada sin el desperdicio de las tallas estándar, reparable y sin la dependencia de tallas de la moda rápida."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "project": {
+    "name": "A-Line Dress",
+    "slug": "a-line-dress",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #22. Waist-seamless sleeveless shift-to-flare dress: a fitted bust with internal side-bust darts, back fisheye darts, a CB invisible zipper, and an A-line hem a flare wider than the bust quarter; neck and armhole facings are derived from the measured openings.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #22 del FC-100. Vestido línea A sin mangas y sin costura de cintura: busto entallado con pinzas laterales internas, pinzas fisheye traseras, cierre invisible en CB y dobladillo línea A con vuelo sobre el cuarto de busto; las vistas de escote y sisa se derivan de las aberturas medidas.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["dress", "a-line", "sleeveless", "woven", "zipper", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet (bodice block + A-line skirt families)", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "dress",
+      "label": { "en": "A-line dress (all pieces)", "es": "Vestido línea A (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "neck_facing", "armhole_facing"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Dress Front", "es": "Delantero de Vestido" }, "default_color": "#7a4a68", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "back", "label": { "en": "Dress Back", "es": "Trasero de Vestido" }, "default_color": "#5f3752", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "neck_facing", "label": { "en": "Neck Facing", "es": "Vista de Escote" }, "default_color": "#9a6a88", "cut": { "quantity": 1 } },
+    { "id": "armhole_facing", "label": { "en": "Armhole Facing", "es": "Vista de Sisa" }, "default_color": "#b08aa2", "cut": { "quantity": 2 } }
+  ],
+  "parameters": [
+    { "id": "bust_girth", "type": "slider", "default": 920, "min": 600, "max": 1700, "step": 10, "measurement": { "standard": "iso_8559", "code": "bust_girth" }, "label": { "en": "Bust girth (mm)", "es": "Contorno de busto (mm)" } },
+    { "id": "waist_girth", "type": "slider", "default": 740, "min": 450, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "tooltip": { "en": "Places the back fisheye darts", "es": "Ubica las pinzas fisheye traseras" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
+    { "id": "dress_length", "type": "slider", "default": 950, "min": 700, "max": 1400, "step": 10, "label": { "en": "Dress length, nape to hem (mm)", "es": "Largo de vestido, nuca a dobladillo (mm)" } },
+    { "id": "flare_mm", "type": "slider", "default": 110, "min": 40, "max": 400, "step": 10, "tooltip": { "en": "Extra half-hem width beyond the bust quarter", "es": "Ancho extra de medio dobladillo sobre el cuarto de busto" }, "label": { "en": "Hem flare (mm)", "es": "Vuelo de dobladillo (mm)" } },
+    { "id": "strap_width", "type": "slider", "default": 42, "min": 24, "max": 80, "step": 2, "label": { "en": "Strap width (mm)", "es": "Ancho de tirante (mm)" } },
+    { "id": "front_drop", "type": "slider", "default": 95, "min": 60, "max": 160, "step": 5, "label": { "en": "Front neck drop (mm)", "es": "Caída de escote delantero (mm)" } },
+    { "id": "zipper_length", "type": "slider", "default": 400, "min": 250, "max": 600, "step": 10, "label": { "en": "Zipper length (mm)", "es": "Largo de cierre (mm)" } },
+    { "id": "bust_dart_intake", "type": "slider", "default": 28, "min": 0, "max": 50, "step": 2, "advanced": true, "label": { "en": "Bust dart intake (mm)", "es": "Profundidad de pinza de busto (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 30, "min": 0, "max": 60, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+  ],
+  "presets": [
+    { "id": "knee", "label": { "en": "Knee", "es": "A la rodilla" }, "values": { "dress_length": 850 } },
+    { "id": "midi", "label": { "en": "Midi", "es": "Midi" }, "values": { "dress_length": 1050 } }
+  ],
+  "constraints": [
+    {
+      "expression": "zipper_length < dress_length / 2",
+      "severity": "warning",
+      "message": { "en": "Zippers longer than half the dress length are clamped by the draft", "es": "Cierres mayores a la mitad del largo del vestido se limitan en el trazo" }
+    },
+    {
+      "expression": "waist_girth <= bust_girth + 80",
+      "severity": "warning",
+      "message": { "en": "Width is bust-derived; a waist beyond bust + ease needs more flare or a larger size", "es": "El ancho se deriva del busto; una cintura mayor al busto + holgura requiere más vuelo o una talla mayor" }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["popelina-algodon"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "neck" }, { "piece": "back", "edge": "neck" }], "parameters": ["front_drop"] },
+      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }], "parameters": ["bust_girth", "strap_width"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["dress_length", "flare_mm", "hem_allowance"] },
+      { "id": "cb_zipper", "type": "zipper_tape", "edges": [{ "piece": "back", "edge": "center" }], "parameters": ["zipper_length"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "First dress of the FC-100: one tier-2 cartridge that graduates makers from separates to dresses — waist-seamless shaping with internal darts, an invisible zipper, and facings computed from measured curves instead of guessed.",
+      "es": "Primer vestido del FC-100: un cartucho de nivel 2 que lleva a quien confecciona de las prendas separadas a los vestidos — silueta sin costura de cintura con pinzas internas, cierre invisible y vistas calculadas a partir de curvas medidas en lugar de adivinarse."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

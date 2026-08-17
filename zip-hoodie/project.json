@@ -1,0 +1,85 @@
+{
+  "project": {
+    "name": "Zip Hoodie",
+    "slug": "zip-hoodie",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #14. The pullover hoodie transformed for a full front zipper: the front is cut as two mirrored halves whose center edge is the zipper seam (15 mm tape allowance, stop notches, 7 mm stitch line); the kangaroo pocket and the rib hem band split with it, and the metadata derives the closed-end zipper length to order. The sleeve cap and two-panel hood stay solved against the measured armhole and neck opening.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #14 del FC-100. La sudadera con capucha transformada para un cierre frontal completo: el delantero se corta en dos mitades espejadas cuyo borde central es la costura del cierre (margen de cinta de 15 mm, piquetes de tope, línea de pespunte a 7 mm); la bolsa canguro y la pretina de rib se dividen con él, y los metadatos derivan el largo del cierre de extremo cerrado a ordenar. La copa de manga y la capucha de dos paneles siguen resueltas contra la sisa y la abertura de cuello medidas.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["hoodie", "zipper", "fleece", "hood", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [{ "source": "hoodie-pullover block family", "license": "LicenseRef-FC1-pending" }]
+    }
+  },
+  "modes": [
+    {
+      "id": "zip-hoodie",
+      "label": { "en": "Zip hoodie (all pieces)", "es": "Sudadera con cierre (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "sleeve", "hood", "pocket", "cuff", "hem_band"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front (zip half)", "es": "Delantero (mitad del cierre)" }, "default_color": "#5b6d7e", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "back", "label": { "en": "Back", "es": "Trasero" }, "default_color": "#49586a", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#75889a", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "hood", "label": { "en": "Hood (side panel)", "es": "Capucha (panel lateral)" }, "default_color": "#8fa2b4", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "pocket", "label": { "en": "Kangaroo Pocket (half)", "es": "Bolsa Canguro (mitad)" }, "default_color": "#a9bcce", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "cuff", "label": { "en": "Cuff (rib)", "es": "Puño (rib)" }, "default_color": "#c3d2e0", "cut": { "quantity": 2 } },
+    { "id": "hem_band", "label": { "en": "Hem Band (split rib)", "es": "Pretina (rib dividido)" }, "default_color": "#c3d2e0", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "default": 1000, "min": 650, "max": 1900, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
+    { "id": "body_length", "type": "slider", "default": 670, "min": 420, "max": 950, "step": 10, "label": { "en": "Body length to band seam (mm)", "es": "Largo de cuerpo hasta pretina (mm)" } },
+    { "id": "neck_girth", "type": "slider", "default": 390, "min": 300, "max": 540, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "default": 570, "min": 200, "max": 780, "step": 10, "label": { "en": "Sleeve length to cuff seam (mm)", "es": "Largo de manga hasta puño (mm)" } },
+    { "id": "fleece_ease", "type": "slider", "default": 160, "min": 60, "max": 400, "step": 10, "label": { "en": "Total ease (mm)", "es": "Holgura total (mm)" } },
+    { "id": "hood_height", "type": "slider", "default": 350, "min": 280, "max": 450, "step": 5, "label": { "en": "Hood height (mm)", "es": "Alto de capucha (mm)" } },
+    { "id": "hood_depth", "type": "slider", "default": 260, "min": 200, "max": 340, "step": 5, "label": { "en": "Hood depth (mm)", "es": "Profundidad de capucha (mm)" } },
+    { "id": "cuff_ratio", "type": "slider", "default": 0.78, "min": 0.6, "max": 0.95, "step": 0.01, "advanced": true, "label": { "en": "Cuff/opening ratio", "es": "Proporción puño/abertura" } },
+    { "id": "hemband_ratio", "type": "slider", "default": 0.85, "min": 0.7, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Hem band/hem ratio", "es": "Proporción pretina/dobladillo" } },
+    { "id": "cuff_height", "type": "slider", "default": 60, "min": 30, "max": 100, "step": 5, "label": { "en": "Cuff height (mm)", "es": "Alto de puño (mm)" } },
+    { "id": "hemband_height", "type": "slider", "default": 60, "min": 30, "max": 100, "step": 5, "label": { "en": "Hem band height (mm)", "es": "Alto de pretina (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 8, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1000, "body_length": 670, "sleeve_length": 570 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1080, "body_length": 700, "sleeve_length": 590 } }
+  ],
+  "constraints": [
+    {
+      "expression": "hood_depth <= hood_height",
+      "severity": "warning",
+      "message": { "en": "Very deep hoods relative to height collapse forward", "es": "Capuchas muy profundas respecto a su alto se vencen hacia adelante" }
+    },
+    {
+      "expression": "body_length - 70 + hemband_height <= 900",
+      "severity": "warning",
+      "message": { "en": "Derived zipper length exceeds common stock zipper lengths (900 mm)", "es": "El largo derivado del cierre excede los largos comunes de stock (900 mm)" }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["felpa-algodon"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "neck" }, { "piece": "back", "edge": "neck" }, { "piece": "hood", "edge": "neck" }], "parameters": ["neck_girth", "hood_height", "hood_depth"] },
+      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }, { "piece": "sleeve", "edge": "cap" }], "parameters": ["chest_girth", "fleece_ease"] },
+      { "id": "cuff", "type": "cuff", "edges": [{ "piece": "sleeve", "edge": "hem" }], "parameters": ["cuff_ratio", "cuff_height"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["hemband_ratio", "hemband_height"] },
+      { "id": "zipper_tape", "type": "zipper_tape", "edges": [{ "piece": "front", "edge": "center" }], "parameters": ["body_length", "hemband_height", "seam_allowance"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "The commons' first full-front zipper garment: it establishes the halve-at-center-front transform — split the body, give the center edge a tape allowance, split the pocket and the band, derive the zipper length to order — that jackets, cardigans and coveralls will reuse across the FC-100, with zipper hardware federated to Yantra4D via the zipper-notion cartridge.",
+      "es": "La primera prenda del commons con cierre frontal completo: establece la transformación de partir al centro del frente — dividir el cuerpo, dar margen de cinta al borde central, partir la bolsa y la pretina, derivar el largo del cierre a ordenar — que chamarras, cárdigans y overoles reutilizarán en el FC-100, con el herraje del cierre federado a Yantra4D vía el cartucho zipper-notion."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

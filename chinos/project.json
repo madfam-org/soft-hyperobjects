@@ -1,0 +1,60 @@
+{
+  "project": {
+    "name": "Chinos",
+    "slug": "chinos",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #17. Tailored chino trouser on the scrubs-pants woven block: front/back legs with the front inseam bowed by a solved amount to match the deeper back fork, a grown-on fly extension with J-topstitch guide and fly-stop notch, diagonal slash-pocket openings, pressed creases, two back waist darts with a back-pocket placement, a two-piece waistband eased by the closure overlap, and five belt loops.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #17 del FC-100. Pantalón chino de sastre sobre el bloque de tela plana del pantalón quirúrgico: piernas delantera/trasera con la entrepierna delantera curvada por una cantidad resuelta para igualar el tiro trasero más profundo, aletilla de bragueta unida con guía de pespunte en J y piquete de tope, aberturas diagonales de bolsillo sesgado, rayas planchadas, dos pinzas traseras de cintura con marca de bolsillo trasero, pretina en dos piezas con holgura por el traslape de cierre y cinco trabillas.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["chinos", "trousers", "bottoms", "fly-front", "woven", "fc100", "hyperobject", "commons"],
+    "attribution": { "author": "Innovaciones MADFAM", "license": "LicenseRef-FC1-pending", "lineage": [{ "source": "Original draft for Fashion Cabinet (scrubs-pants woven trouser block)", "license": "original" }] }
+  },
+  "modes": [{ "id": "chinos", "label": { "en": "Chinos (all pieces)", "es": "Pantalón chino (todas las piezas)" }, "script_file": "main.py", "pieces": ["front", "back", "waistband", "belt_loop"] }],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front Leg", "es": "Pierna Delantera" }, "default_color": "#c2a878", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "back", "label": { "en": "Back Leg", "es": "Pierna Trasera" }, "default_color": "#a68c5f", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "waistband", "label": { "en": "Waistband (half)", "es": "Pretina (mitad)" }, "default_color": "#d3bf94", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "belt_loop", "label": { "en": "Belt Loop", "es": "Trabilla" }, "default_color": "#8a734d", "cut": { "quantity": 5 } }
+  ],
+  "parameters": [
+    { "id": "hip_girth", "type": "slider", "default": 1000, "min": 650, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
+    { "id": "waist_girth", "type": "slider", "default": 860, "min": 500, "max": 1600, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
+    { "id": "inseam_length", "type": "slider", "default": 760, "min": 300, "max": 950, "step": 10, "measurement": { "standard": "iso_8559", "code": "inside_leg_length" }, "label": { "en": "Inseam (mm)", "es": "Entrepierna (mm)" } },
+    { "id": "front_rise", "type": "slider", "default": 265, "min": 190, "max": 380, "step": 5, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)" } },
+    { "id": "back_rise", "type": "slider", "default": 305, "min": 190, "max": 460, "step": 5, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)" } },
+    { "id": "woven_ease", "type": "slider", "default": 100, "min": 40, "max": 400, "step": 10, "label": { "en": "Total hip ease (mm)", "es": "Holgura total de cadera (mm)" } },
+    { "id": "hem_width", "type": "slider", "default": 105, "min": 80, "max": 260, "step": 5, "label": { "en": "Hem half-width, flat (mm)", "es": "Medio bajo, extendido (mm)" } },
+    { "id": "fly_width", "type": "slider", "default": 38, "min": 20, "max": 60, "step": 2, "label": { "en": "Fly extension width (mm)", "es": "Ancho de aletilla (mm)" } },
+    { "id": "fly_depth", "type": "slider", "default": 200, "min": 80, "max": 300, "step": 5, "label": { "en": "Fly depth (mm)", "es": "Largo de bragueta (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 35, "min": 0, "max": 50, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "hip_girth": 1000, "waist_girth": 860, "inseam_length": 760 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "hip_girth": 1120, "waist_girth": 980, "inseam_length": 800 } }
+  ],
+  "constraints": [
+    { "expression": "back_rise >= front_rise", "severity": "error", "message": { "en": "Back rise must be at least the front rise", "es": "El tiro trasero debe ser al menos el delantero" } },
+    { "expression": "fly_depth < front_rise", "severity": "error", "message": { "en": "Fly depth must stay above the crotch line (less than the front rise)", "es": "El largo de bragueta debe quedar arriba del tiro (menor que el tiro delantero)" } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["popelina-algodon", "mezclilla-denim"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "waistband", "type": "waistband", "edges": [{ "piece": "front", "edge": "waist" }, { "piece": "back", "edge": "waist" }], "parameters": ["waist_girth", "hip_girth"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["hem_width", "hem_allowance"] },
+      { "id": "fly", "type": "zipper_tape", "edges": [{ "piece": "front", "edge": "crotch" }], "parameters": ["fly_depth", "fly_width"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "The everyday tailored trouser as a commons object: a graded-by-measurement chino with a real fly extension, slash pockets and belt loops, cuttable in popeline or denim by any small workshop without licensing a block.",
+      "es": "El pantalón de vestir cotidiano como objeto del commons: un chino graduado por medidas con aletilla real, bolsillos sesgados y trabillas, cortable en popelina o mezclilla por cualquier taller pequeño sin licenciar un bloque."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

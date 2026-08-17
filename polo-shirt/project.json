@@ -1,0 +1,92 @@
+{
+  "project": {
+    "name": "Polo Shirt",
+    "slug": "polo-shirt",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #3. The t-shirt block grown into tier 2: a marked button placket with backing strip, a flat pointed collar whose neck edge is solved to half the measured neck opening, and a short sleeve with a solved cap finished in a derived rib cuff.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #3 del FC-100. El bloque de playera llevado al nivel 2: una tapeta de botones marcada con tira de refuerzo, un cuello plano en punta cuyo borde de escote se resuelve a la mitad de la abertura medida, y una manga corta con copa resuelta terminada en un puño de rib derivado.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["polo", "placket", "collar", "knit", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet; tee knit block extended with standard polo placket and flat-collar practice",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "polo",
+      "label": { "en": "Polo (all pieces)", "es": "Polo (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "sleeve", "collar", "placket_backing", "cuff"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#3f9b6a", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "back", "label": { "en": "Back", "es": "Trasero" }, "default_color": "#2f7a52", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#63b184", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "collar", "label": { "en": "Flat Collar", "es": "Cuello Plano" }, "default_color": "#8fcaa8", "cut": { "quantity": 2, "on_fold": true, "mirror": true } },
+    { "id": "placket_backing", "label": { "en": "Placket Backing", "es": "Refuerzo de Tapeta" }, "default_color": "#b7dfc6", "cut": { "quantity": 1 } },
+    { "id": "cuff", "label": { "en": "Cuff (rib)", "es": "Puño (rib)" }, "default_color": "#a3d5b5", "cut": { "quantity": 2 } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "default": 1000, "min": 600, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
+    { "id": "body_length", "type": "slider", "default": 700, "min": 400, "max": 1000, "step": 10, "label": { "en": "Body length, nape to hem (mm)", "es": "Largo de cuerpo, nuca a dobladillo (mm)" } },
+    { "id": "neck_girth", "type": "slider", "default": 390, "min": 300, "max": 520, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "default": 210, "min": 80, "max": 700, "step": 5, "label": { "en": "Sleeve length, shoulder to hem (mm)", "es": "Largo de manga, hombro a dobladillo (mm)" } },
+    { "id": "knit_ease", "type": "slider", "default": 80, "min": -80, "max": 300, "step": 10, "label": { "en": "Total ease (mm, negative = compression)", "es": "Holgura total (mm, negativa = compresión)" } },
+    { "id": "placket_length", "type": "slider", "default": 150, "min": 60, "max": 260, "step": 5, "label": { "en": "Placket length (mm)", "es": "Largo de tapeta (mm)" } },
+    { "id": "placket_width", "type": "slider", "default": 32, "min": 20, "max": 50, "step": 1, "label": { "en": "Placket width (mm)", "es": "Ancho de tapeta (mm)" } },
+    { "id": "collar_height", "type": "slider", "default": 75, "min": 40, "max": 110, "step": 5, "label": { "en": "Collar height (mm)", "es": "Alto de cuello (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 7, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 25, "min": 0, "max": 50, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1000, "body_length": 700, "neck_girth": 390, "sleeve_length": 210 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1080, "body_length": 730, "neck_girth": 405, "sleeve_length": 225 } }
+  ],
+  "constraints": [
+    {
+      "expression": "placket_length < body_length / 3",
+      "severity": "warning",
+      "message": {
+        "en": "A placket longer than a third of the body reads as a henley/quarter-zip draft",
+        "es": "Una tapeta más larga que un tercio del cuerpo se lee como un trazo henley o de cierre medio"
+      }
+    },
+    {
+      "expression": "placket_width >= 25",
+      "severity": "warning",
+      "message": {
+        "en": "Very narrow plackets are hard to sew cleanly and crowd the buttonholes",
+        "es": "Las tapetas muy angostas son difíciles de coser con limpieza y aprietan los ojales"
+      }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["jersey-algodon"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "neck" }, { "piece": "back", "edge": "neck" }, { "piece": "collar", "edge": "neck" }], "parameters": ["neck_girth", "collar_height"] },
+      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }, { "piece": "sleeve", "edge": "cap" }], "parameters": ["chest_girth", "knit_ease"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["body_length", "hem_allowance"] },
+      { "id": "placket", "type": "placket", "edges": [{ "piece": "placket_backing", "edge": "side_a" }, { "piece": "placket_backing", "edge": "side_b" }], "parameters": ["placket_length", "placket_width"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": true },
+    "societal_benefit": {
+      "en": "The polo is the uniform staple of service work and schooling across Latin America; a verified parametric draft opens made-to-measure uniforms to small workshops, and its solved collar and marked placket teach the two constructions that separate tier-2 garments from basic tees.",
+      "es": "El polo es el uniforme básico del trabajo de servicio y la escuela en América Latina; un trazo paramétrico verificado abre los uniformes a medida a talleres pequeños, y su cuello resuelto y tapeta marcada enseñan las dos construcciones que separan las prendas de nivel 2 de las playeras básicas."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
