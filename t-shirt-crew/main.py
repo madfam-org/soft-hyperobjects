@@ -221,6 +221,20 @@ def build():
             ("sleeve", "underarm_front"), ("sleeve", "underarm_back"), tol=1.0
         )
     half_opening = front.edge("neck").length() + back.edge("neck").length()
+    fabric_width = 1600.0                       # jersey-algodon card width
+    total_area = sum(
+        p.area() * p.cut.quantity * (2.0 if p.cut.on_fold else 1.0)
+        for p in pattern.pieces if p.name != "neckband"
+    )
+    marker_len = total_area / (fabric_width * 0.70)   # knits nest tightly
+    pattern.bom = [
+        {"item": "jersey-algodon", "qty": round(marker_len / 10.0) * 10, "unit": "mm_length",
+         "note": f"at {fabric_width:.0f} mm width, 70% marker efficiency"},
+        {"item": "1x1 rib for neckband", "qty": 1, "unit": "strip",
+         "note": "see neckband piece dimensions"},
+        {"item": "polyester thread + stretch needle", "qty": 1, "unit": "set",
+         "note": "ballpoint 75/11"},
+    ]
     pattern.metadata = {
         "fc100_rank": 1,
         "neck_opening_mm": round(2.0 * half_opening, 1),

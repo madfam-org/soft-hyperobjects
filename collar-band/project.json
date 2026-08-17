@@ -1,0 +1,45 @@
+{
+  "project": {
+    "name": "Band Collar (Mandarin)",
+    "slug": "collar-band",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "Enabler block (not FC-100 counted): a curved half-collar cut on fold whose neck edge is solved to half the target neckline plus a button-stand overlap. Second consumer in the cross-cartridge interface lane, verified against the bodice block in CI.",
+      "es": "Bloque habilitador (no cuenta en el FC-100): cuello curvo a la mitad, cortado al doblez, cuyo borde se resuelve a la mitad del escote objetivo más el traslape de cartera. Segundo consumidor de la interfaz entre cartuchos, verificado contra el corpiño en CI."
+    },
+    "difficulty": "intermediate",
+    "tags": ["collar", "band", "mandarin", "block", "enabler", "interface", "commons"],
+    "attribution": { "author": "Innovaciones MADFAM", "license": "LicenseRef-FC1-pending", "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }] }
+  },
+  "modes": [{ "id": "collar", "label": { "en": "Band collar", "es": "Cuello mao" }, "script_file": "main.py", "pieces": ["collar"] }],
+  "pieces": [
+    { "id": "collar", "label": { "en": "Band Collar", "es": "Cuello Mao" }, "default_color": "#99816a", "cut": { "quantity": 2, "on_fold": true, "mirror": true } }
+  ],
+  "parameters": [
+    { "id": "neckline_length", "type": "slider", "default": 0, "min": 0, "max": 700, "step": 5, "label": { "en": "Target neckline length (mm, 0 = auto)", "es": "Largo de escote objetivo (mm, 0 = auto)" } },
+    { "id": "neck_girth", "type": "slider", "default": 370, "min": 280, "max": 540, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth for auto mode (mm)", "es": "Contorno de cuello para modo auto (mm)" } },
+    { "id": "collar_height", "type": "slider", "default": 30, "min": 20, "max": 60, "step": 2, "label": { "en": "Collar height (mm)", "es": "Alto de cuello (mm)" } },
+    { "id": "overlap", "type": "slider", "default": 15, "min": 0, "max": 40, "step": 1, "label": { "en": "Button-stand overlap (mm)", "es": "Traslape de cartera (mm)" } },
+    { "id": "rise", "type": "slider", "default": 14, "min": 0, "max": 30, "step": 2, "advanced": true, "label": { "en": "Front-edge rise (mm)", "es": "Elevación frontal (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 8, "min": 0, "max": 15, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } }
+  ],
+  "presets": [{ "id": "default", "label": { "en": "Default", "es": "Predeterminado" }, "values": {} }],
+  "constraints": [
+    { "expression": "collar_height >= 20", "severity": "warning", "message": { "en": "Very low bands read as facing, not collar", "es": "Bandas muy bajas se leen como vista, no como cuello" } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "block",
+    "interfaces": [
+      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "collar", "edge": "neck" }], "parameters": ["neckline_length", "overlap"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "Proves the neckline interface from the consumer side: guayabera, kurta, and dress-shirt collars in the FC-100 all inherit this solved-band rule.",
+      "es": "Demuestra la interfaz de escote desde el lado consumidor: los cuellos de guayabera, kurta y camisa de vestir del FC-100 heredan esta regla de banda resuelta."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

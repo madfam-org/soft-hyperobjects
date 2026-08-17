@@ -119,6 +119,16 @@ def build():
     if everything or target_piece == "strips":
         pattern.add(_strip("neck_strap", strap_length, 40.0, 1, "Neck Strap"))
         pattern.add(_strip("waist_tie", tie_length, 40.0, 2, "Waist Tie"))
+    fabric_width = 900.0                        # manta-cruda card width
+    total_area = sum(
+        p.area() * p.cut.quantity * (2.0 if p.cut.on_fold else 1.0) for p in pattern.pieces
+    )
+    marker_len = total_area / (fabric_width * 0.65)   # 65% marker efficiency
+    pattern.bom = [
+        {"item": "manta-cruda", "qty": round(marker_len / 10.0) * 10, "unit": "mm_length",
+         "note": f"at {fabric_width:.0f} mm width, 65% marker efficiency"},
+        {"item": "sewing thread (poly)", "qty": 1, "unit": "spool", "note": "topstitch optional"},
+    ]
     pattern.metadata = {
         "fc100_rank": 91,
         "fabric_hint": "manta-cruda",
