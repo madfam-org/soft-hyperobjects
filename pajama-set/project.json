@@ -1,0 +1,221 @@
+{
+  "project": {
+    "name": "Pajama Set",
+    "slug": "pajama-set",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #41 — the commons' first TWO-GARMENT cartridge: a complete sleep set in one object. The top rides the casual-button-down drop-shoulder block at lounge ease: front cut 2 with a 28 mm button stand past CF (four buttonhole cross-marks, chest patch-pocket trace), plain back on fold, a long sleeve whose cap is solved numerically to the front + back armholes, and the notched collar simplified to the solved one-piece band collar. The pants ride the sweatpants side-seamed block: front inseam bowed by a solved amount to the deeper back fork, straight open hems, and an elastic + drawstring casing waistband with two exit crosses at CF. Modes render the top, the pants, or the full set; the BOM always totals both garments.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #41 del FC-100 — el primer cartucho de DOS PRENDAS del commons: un conjunto de dormir completo en un solo objeto. La camisa monta el bloque de hombro caído de la camisa casual con holgura de descanso: delantero cortado en 2 con cartera de 28 mm después del centro frente (cuatro cruces de ojal, trazo de bolsa al pecho), trasero liso al doblez, manga larga cuya copa se resuelve numéricamente contra las sisas delantera + trasera, y el cuello de solapas simplificado al cuello mao de una pieza resuelto. El pantalón monta el bloque con costura lateral de los pants: entrepierna delantera curvada por una cantidad resuelta hacia el tiro trasero más profundo, bajos rectos abiertos y una pretina tipo casing con elástico + cordón (jareta) y dos cruces de salida al centro frente. Los modos renderizan la camisa, el pantalón o el conjunto completo; el BOM siempre suma ambas prendas.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["pajama-set", "pijama", "sleepwear", "loungewear", "set", "two-garment", "band-collar", "drawstring", "woven", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet; top on the casual-button-down drop-shoulder block with its solved band collar (collar-band enabler rule); pants on the sweatpants side-seamed block with the solved front-inseam bow and the scrubs-pants drawstring-exit casing",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "top",
+      "label": { "en": "Pajama top", "es": "Camisa de pijama" },
+      "script_file": "main.py",
+      "pieces": ["top_front", "top_back", "top_sleeve", "collar"]
+    },
+    {
+      "id": "pants",
+      "label": { "en": "Pajama pants", "es": "Pantalón de pijama" },
+      "script_file": "main.py",
+      "pieces": ["pant_front", "pant_back", "pant_waistband"]
+    },
+    {
+      "id": "set",
+      "label": { "en": "Full set (both garments)", "es": "Conjunto completo (ambas prendas)" },
+      "script_file": "main.py",
+      "pieces": ["top_front", "top_back", "top_sleeve", "collar", "pant_front", "pant_back", "pant_waistband"]
+    }
+  ],
+  "pieces": [
+    { "id": "top_front", "label": { "en": "Top Front", "es": "Delantero (camisa)" }, "default_color": "#5b84ad", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "top_back", "label": { "en": "Top Back", "es": "Trasero (camisa)" }, "default_color": "#4e7398", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "top_sleeve", "label": { "en": "Top Sleeve (long)", "es": "Manga (camisa)" }, "default_color": "#6f95bb", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "collar", "label": { "en": "Band Collar", "es": "Cuello mao" }, "default_color": "#86a8c9", "cut": { "quantity": 2, "on_fold": true, "mirror": true } },
+    { "id": "pant_front", "label": { "en": "Pant Front Leg", "es": "Pierna delantera" }, "default_color": "#a89a7e", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "pant_back", "label": { "en": "Pant Back Leg", "es": "Pierna trasera" }, "default_color": "#8f8268", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "pant_waistband", "label": { "en": "Pant Waistband Casing", "es": "Pretina (casing)" }, "default_color": "#bcae94", "cut": { "quantity": 1 } }
+  ],
+  "parameter_groups": [
+    { "id": "body", "label": { "en": "Body Measurements", "es": "Medidas Corporales" } },
+    { "id": "fit", "label": { "en": "Fit & Style", "es": "Ajuste y Estilo" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción" } }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth", "type": "slider", "default": 1000, "min": 700, "max": 1800, "step": 10,
+      "group": "body", "modes": ["top", "set"],
+      "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" },
+      "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" }
+    },
+    {
+      "id": "hip_girth", "type": "slider", "default": 1000, "min": 650, "max": 1800, "step": 10,
+      "group": "body", "modes": ["pants", "set"],
+      "measurement": { "standard": "iso_8559", "code": "hip_girth" },
+      "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" }
+    },
+    {
+      "id": "top_length", "type": "slider", "default": 720, "min": 400, "max": 1000, "step": 10,
+      "group": "body", "modes": ["top", "set"],
+      "label": { "en": "Top length, nape to hem (mm)", "es": "Largo de la camisa, nuca a dobladillo (mm)" }
+    },
+    {
+      "id": "inseam_length", "type": "slider", "default": 720, "min": 300, "max": 950, "step": 10,
+      "group": "body", "modes": ["pants", "set"],
+      "measurement": { "standard": "iso_8559", "code": "inside_leg_length" },
+      "label": { "en": "Inseam (mm)", "es": "Entrepierna (mm)" }
+    },
+    {
+      "id": "sleeve_length", "type": "slider", "default": 580, "min": 100, "max": 660, "step": 10,
+      "group": "body", "modes": ["top", "set"],
+      "label": { "en": "Sleeve length, shoulder to hem (mm)", "es": "Largo de manga, hombro a dobladillo (mm)" }
+    },
+    {
+      "id": "front_rise", "type": "slider", "default": 275, "min": 190, "max": 380, "step": 5,
+      "group": "body", "modes": ["pants", "set"],
+      "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)" }
+    },
+    {
+      "id": "back_rise", "type": "slider", "default": 315, "min": 190, "max": 460, "step": 5,
+      "group": "body", "modes": ["pants", "set"],
+      "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)" }
+    },
+    {
+      "id": "lounge_ease", "type": "slider", "default": 180, "min": 80, "max": 400, "step": 10,
+      "group": "fit",
+      "label": { "en": "Total lounge ease (mm; both garments)", "es": "Holgura total de descanso (mm; ambas prendas)" }
+    },
+    {
+      "id": "hem_width", "type": "slider", "default": 135, "min": 90, "max": 260, "step": 5,
+      "group": "fit", "modes": ["pants", "set"],
+      "label": { "en": "Pant hem half-width, flat (mm)", "es": "Medio bajo del pantalón, extendido (mm)" }
+    },
+    {
+      "id": "collar_height", "type": "slider", "default": 60, "min": 40, "max": 90, "step": 5,
+      "group": "construction", "modes": ["top", "set"],
+      "label": { "en": "Band collar height (mm)", "es": "Alto del cuello mao (mm)" }
+    },
+    {
+      "id": "button_stand", "type": "slider", "default": 28, "min": 20, "max": 40, "step": 2,
+      "group": "construction", "modes": ["top", "set"],
+      "label": { "en": "Button-stand width past CF (mm)", "es": "Ancho de cartera después del centro frente (mm)" }
+    },
+    {
+      "id": "elastic_width", "type": "slider", "default": 30, "min": 20, "max": 60, "step": 5,
+      "group": "construction", "modes": ["pants", "set"],
+      "label": { "en": "Elastic width (mm)", "es": "Ancho de elástico (mm)" }
+    },
+    {
+      "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1,
+      "group": "construction",
+      "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" }
+    },
+    {
+      "id": "hem_allowance", "type": "slider", "default": 25, "min": 0, "max": 50, "step": 5,
+      "group": "construction",
+      "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" }
+    }
+  ],
+  "presets": [
+    {
+      "id": "size-m", "label": { "en": "M", "es": "M" },
+      "values": { "chest_girth": 1000, "hip_girth": 1000, "top_length": 720, "inseam_length": 720, "sleeve_length": 580 }
+    },
+    {
+      "id": "size-l", "label": { "en": "L", "es": "G" },
+      "values": { "chest_girth": 1080, "hip_girth": 1080, "top_length": 750, "inseam_length": 740, "sleeve_length": 600 }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "back_rise >= front_rise",
+      "severity": "error",
+      "message": {
+        "en": "Back rise must be at least the front rise",
+        "es": "El tiro trasero debe ser al menos el delantero"
+      }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["popelina-algodon", "manta-cruda"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "edges": [
+          { "piece": "top_front", "edge": "neck" },
+          { "piece": "top_back", "edge": "neck" },
+          { "piece": "collar", "edge": "neck" }
+        ],
+        "parameters": ["chest_girth", "collar_height"]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "edges": [
+          { "piece": "top_front", "edge": "armhole" },
+          { "piece": "top_back", "edge": "armhole" },
+          { "piece": "top_sleeve", "edge": "cap" }
+        ],
+        "parameters": ["chest_girth", "lounge_ease"]
+      },
+      {
+        "id": "waistband",
+        "type": "waistband",
+        "edges": [
+          { "piece": "pant_front", "edge": "waist" },
+          { "piece": "pant_back", "edge": "waist" }
+        ],
+        "parameters": ["hip_girth", "elastic_width"]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          { "piece": "top_front", "edge": "hem" },
+          { "piece": "top_back", "edge": "hem" },
+          { "piece": "pant_front", "edge": "hem" },
+          { "piece": "pant_back", "edge": "hem" }
+        ],
+        "parameters": ["top_length", "hem_width", "hem_allowance"]
+      },
+      {
+        "id": "button_stand",
+        "type": "button_stand",
+        "edges": [
+          { "piece": "top_front", "edge": "center" }
+        ],
+        "parameters": ["button_stand"]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": false,
+      "multi_garment": true
+    },
+    "societal_benefit": {
+      "en": "A third of every life is spent in sleepwear, yet it is where sizing failures are most tolerated and most felt. The FC-100's first two-garment cartridge cuts a complete made-to-measure sleep set from one marker with one honest BOM, and establishes the set contract — namespaced pieces, per-garment modes, combined consumption — that scrubs, uniforms, and suit sets will reuse.",
+      "es": "Un tercio de cada vida transcurre en ropa de dormir, y aun así es donde más se toleran y más se sienten las fallas de tallaje. El primer cartucho de dos prendas del FC-100 corta un conjunto de dormir completo a la medida desde un solo marcador con un BOM honesto, y establece el contrato de conjunto — piezas con espacio de nombres, modos por prenda, consumo combinado — que reutilizarán los uniformes, los scrubs y los trajes."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
