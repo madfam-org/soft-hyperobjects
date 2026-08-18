@@ -1,0 +1,99 @@
+{
+  "project": {
+    "name": "Swim Trunks",
+    "slug": "swim-trunks",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #53. Board-short-style men's swim trunks: a relaxed outer trunk (mid-thigh, woven-like fit even in 4-way-stretch swim tricot, so no negative ease on the outer) with an elastic waistband casing and an internal drawcord, worn over a fitted mesh brief liner. One waistband casing catches both layers; the mesh liner attaches only at the waist and hangs free at the leg. The outer carries a curved, split side hem (a bezier that sweeps up at the side seam — the board-short side vent) and a patch back pocket with a drain eyelet. The outer back hem width and the liner back hem width are both solved analytically so the straight inseams match, the mesh liner waist is pinned to the outer waist so the waist stack balances, and the liner leg openings carry exact-mm elastic cut lengths in the BOM. Eyelet/grommet hardware is a Yantra4D cartridge reference, not re-implemented here.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #53 del FC-100. Traje de baño (short) estilo board-short para hombre: un short exterior holgado (a media pierna, con caída de tela plana aun en tricot de baño de estiramiento en cuatro direcciones, por lo que el exterior no lleva holgura negativa) con pretina elástica y cordón interno, sobre un forro interior de malla tipo brief ajustado. Una sola pretina atrapa ambas capas; el forro de malla se une solo en la cintura y cuelga libre en la pierna. El exterior lleva un bajo lateral curvo y abierto (una curva bezier que sube en la costura lateral — la abertura lateral del board-short) y un bolsillo trasero de parche con ojal de drenaje. El ancho del bajo trasero exterior y el del forro se resuelven analíticamente para que las entrepiernas rectas coincidan, la cintura del forro de malla se fija a la cintura exterior para que la pila de cintura cuadre, y las aberturas de pierna del forro llevan largos de elástico exactos en mm en la lista de materiales. La herrajería de ojales/arandelas es una referencia de cartucho Yantra4D, no se reimplementa aquí.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["swim", "trunks", "board-shorts", "swimwear", "active", "liner", "mesh", "curved-hem", "elastic", "drawcord", "negative-ease", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" },
+        { "source": "running-shorts cartridge (outer + built-in liner + shared waistband architecture, analytic back-hem solves, exact-mm elastics)", "license": "LicenseRef-FC1-pending" },
+        { "source": "athletic-shorts cartridge (analytic back-hem inseam solve, elastic casing)", "license": "LicenseRef-FC1-pending" },
+        { "source": "panties-bikini cartridge (mesh brief liner: elastic-finished edges, negative ease, exact-mm elastic cut lengths)", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "swim-trunks",
+      "label": { "en": "Swim trunks (all pieces)", "es": "Traje de baño short (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["outer_front", "outer_back", "liner_front", "liner_back", "waistband", "back_pocket"]
+    }
+  ],
+  "pieces": [
+    { "id": "outer_front", "label": { "en": "Outer Front", "es": "Delantero exterior" }, "default_color": "#1f5f78", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "outer_back", "label": { "en": "Outer Back", "es": "Trasero exterior" }, "default_color": "#164a5e", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "liner_front", "label": { "en": "Mesh Liner Front (brief)", "es": "Forro de malla delantero (brief)" }, "default_color": "#3f8aa0", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "liner_back", "label": { "en": "Mesh Liner Back (brief)", "es": "Forro de malla trasero (brief)" }, "default_color": "#2f7a90", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "waistband", "label": { "en": "Waistband Casing", "es": "Pretina (casing)" }, "default_color": "#4f9ab0", "cut": { "quantity": 1 } },
+    { "id": "back_pocket", "label": { "en": "Back Patch Pocket", "es": "Bolsillo trasero de parche" }, "default_color": "#5faac0", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "hip_girth", "type": "slider", "default": 1000, "min": 650, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
+    { "id": "outer_inseam", "type": "slider", "default": 220, "min": 120, "max": 320, "step": 10, "label": { "en": "Outer inseam (mm)", "es": "Entrepierna exterior (mm)" } },
+    { "id": "liner_inseam", "type": "slider", "default": 40, "min": 20, "max": 120, "step": 5, "label": { "en": "Mesh liner inseam (mm)", "es": "Entrepierna del forro de malla (mm)" } },
+    { "id": "front_rise", "type": "slider", "default": 265, "min": 190, "max": 380, "step": 5, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)" } },
+    { "id": "back_rise", "type": "slider", "default": 300, "min": 190, "max": 440, "step": 5, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)" } },
+    { "id": "sport_ease", "type": "slider", "default": 170, "min": 90, "max": 380, "step": 10, "label": { "en": "Outer ease (mm)", "es": "Holgura del exterior (mm)" } },
+    { "id": "outer_hem_width", "type": "slider", "default": 285, "min": 190, "max": 380, "step": 5, "label": { "en": "Outer hem half-width (mm)", "es": "Medio bajo exterior (mm)" } },
+    { "id": "side_scoop", "type": "slider", "default": 45, "min": 0, "max": 130, "step": 5, "label": { "en": "Side-hem scoop (mm)", "es": "Curva del bajo lateral (mm)" } },
+    { "id": "liner_neg_ease", "type": "slider", "default": 8, "min": 0, "max": 18, "step": 1, "label": { "en": "Liner negative ease (%)", "es": "Holgura negativa del forro (%)" } },
+    { "id": "elastic_width", "type": "slider", "default": 35, "min": 20, "max": 60, "step": 5, "label": { "en": "Waist elastic width (mm)", "es": "Ancho del elástico de cintura (mm)" } },
+    { "id": "waist_elastic_ratio", "type": "slider", "default": 0.92, "min": 0.8, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Waist elastic/opening ratio", "es": "Proporción elástico/abertura de cintura" } },
+    { "id": "leg_elastic_ratio", "type": "slider", "default": 0.9, "min": 0.75, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Leg elastic/opening ratio", "es": "Proporción elástico/abertura de pierna" } },
+    { "id": "drawcord_ratio", "type": "slider", "default": 1.35, "min": 1.0, "max": 1.7, "step": 0.05, "advanced": true, "label": { "en": "Drawcord/waist ratio", "es": "Proporción cordón/cintura" } },
+    { "id": "pocket_width", "type": "slider", "default": 140, "min": 90, "max": 200, "step": 5, "label": { "en": "Back pocket width (mm)", "es": "Ancho del bolsillo trasero (mm)" } },
+    { "id": "pocket_depth", "type": "slider", "default": 150, "min": 90, "max": 220, "step": 5, "label": { "en": "Back pocket depth (mm)", "es": "Alto del bolsillo trasero (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 8, "min": 0, "max": 15, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 22, "min": 0, "max": 40, "step": 2, "label": { "en": "Outer hem allowance (mm)", "es": "Margen de dobladillo exterior (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "hip_girth": 1000, "outer_inseam": 220, "liner_inseam": 40 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "hip_girth": 1080, "outer_inseam": 235, "liner_inseam": 45, "front_rise": 275, "back_rise": 310 } },
+    { "id": "long-vent", "label": { "en": "Long with deep side vent", "es": "Largo con abertura lateral profunda" }, "values": { "outer_inseam": 280, "side_scoop": 95 } }
+  ],
+  "constraints": [
+    {
+      "expression": "liner_inseam <= outer_inseam",
+      "severity": "warning",
+      "message": { "en": "The mesh brief liner should sit inside the outer trunk — keep the liner inseam at or below the outer inseam", "es": "El forro de malla debe quedar dentro del short exterior — mantén la entrepierna del forro igual o menor que la exterior" }
+    },
+    {
+      "expression": "side_scoop <= outer_inseam",
+      "severity": "warning",
+      "message": { "en": "A side scoop taller than the inseam leaves almost no side seam to sew", "es": "Una curva lateral mayor que la entrepierna deja casi sin costura lateral que coser" }
+    },
+    {
+      "expression": "liner_neg_ease <= 15",
+      "severity": "warning",
+      "message": { "en": "Above 15% negative ease demands a high-elastane swim knit; check the fabric card", "es": "Arriba de 15% de holgura negativa exige punto de baño con alto elastano; revisa la ficha de tela" }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["tricot-nylon-elastano"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "waistband", "type": "waistband", "label": { "en": "Waist elastic + drawcord (both layers)", "es": "Elástico de cintura + cordón (ambas capas)" }, "edges": [{ "piece": "outer_front", "edge": "waist" }, { "piece": "outer_back", "edge": "waist" }, { "piece": "liner_front", "edge": "waist" }, { "piece": "liner_back", "edge": "waist" }], "parameters": ["hip_girth", "elastic_width", "waist_elastic_ratio", "drawcord_ratio"] },
+      { "id": "outer_hem", "type": "hem", "label": { "en": "Outer split side hem", "es": "Bajo lateral abierto exterior" }, "edges": [{ "piece": "outer_front", "edge": "hem" }, { "piece": "outer_back", "edge": "hem" }], "parameters": ["outer_hem_width", "side_scoop", "hem_allowance"] },
+      { "id": "liner_leg", "type": "hem", "label": { "en": "Mesh liner leg openings (elastic)", "es": "Aberturas de pierna del forro de malla (elástico)" }, "edges": [{ "piece": "liner_front", "edge": "hem" }, { "piece": "liner_back", "edge": "hem" }], "parameters": ["liner_inseam", "liner_neg_ease", "leg_elastic_ratio"] },
+      { "id": "drawcord_eyelets", "type": "custom", "label": { "en": "Drawcord eyelets (Yantra4D hardware)", "es": "Ojales del cordón (herraje Yantra4D)" }, "edges": [{ "piece": "waistband", "edge": "top" }], "parameters": ["drawcord_ratio"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": true, "knit_negative_ease": true, "elastic_finish": true, "built_in_liner": true, "hardware_reference": true },
+    "societal_benefit": {
+      "en": "The commons' first swimwear draft: a relaxed board-short trunk and its mesh brief liner as one verified object, with the drafting math brands keep proprietary in the open — both back hems solved so the straight inseams match, the mesh liner waist pinned so both layers meet the band at one length, and exact-mm waist, leg, and drawcord cut lengths computed from the measured pattern. The relaxed outer honestly takes no negative ease while the mesh liner carries it, teaching the difference between a comfort shell and a fitted knit. Eyelet hardware federates to Yantra4D rather than being re-modelled here.",
+      "es": "El primer trazo de traje de baño del commons: un short board-short holgado y su forro de malla tipo brief como un solo objeto verificado, con la matemática de trazo que las marcas mantienen propietaria en abierto — ambos bajos traseros resueltos para que las entrepiernas rectas coincidan, la cintura del forro de malla fijada para que ambas capas lleguen a la pretina al mismo largo, y largos exactos en mm de cintura, pierna y cordón calculados desde el patrón medido. El exterior holgado honestamente no lleva holgura negativa mientras el forro de malla sí la lleva, enseñando la diferencia entre una capa de confort y un punto ajustado. La herrajería de ojales se federa a Yantra4D en vez de re-modelarse aquí."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

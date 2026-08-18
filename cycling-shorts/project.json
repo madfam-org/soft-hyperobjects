@@ -1,0 +1,94 @@
+{
+  "project": {
+    "name": "Cycling Shorts",
+    "slug": "cycling-shorts",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #58. A compression cycling short: leggings cut to a long mid-thigh in athletic power-stretch, with an anatomical crotch gusset and a placed chamois pad. Fold-cut front and fuller back at ~15% negative ease, each with a long leg; the gusset front and back edges match the body forks by construction, and the chamois insert (a purchased pad) is located by a placement marking. The shorter inseam is bowed to the longer by a solved amount, the wide flat fold-over waistband attach edge equals the full measured waist opening, and the leg openings carry silicone gripper elastic cut to exact mm.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #58 del FC-100. Un short de ciclismo de compresión: mallas cortadas a media pierna larga en punto deportivo de alto estiramiento, con refuerzo anatómico de entrepierna y badana colocada. Delantero cortado al doblez y trasero más amplio con ~15% de holgura negativa, cada uno con pierna larga; los bordes delantero y trasero del refuerzo igualan a las entrepiernas por construcción, y la badana (una almohadilla comprada) se ubica por una marca de colocación. La entrepierna más corta se curva hasta la más larga por una cantidad resuelta, el borde de unión de la pretina plana ancha doblada iguala la abertura de cintura medida completa, y las aberturas de pierna llevan elástico de silicón cortado a mm exactos.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["cycling-shorts", "activewear", "compression", "chamois", "knit", "negative-ease", "elastic", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" },
+        { "source": "projects/boxer-briefs (fold-cut mid-thigh leg + gusset by construction + fold-over waistband + solved inseam bow)", "license": "LicenseRef-FC1-pending" },
+        { "source": "projects/leggings (compression leg with solved inseam + diamond gusset + fold-over waistband from measured waist)", "license": "LicenseRef-FC1-pending" },
+        { "source": "projects/panties-bikini (negative ease + exact-mm elastic accounting + gusset matched by construction)", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "cycling-shorts",
+      "label": { "en": "Cycling shorts (all pieces)", "es": "Short de ciclismo (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "gusset", "waistband"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#2b2f33", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "back", "label": { "en": "Back (full seat)", "es": "Trasero (asiento completo)" }, "default_color": "#22262a", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "gusset", "label": { "en": "Gusset + chamois placement", "es": "Refuerzo + colocación de badana" }, "default_color": "#3d4247", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "waistband", "label": { "en": "Waistband (wide flat fold-over)", "es": "Pretina (plana ancha doblada)" }, "default_color": "#16191c", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "waist_girth", "type": "slider", "default": 800, "min": 500, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
+    { "id": "hip_girth", "type": "slider", "default": 960, "min": 600, "max": 1700, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip/seat girth (mm)", "es": "Contorno de cadera/asiento (mm)" } },
+    { "id": "body_rise", "type": "slider", "default": 250, "min": 180, "max": 360, "step": 5, "measurement": { "standard": "iso_8559", "code": "body_rise" }, "label": { "en": "Body rise, crotch to waist (mm)", "es": "Tiro, entrepierna a cintura (mm)" } },
+    { "id": "inseam_length", "type": "slider", "default": 230, "min": 180, "max": 300, "step": 5, "measurement": { "standard": "iso_8559", "code": "inside_leg_length" }, "label": { "en": "Leg inseam, mid-thigh (mm)", "es": "Entrepierna de pierna, media pierna (mm)" } },
+    { "id": "thigh_girth", "type": "slider", "default": 560, "min": 360, "max": 900, "step": 10, "measurement": { "standard": "iso_8559", "code": "thigh_girth" }, "label": { "en": "Thigh girth at leg hem (mm)", "es": "Contorno de muslo en el borde (mm)" } },
+    { "id": "negative_ease_pct", "type": "slider", "default": 15, "min": 8, "max": 20, "step": 1, "label": { "en": "Negative ease (%)", "es": "Holgura negativa (%)" } },
+    { "id": "back_rise_extra", "type": "slider", "default": 35, "min": 0, "max": 70, "step": 5, "advanced": true, "label": { "en": "Back rise extra (mm)", "es": "Tiro trasero adicional (mm)" } },
+    { "id": "gusset_front_w", "type": "slider", "default": 56, "min": 40, "max": 110, "step": 2, "advanced": true, "label": { "en": "Gusset front width (mm)", "es": "Ancho delantero del refuerzo (mm)" } },
+    { "id": "gusset_back_w", "type": "slider", "default": 80, "min": 40, "max": 130, "step": 2, "advanced": true, "label": { "en": "Gusset back width (mm)", "es": "Ancho trasero del refuerzo (mm)" } },
+    { "id": "gusset_len", "type": "slider", "default": 150, "min": 90, "max": 200, "step": 5, "advanced": true, "label": { "en": "Gusset length (mm)", "es": "Largo del refuerzo (mm)" } },
+    { "id": "waistband_height", "type": "slider", "default": 40, "min": 25, "max": 70, "step": 5, "label": { "en": "Waistband stand height (mm)", "es": "Alto de pretina (mm)" } },
+    { "id": "waistband_ratio", "type": "slider", "default": 0.9, "min": 0.82, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Waistband elastic/waist ratio", "es": "Proporción elástico/cintura de pretina" } },
+    { "id": "leg_gripper_ratio", "type": "slider", "default": 0.94, "min": 0.85, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Leg gripper/opening ratio", "es": "Proporción elástico de silicón/abertura de pierna" } },
+    { "id": "seam_allowance", "type": "slider", "default": 6, "min": 0, "max": 12, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-s", "label": { "en": "S", "es": "CH" }, "values": { "waist_girth": 720, "hip_girth": 880, "thigh_girth": 500 } },
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "waist_girth": 800, "hip_girth": 960, "thigh_girth": 560 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "waist_girth": 900, "hip_girth": 1060, "thigh_girth": 640 } },
+    { "id": "long", "label": { "en": "Long (knee-length)", "es": "Largo (a la rodilla)" }, "values": { "inseam_length": 290 } }
+  ],
+  "constraints": [
+    {
+      "expression": "negative_ease_pct >= 8",
+      "severity": "warning",
+      "message": { "en": "Below 8% negative ease a cycling short slips under load — compression needs a firm grip", "es": "Debajo de 8% de holgura negativa el short se desliza con el esfuerzo — la compresión necesita agarre firme" }
+    },
+    {
+      "expression": "negative_ease_pct <= 18",
+      "severity": "warning",
+      "message": { "en": "Above 18% negative ease demands the high-recovery compression card; check the fabric", "es": "Arriba de 18% de holgura negativa exige el punto de compresión de alta recuperación; revisa la tela" }
+    },
+    {
+      "expression": "gusset_back_w >= gusset_front_w",
+      "severity": "warning",
+      "message": { "en": "A back gusset narrower than the front is unusual — verify the seat width", "es": "Un refuerzo trasero más angosto que el delantero es inusual — verifica el ancho del asiento" }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["poliester-elastano-compresion"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "waistband", "type": "waistband", "label": { "en": "Wide flat waistband", "es": "Pretina plana ancha" }, "edges": [{ "piece": "waistband", "edge": "bottom" }, { "piece": "front", "edge": "waist" }, { "piece": "back", "edge": "waist" }], "parameters": ["waist_girth", "negative_ease_pct", "waistband_ratio", "waistband_height"] },
+      { "id": "leg_openings", "type": "hem", "label": { "en": "Leg openings (silicone gripper)", "es": "Aberturas de pierna (silicón)" }, "edges": [{ "piece": "front", "edge": "leg_hem" }, { "piece": "back", "edge": "leg_hem" }], "parameters": ["thigh_girth", "leg_gripper_ratio"] },
+      { "id": "gusset", "type": "custom", "label": { "en": "Gusset + chamois", "es": "Refuerzo + badana" }, "edges": [{ "piece": "gusset", "edge": "front_edge" }, { "piece": "gusset", "edge": "back_edge" }], "parameters": ["gusset_front_w", "gusset_back_w", "gusset_len"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": true, "elastic_finish": true },
+    "societal_benefit": {
+      "en": "The commons' cycling reference: a compression short with the fit math in the open — exact-mm waistband and silicone-gripper leg cut lengths computed from the measured openings, a crotch gusset proven to fit its bodies at render time, and a chamois pad placed by a marking so the padded insert federates as a purchased component rather than being locked into one brand's block.",
+      "es": "La referencia de ciclismo del commons: un short de compresión con la matemática del ajuste en abierto — largos exactos en mm de la pretina y del elástico de silicón de pierna calculados desde las aberturas medidas, un refuerzo de entrepierna cuyo ajuste a los cuerpos se comprueba al renderizar, y una badana ubicada por una marca para que el inserto acolchado federe como componente comprado en lugar de quedar encerrado en el molde de una sola marca."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
