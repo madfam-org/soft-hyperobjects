@@ -1,0 +1,162 @@
+{
+  "project": {
+    "name": "Flannel Shirt",
+    "slug": "flannel-shirt",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #76 — the classic brushed-cotton casual flannel button-up, a relaxed woven shirt whose signature is that the cloth is PLAID and the craft is matching the pattern across every seam. Structurally it is the dress-shirt family solved for a soft, roomy flannel: a CF button-stand front cut 2 with seven buttonhole marks and a curved shirttail hem, a back ending at the yoke seam, a yoke carrying the back neck and shoulders, a set-in sleeve solved numerically to the front + back armholes with a barrel cuff, and a two-piece turndown collar whose stand is solved to the measured neckline and whose fall is chained to the stand's top edge. Plaid matching is modelled as match-point notches at whole plaid repeats down the shared side seam, a chest patch pocket + flap whose placement is snapped to the plaid grid, and a fabric yardage allowance for the matching waste — the plaid_repeat parameter drives the match-notch spacing.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #76 del FC-100 — la clásica camisa casual de franela de algodón cepillado, una camisa de tejido plano holgada cuya firma es que la tela es DE CUADROS y el oficio es casar el patrón en cada costura. Estructuralmente es la familia de la camisa de vestir resuelta para una franela suave y amplia: delantero con tapeta de botones cortado en 2 con siete marcas de ojal y dobladillo de cola curva, espalda que termina en la costura del canesú, canesú que lleva el escote trasero y los hombros, manga montada resuelta numéricamente contra las sisas delantera + trasera con puño de barril, y cuello de dos piezas cuyo pie se resuelve al escote medido y cuya caída se encadena al borde superior del pie. El casado de cuadros se modela como piquetes de coincidencia a repeticiones enteras del cuadro a lo largo de la costura lateral compartida, una bolsa de parche al pecho con tapa cuya ubicación se ajusta a la retícula del cuadro, y una tolerancia de metraje de tela para el desperdicio del casado — el parámetro plaid_repeat controla el espaciado de los piquetes de coincidencia.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["shirt", "camisa", "flannel", "franela", "plaid", "button-down", "collar", "yoke", "cuff", "woven", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" },
+        { "source": "Yoke-split woven shirt block, chained collar stand + fall solve, and barrel cuff from the dress-shirt (rank #4) cartridge", "license": "LicenseRef-FC1-pending" },
+        { "source": "CF button-stand front, curved shirttail hem via shared side edge, and real patch-pocket piece from the casual-button-down (rank #20), shirt-dress (rank #26), chore-coat (rank #65), and patch-pocket enabler cartridges", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "shirt",
+      "label": { "en": "Flannel shirt (all pieces)", "es": "Camisa de franela (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "yoke", "sleeve", "cuff", "stand", "fall", "pocket", "flap"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#8c4a3d", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "back", "label": { "en": "Back", "es": "Espalda" }, "default_color": "#a15b4a", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "yoke", "label": { "en": "Yoke (doubled)", "es": "Canesú (doble)" }, "default_color": "#b56d58", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#c67e68", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "cuff", "label": { "en": "Cuff", "es": "Puño" }, "default_color": "#d69078", "cut": { "quantity": 2 } },
+    { "id": "stand", "label": { "en": "Collar Stand", "es": "Pie de Cuello" }, "default_color": "#e2a389", "cut": { "quantity": 2, "on_fold": true, "mirror": true } },
+    { "id": "fall", "label": { "en": "Collar Fall", "es": "Cuello" }, "default_color": "#ecb69e", "cut": { "quantity": 2, "on_fold": true, "mirror": true } },
+    { "id": "pocket", "label": { "en": "Chest Patch Pocket", "es": "Bolsa de Parche al Pecho" }, "default_color": "#d8a07c", "cut": { "quantity": 1 } },
+    { "id": "flap", "label": { "en": "Pocket Flap", "es": "Tapa de Bolsa" }, "default_color": "#e6b48c", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "default": 1060, "min": 700, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
+    { "id": "body_length", "type": "slider", "default": 760, "min": 500, "max": 1000, "step": 10, "label": { "en": "Body length, nape to CB hem (mm)", "es": "Largo de cuerpo, nuca a dobladillo CE (mm)" } },
+    { "id": "neck_girth", "type": "slider", "default": 410, "min": 300, "max": 520, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "default": 620, "min": 400, "max": 750, "step": 10, "measurement": { "standard": "iso_8559", "code": "arm_length" }, "label": { "en": "Sleeve length, cap to wrist (mm)", "es": "Largo de manga, copa a puño (mm)" } },
+    { "id": "woven_ease", "type": "slider", "default": 200, "min": 80, "max": 400, "step": 10, "label": { "en": "Total ease (mm; relaxed flannel fit)", "es": "Holgura total (mm; corte de franela holgado)" } },
+    { "id": "button_stand", "type": "slider", "default": 32, "min": 20, "max": 50, "step": 2, "label": { "en": "Button stand width past CF (mm)", "es": "Ancho de tapeta después del centro frente (mm)" } },
+    { "id": "yoke_drop", "type": "slider", "default": 105, "min": 60, "max": 160, "step": 5, "advanced": true, "label": { "en": "Yoke drop below HPS (mm)", "es": "Caída del canesú bajo el hombro (mm)" } },
+    { "id": "wrist_opening", "type": "slider", "default": 250, "min": 180, "max": 320, "step": 10, "label": { "en": "Wrist opening (mm)", "es": "Abertura de puño (mm)" } },
+    { "id": "collar_height", "type": "slider", "default": 68, "min": 45, "max": 90, "step": 5, "label": { "en": "Collar fall depth at CB (mm)", "es": "Alto de la caída del cuello en CE (mm)" } },
+    { "id": "plaid_repeat", "type": "slider", "default": 40, "min": 10, "max": 120, "step": 5, "label": { "en": "Plaid repeat / tartan block (mm)", "es": "Repetición del cuadro / bloque de tartán (mm)" } },
+    { "id": "shirttail_drop", "type": "slider", "default": 70, "min": 0, "max": 140, "step": 10, "label": { "en": "Curved shirttail drop at CB (mm; 0 = straight hem)", "es": "Caída de la cola curva en CE (mm; 0 = dobladillo recto)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 15, "min": 0, "max": 50, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1060, "body_length": 760, "neck_girth": 410, "sleeve_length": 620, "wrist_opening": 250 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1140, "body_length": 780, "neck_girth": 425, "sleeve_length": 645, "wrist_opening": 260, "plaid_repeat": 50 } }
+  ],
+  "constraints": [
+    {
+      "expression": "button_stand >= 25",
+      "severity": "warning",
+      "message": {
+        "en": "Narrow button stands crowd standard 11-12 mm shirt buttons",
+        "es": "Tapetas angostas aprietan los botones de camisa estándar de 11-12 mm"
+      }
+    },
+    {
+      "expression": "plaid_repeat <= 80",
+      "severity": "warning",
+      "message": {
+        "en": "Plaid repeats above ~80 mm are oversized checks; matching them wastes a lot of cloth (see the BOM matching allowance)",
+        "es": "Repeticiones de cuadro de más de ~80 mm son cuadros muy grandes; casarlos desperdicia mucha tela (ver la tolerancia de casado en el BOM)"
+      }
+    },
+    {
+      "expression": "yoke_drop >= 60",
+      "severity": "warning",
+      "message": {
+        "en": "Very shallow yokes leave no room for the back neck curve",
+        "es": "Canesús muy bajos no dejan espacio para la curva del escote trasero"
+      }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["felpa-algodon"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "edges": [
+          { "piece": "front", "edge": "neck" },
+          { "piece": "yoke", "edge": "neck" },
+          { "piece": "stand", "edge": "neck" }
+        ],
+        "parameters": ["neck_girth", "collar_height"]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "edges": [
+          { "piece": "front", "edge": "armhole" },
+          { "piece": "back", "edge": "armhole" },
+          { "piece": "sleeve", "edge": "cap" }
+        ],
+        "parameters": ["chest_girth", "woven_ease"]
+      },
+      {
+        "id": "cuff",
+        "type": "cuff",
+        "edges": [
+          { "piece": "sleeve", "edge": "hem" },
+          { "piece": "cuff", "edge": "bottom" }
+        ],
+        "parameters": ["wrist_opening"]
+      },
+      {
+        "id": "button_stand",
+        "type": "button_stand",
+        "edges": [
+          { "piece": "front", "edge": "center" }
+        ],
+        "parameters": ["button_stand", "body_length"]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          { "piece": "front", "edge": "hem" },
+          { "piece": "back", "edge": "hem" }
+        ],
+        "parameters": ["shirttail_drop", "hem_allowance"]
+      },
+      {
+        "id": "pocket",
+        "type": "pocket",
+        "edges": [
+          { "piece": "pocket", "edge": "top" },
+          { "piece": "flap", "edge": "top" }
+        ],
+        "parameters": ["plaid_repeat"]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "plaid_matching": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
+    "societal_benefit": {
+      "en": "The flannel shirt is the workwear-and-weekend staple of cold climates, and it is the garment that teaches plaid matching — the craft that separates a made shirt from a bought one. A verified parametric draft carries the match-points as notches and snaps the pocket to the plaid grid, so a sewing co-op or a home sewist can cut a checked shirt whose pattern runs unbroken across every seam, and can budget the extra cloth honestly instead of guessing.",
+      "es": "La camisa de franela es el básico de trabajo y de fin de semana de los climas fríos, y es la prenda que enseña el casado de cuadros — el oficio que separa una camisa hecha de una comprada. Un trazo paramétrico verificado lleva los puntos de coincidencia como piquetes y ajusta la bolsa a la retícula del cuadro, de modo que una cooperativa de costura o una persona en casa puede cortar una camisa de cuadros cuyo patrón corre sin cortes por cada costura, y puede presupuestar la tela extra con honestidad en vez de adivinarla."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "project": {
+    "name": "Chef Coat",
+    "slug": "chef-coat",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #87 — the classic double-breasted chef's jacket (filipina de chef), parametric and honestly simplified to teaching grade. The signature is the wide crossover double-breasted front: each front is cut 2 mirrored with its center edge extended a generous crossover past CF (default 110 mm) so the right front wraps well over the left, with two marked columns of knotted cloth/china buttons — an outer column near the wrap edge and an inner column near CF (~2 columns × 5). A stand/mandarin band collar and a one-piece sleeve cap are both solved by bisection to the measured openings (collar at zero ease, cap with a small declared ease); the sleeve carries a turn-back cuff fold and a pocket trace; the roomy body has side vents marked, a thermometer chest pocket traced, and a straight hem; and a straight crossover front facing is verified against the measured center + neck run. Reversible construction and the cloth knot buttons are documented notes.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #87 del FC-100 — la clásica filipina de chef cruzada (doble botonadura), paramétrica y simplificada con honestidad a grado didáctico. La firma es el cruce ancho de doble botonadura: cada delantero se corta en 2 espejado con el canto central extendido un cruce generoso más allá del centro frente (110 mm por defecto), de modo que el delantero derecho envuelve bien sobre el izquierdo, con dos columnas marcadas de botones de nudo de tela/china — una columna exterior junto al borde del cruce y una interior junto al centro frente (~2 columnas × 5). Un cuello mao (banda de pie) y la copa de una manga de una pieza se resuelven por bisección al escote y las sisas medidas (el cuello sin embebido, la copa con un pequeño embebido declarado); la manga lleva un doblez de puño vuelto y una bolsa trazada; el cuerpo holgado lleva aberturas laterales marcadas, una bolsa de termómetro al pecho trazada y bajo recto; y una vista delantera recta del cruce se verifica contra el recorrido medido de canto + escote. La construcción reversible y los botones de nudo de tela son notas documentadas.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["chef-coat", "filipina", "workwear", "uniform", "double-breasted", "cloth-buttons", "band-collar", "woven", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" },
+        { "source": "casual-button-down (rank #20) — drop/set-in woven front block, button-stand + front-neck overlap, solved band-collar and bisected sleeve-cap architecture", "license": "LicenseRef-FC1-pending" },
+        { "source": "blazer (rank #30) — wide button-stand extension for the crossover front, eased-cap solver, and straight-facing-verified-against-front-run method", "license": "LicenseRef-FC1-pending" },
+        { "source": "collar-band enabler — neck-edge bisection method for the stand/mandarin collar", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "chef-coat",
+      "label": { "en": "Chef coat (all pieces)", "es": "Filipina de chef (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "sleeve", "collar", "facing"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front (double-breasted)", "es": "Delantero (cruzado)" }, "default_color": "#f2f4f7", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "back", "label": { "en": "Back", "es": "Espalda" }, "default_color": "#e6eaef", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#dfe4ea", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "collar", "label": { "en": "Band Collar", "es": "Cuello Mao" }, "default_color": "#d3dae2", "cut": { "quantity": 2, "on_fold": true, "mirror": true } },
+    { "id": "facing", "label": { "en": "Crossover Front Facing", "es": "Vista Delantera del Cruce" }, "default_color": "#c8d0da", "cut": { "quantity": 2, "mirror": true } }
+  ],
+  "parameters": [
+    { "id": "target_piece", "type": "select", "default": "set", "advanced": true, "label": { "en": "Piece to draft", "es": "Pieza a trazar" }, "options": [
+      { "value": "set", "label": { "en": "Full set", "es": "Conjunto completo" } },
+      { "value": "front", "label": { "en": "Front only", "es": "Solo delantero" } },
+      { "value": "back", "label": { "en": "Back only", "es": "Solo espalda" } },
+      { "value": "sleeve", "label": { "en": "Sleeve only", "es": "Solo manga" } },
+      { "value": "collar", "label": { "en": "Collar only", "es": "Solo cuello" } },
+      { "value": "facing", "label": { "en": "Facing only", "es": "Solo vista" } }
+    ] },
+    { "id": "chest_girth", "type": "slider", "default": 1080, "min": 760, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
+    { "id": "body_length", "type": "slider", "default": 780, "min": 500, "max": 1000, "step": 10, "label": { "en": "Body length, nape to hem (mm)", "es": "Largo de cuerpo, nuca a bajo (mm)" } },
+    { "id": "neck_girth", "type": "slider", "default": 410, "min": 300, "max": 520, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "default": 610, "min": 150, "max": 720, "step": 10, "measurement": { "standard": "iso_8559", "code": "arm_length" }, "label": { "en": "Sleeve length, cap to hem (mm)", "es": "Largo de manga, copa a bajo (mm)" } },
+    { "id": "coat_ease", "type": "slider", "default": 200, "min": 120, "max": 360, "step": 10, "label": { "en": "Total ease (mm; roomy comfort fit)", "es": "Holgura total (mm; corte holgado)" } },
+    { "id": "crossover", "type": "slider", "default": 110, "min": 70, "max": 160, "step": 5, "label": { "en": "Crossover: wrap edge past CF (mm)", "es": "Cruce: borde de solape más allá del centro frente (mm)" } },
+    { "id": "collar_height", "type": "slider", "default": 55, "min": 40, "max": 75, "step": 5, "label": { "en": "Band collar height (mm)", "es": "Alto del cuello mao (mm)" } },
+    { "id": "cap_ease", "type": "slider", "default": 15, "min": 0, "max": 30, "step": 5, "advanced": true, "label": { "en": "Sleeve cap ease (mm)", "es": "Embebido de copa (mm)" } },
+    { "id": "cuff_turnback", "type": "slider", "default": 60, "min": 0, "max": 90, "step": 5, "advanced": true, "label": { "en": "Turn-back cuff depth (mm)", "es": "Profundidad de puño vuelto (mm)" } },
+    { "id": "vent_height", "type": "slider", "default": 160, "min": 80, "max": 260, "step": 10, "advanced": true, "label": { "en": "Side vent height above hem (mm)", "es": "Alto de abertura lateral sobre el bajo (mm)" } },
+    { "id": "button_rows", "type": "slider", "default": 5, "min": 3, "max": 7, "step": 1, "label": { "en": "Buttons per column", "es": "Botones por columna" } },
+    { "id": "seam_allowance", "type": "slider", "default": 12, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 25, "min": 0, "max": 50, "step": 5, "advanced": true, "label": { "en": "Hem allowance (mm)", "es": "Margen de bajo (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1080, "body_length": 780, "neck_girth": 410, "sleeve_length": 610, "crossover": 110 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1180, "body_length": 800, "neck_girth": 430, "sleeve_length": 630, "crossover": 120 } }
+  ],
+  "constraints": [
+    {
+      "expression": "crossover >= 80",
+      "severity": "warning",
+      "message": {
+        "en": "A double-breasted chef coat needs a generous wrap; below ~80 mm the fronts barely cross and the second button column crowds CF",
+        "es": "Una filipina cruzada necesita un solape generoso; debajo de ~80 mm los delanteros apenas se cruzan y la segunda columna aprieta el centro frente"
+      }
+    },
+    {
+      "expression": "collar_height <= 70",
+      "severity": "warning",
+      "message": {
+        "en": "Band collars above ~70 mm collide with the jaw on most necks",
+        "es": "Cuellos mao de más de ~70 mm chocan con la mandíbula en la mayoría de los cuellos"
+      }
+    },
+    {
+      "expression": "cap_ease <= 25",
+      "severity": "warning",
+      "message": {
+        "en": "A comfort chef sleeve eases at most ~25 mm; more and the roomy cap ripples at the shoulder",
+        "es": "Una manga de chef holgada embebe cuando mucho ~25 mm; con más, la copa amplia se frunce en el hombro"
+      }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["popelina-algodon", "manta-cruda"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "edges": [
+          { "piece": "front", "edge": "neck" },
+          { "piece": "back", "edge": "neck" },
+          { "piece": "collar", "edge": "neck" }
+        ],
+        "parameters": ["neck_girth", "collar_height"]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "edges": [
+          { "piece": "front", "edge": "armhole" },
+          { "piece": "back", "edge": "armhole" },
+          { "piece": "sleeve", "edge": "cap" }
+        ],
+        "parameters": ["chest_girth", "coat_ease", "cap_ease"]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          { "piece": "front", "edge": "hem" },
+          { "piece": "back", "edge": "hem" }
+        ],
+        "parameters": ["body_length", "hem_allowance"]
+      },
+      {
+        "id": "button_stand",
+        "type": "button_stand",
+        "edges": [
+          { "piece": "front", "edge": "center" }
+        ],
+        "parameters": ["crossover", "button_rows"]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "double_breasted": true,
+      "reversible": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
+    "societal_benefit": {
+      "en": "The chef coat is a uniform of professional dignity worn every day in every kitchen, yet it is bought disposable and sized to letters; a verified parametric draft lets culinary schools, co-ops, and small workshops cut it made-to-measure and locally — the double-breasted wrap, band collar, eased sleeve, and vents all regenerate as declared, checked geometry, so a learner can see exactly how the front crosses and why the neckline closes, and the reversible cloth-button build can be repaired and re-fronted instead of thrown away.",
+      "es": "La filipina de chef es un uniforme de dignidad profesional que se usa a diario en toda cocina, pero se compra desechable y por tallas de letra; un trazo paramétrico verificado permite a escuelas de gastronomía, cooperativas y talleres pequeños cortarla a la medida y localmente — el cruce de doble botonadura, el cuello mao, la manga embebida y las aberturas se regeneran como geometría declarada y comprobada, así que quien aprende ve exactamente cómo cruza el delantero y por qué cierra el escote, y la construcción reversible con botones de tela puede repararse y re-frentearse en vez de tirarse."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

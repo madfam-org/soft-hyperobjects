@@ -1,0 +1,101 @@
+{
+  "project": {
+    "name": "Lab Coat",
+    "slug": "lab-coat",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #88 — the classic knee-length white lab coat, a relaxed single-breasted coat cut to layer over street clothes: a one-piece button-stand front whose center edge breaks at the roll point into a modest notch lapel and a straight gorge (five buttonhole marks, the roll line, and chest and hip patch-pocket placements traced), a back with a gently shaped center-back seam, a CB vent, and a half-belt marking at the waist, a convertible two-piece notch collar solved to the measured gorge plus back neck, a one-piece set-in sleeve solved to the summed armholes plus a small cap ease with a cuff-tab marking, a straight front facing verified against the measured front-edge run, and — the signature — three real patch pockets (two large hip pockets and one chest pocket carrying a pen slot) appliquéd to marked placements. Every seam is length-verified and regenerates true to body measurements.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #88 del FC-100 — la clásica bata de laboratorio blanca a la rodilla, un abrigo holgado de un solo pecho cortado para llevarse sobre la ropa de calle: un delantero de una pieza con tapeta cuyo canto rompe en el punto de quiebre en una solapa de muesca modesta y un escote (gorge) recto (cinco marcas de ojal, la línea de quiebre y las ubicaciones de bolsillos de parche al pecho y a la cadera trazadas), una espalda con costura central suavemente formada, una abertura trasera (vent) y una marca de media-cinturón a la cintura, un cuello de muesca convertible de dos piezas resuelto al gorge medido más el escote trasero, una manga montada de una pieza resuelta a la suma de las sisas más un pequeño embebido de copa con marca de trabilla de puño, una vista delantera recta verificada contra el recorrido medido del canto delantero, y — el sello distintivo — tres bolsillos de parche reales (dos grandes a la cadera y uno al pecho con ranura para pluma) aplicados sobre ubicaciones marcadas. Cada costura se verifica en longitud y se regenera fiel a las medidas del cuerpo.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["lab-coat", "coat", "workwear", "uniform", "notch-lapel", "patch-pocket", "vent", "half-belt", "outerwear", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" },
+        { "source": "overcoat (rank #63) — knee-length coat frame, center→lapel→gorge break, shaped CB seam with a vent + half-belt marking, upper collar solved to gorge + back neck, and straight facing verified against the measured front-edge run", "license": "LicenseRef-FC1-pending" },
+        { "source": "blazer (rank #30) — notch-lapel front, roll line, and one-piece eased set-in sleeve solved to the summed armholes", "license": "LicenseRef-FC1-pending" },
+        { "source": "chore-coat (rank #65) — three real patch pockets (chest cut 1 + hip cut 2) appliquéd to traced placements", "license": "LicenseRef-FC1-pending" },
+        { "source": "patch-pocket enabler — chamfered patch-pocket piece with a hem-facing opening and topstitch attach guide", "license": "LicenseRef-FC1-pending" },
+        { "source": "dress-shirt (rank #4) — woven front block, button stand, and chained-solve architecture", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "coat",
+      "label": { "en": "Lab coat (all pieces)", "es": "Bata de laboratorio (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "sleeve", "collar", "facing", "patch_chest", "patch_hip"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#eef1f4", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "back", "label": { "en": "Back", "es": "Espalda" }, "default_color": "#e6eaee", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#dfe4e9", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "collar", "label": { "en": "Upper Collar", "es": "Cuello Superior" }, "default_color": "#d7dde3", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "facing", "label": { "en": "Front Facing", "es": "Vista Delantera" }, "default_color": "#cfd6dd", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "patch_chest", "label": { "en": "Chest Patch Pocket", "es": "Bolsillo de Parche (pecho)" }, "default_color": "#c7cfd7", "cut": { "quantity": 1 } },
+    { "id": "patch_hip", "label": { "en": "Hip Patch Pocket", "es": "Bolsillo de Parche (cadera)" }, "default_color": "#bfc8d1", "cut": { "quantity": 2 } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "default": 1040, "min": 800, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
+    { "id": "body_length", "type": "slider", "default": 1050, "min": 880, "max": 1250, "step": 10, "label": { "en": "Body length, nape to hem (mm)", "es": "Largo de cuerpo, nuca a bajo (mm)" } },
+    { "id": "neck_girth", "type": "slider", "default": 400, "min": 320, "max": 540, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "default": 640, "min": 480, "max": 760, "step": 10, "measurement": { "standard": "iso_8559", "code": "arm_length" }, "label": { "en": "Sleeve length, cap to wrist (mm)", "es": "Largo de manga, copa a muñeca (mm)" } },
+    { "id": "coat_ease", "type": "slider", "default": 220, "min": 140, "max": 360, "step": 10, "label": { "en": "Total ease (mm; relaxed layering fit)", "es": "Holgura total (mm; corte holgado para capas)" } },
+    { "id": "button_stand", "type": "slider", "default": 20, "min": 15, "max": 35, "step": 1, "label": { "en": "Button-stand width past CF (mm)", "es": "Ancho de tapeta después del centro frente (mm)" } },
+    { "id": "lapel_width", "type": "slider", "default": 72, "min": 55, "max": 100, "step": 1, "label": { "en": "Notch lapel point past CF (mm)", "es": "Punta de solapa de muesca más allá del CF (mm)" } },
+    { "id": "roll_line_y", "type": "slider", "default": 720, "min": 520, "max": 900, "step": 10, "advanced": true, "label": { "en": "Roll point above hem (mm)", "es": "Punto de quiebre sobre el bajo (mm)" } },
+    { "id": "collar_height", "type": "slider", "default": 60, "min": 45, "max": 80, "step": 5, "label": { "en": "Collar height (mm)", "es": "Alto de cuello (mm)" } },
+    { "id": "cap_ease", "type": "slider", "default": 16, "min": 0, "max": 35, "step": 1, "advanced": true, "label": { "en": "Sleeve cap ease (mm)", "es": "Embebido de copa de manga (mm)" } },
+    { "id": "vent_height", "type": "slider", "default": 280, "min": 180, "max": 420, "step": 10, "advanced": true, "label": { "en": "CB vent height (mm)", "es": "Alto de abertura trasera (mm)" } },
+    { "id": "buttons", "type": "slider", "default": 5, "min": 3, "max": 7, "step": 1, "label": { "en": "Front closure buttons", "es": "Botones de cierre delantero" } },
+    { "id": "pocket_width", "type": "slider", "default": 180, "min": 150, "max": 240, "step": 5, "label": { "en": "Hip patch-pocket width (mm)", "es": "Ancho de bolsillo de parche a la cadera (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 12, "min": 8, "max": 18, "step": 1, "advanced": true, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 35, "min": 20, "max": 55, "step": 5, "advanced": true, "label": { "en": "Hem allowance (mm)", "es": "Margen de bajo (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1040, "body_length": 1050, "neck_girth": 400, "sleeve_length": 640, "pocket_width": 180 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1140, "body_length": 1090, "neck_girth": 420, "sleeve_length": 665, "roll_line_y": 750, "pocket_width": 195 } }
+  ],
+  "constraints": [
+    {
+      "expression": "coat_ease >= 160",
+      "severity": "warning",
+      "message": { "en": "A lab coat needs at least 160 mm of ease to layer over street clothes", "es": "Una bata de laboratorio necesita al menos 160 mm de holgura para llevarse sobre la ropa de calle" }
+    },
+    {
+      "expression": "roll_line_y <= body_length - 220",
+      "severity": "warning",
+      "message": { "en": "A high roll point crowds the lapel against the chest line — keep it near waist level", "es": "Un punto de quiebre alto aprieta la solapa contra la línea de pecho — manténgalo cerca de la cintura" }
+    },
+    {
+      "expression": "lapel_width <= button_stand + 85",
+      "severity": "warning",
+      "message": { "en": "Very wide lapels overwhelm the straight v0 facing strip", "es": "Solapas muy anchas rebasan la vista recta de la v0" }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["popelina-algodon", "manta-cruda"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "gorge" }, { "piece": "back", "edge": "neck" }, { "piece": "collar", "edge": "neck" }], "parameters": ["neck_girth", "lapel_width", "collar_height"] },
+      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }, { "piece": "sleeve", "edge": "cap" }], "parameters": ["chest_girth", "coat_ease", "cap_ease"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["body_length", "chest_girth", "coat_ease"] },
+      { "id": "button_stand", "type": "button_stand", "edges": [{ "piece": "front", "edge": "center" }], "parameters": ["button_stand", "roll_line_y", "buttons"] },
+      { "id": "chest_pocket", "type": "pocket", "edges": [{ "piece": "patch_chest", "edge": "top" }], "parameters": ["pocket_width"] },
+      { "id": "hip_pocket", "type": "pocket", "edges": [{ "piece": "patch_hip", "edge": "top" }], "parameters": ["pocket_width"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "tailoring": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "The lab coat is a uniform of expertise handed out identical and disposable, yet it is one of the simplest coats to draft: a straight notch lapel, a set-in sleeve, three patch pockets, and a vent. Opened as a made-to-measure commons draft, its roll-line break, neckline-solved collar, and appliquéd pockets — including the pen slot that every wearer knows and no pattern ever names — show how a working coat is assembled, and every piece regenerates true when the body measurements change, so a clinic, a lab, or a school can cut coats that actually fit, in the fabric they choose, and repair them instead of replacing them.",
+      "es": "La bata de laboratorio es un uniforme de pericia que se reparte idéntico y desechable, y sin embargo es uno de los abrigos más simples de trazar: una solapa de muesca recta, una manga montada, tres bolsillos de parche y una abertura. Abierta como trazo del común a medida, su rompimiento en la línea de quiebre, su cuello resuelto al escote y sus bolsillos aplicados — incluida la ranura para pluma que toda persona que la usa conoce y ningún patrón nombra — muestran cómo se ensambla un abrigo de trabajo, y cada pieza se regenera fiel cuando cambian las medidas del cuerpo, así que una clínica, un laboratorio o una escuela pueden cortar batas que de verdad ajusten, en la tela que elijan, y repararlas en vez de reemplazarlas."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

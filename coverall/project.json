@@ -1,0 +1,119 @@
+{
+  "project": {
+    "name": "Coverall",
+    "slug": "coverall",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #84 — the classic mechanic's one-piece work coverall. A sleeved, collared woven bodice (front cut 2 with a full center-front separating zipper from collar to waist, a bi-swing ACTION BACK pleat over each shoulder blade, and a band collar solved to the neckline) joins a straight-leg trouser at a declared waist seam — the jumpsuit top-to-bottom join, with bodice hems and leg waists driven by the same waist formulas so the eight-reference seam closes at zero delta. Three real patch pockets (chest bib, hip, thigh tool) and a buttoned cuff finish it; the zipper and snaps federate to Yantra4D.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #84 del FC-100 — el clásico overol industrial de una pieza. Un talle de tela plana con mangas y cuello (delantero cortado en 2 con cierre separable de centro frente completo del cuello a la cintura, un pliegue de ESPALDA DE ACCIÓN bi-swing sobre cada omóplato y un cuello mao resuelto al escote) se une a un pantalón de pierna recta en una costura de cintura declarada — la unión de arriba a abajo del jumpsuit, con los dobladillos del talle y las cinturas de la pierna derivados de las mismas fórmulas para que la costura de ocho referencias cierre con delta cero. Tres bolsas de parche reales (pecho, cadera y de herramienta al muslo) y un puño abotonado lo terminan; el cierre y los broches se federan a Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["coverall", "overol", "boilersuit", "one-piece", "workwear", "woven", "zipper", "action-back", "patch-pocket", "waist-seam", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet (work coverall: shirt bodice + trouser joined at the waist, bi-swing action back)", "license": "original" },
+        { "source": "Fashion Cabinet jumpsuit cartridge (one-piece top-to-bottom waist-seam join, shared waist formulas, solved front-inseam bow)", "license": "LicenseRef-FC1-pending" },
+        { "source": "Fashion Cabinet casual-button-down cartridge (drop-shoulder woven bodice, solved sleeve cap, one-piece band collar solved to the neckline)", "license": "LicenseRef-FC1-pending" },
+        { "source": "Fashion Cabinet chinos cartridge (side-seamed woven leg block, solved inseam bow, patch-pocket placement)", "license": "LicenseRef-FC1-pending" },
+        { "source": "Fashion Cabinet patch-pocket enabler cartridge (chamfered hexagon patch pocket with hem facing and topstitch guide)", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "coverall",
+      "label": { "en": "Coverall (all pieces)", "es": "Overol (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["bodice_front", "bodice_back", "sleeve", "cuff", "collar", "leg_front", "leg_back", "chest_pocket", "hip_pocket", "thigh_pocket"]
+    }
+  ],
+  "pieces": [
+    { "id": "bodice_front", "label": { "en": "Bodice Front", "es": "Talle Delantero" }, "default_color": "#3f5573", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "bodice_back", "label": { "en": "Bodice Back (action pleat)", "es": "Talle Trasero (pliegue de acción)" }, "default_color": "#354a63", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#4c688a", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "cuff", "label": { "en": "Cuff", "es": "Puño" }, "default_color": "#5f7ca0", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "collar", "label": { "en": "Band Collar", "es": "Cuello Mao" }, "default_color": "#6f8cb0", "cut": { "quantity": 2, "on_fold": true, "mirror": true } },
+    { "id": "leg_front", "label": { "en": "Leg Front", "es": "Pierna Delantera" }, "default_color": "#43607c", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "leg_back", "label": { "en": "Leg Back", "es": "Pierna Trasera" }, "default_color": "#3a5470", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "chest_pocket", "label": { "en": "Chest Bib Pocket", "es": "Bolsa de Pecho" }, "default_color": "#86a0c0", "cut": { "quantity": 2 } },
+    { "id": "hip_pocket", "label": { "en": "Hip Pocket", "es": "Bolsa de Cadera" }, "default_color": "#96aecb", "cut": { "quantity": 2 } },
+    { "id": "thigh_pocket", "label": { "en": "Thigh Tool Pocket", "es": "Bolsa de Herramienta (muslo)" }, "default_color": "#a8bcd4", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "default": 1080, "min": 700, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
+    { "id": "waist_girth", "type": "slider", "default": 940, "min": 550, "max": 1650, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "tooltip": { "en": "Drives BOTH sides of the waist seam", "es": "Determina AMBOS lados de la costura de cintura" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
+    { "id": "hip_girth", "type": "slider", "default": 1060, "min": 700, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
+    { "id": "neck_girth", "type": "slider", "default": 420, "min": 320, "max": 560, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
+    { "id": "bodice_length", "type": "slider", "default": 430, "min": 320, "max": 620, "step": 10, "label": { "en": "Bodice length, nape to waist seam (mm)", "es": "Largo de talle, nuca a costura de cintura (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "default": 610, "min": 200, "max": 720, "step": 10, "label": { "en": "Sleeve length, shoulder to cuff line (mm)", "es": "Largo de manga, hombro a línea de puño (mm)" } },
+    { "id": "inseam_length", "type": "slider", "default": 740, "min": 300, "max": 950, "step": 10, "label": { "en": "Inseam length (mm)", "es": "Largo de entrepierna (mm)" } },
+    { "id": "front_rise", "type": "slider", "default": 280, "min": 200, "max": 380, "step": 5, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)" } },
+    { "id": "back_rise", "type": "slider", "default": 320, "min": 200, "max": 470, "step": 5, "tooltip": { "en": "Clamped between front rise and front rise + 90", "es": "Se limita entre el tiro delantero y el tiro delantero + 90" }, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)" } },
+    { "id": "coverall_ease", "type": "slider", "default": 220, "min": 120, "max": 400, "step": 10, "label": { "en": "Total woven work ease (mm)", "es": "Holgura total de trabajo en tela plana (mm)" } },
+    { "id": "hem_width", "type": "slider", "default": 125, "min": 95, "max": 260, "step": 5, "label": { "en": "Leg half-hem width (mm)", "es": "Ancho de medio dobladillo de pierna (mm)" } },
+    { "id": "action_pleat", "type": "slider", "default": 45, "min": 0, "max": 80, "step": 5, "tooltip": { "en": "Bi-swing intake per shoulder blade; folded at the shoulder seam. 0 = plain back", "es": "Fuelle bi-swing por omóplato; se pliega en la costura de hombro. 0 = espalda lisa" }, "label": { "en": "Action-back pleat intake (mm)", "es": "Fuelle de espalda de acción (mm)" } },
+    { "id": "collar_height", "type": "slider", "default": 70, "min": 40, "max": 95, "step": 5, "label": { "en": "Band collar height (mm)", "es": "Alto del cuello mao (mm)" } },
+    { "id": "cuff_height", "type": "slider", "default": 70, "min": 45, "max": 100, "step": 5, "label": { "en": "Cuff height, folded (mm)", "es": "Alto del puño, doblado (mm)" } },
+    { "id": "zipper_length", "type": "slider", "default": 700, "min": 400, "max": 1000, "step": 10, "tooltip": { "en": "Separating zipper measured from the collar top down the whole center front", "es": "Cierre separable medido desde el cuello por todo el centro frente" }, "label": { "en": "Zipper length (mm)", "es": "Largo de cierre (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 12, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 35, "min": 0, "max": 60, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1080, "waist_girth": 940, "hip_girth": 1060, "inseam_length": 740 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1180, "waist_girth": 1040, "hip_girth": 1160, "inseam_length": 770 } },
+    { "id": "insulated-fit", "label": { "en": "Insulated (layer-over)", "es": "Aislado (sobre capas)" }, "values": { "coverall_ease": 320, "action_pleat": 65 } }
+  ],
+  "constraints": [
+    {
+      "expression": "back_rise >= front_rise",
+      "severity": "warning",
+      "message": { "en": "A back rise below the front rise is clamped up to the front rise by the draft", "es": "Un tiro trasero menor al delantero se eleva al tiro delantero en el trazo" }
+    },
+    {
+      "expression": "waist_girth <= chest_girth + 200",
+      "severity": "warning",
+      "message": { "en": "A waist much larger than the chest fights the fitted bodice side taper; add ease instead", "es": "Una cintura mucho mayor al pecho pelea con el entalle del talle; añade holgura en su lugar" }
+    },
+    {
+      "expression": "coverall_ease >= 120",
+      "severity": "warning",
+      "message": { "en": "A work coverall needs generous ease to move and layer under; below ~120 mm it binds at the action back", "es": "Un overol de trabajo necesita holgura para moverse y llevar capas; debajo de ~120 mm se restringe en la espalda de acción" }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["mezclilla-denim", "manta-cruda"],
+  "notion": {
+    "kind": "zipper",
+    "subtype": "separating",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "zipper-notion",
+      "linked": true,
+      "params_map": { "length_mm": "zipper_length" }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "bodice_front", "edge": "neck" }, { "piece": "bodice_back", "edge": "neck" }, { "piece": "collar", "edge": "neck" }], "parameters": ["neck_girth", "collar_height"] },
+      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "bodice_front", "edge": "armhole" }, { "piece": "bodice_back", "edge": "armhole" }, { "piece": "sleeve", "edge": "cap" }], "parameters": ["chest_girth", "coverall_ease"] },
+      { "id": "cuff", "type": "cuff", "edges": [{ "piece": "sleeve", "edge": "hem" }, { "piece": "cuff", "edge": "bottom" }], "parameters": ["sleeve_length", "cuff_height"] },
+      { "id": "cf_zipper", "type": "zipper_tape", "edges": [{ "piece": "bodice_front", "edge": "center" }, { "piece": "collar", "edge": "front_edge" }], "parameters": ["zipper_length", "bodice_length", "collar_height"] },
+      { "id": "waist_seam", "type": "waistband", "edges": [{ "piece": "bodice_front", "edge": "hem" }, { "piece": "bodice_back", "edge": "hem" }, { "piece": "leg_front", "edge": "waist" }, { "piece": "leg_back", "edge": "waist" }], "parameters": ["waist_girth", "coverall_ease"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "leg_front", "edge": "hem" }, { "piece": "leg_back", "edge": "hem" }], "parameters": ["hem_width", "hem_allowance"] },
+      { "id": "chest_pocket_mouth", "type": "pocket", "edges": [{ "piece": "chest_pocket", "edge": "top" }], "parameters": [] },
+      { "id": "hip_pocket_mouth", "type": "pocket", "edges": [{ "piece": "hip_pocket", "edge": "top" }], "parameters": [] },
+      { "id": "thigh_pocket_mouth", "type": "pocket", "edges": [{ "piece": "thigh_pocket", "edge": "top" }], "parameters": [] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "The one-piece work coverall is the uniform of mechanics, farmers, and line workers everywhere; a verified parametric draft lets co-ops and workshops cut protective, repairable workwear to real bodies in local heavy cloth — bi-swing action back for a full range of motion, honest patch pockets that carry tools, and a zip front that opens fully to don over boots.",
+      "es": "El overol de una pieza es el uniforme de mecánicos, campesinos y operarios en todo el mundo; un trazo paramétrico verificado permite a cooperativas y talleres cortar ropa de trabajo protectora y reparable a cuerpos reales en tela pesada local — espalda de acción bi-swing para libertad de movimiento, bolsas de parche honestas que cargan herramienta y un frente con cierre que abre por completo para ponerse sobre las botas."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
