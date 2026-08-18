@@ -1,0 +1,99 @@
+{
+  "project": {
+    "name": "Puffer Vest",
+    "slug": "puffer-vest",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #64. A roomy sleeveless insulated zip vest — the puffer jacket with the sleeves removed. The front is cut as two mirrored halves whose center edge is the full separating-zipper seam (15 mm tape allowance, stop notches, 7 mm stitch line); with no sleeve, each armhole is a finished/bound edge (the waistcoat's bound-armscye method). Horizontal quilt channels are drawn as sew-through traces on the shell at a channel-spacing parameter; the garment is shell + lining quilted over down/synthetic fill, and a stand/funnel collar is solved by bisection to the neck opening. The hem is a bound/elastic-cased finished edge; zipper hardware is federated to Yantra4D via the zipper-notion cartridge.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #64 del FC-100. Un chaleco acolchado con cierre, holgado y sin mangas — la chamarra puffer sin las mangas. El delantero se corta en dos mitades espejadas cuyo borde central es la costura del cierre separable completo (margen de cinta de 15 mm, piquetes de tope, pespunte a 7 mm); al no haber manga, cada sisa es un borde terminado/ribeteado (el método de sisa ribeteada del chaleco de vestir). Los canales de acolchado horizontales se trazan como líneas de pespunte pasante sobre el shell según un parámetro de separación de canales; la prenda es shell + forro acolchados sobre relleno de pluma/sintético, y un cuello alto/tipo embudo se resuelve por bisección contra la abertura de cuello. El dobladillo es un borde terminado con elástico/jareta; el herraje del cierre se federa a Yantra4D vía el cartucho zipper-notion.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["puffer", "vest", "gilet", "zipper", "quilted", "insulated", "outerwear", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" },
+        { "source": "zip-hoodie block family (CF halve-at-center-front zip transform)", "license": "LicenseRef-FC1-pending" },
+        { "source": "bomber-jacket (zip body block + derived stand collar)", "license": "LicenseRef-FC1-pending" },
+        { "source": "waistcoat (sleeveless bound-armscye method)", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "puffer-vest",
+      "label": { "en": "Puffer vest (all pieces)", "es": "Chaleco acolchado (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "collar"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front (zip half, quilted)", "es": "Delantero (mitad del cierre, acolchado)" }, "default_color": "#3a4a58", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "back", "label": { "en": "Back (quilted)", "es": "Trasero (acolchado)" }, "default_color": "#2f3d49", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "collar", "label": { "en": "Stand Collar (funnel)", "es": "Cuello Alto (embudo)" }, "default_color": "#4c5e6c", "cut": { "quantity": 1, "on_fold": true, "mirror": true } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "default": 1060, "min": 700, "max": 1900, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
+    { "id": "body_length", "type": "slider", "default": 680, "min": 440, "max": 900, "step": 10, "label": { "en": "Body length to hem (mm)", "es": "Largo de cuerpo hasta dobladillo (mm)" } },
+    { "id": "neck_girth", "type": "slider", "default": 400, "min": 300, "max": 540, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
+    { "id": "puffer_ease", "type": "slider", "default": 240, "min": 120, "max": 480, "step": 10, "label": { "en": "Total ease over layers (mm)", "es": "Holgura total sobre capas (mm)" } },
+    { "id": "channel_spacing", "type": "slider", "default": 80, "min": 40, "max": 160, "step": 5, "label": { "en": "Quilt channel spacing (mm)", "es": "Separación de canales de acolchado (mm)" } },
+    { "id": "collar_height", "type": "slider", "default": 90, "min": 40, "max": 140, "step": 5, "label": { "en": "Stand collar height (mm)", "es": "Alto del cuello alto (mm)" } },
+    { "id": "loft_mm", "type": "slider", "default": 25, "min": 8, "max": 60, "step": 1, "label": { "en": "Insulation loft (mm)", "es": "Loft del aislante (mm)" } },
+    { "id": "hem_elastic", "type": "slider", "default": 0.9, "min": 0.7, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Hem draw ratio", "es": "Proporción de ajuste del dobladillo" } },
+    { "id": "pockets", "type": "checkbox", "default": true, "label": { "en": "Zip hand-warmer pocket markings", "es": "Marcas de bolsas con cierre" } },
+    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 22, "min": 0, "max": 40, "step": 1, "advanced": true, "label": { "en": "Hem casing allowance (mm)", "es": "Margen de jareta del dobladillo (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1060, "body_length": 680, "neck_girth": 400 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1140, "body_length": 705, "neck_girth": 420 } }
+  ],
+  "constraints": [
+    {
+      "expression": "channel_spacing <= body_length / 3",
+      "severity": "warning",
+      "message": { "en": "Very wide quilt channels relative to body length leave too few loft lines", "es": "Canales de acolchado muy anchos respecto al largo dejan muy pocas líneas de loft" }
+    },
+    {
+      "expression": "collar_height <= neck_girth / 3",
+      "severity": "warning",
+      "message": { "en": "A stand collar taller than a third of the neck girth folds over on itself", "es": "Un cuello alto de más de un tercio del contorno de cuello se dobla sobre sí mismo" }
+    },
+    {
+      "expression": "body_length - 80 + hem_allowance <= 900",
+      "severity": "warning",
+      "message": { "en": "Derived separating-zipper length exceeds common stock lengths (900 mm)", "es": "El largo derivado del cierre separable excede los largos comunes de stock (900 mm)" }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["nylon-ripstop-shell"],
+  "notion": {
+    "kind": "zipper",
+    "subtype": "separating",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "zipper-notion",
+      "linked": true,
+      "params_map": { "length_mm": "zipper_length_mm" }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "neck" }, { "piece": "back", "edge": "neck" }, { "piece": "collar", "edge": "neckline" }], "parameters": ["neck_girth", "collar_height"] },
+      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }], "parameters": ["chest_girth", "puffer_ease"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["hem_elastic", "hem_allowance"] },
+      { "id": "zipper_tape", "type": "zipper_tape", "edges": [{ "piece": "front", "edge": "center" }, { "piece": "collar", "edge": "front_edge" }], "parameters": ["body_length", "hem_allowance", "seam_allowance"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false, "insulated_quilting": true },
+    "societal_benefit": {
+      "en": "The commons' sleeveless insulated layer: it takes the full-front-zip body from the zip-hoodie/bomber line and removes the sleeves into bound armscyes, then adds the puffer craft the whole outerwear tier reuses — quilt channels drawn as sew-through traces at a spacing parameter, insulation and lining carried as BOM by garment area, and a stand/funnel collar solved to the neck. The gilet is the most accessible entry to insulated construction, and its quilt-channel + fill-BOM pattern feeds the puffer jacket, parka and beyond, with zipper hardware federated to Yantra4D.",
+      "es": "La capa aislante sin mangas del commons: toma el cuerpo con cierre frontal completo de la línea zip-hoodie/bomber y quita las mangas convirtiéndolas en sisas ribeteadas, y suma la técnica puffer que reutiliza toda la gama de abrigo — canales de acolchado trazados como líneas de pespunte pasante según un parámetro de separación, aislante y forro llevados como BOM por área de prenda, y un cuello alto/embudo resuelto contra el cuello. El chaleco es la entrada más accesible a la construcción aislada, y su patrón de canales + BOM de relleno alimenta la chamarra puffer, la parka y más, con el herraje del cierre federado a Yantra4D."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
