@@ -1,0 +1,73 @@
+{
+  "project": {
+    "name": "Palazzo Pants",
+    "slug": "palazzo-pants",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #79. A dramatically wide-leg pull-on trouser on the sweatpants side-seamed woven block: front/back legs that flare from the hip to a very wide hem on both the outseam and inseam, the front inseam bowed by a solved amount to match the deeper back fork, an elastic waistband casing, and a select waist finish (elastic pull-on by default, or a left side zipper).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #79 del FC-100. Pantalón palazzo de tiro sin bragueta sobre el bloque de tela con costura lateral del pants: piernas delantera/trasera que se ensanchan desde la cadera hasta un bajo muy amplio en el costado y la entrepierna, con la entrepierna delantera curvada por una cantidad resuelta para igualar el tiro trasero más profundo, pretina de casing con elástico y acabado de cintura seleccionable (elástico por defecto o cierre en el costado izquierdo).\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": ["palazzo-pants", "wide-leg", "bottoms", "trousers", "pull-on", "woven", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" },
+        { "source": "Sweatpants side-seamed elastic-waist leg block (projects/sweatpants)", "license": "LicenseRef-FC1-pending" },
+        { "source": "Chinos woven trouser (projects/chinos) — solved front-inseam bow and derived two-half waistband idiom", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    { "id": "palazzo-pants", "label": { "en": "Palazzo pants (all pieces)", "es": "Pantalón palazzo (todas las piezas)" }, "script_file": "main.py", "pieces": ["front", "back", "waistband"] }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front Leg", "es": "Pierna Delantera" }, "default_color": "#b9a98f", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "back", "label": { "en": "Back Leg", "es": "Pierna Trasera" }, "default_color": "#9c8c72", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "waistband", "label": { "en": "Waistband Casing (half)", "es": "Pretina (casing, mitad)" }, "default_color": "#cabfa6", "cut": { "quantity": 2, "mirror": true } }
+  ],
+  "parameters": [
+    { "id": "closure", "type": "select", "default": "elastic", "options": [
+        { "value": "elastic", "label": { "en": "Elastic pull-on (no opening)", "es": "Elástico sin abertura" } },
+        { "value": "side_zip", "label": { "en": "Left side zipper", "es": "Cierre en costado izquierdo" } }
+      ], "label": { "en": "Waist finish", "es": "Acabado de cintura" } },
+    { "id": "hip_girth", "type": "slider", "default": 1000, "min": 650, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
+    { "id": "inseam_length", "type": "slider", "default": 760, "min": 300, "max": 950, "step": 10, "measurement": { "standard": "iso_8559", "code": "inside_leg_length" }, "label": { "en": "Inseam (mm)", "es": "Entrepierna (mm)" } },
+    { "id": "front_rise", "type": "slider", "default": 260, "min": 190, "max": 380, "step": 5, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)" } },
+    { "id": "back_rise", "type": "slider", "default": 310, "min": 190, "max": 460, "step": 5, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)" } },
+    { "id": "woven_ease", "type": "slider", "default": 120, "min": 60, "max": 400, "step": 10, "label": { "en": "Total hip ease (mm)", "es": "Holgura total de cadera (mm)" } },
+    { "id": "hem_width", "type": "slider", "default": 380, "min": 220, "max": 520, "step": 10, "label": { "en": "Hem half-width, flat (mm)", "es": "Medio bajo, extendido (mm)" } },
+    { "id": "side_flare", "type": "slider", "default": 90, "min": 0, "max": 200, "step": 5, "label": { "en": "Outseam flare at hem (mm)", "es": "Vuelo del costado en el bajo (mm)" } },
+    { "id": "elastic_width", "type": "slider", "default": 40, "min": 20, "max": 70, "step": 5, "label": { "en": "Elastic width (mm)", "es": "Ancho de elástico (mm)" } },
+    { "id": "zip_length", "type": "slider", "default": 180, "min": 120, "max": 300, "step": 10, "advanced": true, "label": { "en": "Side zip length (mm)", "es": "Largo del cierre lateral (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "advanced": true, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 40, "min": 0, "max": 60, "step": 5, "advanced": true, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "hip_girth": 1000, "inseam_length": 760, "hem_width": 380 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "hip_girth": 1120, "inseam_length": 790, "hem_width": 420 } }
+  ],
+  "constraints": [
+    { "expression": "back_rise >= front_rise", "severity": "error", "message": { "en": "Back rise must be at least the front rise", "es": "El tiro trasero debe ser al menos el delantero" } },
+    { "expression": "hem_width >= 220", "severity": "warning", "message": { "en": "A half-hem under 220 mm is a straight or bootcut leg, not the palazzo silhouette", "es": "Un medio bajo menor a 220 mm es una pierna recta o bootcut, no la silueta palazzo" } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["popelina-algodon"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "waistband", "type": "waistband", "edges": [{ "piece": "front", "edge": "waist" }, { "piece": "back", "edge": "waist" }], "parameters": ["hip_girth", "elastic_width"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["hem_width", "side_flare", "hem_allowance"] },
+      { "id": "side_closure", "type": "zipper_tape", "edges": [{ "piece": "front", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["zip_length"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "The wide-leg pull-on trouser as a commons object: a drape-forward palazzo graded by measurement, cuttable in a plain-weave cotton by any small workshop without licensing a block, with an honest elastic or side-zip finish.",
+      "es": "El pantalón palazzo de tiro como objeto del commons: un pantalón de vuelo amplio graduado por medidas, cortable en algodón de tejido plano por cualquier taller pequeño sin licenciar un bloque, con acabado honesto de elástico o cierre lateral."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

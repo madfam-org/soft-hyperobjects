@@ -1,0 +1,82 @@
+{
+  "project": {
+    "name": "Abaya",
+    "slug": "abaya",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #98. A long, loose, floor-length overgarment, offered as a teaching-grade parametric draft, respectfully — the wearer chooses fabric and any embellishment. This is the front-open (\"open abaya\") cut: a back panel on the fold, two mirrored fronts open at centre front, long wide dropped-shoulder sleeves, and one binding strip that finishes the neckline plus both centre-front edges in a single run. Very generous ease; the drape is the point. Production abaya is often crepe or nidha and the closed overhead style is a separate draft — this cartridge models the front-open cut in cotton poplin.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #98 del FC-100. Prenda exterior larga, holgada y hasta el suelo, ofrecida como trazo paramétrico didáctico, con respeto — quien la viste elige la tela y cualquier adorno. Es el corte abierto al frente (\"abaya abierta\"): trasero al doblez, dos delanteros espejados abiertos en el centro delantero, mangas amplias de hombro caído y una sola tira de vivo que termina el escote y ambos cantos delanteros en un solo recorrido. Holgura muy generosa; la caída es lo esencial. La abaya de producción suele ser crepé o nidha y el estilo cerrado por la cabeza es otro trazo — este cartucho modela el corte abierto en popelina de algodón.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": ["abaya", "overgarment", "heritage", "floor-length", "dropped-shoulder", "front-open", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" },
+        { "source": "projects/robe (flowing panel + dropped-shoulder block + cap-to-armhole solver)", "license": "LicenseRef-FC1-pending" },
+        { "source": "projects/tunic (neck-binding derivation convention)", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "abaya",
+      "label": { "en": "Abaya (all pieces)", "es": "Abaya (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["back", "front", "sleeve", "binding"]
+    }
+  ],
+  "pieces": [
+    { "id": "back", "label": { "en": "Back", "es": "Trasero" }, "default_color": "#2f3a44", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "front", "label": { "en": "Front (open CF)", "es": "Delantero (centro abierto)" }, "default_color": "#3c4a56", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#4b5b69", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "binding", "label": { "en": "Neck & Front Binding", "es": "Vivo de Escote y Frente" }, "default_color": "#5e7180", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "default": 1000, "min": 700, "max": 1900, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
+    { "id": "abaya_length", "type": "slider", "default": 1400, "min": 1100, "max": 1600, "step": 10, "label": { "en": "Abaya length, nape to floor (mm)", "es": "Largo de abaya, nuca al suelo (mm)" } },
+    { "id": "neck_girth", "type": "slider", "default": 400, "min": 320, "max": 540, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "default": 620, "min": 400, "max": 800, "step": 10, "label": { "en": "Sleeve length, shoulder to wrist (mm)", "es": "Largo de manga, hombro a muñeca (mm)" } },
+    { "id": "drape_ease", "type": "slider", "default": 360, "min": 200, "max": 600, "step": 10, "label": { "en": "Total drape ease (mm)", "es": "Holgura total de caída (mm)" } },
+    { "id": "hem_flare", "type": "slider", "default": 140, "min": 0, "max": 350, "step": 10, "label": { "en": "Hem flare per side (mm)", "es": "Vuelo del bajo por lado (mm)" } },
+    { "id": "sleeve_width", "type": "slider", "default": 200, "min": 120, "max": 320, "step": 10, "label": { "en": "Half wrist opening (mm)", "es": "Media abertura de muñeca (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 12, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 40, "min": 0, "max": 80, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1000, "abaya_length": 1400, "sleeve_length": 620 } },
+    { "id": "size-l", "label": { "en": "L (tall)", "es": "G (alta)" }, "values": { "chest_girth": 1160, "abaya_length": 1520, "sleeve_length": 660, "drape_ease": 420 } }
+  ],
+  "constraints": [
+    {
+      "expression": "drape_ease >= 240",
+      "severity": "warning",
+      "message": { "en": "An abaya reads as loose drape; below 240 mm total ease it starts to fit like a coat", "es": "La abaya se lee por su caída holgada; debajo de 240 mm de holgura total empieza a ceñir como abrigo" }
+    },
+    {
+      "expression": "abaya_length >= 1200",
+      "severity": "warning",
+      "message": { "en": "Below 1200 mm the garment stops reading as floor-length", "es": "Debajo de 1200 mm la prenda deja de leerse como largo al suelo" }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["popelina-algodon", "manta-cruda"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "back", "edge": "neck" }, { "piece": "front", "edge": "neck" }], "parameters": ["neck_girth"] },
+      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }, { "piece": "sleeve", "edge": "cap" }], "parameters": ["chest_girth", "drape_ease"] },
+      { "id": "front_edge", "type": "button_stand", "edges": [{ "piece": "front", "edge": "center_front" }], "parameters": ["abaya_length"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["abaya_length", "hem_flare", "hem_allowance"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false, "dropped_shoulder": true, "front_open": true, "bound_neckline": true },
+    "societal_benefit": {
+      "en": "A respectful, made-to-measure draft of a heritage overgarment: one dropped-shoulder pattern drapes a wide range of bodies from a single set of measurements, and the continuous neck-and-front binding teaches how one strip can finish a whole opening. The wearer keeps every choice of fabric, length, and embellishment — the commons supplies the honest block, not the identity.",
+      "es": "Un trazo respetuoso y a medida de una prenda exterior de herencia: un solo patrón de hombro caído cae sobre una amplia gama de cuerpos desde un juego de medidas, y el vivo continuo de escote y frente enseña cómo una tira puede terminar toda una abertura. Quien la viste conserva toda decisión de tela, largo y adorno — el commons aporta el bloque honesto, no la identidad."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

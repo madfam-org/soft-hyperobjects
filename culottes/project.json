@@ -1,0 +1,71 @@
+{
+  "project": {
+    "name": "Culottes",
+    "slug": "culottes",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #80. Culottes as a divided skirt: the tailored trouser block drawn wide and cropped so the legs drape like a skirt. Front and back legs (cut 2 mirror each) share one straight outer construction so the outseam matches, the front inseam is bowed by a solved amount to the deeper back fork, two front knife pleats fold toward centre front and are declared to the band as seam ease, and the back opens at centre back with an invisible zipper set into the straight CB-rise seam (zipper-stop notch) under a hook-and-bar drill cross. The straight cut-1 waistband is sized to the finished pleated-down waist plus a hook-and-bar overlap and verified against the four unpleated waist edges.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #80 del FC-100. Falda pantalón como falda dividida: el bloque de pantalón de sastrería dibujado ancho y corto para que las piernas caigan como falda. Piernas delantera y trasera (cortar 2 en espejo cada una) comparten una construcción externa recta para que el costado coincida, la entrepierna delantera se curva una cantidad resuelta hacia la horquilla trasera más profunda, dos pliegues de cuchillo delanteros doblan hacia el centro delantero y se declaran a la pretina como holgura de costura, y la trasera abre en el centro trasero con un cierre invisible montado en la costura recta de tiro (piquete de tope de cierre) bajo una cruz de broche de gancho y barra. La pretina recta de una pieza se dimensiona a la cintura terminada con pliegues más un traslape de gancho y barra y se verifica contra las cuatro orillas de cintura sin plegar.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["culottes", "divided-skirt", "bottoms", "pleats", "wide-leg", "invisible-zipper", "woven", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" },
+        { "source": "Fashion Cabinet 'dress-trousers' cartridge — trouser leg block (waistband + fly/opening, solved front inseam)", "license": "LicenseRef-FC1-pending" },
+        { "source": "Fashion Cabinet 'pencil-skirt' cartridge — CB zipper notch, hook drill cross, eased cut-1 waistband check", "license": "LicenseRef-FC1-pending" },
+        { "source": "Fashion Cabinet 'pleated-skirt' cartridge — pleat intake declared to the waistband as seam ease", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    { "id": "culottes", "label": { "en": "Culottes (all pieces)", "es": "Falda pantalón (todas las piezas)" }, "script_file": "main.py", "pieces": ["front", "back", "waistband"] }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front Leg", "es": "Pierna Delantera" }, "default_color": "#8a7d9c", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "back", "label": { "en": "Back Leg", "es": "Pierna Trasera" }, "default_color": "#746688", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "waistband", "label": { "en": "Waistband", "es": "Pretina" }, "default_color": "#a49ab6", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "hip_girth", "type": "slider", "default": 1000, "min": 650, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
+    { "id": "waist_girth", "type": "slider", "default": 780, "min": 500, "max": 1600, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
+    { "id": "inseam_length", "type": "slider", "default": 380, "min": 300, "max": 450, "step": 10, "measurement": { "standard": "iso_8559", "code": "inside_leg_length" }, "label": { "en": "Inseam, cropped (mm)", "es": "Entrepierna, corta (mm)" } },
+    { "id": "front_rise", "type": "slider", "default": 280, "min": 200, "max": 360, "step": 5, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)" } },
+    { "id": "back_rise", "type": "slider", "default": 310, "min": 200, "max": 440, "step": 5, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)" } },
+    { "id": "woven_ease", "type": "slider", "default": 120, "min": 60, "max": 400, "step": 10, "label": { "en": "Total hip ease (mm)", "es": "Holgura total de cadera (mm)" } },
+    { "id": "hem_width", "type": "slider", "default": 300, "min": 250, "max": 350, "step": 10, "label": { "en": "Front half-hem, flat (mm)", "es": "Medio bajo delantero, extendido (mm)" } },
+    { "id": "pleat_depth", "type": "slider", "default": 30, "min": 10, "max": 45, "step": 5, "tooltip": { "en": "Each of the two front knife pleats hides 2× this depth", "es": "Cada uno de los dos pliegues de cuchillo delanteros esconde 2× esta profundidad" }, "label": { "en": "Pleat depth (mm)", "es": "Profundidad de pliegue (mm)" } },
+    { "id": "zipper_length", "type": "slider", "default": 200, "min": 120, "max": 400, "step": 10, "label": { "en": "CB zipper length (mm)", "es": "Largo de cierre CT (mm)" } },
+    { "id": "overlap", "type": "slider", "default": 30, "min": 0, "max": 60, "step": 5, "advanced": true, "tooltip": { "en": "Waistband extension carrying the hook-and-bar", "es": "Extensión de pretina que lleva el gancho y barra" }, "label": { "en": "Waistband overlap (mm)", "es": "Traslape de pretina (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 12, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 40, "min": 0, "max": 60, "step": 5, "tooltip": { "en": "Blind-hem depth", "es": "Profundidad de dobladillo invisible" }, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "hip_girth": 1000, "waist_girth": 780, "inseam_length": 380 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "hip_girth": 1120, "waist_girth": 900, "inseam_length": 400 } }
+  ],
+  "constraints": [
+    { "expression": "back_rise >= front_rise", "severity": "error", "message": { "en": "Back rise must be at least the front rise", "es": "El tiro trasero debe ser al menos el delantero" } },
+    { "expression": "waist_girth <= hip_girth", "severity": "warning", "message": { "en": "Waist should not exceed the hip for a culotte block", "es": "La cintura no debería exceder la cadera en un bloque de falda pantalón" } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["popelina-algodon"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "waistband", "type": "waistband", "edges": [{ "piece": "front", "edge": "waist" }, { "piece": "back", "edge": "waist" }], "parameters": ["waist_girth", "pleat_depth"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["hem_width", "hem_allowance"] },
+      { "id": "cb_zip", "type": "zipper_tape", "edges": [{ "piece": "back", "edge": "crotch" }], "parameters": ["zipper_length"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "The culotte — a wide, cropped divided skirt — as a commons object: graded by measurement, with front pleats declared as verified waistband ease and a centre-back invisible-zip opening, cuttable today in cotton poplin by any small workshop without licensing a block.",
+      "es": "La falda pantalón — una falda dividida ancha y corta — como objeto del commons: graduada por medidas, con pliegues delanteros declarados como holgura verificada de pretina y una abertura de cierre invisible al centro trasero, cortable hoy en popelina de algodón por cualquier taller pequeño sin licenciar un bloque."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

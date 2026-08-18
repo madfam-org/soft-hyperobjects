@@ -1,0 +1,80 @@
+{
+  "project": {
+    "name": "Jeans (5-pocket)",
+    "slug": "jeans-5-pocket",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #2. The canonical five-pocket jean on the side-seamed trouser block: a front leg with a grown-on fly extension (J-topstitch guide, fly-stop notch) and a curved coin-pocket opening, a back leg whose top edge IS the yoke seam, a shaped back yoke whose lower edge is matched to the back leg by shared endpoints, a pentagon back patch pocket, a fly shield, a two-piece waistband eased by the button-stand overlap, and five belt loops. The back inseam hem is solved analytically so the straight inseams match exactly. A fly-type switch notes a zipper or a button fly; hardware federates to Yantra4D.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #2 del FC-100. El jean clásico de cinco bolsillos sobre el bloque de pantalón con costura lateral: pierna delantera con extensión de bragueta unida (guía de pespunte en J, piquete de tope) y boca de bolsillo de moneda curva, pierna trasera cuyo borde superior ES la costura de la quilla, quilla trasera formada cuyo borde inferior se iguala a la pierna por compartir extremos, bolsillo de parche trasero en pentágono, tapeta de bragueta, pretina en dos piezas con holgura por el traslape del botón y cinco trabillas. El bajo trasero se resuelve analíticamente para que las entrepiernas rectas coincidan. Un selector de bragueta indica cierre o botones; el herraje se federa a Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["jeans", "denim", "trousers", "bottoms", "five-pocket", "yoke", "fly-front", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet (five-pocket jean on the side-seamed trouser block)", "license": "original" },
+        { "source": "chinos — Fashion Cabinet commons (grown-on fly, two-piece waistband, overlap-as-ease)", "license": "LicenseRef-FC1-pending" },
+        { "source": "denim-shorts — Fashion Cabinet commons (denim topstitch/BOM idioms, analytic hem-match)", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    { "id": "jeans", "label": { "en": "Jeans (all pieces)", "es": "Jeans (todas las piezas)" }, "script_file": "main.py", "pieces": ["front", "back", "yoke", "back_pocket", "fly_shield", "waistband", "belt_loop"] }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front Leg", "es": "Pierna Delantera" }, "default_color": "#3f5d8c", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "back", "label": { "en": "Back Leg", "es": "Pierna Trasera" }, "default_color": "#34507c", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "yoke", "label": { "en": "Back Yoke", "es": "Quilla Trasera" }, "default_color": "#2c4670", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "back_pocket", "label": { "en": "Back Patch Pocket", "es": "Bolsillo de Parche Trasero" }, "default_color": "#5a76a6", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "fly_shield", "label": { "en": "Fly Shield", "es": "Tapeta de Bragueta" }, "default_color": "#6b86b8", "cut": { "quantity": 1 } },
+    { "id": "waistband", "label": { "en": "Waistband (half)", "es": "Pretina (mitad)" }, "default_color": "#7189b5", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "belt_loop", "label": { "en": "Belt Loop", "es": "Trabilla" }, "default_color": "#8ea3c6", "cut": { "quantity": 5 } }
+  ],
+  "parameters": [
+    { "id": "hip_girth", "type": "slider", "default": 1000, "min": 650, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
+    { "id": "waist_girth", "type": "slider", "default": 860, "min": 500, "max": 1600, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
+    { "id": "inseam_length", "type": "slider", "default": 780, "min": 300, "max": 950, "step": 10, "measurement": { "standard": "iso_8559", "code": "inside_leg_length" }, "label": { "en": "Inseam (mm)", "es": "Entrepierna (mm)" } },
+    { "id": "front_rise", "type": "slider", "default": 255, "min": 190, "max": 380, "step": 5, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)" } },
+    { "id": "back_rise", "type": "slider", "default": 300, "min": 190, "max": 470, "step": 5, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)" } },
+    { "id": "denim_ease", "type": "slider", "default": 90, "min": 40, "max": 300, "step": 10, "label": { "en": "Total hip ease (mm)", "es": "Holgura total de cadera (mm)" } },
+    { "id": "hem_width", "type": "slider", "default": 100, "min": 80, "max": 260, "step": 5, "label": { "en": "Front hem half-width, flat (mm)", "es": "Medio bajo delantero, extendido (mm)" } },
+    { "id": "yoke_depth", "type": "slider", "default": 90, "min": 50, "max": 130, "step": 5, "label": { "en": "Back yoke depth at side (mm)", "es": "Alto de quilla en el costado (mm)" } },
+    { "id": "fly_width", "type": "slider", "default": 36, "min": 20, "max": 60, "step": 2, "label": { "en": "Fly extension width (mm)", "es": "Ancho de aletilla (mm)" } },
+    { "id": "fly_depth", "type": "slider", "default": 190, "min": 80, "max": 300, "step": 5, "label": { "en": "Fly depth (mm)", "es": "Largo de bragueta (mm)" } },
+    { "id": "fly_type", "type": "select", "default": "zip", "options": [
+        { "value": "zip", "label": { "en": "Zipper fly", "es": "Bragueta con cierre" } },
+        { "value": "button", "label": { "en": "Button fly", "es": "Bragueta de botones" } }
+      ], "label": { "en": "Fly closure", "es": "Cierre de bragueta" } },
+    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 30, "min": 0, "max": 50, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "hip_girth": 1000, "waist_girth": 860, "inseam_length": 780 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "hip_girth": 1120, "waist_girth": 980, "inseam_length": 810 } }
+  ],
+  "constraints": [
+    { "expression": "back_rise >= front_rise", "severity": "warning", "message": { "en": "Back rise should be at least the front rise", "es": "El tiro trasero debe ser al menos el delantero" } },
+    { "expression": "fly_depth < front_rise", "severity": "warning", "message": { "en": "Fly depth must stay above the crotch line (less than the front rise)", "es": "El largo de bragueta debe quedar arriba del tiro (menor que el tiro delantero)" } },
+    { "expression": "denim_ease >= 40", "severity": "warning", "message": { "en": "Rigid denim needs at least 40 mm of ease or the jean binds", "es": "La mezclilla rígida necesita al menos 40 mm de holgura o el jean aprieta" } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["mezclilla-denim"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "waistband", "type": "waistband", "edges": [{ "piece": "front", "edge": "waist" }, { "piece": "yoke", "edge": "waist" }], "parameters": ["waist_girth", "yoke_depth"] },
+      { "id": "yoke", "type": "custom", "edges": [{ "piece": "yoke", "edge": "lower" }, { "piece": "back", "edge": "yoke_seam" }], "parameters": ["yoke_depth", "back_rise"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["hem_width", "hem_allowance"] },
+      { "id": "fly", "type": "zipper_tape", "edges": [{ "piece": "front", "edge": "crotch" }], "parameters": ["fly_depth", "fly_width"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "The world's most-worn garment as a commons object: a real five-pocket jean — shaped back yoke, grown-on fly, coin and patch pockets — graded by measurement and cuttable in denim by any small workshop, so the archetypal jean is repairable and made-to-measure without licensing a block.",
+      "es": "La prenda más usada del mundo como objeto del commons: un jean real de cinco bolsillos — quilla trasera formada, aletilla unida, bolsillos de moneda y de parche — graduado por medidas y cortable en mezclilla por cualquier taller pequeño, para que el jean arquetípico sea reparable y a medida sin licenciar un bloque."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
