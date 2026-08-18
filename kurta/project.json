@@ -1,0 +1,99 @@
+{
+  "project": {
+    "name": "Kurta",
+    "slug": "kurta",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #97. The traditional South Asian kurta: a long, straight, loose tunic of the heritage-global family, worn by men and women across India, Pakistan, Bangladesh, Nepal, Sri Lanka and the wider diaspora. Front and back are cut on fold; a standing mandarin BAND COLLAR is solved by bisection to the measured neckline (collar-band method); a partial centre-front PLACKET opens from the neckline down the chest, marked as a slash and finished by a separate facing strip; the lower side seams open into SIDE SLITS (chaak) above the hem for movement; a straight set-in sleeve (long or short) has its cap solved to the armholes. Drafted respectfully as a teaching-grade block.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #97 del FC-100. El kurta tradicional del sur de Asia: una túnica larga, recta y holgada de la familia patrimonial global, usada por hombres y mujeres en India, Pakistán, Bangladés, Nepal, Sri Lanka y la diáspora. El delantero y el trasero se cortan al doblez; un CUELLO BANDA mandarín de tira alta se resuelve por bisección al escote medido (método de banda de cuello); una TAPETA parcial en el centro delantero abre desde el escote hacia el pecho, marcada como abertura y rematada con una vista aparte; las costuras laterales inferiores se abren en ABERTURAS LATERALES (chaak) sobre el dobladillo para dar movimiento; una manga montada recta (larga o corta) resuelve su copa a las sisas. Trazada con respeto como bloque didáctico.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["kurta", "kurti", "tunic", "heritage", "south-asian", "mandarin", "band-collar", "placket", "side-slit", "chaak", "woven", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" },
+        { "source": "projects/kaftan (fold-cut heritage tunic; shoulder/side/sleeve idiom, notched side slit)", "license": "LicenseRef-FC1-pending" },
+        { "source": "projects/henley (fold-cut front partial CF placket slash + separate facing strip)", "license": "LicenseRef-FC1-pending" },
+        { "source": "projects/dress-shirt and projects/collar-band (band collar solved to the measured neckline by bisection)", "license": "LicenseRef-FC1-pending" },
+        { "source": "projects/tunic (side-slit-by-notch convention)", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "kurta",
+      "label": { "en": "Kurta (all pieces)", "es": "Kurta (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "sleeve", "collar", "placket", "pocket"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front (placket)", "es": "Delantero (tapeta)" }, "default_color": "#c9b79c", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "back", "label": { "en": "Back", "es": "Trasero" }, "default_color": "#bda988", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#d6c6ac", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "collar", "label": { "en": "Band collar (mandarin)", "es": "Cuello banda (mandarín)" }, "default_color": "#e2d5bd", "cut": { "quantity": 2, "on_fold": true, "mirror": true } },
+    { "id": "placket", "label": { "en": "Placket facing", "es": "Vista de tapeta" }, "default_color": "#efe6d3", "cut": { "quantity": 2 } },
+    { "id": "pocket", "label": { "en": "Chest pocket", "es": "Bolsillo de pecho" }, "default_color": "#f3ecdd", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "sleeve_style", "type": "select", "default": "long", "options": [ { "value": "long", "label": { "en": "Long sleeve", "es": "Manga larga" } }, { "value": "short", "label": { "en": "Short sleeve", "es": "Manga corta" } } ], "label": { "en": "Sleeve style", "es": "Estilo de manga" } },
+    { "id": "chest_girth", "type": "slider", "default": 1040, "min": 700, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
+    { "id": "kurta_length", "type": "slider", "default": 1020, "min": 760, "max": 1300, "step": 10, "label": { "en": "Kurta length, nape to hem (mm)", "es": "Largo del kurta, nuca a dobladillo (mm)" } },
+    { "id": "neck_girth", "type": "slider", "default": 400, "min": 320, "max": 520, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "default": 600, "min": 180, "max": 720, "step": 10, "measurement": { "standard": "iso_8559", "code": "arm_length" }, "label": { "en": "Sleeve length to opening (mm)", "es": "Largo de manga a la bocamanga (mm)" } },
+    { "id": "woven_ease", "type": "slider", "default": 180, "min": 100, "max": 420, "step": 10, "label": { "en": "Total wearing ease (mm)", "es": "Holgura total de uso (mm)" } },
+    { "id": "placket_length", "type": "slider", "default": 240, "min": 120, "max": 380, "step": 10, "label": { "en": "Placket length from neck (mm)", "es": "Largo de tapeta desde el escote (mm)" } },
+    { "id": "placket_width", "type": "slider", "default": 32, "min": 20, "max": 50, "step": 2, "label": { "en": "Placket width (mm)", "es": "Ancho de tapeta (mm)" } },
+    { "id": "collar_height", "type": "slider", "default": 40, "min": 25, "max": 60, "step": 5, "label": { "en": "Band collar height (mm)", "es": "Altura del cuello banda (mm)" } },
+    { "id": "collar_overlap", "type": "slider", "default": 15, "min": 0, "max": 40, "step": 5, "advanced": true, "label": { "en": "Collar closure overlap (mm)", "es": "Traslape de cierre del cuello (mm)" } },
+    { "id": "side_flare", "type": "slider", "default": 40, "min": 0, "max": 200, "step": 10, "advanced": true, "label": { "en": "Side flare at hem (mm)", "es": "Vuelo lateral en el dobladillo (mm)" } },
+    { "id": "slit_height", "type": "slider", "default": 300, "min": 0, "max": 500, "step": 10, "label": { "en": "Side slit (chaak) height above hem (mm)", "es": "Alto de la abertura lateral (chaak) (mm)" } },
+    { "id": "wrist_opening", "type": "slider", "default": 260, "min": 160, "max": 380, "step": 10, "advanced": true, "label": { "en": "Sleeve opening (mm)", "es": "Abertura de la manga (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "advanced": true, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 30, "min": 0, "max": 60, "step": 5, "advanced": true, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1040, "kurta_length": 1020, "neck_girth": 400, "sleeve_length": 600, "woven_ease": 180 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1160, "kurta_length": 1080, "neck_girth": 430, "sleeve_length": 625, "woven_ease": 210, "slit_height": 340 } },
+    { "id": "short-sleeve-kurti", "label": { "en": "Short-sleeve kurti", "es": "Kurti de manga corta" }, "values": { "chest_girth": 960, "kurta_length": 880, "sleeve_style": "short", "sleeve_length": 230, "slit_height": 260, "side_flare": 80 } }
+  ],
+  "constraints": [
+    {
+      "expression": "placket_length + 120 <= kurta_length",
+      "severity": "warning",
+      "message": { "en": "The placket must end well above the hem; keep it short relative to the body length", "es": "La tapeta debe terminar bien arriba del dobladillo; consérvala corta respecto al largo del cuerpo" }
+    },
+    {
+      "expression": "slit_height < kurta_length / 2",
+      "severity": "warning",
+      "message": { "en": "A chaak slit taller than half the length destabilizes the side panels", "es": "Una abertura chaak mayor a la mitad del largo desestabiliza los paneles laterales" }
+    },
+    {
+      "expression": "collar_height >= 25",
+      "severity": "warning",
+      "message": { "en": "A mandarin band shorter than 25 mm reads as a bound edge, not a standing collar", "es": "Una banda mandarina menor a 25 mm se ve como un canto rematado, no como un cuello alto" }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["popelina-algodon", "manta-cruda"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "neckline", "type": "neckline", "label": { "en": "Band-collar neckline", "es": "Escote de cuello banda" }, "edges": [{ "piece": "front", "edge": "neck" }, { "piece": "back", "edge": "neck" }, { "piece": "collar", "edge": "neck" }], "parameters": ["neck_girth", "collar_overlap"] },
+      { "id": "placket", "type": "placket", "label": { "en": "Centre-front placket", "es": "Tapeta central delantera" }, "edges": [{ "piece": "placket", "edge": "side_a" }, { "piece": "placket", "edge": "side_b" }], "parameters": ["placket_length", "placket_width"] },
+      { "id": "armscye", "type": "armscye", "label": { "en": "Set-in armhole", "es": "Sisa montada" }, "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }, { "piece": "sleeve", "edge": "cap" }], "parameters": ["chest_girth", "woven_ease"] },
+      { "id": "side_seam", "type": "side_seam", "label": { "en": "Side seam with chaak slit", "es": "Costura lateral con abertura chaak" }, "edges": [{ "piece": "front", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["slit_height", "side_flare"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["kurta_length", "hem_allowance"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false, "band_collar": true, "front_placket": true, "side_slits": true, "closure_free": false },
+    "societal_benefit": {
+      "en": "A respectful, buildable draft of the South Asian kurta — everyday heritage dress for hundreds of millions of people. The fold-cut straight tunic fits a broad range of bodies from one draft; the cartridge teaches how a mandarin band is engineered from the measured neckline, how a partial placket opens a pull-over front for head clearance, and how the chaak side slit is placed for movement — the commons' reference for band-collar, plackated heritage dress.",
+      "es": "Un trazo respetuoso y realizable del kurta del sur de Asia — vestir patrimonial cotidiano para cientos de millones de personas. La túnica recta cortada al doblez ajusta a una amplia gama de cuerpos desde un solo trazo; el cartucho enseña cómo se diseña una banda mandarina a partir del escote medido, cómo una tapeta parcial abre un delantero para pasar por la cabeza, y cómo se ubica la abertura chaak para el movimiento — la referencia del commons para vestir patrimonial con cuello banda y tapeta."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "project": {
+    "name": "Evening Gown",
+    "slug": "evening-gown",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #72. A woven, floor-length formal gown cut on the true bias: the grainline is drawn at an exact 45 degrees on both body panels so the fabric hangs liquid, a fitted torso with internal side-bust and back fisheye darts flares to the floor, and a train extends the CB back hem below the floor line while the front hem stays level. A silhouette select swaps a bias column for a dramatic A-line sweep; the CB (or side) invisible zipper is a Yantra4D-bridged notion; neck and armhole facings are derived from the measured openings; the gown is fully lined so the bias shell hangs true.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #72 del FC-100. Vestido de noche largo en tela plana cortado al bies verdadero: la hebra se traza a 45 grados exactos en ambos paneles del cuerpo para que la tela caiga fluida, un torso entallado con pinzas laterales y pinzas fisheye traseras internas se abre hasta el suelo, y una cola extiende el dobladillo trasero en CB por debajo de la línea del suelo mientras el delantero queda a nivel. Un selector de silueta cambia una columna al bies por un vuelo línea A dramático; el cierre invisible en CB (o lateral) es un avío puenteado con Yantra4D; las vistas de escote y sisa se derivan de las aberturas medidas; el vestido va totalmente forrado para que la caída al bies sea fiel.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["dress", "evening-gown", "formal", "bias-cut", "train", "lined", "low-back", "woven", "zipper", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" },
+        { "source": "a-line-dress (FC-100 #22), Fashion Cabinet commons — fold-cut front + cut-2 back with CB invisible zipper, shared shoulder/side seams, internal side-bust + back fisheye darts, facings derived from measured openings", "license": "LicenseRef-FC1-pending" },
+        { "source": "slip-dress (FC-100 #46), Fashion Cabinet commons — true 45-degree bias grainline drawn on the pattern for liquid drape", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "gown",
+      "label": { "en": "Evening gown (all pieces)", "es": "Vestido de noche (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "neck_facing", "armhole_facing"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Gown Front", "es": "Delantero del Vestido" }, "default_color": "#3a2a4e", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "back", "label": { "en": "Gown Back", "es": "Trasero del Vestido" }, "default_color": "#2c2039", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "neck_facing", "label": { "en": "Neck Facing", "es": "Vista de Escote" }, "default_color": "#5a4a6e", "cut": { "quantity": 1 } },
+    { "id": "armhole_facing", "label": { "en": "Armhole Facing", "es": "Vista de Sisa" }, "default_color": "#7a6a8e", "cut": { "quantity": 2 } }
+  ],
+  "parameters": [
+    { "id": "silhouette", "type": "select", "default": "bias_column", "options": [{ "value": "bias_column", "label": { "en": "Bias column (skims the hip)", "es": "Columna al bies (roza la cadera)" } }, { "value": "a_line_train", "label": { "en": "A-line sweep", "es": "Vuelo línea A" } }], "label": { "en": "Silhouette", "es": "Silueta" } },
+    { "id": "zip_placement", "type": "select", "default": "center_back", "options": [{ "value": "center_back", "label": { "en": "Center-back invisible zip", "es": "Cierre invisible en CB" } }, { "value": "side", "label": { "en": "Side invisible zip", "es": "Cierre invisible lateral" } }], "label": { "en": "Zipper placement", "es": "Ubicación del cierre" } },
+    { "id": "bust_girth", "type": "slider", "default": 900, "min": 600, "max": 1700, "step": 10, "measurement": { "standard": "iso_8559", "code": "bust_girth" }, "label": { "en": "Bust girth (mm)", "es": "Contorno de busto (mm)" } },
+    { "id": "waist_girth", "type": "slider", "default": 720, "min": 450, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "tooltip": { "en": "Places the back fisheye darts", "es": "Ubica las pinzas fisheye traseras" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
+    { "id": "hip_girth", "type": "slider", "default": 980, "min": 600, "max": 1700, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "tooltip": { "en": "Sets the hip line the flare starts from", "es": "Fija la línea de cadera donde inicia el vuelo" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
+    { "id": "dress_length", "type": "slider", "default": 1450, "min": 1200, "max": 1700, "step": 10, "label": { "en": "Gown length, nape to floor (mm)", "es": "Largo del vestido, nuca a suelo (mm)" } },
+    { "id": "train_length", "type": "slider", "default": 250, "min": 0, "max": 900, "step": 10, "tooltip": { "en": "Extra CB length swept below the floor; 0 = no train", "es": "Largo extra en CB barriendo bajo el suelo; 0 = sin cola" }, "label": { "en": "Train length at CB (mm)", "es": "Largo de cola en CB (mm)" } },
+    { "id": "flare_mm", "type": "slider", "default": 90, "min": 20, "max": 400, "step": 10, "tooltip": { "en": "Extra half-hem width beyond the hip quarter", "es": "Ancho extra de medio dobladillo sobre el cuarto de cadera" }, "label": { "en": "Hem flare (mm)", "es": "Vuelo de dobladillo (mm)" } },
+    { "id": "strap_width", "type": "slider", "default": 40, "min": 20, "max": 90, "step": 2, "label": { "en": "Strap width (mm)", "es": "Ancho de tirante (mm)" } },
+    { "id": "back_drop", "type": "slider", "default": 210, "min": 60, "max": 380, "step": 10, "tooltip": { "en": "Depth of the low back scoop below the nape", "es": "Profundidad del escote bajo de espalda bajo la nuca" }, "label": { "en": "Low back drop (mm)", "es": "Caída de espalda baja (mm)" } },
+    { "id": "front_drop", "type": "slider", "default": 80, "min": 50, "max": 200, "step": 5, "label": { "en": "Front neck drop (mm)", "es": "Caída de escote delantero (mm)" } },
+    { "id": "zipper_length", "type": "slider", "default": 520, "min": 300, "max": 900, "step": 10, "label": { "en": "Zipper length (mm)", "es": "Largo de cierre (mm)" } },
+    { "id": "bust_dart_intake", "type": "slider", "default": 26, "min": 0, "max": 50, "step": 2, "advanced": true, "label": { "en": "Bust dart intake (mm)", "es": "Profundidad de pinza de busto (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 12, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 20, "min": 0, "max": 60, "step": 5, "tooltip": { "en": "A narrow hem suits a floating bias hem", "es": "Un dobladillo angosto conviene a un ruedo al bies" }, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M — bias column", "es": "M — columna al bies" }, "values": { "bust_girth": 900, "waist_girth": 720, "hip_girth": 980, "silhouette": "bias_column", "train_length": 250 } },
+    { "id": "size-l", "label": { "en": "L — A-line sweep", "es": "L — vuelo línea A" }, "values": { "bust_girth": 1020, "waist_girth": 860, "hip_girth": 1100, "dress_length": 1500, "silhouette": "a_line_train", "train_length": 450 } }
+  ],
+  "constraints": [
+    {
+      "expression": "hip_girth >= waist_girth",
+      "severity": "warning",
+      "message": { "en": "Width below the waist is hip-derived; a hip under the waist flattens the flare and the draft clamps the hip line", "es": "El ancho bajo la cintura se deriva de la cadera; una cadera menor que la cintura aplana el vuelo y el trazo limita la línea de cadera" }
+    },
+    {
+      "expression": "zipper_length < dress_length * 0.55",
+      "severity": "warning",
+      "message": { "en": "Zippers past ~55% of the gown length are clamped by the draft", "es": "Cierres mayores a ~55% del largo del vestido se limitan en el trazo" }
+    },
+    {
+      "expression": "back_drop >= front_drop",
+      "severity": "warning",
+      "message": { "en": "An evening gown reads best with the back scooped lower than the front; keep the back drop at or above the front", "es": "Un vestido de noche luce mejor con la espalda más escotada que el frente; mantén la caída trasera igual o mayor que la delantera" }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["popelina-algodon"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "neck" }, { "piece": "back", "edge": "neck" }], "parameters": ["front_drop", "back_drop"] },
+      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }], "parameters": ["bust_girth", "strap_width"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["dress_length", "train_length", "flare_mm", "silhouette", "hem_allowance"] },
+      { "id": "cb_zipper", "type": "zipper_tape", "edges": [{ "piece": "back", "edge": "center" }], "parameters": ["zipper_length", "zip_placement"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "bias_cutting": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "The gown that makes couture-grade bias measurable: a true 45-degree grainline drawn on the pattern instead of assumed, a train that extends only the back hem by a stated amount, a fully-lined shell, and a low back scoop and invisible closure federated to shared hardware — the formal-wear peak of the FC-100 rendered as a verifiable, reproducible draft rather than an atelier secret.",
+      "es": "El vestido que vuelve medible el bies de alta costura: una hebra a 45 grados exactos trazada en el patrón en vez de supuesta, una cola que extiende solo el dobladillo trasero en una cantidad declarada, un forro completo, y un escote bajo de espalda y cierre invisible puenteados a herraje compartido — la cima de la ropa formal del FC-100 como un trazo verificable y reproducible, no un secreto de taller."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
