@@ -1,0 +1,95 @@
+{
+  "project": {
+    "name": "Boxer Briefs",
+    "slug": "boxer-briefs",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #10. A fitted mid-thigh men's/unisex boxer brief: leggings cut very short with the intimates' exact elastic accounting. Fold-cut front (pouch) and back (fuller seat) at ~10% negative ease, each with a short leg; a pouch gusset cut twice (self + liner) whose front and back edges match the body forks by construction; and the signature wide fold-over waistband casing whose attach edge equals the full measured waist opening. The shorter inseam is bowed to the longer by a solved amount, and the BOM emits exact-mm elastic cut lengths.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #10 del FC-100. Un bóxer ajustado a media pierna para hombre/unisex: mallas cortadas muy cortas con la matemática exacta de elástico de la ropa interior. Delantero (bolsa) y trasero (asiento más amplio) cortados al doblez con ~10% de holgura negativa, cada uno con pierna corta; un refuerzo de bolsa cortado dos veces (tela + forro) cuyos bordes delantero y trasero igualan a las entrepiernas por construcción; y la pretina ancha doblada característica cuyo borde de unión iguala la abertura de cintura medida completa. La entrepierna más corta se curva hasta la más larga por una cantidad resuelta, y la lista de materiales emite largos de elástico exactos en mm.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["boxer-briefs", "underwear", "intimates", "loungewear", "knit", "negative-ease", "elastic", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" },
+        { "source": "projects/panties-bikini (intimates fold-cut gusset + exact-mm elastic accounting)", "license": "LicenseRef-FC1-pending" },
+        { "source": "projects/leggings (pull-on leg with solved inseam bow + fold-over waistband from measured waist)", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "boxer-briefs",
+      "label": { "en": "Boxer briefs (all pieces)", "es": "Bóxer ajustado (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "gusset", "waistband"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front (pouch)", "es": "Delantero (bolsa)" }, "default_color": "#3f5a73", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "back", "label": { "en": "Back (full seat)", "es": "Trasero (asiento completo)" }, "default_color": "#324a5f", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "gusset", "label": { "en": "Pouch gusset (self + liner)", "es": "Refuerzo de bolsa (tela + forro)" }, "default_color": "#5a7893", "cut": { "quantity": 2, "on_fold": true, "mirror": true } },
+    { "id": "waistband", "label": { "en": "Waistband (fold-over casing)", "es": "Pretina (doblada, funda)" }, "default_color": "#1f2d3a", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "waist_girth", "type": "slider", "default": 820, "min": 500, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
+    { "id": "hip_girth", "type": "slider", "default": 960, "min": 600, "max": 1700, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip/seat girth (mm)", "es": "Contorno de cadera/asiento (mm)" } },
+    { "id": "body_rise", "type": "slider", "default": 250, "min": 180, "max": 360, "step": 5, "measurement": { "standard": "iso_8559", "code": "body_rise" }, "label": { "en": "Body rise, crotch to waist (mm)", "es": "Tiro, entrepierna a cintura (mm)" } },
+    { "id": "inseam_length", "type": "slider", "default": 180, "min": 80, "max": 260, "step": 5, "measurement": { "standard": "iso_8559", "code": "inside_leg_length" }, "label": { "en": "Leg inseam, mid-thigh (mm)", "es": "Entrepierna de pierna, media pierna (mm)" } },
+    { "id": "thigh_girth", "type": "slider", "default": 560, "min": 360, "max": 900, "step": 10, "measurement": { "standard": "iso_8559", "code": "thigh_girth" }, "label": { "en": "Thigh girth at leg hem (mm)", "es": "Contorno de muslo en el borde (mm)" } },
+    { "id": "negative_ease_pct", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Negative ease (%)", "es": "Holgura negativa (%)" } },
+    { "id": "back_rise_extra", "type": "slider", "default": 30, "min": 0, "max": 70, "step": 5, "advanced": true, "label": { "en": "Back rise extra (mm)", "es": "Tiro trasero adicional (mm)" } },
+    { "id": "gusset_front_w", "type": "slider", "default": 60, "min": 40, "max": 110, "step": 2, "advanced": true, "label": { "en": "Pouch front width (mm)", "es": "Ancho delantero de bolsa (mm)" } },
+    { "id": "gusset_back_w", "type": "slider", "default": 84, "min": 40, "max": 130, "step": 2, "advanced": true, "label": { "en": "Gusset back width (mm)", "es": "Ancho trasero del refuerzo (mm)" } },
+    { "id": "gusset_len", "type": "slider", "default": 130, "min": 90, "max": 190, "step": 5, "advanced": true, "label": { "en": "Gusset length (mm)", "es": "Largo del refuerzo (mm)" } },
+    { "id": "waistband_height", "type": "slider", "default": 38, "min": 20, "max": 60, "step": 2, "label": { "en": "Waistband stand height (mm)", "es": "Alto de pretina (mm)" } },
+    { "id": "waistband_ratio", "type": "slider", "default": 0.92, "min": 0.82, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Waistband elastic/waist ratio", "es": "Proporción elástico/cintura de pretina" } },
+    { "id": "leg_elastic_ratio", "type": "slider", "default": 0.92, "min": 0.8, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Leg elastic/opening ratio", "es": "Proporción elástico/abertura de pierna" } },
+    { "id": "leg_hem_elastic", "type": "checkbox", "default": true, "label": { "en": "Elastic-finished leg openings", "es": "Aberturas de pierna con elástico" } },
+    { "id": "seam_allowance", "type": "slider", "default": 6, "min": 0, "max": 12, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 20, "min": 0, "max": 40, "step": 5, "advanced": true, "label": { "en": "Turned leg-hem allowance (mm)", "es": "Margen de dobladillo de pierna (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-s", "label": { "en": "S", "es": "CH" }, "values": { "waist_girth": 740, "hip_girth": 880, "thigh_girth": 500 } },
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "waist_girth": 820, "hip_girth": 960, "thigh_girth": 560 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "waist_girth": 920, "hip_girth": 1060, "thigh_girth": 640 } },
+    { "id": "trunk", "label": { "en": "Trunk (short leg)", "es": "Trunk (pierna corta)" }, "values": { "inseam_length": 110 } }
+  ],
+  "constraints": [
+    {
+      "expression": "negative_ease_pct >= 5",
+      "severity": "warning",
+      "message": { "en": "Below 5% negative ease the boxer brief relies on elastic alone — expect a loose fit", "es": "Debajo de 5% de holgura negativa la prenda depende solo del elástico — el ajuste quedará flojo" }
+    },
+    {
+      "expression": "negative_ease_pct <= 15",
+      "severity": "warning",
+      "message": { "en": "Above 15% negative ease demands high-elastane jersey; check the fabric card", "es": "Arriba de 15% de holgura negativa exige jersey con alto elastano; revisa la ficha de tela" }
+    },
+    {
+      "expression": "gusset_back_w >= gusset_front_w",
+      "severity": "warning",
+      "message": { "en": "A back gusset narrower than the front pouch is unusual — verify the seat width", "es": "Un refuerzo trasero más angosto que la bolsa delantera es inusual — verifica el ancho del asiento" }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["jersey-algodon"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "waistband", "type": "waistband", "label": { "en": "Waistband casing", "es": "Funda de pretina" }, "edges": [{ "piece": "waistband", "edge": "bottom" }, { "piece": "front", "edge": "waist" }, { "piece": "back", "edge": "waist" }], "parameters": ["waist_girth", "negative_ease_pct", "waistband_ratio", "waistband_height"] },
+      { "id": "leg_openings", "type": "hem", "label": { "en": "Leg openings", "es": "Aberturas de pierna" }, "edges": [{ "piece": "front", "edge": "leg_hem" }, { "piece": "back", "edge": "leg_hem" }], "parameters": ["thigh_girth", "leg_elastic_ratio", "leg_hem_elastic", "hem_allowance"] },
+      { "id": "gusset", "type": "custom", "label": { "en": "Pouch gusset", "es": "Refuerzo de bolsa" }, "edges": [{ "piece": "gusset", "edge": "front_edge" }, { "piece": "gusset", "edge": "back_edge" }], "parameters": ["gusset_front_w", "gusset_back_w", "gusset_len"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": true, "elastic_finish": true },
+    "societal_benefit": {
+      "en": "The commons' menswear intimates reference: a fitted boxer brief with the elastic math in the open — exact-mm waistband and leg elastic cut lengths computed from the measured pattern openings, a pouch gusset proven to fit its bodies at render time, and the shorter inseam solved to the longer so the inner-leg seam always closes.",
+      "es": "La referencia de ropa interior masculina del commons: un bóxer ajustado con la matemática del elástico en abierto — largos exactos en mm de la pretina y del elástico de pierna calculados desde las aberturas medidas del patrón, un refuerzo de bolsa cuyo ajuste a los cuerpos se comprueba al renderizar, y la entrepierna más corta resuelta hasta la más larga para que la costura interna siempre cierre."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "project": {
+    "name": "Wireless Bra",
+    "slug": "bra-wireless",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #11. A soft, wire-free bralette that shapes with seams and stretch, never boning. Support comes first from a gripping underband whose finished length is the underbust girth at negative ease; the bust is shaped by a curved vertical cup seam that cones two flat cup halves into projection. Back wings wrap to a center-back hook-and-eye closure (hardware, referenced not modelled) and two adjustable straps run over sliders and rings. Neckline, armhole and the band's lower edge are elastic-finished, and the BOM emits exact-mm elastic cut lengths derived from the measured openings.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #11 del FC-100. Un brasier suave sin varilla que da forma con costuras y elasticidad, nunca con ballenas. El soporte nace de una banda inferior que agarra, cuyo largo terminado es el contorno bajo el busto con holgura negativa; el busto se moldea con una costura de copa curva que convierte dos mitades planas en volumen. Las alas traseras cierran con broches de gancho al centro de la espalda (herrajes referenciados, no modelados) y dos tirantes ajustables corren sobre reguladores y anillos. Escote, sisa y el borde inferior de la banda se terminan con elástico, y la lista de materiales emite largos de elástico exactos en mm derivados de las aberturas medidas.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["bra", "bralette", "wireless", "intimates", "underwear", "knit", "negative-ease", "elastic", "hook-closure", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" },
+        { "source": "projects/panties-bikini (negative-ease + exact-mm elastic accounting)", "license": "LicenseRef-FC1-pending" },
+        { "source": "projects/tank-top (strap + bound-edge conventions)", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "bra",
+      "label": { "en": "Wireless bra (all pieces)", "es": "Brasier sin varilla (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["cup_inner", "cup_outer", "underband", "back", "strap"]
+    }
+  ],
+  "pieces": [
+    { "id": "cup_inner", "label": { "en": "Cup — inner half", "es": "Copa — mitad interior" }, "default_color": "#b8788f", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "cup_outer", "label": { "en": "Cup — outer half", "es": "Copa — mitad exterior" }, "default_color": "#a5657d", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "underband", "label": { "en": "Underband", "es": "Banda inferior" }, "default_color": "#8f5069", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "back", "label": { "en": "Back wing", "es": "Ala trasera" }, "default_color": "#c98aa1", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "strap", "label": { "en": "Strap", "es": "Tirante" }, "default_color": "#dca7ba", "cut": { "quantity": 2 } }
+  ],
+  "parameters": [
+    { "id": "underbust_girth", "type": "slider", "default": 760, "min": 560, "max": 1200, "step": 10, "measurement": { "standard": "iso_8559", "code": "underbust_girth" }, "label": { "en": "Underbust girth (mm)", "es": "Contorno bajo el busto (mm)" } },
+    { "id": "bust_girth", "type": "slider", "default": 940, "min": 640, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Bust girth (mm)", "es": "Contorno de busto (mm)" } },
+    { "id": "cup_depth", "type": "slider", "default": 150, "min": 90, "max": 260, "step": 5, "label": { "en": "Cup depth (mm)", "es": "Profundidad de copa (mm)" } },
+    { "id": "band_height", "type": "slider", "default": 42, "min": 25, "max": 90, "step": 1, "label": { "en": "Underband height (mm)", "es": "Alto de banda (mm)" } },
+    { "id": "strap_length", "type": "slider", "default": 340, "min": 220, "max": 460, "step": 10, "label": { "en": "Strap length (mm)", "es": "Largo de tirante (mm)" } },
+    { "id": "strap_width", "type": "slider", "default": 16, "min": 8, "max": 40, "step": 1, "label": { "en": "Strap width (mm)", "es": "Ancho de tirante (mm)" } },
+    { "id": "negative_ease_pct", "type": "slider", "default": 18, "min": 10, "max": 25, "step": 1, "label": { "en": "Band negative ease (%)", "es": "Holgura negativa de banda (%)" } },
+    { "id": "cup_frac", "type": "slider", "default": 0.56, "min": 0.45, "max": 0.7, "step": 0.01, "advanced": true, "label": { "en": "Cup share of band half", "es": "Proporción de copa en media banda" } },
+    { "id": "band_elastic_ratio", "type": "slider", "default": 0.92, "min": 0.8, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Band elastic/opening ratio", "es": "Proporción elástico/abertura de banda" } },
+    { "id": "edge_elastic_ratio", "type": "slider", "default": 0.85, "min": 0.75, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Neck/armhole elastic/opening ratio", "es": "Proporción elástico/abertura de escote y sisa" } },
+    { "id": "seam_allowance", "type": "slider", "default": 6, "min": 0, "max": 12, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-s", "label": { "en": "S (32B)", "es": "CH (32B)" }, "values": { "underbust_girth": 680, "bust_girth": 840, "cup_depth": 135 } },
+    { "id": "size-m", "label": { "en": "M (34C)", "es": "M (34C)" }, "values": { "underbust_girth": 760, "bust_girth": 940, "cup_depth": 150 } },
+    { "id": "size-l", "label": { "en": "L (38D)", "es": "G (38D)" }, "values": { "underbust_girth": 880, "bust_girth": 1080, "cup_depth": 175 } }
+  ],
+  "constraints": [
+    {
+      "expression": "negative_ease_pct >= 12",
+      "severity": "warning",
+      "message": { "en": "Below 12% band negative ease the underband will not grip enough to support — the primary support is the band, not the straps", "es": "Debajo de 12% de holgura negativa la banda no agarra lo suficiente para sostener — el soporte principal es la banda, no los tirantes" }
+    },
+    {
+      "expression": "bust_girth > underbust_girth",
+      "severity": "warning",
+      "message": { "en": "Bust girth should exceed underbust girth; the difference sets the cup volume", "es": "El contorno de busto debe superar al de bajo busto; la diferencia define el volumen de copa" }
+    },
+    {
+      "expression": "negative_ease_pct <= 22",
+      "severity": "warning",
+      "message": { "en": "Above 22% band negative ease demands a high-elastane knit or power mesh; check the fabric card", "es": "Arriba de 22% de holgura negativa exige un punto de alto elastano o malla de poder; revisa la ficha de tela" }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["jersey-algodon"],
+  "notion": {
+    "kind": "hook",
+    "subtype": "hook-and-eye bra back (3x2)",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "hook-and-eye-3x2",
+      "linked": false,
+      "params_map": { "rows": "3", "columns": "2" }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "neckline", "type": "neckline", "label": { "en": "Neckline (elastic)", "es": "Escote (elástico)" }, "edges": [{ "piece": "cup_inner", "edge": "neckline" }], "parameters": ["cup_depth", "edge_elastic_ratio"] },
+      { "id": "armscye", "type": "armscye", "label": { "en": "Armhole (elastic)", "es": "Sisa (elástico)" }, "edges": [{ "piece": "cup_outer", "edge": "side" }, { "piece": "back", "edge": "top" }], "parameters": ["cup_depth", "edge_elastic_ratio"] },
+      { "id": "underband", "type": "waistband", "label": { "en": "Underband elastic (primary support)", "es": "Elástico de banda (soporte principal)" }, "edges": [{ "piece": "underband", "edge": "lower" }], "parameters": ["underbust_girth", "negative_ease_pct", "band_elastic_ratio"] },
+      { "id": "cup_seam", "type": "custom", "label": { "en": "Cup seam (wire-free shaping)", "es": "Costura de copa (forma sin varilla)" }, "edges": [{ "piece": "cup_inner", "edge": "cup_seam" }, { "piece": "cup_outer", "edge": "cup_seam" }], "parameters": ["bust_girth", "underbust_girth", "cup_depth"] },
+      { "id": "closure", "type": "custom", "label": { "en": "Center-back hook closure", "es": "Cierre de gancho al centro de la espalda" }, "edges": [{ "piece": "back", "edge": "center_back" }, { "piece": "underband", "edge": "center_back" }], "parameters": ["band_height"] },
+      { "id": "straps", "type": "custom", "label": { "en": "Adjustable straps", "es": "Tirantes ajustables" }, "edges": [{ "piece": "cup_outer", "edge": "strap_tab" }, { "piece": "back", "edge": "strap_tab" }], "parameters": ["strap_length", "strap_width"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false, "knit_negative_ease": true, "elastic_finish": true, "wire_free_support": true, "hook_closure": true },
+    "societal_benefit": {
+      "en": "A wire-free bra with its support honest and in the open: the underband carries the load at a stated negative ease, the bust is shaped by a curved cup seam instead of boning, and the exact-mm band, neckline and armhole elastic cut lengths — usually locked inside factory spec sheets — are computed from the measured pattern openings. Made to measure to underbust and bust girths, with a power-mesh lining option for firmer support.",
+      "es": "Un brasier sin varilla con su soporte honesto y a la vista: la banda inferior lleva la carga con una holgura negativa declarada, el busto se moldea con una costura de copa curva en vez de ballenas, y los largos exactos en mm del elástico de banda, escote y sisa — que suelen quedar bajo llave en las hojas de especificación de fábrica — se calculan desde las aberturas medidas del patrón. Hecho a medida al contorno bajo el busto y al busto, con opción de forro de malla de poder para mayor soporte."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

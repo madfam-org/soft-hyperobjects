@@ -1,0 +1,87 @@
+{
+  "project": {
+    "name": "Bikini Top",
+    "slug": "bikini-top",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #55. The classic string / sliding-triangle bikini top: each cup is a single triangle cut four times (2 self + 2 lining) at 12% swim negative ease so the tricot tensions over the bust. Self and lining sew along the outer and top edges (delta 0 by construction), turn, and the underbust edge is clear-elastic bound. The top edge is a folded halter casing; the neck tie threads through it and the underbust band tie threads the lower edges — no hardware, it ties. Swim-elastic and tie cut lengths are derived exactly from the measured cup edges.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #55 del FC-100. El top de bikini clasico de tirantes / triangulo deslizante: cada copa es un solo triangulo cortado cuatro veces (2 tela + 2 forro) con 12% de holgura negativa de bano para que el tricot se ajuste al busto. Tela y forro se cosen por los bordes exterior y superior (delta 0 por construccion), se voltean, y el borde inferior se remata con elastico transparente. El borde superior forma un jareta para el cuello; el tirante del cuello pasa por ahi y el tirante de la banda inferior atraviesa los bordes inferiores — sin herrajes, se amarra. Los largos de elastico de bano y de los tirantes se derivan exactamente de los bordes medidos de la copa.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["bikini", "swimwear", "swim", "triangle", "halter", "knit", "negative-ease", "elastic", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" },
+        { "source": "projects/panties-bikini (negative-ease fold-cut + exact-mm elastic accounting)", "license": "LicenseRef-FC1-pending" },
+        { "source": "projects/tank-top (bound-edge strip conventions)", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "bikini-top",
+      "label": { "en": "Bikini top (all pieces)", "es": "Top de bikini (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["cup", "neck_tie", "band_tie"]
+    }
+  ],
+  "pieces": [
+    { "id": "cup", "label": { "en": "Cup (2 self + 2 lining)", "es": "Copa (2 tela + 2 forro)" }, "default_color": "#2f8fa8", "cut": { "quantity": 4, "mirror": true } },
+    { "id": "neck_tie", "label": { "en": "Neck / halter tie", "es": "Tirante de cuello" }, "default_color": "#1f5f78", "cut": { "quantity": 1 } },
+    { "id": "band_tie", "label": { "en": "Underbust band tie", "es": "Tirante de banda inferior" }, "default_color": "#3fa6c0", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "bust_girth", "type": "slider", "default": 900, "min": 650, "max": 1300, "step": 10, "measurement": { "standard": "iso_8559", "code": "bust_girth" }, "label": { "en": "Bust girth (mm)", "es": "Contorno de busto (mm)" } },
+    { "id": "underbust_girth", "type": "slider", "default": 760, "min": 550, "max": 1150, "step": 10, "measurement": { "standard": "iso_8559", "code": "under_bust_girth" }, "label": { "en": "Underbust girth (mm)", "es": "Contorno bajo busto (mm)" } },
+    { "id": "cup_height", "type": "slider", "default": 210, "min": 140, "max": 320, "step": 5, "label": { "en": "Cup height, base to apex (mm)", "es": "Alto de copa, base a punta (mm)" } },
+    { "id": "negative_ease_pct", "type": "slider", "default": 12, "min": 0, "max": 20, "step": 1, "label": { "en": "Negative ease (%)", "es": "Holgura negativa (%)" } },
+    { "id": "apex_offset", "type": "slider", "default": 18, "min": 0, "max": 60, "step": 2, "advanced": true, "label": { "en": "Apex offset toward centre (mm)", "es": "Desfase de punta hacia el centro (mm)" } },
+    { "id": "tie_tail", "type": "slider", "default": 380, "min": 150, "max": 600, "step": 10, "label": { "en": "Tie tail length, each end (mm)", "es": "Largo de cola del tirante, cada extremo (mm)" } },
+    { "id": "tie_width", "type": "slider", "default": 16, "min": 8, "max": 30, "step": 1, "label": { "en": "Tie finished width (mm)", "es": "Ancho terminado del tirante (mm)" } },
+    { "id": "edge_elastic_ratio", "type": "slider", "default": 0.88, "min": 0.75, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Edge elastic/opening ratio", "es": "Proporcion elastico/abertura de borde" } },
+    { "id": "seam_allowance", "type": "slider", "default": 6, "min": 0, "max": 12, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "casing_allowance", "type": "slider", "default": 18, "min": 10, "max": 40, "step": 2, "advanced": true, "label": { "en": "Casing fold allowance (mm)", "es": "Margen de doblez de la jareta (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-s", "label": { "en": "S", "es": "CH" }, "values": { "bust_girth": 840, "underbust_girth": 700, "cup_height": 195 } },
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "bust_girth": 900, "underbust_girth": 760, "cup_height": 210 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "bust_girth": 980, "underbust_girth": 840, "cup_height": 225 } }
+  ],
+  "constraints": [
+    {
+      "expression": "negative_ease_pct >= 5",
+      "severity": "warning",
+      "message": { "en": "Below 5% negative ease the triangle relies on the ties alone — expect a loose, shifting fit", "es": "Debajo de 5% de holgura negativa el triangulo depende solo de los tirantes — el ajuste quedara flojo y se movera" }
+    },
+    {
+      "expression": "negative_ease_pct <= 15",
+      "severity": "warning",
+      "message": { "en": "Above 15% negative ease demands high-elastane swim tricot; check the fabric card", "es": "Arriba de 15% de holgura negativa exige tricot de bano con alto elastano; revisa la ficha de tela" }
+    },
+    {
+      "expression": "underbust_girth < bust_girth",
+      "severity": "warning",
+      "message": { "en": "Underbust must be smaller than bust; the draft clamps it below the bust line", "es": "El bajo busto debe ser menor que el busto; el trazo lo limita por debajo de la linea del busto" }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["tricot-nylon-elastano"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "underbust_band", "type": "waistband", "label": { "en": "Underbust band (elastic + band tie)", "es": "Banda bajo busto (elastico + tirante)" }, "edges": [{ "piece": "cup", "edge": "lower" }], "parameters": ["underbust_girth", "negative_ease_pct", "edge_elastic_ratio", "tie_tail"] },
+      { "id": "cup_side", "type": "side_seam", "label": { "en": "Cup outer edge (elastic-finished)", "es": "Borde exterior de copa (rematado con elastico)" }, "edges": [{ "piece": "cup", "edge": "side" }], "parameters": ["bust_girth", "cup_height", "edge_elastic_ratio"] },
+      { "id": "halter", "type": "neckline", "label": { "en": "Halter casing (neck tie)", "es": "Jareta de cuello (tirante)" }, "edges": [{ "piece": "cup", "edge": "casing" }], "parameters": ["casing_allowance", "tie_width", "tie_tail"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false, "knit_negative_ease": true, "elastic_finish": true, "self_lined": true, "tie_closure": true },
+    "societal_benefit": {
+      "en": "The commons' swim-top draft with the elastic and tie math in the open: exact-mm clear-elastic and halter/band tie cut lengths computed from measured cup edges — usually locked inside factory spec sheets — for the most-copied swim silhouette. A single triangle cut four times, self and lining proven to match at render time, adjustable by string alone so it fits a wide range of bodies with no hardware.",
+      "es": "El trazo del top de bano del commons con la matematica del elastico y los tirantes en abierto: largos exactos en mm del elastico transparente y de los tirantes de cuello y banda calculados desde los bordes medidos de la copa — normalmente bajo llave en las hojas de especificacion de fabrica — para la silueta de bano mas copiada. Un solo triangulo cortado cuatro veces, tela y forro comprobados al renderizar, ajustable solo con amarres para adaptarse a muchos cuerpos sin herrajes."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
