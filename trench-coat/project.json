@@ -1,0 +1,100 @@
+{
+  "project": {
+    "name": "Trench Coat",
+    "slug": "trench-coat",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #60. The commons' most detailed coat: a teaching-grade DOUBLE-BREASTED trench on the blazer's lapel-front architecture, lengthened to a coat and widened for layering, dressed with every iconic trench detail as verified geometry. The front's center edge climbs a wide double-breasted button stand — two columns of buttons cross the chest — to the roll point, then breaks into a broad lapel out to the lapel point and a gorge edge back to the neck point. A storm-shield cape yoke sits over a back body with a shaped center-back seam and a deep vent; the one-piece set-in sleeve cap is solved to the measured armholes plus declared cap ease; the upper collar is solved to the gorge + back-cape neck; a straight front facing is verified against the measured center + lapel + gorge run. The signature gun (storm) flap is a shaped right-front panel caught in the shoulder seam and hanging free; the belt and epaulettes are real straps. A real trench is cut in gabardine / cotton twill — the commons' closest heavyweight woven is wool melton coating, used here with wider seam room for its bulk. Full lining is noted-not-drafted in v0.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #60 del FC-100. El abrigo más detallado del común: una gabardina CRUZADA (doble botonadura) con grado didáctico sobre la arquitectura de solapa del saco, alargada a abrigo y ensanchada para usarse en capas, vestida con cada detalle icónico de la gabardina como geometría verificada. El canto delantero sube por una tapeta ancha de doble botonadura — dos columnas de botones cruzan el pecho — hasta el punto de quiebre, y ahí rompe en una solapa amplia hasta la punta de solapa y un escote (gorge) de regreso al punto de cuello. Un canesú-capa cortavientos (storm-shield) va sobre una espalda con costura central formada y una abertura (vent) profunda; la copa de la manga montada de una pieza se resuelve a las sisas medidas más el embebido declarado; el cuello superior se resuelve al gorge + escote de la capa trasera; una vista delantera recta se verifica contra el recorrido medido de canto + solapa + gorge. La solapa antiviento (gun flap) es un panel derecho formado, cosido en la costura de hombro y colgando libre; el cinturón y las charreteras son piezas reales. Una gabardina real se corta en gabardina/sarga de algodón — el tejido pesado más cercano del común es el melton de lana, usado aquí con más margen por su volumen. El forro completo se anota, no se traza, en v0.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["trench-coat", "coat", "outerwear", "tailoring", "double-breasted", "lapel", "gun-flap", "storm-flap", "belt", "epaulette", "vent", "eased-cap", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" },
+        { "source": "blazer (rank #30) — lapel/roll-line front, eased set-in sleeve cap, upper collar solved to gorge + back neck, straight front facing, shaped CB seam + vent, chained-solve architecture", "license": "LicenseRef-FC1-pending" },
+        { "source": "denim-jacket (rank #28) — storm-shield/back yoke seam construction, folded-strap pieces (belt, epaulette) and the cut-doubled fold-line idiom", "license": "LicenseRef-FC1-pending" },
+        { "source": "collar-band enabler — neck-edge bisection method for the upper collar", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "trench-coat",
+      "label": { "en": "Trench coat (all pieces)", "es": "Gabardina (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "back_yoke", "sleeve", "collar", "gun_flap", "belt", "epaulette", "facing"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front (double-breasted)", "es": "Delantero (cruzado)" }, "default_color": "#3a4048", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "back", "label": { "en": "Back Body (CB seam + vent)", "es": "Espalda (costura central + abertura)" }, "default_color": "#434952", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "back_yoke", "label": { "en": "Back Storm-Shield Yoke", "es": "Canesú-capa trasero" }, "default_color": "#4c525c", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "sleeve", "label": { "en": "Sleeve (set-in, eased)", "es": "Manga (montada, embebida)" }, "default_color": "#555c66", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "collar", "label": { "en": "Upper Collar", "es": "Cuello Superior" }, "default_color": "#5e6670", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "gun_flap", "label": { "en": "Gun Flap (storm flap)", "es": "Solapa antiviento (gun flap)" }, "default_color": "#67707a", "cut": { "quantity": 1 } },
+    { "id": "belt", "label": { "en": "Belt (strap)", "es": "Cinturón (tira)" }, "default_color": "#2f3033", "cut": { "quantity": 2 } },
+    { "id": "epaulette", "label": { "en": "Epaulette (shoulder strap)", "es": "Charretera (tira de hombro)" }, "default_color": "#707984", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "facing", "label": { "en": "Front Facing (double-breasted)", "es": "Vista Delantera (cruzada)" }, "default_color": "#79828e", "cut": { "quantity": 2, "mirror": true } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "default": 1020, "min": 800, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
+    { "id": "body_length", "type": "slider", "default": 1120, "min": 900, "max": 1400, "step": 10, "label": { "en": "Coat length, nape to hem (mm)", "es": "Largo de abrigo, nuca a bajo (mm)" } },
+    { "id": "neck_girth", "type": "slider", "default": 400, "min": 300, "max": 520, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "default": 640, "min": 500, "max": 780, "step": 10, "measurement": { "standard": "iso_8559", "code": "arm_length" }, "label": { "en": "Sleeve length, cap to wrist (mm)", "es": "Largo de manga (mm)" } },
+    { "id": "coat_ease", "type": "slider", "default": 260, "min": 160, "max": 420, "step": 10, "label": { "en": "Total layering ease (mm)", "es": "Holgura total para capas (mm)" } },
+    { "id": "button_stand", "type": "slider", "default": 140, "min": 90, "max": 180, "step": 5, "label": { "en": "Double-breasted wrap past CF (mm)", "es": "Cruce de doble botonadura más allá del CF (mm)" } },
+    { "id": "lapel_width", "type": "slider", "default": 110, "min": 80, "max": 150, "step": 5, "label": { "en": "Lapel point past CF (mm)", "es": "Punta de solapa más allá del CF (mm)" } },
+    { "id": "roll_line_y", "type": "slider", "default": 620, "min": 420, "max": 820, "step": 10, "advanced": true, "label": { "en": "Roll point above hem (mm)", "es": "Punto de quiebre sobre el bajo (mm)" } },
+    { "id": "collar_height", "type": "slider", "default": 80, "min": 55, "max": 100, "step": 5, "label": { "en": "Collar height (mm)", "es": "Alto de cuello (mm)" } },
+    { "id": "cap_ease", "type": "slider", "default": 30, "min": 0, "max": 45, "step": 5, "advanced": true, "label": { "en": "Sleeve cap ease (mm)", "es": "Embebido de copa (mm)" } },
+    { "id": "vent_height", "type": "slider", "default": 420, "min": 250, "max": 620, "step": 10, "advanced": true, "label": { "en": "CB vent height (mm)", "es": "Alto de abertura trasera (mm)" } },
+    { "id": "belt_width", "type": "slider", "default": 60, "min": 40, "max": 80, "step": 5, "advanced": true, "label": { "en": "Finished belt width (mm)", "es": "Ancho terminado del cinturón (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 14, "min": 10, "max": 18, "step": 1, "label": { "en": "Seam allowance, melton-wide (mm)", "es": "Margen de costura, ancho para melton (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 55, "min": 35, "max": 75, "step": 5, "advanced": true, "label": { "en": "Hem allowance (mm)", "es": "Margen de bajo (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1020, "body_length": 1120, "neck_girth": 400, "sleeve_length": 640, "coat_ease": 260 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1120, "body_length": 1160, "neck_girth": 420, "sleeve_length": 665, "coat_ease": 280, "roll_line_y": 640 } }
+  ],
+  "constraints": [
+    {
+      "expression": "roll_line_y <= body_length - 300",
+      "severity": "warning",
+      "message": { "en": "A high roll point crowds the lapel against the chest line — keep it below the coat's chest level", "es": "Un punto de quiebre alto aprieta la solapa contra la línea de pecho — manténgalo por debajo del pecho del abrigo" }
+    },
+    {
+      "expression": "cap_ease >= 15",
+      "severity": "warning",
+      "message": { "en": "Tailored coat caps ease 15-35 mm into the armhole; below that the cap sews flat and pulls", "es": "Las copas de abrigo embeben 15-35 mm en la sisa; con menos, la copa se cose plana y tira" }
+    },
+    {
+      "expression": "button_stand >= lapel_width",
+      "severity": "warning",
+      "message": { "en": "A double-breasted wrap should reach at least as far as the lapel point — widen the button stand", "es": "El cruce de doble botonadura debe llegar al menos hasta la punta de solapa — ensanche la tapeta" }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["lana-melton-abrigo"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "gorge" }, { "piece": "back_yoke", "edge": "neck" }], "parameters": ["neck_girth", "lapel_width"] },
+      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }], "parameters": ["chest_girth", "coat_ease", "cap_ease"] },
+      { "id": "shoulder", "type": "shoulder", "edges": [{ "piece": "front", "edge": "shoulder" }, { "piece": "back_yoke", "edge": "shoulder" }], "parameters": ["neck_girth", "chest_girth"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["chest_girth", "coat_ease"] },
+      { "id": "button_stand", "type": "button_stand", "edges": [{ "piece": "front", "edge": "center" }], "parameters": ["button_stand", "roll_line_y"] },
+      { "id": "storm_flap", "type": "custom", "edges": [{ "piece": "gun_flap", "edge": "attach" }, { "piece": "front", "edge": "shoulder" }], "parameters": ["chest_girth"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "tailoring": true, "double_breasted": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "The trench is the most mythologized coat in the wardrobe — sold at a luxury markup precisely because its architecture looks unrepeatable — and this teaching-grade draft takes it apart into verified, regenerating pieces: the double-breasted wrap, the storm-shield cape, the gun flap caught in the shoulder seam, the eased set-in cap, the belt and epaulettes, the deep back vent, each solve declared and length-checked so a learner can watch the cap grow exactly its declared ease past the armholes and the facing balance the front-edge run to the millimetre. A coat built to last decades and to be re-lined and repaired is the opposite of disposable fashion; opening its draft to the commons is what lets it be made, fitted, and kept.",
+      "es": "La gabardina es el abrigo más mitificado del guardarropa — se vende con sobreprecio de lujo justamente porque su arquitectura parece irrepetible — y este trazo didáctico la desarma en piezas verificadas que se regeneran: el cruce de doble botonadura, la capa cortavientos, la solapa antiviento cosida en el hombro, la copa montada y embebida, el cinturón y las charreteras, la abertura trasera profunda, cada resolución declarada y comprobada en longitud para que quien aprende vea la copa crecer exactamente su embebido sobre las sisas y la vista igualar el recorrido del canto al milímetro. Un abrigo hecho para durar décadas y para re-forrarse y repararse es lo contrario de la moda desechable; abrir su trazo al común es lo que permite fabricarlo, ajustarlo y conservarlo."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

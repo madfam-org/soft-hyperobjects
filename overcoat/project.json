@@ -1,0 +1,96 @@
+{
+  "project": {
+    "name": "Overcoat",
+    "slug": "overcoat",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #63. A classic single-breasted tailored overcoat in the Chesterfield idiom — the blazer (rank #30) grown to full coat length and cut roomy to layer over a suit. The front's center edge runs up the button stand to the roll point, then breaks into a peak lapel that rises past the gorge to a peak point and a short gorge back to the neck point, with a welt breast pocket, flap hip pockets, and the roll line marked. The back carries a shaped center-back seam with a deep vent and a half-belt marking; the coat-appropriate two-piece sleeve joins an upper and an under sleeve along an exact forearm and hindarm seam, its combined cap bisection-solved to the measured armholes plus 28 mm of declared ease; the upper collar is solved to the gorge + back neck; a straight front facing is verified against the measured center + lapel + gorge run. Drafted in wool melton with wider seam allowances and a generous hem for the coating's bulk; fully lined (lining pieces derived from the shell). No pad-stitched canvas or separately drafted lining in v0.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #63 del FC-100. Un abrigo clásico de sastrería de un solo pecho al estilo Chesterfield — el saco (rango #30) crecido a largo completo de abrigo y cortado holgado para usarse sobre un traje. El canto delantero sube por la tapeta hasta el punto de quiebre, y ahí rompe en una solapa de pico que sube más allá del escote hasta la punta de pico y un escote corto de regreso al punto de cuello, con bolsillo de pecho de vista, bolsillos de cartera en la cadera y la línea de quiebre marcada. La espalda lleva costura central formada con abertura profunda y una marca de media-martingala; la manga de dos piezas, propia del abrigo, une una manga superior y una inferior por una costura delantera y trasera exactas, con la copa combinada resuelta por bisección a las sisas medidas más 28 mm de embebido declarado; el cuello superior se resuelve al escote + cuello trasero; una vista delantera recta se verifica contra el recorrido medido de canto + solapa + escote. Trazado en melton de lana con márgenes más anchos y bajo amplio por el cuerpo de la tela; totalmente forrado (piezas de forro derivadas de la prenda). Sin entretela de sastre pespunteada ni forro trazado por separado en v0.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["overcoat", "coat", "tailoring", "chesterfield", "peak-lapel", "two-piece-sleeve", "vent", "eased-cap", "melton", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" },
+        { "source": "blazer (rank #30) — lapel/roll-line front, eased sleeve cap, upper-collar and facing bisection solves, shaped CB seam + vent; scaled up to a coat and given a peak lapel and a two-piece sleeve", "license": "LicenseRef-FC1-pending" },
+        { "source": "collar-band enabler — neck-edge bisection method for the upper collar", "license": "LicenseRef-FC1-pending" },
+        { "source": "dress-shirt (rank #4) — woven front block, button stand, and chained-solve architecture", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "overcoat",
+      "label": { "en": "Overcoat (all pieces)", "es": "Abrigo (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "sleeve_upper", "sleeve_under", "collar", "facing"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#33383d", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "back", "label": { "en": "Back", "es": "Espalda" }, "default_color": "#3b4045", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "sleeve_upper", "label": { "en": "Upper Sleeve", "es": "Manga Superior" }, "default_color": "#454b50", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "sleeve_under", "label": { "en": "Under Sleeve", "es": "Manga Inferior" }, "default_color": "#4f555b", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "collar", "label": { "en": "Upper Collar", "es": "Cuello Superior" }, "default_color": "#595f66", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "facing", "label": { "en": "Front Facing", "es": "Vista Delantera" }, "default_color": "#646b72", "cut": { "quantity": 2, "mirror": true } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "default": 1040, "min": 800, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
+    { "id": "body_length", "type": "slider", "default": 1150, "min": 950, "max": 1350, "step": 10, "label": { "en": "Coat length, nape to hem (mm)", "es": "Largo de abrigo, nuca a bajo (mm)" } },
+    { "id": "neck_girth", "type": "slider", "default": 400, "min": 320, "max": 540, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "default": 660, "min": 500, "max": 780, "step": 10, "measurement": { "standard": "iso_8559", "code": "arm_length" }, "label": { "en": "Sleeve length, cap to wrist (mm)", "es": "Largo de manga (mm)" } },
+    { "id": "coat_ease", "type": "slider", "default": 260, "min": 160, "max": 360, "step": 10, "label": { "en": "Total layering ease (mm)", "es": "Holgura total para capas (mm)" } },
+    { "id": "button_stand", "type": "slider", "default": 22, "min": 18, "max": 40, "step": 1, "label": { "en": "Button stand width (mm)", "es": "Ancho de tapeta (mm)" } },
+    { "id": "lapel_width", "type": "slider", "default": 95, "min": 70, "max": 130, "step": 5, "label": { "en": "Peak point past CF (mm)", "es": "Punta de pico más allá del CF (mm)" } },
+    { "id": "peak_rise", "type": "slider", "default": 55, "min": 0, "max": 90, "step": 5, "advanced": true, "label": { "en": "Peak rise above gorge (mm)", "es": "Alzado del pico sobre el escote (mm)" } },
+    { "id": "roll_line_y", "type": "slider", "default": 720, "min": 560, "max": 900, "step": 10, "advanced": true, "label": { "en": "Roll point above hem (mm)", "es": "Punto de quiebre sobre el bajo (mm)" } },
+    { "id": "collar_height", "type": "slider", "default": 70, "min": 55, "max": 95, "step": 5, "label": { "en": "Collar height (mm)", "es": "Alto de cuello (mm)" } },
+    { "id": "cap_ease", "type": "slider", "default": 28, "min": 0, "max": 45, "step": 5, "advanced": true, "label": { "en": "Sleeve cap ease (mm)", "es": "Embebido de copa (mm)" } },
+    { "id": "vent_height", "type": "slider", "default": 320, "min": 220, "max": 480, "step": 10, "advanced": true, "label": { "en": "CB vent height (mm)", "es": "Alto de abertura trasera (mm)" } },
+    { "id": "buttons", "type": "slider", "default": 4, "min": 2, "max": 6, "step": 1, "label": { "en": "Front closure buttons", "es": "Botones de cierre delantero" } },
+    { "id": "seam_allowance", "type": "slider", "default": 13, "min": 10, "max": 18, "step": 1, "advanced": true, "label": { "en": "Seam allowance, melton (mm)", "es": "Margen de costura, melton (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 50, "min": 35, "max": 70, "step": 5, "advanced": true, "label": { "en": "Hem allowance (mm)", "es": "Margen de bajo (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1040, "body_length": 1150, "neck_girth": 400, "sleeve_length": 660, "buttons": 4 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1120, "body_length": 1180, "neck_girth": 420, "sleeve_length": 685, "roll_line_y": 750, "buttons": 4 } }
+  ],
+  "constraints": [
+    {
+      "expression": "roll_line_y <= body_length - 380",
+      "severity": "warning",
+      "message": { "en": "A high roll point crowds the peak lapel against the chest line — keep it near waist level on a long coat", "es": "Un punto de quiebre alto aprieta la solapa de pico contra la línea de pecho — manténgalo cerca de la cintura en un abrigo largo" }
+    },
+    {
+      "expression": "cap_ease >= 18",
+      "severity": "warning",
+      "message": { "en": "Coat caps ease 18-40 mm into the armhole; below that the two-piece cap sews flat and loses its roll", "es": "Las copas de abrigo embeben 18-40 mm en la sisa; con menos, la copa de dos piezas se cose plana y pierde su rollo" }
+    },
+    {
+      "expression": "lapel_width <= button_stand + 110",
+      "severity": "warning",
+      "message": { "en": "Very wide peaks overwhelm the straight v0 facing strip", "es": "Picos muy anchos rebasan la vista recta de la v0" }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["lana-melton-abrigo"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "gorge" }, { "piece": "back", "edge": "neck" }], "parameters": ["neck_girth", "lapel_width", "peak_rise"] },
+      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }], "parameters": ["chest_girth", "coat_ease", "cap_ease"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["chest_girth", "coat_ease"] },
+      { "id": "button_stand", "type": "button_stand", "edges": [{ "piece": "front", "edge": "center" }], "parameters": ["button_stand", "roll_line_y", "buttons"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "tailoring": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "The overcoat is the wardrobe's most expensive layer and its most gatekept: a good coat is bought once, tailored, and repaired for decades — yet its pattern is locked inside couture houses. This teaching-grade draft opens the coat's hardest moves as verified, regenerating geometry — the peak-lapel break, the eased two-piece sleeve whose upper and under caps together grow exactly 28 mm past the armholes, the shaped center-back seam with its deep vent — every solve declared and checked, so a learner can watch the two cap arcs close on the armhole and understand why. Cut in the FC-100's wool-melton card with honest coat allowances, it turns the garment most people rent or discard into one that can be drafted, fitted, relined, and handed down.",
+      "es": "El abrigo es la capa más cara del guardarropa y la más cerrada: un buen abrigo se compra una vez, se entalla y se repara por décadas — pero su patrón vive encerrado en las casas de alta costura. Este trazo didáctico abre los movimientos más difíciles del abrigo como geometría verificada que se regenera — el rompimiento de la solapa de pico, la manga embebida de dos piezas cuyas copas superior e inferior juntas crecen exactamente 28 mm sobre las sisas, la costura central formada con su abertura profunda — cada resolución declarada y comprobada, para que quien aprende vea las dos copas cerrar sobre la sisa y entienda por qué. Cortado en la tela de melton de lana del FC-100 con márgenes honestos de abrigo, convierte la prenda que la mayoría renta o desecha en una que puede trazarse, ajustarse, reforrarse y heredarse."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

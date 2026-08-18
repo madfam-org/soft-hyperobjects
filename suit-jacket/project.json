@@ -1,0 +1,98 @@
+{
+  "project": {
+    "name": "Suit Jacket",
+    "slug": "suit-jacket",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #67. The blazer's refined sibling: a teaching-grade two-button single-breasted suit jacket drafted as the classic tailored three-panel body (front + side body + back) with a two-piece sleeve (upper + under). The front's center edge climbs the button stand to the roll point at waist level, then breaks into a straight notch lapel out to the lapel point and a gorge edge back to the neck point, with a fisheye waist dart, a breast welt and two jetted-flap hip pockets marked, and the roll line drawn. The armhole is split three ways across the front, side-body, and back panels; the upper sleeve carries the eased cap solved to that whole armhole plus 15-35 mm of declared ease while the under sleeve joins along matched forearm and hindarm seams; the back has a shaped center-back seam with vent markings; the upper collar is solved to the gorge + back neck; and a straight front facing is verified against the measured center + lapel + gorge run. Fully lined (lining noted, BOM-costed) with a fusible + floating chest canvas, a lightly extended padded shoulder, and four working-cuff sleeve buttons. No full hand-padded canvas or drafted lining in v0.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #67 del FC-100. El hermano refinado del saco (blazer): un saco de traje de dos botones y un solo pecho, grado didáctico, trazado como el cuerpo sastreado clásico de tres paneles (delantero + costadillo + espalda) con manga de dos piezas (superior + inferior). El canto delantero sube por la tapeta hasta el punto de quiebre a la altura de la cintura y ahí rompe en una solapa de muesca recta hasta la punta de solapa y un escote (gorge) de regreso al punto de cuello, con pinza de pez en la cintura, un vivo de pecho y dos bolsillos de cadera de vivo con cartera marcados, y la línea de quiebre dibujada. La sisa se reparte en tres a lo largo de los paneles delantero, costadillo y espalda; la manga superior lleva la copa embebida resuelta a esa sisa completa más 15-35 mm de embebido declarado mientras la manga inferior se une por costuras de codo delantero y trasero emparejadas; la espalda tiene costura central formada con marcas de abertura; el cuello superior se resuelve al gorge + escote trasero; y una vista delantera recta se verifica contra el recorrido medido de canto + solapa + gorge. Totalmente forrado (forro anotado y presupuestado) con entretela fusionable + entretela de pecho flotante, hombro estructurado ligeramente extendido y cuatro botones de puño funcionales. Sin entretela de sastre pespuntada completa ni forro trazado en v0.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["suit-jacket", "suit", "tailoring", "lapel", "roll-line", "three-panel", "side-body", "two-piece-sleeve", "eased-cap", "vent", "facing", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" },
+        { "source": "blazer (rank #30) — lapel/roll-line front, fisheye dart, shaped CB seam + vent, eased-cap bisection, collar-band solve, and straight-facing derivation", "license": "LicenseRef-FC1-pending" },
+        { "source": "collar-band enabler — neck-edge bisection method for the upper collar", "license": "LicenseRef-FC1-pending" },
+        { "source": "chinos (rank #17) — bowed-seam bisection idiom and marking-trace conventions for pockets and creases", "license": "LicenseRef-FC1-pending" },
+        { "source": "shank-button (notion) — Yantra4D hardware reference for front and sleeve buttons", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "suit-jacket",
+      "label": { "en": "Suit jacket (all pieces)", "es": "Saco de traje (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["front", "side_body", "back", "upper_sleeve", "under_sleeve", "collar", "facing"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#39404e", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "side_body", "label": { "en": "Side Body", "es": "Costadillo" }, "default_color": "#424a5a", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "back", "label": { "en": "Back", "es": "Espalda" }, "default_color": "#4b5466", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "upper_sleeve", "label": { "en": "Upper Sleeve", "es": "Manga Superior" }, "default_color": "#545d72", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "under_sleeve", "label": { "en": "Under Sleeve", "es": "Manga Inferior" }, "default_color": "#5d677e", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "collar", "label": { "en": "Upper Collar", "es": "Cuello Superior" }, "default_color": "#66708a", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
+    { "id": "facing", "label": { "en": "Front Facing", "es": "Vista Delantera" }, "default_color": "#727c96", "cut": { "quantity": 2, "mirror": true } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "default": 1020, "min": 760, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
+    { "id": "body_length", "type": "slider", "default": 730, "min": 560, "max": 1000, "step": 10, "label": { "en": "Body length, nape to hem (mm)", "es": "Largo de cuerpo, nuca a bajo (mm)" } },
+    { "id": "neck_girth", "type": "slider", "default": 400, "min": 300, "max": 520, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "default": 630, "min": 420, "max": 760, "step": 10, "measurement": { "standard": "iso_8559", "code": "arm_length" }, "label": { "en": "Sleeve length, cap to wrist (mm)", "es": "Largo de manga (mm)" } },
+    { "id": "jacket_ease", "type": "slider", "default": 130, "min": 90, "max": 260, "step": 10, "label": { "en": "Total ease (mm)", "es": "Holgura total (mm)" } },
+    { "id": "button_stand", "type": "slider", "default": 20, "min": 15, "max": 35, "step": 1, "label": { "en": "Button stand width (mm)", "es": "Ancho de tapeta (mm)" } },
+    { "id": "lapel_width", "type": "slider", "default": 90, "min": 65, "max": 115, "step": 5, "label": { "en": "Lapel point past CF (mm)", "es": "Punta de solapa más allá del CF (mm)" } },
+    { "id": "roll_line_y", "type": "slider", "default": 300, "min": 230, "max": 430, "step": 10, "advanced": true, "label": { "en": "Roll point above hem (mm)", "es": "Punto de quiebre sobre el bajo (mm)" } },
+    { "id": "collar_height", "type": "slider", "default": 58, "min": 45, "max": 85, "step": 5, "label": { "en": "Collar height (mm)", "es": "Alto de cuello (mm)" } },
+    { "id": "cap_ease", "type": "slider", "default": 28, "min": 0, "max": 40, "step": 5, "advanced": true, "label": { "en": "Sleeve cap ease (mm)", "es": "Embebido de copa (mm)" } },
+    { "id": "shoulder_ext", "type": "slider", "default": 10, "min": 0, "max": 25, "step": 1, "advanced": true, "label": { "en": "Structured shoulder extension (mm)", "es": "Extensión de hombro estructurado (mm)" } },
+    { "id": "vent_height", "type": "slider", "default": 260, "min": 150, "max": 320, "step": 10, "advanced": true, "label": { "en": "CB vent height (mm)", "es": "Alto de abertura trasera (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 12, "min": 8, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 45, "min": 25, "max": 60, "step": 5, "advanced": true, "label": { "en": "Hem allowance (mm)", "es": "Margen de bajo (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M (drop 6)", "es": "M (drop 6)" }, "values": { "chest_girth": 1020, "body_length": 730, "neck_girth": 400, "sleeve_length": 630, "jacket_ease": 130 } },
+    { "id": "size-l", "label": { "en": "L (drop 6)", "es": "G (drop 6)" }, "values": { "chest_girth": 1120, "body_length": 750, "neck_girth": 420, "sleeve_length": 650, "jacket_ease": 140, "roll_line_y": 310 } }
+  ],
+  "constraints": [
+    {
+      "expression": "roll_line_y <= body_length - 280",
+      "severity": "warning",
+      "message": { "en": "A high roll point crowds the lapel against the chest line — keep it near waist level", "es": "Un punto de quiebre alto aprieta la solapa contra la línea de pecho — manténgalo cerca de la cintura" }
+    },
+    {
+      "expression": "cap_ease >= 15",
+      "severity": "warning",
+      "message": { "en": "Tailored two-piece caps ease 15-35 mm into the armhole; below that the cap sews flat and loses its roll", "es": "Las copas de dos piezas de sastre embeben 15-35 mm en la sisa; con menos, la copa se cose plana y pierde su volumen" }
+    },
+    {
+      "expression": "lapel_width <= button_stand + 95",
+      "severity": "warning",
+      "message": { "en": "Very wide lapels overwhelm the straight v0 facing strip", "es": "Solapas muy anchas rebasan la vista recta de la v0" }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["lana-peinada-traje"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "gorge" }, { "piece": "back", "edge": "neck" }], "parameters": ["neck_girth", "lapel_width"] },
+      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "side_body", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }], "parameters": ["chest_girth", "jacket_ease", "cap_ease"] },
+      { "id": "shoulder", "type": "shoulder", "edges": [{ "piece": "front", "edge": "shoulder" }, { "piece": "back", "edge": "shoulder" }], "parameters": ["neck_girth", "chest_girth", "shoulder_ext"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "side_body", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["chest_girth", "jacket_ease"] },
+      { "id": "button_stand", "type": "button_stand", "edges": [{ "piece": "front", "edge": "center" }], "parameters": ["button_stand", "roll_line_y"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "tailoring": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "The suit jacket is the most gatekept garment in the wardrobe, and its tailoring is guarded as trade craft: this teaching-grade draft opens the three-panel body, the split armhole, the two-piece sleeve, the roll line, and the eased cap as verified, regenerating geometry — every seam is declared and checked, so a learner can watch the cap grow exactly its declared ease past the whole armhole and see how the side body carves chest shape without a visible seam — turning the garment most often rented or bought disposable into one that can be drafted, fitted, and repaired at home.",
+      "es": "El saco de traje es la prenda más cerrada del guardarropa, y su sastrería se guarda como oficio de gremio: este trazo didáctico abre el cuerpo de tres paneles, la sisa repartida, la manga de dos piezas, la línea de quiebre y la copa embebida como geometría verificada que se regenera — cada costura está declarada y comprobada, así que quien aprende puede ver la copa crecer exactamente su embebido declarado sobre la sisa completa y entender cómo el costadillo talla la forma del pecho sin costura visible — convirtiendo la prenda que más se renta o se compra desechable en una que puede trazarse, ajustarse y repararse en casa."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

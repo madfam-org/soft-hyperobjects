@@ -1,0 +1,93 @@
+{
+  "project": {
+    "name": "Waistcoat",
+    "slug": "waistcoat",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "FC-100 rank #69. The commons' first sleeveless tailoring garment: a classic single-breasted five-button suit waistcoat, honestly simplified. It is a tailored front with no sleeve — the armhole is a finished, bound armscye (faced or bound, no sleeve piece). The neckline is a deep front V that drops to the top button on the center front, and below the bottom button the hem comes to the signature pointed front (each cut-2 front dips to a point at CF; mirrored, the pair reads as the notched waistcoat front). A fisheye waist dart shapes the front, with two lower welt-pocket markings and a breast welt. The back is the signature cinched back — cut 2 with a shaped center-back seam that nips the waist, drafted in lining/satin — pulled in by an adjustable two-strap cinch belt (buckle + slider hardware referenced from Yantra4D). The straight front facing is verified against the measured center + V-neck run. Lining is noted, not fully drafted, in v0.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Rango #69 del FC-100. La primera prenda de sastrería sin manga del común: un chaleco de vestir clásico de un solo pecho y cinco botones, simplificado con honestidad. Es un delantero sastreado sin manga — la sisa es una boca de brazo terminada y ribeteada (forrada o ribeteada, sin pieza de manga). El escote es una V profunda que baja hasta el botón superior en el centro delantero, y debajo del último botón el bajo remata en la punta delantera característica (cada delantero cortado por 2 baja a una punta en el CF; espejeados, el par se lee como el frente en pico del chaleco). Una pinza de pez marca la cintura, con dos bolsillos de vista (welt) inferiores y una vista de pecho. La espalda es la espalda entallada característica — cortada por 2 con costura central formada que ciñe la cintura, trazada en forro/satén — ajustada por un cinturón trasero de dos tiras (hebilla + corredera, herraje referenciado de Yantra4D). La vista delantera recta se verifica contra el recorrido medido de canto + escote en V. El forro se anota, no se traza por completo, en v0.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["waistcoat", "vest", "tailoring", "sleeveless", "v-neck", "pointed-hem", "back-cinch", "welt-pocket", "lined", "fc100", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" },
+        { "source": "blazer (rank #30) — tailored front block, fisheye waist dart, bound-armhole bezier, shaped CB seam, and the straight-facing verification method", "license": "LicenseRef-FC1-pending" },
+        { "source": "dress-shirt (rank #4) — button-stand front and the CF buttonhole cross-mark spacing method", "license": "LicenseRef-FC1-pending" },
+        { "source": "waistband-block enabler — the straight cut-ready rectangular strap idiom used for the cinch-belt straps", "license": "LicenseRef-FC1-pending" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "waistcoat",
+      "label": { "en": "Waistcoat (all pieces)", "es": "Chaleco (todas las piezas)" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "facing", "cinch_strap"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#3a3f4a", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "back", "label": { "en": "Back (lining)", "es": "Espalda (forro)" }, "default_color": "#4a4f5a", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "facing", "label": { "en": "Front Facing", "es": "Vista Delantera" }, "default_color": "#565b68", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "cinch_strap", "label": { "en": "Cinch Strap", "es": "Tira de Ajuste" }, "default_color": "#646978", "cut": { "quantity": 2, "mirror": false } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "default": 1020, "min": 700, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
+    { "id": "waist_girth", "type": "slider", "default": 880, "min": 600, "max": 1600, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
+    { "id": "body_length", "type": "slider", "default": 560, "min": 440, "max": 720, "step": 10, "label": { "en": "Body length, nape to front point (mm)", "es": "Largo de cuerpo, nuca a punta delantera (mm)" } },
+    { "id": "neck_girth", "type": "slider", "default": 400, "min": 300, "max": 520, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
+    { "id": "waistcoat_ease", "type": "slider", "default": 90, "min": 40, "max": 200, "step": 10, "label": { "en": "Total ease (mm)", "es": "Holgura total (mm)" } },
+    { "id": "button_stand", "type": "slider", "default": 20, "min": 15, "max": 30, "step": 1, "label": { "en": "Button stand width (mm)", "es": "Ancho de tapeta (mm)" } },
+    { "id": "neck_drop", "type": "slider", "default": 235, "min": 170, "max": 320, "step": 5, "label": { "en": "Top button height above front point (mm)", "es": "Altura del botón superior sobre la punta (mm)" } },
+    { "id": "front_point", "type": "slider", "default": 55, "min": 25, "max": 90, "step": 5, "label": { "en": "Front hem point dip (mm)", "es": "Caída de la punta del bajo (mm)" } },
+    { "id": "back_cinch", "type": "slider", "default": 22, "min": 8, "max": 40, "step": 2, "advanced": true, "label": { "en": "Back-seam waist nip per side (mm)", "es": "Entalle de costura trasera por lado (mm)" } },
+    { "id": "strap_length", "type": "slider", "default": 210, "min": 150, "max": 300, "step": 10, "advanced": true, "label": { "en": "Cinch strap length (mm)", "es": "Largo de tira de ajuste (mm)" } },
+    { "id": "strap_width", "type": "slider", "default": 32, "min": 20, "max": 45, "step": 2, "advanced": true, "label": { "en": "Cinch strap width (mm)", "es": "Ancho de tira de ajuste (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "default": 12, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "default": 20, "min": 12, "max": 40, "step": 4, "advanced": true, "label": { "en": "Hem allowance (mm)", "es": "Margen de bajo (mm)" } }
+  ],
+  "presets": [
+    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1020, "waist_girth": 880, "body_length": 560, "neck_girth": 400 } },
+    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1100, "waist_girth": 960, "body_length": 580, "neck_girth": 420, "back_cinch": 26 } }
+  ],
+  "constraints": [
+    {
+      "expression": "neck_drop <= body_length - 120",
+      "severity": "warning",
+      "message": { "en": "The top button must sit below the chest line — keep the V-neck drop under body length minus 120 mm", "es": "El botón superior debe quedar debajo de la línea de pecho — mantenga la caída de la V por debajo del largo menos 120 mm" }
+    },
+    {
+      "expression": "waist_girth <= chest_girth",
+      "severity": "warning",
+      "message": { "en": "A waistcoat's waist is normally at or under the chest; a waist wider than the chest defeats the cinched back", "es": "La cintura de un chaleco normalmente es igual o menor que el pecho; una cintura más ancha que el pecho anula la espalda entallada" }
+    },
+    {
+      "expression": "front_point <= body_length - 300",
+      "severity": "warning",
+      "message": { "en": "A very deep hem point can drop below the datum — keep the point dip well under the body length", "es": "Una punta de bajo muy profunda puede caer por debajo del datum — mantenga la caída de la punta muy por debajo del largo" }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["lana-peinada-traje"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "neck" }, { "piece": "back", "edge": "neck" }], "parameters": ["neck_girth", "neck_drop"] },
+      { "id": "armscye", "type": "armscye", "label": { "en": "Bound armhole (no sleeve)", "es": "Sisa ribeteada (sin manga)" }, "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }], "parameters": ["chest_girth", "waistcoat_ease"] },
+      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["front_point", "body_length"] },
+      { "id": "button_stand", "type": "button_stand", "edges": [{ "piece": "front", "edge": "center" }], "parameters": ["button_stand", "neck_drop"] },
+      { "id": "back_cinch", "type": "custom", "label": { "en": "Back cinch belt", "es": "Cinturón trasero de ajuste" }, "edges": [{ "piece": "cinch_strap", "edge": "attach" }, { "piece": "back", "edge": "cb" }], "parameters": ["back_cinch", "strap_length", "strap_width"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": false, "tailoring": true, "sleeveless": true, "adjustable_fit": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "societal_benefit": {
+      "en": "The waistcoat is tailoring stripped to its front: no sleeve to ease, no collar to roll, just the shaped panel, the pointed hem, the fisheye dart, and the cinched back that a learner can actually finish. This teaching-grade draft opens the deep V-neck, the bound armscye, and the adjustable back belt as verified, regenerating geometry — every seam declared and length-checked — so the most accessible way into a bespoke suit can be drafted, fitted, and repaired at home, and the cinch belt lets one garment fit a changing body instead of being discarded.",
+      "es": "El chaleco es la sastrería reducida a su delantero: sin manga que embeber, sin cuello que quebrar, solo el panel formado, la punta del bajo, la pinza de pez y la espalda entallada que quien aprende sí puede terminar. Este trazo didáctico abre la V profunda, la sisa ribeteada y el cinturón trasero ajustable como geometría verificada que se regenera — cada costura declarada y medida — para que la entrada más accesible a un traje a medida pueda trazarse, ajustarse y repararse en casa, y el cinturón permita que una prenda vista a un cuerpo cambiante en vez de desecharse."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
