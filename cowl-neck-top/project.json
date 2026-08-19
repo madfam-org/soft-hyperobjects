@@ -1,0 +1,55 @@
+{
+  "project": {
+    "name": "Cowl-Neck Top",
+    "slug": "cowl-neck-top",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A relaxed top whose front neckline rises above the shoulder into a self-facing that folds back into a soft cowl — no separate collar. The front shoulder matches the back exactly, so the shoulder seam balances by construction; cut in a fluid fabric for the drape. A soft-goods garment — no hardware. FC-200 long-tail (silhouette gap).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un top holgado cuyo escote frontal se eleva por encima del hombro en una vista propia que se dobla en una caída suave (cowl) — sin cuello aparte. El hombro frontal coincide exactamente con la espalda, así que la costura de hombro se equilibra por construcción; córtese en tela fluida para el drapeado. Una prenda textil — sin herrajes. Cola larga FC-200 (hueco de silueta).\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["cowl", "top", "draped", "knit", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+    }
+  },
+  "modes": [
+    { "id": "set", "label": { "en": "Full Top", "es": "Top completo" }, "script_file": "main.py", "pieces": ["front", "back"] }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front (cowl)", "es": "Frente (cowl)" }, "default_color": "#5a6a7a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
+    { "id": "back", "label": { "en": "Back", "es": "Espalda" }, "default_color": "#5a6a7a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "default": 980, "min": 650, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" }, "tooltip": { "en": "Full chest", "es": "Pecho completo" } },
+    { "id": "top_length", "type": "slider", "default": 620, "min": 420, "max": 900, "step": 10, "label": { "en": "Length (mm)", "es": "Largo (mm)" }, "tooltip": { "en": "Shoulder to hem", "es": "Del hombro al ruedo" } },
+    { "id": "neck_width", "type": "slider", "default": 220, "min": 160, "max": 380, "step": 5, "label": { "en": "Neck width (mm)", "es": "Ancho de cuello (mm)" }, "tooltip": { "en": "Base neck opening", "es": "Abertura base de cuello" } },
+    { "id": "cowl_drop", "type": "slider", "default": 150, "min": 60, "max": 300, "step": 10, "label": { "en": "Cowl depth (mm)", "es": "Profundidad del cowl (mm)" }, "tooltip": { "en": "How deep the cowl folds", "es": "Cuánto cae el cowl" } },
+    { "id": "cowl_rise", "type": "slider", "default": 90, "min": 30, "max": 200, "step": 10, "label": { "en": "Cowl rise (mm)", "es": "Elevación del cowl (mm)" }, "tooltip": { "en": "Extra height above the shoulder", "es": "Altura extra sobre el hombro" } },
+    { "id": "sleeve_grown", "type": "slider", "default": 150, "min": 60, "max": 260, "step": 10, "label": { "en": "Grown sleeve (mm)", "es": "Manga nacida (mm)" }, "tooltip": { "en": "Grown-on cap sleeve", "es": "Manga nacida" } },
+    { "id": "ease", "type": "slider", "default": 120, "min": 40, "max": 360, "step": 10, "label": { "en": "Fit ease (mm)", "es": "Holgura (mm)" }, "tooltip": { "en": "Soft ease", "es": "Holgura suave" } }
+  ],
+  "presets": [
+    { "id": "soft", "label": { "en": "Soft cowl", "es": "Cowl suave" }, "values": { "cowl_rise": 90, "cowl_drop": 150 } },
+    { "id": "deep", "label": { "en": "Deep cowl", "es": "Cowl profundo" }, "values": { "cowl_rise": 150, "cowl_drop": 240 } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "shoulder_seam", "type": "shoulder", "label": { "en": "Shoulder seam", "es": "Costura de hombro" }, "edges": [{ "piece": "front", "edge": "shoulder" }, { "piece": "back", "edge": "shoulder" }], "parameters": ["neck_width", "chest_girth"] },
+      { "id": "side_seam", "type": "side_seam", "label": { "en": "Side seam", "es": "Costura lateral" }, "edges": [{ "piece": "front", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["top_length"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "societal_benefit": {
+      "en": "An open, made-to-measure cowl top gets its drape from the front's own folded facing rather than a separate collar, so a draped neckline becomes a single-fabric, easy-to-cut commons object sized to the wearer.",
+      "es": "Un top cowl abierto y a la medida obtiene su drapeado de la vista doblada del propio frente en lugar de un cuello aparte, de modo que un escote drapeado se vuelve un objeto común de una sola tela, fácil de cortar y ajustado a quien lo viste."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

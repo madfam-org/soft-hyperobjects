@@ -1,0 +1,56 @@
+{
+  "project": {
+    "name": "Mock-Neck Top",
+    "slug": "mock-neck-top",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A fitted knit top with a mock neck: a short stand collar (~50-70 mm) that stands at the neck without folding — distinct from a tall folding turtleneck. The band length is solved to the measured neckline so it eases on without gaps; front and back share the body width so the shoulder and side seams balance by construction. A soft-goods garment — no hardware. FC-200 long-tail (silhouette gap).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un top de punto ajustado con cuello mock: un cuello alto corto (~50-70 mm) que se mantiene erguido sin doblarse — distinto de un cuello de tortuga alto que se dobla. El largo de la banda se resuelve al escote medido para que entre sin huecos; frente y espalda comparten el ancho del cuerpo, así que las costuras de hombro y lateral se equilibran por construcción. Una prenda textil — sin herrajes. Cola larga FC-200 (hueco de silueta).\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["mock-neck", "top", "knit", "stand-collar", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+    }
+  },
+  "modes": [
+    { "id": "set", "label": { "en": "Full Top", "es": "Top completo" }, "script_file": "main.py", "pieces": ["front", "back", "band"] }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front", "es": "Frente" }, "default_color": "#6a5a5a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
+    { "id": "back", "label": { "en": "Back", "es": "Espalda" }, "default_color": "#6a5a5a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
+    { "id": "band", "label": { "en": "Mock-neck band", "es": "Banda de cuello mock" }, "default_color": "#5a4a4a", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "default": 940, "min": 640, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" }, "tooltip": { "en": "Full chest", "es": "Pecho completo" } },
+    { "id": "top_length", "type": "slider", "default": 620, "min": 420, "max": 880, "step": 10, "label": { "en": "Length (mm)", "es": "Largo (mm)" }, "tooltip": { "en": "Shoulder to hem", "es": "Del hombro al ruedo" } },
+    { "id": "neck_width", "type": "slider", "default": 170, "min": 130, "max": 300, "step": 5, "label": { "en": "Neck width (mm)", "es": "Ancho de cuello (mm)" }, "tooltip": { "en": "Jewel neck width", "es": "Ancho de escote redondo" } },
+    { "id": "mock_height", "type": "slider", "default": 60, "min": 35, "max": 110, "step": 5, "label": { "en": "Mock height (mm)", "es": "Alto del mock (mm)" }, "tooltip": { "en": "Stand height (short — not a turtleneck)", "es": "Altura del cuello (corto — no tortuga)" } },
+    { "id": "sleeve_grown", "type": "slider", "default": 150, "min": 60, "max": 260, "step": 10, "label": { "en": "Grown sleeve (mm)", "es": "Manga nacida (mm)" }, "tooltip": { "en": "Grown-on cap sleeve", "es": "Manga nacida" } },
+    { "id": "ease", "type": "slider", "default": 70, "min": 0, "max": 260, "step": 10, "label": { "en": "Fit ease (mm)", "es": "Holgura (mm)" }, "tooltip": { "en": "Close knit fit", "es": "Ajuste ceñido de punto" } }
+  ],
+  "presets": [
+    { "id": "fitted", "label": { "en": "Fitted", "es": "Ceñido" }, "values": { "ease": 40, "mock_height": 55 } },
+    { "id": "relaxed", "label": { "en": "Relaxed", "es": "Holgado" }, "values": { "ease": 140, "top_length": 700 } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "shoulder_seam", "type": "shoulder", "label": { "en": "Shoulder seam", "es": "Costura de hombro" }, "edges": [{ "piece": "front", "edge": "shoulder" }, { "piece": "back", "edge": "shoulder" }], "parameters": ["neck_width", "chest_girth"] },
+      { "id": "side_seam", "type": "side_seam", "label": { "en": "Side seam", "es": "Costura lateral" }, "edges": [{ "piece": "front", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["top_length"] },
+      { "id": "neck_band", "type": "neckline", "label": { "en": "Mock-neck band", "es": "Banda de cuello mock" }, "edges": [{ "piece": "band", "edge": "attach" }, { "piece": "front", "edge": "neck" }], "parameters": ["neck_width", "mock_height"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "societal_benefit": {
+      "en": "An open, made-to-measure mock-neck top solves the neckband length from the wearer's own neckline so the collar sits clean, turning a knit staple into a repeatable commons object without factory grading.",
+      "es": "Un top de cuello mock abierto y a la medida resuelve el largo de la banda a partir del escote de quien lo viste para que el cuello asiente limpio, convirtiendo un básico de punto en un objeto común repetible sin escalado de fábrica."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

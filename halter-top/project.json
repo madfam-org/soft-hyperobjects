@@ -1,0 +1,54 @@
+{
+  "project": {
+    "name": "Halter Top",
+    "slug": "halter-top",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A halter top: a shaped front rising to a self-fabric neck strap tied behind the neck, with bare shoulders and an open upper back; a low back band wraps to centre back and closes there. Front and back share the band-girth side seam, so the sides balance by construction. A soft-goods garment — no hardware (the back closure is the maker's choice). FC-200 long-tail (silhouette gap).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un top halter: un frente moldeado que se eleva a una cinta de cuello de tela propia atada tras la nuca, con hombros descubiertos y espalda superior abierta; una banda baja de espalda envuelve hasta el centro de la espalda y cierra ahí. Frente y espalda comparten la costura lateral del contorno de banda, así que los lados se equilibran por construcción. Una prenda textil — sin herrajes (el cierre trasero es a elección de quien elabora). Cola larga FC-200 (hueco de silueta).\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["halter", "top", "backless", "summer", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+    }
+  },
+  "modes": [
+    { "id": "set", "label": { "en": "Full Top", "es": "Top completo" }, "script_file": "main.py", "pieces": ["front", "back"] }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front (halter)", "es": "Frente (halter)" }, "default_color": "#8a6a5a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
+    { "id": "back", "label": { "en": "Back band", "es": "Banda de espalda" }, "default_color": "#8a6a5a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } }
+  ],
+  "parameters": [
+    { "id": "bust_girth", "type": "slider", "default": 900, "min": 650, "max": 1400, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Bust girth (mm)", "es": "Contorno de busto (mm)" }, "tooltip": { "en": "Full bust", "es": "Busto completo" } },
+    { "id": "underbust", "type": "slider", "default": 760, "min": 560, "max": 1200, "step": 10, "measurement": { "standard": "iso_8559", "code": "underbust_girth" }, "label": { "en": "Under-bust girth (mm)", "es": "Contorno bajo busto (mm)" }, "tooltip": { "en": "Body band girth", "es": "Contorno de la banda" } },
+    { "id": "front_len", "type": "slider", "default": 360, "min": 240, "max": 500, "step": 10, "label": { "en": "Front length (mm)", "es": "Largo del frente (mm)" }, "tooltip": { "en": "Under-bust to neck-strap point", "es": "Del bajo busto al punto de la cinta" } },
+    { "id": "back_height", "type": "slider", "default": 180, "min": 100, "max": 320, "step": 10, "label": { "en": "Back band height (mm)", "es": "Altura de banda trasera (mm)" }, "tooltip": { "en": "How high the low back rises", "es": "Cuánto sube la espalda baja" } },
+    { "id": "strap_width", "type": "slider", "default": 40, "min": 20, "max": 90, "step": 5, "label": { "en": "Neck strap width (mm)", "es": "Ancho de cinta de cuello (mm)" }, "tooltip": { "en": "Self-fabric strap width", "es": "Ancho de la cinta de tela propia" } },
+    { "id": "ease", "type": "slider", "default": 40, "min": 0, "max": 160, "step": 10, "label": { "en": "Fit ease (mm)", "es": "Holgura (mm)" }, "tooltip": { "en": "Close fit", "es": "Ajuste ceñido" } }
+  ],
+  "presets": [
+    { "id": "fitted", "label": { "en": "Fitted", "es": "Ceñido" }, "values": { "ease": 20, "front_len": 340 } },
+    { "id": "relaxed", "label": { "en": "Relaxed", "es": "Holgado" }, "values": { "ease": 80, "front_len": 400 } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "side_seam", "type": "side_seam", "label": { "en": "Side seam", "es": "Costura lateral" }, "edges": [{ "piece": "front", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["underbust", "front_len"] },
+      { "id": "neck_strap", "type": "custom", "label": { "en": "Neck strap point", "es": "Punto de cinta de cuello" }, "edges": [{ "piece": "front", "edge": "neck" }], "parameters": ["strap_width"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "societal_benefit": {
+      "en": "An open, made-to-measure halter sizes the body band to the wearer's own under-bust and ties at the neck with a self-fabric strap, keeping a warm-weather staple makeable and adjustable from a firm woven without proprietary sizing.",
+      "es": "Un halter abierto y a la medida ajusta la banda del cuerpo al bajo busto de quien lo viste y ata al cuello con una cinta de tela propia, manteniendo un básico de clima cálido fabricable y ajustable a partir de un tejido firme sin tallaje propietario."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
