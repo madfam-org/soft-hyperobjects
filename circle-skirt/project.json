@@ -1,0 +1,53 @@
+{
+  "project": {
+    "name": "Circle Skirt",
+    "slug": "circle-skirt",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The full circle skirt: cut as an annulus so the hem is a full circle and the skirt falls in even waves with no gathers. The waist arc is solved so its inner radius = waist ÷ (2π × fullness); a fullness slider trades a full circle for a half/three-quarter. Distinct from FC-100's gathered and A-line skirts — the volume is pure geometry. A soft-goods garment — a side zip is the maker's hardware. FC-200 long-tail (skirt gap).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La falda circular completa: cortada como un anillo para que el ruedo sea un círculo completo y la falda caiga en ondas parejas sin fruncidos. El arco de cintura se resuelve para que su radio interior = cintura ÷ (2π × amplitud); un control de amplitud cambia el círculo completo por medio o tres cuartos. Distinta de las faldas fruncidas y en A de FC-100 — el volumen es pura geometría. Una prenda textil — la cremallera lateral es herraje de quien elabora. Cola larga FC-200 (hueco de falda).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La jupe cercle complète : coupée en anneau pour que l'ourlet soit un cercle entier et que la jupe tombe en vagues régulières sans fronces. L'arc de taille est résolu pour que son rayon intérieur = tour de taille ÷ (2π × ampleur) ; un curseur d'ampleur échange le cercle entier contre un demi/trois-quarts. Distincte des jupes froncées et trapèze de FC-100 — le volume est de la pure géométrie. Un vêtement textile — une fermeture latérale est la quincaillerie du fabricant. Longue traîne FC-200 (manque jupe).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["circle-skirt", "skirt", "circular", "flared", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+    }
+  },
+  "modes": [
+    { "id": "set", "label": { "en": "Full Skirt", "es": "Falda completa", "fr": "Jupe complète" }, "script_file": "main.py", "pieces": ["skirt", "waistband"] }
+  ],
+  "pieces": [
+    { "id": "skirt", "label": { "en": "Skirt (quarter circle)", "es": "Falda (cuarto de círculo)", "fr": "Jupe (quart de cercle)" }, "default_color": "#5a5a7a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
+    { "id": "waistband", "label": { "en": "Waistband", "es": "Pretina", "fr": "Ceinture" }, "default_color": "#4a4a6a", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "waist_girth", "type": "slider", "default": 760, "min": 500, "max": 1400, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)" }, "tooltip": { "en": "Fitted waist", "es": "Cintura ajustada", "fr": "Taille ajustée" } },
+    { "id": "skirt_length", "type": "slider", "default": 600, "min": 250, "max": 1100, "step": 10, "label": { "en": "Length (mm)", "es": "Largo (mm)", "fr": "Longueur (mm)" }, "tooltip": { "en": "Waist to hem", "es": "De la cintura al ruedo", "fr": "De la taille à l'ourlet" } },
+    { "id": "fullness", "type": "slider", "default": 1.0, "min": 0.5, "max": 1.0, "step": 0.05, "label": { "en": "Fullness (circle)", "es": "Amplitud (círculo)", "fr": "Ampleur (cercle)" }, "tooltip": { "en": "1.0 = full circle, 0.5 = half", "es": "1.0 = círculo completo, 0.5 = medio", "fr": "1,0 = cercle entier, 0,5 = demi" } },
+    { "id": "band_height", "type": "slider", "default": 40, "min": 20, "max": 90, "step": 5, "label": { "en": "Waistband height (mm)", "es": "Alto de pretina (mm)", "fr": "Hauteur de ceinture (mm)" }, "tooltip": { "en": "Finished band height", "es": "Alto de pretina terminada", "fr": "Hauteur de ceinture finie" } }
+  ],
+  "presets": [
+    { "id": "full", "label": { "en": "Full circle", "es": "Círculo completo", "fr": "Cercle entier" }, "values": { "fullness": 1.0 } },
+    { "id": "half", "label": { "en": "Half circle", "es": "Medio círculo", "fr": "Demi-cercle" }, "values": { "fullness": 0.6 } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "waist_seam", "type": "waistband", "label": { "en": "Waist seam", "es": "Costura de cintura", "fr": "Couture de taille" }, "edges": [{ "piece": "skirt", "edge": "waist" }, { "piece": "waistband", "edge": "attach" }], "parameters": ["waist_girth", "fullness"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "societal_benefit": {
+      "en": "An open, made-to-measure circle skirt solves the exact radius for the wearer's own waist, so a skirt whose fit depends entirely on one precise curve becomes a reliable commons object anyone can cut to size.",
+      "es": "Una falda circular abierta y a la medida resuelve el radio exacto para la cintura de quien la viste, para que una falda cuyo ajuste depende por completo de una curva precisa se vuelva un objeto común confiable que cualquiera puede cortar a su talla.",
+      "fr": "Une jupe cercle ouverte et sur mesure résout le rayon exact pour le tour de taille de la personne, de sorte qu'une jupe dont l'ajustement dépend entièrement d'une courbe précise devienne un objet commun fiable que chacun peut couper à sa taille."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

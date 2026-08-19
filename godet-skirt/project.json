@@ -1,0 +1,57 @@
+{
+  "project": {
+    "name": "Godet Skirt",
+    "slug": "godet-skirt",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The godet skirt: a slim skirt with triangular godets (flared inserts) set into slashes so the hem flares dramatically while the hip stays close — a mermaid/trumpet line. Each godet is isosceles with equal seam edges (the slash length) so its seams balance. Distinct from FC-100's straight and gathered skirts — the flare comes from inserted wedges. A soft-goods garment — a side zip is the maker's hardware. FC-200 long-tail (skirt gap).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La falda de godets: una falda entallada con godets triangulares (piezas acampanadas) insertados en cortes para que el ruedo se abra mucho mientras la cadera queda ceñida — línea de sirena/trompeta. Cada godet es isósceles con cantos de costura iguales (el largo del corte) para que sus costuras se equilibren. Distinta de las faldas rectas y fruncidas de FC-100 — el vuelo viene de cuñas insertadas. Una prenda textil — la cremallera lateral es herraje de quien elabora. Cola larga FC-200 (hueco de falda).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La jupe à godets : une jupe ajustée avec des godets triangulaires (inserts évasés) posés dans des fentes pour que l'ourlet s'évase fortement tandis que la hanche reste près du corps — ligne sirène/trompette. Chaque godet est isocèle, ses bords de couture égaux (la longueur de la fente) pour que ses coutures s'équilibrent. Distincte des jupes droites et froncées de FC-100 — l'évasé vient de coins insérés. Un vêtement textile — une fermeture latérale est la quincaillerie du fabricant. Longue traîne FC-200 (manque jupe).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["godet-skirt", "skirt", "mermaid", "trumpet", "godet", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+    }
+  },
+  "modes": [
+    { "id": "set", "label": { "en": "Full Skirt", "es": "Falda completa", "fr": "Jupe complète" }, "script_file": "main.py", "pieces": ["front", "back", "godet"] }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front (slashes)", "es": "Frente (cortes)", "fr": "Devant (fentes)" }, "default_color": "#5a4a6a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
+    { "id": "back", "label": { "en": "Back (slashes)", "es": "Espalda (cortes)", "fr": "Dos (fentes)" }, "default_color": "#5a4a6a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
+    { "id": "godet", "label": { "en": "Godet insert", "es": "Godet", "fr": "Godet" }, "default_color": "#6a5a7a", "cut": { "quantity": 6 } }
+  ],
+  "parameters": [
+    { "id": "waist_girth", "type": "slider", "default": 760, "min": 520, "max": 1300, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)" }, "tooltip": { "en": "Fitted waist", "es": "Cintura ajustada", "fr": "Taille ajustée" } },
+    { "id": "hip_girth", "type": "slider", "default": 980, "min": 700, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)", "fr": "Tour de hanches (mm)" }, "tooltip": { "en": "Full hip", "es": "Cadera completa", "fr": "Hanches complètes" } },
+    { "id": "skirt_length", "type": "slider", "default": 720, "min": 450, "max": 1200, "step": 10, "label": { "en": "Length (mm)", "es": "Largo (mm)", "fr": "Longueur (mm)" }, "tooltip": { "en": "Waist to hem", "es": "De la cintura al ruedo", "fr": "De la taille à l'ourlet" } },
+    { "id": "godet_rise", "type": "slider", "default": 380, "min": 200, "max": 700, "step": 10, "label": { "en": "Godet rise (mm)", "es": "Altura de godet (mm)", "fr": "Hauteur de godet (mm)" }, "tooltip": { "en": "How far up the godet reaches", "es": "Cuánto sube el godet", "fr": "Jusqu'où monte le godet" } },
+    { "id": "godet_flare", "type": "slider", "default": 260, "min": 100, "max": 450, "step": 10, "label": { "en": "Godet flare (mm)", "es": "Vuelo de godet (mm)", "fr": "Évasé de godet (mm)" }, "tooltip": { "en": "Hem width each godet adds", "es": "Ancho de ruedo que añade cada godet", "fr": "Largeur d'ourlet ajoutée par godet" } },
+    { "id": "godets", "type": "slider", "default": 6, "min": 2, "max": 12, "step": 1, "label": { "en": "Godets", "es": "Godets", "fr": "Godets" }, "tooltip": { "en": "Number of godet inserts", "es": "Número de godets", "fr": "Nombre de godets" } }
+  ],
+  "presets": [
+    { "id": "trumpet", "label": { "en": "Trumpet", "es": "Trompeta", "fr": "Trompette" }, "values": { "godets": 6, "godet_rise": 380 } },
+    { "id": "dramatic", "label": { "en": "Dramatic", "es": "Dramático", "fr": "Spectaculaire" }, "values": { "godets": 8, "godet_flare": 340 } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "side_seam", "type": "side_seam", "label": { "en": "Side seam", "es": "Costura lateral", "fr": "Couture latérale" }, "edges": [{ "piece": "front", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["hip_girth", "skirt_length"] },
+      { "id": "godet_seam", "type": "custom", "label": { "en": "Godet seam", "es": "Costura de godet", "fr": "Couture de godet" }, "edges": [{ "piece": "godet", "edge": "seam_a" }, { "piece": "front", "edge": "hem" }], "parameters": ["godet_rise", "godet_flare"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "societal_benefit": {
+      "en": "An open, made-to-measure godet skirt computes each flared insert to fit the wearer's own slim skirt, so a dramatic mermaid line — usually a couture technique — becomes a repeatable commons object anyone can cut and set.",
+      "es": "Una falda de godets abierta y a la medida calcula cada pieza acampanada para ajustarse a la falda entallada de quien la viste, para que una línea de sirena dramática — normalmente técnica de alta costura — se vuelva un objeto común repetible que cualquiera puede cortar e insertar.",
+      "fr": "Une jupe à godets ouverte et sur mesure calcule chaque insert évasé pour l'ajuster à la jupe ajustée de la personne, de sorte qu'une ligne sirène spectaculaire — d'ordinaire une technique de couture — devienne un objet commun reproductible que chacun peut couper et poser."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

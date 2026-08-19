@@ -1,0 +1,60 @@
+{
+  "project": {
+    "name": "Harem Pants",
+    "slug": "harem-pants",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The dropped-crotch harem pant: a very full, low-crotch trouser gathered onto an elastic waist and into narrow ankle cuffs so the leg blouses dramatically between (şalvar/harem/patiala line). Worn across many cultures. Distinct from FC-100's joggers/track pants — the dropped crotch and blousing are the point; the front inseam bow is solved to the back. A soft-goods garment — no hardware. FC-200 long-tail (bottoms gap).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El pantalón harén de tiro caído: un pantalón muy amplio de entrepierna baja fruncido a una cintura elástica y a puños de tobillo estrechos para que la pierna forme globo entre ambos (línea şalvar/harén/patiala). Usado en muchas culturas. Distinto de los joggers/pants de FC-100 — el tiro caído y el globo son el punto; el arco de la entrepierna delantera se resuelve al trasero. Una prenda textil — sin herrajes. Cola larga FC-200 (hueco de pantalón).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le sarouel à entrejambe bas : un pantalon très ample à entrejambe bas froncé sur une taille élastique et dans des bracelets de cheville étroits pour que la jambe bouffe fortement entre les deux (ligne şalvar/harem/patiala). Porté dans de nombreuses cultures. Distinct des joggings/pantalons de FC-100 — l'entrejambe bas et le bouffant sont l'essentiel ; l'arc d'entrejambe devant est résolu vers le dos. Un vêtement textile — sans quincaillerie. Longue traîne FC-200 (manque bas).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["harem-pants", "salvar", "dropped-crotch", "elastic", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+    }
+  },
+  "modes": [
+    { "id": "set", "label": { "en": "Full Pant", "es": "Pantalón completo", "fr": "Pantalon complet" }, "script_file": "main.py", "pieces": ["front", "back", "waistband", "cuff"] }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front Leg", "es": "Pierna frente", "fr": "Jambe devant" }, "default_color": "#5a4a6a", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "back", "label": { "en": "Back Leg", "es": "Pierna espalda", "fr": "Jambe dos" }, "default_color": "#5a4a6a", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "waistband", "label": { "en": "Waistband Casing", "es": "Jareta de pretina", "fr": "Coulisse de ceinture" }, "default_color": "#4a3a5a", "cut": { "quantity": 1 } },
+    { "id": "cuff", "label": { "en": "Ankle cuff", "es": "Puño de tobillo", "fr": "Bracelet de cheville" }, "default_color": "#4a3a5a", "cut": { "quantity": 2 } }
+  ],
+  "parameters": [
+    { "id": "hip_girth", "type": "slider", "default": 1000, "min": 760, "max": 1600, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)", "fr": "Tour de hanches (mm)" }, "tooltip": { "en": "Seat", "es": "Asiento", "fr": "Assise" } },
+    { "id": "waist_girth", "type": "slider", "default": 820, "min": 600, "max": 1400, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)" }, "tooltip": { "en": "Elastic waist", "es": "Cintura elástica", "fr": "Taille élastique" } },
+    { "id": "ankle_girth", "type": "slider", "default": 280, "min": 200, "max": 460, "step": 10, "measurement": { "standard": "iso_8559", "code": "ankle_girth" }, "label": { "en": "Ankle girth (mm)", "es": "Contorno de tobillo (mm)", "fr": "Tour de cheville (mm)" }, "tooltip": { "en": "Snug cuff", "es": "Puño ceñido", "fr": "Bracelet ajusté" } },
+    { "id": "inseam_length", "type": "slider", "default": 680, "min": 450, "max": 900, "step": 10, "measurement": { "standard": "iso_8559", "code": "inside_leg_length" }, "label": { "en": "Inseam (mm)", "es": "Entrepierna (mm)", "fr": "Entrejambe (mm)" }, "tooltip": { "en": "To the cuff", "es": "Hasta el puño", "fr": "Jusqu'au bracelet" } },
+    { "id": "front_rise", "type": "slider", "default": 320, "min": 240, "max": 420, "step": 5, "measurement": { "standard": "iso_8559", "code": "body_rise" }, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)", "fr": "Montant devant (mm)" }, "tooltip": { "en": "Deep rise", "es": "Tiro profundo", "fr": "Montant profond" } },
+    { "id": "back_rise", "type": "slider", "default": 380, "min": 280, "max": 480, "step": 5, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)", "fr": "Montant dos (mm)" }, "tooltip": { "en": "Deep back rise", "es": "Tiro trasero profundo", "fr": "Montant dos profond" } },
+    { "id": "crotch_drop", "type": "slider", "default": 220, "min": 80, "max": 380, "step": 10, "label": { "en": "Crotch drop (mm)", "es": "Caída de entrepierna (mm)", "fr": "Chute d'entrejambe (mm)" }, "tooltip": { "en": "How far the crotch drops", "es": "Cuánto cae la entrepierna", "fr": "De combien l'entrejambe descend" } },
+    { "id": "harem_ease", "type": "slider", "default": 400, "min": 200, "max": 620, "step": 10, "label": { "en": "Fullness (mm)", "es": "Amplitud (mm)", "fr": "Ampleur (mm)" }, "tooltip": { "en": "Very full", "es": "Muy amplio", "fr": "Très ample" } }
+  ],
+  "presets": [
+    { "id": "classic", "label": { "en": "Classic", "es": "Clásico", "fr": "Classique" }, "values": { "crotch_drop": 220, "harem_ease": 400 } },
+    { "id": "extreme", "label": { "en": "Extreme drop", "es": "Tiro extremo", "fr": "Chute extrême" }, "values": { "crotch_drop": 320, "harem_ease": 520 } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "inseam", "type": "custom", "label": { "en": "Inseam", "es": "Entrepierna", "fr": "Entrejambe" }, "edges": [{ "piece": "front", "edge": "inseam" }, { "piece": "back", "edge": "inseam" }], "parameters": ["inseam_length", "crotch_drop"] },
+      { "id": "side_seam", "type": "side_seam", "label": { "en": "Side seam", "es": "Costura lateral", "fr": "Couture latérale" }, "edges": [{ "piece": "front", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["hip_girth", "harem_ease"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false },
+    "societal_benefit": {
+      "en": "An open, made-to-measure harem pant makes a comfortable, deeply forgiving garment worn across many cultures adjustable to the wearer, so a breathable everyday trouser stays makeable and mendable from a single drapey cloth.",
+      "es": "Un pantalón harén abierto y a la medida hace ajustable a quien lo viste una prenda cómoda y muy indulgente usada en muchas culturas, para que un pantalón transpirable de diario siga siendo fabricable y reparable a partir de una sola tela fluida.",
+      "fr": "Un sarouel ouvert et sur mesure rend ajustable à la personne un vêtement confortable et très indulgent porté dans de nombreuses cultures, de sorte qu'un pantalon respirant du quotidien reste fabricable et réparable à partir d'un seul tissu fluide."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

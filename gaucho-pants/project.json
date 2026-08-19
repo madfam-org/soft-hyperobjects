@@ -1,0 +1,58 @@
+{
+  "project": {
+    "name": "Gaucho Pants",
+    "slug": "gaucho-pants",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The gaucho: a very wide, cropped, mid-calf trouser cut so full and straight it reads almost as a divided skirt (1970s riding-inspired line), with a fitted waistband. Distinct from FC-100's culottes (shorter, more skirt-like) and full-length palazzo/wide-leg pants — the gaucho is the specific cropped mid-calf wide cut; the front inseam bow is solved to the back. A soft-goods garment — a zip is the maker's hardware. FC-200 long-tail (bottoms gap).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El gaucho: un pantalón muy ancho, cropped, a media pantorrilla, tan amplio y recto que casi se lee como falda pantalón (línea setentera inspirada en la equitación), con pretina ajustada. Distinto de los culotes de FC-100 (más cortos, más de falda) y de los palazzo/pierna ancha de largo completo — el gaucho es el corte específico ancho a media pantorrilla; el arco de la entrepierna delantera se resuelve al trasero. Una prenda textil — la cremallera es herraje de quien elabora. Cola larga FC-200 (hueco de pantalón).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le gaucho : un pantalon très large, court, à mi-mollet, coupé si ample et droit qu'il se lit presque comme une jupe-culotte (ligne années 70 inspirée de l'équitation), avec une ceinture ajustée. Distinct des jupes-culottes de FC-100 (plus courtes, plus jupe) et des palazzo/jambe large pleine longueur — le gaucho est la coupe large spécifique à mi-mollet ; l'arc d'entrejambe devant est résolu vers le dos. Un vêtement textile — une fermeture est la quincaillerie du fabricant. Longue traîne FC-200 (manque bas).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["gaucho-pants", "wide-leg", "cropped", "culotte", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+    }
+  },
+  "modes": [
+    { "id": "set", "label": { "en": "Full Pant", "es": "Pantalón completo", "fr": "Pantalon complet" }, "script_file": "main.py", "pieces": ["front", "back", "waistband"] }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front Leg", "es": "Pierna frente", "fr": "Jambe devant" }, "default_color": "#6a5a4a", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "back", "label": { "en": "Back Leg", "es": "Pierna espalda", "fr": "Jambe dos" }, "default_color": "#6a5a4a", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "waistband", "label": { "en": "Waistband", "es": "Pretina", "fr": "Ceinture" }, "default_color": "#5a4a3a", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "hip_girth", "type": "slider", "default": 1000, "min": 760, "max": 1600, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)", "fr": "Tour de hanches (mm)" }, "tooltip": { "en": "Seat", "es": "Asiento", "fr": "Assise" } },
+    { "id": "waist_girth", "type": "slider", "default": 780, "min": 600, "max": 1400, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)" }, "tooltip": { "en": "Fitted waist", "es": "Cintura ajustada", "fr": "Taille ajustée" } },
+    { "id": "inseam_length", "type": "slider", "default": 480, "min": 300, "max": 650, "step": 10, "measurement": { "standard": "iso_8559", "code": "inside_leg_length" }, "label": { "en": "Inseam (mm)", "es": "Entrepierna (mm)", "fr": "Entrejambe (mm)" }, "tooltip": { "en": "Cropped mid-calf", "es": "Cropped a media pantorrilla", "fr": "Court à mi-mollet" } },
+    { "id": "front_rise", "type": "slider", "default": 290, "min": 220, "max": 400, "step": 5, "measurement": { "standard": "iso_8559", "code": "body_rise" }, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)", "fr": "Montant devant (mm)" }, "tooltip": { "en": "CF crotch to waist", "es": "De la entrepierna delantera a la cintura", "fr": "De l'entrejambe devant à la taille" } },
+    { "id": "back_rise", "type": "slider", "default": 330, "min": 260, "max": 450, "step": 5, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)", "fr": "Montant dos (mm)" }, "tooltip": { "en": "CB crotch to waist", "es": "De la entrepierna trasera a la cintura", "fr": "De l'entrejambe dos à la taille" } },
+    { "id": "gaucho_ease", "type": "slider", "default": 140, "min": 60, "max": 320, "step": 10, "label": { "en": "Fit ease (mm)", "es": "Holgura (mm)", "fr": "Aisance (mm)" }, "tooltip": { "en": "Room through the hip", "es": "Amplitud en la cadera", "fr": "Aisance aux hanches" } },
+    { "id": "hem_width", "type": "slider", "default": 330, "min": 230, "max": 460, "step": 10, "label": { "en": "Leg opening (mm)", "es": "Abertura de pierna (mm)", "fr": "Ouverture de jambe (mm)" }, "tooltip": { "en": "Very wide leg (half)", "es": "Pierna muy ancha (mitad)", "fr": "Jambe très large (moitié)" } }
+  ],
+  "presets": [
+    { "id": "classic", "label": { "en": "Classic", "es": "Clásico", "fr": "Classique" }, "values": { "hem_width": 330 } },
+    { "id": "extra-wide", "label": { "en": "Extra wide", "es": "Extra ancho", "fr": "Extra large" }, "values": { "hem_width": 420, "gaucho_ease": 220 } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "inseam", "type": "custom", "label": { "en": "Inseam", "es": "Entrepierna", "fr": "Entrejambe" }, "edges": [{ "piece": "front", "edge": "inseam" }, { "piece": "back", "edge": "inseam" }], "parameters": ["inseam_length", "hem_width"] },
+      { "id": "side_seam", "type": "side_seam", "label": { "en": "Side seam", "es": "Costura lateral", "fr": "Couture latérale" }, "edges": [{ "piece": "front", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["hip_girth", "gaucho_ease"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false },
+    "societal_benefit": {
+      "en": "An open, made-to-measure gaucho gives the ease of a skirt with the practicality of trousers, sized to the wearer, so a comfortable, movement-friendly cut stays makeable and mendable from a single length of drapey cloth.",
+      "es": "Un gaucho abierto y a la medida da la comodidad de una falda con la practicidad de un pantalón, ajustado a quien lo viste, para que un corte cómodo y con libertad de movimiento siga siendo fabricable y reparable a partir de una sola pieza de tela fluida.",
+      "fr": "Un gaucho ouvert et sur mesure offre l'aisance d'une jupe avec la praticité d'un pantalon, ajusté à la personne, de sorte qu'une coupe confortable et facile à mouvoir reste fabricable et réparable à partir d'une seule longueur de tissu fluide."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
