@@ -1,0 +1,216 @@
+{
+  "project": {
+    "name": "Bag Clip Closure",
+    "slug": "bag-clip-closure",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A Yantra4D-bridged notion: the placement guide for the snap clip that seals a roll-top or pouch without a zipper. Fashion Cabinet owns the fashion — spacing, placement, and the 2-D guide that transfers every position to the garment — while the fastener SOLID is the Yantra4D `bag-clip` cartridge, referenced through notion.hardware_ref. Official visualizer and configurator: Fashion Cabinet",
+      "es": "Un avío puenteado con Yantra4D: la guía de colocación para el broche que sella una bolsa enrollable sin cierre. Fashion Cabinet posee la moda — espaciado, colocación y la guía 2-D que transfiere cada posición a la prenda — mientras el SÓLIDO del avío es el cartucho `bag-clip` de Yantra4D, referenciado por notion.hardware_ref. Visualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "clip",
+      "closure",
+      "bag",
+      "notion",
+      "hardware",
+      "finding",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Placement Guide",
+        "es": "Guía de colocación"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "placement-guide"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Bag Clip Closure Placement Guide",
+        "es": "Guía de Bag Clip Closure"
+      },
+      "default_color": "#8a8f94",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "count",
+      "type": "slider",
+      "default": 5,
+      "min": 1,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Number of fasteners",
+        "es": "Número de avíos"
+      },
+      "tooltip": {
+        "en": "How many fasteners along the placement line",
+        "es": "Cuántos avíos a lo largo de la línea de colocación"
+      }
+    },
+    {
+      "id": "run_length",
+      "type": "slider",
+      "default": 300.0,
+      "min": 40.0,
+      "max": 1200.0,
+      "step": 5,
+      "label": {
+        "en": "Placement run length (mm)",
+        "es": "Largo de la línea (mm)"
+      },
+      "tooltip": {
+        "en": "Length of the edge the fasteners space along",
+        "es": "Largo del canto donde se distribuyen los avíos"
+      }
+    },
+    {
+      "id": "end_offset",
+      "type": "slider",
+      "default": 15.0,
+      "min": 5.0,
+      "max": 100.0,
+      "step": 1,
+      "label": {
+        "en": "End inset (mm)",
+        "es": "Margen extremo (mm)"
+      },
+      "tooltip": {
+        "en": "First/last fastener inset from the ends",
+        "es": "Margen del primer/último avío desde los extremos"
+      }
+    },
+    {
+      "id": "strip_width",
+      "type": "slider",
+      "default": 40.0,
+      "min": 20.0,
+      "max": 120.0,
+      "step": 1,
+      "label": {
+        "en": "Guide strip width (mm)",
+        "es": "Ancho de la guía (mm)"
+      },
+      "tooltip": {
+        "en": "Width of the printed placement strip",
+        "es": "Ancho de la tira de colocación impresa"
+      }
+    },
+    {
+      "id": "clip_width",
+      "type": "slider",
+      "default": 40.0,
+      "min": 20.0,
+      "max": 80.0,
+      "step": 1.0,
+      "label": {
+        "en": "Clip width (mm)",
+        "es": "Ancho del broche (mm)"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "even-5",
+      "label": {
+        "en": "Even, 5",
+        "es": "Uniforme, 5"
+      },
+      "values": {
+        "count": 5,
+        "run_length": 300.0
+      }
+    },
+    {
+      "id": "dense-8",
+      "label": {
+        "en": "Dense, 8",
+        "es": "Denso, 8"
+      },
+      "values": {
+        "count": 8,
+        "run_length": 420.0
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "bag clip closure",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "bag-clip",
+      "linked": true,
+      "params_map": {
+        "clip_width": "clip_width"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "notion",
+    "interfaces": [
+      {
+        "id": "placement_line",
+        "type": "custom",
+        "label": {
+          "en": "Fastener placement line",
+          "es": "Línea de colocación"
+        },
+        "edges": [
+          {
+            "piece": "placement-guide",
+            "edge": "guide"
+          }
+        ],
+        "parameters": [
+          "count",
+          "run_length",
+          "end_offset"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Turns a fastener into an open, made-to-measure placement guide: the snap clip that seals a roll-top or pouch without a zipper, sized to a garment and transferred exactly — with the printable solid an open Yantra4D object, so the whole closure (guide + hardware) is repairable and free.",
+      "es": "Convierte un avío en una guía de colocación abierta y a la medida: el broche que sella una bolsa enrollable sin cierre, dimensionada a la prenda y transferida con exactitud — con el sólido imprimible como objeto abierto de Yantra4D, así que todo el cierre (guía + herraje) es reparable y libre."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
