@@ -1,0 +1,389 @@
+{
+  "project": {
+    "name": "Kebaya",
+    "slug": "kebaya",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The kebaya is the fitted, open-front blouse worn across Indonesia, Malaysia, Brunei, Singapore and beyond — often in embroidered lace or voile, shaped close with bust and waist darts, an open curved front worn over a camisole, and fitted sleeves. Recognised by UNESCO. This cartridge drafts the garment geometry and marks (does not reproduce) the sulaman embroidery. Offered with respect. A soft-goods garment — brooches/hooks are the maker's hardware. FC-200 long-tail (heritage).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El kebaya es la blusa entallada de frente abierto usada en Indonesia, Malasia, Brunéi, Singapur y más allá — a menudo en encaje bordado o voile, ceñida con pinzas de busto y cintura, un frente curvo abierto sobre un camisole y mangas ajustadas. Reconocido por la UNESCO. Este cartucho traza la geometría y marca (no reproduce) el bordado sulaman. Ofrecido con respeto. Una prenda textil — los broches/ganchos son herraje de quien elabora. Cola larga FC-200 (patrimonio).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le kebaya est le chemisier ajusté à devant ouvert porté en Indonésie, Malaisie, Brunei, Singapour et au-delà — souvent en dentelle brodée ou voile, cintré par des pinces de poitrine et de taille, un devant courbe ouvert porté sur une caraco, et des manches ajustées. Reconnu par l'UNESCO. Ce cartouche trace la géométrie et marque (ne reproduit pas) la broderie sulaman. Offert avec respect. Un vêtement textile — les broches/crochets sont la quincaillerie du fabricant. Longue traîne FC-200 (patrimoine).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "kebaya",
+      "heritage",
+      "southeast-asian",
+      "fitted",
+      "lace",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Blouse",
+        "es": "Blusa completa",
+        "fr": "Chemisier complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (open, darted, lace band)",
+        "es": "Frente (abierto, con pinzas, banda)",
+        "fr": "Devant (ouvert, pinces, bande)"
+      },
+      "default_color": "#d8c8d0",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#d8c8d0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#d0c0c8",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "default": 900,
+      "min": 680,
+      "max": 1400,
+      "step": 10,
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full bust",
+        "es": "Busto completo",
+        "fr": "Poitrine complète"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "default": 720,
+      "min": 540,
+      "max": 1250,
+      "step": 10,
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "Waist",
+        "es": "Cintura",
+        "fr": "Taille"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "default": 960,
+      "min": 720,
+      "max": 1450,
+      "step": 10,
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      },
+      "tooltip": {
+        "en": "Full hip",
+        "es": "Cadera completa",
+        "fr": "Hanches complètes"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      }
+    },
+    {
+      "id": "kebaya_length",
+      "type": "slider",
+      "default": 620,
+      "min": 480,
+      "max": 850,
+      "step": 10,
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to front point",
+        "es": "De la nuca a la punta frontal",
+        "fr": "De la nuque à la pointe devant"
+      }
+    },
+    {
+      "id": "neck_width",
+      "type": "slider",
+      "default": 170,
+      "min": 130,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Neck width (mm)",
+        "es": "Ancho de escote (mm)",
+        "fr": "Largeur d'encolure (mm)"
+      },
+      "tooltip": {
+        "en": "Neckline width",
+        "es": "Ancho del escote",
+        "fr": "Largeur de l'encolure"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 580,
+      "min": 400,
+      "max": 720,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to cuff",
+        "es": "Del hombro al puño",
+        "fr": "De l'épaule au poignet"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "arm_length"
+      }
+    },
+    {
+      "id": "sleeve_depth",
+      "type": "slider",
+      "default": 230,
+      "min": 180,
+      "max": 380,
+      "step": 10,
+      "label": {
+        "en": "Sleeve depth (mm)",
+        "es": "Profundidad de manga (mm)",
+        "fr": "Profondeur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Armhole drop",
+        "es": "Caída de sisa",
+        "fr": "Descente d'emmanchure"
+      }
+    },
+    {
+      "id": "front_point",
+      "type": "slider",
+      "default": 120,
+      "min": 0,
+      "max": 300,
+      "step": 10,
+      "label": {
+        "en": "Front point (mm)",
+        "es": "Punta frontal (mm)",
+        "fr": "Pointe devant (mm)"
+      },
+      "tooltip": {
+        "en": "How far the CF hem dips",
+        "es": "Cuánto baja el ruedo central",
+        "fr": "De combien l'ourlet devant descend"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "default": 70,
+      "min": 20,
+      "max": 200,
+      "step": 10,
+      "label": {
+        "en": "Fit ease (mm)",
+        "es": "Holgura (mm)",
+        "fr": "Aisance (mm)"
+      },
+      "tooltip": {
+        "en": "Close, fitted",
+        "es": "Ceñido",
+        "fr": "Près du corps"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic",
+        "es": "Clásico",
+        "fr": "Classique"
+      },
+      "values": {
+        "front_point": 120
+      }
+    },
+    {
+      "id": "long-point",
+      "label": {
+        "en": "Long point",
+        "es": "Punta larga",
+        "fr": "Pointe longue"
+      },
+      "values": {
+        "front_point": 220,
+        "kebaya_length": 700
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "shoulder_seam",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder seam",
+          "es": "Costura de hombro",
+          "fr": "Couture d'épaule"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "back",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "neck_width",
+          "bust_girth"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam",
+          "es": "Costura lateral",
+          "fr": "Couture latérale"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "waist_girth",
+          "hip_girth"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Armhole",
+          "es": "Sisa",
+          "fr": "Emmanchure"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "sleevehead"
+          },
+          {
+            "piece": "back",
+            "edge": "armscye"
+          }
+        ],
+        "parameters": [
+          "sleeve_depth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure kebaya computes a precisely darted, close-fitting heritage blouse to a wearer's own figure, keeping a garment recognised across Southeast Asia makeable in the lace and voile it belongs to — with the embroidery and brooches that carry identity left to the wearer.",
+      "es": "Un kebaya abierto y a la medida calcula una blusa patrimonial ceñida y con pinzas precisas para la figura de quien la viste, manteniendo una prenda reconocida en todo el sudeste asiático fabricable en el encaje y voile que le corresponden — con el bordado y los broches que portan identidad en manos de quien la viste.",
+      "fr": "Un kebaya ouvert et sur mesure calcule un chemisier patrimonial ajusté aux pinces précises selon la morphologie de la personne, gardant un vêtement reconnu dans toute l'Asie du Sud-Est fabricable dans la dentelle et le voile qui lui reviennent — la broderie et les broches qui portent l'identité étant laissées à la personne."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

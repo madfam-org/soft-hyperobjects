@@ -1,0 +1,220 @@
+{
+  "project": {
+    "name": "Scrub Cap",
+    "slug": "scrub-cap",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The surgical scrub cap (tie-back): a domed cap that covers the hair, with a brow band at the front and a gathered, bound, tie-back at the nape, worn in operating rooms and kitchens. Woven and gathered, distinct from FC-100's structured caps and the knit beanie. A soft-goods garment — no hardware. FC-200 long-tail (accessory).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El gorro quirúrgico (de amarre): un gorro abovedado que cubre el cabello, con banda en la frente y una parte trasera fruncida, ribeteada y con amarre en la nuca, usado en quirófanos y cocinas. Tejido y fruncido, distinto de las gorras estructuradas de FC-100 y del beanie de punto. Una prenda textil — sin herrajes. Cola larga FC-200 (accesorio).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La charlotte de bloc (à nouer) : une coiffe bombée couvrant les cheveux, avec un bandeau au front et un dos froncé, gansé et noué à la nuque, portée au bloc opératoire et en cuisine. Tissée et froncée, distincte des casquettes structurées de FC-100 et du bonnet en maille. Un vêtement textile — sans quincaillerie. Longue traîne FC-200 (accessoire).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "scrub-cap",
+      "surgical",
+      "tie-back",
+      "cap",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Cap",
+        "es": "Gorro completo",
+        "fr": "Coiffe complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "cap",
+        "tie"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "cap",
+      "label": {
+        "en": "Cap dome",
+        "es": "Domo del gorro",
+        "fr": "Dôme de la coiffe"
+      },
+      "default_color": "#3a6a5a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "tie",
+      "label": {
+        "en": "Tie",
+        "es": "Amarre",
+        "fr": "Lien"
+      },
+      "default_color": "#2a5a4a",
+      "cut": {
+        "quantity": 2
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "head_girth",
+      "type": "slider",
+      "default": 570,
+      "min": 440,
+      "max": 700,
+      "step": 10,
+      "label": {
+        "en": "Head girth (mm)",
+        "es": "Contorno de cabeza (mm)",
+        "fr": "Tour de tête (mm)"
+      },
+      "tooltip": {
+        "en": "Around the head",
+        "es": "Alrededor de la cabeza",
+        "fr": "Autour de la tête"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "head_girth"
+      }
+    },
+    {
+      "id": "cap_depth",
+      "type": "slider",
+      "default": 240,
+      "min": 180,
+      "max": 340,
+      "step": 10,
+      "label": {
+        "en": "Cap depth (mm)",
+        "es": "Profundidad de gorro (mm)",
+        "fr": "Profondeur de coiffe (mm)"
+      },
+      "tooltip": {
+        "en": "Brow to crown",
+        "es": "De la frente a la coronilla",
+        "fr": "Du front au sommet"
+      }
+    },
+    {
+      "id": "brow_band",
+      "type": "slider",
+      "default": 40,
+      "min": 20,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Brow band (mm)",
+        "es": "Banda de frente (mm)",
+        "fr": "Bandeau front (mm)"
+      },
+      "tooltip": {
+        "en": "Front brow band height",
+        "es": "Alto de banda frontal",
+        "fr": "Hauteur du bandeau front"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic",
+        "es": "Clásico",
+        "fr": "Classique"
+      },
+      "values": {
+        "cap_depth": 240
+      }
+    },
+    {
+      "id": "deep",
+      "label": {
+        "en": "Deep",
+        "es": "Profundo",
+        "fr": "Profond"
+      },
+      "values": {
+        "cap_depth": 300
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "brow",
+        "type": "hem",
+        "label": {
+          "en": "Brow band",
+          "es": "Banda de frente",
+          "fr": "Bandeau front"
+        },
+        "edges": [
+          {
+            "piece": "cap",
+            "edge": "brow"
+          }
+        ],
+        "parameters": [
+          "head_girth",
+          "brow_band"
+        ]
+      },
+      {
+        "id": "tie_back",
+        "type": "custom",
+        "label": {
+          "en": "Gathered tie-back",
+          "es": "Amarre fruncido",
+          "fr": "Nouage froncé"
+        },
+        "edges": [
+          {
+            "piece": "cap",
+            "edge": "back"
+          }
+        ],
+        "parameters": [
+          "head_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure scrub cap lets clinical and kitchen workers make their own washable, comfortable head cover in fabrics they choose, sized to fit, replacing disposable caps with a repairable commons object.",
+      "es": "Un gorro quirúrgico abierto y a la medida permite a quienes trabajan en clínica y cocina hacer su propia cubierta lavable y cómoda en telas que eligen, ajustada a la medida, reemplazando gorros desechables por un objeto común reparable.",
+      "fr": "Une charlotte de bloc ouverte et sur mesure permet aux personnels de soin et de cuisine de fabriquer leur propre couvre-chef lavable et confortable dans les tissus de leur choix, ajusté à la taille, remplaçant les charlottes jetables par un objet commun réparable."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "project": {
+    "name": "Beanie",
+    "slug": "beanie",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The knit beanie: a stretch tube that hugs the head, seamed up the back and gathered closed at the crown, with a folded ribbed brim. Cut with negative ease so it grips. Distinct from FC-100's structured caps — the beanie is a knit stretch cap; the back seam is a balanced self-seam. A soft-goods garment — no hardware. FC-200 long-tail (accessory).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El gorro de punto (beanie): un tubo elástico que ciñe la cabeza, cosido por atrás y fruncido en la coronilla, con visera de canalé doblada. Cortado con holgura negativa para que ciña. Distinto de las gorras estructuradas de FC-100 — el beanie es un gorro de punto elástico; la costura trasera es una costura equilibrada. Una prenda textil — sin herrajes. Cola larga FC-200 (accesorio).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le bonnet en maille : un tube extensible qui épouse la tête, cousu dans le dos et fermé par fronçage au sommet, avec un bord côtelé replié. Coupé avec une aisance négative pour qu'il tienne. Distinct des casquettes structurées de FC-100 — le bonnet est une casquette en maille extensible ; la couture dos est une couture équilibrée. Un vêtement textile — sans quincaillerie. Longue traîne FC-200 (accessoire).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "beanie",
+      "knit",
+      "cap",
+      "stretch",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Beanie",
+        "es": "Gorro completo",
+        "fr": "Bonnet complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "panel"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "panel",
+      "label": {
+        "en": "Beanie panel",
+        "es": "Panel de gorro",
+        "fr": "Panneau de bonnet"
+      },
+      "default_color": "#3a4a5a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center_back",
+        "mirror": true
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "head_girth",
+      "type": "slider",
+      "default": 570,
+      "min": 440,
+      "max": 680,
+      "step": 10,
+      "label": {
+        "en": "Head girth (mm)",
+        "es": "Contorno de cabeza (mm)",
+        "fr": "Tour de tête (mm)"
+      },
+      "tooltip": {
+        "en": "Around the head",
+        "es": "Alrededor de la cabeza",
+        "fr": "Autour de la tête"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "head_girth"
+      }
+    },
+    {
+      "id": "beanie_height",
+      "type": "slider",
+      "default": 240,
+      "min": 160,
+      "max": 360,
+      "step": 10,
+      "label": {
+        "en": "Height (mm)",
+        "es": "Alto (mm)",
+        "fr": "Hauteur (mm)"
+      },
+      "tooltip": {
+        "en": "Brim fold to crown",
+        "es": "Del doblez de visera a la coronilla",
+        "fr": "Du repli de bord au sommet"
+      }
+    },
+    {
+      "id": "brim_fold",
+      "type": "slider",
+      "default": 60,
+      "min": 0,
+      "max": 140,
+      "step": 10,
+      "label": {
+        "en": "Brim fold (mm)",
+        "es": "Doblez de visera (mm)",
+        "fr": "Repli de bord (mm)"
+      },
+      "tooltip": {
+        "en": "Folded ribbed brim",
+        "es": "Visera de canalé doblada",
+        "fr": "Bord côtelé replié"
+      }
+    },
+    {
+      "id": "neg_ease",
+      "type": "slider",
+      "default": 40,
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "label": {
+        "en": "Negative ease (mm)",
+        "es": "Holgura negativa (mm)",
+        "fr": "Aisance négative (mm)"
+      },
+      "tooltip": {
+        "en": "Grip (needs stretch)",
+        "es": "Ajuste (requiere elástico)",
+        "fr": "Maintien (extensible requis)"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "cuffed",
+      "label": {
+        "en": "Cuffed",
+        "es": "Con vuelta",
+        "fr": "À revers"
+      },
+      "values": {
+        "brim_fold": 60
+      }
+    },
+    {
+      "id": "slouchy",
+      "label": {
+        "en": "Slouchy",
+        "es": "Holgado",
+        "fr": "Souple"
+      },
+      "values": {
+        "beanie_height": 320,
+        "brim_fold": 40
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "back_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Back seam",
+          "es": "Costura trasera",
+          "fr": "Couture dos"
+        },
+        "edges": [
+          {
+            "piece": "panel",
+            "edge": "join"
+          },
+          {
+            "piece": "panel",
+            "edge": "center_back"
+          }
+        ],
+        "parameters": [
+          "head_girth",
+          "neg_ease"
+        ]
+      },
+      {
+        "id": "brim",
+        "type": "hem",
+        "label": {
+          "en": "Ribbed brim",
+          "es": "Visera de canalé",
+          "fr": "Bord côtelé"
+        },
+        "edges": [
+          {
+            "piece": "panel",
+            "edge": "brim"
+          }
+        ],
+        "parameters": [
+          "brim_fold"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure beanie is a first project anyone can finish — one panel, one seam, a gathered crown — sized to grip the wearer, keeping a warm everyday cap makeable and mendable from a scrap of rib knit.",
+      "es": "Un gorro abierto y a la medida es un primer proyecto que cualquiera puede terminar — un panel, una costura, una coronilla fruncida — dimensionado para ceñir a quien lo viste, manteniendo un gorro cálido diario fabricable y reparable con un retazo de canalé.",
+      "fr": "Un bonnet ouvert et sur mesure est un premier projet que chacun peut finir — un panneau, une couture, un sommet froncé — dimensionné pour maintenir la personne, gardant une casquette chaude du quotidien fabricable et réparable à partir d'une chute de côtes."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

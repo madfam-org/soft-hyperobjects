@@ -1,0 +1,231 @@
+{
+  "project": {
+    "name": "Balaclava",
+    "slug": "balaclava",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The knit balaclava (ski mask): a close hood covering head and neck with a shaped face opening, seamed up the back. Cut with negative ease so it hugs; the back is a balanced self-seam and the whole head is wrapped with just the face exposed. Distinct from FC-100's open hoodie hoods. A soft-goods garment — no hardware. FC-200 long-tail (accessory).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El pasamontañas de punto: una capucha ceñida que cubre cabeza y cuello con una abertura de cara moldeada, cosida por atrás. Cortado con holgura negativa para que ciña; la parte trasera es una costura equilibrada y toda la cabeza queda envuelta con solo la cara expuesta. Distinto de las capuchas abiertas de FC-100. Una prenda textil — sin herrajes. Cola larga FC-200 (accesorio).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La cagoule en maille : une capuche ajustée couvrant tête et cou avec une ouverture de visage mise en forme, cousue dans le dos. Coupée avec une aisance négative pour qu'elle épouse ; le dos est une couture équilibrée et toute la tête est enveloppée, seul le visage exposé. Distincte des capuches ouvertes de FC-100. Un vêtement textile — sans quincaillerie. Longue traîne FC-200 (accessoire).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "balaclava",
+      "ski-mask",
+      "hood",
+      "knit",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Balaclava",
+        "es": "Pasamontañas completo",
+        "fr": "Cagoule complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "hood"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "hood",
+      "label": {
+        "en": "Balaclava hood",
+        "es": "Capucha de pasamontañas",
+        "fr": "Capuche de cagoule"
+      },
+      "default_color": "#3a3a4a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center_front",
+        "mirror": true
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "head_girth",
+      "type": "slider",
+      "default": 570,
+      "min": 440,
+      "max": 700,
+      "step": 10,
+      "label": {
+        "en": "Head girth (mm)",
+        "es": "Contorno de cabeza (mm)",
+        "fr": "Tour de tête (mm)"
+      },
+      "tooltip": {
+        "en": "Around the head",
+        "es": "Alrededor de la cabeza",
+        "fr": "Autour de la tête"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "head_girth"
+      }
+    },
+    {
+      "id": "face_height",
+      "type": "slider",
+      "default": 460,
+      "min": 360,
+      "max": 600,
+      "step": 10,
+      "label": {
+        "en": "Coverage (mm)",
+        "es": "Cobertura (mm)",
+        "fr": "Couverture (mm)"
+      },
+      "tooltip": {
+        "en": "Crown to neck base",
+        "es": "De la coronilla a la base del cuello",
+        "fr": "Du sommet à la base du cou"
+      }
+    },
+    {
+      "id": "face_open_w",
+      "type": "slider",
+      "default": 130,
+      "min": 80,
+      "max": 200,
+      "step": 10,
+      "label": {
+        "en": "Face opening width (mm)",
+        "es": "Ancho de abertura (mm)",
+        "fr": "Largeur d'ouverture (mm)"
+      },
+      "tooltip": {
+        "en": "Half-width",
+        "es": "Media anchura",
+        "fr": "Demi-largeur"
+      }
+    },
+    {
+      "id": "face_open_h",
+      "type": "slider",
+      "default": 150,
+      "min": 90,
+      "max": 230,
+      "step": 10,
+      "label": {
+        "en": "Face opening height (mm)",
+        "es": "Alto de abertura (mm)",
+        "fr": "Hauteur d'ouverture (mm)"
+      },
+      "tooltip": {
+        "en": "Opening height",
+        "es": "Alto de la abertura",
+        "fr": "Hauteur de l'ouverture"
+      }
+    },
+    {
+      "id": "neg_ease",
+      "type": "slider",
+      "default": 50,
+      "min": 0,
+      "max": 120,
+      "step": 10,
+      "label": {
+        "en": "Negative ease (mm)",
+        "es": "Holgura negativa (mm)",
+        "fr": "Aisance négative (mm)"
+      },
+      "tooltip": {
+        "en": "Hug (needs stretch)",
+        "es": "Ajuste (requiere elástico)",
+        "fr": "Épouse (extensible requis)"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "open",
+      "label": {
+        "en": "Open face",
+        "es": "Cara abierta",
+        "fr": "Visage ouvert"
+      },
+      "values": {
+        "face_open_w": 160,
+        "face_open_h": 180
+      }
+    },
+    {
+      "id": "closed",
+      "label": {
+        "en": "Small opening",
+        "es": "Abertura pequeña",
+        "fr": "Petite ouverture"
+      },
+      "values": {
+        "face_open_w": 100,
+        "face_open_h": 120
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "back_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Back seam",
+          "es": "Costura trasera",
+          "fr": "Couture dos"
+        },
+        "edges": [
+          {
+            "piece": "hood",
+            "edge": "back"
+          },
+          {
+            "piece": "hood",
+            "edge": "back"
+          }
+        ],
+        "parameters": [
+          "head_girth",
+          "neg_ease"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure balaclava lets anyone make cold-weather head-and-neck protection sized to their own head and face opening, keeping warm, functional gear makeable and mendable from a scrap of merino or fleece.",
+      "es": "Un pasamontañas abierto y a la medida permite a cualquiera hacer protección de cabeza y cuello para el frío ajustada a su cabeza y abertura de cara, manteniendo equipo cálido y funcional fabricable y reparable con un retazo de merino o polar.",
+      "fr": "Une cagoule ouverte et sur mesure permet à chacun de fabriquer une protection tête-et-cou pour le froid ajustée à sa tête et à son ouverture de visage, gardant un équipement chaud et fonctionnel fabricable et réparable à partir d'une chute de mérinos ou de polaire."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

@@ -1,0 +1,193 @@
+{
+  "project": {
+    "name": "Neck Gaiter",
+    "slug": "neck-gaiter",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The neck gaiter (buff/tube scarf): a simple stretch tube worn around the neck and pulled up over the face, seamed into a loop. Its circumference equals the head girth so it pulls over the head. Distinct from FC-100 (no scarves) — the simplest worn tube; front and back are the same panel with one balanced join seam. A soft-goods garment — no hardware. FC-200 long-tail (accessory).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El cuello tubular (buff): un simple tubo elástico que se lleva en el cuello y se sube sobre la cara, cosido en aro. Su contorno es igual al de la cabeza para pasarse por ella. Distinto de FC-100 (sin bufandas) — el tubo más simple; frente y espalda son el mismo panel con una costura de unión equilibrada. Una prenda textil — sin herrajes. Cola larga FC-200 (accesorio).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le tour de cou (buff) : un simple tube extensible porté autour du cou et remonté sur le visage, cousu en boucle. Sa circonférence égale le tour de tête pour passer par-dessus la tête. Distinct de FC-100 (pas d'écharpes) — le tube porté le plus simple ; devant et dos sont le même panneau avec une couture d'assemblage équilibrée. Un vêtement textile — sans quincaillerie. Longue traîne FC-200 (accessoire).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "neck-gaiter",
+      "buff",
+      "tube-scarf",
+      "stretch",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Gaiter",
+        "es": "Cuello completo",
+        "fr": "Tour complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "panel"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "panel",
+      "label": {
+        "en": "Gaiter tube",
+        "es": "Tubo de cuello",
+        "fr": "Tube du tour"
+      },
+      "default_color": "#4a5a4a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center_back",
+        "mirror": true
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "head_girth",
+      "type": "slider",
+      "default": 570,
+      "min": 440,
+      "max": 680,
+      "step": 10,
+      "label": {
+        "en": "Head girth (mm)",
+        "es": "Contorno de cabeza (mm)",
+        "fr": "Tour de tête (mm)"
+      },
+      "tooltip": {
+        "en": "Around the head",
+        "es": "Alrededor de la cabeza",
+        "fr": "Autour de la tête"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "head_girth"
+      }
+    },
+    {
+      "id": "gaiter_height",
+      "type": "slider",
+      "default": 380,
+      "min": 200,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Height (mm)",
+        "es": "Alto (mm)",
+        "fr": "Hauteur (mm)"
+      },
+      "tooltip": {
+        "en": "Neck-to-nose coverage",
+        "es": "Cobertura de cuello a nariz",
+        "fr": "Couverture cou-nez"
+      }
+    },
+    {
+      "id": "neg_ease",
+      "type": "slider",
+      "default": 40,
+      "min": 0,
+      "max": 120,
+      "step": 10,
+      "label": {
+        "en": "Negative ease (mm)",
+        "es": "Holgura negativa (mm)",
+        "fr": "Aisance négative (mm)"
+      },
+      "tooltip": {
+        "en": "Slight grip",
+        "es": "Ajuste ligero",
+        "fr": "Léger maintien"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "neck",
+      "label": {
+        "en": "Neck",
+        "es": "Cuello",
+        "fr": "Cou"
+      },
+      "values": {
+        "gaiter_height": 300
+      }
+    },
+    {
+      "id": "face",
+      "label": {
+        "en": "Face cover",
+        "es": "Cubre-cara",
+        "fr": "Cache-visage"
+      },
+      "values": {
+        "gaiter_height": 480
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "join_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Join seam",
+          "es": "Costura de unión",
+          "fr": "Couture d'assemblage"
+        },
+        "edges": [
+          {
+            "piece": "panel",
+            "edge": "join"
+          },
+          {
+            "piece": "panel",
+            "edge": "center_back"
+          }
+        ],
+        "parameters": [
+          "head_girth",
+          "neg_ease"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure neck gaiter is a ten-minute make that turns a strip of technical knit into warmth and sun/dust protection sized to the wearer, keeping useful gear makeable and mendable rather than bought disposable.",
+      "es": "Un cuello tubular abierto y a la medida es un proyecto de diez minutos que convierte una tira de punto técnico en abrigo y protección del sol/polvo ajustado a quien lo viste, manteniendo equipo útil fabricable y reparable en vez de comprado desechable.",
+      "fr": "Un tour de cou ouvert et sur mesure est une réalisation de dix minutes qui transforme une bande de maille technique en chaleur et protection soleil/poussière ajustée à la personne, gardant un équipement utile fabricable et réparable plutôt qu'acheté jetable."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

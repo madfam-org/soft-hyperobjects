@@ -1,0 +1,274 @@
+{
+  "project": {
+    "name": "Mittens",
+    "slug": "mittens",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "Warm mittens: a rounded hand pouch that pools all four fingers in one chamber for warmth, with a set-in thumb and a ribbed or folded cuff. Simpler and warmer than a five-finger glove. Distinct from FC-100 (no gloves) and the work-glove. A soft-goods garment — no hardware. FC-200 long-tail (accessory).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Mitones abrigadores: una bolsa de mano redondeada que reúne los cuatro dedos en una cámara para dar calor, con pulgar insertado y puño de canalé o doblado. Más simples y cálidos que un guante de cinco dedos. Distintos de FC-100 (sin guantes) y del guante de trabajo. Una prenda textil — sin herrajes. Cola larga FC-200 (accesorio).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Des moufles chaudes : une poche de main arrondie qui réunit les quatre doigts dans une seule chambre pour la chaleur, avec un pouce rapporté et une manchette côtelée ou repliée. Plus simples et plus chaudes qu'un gant à cinq doigts. Distinctes de FC-100 (pas de gants) et du gant de travail. Un vêtement textile — sans quincaillerie. Longue traîne FC-200 (accessoire).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "mittens",
+      "gloves",
+      "winter",
+      "warm",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Mittens",
+        "es": "Mitones completos",
+        "fr": "Moufles complètes"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "hand",
+        "thumb",
+        "cuff"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "hand",
+      "label": {
+        "en": "Hand pouch",
+        "es": "Bolsa de mano",
+        "fr": "Poche de main"
+      },
+      "default_color": "#5a6a7a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "tip",
+        "mirror": true
+      }
+    },
+    {
+      "id": "thumb",
+      "label": {
+        "en": "Thumb",
+        "es": "Pulgar",
+        "fr": "Pouce"
+      },
+      "default_color": "#4a5a6a",
+      "cut": {
+        "quantity": 2
+      }
+    },
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Cuff",
+        "es": "Puño",
+        "fr": "Manchette"
+      },
+      "default_color": "#4a5a6a",
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "hand_length",
+      "type": "slider",
+      "default": 180,
+      "min": 130,
+      "max": 230,
+      "step": 5,
+      "label": {
+        "en": "Hand length (mm)",
+        "es": "Largo de mano (mm)",
+        "fr": "Longueur de main (mm)"
+      },
+      "tooltip": {
+        "en": "Wrist to fingertip",
+        "es": "De la muñeca a la yema",
+        "fr": "Du poignet au bout du doigt"
+      }
+    },
+    {
+      "id": "hand_span",
+      "type": "slider",
+      "default": 210,
+      "min": 160,
+      "max": 280,
+      "step": 5,
+      "label": {
+        "en": "Hand span (mm)",
+        "es": "Contorno de mano (mm)",
+        "fr": "Tour de main (mm)"
+      },
+      "tooltip": {
+        "en": "Around the palm",
+        "es": "Alrededor de la palma",
+        "fr": "Autour de la paume"
+      }
+    },
+    {
+      "id": "thumb_len",
+      "type": "slider",
+      "default": 60,
+      "min": 40,
+      "max": 100,
+      "step": 5,
+      "label": {
+        "en": "Thumb length (mm)",
+        "es": "Largo de pulgar (mm)",
+        "fr": "Longueur de pouce (mm)"
+      },
+      "tooltip": {
+        "en": "Thumb",
+        "es": "Pulgar",
+        "fr": "Pouce"
+      }
+    },
+    {
+      "id": "cuff_height",
+      "type": "slider",
+      "default": 70,
+      "min": 20,
+      "max": 160,
+      "step": 10,
+      "label": {
+        "en": "Cuff height (mm)",
+        "es": "Alto de puño (mm)",
+        "fr": "Hauteur de manchette (mm)"
+      },
+      "tooltip": {
+        "en": "Wrist cuff",
+        "es": "Puño de muñeca",
+        "fr": "Manchette de poignet"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "default": 30,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "label": {
+        "en": "Fit ease (mm)",
+        "es": "Holgura (mm)",
+        "fr": "Aisance (mm)"
+      },
+      "tooltip": {
+        "en": "A little warmth room",
+        "es": "Algo de holgura para calor",
+        "fr": "Un peu d'aisance pour la chaleur"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "snug",
+      "label": {
+        "en": "Snug",
+        "es": "Ceñido",
+        "fr": "Ajusté"
+      },
+      "values": {
+        "ease": 10
+      }
+    },
+    {
+      "id": "roomy",
+      "label": {
+        "en": "Roomy",
+        "es": "Amplio",
+        "fr": "Ample"
+      },
+      "values": {
+        "ease": 60,
+        "cuff_height": 110
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "thumb_set",
+        "type": "custom",
+        "label": {
+          "en": "Thumb set-in",
+          "es": "Inserción de pulgar",
+          "fr": "Montage du pouce"
+        },
+        "edges": [
+          {
+            "piece": "thumb",
+            "edge": "base"
+          },
+          {
+            "piece": "hand",
+            "edge": "side_r"
+          }
+        ],
+        "parameters": [
+          "hand_span",
+          "thumb_len"
+        ]
+      },
+      {
+        "id": "cuff_seam",
+        "type": "hem",
+        "label": {
+          "en": "Cuff",
+          "es": "Puño",
+          "fr": "Manchette"
+        },
+        "edges": [
+          {
+            "piece": "cuff",
+            "edge": "attach"
+          },
+          {
+            "piece": "hand",
+            "edge": "wrist"
+          }
+        ],
+        "parameters": [
+          "cuff_height"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure mitten sizes real winter warmth to the wearer's own hand from warm offcuts of fleece or wool, so cosy, repairable hand-wear stays makeable at home instead of bought in fixed sizes.",
+      "es": "Un mitón abierto y a la medida ajusta calor invernal real a la mano de quien lo viste a partir de retazos cálidos de polar o lana, para que prendas de mano acogedoras y reparables sigan siendo fabricables en casa en vez de compradas en tallas fijas.",
+      "fr": "Une moufle ouverte et sur mesure ajuste une vraie chaleur d'hiver à la main de la personne à partir de chutes chaudes de polaire ou de laine, de sorte qu'un article pour les mains douillet et réparable reste fabricable à la maison plutôt qu'acheté en tailles fixes."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

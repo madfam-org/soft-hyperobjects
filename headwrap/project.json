@@ -1,0 +1,242 @@
+{
+  "project": {
+    "name": "Headwrap",
+    "slug": "headwrap",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The pre-tied headwrap (turban-style): a fitted back cap gathered to a wide band that ties or knots at the front — worn across the African diaspora and in many cultures for protection, faith, and expression, so the wrap holds its shape without re-tying each time. This cartridge drafts the cap + band geometry only; the tie styles and the meanings they carry are the wearer's and are not prescribed here. Offered with respect. A soft-goods garment — no hardware. FC-200 long-tail (accessory).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El pañuelo pre-atado (estilo turbante): un gorro trasero ajustado fruncido a una banda ancha que se ata o anuda al frente — usado en la diáspora africana y en muchas culturas para protección, fe y expresión, para que conserve su forma sin re-atarse cada vez. Este cartucho traza solo la geometría de gorro + banda; los estilos de amarre y sus significados pertenecen a quien lo viste y no se prescriben aquí. Ofrecido con respeto. Una prenda textil — sin herrajes. Cola larga FC-200 (accesorio).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le foulard pré-noué (style turban) : une coiffe arrière ajustée froncée sur un large bandeau qui se noue devant — porté dans la diaspora africaine et dans de nombreuses cultures pour la protection, la foi et l'expression, de sorte qu'il garde sa forme sans se renouer à chaque fois. Ce cartouche trace seulement la géométrie coiffe + bandeau ; les styles de nouage et les sens qu'ils portent appartiennent à la personne et ne sont pas prescrits ici. Offert avec respect. Un vêtement textile — sans quincaillerie. Longue traîne FC-200 (accessoire).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "headwrap",
+      "turban",
+      "heritage",
+      "pre-tied",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Headwrap",
+        "es": "Pañuelo completo",
+        "fr": "Foulard complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "cap",
+        "band"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "cap",
+      "label": {
+        "en": "Back cap (gathered)",
+        "es": "Gorro trasero (fruncido)",
+        "fr": "Coiffe arrière (froncée)"
+      },
+      "default_color": "#6a4a6a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "band",
+      "label": {
+        "en": "Wrap band",
+        "es": "Banda de envoltura",
+        "fr": "Bandeau d'enroulement"
+      },
+      "default_color": "#5a3a5a",
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "head_girth",
+      "type": "slider",
+      "default": 570,
+      "min": 440,
+      "max": 700,
+      "step": 10,
+      "label": {
+        "en": "Head girth (mm)",
+        "es": "Contorno de cabeza (mm)",
+        "fr": "Tour de tête (mm)"
+      },
+      "tooltip": {
+        "en": "Around the head",
+        "es": "Alrededor de la cabeza",
+        "fr": "Autour de la tête"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "head_girth"
+      }
+    },
+    {
+      "id": "cap_depth",
+      "type": "slider",
+      "default": 220,
+      "min": 160,
+      "max": 320,
+      "step": 10,
+      "label": {
+        "en": "Cap depth (mm)",
+        "es": "Profundidad de gorro (mm)",
+        "fr": "Profondeur de coiffe (mm)"
+      },
+      "tooltip": {
+        "en": "Back cap depth",
+        "es": "Profundidad del gorro trasero",
+        "fr": "Profondeur coiffe arrière"
+      }
+    },
+    {
+      "id": "band_width",
+      "type": "slider",
+      "default": 180,
+      "min": 100,
+      "max": 320,
+      "step": 10,
+      "label": {
+        "en": "Band width (mm)",
+        "es": "Ancho de banda (mm)",
+        "fr": "Largeur de bandeau (mm)"
+      },
+      "tooltip": {
+        "en": "Wide wrap band (folds)",
+        "es": "Banda ancha (se dobla)",
+        "fr": "Large bandeau (se plie)"
+      }
+    },
+    {
+      "id": "band_length",
+      "type": "slider",
+      "default": 1400,
+      "min": 900,
+      "max": 2200,
+      "step": 50,
+      "label": {
+        "en": "Band length (mm)",
+        "es": "Largo de banda (mm)",
+        "fr": "Longueur de bandeau (mm)"
+      },
+      "tooltip": {
+        "en": "Wrap and tie length",
+        "es": "Largo para envolver y atar",
+        "fr": "Longueur pour enrouler et nouer"
+      }
+    },
+    {
+      "id": "cap_gather",
+      "type": "slider",
+      "default": 1.5,
+      "min": 1.2,
+      "max": 2.2,
+      "step": 0.1,
+      "label": {
+        "en": "Cap gather",
+        "es": "Fruncido de gorro",
+        "fr": "Fronçage de coiffe"
+      },
+      "tooltip": {
+        "en": "Cap width / band attach",
+        "es": "Ancho de gorro / unión a banda",
+        "fr": "Largeur coiffe / attache bandeau"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic",
+        "es": "Clásico",
+        "fr": "Classique"
+      },
+      "values": {
+        "band_length": 1400
+      }
+    },
+    {
+      "id": "tall",
+      "label": {
+        "en": "Tall wrap",
+        "es": "Envoltura alta",
+        "fr": "Enroulement haut"
+      },
+      "values": {
+        "band_length": 1800,
+        "band_width": 240
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "cap_attach",
+        "type": "custom",
+        "label": {
+          "en": "Cap-to-band (gathered)",
+          "es": "Gorro a banda (fruncido)",
+          "fr": "Coiffe-bandeau (froncé)"
+        },
+        "edges": [
+          {
+            "piece": "cap",
+            "edge": "attach"
+          },
+          {
+            "piece": "band",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "cap_gather"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure headwrap gives a pre-tied cap that holds its shape, sized to the wearer, so a garment of protection and expression stays makeable and mendable in fabrics the wearer chooses — leaving every tie style and its meaning to them.",
+      "es": "Un pañuelo abierto y a la medida da un gorro pre-atado que conserva su forma, ajustado a quien lo viste, para que una prenda de protección y expresión siga siendo fabricable y reparable en telas que elige — dejándole cada estilo de amarre y su significado.",
+      "fr": "Un foulard ouvert et sur mesure offre une coiffe pré-nouée qui garde sa forme, ajustée à la personne, de sorte qu'un vêtement de protection et d'expression reste fabricable et réparable dans les tissus qu'elle choisit — lui laissant chaque style de nouage et son sens."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

@@ -1,0 +1,373 @@
+{
+  "project": {
+    "name": "Barong (Tagalog)",
+    "slug": "barong",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The barong tagalog is the formal embroidered shirt of the Philippines: a lightweight, sheer, untucked shirt worn over an undershirt, with a band collar, a front placket, cuffed sleeves, and side slits — traditionally in piña or jusi with chest embroidery. This cartridge drafts the garment geometry and marks (does not reproduce) the embroidery panel. Offered with respect for the living tradition. A soft-goods garment — buttons are the maker's hardware. FC-200 long-tail (heritage).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El barong tagalog es la camisa formal bordada de Filipinas: una camisa ligera, transparente y por fuera que se usa sobre una camiseta, con cuello de tira, tapeta frontal, mangas con puño y aberturas laterales — tradicionalmente en piña o jusi con bordado en el pecho. Este cartucho traza la geometría de la prenda y marca (no reproduce) el panel de bordado. Ofrecido con respeto por la tradición viva. Una prenda textil — los botones son herraje de quien elabora. Cola larga FC-200 (patrimonio).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le barong tagalog est la chemise formelle brodée des Philippines : une chemise légère, transparente, portée par-dessus un sous-vêtement, avec un col officier, une patte de boutonnage, des manches à poignet et des fentes latérales — traditionnellement en piña ou jusi avec une broderie de poitrine. Ce cartouche trace la géométrie du vêtement et marque (ne reproduit pas) le panneau de broderie. Offert avec respect pour la tradition vivante. Un vêtement textile — les boutons sont la quincaillerie du fabricant. Longue traîne FC-200 (patrimoine).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "barong",
+      "heritage",
+      "filipino",
+      "formal",
+      "sheer",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Shirt",
+        "es": "Camisa completa",
+        "fr": "Chemise complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "cuff",
+        "collar"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (placket + embroidery)",
+        "es": "Frente (tapeta + bordado)",
+        "fr": "Devant (patte + broderie)"
+      },
+      "default_color": "#e8e4dc",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#e8e4dc",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#e0dcd2",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Cuff",
+        "es": "Puño",
+        "fr": "Poignet"
+      },
+      "default_color": "#e0dcd2",
+      "cut": {
+        "quantity": 2
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Band collar",
+        "es": "Cuello de tira",
+        "fr": "Col officier"
+      },
+      "default_color": "#e0dcd2",
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "default": 1060,
+      "min": 680,
+      "max": 1600,
+      "step": 10,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest",
+        "es": "Pecho completo",
+        "fr": "Poitrine complète"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "shirt_length",
+      "type": "slider",
+      "default": 760,
+      "min": 600,
+      "max": 950,
+      "step": 10,
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to hem",
+        "es": "De la nuca al ruedo",
+        "fr": "De la nuque à l'ourlet"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 420,
+      "min": 300,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "Full neck",
+        "es": "Cuello completo",
+        "fr": "Cou complet"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 620,
+      "min": 400,
+      "max": 720,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to cuff",
+        "es": "Del hombro al puño",
+        "fr": "De l'épaule au poignet"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "arm_length"
+      }
+    },
+    {
+      "id": "sleeve_depth",
+      "type": "slider",
+      "default": 250,
+      "min": 180,
+      "max": 380,
+      "step": 10,
+      "label": {
+        "en": "Sleeve depth (mm)",
+        "es": "Profundidad de manga (mm)",
+        "fr": "Profondeur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Armhole drop",
+        "es": "Caída de sisa",
+        "fr": "Descente d'emmanchure"
+      }
+    },
+    {
+      "id": "side_slit",
+      "type": "slider",
+      "default": 130,
+      "min": 0,
+      "max": 260,
+      "step": 10,
+      "label": {
+        "en": "Side slit (mm)",
+        "es": "Abertura lateral (mm)",
+        "fr": "Fente latérale (mm)"
+      },
+      "tooltip": {
+        "en": "Hem side slit",
+        "es": "Abertura lateral del ruedo",
+        "fr": "Fente latérale d'ourlet"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "default": 200,
+      "min": 120,
+      "max": 380,
+      "step": 10,
+      "label": {
+        "en": "Fit ease (mm)",
+        "es": "Holgura (mm)",
+        "fr": "Aisance (mm)"
+      },
+      "tooltip": {
+        "en": "Worn over an undershirt",
+        "es": "Sobre una camiseta",
+        "fr": "Par-dessus un sous-vêtement"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic",
+        "es": "Clásico",
+        "fr": "Classique"
+      },
+      "values": {
+        "side_slit": 130
+      }
+    },
+    {
+      "id": "long",
+      "label": {
+        "en": "Longer",
+        "es": "Más largo",
+        "fr": "Plus long"
+      },
+      "values": {
+        "shirt_length": 820
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "shoulder_seam",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder seam",
+          "es": "Costura de hombro",
+          "fr": "Couture d'épaule"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "back",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "chest_girth"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam",
+          "es": "Costura lateral",
+          "fr": "Couture latérale"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "shirt_length",
+          "side_slit"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Armhole",
+          "es": "Sisa",
+          "fr": "Emmanchure"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "sleevehead"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "sleeve_depth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure barong keeps a national formal garment makeable to real measurements in the sheer fibres it belongs to, so a piece central to Filipino ceremony stays in the hands of its makers rather than only its retailers — with the embroidery that carries its identity left to them.",
+      "es": "Un barong abierto y a la medida mantiene una prenda formal nacional fabricable a medidas reales en las fibras transparentes que le corresponden, para que una pieza central de la ceremonia filipina siga en manos de quienes la elaboran y no solo de quienes la venden — con el bordado que porta su identidad en sus manos.",
+      "fr": "Un barong ouvert et sur mesure garde un vêtement formel national fabricable à des mesures réelles dans les fibres transparentes qui lui reviennent, de sorte qu'une pièce centrale des cérémonies philippines reste entre les mains de ceux qui la font plutôt que de ceux qui la vendent — la broderie qui porte son identité leur étant laissée."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "project": {
+    "name": "Arm Warmers",
+    "slug": "arm-warmers",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "Knit arm warmers: tapered stretch tubes worn on the forearms from wrist to above the elbow, often with a thumbhole, for warmth without a full sleeve. Cut with negative ease so they stay up. Distinct from FC-100 (no arm warmers) — front and back are the same tapered panel with one balanced join seam. A soft-goods garment — no hardware. FC-200 long-tail (accessory).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Calentadores de brazo de punto: tubos elásticos ahusados que se llevan en los antebrazos del puño a arriba del codo, a menudo con un orificio para el pulgar, para dar calor sin una manga completa. Cortados con holgura negativa para que se mantengan. Distintos de FC-100 (sin calentadores) — frente y espalda son el mismo panel ahusado con una costura de unión equilibrada. Una prenda textil — sin herrajes. Cola larga FC-200 (accesorio).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Des manchettes en maille : des tubes extensibles fuselés portés sur les avant-bras du poignet au-dessus du coude, souvent avec un trou pour le pouce, pour la chaleur sans manche complète. Coupées avec une aisance négative pour qu'elles tiennent. Distinctes de FC-100 (pas de manchettes) — devant et dos sont le même panneau fuselé avec une couture d'assemblage équilibrée. Un vêtement textile — sans quincaillerie. Longue traîne FC-200 (accessoire).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "arm-warmers",
+      "knit",
+      "thumbhole",
+      "layering",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Pair",
+        "es": "Par completo",
+        "fr": "Paire complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "panel"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "panel",
+      "label": {
+        "en": "Arm-warmer tube",
+        "es": "Tubo de calentador",
+        "fr": "Tube de manchette"
+      },
+      "default_color": "#6a5a6a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "fold_edge": "fold",
+        "mirror": true
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "wrist_girth",
+      "type": "slider",
+      "default": 170,
+      "min": 120,
+      "max": 240,
+      "step": 10,
+      "label": {
+        "en": "Wrist girth (mm)",
+        "es": "Contorno de muñeca (mm)",
+        "fr": "Tour de poignet (mm)"
+      },
+      "tooltip": {
+        "en": "Wrist",
+        "es": "Muñeca",
+        "fr": "Poignet"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "wrist_girth"
+      }
+    },
+    {
+      "id": "upper_girth",
+      "type": "slider",
+      "default": 300,
+      "min": 200,
+      "max": 460,
+      "step": 10,
+      "label": {
+        "en": "Upper-arm girth (mm)",
+        "es": "Contorno de brazo (mm)",
+        "fr": "Tour de bras (mm)"
+      },
+      "tooltip": {
+        "en": "Above the elbow",
+        "es": "Arriba del codo",
+        "fr": "Au-dessus du coude"
+      }
+    },
+    {
+      "id": "warmer_length",
+      "type": "slider",
+      "default": 420,
+      "min": 250,
+      "max": 620,
+      "step": 10,
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
+      },
+      "tooltip": {
+        "en": "Wrist to above elbow",
+        "es": "De la muñeca a arriba del codo",
+        "fr": "Du poignet au-dessus du coude"
+      }
+    },
+    {
+      "id": "neg_ease",
+      "type": "slider",
+      "default": 30,
+      "min": 0,
+      "max": 80,
+      "step": 10,
+      "label": {
+        "en": "Negative ease (mm)",
+        "es": "Holgura negativa (mm)",
+        "fr": "Aisance négative (mm)"
+      },
+      "tooltip": {
+        "en": "Stay-up grip",
+        "es": "Ajuste para no caer",
+        "fr": "Maintien anti-glisse"
+      }
+    },
+    {
+      "id": "thumbhole",
+      "type": "checkbox",
+      "default": true,
+      "label": {
+        "en": "Thumbhole",
+        "es": "Orificio de pulgar",
+        "fr": "Trou de pouce"
+      },
+      "tooltip": {
+        "en": "Mark a thumbhole",
+        "es": "Marcar un orificio de pulgar",
+        "fr": "Marquer un trou de pouce"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic",
+        "es": "Clásico",
+        "fr": "Classique"
+      },
+      "values": {
+        "warmer_length": 420
+      }
+    },
+    {
+      "id": "long",
+      "label": {
+        "en": "Long",
+        "es": "Largo",
+        "fr": "Long"
+      },
+      "values": {
+        "warmer_length": 540
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "join_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Join seam",
+          "es": "Costura de unión",
+          "fr": "Couture d'assemblage"
+        },
+        "edges": [
+          {
+            "piece": "panel",
+            "edge": "join"
+          },
+          {
+            "piece": "panel",
+            "edge": "fold"
+          }
+        ],
+        "parameters": [
+          "wrist_girth",
+          "upper_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure pair of arm warmers is a ten-minute make that adds warmth exactly where a sleeveless top leaves off, sized to the wearer's own arm, keeping a useful layer makeable and mendable from a scrap of rib knit.",
+      "es": "Un par de calentadores de brazo abiertos y a la medida es un proyecto de diez minutos que añade calor justo donde termina un top sin mangas, ajustado al brazo de quien los viste, manteniendo una capa útil fabricable y reparable con un retazo de canalé.",
+      "fr": "Une paire de manchettes ouverte et sur mesure est une réalisation de dix minutes qui ajoute de la chaleur là où un haut sans manches s'arrête, ajustée au bras de la personne, gardant une couche utile fabricable et réparable à partir d'une chute de côtes."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
