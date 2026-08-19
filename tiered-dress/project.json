@@ -1,0 +1,62 @@
+{
+  "project": {
+    "name": "Tiered Dress",
+    "slug": "tiered-dress",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The gathered tiered (prairie) dress: a simple bodice seamed to a skirt of three stacked rectangular tiers, each wider than the one above and gathered onto it, so fullness grows toward the hem. Distinct from FC-100's dresses (none are tiered) — the gather, not shaping, makes the volume. A soft-goods garment — a back closure is the maker's hardware. FC-200 long-tail (dress silhouette gap).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El vestido de olanes (pradera): un corpiño simple unido a una falda de tres olanes rectangulares apilados, cada uno más ancho que el anterior y fruncido sobre él, para que la amplitud crezca hacia el ruedo. Distinto de los vestidos de FC-100 (ninguno es de olanes) — el fruncido, no el moldeado, hace el volumen. Una prenda textil — el cierre trasero es herraje de quien elabora. Cola larga FC-200 (hueco de silueta de vestido).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La robe à volants étagés (prairie) : un corsage simple assemblé à une jupe de trois volants rectangulaires empilés, chacun plus large que celui du dessus et froncé dessus, de sorte que l'ampleur croît vers l'ourlet. Distincte des robes de FC-100 (aucune n'est étagée) — le fronçage, non la mise en forme, fait le volume. Un vêtement textile — une fermeture dos est la quincaillerie du fabricant. Longue traîne FC-200 (manque silhouette de robe).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["tiered", "prairie", "dress", "gathered", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+    }
+  },
+  "modes": [
+    { "id": "set", "label": { "en": "Full Dress", "es": "Vestido completo", "fr": "Robe complète" }, "script_file": "main.py", "pieces": ["bodice_front", "bodice_back", "tier1", "tier2", "tier3"] }
+  ],
+  "pieces": [
+    { "id": "bodice_front", "label": { "en": "Bodice Front", "es": "Corpiño frente", "fr": "Corsage devant" }, "default_color": "#7a5a6a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
+    { "id": "bodice_back", "label": { "en": "Bodice Back", "es": "Corpiño espalda", "fr": "Corsage dos" }, "default_color": "#7a5a6a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
+    { "id": "tier1", "label": { "en": "Tier 1 (waist)", "es": "Olán 1 (cintura)", "fr": "Volant 1 (taille)" }, "default_color": "#8a6a7a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
+    { "id": "tier2", "label": { "en": "Tier 2 (middle)", "es": "Olán 2 (medio)", "fr": "Volant 2 (milieu)" }, "default_color": "#8a6a7a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
+    { "id": "tier3", "label": { "en": "Tier 3 (hem)", "es": "Olán 3 (ruedo)", "fr": "Volant 3 (ourlet)" }, "default_color": "#9a7a8a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } }
+  ],
+  "parameters": [
+    { "id": "bust_girth", "type": "slider", "default": 940, "min": 680, "max": 1400, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Bust girth (mm)", "es": "Contorno de busto (mm)", "fr": "Tour de poitrine (mm)" }, "tooltip": { "en": "Full bust", "es": "Busto completo", "fr": "Poitrine complète" } },
+    { "id": "waist_girth", "type": "slider", "default": 760, "min": 560, "max": 1300, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)" }, "tooltip": { "en": "Waist (bodice-skirt seam)", "es": "Cintura (costura corpiño-falda)", "fr": "Taille (couture corsage-jupe)" } },
+    { "id": "bodice_len", "type": "slider", "default": 380, "min": 300, "max": 470, "step": 5, "label": { "en": "Bodice length (mm)", "es": "Largo de corpiño (mm)", "fr": "Longueur de corsage (mm)" }, "tooltip": { "en": "Shoulder to waist", "es": "Del hombro a la cintura", "fr": "De l'épaule à la taille" } },
+    { "id": "skirt_length", "type": "slider", "default": 720, "min": 400, "max": 1100, "step": 10, "label": { "en": "Skirt length (mm)", "es": "Largo de falda (mm)", "fr": "Longueur de jupe (mm)" }, "tooltip": { "en": "Waist to hem (all tiers)", "es": "De la cintura al ruedo (todos los olanes)", "fr": "De la taille à l'ourlet (tous les volants)" } },
+    { "id": "neck_width", "type": "slider", "default": 190, "min": 140, "max": 320, "step": 5, "label": { "en": "Neck width (mm)", "es": "Ancho de escote (mm)", "fr": "Largeur d'encolure (mm)" }, "tooltip": { "en": "Neckline width", "es": "Ancho del escote", "fr": "Largeur de l'encolure" } },
+    { "id": "tier_growth", "type": "slider", "default": 1.5, "min": 1.2, "max": 2.0, "step": 0.1, "label": { "en": "Tier growth", "es": "Crecimiento de olán", "fr": "Croissance de volant" }, "tooltip": { "en": "Each tier wider by this factor", "es": "Cada olán más ancho por este factor", "fr": "Chaque volant plus large de ce facteur" } },
+    { "id": "sleeve_grown", "type": "slider", "default": 130, "min": 0, "max": 260, "step": 10, "label": { "en": "Grown sleeve (mm)", "es": "Manga nacida (mm)", "fr": "Manche coupée à même (mm)" }, "tooltip": { "en": "Small grown cap", "es": "Manga nacida pequeña", "fr": "Petite manche coupée à même" } },
+    { "id": "ease", "type": "slider", "default": 120, "min": 40, "max": 360, "step": 10, "label": { "en": "Fit ease (mm)", "es": "Holgura (mm)", "fr": "Aisance (mm)" }, "tooltip": { "en": "Bodice ease", "es": "Holgura del corpiño", "fr": "Aisance du corsage" } }
+  ],
+  "presets": [
+    { "id": "prairie", "label": { "en": "Prairie", "es": "Pradera", "fr": "Prairie" }, "values": { "tier_growth": 1.5 } },
+    { "id": "full", "label": { "en": "Very full", "es": "Muy amplio", "fr": "Très ample" }, "values": { "tier_growth": 1.8 } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "shoulder_seam", "type": "shoulder", "label": { "en": "Shoulder seam", "es": "Costura de hombro", "fr": "Couture d'épaule" }, "edges": [{ "piece": "bodice_front", "edge": "shoulder" }, { "piece": "bodice_back", "edge": "shoulder" }], "parameters": ["neck_width", "bust_girth"] },
+      { "id": "bodice_side", "type": "side_seam", "label": { "en": "Bodice side seam", "es": "Costura lateral de corpiño", "fr": "Couture latérale de corsage" }, "edges": [{ "piece": "bodice_front", "edge": "side" }, { "piece": "bodice_back", "edge": "side" }], "parameters": ["bust_girth", "waist_girth"] },
+      { "id": "waist_seam", "type": "waistband", "label": { "en": "Waist seam (bodice to tier 1)", "es": "Costura de cintura (corpiño a olán 1)", "fr": "Couture de taille (corsage au volant 1)" }, "edges": [{ "piece": "bodice_front", "edge": "waist" }, { "piece": "tier1", "edge": "top" }], "parameters": ["waist_girth"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "societal_benefit": {
+      "en": "An open, made-to-measure tiered dress builds volume from plain rectangles gathered in stages, so a full, forgiving dress is makeable from straight cuts of light cloth with almost no shaping skill and very little waste.",
+      "es": "Un vestido de olanes abierto y a la medida construye volumen a partir de rectángulos lisos fruncidos por etapas, para que un vestido amplio e indulgente sea fabricable con cortes rectos de tela ligera casi sin destreza de moldeado y con muy poco desperdicio.",
+      "fr": "Une robe à volants étagés ouverte et sur mesure construit le volume à partir de rectangles simples froncés par étapes, de sorte qu'une robe ample et indulgente soit fabricable à partir de coupes droites de tissu léger, presque sans savoir-faire de mise en forme et avec très peu de chutes."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
