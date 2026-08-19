@@ -1,0 +1,126 @@
+{
+  "project": {
+    "name": "Chainmail Panel",
+    "slug": "chainmail-panel",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A Yantra4D-bridged notion for the additive-manufacturing frontier of the fabric library: a 3D-printed TPU chainmail panel that behaves as cloth. Fashion Cabinet owns the fashion semantics — panel sizing, the sewable-edge placement guide, and cut planning against the printed panel's fixed width — while the flexible ring lattice itself is a Yantra4D solid (`tpu-chainmail-panel`) printed in place. One material, `tpu-panel-impreso` / Bambu TPU 95A, spans this card and that solid, so the same panel is a Fashion Cabinet fabric and a Yantra4D object at once.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un avío puenteado con Yantra4D para la frontera de manufactura aditiva de la biblioteca de telas: un panel de cota de malla TPU impreso en 3D que se comporta como tela. Fashion Cabinet posee la semántica de moda — dimensionado del panel, la guía de colocación del canto cosible y la planeación de corte contra el ancho fijo del panel impreso — mientras la propia rejilla flexible de anillos es un sólido de Yantra4D (`tpu-chainmail-panel`) impreso en sitio. Un material, `tpu-panel-impreso` / Bambu TPU 95A, abarca esta ficha y ese sólido, así que el mismo panel es una tela de Fashion Cabinet y un objeto de Yantra4D a la vez.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["chainmail", "panel", "tpu", "am-fashion", "notion", "hardware", "printed-textile", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "placement-guide",
+      "label": { "en": "Panel Placement Guide", "es": "Guía de Colocación del Panel" },
+      "script_file": "main.py",
+      "pieces": ["placement-guide"]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "placement-guide",
+      "label": { "en": "Chainmail Panel Placement Guide", "es": "Guía de Colocación de Panel de Cota" },
+      "default_color": "#8a8f94",
+      "cut": { "quantity": 1, "on_fold": false, "mirror": false }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "panel_width_mm", "type": "slider", "default": 200, "min": 60, "max": 250, "step": 5,
+      "label": { "en": "Panel width (mm, ≤ print bed)", "es": "Ancho del panel (mm, ≤ cama)" },
+      "tooltip": { "en": "Finished panel width; capped at the printed panel's bed-bound width (250 mm)", "es": "Ancho terminado; limitado al ancho del panel impreso ligado a la cama (250 mm)" }
+    },
+    {
+      "id": "panel_height_mm", "type": "slider", "default": 300, "min": 60, "max": 600, "step": 5,
+      "label": { "en": "Panel height (mm)", "es": "Alto del panel (mm)" },
+      "tooltip": { "en": "Finished panel height down the body", "es": "Alto terminado del panel a lo largo del cuerpo" }
+    },
+    {
+      "id": "ring_id", "type": "slider", "default": 9, "min": 4, "max": 30, "step": 0.5,
+      "label": { "en": "Ring inner diameter (mm)", "es": "Diámetro interior del anillo (mm)" },
+      "tooltip": { "en": "Passed to the Yantra4D panel; larger = looser, drapier weave", "es": "Se pasa al panel de Yantra4D; mayor = tejido más suelto" }
+    },
+    {
+      "id": "wire_d", "type": "slider", "default": 2.4, "min": 1.2, "max": 6, "step": 0.1,
+      "label": { "en": "Wire diameter (mm)", "es": "Diámetro de alambre (mm)" },
+      "tooltip": { "en": "Ring cross-section; thicker = stiffer panel", "es": "Sección del anillo; más grueso = panel más rígido" }
+    },
+    {
+      "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 25, "step": 1,
+      "label": { "en": "Sew-edge allowance (mm)", "es": "Margen de canto cosible (mm)" },
+      "tooltip": { "en": "Tape-bound edge allowance where the panel sews to a garment", "es": "Margen de canto rematado donde el panel se cose a la prenda" }
+    }
+  ],
+  "presets": [
+    {
+      "id": "chest-guard", "label": { "en": "Chest guard (200×300)", "es": "Peto (200×300)" },
+      "values": { "panel_width_mm": 200, "panel_height_mm": 300, "ring_id": 9, "wire_d": 2.4 }
+    },
+    {
+      "id": "sleeve-panel", "label": { "en": "Sleeve panel (140×420)", "es": "Panel de manga (140×420)" },
+      "values": { "panel_width_mm": 140, "panel_height_mm": 420, "ring_id": 8, "wire_d": 2.2 }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "panel_width_mm <= 250",
+      "severity": "error",
+      "message": {
+        "en": "Panel width exceeds the printed panel's bed-bound width (250 mm) — split into panels",
+        "es": "El ancho excede el ancho del panel impreso ligado a la cama (250 mm) — divide en paneles"
+      }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": ["tpu-panel-impreso"],
+  "notion": {
+    "kind": "custom",
+    "subtype": "printed chainmail panel",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "tpu-chainmail-panel",
+      "linked": true,
+      "params_map": {
+        "ring_id": "ring_id",
+        "wire_d": "wire_d",
+        "cols": "round(panel_width_mm / (ring_id + wire_d))",
+        "rows": "round(panel_height_mm / ((ring_id + 2 * wire_d) * 0.62))"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "notion",
+    "interfaces": [
+      {
+        "id": "panel_edge",
+        "type": "side_seam",
+        "label": { "en": "Sewable panel edge", "es": "Canto cosible del panel" },
+        "edges": [{ "piece": "placement-guide", "edge": "perimeter" }],
+        "parameters": ["panel_width_mm", "panel_height_mm", "ring_id", "wire_d", "seam_allowance"]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "printed_textile": true,
+      "am_fashion": true
+    },
+    "societal_benefit": {
+      "en": "The additive-manufacturing frontier of clothing, made a pattern: a flexible chainmail fabric anyone can print, sized to a garment panel and sewn in like any cloth. It closes the loop from a Fashion Cabinet fabric card to a printable Yantra4D solid — the same panel is cloth and object — and makes protective, expressive, metal-like wear an open, repairable, made-to-measure thing.",
+      "es": "La frontera de manufactura aditiva de la ropa vuelta patrón: una tela de cota flexible que cualquiera puede imprimir, dimensionada a un panel de prenda y cosida como cualquier tela. Cierra el ciclo de una ficha de tela de Fashion Cabinet a un sólido imprimible de Yantra4D — el mismo panel es tela y objeto — y vuelve la ropa protectora, expresiva y tipo metal algo abierto, reparable y a la medida."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
