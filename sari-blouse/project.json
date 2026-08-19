@@ -1,0 +1,58 @@
+{
+  "project": {
+    "name": "Sari Blouse (Choli)",
+    "slug": "sari-blouse",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The choli — the fitted, cropped blouse worn with the sari and lehenga across South Asia: close-fitting to the bust with a short hem above the midriff, short set-in sleeves, a back opening, and its signature bust darts. This cartridge drafts the fitted garment geometry to measure — a shaped front and back with marked bust/shaping darts and a short sleeve. The silk, the border, the mirror (shisha) work, and the embroidery are the maker's. Offered with respect for the living tradition.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El choli — la blusa entallada y corta que se usa con el sari y el lehenga en el sur de Asia: ceñida al busto con un ruedo corto sobre la cintura, mangas cortas montadas, una abertura trasera y sus pinzas de busto características. Este cartucho traza la geometría entallada a la medida — un delantero y espalda con forma y pinzas marcadas y una manga corta. La seda, el borde, el trabajo de espejo (shisha) y el bordado los aporta quien lo elabora. Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["choli", "sari-blouse", "heritage", "south-asia", "blouse", "bust-dart", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+    }
+  },
+  "modes": [
+    { "id": "set", "label": { "en": "Full Choli", "es": "Choli completo" }, "script_file": "main.py", "pieces": ["front", "back", "sleeve"] }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#c43a6a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
+    { "id": "back", "label": { "en": "Back", "es": "Espalda" }, "default_color": "#c43a6a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
+    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#c43a6a", "cut": { "quantity": 2, "on_fold": false, "mirror": true } }
+  ],
+  "parameters": [
+    { "id": "bust_girth", "type": "slider", "default": 880, "min": 650, "max": 1300, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Bust girth (mm)", "es": "Contorno de busto (mm)" }, "tooltip": { "en": "Full bust", "es": "Busto completo" } },
+    { "id": "under_bust", "type": "slider", "default": 760, "min": 550, "max": 1200, "step": 10, "measurement": { "standard": "iso_8559", "code": "underbust_girth" }, "label": { "en": "Underbust (mm)", "es": "Bajo busto (mm)" }, "tooltip": { "en": "The choli hem sits here; shapes the back", "es": "El ruedo se asienta aquí; da forma a la espalda" } },
+    { "id": "blouse_length", "type": "slider", "default": 360, "min": 220, "max": 500, "step": 10, "label": { "en": "Length (mm)", "es": "Largo (mm)" }, "tooltip": { "en": "Shoulder to the short hem", "es": "Del hombro al ruedo corto" } },
+    { "id": "shoulder_w", "type": "slider", "default": 110, "min": 70, "max": 180, "step": 5, "label": { "en": "Shoulder width (mm)", "es": "Ancho de hombro (mm)" }, "tooltip": { "en": "Half shoulder width", "es": "Medio ancho de hombro" } },
+    { "id": "sleeve_length", "type": "slider", "default": 150, "min": 60, "max": 320, "step": 10, "label": { "en": "Sleeve length (mm)", "es": "Largo de manga (mm)" }, "tooltip": { "en": "Short set-in sleeve", "es": "Manga corta montada" } },
+    { "id": "sleeve_depth", "type": "slider", "default": 130, "min": 90, "max": 220, "step": 5, "label": { "en": "Armhole depth (mm)", "es": "Profundidad de sisa (mm)" }, "tooltip": { "en": "Armhole depth", "es": "Profundidad de la sisa" } },
+    { "id": "bust_dart", "type": "slider", "default": 45, "min": 0, "max": 90, "step": 5, "label": { "en": "Bust-dart intake (mm)", "es": "Entrada de pinza de busto (mm)" }, "tooltip": { "en": "Marked bust dart; 0 = none", "es": "Pinza de busto marcada; 0 = ninguna" } },
+    { "id": "bust_ease", "type": "slider", "default": 40, "min": 10, "max": 120, "step": 5, "label": { "en": "Fit ease (mm)", "es": "Holgura de ajuste (mm)" }, "tooltip": { "en": "Close-fit ease", "es": "Holgura ceñida" } }
+  ],
+  "presets": [
+    { "id": "classic", "label": { "en": "Classic", "es": "Clásico" }, "values": { "blouse_length": 360, "sleeve_length": 150 } },
+    { "id": "cap-sleeve", "label": { "en": "Cap sleeve", "es": "Manga casquillo" }, "values": { "sleeve_length": 80, "blouse_length": 320 } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "shoulder_seam", "type": "shoulder", "label": { "en": "Shoulder seam", "es": "Costura de hombro" }, "edges": [{ "piece": "front", "edge": "shoulder" }, { "piece": "back", "edge": "shoulder" }], "parameters": ["shoulder_w", "bust_girth"] },
+      { "id": "side_seam", "type": "side_seam", "label": { "en": "Side seam", "es": "Costura lateral" }, "edges": [{ "piece": "front", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["bust_girth", "under_bust", "blouse_length"] },
+      { "id": "armscye", "type": "armscye", "label": { "en": "Armhole ↔ sleeve cap", "es": "Sisa ↔ copa de manga" }, "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }, { "piece": "sleeve", "edge": "cap" }], "parameters": ["sleeve_depth", "bust_dart"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "societal_benefit": {
+      "en": "An open, made-to-measure draft of the choli lets anyone shape and construct this fitted blouse to measure, with the signature bust dart marked, while leaving the silk, the border, and the mirror (shisha) work to the maker. It records a garment central to South Asian dress and serves the tradition rather than extracting from it.",
+      "es": "Un trazo abierto y a la medida del choli permite a cualquiera dar forma y construir esta blusa entallada a su talla, con la pinza de busto característica marcada, dejando la seda, el borde y el trabajo de espejo (shisha) a quien lo elabora. Registra una prenda central del vestir del sur de Asia y sirve a la tradición en vez de extraer de ella."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "project": {
+    "name": "Qipao / Cheongsam",
+    "slug": "qipao",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The qipao (cheongsam) — the fitted Chinese dress with its unmistakable signatures: a mandarin (stand) collar, an asymmetric front opening curving to the right underarm, hand-knotted frog (pankou) fastenings, bust and waist shaping, and side slits. This cartridge drafts the fitted garment geometry to measure — a shaped front and back with marked waist darts, a mandarin collar solved to the neckline, and marked frog + slit positions. The silk brocade, the frog knots, and the piping are the maker's. Offered with respect for the living tradition.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El qipao (cheongsam) — el vestido chino entallado con sus sellos inconfundibles: un cuello mao, una abertura frontal asimétrica que curva hacia la axila derecha, cierres de nudo (pankou), entalle de busto y cintura, y aberturas laterales. Este cartucho traza la geometría entallada a la medida — un delantero y espalda con forma y pinzas de cintura marcadas, un cuello mao resuelto al escote, y posiciones de nudos y aberturas marcadas. El brocado de seda, los nudos y el vivo los aporta quien lo elabora. Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["qipao", "cheongsam", "heritage", "china", "dress", "mandarin-collar", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+    }
+  },
+  "modes": [
+    { "id": "set", "label": { "en": "Full Qipao", "es": "Qipao completo" }, "script_file": "main.py", "pieces": ["front", "back", "collar"] }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#8a1f3a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
+    { "id": "back", "label": { "en": "Back", "es": "Espalda" }, "default_color": "#8a1f3a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
+    { "id": "collar", "label": { "en": "Mandarin collar", "es": "Cuello mao" }, "default_color": "#6a1730", "cut": { "quantity": 1, "on_fold": false, "mirror": false } }
+  ],
+  "parameters": [
+    { "id": "bust_girth", "type": "slider", "default": 900, "min": 650, "max": 1400, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Bust girth (mm)", "es": "Contorno de busto (mm)" }, "tooltip": { "en": "Full bust", "es": "Busto completo" } },
+    { "id": "waist_girth", "type": "slider", "default": 720, "min": 500, "max": 1300, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" }, "tooltip": { "en": "Full waist; shapes the side seam", "es": "Cintura completa; da forma al costado" } },
+    { "id": "hip_girth", "type": "slider", "default": 960, "min": 650, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" }, "tooltip": { "en": "Full hip", "es": "Cadera completa" } },
+    { "id": "qipao_length", "type": "slider", "default": 1150, "min": 800, "max": 1600, "step": 10, "label": { "en": "Length (mm)", "es": "Largo (mm)" }, "tooltip": { "en": "Shoulder to finished hem", "es": "Del hombro al ruedo terminado" } },
+    { "id": "neck_girth", "type": "slider", "default": 380, "min": 300, "max": 500, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" }, "tooltip": { "en": "The collar band solves to this", "es": "El cuello se resuelve a esto" } },
+    { "id": "collar_h", "type": "slider", "default": 45, "min": 25, "max": 80, "step": 5, "label": { "en": "Collar height (mm)", "es": "Alto del cuello (mm)" }, "tooltip": { "en": "Mandarin stand height", "es": "Alto del cuello mao" } },
+    { "id": "slit_height", "type": "slider", "default": 350, "min": 150, "max": 600, "step": 10, "label": { "en": "Side-slit height (mm)", "es": "Alto de abertura lateral (mm)" }, "tooltip": { "en": "Slit from the hem up", "es": "Abertura desde el ruedo hacia arriba" } },
+    { "id": "bust_ease", "type": "slider", "default": 60, "min": 20, "max": 160, "step": 5, "label": { "en": "Fit ease (mm)", "es": "Holgura de ajuste (mm)" }, "tooltip": { "en": "Total added width for the fitted line", "es": "Ancho total agregado para la línea entallada" } },
+    { "id": "waist_dart", "type": "slider", "default": 30, "min": 0, "max": 70, "step": 5, "label": { "en": "Waist-dart intake (mm)", "es": "Entrada de pinza de cintura (mm)" }, "tooltip": { "en": "Marked waist dart; 0 = none", "es": "Pinza de cintura marcada; 0 = ninguna" } }
+  ],
+  "presets": [
+    { "id": "classic", "label": { "en": "Classic (full length)", "es": "Clásico (largo)" }, "values": { "qipao_length": 1150, "slit_height": 350 } },
+    { "id": "tea-length", "label": { "en": "Tea length", "es": "Largo té" }, "values": { "qipao_length": 980, "slit_height": 250 } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "shoulder_seam", "type": "shoulder", "label": { "en": "Shoulder seam", "es": "Costura de hombro" }, "edges": [{ "piece": "front", "edge": "shoulder" }, { "piece": "back", "edge": "shoulder" }], "parameters": ["bust_girth", "bust_ease"] },
+      { "id": "side_seam", "type": "side_seam", "label": { "en": "Shaped side seam", "es": "Costura lateral con forma" }, "edges": [{ "piece": "front", "edge": "side_upper" }, { "piece": "back", "edge": "side_upper" }], "parameters": ["waist_girth", "hip_girth", "waist_dart"] },
+      { "id": "collar_band", "type": "neckline", "label": { "en": "Mandarin collar ↔ neck run", "es": "Cuello mao ↔ escote" }, "edges": [{ "piece": "collar", "edge": "inner" }], "parameters": ["neck_girth", "collar_h"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "societal_benefit": {
+      "en": "An open, made-to-measure draft of the qipao lets anyone shape and construct this fitted dress to measure — the mandarin collar solved to the neckline so it always balances — while leaving the silk brocade, the frog (pankou) knots, and the piped edges to the maker. It records a garment central to Chinese dress and serves the tradition rather than extracting from it.",
+      "es": "Un trazo abierto y a la medida del qipao permite a cualquiera dar forma y construir este vestido entallado a su talla — con el cuello mao resuelto al escote para que siempre equilibre — dejando el brocado de seda, los nudos (pankou) y los vivos a quien lo elabora. Registra una prenda central del vestir chino y sirve a la tradición en vez de extraer de ella."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
