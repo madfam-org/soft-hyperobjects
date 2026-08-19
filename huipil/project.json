@@ -1,0 +1,55 @@
+{
+  "project": {
+    "name": "Huipil",
+    "slug": "huipil",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The huipil — one of the oldest and most widely worn Indigenous garments of Mexico and Central America: a rectangular tunic assembled from straight-woven webs, joined by straight seams, with a boat/keyhole neck. This cartridge drafts the garment geometry to measure; the woven and embroidered designs that give each huipil its community identity are the maker's to supply. Offered with respect for the living traditions it comes from.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El huipil — una de las prendas indígenas más antiguas y difundidas de México y Centroamérica: una túnica rectangular armada con lienzos tejidos, unidos por costuras rectas, con cuello de barco. Este cartucho traza la geometría de la prenda a la medida; los diseños tejidos y bordados que dan a cada huipil su identidad comunitaria los aporta quien lo elabora. Ofrecido con respeto por las tradiciones vivas de las que proviene.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": ["huipil", "heritage", "mexico", "indigenous", "tunic", "rectangular-construction", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+    }
+  },
+  "modes": [
+    { "id": "set", "label": { "en": "Full Huipil", "es": "Huipil completo" }, "script_file": "main.py", "pieces": ["front", "back"] }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front panel", "es": "Panel delantero" }, "default_color": "#e8e2d0", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
+    { "id": "back", "label": { "en": "Back panel", "es": "Panel trasero" }, "default_color": "#e8e2d0", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "default": 960, "min": 650, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" }, "tooltip": { "en": "Full chest; the panels are cut loose from this", "es": "Pecho completo; los paneles se cortan holgados de esto" } },
+    { "id": "huipil_length", "type": "slider", "default": 900, "min": 500, "max": 1300, "step": 10, "label": { "en": "Length (mm)", "es": "Largo (mm)" }, "tooltip": { "en": "Shoulder to finished hem; tunic, hip, or full length", "es": "Del hombro al ruedo; largo túnica, cadera o completo" } },
+    { "id": "neck_width", "type": "slider", "default": 200, "min": 120, "max": 360, "step": 5, "label": { "en": "Neck opening width (mm)", "es": "Ancho de cuello (mm)" }, "tooltip": { "en": "Boat-neck opening across the shoulders", "es": "Abertura de cuello de barco entre hombros" } },
+    { "id": "neck_drop", "type": "slider", "default": 60, "min": 10, "max": 160, "step": 5, "label": { "en": "Front-neck drop (mm)", "es": "Caída del cuello delantero (mm)" }, "tooltip": { "en": "Front-neck scoop depth", "es": "Profundidad del escote delantero" } },
+    { "id": "web_ease", "type": "slider", "default": 160, "min": 80, "max": 400, "step": 10, "label": { "en": "Width ease (mm)", "es": "Holgura de ancho (mm)" }, "tooltip": { "en": "Total added width for a loose tunic", "es": "Ancho total agregado para túnica holgada" } },
+    { "id": "arm_opening", "type": "slider", "default": 240, "min": 150, "max": 400, "step": 10, "label": { "en": "Arm opening (mm)", "es": "Abertura de brazo (mm)" }, "tooltip": { "en": "Unsewn side length at the top for the arm", "es": "Largo del costado sin coser arriba para el brazo" } },
+    { "id": "band_depth", "type": "slider", "default": 120, "min": 0, "max": 250, "step": 5, "label": { "en": "Neck-band depth (mm)", "es": "Profundidad de banda de cuello (mm)" }, "tooltip": { "en": "Marked decorative band the maker fills; 0 = none", "es": "Banda decorativa marcada que llena quien elabora; 0 = ninguna" } }
+  ],
+  "presets": [
+    { "id": "tunic", "label": { "en": "Tunic length", "es": "Largo túnica" }, "values": { "huipil_length": 700, "chest_girth": 960 } },
+    { "id": "full", "label": { "en": "Full length", "es": "Largo completo" }, "values": { "huipil_length": 1150, "web_ease": 240 } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "shoulder_seam", "type": "shoulder", "label": { "en": "Shoulder seam", "es": "Costura de hombro" }, "edges": [{ "piece": "front", "edge": "shoulder" }, { "piece": "back", "edge": "shoulder" }], "parameters": ["neck_width", "chest_girth", "web_ease"] },
+      { "id": "side_seam", "type": "side_seam", "label": { "en": "Side seam", "es": "Costura lateral" }, "edges": [{ "piece": "front", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["huipil_length", "arm_opening"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "societal_benefit": {
+      "en": "An open, made-to-measure draft of the huipil's rectangular construction lets anyone cut and sew the garment geometry to fit, while leaving the woven and embroidered design — the part that carries community identity — entirely to the maker. It puts the largest open, verified, parametric heritage-garment library in service of the traditions it draws from, rather than extracting from them.",
+      "es": "Un trazo abierto y a la medida de la construcción rectangular del huipil permite a cualquiera cortar y coser la geometría de la prenda a su talla, dejando el diseño tejido y bordado — lo que porta la identidad comunitaria — enteramente a quien lo elabora. Pone la mayor biblioteca abierta, verificada y paramétrica de prendas de herencia al servicio de las tradiciones de las que parte, en vez de extraer de ellas."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
