@@ -9,79 +9,348 @@
       "es": "Rango #61 del FC-100. Un impermeable con capucha, largo a la rodilla y holgado para usarse sobre capas. La arquitectura de frente con cierre de la sudadera con cierre / chamarra deportiva, alargada a abrigo: el delantero se corta en dos mitades espejadas cuyo borde central es la costura de un cierre separable de largo completo (margen de cinta de 15 mm, piquetes de tope, pespunte a 7 mm), cubierto por una TAPETA CORTAVIENTOS (storm flap) cuyo borde de unión se resuelve al centro medido para traslapar el cierre con delta ~ 0. El borde de cuello de la capucha de dos paneles se resuelve por bisección a la abertura medida del escote (con canal para alambre de visera y jareta de cara); la copa de la manga montada se resuelve a la sisa medida más un embebido declarado, con ojales de ventilación en la axila. La propiedad que la define es la construcción, no un trazo nuevo: el BOM lleva cinta selladora de costuras a ~la longitud total de costura cosida, porque termosellar cada costura perforada por la aguja es lo que de verdad impermeabiliza el abrigo. Cierre, broches, topes de cordón y ojales son referencias de herraje Yantra4D, nunca trazados.\n\nVisualizador y configurador oficial: Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["raincoat", "waterproof", "outerwear", "shell", "hood", "zipper", "storm-flap", "taped-seams", "eased-cap", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "raincoat",
+      "waterproof",
+      "outerwear",
+      "shell",
+      "hood",
+      "zipper",
+      "storm-flap",
+      "taped-seams",
+      "eased-cap",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet", "license": "original" },
-        { "source": "zip-hoodie (rank #14) — halved-at-CF separating-zip front (tape allowance, stop notches, stitch line), set-in sleeve cap solved to the armhole pair, derived zipper length", "license": "LicenseRef-FC1-pending" },
-        { "source": "track-jacket (rank #51) — relaxed technical-shell zip front and exact-mm notion accounting in the BOM", "license": "LicenseRef-FC1-pending" },
-        { "source": "hoodie-pullover (rank #5) — two-panel hood whose neck edge is bisection-solved to the half neck opening", "license": "LicenseRef-FC1-pending" },
-        { "source": "trench-coat (rank #60) — long shell-coat silhouette, storm flap attached over the front, and flap-pocket + back-cape ventilation markings", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "zip-hoodie (rank #14) — halved-at-CF separating-zip front (tape allowance, stop notches, stitch line), set-in sleeve cap solved to the armhole pair, derived zipper length",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "track-jacket (rank #51) — relaxed technical-shell zip front and exact-mm notion accounting in the BOM",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "hoodie-pullover (rank #5) — two-panel hood whose neck edge is bisection-solved to the half neck opening",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "trench-coat (rank #60) — long shell-coat silhouette, storm flap attached over the front, and flap-pocket + back-cape ventilation markings",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "raincoat",
-      "label": { "en": "Raincoat (all pieces)", "es": "Impermeable (todas las piezas)" },
+      "label": {
+        "en": "Raincoat (all pieces)",
+        "es": "Impermeable (todas las piezas)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "sleeve", "hood", "storm_flap"]
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "hood",
+        "storm_flap"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front (zip half)", "es": "Delantero (mitad del cierre)" }, "default_color": "#34434f", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Trasero" }, "default_color": "#2b3843", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "sleeve", "label": { "en": "Sleeve (set-in, eased)", "es": "Manga (montada, embebida)" }, "default_color": "#3f5160", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "hood", "label": { "en": "Hood (side panel)", "es": "Capucha (panel lateral)" }, "default_color": "#4c6070", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "storm_flap", "label": { "en": "Storm Flap (placket over CF zip)", "es": "Tapeta cortavientos (sobre el cierre CF)" }, "default_color": "#5b7182", "cut": { "quantity": 1 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (zip half)",
+        "es": "Delantero (mitad del cierre)"
+      },
+      "default_color": "#34434f",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Trasero"
+      },
+      "default_color": "#2b3843",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve (set-in, eased)",
+        "es": "Manga (montada, embebida)"
+      },
+      "default_color": "#3f5160",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "hood",
+      "label": {
+        "en": "Hood (side panel)",
+        "es": "Capucha (panel lateral)"
+      },
+      "default_color": "#4c6070",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "storm_flap",
+      "label": {
+        "en": "Storm Flap (placket over CF zip)",
+        "es": "Tapeta cortavientos (sobre el cierre CF)"
+      },
+      "default_color": "#5b7182",
+      "cut": {
+        "quantity": 1
+      }
+    }
   ],
   "parameters": [
-    { "id": "chest_girth", "type": "slider", "default": 1020, "min": 800, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
-    { "id": "body_length", "type": "slider", "default": 1040, "min": 820, "max": 1300, "step": 10, "label": { "en": "Coat length, nape to hem (mm)", "es": "Largo de abrigo, nuca a bajo (mm)" } },
-    { "id": "neck_girth", "type": "slider", "default": 400, "min": 300, "max": 520, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
-    { "id": "sleeve_length", "type": "slider", "default": 620, "min": 460, "max": 780, "step": 10, "measurement": { "standard": "iso_8559", "code": "arm_length" }, "label": { "en": "Sleeve length, cap to wrist (mm)", "es": "Largo de manga, copa a muñeca (mm)" } },
-    { "id": "shell_ease", "type": "slider", "default": 240, "min": 140, "max": 420, "step": 10, "label": { "en": "Roomy layering ease (mm)", "es": "Holgura para capas (mm)" } },
-    { "id": "hood_height", "type": "slider", "default": 380, "min": 300, "max": 460, "step": 5, "label": { "en": "Hood height (mm)", "es": "Alto de capucha (mm)" } },
-    { "id": "hood_depth", "type": "slider", "default": 280, "min": 220, "max": 340, "step": 5, "label": { "en": "Hood depth (mm)", "es": "Profundidad de capucha (mm)" } },
-    { "id": "storm_flap_w", "type": "slider", "default": 70, "min": 45, "max": 100, "step": 5, "label": { "en": "Storm-flap finished width (mm)", "es": "Ancho terminado de tapeta cortavientos (mm)" } },
-    { "id": "cap_ease", "type": "slider", "default": 25, "min": 0, "max": 45, "step": 5, "advanced": true, "label": { "en": "Sleeve cap ease (mm)", "es": "Embebido de copa (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 12, "min": 8, "max": 18, "step": 1, "label": { "en": "Seam allowance, taped (mm)", "es": "Margen de costura, sellado (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 40, "min": 25, "max": 65, "step": 5, "advanced": true, "label": { "en": "Hem allowance (mm)", "es": "Margen de bajo (mm)" } }
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "default": 1020,
+      "min": 800,
+      "max": 1800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "default": 1040,
+      "min": 820,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Coat length, nape to hem (mm)",
+        "es": "Largo de abrigo, nuca a bajo (mm)"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 400,
+      "min": 300,
+      "max": 520,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 620,
+      "min": 460,
+      "max": 780,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "arm_length"
+      },
+      "label": {
+        "en": "Sleeve length, cap to wrist (mm)",
+        "es": "Largo de manga, copa a muñeca (mm)"
+      }
+    },
+    {
+      "id": "shell_ease",
+      "type": "slider",
+      "default": 240,
+      "min": 140,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Roomy layering ease (mm)",
+        "es": "Holgura para capas (mm)"
+      }
+    },
+    {
+      "id": "hood_height",
+      "type": "slider",
+      "default": 380,
+      "min": 300,
+      "max": 460,
+      "step": 5,
+      "label": {
+        "en": "Hood height (mm)",
+        "es": "Alto de capucha (mm)"
+      }
+    },
+    {
+      "id": "hood_depth",
+      "type": "slider",
+      "default": 280,
+      "min": 220,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Hood depth (mm)",
+        "es": "Profundidad de capucha (mm)"
+      }
+    },
+    {
+      "id": "storm_flap_w",
+      "type": "slider",
+      "default": 70,
+      "min": 45,
+      "max": 100,
+      "step": 5,
+      "label": {
+        "en": "Storm-flap finished width (mm)",
+        "es": "Ancho terminado de tapeta cortavientos (mm)"
+      }
+    },
+    {
+      "id": "cap_ease",
+      "type": "slider",
+      "default": 25,
+      "min": 0,
+      "max": 45,
+      "step": 5,
+      "advanced": true,
+      "label": {
+        "en": "Sleeve cap ease (mm)",
+        "es": "Embebido de copa (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 12,
+      "min": 8,
+      "max": 18,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance, taped (mm)",
+        "es": "Margen de costura, sellado (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 40,
+      "min": 25,
+      "max": 65,
+      "step": 5,
+      "advanced": true,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de bajo (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1020, "body_length": 1040, "neck_girth": 400, "sleeve_length": 620, "shell_ease": 240 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1120, "body_length": 1080, "neck_girth": 420, "sleeve_length": 645, "shell_ease": 280 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M"
+      },
+      "values": {
+        "chest_girth": 1020,
+        "body_length": 1040,
+        "neck_girth": 400,
+        "sleeve_length": 620,
+        "shell_ease": 240
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G"
+      },
+      "values": {
+        "chest_girth": 1120,
+        "body_length": 1080,
+        "neck_girth": 420,
+        "sleeve_length": 645,
+        "shell_ease": 280
+      }
+    }
   ],
   "constraints": [
     {
       "expression": "hood_depth <= hood_height",
       "severity": "warning",
-      "message": { "en": "Very deep hoods relative to height collapse forward off the face", "es": "Capuchas muy profundas respecto a su alto se vencen hacia adelante sobre la cara" }
+      "message": {
+        "en": "Very deep hoods relative to height collapse forward off the face",
+        "es": "Capuchas muy profundas respecto a su alto se vencen hacia adelante sobre la cara"
+      }
     },
     {
       "expression": "storm_flap_w <= 100",
       "severity": "warning",
-      "message": { "en": "A storm flap wider than 100 mm flaps in the wind — keep it just wide enough to cover the zip", "es": "Una tapeta de más de 100 mm ondea con el viento — que solo cubra el cierre" }
+      "message": {
+        "en": "A storm flap wider than 100 mm flaps in the wind — keep it just wide enough to cover the zip",
+        "es": "Una tapeta de más de 100 mm ondea con el viento — que solo cubra el cierre"
+      }
     },
     {
       "expression": "body_length >= 820",
       "severity": "warning",
-      "message": { "en": "Below knee-length the coat stops shedding rain off the legs — keep it long", "es": "Por debajo del largo a la rodilla el abrigo deja de escurrir la lluvia de las piernas — manténgalo largo" }
+      "message": {
+        "en": "Below knee-length the coat stops shedding rain off the legs — keep it long",
+        "es": "Por debajo del largo a la rodilla el abrigo deja de escurrir la lluvia de las piernas — manténgalo largo"
+      }
     }
   ],
-  "export_formats": ["svg", "dxf", "json", "pdf"],
-  "fabrics": ["nylon-ripstop-shell"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "nylon-ripstop-shell"
+  ],
   "notion": {
     "kind": "zipper",
     "subtype": "separating",
     "hardware_ref": {
       "platform": "yantra4d",
-      "project_slug": "zipper-notion",
+      "project_slug": "zipper",
       "linked": true,
       "params_map": {
-        "length_mm": "zipper_length_mm"
+        "zip_length": "body_length"
       }
     }
   },
@@ -89,14 +358,128 @@
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "neck" }, { "piece": "back", "edge": "neck" }, { "piece": "hood", "edge": "neck" }], "parameters": ["neck_girth", "hood_height", "hood_depth"] },
-      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }, { "piece": "sleeve", "edge": "cap" }], "parameters": ["chest_girth", "shell_ease", "cap_ease"] },
-      { "id": "shoulder", "type": "shoulder", "edges": [{ "piece": "front", "edge": "shoulder" }, { "piece": "back", "edge": "shoulder" }], "parameters": ["neck_girth", "chest_girth"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["chest_girth", "shell_ease", "hem_allowance"] },
-      { "id": "zipper_tape", "type": "zipper_tape", "edges": [{ "piece": "front", "edge": "center" }], "parameters": ["body_length", "seam_allowance"] },
-      { "id": "storm_flap", "type": "placket", "edges": [{ "piece": "storm_flap", "edge": "attach" }, { "piece": "front", "edge": "center" }], "parameters": ["storm_flap_w"] }
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          },
+          {
+            "piece": "hood",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "hood_height",
+          "hood_depth"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "shell_ease",
+          "cap_ease"
+        ]
+      },
+      {
+        "id": "shoulder",
+        "type": "shoulder",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "back",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "chest_girth"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "shell_ease",
+          "hem_allowance"
+        ]
+      },
+      {
+        "id": "zipper_tape",
+        "type": "zipper_tape",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "center"
+          }
+        ],
+        "parameters": [
+          "body_length",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "storm_flap",
+        "type": "placket",
+        "edges": [
+          {
+            "piece": "storm_flap",
+            "edge": "attach"
+          },
+          {
+            "piece": "front",
+            "edge": "center"
+          }
+        ],
+        "parameters": [
+          "storm_flap_w"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "waterproof_construction": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "waterproof_construction": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
     "societal_benefit": {
       "en": "The commons' first WATERPROOF garment establishes that waterproofing is a verified construction property, not a mystique: the shell may be laminated, but every stitch is a hole until it is heat-taped, so the cartridge derives the seam-sealing tape length from the actual sewn seams and names the taped-seam step as the thing that keeps the wearer dry. Paired with a storm flap solved over the separating zip and a hood solved to the measured neck, it turns an opaque technical-outerwear category — sold at a steep markup precisely because 'waterproof' sounds unrepeatable at home — into a regenerating, repairable pattern anyone can cut, tape, and re-proof, with the zipper, snaps, cord stops and eyelets federated to Yantra4D.",
       "es": "La primera prenda IMPERMEABLE del común establece que la impermeabilidad es una propiedad de construcción verificada, no una mística: el shell puede estar laminado, pero cada puntada es un orificio hasta que se termosella, así que el cartucho deriva la longitud de la cinta selladora de las costuras reales y nombra el sellado de costuras como lo que mantiene seca a la persona. Junto con una tapeta resuelta sobre el cierre separable y una capucha resuelta al cuello medido, convierte una categoría técnica opaca — vendida con fuerte sobreprecio justo porque 'impermeable' suena irrepetible en casa — en un patrón que se regenera, se repara y cualquiera puede cortar, sellar y re-impermeabilizar, con el cierre, los broches, los topes de cordón y los ojales federados a Yantra4D."

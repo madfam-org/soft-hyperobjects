@@ -9,77 +9,331 @@
       "es": "Rango #31 del FC-100. Una chamarra acolchada holgada sobre la arquitectura de la bomber: el delantero se corta en dos mitades espejadas cuyo borde central es la costura del cierre separable (margen de cinta de 15 mm, piquetes de tope, línea de pespunte a 7 mm). La firma es el acolchado — canales horizontales trazados como marcas internas en delantero, espalda y manga a un parámetro de separación de canales (80 mm por defecto), donde el shell y el forro se acolchan entre sí sobre el relleno. Un cuello tipo embudo de tela propia, derivado, se une al escote; la copa de la manga larga se resuelve contra la sisa medida; los puños elásticos son una banda derivada y el bajo lleva un acabado con jareta elástica. Los metadatos derivan el largo del cierre separable de extremo cerrado a ordenar.\n\nVisualizador y configurador oficial: Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["puffer", "jacket", "outerwear", "quilted", "insulated", "zipper", "funnel-collar", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "puffer",
+      "jacket",
+      "outerwear",
+      "quilted",
+      "insulated",
+      "zipper",
+      "funnel-collar",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet", "license": "original" },
-        { "source": "bomber-jacket family", "license": "LicenseRef-FC1-pending" },
-        { "source": "zip-hoodie family", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "bomber-jacket family",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "zip-hoodie family",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "puffer-jacket",
-      "label": { "en": "Puffer jacket (all pieces)", "es": "Chamarra acolchada (todas las piezas)" },
+      "label": {
+        "en": "Puffer jacket (all pieces)",
+        "es": "Chamarra acolchada (todas las piezas)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "sleeve", "collar", "cuff"]
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "collar",
+        "cuff"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front (quilted zip half)", "es": "Delantero (mitad acolchada del cierre)" }, "default_color": "#2f3a45", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back (quilted)", "es": "Espalda (acolchada)" }, "default_color": "#26303a", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "sleeve", "label": { "en": "Sleeve (quilted)", "es": "Manga (acolchada)" }, "default_color": "#3a4650", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "collar", "label": { "en": "Funnel Collar (stand)", "es": "Cuello Embudo (mao)" }, "default_color": "#4c5a66", "cut": { "quantity": 1, "on_fold": true } },
-    { "id": "cuff", "label": { "en": "Cuff (elastic band)", "es": "Puño (banda elástica)" }, "default_color": "#5d6c78", "cut": { "quantity": 2 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (quilted zip half)",
+        "es": "Delantero (mitad acolchada del cierre)"
+      },
+      "default_color": "#2f3a45",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (quilted)",
+        "es": "Espalda (acolchada)"
+      },
+      "default_color": "#26303a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve (quilted)",
+        "es": "Manga (acolchada)"
+      },
+      "default_color": "#3a4650",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Funnel Collar (stand)",
+        "es": "Cuello Embudo (mao)"
+      },
+      "default_color": "#4c5a66",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true
+      }
+    },
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Cuff (elastic band)",
+        "es": "Puño (banda elástica)"
+      },
+      "default_color": "#5d6c78",
+      "cut": {
+        "quantity": 2
+      }
+    }
   ],
   "parameters": [
-    { "id": "chest_girth", "type": "slider", "default": 1080, "min": 650, "max": 1900, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
-    { "id": "body_length", "type": "slider", "default": 680, "min": 420, "max": 900, "step": 10, "label": { "en": "Body length to hem (mm)", "es": "Largo de cuerpo hasta el bajo (mm)" } },
-    { "id": "neck_girth", "type": "slider", "default": 400, "min": 300, "max": 540, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
-    { "id": "sleeve_length", "type": "slider", "default": 620, "min": 200, "max": 780, "step": 10, "label": { "en": "Sleeve length to cuff seam (mm)", "es": "Largo de manga hasta puño (mm)" } },
-    { "id": "puffer_ease", "type": "slider", "default": 300, "min": 150, "max": 520, "step": 10, "label": { "en": "Total ease for loft + layering (mm)", "es": "Holgura total para volumen y capas (mm)" } },
-    { "id": "channel_spacing", "type": "slider", "default": 80, "min": 40, "max": 160, "step": 5, "label": { "en": "Quilt channel spacing (mm)", "es": "Separación de canales de acolchado (mm)" } },
-    { "id": "collar_height", "type": "slider", "default": 95, "min": 40, "max": 160, "step": 5, "label": { "en": "Funnel collar height (mm)", "es": "Alto del cuello embudo (mm)" } },
-    { "id": "cuff_ratio", "type": "slider", "default": 0.8, "min": 0.6, "max": 0.95, "step": 0.01, "advanced": true, "label": { "en": "Cuff/opening ratio", "es": "Proporción puño/abertura" } },
-    { "id": "cuff_height", "type": "slider", "default": 60, "min": 30, "max": 100, "step": 5, "label": { "en": "Cuff height (mm)", "es": "Alto de puño (mm)" } },
-    { "id": "hem_elastic_ratio", "type": "slider", "default": 0.85, "min": 0.7, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Hem elastic/hem ratio", "es": "Proporción elástico/bajo" } },
-    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } }
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "default": 1080,
+      "min": 650,
+      "max": 1900,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "default": 680,
+      "min": 420,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Body length to hem (mm)",
+        "es": "Largo de cuerpo hasta el bajo (mm)"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 400,
+      "min": 300,
+      "max": 540,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 620,
+      "min": 200,
+      "max": 780,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length to cuff seam (mm)",
+        "es": "Largo de manga hasta puño (mm)"
+      }
+    },
+    {
+      "id": "puffer_ease",
+      "type": "slider",
+      "default": 300,
+      "min": 150,
+      "max": 520,
+      "step": 10,
+      "label": {
+        "en": "Total ease for loft + layering (mm)",
+        "es": "Holgura total para volumen y capas (mm)"
+      }
+    },
+    {
+      "id": "channel_spacing",
+      "type": "slider",
+      "default": 80,
+      "min": 40,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Quilt channel spacing (mm)",
+        "es": "Separación de canales de acolchado (mm)"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "default": 95,
+      "min": 40,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Funnel collar height (mm)",
+        "es": "Alto del cuello embudo (mm)"
+      }
+    },
+    {
+      "id": "cuff_ratio",
+      "type": "slider",
+      "default": 0.8,
+      "min": 0.6,
+      "max": 0.95,
+      "step": 0.01,
+      "advanced": true,
+      "label": {
+        "en": "Cuff/opening ratio",
+        "es": "Proporción puño/abertura"
+      }
+    },
+    {
+      "id": "cuff_height",
+      "type": "slider",
+      "default": 60,
+      "min": 30,
+      "max": 100,
+      "step": 5,
+      "label": {
+        "en": "Cuff height (mm)",
+        "es": "Alto de puño (mm)"
+      }
+    },
+    {
+      "id": "hem_elastic_ratio",
+      "type": "slider",
+      "default": 0.85,
+      "min": 0.7,
+      "max": 1.0,
+      "step": 0.01,
+      "advanced": true,
+      "label": {
+        "en": "Hem elastic/hem ratio",
+        "es": "Proporción elástico/bajo"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1080, "body_length": 680, "sleeve_length": 620, "puffer_ease": 300 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1160, "body_length": 710, "sleeve_length": 640, "puffer_ease": 320 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M"
+      },
+      "values": {
+        "chest_girth": 1080,
+        "body_length": 680,
+        "sleeve_length": 620,
+        "puffer_ease": 300
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G"
+      },
+      "values": {
+        "chest_girth": 1160,
+        "body_length": 710,
+        "sleeve_length": 640,
+        "puffer_ease": 320
+      }
+    }
   ],
   "constraints": [
     {
       "expression": "puffer_ease >= 200",
       "severity": "warning",
-      "message": { "en": "Puffers are worn over layers and need loft; under 200 mm of ease fits like a light jacket", "es": "Las chamarras acolchadas se usan sobre capas y necesitan volumen; menos de 200 mm de holgura queda como chamarra ligera" }
+      "message": {
+        "en": "Puffers are worn over layers and need loft; under 200 mm of ease fits like a light jacket",
+        "es": "Las chamarras acolchadas se usan sobre capas y necesitan volumen; menos de 200 mm de holgura queda como chamarra ligera"
+      }
     },
     {
       "expression": "channel_spacing <= body_length / 3",
       "severity": "warning",
-      "message": { "en": "Very wide quilt channels relative to body length leave large unquilted panels that shift the fill", "es": "Canales de acolchado muy anchos respecto al largo dejan paneles grandes sin acolchar que desplazan el relleno" }
+      "message": {
+        "en": "Very wide quilt channels relative to body length leave large unquilted panels that shift the fill",
+        "es": "Canales de acolchado muy anchos respecto al largo dejan paneles grandes sin acolchar que desplazan el relleno"
+      }
     },
     {
       "expression": "body_length <= 900",
       "severity": "warning",
-      "message": { "en": "Derived separating-zipper length exceeds common stock lengths (900 mm)", "es": "El largo derivado del cierre separable excede los largos comunes de stock (900 mm)" }
+      "message": {
+        "en": "Derived separating-zipper length exceeds common stock lengths (900 mm)",
+        "es": "El largo derivado del cierre separable excede los largos comunes de stock (900 mm)"
+      }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["nylon-ripstop-shell"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "nylon-ripstop-shell"
+  ],
   "notion": {
     "kind": "zipper",
     "subtype": "separating",
     "hardware_ref": {
       "platform": "yantra4d",
-      "project_slug": "zipper-notion",
+      "project_slug": "zipper",
       "linked": true,
       "params_map": {
-        "length_mm": "zipper_length_mm"
+        "zip_length": "body_length"
       }
     }
   },
@@ -87,13 +341,104 @@
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "neck" }, { "piece": "back", "edge": "neck" }, { "piece": "collar", "edge": "neck" }], "parameters": ["neck_girth", "collar_height"] },
-      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }, { "piece": "sleeve", "edge": "cap" }], "parameters": ["chest_girth", "puffer_ease"] },
-      { "id": "cuff", "type": "cuff", "edges": [{ "piece": "sleeve", "edge": "hem" }], "parameters": ["cuff_ratio", "cuff_height"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["hem_elastic_ratio", "body_length"] },
-      { "id": "zipper_tape", "type": "zipper_tape", "edges": [{ "piece": "front", "edge": "center" }], "parameters": ["body_length", "seam_allowance"] }
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          },
+          {
+            "piece": "collar",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "collar_height"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "puffer_ease"
+        ]
+      },
+      {
+        "id": "cuff",
+        "type": "cuff",
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "cuff_ratio",
+          "cuff_height"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "hem_elastic_ratio",
+          "body_length"
+        ]
+      },
+      {
+        "id": "zipper_tape",
+        "type": "zipper_tape",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "center"
+          }
+        ],
+        "parameters": [
+          "body_length",
+          "seam_allowance"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false, "quilted_insulation": true },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": false,
+      "quilted_insulation": true
+    },
     "societal_benefit": {
       "en": "The commons' first insulated garment: it establishes the quilt-channel convention — horizontal traces at a channel-spacing parameter, clipped to each shell silhouette, marking where the shell and lining are quilted to each other over the fill — with a BOM that budgets shell, downproof lining and insulating fill by panel area, so puffer vests, parkas and quilted liners across the FC-100 reuse the same insulation model; the separating-zipper hardware stays federated to Yantra4D via the zipper-notion cartridge.",
       "es": "La primera prenda aislante del commons: establece la convención de canales de acolchado — trazos horizontales a un parámetro de separación, recortados a la silueta de cada shell, que marcan dónde el shell y el forro se acolchan entre sí sobre el relleno — con un BOM que presupuesta shell, forro anti-pluma y relleno aislante por área de panel, para que chalecos acolchados, parkas y forros del FC-100 reutilicen el mismo modelo de aislamiento; el herraje del cierre separable sigue federado a Yantra4D vía el cartucho zipper-notion."

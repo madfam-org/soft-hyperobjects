@@ -9,99 +9,531 @@
       "es": "Rango #51 del FC-100. La chamarra deportiva con cierre clásica: la arquitectura de la sudadera con cierre / bomber — delantero cortado en dos mitades espejadas cuyo borde central es la costura del cierre (margen de cinta de 15 mm, piquetes de tope, línea de pespunte a 7 mm), copa de manga montada resuelta por bisección contra la sisa medida, y puños + pretina dividida derivados de las aberturas medidas — pero la capucha se sustituye por un cuello alto RESUELTO (funnel / mao) cuyo borde de cuello se resuelve por bisección a la mitad de la abertura de cuello y cuyo borde delantero lleva el mismo margen de cinta del cierre, porque el cierre separable sube a través del cuello. El ajuste es HOLGADO (poca holgura positiva, no compresión); bolsas frontales con cierre opcionales marcadas. El herraje del cierre se federa a Yantra4D vía el cartucho zipper-notion.\n\nVisualizador y configurador oficial: Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["track-jacket", "activewear", "athletic", "zipper", "stand-collar", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "track-jacket",
+      "activewear",
+      "athletic",
+      "zipper",
+      "stand-collar",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet", "license": "original" },
-        { "source": "zip-hoodie cartridge (halved-at-CF zip front: tape allowance, stop notches, stitch line; set-in cap solved to the armhole pair; split hem band + cuffs; derived zipper length)", "license": "LicenseRef-FC1-pending" },
-        { "source": "bomber-jacket cartridge (hood-to-stand-collar swap on the shared zip-front block; front zip-pocket marking convention)", "license": "LicenseRef-FC1-pending" },
-        { "source": "collar-band cartridge (stand collar whose neck edge is bisection-solved to the measured opening)", "license": "LicenseRef-FC1-pending" },
-        { "source": "track-pants cartridge (relaxed technical fit — positive ease, no compression scale — and exact-mm notion accounting)", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "zip-hoodie cartridge (halved-at-CF zip front: tape allowance, stop notches, stitch line; set-in cap solved to the armhole pair; split hem band + cuffs; derived zipper length)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "bomber-jacket cartridge (hood-to-stand-collar swap on the shared zip-front block; front zip-pocket marking convention)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "collar-band cartridge (stand collar whose neck edge is bisection-solved to the measured opening)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "track-pants cartridge (relaxed technical fit — positive ease, no compression scale — and exact-mm notion accounting)",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "track-jacket",
-      "label": { "en": "Track jacket (all pieces)", "es": "Chamarra deportiva (todas las piezas)" },
+      "label": {
+        "en": "Track jacket (all pieces)",
+        "es": "Chamarra deportiva (todas las piezas)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "sleeve", "collar", "cuff", "hem_band"]
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "collar",
+        "cuff",
+        "hem_band"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front (zip half)", "es": "Delantero (mitad del cierre)" }, "default_color": "#2f353b", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Trasero" }, "default_color": "#262b30", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "sleeve", "label": { "en": "Sleeve (set-in)", "es": "Manga (montada)" }, "default_color": "#3b434a", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "collar", "label": { "en": "Stand Collar (funnel)", "es": "Cuello alto (funnel)" }, "default_color": "#565f68", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "cuff", "label": { "en": "Cuff (rib/elastic)", "es": "Puño (rib/elástico)" }, "default_color": "#6a747d", "cut": { "quantity": 2 } },
-    { "id": "hem_band", "label": { "en": "Hem Band (split rib/elastic)", "es": "Pretina (rib/elástico dividido)" }, "default_color": "#6a747d", "cut": { "quantity": 1 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (zip half)",
+        "es": "Delantero (mitad del cierre)"
+      },
+      "default_color": "#2f353b",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Trasero"
+      },
+      "default_color": "#262b30",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve (set-in)",
+        "es": "Manga (montada)"
+      },
+      "default_color": "#3b434a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Stand Collar (funnel)",
+        "es": "Cuello alto (funnel)"
+      },
+      "default_color": "#565f68",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Cuff (rib/elastic)",
+        "es": "Puño (rib/elástico)"
+      },
+      "default_color": "#6a747d",
+      "cut": {
+        "quantity": 2
+      }
+    },
+    {
+      "id": "hem_band",
+      "label": {
+        "en": "Hem Band (split rib/elastic)",
+        "es": "Pretina (rib/elástico dividido)"
+      },
+      "default_color": "#6a747d",
+      "cut": {
+        "quantity": 1
+      }
+    }
   ],
   "parameter_groups": [
-    { "id": "body", "label": { "en": "Body Measurements", "es": "Medidas Corporales" } },
-    { "id": "fit", "label": { "en": "Fit & Collar", "es": "Ajuste y Cuello" } },
-    { "id": "construction", "label": { "en": "Construction", "es": "Construcción" } }
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Collar",
+        "es": "Ajuste y Cuello"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción"
+      }
+    }
   ],
   "parameters": [
-    { "id": "chest_girth", "type": "slider", "default": 1020, "min": 650, "max": 1900, "step": 10, "group": "body", "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
-    { "id": "body_length", "type": "slider", "default": 660, "min": 420, "max": 900, "step": 10, "group": "body", "label": { "en": "Body length to hem-band seam (mm)", "es": "Largo de cuerpo hasta pretina (mm)" } },
-    { "id": "neck_girth", "type": "slider", "default": 400, "min": 300, "max": 540, "step": 5, "group": "body", "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
-    { "id": "sleeve_length", "type": "slider", "default": 600, "min": 200, "max": 780, "step": 10, "group": "body", "label": { "en": "Sleeve length to cuff seam (mm)", "es": "Largo de manga hasta puño (mm)" } },
-    { "id": "relaxed_ease", "type": "slider", "default": 170, "min": 80, "max": 400, "step": 10, "group": "fit", "label": { "en": "Relaxed ease at chest (mm, positive)", "es": "Holgura al pecho (mm, positiva)" } },
-    { "id": "collar_height", "type": "slider", "default": 70, "min": 35, "max": 130, "step": 5, "group": "fit", "label": { "en": "Collar height / stand (mm)", "es": "Alto del cuello / pie (mm)" } },
-    { "id": "collar_rise", "type": "slider", "default": 12, "min": 0, "max": 30, "step": 2, "group": "fit", "advanced": true, "label": { "en": "Collar front-edge rise (mm)", "es": "Elevación frontal del cuello (mm)" } },
-    { "id": "pockets", "type": "checkbox", "default": true, "group": "fit", "label": { "en": "Front zip pockets (markings)", "es": "Bolsas frontales con cierre (marcas)" } },
-    { "id": "cuff_ratio", "type": "slider", "default": 0.80, "min": 0.60, "max": 0.95, "step": 0.01, "group": "construction", "advanced": true, "label": { "en": "Cuff / opening ratio", "es": "Proporción puño / abertura" } },
-    { "id": "hemband_ratio", "type": "slider", "default": 0.88, "min": 0.70, "max": 1.0, "step": 0.01, "group": "construction", "advanced": true, "label": { "en": "Hem band / hem ratio", "es": "Proporción pretina / dobladillo" } },
-    { "id": "cuff_height", "type": "slider", "default": 60, "min": 30, "max": 100, "step": 5, "group": "construction", "label": { "en": "Cuff height (mm)", "es": "Alto de puño (mm)" } },
-    { "id": "hemband_height", "type": "slider", "default": 60, "min": 30, "max": 100, "step": 5, "group": "construction", "label": { "en": "Hem band height (mm)", "es": "Alto de pretina (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 9, "min": 0, "max": 20, "step": 1, "group": "construction", "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } }
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "default": 1020,
+      "min": 650,
+      "max": 1900,
+      "step": 10,
+      "group": "body",
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "default": 660,
+      "min": 420,
+      "max": 900,
+      "step": 10,
+      "group": "body",
+      "label": {
+        "en": "Body length to hem-band seam (mm)",
+        "es": "Largo de cuerpo hasta pretina (mm)"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 400,
+      "min": 300,
+      "max": 540,
+      "step": 5,
+      "group": "body",
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 600,
+      "min": 200,
+      "max": 780,
+      "step": 10,
+      "group": "body",
+      "label": {
+        "en": "Sleeve length to cuff seam (mm)",
+        "es": "Largo de manga hasta puño (mm)"
+      }
+    },
+    {
+      "id": "relaxed_ease",
+      "type": "slider",
+      "default": 170,
+      "min": 80,
+      "max": 400,
+      "step": 10,
+      "group": "fit",
+      "label": {
+        "en": "Relaxed ease at chest (mm, positive)",
+        "es": "Holgura al pecho (mm, positiva)"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "default": 70,
+      "min": 35,
+      "max": 130,
+      "step": 5,
+      "group": "fit",
+      "label": {
+        "en": "Collar height / stand (mm)",
+        "es": "Alto del cuello / pie (mm)"
+      }
+    },
+    {
+      "id": "collar_rise",
+      "type": "slider",
+      "default": 12,
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "group": "fit",
+      "advanced": true,
+      "label": {
+        "en": "Collar front-edge rise (mm)",
+        "es": "Elevación frontal del cuello (mm)"
+      }
+    },
+    {
+      "id": "pockets",
+      "type": "checkbox",
+      "default": true,
+      "group": "fit",
+      "label": {
+        "en": "Front zip pockets (markings)",
+        "es": "Bolsas frontales con cierre (marcas)"
+      }
+    },
+    {
+      "id": "cuff_ratio",
+      "type": "slider",
+      "default": 0.8,
+      "min": 0.6,
+      "max": 0.95,
+      "step": 0.01,
+      "group": "construction",
+      "advanced": true,
+      "label": {
+        "en": "Cuff / opening ratio",
+        "es": "Proporción puño / abertura"
+      }
+    },
+    {
+      "id": "hemband_ratio",
+      "type": "slider",
+      "default": 0.88,
+      "min": 0.7,
+      "max": 1.0,
+      "step": 0.01,
+      "group": "construction",
+      "advanced": true,
+      "label": {
+        "en": "Hem band / hem ratio",
+        "es": "Proporción pretina / dobladillo"
+      }
+    },
+    {
+      "id": "cuff_height",
+      "type": "slider",
+      "default": 60,
+      "min": 30,
+      "max": 100,
+      "step": 5,
+      "group": "construction",
+      "label": {
+        "en": "Cuff height (mm)",
+        "es": "Alto de puño (mm)"
+      }
+    },
+    {
+      "id": "hemband_height",
+      "type": "slider",
+      "default": 60,
+      "min": 30,
+      "max": 100,
+      "step": 5,
+      "group": "construction",
+      "label": {
+        "en": "Hem band height (mm)",
+        "es": "Alto de pretina (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 9,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "group": "construction",
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1020, "body_length": 660, "neck_girth": 400, "sleeve_length": 600 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1100, "body_length": 685, "neck_girth": 415, "sleeve_length": 620, "relaxed_ease": 180 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M"
+      },
+      "values": {
+        "chest_girth": 1020,
+        "body_length": 660,
+        "neck_girth": 400,
+        "sleeve_length": 600
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G"
+      },
+      "values": {
+        "chest_girth": 1100,
+        "body_length": 685,
+        "neck_girth": 415,
+        "sleeve_length": 620,
+        "relaxed_ease": 180
+      }
+    }
   ],
   "constraints": [
     {
       "expression": "relaxed_ease >= 80",
       "severity": "warning",
-      "message": { "en": "Track jackets are worn over a base layer; under 80 mm of ease fits like a compression top, not a relaxed jacket", "es": "Las chamarras deportivas se usan sobre una capa base; menos de 80 mm de holgura queda como top de compresión, no como chamarra holgada" }
+      "message": {
+        "en": "Track jackets are worn over a base layer; under 80 mm of ease fits like a compression top, not a relaxed jacket",
+        "es": "Las chamarras deportivas se usan sobre una capa base; menos de 80 mm de holgura queda como top de compresión, no como chamarra holgada"
+      }
     },
     {
       "expression": "collar_height >= 35",
       "severity": "warning",
-      "message": { "en": "Very low stands read as a neckband, not a funnel collar the zipper can run through", "es": "Pies muy bajos se leen como tira de cuello, no como cuello funnel por el que suba el cierre" }
+      "message": {
+        "en": "Very low stands read as a neckband, not a funnel collar the zipper can run through",
+        "es": "Pies muy bajos se leen como tira de cuello, no como cuello funnel por el que suba el cierre"
+      }
     },
     {
       "expression": "body_length - 80 + hemband_height + collar_height <= 900",
       "severity": "warning",
-      "message": { "en": "Derived separating-zipper length exceeds common stock lengths (900 mm)", "es": "El largo derivado del cierre separable excede los largos comunes de stock (900 mm)" }
+      "message": {
+        "en": "Derived separating-zipper length exceeds common stock lengths (900 mm)",
+        "es": "El largo derivado del cierre separable excede los largos comunes de stock (900 mm)"
+      }
     }
   ],
-  "export_formats": ["svg", "dxf", "json", "pdf"],
-  "fabrics": ["poliester-elastano-compresion"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "poliester-elastano-compresion"
+  ],
   "notion": {
     "kind": "zipper",
     "subtype": "separating",
     "hardware_ref": {
       "platform": "yantra4d",
-      "project_slug": "zipper-notion",
+      "project_slug": "zipper",
       "linked": true,
-      "params_map": { "length_mm": "zipper_length_mm" }
+      "params_map": {
+        "zip_length": "body_length"
+      }
     }
   },
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "neck" }, { "piece": "back", "edge": "neck" }, { "piece": "collar", "edge": "neck" }], "parameters": ["neck_girth", "collar_height", "collar_rise"] },
-      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }, { "piece": "sleeve", "edge": "cap" }], "parameters": ["chest_girth", "relaxed_ease"] },
-      { "id": "cuff", "type": "cuff", "edges": [{ "piece": "sleeve", "edge": "hem" }, { "piece": "cuff", "edge": "bottom" }], "parameters": ["cuff_ratio", "cuff_height"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }, { "piece": "hem_band", "edge": "bottom" }], "parameters": ["hemband_ratio", "hemband_height"] },
-      { "id": "zipper_tape", "type": "zipper_tape", "edges": [{ "piece": "front", "edge": "center" }, { "piece": "collar", "edge": "front_edge" }], "parameters": ["body_length", "hemband_height", "collar_height", "seam_allowance"] }
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          },
+          {
+            "piece": "collar",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "collar_height",
+          "collar_rise"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "relaxed_ease"
+        ]
+      },
+      {
+        "id": "cuff",
+        "type": "cuff",
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "hem"
+          },
+          {
+            "piece": "cuff",
+            "edge": "bottom"
+          }
+        ],
+        "parameters": [
+          "cuff_ratio",
+          "cuff_height"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          },
+          {
+            "piece": "hem_band",
+            "edge": "bottom"
+          }
+        ],
+        "parameters": [
+          "hemband_ratio",
+          "hemband_height"
+        ]
+      },
+      {
+        "id": "zipper_tape",
+        "type": "zipper_tape",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "center"
+          },
+          {
+            "piece": "collar",
+            "edge": "front_edge"
+          }
+        ],
+        "parameters": [
+          "body_length",
+          "hemband_height",
+          "collar_height",
+          "seam_allowance"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false, "solved_stand_collar": true, "separating_zipper": true },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": false,
+      "solved_stand_collar": true,
+      "separating_zipper": true
+    },
     "societal_benefit": {
       "en": "Completes the FC-100's activewear top: the same zip-front block that gives the hoodie and bomber, restyled as a relaxed technical jacket whose stand collar is SOLVED to the neckline (not a guessed rib) and whose separating zipper — running up through that collar — plus every band and cuff length is derived, to the millimetre, from the measured pattern. It proves the collar-band solve on a zip-front garment and pairs the funnel collar with the open-end zipper the FC-100's vests, coveralls and shells reuse; all zipper hardware stays federated to Yantra4D via the zipper-notion cartridge.",
       "es": "Completa la parte superior deportiva del FC-100: el mismo bloque de frente con cierre que da la sudadera y la bomber, reestilizado como chamarra técnica holgada cuyo cuello alto se RESUELVE al escote (no un rib al tanteo) y cuyo cierre separable — que sube a través de ese cuello — más el largo de cada pretina y puño se derivan, al milímetro, del patrón medido. Demuestra la resolución de banda-cuello sobre una prenda con cierre y combina el cuello funnel con el cierre de extremo abierto que reutilizarán chalecos, overoles y shells del FC-100; todo el herraje del cierre sigue federado a Yantra4D vía el cartucho zipper-notion."

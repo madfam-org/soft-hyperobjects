@@ -9,96 +9,597 @@
       "es": "Rango #94 del FC-100. El clásico mameluco con pies y cierre, como una prenda de punto paramétrica de una pieza: cada mitad del cuerpo (un delantero cortado x2 para el cierre, una espalda cortada x1 al doblez) corre de forma continua desde el escote sobre el hombro, baja por el costado y la pierna, rodea un pie cerrado y sube por la entrepierna hasta la horcajadura — talle, pierna larga y pie en un solo contorno. Delantero y espalda comparten la geometría de pierna y pie, así que las costuras de hombro, costado, costado externo, entrepierna y unión del pie cierran con delta ~ 0 por construcción; una plantilla plana (cortada x2) se resuelve por bisección al borde del pie, y la copa de una manga larga se resuelve a las sisas combinadas. Un cierre frontal separable de largo completo (herraje Yantra4D) y un puño tipo mitón opcional lo terminan.\n\nVisualizador y configurador oficial: Fashion Cabinet"
     },
     "difficulty": "advanced",
-    "tags": ["baby-sleeper", "footed-pajama", "sleeper", "onesie", "one-piece", "footed", "zip-front", "infant", "knit", "kids", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "baby-sleeper",
+      "footed-pajama",
+      "sleeper",
+      "onesie",
+      "one-piece",
+      "footed",
+      "zip-front",
+      "infant",
+      "knit",
+      "kids",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet", "license": "original" },
-        { "source": "Fashion Cabinet jumpsuit cartridge (continuous body+leg one-piece with a front/center zip and shared width formulas)", "license": "LicenseRef-FC1-pending" },
-        { "source": "Fashion Cabinet t-shirt-crew cartridge (knit body block, drop-shoulder armhole, sleeve-cap bisection solve, derived neck band)", "license": "LicenseRef-FC1-pending" },
-        { "source": "Fashion Cabinet leggings cartridge (knit leg with the fork/inseam geometry and the curve-length bisection solve)", "license": "LicenseRef-FC1-pending" },
-        { "source": "Fashion Cabinet romper cartridge (one-piece assembly + surplus/derived-strip accounting idioms)", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "Fashion Cabinet jumpsuit cartridge (continuous body+leg one-piece with a front/center zip and shared width formulas)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "Fashion Cabinet t-shirt-crew cartridge (knit body block, drop-shoulder armhole, sleeve-cap bisection solve, derived neck band)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "Fashion Cabinet leggings cartridge (knit leg with the fork/inseam geometry and the curve-length bisection solve)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "Fashion Cabinet romper cartridge (one-piece assembly + surplus/derived-strip accounting idioms)",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "sleeper",
-      "label": { "en": "Footed sleeper (all pieces)", "es": "Mameluco con pies (todas las piezas)" },
+      "label": {
+        "en": "Footed sleeper (all pieces)",
+        "es": "Mameluco con pies (todas las piezas)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "sleeve", "sole", "neck_binding"]
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "sole",
+        "neck_binding"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front (zip half)", "es": "Delantero (mitad del cierre)" }, "default_color": "#8ea9c9", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back (on fold)", "es": "Espalda (al doblez)" }, "default_color": "#6f8cae", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "sleeve", "label": { "en": "Sleeve (long)", "es": "Manga (larga)" }, "default_color": "#a7bdd8", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "sole", "label": { "en": "Foot Sole", "es": "Plantilla del pie" }, "default_color": "#c3d2e6", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "neck_binding", "label": { "en": "Neck Binding (rib)", "es": "Vista de escote (rib)" }, "default_color": "#dbe4f0", "cut": { "quantity": 1 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (zip half)",
+        "es": "Delantero (mitad del cierre)"
+      },
+      "default_color": "#8ea9c9",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (on fold)",
+        "es": "Espalda (al doblez)"
+      },
+      "default_color": "#6f8cae",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve (long)",
+        "es": "Manga (larga)"
+      },
+      "default_color": "#a7bdd8",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sole",
+      "label": {
+        "en": "Foot Sole",
+        "es": "Plantilla del pie"
+      },
+      "default_color": "#c3d2e6",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "neck_binding",
+      "label": {
+        "en": "Neck Binding (rib)",
+        "es": "Vista de escote (rib)"
+      },
+      "default_color": "#dbe4f0",
+      "cut": {
+        "quantity": 1
+      }
+    }
   ],
   "parameters": [
-    { "id": "chest_girth", "type": "slider", "default": 520, "min": 380, "max": 760, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
-    { "id": "hip_girth", "type": "slider", "default": 540, "min": 380, "max": 800, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
-    { "id": "neck_girth", "type": "slider", "default": 260, "min": 200, "max": 420, "step": 10, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
-    { "id": "ankle_girth", "type": "slider", "default": 130, "min": 90, "max": 260, "step": 5, "measurement": { "standard": "iso_8559", "code": "ankle_girth" }, "tooltip": { "en": "Full ankle circumference; sizes the foot opening and the sole", "es": "Contorno completo del tobillo; dimensiona la abertura del pie y la plantilla" }, "label": { "en": "Ankle girth (mm)", "es": "Contorno de tobillo (mm)" } },
-    { "id": "body_length", "type": "slider", "default": 300, "min": 220, "max": 520, "step": 10, "tooltip": { "en": "Crotch line to the high point of shoulder", "es": "De la línea de horcajadura al punto alto del hombro" }, "label": { "en": "Body length (mm)", "es": "Largo del talle (mm)" } },
-    { "id": "inseam_length", "type": "slider", "default": 240, "min": 140, "max": 520, "step": 10, "tooltip": { "en": "Ankle line up to the crotch", "es": "De la línea del tobillo a la horcajadura" }, "label": { "en": "Inseam length (mm)", "es": "Largo de entrepierna (mm)" } },
-    { "id": "sleeve_length", "type": "slider", "default": 200, "min": 110, "max": 420, "step": 10, "tooltip": { "en": "Cap apex to the cuff; long sleeve", "es": "De la copa al puño; manga larga" }, "label": { "en": "Sleeve length (mm)", "es": "Largo de manga (mm)" } },
-    { "id": "foot_length", "type": "slider", "default": 100, "min": 70, "max": 190, "step": 5, "tooltip": { "en": "Ankle line to the toe tip; drives the sole solve", "es": "De la línea del tobillo a la punta; determina el cálculo de la plantilla" }, "label": { "en": "Foot length (mm)", "es": "Largo del pie (mm)" } },
-    { "id": "knit_ease", "type": "slider", "default": 80, "min": 0, "max": 260, "step": 10, "tooltip": { "en": "Roomy pull-on ease for a cotton-jersey infant fit", "es": "Holgura amplia para ponérselo con facilidad, en jersey de algodón" }, "label": { "en": "Knit ease (mm)", "es": "Holgura de punto (mm)" } },
-    { "id": "binding_ratio", "type": "slider", "default": 0.9, "min": 0.75, "max": 1.0, "step": 0.01, "advanced": true, "tooltip": { "en": "Neck binding length / measured opening (rib stretch)", "es": "Largo de la vista de escote / abertura medida (estiramiento del rib)" }, "label": { "en": "Neck binding ratio", "es": "Proporción de vista de escote" } },
-    { "id": "binding_width", "type": "slider", "default": 18, "min": 10, "max": 40, "step": 1, "advanced": true, "label": { "en": "Neck binding width (mm)", "es": "Ancho de vista de escote (mm)" } },
-    { "id": "footed", "type": "checkbox", "default": true, "tooltip": { "en": "Enclosed feet with a seamed sole; off = open cuffed ankles", "es": "Pies cerrados con plantilla cosida; apagado = tobillos abiertos con puño" }, "label": { "en": "Footed", "es": "Con pies" } },
-    { "id": "cuff_style", "type": "select", "default": "mitten", "options": [
-        { "value": "mitten", "label": { "en": "Fold-over mitten", "es": "Mitón plegable" } },
-        { "value": "plain", "label": { "en": "Plain cuff", "es": "Puño liso" } }
-      ], "label": { "en": "Sleeve cuff", "es": "Puño de manga" } },
-    { "id": "zip_guard", "type": "checkbox", "default": true, "tooltip": { "en": "Chin flap folded behind the top of the zipper", "es": "Solapa para la barbilla detrás de la parte alta del cierre" }, "label": { "en": "Zip guard (chin flap)", "es": "Protector de cierre (solapa)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 7, "min": 0, "max": 20, "step": 1, "advanced": true, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 20, "min": 0, "max": 50, "step": 5, "advanced": true, "label": { "en": "Cuff/hem allowance (mm)", "es": "Margen de puño/dobladillo (mm)" } }
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "default": 520,
+      "min": 380,
+      "max": 760,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "default": 540,
+      "min": 380,
+      "max": 800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 260,
+      "min": 200,
+      "max": 420,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)"
+      }
+    },
+    {
+      "id": "ankle_girth",
+      "type": "slider",
+      "default": 130,
+      "min": 90,
+      "max": 260,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "ankle_girth"
+      },
+      "tooltip": {
+        "en": "Full ankle circumference; sizes the foot opening and the sole",
+        "es": "Contorno completo del tobillo; dimensiona la abertura del pie y la plantilla"
+      },
+      "label": {
+        "en": "Ankle girth (mm)",
+        "es": "Contorno de tobillo (mm)"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "default": 300,
+      "min": 220,
+      "max": 520,
+      "step": 10,
+      "tooltip": {
+        "en": "Crotch line to the high point of shoulder",
+        "es": "De la línea de horcajadura al punto alto del hombro"
+      },
+      "label": {
+        "en": "Body length (mm)",
+        "es": "Largo del talle (mm)"
+      }
+    },
+    {
+      "id": "inseam_length",
+      "type": "slider",
+      "default": 240,
+      "min": 140,
+      "max": 520,
+      "step": 10,
+      "tooltip": {
+        "en": "Ankle line up to the crotch",
+        "es": "De la línea del tobillo a la horcajadura"
+      },
+      "label": {
+        "en": "Inseam length (mm)",
+        "es": "Largo de entrepierna (mm)"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 200,
+      "min": 110,
+      "max": 420,
+      "step": 10,
+      "tooltip": {
+        "en": "Cap apex to the cuff; long sleeve",
+        "es": "De la copa al puño; manga larga"
+      },
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)"
+      }
+    },
+    {
+      "id": "foot_length",
+      "type": "slider",
+      "default": 100,
+      "min": 70,
+      "max": 190,
+      "step": 5,
+      "tooltip": {
+        "en": "Ankle line to the toe tip; drives the sole solve",
+        "es": "De la línea del tobillo a la punta; determina el cálculo de la plantilla"
+      },
+      "label": {
+        "en": "Foot length (mm)",
+        "es": "Largo del pie (mm)"
+      }
+    },
+    {
+      "id": "knit_ease",
+      "type": "slider",
+      "default": 80,
+      "min": 0,
+      "max": 260,
+      "step": 10,
+      "tooltip": {
+        "en": "Roomy pull-on ease for a cotton-jersey infant fit",
+        "es": "Holgura amplia para ponérselo con facilidad, en jersey de algodón"
+      },
+      "label": {
+        "en": "Knit ease (mm)",
+        "es": "Holgura de punto (mm)"
+      }
+    },
+    {
+      "id": "binding_ratio",
+      "type": "slider",
+      "default": 0.9,
+      "min": 0.75,
+      "max": 1.0,
+      "step": 0.01,
+      "advanced": true,
+      "tooltip": {
+        "en": "Neck binding length / measured opening (rib stretch)",
+        "es": "Largo de la vista de escote / abertura medida (estiramiento del rib)"
+      },
+      "label": {
+        "en": "Neck binding ratio",
+        "es": "Proporción de vista de escote"
+      }
+    },
+    {
+      "id": "binding_width",
+      "type": "slider",
+      "default": 18,
+      "min": 10,
+      "max": 40,
+      "step": 1,
+      "advanced": true,
+      "label": {
+        "en": "Neck binding width (mm)",
+        "es": "Ancho de vista de escote (mm)"
+      }
+    },
+    {
+      "id": "footed",
+      "type": "checkbox",
+      "default": true,
+      "tooltip": {
+        "en": "Enclosed feet with a seamed sole; off = open cuffed ankles",
+        "es": "Pies cerrados con plantilla cosida; apagado = tobillos abiertos con puño"
+      },
+      "label": {
+        "en": "Footed",
+        "es": "Con pies"
+      }
+    },
+    {
+      "id": "cuff_style",
+      "type": "select",
+      "default": "mitten",
+      "options": [
+        {
+          "value": "mitten",
+          "label": {
+            "en": "Fold-over mitten",
+            "es": "Mitón plegable"
+          }
+        },
+        {
+          "value": "plain",
+          "label": {
+            "en": "Plain cuff",
+            "es": "Puño liso"
+          }
+        }
+      ],
+      "label": {
+        "en": "Sleeve cuff",
+        "es": "Puño de manga"
+      }
+    },
+    {
+      "id": "zip_guard",
+      "type": "checkbox",
+      "default": true,
+      "tooltip": {
+        "en": "Chin flap folded behind the top of the zipper",
+        "es": "Solapa para la barbilla detrás de la parte alta del cierre"
+      },
+      "label": {
+        "en": "Zip guard (chin flap)",
+        "es": "Protector de cierre (solapa)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 7,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "advanced": true,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 20,
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "advanced": true,
+      "label": {
+        "en": "Cuff/hem allowance (mm)",
+        "es": "Margen de puño/dobladillo (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M (6-9 mo)", "es": "M (6-9 meses)" }, "values": { "chest_girth": 520, "hip_girth": 540, "neck_girth": 260, "ankle_girth": 130, "body_length": 300, "inseam_length": 240, "sleeve_length": 200, "foot_length": 100 } },
-    { "id": "size-l", "label": { "en": "L (12-18 mo)", "es": "L (12-18 meses)" }, "values": { "chest_girth": 560, "hip_girth": 580, "neck_girth": 280, "ankle_girth": 150, "body_length": 340, "inseam_length": 290, "sleeve_length": 235, "foot_length": 115 } },
-    { "id": "newborn", "label": { "en": "Newborn", "es": "Recién nacido" }, "values": { "chest_girth": 420, "hip_girth": 430, "neck_girth": 215, "ankle_girth": 100, "body_length": 240, "inseam_length": 165, "sleeve_length": 130, "foot_length": 78, "cuff_style": "mitten" } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M (6-9 mo)",
+        "es": "M (6-9 meses)"
+      },
+      "values": {
+        "chest_girth": 520,
+        "hip_girth": 540,
+        "neck_girth": 260,
+        "ankle_girth": 130,
+        "body_length": 300,
+        "inseam_length": 240,
+        "sleeve_length": 200,
+        "foot_length": 100
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L (12-18 mo)",
+        "es": "L (12-18 meses)"
+      },
+      "values": {
+        "chest_girth": 560,
+        "hip_girth": 580,
+        "neck_girth": 280,
+        "ankle_girth": 150,
+        "body_length": 340,
+        "inseam_length": 290,
+        "sleeve_length": 235,
+        "foot_length": 115
+      }
+    },
+    {
+      "id": "newborn",
+      "label": {
+        "en": "Newborn",
+        "es": "Recién nacido"
+      },
+      "values": {
+        "chest_girth": 420,
+        "hip_girth": 430,
+        "neck_girth": 215,
+        "ankle_girth": 100,
+        "body_length": 240,
+        "inseam_length": 165,
+        "sleeve_length": 130,
+        "foot_length": 78,
+        "cuff_style": "mitten"
+      }
+    }
   ],
   "constraints": [
     {
       "expression": "chest_girth + knit_ease >= neck_girth",
       "severity": "warning",
-      "message": { "en": "The neck opening must be smaller than the body; a knit neckline still needs to clear the head", "es": "La abertura del escote debe ser menor que el cuerpo; un escote de punto igual debe pasar la cabeza" }
+      "message": {
+        "en": "The neck opening must be smaller than the body; a knit neckline still needs to clear the head",
+        "es": "La abertura del escote debe ser menor que el cuerpo; un escote de punto igual debe pasar la cabeza"
+      }
     },
     {
       "expression": "footed == false || foot_length >= ankle_girth / 4.0",
       "severity": "warning",
-      "message": { "en": "A very shallow foot relative to the ankle makes the sole solver bulge hard; deepen the foot or narrow the ankle", "es": "Un pie muy poco profundo respecto al tobillo obliga a la plantilla a curvarse en exceso; aumenta el pie o reduce el tobillo" }
+      "message": {
+        "en": "A very shallow foot relative to the ankle makes the sole solver bulge hard; deepen the foot or narrow the ankle",
+        "es": "Un pie muy poco profundo respecto al tobillo obliga a la plantilla a curvarse en exceso; aumenta el pie o reduce el tobillo"
+      }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["jersey-algodon"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "jersey-algodon"
+  ],
   "notion": {
     "kind": "zipper",
     "subtype": "separating-2way",
     "hardware_ref": {
       "platform": "yantra4d",
       "project_slug": "zipper",
-      "linked": false,
-      "params_map": { "length_mm": "front_zip_mm" }
+      "linked": true,
+      "params_map": {
+        "zip_length": "body_length"
+      }
     }
   },
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "neck" }, { "piece": "back", "edge": "neck" }], "parameters": ["neck_girth", "binding_ratio"] },
-      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }], "parameters": ["chest_girth", "knit_ease"] },
-      { "id": "front_zip", "type": "zipper_tape", "edges": [{ "piece": "front", "edge": "cf" }], "parameters": ["body_length", "inseam_length"] },
-      { "id": "inseam", "type": "side_seam", "edges": [{ "piece": "front", "edge": "inseam" }, { "piece": "back", "edge": "inseam" }], "parameters": ["inseam_length", "ankle_girth"] },
-      { "id": "foot_attach", "type": "custom", "edges": [{ "piece": "front", "edge": "foot" }, { "piece": "back", "edge": "foot" }, { "piece": "sole", "edge": "attach_out" }, { "piece": "sole", "edge": "attach_in" }], "parameters": ["foot_length", "ankle_girth"] },
-      { "id": "cuff", "type": "cuff", "edges": [{ "piece": "sleeve", "edge": "hem" }], "parameters": ["sleeve_length", "cuff_style"] }
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "binding_ratio"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "knit_ease"
+        ]
+      },
+      {
+        "id": "front_zip",
+        "type": "zipper_tape",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "cf"
+          }
+        ],
+        "parameters": [
+          "body_length",
+          "inseam_length"
+        ]
+      },
+      {
+        "id": "inseam",
+        "type": "side_seam",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "inseam"
+          },
+          {
+            "piece": "back",
+            "edge": "inseam"
+          }
+        ],
+        "parameters": [
+          "inseam_length",
+          "ankle_girth"
+        ]
+      },
+      {
+        "id": "foot_attach",
+        "type": "custom",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "foot"
+          },
+          {
+            "piece": "back",
+            "edge": "foot"
+          },
+          {
+            "piece": "sole",
+            "edge": "attach_out"
+          },
+          {
+            "piece": "sole",
+            "edge": "attach_in"
+          }
+        ],
+        "parameters": [
+          "foot_length",
+          "ankle_girth"
+        ]
+      },
+      {
+        "id": "cuff",
+        "type": "cuff",
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "sleeve_length",
+          "cuff_style"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "knit_negative_ease": true, "fabric_compensation": false, "footed_closure": true, "zip_front": true },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "knit_negative_ease": true,
+      "fabric_compensation": false,
+      "footed_closure": true,
+      "zip_front": true
+    },
     "societal_benefit": {
       "en": "The FC-100's footed infant one-piece: it teaches makers that a sleeper is one continuous bodice-leg-foot outline whose enclosed foot is a solved sole and whose seams close by shared geometry, not guesswork — and it carries the honest sleepwear-safety note (snug-fit or flame-resistant) into the commons so a home-sewn baby garment is drafted responsibly.",
       "es": "La prenda infantil de una pieza con pies del FC-100: enseña que un mameluco es un solo contorno continuo de talle-pierna-pie, cuyo pie cerrado es una plantilla resuelta y cuyas costuras cierran por geometría compartida, no por tanteo — y lleva al procomún la nota honesta de seguridad para ropa de dormir (ajuste ceñido o tela ignífuga) para que una prenda de bebé cosida en casa se trace con responsabilidad."

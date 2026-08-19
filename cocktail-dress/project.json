@@ -9,106 +9,649 @@
       "es": "Rango #71 del FC-100. Vestido de coctel entallado a la rodilla en dos cuerpos: un corpiño con costura princesa de sisa (centro delantero al hilo doblado más paneles laterales delanteros, con la costura princesa trazada una sola vez y compartida para que empate por construcción) sobre una falda ligeramente acampanada moldeada en la cadera, unidos por una costura de cintura real. Un cierre invisible en el centro espalda recorre ambos cuerpos; la espalda lleva pinzas fisheye de cintura. Con o sin tirantes; la versión sin tirantes lleva ballenas de acero espiral en canales por las costuras princesa y laterales. Totalmente forrado (corpiño y falda). El cierre invisible y las ballenas son cartuchos de herrajes Yantra4D, referenciados y no reimplementados.\n\nVisualizador y configurador oficial: Fashion Cabinet"
     },
     "difficulty": "advanced",
-    "tags": ["dress", "cocktail", "occasion", "sheath", "princess-seam", "woven", "zipper", "boning", "lined", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "dress",
+      "cocktail",
+      "occasion",
+      "sheath",
+      "princess-seam",
+      "woven",
+      "zipper",
+      "boning",
+      "lined",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet (fitted-bodice + waist-seam occasion dress)", "license": "original" },
-        { "source": "projects/a-line-dress (CB invisible-zipper notch + back fisheye dart idiom)", "license": "LicenseRef-FC1-pending" },
-        { "source": "projects/shift-dress (fitted-bodice dart + measured-opening derivation idiom)", "license": "LicenseRef-FC1-pending" },
-        { "source": "projects/suit-jacket (shared-curve princess/panel seam matched by construction)", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet (fitted-bodice + waist-seam occasion dress)",
+          "license": "original"
+        },
+        {
+          "source": "projects/a-line-dress (CB invisible-zipper notch + back fisheye dart idiom)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "projects/shift-dress (fitted-bodice dart + measured-opening derivation idiom)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "projects/suit-jacket (shared-curve princess/panel seam matched by construction)",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "dress",
-      "label": { "en": "Cocktail dress (all pieces)", "es": "Vestido de coctel (todas las piezas)" },
+      "label": {
+        "en": "Cocktail dress (all pieces)",
+        "es": "Vestido de coctel (todas las piezas)"
+      },
       "script_file": "main.py",
-      "pieces": ["bodice_cf", "bodice_sf", "bodice_back", "skirt_front", "skirt_back"]
+      "pieces": [
+        "bodice_cf",
+        "bodice_sf",
+        "bodice_back",
+        "skirt_front",
+        "skirt_back"
+      ]
     }
   ],
   "pieces": [
-    { "id": "bodice_cf", "label": { "en": "Bodice Center Front", "es": "Corpiño Centro Delantero" }, "default_color": "#6b2f52", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "bodice_sf", "label": { "en": "Bodice Side Front", "es": "Corpiño Lateral Delantero" }, "default_color": "#7c3a61", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "bodice_back", "label": { "en": "Bodice Back", "es": "Corpiño Espalda" }, "default_color": "#5a2745", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "skirt_front", "label": { "en": "Skirt Front", "es": "Falda Delantero" }, "default_color": "#8a4670", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "skirt_back", "label": { "en": "Skirt Back", "es": "Falda Espalda" }, "default_color": "#733a5d", "cut": { "quantity": 2, "mirror": true } }
+    {
+      "id": "bodice_cf",
+      "label": {
+        "en": "Bodice Center Front",
+        "es": "Corpiño Centro Delantero"
+      },
+      "default_color": "#6b2f52",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "bodice_sf",
+      "label": {
+        "en": "Bodice Side Front",
+        "es": "Corpiño Lateral Delantero"
+      },
+      "default_color": "#7c3a61",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "bodice_back",
+      "label": {
+        "en": "Bodice Back",
+        "es": "Corpiño Espalda"
+      },
+      "default_color": "#5a2745",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "skirt_front",
+      "label": {
+        "en": "Skirt Front",
+        "es": "Falda Delantero"
+      },
+      "default_color": "#8a4670",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "skirt_back",
+      "label": {
+        "en": "Skirt Back",
+        "es": "Falda Espalda"
+      },
+      "default_color": "#733a5d",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    }
   ],
   "parameters": [
-    { "id": "target_piece", "type": "select", "default": "set", "advanced": true, "label": { "en": "Piece to draft", "es": "Pieza a trazar" }, "options": [
-      { "value": "set", "label": { "en": "Full set", "es": "Conjunto completo" } },
-      { "value": "bodice_cf", "label": { "en": "Bodice center front only", "es": "Solo corpiño centro delantero" } },
-      { "value": "bodice_sf", "label": { "en": "Bodice side front only", "es": "Solo corpiño lateral delantero" } },
-      { "value": "bodice_back", "label": { "en": "Bodice back only", "es": "Solo corpiño espalda" } },
-      { "value": "skirt_front", "label": { "en": "Skirt front only", "es": "Solo falda delantero" } },
-      { "value": "skirt_back", "label": { "en": "Skirt back only", "es": "Solo falda espalda" } }
-    ] },
-    { "id": "bust_girth", "type": "slider", "default": 900, "min": 700, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "bust_girth" }, "group": "fit", "label": { "en": "Bust girth (mm)", "es": "Contorno de busto (mm)" } },
-    { "id": "waist_girth", "type": "slider", "default": 720, "min": 550, "max": 1300, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "group": "fit", "tooltip": { "en": "Sets the shared bodice/skirt waist quarter", "es": "Define el cuarto de cintura compartido corpiño/falda" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
-    { "id": "hip_girth", "type": "slider", "default": 980, "min": 750, "max": 1600, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "group": "fit", "tooltip": { "en": "The skirt's widest control point", "es": "Punto de control más ancho de la falda" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
-    { "id": "bodice_length", "type": "slider", "default": 400, "min": 300, "max": 520, "step": 10, "group": "fit", "tooltip": { "en": "Top edge (nape/bust line) down to the waist seam", "es": "Del borde superior (nuca/línea de busto) a la costura de cintura" }, "label": { "en": "Bodice length (mm)", "es": "Largo de corpiño (mm)" } },
-    { "id": "skirt_length", "type": "slider", "default": 560, "min": 400, "max": 800, "step": 10, "group": "fit", "tooltip": { "en": "Waist seam down to the knee-length hem", "es": "De la costura de cintura al dobladillo a la rodilla" }, "label": { "en": "Skirt length, waist to hem (mm)", "es": "Largo de falda, cintura a dobladillo (mm)" } },
-    { "id": "neckline", "type": "select", "default": "strapless", "group": "style", "tooltip": { "en": "Strapless requires boning; strapped adds shoulder straps", "es": "Sin tirantes requiere ballenas; con tirantes agrega tirantes de hombro" }, "label": { "en": "Neckline", "es": "Escote" }, "options": [
-      { "value": "strapless", "label": { "en": "Strapless (boned)", "es": "Sin tirantes (con ballenas)" } },
-      { "value": "straps", "label": { "en": "Shoulder straps", "es": "Con tirantes" } }
-    ] },
-    { "id": "boned", "type": "checkbox", "default": true, "group": "style", "tooltip": { "en": "Boning channels + spiral steel; forced on when strapless", "es": "Canales de ballena + acero espiral; obligatorio sin tirantes" }, "label": { "en": "Boned bodice", "es": "Corpiño con ballenas" } },
-    { "id": "front_drop", "type": "slider", "default": 70, "min": 30, "max": 160, "step": 5, "group": "style", "tooltip": { "en": "CF top edge below the bust line (neckline depth)", "es": "Borde superior del centro frente bajo la línea de busto (profundidad de escote)" }, "label": { "en": "Front neckline drop (mm)", "es": "Caída de escote delantero (mm)" } },
-    { "id": "skirt_flare", "type": "slider", "default": 55, "min": 0, "max": 250, "step": 5, "group": "style", "tooltip": { "en": "Extra half-hem width beyond the hip quarter", "es": "Ancho extra de medio dobladillo sobre el cuarto de cadera" }, "label": { "en": "Skirt hem flare (mm)", "es": "Vuelo de dobladillo de falda (mm)" } },
-    { "id": "strap_width", "type": "slider", "default": 40, "min": 24, "max": 70, "step": 2, "advanced": true, "group": "style", "tooltip": { "en": "Shoulder-strap width (strapped neckline only)", "es": "Ancho de tirante de hombro (solo escote con tirantes)" }, "label": { "en": "Strap width (mm)", "es": "Ancho de tirante (mm)" } },
-    { "id": "zipper_length", "type": "slider", "default": 550, "min": 350, "max": 900, "step": 10, "tooltip": { "en": "CB invisible zip, from the bodice top down across the waist into the skirt", "es": "Cierre invisible CB, del borde superior del corpiño hacia abajo cruzando la cintura hasta la falda" }, "label": { "en": "Zipper length (mm)", "es": "Largo de cierre (mm)" } },
-    { "id": "waist_dart_intake", "type": "slider", "default": 22, "min": 0, "max": 45, "step": 2, "advanced": true, "tooltip": { "en": "Back fisheye waist dart intake per panel", "es": "Profundidad de pinza fisheye de cintura trasera por panel" }, "label": { "en": "Back waist dart intake (mm)", "es": "Profundidad de pinza de cintura trasera (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 12, "min": 0, "max": 20, "step": 1, "advanced": true, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 40, "min": 0, "max": 60, "step": 5, "advanced": true, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "target_piece",
+      "type": "select",
+      "default": "set",
+      "advanced": true,
+      "label": {
+        "en": "Piece to draft",
+        "es": "Pieza a trazar"
+      },
+      "options": [
+        {
+          "value": "set",
+          "label": {
+            "en": "Full set",
+            "es": "Conjunto completo"
+          }
+        },
+        {
+          "value": "bodice_cf",
+          "label": {
+            "en": "Bodice center front only",
+            "es": "Solo corpiño centro delantero"
+          }
+        },
+        {
+          "value": "bodice_sf",
+          "label": {
+            "en": "Bodice side front only",
+            "es": "Solo corpiño lateral delantero"
+          }
+        },
+        {
+          "value": "bodice_back",
+          "label": {
+            "en": "Bodice back only",
+            "es": "Solo corpiño espalda"
+          }
+        },
+        {
+          "value": "skirt_front",
+          "label": {
+            "en": "Skirt front only",
+            "es": "Solo falda delantero"
+          }
+        },
+        {
+          "value": "skirt_back",
+          "label": {
+            "en": "Skirt back only",
+            "es": "Solo falda espalda"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "default": 900,
+      "min": 700,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      },
+      "group": "fit",
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "default": 720,
+      "min": 550,
+      "max": 1300,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "group": "fit",
+      "tooltip": {
+        "en": "Sets the shared bodice/skirt waist quarter",
+        "es": "Define el cuarto de cintura compartido corpiño/falda"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "default": 980,
+      "min": 750,
+      "max": 1600,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "group": "fit",
+      "tooltip": {
+        "en": "The skirt's widest control point",
+        "es": "Punto de control más ancho de la falda"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)"
+      }
+    },
+    {
+      "id": "bodice_length",
+      "type": "slider",
+      "default": 400,
+      "min": 300,
+      "max": 520,
+      "step": 10,
+      "group": "fit",
+      "tooltip": {
+        "en": "Top edge (nape/bust line) down to the waist seam",
+        "es": "Del borde superior (nuca/línea de busto) a la costura de cintura"
+      },
+      "label": {
+        "en": "Bodice length (mm)",
+        "es": "Largo de corpiño (mm)"
+      }
+    },
+    {
+      "id": "skirt_length",
+      "type": "slider",
+      "default": 560,
+      "min": 400,
+      "max": 800,
+      "step": 10,
+      "group": "fit",
+      "tooltip": {
+        "en": "Waist seam down to the knee-length hem",
+        "es": "De la costura de cintura al dobladillo a la rodilla"
+      },
+      "label": {
+        "en": "Skirt length, waist to hem (mm)",
+        "es": "Largo de falda, cintura a dobladillo (mm)"
+      }
+    },
+    {
+      "id": "neckline",
+      "type": "select",
+      "default": "strapless",
+      "group": "style",
+      "tooltip": {
+        "en": "Strapless requires boning; strapped adds shoulder straps",
+        "es": "Sin tirantes requiere ballenas; con tirantes agrega tirantes de hombro"
+      },
+      "label": {
+        "en": "Neckline",
+        "es": "Escote"
+      },
+      "options": [
+        {
+          "value": "strapless",
+          "label": {
+            "en": "Strapless (boned)",
+            "es": "Sin tirantes (con ballenas)"
+          }
+        },
+        {
+          "value": "straps",
+          "label": {
+            "en": "Shoulder straps",
+            "es": "Con tirantes"
+          }
+        }
+      ]
+    },
+    {
+      "id": "boned",
+      "type": "checkbox",
+      "default": true,
+      "group": "style",
+      "tooltip": {
+        "en": "Boning channels + spiral steel; forced on when strapless",
+        "es": "Canales de ballena + acero espiral; obligatorio sin tirantes"
+      },
+      "label": {
+        "en": "Boned bodice",
+        "es": "Corpiño con ballenas"
+      }
+    },
+    {
+      "id": "front_drop",
+      "type": "slider",
+      "default": 70,
+      "min": 30,
+      "max": 160,
+      "step": 5,
+      "group": "style",
+      "tooltip": {
+        "en": "CF top edge below the bust line (neckline depth)",
+        "es": "Borde superior del centro frente bajo la línea de busto (profundidad de escote)"
+      },
+      "label": {
+        "en": "Front neckline drop (mm)",
+        "es": "Caída de escote delantero (mm)"
+      }
+    },
+    {
+      "id": "skirt_flare",
+      "type": "slider",
+      "default": 55,
+      "min": 0,
+      "max": 250,
+      "step": 5,
+      "group": "style",
+      "tooltip": {
+        "en": "Extra half-hem width beyond the hip quarter",
+        "es": "Ancho extra de medio dobladillo sobre el cuarto de cadera"
+      },
+      "label": {
+        "en": "Skirt hem flare (mm)",
+        "es": "Vuelo de dobladillo de falda (mm)"
+      }
+    },
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "default": 40,
+      "min": 24,
+      "max": 70,
+      "step": 2,
+      "advanced": true,
+      "group": "style",
+      "tooltip": {
+        "en": "Shoulder-strap width (strapped neckline only)",
+        "es": "Ancho de tirante de hombro (solo escote con tirantes)"
+      },
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de tirante (mm)"
+      }
+    },
+    {
+      "id": "zipper_length",
+      "type": "slider",
+      "default": 550,
+      "min": 350,
+      "max": 900,
+      "step": 10,
+      "tooltip": {
+        "en": "CB invisible zip, from the bodice top down across the waist into the skirt",
+        "es": "Cierre invisible CB, del borde superior del corpiño hacia abajo cruzando la cintura hasta la falda"
+      },
+      "label": {
+        "en": "Zipper length (mm)",
+        "es": "Largo de cierre (mm)"
+      }
+    },
+    {
+      "id": "waist_dart_intake",
+      "type": "slider",
+      "default": 22,
+      "min": 0,
+      "max": 45,
+      "step": 2,
+      "advanced": true,
+      "tooltip": {
+        "en": "Back fisheye waist dart intake per panel",
+        "es": "Profundidad de pinza fisheye de cintura trasera por panel"
+      },
+      "label": {
+        "en": "Back waist dart intake (mm)",
+        "es": "Profundidad de pinza de cintura trasera (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 12,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "advanced": true,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 40,
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "advanced": true,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "bust_girth": 900, "waist_girth": 720, "hip_girth": 980, "bodice_length": 400, "skirt_length": 560 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "bust_girth": 1000, "waist_girth": 820, "hip_girth": 1080, "bodice_length": 415, "skirt_length": 575 } },
-    { "id": "strapped-midi", "label": { "en": "Strapped, longer skirt", "es": "Con tirantes, falda más larga" }, "values": { "neckline": "straps", "skirt_length": 660, "skirt_flare": 90 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M"
+      },
+      "values": {
+        "bust_girth": 900,
+        "waist_girth": 720,
+        "hip_girth": 980,
+        "bodice_length": 400,
+        "skirt_length": 560
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G"
+      },
+      "values": {
+        "bust_girth": 1000,
+        "waist_girth": 820,
+        "hip_girth": 1080,
+        "bodice_length": 415,
+        "skirt_length": 575
+      }
+    },
+    {
+      "id": "strapped-midi",
+      "label": {
+        "en": "Strapped, longer skirt",
+        "es": "Con tirantes, falda más larga"
+      },
+      "values": {
+        "neckline": "straps",
+        "skirt_length": 660,
+        "skirt_flare": 90
+      }
+    }
   ],
   "constraints": [
     {
       "expression": "waist_girth <= bust_girth + 40",
       "severity": "warning",
-      "message": { "en": "The waist quarter derives from the waist girth; a waist near or above the bust needs a larger size or the shaping collapses", "es": "El cuarto de cintura se deriva del contorno de cintura; una cintura cercana o mayor al busto requiere una talla mayor o el moldeado se pierde" }
+      "message": {
+        "en": "The waist quarter derives from the waist girth; a waist near or above the bust needs a larger size or the shaping collapses",
+        "es": "El cuarto de cintura se deriva del contorno de cintura; una cintura cercana o mayor al busto requiere una talla mayor o el moldeado se pierde"
+      }
     },
     {
       "expression": "hip_girth >= waist_girth",
       "severity": "warning",
-      "message": { "en": "Hip girth should be at least the waist girth for a sheath skirt", "es": "El contorno de cadera debe ser al menos el de cintura para una falda tubo" }
+      "message": {
+        "en": "Hip girth should be at least the waist girth for a sheath skirt",
+        "es": "El contorno de cadera debe ser al menos el de cintura para una falda tubo"
+      }
     },
     {
       "expression": "zipper_length >= bodice_length + 120",
       "severity": "warning",
-      "message": { "en": "A CB invisible zip shorter than the bodice plus a hand-span into the skirt will not clear the hips to dress", "es": "Un cierre invisible CB más corto que el corpiño más un palmo en la falda no libera las caderas para vestirse" }
+      "message": {
+        "en": "A CB invisible zip shorter than the bodice plus a hand-span into the skirt will not clear the hips to dress",
+        "es": "Un cierre invisible CB más corto que el corpiño más un palmo en la falda no libera las caderas para vestirse"
+      }
     }
   ],
-  "export_formats": ["svg", "dxf", "json", "pdf"],
-  "fabrics": ["popelina-algodon"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "popelina-algodon"
+  ],
   "notion": {
     "kind": "zipper",
     "subtype": "invisible center-back (bodice + skirt)",
     "hardware_ref": {
       "platform": "yantra4d",
-      "project_slug": "zipper-notion",
+      "project_slug": "zipper",
       "linked": true,
-      "params_map": { "length_mm": "zipper_length" }
+      "params_map": {
+        "zip_length": "zipper_length"
+      }
     }
   },
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "bodice_cf", "edge": "neck" }, { "piece": "bodice_back", "edge": "neck" }], "parameters": ["front_drop", "neckline"] },
-      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "bodice_sf", "edge": "armhole" }, { "piece": "bodice_back", "edge": "armhole" }], "parameters": ["bust_girth", "strap_width"] },
-      { "id": "front_princess", "type": "side_seam", "edges": [{ "piece": "bodice_cf", "edge": "princess" }, { "piece": "bodice_sf", "edge": "princess" }], "parameters": ["bust_girth", "waist_girth"] },
-      { "id": "waist_seam", "type": "waistband", "edges": [{ "piece": "bodice_cf", "edge": "waist" }, { "piece": "bodice_sf", "edge": "waist" }, { "piece": "bodice_back", "edge": "waist" }, { "piece": "skirt_front", "edge": "waist" }, { "piece": "skirt_back", "edge": "waist" }], "parameters": ["waist_girth"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "skirt_front", "edge": "hem" }, { "piece": "skirt_back", "edge": "hem" }], "parameters": ["skirt_length", "skirt_flare", "hem_allowance"] },
-      { "id": "cb_zipper", "type": "zipper_tape", "edges": [{ "piece": "bodice_back", "edge": "center" }, { "piece": "skirt_back", "edge": "center" }], "parameters": ["zipper_length"] }
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "edges": [
+          {
+            "piece": "bodice_cf",
+            "edge": "neck"
+          },
+          {
+            "piece": "bodice_back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "front_drop",
+          "neckline"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "edges": [
+          {
+            "piece": "bodice_sf",
+            "edge": "armhole"
+          },
+          {
+            "piece": "bodice_back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "strap_width"
+        ]
+      },
+      {
+        "id": "front_princess",
+        "type": "side_seam",
+        "edges": [
+          {
+            "piece": "bodice_cf",
+            "edge": "princess"
+          },
+          {
+            "piece": "bodice_sf",
+            "edge": "princess"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "waist_girth"
+        ]
+      },
+      {
+        "id": "waist_seam",
+        "type": "waistband",
+        "edges": [
+          {
+            "piece": "bodice_cf",
+            "edge": "waist"
+          },
+          {
+            "piece": "bodice_sf",
+            "edge": "waist"
+          },
+          {
+            "piece": "bodice_back",
+            "edge": "waist"
+          },
+          {
+            "piece": "skirt_front",
+            "edge": "waist"
+          },
+          {
+            "piece": "skirt_back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "skirt_front",
+            "edge": "hem"
+          },
+          {
+            "piece": "skirt_back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "skirt_length",
+          "skirt_flare",
+          "hem_allowance"
+        ]
+      },
+      {
+        "id": "cb_zipper",
+        "type": "zipper_tape",
+        "edges": [
+          {
+            "piece": "bodice_back",
+            "edge": "center"
+          },
+          {
+            "piece": "skirt_back",
+            "edge": "center"
+          }
+        ],
+        "parameters": [
+          "zipper_length"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false, "boning_optional": true, "fully_lined": true },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": false,
+      "boning_optional": true,
+      "fully_lined": true
+    },
     "societal_benefit": {
       "en": "The FC-100's tailored occasion dress: one advanced cartridge that teaches the real anatomy of a fitted evening garment — an armhole princess seam that shapes the bust in 3D, a true waist seam joining two independently graded stories, an invisible zipper, optional steel boning, and a full lining — with every seam length solved and verified instead of guessed, and all hardware federated to Yantra4D.",
       "es": "El vestido de ocasión entallado del FC-100: un cartucho avanzado que enseña la anatomía real de una prenda de noche ajustada — una costura princesa de sisa que moldea el busto en 3D, una costura de cintura real que une dos cuerpos graduados por separado, un cierre invisible, ballenas de acero opcionales y un forro completo — con cada largo de costura resuelto y verificado en lugar de adivinado, y todo el herraje federado a Yantra4D."
