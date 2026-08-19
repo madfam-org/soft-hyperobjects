@@ -1,0 +1,53 @@
+{
+  "project": {
+    "name": "Sensory-Friendly Tee",
+    "slug": "sensory-tee",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A sensory-friendly tee for wearers sensitive to touch: a relaxed boxy front + back with a printed tagless label zone, seams marked for flat-fell / covered construction (no raised inside seam allowances), and a soft wide neck with no scratchy binding. A soft-goods garment — no hardware. Everything that irritates on a conventional tee is designed out and marked for the maker. FC-200 long-tail (adaptive/sensory).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una playera amigable con lo sensorial para quienes son sensibles al tacto: un frente + espalda holgados con zona de etiqueta impresa (sin etiqueta cosida), costuras marcadas para construcción plana / cubierta (sin márgenes internos elevados) y un cuello ancho y suave sin ribete que raspe. Una prenda textil — sin herrajes. Todo lo que irrita en una playera convencional se diseña fuera y se marca para quien elabora. Cola larga FC-200 (adaptativo/sensorial).\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": ["sensory-friendly", "adaptive", "inclusive", "tee", "tagless", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+    }
+  },
+  "modes": [
+    { "id": "set", "label": { "en": "Full Tee", "es": "Playera completa" }, "script_file": "main.py", "pieces": ["front", "back"] }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front", "es": "Frente" }, "default_color": "#6a7a6a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
+    { "id": "back", "label": { "en": "Back (tagless zone)", "es": "Espalda (zona sin etiqueta)" }, "default_color": "#6a7a6a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "default": 980, "min": 600, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" }, "tooltip": { "en": "Full chest", "es": "Pecho completo" } },
+    { "id": "tee_length", "type": "slider", "default": 640, "min": 400, "max": 900, "step": 10, "label": { "en": "Length (mm)", "es": "Largo (mm)" }, "tooltip": { "en": "Shoulder to hem", "es": "Del hombro al ruedo" } },
+    { "id": "neck_width", "type": "slider", "default": 220, "min": 150, "max": 380, "step": 5, "label": { "en": "Neck width (mm)", "es": "Ancho de cuello (mm)" }, "tooltip": { "en": "Wide no-scratch neck", "es": "Cuello ancho sin roce" } },
+    { "id": "sleeve_grown", "type": "slider", "default": 160, "min": 60, "max": 260, "step": 10, "label": { "en": "Grown sleeve (mm)", "es": "Manga nacida (mm)" }, "tooltip": { "en": "Grown-on cap sleeve", "es": "Manga nacida" } },
+    { "id": "ease", "type": "slider", "default": 120, "min": 40, "max": 360, "step": 10, "label": { "en": "Fit ease (mm)", "es": "Holgura (mm)" }, "tooltip": { "en": "Relaxed fit", "es": "Ajuste holgado" } }
+  ],
+  "presets": [
+    { "id": "child", "label": { "en": "Child", "es": "Infantil" }, "values": { "chest_girth": 700, "tee_length": 500 } },
+    { "id": "adult", "label": { "en": "Adult", "es": "Adulto" }, "values": { "chest_girth": 980, "tee_length": 660 } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "shoulder_seam", "type": "shoulder", "label": { "en": "Shoulder seam", "es": "Costura de hombro" }, "edges": [{ "piece": "front", "edge": "shoulder" }, { "piece": "back", "edge": "shoulder" }], "parameters": ["neck_width", "chest_girth"] },
+      { "id": "side_seam", "type": "side_seam", "label": { "en": "Side seam (flat-fell)", "es": "Costura lateral (plana)" }, "edges": [{ "piece": "front", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["tee_length"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "societal_benefit": {
+      "en": "An open, made-to-measure tee that designs out tags, ridged seams, and a scratchy neck makes everyday clothing wearable for people with tactile sensitivity — including many autistic and sensory-processing-different wearers — from an open pattern anyone can make in any soft fabric.",
+      "es": "Una playera abierta y a la medida que elimina etiquetas, costuras elevadas y un cuello que raspa hace la ropa diaria usable para personas con sensibilidad táctil — incluidas muchas personas autistas y con procesamiento sensorial diferente — desde un patrón abierto que cualquiera puede hacer en cualquier tela suave."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

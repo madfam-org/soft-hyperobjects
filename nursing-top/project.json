@@ -1,0 +1,55 @@
+{
+  "project": {
+    "name": "Nursing Top",
+    "slug": "nursing-top",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A relaxed nursing top with a double-layer front: an outer front that lifts from the hem over an inner modesty layer with a nursing slit, so a parent can feed discreetly without undressing. A soft-goods garment — no hardware; the access is a marked sewn overlap. FC-200 long-tail (maternity/nursing).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un top de lactancia holgado con frente de doble capa: un frente exterior que se levanta desde el ruedo sobre una capa interior de recato con una abertura de lactancia, para amamantar con discreción sin desvestirse. Una prenda textil — sin herrajes; el acceso es un traslape cosido marcado. Cola larga FC-200 (maternidad/lactancia).\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["nursing", "maternity", "top", "inclusive", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+    }
+  },
+  "modes": [
+    { "id": "set", "label": { "en": "Full Top", "es": "Top completo" }, "script_file": "main.py", "pieces": ["front_outer", "front_inner", "back"] }
+  ],
+  "pieces": [
+    { "id": "front_outer", "label": { "en": "Front Outer (lift access)", "es": "Frente exterior (acceso)" }, "default_color": "#8a5a6a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
+    { "id": "front_inner", "label": { "en": "Front Inner (nursing slit)", "es": "Frente interior (abertura)" }, "default_color": "#7a4a5a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
+    { "id": "back", "label": { "en": "Back", "es": "Espalda" }, "default_color": "#8a5a6a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "default": 1000, "min": 700, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" }, "tooltip": { "en": "Full chest", "es": "Pecho completo" } },
+    { "id": "top_length", "type": "slider", "default": 660, "min": 450, "max": 950, "step": 10, "label": { "en": "Length (mm)", "es": "Largo (mm)" }, "tooltip": { "en": "Shoulder to hem", "es": "Del hombro al ruedo" } },
+    { "id": "neck_width", "type": "slider", "default": 190, "min": 140, "max": 340, "step": 5, "label": { "en": "Neck width (mm)", "es": "Ancho de cuello (mm)" }, "tooltip": { "en": "Neck opening", "es": "Abertura de cuello" } },
+    { "id": "sleeve_grown", "type": "slider", "default": 150, "min": 60, "max": 260, "step": 10, "label": { "en": "Grown sleeve (mm)", "es": "Manga nacida (mm)" }, "tooltip": { "en": "Grown-on cap sleeve", "es": "Manga nacida" } },
+    { "id": "ease", "type": "slider", "default": 120, "min": 60, "max": 360, "step": 10, "label": { "en": "Fit ease (mm)", "es": "Holgura (mm)" }, "tooltip": { "en": "Easy fit", "es": "Ajuste holgado" } },
+    { "id": "access_drop", "type": "slider", "default": 240, "min": 120, "max": 500, "step": 10, "label": { "en": "Lift-access drop (mm)", "es": "Caída de acceso (mm)" }, "tooltip": { "en": "How far the lift access extends", "es": "Cuánto se extiende el acceso" } }
+  ],
+  "presets": [
+    { "id": "everyday", "label": { "en": "Everyday", "es": "Diario" }, "values": { "ease": 120, "access_drop": 240 } },
+    { "id": "relaxed", "label": { "en": "Relaxed", "es": "Holgada" }, "values": { "ease": 200, "top_length": 740 } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "shoulder_seam", "type": "shoulder", "label": { "en": "Shoulder seam", "es": "Costura de hombro" }, "edges": [{ "piece": "front_outer", "edge": "shoulder" }, { "piece": "back", "edge": "shoulder" }], "parameters": ["neck_width", "chest_girth"] },
+      { "id": "nursing_access", "type": "custom", "label": { "en": "Nursing access", "es": "Acceso de lactancia" }, "edges": [{ "piece": "front_inner", "edge": "hem" }], "parameters": ["access_drop"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "societal_benefit": {
+      "en": "An open, made-to-measure nursing top with a double-layer discreet-access front lets a parent feed without undressing, from an open pattern that keeps the maker in control of fabric and fit — nursing wear as a repairable commons object, not a marked-up specialty product.",
+      "es": "Un top de lactancia abierto y a la medida con un frente de doble capa de acceso discreto permite amamantar sin desvestirse, desde un patrón abierto que deja a quien elabora el control de la tela y el ajuste — ropa de lactancia como objeto común reparable, no un producto de especialidad sobreprecio."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
