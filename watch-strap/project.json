@@ -1,0 +1,220 @@
+{
+  "project": {
+    "name": "Watch Strap",
+    "slug": "watch-strap",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A made-to-measure two-piece watch strap sized to the lug width and wrist: the buckle half (with billet and eyelets) and the keeper half (with the spring-bar tab and a floating loop), bridged to the Yantra4D `watch-adapter` solid that carries the lug interface. Fashion Cabinet owns the strap; Yantra4D owns the adapter/buckle hardware. FC-200 accessories capsule.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una correa de reloj de dos piezas a la medida del ancho de asa y la muñeca: la mitad de la hebilla (con punta y ojales) y la mitad del pasador (con la lengüeta del pasador de resorte y un aro flotante), puenteada al sólido `watch-adapter` de Yantra4D que lleva la interfaz del asa. Fashion Cabinet posee la correa; Yantra4D posee el herraje.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "watch",
+      "strap",
+      "accessory",
+      "hardware",
+      "notion",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "strap",
+      "label": {
+        "en": "Watch Strap (both halves)",
+        "es": "Correa (ambas mitades)"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "buckle-half",
+        "keeper-half"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "buckle-half",
+      "label": {
+        "en": "Buckle half",
+        "es": "Mitad de hebilla"
+      },
+      "default_color": "#5a3d2b",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "keeper-half",
+      "label": {
+        "en": "Keeper half",
+        "es": "Mitad de pasador"
+      },
+      "default_color": "#5a3d2b",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "lug_width",
+      "type": "slider",
+      "default": 20,
+      "min": 12,
+      "max": 26,
+      "step": 1,
+      "label": {
+        "en": "Lug width (mm)",
+        "es": "Ancho de asa (mm)"
+      },
+      "tooltip": {
+        "en": "Where the strap meets the watch; passed to the Yantra4D adapter",
+        "es": "Donde la correa encuentra el reloj; se pasa al adaptador de Yantra4D"
+      }
+    },
+    {
+      "id": "wrist_girth",
+      "type": "slider",
+      "default": 180,
+      "min": 120,
+      "max": 240,
+      "step": 5,
+      "label": {
+        "en": "Wrist girth (mm)",
+        "es": "Contorno de muñeca (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the combined strap length so the middle eyelet fits",
+        "es": "Define el largo combinado para que el ojal central ajuste"
+      },
+      "measurement": {
+        "code": "wrist_girth",
+        "standard": "iso_8559"
+      }
+    },
+    {
+      "id": "taper",
+      "type": "slider",
+      "default": 4,
+      "min": 0,
+      "max": 8,
+      "step": 1,
+      "label": {
+        "en": "Taper to buckle (mm)",
+        "es": "Conicidad a la hebilla (mm)"
+      },
+      "tooltip": {
+        "en": "How much each side narrows from lug to buckle",
+        "es": "Cuánto se angosta de asa a hebilla"
+      }
+    },
+    {
+      "id": "eyelets",
+      "type": "slider",
+      "default": 6,
+      "min": 3,
+      "max": 9,
+      "step": 1,
+      "label": {
+        "en": "Adjustment eyelets",
+        "es": "Ojales de ajuste"
+      },
+      "tooltip": {
+        "en": "Holes on the buckle half",
+        "es": "Ojales en la mitad de la hebilla"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "std-20",
+      "label": {
+        "en": "Standard 20 mm",
+        "es": "Estándar 20 mm"
+      },
+      "values": {
+        "lug_width": 20,
+        "wrist_girth": 180
+      }
+    },
+    {
+      "id": "slim-18",
+      "label": {
+        "en": "Slim 18 mm",
+        "es": "Delgada 18 mm"
+      },
+      "values": {
+        "lug_width": 18,
+        "taper": 5
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "watch strap",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "watch-adapter",
+      "linked": true,
+      "params_map": {
+        "lug_width": "lug_width"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "lug_end",
+        "type": "custom",
+        "label": {
+          "en": "Lug (spring-bar) end",
+          "es": "Extremo del asa"
+        },
+        "edges": [
+          {
+            "piece": "buckle-half",
+            "edge": "lug"
+          }
+        ],
+        "parameters": [
+          "lug_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A watch strap cut to the actual lug width and wrist, with the adapter and buckle open printable Yantra4D objects — one broken strap becomes a print + a cut, not a whole new watch band.",
+      "es": "Una correa cortada al ancho de asa y muñeca reales, con el adaptador y la hebilla como objetos imprimibles abiertos de Yantra4D — una correa rota se vuelve una impresión y un corte, no una banda nueva completa."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

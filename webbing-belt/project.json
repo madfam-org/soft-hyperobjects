@@ -1,0 +1,239 @@
+{
+  "project": {
+    "name": "Webbing Belt",
+    "slug": "webbing-belt",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A made-to-measure webbing belt: one strap piece with a folded buckle end, a pointed billet, and punched adjustment eyelets, bridged to the Yantra4D `strap-buckle` solid. Fashion Cabinet owns the belt (length to the wearer's waist, taper, eyelet spacing); Yantra4D owns the buckle. FC-200 accessories capsule.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un cinturón de correa a la medida: una pieza de correa con extremo de hebilla doblado, punta y ojales de ajuste, puenteado al sólido `strap-buckle` de Yantra4D. Fashion Cabinet posee el cinturón (largo a la cintura, conicidad, espaciado de ojales); Yantra4D posee la hebilla.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "belt",
+      "webbing",
+      "accessory",
+      "hardware",
+      "notion",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "belt",
+      "label": {
+        "en": "Webbing Belt",
+        "es": "Cinturón de correa"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "strap"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "strap",
+      "label": {
+        "en": "Belt strap",
+        "es": "Correa del cinturón"
+      },
+      "default_color": "#6b5b4b",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "default": 900,
+      "min": 550,
+      "max": 1400,
+      "step": 5,
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)"
+      },
+      "tooltip": {
+        "en": "The wearer's waist where the belt sits; sets belt length",
+        "es": "Cintura donde se usa el cinturón; define el largo"
+      },
+      "measurement": {
+        "code": "waist_girth",
+        "standard": "iso_8559"
+      }
+    },
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "default": 38,
+      "min": 15,
+      "max": 50,
+      "step": 1,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de correa (mm)"
+      },
+      "tooltip": {
+        "en": "Passed to the Yantra4D buckle so the strap fits its slot",
+        "es": "Se pasa a la hebilla de Yantra4D para que la correa entre en la ranura"
+      }
+    },
+    {
+      "id": "tip_length",
+      "type": "slider",
+      "default": 60,
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Billet tip length (mm)",
+        "es": "Largo de la punta (mm)"
+      },
+      "tooltip": {
+        "en": "The pointed tip past the last eyelet; 0 = square end",
+        "es": "La punta después del último ojal; 0 = extremo recto"
+      }
+    },
+    {
+      "id": "eyelets",
+      "type": "slider",
+      "default": 5,
+      "min": 1,
+      "max": 9,
+      "step": 1,
+      "label": {
+        "en": "Adjustment eyelets",
+        "es": "Ojales de ajuste"
+      },
+      "tooltip": {
+        "en": "Number of holes; the middle one lands at the measured waist",
+        "es": "Número de ojales; el central cae en la cintura medida"
+      }
+    },
+    {
+      "id": "eyelet_pitch",
+      "type": "slider",
+      "default": 25,
+      "min": 15,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Eyelet spacing (mm)",
+        "es": "Espaciado de ojales (mm)"
+      },
+      "tooltip": {
+        "en": "Center-to-center between adjustment holes",
+        "es": "Centro a centro entre ojales"
+      }
+    },
+    {
+      "id": "buckle_return",
+      "type": "slider",
+      "default": 80,
+      "min": 40,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Buckle fold return (mm)",
+        "es": "Retorno de hebilla (mm)"
+      },
+      "tooltip": {
+        "en": "The end that folds back through the buckle and rivets down",
+        "es": "El extremo que se dobla por la hebilla y se remacha"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic-38",
+      "label": {
+        "en": "Classic 38 mm",
+        "es": "Clásico 38 mm"
+      },
+      "values": {
+        "strap_width": 38,
+        "eyelets": 5
+      }
+    },
+    {
+      "id": "narrow-25",
+      "label": {
+        "en": "Narrow 25 mm",
+        "es": "Angosto 25 mm"
+      },
+      "values": {
+        "strap_width": 25,
+        "eyelets": 7
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "webbing belt",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "strap-buckle",
+      "linked": true,
+      "params_map": {
+        "webbing": "strap_width"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "buckle_end",
+        "type": "custom",
+        "label": {
+          "en": "Buckle attachment end",
+          "es": "Extremo de la hebilla"
+        },
+        "edges": [
+          {
+            "piece": "strap",
+            "edge": "buckle"
+          }
+        ],
+        "parameters": [
+          "strap_width",
+          "buckle_return"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A belt sized to the actual waist, with the buckle an open printable Yantra4D object — the whole thing repairable, resizable, and free to make, instead of a fixed-length good you replace.",
+      "es": "Un cinturón dimensionado a la cintura real, con la hebilla como objeto imprimible abierto de Yantra4D — todo reparable, redimensionable y libre de hacer, en vez de un producto de largo fijo que se reemplaza."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

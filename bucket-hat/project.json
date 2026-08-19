@@ -1,0 +1,222 @@
+{
+  "project": {
+    "name": "Bucket Hat",
+    "slug": "bucket-hat",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A made-to-measure bucket hat drafted from the head girth: a circular crown, a side band, and a down-sloping brim (a half-annulus cut on the fold). Fashion Cabinet's classic reversible summer hat, sized to the wearer. FC-200 accessories capsule; no hardware — a pure soft-goods garment.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un sombrero de pescador a la medida trazado desde el contorno de cabeza: copa circular, banda lateral y ala inclinada (media corona doblada). El clásico sombrero reversible de verano de Fashion Cabinet, dimensionado a quien lo usa. Cápsula de accesorios FC-200; sin herrajes — una prenda textil pura.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "hat",
+      "bucket-hat",
+      "headwear",
+      "accessory",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "hat",
+      "label": {
+        "en": "Bucket Hat",
+        "es": "Sombrero de pescador"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "crown",
+        "side-band",
+        "brim"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "crown",
+      "label": {
+        "en": "Crown",
+        "es": "Copa"
+      },
+      "default_color": "#4a6b52",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "side-band",
+      "label": {
+        "en": "Side band",
+        "es": "Banda lateral"
+      },
+      "default_color": "#4a6b52",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "brim",
+      "label": {
+        "en": "Brim",
+        "es": "Ala"
+      },
+      "default_color": "#3f5c47",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "head_girth",
+      "type": "slider",
+      "default": 570,
+      "min": 480,
+      "max": 640,
+      "step": 5,
+      "label": {
+        "en": "Head girth (mm)",
+        "es": "Contorno de cabeza (mm)"
+      },
+      "tooltip": {
+        "en": "The head circumference where the hat sits",
+        "es": "El contorno de cabeza donde se asienta el sombrero"
+      },
+      "measurement": {
+        "code": "head_girth",
+        "standard": "iso_8559"
+      }
+    },
+    {
+      "id": "crown_depth",
+      "type": "slider",
+      "default": 90,
+      "min": 50,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Crown depth (mm)",
+        "es": "Profundidad de copa (mm)"
+      },
+      "tooltip": {
+        "en": "How deep the side band sits down the head",
+        "es": "Qué tan profunda baja la banda por la cabeza"
+      }
+    },
+    {
+      "id": "brim_width",
+      "type": "slider",
+      "default": 60,
+      "min": 30,
+      "max": 100,
+      "step": 5,
+      "label": {
+        "en": "Brim width (mm)",
+        "es": "Ancho del ala (mm)"
+      },
+      "tooltip": {
+        "en": "How far the brim extends past the head",
+        "es": "Cuánto se extiende el ala más allá de la cabeza"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "label": {
+        "en": "Fit ease (mm)",
+        "es": "Holgura de ajuste (mm)"
+      },
+      "tooltip": {
+        "en": "Added to the head girth for comfort",
+        "es": "Se agrega al contorno de cabeza para comodidad"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic",
+        "es": "Clásico"
+      },
+      "values": {
+        "brim_width": 60,
+        "crown_depth": 90
+      }
+    },
+    {
+      "id": "wide-brim",
+      "label": {
+        "en": "Wide brim",
+        "es": "Ala ancha"
+      },
+      "values": {
+        "brim_width": 90,
+        "crown_depth": 80
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "head_opening",
+        "type": "custom",
+        "label": {
+          "en": "Head opening (band ↔ brim seam)",
+          "es": "Abertura de cabeza"
+        },
+        "edges": [
+          {
+            "piece": "side-band",
+            "edge": "bottom"
+          }
+        ],
+        "parameters": [
+          "head_girth",
+          "ease"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false
+    },
+    "societal_benefit": {
+      "en": "A hat cut to the actual head, reversible and repairable, from an open pattern — headwear as a made-to-measure commons object rather than a one-size good.",
+      "es": "Un sombrero cortado a la cabeza real, reversible y reparable, desde un patrón abierto — sombrerería como objeto común a la medida en vez de un producto de talla única."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

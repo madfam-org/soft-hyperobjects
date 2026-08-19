@@ -1,0 +1,280 @@
+{
+  "project": {
+    "name": "Five-Panel Cap",
+    "slug": "five-panel-cap",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A made-to-measure five-panel cap from the head girth: five crown gores (a front, two side, two back), a stiffened peak, and a snap-back tab bridged to the Yantra4D `snap-fit` closure. Fashion Cabinet owns the cap; Yantra4D owns the snap. FC-200 accessories capsule.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una gorra de cinco paneles a la medida desde el contorno de cabeza: cinco gajos de copa (frente, dos laterales, dos traseros), una visera rígida y una lengüeta de ajuste puenteada al cierre `snap-fit` de Yantra4D. Fashion Cabinet posee la gorra; Yantra4D posee el broche.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "cap",
+      "five-panel",
+      "headwear",
+      "accessory",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "cap",
+      "label": {
+        "en": "Five-Panel Cap",
+        "es": "Gorra de cinco paneles"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front-panel",
+        "side-panel",
+        "back-panel",
+        "peak",
+        "snap-tab"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front-panel",
+      "label": {
+        "en": "Front panel",
+        "es": "Panel frontal"
+      },
+      "default_color": "#2f3b4a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "side-panel",
+      "label": {
+        "en": "Side panel",
+        "es": "Panel lateral"
+      },
+      "default_color": "#2f3b4a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back-panel",
+      "label": {
+        "en": "Back panel",
+        "es": "Panel trasero"
+      },
+      "default_color": "#2f3b4a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "peak",
+      "label": {
+        "en": "Peak / brim",
+        "es": "Visera"
+      },
+      "default_color": "#252f3b",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "snap-tab",
+      "label": {
+        "en": "Snap-back tab",
+        "es": "Lengüeta de ajuste"
+      },
+      "default_color": "#2f3b4a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "head_girth",
+      "type": "slider",
+      "default": 580,
+      "min": 500,
+      "max": 640,
+      "step": 5,
+      "label": {
+        "en": "Head girth (mm)",
+        "es": "Contorno de cabeza (mm)"
+      },
+      "tooltip": {
+        "en": "Head circumference; the five panels sum to this",
+        "es": "Contorno de cabeza; los cinco paneles suman esto"
+      },
+      "measurement": {
+        "code": "head_girth",
+        "standard": "iso_8559"
+      }
+    },
+    {
+      "id": "crown_height",
+      "type": "slider",
+      "default": 130,
+      "min": 90,
+      "max": 170,
+      "step": 5,
+      "label": {
+        "en": "Crown height (mm)",
+        "es": "Altura de copa (mm)"
+      },
+      "tooltip": {
+        "en": "Gore height from headband to apex",
+        "es": "Altura del gajo de la banda a la punta"
+      }
+    },
+    {
+      "id": "peak_length",
+      "type": "slider",
+      "default": 70,
+      "min": 40,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Peak length (mm)",
+        "es": "Largo de visera (mm)"
+      },
+      "tooltip": {
+        "en": "How far the peak projects",
+        "es": "Cuánto se proyecta la visera"
+      }
+    },
+    {
+      "id": "snap_dia",
+      "type": "slider",
+      "default": 12,
+      "min": 8,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Snap diameter (mm)",
+        "es": "Diámetro del broche (mm)"
+      },
+      "tooltip": {
+        "en": "Passed to the Yantra4D snap so the tab holes fit",
+        "es": "Se pasa al broche de Yantra4D para que los ojales ajusten"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "default": 8,
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "label": {
+        "en": "Fit ease (mm)",
+        "es": "Holgura (mm)"
+      },
+      "tooltip": {
+        "en": "Added to the head girth",
+        "es": "Se agrega al contorno de cabeza"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic",
+        "es": "Clásico"
+      },
+      "values": {
+        "crown_height": 130,
+        "peak_length": 70
+      }
+    },
+    {
+      "id": "low-profile",
+      "label": {
+        "en": "Low profile",
+        "es": "Perfil bajo"
+      },
+      "values": {
+        "crown_height": 105,
+        "peak_length": 65
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "snap-back cap",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "snap-fit",
+      "linked": true,
+      "params_map": {
+        "bore_dia": "snap_dia"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "headband",
+        "type": "custom",
+        "label": {
+          "en": "Headband seam (panels ↔ band)",
+          "es": "Costura de banda"
+        },
+        "edges": [
+          {
+            "piece": "front-panel",
+            "edge": "bottom"
+          }
+        ],
+        "parameters": [
+          "head_girth",
+          "ease"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A cap fit to the actual head with an open, printable snap-back — headwear as a made-to-measure, repairable commons object instead of a fixed one-size good with a throwaway plastic strap.",
+      "es": "Una gorra ajustada a la cabeza real con un cierre imprimible abierto — sombrerería como objeto común, a la medida y reparable, en vez de un producto de talla única con correa plástica desechable."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
