@@ -1,0 +1,177 @@
+{
+  "project": {
+    "name": "Rivet + Burr",
+    "slug": "rivet-burr",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A Yantra4D-bridged notion: the placement guide for the copper-rivet reinforcement of denim stress points (pocket corners, fly base). Fashion Cabinet owns the fashion (spacing, placement, the 2-D guide) while the finding SOLID is the Yantra4D `rivet` cartridge, referenced through notion.hardware_ref. This is a Group-B co-creation — the finding FC needed, now a Yantra4D solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un avío puenteado con Yantra4D: la guía de colocación para the copper-rivet reinforcement of denim stress points (pocket corners, fly base). Fashion Cabinet posee la moda (espaciado, colocación, la guía 2-D) mientras el SÓLIDO del avío es el cartucho `rivet` de Yantra4D, referenciado por notion.hardware_ref. Una co-creación Grupo-B — el avío que FC necesitaba, ahora un sólido de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "rivet",
+      "denim",
+      "reinforcement",
+      "notion",
+      "hardware",
+      "finding",
+      "hyperobject",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Placement Guide",
+        "es": "Guía de colocación"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "placement-guide"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Rivet + Burr Placement Guide",
+        "es": "Guía de Rivet + Burr"
+      },
+      "default_color": "#8a8f94",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "cap_dia",
+      "type": "slider",
+      "default": 9,
+      "min": 5,
+      "max": 20,
+      "step": 0.5,
+      "label": {
+        "en": "Rivet cap diameter (mm)",
+        "es": "Diámetro de cabeza (mm)"
+      }
+    },
+    {
+      "id": "count",
+      "type": "slider",
+      "default": 6,
+      "min": 1,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Number of rivets",
+        "es": "Número de remaches"
+      }
+    },
+    {
+      "id": "run_length",
+      "type": "slider",
+      "default": 240,
+      "min": 40,
+      "max": 1200,
+      "step": 5,
+      "label": {
+        "en": "Placement run length (mm)",
+        "es": "Largo de la línea (mm)"
+      }
+    },
+    {
+      "id": "end_offset",
+      "type": "slider",
+      "default": 12,
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "label": {
+        "en": "End inset (mm)",
+        "es": "Margen extremo (mm)"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "default",
+      "label": {
+        "en": "Default",
+        "es": "Predeterminado"
+      },
+      "values": {
+        "cap_dia": 9
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "rivet placement",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "rivet",
+      "linked": true,
+      "params_map": {
+        "cap_dia": "cap_dia"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "notion",
+    "interfaces": [
+      {
+        "id": "placement_line",
+        "type": "custom",
+        "label": {
+          "en": "Fastener placement line",
+          "es": "Línea de colocación"
+        },
+        "edges": [
+          {
+            "piece": "placement-guide",
+            "edge": "guide"
+          }
+        ],
+        "parameters": [
+          "cap_dia",
+          "count",
+          "run_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Turns the copper-rivet reinforcement of denim stress points (pocket corners, fly base) into an open, made-to-measure placement guide, with the printable finding an open Yantra4D object — the whole closure repairable and free, and a fastener FC needed now co-created as a Yantra4D solid.",
+      "es": "Convierte the copper-rivet reinforcement of denim stress points (pocket corners, fly base) en una guía de colocación abierta y a la medida, con el avío imprimible como objeto abierto de Yantra4D — todo el cierre reparable y libre, y un avío que FC necesitaba ahora co-creado como sólido de Yantra4D."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

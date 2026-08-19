@@ -1,0 +1,178 @@
+{
+  "project": {
+    "name": "D-Ring / Slider",
+    "slug": "d-ring-slider",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A Yantra4D-bridged notion: the placement guide for the flat-bottomed D-ring loop that anchors straps and webbing on a bag or overall. Fashion Cabinet owns the fashion (spacing, placement, the 2-D guide) while the finding SOLID is the Yantra4D `d-ring` cartridge, referenced through notion.hardware_ref. This is a Group-B co-creation — the finding FC needed, now a Yantra4D solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un avío puenteado con Yantra4D: la guía de colocación para the flat-bottomed D-ring loop that anchors straps and webbing on a bag or overall. Fashion Cabinet posee la moda (espaciado, colocación, la guía 2-D) mientras el SÓLIDO del avío es el cartucho `d-ring` de Yantra4D, referenciado por notion.hardware_ref. Una co-creación Grupo-B — el avío que FC necesitaba, ahora un sólido de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "d-ring",
+      "slider",
+      "strap",
+      "webbing",
+      "notion",
+      "hardware",
+      "finding",
+      "hyperobject",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Placement Guide",
+        "es": "Guía de colocación"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "placement-guide"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "D-Ring / Slider Placement Guide",
+        "es": "Guía de D-Ring / Slider"
+      },
+      "default_color": "#8a8f94",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "default": 25,
+      "min": 10,
+      "max": 60,
+      "step": 1,
+      "label": {
+        "en": "Strap / webbing width (mm)",
+        "es": "Ancho de correa (mm)"
+      }
+    },
+    {
+      "id": "count",
+      "type": "slider",
+      "default": 2,
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Number of D-rings",
+        "es": "Número de argollas"
+      }
+    },
+    {
+      "id": "run_length",
+      "type": "slider",
+      "default": 200,
+      "min": 40,
+      "max": 1000,
+      "step": 5,
+      "label": {
+        "en": "Placement run length (mm)",
+        "es": "Largo de la línea (mm)"
+      }
+    },
+    {
+      "id": "end_offset",
+      "type": "slider",
+      "default": 15,
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "label": {
+        "en": "End inset (mm)",
+        "es": "Margen extremo (mm)"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "default",
+      "label": {
+        "en": "Default",
+        "es": "Predeterminado"
+      },
+      "values": {
+        "strap_width": 25
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "d-ring slider",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "d-ring",
+      "linked": true,
+      "params_map": {
+        "webbing": "strap_width"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "notion",
+    "interfaces": [
+      {
+        "id": "placement_line",
+        "type": "custom",
+        "label": {
+          "en": "Fastener placement line",
+          "es": "Línea de colocación"
+        },
+        "edges": [
+          {
+            "piece": "placement-guide",
+            "edge": "guide"
+          }
+        ],
+        "parameters": [
+          "strap_width",
+          "count",
+          "run_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Turns the flat-bottomed D-ring loop that anchors straps and webbing on a bag or overall into an open, made-to-measure placement guide, with the printable finding an open Yantra4D object — the whole closure repairable and free, and a fastener FC needed now co-created as a Yantra4D solid.",
+      "es": "Convierte the flat-bottomed D-ring loop that anchors straps and webbing on a bag or overall en una guía de colocación abierta y a la medida, con el avío imprimible como objeto abierto de Yantra4D — todo el cierre reparable y libre, y un avío que FC necesitaba ahora co-creado como sólido de Yantra4D."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
