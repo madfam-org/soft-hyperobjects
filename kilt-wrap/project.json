@@ -1,0 +1,53 @@
+{
+  "project": {
+    "name": "Kilt (Wrap)",
+    "slug": "kilt-wrap",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The Scottish Highland wrapped garment: one long length of (traditionally tartan) cloth with a flat front apron, deep knife pleats across the back, wrapped and buckled at the side. This cartridge drafts the garment geometry as a single flat length with pleat lines, apron folds, and strap positions marked; it does not reproduce the tartan sett or clan meaning. A soft-goods garment — buckles are the maker's hardware. FC-200 long-tail (heritage). Offered with respect for the living tradition.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La prenda envolvente de las Tierras Altas de Escocia: una larga pieza de tela (tradicionalmente tartán) con un mandil frontal liso, tablas de cuchillo profundas en la espalda, envuelta y abrochada al costado. Este cartucho traza la geometría como una sola pieza plana con líneas de tabla, dobleces del mandil y posiciones de correas marcadas; no reproduce el sett del tartán ni el significado de clan. Una prenda textil — las hebillas son herraje de quien elabora. Cola larga FC-200 (patrimonio). Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["kilt", "heritage", "scottish", "wrap", "pleated", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+    }
+  },
+  "modes": [
+    { "id": "set", "label": { "en": "Kilt length", "es": "Pieza del kilt" }, "script_file": "main.py", "pieces": ["length"] }
+  ],
+  "pieces": [
+    { "id": "length", "label": { "en": "Kilt length", "es": "Pieza del kilt" }, "default_color": "#3a4a5a", "cut": { "quantity": 1 } }
+  ],
+  "parameters": [
+    { "id": "waist_girth", "type": "slider", "default": 880, "min": 600, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" }, "tooltip": { "en": "Fitted waist", "es": "Cintura ajustada" } },
+    { "id": "hip_girth", "type": "slider", "default": 1000, "min": 700, "max": 1600, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" }, "tooltip": { "en": "Seat (pleats give room)", "es": "Asiento (las tablas dan holgura)" } },
+    { "id": "kilt_length", "type": "slider", "default": 570, "min": 420, "max": 750, "step": 10, "label": { "en": "Length (mm)", "es": "Largo (mm)" }, "tooltip": { "en": "Waist to mid-knee", "es": "De la cintura a media rodilla" } },
+    { "id": "apron_width", "type": "slider", "default": 360, "min": 250, "max": 520, "step": 10, "label": { "en": "Apron width (mm)", "es": "Ancho del mandil (mm)" }, "tooltip": { "en": "Flat front apron", "es": "Mandil frontal liso" } },
+    { "id": "pleat_depth", "type": "slider", "default": 130, "min": 60, "max": 220, "step": 5, "label": { "en": "Pleat depth (mm)", "es": "Profundidad de tabla (mm)" }, "tooltip": { "en": "Cloth folded into each knife pleat", "es": "Tela plegada en cada tabla" } },
+    { "id": "pleats", "type": "slider", "default": 24, "min": 12, "max": 40, "step": 1, "label": { "en": "Back pleats", "es": "Tablas de espalda" }, "tooltip": { "en": "Number of knife pleats", "es": "Número de tablas de cuchillo" } }
+  ],
+  "presets": [
+    { "id": "day", "label": { "en": "Day kilt", "es": "Kilt de día" }, "values": { "pleats": 24, "pleat_depth": 130 } },
+    { "id": "heavy", "label": { "en": "Heavy pleated", "es": "Tablas profundas" }, "values": { "pleats": 30, "pleat_depth": 170 } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "waist_edge", "type": "waistband", "label": { "en": "Waist edge (strapped)", "es": "Canto de cintura (con correas)" }, "edges": [{ "piece": "length", "edge": "waist" }], "parameters": ["waist_girth", "pleats"] },
+      { "id": "apron_fold", "type": "custom", "label": { "en": "Apron fold", "es": "Doblez del mandil" }, "edges": [{ "piece": "length", "edge": "over_end" }], "parameters": ["apron_width"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false, "heritage": true },
+    "societal_benefit": {
+      "en": "An open, made-to-measure kilt pattern computes the exact flat length, pleat count, and pleat depth for a wearer's own waist and seat, keeping a living heritage garment makeable at home from a single length of cloth — the sett and clan meaning left to the wearer.",
+      "es": "Un patrón de kilt abierto y a la medida calcula la longitud plana exacta, el número y la profundidad de las tablas para la cintura y el asiento de quien lo viste, manteniendo una prenda patrimonial viva fabricable en casa a partir de una sola pieza de tela — el sett y el significado de clan en manos de quien la viste."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

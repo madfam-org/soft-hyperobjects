@@ -1,0 +1,58 @@
+{
+  "project": {
+    "name": "Thobe / Thawb",
+    "slug": "thobe",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The ankle-length tunic-robe of the Arabian Peninsula and the wider Arab world (thobe, thawb, dishdasha, kandura): a long, modest T-cut body with long sleeves, a neck placket, and triangular side gores that flare the hem for an unbroken line. This cartridge drafts the garment geometry in the straight-seam idiom where the side and gore seams balance by construction; the regional neck/cuff treatments and plackets are the maker's. A soft-goods garment — no hardware. FC-200 long-tail (heritage). Offered with respect for the living tradition.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La túnica-túnica hasta el tobillo de la Península Arábiga y del mundo árabe en general (thobe, thawb, dishdasha, kandura): un cuerpo largo y modesto de corte en T con mangas largas, una tapeta de cuello y cuñas laterales triangulares que ensanchan el ruedo para una línea continua. Este cartucho traza la geometría en el estilo de costuras rectas donde las costuras laterales y de cuña se equilibran por construcción; los tratamientos regionales de cuello/puño y las tapetas pertenecen a quien elabora. Una prenda textil — sin herrajes. Cola larga FC-200 (patrimonio). Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["thobe", "thawb", "heritage", "arab", "robe", "gored", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+    }
+  },
+  "modes": [
+    { "id": "set", "label": { "en": "Full Robe", "es": "Túnica completa" }, "script_file": "main.py", "pieces": ["back", "front", "sleeve", "gore"] }
+  ],
+  "pieces": [
+    { "id": "back", "label": { "en": "Back", "es": "Espalda" }, "default_color": "#e6e2d6", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
+    { "id": "front", "label": { "en": "Front (placket)", "es": "Frente (tapeta)" }, "default_color": "#e6e2d6", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
+    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#dcd8ca", "cut": { "quantity": 2, "mirror": true } },
+    { "id": "gore", "label": { "en": "Side gore", "es": "Cuña lateral" }, "default_color": "#dcd8ca", "cut": { "quantity": 2, "mirror": true } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "default": 1100, "min": 750, "max": 1700, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" }, "tooltip": { "en": "Full chest", "es": "Pecho completo" } },
+    { "id": "robe_length", "type": "slider", "default": 1400, "min": 1000, "max": 1650, "step": 10, "label": { "en": "Length (mm)", "es": "Largo (mm)" }, "tooltip": { "en": "Nape to ankle", "es": "De la nuca al tobillo" } },
+    { "id": "neck_girth", "type": "slider", "default": 420, "min": 300, "max": 560, "step": 10, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" }, "tooltip": { "en": "Full neck", "es": "Cuello completo" } },
+    { "id": "sleeve_length", "type": "slider", "default": 580, "min": 350, "max": 700, "step": 10, "label": { "en": "Sleeve length (mm)", "es": "Largo de manga (mm)" }, "tooltip": { "en": "Shoulder to wrist", "es": "Del hombro a la muñeca" } },
+    { "id": "sleeve_width", "type": "slider", "default": 200, "min": 140, "max": 300, "step": 10, "label": { "en": "Sleeve opening (mm)", "es": "Abertura de manga (mm)" }, "tooltip": { "en": "Wrist opening (half, flat)", "es": "Abertura de muñeca (mitad, plano)" } },
+    { "id": "gore_flare", "type": "slider", "default": 220, "min": 80, "max": 400, "step": 10, "label": { "en": "Gore flare (mm)", "es": "Vuelo de cuña (mm)" }, "tooltip": { "en": "Extra hem width per gore", "es": "Ancho extra de ruedo por cuña" } },
+    { "id": "gore_rise", "type": "slider", "default": 700, "min": 400, "max": 1000, "step": 10, "label": { "en": "Gore rise (mm)", "es": "Altura de cuña (mm)" }, "tooltip": { "en": "How high the gore starts", "es": "Cuánto sube la cuña" } }
+  ],
+  "presets": [
+    { "id": "gulf", "label": { "en": "Gulf line", "es": "Línea del Golfo" }, "values": { "gore_flare": 220, "sleeve_width": 200 } },
+    { "id": "fuller", "label": { "en": "Fuller hem", "es": "Ruedo más amplio" }, "values": { "gore_flare": 320, "gore_rise": 850 } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "shoulder_seam", "type": "shoulder", "label": { "en": "Shoulder seam", "es": "Costura de hombro" }, "edges": [{ "piece": "front", "edge": "shoulder" }, { "piece": "back", "edge": "shoulder" }], "parameters": ["neck_girth", "chest_girth"] },
+      { "id": "side_seam", "type": "side_seam", "label": { "en": "Side seam (upper)", "es": "Costura lateral (superior)" }, "edges": [{ "piece": "front", "edge": "side_upper" }, { "piece": "back", "edge": "side_upper" }], "parameters": ["chest_girth"] },
+      { "id": "gore_seam", "type": "custom", "label": { "en": "Gore seam", "es": "Costura de cuña" }, "edges": [{ "piece": "gore", "edge": "seam_a" }, { "piece": "back", "edge": "side_gore" }], "parameters": ["gore_rise", "gore_flare"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "heritage": true },
+    "societal_benefit": {
+      "en": "An open, made-to-measure thobe pattern keeps a widely-worn modest heritage garment makeable to real measurements — a clean T-body with gored flare drafted from a handful of straight-seamed pieces — with the regional neck, cuff, and placket details left to the maker rather than dictated.",
+      "es": "Un patrón de thobe abierto y a la medida mantiene una prenda patrimonial modesta y muy usada fabricable a medidas reales — un cuerpo en T limpio con vuelo de cuñas trazado a partir de unas pocas piezas de costura recta — con los detalles regionales de cuello, puño y tapeta en manos de quien elabora, no dictados."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
