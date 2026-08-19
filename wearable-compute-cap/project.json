@@ -1,0 +1,63 @@
+{
+  "project": {
+    "name": "Wearable-Compute Cap",
+    "slug": "wearable-compute-cap",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A cap prepared to carry a single-board computer: a crown band + a peak, overlaid with an electronics pocket sized to the Yantra4D `pi-hat-case` enclosure and a marked cable route to a rear battery loop. Fashion Cabinet owns the cap + the pocket plan; Yantra4D owns the printable case. The pocket and route are marked for the maker; no electronics are drafted here. FC-200 e-textile capsule.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una gorra preparada para llevar una computadora de placa única: una banda de copa + una visera, con una bolsa de electrónica dimensionada a la carcasa `pi-hat-case` de Yantra4D y una ruta de cable marcada a un lazo de batería trasero. Fashion Cabinet posee la gorra + el plan de bolsa; Yantra4D posee la carcasa imprimible. La bolsa y la ruta se marcan para quien elabora; no se traza electrónica. Cápsula e-textil FC-200.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["etextile", "wearable-tech", "cap", "sbc", "enclosure", "hardware", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+    }
+  },
+  "modes": [
+    { "id": "set", "label": { "en": "Full Cap", "es": "Gorra completa" }, "script_file": "main.py", "pieces": ["crown", "peak"] }
+  ],
+  "pieces": [
+    { "id": "crown", "label": { "en": "Crown (electronics pocket)", "es": "Copa (bolsa de electrónica)" }, "default_color": "#2f3b4a", "cut": { "quantity": 1, "on_fold": false, "mirror": false } },
+    { "id": "peak", "label": { "en": "Peak", "es": "Visera" }, "default_color": "#252f3b", "cut": { "quantity": 2, "on_fold": true, "fold_edge": "back", "mirror": true } }
+  ],
+  "parameters": [
+    { "id": "head_girth", "type": "slider", "default": 580, "min": 500, "max": 640, "step": 5, "measurement": { "standard": "iso_8559", "code": "head_girth" }, "label": { "en": "Head girth (mm)", "es": "Contorno de cabeza (mm)" }, "tooltip": { "en": "Head circumference", "es": "Contorno de cabeza" } },
+    { "id": "crown_depth", "type": "slider", "default": 130, "min": 90, "max": 180, "step": 5, "label": { "en": "Crown depth (mm)", "es": "Profundidad de copa (mm)" }, "tooltip": { "en": "Crown band height", "es": "Alto de la banda de copa" } },
+    { "id": "peak_length", "type": "slider", "default": 70, "min": 40, "max": 100, "step": 5, "label": { "en": "Peak length (mm)", "es": "Largo de visera (mm)" }, "tooltip": { "en": "Peak projection", "es": "Proyección de la visera" } },
+    { "id": "case_size", "type": "slider", "default": 70, "min": 40, "max": 120, "step": 5, "label": { "en": "Electronics-pocket opening (mm)", "es": "Abertura de bolsa (mm)" }, "tooltip": { "en": "Sized to the Yantra4D pi-hat-case", "es": "A la medida del pi-hat-case de Yantra4D" } },
+    { "id": "ease", "type": "slider", "default": 10, "min": 0, "max": 30, "step": 2, "label": { "en": "Fit ease (mm)", "es": "Holgura (mm)" }, "tooltip": { "en": "Added to the head girth", "es": "Se agrega al contorno de cabeza" } }
+  ],
+  "presets": [
+    { "id": "classic", "label": { "en": "Classic", "es": "Clásico" }, "values": { "crown_depth": 130, "case_size": 70 } },
+    { "id": "large-board", "label": { "en": "Large board", "es": "Placa grande" }, "values": { "case_size": 100, "crown_depth": 150 } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "SBC enclosure pocket",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "pi-hat-case",
+      "linked": true,
+      "params_map": { "screen_w": "case_size" }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "e_textile",
+    "interfaces": [
+      { "id": "headband", "type": "custom", "label": { "en": "Headband seam", "es": "Costura de banda" }, "edges": [{ "piece": "crown", "edge": "bottom" }], "parameters": ["head_girth", "ease"] },
+      { "id": "electronics_pocket", "type": "pocket", "label": { "en": "Electronics pocket", "es": "Bolsa de electrónica" }, "edges": [{ "piece": "crown", "edge": "top" }], "parameters": ["case_size", "crown_depth"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "hardware_bridge": true, "e_textile": true },
+    "societal_benefit": {
+      "en": "An open, made-to-measure cap with an electronics pocket sized to an open printable Yantra4D enclosure makes wearable computing — camera rigs, AR, sensing — a repairable, hackable open garment anyone can build, instead of a sealed device strapped on.",
+      "es": "Una gorra abierta y a la medida con una bolsa de electrónica dimensionada a una carcasa imprimible abierta de Yantra4D vuelve el cómputo vestible — cámaras, RA, sensado — una prenda abierta y modificable que cualquiera puede construir, en vez de un dispositivo sellado sujetado encima."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
