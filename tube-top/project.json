@@ -1,0 +1,229 @@
+{
+  "project": {
+    "name": "Tube Top",
+    "slug": "tube-top",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The tube (bandeau) top: a strapless band of stretch fabric around the bust, held by elasticated top and bottom edges — the simplest possible top. Cut with negative ease so it grips; front and back are the same panel with one balanced join seam. Distinct from FC-100's strapped camisole and crop-top. A soft-goods garment — no hardware. FC-200 long-tail (neckline gap).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El top tubo (bandeau): una banda sin tirantes de tela elástica alrededor del busto, sostenida por cantos superior e inferior con elástico — el top más simple posible. Cortado con holgura negativa para que ciña; frente y espalda son el mismo panel con una costura de unión equilibrada. Distinto del camisole y el crop-top con tirantes de FC-100. Una prenda textil — sin herrajes. Cola larga FC-200 (hueco de escote).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le bustier tube (bandeau) : une bande sans bretelles en tissu extensible autour de la poitrine, tenue par des bords supérieur et inférieur élastiqués — le haut le plus simple possible. Coupé avec une aisance négative pour qu'il tienne ; devant et dos sont le même panneau avec une couture d'assemblage équilibrée. Distinct de la caraco et du crop-top à bretelles de FC-100. Un vêtement textile — sans quincaillerie. Longue traîne FC-200 (manque encolure).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "tube-top",
+      "bandeau",
+      "strapless",
+      "stretch",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Top",
+        "es": "Top completo",
+        "fr": "Top complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "band"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "band",
+      "label": {
+        "en": "Tube band",
+        "es": "Banda tubo",
+        "fr": "Bande tube"
+      },
+      "default_color": "#6a4a5a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center_back",
+        "mirror": true
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "default": 900,
+      "min": 640,
+      "max": 1400,
+      "step": 10,
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full bust",
+        "es": "Busto completo",
+        "fr": "Poitrine complète"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "band_length",
+      "type": "slider",
+      "default": 260,
+      "min": 140,
+      "max": 520,
+      "step": 10,
+      "label": {
+        "en": "Band length (mm)",
+        "es": "Largo de banda (mm)",
+        "fr": "Longueur de bande (mm)"
+      },
+      "tooltip": {
+        "en": "Top edge to bottom",
+        "es": "Del canto superior al inferior",
+        "fr": "Du bord supérieur au bas"
+      }
+    },
+    {
+      "id": "neg_ease",
+      "type": "slider",
+      "default": 80,
+      "min": 0,
+      "max": 180,
+      "step": 10,
+      "label": {
+        "en": "Negative ease (mm)",
+        "es": "Holgura negativa (mm)",
+        "fr": "Aisance négative (mm)"
+      },
+      "tooltip": {
+        "en": "Grip (needs stretch)",
+        "es": "Ajuste (requiere elástico)",
+        "fr": "Maintien (extensible requis)"
+      }
+    },
+    {
+      "id": "casing",
+      "type": "slider",
+      "default": 18,
+      "min": 0,
+      "max": 45,
+      "step": 5,
+      "label": {
+        "en": "Casing depth (mm)",
+        "es": "Profundidad de jareta (mm)",
+        "fr": "Profondeur de coulisse (mm)"
+      },
+      "tooltip": {
+        "en": "Top+bottom elastic casing",
+        "es": "Jareta de elástico arriba y abajo",
+        "fr": "Coulisse élastique haut et bas"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic",
+        "es": "Clásico",
+        "fr": "Classique"
+      },
+      "values": {
+        "band_length": 260
+      }
+    },
+    {
+      "id": "long",
+      "label": {
+        "en": "Longline",
+        "es": "Largo",
+        "fr": "Long"
+      },
+      "values": {
+        "band_length": 380
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "join_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Join seam",
+          "es": "Costura de unión",
+          "fr": "Couture d'assemblage"
+        },
+        "edges": [
+          {
+            "piece": "band",
+            "edge": "join"
+          },
+          {
+            "piece": "band",
+            "edge": "center_back"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "neg_ease"
+        ]
+      },
+      {
+        "id": "top_casing",
+        "type": "neckline",
+        "label": {
+          "en": "Top casing",
+          "es": "Jareta superior",
+          "fr": "Coulisse supérieure"
+        },
+        "edges": [
+          {
+            "piece": "band",
+            "edge": "top"
+          }
+        ],
+        "parameters": [
+          "casing"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure tube top is the most minimal garment in the commons — one panel, one seam, two elastic casings — sized to grip the wearer, so even a first-time maker can produce a wearable piece from a scrap of stretch fabric.",
+      "es": "Un top tubo abierto y a la medida es la prenda más mínima del común — un panel, una costura, dos jaretas de elástico — dimensionado para ceñir a quien lo viste, para que incluso quien crea por primera vez produzca una pieza usable con un retazo de tela elástica.",
+      "fr": "Un bustier tube ouvert et sur mesure est le vêtement le plus minimal du commun — un panneau, une couture, deux coulisses élastiques — dimensionné pour maintenir la personne, de sorte que même un débutant puisse produire une pièce portable à partir d'une chute de tissu extensible."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

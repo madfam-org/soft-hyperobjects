@@ -1,0 +1,55 @@
+{
+  "project": {
+    "name": "Off-Shoulder Top",
+    "slug": "off-shoulder-top",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The off-shoulder (bardot) top: a wide horizontal neckline that sits below the shoulders on the upper arm, held by an elasticated top edge with an optional flounce, so the shoulders are bare. Front and back are the same wide panel; the top edge is a continuous casing and the side seams balance by construction. Distinct from FC-100's strapped tops. A soft-goods garment — no hardware. FC-200 long-tail (neckline gap).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El top de hombros descubiertos (bardot): un escote horizontal ancho que se asienta bajo los hombros sobre la parte alta del brazo, sostenido por un canto superior con elástico y un olán opcional, dejando los hombros descubiertos. Frente y espalda son el mismo panel ancho; el canto superior es una jareta continua y las costuras laterales se equilibran por construcción. Distinto de los tops con tirantes de FC-100. Una prenda textil — sin herrajes. Cola larga FC-200 (hueco de escote).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le top épaules dénudées (bardot) : une large encolure horizontale qui repose sous les épaules sur le haut du bras, tenue par un bord supérieur élastiqué avec un volant optionnel, laissant les épaules nues. Devant et dos sont le même large panneau ; le bord supérieur est une coulisse continue et les coutures latérales s'équilibrent par construction. Distinct des tops à bretelles de FC-100. Un vêtement textile — sans quincaillerie. Longue traîne FC-200 (manque encolure).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": ["off-shoulder", "bardot", "top", "elasticated", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+    }
+  },
+  "modes": [
+    { "id": "set", "label": { "en": "Full Top", "es": "Top completo", "fr": "Top complet" }, "script_file": "main.py", "pieces": ["front", "back"] }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front", "es": "Frente", "fr": "Devant" }, "default_color": "#7a6a7a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
+    { "id": "back", "label": { "en": "Back", "es": "Espalda", "fr": "Dos" }, "default_color": "#7a6a7a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "default": 960, "min": 660, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)" }, "tooltip": { "en": "Full chest", "es": "Pecho completo", "fr": "Poitrine complète" } },
+    { "id": "top_length", "type": "slider", "default": 520, "min": 320, "max": 800, "step": 10, "label": { "en": "Length (mm)", "es": "Largo (mm)", "fr": "Longueur (mm)" }, "tooltip": { "en": "Top edge to hem", "es": "Del canto superior al ruedo", "fr": "Du bord supérieur à l'ourlet" } },
+    { "id": "sleeve_grown", "type": "slider", "default": 180, "min": 60, "max": 320, "step": 10, "label": { "en": "Grown sleeve (mm)", "es": "Manga nacida (mm)", "fr": "Manche coupée à même (mm)" }, "tooltip": { "en": "Short sleeve off the shoulder", "es": "Manga corta fuera del hombro", "fr": "Manche courte hors épaule" } },
+    { "id": "flounce", "type": "slider", "default": 90, "min": 0, "max": 220, "step": 10, "label": { "en": "Flounce depth (mm)", "es": "Profundidad de olán (mm)", "fr": "Profondeur de volant (mm)" }, "tooltip": { "en": "Top ruffle depth", "es": "Profundidad del olán superior", "fr": "Profondeur du volant supérieur" } },
+    { "id": "ease", "type": "slider", "default": 160, "min": 80, "max": 420, "step": 10, "label": { "en": "Blousy ease (mm)", "es": "Holgura amplia (mm)", "fr": "Aisance ample (mm)" }, "tooltip": { "en": "Elastic gathers it", "es": "El elástico lo frunce", "fr": "L'élastique le fronce" } }
+  ],
+  "presets": [
+    { "id": "classic", "label": { "en": "Classic", "es": "Clásico", "fr": "Classique" }, "values": { "flounce": 90 } },
+    { "id": "flat", "label": { "en": "No flounce", "es": "Sin olán", "fr": "Sans volant" }, "values": { "flounce": 0 } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "top_casing", "type": "neckline", "label": { "en": "Elasticated top edge", "es": "Canto superior con elástico", "fr": "Bord supérieur élastiqué" }, "edges": [{ "piece": "front", "edge": "top" }, { "piece": "back", "edge": "top" }], "parameters": ["chest_girth", "flounce"] },
+      { "id": "side_seam", "type": "side_seam", "label": { "en": "Side seam", "es": "Costura lateral", "fr": "Couture latérale" }, "edges": [{ "piece": "front", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["top_length"] }
+    ],
+    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "societal_benefit": {
+      "en": "An open, made-to-measure off-shoulder top is one of the easiest garments to make — two panels and an elastic edge — sized to the wearer, so a warm-weather staple is makeable and mendable from a single soft fabric at any body shape.",
+      "es": "Un top de hombros descubiertos abierto y a la medida es una de las prendas más fáciles de hacer — dos paneles y un canto elástico — ajustado a quien lo viste, para que un básico de clima cálido sea fabricable y reparable a partir de una sola tela suave en cualquier figura.",
+      "fr": "Un top épaules dénudées ouvert et sur mesure est l'un des vêtements les plus faciles à réaliser — deux panneaux et un bord élastique — ajusté à la personne, de sorte qu'un basique d'été soit fabricable et réparable à partir d'un seul tissu doux, quelle que soit la morphologie."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

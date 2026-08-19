@@ -1,0 +1,384 @@
+{
+  "project": {
+    "name": "Sweater Dress",
+    "slug": "sweater-dress",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The knit sweater dress: a long-sleeved knit column dress with a ribbed crew or funnel neck and ribbed cuffs/hem, cut close and cosy in a sweater knit — the winter pull-on dress. Distinct from FC-100's sleeveless tank-dress and the woven dresses. Front and back share the body width so the shoulder and side seams balance; a set sleeve joins at the armhole. A soft-goods garment — no hardware. FC-200 long-tail (dress gap).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El vestido suéter de punto: un vestido columna de punto de manga larga con cuello redondo o tipo tortuga de canalé y puños/ruedo de canalé, ceñido y abrigador en punto grueso — el vestido de meter para invierno. Distinto del vestido de tirantes sin mangas de FC-100 y de los vestidos de tela. Frente y espalda comparten el ancho del cuerpo, así que las costuras de hombro y lateral se equilibran; una manga sastre se une en la sisa. Una prenda textil — sin herrajes. Cola larga FC-200 (hueco de vestido).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La robe pull en maille : une robe colonne en maille à manches longues avec un col rond ou cheminée côtelé et des poignets/ourlet côtelés, coupée près du corps et douillette dans une maille épaisse — la robe d'hiver à enfiler. Distincte de la robe débardeur sans manches de FC-100 et des robes tissées. Devant et dos partagent la largeur du corps, donc les coutures d'épaule et latérale s'équilibrent ; une manche montée s'assemble à l'emmanchure. Un vêtement textile — sans quincaillerie. Longue traîne FC-200 (manque robe).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "sweater-dress",
+      "knit",
+      "long-sleeve",
+      "winter",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Dress",
+        "es": "Vestido completo",
+        "fr": "Robe complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "band"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front",
+        "es": "Frente",
+        "fr": "Devant"
+      },
+      "default_color": "#5a5a6a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#5a5a6a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#4a4a5a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "band",
+      "label": {
+        "en": "Ribbed band",
+        "es": "Banda de canalé",
+        "fr": "Bande côtelée"
+      },
+      "default_color": "#3a3a4a",
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "default": 960,
+      "min": 660,
+      "max": 1500,
+      "step": 10,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest",
+        "es": "Pecho completo",
+        "fr": "Poitrine complète"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "default": 1000,
+      "min": 700,
+      "max": 1600,
+      "step": 10,
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      },
+      "tooltip": {
+        "en": "Full hip",
+        "es": "Cadera completa",
+        "fr": "Hanches complètes"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      }
+    },
+    {
+      "id": "dress_length",
+      "type": "slider",
+      "default": 940,
+      "min": 700,
+      "max": 1350,
+      "step": 10,
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to hem",
+        "es": "Del hombro al ruedo",
+        "fr": "De l'épaule à l'ourlet"
+      }
+    },
+    {
+      "id": "neck_width",
+      "type": "slider",
+      "default": 180,
+      "min": 130,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Neck width (mm)",
+        "es": "Ancho de cuello (mm)",
+        "fr": "Largeur d'encolure (mm)"
+      },
+      "tooltip": {
+        "en": "Crew/funnel neck",
+        "es": "Cuello redondo/tortuga",
+        "fr": "Col rond/cheminée"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 600,
+      "min": 350,
+      "max": 720,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to cuff",
+        "es": "Del hombro al puño",
+        "fr": "De l'épaule au poignet"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "arm_length"
+      }
+    },
+    {
+      "id": "sleeve_depth",
+      "type": "slider",
+      "default": 240,
+      "min": 180,
+      "max": 360,
+      "step": 10,
+      "label": {
+        "en": "Sleeve depth (mm)",
+        "es": "Profundidad de manga (mm)",
+        "fr": "Profondeur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Armhole drop",
+        "es": "Caída de sisa",
+        "fr": "Descente d'emmanchure"
+      }
+    },
+    {
+      "id": "wrist_girth",
+      "type": "slider",
+      "default": 180,
+      "min": 130,
+      "max": 300,
+      "step": 10,
+      "label": {
+        "en": "Wrist girth (mm)",
+        "es": "Contorno de muñeca (mm)",
+        "fr": "Tour de poignet (mm)"
+      },
+      "tooltip": {
+        "en": "Cuff",
+        "es": "Puño",
+        "fr": "Poignet"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "wrist_girth"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "default": 90,
+      "min": 20,
+      "max": 260,
+      "step": 10,
+      "label": {
+        "en": "Fit ease (mm)",
+        "es": "Holgura (mm)",
+        "fr": "Aisance (mm)"
+      },
+      "tooltip": {
+        "en": "Close cosy fit",
+        "es": "Ajuste ceñido abrigador",
+        "fr": "Coupe ajustée douillette"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "fitted",
+      "label": {
+        "en": "Fitted",
+        "es": "Ceñido",
+        "fr": "Ajusté"
+      },
+      "values": {
+        "ease": 60
+      }
+    },
+    {
+      "id": "relaxed",
+      "label": {
+        "en": "Relaxed",
+        "es": "Holgado",
+        "fr": "Détendu"
+      },
+      "values": {
+        "ease": 180,
+        "dress_length": 1020
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "shoulder_seam",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder seam",
+          "es": "Costura de hombro",
+          "fr": "Couture d'épaule"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "back",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "neck_width",
+          "chest_girth"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam",
+          "es": "Costura lateral",
+          "fr": "Couture latérale"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "hip_girth"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Armhole",
+          "es": "Sisa",
+          "fr": "Emmanchure"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "sleevehead"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "sleeve_depth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure sweater dress puts a warm, cover-you knit dress within reach of a home sewist with a stretch machine, sized to the wearer and finished with simple ribbed bands, keeping a winter staple makeable and mendable.",
+      "es": "Un vestido suéter abierto y a la medida pone un vestido de punto abrigador al alcance de quien cosa en casa con máquina para elástico, ajustado a quien lo viste y rematado con simples bandas de canalé, manteniendo un básico de invierno fabricable y reparable.",
+      "fr": "Une robe pull ouverte et sur mesure met une robe en maille chaude et couvrante à la portée d'un couturier amateur équipé pour l'extensible, ajustée à la personne et finie par de simples bandes côtelées, gardant un basique d'hiver fabricable et réparable."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

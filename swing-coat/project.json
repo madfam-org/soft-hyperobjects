@@ -1,0 +1,361 @@
+{
+  "project": {
+    "name": "Swing Coat",
+    "slug": "swing-coat",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The swing coat: a coat that flares dramatically from a fitted shoulder to a wide swinging hem (1950s A-line/trapeze line), with a set sleeve and a small collar. Distinct from FC-100's straight overcoat/trench/parka. The flare is in the side seam — front and back release to the same wide hem so the side balances by construction; the front laps for buttons. A soft-goods garment — buttons are the maker's hardware. FC-200 long-tail (outerwear gap).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El abrigo swing: un abrigo que se acampana dramáticamente desde un hombro ajustado hasta un ruedo amplio y oscilante (línea años 50 en A/trapecio), con manga sastre y cuello pequeño. Distinto del abrigo recto/trench/parka de FC-100. El vuelo va en la costura lateral — frente y espalda sueltan al mismo ruedo amplio para que el lateral se equilibre por construcción; el frente traslapa para botones. Una prenda textil — los botones son herraje de quien elabora. Cola larga FC-200 (hueco de abrigo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le manteau swing : un manteau qui s'évase fortement d'une épaule ajustée vers un large ourlet oscillant (ligne années 50 trapèze/A), avec une manche montée et un petit col. Distinct du manteau droit/trench/parka de FC-100. L'évasé est dans la couture latérale — devant et dos libèrent vers le même large ourlet pour que le côté s'équilibre par construction ; le devant croise pour les boutons. Un vêtement textile — les boutons sont la quincaillerie du fabricant. Longue traîne FC-200 (manque manteau).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "swing-coat",
+      "outerwear",
+      "a-line",
+      "trapeze",
+      "1950s",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Coat",
+        "es": "Abrigo completo",
+        "fr": "Manteau complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "collar"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (lap + buttons)",
+        "es": "Frente (traslape + botones)",
+        "fr": "Devant (croisure + boutons)"
+      },
+      "default_color": "#4a4650",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#4a4650",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#3a3640",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Collar",
+        "es": "Cuello",
+        "fr": "Col"
+      },
+      "default_color": "#3a3640",
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "default": 1040,
+      "min": 760,
+      "max": 1750,
+      "step": 10,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest",
+        "es": "Pecho completo",
+        "fr": "Poitrine complète"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "coat_length",
+      "type": "slider",
+      "default": 900,
+      "min": 600,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to hem",
+        "es": "De la nuca al ruedo",
+        "fr": "De la nuque à l'ourlet"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 440,
+      "min": 320,
+      "max": 580,
+      "step": 10,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "Full neck",
+        "es": "Cuello completo",
+        "fr": "Cou complet"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 600,
+      "min": 400,
+      "max": 720,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to cuff",
+        "es": "Del hombro al puño",
+        "fr": "De l'épaule au poignet"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "arm_length"
+      }
+    },
+    {
+      "id": "sleeve_depth",
+      "type": "slider",
+      "default": 280,
+      "min": 200,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Sleeve depth (mm)",
+        "es": "Profundidad de manga (mm)",
+        "fr": "Profondeur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Armhole drop",
+        "es": "Caída de sisa",
+        "fr": "Descente d'emmanchure"
+      }
+    },
+    {
+      "id": "swing_flare",
+      "type": "slider",
+      "default": 340,
+      "min": 120,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Swing flare (mm)",
+        "es": "Vuelo swing (mm)",
+        "fr": "Évasé swing (mm)"
+      },
+      "tooltip": {
+        "en": "Extra hem per side",
+        "es": "Ruedo extra por lado",
+        "fr": "Ourlet en plus par côté"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "default": 260,
+      "min": 160,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Coat ease (mm)",
+        "es": "Holgura de abrigo (mm)",
+        "fr": "Aisance manteau (mm)"
+      },
+      "tooltip": {
+        "en": "Over layers",
+        "es": "Sobre capas",
+        "fr": "Par-dessus les couches"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic swing",
+        "es": "Swing clásico",
+        "fr": "Swing classique"
+      },
+      "values": {
+        "swing_flare": 340
+      }
+    },
+    {
+      "id": "dramatic",
+      "label": {
+        "en": "Dramatic",
+        "es": "Dramático",
+        "fr": "Spectaculaire"
+      },
+      "values": {
+        "swing_flare": 480,
+        "coat_length": 1000
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "shoulder_seam",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder seam",
+          "es": "Costura de hombro",
+          "fr": "Couture d'épaule"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "back",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "chest_girth"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam (flared)",
+          "es": "Costura lateral (acampanada)",
+          "fr": "Couture latérale (évasée)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "swing_flare",
+          "coat_length"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Armhole",
+          "es": "Sisa",
+          "fr": "Emmanchure"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "sleevehead"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "sleeve_depth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure swing coat brings a dramatic mid-century silhouette within reach of a home maker, sized to the wearer over layers, so a striking winter coat is makeable and mendable rather than bought at a premium.",
+      "es": "Un abrigo swing abierto y a la medida pone una silueta dramática de mediados de siglo al alcance de quien crea en casa, ajustado a quien lo viste sobre capas, para que un abrigo de invierno llamativo sea fabricable y reparable en vez de comprado con sobreprecio.",
+      "fr": "Un manteau swing ouvert et sur mesure met une silhouette spectaculaire du milieu du siècle à la portée d'un artisan amateur, ajusté à la personne par-dessus les couches, de sorte qu'un manteau d'hiver saisissant soit fabricable et réparable plutôt qu'acheté à prix fort."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
