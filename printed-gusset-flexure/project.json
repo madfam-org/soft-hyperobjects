@@ -1,0 +1,182 @@
+{
+  "project": {
+    "name": "Printed Gusset Flexure",
+    "slug": "printed-gusset-flexure",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A Yantra4D-bridged notion for the additive-manufacturing frontier of trims: a 3D-printed thin TPU diamond gusset cut with a slit lattice so it stretches biaxially for underarm, crotch, or side-vent range of motion. Fashion Cabinet owns the fashion (sizing to the wearer, the sewable-edge placement guide) while the printed part itself is a Yantra4D solid (`tpu-gusset-flexure`). One material identity spans this notion and that solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un avío puenteado con Yantra4D para la frontera de manufactura aditiva de los avíos: un refuerzo de diamante TPU delgado impreso en 3D cortado con una retícula de ranuras para que estire biaxialmente en axila, entrepierna o abertura lateral. Fashion Cabinet posee la moda (dimensionado a quien lo usa, la guía de colocación del canto cosible) mientras la parte impresa es un sólido de Yantra4D (`tpu-gusset-flexure`). Una identidad de material abarca este avío y ese sólido.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "gusset",
+      "flexure",
+      "stretch",
+      "tpu",
+      "am-fashion",
+      "notion",
+      "printed-textile",
+      "hyperobject",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Placement Guide",
+        "es": "Guía de colocación"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "placement-guide"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Printed Gusset Flexure Placement Guide",
+        "es": "Guía de Printed Gusset Flexure"
+      },
+      "default_color": "#8a94a0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "gusset_w",
+      "type": "slider",
+      "default": 70,
+      "min": 20,
+      "max": 200,
+      "step": 2,
+      "label": {
+        "en": "Gusset width (mm)",
+        "es": "Ancho del refuerzo (mm)"
+      }
+    },
+    {
+      "id": "gusset_h",
+      "type": "slider",
+      "default": 90,
+      "min": 20,
+      "max": 260,
+      "step": 2,
+      "label": {
+        "en": "Gusset height (mm)",
+        "es": "Alto del refuerzo (mm)"
+      }
+    },
+    {
+      "id": "wall",
+      "type": "slider",
+      "default": 1.4,
+      "min": 0.8,
+      "max": 4.0,
+      "step": 0.1,
+      "label": {
+        "en": "Printed wall (mm)",
+        "es": "Pared impresa (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 8,
+      "min": 0,
+      "max": 25,
+      "step": 1,
+      "label": {
+        "en": "Sew-edge allowance (mm)",
+        "es": "Margen de canto cosible (mm)"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "default",
+      "label": {
+        "en": "Default",
+        "es": "Predeterminado"
+      },
+      "values": {
+        "gusset_w": 70
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "printed gusset flexure",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "tpu-gusset-flexure",
+      "linked": true,
+      "params_map": {
+        "diag_w": "gusset_w",
+        "diag_h": "gusset_h",
+        "wall": "wall"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "notion",
+    "interfaces": [
+      {
+        "id": "gusset_edge",
+        "type": "custom",
+        "label": {
+          "en": "Sewable edge",
+          "es": "Canto cosible"
+        },
+        "edges": [
+          {
+            "piece": "placement-guide",
+            "edge": "guide"
+          }
+        ],
+        "parameters": [
+          "gusset_w",
+          "gusset_h",
+          "wall",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "printed_textile": true,
+      "am_fashion": true
+    },
+    "societal_benefit": {
+      "en": "Turns range-of-motion gusseting, made an open printable stretch part: sized to the garment and sewn in, with the printable part an open Yantra4D object — the whole finding repairable, made-to-measure, and free to make.",
+      "es": "Convierte range-of-motion gusseting, made an open printable stretch part en algo abierto: dimensionado a la prenda y cosido, con la parte imprimible como objeto abierto de Yantra4D — todo el avío reparable, a la medida y libre de hacer."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

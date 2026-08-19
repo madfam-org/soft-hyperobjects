@@ -1,0 +1,198 @@
+{
+  "project": {
+    "name": "Printed Hinge Collar",
+    "slug": "printed-hinge-collar",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A Yantra4D-bridged notion for the additive-manufacturing frontier of trims: a 3D-printed TPU collar band with a living-hinge fold line that stands up or folds down and holds its crease — no interfacing, no topstitched roll line. Fashion Cabinet owns the fashion (sizing to the wearer, the sewable-edge placement guide) while the printed part itself is a Yantra4D solid (`tpu-hinge-collar`). One material identity spans this notion and that solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un avío puenteado con Yantra4D para la frontera de manufactura aditiva de los avíos: una pretina de cuello TPU impresa con una línea de doblez de bisagra viva que se para o dobla y mantiene su pliegue — sin entretela, sin línea de rodillo pespunteada. Fashion Cabinet posee la moda (dimensionado a quien lo usa, la guía de colocación del canto cosible) mientras la parte impresa es un sólido de Yantra4D (`tpu-hinge-collar`). Una identidad de material abarca este avío y ese sólido.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "collar",
+      "hinge",
+      "tpu",
+      "am-fashion",
+      "notion",
+      "trim",
+      "printed-textile",
+      "hyperobject",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Placement Guide",
+        "es": "Guía de colocación"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "placement-guide"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Printed Hinge Collar Placement Guide",
+        "es": "Guía de Printed Hinge Collar"
+      },
+      "default_color": "#8a94a0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 400,
+      "min": 280,
+      "max": 600,
+      "step": 5,
+      "label": {
+        "en": "Neck / collar girth (mm)",
+        "es": "Contorno de cuello (mm)"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      }
+    },
+    {
+      "id": "band_h",
+      "type": "slider",
+      "default": 30,
+      "min": 10,
+      "max": 120,
+      "step": 1,
+      "label": {
+        "en": "Sewn band height (mm)",
+        "es": "Alto de pretina cosida (mm)"
+      }
+    },
+    {
+      "id": "stand_h",
+      "type": "slider",
+      "default": 35,
+      "min": 10,
+      "max": 120,
+      "step": 1,
+      "label": {
+        "en": "Stand height (mm)",
+        "es": "Alto de parada (mm)"
+      }
+    },
+    {
+      "id": "wall",
+      "type": "slider",
+      "default": 2.0,
+      "min": 1.0,
+      "max": 6.0,
+      "step": 0.1,
+      "label": {
+        "en": "Printed wall (mm)",
+        "es": "Pared impresa (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 25,
+      "step": 1,
+      "label": {
+        "en": "Sew-edge allowance (mm)",
+        "es": "Margen de canto cosible (mm)"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "default",
+      "label": {
+        "en": "Default",
+        "es": "Predeterminado"
+      },
+      "values": {
+        "neck_girth": 400
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "printed hinge collar",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "tpu-hinge-collar",
+      "linked": true,
+      "params_map": {
+        "collar_len": "neck_girth",
+        "band_h": "band_h",
+        "wall": "wall"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "notion",
+    "interfaces": [
+      {
+        "id": "collar_edge",
+        "type": "cuff",
+        "label": {
+          "en": "Sewable edge",
+          "es": "Canto cosible"
+        },
+        "edges": [
+          {
+            "piece": "placement-guide",
+            "edge": "guide"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "band_h",
+          "wall",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "printed_textile": true,
+      "am_fashion": true
+    },
+    "societal_benefit": {
+      "en": "Turns the crisp roll line of a tailored collar, made an open printable trim: sized to the garment and sewn in, with the printable part an open Yantra4D object — the whole finding repairable, made-to-measure, and free to make.",
+      "es": "Convierte the crisp roll line of a tailored collar, made an open printable trim en algo abierto: dimensionado a la prenda y cosido, con la parte imprimible como objeto abierto de Yantra4D — todo el avío reparable, a la medida y libre de hacer."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

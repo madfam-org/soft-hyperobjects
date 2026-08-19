@@ -1,0 +1,185 @@
+{
+  "project": {
+    "name": "Printed Epaulette",
+    "slug": "printed-epaulette",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A Yantra4D-bridged notion for the additive-manufacturing frontier of trims: a 3D-printed rigid structured shoulder board (tapered plate + rim + button post) for a uniform or costume shoulder line. Fashion Cabinet owns the fashion (sizing to the wearer, the sewable-edge placement guide) while the printed part itself is a Yantra4D solid (`epaulette-board`). One material identity spans this notion and that solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un avío puenteado con Yantra4D para la frontera de manufactura aditiva de los avíos: una charretera rígida estructurada impresa en 3D (placa cónica + reborde + poste de botón) para una línea de hombro de uniforme o disfraz. Fashion Cabinet posee la moda (dimensionado a quien lo usa, la guía de colocación del canto cosible) mientras la parte impresa es un sólido de Yantra4D (`epaulette-board`). Una identidad de material abarca este avío y ese sólido.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "epaulette",
+      "shoulder",
+      "uniform",
+      "hardware",
+      "am-fashion",
+      "notion",
+      "hyperobject",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Placement Guide",
+        "es": "Guía de colocación"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "placement-guide"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Printed Epaulette Placement Guide",
+        "es": "Guía de Printed Epaulette"
+      },
+      "default_color": "#8a94a0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "shoulder_len",
+      "type": "slider",
+      "default": 140,
+      "min": 60,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Shoulder length (mm)",
+        "es": "Largo del hombro (mm)"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "shoulder_length"
+      }
+    },
+    {
+      "id": "wide_w",
+      "type": "slider",
+      "default": 60,
+      "min": 20,
+      "max": 120,
+      "step": 1,
+      "label": {
+        "en": "Shoulder-seam width (mm)",
+        "es": "Ancho en costura (mm)"
+      }
+    },
+    {
+      "id": "narrow_w",
+      "type": "slider",
+      "default": 40,
+      "min": 15,
+      "max": 120,
+      "step": 1,
+      "label": {
+        "en": "Collar-end width (mm)",
+        "es": "Ancho en cuello (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 25,
+      "step": 1,
+      "label": {
+        "en": "Sew-edge allowance (mm)",
+        "es": "Margen de canto cosible (mm)"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "default",
+      "label": {
+        "en": "Default",
+        "es": "Predeterminado"
+      },
+      "values": {
+        "shoulder_len": 140
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "printed epaulette",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "epaulette-board",
+      "linked": true,
+      "params_map": {
+        "board_len": "shoulder_len",
+        "wide_w": "wide_w",
+        "narrow_w": "narrow_w"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "notion",
+    "interfaces": [
+      {
+        "id": "shoulder_edge",
+        "type": "shoulder",
+        "label": {
+          "en": "Sewable edge",
+          "es": "Canto cosible"
+        },
+        "edges": [
+          {
+            "piece": "placement-guide",
+            "edge": "guide"
+          }
+        ],
+        "parameters": [
+          "shoulder_len",
+          "wide_w",
+          "narrow_w",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "printed_textile": true,
+      "am_fashion": true
+    },
+    "societal_benefit": {
+      "en": "Turns rank insignia and costume shoulder structure, made an open printable finding: sized to the garment and sewn in, with the printable part an open Yantra4D object — the whole finding repairable, made-to-measure, and free to make.",
+      "es": "Convierte rank insignia and costume shoulder structure, made an open printable finding en algo abierto: dimensionado a la prenda y cosido, con la parte imprimible como objeto abierto de Yantra4D — todo el avío reparable, a la medida y libre de hacer."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

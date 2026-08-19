@@ -1,0 +1,198 @@
+{
+  "project": {
+    "name": "Printed Corset Busk",
+    "slug": "printed-corset-busk",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A Yantra4D-bridged notion for the additive-manufacturing frontier of trims: a 3D-printed rigid two-part front-closure busk (stud knobs + keyhole plates) so a corset opens and closes without unlacing. Fashion Cabinet owns the fashion (sizing to the wearer, the sewable-edge placement guide) while the printed part itself is a Yantra4D solid (`corset-busk`). One material identity spans this notion and that solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un avío puenteado con Yantra4D para la frontera de manufactura aditiva de los avíos: un busco de cierre frontal rígido de dos partes impreso en 3D (pernos + placas de ojal) para que un corsé abra y cierre sin desamarrar. Fashion Cabinet posee la moda (dimensionado a quien lo usa, la guía de colocación del canto cosible) mientras la parte impresa es un sólido de Yantra4D (`corset-busk`). Una identidad de material abarca este avío y ese sólido.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "corset",
+      "busk",
+      "closure",
+      "hardware",
+      "am-fashion",
+      "notion",
+      "hyperobject",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Placement Guide",
+        "es": "Guía de colocación"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "placement-guide"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Printed Corset Busk Placement Guide",
+        "es": "Guía de Printed Corset Busk"
+      },
+      "default_color": "#8a94a0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "busk_len",
+      "type": "slider",
+      "default": 300,
+      "min": 120,
+      "max": 500,
+      "step": 5,
+      "label": {
+        "en": "Busk length (mm)",
+        "es": "Largo del busco (mm)"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "front_neck_to_waist"
+      }
+    },
+    {
+      "id": "plate_w",
+      "type": "slider",
+      "default": 16,
+      "min": 8,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Plate width (mm)",
+        "es": "Ancho de placa (mm)"
+      }
+    },
+    {
+      "id": "plate_t",
+      "type": "slider",
+      "default": 3.0,
+      "min": 1.5,
+      "max": 8.0,
+      "step": 0.1,
+      "label": {
+        "en": "Plate thickness (mm)",
+        "es": "Espesor de placa (mm)"
+      }
+    },
+    {
+      "id": "knobs",
+      "type": "slider",
+      "default": 5,
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Closure knobs",
+        "es": "Pernos de cierre"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 25,
+      "step": 1,
+      "label": {
+        "en": "Sew-edge allowance (mm)",
+        "es": "Margen de canto cosible (mm)"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "default",
+      "label": {
+        "en": "Default",
+        "es": "Predeterminado"
+      },
+      "values": {
+        "busk_len": 300
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "printed corset busk",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "corset-busk",
+      "linked": true,
+      "params_map": {
+        "busk_len": "busk_len",
+        "plate_w": "plate_w",
+        "plate_t": "plate_t",
+        "knobs": "knobs"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "notion",
+    "interfaces": [
+      {
+        "id": "busk_edge",
+        "type": "placket",
+        "label": {
+          "en": "Sewable edge",
+          "es": "Canto cosible"
+        },
+        "edges": [
+          {
+            "piece": "placement-guide",
+            "edge": "guide"
+          }
+        ],
+        "parameters": [
+          "busk_len",
+          "plate_w",
+          "plate_t",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "printed_textile": true,
+      "am_fashion": true
+    },
+    "societal_benefit": {
+      "en": "Turns corsetry's signature spring-steel front closure, made an open printable finding: sized to the garment and sewn in, with the printable part an open Yantra4D object — the whole finding repairable, made-to-measure, and free to make.",
+      "es": "Convierte corsetry's signature spring-steel front closure, made an open printable finding en algo abierto: dimensionado a la prenda y cosido, con la parte imprimible como objeto abierto de Yantra4D — todo el avío reparable, a la medida y libre de hacer."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
