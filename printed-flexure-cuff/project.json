@@ -1,0 +1,103 @@
+{
+  "project": {
+    "name": "Printed Flexure Cuff",
+    "slug": "printed-flexure-cuff",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A Yantra4D-bridged notion for the additive-manufacturing frontier of trims: a 3D-printed TPU cuff that stretches over the hand and springs back — a sleeve or hem finish with no separate elastic. Fashion Cabinet owns the fashion (cuff circumference to the wrist, height, the sew-in placement guide) while the flexure band itself is a Yantra4D solid (`tpu-flexure-cuff`) printed in place. One material identity, Bambu TPU 95A, spans this notion and that solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un avío puenteado con Yantra4D para la frontera de manufactura aditiva de los avíos: un puño TPU impreso en 3D que se estira sobre la mano y regresa — un acabado de manga o ruedo sin elástico aparte. Fashion Cabinet posee la moda (circunferencia a la muñeca, altura, la guía de colocación cosible) mientras la banda de flexión es un sólido de Yantra4D (`tpu-flexure-cuff`) impreso en sitio. Una identidad de material, Bambu TPU 95A, abarca este avío y ese sólido.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["cuff", "flexure", "tpu", "am-fashion", "notion", "trim", "printed-textile", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+    }
+  },
+  "modes": [
+    {
+      "id": "placement-guide",
+      "label": { "en": "Cuff Placement Guide", "es": "Guía de colocación del puño" },
+      "script_file": "main.py",
+      "pieces": ["placement-guide"]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "placement-guide",
+      "label": { "en": "Flexure Cuff Placement Guide", "es": "Guía de colocación de puño flexible" },
+      "default_color": "#7fa8a0",
+      "cut": { "quantity": 1, "on_fold": false, "mirror": false }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "wrist_girth", "type": "slider", "default": 170, "min": 120, "max": 320, "step": 5,
+      "label": { "en": "Wrist / opening girth (mm)", "es": "Contorno de muñeca / abertura (mm)" },
+      "tooltip": { "en": "The finished sleeve opening; drives the printed cuff circumference", "es": "La abertura terminada de la manga; determina la circunferencia del puño impreso" },
+      "measurement": { "standard": "iso_8559", "code": "wrist_girth" }
+    },
+    {
+      "id": "cuff_height", "type": "slider", "default": 60, "min": 15, "max": 200, "step": 5,
+      "label": { "en": "Cuff height (mm)", "es": "Altura del puño (mm)" },
+      "tooltip": { "en": "How tall the cuff band is up the sleeve", "es": "Qué tan alta es la banda del puño en la manga" }
+    },
+    {
+      "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 25, "step": 1,
+      "label": { "en": "Sew-edge allowance (mm)", "es": "Margen de canto cosible (mm)" },
+      "tooltip": { "en": "Tape-bound edge allowance where the cuff sews to the sleeve", "es": "Margen de canto rematado donde el puño se cose a la manga" }
+    },
+    {
+      "id": "wall", "type": "slider", "default": 2.0, "min": 1.0, "max": 6.0, "step": 0.1,
+      "label": { "en": "Printed wall (mm)", "es": "Pared impresa (mm)" },
+      "tooltip": { "en": "Passed to the Yantra4D band; thinner = softer flex", "es": "Se pasa a la banda de Yantra4D; más delgada = flexión más suave" }
+    }
+  ],
+  "presets": [
+    { "id": "sleeve-170", "label": { "en": "Sleeve cuff (170)", "es": "Puño de manga (170)" }, "values": { "wrist_girth": 170, "cuff_height": 60 } },
+    { "id": "jogger-260", "label": { "en": "Jogger hem (260)", "es": "Ruedo jogger (260)" }, "values": { "wrist_girth": 260, "cuff_height": 80 } }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "printed flexure cuff",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "tpu-flexure-cuff",
+      "linked": true,
+      "params_map": {
+        "cuff_circum": "wrist_girth",
+        "cuff_height": "cuff_height",
+        "wall": "wall"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "notion",
+    "interfaces": [
+      {
+        "id": "cuff_edge",
+        "type": "cuff",
+        "label": { "en": "Sewable cuff edge", "es": "Canto cosible del puño" },
+        "edges": [{ "piece": "placement-guide", "edge": "guide" }],
+        "parameters": ["wrist_girth", "cuff_height", "wall", "seam_allowance"]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "printed_textile": true,
+      "am_fashion": true
+    },
+    "societal_benefit": {
+      "en": "A stretch cuff anyone can print replaces sewn elastic — which perishes and is rarely repairable — with an open, made-to-measure flexure band sized to the sleeve, washable and recyclable, that springs back for the life of the garment. It closes the loop from a Fashion Cabinet trim to a printable Yantra4D solid.",
+      "es": "Un puño elástico que cualquiera puede imprimir reemplaza el elástico cosido — que se degrada y rara vez se repara — con una banda de flexión abierta y a la medida de la manga, lavable y reciclable, que recupera durante toda la vida de la prenda. Cierra el ciclo de un avío de Fashion Cabinet a un sólido imprimible de Yantra4D."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "project": {
+    "name": "TPU Pleat Panel",
+    "slug": "tpu-pleat-panel",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A Yantra4D-bridged notion for the additive-manufacturing frontier of the fabric library: a 3D-printed TPU accordion-pleated panel that concertinas like pleated cloth. Fashion Cabinet owns the fashion (finished panel dimensions, the pleat count from the panel height, the sewable-edge placement guide) while the pleated wall itself is a Yantra4D solid (`tpu-pleat-panel`) printed flat. One material identity, Bambu TPU 95A, spans this notion and that solid — the same panel is a Fashion Cabinet fabric and a Yantra4D object at once.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un avío puenteado con Yantra4D para la frontera de manufactura aditiva de la biblioteca de telas: un panel plisado en acordeón TPU impreso en 3D que se pliega como tela plisada. Fashion Cabinet posee la moda (dimensiones terminadas, el número de pliegues según la altura, la guía de colocación del canto cosible) mientras la pared plisada es un sólido de Yantra4D (`tpu-pleat-panel`) impreso plano. Una identidad de material, Bambu TPU 95A, abarca este avío y ese sólido.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["pleat", "panel", "tpu", "am-fashion", "notion", "printed-textile", "hyperobject", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+    }
+  },
+  "modes": [
+    {
+      "id": "placement-guide",
+      "label": { "en": "Panel Placement Guide", "es": "Guía de colocación del panel" },
+      "script_file": "main.py",
+      "pieces": ["placement-guide"]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "placement-guide",
+      "label": { "en": "Pleat Panel Placement Guide", "es": "Guía de colocación de panel plisado" },
+      "default_color": "#8f86a8",
+      "cut": { "quantity": 1, "on_fold": false, "mirror": false }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "panel_width_mm", "type": "slider", "default": 200, "min": 40, "max": 300, "step": 5,
+      "label": { "en": "Panel width (mm, ≤ print bed)", "es": "Ancho del panel (mm, ≤ cama)" },
+      "tooltip": { "en": "Finished width across the pleats; capped at the printed panel's bed width", "es": "Ancho terminado a través de los pliegues; limitado al ancho de cama" }
+    },
+    {
+      "id": "panel_height_mm", "type": "slider", "default": 320, "min": 40, "max": 800, "step": 5,
+      "label": { "en": "Panel height / drop (mm)", "es": "Alto / caída del panel (mm)" },
+      "tooltip": { "en": "Relaxed drop down the body; the pleat count follows", "es": "Caída en reposo por el cuerpo; el número de pliegues sigue" }
+    },
+    {
+      "id": "pleat_depth", "type": "slider", "default": 12, "min": 3, "max": 40, "step": 0.5,
+      "label": { "en": "Pleat depth (mm)", "es": "Profundidad de pliegue (mm)" },
+      "tooltip": { "en": "Passed to the Yantra4D panel; deeper = more compression", "es": "Se pasa al panel de Yantra4D; mayor = más compresión" }
+    },
+    {
+      "id": "wall", "type": "slider", "default": 1.2, "min": 0.6, "max": 4, "step": 0.1,
+      "label": { "en": "Printed wall (mm)", "es": "Pared impresa (mm)" },
+      "tooltip": { "en": "Facet wall; thinner = softer folds", "es": "Pared de faceta; más delgada = pliegues más suaves" }
+    },
+    {
+      "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 25, "step": 1,
+      "label": { "en": "Sew-edge allowance (mm)", "es": "Margen de canto cosible (mm)" },
+      "tooltip": { "en": "Tape-bound edge allowance where the panel sews to a garment", "es": "Margen de canto rematado donde el panel se cose a la prenda" }
+    }
+  ],
+  "presets": [
+    { "id": "skirt-panel", "label": { "en": "Skirt panel (200×320)", "es": "Panel de falda (200×320)" }, "values": { "panel_width_mm": 200, "panel_height_mm": 320, "pleat_depth": 12 } },
+    { "id": "collar-frill", "label": { "en": "Collar frill (140×90)", "es": "Volante de cuello (140×90)" }, "values": { "panel_width_mm": 140, "panel_height_mm": 90, "pleat_depth": 8 } }
+  ],
+  "constraints": [
+    {
+      "expression": "panel_width_mm <= 300",
+      "severity": "error",
+      "message": { "en": "Panel width exceeds the printed panel's bed-bound width — split into panels", "es": "El ancho excede el ancho de cama del panel impreso — divide en paneles" }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "printed pleat panel",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "tpu-pleat-panel",
+      "linked": true,
+      "params_map": {
+        "panel_width": "panel_width_mm",
+        "wall": "wall",
+        "pleat_depth": "pleat_depth",
+        "pleats": "round(panel_height_mm / (2 * pleat_depth))",
+        "pleat_pitch": "max(4, panel_height_mm / round(panel_height_mm / (2 * pleat_depth)))"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "notion",
+    "interfaces": [
+      {
+        "id": "panel_edge",
+        "type": "side_seam",
+        "label": { "en": "Sewable panel edge", "es": "Canto cosible del panel" },
+        "edges": [{ "piece": "placement-guide", "edge": "guide" }],
+        "parameters": ["panel_width_mm", "panel_height_mm", "wall", "seam_allowance"]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "printed_textile": true,
+      "am_fashion": true
+    },
+    "societal_benefit": {
+      "en": "A permanently-pleated fabric anyone can print turns heat-set pleating — a specialist craft — into an open, made-to-measure pattern whose pleats never fall out, washable and recyclable. It closes the loop from a Fashion Cabinet fabric card to a printable Yantra4D solid: the same panel is cloth and object.",
+      "es": "Una tela de pliegue permanente que cualquiera puede imprimir convierte el plisado por termofijado — un oficio especializado — en un patrón abierto a la medida cuyos pliegues nunca se caen, lavable y reciclable. Cierra el ciclo de una ficha de tela de Fashion Cabinet a un sólido imprimible de Yantra4D: el mismo panel es tela y objeto."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
