@@ -60,10 +60,37 @@
       }
     }
   ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Coupe et style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
   "parameters": [
     {
       "id": "bust_girth",
       "type": "slider",
+      "group": "body",
       "default": 900,
       "min": 640,
       "max": 1400,
@@ -86,6 +113,7 @@
     {
       "id": "band_length",
       "type": "slider",
+      "group": "construction",
       "default": 260,
       "min": 140,
       "max": 520,
@@ -104,6 +132,7 @@
     {
       "id": "neg_ease",
       "type": "slider",
+      "group": "fit",
       "default": 80,
       "min": 0,
       "max": 180,
@@ -122,6 +151,7 @@
     {
       "id": "casing",
       "type": "slider",
+      "group": "construction",
       "default": 18,
       "min": 0,
       "max": 45,

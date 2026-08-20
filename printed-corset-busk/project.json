@@ -58,10 +58,21 @@
       }
     }
   ],
+  "parameter_groups": [
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
   "parameters": [
     {
       "id": "busk_len",
       "type": "slider",
+      "group": "construction",
       "default": 300,
       "min": 120,
       "max": 500,
@@ -78,6 +89,7 @@
     {
       "id": "plate_w",
       "type": "slider",
+      "group": "construction",
       "default": 16,
       "min": 8,
       "max": 40,
@@ -90,6 +102,7 @@
     {
       "id": "plate_t",
       "type": "slider",
+      "group": "construction",
       "default": 3.0,
       "min": 1.5,
       "max": 8.0,
@@ -102,6 +115,7 @@
     {
       "id": "knobs",
       "type": "slider",
+      "group": "construction",
       "default": 5,
       "min": 2,
       "max": 12,
@@ -114,6 +128,7 @@
     {
       "id": "seam_allowance",
       "type": "slider",
+      "group": "construction",
       "default": 10,
       "min": 0,
       "max": 25,
@@ -121,7 +136,8 @@
       "label": {
         "en": "Sew-edge allowance (mm)",
         "es": "Margen de canto cosible (mm)"
-      }
+      },
+      "advanced": true
     }
   ],
   "presets": [

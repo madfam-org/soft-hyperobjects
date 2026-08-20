@@ -10,45 +10,365 @@
       "fr": "Le pantalon de cuisine ample à enfiler : un pantalon large, droit, à taille élastique, coupé pour les longs services debout — hanches et cuisses généreuses, jambe droite complète (sans fuseau athlétique), ceinture élastique (cordon en option) et une grande poche plaquée latérale pour le torchon. Distinct des joggings/pantalons athlétiques de FC-100. Un vêtement textile — sans quincaillerie. Longue traîne FC-200 (manque vêtement de travail).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
-    "tags": ["cook-pants", "kitchen", "workwear", "pull-on", "elastic", "commons", "made-to-measure"],
+    "tags": [
+      "cook-pants",
+      "kitchen",
+      "workwear",
+      "pull-on",
+      "elastic",
+      "commons",
+      "made-to-measure"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
-      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
     }
   },
   "modes": [
-    { "id": "set", "label": { "en": "Full Pant", "es": "Pantalón completo", "fr": "Pantalon complet" }, "script_file": "main.py", "pieces": ["front", "back", "waistband"] }
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Pant",
+        "es": "Pantalón completo",
+        "fr": "Pantalon complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "waistband"
+      ]
+    }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front Leg", "es": "Pierna frente", "fr": "Jambe devant" }, "default_color": "#4a4a4a", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back Leg", "es": "Pierna espalda", "fr": "Jambe dos" }, "default_color": "#4a4a4a", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "waistband", "label": { "en": "Waistband Casing", "es": "Jareta de pretina", "fr": "Coulisse de ceinture" }, "default_color": "#3a3a3a", "cut": { "quantity": 1 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front Leg",
+        "es": "Pierna frente",
+        "fr": "Jambe devant"
+      },
+      "default_color": "#4a4a4a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back Leg",
+        "es": "Pierna espalda",
+        "fr": "Jambe dos"
+      },
+      "default_color": "#4a4a4a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "Waistband Casing",
+        "es": "Jareta de pretina",
+        "fr": "Coulisse de ceinture"
+      },
+      "default_color": "#3a3a3a",
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Coupe et style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
   ],
   "parameters": [
-    { "id": "hip_girth", "type": "slider", "default": 1040, "min": 760, "max": 1600, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)", "fr": "Tour de hanches (mm)" }, "tooltip": { "en": "Seat", "es": "Asiento", "fr": "Assise" } },
-    { "id": "waist_girth", "type": "slider", "default": 860, "min": 600, "max": 1400, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)" }, "tooltip": { "en": "Elastic sits here", "es": "El elástico va aquí", "fr": "L'élastique se place ici" } },
-    { "id": "inseam_length", "type": "slider", "default": 740, "min": 500, "max": 950, "step": 10, "measurement": { "standard": "iso_8559", "code": "inside_leg_length" }, "label": { "en": "Inseam (mm)", "es": "Entrepierna (mm)", "fr": "Entrejambe (mm)" }, "tooltip": { "en": "Crotch to hem", "es": "De la entrepierna al ruedo", "fr": "De l'entrejambe à l'ourlet" } },
-    { "id": "front_rise", "type": "slider", "default": 285, "min": 210, "max": 380, "step": 5, "measurement": { "standard": "iso_8559", "code": "body_rise" }, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)", "fr": "Montant devant (mm)" }, "tooltip": { "en": "CF crotch to waist", "es": "De la entrepierna delantera a la cintura", "fr": "De l'entrejambe devant à la taille" } },
-    { "id": "back_rise", "type": "slider", "default": 330, "min": 240, "max": 430, "step": 5, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)", "fr": "Montant dos (mm)" }, "tooltip": { "en": "CB crotch to waist", "es": "De la entrepierna trasera a la cintura", "fr": "De l'entrejambe dos à la taille" } },
-    { "id": "cook_ease", "type": "slider", "default": 220, "min": 100, "max": 400, "step": 10, "label": { "en": "Baggy ease (mm)", "es": "Holgura amplia (mm)", "fr": "Aisance ample (mm)" }, "tooltip": { "en": "Generous room", "es": "Amplitud generosa", "fr": "Ampleur généreuse" } },
-    { "id": "hem_width", "type": "slider", "default": 230, "min": 150, "max": 320, "step": 10, "label": { "en": "Leg opening (mm)", "es": "Abertura de pierna (mm)", "fr": "Ouverture de jambe (mm)" }, "tooltip": { "en": "Full straight leg (half)", "es": "Pierna recta completa (mitad)", "fr": "Jambe droite complète (moitié)" } },
-    { "id": "elastic_width", "type": "slider", "default": 45, "min": 25, "max": 80, "step": 5, "label": { "en": "Elastic width (mm)", "es": "Ancho de elástico (mm)", "fr": "Largeur d'élastique (mm)" }, "tooltip": { "en": "Waistband elastic", "es": "Elástico de pretina", "fr": "Élastique de ceinture" } }
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 1040,
+      "min": 760,
+      "max": 1600,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      },
+      "tooltip": {
+        "en": "Seat",
+        "es": "Asiento",
+        "fr": "Assise"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 860,
+      "min": 600,
+      "max": 1400,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "Elastic sits here",
+        "es": "El elástico va aquí",
+        "fr": "L'élastique se place ici"
+      }
+    },
+    {
+      "id": "inseam_length",
+      "type": "slider",
+      "group": "body",
+      "default": 740,
+      "min": 500,
+      "max": 950,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "inside_leg_length"
+      },
+      "label": {
+        "en": "Inseam (mm)",
+        "es": "Entrepierna (mm)",
+        "fr": "Entrejambe (mm)"
+      },
+      "tooltip": {
+        "en": "Crotch to hem",
+        "es": "De la entrepierna al ruedo",
+        "fr": "De l'entrejambe à l'ourlet"
+      }
+    },
+    {
+      "id": "front_rise",
+      "type": "slider",
+      "group": "body",
+      "default": 285,
+      "min": 210,
+      "max": 380,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "body_rise"
+      },
+      "label": {
+        "en": "Front rise (mm)",
+        "es": "Tiro delantero (mm)",
+        "fr": "Montant devant (mm)"
+      },
+      "tooltip": {
+        "en": "CF crotch to waist",
+        "es": "De la entrepierna delantera a la cintura",
+        "fr": "De l'entrejambe devant à la taille"
+      }
+    },
+    {
+      "id": "back_rise",
+      "type": "slider",
+      "group": "body",
+      "default": 330,
+      "min": 240,
+      "max": 430,
+      "step": 5,
+      "label": {
+        "en": "Back rise (mm)",
+        "es": "Tiro trasero (mm)",
+        "fr": "Montant dos (mm)"
+      },
+      "tooltip": {
+        "en": "CB crotch to waist",
+        "es": "De la entrepierna trasera a la cintura",
+        "fr": "De l'entrejambe dos à la taille"
+      }
+    },
+    {
+      "id": "cook_ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 220,
+      "min": 100,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Baggy ease (mm)",
+        "es": "Holgura amplia (mm)",
+        "fr": "Aisance ample (mm)"
+      },
+      "tooltip": {
+        "en": "Generous room",
+        "es": "Amplitud generosa",
+        "fr": "Ampleur généreuse"
+      }
+    },
+    {
+      "id": "hem_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 230,
+      "min": 150,
+      "max": 320,
+      "step": 10,
+      "label": {
+        "en": "Leg opening (mm)",
+        "es": "Abertura de pierna (mm)",
+        "fr": "Ouverture de jambe (mm)"
+      },
+      "tooltip": {
+        "en": "Full straight leg (half)",
+        "es": "Pierna recta completa (mitad)",
+        "fr": "Jambe droite complète (moitié)"
+      }
+    },
+    {
+      "id": "elastic_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 45,
+      "min": 25,
+      "max": 80,
+      "step": 5,
+      "label": {
+        "en": "Elastic width (mm)",
+        "es": "Ancho de elástico (mm)",
+        "fr": "Largeur d'élastique (mm)"
+      },
+      "tooltip": {
+        "en": "Waistband elastic",
+        "es": "Elástico de pretina",
+        "fr": "Élastique de ceinture"
+      }
+    }
   ],
   "presets": [
-    { "id": "standard", "label": { "en": "Standard", "es": "Estándar", "fr": "Standard" }, "values": { "cook_ease": 220 } },
-    { "id": "extra-roomy", "label": { "en": "Extra roomy", "es": "Extra amplio", "fr": "Très ample" }, "values": { "cook_ease": 320, "hem_width": 270 } }
+    {
+      "id": "standard",
+      "label": {
+        "en": "Standard",
+        "es": "Estándar",
+        "fr": "Standard"
+      },
+      "values": {
+        "cook_ease": 220
+      }
+    },
+    {
+      "id": "extra-roomy",
+      "label": {
+        "en": "Extra roomy",
+        "es": "Extra amplio",
+        "fr": "Très ample"
+      },
+      "values": {
+        "cook_ease": 320,
+        "hem_width": 270
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
   "fabrics": [],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "inseam", "type": "custom", "label": { "en": "Inseam", "es": "Entrepierna", "fr": "Entrejambe" }, "edges": [{ "piece": "front", "edge": "inseam" }, { "piece": "back", "edge": "inseam" }], "parameters": ["inseam_length", "hem_width"] },
-      { "id": "side_seam", "type": "side_seam", "label": { "en": "Side seam", "es": "Costura lateral", "fr": "Couture latérale" }, "edges": [{ "piece": "front", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["hip_girth", "cook_ease"] }
+      {
+        "id": "inseam",
+        "type": "custom",
+        "label": {
+          "en": "Inseam",
+          "es": "Entrepierna",
+          "fr": "Entrejambe"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "inseam"
+          },
+          {
+            "piece": "back",
+            "edge": "inseam"
+          }
+        ],
+        "parameters": [
+          "inseam_length",
+          "hem_width"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam",
+          "es": "Costura lateral",
+          "fr": "Couture latérale"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "hip_girth",
+          "cook_ease"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false
+    },
     "societal_benefit": {
       "en": "An open, made-to-measure kitchen trouser sizes a durable, comfortable work pant to the wearer's own hip and rise, so a shift-worker staple is makeable and repairable from washable cloth instead of bought as short-lived uniform stock.",
       "es": "Un pantalón de cocina abierto y a la medida ajusta un pantalón de trabajo duradero y cómodo a la cadera y el tiro de quien lo viste, para que un básico de turnos sea fabricable y reparable con tela lavable en vez de comprarse como stock de uniforme efímero.",

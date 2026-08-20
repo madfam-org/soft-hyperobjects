@@ -9,38 +9,197 @@
       "es": "La prenda inferior drapeada y sin costuras del sur de Asia (también veshti, mundu, panche): una sola pieza rectangular larga de tela envuelta y anudada en la cintura. Es tradicionalmente sin costura — la prenda es el drapeado, no una costura — por lo que este cartucho traza la tela misma en proporciones tradicionales, con líneas de borde tejido y de referencia de drapeado marcadas. Los estilos de drapeado regionales y el significado del borde pertenecen a quien la viste. Una pieza textil — sin herrajes. Cola larga FC-200 (patrimonio). Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet"
     },
     "difficulty": "beginner",
-    "tags": ["dhoti", "heritage", "south-asian", "unstitched", "draped", "commons", "made-to-measure"],
+    "tags": [
+      "dhoti",
+      "heritage",
+      "south-asian",
+      "unstitched",
+      "draped",
+      "commons",
+      "made-to-measure"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
-      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
     }
   },
   "modes": [
-    { "id": "set", "label": { "en": "Dhoti length", "es": "Pieza del dhoti" }, "script_file": "main.py", "pieces": ["length"] }
+    {
+      "id": "set",
+      "label": {
+        "en": "Dhoti length",
+        "es": "Pieza del dhoti"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "length"
+      ]
+    }
   ],
   "pieces": [
-    { "id": "length", "label": { "en": "Dhoti length", "es": "Pieza del dhoti" }, "default_color": "#d8cbb0", "cut": { "quantity": 1 } }
+    {
+      "id": "length",
+      "label": {
+        "en": "Dhoti length",
+        "es": "Pieza del dhoti"
+      },
+      "default_color": "#d8cbb0",
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
   ],
   "parameters": [
-    { "id": "cloth_length", "type": "slider", "default": 4500, "min": 3000, "max": 5500, "step": 50, "label": { "en": "Cloth length (mm)", "es": "Largo de tela (mm)" }, "tooltip": { "en": "Full drape length (customary ~4.5 m)", "es": "Largo total del drapeado (tradicional ~4.5 m)" } },
-    { "id": "cloth_width", "type": "slider", "default": 1180, "min": 1000, "max": 1300, "step": 10, "label": { "en": "Cloth width (mm)", "es": "Ancho de tela (mm)" }, "tooltip": { "en": "Loom width (waist to ankle in drape)", "es": "Ancho de telar (de cintura a tobillo en drapeado)" } },
-    { "id": "border_band", "type": "slider", "default": 60, "min": 0, "max": 200, "step": 5, "label": { "en": "Border band (mm)", "es": "Banda de borde (mm)" }, "tooltip": { "en": "Woven selvedge border", "es": "Borde tejido del orillo" } }
+    {
+      "id": "cloth_length",
+      "type": "slider",
+      "group": "body",
+      "default": 4500,
+      "min": 3000,
+      "max": 5500,
+      "step": 50,
+      "label": {
+        "en": "Cloth length (mm)",
+        "es": "Largo de tela (mm)"
+      },
+      "tooltip": {
+        "en": "Full drape length (customary ~4.5 m)",
+        "es": "Largo total del drapeado (tradicional ~4.5 m)"
+      }
+    },
+    {
+      "id": "cloth_width",
+      "type": "slider",
+      "group": "body",
+      "default": 1180,
+      "min": 1000,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Cloth width (mm)",
+        "es": "Ancho de tela (mm)"
+      },
+      "tooltip": {
+        "en": "Loom width (waist to ankle in drape)",
+        "es": "Ancho de telar (de cintura a tobillo en drapeado)"
+      }
+    },
+    {
+      "id": "border_band",
+      "type": "slider",
+      "group": "construction",
+      "default": 60,
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Border band (mm)",
+        "es": "Banda de borde (mm)"
+      },
+      "tooltip": {
+        "en": "Woven selvedge border",
+        "es": "Borde tejido del orillo"
+      }
+    }
   ],
   "presets": [
-    { "id": "standard", "label": { "en": "Standard 4.5 m", "es": "Estándar 4.5 m" }, "values": { "cloth_length": 4500 } },
-    { "id": "short", "label": { "en": "Shorter drape", "es": "Drapeado más corto" }, "values": { "cloth_length": 3600 } }
+    {
+      "id": "standard",
+      "label": {
+        "en": "Standard 4.5 m",
+        "es": "Estándar 4.5 m"
+      },
+      "values": {
+        "cloth_length": 4500
+      }
+    },
+    {
+      "id": "short",
+      "label": {
+        "en": "Shorter drape",
+        "es": "Drapeado más corto"
+      },
+      "values": {
+        "cloth_length": 3600
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
   "fabrics": [],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "wrap_edge", "type": "waistband", "label": { "en": "Wrap edge", "es": "Canto de envoltura" }, "edges": [{ "piece": "length", "edge": "selvedge_bottom" }], "parameters": ["cloth_width"] },
-      { "id": "border", "type": "hem", "label": { "en": "Woven border", "es": "Borde tejido" }, "edges": [{ "piece": "length", "edge": "selvedge_top" }], "parameters": ["border_band"] }
+      {
+        "id": "wrap_edge",
+        "type": "waistband",
+        "label": {
+          "en": "Wrap edge",
+          "es": "Canto de envoltura"
+        },
+        "edges": [
+          {
+            "piece": "length",
+            "edge": "selvedge_bottom"
+          }
+        ],
+        "parameters": [
+          "cloth_width"
+        ]
+      },
+      {
+        "id": "border",
+        "type": "hem",
+        "label": {
+          "en": "Woven border",
+          "es": "Borde tejido"
+        },
+        "edges": [
+          {
+            "piece": "length",
+            "edge": "selvedge_top"
+          }
+        ],
+        "parameters": [
+          "border_band"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false, "heritage": true, "unstitched": true },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "heritage": true,
+      "unstitched": true
+    },
     "societal_benefit": {
       "en": "Documenting the dhoti as an unstitched draped length — cloth size and reference marks, not a sewn pattern — records a garment made entirely by draping, keeping a living tradition legible as a commons object without imposing a Western cut on it or reproducing borders that carry regional identity.",
       "es": "Documentar el dhoti como una pieza drapeada sin costura — tamaño de tela y marcas de referencia, no un patrón cosido — registra una prenda hecha por completo mediante drapeado, manteniendo una tradición viva legible como objeto común sin imponerle un corte occidental ni reproducir bordes que portan identidad regional."

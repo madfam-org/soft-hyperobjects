@@ -103,10 +103,37 @@
       }
     }
   ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Coupe et style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
   "parameters": [
     {
       "id": "bust_girth",
       "type": "slider",
+      "group": "body",
       "default": 880,
       "min": 680,
       "max": 1400,
@@ -129,6 +156,7 @@
     {
       "id": "waist_girth",
       "type": "slider",
+      "group": "body",
       "default": 700,
       "min": 540,
       "max": 1250,
@@ -151,6 +179,7 @@
     {
       "id": "hip_girth",
       "type": "slider",
+      "group": "body",
       "default": 930,
       "min": 720,
       "max": 1450,
@@ -173,6 +202,7 @@
     {
       "id": "tunic_length",
       "type": "slider",
+      "group": "body",
       "default": 1250,
       "min": 900,
       "max": 1500,
@@ -191,6 +221,7 @@
     {
       "id": "neck_girth",
       "type": "slider",
+      "group": "body",
       "default": 380,
       "min": 300,
       "max": 520,
@@ -213,6 +244,7 @@
     {
       "id": "sleeve_length",
       "type": "slider",
+      "group": "body",
       "default": 600,
       "min": 400,
       "max": 720,
@@ -235,6 +267,7 @@
     {
       "id": "sleeve_depth",
       "type": "slider",
+      "group": "fit",
       "default": 220,
       "min": 180,
       "max": 380,
@@ -253,6 +286,7 @@
     {
       "id": "slit_height",
       "type": "slider",
+      "group": "fit",
       "default": 640,
       "min": 400,
       "max": 900,
@@ -271,6 +305,7 @@
     {
       "id": "collar_height",
       "type": "slider",
+      "group": "construction",
       "default": 45,
       "min": 20,
       "max": 90,
@@ -289,6 +324,7 @@
     {
       "id": "ease",
       "type": "slider",
+      "group": "fit",
       "default": 60,
       "min": 20,
       "max": 180,

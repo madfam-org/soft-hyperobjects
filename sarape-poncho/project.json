@@ -9,40 +9,246 @@
       "es": "El sarape — una manta-prenda rectangular tejida que se viste por la cabeza a través de una bocamanga central, una de las prendas más reconocibles de México, pariente del poncho. Su construcción es la más simple posible: un rectángulo, una abertura para la cabeza, orillas terminadas (a menudo con fleco). Este cartucho traza la geometría a la medida; el tejido — bandas, el ojo, los degradados de color — lo aporta quien teje. Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet"
     },
     "difficulty": "beginner",
-    "tags": ["sarape", "poncho", "heritage", "mexico", "blanket-garment", "rectangular-construction", "commons", "made-to-measure"],
+    "tags": [
+      "sarape",
+      "poncho",
+      "heritage",
+      "mexico",
+      "blanket-garment",
+      "rectangular-construction",
+      "commons",
+      "made-to-measure"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
-      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
     }
   },
   "modes": [
-    { "id": "set", "label": { "en": "Sarape", "es": "Sarape" }, "script_file": "main.py", "pieces": ["body"] }
+    {
+      "id": "set",
+      "label": {
+        "en": "Sarape",
+        "es": "Sarape"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "body"
+      ]
+    }
   ],
   "pieces": [
-    { "id": "body", "label": { "en": "Body", "es": "Cuerpo" }, "default_color": "#a83a2a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "fold", "mirror": true } }
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo"
+      },
+      "default_color": "#a83a2a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "fold",
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Coupe et style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
   ],
   "parameters": [
-    { "id": "span_width", "type": "slider", "default": 1200, "min": 700, "max": 1800, "step": 10, "label": { "en": "Span width (mm)", "es": "Ancho de envergadura (mm)" }, "tooltip": { "en": "Width across the body (shoulder span + drape)", "es": "Ancho a través del cuerpo (envergadura + caída)" } },
-    { "id": "drop_length", "type": "slider", "default": 700, "min": 350, "max": 1000, "step": 10, "label": { "en": "Drop length (mm)", "es": "Largo de caída (mm)" }, "tooltip": { "en": "Front (or back) drop from the shoulder fold", "es": "Caída delantera (o trasera) desde el doblez del hombro" } },
-    { "id": "neck_slit", "type": "slider", "default": 300, "min": 200, "max": 500, "step": 10, "label": { "en": "Neck slit (mm)", "es": "Bocamanga (mm)" }, "tooltip": { "en": "Length of the head slit along the fold", "es": "Largo de la abertura para la cabeza en el doblez" } },
-    { "id": "head_cut", "type": "slider", "default": 0, "min": 0, "max": 200, "step": 10, "label": { "en": "Head cut (mm)", "es": "Corte de cabeza (mm)" }, "tooltip": { "en": "Optional perpendicular cut for the head; 0 = plain slit", "es": "Corte perpendicular opcional para la cabeza; 0 = solo abertura" } },
-    { "id": "fringe", "type": "slider", "default": 60, "min": 0, "max": 150, "step": 5, "label": { "en": "Fringe allowance (mm)", "es": "Margen de fleco (mm)" }, "tooltip": { "en": "Marked fringe at the ends; 0 = none", "es": "Fleco marcado en los extremos; 0 = ninguno" } },
-    { "id": "band_count", "type": "slider", "default": 5, "min": 0, "max": 20, "step": 1, "label": { "en": "Weave bands", "es": "Bandas de tejido" }, "tooltip": { "en": "Marked decorative bands for the weaver", "es": "Bandas decorativas marcadas para quien teje" } }
+    {
+      "id": "span_width",
+      "type": "slider",
+      "group": "body",
+      "default": 1200,
+      "min": 700,
+      "max": 1800,
+      "step": 10,
+      "label": {
+        "en": "Span width (mm)",
+        "es": "Ancho de envergadura (mm)"
+      },
+      "tooltip": {
+        "en": "Width across the body (shoulder span + drape)",
+        "es": "Ancho a través del cuerpo (envergadura + caída)"
+      }
+    },
+    {
+      "id": "drop_length",
+      "type": "slider",
+      "group": "body",
+      "default": 700,
+      "min": 350,
+      "max": 1000,
+      "step": 10,
+      "label": {
+        "en": "Drop length (mm)",
+        "es": "Largo de caída (mm)"
+      },
+      "tooltip": {
+        "en": "Front (or back) drop from the shoulder fold",
+        "es": "Caída delantera (o trasera) desde el doblez del hombro"
+      }
+    },
+    {
+      "id": "neck_slit",
+      "type": "slider",
+      "group": "fit",
+      "default": 300,
+      "min": 200,
+      "max": 500,
+      "step": 10,
+      "label": {
+        "en": "Neck slit (mm)",
+        "es": "Bocamanga (mm)"
+      },
+      "tooltip": {
+        "en": "Length of the head slit along the fold",
+        "es": "Largo de la abertura para la cabeza en el doblez"
+      }
+    },
+    {
+      "id": "head_cut",
+      "type": "slider",
+      "group": "body",
+      "default": 0,
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "label": {
+        "en": "Head cut (mm)",
+        "es": "Corte de cabeza (mm)"
+      },
+      "tooltip": {
+        "en": "Optional perpendicular cut for the head; 0 = plain slit",
+        "es": "Corte perpendicular opcional para la cabeza; 0 = solo abertura"
+      }
+    },
+    {
+      "id": "fringe",
+      "type": "slider",
+      "group": "construction",
+      "default": 60,
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "label": {
+        "en": "Fringe allowance (mm)",
+        "es": "Margen de fleco (mm)"
+      },
+      "tooltip": {
+        "en": "Marked fringe at the ends; 0 = none",
+        "es": "Fleco marcado en los extremos; 0 = ninguno"
+      }
+    },
+    {
+      "id": "band_count",
+      "type": "slider",
+      "group": "construction",
+      "default": 5,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Weave bands",
+        "es": "Bandas de tejido"
+      },
+      "tooltip": {
+        "en": "Marked decorative bands for the weaver",
+        "es": "Bandas decorativas marcadas para quien teje"
+      }
+    }
   ],
   "presets": [
-    { "id": "sarape", "label": { "en": "Sarape (fringed)", "es": "Sarape (con fleco)" }, "values": { "span_width": 1200, "drop_length": 700, "fringe": 80 } },
-    { "id": "poncho", "label": { "en": "Poncho (head cut)", "es": "Poncho (corte de cabeza)" }, "values": { "span_width": 1300, "head_cut": 150, "fringe": 40 } }
+    {
+      "id": "sarape",
+      "label": {
+        "en": "Sarape (fringed)",
+        "es": "Sarape (con fleco)"
+      },
+      "values": {
+        "span_width": 1200,
+        "drop_length": 700,
+        "fringe": 80
+      }
+    },
+    {
+      "id": "poncho",
+      "label": {
+        "en": "Poncho (head cut)",
+        "es": "Poncho (corte de cabeza)"
+      },
+      "values": {
+        "span_width": 1300,
+        "head_cut": 150,
+        "fringe": 40
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
   "fabrics": [],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "shoulder_fold", "type": "shoulder", "label": { "en": "Shoulder fold + neck slit", "es": "Doblez de hombro + bocamanga" }, "edges": [{ "piece": "body", "edge": "fold" }], "parameters": ["span_width", "neck_slit"] }
+      {
+        "id": "shoulder_fold",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder fold + neck slit",
+          "es": "Doblez de hombro + bocamanga"
+        },
+        "edges": [
+          {
+            "piece": "body",
+            "edge": "fold"
+          }
+        ],
+        "parameters": [
+          "span_width",
+          "neck_slit"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false
+    },
     "societal_benefit": {
       "en": "An open, made-to-measure draft of the sarape's single-rectangle construction lets anyone size and finish the garment while leaving the weave — the part that carries its identity — entirely to the weaver. It serves the tradition it draws from rather than extracting from it, and teaches the most economical garment geometry there is: one rectangle, no waste.",
       "es": "Un trazo abierto y a la medida de la construcción de un solo rectángulo del sarape permite a cualquiera dimensionar y terminar la prenda, dejando el tejido — lo que porta su identidad — enteramente a quien teje. Sirve a la tradición de la que parte en vez de extraer de ella, y enseña la geometría de prenda más económica que existe: un rectángulo, sin desperdicio."

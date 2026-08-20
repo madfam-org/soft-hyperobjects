@@ -10,47 +10,398 @@
       "fr": "La veste de terrain utilitaire style M-65 : une veste carrée à hauteur de hanche avec une patte centrale zip-et-pression, quatre poches plaquées à soufflet (deux poitrine, deux basses), une coupe ample pour superposer, et des cordons taille/ourlet. Distincte du bomber, de la veste de travail et de la veste en jean de FC-100. Un vêtement textile — le zip et les pressions sont la quincaillerie du fabricant. Longue traîne FC-200 (manque vêtement de travail).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "advanced",
-    "tags": ["field-jacket", "m-65", "utility", "workwear", "bellows-pockets", "commons", "made-to-measure"],
+    "tags": [
+      "field-jacket",
+      "m-65",
+      "utility",
+      "workwear",
+      "bellows-pockets",
+      "commons",
+      "made-to-measure"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
-      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
     }
   },
   "modes": [
-    { "id": "set", "label": { "en": "Full Jacket", "es": "Chaqueta completa", "fr": "Veste complète" }, "script_file": "main.py", "pieces": ["front", "back", "sleeve", "pocket"] }
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Jacket",
+        "es": "Chaqueta completa",
+        "fr": "Veste complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "pocket"
+      ]
+    }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front (placket + pockets)", "es": "Frente (tapeta + bolsillos)", "fr": "Devant (patte + poches)" }, "default_color": "#5a5e4a", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Espalda", "fr": "Dos" }, "default_color": "#5a5e4a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
-    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga", "fr": "Manche" }, "default_color": "#4a4e3a", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "pocket", "label": { "en": "Bellows pocket", "es": "Bolsillo de fuelle", "fr": "Poche soufflet" }, "default_color": "#4a4e3a", "cut": { "quantity": 4 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (placket + pockets)",
+        "es": "Frente (tapeta + bolsillos)",
+        "fr": "Devant (patte + poches)"
+      },
+      "default_color": "#5a5e4a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#5a5e4a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#4a4e3a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "pocket",
+      "label": {
+        "en": "Bellows pocket",
+        "es": "Bolsillo de fuelle",
+        "fr": "Poche soufflet"
+      },
+      "default_color": "#4a4e3a",
+      "cut": {
+        "quantity": 4
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Coupe et style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
   ],
   "parameters": [
-    { "id": "chest_girth", "type": "slider", "default": 1100, "min": 760, "max": 1750, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)" }, "tooltip": { "en": "Full chest", "es": "Pecho completo", "fr": "Poitrine complète" } },
-    { "id": "jacket_length", "type": "slider", "default": 720, "min": 560, "max": 950, "step": 10, "label": { "en": "Length (mm)", "es": "Largo (mm)", "fr": "Longueur (mm)" }, "tooltip": { "en": "Nape to hem", "es": "De la nuca al ruedo", "fr": "De la nuque à l'ourlet" } },
-    { "id": "neck_girth", "type": "slider", "default": 440, "min": 320, "max": 580, "step": 10, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)", "fr": "Tour de cou (mm)" }, "tooltip": { "en": "Full neck", "es": "Cuello completo", "fr": "Cou complet" } },
-    { "id": "sleeve_length", "type": "slider", "default": 620, "min": 400, "max": 720, "step": 10, "measurement": { "standard": "iso_8559", "code": "arm_length" }, "label": { "en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)" }, "tooltip": { "en": "Shoulder to cuff", "es": "Del hombro al puño", "fr": "De l'épaule au poignet" } },
-    { "id": "sleeve_depth", "type": "slider", "default": 280, "min": 200, "max": 400, "step": 10, "label": { "en": "Sleeve depth (mm)", "es": "Profundidad de manga (mm)", "fr": "Profondeur de manche (mm)" }, "tooltip": { "en": "Armhole drop", "es": "Caída de sisa", "fr": "Descente d'emmanchure" } },
-    { "id": "ease", "type": "slider", "default": 300, "min": 160, "max": 460, "step": 10, "label": { "en": "Layering ease (mm)", "es": "Holgura de capas (mm)", "fr": "Aisance superposition (mm)" }, "tooltip": { "en": "Roomy over layers", "es": "Amplia sobre capas", "fr": "Ample par-dessus les couches" } },
-    { "id": "pocket_w", "type": "slider", "default": 190, "min": 130, "max": 260, "step": 10, "label": { "en": "Pocket width (mm)", "es": "Ancho de bolsillo (mm)", "fr": "Largeur de poche (mm)" }, "tooltip": { "en": "Bellows pocket width", "es": "Ancho de bolsillo de fuelle", "fr": "Largeur de poche soufflet" } },
-    { "id": "pocket_h", "type": "slider", "default": 210, "min": 140, "max": 300, "step": 10, "label": { "en": "Pocket height (mm)", "es": "Alto de bolsillo (mm)", "fr": "Hauteur de poche (mm)" }, "tooltip": { "en": "Bellows pocket height", "es": "Alto de bolsillo de fuelle", "fr": "Hauteur de poche soufflet" } }
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 1100,
+      "min": 760,
+      "max": 1750,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest",
+        "es": "Pecho completo",
+        "fr": "Poitrine complète"
+      }
+    },
+    {
+      "id": "jacket_length",
+      "type": "slider",
+      "group": "body",
+      "default": 720,
+      "min": 560,
+      "max": 950,
+      "step": 10,
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to hem",
+        "es": "De la nuca al ruedo",
+        "fr": "De la nuque à l'ourlet"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 440,
+      "min": 320,
+      "max": 580,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "Full neck",
+        "es": "Cuello completo",
+        "fr": "Cou complet"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "body",
+      "default": 620,
+      "min": 400,
+      "max": 720,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "arm_length"
+      },
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to cuff",
+        "es": "Del hombro al puño",
+        "fr": "De l'épaule au poignet"
+      }
+    },
+    {
+      "id": "sleeve_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 280,
+      "min": 200,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Sleeve depth (mm)",
+        "es": "Profundidad de manga (mm)",
+        "fr": "Profondeur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Armhole drop",
+        "es": "Caída de sisa",
+        "fr": "Descente d'emmanchure"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 300,
+      "min": 160,
+      "max": 460,
+      "step": 10,
+      "label": {
+        "en": "Layering ease (mm)",
+        "es": "Holgura de capas (mm)",
+        "fr": "Aisance superposition (mm)"
+      },
+      "tooltip": {
+        "en": "Roomy over layers",
+        "es": "Amplia sobre capas",
+        "fr": "Ample par-dessus les couches"
+      }
+    },
+    {
+      "id": "pocket_w",
+      "type": "slider",
+      "group": "construction",
+      "default": 190,
+      "min": 130,
+      "max": 260,
+      "step": 10,
+      "label": {
+        "en": "Pocket width (mm)",
+        "es": "Ancho de bolsillo (mm)",
+        "fr": "Largeur de poche (mm)"
+      },
+      "tooltip": {
+        "en": "Bellows pocket width",
+        "es": "Ancho de bolsillo de fuelle",
+        "fr": "Largeur de poche soufflet"
+      }
+    },
+    {
+      "id": "pocket_h",
+      "type": "slider",
+      "group": "construction",
+      "default": 210,
+      "min": 140,
+      "max": 300,
+      "step": 10,
+      "label": {
+        "en": "Pocket height (mm)",
+        "es": "Alto de bolsillo (mm)",
+        "fr": "Hauteur de poche (mm)"
+      },
+      "tooltip": {
+        "en": "Bellows pocket height",
+        "es": "Alto de bolsillo de fuelle",
+        "fr": "Hauteur de poche soufflet"
+      }
+    }
   ],
   "presets": [
-    { "id": "classic", "label": { "en": "Classic M-65", "es": "M-65 clásica", "fr": "M-65 classique" }, "values": { "ease": 300 } },
-    { "id": "oversized", "label": { "en": "Oversized", "es": "Oversize", "fr": "Oversize" }, "values": { "ease": 400, "jacket_length": 800 } }
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic M-65",
+        "es": "M-65 clásica",
+        "fr": "M-65 classique"
+      },
+      "values": {
+        "ease": 300
+      }
+    },
+    {
+      "id": "oversized",
+      "label": {
+        "en": "Oversized",
+        "es": "Oversize",
+        "fr": "Oversize"
+      },
+      "values": {
+        "ease": 400,
+        "jacket_length": 800
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
   "fabrics": [],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "shoulder_seam", "type": "shoulder", "label": { "en": "Shoulder seam", "es": "Costura de hombro", "fr": "Couture d'épaule" }, "edges": [{ "piece": "front", "edge": "shoulder" }, { "piece": "back", "edge": "shoulder" }], "parameters": ["neck_girth", "chest_girth"] },
-      { "id": "side_seam", "type": "side_seam", "label": { "en": "Side seam", "es": "Costura lateral", "fr": "Couture latérale" }, "edges": [{ "piece": "front", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["jacket_length"] },
-      { "id": "armscye", "type": "armscye", "label": { "en": "Armhole", "es": "Sisa", "fr": "Emmanchure" }, "edges": [{ "piece": "sleeve", "edge": "sleevehead" }, { "piece": "back", "edge": "armhole" }], "parameters": ["sleeve_depth"] }
+      {
+        "id": "shoulder_seam",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder seam",
+          "es": "Costura de hombro",
+          "fr": "Couture d'épaule"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "back",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "chest_girth"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam",
+          "es": "Costura lateral",
+          "fr": "Couture latérale"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "jacket_length"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Armhole",
+          "es": "Sisa",
+          "fr": "Emmanchure"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "sleevehead"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "sleeve_depth"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false
+    },
     "societal_benefit": {
       "en": "An open, made-to-measure field jacket gives a rugged, four-pocket layer sized to the wearer, so a hard-wearing utility staple becomes a repairable commons object made in tough cloth rather than bought and thrown away.",
       "es": "Una chaqueta de campo abierta y a la medida ofrece una capa robusta de cuatro bolsillos ajustada a quien la viste, para que un básico utilitario resistente sea un objeto común reparable hecho en tela dura en vez de comprado y desechado.",

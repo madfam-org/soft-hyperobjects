@@ -9,68 +9,200 @@
       "es": "Un avío puenteado con Yantra4D para la frontera de manufactura aditiva de la biblioteca de telas: un panel de cota de escamas TPU impreso en 3D — escamas superpuestas sobre cuellos de flexión — que articula como una prenda de escamas de dragón. Fashion Cabinet posee la moda (dimensiones terminadas, el campo de escamas según el tamaño del panel, la guía de colocación del canto cosible) mientras el campo de escamas y cuellos es un sólido de Yantra4D (`tpu-scale-mail`). Una identidad de material, Bambu TPU 95A, abarca este avío y ese sólido.\n\nVisualizador y configurador oficial: Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["scale-mail", "scales", "tpu", "am-fashion", "notion", "printed-textile", "hyperobject", "commons"],
+    "tags": [
+      "scale-mail",
+      "scales",
+      "tpu",
+      "am-fashion",
+      "notion",
+      "printed-textile",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
-      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
     }
   },
   "modes": [
     {
       "id": "placement-guide",
-      "label": { "en": "Panel Placement Guide", "es": "Guía de colocación del panel" },
+      "label": {
+        "en": "Panel Placement Guide",
+        "es": "Guía de colocación del panel"
+      },
       "script_file": "main.py",
-      "pieces": ["placement-guide"]
+      "pieces": [
+        "placement-guide"
+      ]
     }
   ],
   "pieces": [
     {
       "id": "placement-guide",
-      "label": { "en": "Scale Mail Placement Guide", "es": "Guía de colocación de cota de escamas" },
+      "label": {
+        "en": "Scale Mail Placement Guide",
+        "es": "Guía de colocación de cota de escamas"
+      },
       "default_color": "#7f8f86",
-      "cut": { "quantity": 1, "on_fold": false, "mirror": false }
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Coupe et style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
     }
   ],
   "parameters": [
     {
-      "id": "panel_width_mm", "type": "slider", "default": 180, "min": 40, "max": 300, "step": 5,
-      "label": { "en": "Panel width (mm, ≤ print bed)", "es": "Ancho del panel (mm, ≤ cama)" },
-      "tooltip": { "en": "Finished width across the scales; capped at the printed panel's bed width", "es": "Ancho terminado a través de las escamas; limitado al ancho de cama" }
+      "id": "panel_width_mm",
+      "type": "slider",
+      "group": "construction",
+      "default": 180,
+      "min": 40,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Panel width (mm, ≤ print bed)",
+        "es": "Ancho del panel (mm, ≤ cama)"
+      },
+      "tooltip": {
+        "en": "Finished width across the scales; capped at the printed panel's bed width",
+        "es": "Ancho terminado a través de las escamas; limitado al ancho de cama"
+      }
     },
     {
-      "id": "panel_height_mm", "type": "slider", "default": 280, "min": 40, "max": 700, "step": 5,
-      "label": { "en": "Panel height (mm)", "es": "Alto del panel (mm)" },
-      "tooltip": { "en": "Finished height down the body; the scale rows follow", "es": "Alto terminado por el cuerpo; las filas de escamas siguen" }
+      "id": "panel_height_mm",
+      "type": "slider",
+      "group": "construction",
+      "default": 280,
+      "min": 40,
+      "max": 700,
+      "step": 5,
+      "label": {
+        "en": "Panel height (mm)",
+        "es": "Alto del panel (mm)"
+      },
+      "tooltip": {
+        "en": "Finished height down the body; the scale rows follow",
+        "es": "Alto terminado por el cuerpo; las filas de escamas siguen"
+      }
     },
     {
-      "id": "scale_size", "type": "slider", "default": 22, "min": 8, "max": 60, "step": 1,
-      "label": { "en": "Scale size (mm)", "es": "Tamaño de escama (mm)" },
-      "tooltip": { "en": "Passed to the Yantra4D panel; sets scale width and height", "es": "Se pasa al panel de Yantra4D; define ancho y alto de escama" }
+      "id": "scale_size",
+      "type": "slider",
+      "group": "construction",
+      "default": 22,
+      "min": 8,
+      "max": 60,
+      "step": 1,
+      "label": {
+        "en": "Scale size (mm)",
+        "es": "Tamaño de escama (mm)"
+      },
+      "tooltip": {
+        "en": "Passed to the Yantra4D panel; sets scale width and height",
+        "es": "Se pasa al panel de Yantra4D; define ancho y alto de escama"
+      }
     },
     {
-      "id": "overlap", "type": "slider", "default": 0.45, "min": 0, "max": 0.7, "step": 0.05,
-      "label": { "en": "Row overlap", "es": "Traslape de filas" },
-      "tooltip": { "en": "Fraction each row overlaps the one below; more = tighter coverage", "es": "Fracción que cada fila traslapa a la de abajo; más = cobertura más cerrada" }
+      "id": "overlap",
+      "type": "slider",
+      "group": "fit",
+      "default": 0.45,
+      "min": 0,
+      "max": 0.7,
+      "step": 0.05,
+      "label": {
+        "en": "Row overlap",
+        "es": "Traslape de filas"
+      },
+      "tooltip": {
+        "en": "Fraction each row overlaps the one below; more = tighter coverage",
+        "es": "Fracción que cada fila traslapa a la de abajo; más = cobertura más cerrada"
+      }
     },
     {
-      "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 25, "step": 1,
-      "label": { "en": "Sew-edge allowance (mm)", "es": "Margen de canto cosible (mm)" },
-      "tooltip": { "en": "Tape-bound edge allowance where the panel sews to a garment", "es": "Margen de canto rematado donde el panel se cose a la prenda" }
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 25,
+      "step": 1,
+      "label": {
+        "en": "Sew-edge allowance (mm)",
+        "es": "Margen de canto cosible (mm)"
+      },
+      "tooltip": {
+        "en": "Tape-bound edge allowance where the panel sews to a garment",
+        "es": "Margen de canto rematado donde el panel se cose a la prenda"
+      },
+      "advanced": true
     }
   ],
   "presets": [
-    { "id": "dragon-guard", "label": { "en": "Dragon guard (180×280)", "es": "Peto de dragón (180×280)" }, "values": { "panel_width_mm": 180, "panel_height_mm": 280, "scale_size": 22 } },
-    { "id": "tight-coverage", "label": { "en": "Tight coverage (0.6)", "es": "Cobertura cerrada (0.6)" }, "values": { "overlap": 0.6 } }
+    {
+      "id": "dragon-guard",
+      "label": {
+        "en": "Dragon guard (180×280)",
+        "es": "Peto de dragón (180×280)"
+      },
+      "values": {
+        "panel_width_mm": 180,
+        "panel_height_mm": 280,
+        "scale_size": 22
+      }
+    },
+    {
+      "id": "tight-coverage",
+      "label": {
+        "en": "Tight coverage (0.6)",
+        "es": "Cobertura cerrada (0.6)"
+      },
+      "values": {
+        "overlap": 0.6
+      }
+    }
   ],
   "constraints": [
     {
       "expression": "panel_width_mm <= 300",
       "severity": "error",
-      "message": { "en": "Panel width exceeds the printed panel's bed-bound width — split into panels", "es": "El ancho excede el ancho de cama del panel impreso — divide en paneles" }
+      "message": {
+        "en": "Panel width exceeds the printed panel's bed-bound width — split into panels",
+        "es": "El ancho excede el ancho de cama del panel impreso — divide en paneles"
+      }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
   "fabrics": [],
   "notion": {
     "kind": "custom",
@@ -95,9 +227,23 @@
       {
         "id": "panel_edge",
         "type": "side_seam",
-        "label": { "en": "Sewable panel edge", "es": "Canto cosible del panel" },
-        "edges": [{ "piece": "placement-guide", "edge": "guide" }],
-        "parameters": ["panel_width_mm", "panel_height_mm", "scale_size", "overlap", "seam_allowance"]
+        "label": {
+          "en": "Sewable panel edge",
+          "es": "Canto cosible del panel"
+        },
+        "edges": [
+          {
+            "piece": "placement-guide",
+            "edge": "guide"
+          }
+        ],
+        "parameters": [
+          "panel_width_mm",
+          "panel_height_mm",
+          "scale_size",
+          "overlap",
+          "seam_allowance"
+        ]
       }
     ],
     "capabilities": {

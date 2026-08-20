@@ -10,41 +10,276 @@
       "fr": "Le top épaules dénudées (bardot) : une large encolure horizontale qui repose sous les épaules sur le haut du bras, tenue par un bord supérieur élastiqué avec un volant optionnel, laissant les épaules nues. Devant et dos sont le même large panneau ; le bord supérieur est une coulisse continue et les coutures latérales s'équilibrent par construction. Distinct des tops à bretelles de FC-100. Un vêtement textile — sans quincaillerie. Longue traîne FC-200 (manque encolure).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
-    "tags": ["off-shoulder", "bardot", "top", "elasticated", "commons", "made-to-measure"],
+    "tags": [
+      "off-shoulder",
+      "bardot",
+      "top",
+      "elasticated",
+      "commons",
+      "made-to-measure"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
-      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
     }
   },
   "modes": [
-    { "id": "set", "label": { "en": "Full Top", "es": "Top completo", "fr": "Top complet" }, "script_file": "main.py", "pieces": ["front", "back"] }
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Top",
+        "es": "Top completo",
+        "fr": "Top complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back"
+      ]
+    }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front", "es": "Frente", "fr": "Devant" }, "default_color": "#7a6a7a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Espalda", "fr": "Dos" }, "default_color": "#7a6a7a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front",
+        "es": "Frente",
+        "fr": "Devant"
+      },
+      "default_color": "#7a6a7a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#7a6a7a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Coupe et style"
+      }
+    }
   ],
   "parameters": [
-    { "id": "chest_girth", "type": "slider", "default": 960, "min": 660, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)" }, "tooltip": { "en": "Full chest", "es": "Pecho completo", "fr": "Poitrine complète" } },
-    { "id": "top_length", "type": "slider", "default": 520, "min": 320, "max": 800, "step": 10, "label": { "en": "Length (mm)", "es": "Largo (mm)", "fr": "Longueur (mm)" }, "tooltip": { "en": "Top edge to hem", "es": "Del canto superior al ruedo", "fr": "Du bord supérieur à l'ourlet" } },
-    { "id": "sleeve_grown", "type": "slider", "default": 180, "min": 60, "max": 320, "step": 10, "label": { "en": "Grown sleeve (mm)", "es": "Manga nacida (mm)", "fr": "Manche coupée à même (mm)" }, "tooltip": { "en": "Short sleeve off the shoulder", "es": "Manga corta fuera del hombro", "fr": "Manche courte hors épaule" } },
-    { "id": "flounce", "type": "slider", "default": 90, "min": 0, "max": 220, "step": 10, "label": { "en": "Flounce depth (mm)", "es": "Profundidad de olán (mm)", "fr": "Profondeur de volant (mm)" }, "tooltip": { "en": "Top ruffle depth", "es": "Profundidad del olán superior", "fr": "Profondeur du volant supérieur" } },
-    { "id": "ease", "type": "slider", "default": 160, "min": 80, "max": 420, "step": 10, "label": { "en": "Blousy ease (mm)", "es": "Holgura amplia (mm)", "fr": "Aisance ample (mm)" }, "tooltip": { "en": "Elastic gathers it", "es": "El elástico lo frunce", "fr": "L'élastique le fronce" } }
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 960,
+      "min": 660,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest",
+        "es": "Pecho completo",
+        "fr": "Poitrine complète"
+      }
+    },
+    {
+      "id": "top_length",
+      "type": "slider",
+      "group": "body",
+      "default": 520,
+      "min": 320,
+      "max": 800,
+      "step": 10,
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
+      },
+      "tooltip": {
+        "en": "Top edge to hem",
+        "es": "Del canto superior al ruedo",
+        "fr": "Du bord supérieur à l'ourlet"
+      }
+    },
+    {
+      "id": "sleeve_grown",
+      "type": "slider",
+      "group": "fit",
+      "default": 180,
+      "min": 60,
+      "max": 320,
+      "step": 10,
+      "label": {
+        "en": "Grown sleeve (mm)",
+        "es": "Manga nacida (mm)",
+        "fr": "Manche coupée à même (mm)"
+      },
+      "tooltip": {
+        "en": "Short sleeve off the shoulder",
+        "es": "Manga corta fuera del hombro",
+        "fr": "Manche courte hors épaule"
+      }
+    },
+    {
+      "id": "flounce",
+      "type": "slider",
+      "group": "fit",
+      "default": 90,
+      "min": 0,
+      "max": 220,
+      "step": 10,
+      "label": {
+        "en": "Flounce depth (mm)",
+        "es": "Profundidad de olán (mm)",
+        "fr": "Profondeur de volant (mm)"
+      },
+      "tooltip": {
+        "en": "Top ruffle depth",
+        "es": "Profundidad del olán superior",
+        "fr": "Profondeur du volant supérieur"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 160,
+      "min": 80,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Blousy ease (mm)",
+        "es": "Holgura amplia (mm)",
+        "fr": "Aisance ample (mm)"
+      },
+      "tooltip": {
+        "en": "Elastic gathers it",
+        "es": "El elástico lo frunce",
+        "fr": "L'élastique le fronce"
+      }
+    }
   ],
   "presets": [
-    { "id": "classic", "label": { "en": "Classic", "es": "Clásico", "fr": "Classique" }, "values": { "flounce": 90 } },
-    { "id": "flat", "label": { "en": "No flounce", "es": "Sin olán", "fr": "Sans volant" }, "values": { "flounce": 0 } }
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic",
+        "es": "Clásico",
+        "fr": "Classique"
+      },
+      "values": {
+        "flounce": 90
+      }
+    },
+    {
+      "id": "flat",
+      "label": {
+        "en": "No flounce",
+        "es": "Sin olán",
+        "fr": "Sans volant"
+      },
+      "values": {
+        "flounce": 0
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
   "fabrics": [],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "top_casing", "type": "neckline", "label": { "en": "Elasticated top edge", "es": "Canto superior con elástico", "fr": "Bord supérieur élastiqué" }, "edges": [{ "piece": "front", "edge": "top" }, { "piece": "back", "edge": "top" }], "parameters": ["chest_girth", "flounce"] },
-      { "id": "side_seam", "type": "side_seam", "label": { "en": "Side seam", "es": "Costura lateral", "fr": "Couture latérale" }, "edges": [{ "piece": "front", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["top_length"] }
+      {
+        "id": "top_casing",
+        "type": "neckline",
+        "label": {
+          "en": "Elasticated top edge",
+          "es": "Canto superior con elástico",
+          "fr": "Bord supérieur élastiqué"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "top"
+          },
+          {
+            "piece": "back",
+            "edge": "top"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "flounce"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam",
+          "es": "Costura lateral",
+          "fr": "Couture latérale"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "top_length"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false
+    },
     "societal_benefit": {
       "en": "An open, made-to-measure off-shoulder top is one of the easiest garments to make — two panels and an elastic edge — sized to the wearer, so a warm-weather staple is makeable and mendable from a single soft fabric at any body shape.",
       "es": "Un top de hombros descubiertos abierto y a la medida es una de las prendas más fáciles de hacer — dos paneles y un canto elástico — ajustado a quien lo viste, para que un básico de clima cálido sea fabricable y reparable a partir de una sola tela suave en cualquier figura.",

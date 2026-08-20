@@ -60,10 +60,37 @@
       }
     }
   ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Coupe et style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
   "parameters": [
     {
       "id": "wrist_girth",
       "type": "slider",
+      "group": "body",
       "default": 170,
       "min": 120,
       "max": 240,
@@ -86,6 +113,7 @@
     {
       "id": "upper_girth",
       "type": "slider",
+      "group": "body",
       "default": 300,
       "min": 200,
       "max": 460,
@@ -104,6 +132,7 @@
     {
       "id": "warmer_length",
       "type": "slider",
+      "group": "body",
       "default": 420,
       "min": 250,
       "max": 620,
@@ -122,6 +151,7 @@
     {
       "id": "neg_ease",
       "type": "slider",
+      "group": "fit",
       "default": 30,
       "min": 0,
       "max": 80,
@@ -140,6 +170,7 @@
     {
       "id": "thumbhole",
       "type": "checkbox",
+      "group": "construction",
       "default": true,
       "label": {
         "en": "Thumbhole",

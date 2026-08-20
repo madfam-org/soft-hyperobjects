@@ -9,33 +9,213 @@
       "es": "Una bolsa tote clásica de fondo cuadrado: un panel de cuerpo envolvente (frente + base + espalda cortados en uno, doblado en la base) que se escuadra en las esquinas inferiores para un fondo plano, más dos asas. Un asa opcional ajustable en largo se puentea al sólido `strap-buckle` de Yantra4D. Fashion Cabinet posee la bolsa; Yantra4D posee la hebilla.\n\nVisualizador y configurador oficial: Fashion Cabinet"
     },
     "difficulty": "beginner",
-    "tags": ["tote", "bag", "accessory", "hardware", "boxed-bottom", "commons", "made-to-measure"],
+    "tags": [
+      "tote",
+      "bag",
+      "accessory",
+      "hardware",
+      "boxed-bottom",
+      "commons",
+      "made-to-measure"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
-      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
     }
   },
   "modes": [
-    { "id": "set", "label": { "en": "Full Tote", "es": "Tote completo" }, "script_file": "main.py", "pieces": ["body", "strap"] }
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Tote",
+        "es": "Tote completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "body",
+        "strap"
+      ]
+    }
   ],
   "pieces": [
-    { "id": "body", "label": { "en": "Body (front + base + back)", "es": "Cuerpo (frente + base + espalda)" }, "default_color": "#c8b89a", "cut": { "quantity": 1, "on_fold": false, "mirror": false } },
-    { "id": "strap", "label": { "en": "Carry strap", "es": "Asa" }, "default_color": "#a89878", "cut": { "quantity": 2, "on_fold": false, "mirror": false } }
+    {
+      "id": "body",
+      "label": {
+        "en": "Body (front + base + back)",
+        "es": "Cuerpo (frente + base + espalda)"
+      },
+      "default_color": "#c8b89a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "strap",
+      "label": {
+        "en": "Carry strap",
+        "es": "Asa"
+      },
+      "default_color": "#a89878",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
   ],
   "parameters": [
-    { "id": "bag_width", "type": "slider", "default": 380, "min": 200, "max": 600, "step": 10, "label": { "en": "Width (mm)", "es": "Ancho (mm)" }, "tooltip": { "en": "Finished width across the front", "es": "Ancho terminado del frente" } },
-    { "id": "bag_height", "type": "slider", "default": 400, "min": 200, "max": 600, "step": 10, "label": { "en": "Height (mm)", "es": "Alto (mm)" }, "tooltip": { "en": "Finished front-face height", "es": "Alto terminado de la cara" } },
-    { "id": "bag_depth", "type": "slider", "default": 120, "min": 0, "max": 250, "step": 10, "label": { "en": "Boxed depth (mm)", "es": "Fondo cuadrado (mm)" }, "tooltip": { "en": "Flat-bottom gusset depth; 0 = flat tote", "es": "Profundidad del fondo plano; 0 = tote plano" } },
-    { "id": "strap_width", "type": "slider", "default": 40, "min": 20, "max": 60, "step": 2, "label": { "en": "Strap width (mm)", "es": "Ancho de asa (mm)" }, "tooltip": { "en": "Carry-strap width; sets the Yantra4D buckle slot", "es": "Ancho del asa; define la ranura de la hebilla de Yantra4D" } },
-    { "id": "strap_length", "type": "slider", "default": 600, "min": 300, "max": 900, "step": 10, "label": { "en": "Strap length (mm)", "es": "Largo de asa (mm)" }, "tooltip": { "en": "Carry-strap length", "es": "Largo del asa" } },
-    { "id": "hem_allowance", "type": "slider", "default": 30, "min": 0, "max": 60, "step": 5, "label": { "en": "Top-hem turn (mm)", "es": "Dobladillo superior (mm)" }, "tooltip": { "en": "Top-opening turn-under", "es": "Doblez de la boca" } }
+    {
+      "id": "bag_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 380,
+      "min": 200,
+      "max": 600,
+      "step": 10,
+      "label": {
+        "en": "Width (mm)",
+        "es": "Ancho (mm)"
+      },
+      "tooltip": {
+        "en": "Finished width across the front",
+        "es": "Ancho terminado del frente"
+      }
+    },
+    {
+      "id": "bag_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 400,
+      "min": 200,
+      "max": 600,
+      "step": 10,
+      "label": {
+        "en": "Height (mm)",
+        "es": "Alto (mm)"
+      },
+      "tooltip": {
+        "en": "Finished front-face height",
+        "es": "Alto terminado de la cara"
+      }
+    },
+    {
+      "id": "bag_depth",
+      "type": "slider",
+      "group": "construction",
+      "default": 120,
+      "min": 0,
+      "max": 250,
+      "step": 10,
+      "label": {
+        "en": "Boxed depth (mm)",
+        "es": "Fondo cuadrado (mm)"
+      },
+      "tooltip": {
+        "en": "Flat-bottom gusset depth; 0 = flat tote",
+        "es": "Profundidad del fondo plano; 0 = tote plano"
+      }
+    },
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 40,
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de asa (mm)"
+      },
+      "tooltip": {
+        "en": "Carry-strap width; sets the Yantra4D buckle slot",
+        "es": "Ancho del asa; define la ranura de la hebilla de Yantra4D"
+      }
+    },
+    {
+      "id": "strap_length",
+      "type": "slider",
+      "group": "construction",
+      "default": 600,
+      "min": 300,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Strap length (mm)",
+        "es": "Largo de asa (mm)"
+      },
+      "tooltip": {
+        "en": "Carry-strap length",
+        "es": "Largo del asa"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 30,
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Top-hem turn (mm)",
+        "es": "Dobladillo superior (mm)"
+      },
+      "tooltip": {
+        "en": "Top-opening turn-under",
+        "es": "Doblez de la boca"
+      },
+      "advanced": true
+    }
   ],
   "presets": [
-    { "id": "market", "label": { "en": "Market tote", "es": "Tote de mercado" }, "values": { "bag_width": 420, "bag_height": 420, "bag_depth": 140 } },
-    { "id": "flat", "label": { "en": "Flat tote", "es": "Tote plano" }, "values": { "bag_depth": 0, "bag_width": 340 } }
+    {
+      "id": "market",
+      "label": {
+        "en": "Market tote",
+        "es": "Tote de mercado"
+      },
+      "values": {
+        "bag_width": 420,
+        "bag_height": 420,
+        "bag_depth": 140
+      }
+    },
+    {
+      "id": "flat",
+      "label": {
+        "en": "Flat tote",
+        "es": "Tote plano"
+      },
+      "values": {
+        "bag_depth": 0,
+        "bag_width": 340
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
   "fabrics": [],
   "notion": {
     "kind": "custom",
@@ -44,16 +224,40 @@
       "platform": "yantra4d",
       "project_slug": "strap-buckle",
       "linked": true,
-      "params_map": { "webbing": "strap_width" }
+      "params_map": {
+        "webbing": "strap_width"
+      }
     }
   },
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "top_opening", "type": "hem", "label": { "en": "Top opening", "es": "Boca superior" }, "edges": [{ "piece": "body", "edge": "top_front" }], "parameters": ["bag_width", "hem_allowance"] }
+      {
+        "id": "top_opening",
+        "type": "hem",
+        "label": {
+          "en": "Top opening",
+          "es": "Boca superior"
+        },
+        "edges": [
+          {
+            "piece": "body",
+            "edge": "top_front"
+          }
+        ],
+        "parameters": [
+          "bag_width",
+          "hem_allowance"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false, "hardware_bridge": true },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
     "societal_benefit": {
       "en": "A boxed-bottom tote sized to what you carry, with an optional length-adjustable strap that is an open printable Yantra4D object — a durable, repairable, made-to-measure bag instead of a fixed disposable one.",
       "es": "Una bolsa de fondo cuadrado dimensionada a lo que cargas, con un asa opcional ajustable que es un objeto imprimible abierto de Yantra4D — una bolsa durable, reparable y a la medida en vez de una desechable de tamaño fijo."

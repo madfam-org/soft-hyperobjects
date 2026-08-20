@@ -89,10 +89,29 @@
       }
     }
   ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Coupe et style"
+      }
+    }
+  ],
   "parameters": [
     {
       "id": "bust_girth",
       "type": "slider",
+      "group": "body",
       "default": 900,
       "min": 680,
       "max": 1400,
@@ -115,6 +134,7 @@
     {
       "id": "waist_girth",
       "type": "slider",
+      "group": "body",
       "default": 720,
       "min": 540,
       "max": 1250,
@@ -137,6 +157,7 @@
     {
       "id": "hip_girth",
       "type": "slider",
+      "group": "body",
       "default": 960,
       "min": 720,
       "max": 1450,
@@ -159,6 +180,7 @@
     {
       "id": "kebaya_length",
       "type": "slider",
+      "group": "body",
       "default": 620,
       "min": 480,
       "max": 850,
@@ -177,6 +199,7 @@
     {
       "id": "neck_width",
       "type": "slider",
+      "group": "fit",
       "default": 170,
       "min": 130,
       "max": 300,
@@ -195,6 +218,7 @@
     {
       "id": "sleeve_length",
       "type": "slider",
+      "group": "body",
       "default": 580,
       "min": 400,
       "max": 720,
@@ -217,6 +241,7 @@
     {
       "id": "sleeve_depth",
       "type": "slider",
+      "group": "fit",
       "default": 230,
       "min": 180,
       "max": 380,
@@ -235,6 +260,7 @@
     {
       "id": "front_point",
       "type": "slider",
+      "group": "fit",
       "default": 120,
       "min": 0,
       "max": 300,
@@ -253,6 +279,7 @@
     {
       "id": "ease",
       "type": "slider",
+      "group": "fit",
       "default": 70,
       "min": 20,
       "max": 200,

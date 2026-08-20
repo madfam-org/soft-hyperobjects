@@ -10,39 +10,242 @@
       "fr": "La jupe à pointes (mouchoir) : des panneaux presque carrés suspendus à un arc de taille circulaire résolu pour que leurs coins extérieurs tombent en pointes sous l'ourlet latéral. Distincte des jupes droites/froncées de FC-100 — les pointes sont la géométrie du carré, non la mise en forme. Un vêtement textile — une fermeture latérale est la quincaillerie du fabricant. Longue traîne FC-200 (manque jupe).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["handkerchief-skirt", "skirt", "pointed-hem", "asymmetric", "commons", "made-to-measure"],
+    "tags": [
+      "handkerchief-skirt",
+      "skirt",
+      "pointed-hem",
+      "asymmetric",
+      "commons",
+      "made-to-measure"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
-      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
     }
   },
   "modes": [
-    { "id": "set", "label": { "en": "Full Skirt", "es": "Falda completa", "fr": "Jupe complète" }, "script_file": "main.py", "pieces": ["panel", "waistband"] }
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Skirt",
+        "es": "Falda completa",
+        "fr": "Jupe complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "panel",
+        "waistband"
+      ]
+    }
   ],
   "pieces": [
-    { "id": "panel", "label": { "en": "Panel (front + back)", "es": "Panel (frente + espalda)", "fr": "Panneau (devant + dos)" }, "default_color": "#5a6a6a", "cut": { "quantity": 2, "on_fold": true, "fold_edge": "center", "mirror": true } },
-    { "id": "waistband", "label": { "en": "Waistband", "es": "Pretina", "fr": "Ceinture" }, "default_color": "#4a5a5a", "cut": { "quantity": 1 } }
+    {
+      "id": "panel",
+      "label": {
+        "en": "Panel (front + back)",
+        "es": "Panel (frente + espalda)",
+        "fr": "Panneau (devant + dos)"
+      },
+      "default_color": "#5a6a6a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "Waistband",
+        "es": "Pretina",
+        "fr": "Ceinture"
+      },
+      "default_color": "#4a5a5a",
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Coupe et style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
   ],
   "parameters": [
-    { "id": "waist_girth", "type": "slider", "default": 760, "min": 520, "max": 1300, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)" }, "tooltip": { "en": "Fitted waist", "es": "Cintura ajustada", "fr": "Taille ajustée" } },
-    { "id": "point_drop", "type": "slider", "default": 620, "min": 300, "max": 1100, "step": 10, "label": { "en": "Point drop (mm)", "es": "Caída de punta (mm)", "fr": "Chute de pointe (mm)" }, "tooltip": { "en": "Length to the handkerchief points", "es": "Largo hasta las puntas", "fr": "Longueur jusqu'aux pointes" } },
-    { "id": "band_height", "type": "slider", "default": 40, "min": 20, "max": 90, "step": 5, "label": { "en": "Waistband height (mm)", "es": "Alto de pretina (mm)", "fr": "Hauteur de ceinture (mm)" }, "tooltip": { "en": "Finished band height", "es": "Alto de pretina terminada", "fr": "Hauteur de ceinture finie" } }
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 760,
+      "min": 520,
+      "max": 1300,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "Fitted waist",
+        "es": "Cintura ajustada",
+        "fr": "Taille ajustée"
+      }
+    },
+    {
+      "id": "point_drop",
+      "type": "slider",
+      "group": "fit",
+      "default": 620,
+      "min": 300,
+      "max": 1100,
+      "step": 10,
+      "label": {
+        "en": "Point drop (mm)",
+        "es": "Caída de punta (mm)",
+        "fr": "Chute de pointe (mm)"
+      },
+      "tooltip": {
+        "en": "Length to the handkerchief points",
+        "es": "Largo hasta las puntas",
+        "fr": "Longueur jusqu'aux pointes"
+      }
+    },
+    {
+      "id": "band_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 40,
+      "min": 20,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Waistband height (mm)",
+        "es": "Alto de pretina (mm)",
+        "fr": "Hauteur de ceinture (mm)"
+      },
+      "tooltip": {
+        "en": "Finished band height",
+        "es": "Alto de pretina terminada",
+        "fr": "Hauteur de ceinture finie"
+      }
+    }
   ],
   "presets": [
-    { "id": "midi", "label": { "en": "Midi points", "es": "Puntas midi", "fr": "Pointes midi" }, "values": { "point_drop": 620 } },
-    { "id": "long", "label": { "en": "Long points", "es": "Puntas largas", "fr": "Pointes longues" }, "values": { "point_drop": 820 } }
+    {
+      "id": "midi",
+      "label": {
+        "en": "Midi points",
+        "es": "Puntas midi",
+        "fr": "Pointes midi"
+      },
+      "values": {
+        "point_drop": 620
+      }
+    },
+    {
+      "id": "long",
+      "label": {
+        "en": "Long points",
+        "es": "Puntas largas",
+        "fr": "Pointes longues"
+      },
+      "values": {
+        "point_drop": 820
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
   "fabrics": [],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "waist_seam", "type": "waistband", "label": { "en": "Waist seam", "es": "Costura de cintura", "fr": "Couture de taille" }, "edges": [{ "piece": "panel", "edge": "waist" }, { "piece": "waistband", "edge": "attach" }], "parameters": ["waist_girth"] },
-      { "id": "side_seam", "type": "side_seam", "label": { "en": "Side seam", "es": "Costura lateral", "fr": "Couture latérale" }, "edges": [{ "piece": "panel", "edge": "side" }, { "piece": "panel", "edge": "center" }], "parameters": ["point_drop"] }
+      {
+        "id": "waist_seam",
+        "type": "waistband",
+        "label": {
+          "en": "Waist seam",
+          "es": "Costura de cintura",
+          "fr": "Couture de taille"
+        },
+        "edges": [
+          {
+            "piece": "panel",
+            "edge": "waist"
+          },
+          {
+            "piece": "waistband",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "waist_girth"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam",
+          "es": "Costura lateral",
+          "fr": "Couture latérale"
+        },
+        "edges": [
+          {
+            "piece": "panel",
+            "edge": "side"
+          },
+          {
+            "piece": "panel",
+            "edge": "center"
+          }
+        ],
+        "parameters": [
+          "point_drop"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false
+    },
     "societal_benefit": {
       "en": "An open, made-to-measure handkerchief skirt gets its floating pointed hem from plain square panels and a solved waist arc, so an airy, movement-rich skirt is makeable from a light fabric with only straight cuts and one curve.",
       "es": "Una falda de puntas abierta y a la medida obtiene su ruedo flotante de paneles cuadrados lisos y un arco de cintura resuelto, para que una falda aireada y llena de movimiento sea fabricable con tela ligera usando solo cortes rectos y una curva.",

@@ -9,31 +9,183 @@
       "es": "Un panel plano de disfraz/cosplay preparado para tiras LED: un panel rectangular con rutas de canal LED marcadas (carriles que sigue una tira LED y su difusor `led-channel` de Yantra4D), un bus de ruedo y una bolsa de driver. Cóselo a una prenda o úsalo solo. Fashion Cabinet posee el panel + el trazado; Yantra4D posee el canal imprimible. Los canales/bolsa se marcan para quien elabora; no se traza electrónica. Cápsula e-textil FC-200.\n\nVisualizador y configurador oficial: Fashion Cabinet"
     },
     "difficulty": "beginner",
-    "tags": ["etextile", "wearable-tech", "led", "costume", "cosplay", "hardware", "commons", "made-to-measure"],
+    "tags": [
+      "etextile",
+      "wearable-tech",
+      "led",
+      "costume",
+      "cosplay",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
-      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
     }
   },
   "modes": [
-    { "id": "set", "label": { "en": "LED Panel", "es": "Panel LED" }, "script_file": "main.py", "pieces": ["panel"] }
+    {
+      "id": "set",
+      "label": {
+        "en": "LED Panel",
+        "es": "Panel LED"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "panel"
+      ]
+    }
   ],
   "pieces": [
-    { "id": "panel", "label": { "en": "Panel", "es": "Panel" }, "default_color": "#1a1a22", "cut": { "quantity": 1, "on_fold": false, "mirror": false } }
+    {
+      "id": "panel",
+      "label": {
+        "en": "Panel",
+        "es": "Panel"
+      },
+      "default_color": "#1a1a22",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
   ],
   "parameters": [
-    { "id": "panel_w", "type": "slider", "default": 300, "min": 80, "max": 700, "step": 10, "label": { "en": "Panel width (mm)", "es": "Ancho del panel (mm)" }, "tooltip": { "en": "Finished width", "es": "Ancho terminado" } },
-    { "id": "panel_h", "type": "slider", "default": 400, "min": 80, "max": 900, "step": 10, "label": { "en": "Panel height (mm)", "es": "Alto del panel (mm)" }, "tooltip": { "en": "Finished height", "es": "Alto terminado" } },
-    { "id": "strip_w", "type": "slider", "default": 12, "min": 5, "max": 30, "step": 1, "label": { "en": "LED strip width (mm)", "es": "Ancho de tira LED (mm)" }, "tooltip": { "en": "Sets the Yantra4D channel width", "es": "Define el ancho del canal de Yantra4D" } },
-    { "id": "channels", "type": "slider", "default": 4, "min": 1, "max": 12, "step": 1, "label": { "en": "LED channels", "es": "Canales LED" }, "tooltip": { "en": "Marked channel lanes", "es": "Carriles de canal marcados" } },
-    { "id": "corner_r", "type": "slider", "default": 30, "min": 0, "max": 200, "step": 5, "label": { "en": "Corner radius (mm)", "es": "Radio de esquina (mm)" }, "tooltip": { "en": "Marked rounded-corner trim", "es": "Recorte de esquina redondeada marcado" } }
+    {
+      "id": "panel_w",
+      "type": "slider",
+      "group": "construction",
+      "default": 300,
+      "min": 80,
+      "max": 700,
+      "step": 10,
+      "label": {
+        "en": "Panel width (mm)",
+        "es": "Ancho del panel (mm)"
+      },
+      "tooltip": {
+        "en": "Finished width",
+        "es": "Ancho terminado"
+      }
+    },
+    {
+      "id": "panel_h",
+      "type": "slider",
+      "group": "construction",
+      "default": 400,
+      "min": 80,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Panel height (mm)",
+        "es": "Alto del panel (mm)"
+      },
+      "tooltip": {
+        "en": "Finished height",
+        "es": "Alto terminado"
+      }
+    },
+    {
+      "id": "strip_w",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "LED strip width (mm)",
+        "es": "Ancho de tira LED (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the Yantra4D channel width",
+        "es": "Define el ancho del canal de Yantra4D"
+      }
+    },
+    {
+      "id": "channels",
+      "type": "slider",
+      "group": "construction",
+      "default": 4,
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "LED channels",
+        "es": "Canales LED"
+      },
+      "tooltip": {
+        "en": "Marked channel lanes",
+        "es": "Carriles de canal marcados"
+      }
+    },
+    {
+      "id": "corner_r",
+      "type": "slider",
+      "group": "construction",
+      "default": 30,
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Corner radius (mm)",
+        "es": "Radio de esquina (mm)"
+      },
+      "tooltip": {
+        "en": "Marked rounded-corner trim",
+        "es": "Recorte de esquina redondeada marcado"
+      }
+    }
   ],
   "presets": [
-    { "id": "chest-panel", "label": { "en": "Chest panel", "es": "Panel de pecho" }, "values": { "panel_w": 300, "panel_h": 400, "channels": 4 } },
-    { "id": "banner", "label": { "en": "Banner", "es": "Estandarte" }, "values": { "panel_w": 500, "panel_h": 700, "channels": 8 } }
+    {
+      "id": "chest-panel",
+      "label": {
+        "en": "Chest panel",
+        "es": "Panel de pecho"
+      },
+      "values": {
+        "panel_w": 300,
+        "panel_h": 400,
+        "channels": 4
+      }
+    },
+    {
+      "id": "banner",
+      "label": {
+        "en": "Banner",
+        "es": "Estandarte"
+      },
+      "values": {
+        "panel_w": 500,
+        "panel_h": 700,
+        "channels": 8
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
   "fabrics": [],
   "notion": {
     "kind": "custom",
@@ -42,16 +194,43 @@
       "platform": "yantra4d",
       "project_slug": "led-channel",
       "linked": true,
-      "params_map": { "strip_width": "strip_w", "length": "panel_h" }
+      "params_map": {
+        "strip_width": "strip_w",
+        "length": "panel_h"
+      }
     }
   },
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "e_textile",
     "interfaces": [
-      { "id": "led_channel", "type": "custom", "label": { "en": "LED channel layout", "es": "Trazado de canal LED" }, "edges": [{ "piece": "panel", "edge": "bottom" }], "parameters": ["strip_w", "channels", "panel_h"] }
+      {
+        "id": "led_channel",
+        "type": "custom",
+        "label": {
+          "en": "LED channel layout",
+          "es": "Trazado de canal LED"
+        },
+        "edges": [
+          {
+            "piece": "panel",
+            "edge": "bottom"
+          }
+        ],
+        "parameters": [
+          "strip_w",
+          "channels",
+          "panel_h"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false, "hardware_bridge": true, "e_textile": true },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true,
+      "e_textile": true
+    },
     "societal_benefit": {
       "en": "An open, made-to-measure LED panel with a marked channel layout and a driver pocket, paired with an open printable Yantra4D diffuser channel, makes illuminated costume and signage a repairable, reconfigurable open build — swap strips, re-cut the panel, reprint the channel — instead of a disposable light-up prop.",
       "es": "Un panel LED abierto y a la medida con un trazado de canal marcado y una bolsa de driver, junto con un canal difusor imprimible abierto de Yantra4D, vuelve el disfraz y la señalización iluminados un proyecto abierto, reparable y reconfigurable — cambia tiras, recorta el panel, reimprime el canal — en vez de un accesorio luminoso desechable."

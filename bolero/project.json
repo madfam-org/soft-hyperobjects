@@ -10,44 +10,338 @@
       "fr": "Le boléro court ouvert (shrug) : une veste très courte à devant ouvert s'arrêtant au-dessus de la taille, avec des devants incurvés qui ne se rejoignent qu'en haut (sans fermeture) et des manches coupées à même — portée sur une robe ou un top, pour les épaules et les bras. Distinct du cardigan boutonné à hauteur de hanche de FC-100. Devant et dos partagent la largeur du corps, donc les coutures d'épaule, latérale et de dessous de bras s'équilibrent. Un vêtement textile — sans quincaillerie. Longue traîne FC-200 (manque couche).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["bolero", "shrug", "cropped", "open-front", "layer", "commons", "made-to-measure"],
+    "tags": [
+      "bolero",
+      "shrug",
+      "cropped",
+      "open-front",
+      "layer",
+      "commons",
+      "made-to-measure"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
-      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
     }
   },
   "modes": [
-    { "id": "set", "label": { "en": "Full Bolero", "es": "Bolero completo", "fr": "Boléro complet" }, "script_file": "main.py", "pieces": ["front", "back"] }
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Bolero",
+        "es": "Bolero completo",
+        "fr": "Boléro complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back"
+      ]
+    }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front (open curve)", "es": "Frente (curva abierta)", "fr": "Devant (courbe ouverte)" }, "default_color": "#6a4a5a", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Espalda", "fr": "Dos" }, "default_color": "#6a4a5a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (open curve)",
+        "es": "Frente (curva abierta)",
+        "fr": "Devant (courbe ouverte)"
+      },
+      "default_color": "#6a4a5a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#6a4a5a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Coupe et style"
+      }
+    }
   ],
   "parameters": [
-    { "id": "chest_girth", "type": "slider", "default": 960, "min": 660, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)" }, "tooltip": { "en": "Full chest", "es": "Pecho completo", "fr": "Poitrine complète" } },
-    { "id": "bolero_length", "type": "slider", "default": 340, "min": 220, "max": 480, "step": 10, "label": { "en": "Length (mm)", "es": "Largo (mm)", "fr": "Longueur (mm)" }, "tooltip": { "en": "Nape to cropped hem", "es": "De la nuca al ruedo corto", "fr": "De la nuque à l'ourlet court" } },
-    { "id": "neck_width", "type": "slider", "default": 200, "min": 150, "max": 340, "step": 5, "label": { "en": "Neck width (mm)", "es": "Ancho de cuello (mm)", "fr": "Largeur d'encolure (mm)" }, "tooltip": { "en": "Neck opening", "es": "Abertura de cuello", "fr": "Ouverture d'encolure" } },
-    { "id": "sleeve_grown", "type": "slider", "default": 260, "min": 80, "max": 420, "step": 10, "label": { "en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)" }, "tooltip": { "en": "Grown sleeve length", "es": "Largo de manga nacida", "fr": "Longueur de manche coupée à même" } },
-    { "id": "sleeve_depth", "type": "slider", "default": 150, "min": 100, "max": 240, "step": 10, "label": { "en": "Sleeve height (mm)", "es": "Alto de manga (mm)", "fr": "Hauteur de manche (mm)" }, "tooltip": { "en": "Grown sleeve height at cuff", "es": "Alto de manga nacida en el puño", "fr": "Hauteur de manche au poignet" } },
-    { "id": "front_curve", "type": "slider", "default": 140, "min": 60, "max": 260, "step": 10, "label": { "en": "Front curve (mm)", "es": "Curva del frente (mm)", "fr": "Courbe du devant (mm)" }, "tooltip": { "en": "How deep the open front curves away", "es": "Cuánto se curva el frente abierto", "fr": "Profondeur de la courbe du devant ouvert" } },
-    { "id": "ease", "type": "slider", "default": 120, "min": 40, "max": 320, "step": 10, "label": { "en": "Fit ease (mm)", "es": "Holgura (mm)", "fr": "Aisance (mm)" }, "tooltip": { "en": "Fit ease", "es": "Holgura de ajuste", "fr": "Aisance de coupe" } }
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 960,
+      "min": 660,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest",
+        "es": "Pecho completo",
+        "fr": "Poitrine complète"
+      }
+    },
+    {
+      "id": "bolero_length",
+      "type": "slider",
+      "group": "body",
+      "default": 340,
+      "min": 220,
+      "max": 480,
+      "step": 10,
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to cropped hem",
+        "es": "De la nuca al ruedo corto",
+        "fr": "De la nuque à l'ourlet court"
+      }
+    },
+    {
+      "id": "neck_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 200,
+      "min": 150,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Neck width (mm)",
+        "es": "Ancho de cuello (mm)",
+        "fr": "Largeur d'encolure (mm)"
+      },
+      "tooltip": {
+        "en": "Neck opening",
+        "es": "Abertura de cuello",
+        "fr": "Ouverture d'encolure"
+      }
+    },
+    {
+      "id": "sleeve_grown",
+      "type": "slider",
+      "group": "fit",
+      "default": 260,
+      "min": 80,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Grown sleeve length",
+        "es": "Largo de manga nacida",
+        "fr": "Longueur de manche coupée à même"
+      }
+    },
+    {
+      "id": "sleeve_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 150,
+      "min": 100,
+      "max": 240,
+      "step": 10,
+      "label": {
+        "en": "Sleeve height (mm)",
+        "es": "Alto de manga (mm)",
+        "fr": "Hauteur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Grown sleeve height at cuff",
+        "es": "Alto de manga nacida en el puño",
+        "fr": "Hauteur de manche au poignet"
+      }
+    },
+    {
+      "id": "front_curve",
+      "type": "slider",
+      "group": "fit",
+      "default": 140,
+      "min": 60,
+      "max": 260,
+      "step": 10,
+      "label": {
+        "en": "Front curve (mm)",
+        "es": "Curva del frente (mm)",
+        "fr": "Courbe du devant (mm)"
+      },
+      "tooltip": {
+        "en": "How deep the open front curves away",
+        "es": "Cuánto se curva el frente abierto",
+        "fr": "Profondeur de la courbe du devant ouvert"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 120,
+      "min": 40,
+      "max": 320,
+      "step": 10,
+      "label": {
+        "en": "Fit ease (mm)",
+        "es": "Holgura (mm)",
+        "fr": "Aisance (mm)"
+      },
+      "tooltip": {
+        "en": "Fit ease",
+        "es": "Holgura de ajuste",
+        "fr": "Aisance de coupe"
+      }
+    }
   ],
   "presets": [
-    { "id": "classic", "label": { "en": "Classic", "es": "Clásico", "fr": "Classique" }, "values": { "front_curve": 140 } },
-    { "id": "cropped", "label": { "en": "Extra cropped", "es": "Extra corto", "fr": "Très court" }, "values": { "bolero_length": 260, "front_curve": 100 } }
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic",
+        "es": "Clásico",
+        "fr": "Classique"
+      },
+      "values": {
+        "front_curve": 140
+      }
+    },
+    {
+      "id": "cropped",
+      "label": {
+        "en": "Extra cropped",
+        "es": "Extra corto",
+        "fr": "Très court"
+      },
+      "values": {
+        "bolero_length": 260,
+        "front_curve": 100
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
   "fabrics": [],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "shoulder_seam", "type": "shoulder", "label": { "en": "Shoulder seam", "es": "Costura de hombro", "fr": "Couture d'épaule" }, "edges": [{ "piece": "front", "edge": "shoulder" }, { "piece": "back", "edge": "shoulder" }], "parameters": ["neck_width", "chest_girth"] },
-      { "id": "side_seam", "type": "side_seam", "label": { "en": "Side seam", "es": "Costura lateral", "fr": "Couture latérale" }, "edges": [{ "piece": "front", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["chest_girth", "ease"] },
-      { "id": "underarm", "type": "armscye", "label": { "en": "Sleeve underarm", "es": "Bajo manga", "fr": "Dessous de manche" }, "edges": [{ "piece": "front", "edge": "sleeve_under" }, { "piece": "back", "edge": "sleeve_under" }], "parameters": ["sleeve_grown", "sleeve_depth"] }
+      {
+        "id": "shoulder_seam",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder seam",
+          "es": "Costura de hombro",
+          "fr": "Couture d'épaule"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "back",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "neck_width",
+          "chest_girth"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam",
+          "es": "Costura lateral",
+          "fr": "Couture latérale"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "ease"
+        ]
+      },
+      {
+        "id": "underarm",
+        "type": "armscye",
+        "label": {
+          "en": "Sleeve underarm",
+          "es": "Bajo manga",
+          "fr": "Dessous de manche"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "sleeve_under"
+          },
+          {
+            "piece": "back",
+            "edge": "sleeve_under"
+          }
+        ],
+        "parameters": [
+          "sleeve_grown",
+          "sleeve_depth"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false
+    },
     "societal_benefit": {
       "en": "An open, made-to-measure bolero adds warmth and coverage to a sleeveless dress from a tiny amount of cloth and no fastenings, so a versatile layer is makeable and mendable by anyone and pairs with garments they already own.",
       "es": "Un bolero abierto y a la medida añade abrigo y cobertura a un vestido sin mangas con muy poca tela y sin cierres, para que una capa versátil sea fabricable y reparable por cualquiera y combine con prendas que ya se tienen.",

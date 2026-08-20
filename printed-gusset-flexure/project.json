@@ -59,10 +59,21 @@
       }
     }
   ],
+  "parameter_groups": [
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
   "parameters": [
     {
       "id": "gusset_w",
       "type": "slider",
+      "group": "construction",
       "default": 70,
       "min": 20,
       "max": 200,
@@ -75,6 +86,7 @@
     {
       "id": "gusset_h",
       "type": "slider",
+      "group": "construction",
       "default": 90,
       "min": 20,
       "max": 260,
@@ -87,6 +99,7 @@
     {
       "id": "wall",
       "type": "slider",
+      "group": "construction",
       "default": 1.4,
       "min": 0.8,
       "max": 4.0,
@@ -99,6 +112,7 @@
     {
       "id": "seam_allowance",
       "type": "slider",
+      "group": "construction",
       "default": 8,
       "min": 0,
       "max": 25,
@@ -106,7 +120,8 @@
       "label": {
         "en": "Sew-edge allowance (mm)",
         "es": "Margen de canto cosible (mm)"
-      }
+      },
+      "advanced": true
     }
   ],
   "presets": [

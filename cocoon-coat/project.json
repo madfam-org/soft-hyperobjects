@@ -88,10 +88,29 @@
       }
     }
   ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Coupe et style"
+      }
+    }
+  ],
   "parameters": [
     {
       "id": "chest_girth",
       "type": "slider",
+      "group": "body",
       "default": 1040,
       "min": 760,
       "max": 1750,
@@ -114,6 +133,7 @@
     {
       "id": "coat_length",
       "type": "slider",
+      "group": "body",
       "default": 950,
       "min": 600,
       "max": 1300,
@@ -132,6 +152,7 @@
     {
       "id": "neck_girth",
       "type": "slider",
+      "group": "body",
       "default": 440,
       "min": 320,
       "max": 580,
@@ -154,6 +175,7 @@
     {
       "id": "sleeve_grown",
       "type": "slider",
+      "group": "fit",
       "default": 300,
       "min": 120,
       "max": 460,
@@ -172,6 +194,7 @@
     {
       "id": "sleeve_depth",
       "type": "slider",
+      "group": "fit",
       "default": 300,
       "min": 220,
       "max": 420,
@@ -190,6 +213,7 @@
     {
       "id": "cocoon_bow",
       "type": "slider",
+      "group": "fit",
       "default": 180,
       "min": 60,
       "max": 320,
@@ -208,6 +232,7 @@
     {
       "id": "hem_pull",
       "type": "slider",
+      "group": "fit",
       "default": 120,
       "min": 0,
       "max": 260,
@@ -226,6 +251,7 @@
     {
       "id": "ease",
       "type": "slider",
+      "group": "fit",
       "default": 320,
       "min": 200,
       "max": 480,

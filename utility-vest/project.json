@@ -10,45 +10,354 @@
       "fr": "Le gilet de travail/terrain multi-poches : un gilet sans manches à zip frontal conçu comme un porteur de poches — poches poitrine, une rangée à stylos et de grandes poches cargo à soufflet en bas — avec une emmanchure profonde pour superposer, pour les métiers, le terrain, la photographie et la pêche. Distinct du gilet matelassé, du gilet haute visibilité et du gilet de costume de FC-100. Un vêtement textile — le zip est la quincaillerie du fabricant. Longue traîne FC-200 (manque vêtement de travail).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["utility-vest", "workwear", "field", "multi-pocket", "commons", "made-to-measure"],
+    "tags": [
+      "utility-vest",
+      "workwear",
+      "field",
+      "multi-pocket",
+      "commons",
+      "made-to-measure"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
-      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
     }
   },
   "modes": [
-    { "id": "set", "label": { "en": "Full Vest", "es": "Chaleco completo", "fr": "Gilet complet" }, "script_file": "main.py", "pieces": ["front", "back", "pocket"] }
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Vest",
+        "es": "Chaleco completo",
+        "fr": "Gilet complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "pocket"
+      ]
+    }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front (zip + pockets)", "es": "Frente (cremallera + bolsillos)", "fr": "Devant (zip + poches)" }, "default_color": "#6a6250", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Espalda", "fr": "Dos" }, "default_color": "#6a6250", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
-    { "id": "pocket", "label": { "en": "Cargo pocket", "es": "Bolsillo cargo", "fr": "Poche cargo" }, "default_color": "#5a5240", "cut": { "quantity": 2 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (zip + pockets)",
+        "es": "Frente (cremallera + bolsillos)",
+        "fr": "Devant (zip + poches)"
+      },
+      "default_color": "#6a6250",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#6a6250",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "pocket",
+      "label": {
+        "en": "Cargo pocket",
+        "es": "Bolsillo cargo",
+        "fr": "Poche cargo"
+      },
+      "default_color": "#5a5240",
+      "cut": {
+        "quantity": 2
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Coupe et style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
   ],
   "parameters": [
-    { "id": "chest_girth", "type": "slider", "default": 1060, "min": 720, "max": 1700, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)" }, "tooltip": { "en": "Full chest", "es": "Pecho completo", "fr": "Poitrine complète" } },
-    { "id": "vest_length", "type": "slider", "default": 640, "min": 480, "max": 860, "step": 10, "label": { "en": "Length (mm)", "es": "Largo (mm)", "fr": "Longueur (mm)" }, "tooltip": { "en": "Nape to hem", "es": "De la nuca al ruedo", "fr": "De la nuque à l'ourlet" } },
-    { "id": "neck_width", "type": "slider", "default": 200, "min": 160, "max": 360, "step": 5, "label": { "en": "Neck width (mm)", "es": "Ancho de cuello (mm)", "fr": "Largeur d'encolure (mm)" }, "tooltip": { "en": "Collar-stand neck", "es": "Cuello con tira", "fr": "Encolure à pied de col" } },
-    { "id": "shoulder_w", "type": "slider", "default": 120, "min": 70, "max": 200, "step": 5, "label": { "en": "Shoulder width (mm)", "es": "Ancho de hombro (mm)", "fr": "Largeur d'épaule (mm)" }, "tooltip": { "en": "Shoulder strap width", "es": "Ancho del tirante de hombro", "fr": "Largeur de la bretelle d'épaule" } },
-    { "id": "armhole_drop", "type": "slider", "default": 300, "min": 220, "max": 420, "step": 10, "label": { "en": "Armhole drop (mm)", "es": "Caída de sisa (mm)", "fr": "Descente d'emmanchure (mm)" }, "tooltip": { "en": "Deep vest armhole", "es": "Sisa profunda de chaleco", "fr": "Emmanchure profonde de gilet" } },
-    { "id": "ease", "type": "slider", "default": 220, "min": 120, "max": 380, "step": 10, "label": { "en": "Layering ease (mm)", "es": "Holgura de capas (mm)", "fr": "Aisance superposition (mm)" }, "tooltip": { "en": "Room over layers", "es": "Amplitud sobre capas", "fr": "Aisance par-dessus les couches" } },
-    { "id": "pocket_w", "type": "slider", "default": 180, "min": 120, "max": 260, "step": 10, "label": { "en": "Cargo pocket width (mm)", "es": "Ancho bolsillo cargo (mm)", "fr": "Largeur poche cargo (mm)" }, "tooltip": { "en": "Lower cargo pocket", "es": "Bolsillo cargo inferior", "fr": "Poche cargo basse" } },
-    { "id": "pocket_h", "type": "slider", "default": 200, "min": 130, "max": 300, "step": 10, "label": { "en": "Cargo pocket height (mm)", "es": "Alto bolsillo cargo (mm)", "fr": "Hauteur poche cargo (mm)" }, "tooltip": { "en": "Lower cargo pocket", "es": "Bolsillo cargo inferior", "fr": "Poche cargo basse" } }
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 1060,
+      "min": 720,
+      "max": 1700,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest",
+        "es": "Pecho completo",
+        "fr": "Poitrine complète"
+      }
+    },
+    {
+      "id": "vest_length",
+      "type": "slider",
+      "group": "body",
+      "default": 640,
+      "min": 480,
+      "max": 860,
+      "step": 10,
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to hem",
+        "es": "De la nuca al ruedo",
+        "fr": "De la nuque à l'ourlet"
+      }
+    },
+    {
+      "id": "neck_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 200,
+      "min": 160,
+      "max": 360,
+      "step": 5,
+      "label": {
+        "en": "Neck width (mm)",
+        "es": "Ancho de cuello (mm)",
+        "fr": "Largeur d'encolure (mm)"
+      },
+      "tooltip": {
+        "en": "Collar-stand neck",
+        "es": "Cuello con tira",
+        "fr": "Encolure à pied de col"
+      }
+    },
+    {
+      "id": "shoulder_w",
+      "type": "slider",
+      "group": "body",
+      "default": 120,
+      "min": 70,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombro (mm)",
+        "fr": "Largeur d'épaule (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder strap width",
+        "es": "Ancho del tirante de hombro",
+        "fr": "Largeur de la bretelle d'épaule"
+      }
+    },
+    {
+      "id": "armhole_drop",
+      "type": "slider",
+      "group": "fit",
+      "default": 300,
+      "min": 220,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Armhole drop (mm)",
+        "es": "Caída de sisa (mm)",
+        "fr": "Descente d'emmanchure (mm)"
+      },
+      "tooltip": {
+        "en": "Deep vest armhole",
+        "es": "Sisa profunda de chaleco",
+        "fr": "Emmanchure profonde de gilet"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 220,
+      "min": 120,
+      "max": 380,
+      "step": 10,
+      "label": {
+        "en": "Layering ease (mm)",
+        "es": "Holgura de capas (mm)",
+        "fr": "Aisance superposition (mm)"
+      },
+      "tooltip": {
+        "en": "Room over layers",
+        "es": "Amplitud sobre capas",
+        "fr": "Aisance par-dessus les couches"
+      }
+    },
+    {
+      "id": "pocket_w",
+      "type": "slider",
+      "group": "construction",
+      "default": 180,
+      "min": 120,
+      "max": 260,
+      "step": 10,
+      "label": {
+        "en": "Cargo pocket width (mm)",
+        "es": "Ancho bolsillo cargo (mm)",
+        "fr": "Largeur poche cargo (mm)"
+      },
+      "tooltip": {
+        "en": "Lower cargo pocket",
+        "es": "Bolsillo cargo inferior",
+        "fr": "Poche cargo basse"
+      }
+    },
+    {
+      "id": "pocket_h",
+      "type": "slider",
+      "group": "construction",
+      "default": 200,
+      "min": 130,
+      "max": 300,
+      "step": 10,
+      "label": {
+        "en": "Cargo pocket height (mm)",
+        "es": "Alto bolsillo cargo (mm)",
+        "fr": "Hauteur poche cargo (mm)"
+      },
+      "tooltip": {
+        "en": "Lower cargo pocket",
+        "es": "Bolsillo cargo inferior",
+        "fr": "Poche cargo basse"
+      }
+    }
   ],
   "presets": [
-    { "id": "field", "label": { "en": "Field", "es": "Campo", "fr": "Terrain" }, "values": { "ease": 220 } },
-    { "id": "photo", "label": { "en": "Photo/roomy", "es": "Foto/amplio", "fr": "Photo/ample" }, "values": { "ease": 300, "vest_length": 700 } }
+    {
+      "id": "field",
+      "label": {
+        "en": "Field",
+        "es": "Campo",
+        "fr": "Terrain"
+      },
+      "values": {
+        "ease": 220
+      }
+    },
+    {
+      "id": "photo",
+      "label": {
+        "en": "Photo/roomy",
+        "es": "Foto/amplio",
+        "fr": "Photo/ample"
+      },
+      "values": {
+        "ease": 300,
+        "vest_length": 700
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
   "fabrics": [],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "shoulder_seam", "type": "shoulder", "label": { "en": "Shoulder seam", "es": "Costura de hombro", "fr": "Couture d'épaule" }, "edges": [{ "piece": "front", "edge": "shoulder" }, { "piece": "back", "edge": "shoulder" }], "parameters": ["neck_width", "shoulder_w"] },
-      { "id": "side_seam", "type": "side_seam", "label": { "en": "Side seam", "es": "Costura lateral", "fr": "Couture latérale" }, "edges": [{ "piece": "front", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["chest_girth", "ease"] }
+      {
+        "id": "shoulder_seam",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder seam",
+          "es": "Costura de hombro",
+          "fr": "Couture d'épaule"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "back",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "neck_width",
+          "shoulder_w"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam",
+          "es": "Costura lateral",
+          "fr": "Couture latérale"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "ease"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false
+    },
     "societal_benefit": {
       "en": "An open, made-to-measure utility vest turns a carrier of tool and cargo pockets into a repairable commons object sized to the wearer, so field and trade workers can make and mend their own gear from tough cloth instead of buying fixed-size kit.",
       "es": "Un chaleco utilitario abierto y a la medida convierte un portador de bolsillos de herramienta y cargo en un objeto común reparable ajustado a quien lo viste, para que quienes trabajan en campo y oficios hagan y reparen su propio equipo con tela dura en vez de comprar kit de talla fija.",

@@ -10,44 +10,343 @@
       "fr": "La robe fourreau ajustée : une robe près du corps, droite, mise en forme par des pinces de poitrine et de taille (marquées sur une couture latérale commune, donc équilibrée par construction), une encolure ras-du-cou et une jupe droite au genou avec une fente de marche au dos. Distincte de la robe chasuble ample de FC-100 — le fourreau est pincé et près du corps. Un vêtement textile — une fermeture dos est la quincaillerie du fabricant. Longue traîne FC-200 (manque silhouette de robe).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "advanced",
-    "tags": ["sheath", "dress", "fitted", "darted", "commons", "made-to-measure"],
+    "tags": [
+      "sheath",
+      "dress",
+      "fitted",
+      "darted",
+      "commons",
+      "made-to-measure"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
-      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
     }
   },
   "modes": [
-    { "id": "set", "label": { "en": "Full Dress", "es": "Vestido completo", "fr": "Robe complète" }, "script_file": "main.py", "pieces": ["front", "back"] }
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Dress",
+        "es": "Vestido completo",
+        "fr": "Robe complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back"
+      ]
+    }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front (darts)", "es": "Frente (pinzas)", "fr": "Devant (pinces)" }, "default_color": "#5a4a5a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
-    { "id": "back", "label": { "en": "Back (vent)", "es": "Espalda (abertura)", "fr": "Dos (fente)" }, "default_color": "#5a4a5a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (darts)",
+        "es": "Frente (pinzas)",
+        "fr": "Devant (pinces)"
+      },
+      "default_color": "#5a4a5a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (vent)",
+        "es": "Espalda (abertura)",
+        "fr": "Dos (fente)"
+      },
+      "default_color": "#5a4a5a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Coupe et style"
+      }
+    }
   ],
   "parameters": [
-    { "id": "bust_girth", "type": "slider", "default": 920, "min": 700, "max": 1400, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Bust girth (mm)", "es": "Contorno de busto (mm)", "fr": "Tour de poitrine (mm)" }, "tooltip": { "en": "Full bust", "es": "Busto completo", "fr": "Poitrine complète" } },
-    { "id": "waist_girth", "type": "slider", "default": 740, "min": 560, "max": 1250, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)" }, "tooltip": { "en": "Fitted waist", "es": "Cintura ajustada", "fr": "Taille ajustée" } },
-    { "id": "hip_girth", "type": "slider", "default": 980, "min": 760, "max": 1450, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)", "fr": "Tour de hanches (mm)" }, "tooltip": { "en": "Full hip", "es": "Cadera completa", "fr": "Hanches complètes" } },
-    { "id": "dress_length", "type": "slider", "default": 1000, "min": 750, "max": 1350, "step": 10, "label": { "en": "Length (mm)", "es": "Largo (mm)", "fr": "Longueur (mm)" }, "tooltip": { "en": "Shoulder to hem", "es": "Del hombro al ruedo", "fr": "De l'épaule à l'ourlet" } },
-    { "id": "waist_pos", "type": "slider", "default": 400, "min": 320, "max": 500, "step": 5, "label": { "en": "Waist position (mm)", "es": "Posición de cintura (mm)", "fr": "Position de taille (mm)" }, "tooltip": { "en": "Shoulder to natural waist", "es": "Del hombro a la cintura natural", "fr": "De l'épaule à la taille naturelle" } },
-    { "id": "neck_width", "type": "slider", "default": 180, "min": 130, "max": 300, "step": 5, "label": { "en": "Neck width (mm)", "es": "Ancho de escote (mm)", "fr": "Largeur d'encolure (mm)" }, "tooltip": { "en": "Jewel neck", "es": "Escote redondo", "fr": "Encolure ras-du-cou" } },
-    { "id": "shoulder_w", "type": "slider", "default": 120, "min": 70, "max": 200, "step": 5, "label": { "en": "Shoulder width (mm)", "es": "Ancho de hombro (mm)", "fr": "Largeur d'épaule (mm)" }, "tooltip": { "en": "Shoulder seam width", "es": "Ancho de costura de hombro", "fr": "Largeur de couture d'épaule" } },
-    { "id": "ease", "type": "slider", "default": 80, "min": 20, "max": 200, "step": 10, "label": { "en": "Fit ease (mm)", "es": "Holgura (mm)", "fr": "Aisance (mm)" }, "tooltip": { "en": "Close, body-skimming", "es": "Ceñido al cuerpo", "fr": "Près du corps" } }
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 920,
+      "min": 700,
+      "max": 1400,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full bust",
+        "es": "Busto completo",
+        "fr": "Poitrine complète"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 740,
+      "min": 560,
+      "max": 1250,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "Fitted waist",
+        "es": "Cintura ajustada",
+        "fr": "Taille ajustée"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 980,
+      "min": 760,
+      "max": 1450,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      },
+      "tooltip": {
+        "en": "Full hip",
+        "es": "Cadera completa",
+        "fr": "Hanches complètes"
+      }
+    },
+    {
+      "id": "dress_length",
+      "type": "slider",
+      "group": "body",
+      "default": 1000,
+      "min": 750,
+      "max": 1350,
+      "step": 10,
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to hem",
+        "es": "Del hombro al ruedo",
+        "fr": "De l'épaule à l'ourlet"
+      }
+    },
+    {
+      "id": "waist_pos",
+      "type": "slider",
+      "group": "body",
+      "default": 400,
+      "min": 320,
+      "max": 500,
+      "step": 5,
+      "label": {
+        "en": "Waist position (mm)",
+        "es": "Posición de cintura (mm)",
+        "fr": "Position de taille (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to natural waist",
+        "es": "Del hombro a la cintura natural",
+        "fr": "De l'épaule à la taille naturelle"
+      }
+    },
+    {
+      "id": "neck_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 180,
+      "min": 130,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Neck width (mm)",
+        "es": "Ancho de escote (mm)",
+        "fr": "Largeur d'encolure (mm)"
+      },
+      "tooltip": {
+        "en": "Jewel neck",
+        "es": "Escote redondo",
+        "fr": "Encolure ras-du-cou"
+      }
+    },
+    {
+      "id": "shoulder_w",
+      "type": "slider",
+      "group": "body",
+      "default": 120,
+      "min": 70,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombro (mm)",
+        "fr": "Largeur d'épaule (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder seam width",
+        "es": "Ancho de costura de hombro",
+        "fr": "Largeur de couture d'épaule"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 80,
+      "min": 20,
+      "max": 200,
+      "step": 10,
+      "label": {
+        "en": "Fit ease (mm)",
+        "es": "Holgura (mm)",
+        "fr": "Aisance (mm)"
+      },
+      "tooltip": {
+        "en": "Close, body-skimming",
+        "es": "Ceñido al cuerpo",
+        "fr": "Près du corps"
+      }
+    }
   ],
   "presets": [
-    { "id": "classic", "label": { "en": "Classic", "es": "Clásico", "fr": "Classique" }, "values": { "ease": 80 } },
-    { "id": "easy", "label": { "en": "Easy fit", "es": "Ajuste cómodo", "fr": "Coupe confort" }, "values": { "ease": 140 } }
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic",
+        "es": "Clásico",
+        "fr": "Classique"
+      },
+      "values": {
+        "ease": 80
+      }
+    },
+    {
+      "id": "easy",
+      "label": {
+        "en": "Easy fit",
+        "es": "Ajuste cómodo",
+        "fr": "Coupe confort"
+      },
+      "values": {
+        "ease": 140
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
   "fabrics": [],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "shoulder_seam", "type": "shoulder", "label": { "en": "Shoulder seam", "es": "Costura de hombro", "fr": "Couture d'épaule" }, "edges": [{ "piece": "front", "edge": "shoulder" }, { "piece": "back", "edge": "shoulder" }], "parameters": ["neck_width", "bust_girth"] },
-      { "id": "side_seam", "type": "side_seam", "label": { "en": "Side seam", "es": "Costura lateral", "fr": "Couture latérale" }, "edges": [{ "piece": "front", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["bust_girth", "waist_girth", "hip_girth"] }
+      {
+        "id": "shoulder_seam",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder seam",
+          "es": "Costura de hombro",
+          "fr": "Couture d'épaule"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "back",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "neck_width",
+          "bust_girth"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam",
+          "es": "Costura lateral",
+          "fr": "Couture latérale"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "waist_girth",
+          "hip_girth"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false
+    },
     "societal_benefit": {
       "en": "An open, made-to-measure sheath computes bust, waist, and hip shaping to the wearer's own figure, so a precisely fitted dress — usually the product of professional pattern-drafting — becomes a repeatable commons object anyone can cut to fit.",
       "es": "Un vestido tubo abierto y a la medida calcula el moldeado de busto, cintura y cadera a la figura de quien lo viste, para que un vestido ajustado con precisión — normalmente producto del patronaje profesional — se vuelva un objeto común repetible que cualquiera puede cortar a su medida.",

@@ -9,44 +9,316 @@
       "es": "La chaqueta del conjunto de verano tradicional japonés (jinbei), usado en casa y en festivales: un top ligero, abierto y de corte kimono con mangas anchas caídas que cierra con lazos internos y externos al costado. Este cartucho traza la chaqueta en el estilo de costuras rectas de la confección japonesa (espalda al canto + dos frentes traslapados + mangas anchas); el bordado sashiko y el teñido aizome pertenecen a quien elabora. Una prenda textil — sin herrajes. Tradicionalmente combinado con pantalón corto a juego. Cola larga FC-200 (patrimonio). Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["jinbei", "heritage", "japanese", "kimono-cut", "summer", "commons", "made-to-measure"],
+    "tags": [
+      "jinbei",
+      "heritage",
+      "japanese",
+      "kimono-cut",
+      "summer",
+      "commons",
+      "made-to-measure"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
-      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
     }
   },
   "modes": [
-    { "id": "set", "label": { "en": "Full Jacket", "es": "Chaqueta completa" }, "script_file": "main.py", "pieces": ["back", "front", "sleeve"] }
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Jacket",
+        "es": "Chaqueta completa"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "back",
+        "front",
+        "sleeve"
+      ]
+    }
   ],
   "pieces": [
-    { "id": "back", "label": { "en": "Back", "es": "Espalda" }, "default_color": "#3a5a6a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
-    { "id": "front", "label": { "en": "Front (ties)", "es": "Frente (lazos)" }, "default_color": "#3a5a6a", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#2a4a5a", "cut": { "quantity": 2, "mirror": true } }
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda"
+      },
+      "default_color": "#3a5a6a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (ties)",
+        "es": "Frente (lazos)"
+      },
+      "default_color": "#3a5a6a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga"
+      },
+      "default_color": "#2a4a5a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Coupe et style"
+      }
+    }
   ],
   "parameters": [
-    { "id": "chest_girth", "type": "slider", "default": 1060, "min": 700, "max": 1700, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" }, "tooltip": { "en": "Full chest", "es": "Pecho completo" } },
-    { "id": "jacket_length", "type": "slider", "default": 680, "min": 500, "max": 900, "step": 10, "label": { "en": "Length (mm)", "es": "Largo (mm)" }, "tooltip": { "en": "Nape to hem", "es": "De la nuca al ruedo" } },
-    { "id": "neck_girth", "type": "slider", "default": 420, "min": 300, "max": 560, "step": 10, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" }, "tooltip": { "en": "Full neck", "es": "Cuello completo" } },
-    { "id": "sleeve_depth", "type": "slider", "default": 260, "min": 180, "max": 400, "step": 10, "label": { "en": "Sleeve depth (mm)", "es": "Profundidad de manga (mm)" }, "tooltip": { "en": "Armhole drop", "es": "Caída de sisa" } },
-    { "id": "sleeve_length", "type": "slider", "default": 300, "min": 150, "max": 480, "step": 10, "label": { "en": "Sleeve length (mm)", "es": "Largo de manga (mm)" }, "tooltip": { "en": "Shoulder to opening", "es": "Del hombro a la abertura" } },
-    { "id": "ease", "type": "slider", "default": 240, "min": 120, "max": 460, "step": 10, "label": { "en": "Fit ease (mm)", "es": "Holgura (mm)" }, "tooltip": { "en": "Light, airy ease", "es": "Holgura ligera y aireada" } }
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 1060,
+      "min": 700,
+      "max": 1700,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest",
+        "es": "Pecho completo"
+      }
+    },
+    {
+      "id": "jacket_length",
+      "type": "slider",
+      "group": "body",
+      "default": 680,
+      "min": 500,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to hem",
+        "es": "De la nuca al ruedo"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 420,
+      "min": 300,
+      "max": 560,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)"
+      },
+      "tooltip": {
+        "en": "Full neck",
+        "es": "Cuello completo"
+      }
+    },
+    {
+      "id": "sleeve_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 260,
+      "min": 180,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Sleeve depth (mm)",
+        "es": "Profundidad de manga (mm)"
+      },
+      "tooltip": {
+        "en": "Armhole drop",
+        "es": "Caída de sisa"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "body",
+      "default": 300,
+      "min": 150,
+      "max": 480,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to opening",
+        "es": "Del hombro a la abertura"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 240,
+      "min": 120,
+      "max": 460,
+      "step": 10,
+      "label": {
+        "en": "Fit ease (mm)",
+        "es": "Holgura (mm)"
+      },
+      "tooltip": {
+        "en": "Light, airy ease",
+        "es": "Holgura ligera y aireada"
+      }
+    }
   ],
   "presets": [
-    { "id": "classic", "label": { "en": "Classic", "es": "Clásico" }, "values": { "ease": 240, "sleeve_length": 300 } },
-    { "id": "roomy", "label": { "en": "Roomy", "es": "Holgado" }, "values": { "ease": 340, "jacket_length": 760 } }
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic",
+        "es": "Clásico"
+      },
+      "values": {
+        "ease": 240,
+        "sleeve_length": 300
+      }
+    },
+    {
+      "id": "roomy",
+      "label": {
+        "en": "Roomy",
+        "es": "Holgado"
+      },
+      "values": {
+        "ease": 340,
+        "jacket_length": 760
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
   "fabrics": [],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "shoulder_seam", "type": "shoulder", "label": { "en": "Shoulder seam", "es": "Costura de hombro" }, "edges": [{ "piece": "front", "edge": "shoulder" }, { "piece": "back", "edge": "shoulder" }], "parameters": ["neck_girth", "chest_girth"] },
-      { "id": "side_seam", "type": "side_seam", "label": { "en": "Side seam (tied)", "es": "Costura lateral (con lazos)" }, "edges": [{ "piece": "front", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["jacket_length"] },
-      { "id": "armscye", "type": "armscye", "label": { "en": "Armhole", "es": "Sisa" }, "edges": [{ "piece": "sleeve", "edge": "sleevehead" }, { "piece": "back", "edge": "armhole" }], "parameters": ["sleeve_depth"] }
+      {
+        "id": "shoulder_seam",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder seam",
+          "es": "Costura de hombro"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "back",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "chest_girth"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam (tied)",
+          "es": "Costura lateral (con lazos)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "jacket_length"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Armhole",
+          "es": "Sisa"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "sleevehead"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "sleeve_depth"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "heritage": true },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "heritage": true
+    },
     "societal_benefit": {
       "en": "An open, made-to-measure jinbei jacket keeps a light, breathable heritage garment makeable from a few straight-seamed rectangles — dressed with simple side ties rather than fastenings — with the sashiko and indigo finishing left to the maker rather than sold back.",
       "es": "Una chaqueta jinbei abierta y a la medida mantiene una prenda patrimonial ligera y transpirable fabricable a partir de unos pocos rectángulos de costura recta — vestida con simples lazos laterales en lugar de cierres — con el acabado sashiko e índigo en manos de quien elabora, no revendido."

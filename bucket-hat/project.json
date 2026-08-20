@@ -85,10 +85,37 @@
       }
     }
   ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Coupe et style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
   "parameters": [
     {
       "id": "head_girth",
       "type": "slider",
+      "group": "body",
       "default": 570,
       "min": 480,
       "max": 640,
@@ -109,6 +136,7 @@
     {
       "id": "crown_depth",
       "type": "slider",
+      "group": "body",
       "default": 90,
       "min": 50,
       "max": 140,
@@ -125,6 +153,7 @@
     {
       "id": "brim_width",
       "type": "slider",
+      "group": "construction",
       "default": 60,
       "min": 30,
       "max": 100,
@@ -141,6 +170,7 @@
     {
       "id": "ease",
       "type": "slider",
+      "group": "fit",
       "default": 10,
       "min": 0,
       "max": 30,

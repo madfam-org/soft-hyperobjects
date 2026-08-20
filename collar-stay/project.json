@@ -58,10 +58,21 @@
       }
     }
   ],
+  "parameter_groups": [
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
   "parameters": [
     {
       "id": "stay_len",
       "type": "slider",
+      "group": "construction",
       "default": 65,
       "min": 35,
       "max": 120,
@@ -74,6 +85,7 @@
     {
       "id": "base_w",
       "type": "slider",
+      "group": "construction",
       "default": 12,
       "min": 6,
       "max": 25,
@@ -86,6 +98,7 @@
     {
       "id": "count",
       "type": "slider",
+      "group": "construction",
       "default": 2,
       "min": 1,
       "max": 4,
@@ -98,6 +111,7 @@
     {
       "id": "run_length",
       "type": "slider",
+      "group": "construction",
       "default": 160,
       "min": 40,
       "max": 400,
@@ -110,6 +124,7 @@
     {
       "id": "end_offset",
       "type": "slider",
+      "group": "construction",
       "default": 20,
       "min": 5,
       "max": 100,

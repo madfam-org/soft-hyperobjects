@@ -9,40 +9,249 @@
       "es": "La falda de manta — la falda fruncida del traje tradicional mexicano: anchos de manta (algodón liso) o tela tejida fruncidos sobre una pretina ajustada, amplia y con vuelo, rematada con bandas bordadas o de listón en el ruedo. Su construcción es un rectángulo fruncido a una pretina; el vuelo es lo esencial y la decoración (deshilado, bordado, listones) la aporta quien la elabora. Este cartucho traza la geometría a la medida. Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet"
     },
     "difficulty": "beginner",
-    "tags": ["falda", "skirt", "heritage", "mexico", "gathered", "commons", "made-to-measure"],
+    "tags": [
+      "falda",
+      "skirt",
+      "heritage",
+      "mexico",
+      "gathered",
+      "commons",
+      "made-to-measure"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
-      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
     }
   },
   "modes": [
-    { "id": "set", "label": { "en": "Full Skirt", "es": "Falda completa" }, "script_file": "main.py", "pieces": ["skirt", "band"] }
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Skirt",
+        "es": "Falda completa"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "skirt",
+        "band"
+      ]
+    }
   ],
   "pieces": [
-    { "id": "skirt", "label": { "en": "Skirt", "es": "Falda" }, "default_color": "#f0ece0", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
-    { "id": "band", "label": { "en": "Waistband", "es": "Pretina" }, "default_color": "#e0d8c4", "cut": { "quantity": 1, "on_fold": false, "mirror": false } }
+    {
+      "id": "skirt",
+      "label": {
+        "en": "Skirt",
+        "es": "Falda"
+      },
+      "default_color": "#f0ece0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "band",
+      "label": {
+        "en": "Waistband",
+        "es": "Pretina"
+      },
+      "default_color": "#e0d8c4",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Coupe et style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
   ],
   "parameters": [
-    { "id": "waist_girth", "type": "slider", "default": 760, "min": 500, "max": 1400, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" }, "tooltip": { "en": "Fitted waist the band is cut to", "es": "Cintura ajustada a la que se corta la pretina" } },
-    { "id": "skirt_length", "type": "slider", "default": 850, "min": 400, "max": 1200, "step": 10, "label": { "en": "Length (mm)", "es": "Largo (mm)" }, "tooltip": { "en": "Waist to finished hem", "es": "De la cintura al ruedo terminado" } },
-    { "id": "gather_ratio", "type": "slider", "default": 2.4, "min": 1.5, "max": 3.5, "step": 0.1, "label": { "en": "Gather ratio (fullness)", "es": "Razón de frunce (vuelo)" }, "tooltip": { "en": "Skirt width / waist; higher = fuller", "es": "Ancho de falda / cintura; mayor = más vuelo" } },
-    { "id": "band_height", "type": "slider", "default": 40, "min": 20, "max": 90, "step": 5, "label": { "en": "Waistband height (mm)", "es": "Alto de pretina (mm)" }, "tooltip": { "en": "Finished band height", "es": "Alto terminado de la pretina" } },
-    { "id": "hem_band", "type": "slider", "default": 100, "min": 0, "max": 300, "step": 10, "label": { "en": "Hem band depth (mm)", "es": "Profundidad de banda de ruedo (mm)" }, "tooltip": { "en": "Marked decorative hem band; 0 = none", "es": "Banda decorativa de ruedo marcada; 0 = ninguna" } }
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 760,
+      "min": 500,
+      "max": 1400,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)"
+      },
+      "tooltip": {
+        "en": "Fitted waist the band is cut to",
+        "es": "Cintura ajustada a la que se corta la pretina"
+      }
+    },
+    {
+      "id": "skirt_length",
+      "type": "slider",
+      "group": "body",
+      "default": 850,
+      "min": 400,
+      "max": 1200,
+      "step": 10,
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)"
+      },
+      "tooltip": {
+        "en": "Waist to finished hem",
+        "es": "De la cintura al ruedo terminado"
+      }
+    },
+    {
+      "id": "gather_ratio",
+      "type": "slider",
+      "group": "fit",
+      "default": 2.4,
+      "min": 1.5,
+      "max": 3.5,
+      "step": 0.1,
+      "label": {
+        "en": "Gather ratio (fullness)",
+        "es": "Razón de frunce (vuelo)"
+      },
+      "tooltip": {
+        "en": "Skirt width / waist; higher = fuller",
+        "es": "Ancho de falda / cintura; mayor = más vuelo"
+      }
+    },
+    {
+      "id": "band_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 40,
+      "min": 20,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Waistband height (mm)",
+        "es": "Alto de pretina (mm)"
+      },
+      "tooltip": {
+        "en": "Finished band height",
+        "es": "Alto terminado de la pretina"
+      }
+    },
+    {
+      "id": "hem_band",
+      "type": "slider",
+      "group": "construction",
+      "default": 100,
+      "min": 0,
+      "max": 300,
+      "step": 10,
+      "label": {
+        "en": "Hem band depth (mm)",
+        "es": "Profundidad de banda de ruedo (mm)"
+      },
+      "tooltip": {
+        "en": "Marked decorative hem band; 0 = none",
+        "es": "Banda decorativa de ruedo marcada; 0 = ninguna"
+      }
+    }
   ],
   "presets": [
-    { "id": "everyday", "label": { "en": "Everyday", "es": "Diario" }, "values": { "gather_ratio": 2.2, "skirt_length": 800 } },
-    { "id": "festival", "label": { "en": "Festival (very full)", "es": "Fiesta (muy amplia)" }, "values": { "gather_ratio": 3.2, "hem_band": 180 } }
+    {
+      "id": "everyday",
+      "label": {
+        "en": "Everyday",
+        "es": "Diario"
+      },
+      "values": {
+        "gather_ratio": 2.2,
+        "skirt_length": 800
+      }
+    },
+    {
+      "id": "festival",
+      "label": {
+        "en": "Festival (very full)",
+        "es": "Fiesta (muy amplia)"
+      },
+      "values": {
+        "gather_ratio": 3.2,
+        "hem_band": 180
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
   "fabrics": [],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "waist_seam", "type": "waistband", "label": { "en": "Gathered waist ↔ band", "es": "Cintura fruncida ↔ pretina" }, "edges": [{ "piece": "skirt", "edge": "waist" }, { "piece": "band", "edge": "attach" }], "parameters": ["waist_girth", "gather_ratio", "band_height"] }
+      {
+        "id": "waist_seam",
+        "type": "waistband",
+        "label": {
+          "en": "Gathered waist ↔ band",
+          "es": "Cintura fruncida ↔ pretina"
+        },
+        "edges": [
+          {
+            "piece": "skirt",
+            "edge": "waist"
+          },
+          {
+            "piece": "band",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "gather_ratio",
+          "band_height"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false
+    },
     "societal_benefit": {
       "en": "An open, made-to-measure draft of the falda de manta's gathered construction lets anyone cut and gather the skirt to fit, while leaving the deshilado, embroidery, and ribbon work — the regional identity — to the maker. It records a garment central to Mexican traditional dress and teaches gathered-fullness construction with almost no waste.",
       "es": "Un trazo abierto y a la medida de la construcción fruncida de la falda de manta permite a cualquiera cortar y fruncir la falda a su talla, dejando el deshilado, el bordado y el listón — la identidad regional — a quien la elabora. Registra una prenda central del traje tradicional mexicano y enseña la construcción de vuelo fruncido casi sin desperdicio."

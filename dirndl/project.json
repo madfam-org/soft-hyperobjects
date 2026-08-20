@@ -9,46 +9,355 @@
       "es": "El vestido tradicional alpino (bávaro/austríaco): un corpiño ajustado unido en la cintura a una falda amplia fruncida, con un delantal atado por separado. Este cartucho traza la geometría de la prenda — corpiño, falda fruncida y delantal — y marca (no reproduce) los adornos regionales, el cordón y la decoración del delantal. Una prenda textil — sin herrajes. Cola larga FC-200 (patrimonio). Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet"
     },
     "difficulty": "advanced",
-    "tags": ["dirndl", "heritage", "alpine", "dress", "bodice", "gathered", "commons", "made-to-measure"],
+    "tags": [
+      "dirndl",
+      "heritage",
+      "alpine",
+      "dress",
+      "bodice",
+      "gathered",
+      "commons",
+      "made-to-measure"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
-      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
     }
   },
   "modes": [
-    { "id": "set", "label": { "en": "Full Dress", "es": "Vestido completo" }, "script_file": "main.py", "pieces": ["bodice_front", "bodice_back", "skirt", "apron"] }
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Dress",
+        "es": "Vestido completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "bodice_front",
+        "bodice_back",
+        "skirt",
+        "apron"
+      ]
+    }
   ],
   "pieces": [
-    { "id": "bodice_front", "label": { "en": "Bodice Front", "es": "Corpiño frente" }, "default_color": "#7a5a3a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
-    { "id": "bodice_back", "label": { "en": "Bodice Back", "es": "Corpiño espalda" }, "default_color": "#7a5a3a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
-    { "id": "skirt", "label": { "en": "Skirt", "es": "Falda" }, "default_color": "#6a4a2a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
-    { "id": "apron", "label": { "en": "Apron", "es": "Delantal" }, "default_color": "#8a6a4a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } }
+    {
+      "id": "bodice_front",
+      "label": {
+        "en": "Bodice Front",
+        "es": "Corpiño frente"
+      },
+      "default_color": "#7a5a3a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "bodice_back",
+      "label": {
+        "en": "Bodice Back",
+        "es": "Corpiño espalda"
+      },
+      "default_color": "#7a5a3a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "skirt",
+      "label": {
+        "en": "Skirt",
+        "es": "Falda"
+      },
+      "default_color": "#6a4a2a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "apron",
+      "label": {
+        "en": "Apron",
+        "es": "Delantal"
+      },
+      "default_color": "#8a6a4a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Coupe et style"
+      }
+    }
   ],
   "parameters": [
-    { "id": "bust_girth", "type": "slider", "default": 920, "min": 700, "max": 1400, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Bust girth (mm)", "es": "Contorno de busto (mm)" }, "tooltip": { "en": "Full bust", "es": "Busto completo" } },
-    { "id": "waist_girth", "type": "slider", "default": 740, "min": 550, "max": 1300, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" }, "tooltip": { "en": "Fitted waist", "es": "Cintura ajustada" } },
-    { "id": "bodice_len", "type": "slider", "default": 380, "min": 300, "max": 480, "step": 5, "label": { "en": "Bodice length (mm)", "es": "Largo de corpiño (mm)" }, "tooltip": { "en": "Shoulder to waist seam", "es": "Del hombro a la costura de cintura" } },
-    { "id": "skirt_length", "type": "slider", "default": 700, "min": 400, "max": 1100, "step": 10, "label": { "en": "Skirt length (mm)", "es": "Largo de falda (mm)" }, "tooltip": { "en": "Waist to hem", "es": "De la cintura al ruedo" } },
-    { "id": "gather_ratio", "type": "slider", "default": 2.2, "min": 1.6, "max": 3.2, "step": 0.1, "label": { "en": "Gather fullness", "es": "Amplitud del fruncido" }, "tooltip": { "en": "Skirt width ÷ waist", "es": "Ancho de falda ÷ cintura" } },
-    { "id": "neck_width", "type": "slider", "default": 180, "min": 130, "max": 300, "step": 5, "label": { "en": "Neck width (mm)", "es": "Ancho de escote (mm)" }, "tooltip": { "en": "Square-ish neckline", "es": "Escote casi cuadrado" } },
-    { "id": "apron_ratio", "type": "slider", "default": 0.62, "min": 0.45, "max": 0.85, "step": 0.01, "label": { "en": "Apron width fraction", "es": "Fracción de ancho del delantal" }, "tooltip": { "en": "Apron width as a fraction of the skirt", "es": "Ancho del delantal como fracción de la falda" } }
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 920,
+      "min": 700,
+      "max": 1400,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)"
+      },
+      "tooltip": {
+        "en": "Full bust",
+        "es": "Busto completo"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 740,
+      "min": 550,
+      "max": 1300,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)"
+      },
+      "tooltip": {
+        "en": "Fitted waist",
+        "es": "Cintura ajustada"
+      }
+    },
+    {
+      "id": "bodice_len",
+      "type": "slider",
+      "group": "body",
+      "default": 380,
+      "min": 300,
+      "max": 480,
+      "step": 5,
+      "label": {
+        "en": "Bodice length (mm)",
+        "es": "Largo de corpiño (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to waist seam",
+        "es": "Del hombro a la costura de cintura"
+      }
+    },
+    {
+      "id": "skirt_length",
+      "type": "slider",
+      "group": "body",
+      "default": 700,
+      "min": 400,
+      "max": 1100,
+      "step": 10,
+      "label": {
+        "en": "Skirt length (mm)",
+        "es": "Largo de falda (mm)"
+      },
+      "tooltip": {
+        "en": "Waist to hem",
+        "es": "De la cintura al ruedo"
+      }
+    },
+    {
+      "id": "gather_ratio",
+      "type": "slider",
+      "group": "fit",
+      "default": 2.2,
+      "min": 1.6,
+      "max": 3.2,
+      "step": 0.1,
+      "label": {
+        "en": "Gather fullness",
+        "es": "Amplitud del fruncido"
+      },
+      "tooltip": {
+        "en": "Skirt width ÷ waist",
+        "es": "Ancho de falda ÷ cintura"
+      }
+    },
+    {
+      "id": "neck_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 180,
+      "min": 130,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Neck width (mm)",
+        "es": "Ancho de escote (mm)"
+      },
+      "tooltip": {
+        "en": "Square-ish neckline",
+        "es": "Escote casi cuadrado"
+      }
+    },
+    {
+      "id": "apron_ratio",
+      "type": "slider",
+      "group": "fit",
+      "default": 0.62,
+      "min": 0.45,
+      "max": 0.85,
+      "step": 0.01,
+      "label": {
+        "en": "Apron width fraction",
+        "es": "Fracción de ancho del delantal"
+      },
+      "tooltip": {
+        "en": "Apron width as a fraction of the skirt",
+        "es": "Ancho del delantal como fracción de la falda"
+      }
+    }
   ],
   "presets": [
-    { "id": "classic", "label": { "en": "Classic", "es": "Clásico" }, "values": { "gather_ratio": 2.2, "skirt_length": 700 } },
-    { "id": "midi-full", "label": { "en": "Fuller midi", "es": "Midi más amplio" }, "values": { "gather_ratio": 2.8, "skirt_length": 850 } }
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic",
+        "es": "Clásico"
+      },
+      "values": {
+        "gather_ratio": 2.2,
+        "skirt_length": 700
+      }
+    },
+    {
+      "id": "midi-full",
+      "label": {
+        "en": "Fuller midi",
+        "es": "Midi más amplio"
+      },
+      "values": {
+        "gather_ratio": 2.8,
+        "skirt_length": 850
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
   "fabrics": [],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "shoulder_seam", "type": "shoulder", "label": { "en": "Shoulder seam", "es": "Costura de hombro" }, "edges": [{ "piece": "bodice_front", "edge": "shoulder" }, { "piece": "bodice_back", "edge": "shoulder" }], "parameters": ["neck_width", "bust_girth"] },
-      { "id": "bodice_side", "type": "side_seam", "label": { "en": "Bodice side seam", "es": "Costura lateral de corpiño" }, "edges": [{ "piece": "bodice_front", "edge": "side" }, { "piece": "bodice_back", "edge": "side" }], "parameters": ["bust_girth", "waist_girth"] },
-      { "id": "waist_seam", "type": "waistband", "label": { "en": "Waist seam (bodice to skirt)", "es": "Costura de cintura (corpiño a falda)" }, "edges": [{ "piece": "bodice_front", "edge": "waist" }, { "piece": "skirt", "edge": "waist" }], "parameters": ["waist_girth", "gather_ratio"] }
+      {
+        "id": "shoulder_seam",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder seam",
+          "es": "Costura de hombro"
+        },
+        "edges": [
+          {
+            "piece": "bodice_front",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "bodice_back",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "neck_width",
+          "bust_girth"
+        ]
+      },
+      {
+        "id": "bodice_side",
+        "type": "side_seam",
+        "label": {
+          "en": "Bodice side seam",
+          "es": "Costura lateral de corpiño"
+        },
+        "edges": [
+          {
+            "piece": "bodice_front",
+            "edge": "side"
+          },
+          {
+            "piece": "bodice_back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "waist_girth"
+        ]
+      },
+      {
+        "id": "waist_seam",
+        "type": "waistband",
+        "label": {
+          "en": "Waist seam (bodice to skirt)",
+          "es": "Costura de cintura (corpiño a falda)"
+        },
+        "edges": [
+          {
+            "piece": "bodice_front",
+            "edge": "waist"
+          },
+          {
+            "piece": "skirt",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "gather_ratio"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "heritage": true },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "heritage": true
+    },
     "societal_benefit": {
       "en": "An open, made-to-measure dirndl pattern keeps a living heritage garment makeable and repairable by the people who wear it — bodice, skirt, and apron drafted to real measurements, with the regional decoration left to the maker rather than dictated or sold back.",
       "es": "Un patrón de dirndl abierto y a la medida mantiene una prenda patrimonial viva fabricable y reparable por quienes la visten — corpiño, falda y delantal trazados a medidas reales, con la decoración regional en manos de quien elabora, no dictada ni revendida."

@@ -10,46 +10,378 @@
       "fr": "La blouse d'artiste/d'atelier à enfiler : un vêtement de protection ample avec un empiècement d'épaule, un corps froncé qui pend de l'empiècement pour l'aisance, une large encolure à enfiler, des manches tombantes coupées à même, et une grande poche kangourou avant divisée. Distinct des manteaux boutonnés de FC-100 — la blouse s'enfile, elle est froncée et ne nécessite aucune fermeture. Un vêtement textile — sans quincaillerie. Longue traîne FC-200 (manque vêtement de travail).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["smock", "artist", "craft", "workwear", "yoke", "commons", "made-to-measure"],
+    "tags": [
+      "smock",
+      "artist",
+      "craft",
+      "workwear",
+      "yoke",
+      "commons",
+      "made-to-measure"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
-      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
     }
   },
   "modes": [
-    { "id": "set", "label": { "en": "Full Smock", "es": "Mandil completo", "fr": "Blouse complète" }, "script_file": "main.py", "pieces": ["yoke_front", "yoke_back", "body_front", "body_back"] }
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Smock",
+        "es": "Mandil completo",
+        "fr": "Blouse complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "yoke_front",
+        "yoke_back",
+        "body_front",
+        "body_back"
+      ]
+    }
   ],
   "pieces": [
-    { "id": "yoke_front", "label": { "en": "Yoke Front", "es": "Canesú frente", "fr": "Empiècement devant" }, "default_color": "#7a7a6a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
-    { "id": "yoke_back", "label": { "en": "Yoke Back", "es": "Canesú espalda", "fr": "Empiècement dos" }, "default_color": "#7a7a6a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
-    { "id": "body_front", "label": { "en": "Body Front (pocket)", "es": "Cuerpo frente (bolsillo)", "fr": "Corps devant (poche)" }, "default_color": "#8a8a7a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
-    { "id": "body_back", "label": { "en": "Body Back", "es": "Cuerpo espalda", "fr": "Corps dos" }, "default_color": "#8a8a7a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } }
+    {
+      "id": "yoke_front",
+      "label": {
+        "en": "Yoke Front",
+        "es": "Canesú frente",
+        "fr": "Empiècement devant"
+      },
+      "default_color": "#7a7a6a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "yoke_back",
+      "label": {
+        "en": "Yoke Back",
+        "es": "Canesú espalda",
+        "fr": "Empiècement dos"
+      },
+      "default_color": "#7a7a6a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "body_front",
+      "label": {
+        "en": "Body Front (pocket)",
+        "es": "Cuerpo frente (bolsillo)",
+        "fr": "Corps devant (poche)"
+      },
+      "default_color": "#8a8a7a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "body_back",
+      "label": {
+        "en": "Body Back",
+        "es": "Cuerpo espalda",
+        "fr": "Corps dos"
+      },
+      "default_color": "#8a8a7a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Coupe et style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
   ],
   "parameters": [
-    { "id": "chest_girth", "type": "slider", "default": 1080, "min": 720, "max": 1700, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)" }, "tooltip": { "en": "Full chest", "es": "Pecho completo", "fr": "Poitrine complète" } },
-    { "id": "smock_length", "type": "slider", "default": 760, "min": 500, "max": 1000, "step": 10, "label": { "en": "Length (mm)", "es": "Largo (mm)", "fr": "Longueur (mm)" }, "tooltip": { "en": "Nape to hem", "es": "De la nuca al ruedo", "fr": "De la nuque à l'ourlet" } },
-    { "id": "yoke_depth", "type": "slider", "default": 150, "min": 90, "max": 260, "step": 10, "label": { "en": "Yoke depth (mm)", "es": "Alto de canesú (mm)", "fr": "Profondeur d'empiècement (mm)" }, "tooltip": { "en": "Yoke height at CB", "es": "Alto del canesú en el centro de la espalda", "fr": "Hauteur de l'empiècement au milieu dos" } },
-    { "id": "neck_width", "type": "slider", "default": 240, "min": 180, "max": 380, "step": 5, "label": { "en": "Neck width (mm)", "es": "Ancho de cuello (mm)", "fr": "Largeur d'encolure (mm)" }, "tooltip": { "en": "Wide pull-over neck", "es": "Cuello ancho para meter", "fr": "Large encolure à enfiler" } },
-    { "id": "sleeve_grown", "type": "slider", "default": 220, "min": 80, "max": 340, "step": 10, "label": { "en": "Grown sleeve (mm)", "es": "Manga nacida (mm)", "fr": "Manche coupée à même (mm)" }, "tooltip": { "en": "Grown dropped sleeve", "es": "Manga nacida caída", "fr": "Manche tombante coupée à même" } },
-    { "id": "body_gather", "type": "slider", "default": 1.6, "min": 1.2, "max": 2.4, "step": 0.1, "label": { "en": "Body gather", "es": "Fruncido del cuerpo", "fr": "Fronçage du corps" }, "tooltip": { "en": "Body width ÷ yoke width", "es": "Ancho de cuerpo ÷ ancho de canesú", "fr": "Largeur du corps ÷ largeur de l'empiècement" } },
-    { "id": "ease", "type": "slider", "default": 200, "min": 100, "max": 400, "step": 10, "label": { "en": "Fit ease (mm)", "es": "Holgura (mm)", "fr": "Aisance (mm)" }, "tooltip": { "en": "Roomy ease", "es": "Holgura amplia", "fr": "Aisance ample" } }
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 1080,
+      "min": 720,
+      "max": 1700,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest",
+        "es": "Pecho completo",
+        "fr": "Poitrine complète"
+      }
+    },
+    {
+      "id": "smock_length",
+      "type": "slider",
+      "group": "body",
+      "default": 760,
+      "min": 500,
+      "max": 1000,
+      "step": 10,
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to hem",
+        "es": "De la nuca al ruedo",
+        "fr": "De la nuque à l'ourlet"
+      }
+    },
+    {
+      "id": "yoke_depth",
+      "type": "slider",
+      "group": "construction",
+      "default": 150,
+      "min": 90,
+      "max": 260,
+      "step": 10,
+      "label": {
+        "en": "Yoke depth (mm)",
+        "es": "Alto de canesú (mm)",
+        "fr": "Profondeur d'empiècement (mm)"
+      },
+      "tooltip": {
+        "en": "Yoke height at CB",
+        "es": "Alto del canesú en el centro de la espalda",
+        "fr": "Hauteur de l'empiècement au milieu dos"
+      }
+    },
+    {
+      "id": "neck_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 240,
+      "min": 180,
+      "max": 380,
+      "step": 5,
+      "label": {
+        "en": "Neck width (mm)",
+        "es": "Ancho de cuello (mm)",
+        "fr": "Largeur d'encolure (mm)"
+      },
+      "tooltip": {
+        "en": "Wide pull-over neck",
+        "es": "Cuello ancho para meter",
+        "fr": "Large encolure à enfiler"
+      }
+    },
+    {
+      "id": "sleeve_grown",
+      "type": "slider",
+      "group": "fit",
+      "default": 220,
+      "min": 80,
+      "max": 340,
+      "step": 10,
+      "label": {
+        "en": "Grown sleeve (mm)",
+        "es": "Manga nacida (mm)",
+        "fr": "Manche coupée à même (mm)"
+      },
+      "tooltip": {
+        "en": "Grown dropped sleeve",
+        "es": "Manga nacida caída",
+        "fr": "Manche tombante coupée à même"
+      }
+    },
+    {
+      "id": "body_gather",
+      "type": "slider",
+      "group": "fit",
+      "default": 1.6,
+      "min": 1.2,
+      "max": 2.4,
+      "step": 0.1,
+      "label": {
+        "en": "Body gather",
+        "es": "Fruncido del cuerpo",
+        "fr": "Fronçage du corps"
+      },
+      "tooltip": {
+        "en": "Body width ÷ yoke width",
+        "es": "Ancho de cuerpo ÷ ancho de canesú",
+        "fr": "Largeur du corps ÷ largeur de l'empiècement"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 200,
+      "min": 100,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Fit ease (mm)",
+        "es": "Holgura (mm)",
+        "fr": "Aisance (mm)"
+      },
+      "tooltip": {
+        "en": "Roomy ease",
+        "es": "Holgura amplia",
+        "fr": "Aisance ample"
+      }
+    }
   ],
   "presets": [
-    { "id": "classic", "label": { "en": "Classic", "es": "Clásico", "fr": "Classique" }, "values": { "body_gather": 1.6 } },
-    { "id": "voluminous", "label": { "en": "Voluminous", "es": "Voluminoso", "fr": "Volumineux" }, "values": { "body_gather": 2.1, "smock_length": 860 } }
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic",
+        "es": "Clásico",
+        "fr": "Classique"
+      },
+      "values": {
+        "body_gather": 1.6
+      }
+    },
+    {
+      "id": "voluminous",
+      "label": {
+        "en": "Voluminous",
+        "es": "Voluminoso",
+        "fr": "Volumineux"
+      },
+      "values": {
+        "body_gather": 2.1,
+        "smock_length": 860
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
   "fabrics": [],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "shoulder_seam", "type": "shoulder", "label": { "en": "Shoulder seam", "es": "Costura de hombro", "fr": "Couture d'épaule" }, "edges": [{ "piece": "yoke_front", "edge": "shoulder" }, { "piece": "yoke_back", "edge": "shoulder" }], "parameters": ["neck_width", "chest_girth"] },
-      { "id": "yoke_seam", "type": "custom", "label": { "en": "Yoke-to-body seam", "es": "Costura canesú-cuerpo", "fr": "Couture empiècement-corps" }, "edges": [{ "piece": "yoke_front", "edge": "yoke_seam" }, { "piece": "body_front", "edge": "yoke_seam" }], "parameters": ["body_gather"] },
-      { "id": "body_side", "type": "side_seam", "label": { "en": "Body side seam", "es": "Costura lateral del cuerpo", "fr": "Couture latérale du corps" }, "edges": [{ "piece": "body_front", "edge": "side" }, { "piece": "body_back", "edge": "side" }], "parameters": ["ease"] }
+      {
+        "id": "shoulder_seam",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder seam",
+          "es": "Costura de hombro",
+          "fr": "Couture d'épaule"
+        },
+        "edges": [
+          {
+            "piece": "yoke_front",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "yoke_back",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "neck_width",
+          "chest_girth"
+        ]
+      },
+      {
+        "id": "yoke_seam",
+        "type": "custom",
+        "label": {
+          "en": "Yoke-to-body seam",
+          "es": "Costura canesú-cuerpo",
+          "fr": "Couture empiècement-corps"
+        },
+        "edges": [
+          {
+            "piece": "yoke_front",
+            "edge": "yoke_seam"
+          },
+          {
+            "piece": "body_front",
+            "edge": "yoke_seam"
+          }
+        ],
+        "parameters": [
+          "body_gather"
+        ]
+      },
+      {
+        "id": "body_side",
+        "type": "side_seam",
+        "label": {
+          "en": "Body side seam",
+          "es": "Costura lateral del cuerpo",
+          "fr": "Couture latérale du corps"
+        },
+        "edges": [
+          {
+            "piece": "body_front",
+            "edge": "side"
+          },
+          {
+            "piece": "body_back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "ease"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false
+    },
     "societal_benefit": {
       "en": "An open, made-to-measure smock protects clothing and gives room to work from a simple yoke-and-gathered-body cut with no fasteners, so a maker, cook, or child can pull on a durable, mendable cover made in any wipeable cloth.",
       "es": "Un mandil abierto y a la medida protege la ropa y da amplitud para trabajar desde un corte simple de canesú y cuerpo fruncido sin cierres, para que quien crea, cocina o juega pueda meterse una cubierta duradera y reparable hecha en cualquier tela lavable.",

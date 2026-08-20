@@ -115,10 +115,29 @@
       }
     }
   ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Coupe et style"
+      }
+    }
+  ],
   "parameters": [
     {
       "id": "chest_girth",
       "type": "slider",
+      "group": "body",
       "default": 1060,
       "min": 680,
       "max": 1600,
@@ -141,6 +160,7 @@
     {
       "id": "shirt_length",
       "type": "slider",
+      "group": "body",
       "default": 760,
       "min": 600,
       "max": 950,
@@ -159,6 +179,7 @@
     {
       "id": "neck_girth",
       "type": "slider",
+      "group": "body",
       "default": 420,
       "min": 300,
       "max": 560,
@@ -181,6 +202,7 @@
     {
       "id": "sleeve_length",
       "type": "slider",
+      "group": "body",
       "default": 620,
       "min": 400,
       "max": 720,
@@ -203,6 +225,7 @@
     {
       "id": "sleeve_depth",
       "type": "slider",
+      "group": "fit",
       "default": 250,
       "min": 180,
       "max": 380,
@@ -221,6 +244,7 @@
     {
       "id": "side_slit",
       "type": "slider",
+      "group": "fit",
       "default": 130,
       "min": 0,
       "max": 260,
@@ -239,6 +263,7 @@
     {
       "id": "ease",
       "type": "slider",
+      "group": "fit",
       "default": 200,
       "min": 120,
       "max": 380,

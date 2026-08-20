@@ -9,68 +9,194 @@
       "es": "Un avío puenteado con Yantra4D para la frontera de manufactura aditiva de la biblioteca de telas: un panel plisado en acordeón TPU impreso en 3D que se pliega como tela plisada. Fashion Cabinet posee la moda (dimensiones terminadas, el número de pliegues según la altura, la guía de colocación del canto cosible) mientras la pared plisada es un sólido de Yantra4D (`tpu-pleat-panel`) impreso plano. Una identidad de material, Bambu TPU 95A, abarca este avío y ese sólido.\n\nVisualizador y configurador oficial: Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["pleat", "panel", "tpu", "am-fashion", "notion", "printed-textile", "hyperobject", "commons"],
+    "tags": [
+      "pleat",
+      "panel",
+      "tpu",
+      "am-fashion",
+      "notion",
+      "printed-textile",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
-      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
     }
   },
   "modes": [
     {
       "id": "placement-guide",
-      "label": { "en": "Panel Placement Guide", "es": "Guía de colocación del panel" },
+      "label": {
+        "en": "Panel Placement Guide",
+        "es": "Guía de colocación del panel"
+      },
       "script_file": "main.py",
-      "pieces": ["placement-guide"]
+      "pieces": [
+        "placement-guide"
+      ]
     }
   ],
   "pieces": [
     {
       "id": "placement-guide",
-      "label": { "en": "Pleat Panel Placement Guide", "es": "Guía de colocación de panel plisado" },
+      "label": {
+        "en": "Pleat Panel Placement Guide",
+        "es": "Guía de colocación de panel plisado"
+      },
       "default_color": "#8f86a8",
-      "cut": { "quantity": 1, "on_fold": false, "mirror": false }
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
     }
   ],
   "parameters": [
     {
-      "id": "panel_width_mm", "type": "slider", "default": 200, "min": 40, "max": 300, "step": 5,
-      "label": { "en": "Panel width (mm, ≤ print bed)", "es": "Ancho del panel (mm, ≤ cama)" },
-      "tooltip": { "en": "Finished width across the pleats; capped at the printed panel's bed width", "es": "Ancho terminado a través de los pliegues; limitado al ancho de cama" }
+      "id": "panel_width_mm",
+      "type": "slider",
+      "group": "construction",
+      "default": 200,
+      "min": 40,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Panel width (mm, ≤ print bed)",
+        "es": "Ancho del panel (mm, ≤ cama)"
+      },
+      "tooltip": {
+        "en": "Finished width across the pleats; capped at the printed panel's bed width",
+        "es": "Ancho terminado a través de los pliegues; limitado al ancho de cama"
+      }
     },
     {
-      "id": "panel_height_mm", "type": "slider", "default": 320, "min": 40, "max": 800, "step": 5,
-      "label": { "en": "Panel height / drop (mm)", "es": "Alto / caída del panel (mm)" },
-      "tooltip": { "en": "Relaxed drop down the body; the pleat count follows", "es": "Caída en reposo por el cuerpo; el número de pliegues sigue" }
+      "id": "panel_height_mm",
+      "type": "slider",
+      "group": "construction",
+      "default": 320,
+      "min": 40,
+      "max": 800,
+      "step": 5,
+      "label": {
+        "en": "Panel height / drop (mm)",
+        "es": "Alto / caída del panel (mm)"
+      },
+      "tooltip": {
+        "en": "Relaxed drop down the body; the pleat count follows",
+        "es": "Caída en reposo por el cuerpo; el número de pliegues sigue"
+      }
     },
     {
-      "id": "pleat_depth", "type": "slider", "default": 12, "min": 3, "max": 40, "step": 0.5,
-      "label": { "en": "Pleat depth (mm)", "es": "Profundidad de pliegue (mm)" },
-      "tooltip": { "en": "Passed to the Yantra4D panel; deeper = more compression", "es": "Se pasa al panel de Yantra4D; mayor = más compresión" }
+      "id": "pleat_depth",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 3,
+      "max": 40,
+      "step": 0.5,
+      "label": {
+        "en": "Pleat depth (mm)",
+        "es": "Profundidad de pliegue (mm)"
+      },
+      "tooltip": {
+        "en": "Passed to the Yantra4D panel; deeper = more compression",
+        "es": "Se pasa al panel de Yantra4D; mayor = más compresión"
+      }
     },
     {
-      "id": "wall", "type": "slider", "default": 1.2, "min": 0.6, "max": 4, "step": 0.1,
-      "label": { "en": "Printed wall (mm)", "es": "Pared impresa (mm)" },
-      "tooltip": { "en": "Facet wall; thinner = softer folds", "es": "Pared de faceta; más delgada = pliegues más suaves" }
+      "id": "wall",
+      "type": "slider",
+      "group": "construction",
+      "default": 1.2,
+      "min": 0.6,
+      "max": 4,
+      "step": 0.1,
+      "label": {
+        "en": "Printed wall (mm)",
+        "es": "Pared impresa (mm)"
+      },
+      "tooltip": {
+        "en": "Facet wall; thinner = softer folds",
+        "es": "Pared de faceta; más delgada = pliegues más suaves"
+      }
     },
     {
-      "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 25, "step": 1,
-      "label": { "en": "Sew-edge allowance (mm)", "es": "Margen de canto cosible (mm)" },
-      "tooltip": { "en": "Tape-bound edge allowance where the panel sews to a garment", "es": "Margen de canto rematado donde el panel se cose a la prenda" }
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 25,
+      "step": 1,
+      "label": {
+        "en": "Sew-edge allowance (mm)",
+        "es": "Margen de canto cosible (mm)"
+      },
+      "tooltip": {
+        "en": "Tape-bound edge allowance where the panel sews to a garment",
+        "es": "Margen de canto rematado donde el panel se cose a la prenda"
+      },
+      "advanced": true
     }
   ],
   "presets": [
-    { "id": "skirt-panel", "label": { "en": "Skirt panel (200×320)", "es": "Panel de falda (200×320)" }, "values": { "panel_width_mm": 200, "panel_height_mm": 320, "pleat_depth": 12 } },
-    { "id": "collar-frill", "label": { "en": "Collar frill (140×90)", "es": "Volante de cuello (140×90)" }, "values": { "panel_width_mm": 140, "panel_height_mm": 90, "pleat_depth": 8 } }
+    {
+      "id": "skirt-panel",
+      "label": {
+        "en": "Skirt panel (200×320)",
+        "es": "Panel de falda (200×320)"
+      },
+      "values": {
+        "panel_width_mm": 200,
+        "panel_height_mm": 320,
+        "pleat_depth": 12
+      }
+    },
+    {
+      "id": "collar-frill",
+      "label": {
+        "en": "Collar frill (140×90)",
+        "es": "Volante de cuello (140×90)"
+      },
+      "values": {
+        "panel_width_mm": 140,
+        "panel_height_mm": 90,
+        "pleat_depth": 8
+      }
+    }
   ],
   "constraints": [
     {
       "expression": "panel_width_mm <= 300",
       "severity": "error",
-      "message": { "en": "Panel width exceeds the printed panel's bed-bound width — split into panels", "es": "El ancho excede el ancho de cama del panel impreso — divide en paneles" }
+      "message": {
+        "en": "Panel width exceeds the printed panel's bed-bound width — split into panels",
+        "es": "El ancho excede el ancho de cama del panel impreso — divide en paneles"
+      }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
   "fabrics": [],
   "notion": {
     "kind": "custom",
@@ -95,9 +221,22 @@
       {
         "id": "panel_edge",
         "type": "side_seam",
-        "label": { "en": "Sewable panel edge", "es": "Canto cosible del panel" },
-        "edges": [{ "piece": "placement-guide", "edge": "guide" }],
-        "parameters": ["panel_width_mm", "panel_height_mm", "wall", "seam_allowance"]
+        "label": {
+          "en": "Sewable panel edge",
+          "es": "Canto cosible del panel"
+        },
+        "edges": [
+          {
+            "piece": "placement-guide",
+            "edge": "guide"
+          }
+        ],
+        "parameters": [
+          "panel_width_mm",
+          "panel_height_mm",
+          "wall",
+          "seam_allowance"
+        ]
       }
     ],
     "capabilities": {

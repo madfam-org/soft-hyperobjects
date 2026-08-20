@@ -57,10 +57,29 @@
       }
     }
   ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
   "parameters": [
     {
       "id": "waist_girth",
       "type": "slider",
+      "group": "body",
       "default": 900,
       "min": 550,
       "max": 1400,
@@ -81,6 +100,7 @@
     {
       "id": "strap_width",
       "type": "slider",
+      "group": "construction",
       "default": 38,
       "min": 15,
       "max": 50,
@@ -97,6 +117,7 @@
     {
       "id": "tip_length",
       "type": "slider",
+      "group": "construction",
       "default": 60,
       "min": 0,
       "max": 120,
@@ -113,6 +134,7 @@
     {
       "id": "eyelets",
       "type": "slider",
+      "group": "construction",
       "default": 5,
       "min": 1,
       "max": 9,
@@ -129,6 +151,7 @@
     {
       "id": "eyelet_pitch",
       "type": "slider",
+      "group": "construction",
       "default": 25,
       "min": 15,
       "max": 40,
@@ -145,6 +168,7 @@
     {
       "id": "buckle_return",
       "type": "slider",
+      "group": "construction",
       "default": 80,
       "min": 40,
       "max": 140,

@@ -59,10 +59,29 @@
       }
     }
   ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
   "parameters": [
     {
       "id": "neck_girth",
       "type": "slider",
+      "group": "body",
       "default": 400,
       "min": 280,
       "max": 600,
@@ -79,6 +98,7 @@
     {
       "id": "band_h",
       "type": "slider",
+      "group": "construction",
       "default": 30,
       "min": 10,
       "max": 120,
@@ -91,6 +111,7 @@
     {
       "id": "stand_h",
       "type": "slider",
+      "group": "construction",
       "default": 35,
       "min": 10,
       "max": 120,
@@ -103,6 +124,7 @@
     {
       "id": "wall",
       "type": "slider",
+      "group": "construction",
       "default": 2.0,
       "min": 1.0,
       "max": 6.0,
@@ -115,6 +137,7 @@
     {
       "id": "seam_allowance",
       "type": "slider",
+      "group": "construction",
       "default": 10,
       "min": 0,
       "max": 25,
@@ -122,7 +145,8 @@
       "label": {
         "en": "Sew-edge allowance (mm)",
         "es": "Margen de canto cosible (mm)"
-      }
+      },
+      "advanced": true
     }
   ],
   "presets": [

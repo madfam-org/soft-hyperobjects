@@ -9,44 +9,319 @@
       "es": "Un vestido pichi (jumper): un peto frontal + corpiño bajo de espalda sobre tirantes que cruzan atrás y se abotonan, unido en la cintura a una falda fruncida. Se usa sobre un top o blusa; abierto en los costados (los tirantes + la costura de cintura lo sostienen). Una prenda textil — los botones son herraje de quien elabora. Cola larga FC-200 (hueco de silueta).\n\nVisualizador y configurador oficial: Fashion Cabinet"
     },
     "difficulty": "beginner",
-    "tags": ["pinafore", "jumper", "dress", "bib", "layering", "commons", "made-to-measure"],
+    "tags": [
+      "pinafore",
+      "jumper",
+      "dress",
+      "bib",
+      "layering",
+      "commons",
+      "made-to-measure"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
-      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
     }
   },
   "modes": [
-    { "id": "set", "label": { "en": "Full Dress", "es": "Vestido completo" }, "script_file": "main.py", "pieces": ["bib", "back", "skirt"] }
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Dress",
+        "es": "Vestido completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "bib",
+        "back",
+        "skirt"
+      ]
+    }
   ],
   "pieces": [
-    { "id": "bib", "label": { "en": "Bib front", "es": "Peto frontal" }, "default_color": "#5a5a6a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
-    { "id": "back", "label": { "en": "Back bodice", "es": "Corpiño espalda" }, "default_color": "#5a5a6a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } },
-    { "id": "skirt", "label": { "en": "Skirt", "es": "Falda" }, "default_color": "#4a4a5a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } }
+    {
+      "id": "bib",
+      "label": {
+        "en": "Bib front",
+        "es": "Peto frontal"
+      },
+      "default_color": "#5a5a6a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back bodice",
+        "es": "Corpiño espalda"
+      },
+      "default_color": "#5a5a6a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "skirt",
+      "label": {
+        "en": "Skirt",
+        "es": "Falda"
+      },
+      "default_color": "#4a4a5a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Coupe et style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
   ],
   "parameters": [
-    { "id": "waist_girth", "type": "slider", "default": 760, "min": 500, "max": 1300, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" }, "tooltip": { "en": "Skirt attaches here", "es": "La falda se une aquí" } },
-    { "id": "bib_width", "type": "slider", "default": 260, "min": 160, "max": 420, "step": 10, "label": { "en": "Bib width (mm)", "es": "Ancho del peto (mm)" }, "tooltip": { "en": "Bib width across the chest", "es": "Ancho del peto en el pecho" } },
-    { "id": "bib_height", "type": "slider", "default": 240, "min": 140, "max": 380, "step": 10, "label": { "en": "Bib height (mm)", "es": "Alto del peto (mm)" }, "tooltip": { "en": "Waist to top of bib", "es": "De la cintura a lo alto del peto" } },
-    { "id": "back_height", "type": "slider", "default": 170, "min": 100, "max": 320, "step": 10, "label": { "en": "Back height (mm)", "es": "Alto de espalda (mm)" }, "tooltip": { "en": "Waist to top of low back", "es": "De la cintura a lo alto de la espalda baja" } },
-    { "id": "skirt_length", "type": "slider", "default": 640, "min": 300, "max": 1000, "step": 10, "label": { "en": "Skirt length (mm)", "es": "Largo de falda (mm)" }, "tooltip": { "en": "Waist to hem", "es": "De la cintura al ruedo" } },
-    { "id": "gather_ratio", "type": "slider", "default": 1.9, "min": 1.3, "max": 3.0, "step": 0.1, "label": { "en": "Skirt fullness", "es": "Amplitud de falda" }, "tooltip": { "en": "Skirt width ÷ waist", "es": "Ancho de falda ÷ cintura" } },
-    { "id": "strap_width", "type": "slider", "default": 45, "min": 25, "max": 90, "step": 5, "label": { "en": "Strap width (mm)", "es": "Ancho de tirante (mm)" }, "tooltip": { "en": "Over-shoulder strap width", "es": "Ancho del tirante" } }
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 760,
+      "min": 500,
+      "max": 1300,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)"
+      },
+      "tooltip": {
+        "en": "Skirt attaches here",
+        "es": "La falda se une aquí"
+      }
+    },
+    {
+      "id": "bib_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 260,
+      "min": 160,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Bib width (mm)",
+        "es": "Ancho del peto (mm)"
+      },
+      "tooltip": {
+        "en": "Bib width across the chest",
+        "es": "Ancho del peto en el pecho"
+      }
+    },
+    {
+      "id": "bib_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 240,
+      "min": 140,
+      "max": 380,
+      "step": 10,
+      "label": {
+        "en": "Bib height (mm)",
+        "es": "Alto del peto (mm)"
+      },
+      "tooltip": {
+        "en": "Waist to top of bib",
+        "es": "De la cintura a lo alto del peto"
+      }
+    },
+    {
+      "id": "back_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 170,
+      "min": 100,
+      "max": 320,
+      "step": 10,
+      "label": {
+        "en": "Back height (mm)",
+        "es": "Alto de espalda (mm)"
+      },
+      "tooltip": {
+        "en": "Waist to top of low back",
+        "es": "De la cintura a lo alto de la espalda baja"
+      }
+    },
+    {
+      "id": "skirt_length",
+      "type": "slider",
+      "group": "body",
+      "default": 640,
+      "min": 300,
+      "max": 1000,
+      "step": 10,
+      "label": {
+        "en": "Skirt length (mm)",
+        "es": "Largo de falda (mm)"
+      },
+      "tooltip": {
+        "en": "Waist to hem",
+        "es": "De la cintura al ruedo"
+      }
+    },
+    {
+      "id": "gather_ratio",
+      "type": "slider",
+      "group": "fit",
+      "default": 1.9,
+      "min": 1.3,
+      "max": 3.0,
+      "step": 0.1,
+      "label": {
+        "en": "Skirt fullness",
+        "es": "Amplitud de falda"
+      },
+      "tooltip": {
+        "en": "Skirt width ÷ waist",
+        "es": "Ancho de falda ÷ cintura"
+      }
+    },
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 45,
+      "min": 25,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de tirante (mm)"
+      },
+      "tooltip": {
+        "en": "Over-shoulder strap width",
+        "es": "Ancho del tirante"
+      }
+    }
   ],
   "presets": [
-    { "id": "everyday", "label": { "en": "Everyday", "es": "Diario" }, "values": { "gather_ratio": 1.9, "skirt_length": 640 } },
-    { "id": "fuller", "label": { "en": "Fuller skirt", "es": "Falda más amplia" }, "values": { "gather_ratio": 2.4, "skirt_length": 760 } }
+    {
+      "id": "everyday",
+      "label": {
+        "en": "Everyday",
+        "es": "Diario"
+      },
+      "values": {
+        "gather_ratio": 1.9,
+        "skirt_length": 640
+      }
+    },
+    {
+      "id": "fuller",
+      "label": {
+        "en": "Fuller skirt",
+        "es": "Falda más amplia"
+      },
+      "values": {
+        "gather_ratio": 2.4,
+        "skirt_length": 760
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
   "fabrics": [],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "front_waist", "type": "waistband", "label": { "en": "Bib waist seam", "es": "Costura de cintura del peto" }, "edges": [{ "piece": "bib", "edge": "waist" }, { "piece": "skirt", "edge": "waist" }], "parameters": ["waist_girth", "gather_ratio"] },
-      { "id": "back_waist", "type": "waistband", "label": { "en": "Back waist seam", "es": "Costura de cintura trasera" }, "edges": [{ "piece": "back", "edge": "waist" }, { "piece": "skirt", "edge": "waist" }], "parameters": ["waist_girth"] }
+      {
+        "id": "front_waist",
+        "type": "waistband",
+        "label": {
+          "en": "Bib waist seam",
+          "es": "Costura de cintura del peto"
+        },
+        "edges": [
+          {
+            "piece": "bib",
+            "edge": "waist"
+          },
+          {
+            "piece": "skirt",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "gather_ratio"
+        ]
+      },
+      {
+        "id": "back_waist",
+        "type": "waistband",
+        "label": {
+          "en": "Back waist seam",
+          "es": "Costura de cintura trasera"
+        },
+        "edges": [
+          {
+            "piece": "back",
+            "edge": "waist"
+          },
+          {
+            "piece": "skirt",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false
+    },
     "societal_benefit": {
       "en": "An open, made-to-measure pinafore is a forgiving layering dress with no fitted side seam — held by crossed straps and a waist seam — so it fits a wide range of bodies and grows with a child, makeable from sturdy everyday cloth.",
       "es": "Un pichi abierto y a la medida es un vestido de capas indulgente sin costura lateral ajustada — sostenido por tirantes cruzados y una costura de cintura — así que se adapta a muchos cuerpos y crece con la infancia, fabricable con tela cotidiana resistente."

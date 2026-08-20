@@ -10,41 +10,276 @@
       "fr": "La jupe tulipe (pétales) : une jupe courte et arrondie dont le devant est fait de deux pétales incurvés qui se chevauchent comme des feuilles de tulipe et s'arrondissent à l'ourlet, sur un dos à pinces. Distincte des jupes droites/froncées de FC-100 — la forme, ce sont les pétales incurvés qui se chevauchent ; la couture latérale droite s'équilibre par construction. Un vêtement textile — une fermeture latérale est la quincaillerie du fabricant. Longue traîne FC-200 (manque jupe).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["tulip-skirt", "skirt", "petal", "wrapped", "commons", "made-to-measure"],
+    "tags": [
+      "tulip-skirt",
+      "skirt",
+      "petal",
+      "wrapped",
+      "commons",
+      "made-to-measure"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
-      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
     }
   },
   "modes": [
-    { "id": "set", "label": { "en": "Full Skirt", "es": "Falda completa", "fr": "Jupe complète" }, "script_file": "main.py", "pieces": ["petal", "back"] }
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Skirt",
+        "es": "Falda completa",
+        "fr": "Jupe complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "petal",
+        "back"
+      ]
+    }
   ],
   "pieces": [
-    { "id": "petal", "label": { "en": "Front petal", "es": "Pétalo frente", "fr": "Pétale devant" }, "default_color": "#7a5a5a", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Espalda", "fr": "Dos" }, "default_color": "#7a5a5a", "cut": { "quantity": 1, "on_fold": true, "fold_edge": "center", "mirror": true } }
+    {
+      "id": "petal",
+      "label": {
+        "en": "Front petal",
+        "es": "Pétalo frente",
+        "fr": "Pétale devant"
+      },
+      "default_color": "#7a5a5a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#7a5a5a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Coupe et style"
+      }
+    }
   ],
   "parameters": [
-    { "id": "waist_girth", "type": "slider", "default": 760, "min": 520, "max": 1300, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)" }, "tooltip": { "en": "Fitted waist", "es": "Cintura ajustada", "fr": "Taille ajustée" } },
-    { "id": "hip_girth", "type": "slider", "default": 980, "min": 700, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)", "fr": "Tour de hanches (mm)" }, "tooltip": { "en": "Full hip", "es": "Cadera completa", "fr": "Hanches complètes" } },
-    { "id": "skirt_length", "type": "slider", "default": 480, "min": 300, "max": 700, "step": 10, "label": { "en": "Length (mm)", "es": "Largo (mm)", "fr": "Longueur (mm)" }, "tooltip": { "en": "Short tulip length", "es": "Largo tulipán corto", "fr": "Longueur tulipe courte" } },
-    { "id": "overlap", "type": "slider", "default": 140, "min": 60, "max": 260, "step": 10, "label": { "en": "Petal overlap (mm)", "es": "Traslape de pétalo (mm)", "fr": "Chevauchement de pétale (mm)" }, "tooltip": { "en": "How far the petals cross CF", "es": "Cuánto cruzan los pétalos el centro", "fr": "De combien les pétales croisent le milieu devant" } },
-    { "id": "petal_curve", "type": "slider", "default": 90, "min": 30, "max": 200, "step": 10, "label": { "en": "Petal curve (mm)", "es": "Curva de pétalo (mm)", "fr": "Courbe de pétale (mm)" }, "tooltip": { "en": "How much the petal rounds in at the hem", "es": "Cuánto se redondea el pétalo en el ruedo", "fr": "De combien le pétale s'arrondit à l'ourlet" } }
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 760,
+      "min": 520,
+      "max": 1300,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "Fitted waist",
+        "es": "Cintura ajustada",
+        "fr": "Taille ajustée"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 980,
+      "min": 700,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      },
+      "tooltip": {
+        "en": "Full hip",
+        "es": "Cadera completa",
+        "fr": "Hanches complètes"
+      }
+    },
+    {
+      "id": "skirt_length",
+      "type": "slider",
+      "group": "body",
+      "default": 480,
+      "min": 300,
+      "max": 700,
+      "step": 10,
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
+      },
+      "tooltip": {
+        "en": "Short tulip length",
+        "es": "Largo tulipán corto",
+        "fr": "Longueur tulipe courte"
+      }
+    },
+    {
+      "id": "overlap",
+      "type": "slider",
+      "group": "fit",
+      "default": 140,
+      "min": 60,
+      "max": 260,
+      "step": 10,
+      "label": {
+        "en": "Petal overlap (mm)",
+        "es": "Traslape de pétalo (mm)",
+        "fr": "Chevauchement de pétale (mm)"
+      },
+      "tooltip": {
+        "en": "How far the petals cross CF",
+        "es": "Cuánto cruzan los pétalos el centro",
+        "fr": "De combien les pétales croisent le milieu devant"
+      }
+    },
+    {
+      "id": "petal_curve",
+      "type": "slider",
+      "group": "fit",
+      "default": 90,
+      "min": 30,
+      "max": 200,
+      "step": 10,
+      "label": {
+        "en": "Petal curve (mm)",
+        "es": "Curva de pétalo (mm)",
+        "fr": "Courbe de pétale (mm)"
+      },
+      "tooltip": {
+        "en": "How much the petal rounds in at the hem",
+        "es": "Cuánto se redondea el pétalo en el ruedo",
+        "fr": "De combien le pétale s'arrondit à l'ourlet"
+      }
+    }
   ],
   "presets": [
-    { "id": "classic", "label": { "en": "Classic", "es": "Clásico", "fr": "Classique" }, "values": { "overlap": 140, "petal_curve": 90 } },
-    { "id": "rounded", "label": { "en": "More rounded", "es": "Más redondeado", "fr": "Plus arrondi" }, "values": { "petal_curve": 160 } }
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic",
+        "es": "Clásico",
+        "fr": "Classique"
+      },
+      "values": {
+        "overlap": 140,
+        "petal_curve": 90
+      }
+    },
+    {
+      "id": "rounded",
+      "label": {
+        "en": "More rounded",
+        "es": "Más redondeado",
+        "fr": "Plus arrondi"
+      },
+      "values": {
+        "petal_curve": 160
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
   "fabrics": [],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "side_seam", "type": "side_seam", "label": { "en": "Side seam", "es": "Costura lateral", "fr": "Couture latérale" }, "edges": [{ "piece": "petal", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["hip_girth", "skirt_length"] },
-      { "id": "petal_overlap", "type": "custom", "label": { "en": "Petal overlap (CF)", "es": "Traslape de pétalos (centro)", "fr": "Chevauchement de pétales (milieu devant)" }, "edges": [{ "piece": "petal", "edge": "center_front" }], "parameters": ["overlap", "petal_curve"] }
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam",
+          "es": "Costura lateral",
+          "fr": "Couture latérale"
+        },
+        "edges": [
+          {
+            "piece": "petal",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "hip_girth",
+          "skirt_length"
+        ]
+      },
+      {
+        "id": "petal_overlap",
+        "type": "custom",
+        "label": {
+          "en": "Petal overlap (CF)",
+          "es": "Traslape de pétalos (centro)",
+          "fr": "Chevauchement de pétales (milieu devant)"
+        },
+        "edges": [
+          {
+            "piece": "petal",
+            "edge": "center_front"
+          }
+        ],
+        "parameters": [
+          "overlap",
+          "petal_curve"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false
+    },
     "societal_benefit": {
       "en": "An open, made-to-measure tulip skirt builds a soft, rounded silhouette from two overlapping curved panels sized to the wearer, so a playful shape usually cut by eye becomes a repeatable, well-fitting commons object.",
       "es": "Una falda tulipán abierta y a la medida construye una silueta suave y redondeada a partir de dos paneles curvos traslapados ajustados a quien la viste, para que una forma juguetona normalmente cortada a ojo se vuelva un objeto común repetible y bien ajustado.",
