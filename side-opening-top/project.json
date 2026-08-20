@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "An adaptive pull-on-free top: a relaxed front + back where one side seam and the matching sleeve underarm open fully, closed by a run of magnetic clasps, so the garment can be dressed one-handed or seated without raising the arms overhead. The magnetic-clasp solid bridges to Yantra4D `magnetic-clasp`. Fashion Cabinet owns the garment + clasp placement. FC-200 long-tail (adaptive).\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Un top adaptativo sin necesidad de meterlo por la cabeza: un frente + espalda holgados donde una costura lateral y el bajo manga se abren por completo, cerrados por una hilera de broches magnéticos, para vestirlo con una mano o sentado sin levantar los brazos. El broche se puentea al `magnetic-clasp` de Yantra4D. Fashion Cabinet posee la prenda + la colocación de broches. Cola larga FC-200 (adaptativo).\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Un top adaptativo sin necesidad de meterlo por la cabeza: un frente + espalda holgados donde una costura lateral y el bajo manga se abren por completo, cerrados por una hilera de broches magnéticos, para vestirlo con una mano o sentado sin levantar los brazos. El broche se puentea al `magnetic-clasp` de Yantra4D. Fashion Cabinet posee la prenda + la colocación de broches. Cola larga FC-200 (adaptativo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un haut adaptatif qui évite l'enfilage par la tête : un devant + dos détendus dont une couture latérale et le dessous de manche correspondant s'ouvrent entièrement, fermés par une série de fermoirs magnétiques, pour habiller le vêtement d'une seule main ou en position assise sans lever les bras au-dessus de la tête. Le solide de fermoir magnétique se ponte au `magnetic-clasp` de Yantra4D. Fashion Cabinet possède le vêtement + le placement des fermoirs. Longue traîne FC-200 (adaptatif).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
     "tags": [
@@ -35,7 +36,8 @@
       "id": "set",
       "label": {
         "en": "Full Top",
-        "es": "Top completo"
+        "es": "Top completo",
+        "fr": "Haut complet"
       },
       "script_file": "main.py",
       "pieces": [
@@ -49,7 +51,8 @@
       "id": "front",
       "label": {
         "en": "Front (open side)",
-        "es": "Frente (lado abierto)"
+        "es": "Frente (lado abierto)",
+        "fr": "Devant (côté ouvert)"
       },
       "default_color": "#5a6a7a",
       "cut": {
@@ -63,7 +66,8 @@
       "id": "back",
       "label": {
         "en": "Back",
-        "es": "Espalda"
+        "es": "Espalda",
+        "fr": "Dos"
       },
       "default_color": "#5a6a7a",
       "cut": {
@@ -115,11 +119,13 @@
       },
       "label": {
         "en": "Chest girth (mm)",
-        "es": "Contorno de pecho (mm)"
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
       },
       "tooltip": {
         "en": "Full chest",
-        "es": "Pecho completo"
+        "es": "Pecho completo",
+        "fr": "Tour de poitrine complet"
       }
     },
     {
@@ -132,11 +138,13 @@
       "step": 10,
       "label": {
         "en": "Length (mm)",
-        "es": "Largo (mm)"
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
       },
       "tooltip": {
         "en": "Shoulder to hem",
-        "es": "Del hombro al ruedo"
+        "es": "Del hombro al ruedo",
+        "fr": "De l'épaule à l'ourlet"
       }
     },
     {
@@ -149,11 +157,13 @@
       "step": 5,
       "label": {
         "en": "Neck width (mm)",
-        "es": "Ancho de cuello (mm)"
+        "es": "Ancho de cuello (mm)",
+        "fr": "Largeur d'encolure (mm)"
       },
       "tooltip": {
         "en": "Wide easy neck",
-        "es": "Cuello ancho y fácil"
+        "es": "Cuello ancho y fácil",
+        "fr": "Encolure large et facile"
       }
     },
     {
@@ -166,11 +176,13 @@
       "step": 10,
       "label": {
         "en": "Grown sleeve (mm)",
-        "es": "Manga nacida (mm)"
+        "es": "Manga nacida (mm)",
+        "fr": "Manche montée d'une pièce (mm)"
       },
       "tooltip": {
         "en": "Grown-on cap sleeve",
-        "es": "Manga nacida"
+        "es": "Manga nacida",
+        "fr": "Manche kimono née du corps"
       }
     },
     {
@@ -183,11 +195,13 @@
       "step": 10,
       "label": {
         "en": "Fit ease (mm)",
-        "es": "Holgura (mm)"
+        "es": "Holgura (mm)",
+        "fr": "Aisance d'ajustement (mm)"
       },
       "tooltip": {
         "en": "Generous, easy fit",
-        "es": "Ajuste amplio y fácil"
+        "es": "Ajuste amplio y fácil",
+        "fr": "Coupe ample et facile"
       }
     },
     {
@@ -200,11 +214,13 @@
       "step": 1,
       "label": {
         "en": "Magnetic clasps",
-        "es": "Broches magnéticos"
+        "es": "Broches magnéticos",
+        "fr": "Fermoirs magnétiques"
       },
       "tooltip": {
         "en": "Down the open side; sets the Yantra4D count",
-        "es": "Por el lado abierto; define la cantidad de Yantra4D"
+        "es": "Por el lado abierto; define la cantidad de Yantra4D",
+        "fr": "Le long du côté ouvert ; fixe le nombre de Yantra4D"
       }
     }
   ],
@@ -213,7 +229,8 @@
       "id": "easy",
       "label": {
         "en": "Easy dress",
-        "es": "Vestir fácil"
+        "es": "Vestir fácil",
+        "fr": "Robe décontractée"
       },
       "values": {
         "ease": 180,
@@ -224,7 +241,8 @@
       "id": "fitted",
       "label": {
         "en": "More fitted",
-        "es": "Más ajustado"
+        "es": "Más ajustado",
+        "fr": "Plus ajusté"
       },
       "values": {
         "ease": 100,
@@ -259,7 +277,8 @@
         "type": "shoulder",
         "label": {
           "en": "Shoulder seam",
-          "es": "Costura de hombro"
+          "es": "Costura de hombro",
+          "fr": "Couture d'épaule"
         },
         "edges": [
           {
@@ -281,7 +300,8 @@
         "type": "side_seam",
         "label": {
           "en": "Open side (magnetic)",
-          "es": "Lado abierto (magnético)"
+          "es": "Lado abierto (magnético)",
+          "fr": "Côté ouvert (magnétique)"
         },
         "edges": [
           {
@@ -308,7 +328,8 @@
     },
     "societal_benefit": {
       "en": "An open, made-to-measure top that opens fully down one side and closes with magnetic clasps removes the overhead reach and fine-motor fastening a conventional top demands — making dressing independent for people with limited mobility, one working arm, or dexterity differences, from an open pattern anyone can adapt.",
-      "es": "Un top abierto y a la medida que se abre por completo por un lado y cierra con broches magnéticos elimina el alcance sobre la cabeza y el abrochado de motricidad fina que exige un top convencional — haciendo el vestir independiente para personas con movilidad limitada, un solo brazo funcional o diferencias de destreza, desde un patrón abierto que cualquiera puede adaptar."
+      "es": "Un top abierto y a la medida que se abre por completo por un lado y cierra con broches magnéticos elimina el alcance sobre la cabeza y el abrochado de motricidad fina que exige un top convencional — haciendo el vestir independiente para personas con movilidad limitada, un solo brazo funcional o diferencias de destreza, desde un patrón abierto que cualquiera puede adaptar.",
+      "fr": "Un haut ouvert et sur mesure qui s'ouvre entièrement sur un côté et se ferme par des fermoirs magnétiques supprime le lever de bras au-dessus de la tête et le boutonnage de motricité fine qu'exige un haut conventionnel — rendant l'habillage autonome pour les personnes à mobilité réduite, à un seul bras fonctionnel ou à dextérité différente, à partir d'un patron ouvert que chacun peut adapter."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

@@ -6,49 +6,310 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #33. First flare of the skirt family: the straight block's dart suppression swung into a curved side seam that flares from the hip to a hem wider than the hip — dartless, front on fold, back in two panels with a CB zipper notch.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #33 del FC-100. El primer vuelo de la familia de faldas: la supresión de pinzas del bloque recto girada hacia un costado curvo que se abre desde la cadera hasta un dobladillo más ancho que la cadera — sin pinzas, delantero al doblez, trasero en dos paneles con piquete de cierre en CB.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #33 del FC-100. El primer vuelo de la familia de faldas: la supresión de pinzas del bloque recto girada hacia un costado curvo que se abre desde la cadera hasta un dobladillo más ancho que la cadera — sin pinzas, delantero al doblez, trasero en dos paneles con piquete de cierre en CB.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Rang n°33 du FC-100. Premier évasé de la famille des jupes : la suppression de pince du bloc droit basculée en une couture de côté galbée qui s'évase de la hanche à un ourlet plus large que la hanche — sans pince, devant au pli, dos en deux panneaux avec un cran de fermeture au milieu dos.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
-    "tags": ["skirt", "a-line", "flare", "woven", "fc100", "hyperobject", "commons"],
-    "attribution": { "author": "Innovaciones MADFAM", "license": "LicenseRef-FC1-pending", "lineage": [{ "source": "Original draft for Fashion Cabinet (straight skirt block family)", "license": "original" }] }
+    "tags": [
+      "skirt",
+      "a-line",
+      "flare",
+      "woven",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet (straight skirt block family)",
+          "license": "original"
+        }
+      ]
+    }
   },
-  "modes": [{ "id": "a-line", "label": { "en": "A-line skirt", "es": "Falda línea A" }, "script_file": "main.py", "pieces": ["front", "back"] }],
+  "modes": [
+    {
+      "id": "a-line",
+      "label": {
+        "en": "A-line skirt",
+        "es": "Falda línea A",
+        "fr": "Jupe trapèze"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back"
+      ]
+    }
+  ],
   "pieces": [
-    { "id": "front", "label": { "en": "A-Line Front", "es": "Falda Delantera" }, "default_color": "#a2607a", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "back", "label": { "en": "A-Line Back", "es": "Falda Trasera" }, "default_color": "#844a63", "cut": { "quantity": 2, "mirror": true } }
+    {
+      "id": "front",
+      "label": {
+        "en": "A-Line Front",
+        "es": "Falda Delantera",
+        "fr": "Jupe devant trapèze"
+      },
+      "default_color": "#a2607a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "A-Line Back",
+        "es": "Falda Trasera",
+        "fr": "Jupe dos trapèze"
+      },
+      "default_color": "#844a63",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    }
   ],
   "parameters": [
-    { "id": "waist_girth", "type": "slider", "default": 700, "min": 450, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
-    { "id": "hip_girth", "type": "slider", "default": 940, "min": 600, "max": 1700, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
-    { "id": "skirt_length", "type": "slider", "default": 600, "min": 300, "max": 950, "step": 10, "label": { "en": "Skirt length (mm)", "es": "Largo de falda (mm)" } },
-    { "id": "flare_mm", "type": "slider", "default": 80, "min": 30, "max": 300, "step": 10, "tooltip": { "en": "Extra half-hem width beyond the hip half-width", "es": "Ancho extra de medio dobladillo sobre la media cadera" }, "label": { "en": "Hem flare (mm)", "es": "Vuelo de dobladillo (mm)" } },
-    { "id": "hip_ease", "type": "slider", "default": 40, "min": 0, "max": 150, "step": 5, "label": { "en": "Hip ease (mm)", "es": "Holgura de cadera (mm)" } },
-    { "id": "waist_ease", "type": "slider", "default": 20, "min": 0, "max": 80, "step": 5, "label": { "en": "Waist ease (mm)", "es": "Holgura de cintura (mm)" } },
-    { "id": "zipper_length", "type": "slider", "default": 180, "min": 100, "max": 400, "step": 10, "label": { "en": "Zipper length (mm)", "es": "Largo de cierre (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 12, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 30, "min": 0, "max": 60, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "default": 700,
+      "min": 450,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "default": 940,
+      "min": 600,
+      "max": 1700,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      }
+    },
+    {
+      "id": "skirt_length",
+      "type": "slider",
+      "default": 600,
+      "min": 300,
+      "max": 950,
+      "step": 10,
+      "label": {
+        "en": "Skirt length (mm)",
+        "es": "Largo de falda (mm)",
+        "fr": "Longueur de jupe (mm)"
+      }
+    },
+    {
+      "id": "flare_mm",
+      "type": "slider",
+      "default": 80,
+      "min": 30,
+      "max": 300,
+      "step": 10,
+      "tooltip": {
+        "en": "Extra half-hem width beyond the hip half-width",
+        "es": "Ancho extra de medio dobladillo sobre la media cadera",
+        "fr": "Largeur supplémentaire du demi-ourlet au-delà de la demi-hanche"
+      },
+      "label": {
+        "en": "Hem flare (mm)",
+        "es": "Vuelo de dobladillo (mm)",
+        "fr": "Évasement du bas (mm)"
+      }
+    },
+    {
+      "id": "hip_ease",
+      "type": "slider",
+      "default": 40,
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "label": {
+        "en": "Hip ease (mm)",
+        "es": "Holgura de cadera (mm)",
+        "fr": "Aisance de hanches (mm)"
+      }
+    },
+    {
+      "id": "waist_ease",
+      "type": "slider",
+      "default": 20,
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "label": {
+        "en": "Waist ease (mm)",
+        "es": "Holgura de cintura (mm)",
+        "fr": "Aisance de taille (mm)"
+      }
+    },
+    {
+      "id": "zipper_length",
+      "type": "slider",
+      "default": 180,
+      "min": 100,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Zipper length (mm)",
+        "es": "Largo de cierre (mm)",
+        "fr": "Longueur de fermeture à glissière (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 12,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 30,
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": {} },
-    { "id": "midi-flare", "label": { "en": "Midi flare", "es": "Midi con vuelo" }, "values": { "skirt_length": 680, "flare_mm": 140 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {}
+    },
+    {
+      "id": "midi-flare",
+      "label": {
+        "en": "Midi flare",
+        "es": "Midi con vuelo",
+        "fr": "Midi évasé"
+      },
+      "values": {
+        "skirt_length": 680,
+        "flare_mm": 140
+      }
+    }
   ],
   "constraints": [
-    { "expression": "hip_girth >= waist_girth", "severity": "error", "message": { "en": "Hip must be at least the waist for an A-line skirt", "es": "La cadera debe ser al menos la cintura para falda línea A" } },
-    { "expression": "zipper_length <= skirt_length * 0.6", "severity": "warning", "message": { "en": "Zippers longer than 60% of the skirt length are clamped by the draft", "es": "Cierres mayores al 60% del largo de falda se limitan en el trazo" } }
+    {
+      "expression": "hip_girth >= waist_girth",
+      "severity": "error",
+      "message": {
+        "en": "Hip must be at least the waist for an A-line skirt",
+        "es": "La cadera debe ser al menos la cintura para falda línea A",
+        "fr": "La hanche doit valoir au moins la taille pour une jupe trapèze"
+      }
+    },
+    {
+      "expression": "zipper_length <= skirt_length * 0.6",
+      "severity": "warning",
+      "message": {
+        "en": "Zippers longer than 60% of the skirt length are clamped by the draft",
+        "es": "Cierres mayores al 60% del largo de falda se limitan en el trazo",
+        "fr": "Les fermetures plus longues que 60 % de la jupe sont bridées par le tracé"
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["popelina-algodon", "mezclilla-denim"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "popelina-algodon",
+    "mezclilla-denim"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "waistband", "type": "waistband", "edges": [{ "piece": "front", "edge": "waist" }, { "piece": "back", "edge": "waist" }], "parameters": ["waist_girth", "waist_ease"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["skirt_length", "flare_mm", "hem_allowance"] }
+      {
+        "id": "waistband",
+        "type": "waistband",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "waist"
+          },
+          {
+            "piece": "back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "waist_ease"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "skirt_length",
+          "flare_mm",
+          "hem_allowance"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
     "societal_benefit": {
       "en": "First FC-100 derivative of the skirt block: proves dart suppression can be traded for flare parametrically — one curved side construction fitting every waist-hip ratio without a fitted dart.",
-      "es": "Primera derivada del bloque de falda en el FC-100: demuestra que la supresión de pinzas puede cambiarse por vuelo de forma paramétrica — una sola construcción de costado curvo que ajusta cualquier relación cintura-cadera sin pinza entallada."
+      "es": "Primera derivada del bloque de falda en el FC-100: demuestra que la supresión de pinzas puede cambiarse por vuelo de forma paramétrica — una sola construcción de costado curvo que ajusta cualquier relación cintura-cadera sin pinza entallada.",
+      "fr": "Première dérivée du bloc de jupe dans le FC-100 : elle prouve que la suppression de pince peut s'échanger contre de l'évasé de façon paramétrique — une seule construction de côté galbé qui ajuste tout rapport taille-hanches sans pince ajustée."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

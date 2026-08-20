@@ -6,68 +6,305 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #82. Gathered elastic-waist maxi skirt in woven fabric: front and back are rectangular panels cut on the fold, each half-width drafted at (hip + ease) / 4 widened by the gather ratio, with a gather-zone guide along each waist and a fold-over elastic casing derived from the measured waist edges.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #82 del FC-100. Falda maxi fruncida con cintura elástica en tela plana: delantero y trasero son paneles rectangulares cortados al doblez, cada medio ancho trazado a (cadera + holgura) / 4 ampliado por la proporción de frunce, con guía de zona de frunce en cada cintura y jareta de elástico doblada derivada de las cinturas medidas.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #82 del FC-100. Falda maxi fruncida con cintura elástica en tela plana: delantero y trasero son paneles rectangulares cortados al doblez, cada medio ancho trazado a (cadera + holgura) / 4 ampliado por la proporción de frunce, con guía de zona de frunce en cada cintura y jareta de elástico doblada derivada de las cinturas medidas.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "FC-100 rang no 82. Jupe longue froncée à taille élastique en tissu chaîne et trame : le devant et le dos sont des panneaux rectangulaires coupés au pli, chaque demi-largeur tracée à (hanche + aisance) / 4 élargie par le rapport de fronces, avec un guide de zone de fronces le long de chaque taille et une coulisse d'élastique rabattue dérivée des bords de taille mesurés.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
-    "tags": ["skirt", "maxi", "gathered", "elastic-waist", "woven", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "skirt",
+      "maxi",
+      "gathered",
+      "elastic-waist",
+      "woven",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
-      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
     }
   },
   "modes": [
     {
       "id": "maxi-skirt",
-      "label": { "en": "Maxi skirt (all pieces)", "es": "Falda maxi (todas las piezas)" },
+      "label": {
+        "en": "Maxi skirt (all pieces)",
+        "es": "Falda maxi (todas las piezas)",
+        "fr": "Jupe maxi (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "waistband"]
+      "pieces": [
+        "front",
+        "back",
+        "waistband"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Skirt Front", "es": "Falda Delantera" }, "default_color": "#a35d43", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "back", "label": { "en": "Skirt Back", "es": "Falda Trasera" }, "default_color": "#8a4a33", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "waistband", "label": { "en": "Waistband casing", "es": "Jareta de pretina" }, "default_color": "#c08a6f", "cut": { "quantity": 1 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Skirt Front",
+        "es": "Falda Delantera",
+        "fr": "Jupe Devant"
+      },
+      "default_color": "#a35d43",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Skirt Back",
+        "es": "Falda Trasera",
+        "fr": "Jupe Dos"
+      },
+      "default_color": "#8a4a33",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "Waistband casing",
+        "es": "Jareta de pretina",
+        "fr": "Coulisse de ceinture"
+      },
+      "default_color": "#c08a6f",
+      "cut": {
+        "quantity": 1
+      }
+    }
   ],
   "parameters": [
-    { "id": "waist_girth", "type": "slider", "default": 700, "min": 450, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
-    { "id": "hip_girth", "type": "slider", "default": 940, "min": 600, "max": 1700, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
-    { "id": "skirt_length", "type": "slider", "default": 950, "min": 600, "max": 1200, "step": 10, "label": { "en": "Skirt length (mm)", "es": "Largo de falda (mm)" } },
-    { "id": "gather_ratio", "type": "slider", "default": 1.6, "min": 1.2, "max": 2.2, "step": 0.1, "label": { "en": "Gather ratio (panel/body)", "es": "Proporción de frunce (panel/cuerpo)" } },
-    { "id": "hip_ease", "type": "slider", "default": 40, "min": 0, "max": 150, "step": 5, "label": { "en": "Hip ease (mm)", "es": "Holgura de cadera (mm)" } },
-    { "id": "elastic_width", "type": "slider", "default": 35, "min": 20, "max": 50, "step": 5, "label": { "en": "Elastic width (mm)", "es": "Ancho de elástico (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 40, "min": 0, "max": 60, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "default": 700,
+      "min": 450,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "default": 940,
+      "min": 600,
+      "max": 1700,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      }
+    },
+    {
+      "id": "skirt_length",
+      "type": "slider",
+      "default": 950,
+      "min": 600,
+      "max": 1200,
+      "step": 10,
+      "label": {
+        "en": "Skirt length (mm)",
+        "es": "Largo de falda (mm)",
+        "fr": "Longueur de jupe (mm)"
+      }
+    },
+    {
+      "id": "gather_ratio",
+      "type": "slider",
+      "default": 1.6,
+      "min": 1.2,
+      "max": 2.2,
+      "step": 0.1,
+      "label": {
+        "en": "Gather ratio (panel/body)",
+        "es": "Proporción de frunce (panel/cuerpo)",
+        "fr": "Rapport de fronçage (panneau/corps)"
+      }
+    },
+    {
+      "id": "hip_ease",
+      "type": "slider",
+      "default": 40,
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "label": {
+        "en": "Hip ease (mm)",
+        "es": "Holgura de cadera (mm)",
+        "fr": "Aisance de hanches (mm)"
+      }
+    },
+    {
+      "id": "elastic_width",
+      "type": "slider",
+      "default": 35,
+      "min": 20,
+      "max": 50,
+      "step": 5,
+      "label": {
+        "en": "Elastic width (mm)",
+        "es": "Ancho de elástico (mm)",
+        "fr": "Largeur de l'élastique (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 40,
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": {} },
-    { "id": "ankle", "label": { "en": "Ankle length", "es": "Al tobillo" }, "values": { "skirt_length": 850 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {}
+    },
+    {
+      "id": "ankle",
+      "label": {
+        "en": "Ankle length",
+        "es": "Al tobillo",
+        "fr": "À la cheville"
+      },
+      "values": {
+        "skirt_length": 850
+      }
+    }
   ],
   "constraints": [
     {
       "expression": "gather_ratio >= 1.2 and gather_ratio <= 2.2",
       "severity": "warning",
-      "message": { "en": "Gather ratio outside 1.2–2.2 is clamped by the draft; 1.5–1.8 suits mid-weight poplin", "es": "Una proporción de frunce fuera de 1.2–2.2 se limita en el trazo; 1.5–1.8 va bien con popelina media" }
+      "message": {
+        "en": "Gather ratio outside 1.2–2.2 is clamped by the draft; 1.5–1.8 suits mid-weight poplin",
+        "es": "Una proporción de frunce fuera de 1.2–2.2 se limita en el trazo; 1.5–1.8 va bien con popelina media",
+        "fr": "Un rapport de fronces hors de 1.2–2.2 est bridé par le tracé ; 1.5–1.8 convient à une popeline moyenne"
+      }
     },
     {
       "expression": "hip_girth >= waist_girth",
       "severity": "warning",
-      "message": { "en": "Hip smaller than waist — verify measurements", "es": "Cadera menor que cintura — verifica las medidas" }
+      "message": {
+        "en": "Hip smaller than waist — verify measurements",
+        "es": "Cadera menor que cintura — verifica las medidas",
+        "fr": "Hanche plus petite que la taille — vérifiez les mesures"
+      }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["popelina-algodon"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "popelina-algodon"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "waistband", "type": "waistband", "edges": [{ "piece": "front", "edge": "waist" }, { "piece": "back", "edge": "waist" }], "parameters": ["waist_girth", "gather_ratio", "elastic_width"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["skirt_length", "hem_allowance"] }
+      {
+        "id": "waistband",
+        "type": "waistband",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "waist"
+          },
+          {
+            "piece": "back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "gather_ratio",
+          "elastic_width"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "skirt_length",
+          "hem_allowance"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
     "societal_benefit": {
       "en": "The commons' first gathered garment: fullness as a computed parameter — the gather ratio — so one open draft sizes a floor-length skirt to any body from two girth measurements.",
-      "es": "La primera prenda fruncida del commons: el vuelo como parámetro calculado — la proporción de frunce — para que un solo trazo abierto talle una falda larga a cualquier cuerpo desde dos contornos."
+      "es": "La primera prenda fruncida del commons: el vuelo como parámetro calculado — la proporción de frunce — para que un solo trazo abierto talle una falda larga a cualquier cuerpo desde dos contornos.",
+      "fr": "Le premier vêtement froncé du commons : l'ampleur comme paramètre calculé — le rapport de fronces — pour qu'un seul tracé ouvert dimensionne une jupe longue à n'importe quel corps à partir de deux tours."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

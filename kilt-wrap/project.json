@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "The Scottish Highland wrapped garment: one long length of (traditionally tartan) cloth with a flat front apron, deep knife pleats across the back, wrapped and buckled at the side. This cartridge drafts the garment geometry as a single flat length with pleat lines, apron folds, and strap positions marked; it does not reproduce the tartan sett or clan meaning. A soft-goods garment — buckles are the maker's hardware. FC-200 long-tail (heritage). Offered with respect for the living tradition.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "La prenda envolvente de las Tierras Altas de Escocia: una larga pieza de tela (tradicionalmente tartán) con un mandil frontal liso, tablas de cuchillo profundas en la espalda, envuelta y abrochada al costado. Este cartucho traza la geometría como una sola pieza plana con líneas de tabla, dobleces del mandil y posiciones de correas marcadas; no reproduce el sett del tartán ni el significado de clan. Una prenda textil — las hebillas son herraje de quien elabora. Cola larga FC-200 (patrimonio). Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "La prenda envolvente de las Tierras Altas de Escocia: una larga pieza de tela (tradicionalmente tartán) con un mandil frontal liso, tablas de cuchillo profundas en la espalda, envuelta y abrochada al costado. Este cartucho traza la geometría como una sola pieza plana con líneas de tabla, dobleces del mandil y posiciones de correas marcadas; no reproduce el sett del tartán ni el significado de clan. Una prenda textil — las hebillas son herraje de quien elabora. Cola larga FC-200 (patrimonio). Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le vêtement enveloppant des Highlands écossais : une longue pièce de tissu (traditionnellement en tartan) avec un tablier plat devant, de profonds plis couchés à l'arrière, enroulée et bouclée sur le côté. Cette cartouche trace la géométrie du vêtement comme une seule longueur plate avec les lignes de plis, les plis du tablier et les positions des brides marquées ; elle ne reproduit ni le motif du tartan ni la signification de clan. Un vêtement textile — les boucles sont la quincaillerie de qui confectionne. Longue traîne FC-200 (patrimoine). Offert dans le respect de la tradition vivante.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "advanced",
     "tags": [
@@ -34,7 +35,8 @@
       "id": "set",
       "label": {
         "en": "Kilt length",
-        "es": "Pieza del kilt"
+        "es": "Pieza del kilt",
+        "fr": "Longueur de kilt"
       },
       "script_file": "main.py",
       "pieces": [
@@ -47,7 +49,8 @@
       "id": "length",
       "label": {
         "en": "Kilt length",
-        "es": "Pieza del kilt"
+        "es": "Pieza del kilt",
+        "fr": "Longueur de kilt"
       },
       "default_color": "#3a4a5a",
       "cut": {
@@ -88,11 +91,13 @@
       },
       "label": {
         "en": "Waist girth (mm)",
-        "es": "Contorno de cintura (mm)"
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
       },
       "tooltip": {
         "en": "Fitted waist",
-        "es": "Cintura ajustada"
+        "es": "Cintura ajustada",
+        "fr": "Taille ajustée"
       }
     },
     {
@@ -109,11 +114,13 @@
       },
       "label": {
         "en": "Hip girth (mm)",
-        "es": "Contorno de cadera (mm)"
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
       },
       "tooltip": {
         "en": "Seat (pleats give room)",
-        "es": "Asiento (las tablas dan holgura)"
+        "es": "Asiento (las tablas dan holgura)",
+        "fr": "Bassin (les plis donnent de l'aisance)"
       }
     },
     {
@@ -126,11 +133,13 @@
       "step": 10,
       "label": {
         "en": "Length (mm)",
-        "es": "Largo (mm)"
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
       },
       "tooltip": {
         "en": "Waist to mid-knee",
-        "es": "De la cintura a media rodilla"
+        "es": "De la cintura a media rodilla",
+        "fr": "De la taille à mi-genou"
       }
     },
     {
@@ -143,11 +152,13 @@
       "step": 10,
       "label": {
         "en": "Apron width (mm)",
-        "es": "Ancho del mandil (mm)"
+        "es": "Ancho del mandil (mm)",
+        "fr": "Largeur du tablier (mm)"
       },
       "tooltip": {
         "en": "Flat front apron",
-        "es": "Mandil frontal liso"
+        "es": "Mandil frontal liso",
+        "fr": "Tablier plat devant"
       }
     },
     {
@@ -160,11 +171,13 @@
       "step": 5,
       "label": {
         "en": "Pleat depth (mm)",
-        "es": "Profundidad de tabla (mm)"
+        "es": "Profundidad de tabla (mm)",
+        "fr": "Profondeur de pli (mm)"
       },
       "tooltip": {
         "en": "Cloth folded into each knife pleat",
-        "es": "Tela plegada en cada tabla"
+        "es": "Tela plegada en cada tabla",
+        "fr": "Tissu replié dans chaque pli couché"
       }
     },
     {
@@ -177,11 +190,13 @@
       "step": 1,
       "label": {
         "en": "Back pleats",
-        "es": "Tablas de espalda"
+        "es": "Tablas de espalda",
+        "fr": "Plis dos"
       },
       "tooltip": {
         "en": "Number of knife pleats",
-        "es": "Número de tablas de cuchillo"
+        "es": "Número de tablas de cuchillo",
+        "fr": "Nombre de plis couchés"
       }
     }
   ],
@@ -190,7 +205,8 @@
       "id": "day",
       "label": {
         "en": "Day kilt",
-        "es": "Kilt de día"
+        "es": "Kilt de día",
+        "fr": "Kilt de jour"
       },
       "values": {
         "pleats": 24,
@@ -201,7 +217,8 @@
       "id": "heavy",
       "label": {
         "en": "Heavy pleated",
-        "es": "Tablas profundas"
+        "es": "Tablas profundas",
+        "fr": "Plis profonds"
       },
       "values": {
         "pleats": 30,
@@ -224,7 +241,8 @@
         "type": "waistband",
         "label": {
           "en": "Waist edge (strapped)",
-          "es": "Canto de cintura (con correas)"
+          "es": "Canto de cintura (con correas)",
+          "fr": "Bord de taille (à brides)"
         },
         "edges": [
           {
@@ -242,7 +260,8 @@
         "type": "custom",
         "label": {
           "en": "Apron fold",
-          "es": "Doblez del mandil"
+          "es": "Doblez del mandil",
+          "fr": "Pli du tablier"
         },
         "edges": [
           {
@@ -263,7 +282,8 @@
     },
     "societal_benefit": {
       "en": "An open, made-to-measure kilt pattern computes the exact flat length, pleat count, and pleat depth for a wearer's own waist and seat, keeping a living heritage garment makeable at home from a single length of cloth — the sett and clan meaning left to the wearer.",
-      "es": "Un patrón de kilt abierto y a la medida calcula la longitud plana exacta, el número y la profundidad de las tablas para la cintura y el asiento de quien lo viste, manteniendo una prenda patrimonial viva fabricable en casa a partir de una sola pieza de tela — el sett y el significado de clan en manos de quien la viste."
+      "es": "Un patrón de kilt abierto y a la medida calcula la longitud plana exacta, el número y la profundidad de las tablas para la cintura y el asiento de quien lo viste, manteniendo una prenda patrimonial viva fabricable en casa a partir de una sola pieza de tela — el sett y el significado de clan en manos de quien la viste.",
+      "fr": "Un patron de kilt ouvert et sur mesure calcule la longueur plate exacte, le nombre de plis et leur profondeur pour la taille et le bassin propres de qui le porte, gardant un vêtement patrimonial vivant réalisable à la maison à partir d'une seule pièce de tissu — le motif et la signification de clan laissés à qui le porte."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

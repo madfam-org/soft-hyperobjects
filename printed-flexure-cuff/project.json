@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "A Yantra4D-bridged notion for the additive-manufacturing frontier of trims: a 3D-printed TPU cuff that stretches over the hand and springs back — a sleeve or hem finish with no separate elastic. Fashion Cabinet owns the fashion (cuff circumference to the wrist, height, the sew-in placement guide) while the flexure band itself is a Yantra4D solid (`tpu-flexure-cuff`) printed in place. One material identity, Bambu TPU 95A, spans this notion and that solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Un avío puenteado con Yantra4D para la frontera de manufactura aditiva de los avíos: un puño TPU impreso en 3D que se estira sobre la mano y regresa — un acabado de manga o ruedo sin elástico aparte. Fashion Cabinet posee la moda (circunferencia a la muñeca, altura, la guía de colocación cosible) mientras la banda de flexión es un sólido de Yantra4D (`tpu-flexure-cuff`) impreso en sitio. Una identidad de material, Bambu TPU 95A, abarca este avío y ese sólido.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Un avío puenteado con Yantra4D para la frontera de manufactura aditiva de los avíos: un puño TPU impreso en 3D que se estira sobre la mano y regresa — un acabado de manga o ruedo sin elástico aparte. Fashion Cabinet posee la moda (circunferencia a la muñeca, altura, la guía de colocación cosible) mientras la banda de flexión es un sólido de Yantra4D (`tpu-flexure-cuff`) impreso en sitio. Una identidad de material, Bambu TPU 95A, abarca este avío y ese sólido.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une mercerie reliée à Yantra4D pour la frontière de la fabrication additive des mercerie : un poignet en TPU imprimé en 3D qui s'étire par-dessus la main et reprend sa forme — une finition de manche ou d'ourlet sans élastique distinct. Fashion Cabinet possède la mode (circonférence du poignet au poignet, hauteur, le guide de placement cousable) tandis que la bande flexible elle-même est un solide Yantra4D (`tpu-flexure-cuff`) imprimé en place. Une seule identité de matériau, Bambu TPU 95A, relie cette mercerie et ce solide.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
     "tags": [
@@ -36,7 +37,8 @@
       "id": "placement-guide",
       "label": {
         "en": "Cuff Placement Guide",
-        "es": "Guía de colocación del puño"
+        "es": "Guía de colocación del puño",
+        "fr": "Guide de placement du poignet"
       },
       "script_file": "main.py",
       "pieces": [
@@ -49,7 +51,8 @@
       "id": "placement-guide",
       "label": {
         "en": "Flexure Cuff Placement Guide",
-        "es": "Guía de colocación de puño flexible"
+        "es": "Guía de colocación de puño flexible",
+        "fr": "Guide de placement du poignet flexible"
       },
       "default_color": "#7fa8a0",
       "cut": {
@@ -88,11 +91,13 @@
       "step": 5,
       "label": {
         "en": "Wrist / opening girth (mm)",
-        "es": "Contorno de muñeca / abertura (mm)"
+        "es": "Contorno de muñeca / abertura (mm)",
+        "fr": "Tour de poignet / ouverture (mm)"
       },
       "tooltip": {
         "en": "The finished sleeve opening; drives the printed cuff circumference",
-        "es": "La abertura terminada de la manga; determina la circunferencia del puño impreso"
+        "es": "La abertura terminada de la manga; determina la circunferencia del puño impreso",
+        "fr": "L'ouverture de manche finie ; détermine la circonférence du poignet imprimé"
       },
       "measurement": {
         "standard": "iso_8559",
@@ -109,11 +114,13 @@
       "step": 5,
       "label": {
         "en": "Cuff height (mm)",
-        "es": "Altura del puño (mm)"
+        "es": "Altura del puño (mm)",
+        "fr": "Hauteur du poignet (mm)"
       },
       "tooltip": {
         "en": "How tall the cuff band is up the sleeve",
-        "es": "Qué tan alta es la banda del puño en la manga"
+        "es": "Qué tan alta es la banda del puño en la manga",
+        "fr": "Hauteur de la bande du poignet sur la manche"
       }
     },
     {
@@ -126,11 +133,13 @@
       "step": 1,
       "label": {
         "en": "Sew-edge allowance (mm)",
-        "es": "Margen de canto cosible (mm)"
+        "es": "Margen de canto cosible (mm)",
+        "fr": "Marge de bord à coudre (mm)"
       },
       "tooltip": {
         "en": "Tape-bound edge allowance where the cuff sews to the sleeve",
-        "es": "Margen de canto rematado donde el puño se cose a la manga"
+        "es": "Margen de canto rematado donde el puño se cose a la manga",
+        "fr": "Marge de bord rembordé là où le poignet se coud à la manche"
       },
       "advanced": true
     },
@@ -144,11 +153,13 @@
       "step": 0.1,
       "label": {
         "en": "Printed wall (mm)",
-        "es": "Pared impresa (mm)"
+        "es": "Pared impresa (mm)",
+        "fr": "Paroi imprimée (mm)"
       },
       "tooltip": {
         "en": "Passed to the Yantra4D band; thinner = softer flex",
-        "es": "Se pasa a la banda de Yantra4D; más delgada = flexión más suave"
+        "es": "Se pasa a la banda de Yantra4D; más delgada = flexión más suave",
+        "fr": "Transmise à la bande Yantra4D ; plus fine = flexion plus souple"
       }
     }
   ],
@@ -157,7 +168,8 @@
       "id": "sleeve-170",
       "label": {
         "en": "Sleeve cuff (170)",
-        "es": "Puño de manga (170)"
+        "es": "Puño de manga (170)",
+        "fr": "Poignet de manche (170)"
       },
       "values": {
         "wrist_girth": 170,
@@ -168,7 +180,8 @@
       "id": "jogger-260",
       "label": {
         "en": "Jogger hem (260)",
-        "es": "Ruedo jogger (260)"
+        "es": "Ruedo jogger (260)",
+        "fr": "Bas de jogging (260)"
       },
       "values": {
         "wrist_girth": 260,
@@ -205,7 +218,8 @@
         "type": "cuff",
         "label": {
           "en": "Sewable cuff edge",
-          "es": "Canto cosible del puño"
+          "es": "Canto cosible del puño",
+          "fr": "Bord à coudre du poignet"
         },
         "edges": [
           {
@@ -230,7 +244,8 @@
     },
     "societal_benefit": {
       "en": "A stretch cuff anyone can print replaces sewn elastic — which perishes and is rarely repairable — with an open, made-to-measure flexure band sized to the sleeve, washable and recyclable, that springs back for the life of the garment. It closes the loop from a Fashion Cabinet trim to a printable Yantra4D solid.",
-      "es": "Un puño elástico que cualquiera puede imprimir reemplaza el elástico cosido — que se degrada y rara vez se repara — con una banda de flexión abierta y a la medida de la manga, lavable y reciclable, que recupera durante toda la vida de la prenda. Cierra el ciclo de un avío de Fashion Cabinet a un sólido imprimible de Yantra4D."
+      "es": "Un puño elástico que cualquiera puede imprimir reemplaza el elástico cosido — que se degrada y rara vez se repara — con una banda de flexión abierta y a la medida de la manga, lavable y reciclable, que recupera durante toda la vida de la prenda. Cierra el ciclo de un avío de Fashion Cabinet a un sólido imprimible de Yantra4D.",
+      "fr": "Un poignet extensible que chacun peut imprimer remplace l'élastique cousu — qui se dégrade et se répare rarement — par une bande flexible ouverte et sur mesure dimensionnée à la manche, lavable et recyclable, qui reprend sa forme durant toute la vie du vêtement. Il boucle la chaîne d'une mercerie Fashion Cabinet vers un solide Yantra4D imprimable."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

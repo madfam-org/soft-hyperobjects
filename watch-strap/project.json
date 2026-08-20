@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "A made-to-measure two-piece watch strap sized to the lug width and wrist: the buckle half (with billet and eyelets) and the keeper half (with the spring-bar tab and a floating loop), bridged to the Yantra4D `watch-adapter` solid that carries the lug interface. Fashion Cabinet owns the strap; Yantra4D owns the adapter/buckle hardware. FC-200 accessories capsule.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Una correa de reloj de dos piezas a la medida del ancho de asa y la muñeca: la mitad de la hebilla (con punta y ojales) y la mitad del pasador (con la lengüeta del pasador de resorte y un aro flotante), puenteada al sólido `watch-adapter` de Yantra4D que lleva la interfaz del asa. Fashion Cabinet posee la correa; Yantra4D posee el herraje.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Una correa de reloj de dos piezas a la medida del ancho de asa y la muñeca: la mitad de la hebilla (con punta y ojales) y la mitad del pasador (con la lengüeta del pasador de resorte y un aro flotante), puenteada al sólido `watch-adapter` de Yantra4D que lleva la interfaz del asa. Fashion Cabinet posee la correa; Yantra4D posee el herraje.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un bracelet de montre en deux pièces sur mesure dimensionné à la largeur d'entre-cornes et au poignet : la moitié à boucle (avec ardillon et œillets) et la moitié à passant (avec la languette de la barrette à ressort et un passant flottant), reliée au solide `watch-adapter` de Yantra4D qui porte l'interface d'entre-cornes. Fashion Cabinet possède le bracelet ; Yantra4D possède la quincaillerie adaptateur/boucle. Capsule accessoires FC-200.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
     "tags": [
@@ -34,7 +35,8 @@
       "id": "strap",
       "label": {
         "en": "Watch Strap (both halves)",
-        "es": "Correa (ambas mitades)"
+        "es": "Correa (ambas mitades)",
+        "fr": "Bracelet de montre (les deux moitiés)"
       },
       "script_file": "main.py",
       "pieces": [
@@ -48,7 +50,8 @@
       "id": "buckle-half",
       "label": {
         "en": "Buckle half",
-        "es": "Mitad de hebilla"
+        "es": "Mitad de hebilla",
+        "fr": "Moitié de boucle"
       },
       "default_color": "#5a3d2b",
       "cut": {
@@ -61,7 +64,8 @@
       "id": "keeper-half",
       "label": {
         "en": "Keeper half",
-        "es": "Mitad de pasador"
+        "es": "Mitad de pasador",
+        "fr": "Moitié de passant"
       },
       "default_color": "#5a3d2b",
       "cut": {
@@ -108,11 +112,13 @@
       "step": 1,
       "label": {
         "en": "Lug width (mm)",
-        "es": "Ancho de asa (mm)"
+        "es": "Ancho de asa (mm)",
+        "fr": "Largeur de corne (mm)"
       },
       "tooltip": {
         "en": "Where the strap meets the watch; passed to the Yantra4D adapter",
-        "es": "Donde la correa encuentra el reloj; se pasa al adaptador de Yantra4D"
+        "es": "Donde la correa encuentra el reloj; se pasa al adaptador de Yantra4D",
+        "fr": "Là où le bracelet rencontre la montre ; transmis à l'adaptateur Yantra4D"
       }
     },
     {
@@ -125,11 +131,13 @@
       "step": 5,
       "label": {
         "en": "Wrist girth (mm)",
-        "es": "Contorno de muñeca (mm)"
+        "es": "Contorno de muñeca (mm)",
+        "fr": "Tour de poignet (mm)"
       },
       "tooltip": {
         "en": "Sets the combined strap length so the middle eyelet fits",
-        "es": "Define el largo combinado para que el ojal central ajuste"
+        "es": "Define el largo combinado para que el ojal central ajuste",
+        "fr": "Définit la longueur combinée du bracelet pour que l'œillet central convienne"
       },
       "measurement": {
         "code": "wrist_girth",
@@ -146,11 +154,13 @@
       "step": 1,
       "label": {
         "en": "Taper to buckle (mm)",
-        "es": "Conicidad a la hebilla (mm)"
+        "es": "Conicidad a la hebilla (mm)",
+        "fr": "Affinement vers la boucle (mm)"
       },
       "tooltip": {
         "en": "How much each side narrows from lug to buckle",
-        "es": "Cuánto se angosta de asa a hebilla"
+        "es": "Cuánto se angosta de asa a hebilla",
+        "fr": "De combien chaque côté se rétrécit de l'entre-cornes à la boucle"
       }
     },
     {
@@ -163,11 +173,13 @@
       "step": 1,
       "label": {
         "en": "Adjustment eyelets",
-        "es": "Ojales de ajuste"
+        "es": "Ojales de ajuste",
+        "fr": "Œillets de réglage"
       },
       "tooltip": {
         "en": "Holes on the buckle half",
-        "es": "Ojales en la mitad de la hebilla"
+        "es": "Ojales en la mitad de la hebilla",
+        "fr": "Trous sur la moitié à boucle"
       }
     }
   ],
@@ -176,7 +188,8 @@
       "id": "std-20",
       "label": {
         "en": "Standard 20 mm",
-        "es": "Estándar 20 mm"
+        "es": "Estándar 20 mm",
+        "fr": "Standard 20 mm"
       },
       "values": {
         "lug_width": 20,
@@ -187,7 +200,8 @@
       "id": "slim-18",
       "label": {
         "en": "Slim 18 mm",
-        "es": "Delgada 18 mm"
+        "es": "Delgada 18 mm",
+        "fr": "Fine 18 mm"
       },
       "values": {
         "lug_width": 18,
@@ -222,7 +236,8 @@
         "type": "custom",
         "label": {
           "en": "Lug (spring-bar) end",
-          "es": "Extremo del asa"
+          "es": "Extremo del asa",
+          "fr": "Extrémité de corne (barrette)"
         },
         "edges": [
           {
@@ -243,7 +258,8 @@
     },
     "societal_benefit": {
       "en": "A watch strap cut to the actual lug width and wrist, with the adapter and buckle open printable Yantra4D objects — one broken strap becomes a print + a cut, not a whole new watch band.",
-      "es": "Una correa cortada al ancho de asa y muñeca reales, con el adaptador y la hebilla como objetos imprimibles abiertos de Yantra4D — una correa rota se vuelve una impresión y un corte, no una banda nueva completa."
+      "es": "Una correa cortada al ancho de asa y muñeca reales, con el adaptador y la hebilla como objetos imprimibles abiertos de Yantra4D — una correa rota se vuelve una impresión y un corte, no una banda nueva completa.",
+      "fr": "Un bracelet de montre coupé à la largeur d'entre-cornes et au poignet réels, avec l'adaptateur et la boucle en objets Yantra4D ouverts et imprimables — un bracelet cassé devient une impression + une coupe, pas un tout nouveau bracelet."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

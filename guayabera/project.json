@@ -6,59 +6,408 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #96 — the guayabera, a Latin American / Mexican men's dress shirt of real cultural significance, worn untucked. A drop-shoulder woven block with a button placket and a proper two-piece turndown collar (stand solved to the measured neckline, fall chained to the stand's top edge), decorated with its signature ALFORZAS — vertical columns of fine pintucks, two per front and three down the back — and carrying FOUR patch pockets (two chest + two hip), each with its own alforza column and button. Straight hem, side vents topped by a button tab, and a slightly longer back; short- or long-sleeve.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #96 del FC-100 — la guayabera, una camisa de vestir de hombre latinoamericana / mexicana de gran importancia cultural, que se lleva por fuera. Bloque de tejido plano con hombro caído, tapeta de botones y un cuello camisero de dos piezas (pie resuelto al escote medido y caída encadenada al borde superior del pie), decorada con sus ALFORZAS características — columnas verticales de alforzas finas, dos por delantero y tres en la espalda — y con CUATRO bolsas de parche (dos al pecho + dos bajas), cada una con su propia columna de alforzas y su botón. Bajo recto, aberturas laterales rematadas con una tapeta abotonada y una espalda ligeramente más larga; manga corta o larga.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #96 del FC-100 — la guayabera, una camisa de vestir de hombre latinoamericana / mexicana de gran importancia cultural, que se lleva por fuera. Bloque de tejido plano con hombro caído, tapeta de botones y un cuello camisero de dos piezas (pie resuelto al escote medido y caída encadenada al borde superior del pie), decorada con sus ALFORZAS características — columnas verticales de alforzas finas, dos por delantero y tres en la espalda — y con CUATRO bolsas de parche (dos al pecho + dos bajas), cada una con su propia columna de alforzas y su botón. Bajo recto, aberturas laterales rematadas con una tapeta abotonada y una espalda ligeramente más larga; manga corta o larga.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Rang #96 du FC-100 — la guayabera, une chemise de ville masculine latino-américaine / mexicaine d'une réelle importance culturelle, portée par-dessus. Un bloc en tissé à épaule tombante avec une patte de boutonnage et un vrai col deux pièces à tombant (pied résolu à l'encolure mesurée, tombant enchaîné au bord supérieur du pied), décorée de ses ALFORZAS caractéristiques — des colonnes verticales de fins nervures, deux par devant et trois le long du dos — et portant QUATRE poches plaquées (deux poitrine + deux basses), chacune avec sa propre colonne d'alforzas et son bouton. Ourlet droit, fentes latérales surmontées d'une patte boutonnée, et un dos légèrement plus long ; manche courte ou longue.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["shirt", "camisa", "guayabera", "heritage", "mexican", "cuban", "alforzas", "pintucks", "patch-pocket", "side-vent", "turndown-collar", "woven", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "shirt",
+      "camisa",
+      "guayabera",
+      "heritage",
+      "mexican",
+      "cuban",
+      "alforzas",
+      "pintucks",
+      "patch-pocket",
+      "side-vent",
+      "turndown-collar",
+      "woven",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet; the guayabera is a traditional Latin American / Mexican men's dress shirt drafted here from standard industry practice with respect for its cultural lineage", "license": "original" },
-        { "source": "Drop-shoulder woven block, button placket, real patch-pocket piece and side-vent detail from the camp-collar-shirt (rank #77) cartridge", "license": "LicenseRef-FC1-pending" },
-        { "source": "Two-piece turndown collar with chained stand-then-fall bisection solve from the dress-shirt (rank #4) cartridge and the collar-band enabler", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet; the guayabera is a traditional Latin American / Mexican men's dress shirt drafted here from standard industry practice with respect for its cultural lineage",
+          "license": "original"
+        },
+        {
+          "source": "Drop-shoulder woven block, button placket, real patch-pocket piece and side-vent detail from the camp-collar-shirt (rank #77) cartridge",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "Two-piece turndown collar with chained stand-then-fall bisection solve from the dress-shirt (rank #4) cartridge and the collar-band enabler",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "guayabera",
-      "label": { "en": "Guayabera (all pieces)", "es": "Guayabera (todas las piezas)" },
+      "label": {
+        "en": "Guayabera (all pieces)",
+        "es": "Guayabera (todas las piezas)",
+        "fr": "Guayabera (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "sleeve", "stand", "fall", "chest_pocket", "hip_pocket", "vent_tab"]
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "stand",
+        "fall",
+        "chest_pocket",
+        "hip_pocket",
+        "vent_tab"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#e8e2d0", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Espalda" }, "default_color": "#ddd6c2", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#efe9da", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "stand", "label": { "en": "Collar Stand", "es": "Pie de Cuello" }, "default_color": "#f4efe3", "cut": { "quantity": 2, "on_fold": true, "mirror": true } },
-    { "id": "fall", "label": { "en": "Collar Fall", "es": "Cuello" }, "default_color": "#f8f4ea", "cut": { "quantity": 2, "on_fold": true, "mirror": true } },
-    { "id": "chest_pocket", "label": { "en": "Chest Pocket", "es": "Bolsa de Pecho" }, "default_color": "#d2c9b0", "cut": { "quantity": 2 } },
-    { "id": "hip_pocket", "label": { "en": "Hip Pocket", "es": "Bolsa Baja" }, "default_color": "#c9bfa2", "cut": { "quantity": 2 } },
-    { "id": "vent_tab", "label": { "en": "Vent Tab", "es": "Tapeta de Abertura" }, "default_color": "#c0b593", "cut": { "quantity": 2 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#e8e2d0",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#ddd6c2",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#efe9da",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "stand",
+      "label": {
+        "en": "Collar Stand",
+        "es": "Pie de Cuello",
+        "fr": "Pied de col"
+      },
+      "default_color": "#f4efe3",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "fall",
+      "label": {
+        "en": "Collar Fall",
+        "es": "Cuello",
+        "fr": "Tombant de col"
+      },
+      "default_color": "#f8f4ea",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "chest_pocket",
+      "label": {
+        "en": "Chest Pocket",
+        "es": "Bolsa de Pecho",
+        "fr": "Poche de poitrine"
+      },
+      "default_color": "#d2c9b0",
+      "cut": {
+        "quantity": 2
+      }
+    },
+    {
+      "id": "hip_pocket",
+      "label": {
+        "en": "Hip Pocket",
+        "es": "Bolsa Baja",
+        "fr": "Poche de hanche"
+      },
+      "default_color": "#c9bfa2",
+      "cut": {
+        "quantity": 2
+      }
+    },
+    {
+      "id": "vent_tab",
+      "label": {
+        "en": "Vent Tab",
+        "es": "Tapeta de Abertura",
+        "fr": "Patte de fente"
+      },
+      "default_color": "#c0b593",
+      "cut": {
+        "quantity": 2
+      }
+    }
   ],
   "parameters": [
-    { "id": "chest_girth", "type": "slider", "default": 1080, "min": 700, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
-    { "id": "body_length", "type": "slider", "default": 760, "min": 500, "max": 1000, "step": 10, "label": { "en": "Body length, nape to front hem (mm)", "es": "Largo de cuerpo, nuca a bajo delantero (mm)" } },
-    { "id": "neck_girth", "type": "slider", "default": 400, "min": 300, "max": 520, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
-    { "id": "sleeve_length", "type": "slider", "default": 620, "min": 100, "max": 720, "step": 10, "measurement": { "standard": "iso_8559", "code": "arm_length" }, "label": { "en": "Sleeve length, shoulder to wrist (mm)", "es": "Largo de manga, hombro a muñeca (mm)" } },
-    { "id": "sleeve", "type": "select", "default": "long", "options": [
-      { "value": "long", "label": { "en": "Long sleeve", "es": "Manga larga" } },
-      { "value": "short", "label": { "en": "Short sleeve", "es": "Manga corta" } }
-    ], "label": { "en": "Sleeve length style", "es": "Estilo de largo de manga" } },
-    { "id": "woven_ease", "type": "slider", "default": 180, "min": 80, "max": 400, "step": 10, "label": { "en": "Total ease (mm; relaxed fit)", "es": "Holgura total (mm; corte holgado)" } },
-    { "id": "button_stand", "type": "slider", "default": 32, "min": 20, "max": 50, "step": 2, "label": { "en": "Button-placket width past CF (mm)", "es": "Ancho de tapeta después del centro frente (mm)" } },
-    { "id": "pintuck_rows", "type": "slider", "default": 5, "min": 2, "max": 7, "step": 1, "label": { "en": "Alforzas: pintucks per column", "es": "Alforzas: pliegues por columna" } },
-    { "id": "back_drop", "type": "slider", "default": 40, "min": 0, "max": 90, "step": 5, "advanced": true, "label": { "en": "Longer back: hem drop at CB (mm)", "es": "Espalda más larga: caída del bajo en centro espalda (mm)" } },
-    { "id": "vent_height", "type": "slider", "default": 120, "min": 40, "max": 220, "step": 10, "label": { "en": "Side-vent height (mm)", "es": "Alto de abertura lateral (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 20, "min": 0, "max": 50, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "default": 1080,
+      "min": 700,
+      "max": 1800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "default": 760,
+      "min": 500,
+      "max": 1000,
+      "step": 10,
+      "label": {
+        "en": "Body length, nape to front hem (mm)",
+        "es": "Largo de cuerpo, nuca a bajo delantero (mm)",
+        "fr": "Longueur du corps, nuque à l'ourlet devant (mm)"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 400,
+      "min": 300,
+      "max": 520,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 620,
+      "min": 100,
+      "max": 720,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "arm_length"
+      },
+      "label": {
+        "en": "Sleeve length, shoulder to wrist (mm)",
+        "es": "Largo de manga, hombro a muñeca (mm)",
+        "fr": "Longueur de manche, épaule au poignet (mm)"
+      }
+    },
+    {
+      "id": "sleeve",
+      "type": "select",
+      "default": "long",
+      "options": [
+        {
+          "value": "long",
+          "label": {
+            "en": "Long sleeve",
+            "es": "Manga larga",
+            "fr": "Manche longue"
+          }
+        },
+        {
+          "value": "short",
+          "label": {
+            "en": "Short sleeve",
+            "es": "Manga corta",
+            "fr": "Manche courte"
+          }
+        }
+      ],
+      "label": {
+        "en": "Sleeve length style",
+        "es": "Estilo de largo de manga",
+        "fr": "Style de longueur de manche"
+      }
+    },
+    {
+      "id": "woven_ease",
+      "type": "slider",
+      "default": 180,
+      "min": 80,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Total ease (mm; relaxed fit)",
+        "es": "Holgura total (mm; corte holgado)",
+        "fr": "Aisance totale (mm; coupe décontractée)"
+      }
+    },
+    {
+      "id": "button_stand",
+      "type": "slider",
+      "default": 32,
+      "min": 20,
+      "max": 50,
+      "step": 2,
+      "label": {
+        "en": "Button-placket width past CF (mm)",
+        "es": "Ancho de tapeta después del centro frente (mm)",
+        "fr": "Largeur de la patte au-delà du milieu devant (mm)"
+      }
+    },
+    {
+      "id": "pintuck_rows",
+      "type": "slider",
+      "default": 5,
+      "min": 2,
+      "max": 7,
+      "step": 1,
+      "label": {
+        "en": "Alforzas: pintucks per column",
+        "es": "Alforzas: pliegues por columna",
+        "fr": "Alforzas : nervures par colonne"
+      }
+    },
+    {
+      "id": "back_drop",
+      "type": "slider",
+      "default": 40,
+      "min": 0,
+      "max": 90,
+      "step": 5,
+      "advanced": true,
+      "label": {
+        "en": "Longer back: hem drop at CB (mm)",
+        "es": "Espalda más larga: caída del bajo en centro espalda (mm)",
+        "fr": "Dos plus long : descente de bas au milieu dos (mm)"
+      }
+    },
+    {
+      "id": "vent_height",
+      "type": "slider",
+      "default": 120,
+      "min": 40,
+      "max": 220,
+      "step": 10,
+      "label": {
+        "en": "Side-vent height (mm)",
+        "es": "Alto de abertura lateral (mm)",
+        "fr": "Hauteur de fente latérale (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 20,
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1080, "body_length": 760, "neck_girth": 400, "sleeve_length": 620, "sleeve": "long", "pintuck_rows": 5 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1160, "body_length": 780, "neck_girth": 420, "sleeve_length": 645, "sleeve": "long", "pintuck_rows": 5, "back_drop": 50 } },
-    { "id": "short-sleeve-m", "label": { "en": "M, short sleeve", "es": "M, manga corta" }, "values": { "chest_girth": 1080, "body_length": 750, "neck_girth": 400, "sleeve": "short", "pintuck_rows": 5 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "chest_girth": 1080,
+        "body_length": 760,
+        "neck_girth": 400,
+        "sleeve_length": 620,
+        "sleeve": "long",
+        "pintuck_rows": 5
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G",
+        "fr": "L"
+      },
+      "values": {
+        "chest_girth": 1160,
+        "body_length": 780,
+        "neck_girth": 420,
+        "sleeve_length": 645,
+        "sleeve": "long",
+        "pintuck_rows": 5,
+        "back_drop": 50
+      }
+    },
+    {
+      "id": "short-sleeve-m",
+      "label": {
+        "en": "M, short sleeve",
+        "es": "M, manga corta",
+        "fr": "M, manche courte"
+      },
+      "values": {
+        "chest_girth": 1080,
+        "body_length": 750,
+        "neck_girth": 400,
+        "sleeve": "short",
+        "pintuck_rows": 5
+      }
+    }
   ],
   "constraints": [
     {
@@ -66,7 +415,8 @@
       "severity": "warning",
       "message": {
         "en": "Narrow button plackets crowd standard 11.5 mm shirt buttons",
-        "es": "Tapetas angostas aprietan los botones de camisa estándar de 11.5 mm"
+        "es": "Tapetas angostas aprietan los botones de camisa estándar de 11.5 mm",
+        "fr": "Des pattes de boutonnage étroites serrent les boutons de chemise standard de 11,5 mm"
       }
     },
     {
@@ -74,7 +424,8 @@
       "severity": "warning",
       "message": {
         "en": "Guayabera alforzas traditionally run 3-5 fine tucks per column; fewer reads as plain",
-        "es": "Las alforzas de la guayabera llevan tradicionalmente 3-5 pliegues finos por columna; menos se ve liso"
+        "es": "Las alforzas de la guayabera llevan tradicionalmente 3-5 pliegues finos por columna; menos se ve liso",
+        "fr": "Les alforzas de la guayabera comptent traditionnellement 3-5 fines nervures par colonne ; moins paraît uni"
       }
     },
     {
@@ -82,12 +433,21 @@
       "severity": "warning",
       "message": {
         "en": "Side vents above ~200 mm sit above the natural waist on most torsos",
-        "es": "Aberturas laterales de más de ~200 mm quedan por encima de la cintura natural en la mayoría de los torsos"
+        "es": "Aberturas laterales de más de ~200 mm quedan por encima de la cintura natural en la mayoría de los torsos",
+        "fr": "Des fentes latérales au-delà d'~200 mm se situent au-dessus de la taille naturelle sur la plupart des torses"
       }
     }
   ],
-  "export_formats": ["svg", "dxf", "json", "pdf"],
-  "fabrics": ["popelina-algodon", "manta-cruda"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "popelina-algodon",
+    "manta-cruda"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
@@ -96,54 +456,102 @@
         "id": "neckline",
         "type": "neckline",
         "edges": [
-          { "piece": "front", "edge": "neck" },
-          { "piece": "back", "edge": "neck" },
-          { "piece": "stand", "edge": "neck" }
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          },
+          {
+            "piece": "stand",
+            "edge": "neck"
+          }
         ],
-        "parameters": ["neck_girth"]
+        "parameters": [
+          "neck_girth"
+        ]
       },
       {
         "id": "armscye",
         "type": "armscye",
         "edges": [
-          { "piece": "front", "edge": "armhole" },
-          { "piece": "back", "edge": "armhole" },
-          { "piece": "sleeve", "edge": "cap" }
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
         ],
-        "parameters": ["chest_girth", "woven_ease"]
+        "parameters": [
+          "chest_girth",
+          "woven_ease"
+        ]
       },
       {
         "id": "hem",
         "type": "hem",
         "edges": [
-          { "piece": "front", "edge": "hem" },
-          { "piece": "back", "edge": "hem" }
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
         ],
-        "parameters": ["body_length", "hem_allowance", "back_drop"]
+        "parameters": [
+          "body_length",
+          "hem_allowance",
+          "back_drop"
+        ]
       },
       {
         "id": "button_stand",
         "type": "button_stand",
         "edges": [
-          { "piece": "front", "edge": "center" }
+          {
+            "piece": "front",
+            "edge": "center"
+          }
         ],
-        "parameters": ["button_stand"]
+        "parameters": [
+          "button_stand"
+        ]
       },
       {
         "id": "chest_pocket",
         "type": "pocket",
         "edges": [
-          { "piece": "chest_pocket", "edge": "top" }
+          {
+            "piece": "chest_pocket",
+            "edge": "top"
+          }
         ],
-        "parameters": ["pintuck_rows"]
+        "parameters": [
+          "pintuck_rows"
+        ]
       },
       {
         "id": "hip_pocket",
         "type": "pocket",
         "edges": [
-          { "piece": "hip_pocket", "edge": "top" }
+          {
+            "piece": "hip_pocket",
+            "edge": "top"
+          }
         ],
-        "parameters": ["pintuck_rows"]
+        "parameters": [
+          "pintuck_rows"
+        ]
       }
     ],
     "capabilities": {
@@ -154,7 +562,8 @@
     },
     "societal_benefit": {
       "en": "The guayabera is a living heritage garment of Mexico, Cuba, and the wider Caribbean and Latin America — formal-casual, cool in the heat, and worn with pride at everything from a workday to a wedding. A verified parametric draft lets local tailors and sewing co-ops cut it to real bodies and keep the craft — the alforzas, the four pockets, the vented untucked hem — alive and repairable, honouring the tradition rather than replacing it.",
-      "es": "La guayabera es una prenda de patrimonio vivo de México, Cuba y el resto del Caribe y América Latina — formal-casual, fresca en el calor y usada con orgullo desde un día de trabajo hasta una boda. Un trazo paramétrico verificado permite a sastres y cooperativas de costura locales cortarla a la medida de cuerpos reales y mantener vivo y reparable el oficio — las alforzas, las cuatro bolsas, el bajo abierto por fuera — honrando la tradición en vez de reemplazarla."
+      "es": "La guayabera es una prenda de patrimonio vivo de México, Cuba y el resto del Caribe y América Latina — formal-casual, fresca en el calor y usada con orgullo desde un día de trabajo hasta una boda. Un trazo paramétrico verificado permite a sastres y cooperativas de costura locales cortarla a la medida de cuerpos reales y mantener vivo y reparable el oficio — las alforzas, las cuatro bolsas, el bajo abierto por fuera — honrando la tradición en vez de reemplazarla.",
+      "fr": "La guayabera est un vêtement de patrimoine vivant du Mexique, de Cuba et de l'ensemble des Caraïbes et de l'Amérique latine — formelle-décontractée, fraîche dans la chaleur, et portée avec fierté partout, d'une journée de travail à un mariage. Un tracé paramétrique vérifié permet aux tailleurs et coopératives de couture locaux de la couper sur des corps réels et de garder le savoir-faire — les alforzas, les quatre poches, l'ourlet fendu porté par-dessus — vivant et réparable, honorant la tradition au lieu de la remplacer."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

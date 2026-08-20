@@ -6,10 +6,19 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #27 — rank #1's relaxed drop-shoulder knit block with a true V front neckline and a mitered V-neckband. The front neck is a single straight stitch line from the centre front at v_depth up to the shoulder point, and the band length derives from the measured opening × 0.82 (V-bands need more negative ease than crews), with the miter notched and cross-marked at the band centre. Back and solved-cap sleeve are identical to rank #1.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #27 del FC-100 — el bloque de punto con hombro caído del rango #1 con escote delantero en V verdadera y cuello en V ingleteado. El escote delantero es una sola línea recta de costura desde el centro del delantero a v_depth hasta el punto del hombro, y el largo de la banda se deriva de la abertura medida × 0.82 (las bandas en V requieren más holgura negativa que las redondas), con el inglete marcado con piquete y cruz al centro de la banda. Trasero y manga de copa resuelta idénticos al rango #1.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #27 del FC-100 — el bloque de punto con hombro caído del rango #1 con escote delantero en V verdadera y cuello en V ingleteado. El escote delantero es una sola línea recta de costura desde el centro del delantero a v_depth hasta el punto del hombro, y el largo de la banda se deriva de la abertura medida × 0.82 (las bandas en V requieren más holgura negativa que las redondas), con el inglete marcado con piquete y cruz al centro de la banda. Trasero y manga de copa resuelta idénticos al rango #1.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "FC-100 rang n°27 — le bloc maille à épaule tombante détendu du rang n°1 avec une véritable encolure en V devant et une encolure côtelée en V à onglet. L'Encolure devant est une seule ligne de Piqure droite depuis le centre devant à v_depth jusqu'au point d'épaule, et la longueur de la bande dérive de l'ouverture mesurée × 0,82 (les bandes en V demandent plus d'aisance négative que les rondes), avec l'onglet cranté et repéré en croix au centre de la bande. Le Dos et la Manche à tête résolue sont identiques au rang n°1.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
-    "tags": ["t-shirt", "tee", "v-neck", "knit", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "t-shirt",
+      "tee",
+      "v-neck",
+      "knit",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
@@ -24,83 +33,313 @@
   "modes": [
     {
       "id": "tee",
-      "label": { "en": "V-neck T-shirt (all pieces)", "es": "Playera cuello V (todas las piezas)" },
+      "label": {
+        "en": "V-neck T-shirt (all pieces)",
+        "es": "Playera cuello V (todas las piezas)",
+        "fr": "T-shirt col V (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "sleeve", "neckband"]
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "neckband"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#4a8fc9", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Trasero" }, "default_color": "#3a6f9f", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#6aa4d4", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "neckband", "label": { "en": "Neckband (rib, mitered V)", "es": "Cuello (rib, ingleteado en V)" }, "default_color": "#8fb8dc", "cut": { "quantity": 1 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#4a8fc9",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Trasero",
+        "fr": "Dos"
+      },
+      "default_color": "#3a6f9f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#6aa4d4",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "neckband",
+      "label": {
+        "en": "Neckband (rib, mitered V)",
+        "es": "Cuello (rib, ingleteado en V)",
+        "fr": "Col bord-côte (rib, V à onglet)"
+      },
+      "default_color": "#8fb8dc",
+      "cut": {
+        "quantity": 1
+      }
+    }
   ],
   "parameter_groups": [
-    { "id": "body", "label": { "en": "Body Measurements", "es": "Medidas Corporales" } },
-    { "id": "fit", "label": { "en": "Fit & Style", "es": "Ajuste y Estilo" } },
-    { "id": "construction", "label": { "en": "Construction", "es": "Construcción" } }
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures corporelles"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Ajustement et style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Montage"
+      }
+    }
   ],
   "parameters": [
     {
-      "id": "chest_girth", "type": "slider", "default": 980, "min": 600, "max": 1800, "step": 10,
-      "group": "body", "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" },
-      "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" }
+      "id": "chest_girth",
+      "type": "slider",
+      "default": 980,
+      "min": 600,
+      "max": 1800,
+      "step": 10,
+      "group": "body",
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      }
     },
     {
-      "id": "body_length", "type": "slider", "default": 720, "min": 400, "max": 1000, "step": 10,
-      "group": "body", "label": { "en": "Body length, nape to hem (mm)", "es": "Largo de cuerpo, nuca a dobladillo (mm)" }
+      "id": "body_length",
+      "type": "slider",
+      "default": 720,
+      "min": 400,
+      "max": 1000,
+      "step": 10,
+      "group": "body",
+      "label": {
+        "en": "Body length, nape to hem (mm)",
+        "es": "Largo de cuerpo, nuca a dobladillo (mm)",
+        "fr": "Longueur du corps, nuque à l'ourlet (mm)"
+      }
     },
     {
-      "id": "neck_girth", "type": "slider", "default": 380, "min": 300, "max": 520, "step": 5,
-      "group": "body", "measurement": { "standard": "iso_8559", "code": "neck_girth" },
-      "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" }
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 380,
+      "min": 300,
+      "max": 520,
+      "step": 5,
+      "group": "body",
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      }
     },
     {
-      "id": "sleeve_length", "type": "slider", "default": 220, "min": 80, "max": 700, "step": 5,
-      "group": "body", "label": { "en": "Sleeve length, shoulder to hem (mm)", "es": "Largo de manga, hombro a dobladillo (mm)" }
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 220,
+      "min": 80,
+      "max": 700,
+      "step": 5,
+      "group": "body",
+      "label": {
+        "en": "Sleeve length, shoulder to hem (mm)",
+        "es": "Largo de manga, hombro a dobladillo (mm)",
+        "fr": "Longueur de manche, épaule à l'ourlet (mm)"
+      }
     },
     {
-      "id": "v_depth", "type": "slider", "default": 140, "min": 60, "max": 250, "step": 5,
-      "group": "fit", "label": { "en": "V depth, HPS to V point (mm)", "es": "Profundidad de la V, HPS a la punta (mm)" }
+      "id": "v_depth",
+      "type": "slider",
+      "default": 140,
+      "min": 60,
+      "max": 250,
+      "step": 5,
+      "group": "fit",
+      "label": {
+        "en": "V depth, HPS to V point (mm)",
+        "es": "Profundidad de la V, HPS a la punta (mm)",
+        "fr": "Profondeur du V, HPS à la pointe (mm)"
+      }
     },
     {
-      "id": "knit_ease", "type": "slider", "default": 60, "min": -80, "max": 300, "step": 10,
-      "group": "fit", "label": { "en": "Total ease (mm, negative = compression)", "es": "Holgura total (mm, negativa = compresión)" }
+      "id": "knit_ease",
+      "type": "slider",
+      "default": 60,
+      "min": -80,
+      "max": 300,
+      "step": 10,
+      "group": "fit",
+      "label": {
+        "en": "Total ease (mm, negative = compression)",
+        "es": "Holgura total (mm, negativa = compresión)",
+        "fr": "Aisance totale (mm, négative = compression)"
+      }
     },
     {
-      "id": "armhole_depth", "type": "slider", "default": 0, "min": 0, "max": 350, "step": 5,
-      "group": "fit", "advanced": true,
-      "label": { "en": "Armhole depth (mm, 0 = auto)", "es": "Profundidad de sisa (mm, 0 = auto)" }
+      "id": "armhole_depth",
+      "type": "slider",
+      "default": 0,
+      "min": 0,
+      "max": 350,
+      "step": 5,
+      "group": "fit",
+      "advanced": true,
+      "label": {
+        "en": "Armhole depth (mm, 0 = auto)",
+        "es": "Profundidad de sisa (mm, 0 = auto)",
+        "fr": "Profondeur d'emmanchure (mm, 0 = auto)"
+      }
     },
     {
-      "id": "sleeve_opening", "type": "slider", "default": 0, "min": 0, "max": 500, "step": 5,
-      "group": "fit", "advanced": true,
-      "label": { "en": "Sleeve opening, flat (mm, 0 = auto)", "es": "Abertura de manga, extendida (mm, 0 = auto)" }
+      "id": "sleeve_opening",
+      "type": "slider",
+      "default": 0,
+      "min": 0,
+      "max": 500,
+      "step": 5,
+      "group": "fit",
+      "advanced": true,
+      "label": {
+        "en": "Sleeve opening, flat (mm, 0 = auto)",
+        "es": "Abertura de manga, extendida (mm, 0 = auto)",
+        "fr": "Ouverture de manche, à plat (mm, 0 = auto)"
+      }
     },
     {
-      "id": "neckband_ratio", "type": "slider", "default": 0.82, "min": 0.7, "max": 1.0, "step": 0.01,
-      "group": "construction", "advanced": true,
-      "label": { "en": "Neckband/opening ratio (V-bands run tighter)", "es": "Proporción cuello/abertura (las bandas en V van más tensas)" }
-    },
-    {
-      "id": "neckband_width", "type": "slider", "default": 18, "min": 10, "max": 40, "step": 1,
+      "id": "neckband_ratio",
+      "type": "slider",
+      "default": 0.82,
+      "min": 0.7,
+      "max": 1.0,
+      "step": 0.01,
       "group": "construction",
-      "label": { "en": "Neckband finished width (mm)", "es": "Ancho terminado del cuello (mm)" }
+      "advanced": true,
+      "label": {
+        "en": "Neckband/opening ratio (V-bands run tighter)",
+        "es": "Proporción cuello/abertura (las bandas en V van más tensas)",
+        "fr": "Proportion col/ouverture (les bandes en V sont plus tendues)"
+      }
     },
     {
-      "id": "seam_allowance", "type": "slider", "default": 7, "min": 0, "max": 20, "step": 1,
+      "id": "neckband_width",
+      "type": "slider",
+      "default": 18,
+      "min": 10,
+      "max": 40,
+      "step": 1,
       "group": "construction",
-      "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" }
+      "label": {
+        "en": "Neckband finished width (mm)",
+        "es": "Ancho terminado del cuello (mm)",
+        "fr": "Largeur finie du col (mm)"
+      }
     },
     {
-      "id": "hem_allowance", "type": "slider", "default": 25, "min": 0, "max": 50, "step": 5,
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 7,
+      "min": 0,
+      "max": 20,
+      "step": 1,
       "group": "construction",
-      "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" }
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 25,
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "group": "construction",
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
     }
   ],
   "presets": [
-    { "id": "classic-v", "label": { "en": "Classic V", "es": "V clásica" }, "values": { "chest_girth": 980, "body_length": 720, "neck_girth": 380, "sleeve_length": 220, "v_depth": 140 } },
-    { "id": "deep-v", "label": { "en": "Deep V", "es": "V profunda" }, "values": { "chest_girth": 980, "body_length": 720, "neck_girth": 380, "sleeve_length": 220, "v_depth": 175 } }
+    {
+      "id": "classic-v",
+      "label": {
+        "en": "Classic V",
+        "es": "V clásica",
+        "fr": "V classique"
+      },
+      "values": {
+        "chest_girth": 980,
+        "body_length": 720,
+        "neck_girth": 380,
+        "sleeve_length": 220,
+        "v_depth": 140
+      }
+    },
+    {
+      "id": "deep-v",
+      "label": {
+        "en": "Deep V",
+        "es": "V profunda",
+        "fr": "V plongeant"
+      },
+      "values": {
+        "chest_girth": 980,
+        "body_length": 720,
+        "neck_girth": 380,
+        "sleeve_length": 220,
+        "v_depth": 175
+      }
+    }
   ],
   "constraints": [
     {
@@ -108,7 +347,8 @@
       "severity": "error",
       "message": {
         "en": "V depth must stay under a quarter of the body length or the V collapses into the chest",
-        "es": "La profundidad de la V debe quedar bajo un cuarto del largo de cuerpo o la V invade el pecho"
+        "es": "La profundidad de la V debe quedar bajo un cuarto del largo de cuerpo o la V invade el pecho",
+        "fr": "La profondeur du V doit rester sous un quart de la longueur du corps, sinon le V empiète sur la poitrine"
       }
     },
     {
@@ -116,7 +356,8 @@
       "severity": "warning",
       "message": {
         "en": "Strong compression fits depend on fabric stretch; check the fabric card",
-        "es": "Los ajustes de compresión dependen del estiramiento de la tela; revisa la ficha de tela"
+        "es": "Los ajustes de compresión dependen del estiramiento de la tela; revisa la ficha de tela",
+        "fr": "Les coupes très compressives dépendent de l'élasticité du tissu ; vérifiez la fiche du tissu"
       }
     },
     {
@@ -124,12 +365,19 @@
       "severity": "warning",
       "message": {
         "en": "Sleeve longer than the body — intentional only for wrap styles",
-        "es": "Manga más larga que el cuerpo — solo intencional en estilos envolventes"
+        "es": "Manga más larga que el cuerpo — solo intencional en estilos envolventes",
+        "fr": "Manche plus longue que le corps — intentionnel uniquement pour les styles portefeuille"
       }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["jersey-algodon"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "jersey-algodon"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
@@ -138,29 +386,61 @@
         "id": "neckline",
         "type": "neckline",
         "edges": [
-          { "piece": "front", "edge": "neck" },
-          { "piece": "back", "edge": "neck" }
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
         ],
-        "parameters": ["neck_girth", "v_depth", "neckband_ratio"]
+        "parameters": [
+          "neck_girth",
+          "v_depth",
+          "neckband_ratio"
+        ]
       },
       {
         "id": "armscye",
         "type": "armscye",
         "edges": [
-          { "piece": "front", "edge": "armhole" },
-          { "piece": "back", "edge": "armhole" },
-          { "piece": "sleeve", "edge": "cap" }
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
         ],
-        "parameters": ["armhole_depth", "chest_girth", "knit_ease"]
+        "parameters": [
+          "armhole_depth",
+          "chest_girth",
+          "knit_ease"
+        ]
       },
       {
         "id": "hem",
         "type": "hem",
         "edges": [
-          { "piece": "front", "edge": "hem" },
-          { "piece": "back", "edge": "hem" }
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
         ],
-        "parameters": ["body_length", "hem_allowance"]
+        "parameters": [
+          "body_length",
+          "hem_allowance"
+        ]
       }
     ],
     "capabilities": {
@@ -171,7 +451,8 @@
     },
     "societal_benefit": {
       "en": "The V-neck is the t-shirt's most-requested neckline variation; encoding the true-V draft and the mitered-band rule as a verified block shows the whole FC-100 how a one-edge neckline change propagates into a derived, construction-correct band instead of a redrawn pattern.",
-      "es": "El cuello V es la variación de escote más pedida de la playera; codificar el trazo de V verdadera y la regla de banda ingleteada como bloque verificado muestra a todo el FC-100 cómo un cambio de un solo borde se propaga a una banda derivada y correcta en construcción, en vez de un patrón redibujado."
+      "es": "El cuello V es la variación de escote más pedida de la playera; codificar el trazo de V verdadera y la regla de banda ingleteada como bloque verificado muestra a todo el FC-100 cómo un cambio de un solo borde se propaga a una banda derivada y correcta en construcción, en vez de un patrón redibujado.",
+      "fr": "Le col en V est la variante d'encolure la plus demandée du t-shirt ; encoder le tracé du vrai V et la règle de bande à onglet comme un bloc vérifié montre à tout le FC-100 comment un changement d'un seul bord d'encolure se propage vers une bande dérivée et correcte en construction, plutôt qu'un patron redessiné."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

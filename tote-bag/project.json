@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "A classic boxed-bottom tote: one wrap body panel (front + base + back cut as one, folded at the base) that boxes at the lower corners for a flat bottom, plus two carry straps. An optional length-adjustable strap bridges to the Yantra4D `strap-buckle` solid. Fashion Cabinet owns the bag; Yantra4D owns the buckle. FC-200 accessories capsule.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Una bolsa tote clásica de fondo cuadrado: un panel de cuerpo envolvente (frente + base + espalda cortados en uno, doblado en la base) que se escuadra en las esquinas inferiores para un fondo plano, más dos asas. Un asa opcional ajustable en largo se puentea al sólido `strap-buckle` de Yantra4D. Fashion Cabinet posee la bolsa; Yantra4D posee la hebilla.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Una bolsa tote clásica de fondo cuadrado: un panel de cuerpo envolvente (frente + base + espalda cortados en uno, doblado en la base) que se escuadra en las esquinas inferiores para un fondo plano, más dos asas. Un asa opcional ajustable en largo se puentea al sólido `strap-buckle` de Yantra4D. Fashion Cabinet posee la bolsa; Yantra4D posee la hebilla.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un tote classique à fond rectangulaire : un panneau de corps enveloppant (devant + base + dos coupés en un seul, plié à la base) qui se cube aux angles inférieurs pour un fond plat, plus deux anses de portage. Une anse optionnelle réglable en longueur se relie au solide `strap-buckle` de Yantra4D. Fashion Cabinet possède le sac ; Yantra4D possède la boucle. Capsule accessoires FC-200.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
     "tags": [
@@ -34,7 +35,8 @@
       "id": "set",
       "label": {
         "en": "Full Tote",
-        "es": "Tote completo"
+        "es": "Tote completo",
+        "fr": "Cabas complet"
       },
       "script_file": "main.py",
       "pieces": [
@@ -48,7 +50,8 @@
       "id": "body",
       "label": {
         "en": "Body (front + base + back)",
-        "es": "Cuerpo (frente + base + espalda)"
+        "es": "Cuerpo (frente + base + espalda)",
+        "fr": "Corps (devant + base + dos)"
       },
       "default_color": "#c8b89a",
       "cut": {
@@ -61,7 +64,8 @@
       "id": "strap",
       "label": {
         "en": "Carry strap",
-        "es": "Asa"
+        "es": "Asa",
+        "fr": "Sangle de portage"
       },
       "default_color": "#a89878",
       "cut": {
@@ -92,11 +96,13 @@
       "step": 10,
       "label": {
         "en": "Width (mm)",
-        "es": "Ancho (mm)"
+        "es": "Ancho (mm)",
+        "fr": "Largeur (mm)"
       },
       "tooltip": {
         "en": "Finished width across the front",
-        "es": "Ancho terminado del frente"
+        "es": "Ancho terminado del frente",
+        "fr": "Largeur finie sur le devant"
       }
     },
     {
@@ -109,11 +115,13 @@
       "step": 10,
       "label": {
         "en": "Height (mm)",
-        "es": "Alto (mm)"
+        "es": "Alto (mm)",
+        "fr": "Hauteur (mm)"
       },
       "tooltip": {
         "en": "Finished front-face height",
-        "es": "Alto terminado de la cara"
+        "es": "Alto terminado de la cara",
+        "fr": "Hauteur finie de la face avant"
       }
     },
     {
@@ -126,11 +134,13 @@
       "step": 10,
       "label": {
         "en": "Boxed depth (mm)",
-        "es": "Fondo cuadrado (mm)"
+        "es": "Fondo cuadrado (mm)",
+        "fr": "Profondeur à fond carré (mm)"
       },
       "tooltip": {
         "en": "Flat-bottom gusset depth; 0 = flat tote",
-        "es": "Profundidad del fondo plano; 0 = tote plano"
+        "es": "Profundidad del fondo plano; 0 = tote plano",
+        "fr": "Profondeur du soufflet à fond plat ; 0 = tote plat"
       }
     },
     {
@@ -143,11 +153,13 @@
       "step": 2,
       "label": {
         "en": "Strap width (mm)",
-        "es": "Ancho de asa (mm)"
+        "es": "Ancho de asa (mm)",
+        "fr": "Largeur de sangle (mm)"
       },
       "tooltip": {
         "en": "Carry-strap width; sets the Yantra4D buckle slot",
-        "es": "Ancho del asa; define la ranura de la hebilla de Yantra4D"
+        "es": "Ancho del asa; define la ranura de la hebilla de Yantra4D",
+        "fr": "Largeur de l'anse ; définit la fente de la boucle Yantra4D"
       }
     },
     {
@@ -160,11 +172,13 @@
       "step": 10,
       "label": {
         "en": "Strap length (mm)",
-        "es": "Largo de asa (mm)"
+        "es": "Largo de asa (mm)",
+        "fr": "Longueur de sangle (mm)"
       },
       "tooltip": {
         "en": "Carry-strap length",
-        "es": "Largo del asa"
+        "es": "Largo del asa",
+        "fr": "Longueur de l'anse"
       }
     },
     {
@@ -177,11 +191,13 @@
       "step": 5,
       "label": {
         "en": "Top-hem turn (mm)",
-        "es": "Dobladillo superior (mm)"
+        "es": "Dobladillo superior (mm)",
+        "fr": "Repli d'ourlet supérieur (mm)"
       },
       "tooltip": {
         "en": "Top-opening turn-under",
-        "es": "Doblez de la boca"
+        "es": "Doblez de la boca",
+        "fr": "Rentré de l'ouverture supérieure"
       },
       "advanced": true
     }
@@ -191,7 +207,8 @@
       "id": "market",
       "label": {
         "en": "Market tote",
-        "es": "Tote de mercado"
+        "es": "Tote de mercado",
+        "fr": "Sac cabas de marché"
       },
       "values": {
         "bag_width": 420,
@@ -203,7 +220,8 @@
       "id": "flat",
       "label": {
         "en": "Flat tote",
-        "es": "Tote plano"
+        "es": "Tote plano",
+        "fr": "Cabas plat"
       },
       "values": {
         "bag_depth": 0,
@@ -238,7 +256,8 @@
         "type": "hem",
         "label": {
           "en": "Top opening",
-          "es": "Boca superior"
+          "es": "Boca superior",
+          "fr": "Ouverture supérieure"
         },
         "edges": [
           {
@@ -260,7 +279,8 @@
     },
     "societal_benefit": {
       "en": "A boxed-bottom tote sized to what you carry, with an optional length-adjustable strap that is an open printable Yantra4D object — a durable, repairable, made-to-measure bag instead of a fixed disposable one.",
-      "es": "Una bolsa de fondo cuadrado dimensionada a lo que cargas, con un asa opcional ajustable que es un objeto imprimible abierto de Yantra4D — una bolsa durable, reparable y a la medida en vez de una desechable de tamaño fijo."
+      "es": "Una bolsa de fondo cuadrado dimensionada a lo que cargas, con un asa opcional ajustable que es un objeto imprimible abierto de Yantra4D — una bolsa durable, reparable y a la medida en vez de una desechable de tamaño fijo.",
+      "fr": "Un tote à fond rectangulaire dimensionné à ce que vous transportez, avec une anse optionnelle réglable en longueur qui est un objet Yantra4D ouvert et imprimable — un sac durable, réparable et sur mesure au lieu d'un sac jetable à taille fixe."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

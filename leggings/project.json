@@ -6,74 +6,378 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #7. Side-seamless knit leggings cut with negative ease: one piece per leg (side line on the fold), deeper back fork with the front inseam bowed outward by a solved amount until both inseams match, plus a diamond gusset and a fold-over waistband derived from the measured waist edge.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #7 del FC-100. Mallas de punto sin costura lateral con holgura negativa: una pieza por pierna (línea lateral al doblez), tiro trasero más profundo con la entrepierna delantera curvada por una cantidad resuelta hasta igualar ambas entrepiernas, más refuerzo de rombo y pretina doblada derivada de la cintura medida.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #7 del FC-100. Mallas de punto sin costura lateral con holgura negativa: una pieza por pierna (línea lateral al doblez), tiro trasero más profundo con la entrepierna delantera curvada por una cantidad resuelta hasta igualar ambas entrepiernas, más refuerzo de rombo y pretina doblada derivada de la cintura medida.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "FC-100 rang no 7. Leggings en maille sans couture de côté, coupés en aisance négative : une pièce par jambe (ligne de côté au pli), fourche dos plus profonde avec l'entrejambe devant galbée vers l'extérieur d'une valeur résolue jusqu'à ce que les deux entrejambes correspondent, plus un soufflet losange et une ceinture rabattue dérivée du bord de taille mesuré.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["leggings", "activewear", "knit", "negative-ease", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "leggings",
+      "activewear",
+      "knit",
+      "negative-ease",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
-      "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }]
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
     }
   },
   "modes": [
     {
       "id": "leggings",
-      "label": { "en": "Leggings (all pieces)", "es": "Mallas (todas las piezas)" },
+      "label": {
+        "en": "Leggings (all pieces)",
+        "es": "Mallas (todas las piezas)",
+        "fr": "Leggings (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["leg", "gusset", "waistband"]
+      "pieces": [
+        "leg",
+        "gusset",
+        "waistband"
+      ]
     }
   ],
   "pieces": [
-    { "id": "leg", "label": { "en": "Leg (side-seamless)", "es": "Pierna (sin costura lateral)" }, "default_color": "#6f5a99", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "gusset", "label": { "en": "Gusset", "es": "Refuerzo (rombo)" }, "default_color": "#8d77b8", "cut": { "quantity": 1 } },
-    { "id": "waistband", "label": { "en": "Waistband", "es": "Pretina" }, "default_color": "#a995cc", "cut": { "quantity": 1 } }
+    {
+      "id": "leg",
+      "label": {
+        "en": "Leg (side-seamless)",
+        "es": "Pierna (sin costura lateral)",
+        "fr": "Jambe (sans couture latérale)"
+      },
+      "default_color": "#6f5a99",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "gusset",
+      "label": {
+        "en": "Gusset",
+        "es": "Refuerzo (rombo)",
+        "fr": "Gousset"
+      },
+      "default_color": "#8d77b8",
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "Waistband",
+        "es": "Pretina",
+        "fr": "Ceinture"
+      },
+      "default_color": "#a995cc",
+      "cut": {
+        "quantity": 1
+      }
+    }
   ],
   "parameters": [
-    { "id": "waist_girth", "type": "slider", "default": 700, "min": 450, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
-    { "id": "hip_girth", "type": "slider", "default": 940, "min": 600, "max": 1700, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
-    { "id": "inseam_length", "type": "slider", "default": 700, "min": 300, "max": 950, "step": 10, "measurement": { "standard": "iso_8559", "code": "inside_leg_length" }, "label": { "en": "Inseam length (mm)", "es": "Largo de entrepierna (mm)" } },
-    { "id": "side_rise", "type": "slider", "default": 250, "min": 160, "max": 380, "step": 5, "label": { "en": "Side rise (mm)", "es": "Tiro lateral (mm)" } },
-    { "id": "ankle_girth", "type": "slider", "default": 220, "min": 140, "max": 420, "step": 5, "label": { "en": "Ankle girth (mm)", "es": "Contorno de tobillo (mm)" } },
-    { "id": "negative_ease_pct", "type": "slider", "default": 8, "min": 0, "max": 15, "step": 1, "label": { "en": "Negative ease (%)", "es": "Holgura negativa (%)" } },
-    { "id": "back_rise_extra", "type": "slider", "default": 40, "min": 0, "max": 80, "step": 5, "advanced": true, "label": { "en": "Back rise extra (mm)", "es": "Tiro trasero adicional (mm)" } },
-    { "id": "waistband_height", "type": "slider", "default": 35, "min": 20, "max": 60, "step": 5, "label": { "en": "Waistband height (mm)", "es": "Alto de pretina (mm)" } },
-    { "id": "waistband_ratio", "type": "slider", "default": 0.95, "min": 0.85, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Waistband/waist ratio", "es": "Proporción pretina/cintura" } },
-    { "id": "include_gusset", "type": "checkbox", "default": true, "label": { "en": "Include gusset", "es": "Incluir refuerzo" } },
-    { "id": "seam_allowance", "type": "slider", "default": 7, "min": 0, "max": 15, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 20, "min": 0, "max": 40, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "default": 700,
+      "min": 450,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "default": 940,
+      "min": 600,
+      "max": 1700,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      }
+    },
+    {
+      "id": "inseam_length",
+      "type": "slider",
+      "default": 700,
+      "min": 300,
+      "max": 950,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "inside_leg_length"
+      },
+      "label": {
+        "en": "Inseam length (mm)",
+        "es": "Largo de entrepierna (mm)",
+        "fr": "Longueur d'entrejambe (mm)"
+      }
+    },
+    {
+      "id": "side_rise",
+      "type": "slider",
+      "default": 250,
+      "min": 160,
+      "max": 380,
+      "step": 5,
+      "label": {
+        "en": "Side rise (mm)",
+        "es": "Tiro lateral (mm)",
+        "fr": "Hauteur de montant latéral (mm)"
+      }
+    },
+    {
+      "id": "ankle_girth",
+      "type": "slider",
+      "default": 220,
+      "min": 140,
+      "max": 420,
+      "step": 5,
+      "label": {
+        "en": "Ankle girth (mm)",
+        "es": "Contorno de tobillo (mm)",
+        "fr": "Tour de cheville (mm)"
+      }
+    },
+    {
+      "id": "negative_ease_pct",
+      "type": "slider",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Negative ease (%)",
+        "es": "Holgura negativa (%)",
+        "fr": "Aisance négative (%)"
+      }
+    },
+    {
+      "id": "back_rise_extra",
+      "type": "slider",
+      "default": 40,
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "advanced": true,
+      "label": {
+        "en": "Back rise extra (mm)",
+        "es": "Tiro trasero adicional (mm)",
+        "fr": "Hauteur de fourche arrière supplémentaire (mm)"
+      }
+    },
+    {
+      "id": "waistband_height",
+      "type": "slider",
+      "default": 35,
+      "min": 20,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Waistband height (mm)",
+        "es": "Alto de pretina (mm)",
+        "fr": "Hauteur de ceinture (mm)"
+      }
+    },
+    {
+      "id": "waistband_ratio",
+      "type": "slider",
+      "default": 0.95,
+      "min": 0.85,
+      "max": 1.0,
+      "step": 0.01,
+      "advanced": true,
+      "label": {
+        "en": "Waistband/waist ratio",
+        "es": "Proporción pretina/cintura",
+        "fr": "Rapport ceinture/taille"
+      }
+    },
+    {
+      "id": "include_gusset",
+      "type": "checkbox",
+      "default": true,
+      "label": {
+        "en": "Include gusset",
+        "es": "Incluir refuerzo",
+        "fr": "Inclure le gousset"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 7,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 20,
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-s", "label": { "en": "S", "es": "CH" }, "values": { "waist_girth": 640, "hip_girth": 880, "inseam_length": 680 } },
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "waist_girth": 700, "hip_girth": 940, "inseam_length": 700 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "waist_girth": 780, "hip_girth": 1020, "inseam_length": 710 } },
-    { "id": "capri", "label": { "en": "Capri", "es": "Capri" }, "values": { "inseam_length": 500 } }
+    {
+      "id": "size-s",
+      "label": {
+        "en": "S",
+        "es": "CH",
+        "fr": "S"
+      },
+      "values": {
+        "waist_girth": 640,
+        "hip_girth": 880,
+        "inseam_length": 680
+      }
+    },
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "waist_girth": 700,
+        "hip_girth": 940,
+        "inseam_length": 700
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G",
+        "fr": "L"
+      },
+      "values": {
+        "waist_girth": 780,
+        "hip_girth": 1020,
+        "inseam_length": 710
+      }
+    },
+    {
+      "id": "capri",
+      "label": {
+        "en": "Capri",
+        "es": "Capri",
+        "fr": "Capri"
+      },
+      "values": {
+        "inseam_length": 500
+      }
+    }
   ],
   "constraints": [
     {
       "expression": "negative_ease_pct <= 12",
       "severity": "warning",
-      "message": { "en": "Above 12% negative ease demands high-elastane fabric; check the fabric card", "es": "Arriba de 12% de holgura negativa exige tela con alto elastano; revisa la ficha de tela" }
+      "message": {
+        "en": "Above 12% negative ease demands high-elastane fabric; check the fabric card",
+        "es": "Arriba de 12% de holgura negativa exige tela con alto elastano; revisa la ficha de tela",
+        "fr": "Au-delà de 12 % d'aisance négative, un tissu à fort élasthanne est requis ; consultez la fiche de tissu"
+      }
     },
     {
       "expression": "hip_girth >= waist_girth",
       "severity": "warning",
-      "message": { "en": "Hip smaller than waist — verify measurements", "es": "Cadera menor que cintura — verifica las medidas" }
+      "message": {
+        "en": "Hip smaller than waist — verify measurements",
+        "es": "Cadera menor que cintura — verifica las medidas",
+        "fr": "Hanche plus petite que la taille — vérifiez les mesures"
+      }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["jersey-algodon"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "jersey-algodon"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "waistband", "type": "waistband", "edges": [{ "piece": "leg", "edge": "waist" }], "parameters": ["waist_girth", "waistband_ratio", "negative_ease_pct"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "leg", "edge": "hem" }], "parameters": ["ankle_girth", "hem_allowance"] }
+      {
+        "id": "waistband",
+        "type": "waistband",
+        "edges": [
+          {
+            "piece": "leg",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "waistband_ratio",
+          "negative_ease_pct"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "leg",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "ankle_girth",
+          "hem_allowance"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false, "knit_negative_ease": true },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "knit_negative_ease": true
+    },
     "societal_benefit": {
       "en": "The commons' negative-ease reference: compression fit computed from body measurements and fabric stretch, with matched inseams proven at render time — the drafting rules activewear brands keep proprietary, in the open.",
-      "es": "La referencia de holgura negativa del commons: ajuste de compresión calculado desde medidas corporales y estiramiento de tela, con entrepiernas igualadas comprobadas al renderizar — las reglas de trazo que las marcas deportivas mantienen propietarias, en abierto."
+      "es": "La referencia de holgura negativa del commons: ajuste de compresión calculado desde medidas corporales y estiramiento de tela, con entrepiernas igualadas comprobadas al renderizar — las reglas de trazo que las marcas deportivas mantienen propietarias, en abierto.",
+      "fr": "La référence en aisance négative du commons : un ajustement compressif calculé à partir des mesures du corps et de l'élasticité du tissu, avec des entrejambes raccordées prouvées au rendu — les règles de tracé que les marques de sportswear gardent propriétaires, en accès libre."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

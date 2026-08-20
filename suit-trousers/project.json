@@ -6,69 +6,485 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #68. The dress-trousers block finished as the trouser half of a suit, cut in worsted wool suiting: front/back legs with the front inseam bowed by a solved amount to match the deeper back fork, a grown-on fly extension with J-topstitch guide and fly-stop notch, and one or two FORWARD pleats whose intake is cut into the front waist and declared as waistband ease so the band still finishes to the measured waist. A two-half waistband (one half extended into a crossover tab with a hook-and-bar mark) is verified against the pleated front + darted back waists; full-length pressed creases run down the centre of the front and back legs; back darts, a single-welt back pocket and slant side-pocket marks complete the tailoring. The hem is cuffed or plain (a cuff-depth param), and a lined checkbox notes a knee-length front lining.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #68 del FC-100. El bloque del pantalón de vestir terminado como la mitad inferior de un traje, cortado en lana peinada de sastrería: piernas delantera/trasera con la entrepierna delantera resuelta para igualar el tiro trasero más profundo, aletilla de bragueta unida con guía de pespunte en J y piquete de tope, y uno o dos PLIEGUES hacia adelante cuyo embudo se corta en la cintura delantera y se declara como holgura de pretina para que la pretina siga terminando a la cintura medida. Una pretina en dos mitades (una extendida en lengüeta cruzada con marca de gancho y barra) se verifica contra las cinturas delantera con pliegues y trasera con pinzas; rayas planchadas a todo lo largo bajan por el centro de las piernas delantera y trasera; pinzas traseras, un bolsillo trasero de vivo sencillo y marcas de bolsillo de entrada oblicua completan la sastrería. El bajo es con vuelta o liso (parámetro de profundidad de vuelta), y una casilla de forro indica un forro delantero hasta la rodilla.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #68 del FC-100. El bloque del pantalón de vestir terminado como la mitad inferior de un traje, cortado en lana peinada de sastrería: piernas delantera/trasera con la entrepierna delantera resuelta para igualar el tiro trasero más profundo, aletilla de bragueta unida con guía de pespunte en J y piquete de tope, y uno o dos PLIEGUES hacia adelante cuyo embudo se corta en la cintura delantera y se declara como holgura de pretina para que la pretina siga terminando a la cintura medida. Una pretina en dos mitades (una extendida en lengüeta cruzada con marca de gancho y barra) se verifica contra las cinturas delantera con pliegues y trasera con pinzas; rayas planchadas a todo lo largo bajan por el centro de las piernas delantera y trasera; pinzas traseras, un bolsillo trasero de vivo sencillo y marcas de bolsillo de entrada oblicua completan la sastrería. El bajo es con vuelta o liso (parámetro de profundidad de vuelta), y una casilla de forro indica un forro delantero hasta la rodilla.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Rang #68 du FC-100. Le bloc de pantalon habillé fini comme la moitié pantalon d'un costume, coupé dans une laine peignée de tailleur : jambes devant/dos avec l'entrejambe devant cintrée d'une valeur résolue pour rejoindre la fourche dos plus profonde, une extension de braguette née du corps avec guide de piqûre en J et cran d'arrêt de braguette, et un ou deux plis VERS L'AVANT dont l'embu est coupé dans la taille devant et déclaré comme aisance de ceinture pour que la ceinture finisse tout de même à la taille mesurée. Une ceinture en deux moitiés (une moitié prolongée en patte de croisement avec repère d'agrafe et barrette) est vérifiée contre les tailles devant à plis + dos à pinces ; des plis de repassage sur toute la longueur descendent au centre des jambes devant et dos ; des pinces dos, une poche dos à un passepoil et des repères de poche latérale en biais complètent la coupe tailleur. L'ourlet est à revers ou simple (un paramètre de profondeur de revers), et une case doublure note une doublure devant jusqu'au genou.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["suit-trousers", "trousers", "bottoms", "pleats", "tailoring", "suit", "fly-front", "woven", "wool", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "suit-trousers",
+      "trousers",
+      "bottoms",
+      "pleats",
+      "tailoring",
+      "suit",
+      "fly-front",
+      "woven",
+      "wool",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet", "license": "original" },
-        { "source": "Fashion Cabinet 'dress-trousers' cartridge — pleated tailored trouser block (front-inseam bow, grown-on fly, two-half tab waistband, full-length creases)", "license": "LicenseRef-FC1-pending" },
-        { "source": "Fashion Cabinet 'chinos' cartridge — grown-on fly J-topstitch + fly-stop notch, two-piece waistband, solved front-inseam bow", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "Fashion Cabinet 'dress-trousers' cartridge — pleated tailored trouser block (front-inseam bow, grown-on fly, two-half tab waistband, full-length creases)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "Fashion Cabinet 'chinos' cartridge — grown-on fly J-topstitch + fly-stop notch, two-piece waistband, solved front-inseam bow",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
-    { "id": "suit-trousers", "label": { "en": "Suit trousers (all pieces)", "es": "Pantalón de traje (todas las piezas)" }, "script_file": "main.py", "pieces": ["front", "back", "waistband_tab", "waistband_plain"] }
+    {
+      "id": "suit-trousers",
+      "label": {
+        "en": "Suit trousers (all pieces)",
+        "es": "Pantalón de traje (todas las piezas)",
+        "fr": "Pantalon de costume (toutes les pièces)"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "waistband_tab",
+        "waistband_plain"
+      ]
+    }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front Leg", "es": "Pierna Delantera" }, "default_color": "#3a3f4a", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back Leg", "es": "Pierna Trasera" }, "default_color": "#31353f", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "waistband_tab", "label": { "en": "Waistband Half (tab)", "es": "Pretina mitad (lengüeta)" }, "default_color": "#4a505c", "cut": { "quantity": 1 } },
-    { "id": "waistband_plain", "label": { "en": "Waistband Half (plain)", "es": "Pretina mitad (lisa)" }, "default_color": "#565d6a", "cut": { "quantity": 1 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front Leg",
+        "es": "Pierna Delantera",
+        "fr": "Jambe devant"
+      },
+      "default_color": "#3a3f4a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back Leg",
+        "es": "Pierna Trasera",
+        "fr": "Jambe dos"
+      },
+      "default_color": "#31353f",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "waistband_tab",
+      "label": {
+        "en": "Waistband Half (tab)",
+        "es": "Pretina mitad (lengüeta)",
+        "fr": "Demi-ceinture (patte)"
+      },
+      "default_color": "#4a505c",
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "waistband_plain",
+      "label": {
+        "en": "Waistband Half (plain)",
+        "es": "Pretina mitad (lisa)",
+        "fr": "Demi-ceinture (simple)"
+      },
+      "default_color": "#565d6a",
+      "cut": {
+        "quantity": 1
+      }
+    }
   ],
   "parameters": [
-    { "id": "hip_girth", "type": "slider", "default": 1020, "min": 650, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
-    { "id": "waist_girth", "type": "slider", "default": 880, "min": 500, "max": 1600, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
-    { "id": "inseam_length", "type": "slider", "default": 800, "min": 300, "max": 950, "step": 10, "measurement": { "standard": "iso_8559", "code": "inside_leg_length" }, "label": { "en": "Inseam (mm)", "es": "Entrepierna (mm)" } },
-    { "id": "front_rise", "type": "slider", "default": 285, "min": 190, "max": 380, "step": 5, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)" } },
-    { "id": "back_rise", "type": "slider", "default": 330, "min": 190, "max": 460, "step": 5, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)" } },
-    { "id": "woven_ease", "type": "slider", "default": 85, "min": 40, "max": 400, "step": 5, "label": { "en": "Total hip ease (mm)", "es": "Holgura total de cadera (mm)" } },
-    { "id": "hem_width", "type": "slider", "default": 100, "min": 80, "max": 260, "step": 5, "label": { "en": "Hem half-width, flat (mm)", "es": "Medio bajo, extendido (mm)" } },
-    { "id": "pleat_count", "type": "select", "default": 2, "options": [{ "value": 1, "label": { "en": "One pleat", "es": "Un pliegue" } }, { "value": 2, "label": { "en": "Two pleats", "es": "Dos pliegues" } }], "label": { "en": "Forward pleats", "es": "Pliegues hacia adelante" } },
-    { "id": "pleat_depth", "type": "slider", "default": 30, "min": 15, "max": 45, "step": 5, "tooltip": { "en": "Intake per pleat, folded away and declared as waistband ease", "es": "Embudo por pliegue, plegado y declarado como holgura de pretina" }, "label": { "en": "Pleat intake, each (mm)", "es": "Embudo de pliegue, c/u (mm)" } },
-    { "id": "fly_width", "type": "slider", "default": 38, "min": 20, "max": 60, "step": 2, "label": { "en": "Fly extension width (mm)", "es": "Ancho de aletilla (mm)" } },
-    { "id": "fly_depth", "type": "slider", "default": 205, "min": 80, "max": 300, "step": 5, "label": { "en": "Fly depth (mm)", "es": "Largo de bragueta (mm)" } },
-    { "id": "cuff_depth", "type": "slider", "default": 40, "min": 0, "max": 60, "step": 5, "tooltip": { "en": "0 = plain hem; a cuff (turn-up) adds a full turn-up to the hem allowance", "es": "0 = bajo liso; la vuelta añade una vuelta completa al margen de dobladillo" }, "label": { "en": "Cuff depth (mm)", "es": "Profundidad de vuelta (mm)" } },
-    { "id": "lined", "type": "checkbox", "default": true, "label": { "en": "Knee-length front lining", "es": "Forro delantero hasta la rodilla" } },
-    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 45, "min": 0, "max": 60, "step": 5, "tooltip": { "en": "Blind-hem depth (raised automatically to clear a cuff)", "es": "Profundidad de dobladillo invisible (se eleva para librar la vuelta)" }, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "default": 1020,
+      "min": 650,
+      "max": 1800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "default": 880,
+      "min": 500,
+      "max": 1600,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      }
+    },
+    {
+      "id": "inseam_length",
+      "type": "slider",
+      "default": 800,
+      "min": 300,
+      "max": 950,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "inside_leg_length"
+      },
+      "label": {
+        "en": "Inseam (mm)",
+        "es": "Entrepierna (mm)",
+        "fr": "Entrejambe (mm)"
+      }
+    },
+    {
+      "id": "front_rise",
+      "type": "slider",
+      "default": 285,
+      "min": 190,
+      "max": 380,
+      "step": 5,
+      "label": {
+        "en": "Front rise (mm)",
+        "es": "Tiro delantero (mm)",
+        "fr": "Hauteur de fourche avant (mm)"
+      }
+    },
+    {
+      "id": "back_rise",
+      "type": "slider",
+      "default": 330,
+      "min": 190,
+      "max": 460,
+      "step": 5,
+      "label": {
+        "en": "Back rise (mm)",
+        "es": "Tiro trasero (mm)",
+        "fr": "Hauteur de fourche arrière (mm)"
+      }
+    },
+    {
+      "id": "woven_ease",
+      "type": "slider",
+      "default": 85,
+      "min": 40,
+      "max": 400,
+      "step": 5,
+      "label": {
+        "en": "Total hip ease (mm)",
+        "es": "Holgura total de cadera (mm)",
+        "fr": "Aisance totale aux hanches (mm)"
+      }
+    },
+    {
+      "id": "hem_width",
+      "type": "slider",
+      "default": 100,
+      "min": 80,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Hem half-width, flat (mm)",
+        "es": "Medio bajo, extendido (mm)",
+        "fr": "Demi-largeur de bas, à plat (mm)"
+      }
+    },
+    {
+      "id": "pleat_count",
+      "type": "select",
+      "default": 2,
+      "options": [
+        {
+          "value": 1,
+          "label": {
+            "en": "One pleat",
+            "es": "Un pliegue",
+            "fr": "Un pli"
+          }
+        },
+        {
+          "value": 2,
+          "label": {
+            "en": "Two pleats",
+            "es": "Dos pliegues",
+            "fr": "Deux plis"
+          }
+        }
+      ],
+      "label": {
+        "en": "Forward pleats",
+        "es": "Pliegues hacia adelante",
+        "fr": "Plis vers l'avant"
+      }
+    },
+    {
+      "id": "pleat_depth",
+      "type": "slider",
+      "default": 30,
+      "min": 15,
+      "max": 45,
+      "step": 5,
+      "tooltip": {
+        "en": "Intake per pleat, folded away and declared as waistband ease",
+        "es": "Embudo por pliegue, plegado y declarado como holgura de pretina",
+        "fr": "Embu par pli, replié et déclaré comme aisance de ceinture"
+      },
+      "label": {
+        "en": "Pleat intake, each (mm)",
+        "es": "Embudo de pliegue, c/u (mm)",
+        "fr": "Rentrée de pli, chacun (mm)"
+      }
+    },
+    {
+      "id": "fly_width",
+      "type": "slider",
+      "default": 38,
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Fly extension width (mm)",
+        "es": "Ancho de aletilla (mm)",
+        "fr": "Largeur de la patte de braguette (mm)"
+      }
+    },
+    {
+      "id": "fly_depth",
+      "type": "slider",
+      "default": 205,
+      "min": 80,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Fly depth (mm)",
+        "es": "Largo de bragueta (mm)",
+        "fr": "Longueur de braguette (mm)"
+      }
+    },
+    {
+      "id": "cuff_depth",
+      "type": "slider",
+      "default": 40,
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "tooltip": {
+        "en": "0 = plain hem; a cuff (turn-up) adds a full turn-up to the hem allowance",
+        "es": "0 = bajo liso; la vuelta añade una vuelta completa al margen de dobladillo",
+        "fr": "0 = ourlet simple ; un revers ajoute un repli complet à la ressource d'ourlet"
+      },
+      "label": {
+        "en": "Cuff depth (mm)",
+        "es": "Profundidad de vuelta (mm)",
+        "fr": "Profondeur de poignet (mm)"
+      }
+    },
+    {
+      "id": "lined",
+      "type": "checkbox",
+      "default": true,
+      "label": {
+        "en": "Knee-length front lining",
+        "es": "Forro delantero hasta la rodilla",
+        "fr": "Doublure devant longueur genou"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 45,
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "tooltip": {
+        "en": "Blind-hem depth (raised automatically to clear a cuff)",
+        "es": "Profundidad de dobladillo invisible (se eleva para librar la vuelta)",
+        "fr": "Profondeur d'ourlet invisible (relevée automatiquement pour dégager un revers)"
+      },
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "hip_girth": 1020, "waist_girth": 880, "inseam_length": 800, "pleat_count": 2, "cuff_depth": 40 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "hip_girth": 1140, "waist_girth": 1000, "inseam_length": 840, "pleat_count": 2, "cuff_depth": 40 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "hip_girth": 1020,
+        "waist_girth": 880,
+        "inseam_length": 800,
+        "pleat_count": 2,
+        "cuff_depth": 40
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G",
+        "fr": "L"
+      },
+      "values": {
+        "hip_girth": 1140,
+        "waist_girth": 1000,
+        "inseam_length": 840,
+        "pleat_count": 2,
+        "cuff_depth": 40
+      }
+    }
   ],
   "constraints": [
-    { "expression": "back_rise >= front_rise", "severity": "error", "message": { "en": "Back rise must be at least the front rise", "es": "El tiro trasero debe ser al menos el delantero" } },
-    { "expression": "fly_depth < front_rise", "severity": "error", "message": { "en": "Fly depth must stay above the crotch line (less than the front rise)", "es": "El largo de bragueta debe quedar arriba del tiro (menor que el tiro delantero)" } },
-    { "expression": "waist_girth <= hip_girth", "severity": "warning", "message": { "en": "Waist girth above hip girth is unusual for trousers", "es": "Una cintura mayor que la cadera es inusual en pantalones" } }
+    {
+      "expression": "back_rise >= front_rise",
+      "severity": "error",
+      "message": {
+        "en": "Back rise must be at least the front rise",
+        "es": "El tiro trasero debe ser al menos el delantero",
+        "fr": "La hauteur de fourche dos doit être au moins égale à celle du devant"
+      }
+    },
+    {
+      "expression": "fly_depth < front_rise",
+      "severity": "error",
+      "message": {
+        "en": "Fly depth must stay above the crotch line (less than the front rise)",
+        "es": "El largo de bragueta debe quedar arriba del tiro (menor que el tiro delantero)",
+        "fr": "La profondeur de braguette doit rester au-dessus de la ligne d'entrejambe (inférieure à la hauteur de fourche devant)"
+      }
+    },
+    {
+      "expression": "waist_girth <= hip_girth",
+      "severity": "warning",
+      "message": {
+        "en": "Waist girth above hip girth is unusual for trousers",
+        "es": "Una cintura mayor que la cadera es inusual en pantalones",
+        "fr": "Un tour de taille supérieur au tour de hanche est inhabituel pour un pantalon"
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["lana-peinada-traje"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "lana-peinada-traje"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "waistband", "type": "waistband", "edges": [{ "piece": "front", "edge": "waist" }, { "piece": "back", "edge": "waist" }], "parameters": ["waist_girth", "hip_girth", "pleat_count", "pleat_depth"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["hem_width", "hem_allowance", "cuff_depth"] },
-      { "id": "fly", "type": "zipper_tape", "edges": [{ "piece": "front", "edge": "crotch" }], "parameters": ["fly_depth", "fly_width"] }
+      {
+        "id": "waistband",
+        "type": "waistband",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "waist"
+          },
+          {
+            "piece": "back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "hip_girth",
+          "pleat_count",
+          "pleat_depth"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "hem_width",
+          "hem_allowance",
+          "cuff_depth"
+        ]
+      },
+      {
+        "id": "fly",
+        "type": "zipper_tape",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "crotch"
+          }
+        ],
+        "parameters": [
+          "fly_depth",
+          "fly_width"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false, "knit_negative_ease": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
     "societal_benefit": {
       "en": "The suit trouser as a commons object: a graded-by-measurement pleated wool trouser with a real fly, a crossover-tab waistband whose ease is honestly the pleat intake, cuffed or plain hems and an optional knee lining — cuttable today in worsted suiting by any small workshop to pair with the suit jacket, without licensing a block.",
-      "es": "El pantalón de traje como objeto del commons: un pantalón de lana con pliegues graduado por medidas, con bragueta real, pretina de lengüeta cruzada cuya holgura es honestamente el embudo de los pliegues, bajos con vuelta o lisos y forro opcional hasta la rodilla — cortable hoy en lana peinada por cualquier taller pequeño para conjuntar con el saco, sin licenciar un bloque."
+      "es": "El pantalón de traje como objeto del commons: un pantalón de lana con pliegues graduado por medidas, con bragueta real, pretina de lengüeta cruzada cuya holgura es honestamente el embudo de los pliegues, bajos con vuelta o lisos y forro opcional hasta la rodilla — cortable hoy en lana peinada por cualquier taller pequeño para conjuntar con el saco, sin licenciar un bloque.",
+      "fr": "Le pantalon de costume comme objet du commun : un pantalon en laine à plis gradué par mesures avec une vraie braguette, une ceinture à patte de croisement dont l'aisance est honnêtement l'embu des plis, des ourlets à revers ou simples et une doublure genou optionnelle — taillable dès aujourd'hui en laine peignée par tout petit atelier pour s'accorder à la veste de costume, sans licencier de bloc."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

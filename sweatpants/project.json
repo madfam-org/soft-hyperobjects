@@ -6,49 +6,307 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #15. Side-seamed fleece pant: separate front/back legs with the front inseam bowed by a solved amount to match the deeper back fork, equal side seams by construction, and a derived elastic waistband casing.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #15 del FC-100. Pants de felpa con costura lateral: piernas delantera/trasera separadas con la entrepierna delantera curvada por una cantidad resuelta para igualar el tiro trasero más profundo, costados iguales por construcción y pretina de casing derivada.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #15 del FC-100. Pants de felpa con costura lateral: piernas delantera/trasera separadas con la entrepierna delantera curvada por una cantidad resuelta para igualar el tiro trasero más profundo, costados iguales por construcción y pretina de casing derivada.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Rang #15 du FC-100. Pantalon de survêtement en molleton à couture latérale : jambes devant/dos séparées avec l'entrejambe devant cintrée d'une valeur résolue pour rejoindre la fourche dos plus profonde, coutures latérales égales par construction, et une coulisse de ceinture élastique dérivée.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
-    "tags": ["sweatpants", "fleece", "fc100", "hyperobject", "commons"],
-    "attribution": { "author": "Innovaciones MADFAM", "license": "LicenseRef-FC1-pending", "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }] }
+    "tags": [
+      "sweatpants",
+      "fleece",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
   },
-  "modes": [{ "id": "sweatpants", "label": { "en": "Sweatpants (all pieces)", "es": "Pants (todas las piezas)" }, "script_file": "main.py", "pieces": ["front", "back", "waistband"] }],
+  "modes": [
+    {
+      "id": "sweatpants",
+      "label": {
+        "en": "Sweatpants (all pieces)",
+        "es": "Pants (todas las piezas)",
+        "fr": "Pantalon de survêtement (toutes les pièces)"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "waistband"
+      ]
+    }
+  ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front Leg", "es": "Pierna Delantera" }, "default_color": "#8a8577", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back Leg", "es": "Pierna Trasera" }, "default_color": "#6f6a5e", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "waistband", "label": { "en": "Waistband Casing", "es": "Pretina (casing)" }, "default_color": "#a8a294", "cut": { "quantity": 1 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front Leg",
+        "es": "Pierna Delantera",
+        "fr": "Jambe devant"
+      },
+      "default_color": "#8a8577",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back Leg",
+        "es": "Pierna Trasera",
+        "fr": "Jambe dos"
+      },
+      "default_color": "#6f6a5e",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "Waistband Casing",
+        "es": "Pretina (casing)",
+        "fr": "Coulisse de ceinture"
+      },
+      "default_color": "#a8a294",
+      "cut": {
+        "quantity": 1
+      }
+    }
   ],
   "parameters": [
-    { "id": "hip_girth", "type": "slider", "default": 1000, "min": 650, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
-    { "id": "inseam_length", "type": "slider", "default": 720, "min": 300, "max": 950, "step": 10, "measurement": { "standard": "iso_8559", "code": "inside_leg_length" }, "label": { "en": "Inseam (mm)", "es": "Entrepierna (mm)" } },
-    { "id": "front_rise", "type": "slider", "default": 270, "min": 190, "max": 380, "step": 5, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)" } },
-    { "id": "back_rise", "type": "slider", "default": 310, "min": 190, "max": 460, "step": 5, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)" } },
-    { "id": "fleece_ease", "type": "slider", "default": 140, "min": 60, "max": 400, "step": 10, "label": { "en": "Total ease (mm)", "es": "Holgura total (mm)" } },
-    { "id": "hem_width", "type": "slider", "default": 130, "min": 90, "max": 260, "step": 5, "label": { "en": "Hem half-width, flat (mm)", "es": "Medio bajo, extendido (mm)" } },
-    { "id": "elastic_width", "type": "slider", "default": 35, "min": 20, "max": 60, "step": 5, "label": { "en": "Elastic width (mm)", "es": "Ancho de elástico (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 8, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 30, "min": 0, "max": 50, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "default": 1000,
+      "min": 650,
+      "max": 1800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      }
+    },
+    {
+      "id": "inseam_length",
+      "type": "slider",
+      "default": 720,
+      "min": 300,
+      "max": 950,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "inside_leg_length"
+      },
+      "label": {
+        "en": "Inseam (mm)",
+        "es": "Entrepierna (mm)",
+        "fr": "Entrejambe (mm)"
+      }
+    },
+    {
+      "id": "front_rise",
+      "type": "slider",
+      "default": 270,
+      "min": 190,
+      "max": 380,
+      "step": 5,
+      "label": {
+        "en": "Front rise (mm)",
+        "es": "Tiro delantero (mm)",
+        "fr": "Hauteur de fourche avant (mm)"
+      }
+    },
+    {
+      "id": "back_rise",
+      "type": "slider",
+      "default": 310,
+      "min": 190,
+      "max": 460,
+      "step": 5,
+      "label": {
+        "en": "Back rise (mm)",
+        "es": "Tiro trasero (mm)",
+        "fr": "Hauteur de fourche arrière (mm)"
+      }
+    },
+    {
+      "id": "fleece_ease",
+      "type": "slider",
+      "default": 140,
+      "min": 60,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Total ease (mm)",
+        "es": "Holgura total (mm)",
+        "fr": "Aisance totale (mm)"
+      }
+    },
+    {
+      "id": "hem_width",
+      "type": "slider",
+      "default": 130,
+      "min": 90,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Hem half-width, flat (mm)",
+        "es": "Medio bajo, extendido (mm)",
+        "fr": "Demi-largeur de bas, à plat (mm)"
+      }
+    },
+    {
+      "id": "elastic_width",
+      "type": "slider",
+      "default": 35,
+      "min": 20,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Elastic width (mm)",
+        "es": "Ancho de elástico (mm)",
+        "fr": "Largeur de l'élastique (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 8,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 30,
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "hip_girth": 1000, "inseam_length": 720 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "hip_girth": 1080, "inseam_length": 740 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "hip_girth": 1000,
+        "inseam_length": 720
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G",
+        "fr": "L"
+      },
+      "values": {
+        "hip_girth": 1080,
+        "inseam_length": 740
+      }
+    }
   ],
   "constraints": [
-    { "expression": "back_rise >= front_rise", "severity": "error", "message": { "en": "Back rise must be at least the front rise", "es": "El tiro trasero debe ser al menos el delantero" } }
+    {
+      "expression": "back_rise >= front_rise",
+      "severity": "error",
+      "message": {
+        "en": "Back rise must be at least the front rise",
+        "es": "El tiro trasero debe ser al menos el delantero",
+        "fr": "La hauteur de fourche dos doit être au moins égale à celle du devant"
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["felpa-algodon"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "felpa-algodon"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "waistband", "type": "waistband", "edges": [{ "piece": "front", "edge": "waist" }, { "piece": "back", "edge": "waist" }], "parameters": ["hip_girth", "elastic_width"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["hem_width", "hem_allowance"] }
+      {
+        "id": "waistband",
+        "type": "waistband",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "waist"
+          },
+          {
+            "piece": "back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "hip_girth",
+          "elastic_width"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "hem_width",
+          "hem_allowance"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false, "knit_negative_ease": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
     "societal_benefit": {
       "en": "The commons' first side-seamed trouser block — the parent geometry for joggers, shorts, and every woven pant to come.",
-      "es": "El primer bloque de pantalón con costura lateral del commons — la geometría madre de joggers, shorts y todo pantalón de tela por venir."
+      "es": "El primer bloque de pantalón con costura lateral del commons — la geometría madre de joggers, shorts y todo pantalón de tela por venir.",
+      "fr": "Le premier bloc de pantalon à couture latérale du commun — la géométrie mère des joggings, shorts et de tout pantalon en toile à venir."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

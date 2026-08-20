@@ -6,86 +6,492 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #12. A compression-style athletic bra: a no-hardware pullover that supports by tensioning power-stretch against the body rather than encapsulating cups. A scoop front and a racerback back (both cut on fold) taper from bust to underbust into a wide compression underband whose top edge matches the shell lower edges by construction, with an optional inner front lining for a double support layer. Neckline, armholes and the underband hem are elastic-finished, and the BOM emits exact-mm elastic cut lengths derived from the measured openings. No wire, hooks, rings or sliders.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #12 del FC-100. Un top deportivo de compresión: una prenda cerrada sin herrajes que sujeta tensionando el punto de compresión contra el cuerpo en lugar de encapsular con copas. Un delantero de escote y una espalda tipo nadador (ambos cortados al doblez) se estrechan del busto al bajobusto hacia una banda inferior de compresión ancha cuyo borde superior iguala los bordes inferiores del cuerpo por construcción, con un forro delantero interior opcional para una doble capa de soporte. Escote, sisas y el borde de la banda se terminan con elástico, y la lista de materiales emite largos de elástico exactos en mm derivados de las aberturas medidas. Sin varillas, ganchos, argollas ni reguladores.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #12 del FC-100. Un top deportivo de compresión: una prenda cerrada sin herrajes que sujeta tensionando el punto de compresión contra el cuerpo en lugar de encapsular con copas. Un delantero de escote y una espalda tipo nadador (ambos cortados al doblez) se estrechan del busto al bajobusto hacia una banda inferior de compresión ancha cuyo borde superior iguala los bordes inferiores del cuerpo por construcción, con un forro delantero interior opcional para una doble capa de soporte. Escote, sisas y el borde de la banda se terminan con elástico, y la lista de materiales emite largos de elástico exactos en mm derivados de las aberturas medidas. Sin varillas, ganchos, argollas ni reguladores.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Rang #12 du FC-100. Une brassière de sport de type compression : un enfile-par-la-tête sans quincaillerie qui soutient en tendant un jersey haute élasticité contre le corps plutôt qu'en encapsulant des bonnets. Un devant échancré et un dos nageur (tous deux coupés au pli) s'effilent de la poitrine au dessous-de-poitrine vers une large bande de compression inférieure dont le bord supérieur rejoint par construction les bords inférieurs de la coque, avec une doublure devant intérieure optionnelle pour une double couche de soutien. Encolure, emmanchures et l'ourlet de la bande inférieure sont finis à l'élastique, et la nomenclature émet des longueurs de coupe d'élastique en mm exacts dérivées des ouvertures mesurées. Sans armature, agrafes, anneaux ni coulisses.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["sports-bra", "activewear", "compression", "racerback", "knit", "negative-ease", "elastic", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "sports-bra",
+      "activewear",
+      "compression",
+      "racerback",
+      "knit",
+      "negative-ease",
+      "elastic",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet", "license": "original" },
-        { "source": "projects/panties-bikini (negative-ease + exact-mm elastic accounting)", "license": "LicenseRef-FC1-pending" },
-        { "source": "projects/tank-top (bound-edge + fold-cut shoulder conventions)", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "projects/panties-bikini (negative-ease + exact-mm elastic accounting)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "projects/tank-top (bound-edge + fold-cut shoulder conventions)",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "sports-bra",
-      "label": { "en": "Sports bra (all pieces)", "es": "Top deportivo (todas las piezas)" },
+      "label": {
+        "en": "Sports bra (all pieces)",
+        "es": "Top deportivo (todas las piezas)",
+        "fr": "Brassière de sport (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "underband", "front_lining"]
+      "pieces": [
+        "front",
+        "back",
+        "underband",
+        "front_lining"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front (scoop)", "es": "Delantero (escote)" }, "default_color": "#3a6ea5", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "back", "label": { "en": "Back (racer)", "es": "Espalda (nadador)" }, "default_color": "#2f5885", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "underband", "label": { "en": "Underband (compression)", "es": "Banda inferior (compresión)" }, "default_color": "#22405f", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "front_lining", "label": { "en": "Front Lining (inner support)", "es": "Forro delantero (soporte interior)" }, "default_color": "#5a8bc0", "cut": { "quantity": 1, "on_fold": true, "mirror": true } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (scoop)",
+        "es": "Delantero (escote)",
+        "fr": "Devant (décolleté arrondi)"
+      },
+      "default_color": "#3a6ea5",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (racer)",
+        "es": "Espalda (nadador)",
+        "fr": "Dos (nageur)"
+      },
+      "default_color": "#2f5885",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "underband",
+      "label": {
+        "en": "Underband (compression)",
+        "es": "Banda inferior (compresión)",
+        "fr": "Bande inférieure (compression)"
+      },
+      "default_color": "#22405f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "front_lining",
+      "label": {
+        "en": "Front Lining (inner support)",
+        "es": "Forro delantero (soporte interior)",
+        "fr": "Doublure devant (soutien intérieur)"
+      },
+      "default_color": "#5a8bc0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    }
   ],
   "parameters": [
-    { "id": "chest_girth", "type": "slider", "default": 900, "min": 650, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Bust girth (mm)", "es": "Contorno de busto (mm)" } },
-    { "id": "underbust_girth", "type": "slider", "default": 760, "min": 550, "max": 1350, "step": 10, "measurement": { "standard": "iso_8559", "code": "underbust_girth" }, "label": { "en": "Underbust girth (mm)", "es": "Contorno de bajobusto (mm)" } },
-    { "id": "body_length", "type": "slider", "default": 260, "min": 180, "max": 380, "step": 5, "label": { "en": "Body length, underband to shoulder (mm)", "es": "Largo, banda a hombro (mm)" } },
-    { "id": "band_height", "type": "slider", "default": 60, "min": 35, "max": 110, "step": 5, "label": { "en": "Underband height (mm)", "es": "Alto de banda inferior (mm)" } },
-    { "id": "negative_ease_pct", "type": "slider", "default": 18, "min": 8, "max": 28, "step": 1, "label": { "en": "Negative ease (%)", "es": "Holgura negativa (%)" } },
-    { "id": "neck_drop_front", "type": "slider", "default": 95, "min": 40, "max": 160, "step": 5, "label": { "en": "Front neckline drop (mm)", "es": "Profundidad de escote delantero (mm)" } },
-    { "id": "neck_drop_back", "type": "slider", "default": 40, "min": 10, "max": 120, "step": 5, "label": { "en": "Back neckline drop (mm)", "es": "Profundidad de escote trasero (mm)" } },
-    { "id": "strap_width", "type": "slider", "default": 42, "min": 25, "max": 80, "step": 2, "label": { "en": "Strap width (mm)", "es": "Ancho de tirante (mm)" } },
-    { "id": "racer_pull_in", "type": "slider", "default": 55, "min": 10, "max": 120, "step": 5, "label": { "en": "Racerback pull-in (mm)", "es": "Convergencia de espalda nadador (mm)" } },
-    { "id": "neck_elastic_ratio", "type": "slider", "default": 0.88, "min": 0.78, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Neck elastic/opening ratio", "es": "Proporción elástico/abertura de escote" } },
-    { "id": "arm_elastic_ratio", "type": "slider", "default": 0.85, "min": 0.78, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Armhole elastic/opening ratio", "es": "Proporción elástico/abertura de sisa" } },
-    { "id": "band_elastic_ratio", "type": "slider", "default": 0.92, "min": 0.82, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Underband elastic/opening ratio", "es": "Proporción elástico/abertura de banda" } },
-    { "id": "seam_allowance", "type": "slider", "default": 7, "min": 0, "max": 15, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } }
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "default": 900,
+      "min": 650,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de buste (mm)"
+      }
+    },
+    {
+      "id": "underbust_girth",
+      "type": "slider",
+      "default": 760,
+      "min": 550,
+      "max": 1350,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "underbust_girth"
+      },
+      "label": {
+        "en": "Underbust girth (mm)",
+        "es": "Contorno de bajobusto (mm)",
+        "fr": "Tour sous-poitrine (mm)"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "default": 260,
+      "min": 180,
+      "max": 380,
+      "step": 5,
+      "label": {
+        "en": "Body length, underband to shoulder (mm)",
+        "es": "Largo, banda a hombro (mm)",
+        "fr": "Longueur du corps, sous-bande à l'épaule (mm)"
+      }
+    },
+    {
+      "id": "band_height",
+      "type": "slider",
+      "default": 60,
+      "min": 35,
+      "max": 110,
+      "step": 5,
+      "label": {
+        "en": "Underband height (mm)",
+        "es": "Alto de banda inferior (mm)",
+        "fr": "Hauteur de bande inférieure (mm)"
+      }
+    },
+    {
+      "id": "negative_ease_pct",
+      "type": "slider",
+      "default": 18,
+      "min": 8,
+      "max": 28,
+      "step": 1,
+      "label": {
+        "en": "Negative ease (%)",
+        "es": "Holgura negativa (%)",
+        "fr": "Aisance négative (%)"
+      }
+    },
+    {
+      "id": "neck_drop_front",
+      "type": "slider",
+      "default": 95,
+      "min": 40,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Front neckline drop (mm)",
+        "es": "Profundidad de escote delantero (mm)",
+        "fr": "Profondeur d'encolure devant (mm)"
+      }
+    },
+    {
+      "id": "neck_drop_back",
+      "type": "slider",
+      "default": 40,
+      "min": 10,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Back neckline drop (mm)",
+        "es": "Profundidad de escote trasero (mm)",
+        "fr": "Descente d'encolure dos (mm)"
+      }
+    },
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "default": 42,
+      "min": 25,
+      "max": 80,
+      "step": 2,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de tirante (mm)",
+        "fr": "Largeur de bretelle (mm)"
+      }
+    },
+    {
+      "id": "racer_pull_in",
+      "type": "slider",
+      "default": 55,
+      "min": 10,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Racerback pull-in (mm)",
+        "es": "Convergencia de espalda nadador (mm)",
+        "fr": "Resserrement du dos nageur (mm)"
+      }
+    },
+    {
+      "id": "neck_elastic_ratio",
+      "type": "slider",
+      "default": 0.88,
+      "min": 0.78,
+      "max": 1.0,
+      "step": 0.01,
+      "advanced": true,
+      "label": {
+        "en": "Neck elastic/opening ratio",
+        "es": "Proporción elástico/abertura de escote",
+        "fr": "Proportion élastique/ouverture d'encolure"
+      }
+    },
+    {
+      "id": "arm_elastic_ratio",
+      "type": "slider",
+      "default": 0.85,
+      "min": 0.78,
+      "max": 1.0,
+      "step": 0.01,
+      "advanced": true,
+      "label": {
+        "en": "Armhole elastic/opening ratio",
+        "es": "Proporción elástico/abertura de sisa",
+        "fr": "Rapport élastique/ouverture d'emmanchure"
+      }
+    },
+    {
+      "id": "band_elastic_ratio",
+      "type": "slider",
+      "default": 0.92,
+      "min": 0.82,
+      "max": 1.0,
+      "step": 0.01,
+      "advanced": true,
+      "label": {
+        "en": "Underband elastic/opening ratio",
+        "es": "Proporción elástico/abertura de banda",
+        "fr": "Rapport élastique/ouverture de bande inférieure"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 7,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-s", "label": { "en": "S", "es": "CH" }, "values": { "chest_girth": 840, "underbust_girth": 700, "body_length": 250 } },
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 900, "underbust_girth": 760, "body_length": 260 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 980, "underbust_girth": 840, "body_length": 275 } }
+    {
+      "id": "size-s",
+      "label": {
+        "en": "S",
+        "es": "CH",
+        "fr": "S"
+      },
+      "values": {
+        "chest_girth": 840,
+        "underbust_girth": 700,
+        "body_length": 250
+      }
+    },
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "chest_girth": 900,
+        "underbust_girth": 760,
+        "body_length": 260
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G",
+        "fr": "L"
+      },
+      "values": {
+        "chest_girth": 980,
+        "underbust_girth": 840,
+        "body_length": 275
+      }
+    }
   ],
   "constraints": [
     {
       "expression": "negative_ease_pct >= 12",
       "severity": "warning",
-      "message": { "en": "Below 12% negative ease a compression bra offers little support — increase the ease or choose an encapsulation style", "es": "Debajo de 12% de holgura negativa un top de compresión sujeta poco — aumenta la holgura o elige un estilo de copa" }
+      "message": {
+        "en": "Below 12% negative ease a compression bra offers little support — increase the ease or choose an encapsulation style",
+        "es": "Debajo de 12% de holgura negativa un top de compresión sujeta poco — aumenta la holgura o elige un estilo de copa",
+        "fr": "En dessous de 12 % d'aisance négative, une brassière de compression offre peu de soutien — augmentez l'aisance ou choisissez un style à encapsulation"
+      }
     },
     {
       "expression": "negative_ease_pct <= 25",
       "severity": "warning",
-      "message": { "en": "Above 25% negative ease demands a high-recovery power-stretch; check the compression fabric card", "es": "Arriba de 25% de holgura negativa exige un punto de alta recuperación; revisa la ficha de tela de compresión" }
+      "message": {
+        "en": "Above 25% negative ease demands a high-recovery power-stretch; check the compression fabric card",
+        "es": "Arriba de 25% de holgura negativa exige un punto de alta recuperación; revisa la ficha de tela de compresión",
+        "fr": "Au-delà de 25 % d'aisance négative, il faut un jersey haute élasticité à forte reprise ; vérifiez la fiche du tissu de compression"
+      }
     },
     {
       "expression": "underbust_girth <= chest_girth",
       "severity": "warning",
-      "message": { "en": "Underbust girth should be smaller than bust girth so the shell tapers into the band", "es": "El contorno de bajobusto debe ser menor que el de busto para que el cuerpo se estreche hacia la banda" }
+      "message": {
+        "en": "Underbust girth should be smaller than bust girth so the shell tapers into the band",
+        "es": "El contorno de bajobusto debe ser menor que el de busto para que el cuerpo se estreche hacia la banda",
+        "fr": "Le tour de dessous-de-poitrine doit être inférieur au tour de poitrine pour que la coque s'effile vers la bande"
+      }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["poliester-elastano-compresion"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "poliester-elastano-compresion"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "neckline", "type": "neckline", "label": { "en": "Neckline (elastic-finished)", "es": "Escote (terminado con elástico)" }, "edges": [{ "piece": "front", "edge": "neck" }, { "piece": "back", "edge": "neck" }], "parameters": ["neck_drop_front", "neck_drop_back", "neck_elastic_ratio"] },
-      { "id": "armscye", "type": "armscye", "label": { "en": "Armholes (elastic-finished)", "es": "Sisas (terminadas con elástico)" }, "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }], "parameters": ["chest_girth", "negative_ease_pct", "racer_pull_in"] },
-      { "id": "shoulder", "type": "shoulder", "label": { "en": "Shoulder (grown-on straps)", "es": "Hombro (tirantes de una pieza)" }, "edges": [{ "piece": "front", "edge": "shoulder" }, { "piece": "back", "edge": "shoulder" }], "parameters": ["strap_width"] },
-      { "id": "underband", "type": "waistband", "label": { "en": "Underband (compression band)", "es": "Banda inferior (banda de compresión)" }, "edges": [{ "piece": "underband", "edge": "top" }, { "piece": "front", "edge": "band_join" }, { "piece": "back", "edge": "band_join" }], "parameters": ["underbust_girth", "negative_ease_pct", "band_height", "band_elastic_ratio"] }
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "label": {
+          "en": "Neckline (elastic-finished)",
+          "es": "Escote (terminado con elástico)",
+          "fr": "Encolure (finie à l'élastique)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_drop_front",
+          "neck_drop_back",
+          "neck_elastic_ratio"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Armholes (elastic-finished)",
+          "es": "Sisas (terminadas con elástico)",
+          "fr": "Emmanchures (finies à l'élastique)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "negative_ease_pct",
+          "racer_pull_in"
+        ]
+      },
+      {
+        "id": "shoulder",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder (grown-on straps)",
+          "es": "Hombro (tirantes de una pieza)",
+          "fr": "Épaule (bretelles d'une pièce)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "back",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "strap_width"
+        ]
+      },
+      {
+        "id": "underband",
+        "type": "waistband",
+        "label": {
+          "en": "Underband (compression band)",
+          "es": "Banda inferior (banda de compresión)",
+          "fr": "Bande inférieure (bande de compression)"
+        },
+        "edges": [
+          {
+            "piece": "underband",
+            "edge": "top"
+          },
+          {
+            "piece": "front",
+            "edge": "band_join"
+          },
+          {
+            "piece": "back",
+            "edge": "band_join"
+          }
+        ],
+        "parameters": [
+          "underbust_girth",
+          "negative_ease_pct",
+          "band_height",
+          "band_elastic_ratio"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": true, "elastic_finish": true, "compression_support": true },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": true,
+      "elastic_finish": true,
+      "compression_support": true
+    },
     "societal_benefit": {
       "en": "The commons' compression sports bra with the support math in the open: a fold-cut shell drafted at true negative ease, an underband proven to match its shell at render time, and exact-mm neckline, armhole and underband elastic cut lengths computed from the measured openings — the numbers usually locked inside factory spec sheets. Honestly scoped as the compression (pull-on) style, no hardware, so the draft is fully reproducible without proprietary cup molds.",
-      "es": "El top deportivo de compresión del commons con la matemática del soporte en abierto: un cuerpo cortado al doblez trazado con holgura negativa real, una banda inferior cuyo ajuste al cuerpo se comprueba al renderizar, y largos exactos en mm del elástico de escote, sisas y banda calculados desde las aberturas medidas — los números que suelen quedar bajo llave en las hojas de especificación de fábrica. Honestamente delimitado como el estilo de compresión (cerrado), sin herrajes, para que el trazo sea totalmente reproducible sin moldes de copa propietarios."
+      "es": "El top deportivo de compresión del commons con la matemática del soporte en abierto: un cuerpo cortado al doblez trazado con holgura negativa real, una banda inferior cuyo ajuste al cuerpo se comprueba al renderizar, y largos exactos en mm del elástico de escote, sisas y banda calculados desde las aberturas medidas — los números que suelen quedar bajo llave en las hojas de especificación de fábrica. Honestamente delimitado como el estilo de compresión (cerrado), sin herrajes, para que el trazo sea totalmente reproducible sin moldes de copa propietarios.",
+      "fr": "La brassière de sport de compression du commun avec les calculs de soutien rendus ouverts : une coque coupée au pli tracée à une vraie aisance négative, une bande inférieure prouvée pour rejoindre sa coque au moment du rendu, et des longueurs de coupe d'élastique d'encolure, d'emmanchure et de bande inférieure en mm exacts calculées depuis les ouvertures mesurées — les chiffres habituellement enfermés dans les fiches techniques d'usine. Honnêtement cadrée comme le style compression (enfile-par-la-tête), sans quincaillerie, pour que le tracé soit entièrement reproductible sans moules de bonnet propriétaires."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

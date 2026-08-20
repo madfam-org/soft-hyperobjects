@@ -6,78 +6,416 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #24. Empire-line strappy maxi dress in woven fabric: a camisole-lineage bodice cut on fold with bound top edges and spaghetti straps ends at the underbust, where gathered rectangular skirt panels join at the empire seam with a computed gathered surplus, a soft-elastic channel marked inside the seam, and a top binding strip derived from the measured openings.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #24 del FC-100. Vestido maxi imperio de tirantes en tela plana: un talle de linaje camisola cortado al doblez con bordes superiores ribeteados y tirantes espagueti termina bajo el busto, donde paneles rectangulares fruncidos de falda se unen en la costura imperio con un sobrante de frunce calculado, una jareta de elástico suave marcada dentro de la costura y una tira de vivo superior derivada de las aberturas medidas.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #24 del FC-100. Vestido maxi imperio de tirantes en tela plana: un talle de linaje camisola cortado al doblez con bordes superiores ribeteados y tirantes espagueti termina bajo el busto, donde paneles rectangulares fruncidos de falda se unen en la costura imperio con un sobrante de frunce calculado, una jareta de elástico suave marcada dentro de la costura y una tira de vivo superior derivada de las aberturas medidas.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "FC-100 rang no 24. Robe longue à bretelles fines et ligne empire en tissu chaîne et trame : un corsage de lignée caraco coupé au pli avec bords supérieurs bordés et bretelles spaghetti se termine sous la poitrine, où des panneaux de jupe rectangulaires froncés se joignent à la couture empire avec un surplus de fronces calculé, une coulisse d'élastique souple marquée dans la couture, et une bande de bordure supérieure dérivée des ouvertures mesurées.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["dress", "maxi", "empire", "gathered", "straps", "woven", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "dress",
+      "maxi",
+      "empire",
+      "gathered",
+      "straps",
+      "woven",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet", "license": "original" },
-        { "source": "Fashion Cabinet camisole cartridge (strappy bodice + bound edges + derived strips)", "license": "LicenseRef-FC1-pending" },
-        { "source": "Fashion Cabinet maxi-skirt cartridge (gathered panels + derived casing)", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "Fashion Cabinet camisole cartridge (strappy bodice + bound edges + derived strips)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "Fashion Cabinet maxi-skirt cartridge (gathered panels + derived casing)",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "maxi-dress",
-      "label": { "en": "Maxi dress (all pieces)", "es": "Vestido maxi (todas las piezas)" },
+      "label": {
+        "en": "Maxi dress (all pieces)",
+        "es": "Vestido maxi (todas las piezas)",
+        "fr": "Robe maxi (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["bodice_front", "bodice_back", "skirt_front", "skirt_back", "strap", "top_binding"]
+      "pieces": [
+        "bodice_front",
+        "bodice_back",
+        "skirt_front",
+        "skirt_back",
+        "strap",
+        "top_binding"
+      ]
     }
   ],
   "pieces": [
-    { "id": "bodice_front", "label": { "en": "Bodice Front", "es": "Talle Delantero" }, "default_color": "#6d4a7e", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "bodice_back", "label": { "en": "Bodice Back", "es": "Talle Trasero" }, "default_color": "#593a68", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "skirt_front", "label": { "en": "Skirt Front", "es": "Falda Delantera" }, "default_color": "#8a63a0", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "skirt_back", "label": { "en": "Skirt Back", "es": "Falda Trasera" }, "default_color": "#775189", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "strap", "label": { "en": "Strap", "es": "Tirante" }, "default_color": "#a583b8", "cut": { "quantity": 2 } },
-    { "id": "top_binding", "label": { "en": "Top Binding", "es": "Vivo Superior" }, "default_color": "#c3a8d1", "cut": { "quantity": 1 } }
+    {
+      "id": "bodice_front",
+      "label": {
+        "en": "Bodice Front",
+        "es": "Talle Delantero",
+        "fr": "Corsage devant"
+      },
+      "default_color": "#6d4a7e",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "bodice_back",
+      "label": {
+        "en": "Bodice Back",
+        "es": "Talle Trasero",
+        "fr": "Corsage dos"
+      },
+      "default_color": "#593a68",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "skirt_front",
+      "label": {
+        "en": "Skirt Front",
+        "es": "Falda Delantera",
+        "fr": "Jupe Devant"
+      },
+      "default_color": "#8a63a0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "skirt_back",
+      "label": {
+        "en": "Skirt Back",
+        "es": "Falda Trasera",
+        "fr": "Jupe Dos"
+      },
+      "default_color": "#775189",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "strap",
+      "label": {
+        "en": "Strap",
+        "es": "Tirante",
+        "fr": "Bretelle"
+      },
+      "default_color": "#a583b8",
+      "cut": {
+        "quantity": 2
+      }
+    },
+    {
+      "id": "top_binding",
+      "label": {
+        "en": "Top Binding",
+        "es": "Vivo Superior",
+        "fr": "Passepoil supérieur"
+      },
+      "default_color": "#c3a8d1",
+      "cut": {
+        "quantity": 1
+      }
+    }
   ],
   "parameters": [
-    { "id": "bust_girth", "type": "slider", "default": 900, "min": 600, "max": 1700, "step": 10, "measurement": { "standard": "iso_8559", "code": "bust_girth" }, "label": { "en": "Bust girth (mm)", "es": "Contorno de busto (mm)" } },
-    { "id": "hip_girth", "type": "slider", "default": 960, "min": 600, "max": 1700, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
-    { "id": "bodice_length", "type": "slider", "default": 260, "min": 200, "max": 360, "step": 5, "label": { "en": "Bodice length, strap point to empire seam (mm)", "es": "Largo de talle, tirante a costura imperio (mm)" } },
-    { "id": "skirt_length", "type": "slider", "default": 900, "min": 600, "max": 1300, "step": 10, "label": { "en": "Skirt length, empire seam to hem (mm)", "es": "Largo de falda, costura imperio a dobladillo (mm)" } },
-    { "id": "gather_ratio", "type": "slider", "default": 1.5, "min": 1.2, "max": 2.0, "step": 0.1, "label": { "en": "Gather ratio (skirt panel/body)", "es": "Proporción de frunce (panel/cuerpo)" } },
-    { "id": "dress_ease", "type": "slider", "default": 60, "min": 0, "max": 200, "step": 5, "label": { "en": "Total ease at bust and hip (mm)", "es": "Holgura total en busto y cadera (mm)" } },
-    { "id": "strap_length", "type": "slider", "default": 400, "min": 250, "max": 650, "step": 10, "label": { "en": "Strap cut length (mm)", "es": "Largo de corte del tirante (mm)" } },
-    { "id": "binding_ratio", "type": "slider", "default": 0.92, "min": 0.75, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Binding/opening ratio", "es": "Proporción vivo/abertura" } },
-    { "id": "seam_allowance", "type": "slider", "default": 8, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 35, "min": 0, "max": 60, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "default": 900,
+      "min": 600,
+      "max": 1700,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      },
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de buste (mm)"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "default": 960,
+      "min": 600,
+      "max": 1700,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      }
+    },
+    {
+      "id": "bodice_length",
+      "type": "slider",
+      "default": 260,
+      "min": 200,
+      "max": 360,
+      "step": 5,
+      "label": {
+        "en": "Bodice length, strap point to empire seam (mm)",
+        "es": "Largo de talle, tirante a costura imperio (mm)",
+        "fr": "Longueur de corsage, point de bretelle à la couture empire (mm)"
+      }
+    },
+    {
+      "id": "skirt_length",
+      "type": "slider",
+      "default": 900,
+      "min": 600,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Skirt length, empire seam to hem (mm)",
+        "es": "Largo de falda, costura imperio a dobladillo (mm)",
+        "fr": "Longueur de jupe, couture empire à l'ourlet (mm)"
+      }
+    },
+    {
+      "id": "gather_ratio",
+      "type": "slider",
+      "default": 1.5,
+      "min": 1.2,
+      "max": 2.0,
+      "step": 0.1,
+      "label": {
+        "en": "Gather ratio (skirt panel/body)",
+        "es": "Proporción de frunce (panel/cuerpo)",
+        "fr": "Rapport de fronçage (panneau de jupe/corps)"
+      }
+    },
+    {
+      "id": "dress_ease",
+      "type": "slider",
+      "default": 60,
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Total ease at bust and hip (mm)",
+        "es": "Holgura total en busto y cadera (mm)",
+        "fr": "Aisance totale au buste et aux hanches (mm)"
+      }
+    },
+    {
+      "id": "strap_length",
+      "type": "slider",
+      "default": 400,
+      "min": 250,
+      "max": 650,
+      "step": 10,
+      "label": {
+        "en": "Strap cut length (mm)",
+        "es": "Largo de corte del tirante (mm)",
+        "fr": "Longueur de coupe de la bretelle (mm)"
+      }
+    },
+    {
+      "id": "binding_ratio",
+      "type": "slider",
+      "default": 0.92,
+      "min": 0.75,
+      "max": 1.0,
+      "step": 0.01,
+      "advanced": true,
+      "label": {
+        "en": "Binding/opening ratio",
+        "es": "Proporción vivo/abertura",
+        "fr": "Rapport biais/ouverture"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 8,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 35,
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-s", "label": { "en": "S", "es": "CH" }, "values": { "bust_girth": 840, "hip_girth": 900, "skirt_length": 850 } },
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "bust_girth": 900, "hip_girth": 960 } }
+    {
+      "id": "size-s",
+      "label": {
+        "en": "S",
+        "es": "CH",
+        "fr": "S"
+      },
+      "values": {
+        "bust_girth": 840,
+        "hip_girth": 900,
+        "skirt_length": 850
+      }
+    },
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "bust_girth": 900,
+        "hip_girth": 960
+      }
+    }
   ],
   "constraints": [
     {
       "expression": "gather_ratio >= 1.2 and gather_ratio <= 2.0",
       "severity": "warning",
-      "message": { "en": "Gather ratio outside 1.2–2.0 is clamped by the draft; 1.4–1.7 suits mid-weight poplin at the empire seam", "es": "Una proporción de frunce fuera de 1.2–2.0 se limita en el trazo; 1.4–1.7 va bien con popelina media en la costura imperio" }
+      "message": {
+        "en": "Gather ratio outside 1.2–2.0 is clamped by the draft; 1.4–1.7 suits mid-weight poplin at the empire seam",
+        "es": "Una proporción de frunce fuera de 1.2–2.0 se limita en el trazo; 1.4–1.7 va bien con popelina media en la costura imperio",
+        "fr": "Un rapport de fronces hors de 1.2–2.0 est bridé par le tracé ; 1.4–1.7 convient à une popeline moyenne à la couture empire"
+      }
     },
     {
       "expression": "(hip_girth + dress_ease) * gather_ratio >= bust_girth + dress_ease",
       "severity": "warning",
-      "message": { "en": "Skirt waist would be narrower than the bodice at the empire seam — the draft widens it to match", "es": "La cintura de la falda sería más angosta que el talle en la costura imperio — el trazo la ensancha para igualar" }
+      "message": {
+        "en": "Skirt waist would be narrower than the bodice at the empire seam — the draft widens it to match",
+        "es": "La cintura de la falda sería más angosta que el talle en la costura imperio — el trazo la ensancha para igualar",
+        "fr": "La taille de la jupe serait plus étroite que le corsage à la couture empire — le tracé l'élargit pour la raccorder"
+      }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["popelina-algodon", "jersey-algodon"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "popelina-algodon",
+    "jersey-algodon"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "bodice_front", "edge": "top" }, { "piece": "bodice_back", "edge": "top" }], "parameters": ["bodice_length", "binding_ratio"] },
-      { "id": "empire_seam", "type": "waistband", "edges": [{ "piece": "bodice_front", "edge": "hem" }, { "piece": "bodice_back", "edge": "hem" }, { "piece": "skirt_front", "edge": "waist" }, { "piece": "skirt_back", "edge": "waist" }], "parameters": ["bust_girth", "dress_ease", "gather_ratio"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "skirt_front", "edge": "hem" }, { "piece": "skirt_back", "edge": "hem" }], "parameters": ["skirt_length", "hem_allowance"] }
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "edges": [
+          {
+            "piece": "bodice_front",
+            "edge": "top"
+          },
+          {
+            "piece": "bodice_back",
+            "edge": "top"
+          }
+        ],
+        "parameters": [
+          "bodice_length",
+          "binding_ratio"
+        ]
+      },
+      {
+        "id": "empire_seam",
+        "type": "waistband",
+        "edges": [
+          {
+            "piece": "bodice_front",
+            "edge": "hem"
+          },
+          {
+            "piece": "bodice_back",
+            "edge": "hem"
+          },
+          {
+            "piece": "skirt_front",
+            "edge": "waist"
+          },
+          {
+            "piece": "skirt_back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "dress_ease",
+          "gather_ratio"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "skirt_front",
+            "edge": "hem"
+          },
+          {
+            "piece": "skirt_back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "skirt_length",
+          "hem_allowance"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
     "societal_benefit": {
       "en": "The commons' first two-assembly garment: a bodice lineage and a skirt lineage joined by one declared empire seam whose gathered surplus is computed, not guessed — the verified join every dress after it reuses.",
-      "es": "La primera prenda de dos conjuntos del commons: un linaje de talle y uno de falda unidos por una costura imperio declarada cuyo sobrante de frunce se calcula, no se adivina — la unión verificada que reutilizará cada vestido posterior."
+      "es": "La primera prenda de dos conjuntos del commons: un linaje de talle y uno de falda unidos por una costura imperio declarada cuyo sobrante de frunce se calcula, no se adivina — la unión verificada que reutilizará cada vestido posterior.",
+      "fr": "Le premier vêtement en deux assemblages du commons : une lignée de corsage et une lignée de jupe réunies par une seule couture empire déclarée dont le surplus de fronces est calculé, non deviné — la jonction vérifiée que réutilise ensuite chaque robe."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

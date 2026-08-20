@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "The rebozo — the long rectangular Mexican shawl worn over the shoulders and head, used to carry children or goods, finished with the rapacejo, an elaborate hand-knotted fringe often as prized as the weave. Its construction is a single long web; the jaspe (ikat) or brocade weave and the knotted fringe are the maker's. This cartridge drafts the garment geometry to measure. Offered with respect for the living tradition.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "El rebozo — el largo chal rectangular mexicano que se lleva sobre los hombros y la cabeza, se usa para cargar niños o cosas, y se remata con el rapacejo, un fleco anudado a mano a menudo tan apreciado como el tejido. Su construcción es un solo lienzo largo; el tejido de jaspe (ikat) o brocado y el fleco anudado los aporta quien lo elabora. Este cartucho traza la geometría a la medida. Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "El rebozo — el largo chal rectangular mexicano que se lleva sobre los hombros y la cabeza, se usa para cargar niños o cosas, y se remata con el rapacejo, un fleco anudado a mano a menudo tan apreciado como el tejido. Su construcción es un solo lienzo largo; el tejido de jaspe (ikat) o brocado y el fleco anudado los aporta quien lo elabora. Este cartucho traza la geometría a la medida. Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le rebozo — le long châle rectangulaire mexicain porté sur les épaules et la tête, utilisé pour porter les enfants ou les marchandises, fini par le rapacejo, une frange nouée main élaborée souvent aussi prisée que le tissage. Sa construction est un unique long lé ; le tissage jaspe (ikat) ou brocart et la frange nouée relèvent de celui qui le confectionne. Cette cartouche trace la géométrie du vêtement à la mesure. Proposé dans le respect de la tradition vivante.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
     "tags": [
@@ -34,7 +35,8 @@
       "id": "set",
       "label": {
         "en": "Rebozo",
-        "es": "Rebozo"
+        "es": "Rebozo",
+        "fr": "Rebozo"
       },
       "script_file": "main.py",
       "pieces": [
@@ -47,7 +49,8 @@
       "id": "body",
       "label": {
         "en": "Body",
-        "es": "Cuerpo"
+        "es": "Cuerpo",
+        "fr": "Corps"
       },
       "default_color": "#3a4a6a",
       "cut": {
@@ -86,11 +89,13 @@
       "step": 50,
       "label": {
         "en": "Length (mm, excl. fringe)",
-        "es": "Largo (mm, sin fleco)"
+        "es": "Largo (mm, sin fleco)",
+        "fr": "Longueur (mm, hors franges)"
       },
       "tooltip": {
         "en": "End to end of the woven cloth",
-        "es": "De extremo a extremo del lienzo tejido"
+        "es": "De extremo a extremo del lienzo tejido",
+        "fr": "D'un bout à l'autre du tissu tissé"
       }
     },
     {
@@ -103,11 +108,13 @@
       "step": 10,
       "label": {
         "en": "Width (mm)",
-        "es": "Ancho (mm)"
+        "es": "Ancho (mm)",
+        "fr": "Largeur (mm)"
       },
       "tooltip": {
         "en": "Loom width of the web",
-        "es": "Ancho de telar del lienzo"
+        "es": "Ancho de telar del lienzo",
+        "fr": "Largeur de métier du lé"
       }
     },
     {
@@ -120,11 +127,13 @@
       "step": 10,
       "label": {
         "en": "Rapacejo fringe (mm)",
-        "es": "Fleco rapacejo (mm)"
+        "es": "Fleco rapacejo (mm)",
+        "fr": "Frange rapacejo (mm)"
       },
       "tooltip": {
         "en": "Knotted-fringe length at each end; 0 = none",
-        "es": "Largo del fleco anudado por extremo; 0 = ninguno"
+        "es": "Largo del fleco anudado por extremo; 0 = ninguno",
+        "fr": "Longueur de la frange nouée à chaque extrémité ; 0 = aucune"
       }
     },
     {
@@ -137,11 +146,13 @@
       "step": 1,
       "label": {
         "en": "Weave bands",
-        "es": "Bandas de tejido"
+        "es": "Bandas de tejido",
+        "fr": "Bandes de tressage"
       },
       "tooltip": {
         "en": "Marked jaspe/brocade bands for the weaver",
-        "es": "Bandas de jaspe/brocado marcadas para quien teje"
+        "es": "Bandas de jaspe/brocado marcadas para quien teje",
+        "fr": "Bandes de jaspe/brocart marquées pour celui qui tisse"
       }
     }
   ],
@@ -150,7 +161,8 @@
       "id": "classic",
       "label": {
         "en": "Classic (2.5 m)",
-        "es": "Clásico (2.5 m)"
+        "es": "Clásico (2.5 m)",
+        "fr": "Classique (2,5 m)"
       },
       "values": {
         "rebozo_length": 2500,
@@ -161,7 +173,8 @@
       "id": "long",
       "label": {
         "en": "Long (3 m, deep fringe)",
-        "es": "Largo (3 m, fleco profundo)"
+        "es": "Largo (3 m, fleco profundo)",
+        "fr": "Long (3 m, franges profondes)"
       },
       "values": {
         "rebozo_length": 3000,
@@ -184,7 +197,8 @@
         "type": "hem",
         "label": {
           "en": "Selvedge + fringed ends",
-          "es": "Orillo + extremos con fleco"
+          "es": "Orillo + extremos con fleco",
+          "fr": "Lisière + extrémités frangées"
         },
         "edges": [
           {
@@ -206,7 +220,8 @@
     },
     "societal_benefit": {
       "en": "An open, made-to-measure draft of the rebozo's single-web construction lets anyone size the garment while leaving the jaspe weave and the rapacejo fringe — the artistry and identity — entirely to the maker. It serves the tradition rather than extracting from it, and records the geometry of a garment central to Mexican life.",
-      "es": "Un trazo abierto y a la medida de la construcción de un solo lienzo del rebozo permite a cualquiera dimensionar la prenda, dejando el tejido de jaspe y el fleco rapacejo — el arte y la identidad — enteramente a quien lo elabora. Sirve a la tradición en vez de extraer de ella, y registra la geometría de una prenda central en la vida mexicana."
+      "es": "Un trazo abierto y a la medida de la construcción de un solo lienzo del rebozo permite a cualquiera dimensionar la prenda, dejando el tejido de jaspe y el fleco rapacejo — el arte y la identidad — enteramente a quien lo elabora. Sirve a la tradición en vez de extraer de ella, y registra la geometría de una prenda central en la vida mexicana.",
+      "fr": "Un tracé ouvert et sur mesure de la construction en unique lé du rebozo permet à chacun de dimensionner le vêtement tout en laissant le tissage jaspe et la frange rapacejo — l'art et l'identité — entièrement à celui qui le confectionne. Il sert la tradition plutôt que d'en extraire, et consigne la géométrie d'un vêtement central de la vie mexicaine."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

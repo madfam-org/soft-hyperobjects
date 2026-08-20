@@ -6,130 +6,491 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #92 — the classic infant bodysuit in soft cotton jersey. A drop-shoulder tee whose front and back both extend past the waist into a rounded crotch flap: the two flaps overlap and close with ~3 snap fasteners (no sewn crotch seam), while a lap-shoulder / envelope neckline lets the wide bound opening stretch over a baby's head. The sleeve cap is solved numerically to the front + back armholes, the neck and leg bindings are derived from the measured openings, and every sewn seam balances to delta ~ 0. Sleeve style picks short, long, or sleeveless.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #92 del FC-100 — el clásico body/mameluco de bebé en suave jersey de algodón. Una playera de hombro caído cuyo delantero y trasero se extienden más allá de la cintura en una solapa de entrepierna redondeada: las dos solapas se traslapan y cierran con ~3 broches (sin costura de entrepierna cosida), mientras que un escote de hombro traslapado / tipo sobre permite que la amplia abertura ribeteada se estire sobre la cabeza del bebé. La copa de la manga se resuelve numéricamente a las sisas delantera + trasera, los ribetes de escote y pierna se derivan de las aberturas medidas, y toda costura cosida equilibra a delta ~ 0. El estilo de manga elige corta, larga o sin manga.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #92 del FC-100 — el clásico body/mameluco de bebé en suave jersey de algodón. Una playera de hombro caído cuyo delantero y trasero se extienden más allá de la cintura en una solapa de entrepierna redondeada: las dos solapas se traslapan y cierran con ~3 broches (sin costura de entrepierna cosida), mientras que un escote de hombro traslapado / tipo sobre permite que la amplia abertura ribeteada se estire sobre la cabeza del bebé. La copa de la manga se resuelve numéricamente a las sisas delantera + trasera, los ribetes de escote y pierna se derivan de las aberturas medidas, y toda costura cosida equilibra a delta ~ 0. El estilo de manga elige corta, larga o sin manga.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Rang n°92 du FC-100 — le classique body de bébé en jersey de coton doux. Un tee-shirt à épaule tombante dont le devant et le dos se prolongent tous deux au-delà de la taille en un rabat d'entrejambe arrondi : les deux rabats se chevauchent et se ferment par ~3 boutons-pression (pas de couture d'entrejambe cousue), tandis qu'une encolure cache-cœur / enveloppe permet à la large ouverture bordée de s'étirer par-dessus la tête du bébé. La tête de manche est résolue numériquement aux emmanchures devant + dos, les biais d'encolure et de jambe sont dérivés des ouvertures mesurées, et chaque couture cousue s'équilibre à delta ~ 0. Le style de manche choisit courte, longue ou sans manche.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["baby-bodysuit", "onesie", "bodysuit", "infant", "kids", "knit", "snap-crotch", "envelope-neck", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "baby-bodysuit",
+      "onesie",
+      "bodysuit",
+      "infant",
+      "kids",
+      "knit",
+      "snap-crotch",
+      "envelope-neck",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet", "license": "original" },
-        { "source": "Fashion Cabinet t-shirt-crew cartridge (drop-shoulder knit tee bodice: fold-cut front/back, sleeve cap solved to the armhole, derived rib band)", "license": "LicenseRef-FC1-pending" },
-        { "source": "Fashion Cabinet romper cartridge (body-plus-crotch construction and derived-opening bindings)", "license": "LicenseRef-FC1-pending" },
-        { "source": "Fashion Cabinet parka cartridge (snap positions marked as drill crosses with the snap hardware federated to Yantra4D)", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "Fashion Cabinet t-shirt-crew cartridge (drop-shoulder knit tee bodice: fold-cut front/back, sleeve cap solved to the armhole, derived rib band)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "Fashion Cabinet romper cartridge (body-plus-crotch construction and derived-opening bindings)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "Fashion Cabinet parka cartridge (snap positions marked as drill crosses with the snap hardware federated to Yantra4D)",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "bodysuit",
-      "label": { "en": "Bodysuit (all pieces)", "es": "Body (todas las piezas)" },
+      "label": {
+        "en": "Bodysuit (all pieces)",
+        "es": "Body (todas las piezas)",
+        "fr": "Body (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "sleeve", "neck_binding", "leg_binding"]
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "neck_binding",
+        "leg_binding"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front (to crotch flap)", "es": "Delantero (a solapa de entrepierna)" }, "default_color": "#e0b3c6", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "back", "label": { "en": "Back (to crotch flap)", "es": "Trasero (a solapa de entrepierna)" }, "default_color": "#cf9ab2", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#ecc7d6", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "neck_binding", "label": { "en": "Neck Binding (envelope)", "es": "Ribete de Escote (sobre)" }, "default_color": "#f2d9e3", "cut": { "quantity": 1 } },
-    { "id": "leg_binding", "label": { "en": "Leg Binding", "es": "Ribete de Pierna" }, "default_color": "#f7e6ee", "cut": { "quantity": 2 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (to crotch flap)",
+        "es": "Delantero (a solapa de entrepierna)",
+        "fr": "Devant (jusqu'au rabat d'entrejambe)"
+      },
+      "default_color": "#e0b3c6",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (to crotch flap)",
+        "es": "Trasero (a solapa de entrepierna)",
+        "fr": "Dos (jusqu'au rabat d'entrejambe)"
+      },
+      "default_color": "#cf9ab2",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#ecc7d6",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "neck_binding",
+      "label": {
+        "en": "Neck Binding (envelope)",
+        "es": "Ribete de Escote (sobre)",
+        "fr": "Biais d'encolure (enveloppe)"
+      },
+      "default_color": "#f2d9e3",
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "leg_binding",
+      "label": {
+        "en": "Leg Binding",
+        "es": "Ribete de Pierna",
+        "fr": "Biais de jambe"
+      },
+      "default_color": "#f7e6ee",
+      "cut": {
+        "quantity": 2
+      }
+    }
   ],
   "parameter_groups": [
-    { "id": "body", "label": { "en": "Body Measurements", "es": "Medidas Corporales" } },
-    { "id": "fit", "label": { "en": "Fit & Style", "es": "Ajuste y Estilo" } },
-    { "id": "construction", "label": { "en": "Construction", "es": "Construcción" } }
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures corporelles"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Ajustement et style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Montage"
+      }
+    }
   ],
   "parameters": [
     {
-      "id": "chest_girth", "type": "slider", "default": 500, "min": 380, "max": 720, "step": 10,
-      "group": "body", "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" },
-      "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" }
-    },
-    {
-      "id": "back_length", "type": "slider", "default": 260, "min": 180, "max": 380, "step": 5,
+      "id": "chest_girth",
+      "type": "slider",
+      "default": 500,
+      "min": 380,
+      "max": 720,
+      "step": 10,
       "group": "body",
-      "label": { "en": "Back length, nape to waist (mm)", "es": "Largo de espalda, nuca a cintura (mm)" }
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      }
     },
     {
-      "id": "neck_girth", "type": "slider", "default": 260, "min": 200, "max": 340, "step": 5,
-      "group": "body", "measurement": { "standard": "iso_8559", "code": "neck_girth" },
-      "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" }
-    },
-    {
-      "id": "head_girth", "type": "slider", "default": 460, "min": 360, "max": 560, "step": 10,
-      "group": "body", "measurement": { "standard": "iso_8559", "code": "head_girth" },
-      "tooltip": { "en": "The pull-over check: the bound envelope neck must open past this", "es": "La comprobación de paso: el escote sobre ribeteado debe abrirse más allá de esto" },
-      "label": { "en": "Head girth (mm)", "es": "Contorno de cabeza (mm)" }
-    },
-    {
-      "id": "crotch_ext", "type": "slider", "default": 150, "min": 90, "max": 240, "step": 5,
+      "id": "back_length",
+      "type": "slider",
+      "default": 260,
+      "min": 180,
+      "max": 380,
+      "step": 5,
       "group": "body",
-      "tooltip": { "en": "Waist line down to the crotch tip; sets the flap length", "es": "De la cintura a la punta de entrepierna; define el largo de la solapa" },
-      "label": { "en": "Crotch extension (mm)", "es": "Extensión de entrepierna (mm)" }
+      "label": {
+        "en": "Back length, nape to waist (mm)",
+        "es": "Largo de espalda, nuca a cintura (mm)",
+        "fr": "Longueur de dos, nuque à la taille (mm)"
+      }
     },
     {
-      "id": "sleeve_length", "type": "slider", "default": 90, "min": 40, "max": 260, "step": 5,
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 260,
+      "min": 200,
+      "max": 340,
+      "step": 5,
       "group": "body",
-      "label": { "en": "Sleeve length, shoulder to hem (mm)", "es": "Largo de manga, hombro a dobladillo (mm)" }
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      }
     },
     {
-      "id": "sleeve_style", "type": "select", "default": "short",
+      "id": "head_girth",
+      "type": "slider",
+      "default": 460,
+      "min": 360,
+      "max": 560,
+      "step": 10,
+      "group": "body",
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "head_girth"
+      },
+      "tooltip": {
+        "en": "The pull-over check: the bound envelope neck must open past this",
+        "es": "La comprobación de paso: el escote sobre ribeteado debe abrirse más allá de esto",
+        "fr": "Le contrôle d'enfilage : l'encolure enveloppe bordée doit s'ouvrir au-delà de cela"
+      },
+      "label": {
+        "en": "Head girth (mm)",
+        "es": "Contorno de cabeza (mm)",
+        "fr": "Tour de tête (mm)"
+      }
+    },
+    {
+      "id": "crotch_ext",
+      "type": "slider",
+      "default": 150,
+      "min": 90,
+      "max": 240,
+      "step": 5,
+      "group": "body",
+      "tooltip": {
+        "en": "Waist line down to the crotch tip; sets the flap length",
+        "es": "De la cintura a la punta de entrepierna; define el largo de la solapa",
+        "fr": "De la ligne de taille à la pointe de l'entrejambe ; définit la longueur du rabat"
+      },
+      "label": {
+        "en": "Crotch extension (mm)",
+        "es": "Extensión de entrepierna (mm)",
+        "fr": "Extension d'entrejambe (mm)"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 90,
+      "min": 40,
+      "max": 260,
+      "step": 5,
+      "group": "body",
+      "label": {
+        "en": "Sleeve length, shoulder to hem (mm)",
+        "es": "Largo de manga, hombro a dobladillo (mm)",
+        "fr": "Longueur de manche, épaule à l'ourlet (mm)"
+      }
+    },
+    {
+      "id": "sleeve_style",
+      "type": "select",
+      "default": "short",
       "group": "fit",
       "options": [
-        { "value": "short", "label": { "en": "Short sleeve", "es": "Manga corta" } },
-        { "value": "long", "label": { "en": "Long sleeve", "es": "Manga larga" } },
-        { "value": "sleeveless", "label": { "en": "Sleeveless", "es": "Sin manga" } }
+        {
+          "value": "short",
+          "label": {
+            "en": "Short sleeve",
+            "es": "Manga corta",
+            "fr": "Manche courte"
+          }
+        },
+        {
+          "value": "long",
+          "label": {
+            "en": "Long sleeve",
+            "es": "Manga larga",
+            "fr": "Manche longue"
+          }
+        },
+        {
+          "value": "sleeveless",
+          "label": {
+            "en": "Sleeveless",
+            "es": "Sin manga",
+            "fr": "Sans manche"
+          }
+        }
       ],
-      "label": { "en": "Sleeve style", "es": "Estilo de manga" }
+      "label": {
+        "en": "Sleeve style",
+        "es": "Estilo de manga",
+        "fr": "Style de manche"
+      }
     },
     {
-      "id": "knit_ease", "type": "slider", "default": 50, "min": 20, "max": 160, "step": 5,
+      "id": "knit_ease",
+      "type": "slider",
+      "default": 50,
+      "min": 20,
+      "max": 160,
+      "step": 5,
       "group": "fit",
-      "tooltip": { "en": "Snug-but-comfortable ease for a knit baby garment", "es": "Holgura cómoda y ajustada para una prenda de punto de bebé" },
-      "label": { "en": "Total ease (mm)", "es": "Holgura total (mm)" }
+      "tooltip": {
+        "en": "Snug-but-comfortable ease for a knit baby garment",
+        "es": "Holgura cómoda y ajustada para una prenda de punto de bebé",
+        "fr": "Aisance ajustée mais confortable pour un vêtement de bébé en maille"
+      },
+      "label": {
+        "en": "Total ease (mm)",
+        "es": "Holgura total (mm)",
+        "fr": "Aisance totale (mm)"
+      }
     },
     {
-      "id": "crotch_width", "type": "slider", "default": 110, "min": 70, "max": 160, "step": 5,
+      "id": "crotch_width",
+      "type": "slider",
+      "default": 110,
+      "min": 70,
+      "max": 160,
+      "step": 5,
       "group": "fit",
-      "tooltip": { "en": "Flat width of the crotch flap at the snap line", "es": "Ancho plano de la solapa de entrepierna en la línea de broches" },
-      "label": { "en": "Crotch width, flat (mm)", "es": "Ancho de entrepierna, plano (mm)" }
+      "tooltip": {
+        "en": "Flat width of the crotch flap at the snap line",
+        "es": "Ancho plano de la solapa de entrepierna en la línea de broches",
+        "fr": "Largeur à plat du rabat d'entrejambe à la ligne des pressions"
+      },
+      "label": {
+        "en": "Crotch width, flat (mm)",
+        "es": "Ancho de entrepierna, plano (mm)",
+        "fr": "Largeur d'entrejambe, à plat (mm)"
+      }
     },
     {
-      "id": "lap_depth", "type": "slider", "default": 30, "min": 15, "max": 55, "step": 5,
+      "id": "lap_depth",
+      "type": "slider",
+      "default": 30,
+      "min": 15,
+      "max": 55,
+      "step": 5,
       "group": "construction",
-      "tooltip": { "en": "How far the front and back crotch flaps overlap for the snaps", "es": "Cuánto se traslapan las solapas de entrepierna delantera y trasera para los broches" },
-      "label": { "en": "Snap lap depth (mm)", "es": "Traslape de broches (mm)" }
+      "tooltip": {
+        "en": "How far the front and back crotch flaps overlap for the snaps",
+        "es": "Cuánto se traslapan las solapas de entrepierna delantera y trasera para los broches",
+        "fr": "Jusqu'où les rabats d'entrejambe devant et dos se chevauchent pour les pressions"
+      },
+      "label": {
+        "en": "Snap lap depth (mm)",
+        "es": "Traslape de broches (mm)",
+        "fr": "Croisure des boutons-pression (mm)"
+      }
     },
     {
-      "id": "binding_ratio", "type": "slider", "default": 0.82, "min": 0.7, "max": 1.0, "step": 0.01,
-      "group": "construction", "advanced": true,
-      "tooltip": { "en": "Binding length / measured opening (knit binding is cut short so it hugs)", "es": "Largo de ribete / abertura medida (el ribete de punto se corta más corto para ceñir)" },
-      "label": { "en": "Binding/opening ratio", "es": "Proporción ribete/abertura" }
-    },
-    {
-      "id": "binding_width", "type": "slider", "default": 12, "min": 8, "max": 24, "step": 1,
+      "id": "binding_ratio",
+      "type": "slider",
+      "default": 0.82,
+      "min": 0.7,
+      "max": 1.0,
+      "step": 0.01,
       "group": "construction",
-      "label": { "en": "Binding finished width (mm)", "es": "Ancho terminado del ribete (mm)" }
+      "advanced": true,
+      "tooltip": {
+        "en": "Binding length / measured opening (knit binding is cut short so it hugs)",
+        "es": "Largo de ribete / abertura medida (el ribete de punto se corta más corto para ceñir)",
+        "fr": "Longueur de biais / ouverture mesurée (le biais en maille est coupé plus court pour ceinturer)"
+      },
+      "label": {
+        "en": "Binding/opening ratio",
+        "es": "Proporción ribete/abertura",
+        "fr": "Rapport biais/ouverture"
+      }
     },
     {
-      "id": "seam_allowance", "type": "slider", "default": 7, "min": 0, "max": 15, "step": 1,
+      "id": "binding_width",
+      "type": "slider",
+      "default": 12,
+      "min": 8,
+      "max": 24,
+      "step": 1,
       "group": "construction",
-      "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" }
+      "label": {
+        "en": "Binding finished width (mm)",
+        "es": "Ancho terminado del ribete (mm)",
+        "fr": "Largeur finie du biais (mm)"
+      }
     },
     {
-      "id": "hem_allowance", "type": "slider", "default": 15, "min": 0, "max": 30, "step": 5,
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 7,
+      "min": 0,
+      "max": 15,
+      "step": 1,
       "group": "construction",
-      "tooltip": { "en": "Turn-under at the crotch-tip and sleeve hem", "es": "Vuelta en la punta de entrepierna y dobladillo de manga" },
-      "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" }
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 15,
+      "min": 0,
+      "max": 30,
+      "step": 5,
+      "group": "construction",
+      "tooltip": {
+        "en": "Turn-under at the crotch-tip and sleeve hem",
+        "es": "Vuelta en la punta de entrepierna y dobladillo de manga",
+        "fr": "Rentré à la pointe de l'entrejambe et à l'ourlet de manche"
+      },
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
     }
   ],
   "presets": [
-    { "id": "size-s", "label": { "en": "3-6 months", "es": "3-6 meses" }, "values": { "chest_girth": 450, "back_length": 220, "neck_girth": 240, "head_girth": 430, "crotch_ext": 130, "sleeve_length": 75 } },
-    { "id": "size-m", "label": { "en": "6-12 months", "es": "6-12 meses" }, "values": { "chest_girth": 500, "back_length": 260, "neck_girth": 260, "head_girth": 460, "crotch_ext": 150, "sleeve_length": 90 } },
-    { "id": "size-l", "label": { "en": "12-18 months", "es": "12-18 meses" }, "values": { "chest_girth": 550, "back_length": 300, "neck_girth": 280, "head_girth": 480, "crotch_ext": 175, "sleeve_length": 105 } },
-    { "id": "size-xl", "label": { "en": "18-24 months", "es": "18-24 meses" }, "values": { "chest_girth": 600, "back_length": 335, "neck_girth": 300, "head_girth": 500, "crotch_ext": 195, "sleeve_length": 120 } }
+    {
+      "id": "size-s",
+      "label": {
+        "en": "3-6 months",
+        "es": "3-6 meses",
+        "fr": "3-6 mois"
+      },
+      "values": {
+        "chest_girth": 450,
+        "back_length": 220,
+        "neck_girth": 240,
+        "head_girth": 430,
+        "crotch_ext": 130,
+        "sleeve_length": 75
+      }
+    },
+    {
+      "id": "size-m",
+      "label": {
+        "en": "6-12 months",
+        "es": "6-12 meses",
+        "fr": "6-12 mois"
+      },
+      "values": {
+        "chest_girth": 500,
+        "back_length": 260,
+        "neck_girth": 260,
+        "head_girth": 460,
+        "crotch_ext": 150,
+        "sleeve_length": 90
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "12-18 months",
+        "es": "12-18 meses",
+        "fr": "12-18 mois"
+      },
+      "values": {
+        "chest_girth": 550,
+        "back_length": 300,
+        "neck_girth": 280,
+        "head_girth": 480,
+        "crotch_ext": 175,
+        "sleeve_length": 105
+      }
+    },
+    {
+      "id": "size-xl",
+      "label": {
+        "en": "18-24 months",
+        "es": "18-24 meses",
+        "fr": "18-24 mois"
+      },
+      "values": {
+        "chest_girth": 600,
+        "back_length": 335,
+        "neck_girth": 300,
+        "head_girth": 500,
+        "crotch_ext": 195,
+        "sleeve_length": 120
+      }
+    }
   ],
   "constraints": [
     {
@@ -137,7 +498,8 @@
       "severity": "warning",
       "message": {
         "en": "A crotch flap wider than a third of the chest girth will not sit under the body cleanly; narrow the crotch width",
-        "es": "Una solapa de entrepierna más ancha que un tercio del contorno de pecho no queda bien bajo el cuerpo; reduce el ancho de entrepierna"
+        "es": "Una solapa de entrepierna más ancha que un tercio del contorno de pecho no queda bien bajo el cuerpo; reduce el ancho de entrepierna",
+        "fr": "Un rabat d'entrejambe plus large qu'un tiers du tour de poitrine ne se placera pas proprement sous le corps ; réduisez la largeur d'entrejambe"
       }
     },
     {
@@ -145,7 +507,8 @@
       "severity": "warning",
       "message": {
         "en": "The snap lap must be shorter than the crotch extension or the flaps have no length to snap",
-        "es": "El traslape de broches debe ser menor que la extensión de entrepierna o las solapas no tienen largo para abrocharse"
+        "es": "El traslape de broches debe ser menor que la extensión de entrepierna o las solapas no tienen largo para abrocharse",
+        "fr": "Le chevauchement des pressions doit être plus court que l'extension d'entrejambe, sinon les rabats n'ont pas de longueur pour se fermer"
       }
     },
     {
@@ -153,12 +516,19 @@
       "severity": "warning",
       "message": {
         "en": "Sleeve longer than the whole body length is intentional only for fold-over cuff mitten styles",
-        "es": "Una manga más larga que todo el cuerpo solo es intencional en estilos de puño-manopla plegable"
+        "es": "Una manga más larga que todo el cuerpo solo es intencional en estilos de puño-manopla plegable",
+        "fr": "Une manche plus longue que tout le corps n'est intentionnelle que pour les modèles à poignet moufle rabattable"
       }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["jersey-algodon"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "jersey-algodon"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
@@ -167,38 +537,79 @@
         "id": "neckline",
         "type": "neckline",
         "edges": [
-          { "piece": "front", "edge": "neck" },
-          { "piece": "back", "edge": "neck" }
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
         ],
-        "parameters": ["neck_girth", "head_girth", "binding_ratio"]
+        "parameters": [
+          "neck_girth",
+          "head_girth",
+          "binding_ratio"
+        ]
       },
       {
         "id": "armscye",
         "type": "armscye",
         "edges": [
-          { "piece": "front", "edge": "armhole" },
-          { "piece": "back", "edge": "armhole" },
-          { "piece": "sleeve", "edge": "cap" }
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
         ],
-        "parameters": ["chest_girth", "knit_ease"]
+        "parameters": [
+          "chest_girth",
+          "knit_ease"
+        ]
       },
       {
         "id": "leg_opening",
         "type": "hem",
         "edges": [
-          { "piece": "front", "edge": "leg" },
-          { "piece": "back", "edge": "leg" }
+          {
+            "piece": "front",
+            "edge": "leg"
+          },
+          {
+            "piece": "back",
+            "edge": "leg"
+          }
         ],
-        "parameters": ["crotch_ext", "crotch_width", "binding_ratio"]
+        "parameters": [
+          "crotch_ext",
+          "crotch_width",
+          "binding_ratio"
+        ]
       },
       {
         "id": "snap_crotch",
         "type": "custom",
         "edges": [
-          { "piece": "front", "edge": "crotch" },
-          { "piece": "back", "edge": "crotch" }
+          {
+            "piece": "front",
+            "edge": "crotch"
+          },
+          {
+            "piece": "back",
+            "edge": "crotch"
+          }
         ],
-        "parameters": ["crotch_width", "lap_depth"]
+        "parameters": [
+          "crotch_width",
+          "lap_depth"
+        ]
       }
     ],
     "capabilities": {
@@ -210,7 +621,8 @@
     },
     "societal_benefit": {
       "en": "The infant bodysuit is a first-wardrobe staple worldwide; a verified parametric block puts a made-to-measure onesie — snap crotch for diaper changes, envelope neck for safe pull-over dressing — within reach of any family with soft jersey and a cutter, and teaches the commons how a garment that closes by overlap-and-snap is drafted so its flaps stack instead of being sewn.",
-      "es": "El body de bebé es un básico del primer guardarropa en todo el mundo; un bloque paramétrico verificado pone un mameluco a medida — entrepierna con broches para el cambio de pañal, escote sobre para vestir con seguridad — al alcance de cualquier familia con jersey suave y una cortadora, y enseña al procomún cómo se traza una prenda que cierra por traslape y broche para que sus solapas se apilen en vez de coserse."
+      "es": "El body de bebé es un básico del primer guardarropa en todo el mundo; un bloque paramétrico verificado pone un mameluco a medida — entrepierna con broches para el cambio de pañal, escote sobre para vestir con seguridad — al alcance de cualquier familia con jersey suave y una cortadora, y enseña al procomún cómo se traza una prenda que cierra por traslape y broche para que sus solapas se apilen en vez de coserse.",
+      "fr": "Le body de bébé est un essentiel de la première garde-robe partout dans le monde ; un bloc paramétrique vérifié met à portée de toute famille disposant d'un jersey doux et d'une paire de ciseaux un body sur mesure — entrejambe à pressions pour les changes, encolure enveloppe pour un enfilage sûr — et enseigne au commun comment un vêtement qui se ferme par chevauchement et pression se trace pour que ses rabats s'empilent au lieu d'être cousus."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

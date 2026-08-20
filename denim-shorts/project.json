@@ -6,55 +6,380 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #19. Jeans-style denim shorts on the athletic-shorts block: straight hems, a grown-on fly extension with a J-topstitch guide, quarter-circle scoop-pocket openings with rivet drill marks, a marked back yoke line and pentagon patch-pocket placement, belt loops, and a straight cut-1 waistband with a button-stand overlap. The back hem width is solved analytically so the straight inseams match exactly.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #19 del FC-100. Short de mezclilla estilo jeans sobre el bloque de athletic-shorts: bajos rectos, extensión de bragueta con guía de pespunte en J, bocas de bolsillo delanteras en cuarto de círculo con marcas de remache, línea de quilla trasera y ubicación de bolsillo de parche en pentágono, trabillas y pretina recta (corte 1) con cruce para botón. El ancho trasero del bajo se resuelve analíticamente para que las entrepiernas rectas coincidan.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #19 del FC-100. Short de mezclilla estilo jeans sobre el bloque de athletic-shorts: bajos rectos, extensión de bragueta con guía de pespunte en J, bocas de bolsillo delanteras en cuarto de círculo con marcas de remache, línea de quilla trasera y ubicación de bolsillo de parche en pentágono, trabillas y pretina recta (corte 1) con cruce para botón. El ancho trasero del bajo se resuelve analíticamente para que las entrepiernas rectas coincidan.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Rang #19 du FC-100. Short en denim style jean sur le bloc de short athlétique : ourlets droits, une extension de braguette venue avec un guide de piqûre en J, des ouvertures de poche arrondies en quart de cercle avec repères de perçage pour rivets, une ligne d'empiècement dos marquée et l'emplacement d'une poche plaquée en pentagone, des passants de ceinture et une ceinture droite coupée en 1 avec un croisement de patte de boutonnage. La largeur d'ourlet dos est résolue analytiquement pour que les entrejambes droites coïncident exactement.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["shorts", "denim", "jeans", "fly-front", "fc100", "hyperobject", "commons"],
-    "attribution": { "author": "Innovaciones MADFAM", "license": "LicenseRef-FC1-pending", "lineage": [{ "source": "athletic-shorts — Fashion Cabinet commons trouser block (analytic back-hem strategy)", "license": "LicenseRef-FC1-pending" }] }
+    "tags": [
+      "shorts",
+      "denim",
+      "jeans",
+      "fly-front",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "athletic-shorts — Fashion Cabinet commons trouser block (analytic back-hem strategy)",
+          "license": "LicenseRef-FC1-pending"
+        }
+      ]
+    }
   },
-  "modes": [{ "id": "shorts", "label": { "en": "Shorts (all pieces)", "es": "Short (todas las piezas)" }, "script_file": "main.py", "pieces": ["front", "back", "waistband", "beltloop"] }],
+  "modes": [
+    {
+      "id": "shorts",
+      "label": {
+        "en": "Shorts (all pieces)",
+        "es": "Short (todas las piezas)",
+        "fr": "Short (toutes les pièces)"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "waistband",
+        "beltloop"
+      ]
+    }
+  ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#3f5d8c", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Trasero" }, "default_color": "#34507c", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "waistband", "label": { "en": "Waistband", "es": "Pretina" }, "default_color": "#5a76a6", "cut": { "quantity": 1 } },
-    { "id": "beltloop", "label": { "en": "Belt Loop", "es": "Trabilla" }, "default_color": "#7189b5", "cut": { "quantity": 5 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#3f5d8c",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Trasero",
+        "fr": "Dos"
+      },
+      "default_color": "#34507c",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "Waistband",
+        "es": "Pretina",
+        "fr": "Ceinture"
+      },
+      "default_color": "#5a76a6",
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "beltloop",
+      "label": {
+        "en": "Belt Loop",
+        "es": "Trabilla",
+        "fr": "Passant de ceinture"
+      },
+      "default_color": "#7189b5",
+      "cut": {
+        "quantity": 5
+      }
+    }
   ],
   "parameters": [
-    { "id": "hip_girth", "type": "slider", "default": 1000, "min": 650, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
-    { "id": "waist_girth", "type": "slider", "default": 880, "min": 550, "max": 1600, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
-    { "id": "inseam_length", "type": "slider", "default": 130, "min": 70, "max": 350, "step": 10, "label": { "en": "Inseam (mm)", "es": "Entrepierna (mm)" } },
-    { "id": "front_rise", "type": "slider", "default": 255, "min": 190, "max": 380, "step": 5, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)" } },
-    { "id": "back_rise", "type": "slider", "default": 290, "min": 190, "max": 440, "step": 5, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)" } },
-    { "id": "denim_ease", "type": "slider", "default": 80, "min": 40, "max": 300, "step": 10, "label": { "en": "Total ease (mm)", "es": "Holgura total (mm)" } },
-    { "id": "hem_width", "type": "slider", "default": 250, "min": 160, "max": 340, "step": 5, "label": { "en": "Front hem half-width (mm)", "es": "Medio bajo delantero (mm)" } },
-    { "id": "fly_width", "type": "slider", "default": 36, "min": 24, "max": 50, "step": 2, "label": { "en": "Fly extension width (mm)", "es": "Ancho de bragueta (mm)" } },
-    { "id": "fly_depth", "type": "slider", "default": 180, "min": 120, "max": 240, "step": 5, "label": { "en": "Fly depth (mm)", "es": "Profundidad de bragueta (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 25, "min": 0, "max": 40, "step": 5, "label": { "en": "Hem allowance, turned twice (mm)", "es": "Dobladillo de doble doblez (mm)" } }
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "default": 1000,
+      "min": 650,
+      "max": 1800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "default": 880,
+      "min": 550,
+      "max": 1600,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      }
+    },
+    {
+      "id": "inseam_length",
+      "type": "slider",
+      "default": 130,
+      "min": 70,
+      "max": 350,
+      "step": 10,
+      "label": {
+        "en": "Inseam (mm)",
+        "es": "Entrepierna (mm)",
+        "fr": "Entrejambe (mm)"
+      }
+    },
+    {
+      "id": "front_rise",
+      "type": "slider",
+      "default": 255,
+      "min": 190,
+      "max": 380,
+      "step": 5,
+      "label": {
+        "en": "Front rise (mm)",
+        "es": "Tiro delantero (mm)",
+        "fr": "Hauteur de fourche avant (mm)"
+      }
+    },
+    {
+      "id": "back_rise",
+      "type": "slider",
+      "default": 290,
+      "min": 190,
+      "max": 440,
+      "step": 5,
+      "label": {
+        "en": "Back rise (mm)",
+        "es": "Tiro trasero (mm)",
+        "fr": "Hauteur de fourche arrière (mm)"
+      }
+    },
+    {
+      "id": "denim_ease",
+      "type": "slider",
+      "default": 80,
+      "min": 40,
+      "max": 300,
+      "step": 10,
+      "label": {
+        "en": "Total ease (mm)",
+        "es": "Holgura total (mm)",
+        "fr": "Aisance totale (mm)"
+      }
+    },
+    {
+      "id": "hem_width",
+      "type": "slider",
+      "default": 250,
+      "min": 160,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Front hem half-width (mm)",
+        "es": "Medio bajo delantero (mm)",
+        "fr": "Demi-largeur d'ourlet devant (mm)"
+      }
+    },
+    {
+      "id": "fly_width",
+      "type": "slider",
+      "default": 36,
+      "min": 24,
+      "max": 50,
+      "step": 2,
+      "label": {
+        "en": "Fly extension width (mm)",
+        "es": "Ancho de bragueta (mm)",
+        "fr": "Largeur de la patte de braguette (mm)"
+      }
+    },
+    {
+      "id": "fly_depth",
+      "type": "slider",
+      "default": 180,
+      "min": 120,
+      "max": 240,
+      "step": 5,
+      "label": {
+        "en": "Fly depth (mm)",
+        "es": "Profundidad de bragueta (mm)",
+        "fr": "Profondeur de braguette (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 25,
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance, turned twice (mm)",
+        "es": "Dobladillo de doble doblez (mm)",
+        "fr": "Marge d'ourlet, double rempli (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "hip_girth": 1000, "waist_girth": 880 } },
-    { "id": "bermuda", "label": { "en": "Bermuda length", "es": "Largo bermuda" }, "values": { "inseam_length": 250, "hem_width": 260 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "hip_girth": 1000,
+        "waist_girth": 880
+      }
+    },
+    {
+      "id": "bermuda",
+      "label": {
+        "en": "Bermuda length",
+        "es": "Largo bermuda",
+        "fr": "Longueur bermuda"
+      },
+      "values": {
+        "inseam_length": 250,
+        "hem_width": 260
+      }
+    }
   ],
   "constraints": [
-    { "expression": "waist_girth <= hip_girth", "severity": "warning", "message": { "en": "A waist larger than the hip flattens the waistband suppression", "es": "Una cintura mayor que la cadera aplana la reducción de la pretina" } },
-    { "expression": "fly_depth <= front_rise - 70", "severity": "warning", "message": { "en": "Fly depth is clamped so the fork curve stays below the fly", "es": "La profundidad de bragueta se limita para que la curva de tiro quede debajo de la bragueta" } },
-    { "expression": "denim_ease >= 40", "severity": "warning", "message": { "en": "Rigid denim needs at least 40 mm of ease or the shorts bind", "es": "La mezclilla rígida necesita al menos 40 mm de holgura o el short aprieta" } }
+    {
+      "expression": "waist_girth <= hip_girth",
+      "severity": "warning",
+      "message": {
+        "en": "A waist larger than the hip flattens the waistband suppression",
+        "es": "Una cintura mayor que la cadera aplana la reducción de la pretina",
+        "fr": "Un tour de taille supérieur au tour de hanches aplatit la cintrure de la ceinture"
+      }
+    },
+    {
+      "expression": "fly_depth <= front_rise - 70",
+      "severity": "warning",
+      "message": {
+        "en": "Fly depth is clamped so the fork curve stays below the fly",
+        "es": "La profundidad de bragueta se limita para que la curva de tiro quede debajo de la bragueta",
+        "fr": "La profondeur de braguette est bridée pour que la courbe de fourche reste sous la braguette"
+      }
+    },
+    {
+      "expression": "denim_ease >= 40",
+      "severity": "warning",
+      "message": {
+        "en": "Rigid denim needs at least 40 mm of ease or the shorts bind",
+        "es": "La mezclilla rígida necesita al menos 40 mm de holgura o el short aprieta",
+        "fr": "Le denim rigide a besoin d'au moins 40 mm d'aisance, sinon le short serre"
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["mezclilla-denim"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "mezclilla-denim"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "waistband", "type": "waistband", "edges": [{ "piece": "front", "edge": "waist" }, { "piece": "back", "edge": "waist" }], "parameters": ["waist_girth", "fly_width"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["hem_width", "hem_allowance"] },
-      { "id": "zipper_tape", "type": "zipper_tape", "edges": [{ "piece": "front", "edge": "crotch" }], "parameters": ["fly_depth", "fly_width"] }
+      {
+        "id": "waistband",
+        "type": "waistband",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "waist"
+          },
+          {
+            "piece": "back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "fly_width"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "hem_width",
+          "hem_allowance"
+        ]
+      },
+      {
+        "id": "zipper_tape",
+        "type": "zipper_tape",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "crotch"
+          }
+        ],
+        "parameters": [
+          "fly_depth",
+          "fly_width"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false, "knit_negative_ease": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
     "societal_benefit": {
       "en": "The world's most-worn garment family made repairable and made-to-measure: an open jeans-construction primer — fly extension, J-topstitch, yoke line and rivet marks — on a block anyone can regenerate to their own size.",
-      "es": "La familia de prendas más usada del mundo, reparable y a medida: una cartilla abierta de construcción de jeans — extensión de bragueta, pespunte en J, línea de quilla y marcas de remache — sobre un bloque que cualquiera puede regenerar a su talla."
+      "es": "La familia de prendas más usada del mundo, reparable y a medida: una cartilla abierta de construcción de jeans — extensión de bragueta, pespunte en J, línea de quilla y marcas de remache — sobre un bloque que cualquiera puede regenerar a su talla.",
+      "fr": "La famille de vêtements la plus portée au monde rendue réparable et sur mesure : un manuel ouvert de construction de jean — extension de braguette, piqûre en J, ligne d'empiècement et repères de rivets — sur un bloc que chacun peut régénérer à sa taille."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "A boxed toiletry / wash bag: a wrap body (front + base + back folded at the base), two end gussets that give it its rigid box shape, and a top zip that bridges to the Yantra4D `zipper` solid. Fashion Cabinet owns the bag — dimensions, boxed shape, zip length; Yantra4D owns the zip. FC-200 accessories capsule.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Un neceser de fondo cuadrado: un cuerpo envolvente (frente + base + espalda doblado en la base), dos fuelles de extremo que le dan su forma rígida y un cierre superior que se puentea al sólido `zipper` de Yantra4D. Fashion Cabinet posee la bolsa — dimensiones, forma, largo del cierre; Yantra4D posee el cierre.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Un neceser de fondo cuadrado: un cuerpo envolvente (frente + base + espalda doblado en la base), dos fuelles de extremo que le dan su forma rígida y un cierre superior que se puentea al sólido `zipper` de Yantra4D. Fashion Cabinet posee la bolsa — dimensiones, forma, largo del cierre; Yantra4D posee el cierre.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une trousse de toilette à fond carré : un corps enveloppant (devant + fond + dos plié au fond), deux soufflets d'extrémité qui lui donnent sa forme rigide de boîte, et une fermeture éclair supérieure faisant le pont vers le solide `zipper` de Yantra4D. Fashion Cabinet possède la trousse — dimensions, forme, longueur de fermeture ; Yantra4D possède la fermeture. Capsule accessoires FC-200.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
     "tags": [
@@ -36,7 +37,8 @@
       "id": "set",
       "label": {
         "en": "Full Dopp Kit",
-        "es": "Neceser completo"
+        "es": "Neceser completo",
+        "fr": "Trousse de toilette complète"
       },
       "script_file": "main.py",
       "pieces": [
@@ -50,7 +52,8 @@
       "id": "body",
       "label": {
         "en": "Body (front + base + back)",
-        "es": "Cuerpo (frente + base + espalda)"
+        "es": "Cuerpo (frente + base + espalda)",
+        "fr": "Corps (devant + base + dos)"
       },
       "default_color": "#4a5a6a",
       "cut": {
@@ -63,7 +66,8 @@
       "id": "end",
       "label": {
         "en": "End gusset",
-        "es": "Fuelle de extremo"
+        "es": "Fuelle de extremo",
+        "fr": "Soufflet d'extrémité"
       },
       "default_color": "#3a4a5a",
       "cut": {
@@ -94,11 +98,13 @@
       "step": 10,
       "label": {
         "en": "Length (mm)",
-        "es": "Largo (mm)"
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
       },
       "tooltip": {
         "en": "Length the zip runs along; drives the Yantra4D zip length",
-        "es": "Largo por donde corre el cierre; define el largo del cierre de Yantra4D"
+        "es": "Largo por donde corre el cierre; define el largo del cierre de Yantra4D",
+        "fr": "Longueur le long de laquelle court la fermeture ; pilote la longueur de fermeture Yantra4D"
       }
     },
     {
@@ -111,11 +117,13 @@
       "step": 10,
       "label": {
         "en": "Height (mm)",
-        "es": "Alto (mm)"
+        "es": "Alto (mm)",
+        "fr": "Hauteur (mm)"
       },
       "tooltip": {
         "en": "Front-face height",
-        "es": "Alto de la cara"
+        "es": "Alto de la cara",
+        "fr": "Hauteur de la face avant"
       }
     },
     {
@@ -128,11 +136,13 @@
       "step": 10,
       "label": {
         "en": "Depth (mm)",
-        "es": "Fondo (mm)"
+        "es": "Fondo (mm)",
+        "fr": "Profondeur (mm)"
       },
       "tooltip": {
         "en": "Box depth (end-gusset width)",
-        "es": "Fondo de la caja (ancho del fuelle)"
+        "es": "Fondo de la caja (ancho del fuelle)",
+        "fr": "Profondeur de la boîte (largeur du soufflet d'extrémité)"
       }
     },
     {
@@ -145,11 +155,13 @@
       "step": 1,
       "label": {
         "en": "Seam allowance (mm)",
-        "es": "Margen de costura (mm)"
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
       },
       "tooltip": {
         "en": "Where the body sews to the ends and zip",
-        "es": "Donde el cuerpo se cose a los extremos y al cierre"
+        "es": "Donde el cuerpo se cose a los extremos y al cierre",
+        "fr": "Où le corps se coud aux extrémités et à la fermeture"
       },
       "advanced": true
     }
@@ -159,7 +171,8 @@
       "id": "travel",
       "label": {
         "en": "Travel",
-        "es": "Viaje"
+        "es": "Viaje",
+        "fr": "Voyage"
       },
       "values": {
         "kit_length": 240,
@@ -171,7 +184,8 @@
       "id": "compact",
       "label": {
         "en": "Compact",
-        "es": "Compacto"
+        "es": "Compacto",
+        "fr": "Compact"
       },
       "values": {
         "kit_length": 180,
@@ -207,7 +221,8 @@
         "type": "zipper_tape",
         "label": {
           "en": "Top zip tape",
-          "es": "Cinta del cierre superior"
+          "es": "Cinta del cierre superior",
+          "fr": "Ruban de la fermeture à glissière supérieure"
         },
         "edges": [
           {
@@ -229,7 +244,8 @@
     },
     "societal_benefit": {
       "en": "A boxed wash bag sized to what you pack, with the zip an open printable Yantra4D object sized to the bag's own length — a durable, repairable, made-to-measure kit instead of a disposable one.",
-      "es": "Un neceser de fondo cuadrado dimensionado a lo que empacas, con el cierre como objeto imprimible abierto de Yantra4D dimensionado al largo de la propia bolsa — un neceser durable, reparable y a la medida en vez de uno desechable."
+      "es": "Un neceser de fondo cuadrado dimensionado a lo que empacas, con el cierre como objeto imprimible abierto de Yantra4D dimensionado al largo de la propia bolsa — un neceser durable, reparable y a la medida en vez de uno desechable.",
+      "fr": "Une trousse de toilette à fond carré dimensionnée à ce que vous emportez, avec la fermeture éclair comme objet Yantra4D ouvert et imprimable dimensionné à la propre longueur de la trousse — une trousse durable, réparable et sur mesure au lieu d'une jetable."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

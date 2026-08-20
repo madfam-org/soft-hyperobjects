@@ -6,70 +6,378 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #25. The true wrap dress: the shift-dress body opened at the front and cut twice mirrored, the center edge extended past CF by the wrap extension and drawn as one straight surplice diagonal from the hem corner to the shoulder-neck point — the neck edge IS the wrap edge, with the CF crossing notched at its computed arc fraction. Back on fold with a shallow scoop, A-line flare below the waist, short set-in sleeves whose caps are solved numerically to match the armholes, and two waist ties, the inner one exiting through a side-seam opening notched at the waist.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #25 del FC-100. El auténtico vestido cruzado: el cuerpo del vestido recto abierto por el frente y cortado dos veces en espejo, con la orilla central extendida más allá del centro delantero por el cruce y trazada como una sola diagonal recta de sobrepelliz desde la esquina del dobladillo hasta el punto hombro-cuello — la orilla del escote ES la orilla del cruce, con el cruce del CF piqueteado en su fracción de arco calculada. Trasero al doblez con escote poco profundo, vuelo en línea A bajo la cintura, mangas cortas montadas cuya copa se resuelve numéricamente para coincidir con las sisas, y dos cintas de cintura, la interior saliendo por una abertura en la costura lateral piqueteada a la altura de la cintura.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #25 del FC-100. El auténtico vestido cruzado: el cuerpo del vestido recto abierto por el frente y cortado dos veces en espejo, con la orilla central extendida más allá del centro delantero por el cruce y trazada como una sola diagonal recta de sobrepelliz desde la esquina del dobladillo hasta el punto hombro-cuello — la orilla del escote ES la orilla del cruce, con el cruce del CF piqueteado en su fracción de arco calculada. Trasero al doblez con escote poco profundo, vuelo en línea A bajo la cintura, mangas cortas montadas cuya copa se resuelve numéricamente para coincidir con las sisas, y dos cintas de cintura, la interior saliendo por una abertura en la costura lateral piqueteada a la altura de la cintura.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "FC-100 rang n°25. La véritable robe portefeuille : le corps de la robe droite ouvert devant et coupé deux fois en miroir, le bord central prolongé au-delà du CF par l'extension de croisé et tracé comme une seule diagonale droite de surplis depuis l'angle d'Ourlet jusqu'au point épaule-encolure — le bord d'encolure EST le bord de croisé, avec le croisement du CF cranté à sa fraction d'arc calculée. Dos au pli avec une légère échancrure, évasé en ligne A sous la taille, courtes Manches montées dont les têtes sont résolues numériquement pour s'accorder aux Emmanchures, et deux liens de taille, celui de l'intérieur sortant par une ouverture de couture latérale crantée à la taille.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["dress", "wrap", "surplice", "short-sleeve", "knit", "ties", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "dress",
+      "wrap",
+      "surplice",
+      "short-sleeve",
+      "knit",
+      "ties",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "shift-dress (FC-100 #23), Fashion Cabinet commons — dress body draft + sleeve-cap bisection solver", "license": "LicenseRef-FC1-pending" },
-        { "source": "wrap-skirt (FC-100 #81), Fashion Cabinet commons — wrap extension past CF + waist-tie closure", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "shift-dress (FC-100 #23), Fashion Cabinet commons — dress body draft + sleeve-cap bisection solver",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "wrap-skirt (FC-100 #81), Fashion Cabinet commons — wrap extension past CF + waist-tie closure",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "dress",
-      "label": { "en": "Wrap dress (all pieces)", "es": "Vestido cruzado (todas las piezas)" },
+      "label": {
+        "en": "Wrap dress (all pieces)",
+        "es": "Vestido cruzado (todas las piezas)",
+        "fr": "Robe portefeuille (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "sleeve", "tie"]
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "tie"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Wrap Front", "es": "Delantero Cruzado" }, "default_color": "#8a4a5f", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Dress Back", "es": "Trasero de Vestido" }, "default_color": "#703a4b", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#a86b7f", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "tie", "label": { "en": "Waist Tie", "es": "Cinta de Cintura" }, "default_color": "#c493a3", "cut": { "quantity": 2 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Wrap Front",
+        "es": "Delantero Cruzado",
+        "fr": "Devant portefeuille"
+      },
+      "default_color": "#8a4a5f",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Dress Back",
+        "es": "Trasero de Vestido",
+        "fr": "Dos de robe"
+      },
+      "default_color": "#703a4b",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#a86b7f",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "tie",
+      "label": {
+        "en": "Waist Tie",
+        "es": "Cinta de Cintura",
+        "fr": "Lien de taille"
+      },
+      "default_color": "#c493a3",
+      "cut": {
+        "quantity": 2
+      }
+    }
   ],
   "parameters": [
-    { "id": "bust_girth", "type": "slider", "default": 940, "min": 600, "max": 1700, "step": 10, "measurement": { "standard": "iso_8559", "code": "bust_girth" }, "label": { "en": "Bust girth (mm)", "es": "Contorno de busto (mm)" } },
-    { "id": "dress_length", "type": "slider", "default": 980, "min": 700, "max": 1400, "step": 10, "label": { "en": "Dress length, nape to hem (mm)", "es": "Largo de vestido, nuca a dobladillo (mm)" } },
-    { "id": "neck_girth", "type": "slider", "default": 385, "min": 300, "max": 520, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
-    { "id": "sleeve_length", "type": "slider", "default": 200, "min": 80, "max": 350, "step": 5, "label": { "en": "Sleeve length, cap to hem (mm)", "es": "Largo de manga, copa a dobladillo (mm)" } },
-    { "id": "wrap_ease", "type": "slider", "default": 110, "min": 60, "max": 300, "step": 10, "tooltip": { "en": "Total ease over the bust; the wrap drapes rather than clings", "es": "Holgura total sobre el busto; el cruce cae en lugar de ceñirse" }, "label": { "en": "Wrap ease (mm)", "es": "Holgura del vestido (mm)" } },
-    { "id": "wrap_extension", "type": "slider", "default": 240, "min": 80, "max": 300, "step": 10, "tooltip": { "en": "How far the front edge crosses past CF at the hem", "es": "Cuánto cruza la orilla delantera más allá del CF en el dobladillo" }, "label": { "en": "Wrap extension past CF (mm)", "es": "Cruce más allá del CF (mm)" } },
-    { "id": "flare_mm", "type": "slider", "default": 100, "min": 0, "max": 200, "step": 10, "label": { "en": "A-line flare below the waist (mm)", "es": "Vuelo línea A bajo la cintura (mm)" } },
-    { "id": "tie_length", "type": "slider", "default": 900, "min": 500, "max": 1400, "step": 50, "label": { "en": "Waist tie length (mm)", "es": "Largo de cinta de cintura (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 30, "min": 0, "max": 60, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "default": 940,
+      "min": 600,
+      "max": 1700,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      },
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de buste (mm)"
+      }
+    },
+    {
+      "id": "dress_length",
+      "type": "slider",
+      "default": 980,
+      "min": 700,
+      "max": 1400,
+      "step": 10,
+      "label": {
+        "en": "Dress length, nape to hem (mm)",
+        "es": "Largo de vestido, nuca a dobladillo (mm)",
+        "fr": "Longueur de robe, nuque à l'ourlet (mm)"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 385,
+      "min": 300,
+      "max": 520,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 200,
+      "min": 80,
+      "max": 350,
+      "step": 5,
+      "label": {
+        "en": "Sleeve length, cap to hem (mm)",
+        "es": "Largo de manga, copa a dobladillo (mm)",
+        "fr": "Longueur de manche, tête à l'ourlet (mm)"
+      }
+    },
+    {
+      "id": "wrap_ease",
+      "type": "slider",
+      "default": 110,
+      "min": 60,
+      "max": 300,
+      "step": 10,
+      "tooltip": {
+        "en": "Total ease over the bust; the wrap drapes rather than clings",
+        "es": "Holgura total sobre el busto; el cruce cae en lugar de ceñirse",
+        "fr": "Aisance totale sur la poitrine ; le croisé drape plutôt qu'il n'épouse"
+      },
+      "label": {
+        "en": "Wrap ease (mm)",
+        "es": "Holgura del vestido (mm)",
+        "fr": "Aisance de croisement (mm)"
+      }
+    },
+    {
+      "id": "wrap_extension",
+      "type": "slider",
+      "default": 240,
+      "min": 80,
+      "max": 300,
+      "step": 10,
+      "tooltip": {
+        "en": "How far the front edge crosses past CF at the hem",
+        "es": "Cuánto cruza la orilla delantera más allá del CF en el dobladillo",
+        "fr": "De combien le bord devant croise au-delà du CF à l'Ourlet"
+      },
+      "label": {
+        "en": "Wrap extension past CF (mm)",
+        "es": "Cruce más allá del CF (mm)",
+        "fr": "Extension de croisement au-delà du milieu devant (mm)"
+      }
+    },
+    {
+      "id": "flare_mm",
+      "type": "slider",
+      "default": 100,
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "label": {
+        "en": "A-line flare below the waist (mm)",
+        "es": "Vuelo línea A bajo la cintura (mm)",
+        "fr": "Évasement trapèze sous la taille (mm)"
+      }
+    },
+    {
+      "id": "tie_length",
+      "type": "slider",
+      "default": 900,
+      "min": 500,
+      "max": 1400,
+      "step": 50,
+      "label": {
+        "en": "Waist tie length (mm)",
+        "es": "Largo de cinta de cintura (mm)",
+        "fr": "Longueur de lien de taille (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 30,
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "knee", "label": { "en": "Knee", "es": "A la rodilla" }, "values": { "dress_length": 900 } },
-    { "id": "midi-full-wrap", "label": { "en": "Midi, generous wrap", "es": "Midi, cruce amplio" }, "values": { "dress_length": 1100, "wrap_extension": 280, "flare_mm": 140 } }
+    {
+      "id": "knee",
+      "label": {
+        "en": "Knee",
+        "es": "A la rodilla",
+        "fr": "Genou"
+      },
+      "values": {
+        "dress_length": 900
+      }
+    },
+    {
+      "id": "midi-full-wrap",
+      "label": {
+        "en": "Midi, generous wrap",
+        "es": "Midi, cruce amplio",
+        "fr": "Midi, croisement ample"
+      },
+      "values": {
+        "dress_length": 1100,
+        "wrap_extension": 280,
+        "flare_mm": 140
+      }
+    }
   ],
   "constraints": [
     {
       "expression": "wrap_extension <= bust_girth / 3",
       "severity": "error",
-      "message": { "en": "Wrap extension past CF must stay within a third of the bust girth", "es": "El cruce más allá del centro delantero debe quedar dentro de un tercio del contorno de busto" }
+      "message": {
+        "en": "Wrap extension past CF must stay within a third of the bust girth",
+        "es": "El cruce más allá del centro delantero debe quedar dentro de un tercio del contorno de busto",
+        "fr": "L'extension de croisé au-delà du CF doit rester dans le tiers du Tour de poitrine"
+      }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["jersey-algodon", "popelina-algodon"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "jersey-algodon",
+    "popelina-algodon"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "neck" }, { "piece": "back", "edge": "neck" }], "parameters": ["neck_girth", "wrap_extension"] },
-      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }, { "piece": "sleeve", "edge": "cap" }], "parameters": ["bust_girth", "wrap_ease", "sleeve_length"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["dress_length", "flare_mm", "hem_allowance"] }
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "wrap_extension"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "wrap_ease",
+          "sleeve_length"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "dress_length",
+          "flare_mm",
+          "hem_allowance"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
     "societal_benefit": {
       "en": "A wrap dress fits by tying, not by hardware: the same cut follows a changing body — pregnancy, weight shifts, nursing — and closes without zippers or buttons, which matters for limited dexterity. A verified parametric draft with a numerically solved sleeve cap lets small workshops cut made-to-measure wraps in knit or woven without grading tables.",
-      "es": "Un vestido cruzado ajusta al anudarse, no con herrajes: el mismo corte acompaña a un cuerpo cambiante — embarazo, variaciones de peso, lactancia — y cierra sin cremalleras ni botones, lo que importa cuando hay destreza limitada. Un trazo paramétrico verificado con copa de manga resuelta numéricamente permite a talleres pequeños cortar vestidos cruzados a la medida en punto o plano sin tablas de tallaje."
+      "es": "Un vestido cruzado ajusta al anudarse, no con herrajes: el mismo corte acompaña a un cuerpo cambiante — embarazo, variaciones de peso, lactancia — y cierra sin cremalleras ni botones, lo que importa cuando hay destreza limitada. Un trazo paramétrico verificado con copa de manga resuelta numéricamente permite a talleres pequeños cortar vestidos cruzados a la medida en punto o plano sin tablas de tallaje.",
+      "fr": "Une robe portefeuille s'ajuste en se nouant, pas avec de la quincaillerie : la même coupe suit un corps changeant — grossesse, variations de poids, allaitement — et se ferme sans fermeture éclair ni boutons, ce qui compte en cas de dextérité limitée. Un tracé paramétrique vérifié avec une tête de Manche résolue numériquement permet à de petits ateliers de couper des portefeuilles sur mesure en maille ou en tissé sans grilles de gradation."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

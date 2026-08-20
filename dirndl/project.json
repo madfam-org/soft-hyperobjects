@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "The traditional Alpine (Bavarian/Austrian) dress: a fitted bodice waist-seamed to a full gathered skirt, worn with a separate tied apron. This cartridge drafts the garment geometry — bodice, gathered skirt, and apron — and marks (does not reproduce) the regional trims, lacing, and apron decoration. A soft-goods garment — no hardware. FC-200 long-tail (heritage). Offered with respect for the living tradition.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "El vestido tradicional alpino (bávaro/austríaco): un corpiño ajustado unido en la cintura a una falda amplia fruncida, con un delantal atado por separado. Este cartucho traza la geometría de la prenda — corpiño, falda fruncida y delantal — y marca (no reproduce) los adornos regionales, el cordón y la decoración del delantal. Una prenda textil — sin herrajes. Cola larga FC-200 (patrimonio). Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "El vestido tradicional alpino (bávaro/austríaco): un corpiño ajustado unido en la cintura a una falda amplia fruncida, con un delantal atado por separado. Este cartucho traza la geometría de la prenda — corpiño, falda fruncida y delantal — y marca (no reproduce) los adornos regionales, el cordón y la decoración del delantal. Una prenda textil — sin herrajes. Cola larga FC-200 (patrimonio). Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La robe traditionnelle alpine (bavaroise/autrichienne) : un corsage ajusté monté à la couture de taille sur une jupe ample froncée, portée avec un tablier noué séparé. Cette cartouche trace la géométrie du vêtement — corsage, jupe froncée et tablier — et marque (ne reproduit pas) les garnitures, le laçage et la décoration de tablier régionaux. Un vêtement textile — sans quincaillerie. Longue traîne FC-200 (patrimoine). Proposé dans le respect de la tradition vivante.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "advanced",
     "tags": [
@@ -35,7 +36,8 @@
       "id": "set",
       "label": {
         "en": "Full Dress",
-        "es": "Vestido completo"
+        "es": "Vestido completo",
+        "fr": "Robe complète"
       },
       "script_file": "main.py",
       "pieces": [
@@ -51,7 +53,8 @@
       "id": "bodice_front",
       "label": {
         "en": "Bodice Front",
-        "es": "Corpiño frente"
+        "es": "Corpiño frente",
+        "fr": "Corsage devant"
       },
       "default_color": "#7a5a3a",
       "cut": {
@@ -65,7 +68,8 @@
       "id": "bodice_back",
       "label": {
         "en": "Bodice Back",
-        "es": "Corpiño espalda"
+        "es": "Corpiño espalda",
+        "fr": "Corsage dos"
       },
       "default_color": "#7a5a3a",
       "cut": {
@@ -79,7 +83,8 @@
       "id": "skirt",
       "label": {
         "en": "Skirt",
-        "es": "Falda"
+        "es": "Falda",
+        "fr": "Jupe"
       },
       "default_color": "#6a4a2a",
       "cut": {
@@ -93,7 +98,8 @@
       "id": "apron",
       "label": {
         "en": "Apron",
-        "es": "Delantal"
+        "es": "Delantal",
+        "fr": "Tablier"
       },
       "default_color": "#8a6a4a",
       "cut": {
@@ -137,11 +143,13 @@
       },
       "label": {
         "en": "Bust girth (mm)",
-        "es": "Contorno de busto (mm)"
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de buste (mm)"
       },
       "tooltip": {
         "en": "Full bust",
-        "es": "Busto completo"
+        "es": "Busto completo",
+        "fr": "Tour de poitrine complet"
       }
     },
     {
@@ -158,11 +166,13 @@
       },
       "label": {
         "en": "Waist girth (mm)",
-        "es": "Contorno de cintura (mm)"
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
       },
       "tooltip": {
         "en": "Fitted waist",
-        "es": "Cintura ajustada"
+        "es": "Cintura ajustada",
+        "fr": "Tour de taille ajusté"
       }
     },
     {
@@ -175,11 +185,13 @@
       "step": 5,
       "label": {
         "en": "Bodice length (mm)",
-        "es": "Largo de corpiño (mm)"
+        "es": "Largo de corpiño (mm)",
+        "fr": "Longueur de corsage (mm)"
       },
       "tooltip": {
         "en": "Shoulder to waist seam",
-        "es": "Del hombro a la costura de cintura"
+        "es": "Del hombro a la costura de cintura",
+        "fr": "De l'épaule à la couture de taille"
       }
     },
     {
@@ -192,11 +204,13 @@
       "step": 10,
       "label": {
         "en": "Skirt length (mm)",
-        "es": "Largo de falda (mm)"
+        "es": "Largo de falda (mm)",
+        "fr": "Longueur de jupe (mm)"
       },
       "tooltip": {
         "en": "Waist to hem",
-        "es": "De la cintura al ruedo"
+        "es": "De la cintura al ruedo",
+        "fr": "De la taille à l'ourlet"
       }
     },
     {
@@ -209,11 +223,13 @@
       "step": 0.1,
       "label": {
         "en": "Gather fullness",
-        "es": "Amplitud del fruncido"
+        "es": "Amplitud del fruncido",
+        "fr": "Ampleur du fronçage"
       },
       "tooltip": {
         "en": "Skirt width ÷ waist",
-        "es": "Ancho de falda ÷ cintura"
+        "es": "Ancho de falda ÷ cintura",
+        "fr": "Largeur de jupe ÷ tour de taille"
       }
     },
     {
@@ -226,11 +242,13 @@
       "step": 5,
       "label": {
         "en": "Neck width (mm)",
-        "es": "Ancho de escote (mm)"
+        "es": "Ancho de escote (mm)",
+        "fr": "Largeur d'encolure (mm)"
       },
       "tooltip": {
         "en": "Square-ish neckline",
-        "es": "Escote casi cuadrado"
+        "es": "Escote casi cuadrado",
+        "fr": "Encolure presque carrée"
       }
     },
     {
@@ -243,11 +261,13 @@
       "step": 0.01,
       "label": {
         "en": "Apron width fraction",
-        "es": "Fracción de ancho del delantal"
+        "es": "Fracción de ancho del delantal",
+        "fr": "Fraction de largeur du tablier"
       },
       "tooltip": {
         "en": "Apron width as a fraction of the skirt",
-        "es": "Ancho del delantal como fracción de la falda"
+        "es": "Ancho del delantal como fracción de la falda",
+        "fr": "Largeur du tablier en fraction de la jupe"
       }
     }
   ],
@@ -256,7 +276,8 @@
       "id": "classic",
       "label": {
         "en": "Classic",
-        "es": "Clásico"
+        "es": "Clásico",
+        "fr": "Classique"
       },
       "values": {
         "gather_ratio": 2.2,
@@ -267,7 +288,8 @@
       "id": "midi-full",
       "label": {
         "en": "Fuller midi",
-        "es": "Midi más amplio"
+        "es": "Midi más amplio",
+        "fr": "Midi plus ample"
       },
       "values": {
         "gather_ratio": 2.8,
@@ -290,7 +312,8 @@
         "type": "shoulder",
         "label": {
           "en": "Shoulder seam",
-          "es": "Costura de hombro"
+          "es": "Costura de hombro",
+          "fr": "Couture d'épaule"
         },
         "edges": [
           {
@@ -312,7 +335,8 @@
         "type": "side_seam",
         "label": {
           "en": "Bodice side seam",
-          "es": "Costura lateral de corpiño"
+          "es": "Costura lateral de corpiño",
+          "fr": "Couture côté de corsage"
         },
         "edges": [
           {
@@ -334,7 +358,8 @@
         "type": "waistband",
         "label": {
           "en": "Waist seam (bodice to skirt)",
-          "es": "Costura de cintura (corpiño a falda)"
+          "es": "Costura de cintura (corpiño a falda)",
+          "fr": "Couture de taille (corsage vers jupe)"
         },
         "edges": [
           {
@@ -360,7 +385,8 @@
     },
     "societal_benefit": {
       "en": "An open, made-to-measure dirndl pattern keeps a living heritage garment makeable and repairable by the people who wear it — bodice, skirt, and apron drafted to real measurements, with the regional decoration left to the maker rather than dictated or sold back.",
-      "es": "Un patrón de dirndl abierto y a la medida mantiene una prenda patrimonial viva fabricable y reparable por quienes la visten — corpiño, falda y delantal trazados a medidas reales, con la decoración regional en manos de quien elabora, no dictada ni revendida."
+      "es": "Un patrón de dirndl abierto y a la medida mantiene una prenda patrimonial viva fabricable y reparable por quienes la visten — corpiño, falda y delantal trazados a medidas reales, con la decoración regional en manos de quien elabora, no dictada ni revendida.",
+      "fr": "Un patron de dirndl ouvert et sur mesure garde un vêtement patrimonial vivant fabricable et réparable par ceux qui le portent — corsage, jupe et tablier tracés à des mesures réelles, la décoration régionale laissée à la personne qui le confectionne plutôt que dictée ou revendue."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

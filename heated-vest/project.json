@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "A softshell vest prepared for heating: a sleeveless front + back with a front opening, overlaid with conductive heating routes (marked serpentine traces a heating element follows) and a battery pocket sized to the Yantra4D `battery-holder`. Fashion Cabinet owns the vest + routing; Yantra4D owns the printable battery holder. Routes and pocket are marked for the maker; no electronics/heating element is drafted here. FC-200 e-textile capsule.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Un chaleco softshell preparado para calefacción: un frente + espalda sin mangas con abertura frontal, con rutas de calefacción conductoras marcadas (trazas serpenteantes que sigue un elemento calefactor) y una bolsa de batería dimensionada al `battery-holder` de Yantra4D. Fashion Cabinet posee el chaleco + el ruteo; Yantra4D posee el portapilas imprimible. Las rutas y la bolsa se marcan para quien elabora; no se traza electrónica. Cápsula e-textil FC-200.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Un chaleco softshell preparado para calefacción: un frente + espalda sin mangas con abertura frontal, con rutas de calefacción conductoras marcadas (trazas serpenteantes que sigue un elemento calefactor) y una bolsa de batería dimensionada al `battery-holder` de Yantra4D. Fashion Cabinet posee el chaleco + el ruteo; Yantra4D posee el portapilas imprimible. Las rutas y la bolsa se marcan para quien elabora; no se traza electrónica. Cápsula e-textil FC-200.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un gilet softshell préparé pour le chauffage : un devant + dos sans manches à ouverture devant, recouverts de tracés de chauffage conducteurs (pistes serpentines marquées que suit un élément chauffant) et une poche de batterie dimensionnée au `battery-holder` de Yantra4D. Fashion Cabinet possède le gilet + le routage ; Yantra4D possède le porte-batterie imprimable. Les tracés et la poche sont marqués pour qui le confectionne ; aucune électronique ni élément chauffant n'est tracé ici. Capsule e-textile FC-200.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
     "tags": [
@@ -35,7 +36,8 @@
       "id": "set",
       "label": {
         "en": "Full Vest",
-        "es": "Chaleco completo"
+        "es": "Chaleco completo",
+        "fr": "Gilet complet"
       },
       "script_file": "main.py",
       "pieces": [
@@ -49,7 +51,8 @@
       "id": "front",
       "label": {
         "en": "Front (battery pocket)",
-        "es": "Frente (bolsa de batería)"
+        "es": "Frente (bolsa de batería)",
+        "fr": "Devant (poche batterie)"
       },
       "default_color": "#3a4048",
       "cut": {
@@ -62,7 +65,8 @@
       "id": "back",
       "label": {
         "en": "Back (heating zones)",
-        "es": "Espalda (zonas de calor)"
+        "es": "Espalda (zonas de calor)",
+        "fr": "Dos (zones chauffantes)"
       },
       "default_color": "#3a4048",
       "cut": {
@@ -114,11 +118,13 @@
       },
       "label": {
         "en": "Chest girth (mm)",
-        "es": "Contorno de pecho (mm)"
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
       },
       "tooltip": {
         "en": "Full chest",
-        "es": "Pecho completo"
+        "es": "Pecho completo",
+        "fr": "Tour de poitrine complet"
       }
     },
     {
@@ -131,11 +137,13 @@
       "step": 10,
       "label": {
         "en": "Length (mm)",
-        "es": "Largo (mm)"
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
       },
       "tooltip": {
         "en": "Shoulder to hem",
-        "es": "Del hombro al ruedo"
+        "es": "Del hombro al ruedo",
+        "fr": "De l'épaule à l'ourlet"
       }
     },
     {
@@ -148,11 +156,13 @@
       "step": 5,
       "label": {
         "en": "Neck width (mm)",
-        "es": "Ancho de cuello (mm)"
+        "es": "Ancho de cuello (mm)",
+        "fr": "Largeur d'encolure (mm)"
       },
       "tooltip": {
         "en": "Neck opening",
-        "es": "Abertura de cuello"
+        "es": "Abertura de cuello",
+        "fr": "Ouverture d'encolure"
       }
     },
     {
@@ -165,11 +175,13 @@
       "step": 5,
       "label": {
         "en": "Shoulder width (mm)",
-        "es": "Ancho de hombro (mm)"
+        "es": "Ancho de hombro (mm)",
+        "fr": "Largeur d'épaule (mm)"
       },
       "tooltip": {
         "en": "Half shoulder width",
-        "es": "Medio ancho de hombro"
+        "es": "Medio ancho de hombro",
+        "fr": "Demi-largeur d'épaule"
       }
     },
     {
@@ -182,11 +194,13 @@
       "step": 10,
       "label": {
         "en": "Armhole depth (mm)",
-        "es": "Profundidad de sisa (mm)"
+        "es": "Profundidad de sisa (mm)",
+        "fr": "Profondeur d'emmanchure (mm)"
       },
       "tooltip": {
         "en": "Armhole depth",
-        "es": "Profundidad de la sisa"
+        "es": "Profundidad de la sisa",
+        "fr": "Profondeur d'emmanchure"
       }
     },
     {
@@ -199,11 +213,13 @@
       "step": 10,
       "label": {
         "en": "Layering ease (mm)",
-        "es": "Holgura de capa (mm)"
+        "es": "Holgura de capa (mm)",
+        "fr": "Aisance de superposition (mm)"
       },
       "tooltip": {
         "en": "Ease for wearing over layers",
-        "es": "Holgura para usar sobre capas"
+        "es": "Holgura para usar sobre capas",
+        "fr": "Aisance pour se porter par-dessus des couches"
       }
     },
     {
@@ -216,11 +232,13 @@
       "step": 5,
       "label": {
         "en": "Battery-pocket opening (mm)",
-        "es": "Abertura de bolsa (mm)"
+        "es": "Abertura de bolsa (mm)",
+        "fr": "Ouverture de poche à batterie (mm)"
       },
       "tooltip": {
         "en": "Sized to the Yantra4D battery holder",
-        "es": "A la medida del portapilas de Yantra4D"
+        "es": "A la medida del portapilas de Yantra4D",
+        "fr": "Dimensionnée au porte-batterie Yantra4D"
       }
     },
     {
@@ -233,11 +251,13 @@
       "step": 1,
       "label": {
         "en": "Heating zones",
-        "es": "Zonas de calor"
+        "es": "Zonas de calor",
+        "fr": "Zones chauffantes"
       },
       "tooltip": {
         "en": "Marked serpentine heat routes",
-        "es": "Rutas serpenteantes marcadas"
+        "es": "Rutas serpenteantes marcadas",
+        "fr": "Tracés de chaleur serpentins marqués"
       }
     }
   ],
@@ -246,7 +266,8 @@
       "id": "commuter",
       "label": {
         "en": "Commuter",
-        "es": "Urbano"
+        "es": "Urbano",
+        "fr": "Urbain"
       },
       "values": {
         "vest_ease": 120,
@@ -257,7 +278,8 @@
       "id": "outdoor",
       "label": {
         "en": "Outdoor",
-        "es": "Exterior"
+        "es": "Exterior",
+        "fr": "Extérieur"
       },
       "values": {
         "vest_ease": 240,
@@ -293,7 +315,8 @@
         "type": "shoulder",
         "label": {
           "en": "Shoulder seam",
-          "es": "Costura de hombro"
+          "es": "Costura de hombro",
+          "fr": "Couture d'épaule"
         },
         "edges": [
           {
@@ -315,7 +338,8 @@
         "type": "custom",
         "label": {
           "en": "Heating routing plan",
-          "es": "Plan de ruteo de calor"
+          "es": "Plan de ruteo de calor",
+          "fr": "Plan de cheminement chauffant"
         },
         "edges": [
           {
@@ -338,7 +362,8 @@
     },
     "societal_benefit": {
       "en": "An open, made-to-measure heated vest with marked heating routes and a battery pocket sized to an open printable Yantra4D holder makes warmth-on-demand a repairable, washable, open garment — you reprint the holder and re-route the element instead of discarding a sealed product.",
-      "es": "Un chaleco con calefacción abierto y a la medida con rutas de calor marcadas y una bolsa de batería dimensionada a un portapilas imprimible abierto de Yantra4D vuelve el calor a demanda una prenda abierta, reparable y lavable — reimprimes el portapilas y re-ruteas el elemento en vez de desechar un producto sellado."
+      "es": "Un chaleco con calefacción abierto y a la medida con rutas de calor marcadas y una bolsa de batería dimensionada a un portapilas imprimible abierto de Yantra4D vuelve el calor a demanda una prenda abierta, reparable y lavable — reimprimes el portapilas y re-ruteas el elemento en vez de desechar un producto sellado.",
+      "fr": "Un gilet chauffant ouvert et sur mesure avec des tracés de chauffage marqués et une poche de batterie dimensionnée à un porte-batterie Yantra4D ouvert et imprimable fait de la chaleur à la demande un vêtement ouvert, réparable et lavable — vous réimprimez le porte-batterie et re-routez l'élément au lieu de jeter un produit scellé."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

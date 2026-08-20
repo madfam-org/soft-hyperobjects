@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "A relaxed knit tee prepared for wearable sensing: a boxy front + back with grown-on cap sleeves, overlaid with conductive-thread routes (marked traces from a chest sensor patch to a hem-hub bus) and a sensor-mount pocket sized to the Yantra4D `sensor-mount-plate`. Fashion Cabinet owns the garment + routing plan; Yantra4D owns the printable mount. The routes and pocket are marked for the maker to embroider with conductive thread; no electronics are drafted here. FC-200 e-textile capsule.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Una playera de punto preparada para sensado vestible: un frente + espalda holgados con mangas nacidas, con rutas de hilo conductor marcadas (trazas de un parche sensor en el pecho a un bus en el ruedo) y una bolsa de montaje dimensionada al `sensor-mount-plate` de Yantra4D. Fashion Cabinet posee la prenda + el plan de ruteo; Yantra4D posee el montaje imprimible. Las rutas y la bolsa se marcan para bordar con hilo conductor; no se traza electrónica. Cápsula e-textil FC-200.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Una playera de punto preparada para sensado vestible: un frente + espalda holgados con mangas nacidas, con rutas de hilo conductor marcadas (trazas de un parche sensor en el pecho a un bus en el ruedo) y una bolsa de montaje dimensionada al `sensor-mount-plate` de Yantra4D. Fashion Cabinet posee la prenda + el plan de ruteo; Yantra4D posee el montaje imprimible. Las rutas y la bolsa se marcan para bordar con hilo conductor; no se traza electrónica. Cápsula e-textil FC-200.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un t-shirt en maille détendu préparé pour la captation vestimentaire : un devant + dos carrés à manches montantes venues, recouverts de tracés de fil conducteur (pistes marquées d'un patch capteur poitrine vers un bus concentrateur à l'ourlet) et une poche de montage de capteur dimensionnée à la `sensor-mount-plate` de Yantra4D. Fashion Cabinet possède le vêtement + le plan de routage ; Yantra4D possède le montage imprimable. Les tracés et la poche sont marqués pour que la personne les brode au fil conducteur ; aucune électronique n'est tracée ici. Capsule e-textile FC-200.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
     "tags": [
@@ -35,7 +36,8 @@
       "id": "set",
       "label": {
         "en": "Full Tee",
-        "es": "Playera completa"
+        "es": "Playera completa",
+        "fr": "T-shirt complet"
       },
       "script_file": "main.py",
       "pieces": [
@@ -49,7 +51,8 @@
       "id": "front",
       "label": {
         "en": "Front (e-textile)",
-        "es": "Frente (e-textil)"
+        "es": "Frente (e-textil)",
+        "fr": "Devant (textile connecté)"
       },
       "default_color": "#4a4a55",
       "cut": {
@@ -63,7 +66,8 @@
       "id": "back",
       "label": {
         "en": "Back",
-        "es": "Espalda"
+        "es": "Espalda",
+        "fr": "Dos"
       },
       "default_color": "#4a4a55",
       "cut": {
@@ -115,11 +119,13 @@
       },
       "label": {
         "en": "Chest girth (mm)",
-        "es": "Contorno de pecho (mm)"
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
       },
       "tooltip": {
         "en": "Full chest",
-        "es": "Pecho completo"
+        "es": "Pecho completo",
+        "fr": "Tour de poitrine complet"
       }
     },
     {
@@ -132,11 +138,13 @@
       "step": 10,
       "label": {
         "en": "Length (mm)",
-        "es": "Largo (mm)"
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
       },
       "tooltip": {
         "en": "Shoulder to hem",
-        "es": "Del hombro al ruedo"
+        "es": "Del hombro al ruedo",
+        "fr": "De l'épaule à l'ourlet"
       }
     },
     {
@@ -149,11 +157,13 @@
       "step": 5,
       "label": {
         "en": "Neck width (mm)",
-        "es": "Ancho de cuello (mm)"
+        "es": "Ancho de cuello (mm)",
+        "fr": "Largeur d'encolure (mm)"
       },
       "tooltip": {
         "en": "Neck opening",
-        "es": "Abertura de cuello"
+        "es": "Abertura de cuello",
+        "fr": "Ouverture d'encolure"
       }
     },
     {
@@ -166,11 +176,13 @@
       "step": 10,
       "label": {
         "en": "Grown sleeve (mm)",
-        "es": "Manga nacida (mm)"
+        "es": "Manga nacida (mm)",
+        "fr": "Manche montée d'une pièce (mm)"
       },
       "tooltip": {
         "en": "Grown-on cap sleeve",
-        "es": "Manga nacida"
+        "es": "Manga nacida",
+        "fr": "Manche montante venue"
       }
     },
     {
@@ -183,11 +195,13 @@
       "step": 10,
       "label": {
         "en": "Knit ease (mm)",
-        "es": "Holgura de punto (mm)"
+        "es": "Holgura de punto (mm)",
+        "fr": "Aisance maille (mm)"
       },
       "tooltip": {
         "en": "Close knit ease",
-        "es": "Holgura ceñida de punto"
+        "es": "Holgura ceñida de punto",
+        "fr": "Aisance ceinte de maille"
       }
     },
     {
@@ -200,11 +214,13 @@
       "step": 2,
       "label": {
         "en": "Sensor-mount opening (mm)",
-        "es": "Abertura de montaje (mm)"
+        "es": "Abertura de montaje (mm)",
+        "fr": "Ouverture de montage capteur (mm)"
       },
       "tooltip": {
         "en": "Pocket opening; sized to the Yantra4D mount",
-        "es": "Abertura de bolsa; a la medida del montaje de Yantra4D"
+        "es": "Abertura de bolsa; a la medida del montaje de Yantra4D",
+        "fr": "Ouverture de poche ; dimensionnée au montage Yantra4D"
       }
     },
     {
@@ -217,11 +233,13 @@
       "step": 1,
       "label": {
         "en": "Conductive traces",
-        "es": "Trazas conductoras"
+        "es": "Trazas conductoras",
+        "fr": "Pistes conductrices"
       },
       "tooltip": {
         "en": "Marked routes to the hem bus",
-        "es": "Rutas marcadas al bus del ruedo"
+        "es": "Rutas marcadas al bus del ruedo",
+        "fr": "Tracés marqués vers le bus d'ourlet"
       }
     }
   ],
@@ -230,7 +248,8 @@
       "id": "fitness",
       "label": {
         "en": "Fitness sensing",
-        "es": "Sensado deportivo"
+        "es": "Sensado deportivo",
+        "fr": "Capteur de fitness"
       },
       "values": {
         "knit_ease": 20,
@@ -241,7 +260,8 @@
       "id": "relaxed",
       "label": {
         "en": "Relaxed",
-        "es": "Holgada"
+        "es": "Holgada",
+        "fr": "Ample"
       },
       "values": {
         "knit_ease": 120,
@@ -276,7 +296,8 @@
         "type": "shoulder",
         "label": {
           "en": "Shoulder seam",
-          "es": "Costura de hombro"
+          "es": "Costura de hombro",
+          "fr": "Couture d'épaule"
         },
         "edges": [
           {
@@ -298,7 +319,8 @@
         "type": "custom",
         "label": {
           "en": "Conductive routing plan",
-          "es": "Plan de ruteo conductor"
+          "es": "Plan de ruteo conductor",
+          "fr": "Plan de routage conducteur"
         },
         "edges": [
           {
@@ -321,7 +343,8 @@
     },
     "societal_benefit": {
       "en": "An open, made-to-measure tee with a marked conductive-routing plan and a sensor-mount pocket sized to an open printable Yantra4D enclosure puts wearable sensing — usually a closed, proprietary product — into a repairable, washable, hackable open garment anyone can make.",
-      "es": "Una playera abierta y a la medida con un plan de ruteo conductor marcado y una bolsa de montaje dimensionada a una carcasa imprimible abierta de Yantra4D pone el sensado vestible — usualmente un producto cerrado y propietario — en una prenda abierta, reparable, lavable y modificable que cualquiera puede hacer."
+      "es": "Una playera abierta y a la medida con un plan de ruteo conductor marcado y una bolsa de montaje dimensionada a una carcasa imprimible abierta de Yantra4D pone el sensado vestible — usualmente un producto cerrado y propietario — en una prenda abierta, reparable, lavable y modificable que cualquiera puede hacer.",
+      "fr": "Un t-shirt ouvert et sur mesure avec un plan de routage conducteur marqué et une poche de montage de capteur dimensionnée à un boîtier Yantra4D ouvert et imprimable met la captation vestimentaire — d'ordinaire un produit fermé et propriétaire — dans un vêtement ouvert, réparable, lavable et modifiable que chacun peut confectionner."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

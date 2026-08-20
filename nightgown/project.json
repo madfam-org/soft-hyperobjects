@@ -6,72 +6,388 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #43. The camisole lengthened into a below-knee gown: front and back cut on fold with a gentle A-flare, bound top edges whose binding strip is derived from the measured openings times a stretch ratio, separate spaghetti-strap strips, side slits with matched slit-top notches, and an optional empire gather-zone marking under the bust.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #43 del FC-100. La camisola alargada en camisón por debajo de la rodilla: delantero y trasero cortados al doblez con suave corte en A, bordes superiores con vivo cuya tira se deriva de las aberturas medidas por una proporción de estiramiento, tiras de tirante espagueti separadas, aberturas laterales con piquetes coincidentes y una marca opcional de zona de fruncido imperio bajo el busto.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #43 del FC-100. La camisola alargada en camisón por debajo de la rodilla: delantero y trasero cortados al doblez con suave corte en A, bordes superiores con vivo cuya tira se deriva de las aberturas medidas por una proporción de estiramiento, tiras de tirante espagueti separadas, aberturas laterales con piquetes coincidentes y una marca opcional de zona de fruncido imperio bajo el busto.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "FC-100 rang no 43. Le caraco allongé en chemise de nuit sous le genou : devant et dos coupés au pli avec un léger évasement en A, bords supérieurs bordés dont la bande de bordure est dérivée des ouvertures mesurées multipliées par un rapport d'élasticité, bandes de bretelles spaghetti séparées, fentes de côté avec crans de haut de fente raccordés, et un repère facultatif de zone de fronces empire sous la poitrine.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
-    "tags": ["nightgown", "gown", "straps", "slits", "knit", "woven", "underwear-lounge", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "nightgown",
+      "gown",
+      "straps",
+      "slits",
+      "knit",
+      "woven",
+      "underwear-lounge",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Fashion Cabinet camisole family — strap-point, bound-edge construction (FC-100 rank #44 camisole)", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Fashion Cabinet camisole family — strap-point, bound-edge construction (FC-100 rank #44 camisole)",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "nightgown",
-      "label": { "en": "Nightgown (all pieces)", "es": "Camisón (todas las piezas)" },
+      "label": {
+        "en": "Nightgown (all pieces)",
+        "es": "Camisón (todas las piezas)",
+        "fr": "Chemise de nuit (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "strap", "top_binding"]
+      "pieces": [
+        "front",
+        "back",
+        "strap",
+        "top_binding"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#7a6fae", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Trasero" }, "default_color": "#5d5390", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "strap", "label": { "en": "Strap", "es": "Tirante" }, "default_color": "#9c92c9", "cut": { "quantity": 2 } },
-    { "id": "top_binding", "label": { "en": "Top Binding", "es": "Vivo Superior" }, "default_color": "#c3bce4", "cut": { "quantity": 1 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#7a6fae",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Trasero",
+        "fr": "Dos"
+      },
+      "default_color": "#5d5390",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "strap",
+      "label": {
+        "en": "Strap",
+        "es": "Tirante",
+        "fr": "Bretelle"
+      },
+      "default_color": "#9c92c9",
+      "cut": {
+        "quantity": 2
+      }
+    },
+    {
+      "id": "top_binding",
+      "label": {
+        "en": "Top Binding",
+        "es": "Vivo Superior",
+        "fr": "Passepoil supérieur"
+      },
+      "default_color": "#c3bce4",
+      "cut": {
+        "quantity": 1
+      }
+    }
   ],
   "parameters": [
-    { "id": "bust_girth", "type": "slider", "default": 900, "min": 600, "max": 1600, "step": 10, "measurement": { "standard": "iso_8559", "code": "bust_girth" }, "label": { "en": "Bust girth (mm)", "es": "Contorno de busto (mm)" } },
-    { "id": "gown_length", "type": "slider", "default": 1150, "min": 700, "max": 1400, "step": 10, "label": { "en": "Gown length, strap point to hem (mm)", "es": "Largo del camisón, tirante a dobladillo (mm)" } },
-    { "id": "front_drop", "type": "slider", "default": 105, "min": 40, "max": 200, "step": 5, "label": { "en": "Front neckline drop (mm)", "es": "Caída del escote delantero (mm)" } },
-    { "id": "back_drop", "type": "slider", "default": 45, "min": 10, "max": 120, "step": 5, "label": { "en": "Back edge drop (mm)", "es": "Caída del borde trasero (mm)" } },
-    { "id": "strap_length", "type": "slider", "default": 400, "min": 250, "max": 600, "step": 10, "label": { "en": "Strap cut length (mm)", "es": "Largo de corte del tirante (mm)" } },
-    { "id": "flare_mm", "type": "slider", "default": 120, "min": 0, "max": 250, "step": 5, "label": { "en": "A-flare per quarter (mm)", "es": "Vuelo en A por cuarto (mm)" } },
-    { "id": "slit_height", "type": "slider", "default": 200, "min": 0, "max": 350, "step": 10, "label": { "en": "Side slit height above hem (mm)", "es": "Alto de la abertura lateral sobre el dobladillo (mm)" } },
-    { "id": "knit_ease", "type": "slider", "default": 20, "min": -80, "max": 150, "step": 5, "label": { "en": "Total ease (mm, negative hugs)", "es": "Holgura total (mm, negativa ciñe)" } },
-    { "id": "empire_gather", "type": "checkbox", "default": true, "label": { "en": "Mark empire gather zone", "es": "Marcar zona de fruncido imperio" } },
-    { "id": "bodice_line", "type": "slider", "default": 260, "min": 150, "max": 450, "step": 10, "advanced": true, "label": { "en": "Gather zone below strap point (mm)", "es": "Zona de fruncido bajo el tirante (mm)" } },
-    { "id": "binding_ratio", "type": "slider", "default": 0.92, "min": 0.75, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Binding/opening ratio", "es": "Proporción vivo/abertura" } },
-    { "id": "binding_width", "type": "slider", "default": 10, "min": 6, "max": 20, "step": 1, "label": { "en": "Binding finished width (mm)", "es": "Ancho terminado del vivo (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 7, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 20, "min": 0, "max": 50, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "default": 900,
+      "min": 600,
+      "max": 1600,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      },
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de buste (mm)"
+      }
+    },
+    {
+      "id": "gown_length",
+      "type": "slider",
+      "default": 1150,
+      "min": 700,
+      "max": 1400,
+      "step": 10,
+      "label": {
+        "en": "Gown length, strap point to hem (mm)",
+        "es": "Largo del camisón, tirante a dobladillo (mm)",
+        "fr": "Longueur de robe longue, point de bretelle à l'ourlet (mm)"
+      }
+    },
+    {
+      "id": "front_drop",
+      "type": "slider",
+      "default": 105,
+      "min": 40,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Front neckline drop (mm)",
+        "es": "Caída del escote delantero (mm)",
+        "fr": "Descente d'encolure devant (mm)"
+      }
+    },
+    {
+      "id": "back_drop",
+      "type": "slider",
+      "default": 45,
+      "min": 10,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Back edge drop (mm)",
+        "es": "Caída del borde trasero (mm)",
+        "fr": "Descente du bord dos (mm)"
+      }
+    },
+    {
+      "id": "strap_length",
+      "type": "slider",
+      "default": 400,
+      "min": 250,
+      "max": 600,
+      "step": 10,
+      "label": {
+        "en": "Strap cut length (mm)",
+        "es": "Largo de corte del tirante (mm)",
+        "fr": "Longueur de coupe de la bretelle (mm)"
+      }
+    },
+    {
+      "id": "flare_mm",
+      "type": "slider",
+      "default": 120,
+      "min": 0,
+      "max": 250,
+      "step": 5,
+      "label": {
+        "en": "A-flare per quarter (mm)",
+        "es": "Vuelo en A por cuarto (mm)",
+        "fr": "Évasement trapèze par quart (mm)"
+      }
+    },
+    {
+      "id": "slit_height",
+      "type": "slider",
+      "default": 200,
+      "min": 0,
+      "max": 350,
+      "step": 10,
+      "label": {
+        "en": "Side slit height above hem (mm)",
+        "es": "Alto de la abertura lateral sobre el dobladillo (mm)",
+        "fr": "Hauteur de fente latérale au-dessus de l'ourlet (mm)"
+      }
+    },
+    {
+      "id": "knit_ease",
+      "type": "slider",
+      "default": 20,
+      "min": -80,
+      "max": 150,
+      "step": 5,
+      "label": {
+        "en": "Total ease (mm, negative hugs)",
+        "es": "Holgura total (mm, negativa ciñe)",
+        "fr": "Aisance totale (mm, négative épouse)"
+      }
+    },
+    {
+      "id": "empire_gather",
+      "type": "checkbox",
+      "default": true,
+      "label": {
+        "en": "Mark empire gather zone",
+        "es": "Marcar zona de fruncido imperio",
+        "fr": "Marquer la zone de fronces empire"
+      }
+    },
+    {
+      "id": "bodice_line",
+      "type": "slider",
+      "default": 260,
+      "min": 150,
+      "max": 450,
+      "step": 10,
+      "advanced": true,
+      "label": {
+        "en": "Gather zone below strap point (mm)",
+        "es": "Zona de fruncido bajo el tirante (mm)",
+        "fr": "Zone de fronçage sous le point de bretelle (mm)"
+      }
+    },
+    {
+      "id": "binding_ratio",
+      "type": "slider",
+      "default": 0.92,
+      "min": 0.75,
+      "max": 1.0,
+      "step": 0.01,
+      "advanced": true,
+      "label": {
+        "en": "Binding/opening ratio",
+        "es": "Proporción vivo/abertura",
+        "fr": "Rapport biais/ouverture"
+      }
+    },
+    {
+      "id": "binding_width",
+      "type": "slider",
+      "default": 10,
+      "min": 6,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Binding finished width (mm)",
+        "es": "Ancho terminado del vivo (mm)",
+        "fr": "Largeur finie du biais (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 7,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 20,
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "midi", "label": { "en": "Midi", "es": "Midi" }, "values": { "gown_length": 950 } },
-    { "id": "maxi", "label": { "en": "Maxi", "es": "Maxi" }, "values": { "gown_length": 1250 } }
+    {
+      "id": "midi",
+      "label": {
+        "en": "Midi",
+        "es": "Midi",
+        "fr": "Midi"
+      },
+      "values": {
+        "gown_length": 950
+      }
+    },
+    {
+      "id": "maxi",
+      "label": {
+        "en": "Maxi",
+        "es": "Maxi",
+        "fr": "Maxi"
+      },
+      "values": {
+        "gown_length": 1250
+      }
+    }
   ],
   "constraints": [
     {
       "expression": "slit_height < gown_length / 4",
       "severity": "warning",
-      "message": { "en": "Side slits taller than a quarter of the gown expose the side seam; the draft clamps them", "es": "Aberturas más altas que un cuarto del camisón exponen la costura lateral; el trazo las limita" }
+      "message": {
+        "en": "Side slits taller than a quarter of the gown expose the side seam; the draft clamps them",
+        "es": "Aberturas más altas que un cuarto del camisón exponen la costura lateral; el trazo las limita",
+        "fr": "Des fentes de côté plus hautes qu'un quart de la chemise de nuit exposent la couture de côté ; le tracé les bride"
+      }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["jersey-algodon", "popelina-algodon"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "jersey-algodon",
+    "popelina-algodon"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "top" }, { "piece": "back", "edge": "top" }], "parameters": ["front_drop", "back_drop", "binding_ratio"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["gown_length", "flare_mm", "hem_allowance"] }
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "top"
+          },
+          {
+            "piece": "back",
+            "edge": "top"
+          }
+        ],
+        "parameters": [
+          "front_drop",
+          "back_drop",
+          "binding_ratio"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "gown_length",
+          "flare_mm",
+          "hem_allowance"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": true },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": true
+    },
     "societal_benefit": {
       "en": "The lounge staple that carries strap engineering into full-length drafting: the camisole's measured binding and strap strips, side slits notched at a computed fraction so stride ease is cut identically on front and back, and an empire gather line placed by measurement instead of by eye.",
-      "es": "El básico de descanso que lleva la ingeniería de tirantes al largo completo: el vivo medido y las tiras de tirante de la camisola, aberturas laterales con piquetes a una fracción calculada para que la holgura al andar se corte igual en delantero y trasero, y una línea de fruncido imperio ubicada por medida y no a ojo."
+      "es": "El básico de descanso que lleva la ingeniería de tirantes al largo completo: el vivo medido y las tiras de tirante de la camisola, aberturas laterales con piquetes a una fracción calculada para que la holgura al andar se corte igual en delantero y trasero, y una línea de fruncido imperio ubicada por medida y no a ojo.",
+      "fr": "Le basique d'intérieur qui porte l'ingénierie des bretelles dans le tracé pleine longueur : la bordure mesurée et les bandes de bretelles du caraco, des fentes de côté crantées à une fraction calculée pour que l'aisance d'enjambée soit coupée à l'identique devant et dos, et une ligne de fronces empire placée par mesure plutôt qu'à l'œil."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

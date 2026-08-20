@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "A cap prepared to carry a single-board computer: a crown band + a peak, overlaid with an electronics pocket sized to the Yantra4D `pi-hat-case` enclosure and a marked cable route to a rear battery loop. Fashion Cabinet owns the cap + the pocket plan; Yantra4D owns the printable case. The pocket and route are marked for the maker; no electronics are drafted here. FC-200 e-textile capsule.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Una gorra preparada para llevar una computadora de placa única: una banda de copa + una visera, con una bolsa de electrónica dimensionada a la carcasa `pi-hat-case` de Yantra4D y una ruta de cable marcada a un lazo de batería trasero. Fashion Cabinet posee la gorra + el plan de bolsa; Yantra4D posee la carcasa imprimible. La bolsa y la ruta se marcan para quien elabora; no se traza electrónica. Cápsula e-textil FC-200.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Una gorra preparada para llevar una computadora de placa única: una banda de copa + una visera, con una bolsa de electrónica dimensionada a la carcasa `pi-hat-case` de Yantra4D y una ruta de cable marcada a un lazo de batería trasero. Fashion Cabinet posee la gorra + el plan de bolsa; Yantra4D posee la carcasa imprimible. La bolsa y la ruta se marcan para quien elabora; no se traza electrónica. Cápsula e-textil FC-200.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une casquette préparée pour porter un nano-ordinateur monocarte : un bandeau de calotte + une visière, dotés d'une poche électronique dimensionnée au boîtier `pi-hat-case` de Yantra4D et d'un cheminement de câble repéré vers une boucle de batterie arrière. Fashion Cabinet possède la casquette + le plan de poche ; Yantra4D possède le boîtier imprimable. La poche et le cheminement sont repérés pour celui qui confectionne ; aucune électronique n'est tracée ici. Capsule e-textile FC-200.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
     "tags": [
@@ -35,7 +36,8 @@
       "id": "set",
       "label": {
         "en": "Full Cap",
-        "es": "Gorra completa"
+        "es": "Gorra completa",
+        "fr": "Casquette complète"
       },
       "script_file": "main.py",
       "pieces": [
@@ -49,7 +51,8 @@
       "id": "crown",
       "label": {
         "en": "Crown (electronics pocket)",
-        "es": "Copa (bolsa de electrónica)"
+        "es": "Copa (bolsa de electrónica)",
+        "fr": "Calotte (poche électronique)"
       },
       "default_color": "#2f3b4a",
       "cut": {
@@ -62,7 +65,8 @@
       "id": "peak",
       "label": {
         "en": "Peak",
-        "es": "Visera"
+        "es": "Visera",
+        "fr": "Visière"
       },
       "default_color": "#252f3b",
       "cut": {
@@ -114,11 +118,13 @@
       },
       "label": {
         "en": "Head girth (mm)",
-        "es": "Contorno de cabeza (mm)"
+        "es": "Contorno de cabeza (mm)",
+        "fr": "Tour de tête (mm)"
       },
       "tooltip": {
         "en": "Head circumference",
-        "es": "Contorno de cabeza"
+        "es": "Contorno de cabeza",
+        "fr": "Tour de tête"
       }
     },
     {
@@ -131,11 +137,13 @@
       "step": 5,
       "label": {
         "en": "Crown depth (mm)",
-        "es": "Profundidad de copa (mm)"
+        "es": "Profundidad de copa (mm)",
+        "fr": "Profondeur de calotte (mm)"
       },
       "tooltip": {
         "en": "Crown band height",
-        "es": "Alto de la banda de copa"
+        "es": "Alto de la banda de copa",
+        "fr": "Hauteur du bandeau de calotte"
       }
     },
     {
@@ -148,11 +156,13 @@
       "step": 5,
       "label": {
         "en": "Peak length (mm)",
-        "es": "Largo de visera (mm)"
+        "es": "Largo de visera (mm)",
+        "fr": "Longueur de visière (mm)"
       },
       "tooltip": {
         "en": "Peak projection",
-        "es": "Proyección de la visera"
+        "es": "Proyección de la visera",
+        "fr": "Avancée de la visière"
       }
     },
     {
@@ -165,11 +175,13 @@
       "step": 5,
       "label": {
         "en": "Electronics-pocket opening (mm)",
-        "es": "Abertura de bolsa (mm)"
+        "es": "Abertura de bolsa (mm)",
+        "fr": "Ouverture de la poche électronique (mm)"
       },
       "tooltip": {
         "en": "Sized to the Yantra4D pi-hat-case",
-        "es": "A la medida del pi-hat-case de Yantra4D"
+        "es": "A la medida del pi-hat-case de Yantra4D",
+        "fr": "Dimensionnée au pi-hat-case de Yantra4D"
       }
     },
     {
@@ -182,11 +194,13 @@
       "step": 2,
       "label": {
         "en": "Fit ease (mm)",
-        "es": "Holgura (mm)"
+        "es": "Holgura (mm)",
+        "fr": "Aisance d'ajustement (mm)"
       },
       "tooltip": {
         "en": "Added to the head girth",
-        "es": "Se agrega al contorno de cabeza"
+        "es": "Se agrega al contorno de cabeza",
+        "fr": "Ajouté au tour de tête"
       }
     }
   ],
@@ -195,7 +209,8 @@
       "id": "classic",
       "label": {
         "en": "Classic",
-        "es": "Clásico"
+        "es": "Clásico",
+        "fr": "Classique"
       },
       "values": {
         "crown_depth": 130,
@@ -206,7 +221,8 @@
       "id": "large-board",
       "label": {
         "en": "Large board",
-        "es": "Placa grande"
+        "es": "Placa grande",
+        "fr": "Plaque grande"
       },
       "values": {
         "case_size": 100,
@@ -241,7 +257,8 @@
         "type": "custom",
         "label": {
           "en": "Headband seam",
-          "es": "Costura de banda"
+          "es": "Costura de banda",
+          "fr": "Couture de bandeau"
         },
         "edges": [
           {
@@ -259,7 +276,8 @@
         "type": "pocket",
         "label": {
           "en": "Electronics pocket",
-          "es": "Bolsa de electrónica"
+          "es": "Bolsa de electrónica",
+          "fr": "Poche électronique"
         },
         "edges": [
           {
@@ -282,7 +300,8 @@
     },
     "societal_benefit": {
       "en": "An open, made-to-measure cap with an electronics pocket sized to an open printable Yantra4D enclosure makes wearable computing — camera rigs, AR, sensing — a repairable, hackable open garment anyone can build, instead of a sealed device strapped on.",
-      "es": "Una gorra abierta y a la medida con una bolsa de electrónica dimensionada a una carcasa imprimible abierta de Yantra4D vuelve el cómputo vestible — cámaras, RA, sensado — una prenda abierta y modificable que cualquiera puede construir, en vez de un dispositivo sellado sujetado encima."
+      "es": "Una gorra abierta y a la medida con una bolsa de electrónica dimensionada a una carcasa imprimible abierta de Yantra4D vuelve el cómputo vestible — cámaras, RA, sensado — una prenda abierta y modificable que cualquiera puede construir, en vez de un dispositivo sellado sujetado encima.",
+      "fr": "Une casquette ouverte et sur mesure avec une poche électronique dimensionnée à un boîtier Yantra4D ouvert et imprimable fait de l'informatique portée — montages caméra, RA, captation — un vêtement ouvert, réparable et bidouillable que chacun peut construire, au lieu d'un dispositif scellé sanglé par-dessus."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

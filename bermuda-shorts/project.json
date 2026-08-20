@@ -6,65 +6,429 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #83. Tailored woven shorts on the chino trouser block, cropped to just-above-the-knee: front/back legs with a grown-on fly extension (J-topstitch guide and fly-stop notch), diagonal slash-pocket openings, pressed creases, two back waist darts with a back-pocket placement, a two-piece waistband eased by the closure overlap, five belt loops, and an optional turn-up cuff carried as a hem allowance with a fold-line marking. The back hem width is solved so the back inseam matches the gently bowed front inseam exactly.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #83 del FC-100. Bermudas de sastre en tela plana sobre el bloque del pantalón chino, recortadas a la altura de la rodilla: piernas delantera/trasera con aletilla de bragueta unida (guía de pespunte en J y piquete de tope), aberturas diagonales de bolsillo sesgado, rayas planchadas, dos pinzas traseras de cintura con marca de bolsillo trasero, pretina en dos piezas con holgura por el traslape de cierre, cinco trabillas y una vuelta (dobladillo) opcional con línea de doblez. El ancho trasero del bajo se resuelve para que la entrepierna trasera coincida exactamente con la delantera ligeramente curvada.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #83 del FC-100. Bermudas de sastre en tela plana sobre el bloque del pantalón chino, recortadas a la altura de la rodilla: piernas delantera/trasera con aletilla de bragueta unida (guía de pespunte en J y piquete de tope), aberturas diagonales de bolsillo sesgado, rayas planchadas, dos pinzas traseras de cintura con marca de bolsillo trasero, pretina en dos piezas con holgura por el traslape de cierre, cinco trabillas y una vuelta (dobladillo) opcional con línea de doblez. El ancho trasero del bajo se resuelve para que la entrepierna trasera coincida exactamente con la delantera ligeramente curvada.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Rang n°83 du FC-100. Short tailleur en toile sur le bloc de pantalon chino, raccourci juste au-dessus du genou : jambes devant/dos avec sous-pont de braguette venu de coupe (guide de piqûre en J et cran d'arrêt de braguette), ouvertures de poches à l'italienne en biais, plis marqués au fer, deux pinces de taille au dos avec un emplacement de poche dos, une ceinture en deux pièces mise à l'aise par le croisement de fermeture, cinq passants de ceinture, et un revers optionnel porté comme marge d'ourlet avec une ligne de pli tracée. La largeur d'ourlet du dos est résolue pour que l'entrejambe du dos coïncide exactement avec l'entrejambe du devant légèrement galbé.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["bermuda", "shorts", "bottoms", "fly-front", "woven", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "bermuda",
+      "shorts",
+      "bottoms",
+      "fly-front",
+      "woven",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet (chino block cropped to bermuda length)", "license": "original" },
-        { "source": "chinos — Fashion Cabinet commons (fly extension, two-piece waistband, slash pocket, belt loops, front-inseam bow)", "license": "LicenseRef-FC1-pending" },
-        { "source": "denim-shorts — Fashion Cabinet commons (shorts hem length and turn-up cuff fold convention)", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet (chino block cropped to bermuda length)",
+          "license": "original"
+        },
+        {
+          "source": "chinos — Fashion Cabinet commons (fly extension, two-piece waistband, slash pocket, belt loops, front-inseam bow)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "denim-shorts — Fashion Cabinet commons (shorts hem length and turn-up cuff fold convention)",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
-  "modes": [{ "id": "bermuda", "label": { "en": "Bermuda shorts (all pieces)", "es": "Bermudas (todas las piezas)" }, "script_file": "main.py", "pieces": ["front", "back", "waistband", "belt_loop"] }],
+  "modes": [
+    {
+      "id": "bermuda",
+      "label": {
+        "en": "Bermuda shorts (all pieces)",
+        "es": "Bermudas (todas las piezas)",
+        "fr": "Bermuda (toutes les pièces)"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "waistband",
+        "belt_loop"
+      ]
+    }
+  ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front Leg", "es": "Pierna Delantera" }, "default_color": "#c2a878", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back Leg", "es": "Pierna Trasera" }, "default_color": "#a68c5f", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "waistband", "label": { "en": "Waistband (half)", "es": "Pretina (mitad)" }, "default_color": "#d3bf94", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "belt_loop", "label": { "en": "Belt Loop", "es": "Trabilla" }, "default_color": "#8a734d", "cut": { "quantity": 5 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front Leg",
+        "es": "Pierna Delantera",
+        "fr": "Jambe devant"
+      },
+      "default_color": "#c2a878",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back Leg",
+        "es": "Pierna Trasera",
+        "fr": "Jambe dos"
+      },
+      "default_color": "#a68c5f",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "Waistband (half)",
+        "es": "Pretina (mitad)",
+        "fr": "Ceinture (moitié)"
+      },
+      "default_color": "#d3bf94",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "belt_loop",
+      "label": {
+        "en": "Belt Loop",
+        "es": "Trabilla",
+        "fr": "Passant de ceinture"
+      },
+      "default_color": "#8a734d",
+      "cut": {
+        "quantity": 5
+      }
+    }
   ],
   "parameters": [
-    { "id": "hip_girth", "type": "slider", "default": 1000, "min": 650, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
-    { "id": "waist_girth", "type": "slider", "default": 860, "min": 500, "max": 1600, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
-    { "id": "inseam_length", "type": "slider", "default": 230, "min": 180, "max": 320, "step": 5, "measurement": { "standard": "iso_8559", "code": "inside_leg_length" }, "label": { "en": "Inseam length (mm)", "es": "Largo de entrepierna (mm)" } },
-    { "id": "front_rise", "type": "slider", "default": 265, "min": 190, "max": 380, "step": 5, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)" } },
-    { "id": "back_rise", "type": "slider", "default": 305, "min": 190, "max": 460, "step": 5, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)" } },
-    { "id": "woven_ease", "type": "slider", "default": 100, "min": 40, "max": 400, "step": 10, "label": { "en": "Total hip ease (mm)", "es": "Holgura total de cadera (mm)" } },
-    { "id": "hem_width", "type": "slider", "default": 175, "min": 140, "max": 300, "step": 5, "label": { "en": "Front hem half-width, flat (mm)", "es": "Medio bajo delantero, extendido (mm)" } },
-    { "id": "fly_width", "type": "slider", "default": 38, "min": 20, "max": 60, "step": 2, "label": { "en": "Fly extension width (mm)", "es": "Ancho de aletilla (mm)" } },
-    { "id": "fly_depth", "type": "slider", "default": 200, "min": 80, "max": 300, "step": 5, "label": { "en": "Fly depth (mm)", "es": "Largo de bragueta (mm)" } },
-    { "id": "cuff_depth", "type": "slider", "default": 0, "min": 0, "max": 60, "step": 5, "advanced": true, "label": { "en": "Turn-up cuff depth (mm)", "es": "Ancho de vuelta (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "advanced": true, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 35, "min": 0, "max": 60, "step": 5, "advanced": true, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "default": 1000,
+      "min": 650,
+      "max": 1800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "default": 860,
+      "min": 500,
+      "max": 1600,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      }
+    },
+    {
+      "id": "inseam_length",
+      "type": "slider",
+      "default": 230,
+      "min": 180,
+      "max": 320,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "inside_leg_length"
+      },
+      "label": {
+        "en": "Inseam length (mm)",
+        "es": "Largo de entrepierna (mm)",
+        "fr": "Longueur d'entrejambe (mm)"
+      }
+    },
+    {
+      "id": "front_rise",
+      "type": "slider",
+      "default": 265,
+      "min": 190,
+      "max": 380,
+      "step": 5,
+      "label": {
+        "en": "Front rise (mm)",
+        "es": "Tiro delantero (mm)",
+        "fr": "Hauteur de fourche avant (mm)"
+      }
+    },
+    {
+      "id": "back_rise",
+      "type": "slider",
+      "default": 305,
+      "min": 190,
+      "max": 460,
+      "step": 5,
+      "label": {
+        "en": "Back rise (mm)",
+        "es": "Tiro trasero (mm)",
+        "fr": "Hauteur de fourche arrière (mm)"
+      }
+    },
+    {
+      "id": "woven_ease",
+      "type": "slider",
+      "default": 100,
+      "min": 40,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Total hip ease (mm)",
+        "es": "Holgura total de cadera (mm)",
+        "fr": "Aisance totale aux hanches (mm)"
+      }
+    },
+    {
+      "id": "hem_width",
+      "type": "slider",
+      "default": 175,
+      "min": 140,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Front hem half-width, flat (mm)",
+        "es": "Medio bajo delantero, extendido (mm)",
+        "fr": "Demi-largeur d'ourlet devant, à plat (mm)"
+      }
+    },
+    {
+      "id": "fly_width",
+      "type": "slider",
+      "default": 38,
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Fly extension width (mm)",
+        "es": "Ancho de aletilla (mm)",
+        "fr": "Largeur de la patte de braguette (mm)"
+      }
+    },
+    {
+      "id": "fly_depth",
+      "type": "slider",
+      "default": 200,
+      "min": 80,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Fly depth (mm)",
+        "es": "Largo de bragueta (mm)",
+        "fr": "Longueur de braguette (mm)"
+      }
+    },
+    {
+      "id": "cuff_depth",
+      "type": "slider",
+      "default": 0,
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "advanced": true,
+      "label": {
+        "en": "Turn-up cuff depth (mm)",
+        "es": "Ancho de vuelta (mm)",
+        "fr": "Profondeur de revers de poignet (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "advanced": true,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 35,
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "advanced": true,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "hip_girth": 1000, "waist_girth": 860, "inseam_length": 230, "hem_width": 175 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "hip_girth": 1120, "waist_girth": 980, "inseam_length": 250, "hem_width": 190 } },
-    { "id": "cuffed", "label": { "en": "Cuffed bermuda", "es": "Bermuda con vuelta" }, "values": { "inseam_length": 250, "cuff_depth": 40 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "hip_girth": 1000,
+        "waist_girth": 860,
+        "inseam_length": 230,
+        "hem_width": 175
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G",
+        "fr": "L"
+      },
+      "values": {
+        "hip_girth": 1120,
+        "waist_girth": 980,
+        "inseam_length": 250,
+        "hem_width": 190
+      }
+    },
+    {
+      "id": "cuffed",
+      "label": {
+        "en": "Cuffed bermuda",
+        "es": "Bermuda con vuelta",
+        "fr": "Bermuda à revers"
+      },
+      "values": {
+        "inseam_length": 250,
+        "cuff_depth": 40
+      }
+    }
   ],
   "constraints": [
-    { "expression": "back_rise >= front_rise", "severity": "warning", "message": { "en": "Back rise should be at least the front rise", "es": "El tiro trasero debe ser al menos el delantero" } },
-    { "expression": "fly_depth < front_rise", "severity": "warning", "message": { "en": "Fly depth must stay above the crotch line (less than the front rise)", "es": "El largo de bragueta debe quedar arriba del tiro (menor que el tiro delantero)" } },
-    { "expression": "waist_girth <= hip_girth", "severity": "warning", "message": { "en": "A waist larger than the hip flattens the waistband suppression", "es": "Una cintura mayor que la cadera aplana la reducción de la pretina" } }
+    {
+      "expression": "back_rise >= front_rise",
+      "severity": "warning",
+      "message": {
+        "en": "Back rise should be at least the front rise",
+        "es": "El tiro trasero debe ser al menos el delantero",
+        "fr": "La hauteur de fourche du dos doit valoir au moins celle du devant"
+      }
+    },
+    {
+      "expression": "fly_depth < front_rise",
+      "severity": "warning",
+      "message": {
+        "en": "Fly depth must stay above the crotch line (less than the front rise)",
+        "es": "El largo de bragueta debe quedar arriba del tiro (menor que el tiro delantero)",
+        "fr": "La profondeur de braguette doit rester au-dessus de la ligne d'entrejambe (inférieure à la hauteur de fourche du devant)"
+      }
+    },
+    {
+      "expression": "waist_girth <= hip_girth",
+      "severity": "warning",
+      "message": {
+        "en": "A waist larger than the hip flattens the waistband suppression",
+        "es": "Una cintura mayor que la cadera aplana la reducción de la pretina",
+        "fr": "Une taille plus grande que la hanche aplatit la reprise de la ceinture"
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json", "pdf"],
-  "fabrics": ["popelina-algodon", "manta-cruda"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "popelina-algodon",
+    "manta-cruda"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "waistband", "type": "waistband", "edges": [{ "piece": "front", "edge": "waist" }, { "piece": "back", "edge": "waist" }], "parameters": ["waist_girth", "hip_girth"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["hem_width", "hem_allowance", "cuff_depth"] },
-      { "id": "fly", "type": "zipper_tape", "edges": [{ "piece": "front", "edge": "crotch" }], "parameters": ["fly_depth", "fly_width"] }
+      {
+        "id": "waistband",
+        "type": "waistband",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "waist"
+          },
+          {
+            "piece": "back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "hip_girth"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "hem_width",
+          "hem_allowance",
+          "cuff_depth"
+        ]
+      },
+      {
+        "id": "fly",
+        "type": "zipper_tape",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "crotch"
+          }
+        ],
+        "parameters": [
+          "fly_depth",
+          "fly_width"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false, "knit_negative_ease": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
     "societal_benefit": {
       "en": "The warm-weather tailored short as a commons object: a graded-by-measurement bermuda with a real fly, slash pockets, belt loops and an optional turn-up cuff, cuttable in cotton poplin or raw canvas by any small workshop without licensing a block.",
-      "es": "El short de sastre para clima cálido como objeto del commons: una bermuda graduada por medidas con bragueta real, bolsillos sesgados, trabillas y vuelta opcional, cortable en popelina de algodón o manta cruda por cualquier taller pequeño sin licenciar un bloque."
+      "es": "El short de sastre para clima cálido como objeto del commons: una bermuda graduada por medidas con bragueta real, bolsillos sesgados, trabillas y vuelta opcional, cortable en popelina de algodón o manta cruda por cualquier taller pequeño sin licenciar un bloque.",
+      "fr": "Le short tailleur d'été comme objet du commun : un bermuda gradué à la mesure avec une vraie braguette, des poches à l'italienne, des passants et un revers optionnel, coupable en popeline de coton ou en toile brute par n'importe quel petit atelier sans licence de bloc."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

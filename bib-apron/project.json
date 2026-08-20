@@ -6,49 +6,290 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #91. The simplest complete garment in the index: one body piece on fold with a curved underarm sweep, neck strap, waist ties, and a divided patch pocket. The Wave-1 candidate for the First Garment ceremony.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #91 del FC-100. La prenda completa más simple del índice: una pieza al doblez con curva de sisa, tirante de cuello, cintas de cintura y bolsa de parche dividida. Candidata de la Ola 1 para la ceremonia de la Primera Prenda.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #91 del FC-100. La prenda completa más simple del índice: una pieza al doblez con curva de sisa, tirante de cuello, cintas de cintura y bolsa de parche dividida. Candidata de la Ola 1 para la ceremonia de la Primera Prenda.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Rang n°91 du FC-100. Le vêtement complet le plus simple de l'index : une seule pièce de corps au pli avec une courbe de dessous de bras douce, une bride de cou, des liens de taille et une poche plaquée divisée. Le candidat de la Vague 1 pour la cérémonie du Premier Vêtement.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
-    "tags": ["apron", "workwear", "beginner", "fc100", "hyperobject", "commons"],
-    "attribution": { "author": "Innovaciones MADFAM", "license": "LicenseRef-FC1-pending", "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }] }
+    "tags": [
+      "apron",
+      "workwear",
+      "beginner",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
   },
-  "modes": [{ "id": "apron", "label": { "en": "Apron (all pieces)", "es": "Mandil (todas las piezas)" }, "script_file": "main.py", "pieces": ["body", "pocket", "neck_strap", "waist_tie"] }],
+  "modes": [
+    {
+      "id": "apron",
+      "label": {
+        "en": "Apron (all pieces)",
+        "es": "Mandil (todas las piezas)",
+        "fr": "Tablier (toutes les pièces)"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "body",
+        "pocket",
+        "neck_strap",
+        "waist_tie"
+      ]
+    }
+  ],
   "pieces": [
-    { "id": "body", "label": { "en": "Apron Body", "es": "Cuerpo del Mandil" }, "default_color": "#b0855a", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "pocket", "label": { "en": "Patch Pocket", "es": "Bolsa de Parche" }, "default_color": "#c69a6e", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "neck_strap", "label": { "en": "Neck Strap", "es": "Tirante de Cuello" }, "default_color": "#d9b189", "cut": { "quantity": 1 } },
-    { "id": "waist_tie", "label": { "en": "Waist Tie", "es": "Cinta de Cintura" }, "default_color": "#d9b189", "cut": { "quantity": 2 } }
+    {
+      "id": "body",
+      "label": {
+        "en": "Apron Body",
+        "es": "Cuerpo del Mandil",
+        "fr": "Corps du tablier"
+      },
+      "default_color": "#b0855a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "pocket",
+      "label": {
+        "en": "Patch Pocket",
+        "es": "Bolsa de Parche",
+        "fr": "Poche plaquée"
+      },
+      "default_color": "#c69a6e",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "neck_strap",
+      "label": {
+        "en": "Neck Strap",
+        "es": "Tirante de Cuello",
+        "fr": "Bretelle de cou"
+      },
+      "default_color": "#d9b189",
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "waist_tie",
+      "label": {
+        "en": "Waist Tie",
+        "es": "Cinta de Cintura",
+        "fr": "Lien de taille"
+      },
+      "default_color": "#d9b189",
+      "cut": {
+        "quantity": 2
+      }
+    }
   ],
   "parameters": [
-    { "id": "bib_width", "type": "slider", "default": 280, "min": 180, "max": 420, "step": 10, "label": { "en": "Bib width (mm)", "es": "Ancho del peto (mm)" } },
-    { "id": "waist_width", "type": "slider", "default": 600, "min": 400, "max": 900, "step": 10, "label": { "en": "Waist width (mm)", "es": "Ancho en cintura (mm)" } },
-    { "id": "skirt_length", "type": "slider", "default": 500, "min": 250, "max": 800, "step": 10, "label": { "en": "Skirt length (mm)", "es": "Largo de falda (mm)" } },
-    { "id": "bib_height", "type": "slider", "default": 300, "min": 180, "max": 420, "step": 10, "label": { "en": "Bib height (mm)", "es": "Alto del peto (mm)" } },
-    { "id": "tie_length", "type": "slider", "default": 900, "min": 500, "max": 1300, "step": 50, "label": { "en": "Waist tie length (mm)", "es": "Largo de cinta (mm)" } },
-    { "id": "strap_length", "type": "slider", "default": 520, "min": 350, "max": 800, "step": 10, "label": { "en": "Neck strap length (mm)", "es": "Largo de tirante (mm)" } },
-    { "id": "pocket_width", "type": "slider", "default": 380, "min": 180, "max": 500, "step": 10, "label": { "en": "Pocket width (mm)", "es": "Ancho de bolsa (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 12, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 15, "min": 0, "max": 40, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "bib_width",
+      "type": "slider",
+      "default": 280,
+      "min": 180,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Bib width (mm)",
+        "es": "Ancho del peto (mm)",
+        "fr": "Largeur de bavette (mm)"
+      }
+    },
+    {
+      "id": "waist_width",
+      "type": "slider",
+      "default": 600,
+      "min": 400,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Waist width (mm)",
+        "es": "Ancho en cintura (mm)",
+        "fr": "Largeur à la taille (mm)"
+      }
+    },
+    {
+      "id": "skirt_length",
+      "type": "slider",
+      "default": 500,
+      "min": 250,
+      "max": 800,
+      "step": 10,
+      "label": {
+        "en": "Skirt length (mm)",
+        "es": "Largo de falda (mm)",
+        "fr": "Longueur de jupe (mm)"
+      }
+    },
+    {
+      "id": "bib_height",
+      "type": "slider",
+      "default": 300,
+      "min": 180,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Bib height (mm)",
+        "es": "Alto del peto (mm)",
+        "fr": "Hauteur de bavette (mm)"
+      }
+    },
+    {
+      "id": "tie_length",
+      "type": "slider",
+      "default": 900,
+      "min": 500,
+      "max": 1300,
+      "step": 50,
+      "label": {
+        "en": "Waist tie length (mm)",
+        "es": "Largo de cinta (mm)",
+        "fr": "Longueur de lien de taille (mm)"
+      }
+    },
+    {
+      "id": "strap_length",
+      "type": "slider",
+      "default": 520,
+      "min": 350,
+      "max": 800,
+      "step": 10,
+      "label": {
+        "en": "Neck strap length (mm)",
+        "es": "Largo de tirante (mm)",
+        "fr": "Longueur de bretelle (mm)"
+      }
+    },
+    {
+      "id": "pocket_width",
+      "type": "slider",
+      "default": 380,
+      "min": 180,
+      "max": 500,
+      "step": 10,
+      "label": {
+        "en": "Pocket width (mm)",
+        "es": "Ancho de bolsa (mm)",
+        "fr": "Largeur de poche (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 12,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 15,
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "kitchen", "label": { "en": "Kitchen", "es": "Cocina" }, "values": {} },
-    { "id": "workshop", "label": { "en": "Workshop (long)", "es": "Taller (largo)" }, "values": { "skirt_length": 650, "pocket_width": 460 } }
+    {
+      "id": "kitchen",
+      "label": {
+        "en": "Kitchen",
+        "es": "Cocina",
+        "fr": "Cuisine"
+      },
+      "values": {}
+    },
+    {
+      "id": "workshop",
+      "label": {
+        "en": "Workshop (long)",
+        "es": "Taller (largo)",
+        "fr": "Atelier (long)"
+      },
+      "values": {
+        "skirt_length": 650,
+        "pocket_width": 460
+      }
+    }
   ],
   "constraints": [
-    { "expression": "waist_width >= bib_width + 80", "severity": "error", "message": { "en": "Waist must be wider than the bib for the underarm sweep", "es": "La cintura debe ser más ancha que el peto para la curva de sisa" } }
+    {
+      "expression": "waist_width >= bib_width + 80",
+      "severity": "error",
+      "message": {
+        "en": "Waist must be wider than the bib for the underarm sweep",
+        "es": "La cintura debe ser más ancha que el peto para la curva de sisa",
+        "fr": "La taille doit être plus large que le bavoir pour la courbe de dessous de bras"
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["manta-cruda"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "waist_ties", "type": "custom", "edges": [{ "piece": "body", "edge": "underarm" }], "parameters": ["tie_length", "waist_width"] }
+      {
+        "id": "waist_ties",
+        "type": "custom",
+        "edges": [
+          {
+            "piece": "body",
+            "edge": "underarm"
+          }
+        ],
+        "parameters": [
+          "tie_length",
+          "waist_width"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
     "societal_benefit": {
       "en": "Every sewing journey's first garment — and the platform's: the designated First Garment ceremony candidate, cut from manta on any table.",
-      "es": "La primera prenda de todo camino de costura — y de la plataforma: candidata designada de la ceremonia de la Primera Prenda, cortada en manta sobre cualquier mesa."
+      "es": "La primera prenda de todo camino de costura — y de la plataforma: candidata designada de la ceremonia de la Primera Prenda, cortada en manta sobre cualquier mesa.",
+      "fr": "Le premier vêtement de tout parcours de couture — et de la plateforme : le candidat désigné de la cérémonie du Premier Vêtement, coupé dans du calicot sur n'importe quelle table."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

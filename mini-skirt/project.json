@@ -6,55 +6,391 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #35. The straight skirt block shortened above the knee and slightly tapered at the hem, with a CB back vent restoring the walking ease the taper removes. Front on fold with one dart per half; back in two panels with a CB zipper notch, one dart per panel and the vent markings; straight cut-1 waistband verified against the full waist seam.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #35 del FC-100. El bloque de falda recta acortado arriba de la rodilla y ligeramente entubado en el dobladillo, con abertura trasera en CB que devuelve la soltura de paso que el entubado quita. Delantero al doblez con una pinza por mitad; trasero en dos paneles con piquete de cierre en CB, una pinza por panel y las marcas de la abertura; pretina recta de un corte verificada contra la costura completa de cintura.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #35 del FC-100. El bloque de falda recta acortado arriba de la rodilla y ligeramente entubado en el dobladillo, con abertura trasera en CB que devuelve la soltura de paso que el entubado quita. Delantero al doblez con una pinza por mitad; trasero en dos paneles con piquete de cierre en CB, una pinza por panel y las marcas de la abertura; pretina recta de un corte verificada contra la costura completa de cintura.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "FC-100 rang no 35. Le bloc de jupe droite raccourci au-dessus du genou et légèrement fuselé à l'ourlet, avec une fente au milieu dos qui restitue l'aisance de marche que le fuselé supprime. Devant au pli avec une pince par demi ; dos en deux panneaux avec un cran de fermeture à glissière au milieu dos, une pince par panneau et les repères de la fente ; ceinture droite d'une pièce vérifiée face à la couture de taille complète.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["skirt", "mini", "taper", "vent", "woven", "fc100", "hyperobject", "commons"],
-    "attribution": { "author": "Innovaciones MADFAM", "license": "LicenseRef-FC1-pending", "lineage": [{ "source": "Original draft for Fashion Cabinet (straight skirt block family)", "license": "original" }] }
+    "tags": [
+      "skirt",
+      "mini",
+      "taper",
+      "vent",
+      "woven",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet (straight skirt block family)",
+          "license": "original"
+        }
+      ]
+    }
   },
-  "modes": [{ "id": "mini", "label": { "en": "Mini skirt (all pieces)", "es": "Minifalda (todas las piezas)" }, "script_file": "main.py", "pieces": ["front", "back", "waistband"] }],
+  "modes": [
+    {
+      "id": "mini",
+      "label": {
+        "en": "Mini skirt (all pieces)",
+        "es": "Minifalda (todas las piezas)",
+        "fr": "Mini-jupe (toutes les pièces)"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "waistband"
+      ]
+    }
+  ],
   "pieces": [
-    { "id": "front", "label": { "en": "Mini Skirt Front", "es": "Minifalda Delantera" }, "default_color": "#8c5a72", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "back", "label": { "en": "Mini Skirt Back", "es": "Minifalda Trasera" }, "default_color": "#734459", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "waistband", "label": { "en": "Waistband", "es": "Pretina" }, "default_color": "#a2718b", "cut": { "quantity": 1 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Mini Skirt Front",
+        "es": "Minifalda Delantera",
+        "fr": "Mini-jupe devant"
+      },
+      "default_color": "#8c5a72",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Mini Skirt Back",
+        "es": "Minifalda Trasera",
+        "fr": "Mini-jupe dos"
+      },
+      "default_color": "#734459",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "Waistband",
+        "es": "Pretina",
+        "fr": "Ceinture"
+      },
+      "default_color": "#a2718b",
+      "cut": {
+        "quantity": 1
+      }
+    }
   ],
   "parameters": [
-    { "id": "waist_girth", "type": "slider", "default": 700, "min": 450, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
-    { "id": "hip_girth", "type": "slider", "default": 940, "min": 600, "max": 1700, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
-    { "id": "skirt_length", "type": "slider", "default": 420, "min": 260, "max": 520, "step": 10, "label": { "en": "Skirt length (mm)", "es": "Largo de falda (mm)" } },
-    { "id": "hip_depth", "type": "slider", "default": 190, "min": 140, "max": 260, "step": 5, "label": { "en": "Waist-to-hip depth (mm)", "es": "Altura de cadera (mm)" } },
-    { "id": "taper_mm", "type": "slider", "default": 12, "min": 0, "max": 40, "step": 2, "tooltip": { "en": "How far the hem half-width pulls in from the hip half-width", "es": "Cuánto se entuba el medio dobladillo respecto a la media cadera" }, "label": { "en": "Hem taper (mm)", "es": "Entubado de dobladillo (mm)" } },
-    { "id": "hip_ease", "type": "slider", "default": 30, "min": 0, "max": 150, "step": 5, "label": { "en": "Hip ease (mm)", "es": "Holgura de cadera (mm)" } },
-    { "id": "waist_ease", "type": "slider", "default": 15, "min": 0, "max": 80, "step": 5, "label": { "en": "Waist ease (mm)", "es": "Holgura de cintura (mm)" } },
-    { "id": "front_dart", "type": "slider", "default": 18, "min": 0, "max": 45, "step": 1, "advanced": true, "label": { "en": "Front dart intake (mm)", "es": "Pinza delantera (mm)" } },
-    { "id": "back_dart", "type": "slider", "default": 22, "min": 0, "max": 50, "step": 1, "advanced": true, "label": { "en": "Back dart intake (mm)", "es": "Pinza trasera (mm)" } },
-    { "id": "vent_height", "type": "slider", "default": 120, "min": 60, "max": 200, "step": 10, "label": { "en": "Back vent height (mm)", "es": "Alto de abertura trasera (mm)" } },
-    { "id": "zipper_length", "type": "slider", "default": 160, "min": 100, "max": 250, "step": 10, "label": { "en": "Zipper length (mm)", "es": "Largo de cierre (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 12, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 35, "min": 0, "max": 60, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "default": 700,
+      "min": 450,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "default": 940,
+      "min": 600,
+      "max": 1700,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      }
+    },
+    {
+      "id": "skirt_length",
+      "type": "slider",
+      "default": 420,
+      "min": 260,
+      "max": 520,
+      "step": 10,
+      "label": {
+        "en": "Skirt length (mm)",
+        "es": "Largo de falda (mm)",
+        "fr": "Longueur de jupe (mm)"
+      }
+    },
+    {
+      "id": "hip_depth",
+      "type": "slider",
+      "default": 190,
+      "min": 140,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Waist-to-hip depth (mm)",
+        "es": "Altura de cadera (mm)",
+        "fr": "Hauteur taille-hanches (mm)"
+      }
+    },
+    {
+      "id": "taper_mm",
+      "type": "slider",
+      "default": 12,
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "tooltip": {
+        "en": "How far the hem half-width pulls in from the hip half-width",
+        "es": "Cuánto se entuba el medio dobladillo respecto a la media cadera",
+        "fr": "De combien la demi-largeur d'ourlet se resserre par rapport à la demi-largeur de hanche"
+      },
+      "label": {
+        "en": "Hem taper (mm)",
+        "es": "Entubado de dobladillo (mm)",
+        "fr": "Fuselage du bas (mm)"
+      }
+    },
+    {
+      "id": "hip_ease",
+      "type": "slider",
+      "default": 30,
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "label": {
+        "en": "Hip ease (mm)",
+        "es": "Holgura de cadera (mm)",
+        "fr": "Aisance de hanches (mm)"
+      }
+    },
+    {
+      "id": "waist_ease",
+      "type": "slider",
+      "default": 15,
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "label": {
+        "en": "Waist ease (mm)",
+        "es": "Holgura de cintura (mm)",
+        "fr": "Aisance de taille (mm)"
+      }
+    },
+    {
+      "id": "front_dart",
+      "type": "slider",
+      "default": 18,
+      "min": 0,
+      "max": 45,
+      "step": 1,
+      "advanced": true,
+      "label": {
+        "en": "Front dart intake (mm)",
+        "es": "Pinza delantera (mm)",
+        "fr": "Valeur de la pince devant (mm)"
+      }
+    },
+    {
+      "id": "back_dart",
+      "type": "slider",
+      "default": 22,
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "advanced": true,
+      "label": {
+        "en": "Back dart intake (mm)",
+        "es": "Pinza trasera (mm)",
+        "fr": "Profondeur de pince dos (mm)"
+      }
+    },
+    {
+      "id": "vent_height",
+      "type": "slider",
+      "default": 120,
+      "min": 60,
+      "max": 200,
+      "step": 10,
+      "label": {
+        "en": "Back vent height (mm)",
+        "es": "Alto de abertura trasera (mm)",
+        "fr": "Hauteur de fente dos (mm)"
+      }
+    },
+    {
+      "id": "zipper_length",
+      "type": "slider",
+      "default": 160,
+      "min": 100,
+      "max": 250,
+      "step": 10,
+      "label": {
+        "en": "Zipper length (mm)",
+        "es": "Largo de cierre (mm)",
+        "fr": "Longueur de fermeture à glissière (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 12,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 35,
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": {} },
-    { "id": "above-knee", "label": { "en": "Above knee", "es": "Arriba de la rodilla" }, "values": { "skirt_length": 480, "taper_mm": 8 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {}
+    },
+    {
+      "id": "above-knee",
+      "label": {
+        "en": "Above knee",
+        "es": "Arriba de la rodilla",
+        "fr": "Au-dessus du genou"
+      },
+      "values": {
+        "skirt_length": 480,
+        "taper_mm": 8
+      }
+    }
   ],
   "constraints": [
-    { "expression": "hip_girth >= waist_girth", "severity": "error", "message": { "en": "Hip must be at least the waist for a tapered mini skirt", "es": "La cadera debe ser al menos la cintura para una minifalda entubada" } },
-    { "expression": "vent_height < skirt_length / 2", "severity": "error", "message": { "en": "The back vent must stay below half the skirt length", "es": "La abertura trasera debe quedar por debajo de la mitad del largo de falda" } }
+    {
+      "expression": "hip_girth >= waist_girth",
+      "severity": "error",
+      "message": {
+        "en": "Hip must be at least the waist for a tapered mini skirt",
+        "es": "La cadera debe ser al menos la cintura para una minifalda entubada",
+        "fr": "La hanche doit être au moins égale à la taille pour une mini-jupe fuselée"
+      }
+    },
+    {
+      "expression": "vent_height < skirt_length / 2",
+      "severity": "error",
+      "message": {
+        "en": "The back vent must stay below half the skirt length",
+        "es": "La abertura trasera debe quedar por debajo de la mitad del largo de falda",
+        "fr": "La fente dos doit rester en dessous de la moitié de la longueur de la jupe"
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["mezclilla-denim", "popelina-algodon"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "mezclilla-denim",
+    "popelina-algodon"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "waistband", "type": "waistband", "edges": [{ "piece": "front", "edge": "waist" }, { "piece": "back", "edge": "waist" }], "parameters": ["waist_girth", "waist_ease"] },
-      { "id": "zipper_tape", "type": "zipper_tape", "edges": [{ "piece": "back", "edge": "center" }], "parameters": ["zipper_length"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["skirt_length", "taper_mm", "hem_allowance"] }
+      {
+        "id": "waistband",
+        "type": "waistband",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "waist"
+          },
+          {
+            "piece": "back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "waist_ease"
+        ]
+      },
+      {
+        "id": "zipper_tape",
+        "type": "zipper_tape",
+        "edges": [
+          {
+            "piece": "back",
+            "edge": "center"
+          }
+        ],
+        "parameters": [
+          "zipper_length"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "skirt_length",
+          "taper_mm",
+          "hem_allowance"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
     "societal_benefit": {
       "en": "First taper and first vent of the FC-100 skirt family: proves the block shortens and slims parametrically while a marked CB vent keeps the tapered hem walkable — construction ease as a first-class parameter.",
-      "es": "Primer entubado y primera abertura de la familia de faldas del FC-100: demuestra que el bloque se acorta y entalla paramétricamente mientras una abertura CB marcada mantiene caminable el dobladillo entubado — la soltura de confección como parámetro de primera clase."
+      "es": "Primer entubado y primera abertura de la familia de faldas del FC-100: demuestra que el bloque se acorta y entalla paramétricamente mientras una abertura CB marcada mantiene caminable el dobladillo entubado — la soltura de confección como parámetro de primera clase.",
+      "fr": "Premier fuselé et première fente de la famille de jupes du FC-100 : démontre que le bloc se raccourcit et s'affine paramétriquement tandis qu'une fente au milieu dos marquée garde l'ourlet fuselé praticable à la marche — l'aisance de construction comme paramètre de premier plan."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

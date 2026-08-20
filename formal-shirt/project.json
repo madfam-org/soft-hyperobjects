@@ -6,98 +6,581 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #70. Tuxedo / evening dress shirt on the woven yoke-split block: button-stand fronts, a back ending at the yoke seam, a yoke carrying the back neck and shoulders, a placket sleeve, and a two-piece collar whose stand is solved to the measured neckline and whose fall is solved to the stand's top edge. Refined for black-tie with a stiff marcella bib panel (a cut-2 overlay whose neck and shoulder copy the front, so it is caught in the collar and shoulder seams with zero delta), a turndown-or-wing collar option, and a barrel-or-french cuff option.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #70 del FC-100. Camisa formal de esmoquin sobre el bloque de tejido plano con canesú: delanteros con tapeta, espalda que termina en la costura del canesú, canesú que lleva el escote trasero y los hombros, manga con abertura y puño, y cuello de dos piezas cuyo pie se resuelve al escote medido y cuya caída se resuelve al borde superior del pie. Refinada para etiqueta con una pechera rígida de marcella (una sobrepieza cortada al doble cuyo escote y hombro copian el delantero, de modo que queda atrapada en las costuras de cuello y hombro con delta cero), opción de cuello vuelto o de paloma, y opción de puño sencillo o francés.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #70 del FC-100. Camisa formal de esmoquin sobre el bloque de tejido plano con canesú: delanteros con tapeta, espalda que termina en la costura del canesú, canesú que lleva el escote trasero y los hombros, manga con abertura y puño, y cuello de dos piezas cuyo pie se resuelve al escote medido y cuya caída se resuelve al borde superior del pie. Refinada para etiqueta con una pechera rígida de marcella (una sobrepieza cortada al doble cuyo escote y hombro copian el delantero, de modo que queda atrapada en las costuras de cuello y hombro con delta cero), opción de cuello vuelto o de paloma, y opción de puño sencillo o francés.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Rang #70 du FC-100. Chemise de smoking / de soirée sur le bloc en tissé à empiècement fendu : devants à patte de boutonnage, un dos se terminant à la couture d'empiècement, un empiècement portant l'encolure dos et les épaules, une manche à patte capucin, et un col deux pièces dont le pied est résolu à l'encolure mesurée et dont le tombant est résolu au bord supérieur du pied. Affinée pour la tenue de cérémonie avec un plastron rigide en piqué marcella (une surpièce coupée en 2 dont l'encolure et l'épaule copient le devant, de sorte qu'elle est prise dans les coutures de col et d'épaule avec un écart nul), une option de col à tombant ou cassé, et une option de poignet tonneau ou mousquetaire.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "advanced",
-    "tags": ["shirt", "formal", "tuxedo", "woven", "collar", "yoke", "cuff", "bib", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "shirt",
+      "formal",
+      "tuxedo",
+      "woven",
+      "collar",
+      "yoke",
+      "cuff",
+      "bib",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet", "license": "original" },
-        { "source": "Full woven multi-solve chain (button-stand fronts, yoke split, sleeve-cap and neck-edge bisection, chained collar stand + fall) from the dress-shirt (rank #4) cartridge", "license": "LicenseRef-FC1-pending" },
-        { "source": "Separate cut-on-fold bib panel with a summed-side attach seam from the bib-overalls (rank #49) cartridge", "license": "LicenseRef-FC1-pending" },
-        { "source": "Split stand_top / neck edge idiom from the casual-button-down cartridge", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "Full woven multi-solve chain (button-stand fronts, yoke split, sleeve-cap and neck-edge bisection, chained collar stand + fall) from the dress-shirt (rank #4) cartridge",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "Separate cut-on-fold bib panel with a summed-side attach seam from the bib-overalls (rank #49) cartridge",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "Split stand_top / neck edge idiom from the casual-button-down cartridge",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "shirt",
-      "label": { "en": "Formal shirt (all pieces)", "es": "Camisa formal (todas las piezas)" },
+      "label": {
+        "en": "Formal shirt (all pieces)",
+        "es": "Camisa formal (todas las piezas)",
+        "fr": "Chemise habillée (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "bib", "back", "yoke", "sleeve", "cuff", "stand", "fall"]
+      "pieces": [
+        "front",
+        "bib",
+        "back",
+        "yoke",
+        "sleeve",
+        "cuff",
+        "stand",
+        "fall"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#2f3a4a", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "bib", "label": { "en": "Bib (marcella / piqué)", "es": "Pechera (marcella / piqué)" }, "default_color": "#eef2f6", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Espalda" }, "default_color": "#3a465a", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "yoke", "label": { "en": "Yoke (doubled)", "es": "Canesú (doble)" }, "default_color": "#4a5870", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#5c6c86", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "cuff", "label": { "en": "Cuff", "es": "Puño" }, "default_color": "#7688a2", "cut": { "quantity": 2 } },
-    { "id": "stand", "label": { "en": "Collar Stand", "es": "Pie de Cuello" }, "default_color": "#93a3bc", "cut": { "quantity": 2, "on_fold": true, "mirror": true } },
-    { "id": "fall", "label": { "en": "Collar Fall / Wing", "es": "Cuello / Paloma" }, "default_color": "#b4c1d5", "cut": { "quantity": 2, "on_fold": true, "mirror": true } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#2f3a4a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "bib",
+      "label": {
+        "en": "Bib (marcella / piqué)",
+        "es": "Pechera (marcella / piqué)",
+        "fr": "Plastron (marcella / piqué)"
+      },
+      "default_color": "#eef2f6",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#3a465a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "yoke",
+      "label": {
+        "en": "Yoke (doubled)",
+        "es": "Canesú (doble)",
+        "fr": "Empiècement (doublé)"
+      },
+      "default_color": "#4a5870",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#5c6c86",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Cuff",
+        "es": "Puño",
+        "fr": "Poignet"
+      },
+      "default_color": "#7688a2",
+      "cut": {
+        "quantity": 2
+      }
+    },
+    {
+      "id": "stand",
+      "label": {
+        "en": "Collar Stand",
+        "es": "Pie de Cuello",
+        "fr": "Pied de col"
+      },
+      "default_color": "#93a3bc",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "fall",
+      "label": {
+        "en": "Collar Fall / Wing",
+        "es": "Cuello / Paloma",
+        "fr": "Tombant de col / cassé"
+      },
+      "default_color": "#b4c1d5",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    }
   ],
   "parameters": [
-    { "id": "chest_girth", "type": "slider", "default": 1020, "min": 700, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
-    { "id": "body_length", "type": "slider", "default": 780, "min": 500, "max": 1000, "step": 10, "label": { "en": "Body length, nape to hem (mm)", "es": "Largo de cuerpo (mm)" } },
-    { "id": "neck_girth", "type": "slider", "default": 400, "min": 300, "max": 520, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
-    { "id": "sleeve_length", "type": "slider", "default": 640, "min": 400, "max": 750, "step": 10, "measurement": { "standard": "iso_8559", "code": "arm_length" }, "label": { "en": "Sleeve length, cap to wrist (mm)", "es": "Largo de manga (mm)" } },
-    { "id": "wrist_opening", "type": "slider", "default": 240, "min": 180, "max": 320, "step": 10, "label": { "en": "Wrist opening (mm)", "es": "Abertura de puño (mm)" } },
-    { "id": "woven_ease", "type": "slider", "default": 130, "min": 60, "max": 320, "step": 10, "label": { "en": "Total ease (mm)", "es": "Holgura total (mm)" } },
-    { "id": "button_stand", "type": "slider", "default": 30, "min": 20, "max": 50, "step": 2, "label": { "en": "Button stand width (mm)", "es": "Ancho de tapeta (mm)" } },
-    { "id": "bib_width", "type": "slider", "default": 300, "min": 200, "max": 460, "step": 10, "label": { "en": "Bib width at chest (mm)", "es": "Ancho de pechera (mm)" } },
-    { "id": "bib_height", "type": "slider", "default": 320, "min": 200, "max": 460, "step": 10, "label": { "en": "Bib height, CF neck to hem (mm)", "es": "Alto de pechera (mm)" } },
-    { "id": "collar_style", "type": "select", "default": "wing", "label": { "en": "Collar style", "es": "Estilo de cuello" }, "options": [
-      { "value": "wing", "label": { "en": "Wing (formal band + tabs)", "es": "De paloma (banda + puntas)" } },
-      { "value": "turndown", "label": { "en": "Turndown (pointed fall)", "es": "Vuelto (caída en punta)" } }
-    ] },
-    { "id": "cuff_style", "type": "select", "default": "french", "label": { "en": "Cuff style", "es": "Estilo de puño" }, "options": [
-      { "value": "french", "label": { "en": "French (double, cufflink)", "es": "Francés (doble, gemelos)" } },
-      { "value": "barrel", "label": { "en": "Barrel (single, button)", "es": "Sencillo (botón)" } }
-    ] },
-    { "id": "yoke_drop", "type": "slider", "default": 100, "min": 60, "max": 160, "step": 5, "advanced": true, "label": { "en": "Yoke drop below HPS (mm)", "es": "Caída del canesú bajo el hombro (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "advanced": true, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 20, "min": 0, "max": 50, "step": 5, "advanced": true, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "default": 1020,
+      "min": 700,
+      "max": 1800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "default": 780,
+      "min": 500,
+      "max": 1000,
+      "step": 10,
+      "label": {
+        "en": "Body length, nape to hem (mm)",
+        "es": "Largo de cuerpo (mm)",
+        "fr": "Longueur du corps, nuque à l'ourlet (mm)"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 400,
+      "min": 300,
+      "max": 520,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 640,
+      "min": 400,
+      "max": 750,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "arm_length"
+      },
+      "label": {
+        "en": "Sleeve length, cap to wrist (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche, tête au poignet (mm)"
+      }
+    },
+    {
+      "id": "wrist_opening",
+      "type": "slider",
+      "default": 240,
+      "min": 180,
+      "max": 320,
+      "step": 10,
+      "label": {
+        "en": "Wrist opening (mm)",
+        "es": "Abertura de puño (mm)",
+        "fr": "Ouverture de poignet (mm)"
+      }
+    },
+    {
+      "id": "woven_ease",
+      "type": "slider",
+      "default": 130,
+      "min": 60,
+      "max": 320,
+      "step": 10,
+      "label": {
+        "en": "Total ease (mm)",
+        "es": "Holgura total (mm)",
+        "fr": "Aisance totale (mm)"
+      }
+    },
+    {
+      "id": "button_stand",
+      "type": "slider",
+      "default": 30,
+      "min": 20,
+      "max": 50,
+      "step": 2,
+      "label": {
+        "en": "Button stand width (mm)",
+        "es": "Ancho de tapeta (mm)",
+        "fr": "Largeur de la patte de boutonnage (mm)"
+      }
+    },
+    {
+      "id": "bib_width",
+      "type": "slider",
+      "default": 300,
+      "min": 200,
+      "max": 460,
+      "step": 10,
+      "label": {
+        "en": "Bib width at chest (mm)",
+        "es": "Ancho de pechera (mm)",
+        "fr": "Largeur de plastron à la poitrine (mm)"
+      }
+    },
+    {
+      "id": "bib_height",
+      "type": "slider",
+      "default": 320,
+      "min": 200,
+      "max": 460,
+      "step": 10,
+      "label": {
+        "en": "Bib height, CF neck to hem (mm)",
+        "es": "Alto de pechera (mm)",
+        "fr": "Hauteur de plastron, encolure milieu devant au bord (mm)"
+      }
+    },
+    {
+      "id": "collar_style",
+      "type": "select",
+      "default": "wing",
+      "label": {
+        "en": "Collar style",
+        "es": "Estilo de cuello",
+        "fr": "Style de col"
+      },
+      "options": [
+        {
+          "value": "wing",
+          "label": {
+            "en": "Wing (formal band + tabs)",
+            "es": "De paloma (banda + puntas)",
+            "fr": "Col cassé (bande + pointes)"
+          }
+        },
+        {
+          "value": "turndown",
+          "label": {
+            "en": "Turndown (pointed fall)",
+            "es": "Vuelto (caída en punta)",
+            "fr": "Rabattu (retombée en pointe)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cuff_style",
+      "type": "select",
+      "default": "french",
+      "label": {
+        "en": "Cuff style",
+        "es": "Estilo de puño",
+        "fr": "Style de poignet"
+      },
+      "options": [
+        {
+          "value": "french",
+          "label": {
+            "en": "French (double, cufflink)",
+            "es": "Francés (doble, gemelos)",
+            "fr": "Français (double, boutons de manchette)"
+          }
+        },
+        {
+          "value": "barrel",
+          "label": {
+            "en": "Barrel (single, button)",
+            "es": "Sencillo (botón)",
+            "fr": "Poignet simple (bouton)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "yoke_drop",
+      "type": "slider",
+      "default": 100,
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "advanced": true,
+      "label": {
+        "en": "Yoke drop below HPS (mm)",
+        "es": "Caída del canesú bajo el hombro (mm)",
+        "fr": "Chute d'empiècement sous le HPS (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "advanced": true,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 20,
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "advanced": true,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1020, "body_length": 780, "neck_girth": 400, "sleeve_length": 640, "collar_style": "wing", "cuff_style": "french" } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1100, "body_length": 800, "neck_girth": 420, "sleeve_length": 665, "wrist_opening": 250, "bib_width": 320, "bib_height": 340, "collar_style": "turndown", "cuff_style": "french" } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "chest_girth": 1020,
+        "body_length": 780,
+        "neck_girth": 400,
+        "sleeve_length": 640,
+        "collar_style": "wing",
+        "cuff_style": "french"
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G",
+        "fr": "L"
+      },
+      "values": {
+        "chest_girth": 1100,
+        "body_length": 800,
+        "neck_girth": 420,
+        "sleeve_length": 665,
+        "wrist_opening": 250,
+        "bib_width": 320,
+        "bib_height": 340,
+        "collar_style": "turndown",
+        "cuff_style": "french"
+      }
+    }
   ],
   "constraints": [
     {
       "expression": "button_stand >= 25",
       "severity": "warning",
-      "message": { "en": "Narrow button stands crowd standard 11.5 mm shirt studs", "es": "Tapetas angostas aprietan los botones-broche de camisa estándar de 11.5 mm" }
+      "message": {
+        "en": "Narrow button stands crowd standard 11.5 mm shirt studs",
+        "es": "Tapetas angostas aprietan los botones-broche de camisa estándar de 11.5 mm",
+        "fr": "Des pattes de boutonnage étroites serrent les boutons de plastron de chemise standard de 11,5 mm"
+      }
     },
     {
       "expression": "bib_height <= body_length - 300",
       "severity": "warning",
-      "message": { "en": "A bib taller than the chest runs past the waistband — keep it above the trouser line", "es": "Una pechera más alta que el pecho pasa la pretina — mantenla sobre la línea del pantalón" }
+      "message": {
+        "en": "A bib taller than the chest runs past the waistband — keep it above the trouser line",
+        "es": "Una pechera más alta que el pecho pasa la pretina — mantenla sobre la línea del pantalón",
+        "fr": "Un plastron plus haut que la poitrine dépasse la ceinture — gardez-le au-dessus de la ligne du pantalon"
+      }
     },
     {
       "expression": "bib_width <= chest_girth / 2",
       "severity": "warning",
-      "message": { "en": "The bib should not exceed half the chest — it is a plastron, not the whole front", "es": "La pechera no debe exceder la mitad del pecho — es un plastrón, no todo el delantero" }
+      "message": {
+        "en": "The bib should not exceed half the chest — it is a plastron, not the whole front",
+        "es": "La pechera no debe exceder la mitad del pecho — es un plastrón, no todo el delantero",
+        "fr": "Le plastron ne doit pas excéder la moitié de la poitrine — c'est un plastron, non tout le devant"
+      }
     }
   ],
-  "export_formats": ["svg", "dxf", "json", "pdf"],
-  "fabrics": ["popelina-algodon"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "popelina-algodon"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "neck" }, { "piece": "yoke", "edge": "neck" }], "parameters": ["neck_girth"] },
-      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }], "parameters": ["chest_girth", "woven_ease"] },
-      { "id": "cuff", "type": "cuff", "edges": [{ "piece": "sleeve", "edge": "hem" }], "parameters": ["wrist_opening", "cuff_style"] },
-      { "id": "button_stand", "type": "button_stand", "edges": [{ "piece": "front", "edge": "center" }], "parameters": ["button_stand", "body_length"] },
-      { "id": "bib", "type": "custom", "label": { "en": "Bib overlay", "es": "Sobrepieza de pechera" }, "edges": [{ "piece": "bib", "edge": "neck" }, { "piece": "bib", "edge": "shoulder" }], "parameters": ["bib_width", "bib_height"] }
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "yoke",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "woven_ease"
+        ]
+      },
+      {
+        "id": "cuff",
+        "type": "cuff",
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "wrist_opening",
+          "cuff_style"
+        ]
+      },
+      {
+        "id": "button_stand",
+        "type": "button_stand",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "center"
+          }
+        ],
+        "parameters": [
+          "button_stand",
+          "body_length"
+        ]
+      },
+      {
+        "id": "bib",
+        "type": "custom",
+        "label": {
+          "en": "Bib overlay",
+          "es": "Sobrepieza de pechera",
+          "fr": "Surpièce de plastron"
+        },
+        "edges": [
+          {
+            "piece": "bib",
+            "edge": "neck"
+          },
+          {
+            "piece": "bib",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "bib_width",
+          "bib_height"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
     "societal_benefit": {
       "en": "Black-tie without the rental: the evening shirt drafted to real measurements, with the marcella bib, wing collar, and french cuff that formal dress asks for — and it proves the overlay pattern, a distinct cut-2 panel whose seams are copied from the piece beneath so the plastron stays true when the body changes.",
-      "es": "Etiqueta sin alquiler: la camisa de gala trazada a medidas reales, con la pechera de marcella, el cuello de paloma y el puño francés que exige la vestimenta formal — y demuestra el patrón de sobrepieza, un panel cortado al doble cuyas costuras se copian de la pieza inferior para que el plastrón siga siendo fiel cuando cambia el cuerpo."
+      "es": "Etiqueta sin alquiler: la camisa de gala trazada a medidas reales, con la pechera de marcella, el cuello de paloma y el puño francés que exige la vestimenta formal — y demuestra el patrón de sobrepieza, un panel cortado al doble cuyas costuras se copian de la pieza inferior para que el plastrón siga siendo fiel cuando cambia el cuerpo.",
+      "fr": "La tenue de cérémonie sans la location : la chemise de soirée tracée à des mesures réelles, avec le plastron en marcella, le col cassé et le poignet mousquetaire qu'exige la tenue de gala — et elle prouve le patron de surpièce, un panneau distinct coupé en 2 dont les coutures sont copiées sur la pièce en dessous pour que le plastron reste fidèle quand le corps change."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

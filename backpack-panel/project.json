@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "A simple panelled rucksack: a wrap body (front + base + back folded at the base), a long side/base gusset, a top flap that buckles shut, and two shoulder straps. The flap + strap buckles bridge to the Yantra4D `strap-buckle` solid. Fashion Cabinet owns the pack — dimensions, gusset depth, strap length; Yantra4D owns the buckles. FC-200 accessories capsule.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Una mochila panelada simple: un cuerpo envolvente (frente + base + espalda doblado en la base), un fuelle lateral/base largo, una tapa superior que cierra con hebilla y dos tirantes. Las hebillas de tapa y tirantes se puentean al sólido `strap-buckle` de Yantra4D. Fashion Cabinet posee la mochila; Yantra4D posee las hebillas.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Una mochila panelada simple: un cuerpo envolvente (frente + base + espalda doblado en la base), un fuelle lateral/base largo, una tapa superior que cierra con hebilla y dos tirantes. Las hebillas de tapa y tirantes se puentean al sólido `strap-buckle` de Yantra4D. Fashion Cabinet posee la mochila; Yantra4D posee las hebillas.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un sac à dos à panneaux simple : un corps enveloppant (devant + fond + dos plié au fond), un long soufflet de côté/fond, un rabat supérieur qui se ferme par boucle, et deux bretelles. Les boucles de rabat et de bretelle se relient au solide `strap-buckle` de Yantra4D. Fashion Cabinet possède le sac — dimensions, profondeur de soufflet, longueur de bretelle ; Yantra4D possède les boucles. Capsule accessoires du FC-200.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "advanced",
     "tags": [
@@ -34,7 +35,8 @@
       "id": "set",
       "label": {
         "en": "Full Backpack",
-        "es": "Mochila completa"
+        "es": "Mochila completa",
+        "fr": "Sac à dos complet"
       },
       "script_file": "main.py",
       "pieces": [
@@ -50,7 +52,8 @@
       "id": "body",
       "label": {
         "en": "Body (front + base + back)",
-        "es": "Cuerpo (frente + base + espalda)"
+        "es": "Cuerpo (frente + base + espalda)",
+        "fr": "Corps (devant + base + dos)"
       },
       "default_color": "#3a4048",
       "cut": {
@@ -63,7 +66,8 @@
       "id": "gusset",
       "label": {
         "en": "Side/base gusset",
-        "es": "Fuelle lateral/base"
+        "es": "Fuelle lateral/base",
+        "fr": "Soufflet latéral/fond"
       },
       "default_color": "#2e343c",
       "cut": {
@@ -76,7 +80,8 @@
       "id": "flap",
       "label": {
         "en": "Top flap",
-        "es": "Tapa superior"
+        "es": "Tapa superior",
+        "fr": "Rabat supérieur"
       },
       "default_color": "#3a4048",
       "cut": {
@@ -89,7 +94,8 @@
       "id": "strap",
       "label": {
         "en": "Shoulder strap",
-        "es": "Tirante"
+        "es": "Tirante",
+        "fr": "Bretelle"
       },
       "default_color": "#2e343c",
       "cut": {
@@ -120,11 +126,13 @@
       "step": 10,
       "label": {
         "en": "Width (mm)",
-        "es": "Ancho (mm)"
+        "es": "Ancho (mm)",
+        "fr": "Largeur (mm)"
       },
       "tooltip": {
         "en": "Front width",
-        "es": "Ancho del frente"
+        "es": "Ancho del frente",
+        "fr": "Largeur du devant"
       }
     },
     {
@@ -137,11 +145,13 @@
       "step": 10,
       "label": {
         "en": "Height (mm)",
-        "es": "Alto (mm)"
+        "es": "Alto (mm)",
+        "fr": "Hauteur (mm)"
       },
       "tooltip": {
         "en": "Front-face height",
-        "es": "Alto de la cara"
+        "es": "Alto de la cara",
+        "fr": "Hauteur de la face avant"
       }
     },
     {
@@ -154,11 +164,13 @@
       "step": 10,
       "label": {
         "en": "Depth (mm)",
-        "es": "Fondo (mm)"
+        "es": "Fondo (mm)",
+        "fr": "Profondeur (mm)"
       },
       "tooltip": {
         "en": "Gusset depth",
-        "es": "Fondo del fuelle"
+        "es": "Fondo del fuelle",
+        "fr": "Profondeur du soufflet"
       }
     },
     {
@@ -171,11 +183,13 @@
       "step": 10,
       "label": {
         "en": "Flap drop (mm)",
-        "es": "Caída de tapa (mm)"
+        "es": "Caída de tapa (mm)",
+        "fr": "Tombant du rabat (mm)"
       },
       "tooltip": {
         "en": "How far the flap covers the front",
-        "es": "Cuánto cubre la tapa el frente"
+        "es": "Cuánto cubre la tapa el frente",
+        "fr": "Jusqu'où le rabat couvre le devant"
       }
     },
     {
@@ -188,11 +202,13 @@
       "step": 5,
       "label": {
         "en": "Strap width (mm)",
-        "es": "Ancho de tirante (mm)"
+        "es": "Ancho de tirante (mm)",
+        "fr": "Largeur de bretelle (mm)"
       },
       "tooltip": {
         "en": "Shoulder-strap width; sets the Yantra4D buckle slot",
-        "es": "Ancho del tirante; define la ranura de la hebilla"
+        "es": "Ancho del tirante; define la ranura de la hebilla",
+        "fr": "Largeur de bretelle ; définit la fente de boucle Yantra4D"
       }
     },
     {
@@ -205,11 +221,13 @@
       "step": 10,
       "label": {
         "en": "Strap length (mm)",
-        "es": "Largo de tirante (mm)"
+        "es": "Largo de tirante (mm)",
+        "fr": "Longueur de bretelle (mm)"
       },
       "tooltip": {
         "en": "Shoulder-strap length",
-        "es": "Largo del tirante"
+        "es": "Largo del tirante",
+        "fr": "Longueur de bretelle"
       }
     }
   ],
@@ -218,7 +236,8 @@
       "id": "daypack",
       "label": {
         "en": "Daypack",
-        "es": "Mochila de día"
+        "es": "Mochila de día",
+        "fr": "Sac à dos de jour"
       },
       "values": {
         "pack_width": 300,
@@ -230,7 +249,8 @@
       "id": "roll-top-ish",
       "label": {
         "en": "Large",
-        "es": "Grande"
+        "es": "Grande",
+        "fr": "Grand"
       },
       "values": {
         "pack_height": 560,
@@ -266,7 +286,8 @@
         "type": "hem",
         "label": {
           "en": "Top opening (under flap)",
-          "es": "Boca (bajo la tapa)"
+          "es": "Boca (bajo la tapa)",
+          "fr": "Ouverture supérieure (sous le rabat)"
         },
         "edges": [
           {
@@ -288,7 +309,8 @@
     },
     "societal_benefit": {
       "en": "A panelled pack sized to what you carry, with the flap and strap buckles open printable Yantra4D objects — a durable, repairable, made-to-measure rucksack whose hardware you can reprint instead of replacing the whole bag.",
-      "es": "Una mochila panelada dimensionada a lo que cargas, con las hebillas de tapa y tirantes como objetos imprimibles abiertos de Yantra4D — una mochila durable, reparable y a la medida cuyo herraje puedes reimprimir en vez de reemplazar la bolsa entera."
+      "es": "Una mochila panelada dimensionada a lo que cargas, con las hebillas de tapa y tirantes como objetos imprimibles abiertos de Yantra4D — una mochila durable, reparable y a la medida cuyo herraje puedes reimprimir en vez de reemplazar la bolsa entera.",
+      "fr": "Un sac à panneaux dimensionné à ce que vous transportez, avec les boucles de rabat et de bretelle comme objets Yantra4D ouverts et imprimables — un sac à dos durable, réparable et sur mesure dont vous pouvez réimprimer la quincaillerie au lieu de remplacer tout le sac."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

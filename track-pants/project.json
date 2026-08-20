@@ -6,73 +6,477 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #50. The classic athletic track pant: the side-seamed trouser block cut RELAXED (straight-to-slightly-tapered leg, small positive ease — not compression) in power-stretch interlock, an elastic waistband casing with optional drawcord, and the signature contrast side stripe(s) running the full outseam of both legs, with an optional elastic/rib ankle cuff derived from the measured opening.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #50 del FC-100. El pantalón deportivo (track) clásico: el bloque de pantalón con costura lateral cortado HOLGADO (pierna recta a ligeramente entallada, poca holgura positiva — no compresión) en interlock elástico, pretina de casing con cordón opcional, y la franja(s) lateral de contraste característica que recorre todo el costado de ambas piernas, con puño de tobillo elástico/rib opcional derivado de la abertura medida.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #50 del FC-100. El pantalón deportivo (track) clásico: el bloque de pantalón con costura lateral cortado HOLGADO (pierna recta a ligeramente entallada, poca holgura positiva — no compresión) en interlock elástico, pretina de casing con cordón opcional, y la franja(s) lateral de contraste característica que recorre todo el costado de ambas piernas, con puño de tobillo elástico/rib opcional derivado de la abertura medida.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "FC-100 rang n°50. Le classique pantalon de sport (track) : le bloc de pantalon à couture latérale coupé DÉTENDU (jambe droite à légèrement fuselée, petite aisance positive — pas de compression) en interlock élastique, une ceinture à coulisse élastique avec cordon de serrage optionnel, et la bande latérale contrastée caractéristique parcourant toute la couture externe des deux jambes, avec un poignet de cheville élastique/côtelé optionnel dérivé de l'ouverture mesurée.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
-    "tags": ["track-pants", "activewear", "athletic", "side-stripe", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "track-pants",
+      "activewear",
+      "athletic",
+      "side-stripe",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet", "license": "original" },
-        { "source": "joggers cartridge (side-seamed leg block, solved front-inseam bow, derived rib cuff + waistband casing)", "license": "LicenseRef-FC1-pending" },
-        { "source": "panties-bikini cartridge (elastic-zone trace parallel to an edge; exact-mm notion cut lengths)", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "joggers cartridge (side-seamed leg block, solved front-inseam bow, derived rib cuff + waistband casing)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "panties-bikini cartridge (elastic-zone trace parallel to an edge; exact-mm notion cut lengths)",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
-    { "id": "track-pants", "label": { "en": "Track Pants (all pieces)", "es": "Pantalón deportivo (todas las piezas)" }, "script_file": "main.py", "pieces": ["front", "back", "cuff", "waistband"] }
+    {
+      "id": "track-pants",
+      "label": {
+        "en": "Track Pants (all pieces)",
+        "es": "Pantalón deportivo (todas las piezas)",
+        "fr": "Pantalon de survêtement (toutes les pièces)"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "cuff",
+        "waistband"
+      ]
+    }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front Leg", "es": "Pierna Delantera" }, "default_color": "#3a4046", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back Leg", "es": "Pierna Trasera" }, "default_color": "#2b2f33", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "cuff", "label": { "en": "Ankle Cuff (elastic/rib)", "es": "Puño de tobillo (elástico/rib)" }, "default_color": "#565d64", "cut": { "quantity": 2 } },
-    { "id": "waistband", "label": { "en": "Waistband Casing", "es": "Pretina (casing)" }, "default_color": "#464c52", "cut": { "quantity": 1 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front Leg",
+        "es": "Pierna Delantera",
+        "fr": "Jambe devant"
+      },
+      "default_color": "#3a4046",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back Leg",
+        "es": "Pierna Trasera",
+        "fr": "Jambe dos"
+      },
+      "default_color": "#2b2f33",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Ankle Cuff (elastic/rib)",
+        "es": "Puño de tobillo (elástico/rib)",
+        "fr": "Poignet de cheville (élastique/côtes)"
+      },
+      "default_color": "#565d64",
+      "cut": {
+        "quantity": 2
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "Waistband Casing",
+        "es": "Pretina (casing)",
+        "fr": "Coulisse de ceinture"
+      },
+      "default_color": "#464c52",
+      "cut": {
+        "quantity": 1
+      }
+    }
   ],
   "parameters": [
-    { "id": "hip_girth", "type": "slider", "default": 1000, "min": 650, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
-    { "id": "inseam_length", "type": "slider", "default": 720, "min": 300, "max": 950, "step": 10, "measurement": { "standard": "iso_8559", "code": "inside_leg_length" }, "label": { "en": "Inseam (mm)", "es": "Entrepierna (mm)" } },
-    { "id": "front_rise", "type": "slider", "default": 265, "min": 190, "max": 380, "step": 5, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)" } },
-    { "id": "back_rise", "type": "slider", "default": 305, "min": 190, "max": 470, "step": 5, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)" } },
-    { "id": "relaxed_ease", "type": "slider", "default": 150, "min": 60, "max": 400, "step": 10, "label": { "en": "Relaxed ease at hip (mm, positive)", "es": "Holgura al contorno de cadera (mm, positiva)" } },
-    { "id": "hem_width", "type": "slider", "default": 115, "min": 85, "max": 220, "step": 5, "label": { "en": "Ankle half-width, flat (mm)", "es": "Medio tobillo, extendido (mm)" } },
-    { "id": "cuffed", "type": "checkbox", "default": true, "label": { "en": "Cuffed ankle (off = open hem)", "es": "Tobillo con puño (off = bajo abierto)" } },
-    { "id": "cuff_ratio", "type": "slider", "default": 0.80, "min": 0.60, "max": 0.98, "step": 0.01, "advanced": true, "label": { "en": "Cuff/ankle ratio", "es": "Proporción puño/tobillo" } },
-    { "id": "cuff_height", "type": "slider", "default": 55, "min": 30, "max": 90, "step": 5, "label": { "en": "Cuff height (mm)", "es": "Alto de puño (mm)" } },
-    { "id": "elastic_width", "type": "slider", "default": 40, "min": 20, "max": 70, "step": 5, "label": { "en": "Waist elastic width (mm)", "es": "Ancho de elástico de cintura (mm)" } },
-    { "id": "elastic_ratio", "type": "slider", "default": 0.92, "min": 0.80, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Waist elastic / opening", "es": "Elástico de cintura / abertura" } },
-    { "id": "drawcord", "type": "checkbox", "default": true, "label": { "en": "Drawcord + eyelets", "es": "Cordón + ojales" } },
-    { "id": "stripe_count", "type": "select", "default": 2, "options": [
-        { "value": 1, "label": { "en": "1 stripe", "es": "1 franja" } },
-        { "value": 2, "label": { "en": "2 stripes", "es": "2 franjas" } }
-      ], "label": { "en": "Side stripes", "es": "Franjas laterales" } },
-    { "id": "stripe_width", "type": "slider", "default": 18, "min": 6, "max": 45, "step": 1, "label": { "en": "Stripe width, each (mm)", "es": "Ancho de franja, cada una (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 8, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 35, "min": 0, "max": 60, "step": 5, "advanced": true, "label": { "en": "Open-hem allowance (mm)", "es": "Margen de bajo abierto (mm)" } }
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "default": 1000,
+      "min": 650,
+      "max": 1800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      }
+    },
+    {
+      "id": "inseam_length",
+      "type": "slider",
+      "default": 720,
+      "min": 300,
+      "max": 950,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "inside_leg_length"
+      },
+      "label": {
+        "en": "Inseam (mm)",
+        "es": "Entrepierna (mm)",
+        "fr": "Entrejambe (mm)"
+      }
+    },
+    {
+      "id": "front_rise",
+      "type": "slider",
+      "default": 265,
+      "min": 190,
+      "max": 380,
+      "step": 5,
+      "label": {
+        "en": "Front rise (mm)",
+        "es": "Tiro delantero (mm)",
+        "fr": "Hauteur de fourche avant (mm)"
+      }
+    },
+    {
+      "id": "back_rise",
+      "type": "slider",
+      "default": 305,
+      "min": 190,
+      "max": 470,
+      "step": 5,
+      "label": {
+        "en": "Back rise (mm)",
+        "es": "Tiro trasero (mm)",
+        "fr": "Hauteur de fourche arrière (mm)"
+      }
+    },
+    {
+      "id": "relaxed_ease",
+      "type": "slider",
+      "default": 150,
+      "min": 60,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Relaxed ease at hip (mm, positive)",
+        "es": "Holgura al contorno de cadera (mm, positiva)",
+        "fr": "Aisance ample aux hanches (mm, positive)"
+      }
+    },
+    {
+      "id": "hem_width",
+      "type": "slider",
+      "default": 115,
+      "min": 85,
+      "max": 220,
+      "step": 5,
+      "label": {
+        "en": "Ankle half-width, flat (mm)",
+        "es": "Medio tobillo, extendido (mm)",
+        "fr": "Demi-largeur de cheville, à plat (mm)"
+      }
+    },
+    {
+      "id": "cuffed",
+      "type": "checkbox",
+      "default": true,
+      "label": {
+        "en": "Cuffed ankle (off = open hem)",
+        "es": "Tobillo con puño (off = bajo abierto)",
+        "fr": "Cheville à poignet (désactivé = bas ouvert)"
+      }
+    },
+    {
+      "id": "cuff_ratio",
+      "type": "slider",
+      "default": 0.8,
+      "min": 0.6,
+      "max": 0.98,
+      "step": 0.01,
+      "advanced": true,
+      "label": {
+        "en": "Cuff/ankle ratio",
+        "es": "Proporción puño/tobillo",
+        "fr": "Rapport poignet/cheville"
+      }
+    },
+    {
+      "id": "cuff_height",
+      "type": "slider",
+      "default": 55,
+      "min": 30,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Cuff height (mm)",
+        "es": "Alto de puño (mm)",
+        "fr": "Hauteur du poignet (mm)"
+      }
+    },
+    {
+      "id": "elastic_width",
+      "type": "slider",
+      "default": 40,
+      "min": 20,
+      "max": 70,
+      "step": 5,
+      "label": {
+        "en": "Waist elastic width (mm)",
+        "es": "Ancho de elástico de cintura (mm)",
+        "fr": "Largeur d'élastique de taille (mm)"
+      }
+    },
+    {
+      "id": "elastic_ratio",
+      "type": "slider",
+      "default": 0.92,
+      "min": 0.8,
+      "max": 1.0,
+      "step": 0.01,
+      "advanced": true,
+      "label": {
+        "en": "Waist elastic / opening",
+        "es": "Elástico de cintura / abertura",
+        "fr": "Élastique de taille / ouverture"
+      }
+    },
+    {
+      "id": "drawcord",
+      "type": "checkbox",
+      "default": true,
+      "label": {
+        "en": "Drawcord + eyelets",
+        "es": "Cordón + ojales",
+        "fr": "Cordon + œillets"
+      }
+    },
+    {
+      "id": "stripe_count",
+      "type": "select",
+      "default": 2,
+      "options": [
+        {
+          "value": 1,
+          "label": {
+            "en": "1 stripe",
+            "es": "1 franja",
+            "fr": "1 rayure"
+          }
+        },
+        {
+          "value": 2,
+          "label": {
+            "en": "2 stripes",
+            "es": "2 franjas",
+            "fr": "2 rayures"
+          }
+        }
+      ],
+      "label": {
+        "en": "Side stripes",
+        "es": "Franjas laterales",
+        "fr": "Bandes latérales"
+      }
+    },
+    {
+      "id": "stripe_width",
+      "type": "slider",
+      "default": 18,
+      "min": 6,
+      "max": 45,
+      "step": 1,
+      "label": {
+        "en": "Stripe width, each (mm)",
+        "es": "Ancho de franja, cada una (mm)",
+        "fr": "Largeur de bande, chacune (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 8,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 35,
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "advanced": true,
+      "label": {
+        "en": "Open-hem allowance (mm)",
+        "es": "Margen de bajo abierto (mm)",
+        "fr": "Marge d'ourlet ouvert (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "hip_girth": 1000, "inseam_length": 720, "stripe_count": 2 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "hip_girth": 1080, "inseam_length": 740, "relaxed_ease": 160, "stripe_count": 2 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "hip_girth": 1000,
+        "inseam_length": 720,
+        "stripe_count": 2
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G",
+        "fr": "L"
+      },
+      "values": {
+        "hip_girth": 1080,
+        "inseam_length": 740,
+        "relaxed_ease": 160,
+        "stripe_count": 2
+      }
+    }
   ],
   "constraints": [
-    { "expression": "back_rise >= front_rise", "severity": "warning", "message": { "en": "Back rise should be at least the front rise", "es": "El tiro trasero debe ser al menos el delantero" } },
-    { "expression": "cuff_ratio <= 1.0", "severity": "warning", "message": { "en": "Cuff must be at or under the ankle opening so the rib recovers", "es": "El puño debe ser igual o menor a la abertura del tobillo para que el rib recupere" } },
-    { "expression": "hem_width >= 85", "severity": "warning", "message": { "en": "Keep the ankle wide enough to pass the foot on a relaxed track pant", "es": "Mantenga el tobillo suficientemente ancho para pasar el pie en un track holgado" } }
+    {
+      "expression": "back_rise >= front_rise",
+      "severity": "warning",
+      "message": {
+        "en": "Back rise should be at least the front rise",
+        "es": "El tiro trasero debe ser al menos el delantero",
+        "fr": "La hauteur de fourche arrière doit être au moins égale à celle de devant"
+      }
+    },
+    {
+      "expression": "cuff_ratio <= 1.0",
+      "severity": "warning",
+      "message": {
+        "en": "Cuff must be at or under the ankle opening so the rib recovers",
+        "es": "El puño debe ser igual o menor a la abertura del tobillo para que el rib recupere",
+        "fr": "Le poignet doit être égal ou inférieur à l'ouverture de cheville pour que la côte reprenne"
+      }
+    },
+    {
+      "expression": "hem_width >= 85",
+      "severity": "warning",
+      "message": {
+        "en": "Keep the ankle wide enough to pass the foot on a relaxed track pant",
+        "es": "Mantenga el tobillo suficientemente ancho para pasar el pie en un track holgado",
+        "fr": "Gardez la cheville assez large pour laisser passer le pied sur un track pant détendu"
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json", "pdf"],
-  "fabrics": ["poliester-elastano-compresion"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "poliester-elastano-compresion"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "waistband", "type": "waistband", "edges": [{ "piece": "front", "edge": "waist" }, { "piece": "back", "edge": "waist" }], "parameters": ["hip_girth", "elastic_width", "elastic_ratio", "drawcord"] },
-      { "id": "cuff", "type": "cuff", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["cuffed", "cuff_ratio", "cuff_height"] },
-      { "id": "side_stripe", "type": "side_seam", "edges": [{ "piece": "front", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["stripe_count", "stripe_width"] }
+      {
+        "id": "waistband",
+        "type": "waistband",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "waist"
+          },
+          {
+            "piece": "back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "hip_girth",
+          "elastic_width",
+          "elastic_ratio",
+          "drawcord"
+        ]
+      },
+      {
+        "id": "cuff",
+        "type": "cuff",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "cuffed",
+          "cuff_ratio",
+          "cuff_height"
+        ]
+      },
+      {
+        "id": "side_stripe",
+        "type": "side_seam",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "stripe_count",
+          "stripe_width"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": true, "knit_negative_ease": false, "contrast_trim": true },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "knit_negative_ease": false,
+      "contrast_trim": true
+    },
     "societal_benefit": {
       "en": "Turns the trouser block into activewear: a relaxed technical pant whose signature contrast stripe and every elastic finish are derived, to the millimetre, from the measured pattern — the same block that gives joggers and sweatpants, restyled with sportswear trim.",
-      "es": "Convierte el bloque de pantalón en ropa deportiva: un pantalón técnico holgado cuya franja de contraste característica y cada acabado elástico se derivan, al milímetro, del patrón medido — el mismo bloque que da joggers y pants, reestilizado con vivos deportivos."
+      "es": "Convierte el bloque de pantalón en ropa deportiva: un pantalón técnico holgado cuya franja de contraste característica y cada acabado elástico se derivan, al milímetro, del patrón medido — el mismo bloque que da joggers y pants, reestilizado con vivos deportivos.",
+      "fr": "Transforme le bloc de pantalon en vêtement de sport : un pantalon technique détendu dont la bande contrastée caractéristique et chaque finition élastique sont dérivées, au millimètre, à partir du patron mesuré — le même bloc qui donne les joggings et les pantalons de survêtement, restylé avec des passementeries de sport."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

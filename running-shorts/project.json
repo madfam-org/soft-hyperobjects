@@ -6,89 +6,512 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #52. A runner's short: a relaxed outer short with a scooped, split curved side hem (the hem edge is a bezier that sweeps up at the side seam for stride clearance) worn over a fitted compression liner brief. One elastic waistband casing catches both layers; the liner attaches only at the waist and hangs free at the leg. The outer back hem width and the liner back hem width are both solved analytically so the straight inseams match, the liner waist is pinned to the outer waist so the waist stack balances, and the liner leg openings carry exact-mm elastic cut lengths in the BOM.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #52 del FC-100. Un short para correr: un short exterior holgado con bajo lateral curvo y abierto (el borde del bajo es una curva bezier que sube en la costura lateral para dar libertad a la zancada) sobre un forro interior de compresión ajustado. Una sola pretina elástica atrapa ambas capas; el forro se une solo en la cintura y cuelga libre en la pierna. El ancho del bajo trasero exterior y el del forro se resuelven analíticamente para que las entrepiernas rectas coincidan, la cintura del forro se fija a la cintura exterior para que la pila de cintura cuadre, y las aberturas de pierna del forro llevan largos de elástico exactos en mm en la lista de materiales.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #52 del FC-100. Un short para correr: un short exterior holgado con bajo lateral curvo y abierto (el borde del bajo es una curva bezier que sube en la costura lateral para dar libertad a la zancada) sobre un forro interior de compresión ajustado. Una sola pretina elástica atrapa ambas capas; el forro se une solo en la cintura y cuelga libre en la pierna. El ancho del bajo trasero exterior y el del forro se resuelven analíticamente para que las entrepiernas rectas coincidan, la cintura del forro se fija a la cintura exterior para que la pila de cintura cuadre, y las aberturas de pierna del forro llevan largos de elástico exactos en mm en la lista de materiales.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Rang #52 du FC-100. Un short de course : un short extérieur ample à ourlet latéral courbe, échancré et fendu (le bord d'ourlet est une bézier qui remonte à la couture latérale pour libérer la foulée) porté par-dessus une doublure de compression ajustée. Une seule coulisse de ceinture élastique attrape les deux couches ; la doublure ne se fixe qu'à la taille et pend librement à la jambe. La largeur de l'ourlet dos extérieur et celle de la doublure sont toutes deux résolues analytiquement pour que les entrejambes droites coïncident, la taille de la doublure est épinglée à la taille extérieure pour équilibrer l'empilement de taille, et les ouvertures de jambe de la doublure portent des longueurs de coupe d'élastique en mm exacts dans la nomenclature.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["shorts", "running", "athletic", "activewear", "liner", "curved-hem", "elastic", "negative-ease", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "shorts",
+      "running",
+      "athletic",
+      "activewear",
+      "liner",
+      "curved-hem",
+      "elastic",
+      "negative-ease",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet", "license": "original" },
-        { "source": "athletic-shorts cartridge (analytic back-hem inseam solve, elastic casing)", "license": "LicenseRef-FC1-pending" },
-        { "source": "leggings cartridge (negative-ease knit draft, fold-over casing)", "license": "LicenseRef-FC1-pending" },
-        { "source": "panties-bikini cartridge (elastic-finished edges, exact-mm elastic cut lengths)", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "athletic-shorts cartridge (analytic back-hem inseam solve, elastic casing)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "leggings cartridge (negative-ease knit draft, fold-over casing)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "panties-bikini cartridge (elastic-finished edges, exact-mm elastic cut lengths)",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "running-shorts",
-      "label": { "en": "Running shorts (all pieces)", "es": "Short para correr (todas las piezas)" },
+      "label": {
+        "en": "Running shorts (all pieces)",
+        "es": "Short para correr (todas las piezas)",
+        "fr": "Short de course (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["outer_front", "outer_back", "liner_front", "liner_back", "waistband"]
+      "pieces": [
+        "outer_front",
+        "outer_back",
+        "liner_front",
+        "liner_back",
+        "waistband"
+      ]
     }
   ],
   "pieces": [
-    { "id": "outer_front", "label": { "en": "Outer Front", "es": "Delantero exterior" }, "default_color": "#3a5f8a", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "outer_back", "label": { "en": "Outer Back", "es": "Trasero exterior" }, "default_color": "#2c4a6e", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "liner_front", "label": { "en": "Liner Front (compression)", "es": "Forro delantero (compresión)" }, "default_color": "#5a8ac0", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "liner_back", "label": { "en": "Liner Back (compression)", "es": "Forro trasero (compresión)" }, "default_color": "#4a7ab0", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "waistband", "label": { "en": "Waistband Casing", "es": "Pretina (casing)" }, "default_color": "#6a9ad0", "cut": { "quantity": 1 } }
+    {
+      "id": "outer_front",
+      "label": {
+        "en": "Outer Front",
+        "es": "Delantero exterior",
+        "fr": "Devant extérieur"
+      },
+      "default_color": "#3a5f8a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "outer_back",
+      "label": {
+        "en": "Outer Back",
+        "es": "Trasero exterior",
+        "fr": "Dos extérieur"
+      },
+      "default_color": "#2c4a6e",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "liner_front",
+      "label": {
+        "en": "Liner Front (compression)",
+        "es": "Forro delantero (compresión)",
+        "fr": "Doublure devant (compression)"
+      },
+      "default_color": "#5a8ac0",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "liner_back",
+      "label": {
+        "en": "Liner Back (compression)",
+        "es": "Forro trasero (compresión)",
+        "fr": "Doublure dos (compression)"
+      },
+      "default_color": "#4a7ab0",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "Waistband Casing",
+        "es": "Pretina (casing)",
+        "fr": "Coulisse de ceinture"
+      },
+      "default_color": "#6a9ad0",
+      "cut": {
+        "quantity": 1
+      }
+    }
   ],
   "parameters": [
-    { "id": "hip_girth", "type": "slider", "default": 1000, "min": 650, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
-    { "id": "outer_inseam", "type": "slider", "default": 130, "min": 70, "max": 250, "step": 10, "label": { "en": "Outer inseam (mm)", "es": "Entrepierna exterior (mm)" } },
-    { "id": "liner_inseam", "type": "slider", "default": 55, "min": 20, "max": 140, "step": 5, "label": { "en": "Liner inseam (mm)", "es": "Entrepierna del forro (mm)" } },
-    { "id": "front_rise", "type": "slider", "default": 260, "min": 190, "max": 380, "step": 5, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)" } },
-    { "id": "back_rise", "type": "slider", "default": 295, "min": 190, "max": 440, "step": 5, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)" } },
-    { "id": "sport_ease", "type": "slider", "default": 140, "min": 80, "max": 360, "step": 10, "label": { "en": "Outer ease (mm)", "es": "Holgura del exterior (mm)" } },
-    { "id": "outer_hem_width", "type": "slider", "default": 250, "min": 170, "max": 360, "step": 5, "label": { "en": "Outer hem half-width (mm)", "es": "Medio bajo exterior (mm)" } },
-    { "id": "side_scoop", "type": "slider", "default": 55, "min": 0, "max": 120, "step": 5, "label": { "en": "Side-hem scoop (mm)", "es": "Curva del bajo lateral (mm)" } },
-    { "id": "liner_neg_ease", "type": "slider", "default": 10, "min": 0, "max": 18, "step": 1, "label": { "en": "Liner negative ease (%)", "es": "Holgura negativa del forro (%)" } },
-    { "id": "elastic_width", "type": "slider", "default": 35, "min": 20, "max": 60, "step": 5, "label": { "en": "Waist elastic width (mm)", "es": "Ancho del elástico de cintura (mm)" } },
-    { "id": "waist_elastic_ratio", "type": "slider", "default": 0.9, "min": 0.8, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Waist elastic/opening ratio", "es": "Proporción elástico/abertura de cintura" } },
-    { "id": "leg_elastic_ratio", "type": "slider", "default": 0.88, "min": 0.75, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Leg elastic/opening ratio", "es": "Proporción elástico/abertura de pierna" } },
-    { "id": "drawcord_ratio", "type": "slider", "default": 1.3, "min": 1.0, "max": 1.6, "step": 0.05, "advanced": true, "label": { "en": "Drawcord/waist ratio", "es": "Proporción cordón/cintura" } },
-    { "id": "seam_allowance", "type": "slider", "default": 7, "min": 0, "max": 15, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 18, "min": 0, "max": 40, "step": 2, "label": { "en": "Outer hem allowance (mm)", "es": "Margen de dobladillo exterior (mm)" } }
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "default": 1000,
+      "min": 650,
+      "max": 1800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      }
+    },
+    {
+      "id": "outer_inseam",
+      "type": "slider",
+      "default": 130,
+      "min": 70,
+      "max": 250,
+      "step": 10,
+      "label": {
+        "en": "Outer inseam (mm)",
+        "es": "Entrepierna exterior (mm)",
+        "fr": "Entrejambe extérieur (mm)"
+      }
+    },
+    {
+      "id": "liner_inseam",
+      "type": "slider",
+      "default": 55,
+      "min": 20,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Liner inseam (mm)",
+        "es": "Entrepierna del forro (mm)",
+        "fr": "Entrejambe de doublure (mm)"
+      }
+    },
+    {
+      "id": "front_rise",
+      "type": "slider",
+      "default": 260,
+      "min": 190,
+      "max": 380,
+      "step": 5,
+      "label": {
+        "en": "Front rise (mm)",
+        "es": "Tiro delantero (mm)",
+        "fr": "Hauteur de fourche avant (mm)"
+      }
+    },
+    {
+      "id": "back_rise",
+      "type": "slider",
+      "default": 295,
+      "min": 190,
+      "max": 440,
+      "step": 5,
+      "label": {
+        "en": "Back rise (mm)",
+        "es": "Tiro trasero (mm)",
+        "fr": "Hauteur de fourche arrière (mm)"
+      }
+    },
+    {
+      "id": "sport_ease",
+      "type": "slider",
+      "default": 140,
+      "min": 80,
+      "max": 360,
+      "step": 10,
+      "label": {
+        "en": "Outer ease (mm)",
+        "es": "Holgura del exterior (mm)",
+        "fr": "Aisance extérieure (mm)"
+      }
+    },
+    {
+      "id": "outer_hem_width",
+      "type": "slider",
+      "default": 250,
+      "min": 170,
+      "max": 360,
+      "step": 5,
+      "label": {
+        "en": "Outer hem half-width (mm)",
+        "es": "Medio bajo exterior (mm)",
+        "fr": "Demi-largeur d'ourlet extérieur (mm)"
+      }
+    },
+    {
+      "id": "side_scoop",
+      "type": "slider",
+      "default": 55,
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Side-hem scoop (mm)",
+        "es": "Curva del bajo lateral (mm)",
+        "fr": "Arrondi d'ourlet latéral (mm)"
+      }
+    },
+    {
+      "id": "liner_neg_ease",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 18,
+      "step": 1,
+      "label": {
+        "en": "Liner negative ease (%)",
+        "es": "Holgura negativa del forro (%)",
+        "fr": "Aisance négative de doublure (%)"
+      }
+    },
+    {
+      "id": "elastic_width",
+      "type": "slider",
+      "default": 35,
+      "min": 20,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Waist elastic width (mm)",
+        "es": "Ancho del elástico de cintura (mm)",
+        "fr": "Largeur de l'élastique de taille (mm)"
+      }
+    },
+    {
+      "id": "waist_elastic_ratio",
+      "type": "slider",
+      "default": 0.9,
+      "min": 0.8,
+      "max": 1.0,
+      "step": 0.01,
+      "advanced": true,
+      "label": {
+        "en": "Waist elastic/opening ratio",
+        "es": "Proporción elástico/abertura de cintura",
+        "fr": "Rapport élastique/ouverture de taille"
+      }
+    },
+    {
+      "id": "leg_elastic_ratio",
+      "type": "slider",
+      "default": 0.88,
+      "min": 0.75,
+      "max": 1.0,
+      "step": 0.01,
+      "advanced": true,
+      "label": {
+        "en": "Leg elastic/opening ratio",
+        "es": "Proporción elástico/abertura de pierna",
+        "fr": "Proportion élastique/ouverture de jambe"
+      }
+    },
+    {
+      "id": "drawcord_ratio",
+      "type": "slider",
+      "default": 1.3,
+      "min": 1.0,
+      "max": 1.6,
+      "step": 0.05,
+      "advanced": true,
+      "label": {
+        "en": "Drawcord/waist ratio",
+        "es": "Proporción cordón/cintura",
+        "fr": "Rapport cordon/taille"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 7,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 18,
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "label": {
+        "en": "Outer hem allowance (mm)",
+        "es": "Margen de dobladillo exterior (mm)",
+        "fr": "Marge d'ourlet extérieur (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "hip_girth": 1000, "outer_inseam": 130, "liner_inseam": 55 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "hip_girth": 1080, "outer_inseam": 140, "liner_inseam": 60, "front_rise": 270, "back_rise": 305 } },
-    { "id": "split-5in", "label": { "en": "5-inch split hem", "es": "Bajo abierto 13 cm" }, "values": { "outer_inseam": 125, "side_scoop": 90 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "hip_girth": 1000,
+        "outer_inseam": 130,
+        "liner_inseam": 55
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G",
+        "fr": "L"
+      },
+      "values": {
+        "hip_girth": 1080,
+        "outer_inseam": 140,
+        "liner_inseam": 60,
+        "front_rise": 270,
+        "back_rise": 305
+      }
+    },
+    {
+      "id": "split-5in",
+      "label": {
+        "en": "5-inch split hem",
+        "es": "Bajo abierto 13 cm",
+        "fr": "Bas fendu 13 cm"
+      },
+      "values": {
+        "outer_inseam": 125,
+        "side_scoop": 90
+      }
+    }
   ],
   "constraints": [
     {
       "expression": "liner_inseam <= outer_inseam",
       "severity": "warning",
-      "message": { "en": "The liner should sit inside the outer short — keep the liner inseam at or below the outer inseam", "es": "El forro debe quedar dentro del short exterior — mantén la entrepierna del forro igual o menor que la exterior" }
+      "message": {
+        "en": "The liner should sit inside the outer short — keep the liner inseam at or below the outer inseam",
+        "es": "El forro debe quedar dentro del short exterior — mantén la entrepierna del forro igual o menor que la exterior",
+        "fr": "La doublure doit rester à l'intérieur du short extérieur — gardez l'entrejambe de la doublure égale ou inférieure à celle de l'extérieur"
+      }
     },
     {
       "expression": "side_scoop <= outer_inseam",
       "severity": "warning",
-      "message": { "en": "A side scoop taller than the inseam leaves almost no side seam to sew", "es": "Una curva lateral mayor que la entrepierna deja casi sin costura lateral que coser" }
+      "message": {
+        "en": "A side scoop taller than the inseam leaves almost no side seam to sew",
+        "es": "Una curva lateral mayor que la entrepierna deja casi sin costura lateral que coser",
+        "fr": "Une échancrure latérale plus haute que l'entrejambe ne laisse presque plus de couture latérale à coudre"
+      }
     },
     {
       "expression": "liner_neg_ease <= 15",
       "severity": "warning",
-      "message": { "en": "Above 15% negative ease demands high-elastane compression knit; check the fabric card", "es": "Arriba de 15% de holgura negativa exige punto de compresión con alto elastano; revisa la ficha de tela" }
+      "message": {
+        "en": "Above 15% negative ease demands high-elastane compression knit; check the fabric card",
+        "es": "Arriba de 15% de holgura negativa exige punto de compresión con alto elastano; revisa la ficha de tela",
+        "fr": "Au-delà de 15 % d'aisance négative, il faut un jersey de compression à fort élasthanne ; vérifiez la fiche du tissu"
+      }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["poliester-elastano-compresion", "tricot-nylon-elastano"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "poliester-elastano-compresion",
+    "tricot-nylon-elastano"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "waistband", "type": "waistband", "label": { "en": "Waist elastic (both layers)", "es": "Elástico de cintura (ambas capas)" }, "edges": [{ "piece": "outer_front", "edge": "waist" }, { "piece": "outer_back", "edge": "waist" }, { "piece": "liner_front", "edge": "waist" }, { "piece": "liner_back", "edge": "waist" }], "parameters": ["hip_girth", "elastic_width", "waist_elastic_ratio", "drawcord_ratio"] },
-      { "id": "outer_hem", "type": "hem", "label": { "en": "Outer split hem", "es": "Bajo abierto exterior" }, "edges": [{ "piece": "outer_front", "edge": "hem" }, { "piece": "outer_back", "edge": "hem" }], "parameters": ["outer_hem_width", "side_scoop", "hem_allowance"] },
-      { "id": "liner_leg", "type": "hem", "label": { "en": "Liner leg openings (elastic)", "es": "Aberturas de pierna del forro (elástico)" }, "edges": [{ "piece": "liner_front", "edge": "hem" }, { "piece": "liner_back", "edge": "hem" }], "parameters": ["liner_inseam", "liner_neg_ease", "leg_elastic_ratio"] }
+      {
+        "id": "waistband",
+        "type": "waistband",
+        "label": {
+          "en": "Waist elastic (both layers)",
+          "es": "Elástico de cintura (ambas capas)",
+          "fr": "Élastique de taille (les deux couches)"
+        },
+        "edges": [
+          {
+            "piece": "outer_front",
+            "edge": "waist"
+          },
+          {
+            "piece": "outer_back",
+            "edge": "waist"
+          },
+          {
+            "piece": "liner_front",
+            "edge": "waist"
+          },
+          {
+            "piece": "liner_back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "hip_girth",
+          "elastic_width",
+          "waist_elastic_ratio",
+          "drawcord_ratio"
+        ]
+      },
+      {
+        "id": "outer_hem",
+        "type": "hem",
+        "label": {
+          "en": "Outer split hem",
+          "es": "Bajo abierto exterior",
+          "fr": "Ourlet fendu extérieur"
+        },
+        "edges": [
+          {
+            "piece": "outer_front",
+            "edge": "hem"
+          },
+          {
+            "piece": "outer_back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "outer_hem_width",
+          "side_scoop",
+          "hem_allowance"
+        ]
+      },
+      {
+        "id": "liner_leg",
+        "type": "hem",
+        "label": {
+          "en": "Liner leg openings (elastic)",
+          "es": "Aberturas de pierna del forro (elástico)",
+          "fr": "Ouvertures de jambe de doublure (élastique)"
+        },
+        "edges": [
+          {
+            "piece": "liner_front",
+            "edge": "hem"
+          },
+          {
+            "piece": "liner_back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "liner_inseam",
+          "liner_neg_ease",
+          "leg_elastic_ratio"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": true, "knit_negative_ease": true, "elastic_finish": true, "built_in_liner": true },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "knit_negative_ease": true,
+      "elastic_finish": true,
+      "built_in_liner": true
+    },
     "societal_benefit": {
       "en": "The commons' first lined activewear draft: a relaxed runner's short and its compression liner as one verified object, with the drafting math brands keep proprietary in the open — both back hems solved so the inseams match, the liner waist pinned so both layers meet the band at one length, and exact-mm waist, leg, and drawcord cut lengths computed from the measured pattern.",
-      "es": "El primer trazo de ropa deportiva forrada del commons: un short holgado para correr y su forro de compresión como un solo objeto verificado, con la matemática de trazo que las marcas mantienen propietaria en abierto — ambos bajos traseros resueltos para que las entrepiernas coincidan, la cintura del forro fijada para que ambas capas lleguen a la pretina al mismo largo, y largos exactos en mm de cintura, pierna y cordón calculados desde el patrón medido."
+      "es": "El primer trazo de ropa deportiva forrada del commons: un short holgado para correr y su forro de compresión como un solo objeto verificado, con la matemática de trazo que las marcas mantienen propietaria en abierto — ambos bajos traseros resueltos para que las entrepiernas coincidan, la cintura del forro fijada para que ambas capas lleguen a la pretina al mismo largo, y largos exactos en mm de cintura, pierna y cordón calculados desde el patrón medido.",
+      "fr": "Le premier tracé de vêtement de sport doublé du commun : un short de course ample et sa doublure de compression comme un seul objet vérifié, avec les calculs de tracé que les marques gardent propriétaires rendus ouverts — les deux ourlets dos résolus pour que les entrejambes coïncident, la taille de la doublure épinglée pour que les deux couches atteignent la ceinture à la même longueur, et des longueurs de coupe de taille, de jambe et de cordon en mm exacts calculées depuis le patron mesuré."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

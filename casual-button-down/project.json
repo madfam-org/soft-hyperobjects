@@ -6,10 +6,22 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #20 — the relaxed everyday shirt, parametric and deliberately simpler than a dress shirt: no yoke, no collar fall. Drop-shoulder woven front cut 2 with the center edge extended 30 mm past CF as a button stand (six buttonhole cross-marks, chest patch-pocket placement), back cut on fold with a marked CB box pleat, a sleeve whose cap is solved numerically to the front + back armholes at zero ease (short default, long preset), and a one-piece band collar solved to the measured neckline.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #20 del FC-100 — la camisa casual de diario, paramétrica y deliberadamente más simple que una camisa de vestir: sin hombrera y sin caída de cuello. Delantero de tejido plano con hombro caído cortado en 2 con el borde central extendido 30 mm después del centro frente como cartera de botones (seis cruces de ojal, ubicación de bolsa de parche al pecho), trasero cortado al doblez con tabla marcada en el centro espalda, una manga cuya copa se resuelve numéricamente contra las sisas delantera + trasera sin embebido (corta por defecto, larga como preajuste) y un cuello mao de una pieza resuelto al escote medido.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #20 del FC-100 — la camisa casual de diario, paramétrica y deliberadamente más simple que una camisa de vestir: sin hombrera y sin caída de cuello. Delantero de tejido plano con hombro caído cortado en 2 con el borde central extendido 30 mm después del centro frente como cartera de botones (seis cruces de ojal, ubicación de bolsa de parche al pecho), trasero cortado al doblez con tabla marcada en el centro espalda, una manga cuya copa se resuelve numéricamente contra las sisas delantera + trasera sin embebido (corta por defecto, larga como preajuste) y un cuello mao de una pieza resuelto al escote medido.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Rang #20 du FC-100 — la chemise décontractée de tous les jours, paramétrique et volontairement plus simple qu'une chemise habillée : sans empiècement, sans tombant de col. Devant tissé à épaule tombante coupé en 2 avec le bord central prolongé de 30 mm au-delà du milieu devant en patte de boutonnage (six croix de boutonnière, emplacement de poche plaquée poitrine), dos coupé au pli avec un pli creux marqué au milieu dos, une manche dont la tête est résolue numériquement aux emmanchures devant + dos sans embu (courte par défaut, longue en préréglage), et un col mao d'une pièce résolu à l'encolure mesurée.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["shirt", "camisa", "button-down", "casual", "band-collar", "box-pleat", "woven", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "shirt",
+      "camisa",
+      "button-down",
+      "casual",
+      "band-collar",
+      "box-pleat",
+      "woven",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
@@ -24,31 +36,226 @@
   "modes": [
     {
       "id": "shirt",
-      "label": { "en": "Casual shirt (all pieces)", "es": "Camisa casual (todas las piezas)" },
+      "label": {
+        "en": "Casual shirt (all pieces)",
+        "es": "Camisa casual (todas las piezas)",
+        "fr": "Chemise décontractée (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "sleeve", "collar"]
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "collar"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#4a7fa5", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Trasero" }, "default_color": "#3d6b8c", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#6899bd", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "collar", "label": { "en": "Band Collar", "es": "Cuello Mao" }, "default_color": "#86b0cd", "cut": { "quantity": 2, "on_fold": true, "mirror": true } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#4a7fa5",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Trasero",
+        "fr": "Dos"
+      },
+      "default_color": "#3d6b8c",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#6899bd",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Band Collar",
+        "es": "Cuello Mao",
+        "fr": "Col officier"
+      },
+      "default_color": "#86b0cd",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    }
   ],
   "parameters": [
-    { "id": "chest_girth", "type": "slider", "default": 1040, "min": 700, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
-    { "id": "body_length", "type": "slider", "default": 740, "min": 400, "max": 1000, "step": 10, "label": { "en": "Body length, nape to hem (mm)", "es": "Largo de cuerpo, nuca a dobladillo (mm)" } },
-    { "id": "neck_girth", "type": "slider", "default": 400, "min": 300, "max": 520, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
-    { "id": "sleeve_length", "type": "slider", "default": 240, "min": 100, "max": 660, "step": 10, "label": { "en": "Sleeve length, shoulder to hem (mm)", "es": "Largo de manga, hombro a dobladillo (mm)" } },
-    { "id": "woven_ease", "type": "slider", "default": 180, "min": 80, "max": 400, "step": 10, "label": { "en": "Total ease (mm; relaxed casual fit)", "es": "Holgura total (mm; corte casual holgado)" } },
-    { "id": "button_stand", "type": "slider", "default": 30, "min": 20, "max": 40, "step": 2, "label": { "en": "Button-stand width past CF (mm)", "es": "Ancho de cartera después del centro frente (mm)" } },
-    { "id": "collar_height", "type": "slider", "default": 65, "min": 40, "max": 90, "step": 5, "label": { "en": "Band collar height (mm)", "es": "Alto del cuello mao (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 20, "min": 0, "max": 50, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "default": 1040,
+      "min": 700,
+      "max": 1800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "default": 740,
+      "min": 400,
+      "max": 1000,
+      "step": 10,
+      "label": {
+        "en": "Body length, nape to hem (mm)",
+        "es": "Largo de cuerpo, nuca a dobladillo (mm)",
+        "fr": "Longueur du corps, nuque à l'ourlet (mm)"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 400,
+      "min": 300,
+      "max": 520,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 240,
+      "min": 100,
+      "max": 660,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length, shoulder to hem (mm)",
+        "es": "Largo de manga, hombro a dobladillo (mm)",
+        "fr": "Longueur de manche, épaule à l'ourlet (mm)"
+      }
+    },
+    {
+      "id": "woven_ease",
+      "type": "slider",
+      "default": 180,
+      "min": 80,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Total ease (mm; relaxed casual fit)",
+        "es": "Holgura total (mm; corte casual holgado)",
+        "fr": "Aisance totale (mm; coupe casual décontractée)"
+      }
+    },
+    {
+      "id": "button_stand",
+      "type": "slider",
+      "default": 30,
+      "min": 20,
+      "max": 40,
+      "step": 2,
+      "label": {
+        "en": "Button-stand width past CF (mm)",
+        "es": "Ancho de cartera después del centro frente (mm)",
+        "fr": "Largeur de la patte au-delà du milieu devant (mm)"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "default": 65,
+      "min": 40,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Band collar height (mm)",
+        "es": "Alto del cuello mao (mm)",
+        "fr": "Hauteur de col officier (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 20,
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "short-sleeve", "label": { "en": "Short sleeve", "es": "Manga corta" }, "values": { "sleeve_length": 240 } },
-    { "id": "long-sleeve", "label": { "en": "Long sleeve", "es": "Manga larga" }, "values": { "sleeve_length": 600 } }
+    {
+      "id": "short-sleeve",
+      "label": {
+        "en": "Short sleeve",
+        "es": "Manga corta",
+        "fr": "Manche courte"
+      },
+      "values": {
+        "sleeve_length": 240
+      }
+    },
+    {
+      "id": "long-sleeve",
+      "label": {
+        "en": "Long sleeve",
+        "es": "Manga larga",
+        "fr": "Manche longue"
+      },
+      "values": {
+        "sleeve_length": 600
+      }
+    }
   ],
   "constraints": [
     {
@@ -56,7 +263,8 @@
       "severity": "warning",
       "message": {
         "en": "Below ~24 mm the stand crowds standard 10-12 mm shirt buttons",
-        "es": "Debajo de ~24 mm la cartera queda justa para botones estándar de 10-12 mm"
+        "es": "Debajo de ~24 mm la cartera queda justa para botones estándar de 10-12 mm",
+        "fr": "En dessous de ~24 mm, la patte est trop juste pour des boutons de chemise standard de 10-12 mm"
       }
     },
     {
@@ -64,12 +272,20 @@
       "severity": "warning",
       "message": {
         "en": "Band collars above ~75 mm collide with the jaw on most necks",
-        "es": "Cuellos mao de más de ~75 mm chocan con la mandíbula en la mayoría de los cuellos"
+        "es": "Cuellos mao de más de ~75 mm chocan con la mandíbula en la mayoría de los cuellos",
+        "fr": "Les cols mao de plus de ~75 mm heurtent la mâchoire sur la plupart des cous"
       }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["popelina-algodon", "manta-cruda"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "popelina-algodon",
+    "manta-cruda"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
@@ -78,38 +294,76 @@
         "id": "neckline",
         "type": "neckline",
         "edges": [
-          { "piece": "front", "edge": "neck" },
-          { "piece": "back", "edge": "neck" },
-          { "piece": "collar", "edge": "neck" }
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          },
+          {
+            "piece": "collar",
+            "edge": "neck"
+          }
         ],
-        "parameters": ["neck_girth", "collar_height"]
+        "parameters": [
+          "neck_girth",
+          "collar_height"
+        ]
       },
       {
         "id": "armscye",
         "type": "armscye",
         "edges": [
-          { "piece": "front", "edge": "armhole" },
-          { "piece": "back", "edge": "armhole" },
-          { "piece": "sleeve", "edge": "cap" }
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
         ],
-        "parameters": ["chest_girth", "woven_ease"]
+        "parameters": [
+          "chest_girth",
+          "woven_ease"
+        ]
       },
       {
         "id": "hem",
         "type": "hem",
         "edges": [
-          { "piece": "front", "edge": "hem" },
-          { "piece": "back", "edge": "hem" }
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
         ],
-        "parameters": ["body_length", "hem_allowance"]
+        "parameters": [
+          "body_length",
+          "hem_allowance"
+        ]
       },
       {
         "id": "button_stand",
         "type": "button_stand",
         "edges": [
-          { "piece": "front", "edge": "center" }
+          {
+            "piece": "front",
+            "edge": "center"
+          }
         ],
-        "parameters": ["button_stand"]
+        "parameters": [
+          "button_stand"
+        ]
       }
     ],
     "capabilities": {
@@ -120,7 +374,8 @@
     },
     "societal_benefit": {
       "en": "The casual shirt is the most-worn woven garment on earth; a verified parametric draft lets sewing co-ops and small workshops cut made-to-measure shirts locally — sized to real bodies instead of letter sizes, repairable at the stand and collar, and free of fast-fashion sizing waste.",
-      "es": "La camisa casual es la prenda de tejido plano más usada del mundo; un trazo paramétrico verificado permite a cooperativas de costura y talleres pequeños cortar camisas a la medida localmente — a la talla de cuerpos reales y no de tallas genéricas, reparables en cartera y cuello, y sin el desperdicio de tallaje de la moda rápida."
+      "es": "La camisa casual es la prenda de tejido plano más usada del mundo; un trazo paramétrico verificado permite a cooperativas de costura y talleres pequeños cortar camisas a la medida localmente — a la talla de cuerpos reales y no de tallas genéricas, reparables en cartera y cuello, y sin el desperdicio de tallaje de la moda rápida.",
+      "fr": "La chemise casual est le vêtement tissé le plus porté au monde ; un tracé paramétrique vérifié permet aux coopératives de couture et aux petits ateliers de couper localement des chemises sur mesure — dimensionnées à des corps réels plutôt qu'à des tailles génériques, réparables à la patte et au col, et sans le gaspillage de tailles de la fast fashion."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

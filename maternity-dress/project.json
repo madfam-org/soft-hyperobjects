@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "An empire-waist maternity dress: a fitted bodice to just under the bust, seamed to a gently gathered A-line skirt that falls over and grows with the bump. The high empire seam + skirt flare give room without a tent shape. A soft-goods garment — no hardware. FC-200 long-tail (maternity).\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Un vestido de maternidad de talle imperio: un corpiño ajustado hasta justo bajo el busto, unido a una falda en A ligeramente fruncida que cae sobre y crece con la panza. El talle imperio alto + el vuelo de la falda dan espacio sin forma de carpa. Una prenda textil — sin herrajes. Cola larga FC-200 (maternidad).\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Un vestido de maternidad de talle imperio: un corpiño ajustado hasta justo bajo el busto, unido a una falda en A ligeramente fruncida que cae sobre y crece con la panza. El talle imperio alto + el vuelo de la falda dan espacio sin forma de carpa. Una prenda textil — sin herrajes. Cola larga FC-200 (maternidad).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une robe de grossesse à taille empire : un corsage ajusté jusqu'à juste sous la poitrine, assemblé à une jupe évasée en A légèrement froncée qui tombe sur le ventre et grandit avec lui. La couture empire haute + l'évasement de la jupe donnent de l'ampleur sans effet de tente. Un vêtement textile — sans quincaillerie. Longue traîne FC-200 (grossesse).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
     "tags": [
@@ -33,7 +34,8 @@
       "id": "set",
       "label": {
         "en": "Full Dress",
-        "es": "Vestido completo"
+        "es": "Vestido completo",
+        "fr": "Robe complète"
       },
       "script_file": "main.py",
       "pieces": [
@@ -48,7 +50,8 @@
       "id": "bodice_front",
       "label": {
         "en": "Bodice Front",
-        "es": "Corpiño delantero"
+        "es": "Corpiño delantero",
+        "fr": "Corsage devant"
       },
       "default_color": "#6a5a7a",
       "cut": {
@@ -62,7 +65,8 @@
       "id": "bodice_back",
       "label": {
         "en": "Bodice Back",
-        "es": "Corpiño trasero"
+        "es": "Corpiño trasero",
+        "fr": "Corsage dos"
       },
       "default_color": "#6a5a7a",
       "cut": {
@@ -76,7 +80,8 @@
       "id": "skirt",
       "label": {
         "en": "Skirt",
-        "es": "Falda"
+        "es": "Falda",
+        "fr": "Jupe"
       },
       "default_color": "#5a4a6a",
       "cut": {
@@ -120,11 +125,13 @@
       },
       "label": {
         "en": "Bust girth (mm)",
-        "es": "Contorno de busto (mm)"
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de buste (mm)"
       },
       "tooltip": {
         "en": "Full bust",
-        "es": "Busto completo"
+        "es": "Busto completo",
+        "fr": "Tour de poitrine complet"
       }
     },
     {
@@ -141,11 +148,13 @@
       },
       "label": {
         "en": "Underbust (mm)",
-        "es": "Bajo busto (mm)"
+        "es": "Bajo busto (mm)",
+        "fr": "Sous-poitrine (mm)"
       },
       "tooltip": {
         "en": "The empire seam sits here",
-        "es": "El talle imperio va aquí"
+        "es": "El talle imperio va aquí",
+        "fr": "La couture empire se place ici"
       }
     },
     {
@@ -158,11 +167,13 @@
       "step": 10,
       "label": {
         "en": "Length (mm)",
-        "es": "Largo (mm)"
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
       },
       "tooltip": {
         "en": "Shoulder to hem",
-        "es": "Del hombro al ruedo"
+        "es": "Del hombro al ruedo",
+        "fr": "De l'épaule à l'ourlet"
       }
     },
     {
@@ -175,11 +186,13 @@
       "step": 10,
       "label": {
         "en": "Empire rise (mm)",
-        "es": "Talle imperio (mm)"
+        "es": "Talle imperio (mm)",
+        "fr": "Hauteur taille empire (mm)"
       },
       "tooltip": {
         "en": "Shoulder to the empire seam",
-        "es": "Del hombro al talle"
+        "es": "Del hombro al talle",
+        "fr": "De l'épaule à la couture empire"
       }
     },
     {
@@ -192,11 +205,13 @@
       "step": 5,
       "label": {
         "en": "Neck width (mm)",
-        "es": "Ancho de cuello (mm)"
+        "es": "Ancho de cuello (mm)",
+        "fr": "Largeur d'encolure (mm)"
       },
       "tooltip": {
         "en": "Neck opening",
-        "es": "Abertura de cuello"
+        "es": "Abertura de cuello",
+        "fr": "Ouverture d'encolure"
       }
     },
     {
@@ -209,11 +224,13 @@
       "step": 10,
       "label": {
         "en": "Grown sleeve (mm)",
-        "es": "Manga nacida (mm)"
+        "es": "Manga nacida (mm)",
+        "fr": "Manche montée d'une pièce (mm)"
       },
       "tooltip": {
         "en": "Short grown sleeve",
-        "es": "Manga corta nacida"
+        "es": "Manga corta nacida",
+        "fr": "Manche courte venue de coupe"
       }
     },
     {
@@ -226,11 +243,13 @@
       "step": 0.1,
       "label": {
         "en": "Skirt flare (fullness)",
-        "es": "Vuelo de falda"
+        "es": "Vuelo de falda",
+        "fr": "Évasement de jupe (ampleur)"
       },
       "tooltip": {
         "en": "Skirt width / empire",
-        "es": "Ancho de falda / talle"
+        "es": "Ancho de falda / talle",
+        "fr": "Largeur de jupe / empire"
       }
     },
     {
@@ -243,11 +262,13 @@
       "step": 5,
       "label": {
         "en": "Fit ease (mm)",
-        "es": "Holgura (mm)"
+        "es": "Holgura (mm)",
+        "fr": "Aisance d'ajustement (mm)"
       },
       "tooltip": {
         "en": "Bodice ease",
-        "es": "Holgura del corpiño"
+        "es": "Holgura del corpiño",
+        "fr": "Aisance du corsage"
       }
     }
   ],
@@ -256,7 +277,8 @@
       "id": "day",
       "label": {
         "en": "Day dress",
-        "es": "Vestido de día"
+        "es": "Vestido de día",
+        "fr": "Robe de jour"
       },
       "values": {
         "dress_length": 1000,
@@ -267,7 +289,8 @@
       "id": "occasion",
       "label": {
         "en": "Occasion",
-        "es": "Ocasión"
+        "es": "Ocasión",
+        "fr": "Occasion"
       },
       "values": {
         "dress_length": 1250,
@@ -290,7 +313,8 @@
         "type": "shoulder",
         "label": {
           "en": "Shoulder seam",
-          "es": "Costura de hombro"
+          "es": "Costura de hombro",
+          "fr": "Couture d'épaule"
         },
         "edges": [
           {
@@ -312,7 +336,8 @@
         "type": "waistband",
         "label": {
           "en": "Empire seam (bodice ↔ skirt)",
-          "es": "Talle imperio"
+          "es": "Talle imperio",
+          "fr": "Couture empire (corsage ↔ jupe)"
         },
         "edges": [
           {
@@ -337,7 +362,8 @@
     },
     "societal_benefit": {
       "en": "An open, made-to-measure maternity dress whose empire seam and flared skirt grow with the bump lets a parent dress the whole pregnancy from one adaptable pattern, keeping fabric and fit in the maker's hands rather than buying a series of short-lived specialty garments.",
-      "es": "Un vestido de maternidad abierto y a la medida cuyo talle imperio y falda con vuelo crecen con la panza permite vestir todo el embarazo desde un patrón adaptable, dejando la tela y el ajuste en manos de quien elabora en vez de comprar una serie de prendas de especialidad de vida corta."
+      "es": "Un vestido de maternidad abierto y a la medida cuyo talle imperio y falda con vuelo crecen con la panza permite vestir todo el embarazo desde un patrón adaptable, dejando la tela y el ajuste en manos de quien elabora en vez de comprar una serie de prendas de especialidad de vida corta.",
+      "fr": "Une robe de grossesse ouverte et sur mesure, dont la couture empire et la jupe évasée grandissent avec le ventre, permet à un parent de s'habiller pendant toute la grossesse à partir d'un seul patron adaptable, gardant le tissu et l'ajustement entre les mains de qui confectionne plutôt que d'acheter une série de vêtements spécialisés à courte durée de vie."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

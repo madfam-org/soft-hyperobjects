@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "The large wrapped rectangle worn across Southeast Asia, the Pacific, and East Africa (also kain, lungi, kanga, pareo): worn open and tucked, or sewn into a tube (the Malay/Indonesian kain sarong). This cartridge offers both modes — a flat open length or a seamed tube — sized to the wearer, with border and fold references marked; the printed and woven motifs that carry regional identity are the maker's. A soft-goods garment — no hardware. FC-200 long-tail (heritage). Offered with respect for the living tradition.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "El gran rectángulo envolvente usado en el sudeste asiático, el Pacífico y África oriental (también kain, lungi, kanga, pareo): usado abierto y remetido, o cosido en tubo (el kain sarong malayo/indonesio). Este cartucho ofrece ambos modos — una pieza abierta plana o un tubo cosido — a la medida de quien lo viste, con referencias de borde y doblez marcadas; los motivos impresos y tejidos que portan identidad regional pertenecen a quien elabora. Una prenda textil — sin herrajes. Cola larga FC-200 (patrimonio). Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "El gran rectángulo envolvente usado en el sudeste asiático, el Pacífico y África oriental (también kain, lungi, kanga, pareo): usado abierto y remetido, o cosido en tubo (el kain sarong malayo/indonesio). Este cartucho ofrece ambos modos — una pieza abierta plana o un tubo cosido — a la medida de quien lo viste, con referencias de borde y doblez marcadas; los motivos impresos y tejidos que portan identidad regional pertenecen a quien elabora. Una prenda textil — sin herrajes. Cola larga FC-200 (patrimonio). Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le grand rectangle drapé porté en Asie du Sud-Est, dans le Pacifique et en Afrique de l'Est (aussi kain, lungi, kanga, paréo) : porté ouvert et rentré, ou cousu en tube (le kain sarong malais/indonésien). Cette cartouche propose les deux modes — une longueur ouverte à plat ou un tube cousu — dimensionnés à celui qui le porte, avec repères de bordure et de pli marqués ; les motifs imprimés et tissés qui portent l'identité régionale reviennent au créateur. Un vêtement textile — sans quincaillerie. Longue traîne FC-200 (patrimoine). Offert dans le respect de la tradition vivante.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
     "tags": [
@@ -34,7 +35,8 @@
       "id": "set",
       "label": {
         "en": "Sarong panel",
-        "es": "Panel del sarong"
+        "es": "Panel del sarong",
+        "fr": "Panneau de sarong"
       },
       "script_file": "main.py",
       "pieces": [
@@ -47,7 +49,8 @@
       "id": "panel",
       "label": {
         "en": "Sarong panel",
-        "es": "Panel del sarong"
+        "es": "Panel del sarong",
+        "fr": "Panneau de sarong"
       },
       "default_color": "#5a7a6a",
       "cut": {
@@ -96,11 +99,13 @@
       },
       "label": {
         "en": "Wrap girth (mm)",
-        "es": "Contorno de envoltura (mm)"
+        "es": "Contorno de envoltura (mm)",
+        "fr": "Tour de croisement (mm)"
       },
       "tooltip": {
         "en": "Waist or chest",
-        "es": "Cintura o pecho"
+        "es": "Cintura o pecho",
+        "fr": "Tour de taille ou de poitrine"
       }
     },
     {
@@ -113,11 +118,13 @@
       "step": 0.1,
       "label": {
         "en": "Wrap turns (open)",
-        "es": "Vueltas de envoltura (abierto)"
+        "es": "Vueltas de envoltura (abierto)",
+        "fr": "Tours de croisement (ouvert)"
       },
       "tooltip": {
         "en": "How far it wraps (>1 overlaps)",
-        "es": "Cuánto envuelve (>1 traslapa)"
+        "es": "Cuánto envuelve (>1 traslapa)",
+        "fr": "Ampleur du drapé (>1 chevauche)"
       }
     },
     {
@@ -130,11 +137,13 @@
       "step": 10,
       "label": {
         "en": "Drop length (mm)",
-        "es": "Largo de caída (mm)"
+        "es": "Largo de caída (mm)",
+        "fr": "Longueur du tombant (mm)"
       },
       "tooltip": {
         "en": "Waist to hem",
-        "es": "De la cintura al ruedo"
+        "es": "De la cintura al ruedo",
+        "fr": "De la taille à l'ourlet"
       }
     },
     {
@@ -144,11 +153,13 @@
       "default": false,
       "label": {
         "en": "Seamed tube",
-        "es": "Tubo cosido"
+        "es": "Tubo cosido",
+        "fr": "Tube cousu"
       },
       "tooltip": {
         "en": "Off = open wrap, On = sewn tube",
-        "es": "Apagado = envoltura abierta, Encendido = tubo cosido"
+        "es": "Apagado = envoltura abierta, Encendido = tubo cosido",
+        "fr": "Désactivé = drapé ouvert, Activé = tube cousu"
       }
     },
     {
@@ -161,11 +172,13 @@
       "step": 5,
       "label": {
         "en": "Border band (mm)",
-        "es": "Banda de borde (mm)"
+        "es": "Banda de borde (mm)",
+        "fr": "Bande de bordure (mm)"
       },
       "tooltip": {
         "en": "Hem/head border",
-        "es": "Borde de ruedo/cabecera"
+        "es": "Borde de ruedo/cabecera",
+        "fr": "Bordure d'ourlet/de tête"
       }
     }
   ],
@@ -174,7 +187,8 @@
       "id": "open",
       "label": {
         "en": "Open wrap",
-        "es": "Envoltura abierta"
+        "es": "Envoltura abierta",
+        "fr": "Cache-cœur ouvert"
       },
       "values": {
         "sewn_tube": 0,
@@ -185,7 +199,8 @@
       "id": "tube",
       "label": {
         "en": "Sewn tube",
-        "es": "Tubo cosido"
+        "es": "Tubo cosido",
+        "fr": "Tube cousu"
       },
       "values": {
         "sewn_tube": 1
@@ -207,7 +222,8 @@
         "type": "waistband",
         "label": {
           "en": "Wrap/head edge",
-          "es": "Canto de envoltura/cabecera"
+          "es": "Canto de envoltura/cabecera",
+          "fr": "Bord de croisement/tête"
         },
         "edges": [
           {
@@ -225,7 +241,8 @@
         "type": "side_seam",
         "label": {
           "en": "Tube join (tube mode)",
-          "es": "Unión del tubo (modo tubo)"
+          "es": "Unión del tubo (modo tubo)",
+          "fr": "Jonction du tube (mode tube)"
         },
         "edges": [
           {
@@ -250,7 +267,8 @@
     },
     "societal_benefit": {
       "en": "One open, made-to-measure pattern covers both the open wrap and the sewn tube worn across many cultures, sizing either to the wearer's own girth — a living everyday garment kept makeable from a single rectangle, with the motifs that carry regional identity left to the maker.",
-      "es": "Un patrón abierto y a la medida cubre tanto la envoltura abierta como el tubo cosido usados en muchas culturas, ajustando cualquiera al contorno de quien lo viste — una prenda cotidiana viva mantenida fabricable a partir de un solo rectángulo, con los motivos que portan identidad regional en manos de quien elabora."
+      "es": "Un patrón abierto y a la medida cubre tanto la envoltura abierta como el tubo cosido usados en muchas culturas, ajustando cualquiera al contorno de quien lo viste — una prenda cotidiana viva mantenida fabricable a partir de un solo rectángulo, con los motivos que portan identidad regional en manos de quien elabora.",
+      "fr": "Un seul patron ouvert et sur mesure couvre à la fois le drapé ouvert et le tube cousu portés dans de nombreuses cultures, dimensionnant l'un ou l'autre au tour de corps de celui qui le porte — un vêtement quotidien vivant qui reste réalisable à partir d'un seul rectangle, avec les motifs porteurs d'identité régionale laissés au créateur."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

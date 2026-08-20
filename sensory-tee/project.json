@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "A sensory-friendly tee for wearers sensitive to touch: a relaxed boxy front + back with a printed tagless label zone, seams marked for flat-fell / covered construction (no raised inside seam allowances), and a soft wide neck with no scratchy binding. A soft-goods garment — no hardware. Everything that irritates on a conventional tee is designed out and marked for the maker. FC-200 long-tail (adaptive/sensory).\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Una playera amigable con lo sensorial para quienes son sensibles al tacto: un frente + espalda holgados con zona de etiqueta impresa (sin etiqueta cosida), costuras marcadas para construcción plana / cubierta (sin márgenes internos elevados) y un cuello ancho y suave sin ribete que raspe. Una prenda textil — sin herrajes. Todo lo que irrita en una playera convencional se diseña fuera y se marca para quien elabora. Cola larga FC-200 (adaptativo/sensorial).\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Una playera amigable con lo sensorial para quienes son sensibles al tacto: un frente + espalda holgados con zona de etiqueta impresa (sin etiqueta cosida), costuras marcadas para construcción plana / cubierta (sin márgenes internos elevados) y un cuello ancho y suave sin ribete que raspe. Una prenda textil — sin herrajes. Todo lo que irrita en una playera convencional se diseña fuera y se marca para quien elabora. Cola larga FC-200 (adaptativo/sensorial).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un tee-shirt sensoriel adapté aux personnes sensibles au toucher : un devant + dos boxy détendus avec une zone d'étiquette imprimée sans étiquette cousue, des coutures marquées pour une construction rabattue/couverte (sans marges de couture intérieures en relief), et une encolure large et douce sans biais qui gratte. Un vêtement textile — sans quincaillerie. Tout ce qui irrite sur un tee-shirt conventionnel est éliminé par conception et marqué pour le créateur. Longue traîne FC-200 (adaptatif/sensoriel).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
     "tags": [
@@ -34,7 +35,8 @@
       "id": "set",
       "label": {
         "en": "Full Tee",
-        "es": "Playera completa"
+        "es": "Playera completa",
+        "fr": "T-shirt complet"
       },
       "script_file": "main.py",
       "pieces": [
@@ -48,7 +50,8 @@
       "id": "front",
       "label": {
         "en": "Front",
-        "es": "Frente"
+        "es": "Frente",
+        "fr": "Devant"
       },
       "default_color": "#6a7a6a",
       "cut": {
@@ -62,7 +65,8 @@
       "id": "back",
       "label": {
         "en": "Back (tagless zone)",
-        "es": "Espalda (zona sin etiqueta)"
+        "es": "Espalda (zona sin etiqueta)",
+        "fr": "Dos (zone sans étiquette)"
       },
       "default_color": "#6a7a6a",
       "cut": {
@@ -106,11 +110,13 @@
       },
       "label": {
         "en": "Chest girth (mm)",
-        "es": "Contorno de pecho (mm)"
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
       },
       "tooltip": {
         "en": "Full chest",
-        "es": "Pecho completo"
+        "es": "Pecho completo",
+        "fr": "Tour de poitrine complet"
       }
     },
     {
@@ -123,11 +129,13 @@
       "step": 10,
       "label": {
         "en": "Length (mm)",
-        "es": "Largo (mm)"
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
       },
       "tooltip": {
         "en": "Shoulder to hem",
-        "es": "Del hombro al ruedo"
+        "es": "Del hombro al ruedo",
+        "fr": "De l'épaule à l'ourlet"
       }
     },
     {
@@ -140,11 +148,13 @@
       "step": 5,
       "label": {
         "en": "Neck width (mm)",
-        "es": "Ancho de cuello (mm)"
+        "es": "Ancho de cuello (mm)",
+        "fr": "Largeur d'encolure (mm)"
       },
       "tooltip": {
         "en": "Wide no-scratch neck",
-        "es": "Cuello ancho sin roce"
+        "es": "Cuello ancho sin roce",
+        "fr": "Encolure large sans grattement"
       }
     },
     {
@@ -157,11 +167,13 @@
       "step": 10,
       "label": {
         "en": "Grown sleeve (mm)",
-        "es": "Manga nacida (mm)"
+        "es": "Manga nacida (mm)",
+        "fr": "Manche montée d'une pièce (mm)"
       },
       "tooltip": {
         "en": "Grown-on cap sleeve",
-        "es": "Manga nacida"
+        "es": "Manga nacida",
+        "fr": "Manche kimono née du corps"
       }
     },
     {
@@ -174,11 +186,13 @@
       "step": 10,
       "label": {
         "en": "Fit ease (mm)",
-        "es": "Holgura (mm)"
+        "es": "Holgura (mm)",
+        "fr": "Aisance d'ajustement (mm)"
       },
       "tooltip": {
         "en": "Relaxed fit",
-        "es": "Ajuste holgado"
+        "es": "Ajuste holgado",
+        "fr": "Coupe détendue"
       }
     }
   ],
@@ -187,7 +201,8 @@
       "id": "child",
       "label": {
         "en": "Child",
-        "es": "Infantil"
+        "es": "Infantil",
+        "fr": "Enfant"
       },
       "values": {
         "chest_girth": 700,
@@ -198,7 +213,8 @@
       "id": "adult",
       "label": {
         "en": "Adult",
-        "es": "Adulto"
+        "es": "Adulto",
+        "fr": "Adulte"
       },
       "values": {
         "chest_girth": 980,
@@ -221,7 +237,8 @@
         "type": "shoulder",
         "label": {
           "en": "Shoulder seam",
-          "es": "Costura de hombro"
+          "es": "Costura de hombro",
+          "fr": "Couture d'épaule"
         },
         "edges": [
           {
@@ -243,7 +260,8 @@
         "type": "side_seam",
         "label": {
           "en": "Side seam (flat-fell)",
-          "es": "Costura lateral (plana)"
+          "es": "Costura lateral (plana)",
+          "fr": "Couture latérale (rabattue)"
         },
         "edges": [
           {
@@ -267,7 +285,8 @@
     },
     "societal_benefit": {
       "en": "An open, made-to-measure tee that designs out tags, ridged seams, and a scratchy neck makes everyday clothing wearable for people with tactile sensitivity — including many autistic and sensory-processing-different wearers — from an open pattern anyone can make in any soft fabric.",
-      "es": "Una playera abierta y a la medida que elimina etiquetas, costuras elevadas y un cuello que raspa hace la ropa diaria usable para personas con sensibilidad táctil — incluidas muchas personas autistas y con procesamiento sensorial diferente — desde un patrón abierto que cualquiera puede hacer en cualquier tela suave."
+      "es": "Una playera abierta y a la medida que elimina etiquetas, costuras elevadas y un cuello que raspa hace la ropa diaria usable para personas con sensibilidad táctil — incluidas muchas personas autistas y con procesamiento sensorial diferente — desde un patrón abierto que cualquiera puede hacer en cualquier tela suave.",
+      "fr": "Un tee-shirt ouvert et sur mesure qui élimine par conception les étiquettes, les coutures en relief et une encolure qui gratte rend les vêtements du quotidien portables pour les personnes à sensibilité tactile — dont beaucoup de personnes autistes et à traitement sensoriel différent — à partir d'un patron ouvert que chacun peut réaliser dans n'importe quel tissu doux."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

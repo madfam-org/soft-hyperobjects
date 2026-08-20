@@ -6,105 +6,386 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #75. A cropped knit top whose hem sits at or above the waist. Front and back cut on fold with light knit ease; the signature is bound edges — neck and armhole (or sleeve-hem) binding strips whose lengths are derived from the measured openings times a rib-stretch ratio. A style switch chooses a sleeveless tank crop or a short-sleeve crop whose sleeve cap is solved numerically to the armhole.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #75 del FC-100. Un top de punto corto cuyo dobladillo queda a la cintura o por encima. Delantero y trasero cortados al doblez con holgura de punto ligera; la firma son los bordes con vivo — tiras de vivo del escote y las sisas (o dobladillos de manga) cuyas longitudes se derivan de las aberturas medidas por una proporción de estiramiento de rib. Un selector de estilo elige un top corto sin mangas o con manga corta cuya copa se resuelve numéricamente para coincidir con la sisa.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #75 del FC-100. Un top de punto corto cuyo dobladillo queda a la cintura o por encima. Delantero y trasero cortados al doblez con holgura de punto ligera; la firma son los bordes con vivo — tiras de vivo del escote y las sisas (o dobladillos de manga) cuyas longitudes se derivan de las aberturas medidas por una proporción de estiramiento de rib. Un selector de estilo elige un top corto sin mangas o con manga corta cuya copa se resuelve numéricamente para coincidir con la sisa.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Rang #75 du FC-100. Un haut court en maille dont le bas se situe au niveau de la taille ou au-dessus. Devant et dos coupés au pli avec une légère aisance de maille ; la signature est les bords gansés — bandes de ganse d'encolure et d'emmanchure (ou de bas de manche) dont les longueurs sont dérivées des ouvertures mesurées multipliées par un ratio d'étirement de côtes. Un sélecteur de style choisit un débardeur court sans manches ou un haut court à manches courtes dont la tête de manche est résolue numériquement à l'emmanchure.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
-    "tags": ["crop-top", "cropped", "tank", "knit", "sleeveless", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "crop-top",
+      "cropped",
+      "tank",
+      "knit",
+      "sleeveless",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet; cropped knit top from standard industry practice", "license": "original" },
-        { "source": "projects/tank-top (bound-edge knit block: neck + armhole binding, knit ease)", "license": "LicenseRef-FC1-pending" },
-        { "source": "projects/t-shirt-crew (numerically solved sleeve cap for the short-sleeve style)", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet; cropped knit top from standard industry practice",
+          "license": "original"
+        },
+        {
+          "source": "projects/tank-top (bound-edge knit block: neck + armhole binding, knit ease)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "projects/t-shirt-crew (numerically solved sleeve cap for the short-sleeve style)",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "crop",
-      "label": { "en": "Crop top (all pieces)", "es": "Top corto (todas las piezas)" },
+      "label": {
+        "en": "Crop top (all pieces)",
+        "es": "Top corto (todas las piezas)",
+        "fr": "Top court (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "neck_binding", "armhole_binding", "sleeve"]
+      "pieces": [
+        "front",
+        "back",
+        "neck_binding",
+        "armhole_binding",
+        "sleeve"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#c9578f", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Trasero" }, "default_color": "#9f3a6f", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "neck_binding", "label": { "en": "Neck Binding (rib)", "es": "Vivo de Escote (rib)" }, "default_color": "#dc8fb8", "cut": { "quantity": 1 } },
-    { "id": "armhole_binding", "label": { "en": "Armhole Binding (rib)", "es": "Vivo de Sisa (rib)" }, "default_color": "#e3a8c8", "cut": { "quantity": 2 } },
-    { "id": "sleeve", "label": { "en": "Short Sleeve", "es": "Manga Corta" }, "default_color": "#d46aa4", "cut": { "quantity": 2, "mirror": true } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#c9578f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Trasero",
+        "fr": "Dos"
+      },
+      "default_color": "#9f3a6f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "neck_binding",
+      "label": {
+        "en": "Neck Binding (rib)",
+        "es": "Vivo de Escote (rib)",
+        "fr": "Bord-côte d'encolure (rib)"
+      },
+      "default_color": "#dc8fb8",
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "armhole_binding",
+      "label": {
+        "en": "Armhole Binding (rib)",
+        "es": "Vivo de Sisa (rib)",
+        "fr": "Biais d'emmanchure (côtes)"
+      },
+      "default_color": "#e3a8c8",
+      "cut": {
+        "quantity": 2
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Short Sleeve",
+        "es": "Manga Corta",
+        "fr": "Manche Courte"
+      },
+      "default_color": "#d46aa4",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    }
   ],
   "parameter_groups": [
-    { "id": "body", "label": { "en": "Body Measurements", "es": "Medidas Corporales" } },
-    { "id": "fit", "label": { "en": "Fit & Style", "es": "Ajuste y Estilo" } },
-    { "id": "construction", "label": { "en": "Construction", "es": "Construcción" } }
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures corporelles"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Style",
+        "es": "Ajuste y Estilo",
+        "fr": "Ajustement et style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Montage"
+      }
+    }
   ],
   "parameters": [
     {
-      "id": "style", "type": "select", "default": "sleeveless", "group": "fit",
-      "label": { "en": "Style", "es": "Estilo" },
+      "id": "style",
+      "type": "select",
+      "default": "sleeveless",
+      "group": "fit",
+      "label": {
+        "en": "Style",
+        "es": "Estilo",
+        "fr": "Style"
+      },
       "options": [
-        { "value": "sleeveless", "label": { "en": "Sleeveless (bound armholes)", "es": "Sin mangas (sisas con vivo)" } },
-        { "value": "short_sleeve", "label": { "en": "Short sleeve", "es": "Manga corta" } }
+        {
+          "value": "sleeveless",
+          "label": {
+            "en": "Sleeveless (bound armholes)",
+            "es": "Sin mangas (sisas con vivo)",
+            "fr": "Sans manches (emmanchures gansées)"
+          }
+        },
+        {
+          "value": "short_sleeve",
+          "label": {
+            "en": "Short sleeve",
+            "es": "Manga corta",
+            "fr": "Manche courte"
+          }
+        }
       ]
     },
     {
-      "id": "chest_girth", "type": "slider", "default": 940, "min": 600, "max": 1700, "step": 10,
-      "group": "body", "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" },
-      "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" }
-    },
-    {
-      "id": "body_length", "type": "slider", "default": 380, "min": 300, "max": 480, "step": 10,
+      "id": "chest_girth",
+      "type": "slider",
+      "default": 940,
+      "min": 600,
+      "max": 1700,
+      "step": 10,
       "group": "body",
-      "label": { "en": "Body length, nape to cropped hem (mm)", "es": "Largo de cuerpo, nuca a dobladillo corto (mm)" }
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      }
     },
     {
-      "id": "neck_girth", "type": "slider", "default": 380, "min": 300, "max": 520, "step": 5,
-      "group": "body", "measurement": { "standard": "iso_8559", "code": "neck_girth" },
-      "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" }
+      "id": "body_length",
+      "type": "slider",
+      "default": 380,
+      "min": 300,
+      "max": 480,
+      "step": 10,
+      "group": "body",
+      "label": {
+        "en": "Body length, nape to cropped hem (mm)",
+        "es": "Largo de cuerpo, nuca a dobladillo corto (mm)",
+        "fr": "Longueur du corps, nuque à l'ourlet court (mm)"
+      }
     },
     {
-      "id": "knit_ease", "type": "slider", "default": 40, "min": -80, "max": 200, "step": 10,
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 380,
+      "min": 300,
+      "max": 520,
+      "step": 5,
+      "group": "body",
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      }
+    },
+    {
+      "id": "knit_ease",
+      "type": "slider",
+      "default": 40,
+      "min": -80,
+      "max": 200,
+      "step": 10,
       "group": "fit",
-      "label": { "en": "Total ease (mm, negative = fitted)", "es": "Holgura total (mm, negativa = ajustado)" }
+      "label": {
+        "en": "Total ease (mm, negative = fitted)",
+        "es": "Holgura total (mm, negativa = ajustado)",
+        "fr": "Aisance totale (mm, négative = ajusté)"
+      }
     },
     {
-      "id": "sleeve_length", "type": "slider", "default": 110, "min": 60, "max": 260, "step": 5,
-      "group": "fit", "advanced": true,
-      "label": { "en": "Sleeve length, shoulder to hem (mm, short-sleeve style)", "es": "Largo de manga, hombro a dobladillo (mm, estilo manga corta)" }
-    },
-    {
-      "id": "strap_width", "type": "slider", "default": 40, "min": 24, "max": 90, "step": 2,
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 110,
+      "min": 60,
+      "max": 260,
+      "step": 5,
       "group": "fit",
-      "label": { "en": "Shoulder/strap width (mm, sleeveless style)", "es": "Ancho de hombro/tirante (mm, estilo sin mangas)" }
+      "advanced": true,
+      "label": {
+        "en": "Sleeve length, shoulder to hem (mm, short-sleeve style)",
+        "es": "Largo de manga, hombro a dobladillo (mm, estilo manga corta)",
+        "fr": "Longueur de manche, épaule à l'ourlet (mm, style manche courte)"
+      }
     },
     {
-      "id": "binding_ratio", "type": "slider", "default": 0.9, "min": 0.75, "max": 1.0, "step": 0.01,
-      "group": "construction", "advanced": true,
-      "label": { "en": "Binding/opening ratio", "es": "Proporción vivo/abertura" }
+      "id": "strap_width",
+      "type": "slider",
+      "default": 40,
+      "min": 24,
+      "max": 90,
+      "step": 2,
+      "group": "fit",
+      "label": {
+        "en": "Shoulder/strap width (mm, sleeveless style)",
+        "es": "Ancho de hombro/tirante (mm, estilo sin mangas)",
+        "fr": "Largeur d'épaule/bretelle (mm, style sans manches)"
+      }
     },
     {
-      "id": "binding_width", "type": "slider", "default": 12, "min": 8, "max": 25, "step": 1,
+      "id": "binding_ratio",
+      "type": "slider",
+      "default": 0.9,
+      "min": 0.75,
+      "max": 1.0,
+      "step": 0.01,
       "group": "construction",
-      "label": { "en": "Binding finished width (mm)", "es": "Ancho terminado del vivo (mm)" }
+      "advanced": true,
+      "label": {
+        "en": "Binding/opening ratio",
+        "es": "Proporción vivo/abertura",
+        "fr": "Rapport biais/ouverture"
+      }
     },
     {
-      "id": "seam_allowance", "type": "slider", "default": 7, "min": 0, "max": 20, "step": 1,
+      "id": "binding_width",
+      "type": "slider",
+      "default": 12,
+      "min": 8,
+      "max": 25,
+      "step": 1,
       "group": "construction",
-      "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" }
+      "label": {
+        "en": "Binding finished width (mm)",
+        "es": "Ancho terminado del vivo (mm)",
+        "fr": "Largeur finie du biais (mm)"
+      }
     },
     {
-      "id": "hem_allowance", "type": "slider", "default": 22, "min": 0, "max": 40, "step": 2,
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 7,
+      "min": 0,
+      "max": 20,
+      "step": 1,
       "group": "construction",
-      "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" }
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 22,
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "group": "construction",
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
     }
   ],
   "presets": [
-    { "id": "size-s", "label": { "en": "S", "es": "CH" }, "values": { "chest_girth": 860, "body_length": 360, "neck_girth": 360 } },
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 940, "body_length": 380, "neck_girth": 380 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1020, "body_length": 400, "neck_girth": 395 } },
-    { "id": "sleeved-m", "label": { "en": "Short-sleeve M", "es": "Manga corta M" }, "mode": "crop", "values": { "style": "short_sleeve", "chest_girth": 940, "body_length": 390, "sleeve_length": 110 } }
+    {
+      "id": "size-s",
+      "label": {
+        "en": "S",
+        "es": "CH",
+        "fr": "S"
+      },
+      "values": {
+        "chest_girth": 860,
+        "body_length": 360,
+        "neck_girth": 360
+      }
+    },
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "chest_girth": 940,
+        "body_length": 380,
+        "neck_girth": 380
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G",
+        "fr": "L"
+      },
+      "values": {
+        "chest_girth": 1020,
+        "body_length": 400,
+        "neck_girth": 395
+      }
+    },
+    {
+      "id": "sleeved-m",
+      "label": {
+        "en": "Short-sleeve M",
+        "es": "Manga corta M",
+        "fr": "Manche courte M"
+      },
+      "mode": "crop",
+      "values": {
+        "style": "short_sleeve",
+        "chest_girth": 940,
+        "body_length": 390,
+        "sleeve_length": 110
+      }
+    }
   ],
   "constraints": [
     {
@@ -112,7 +393,8 @@
       "severity": "warning",
       "message": {
         "en": "A crop top hem sits at or above the waist; longer bodies are no longer cropped",
-        "es": "El dobladillo de un top corto queda a la cintura o por encima; largos mayores dejan de ser corto"
+        "es": "El dobladillo de un top corto queda a la cintura o por encima; largos mayores dejan de ser corto",
+        "fr": "Le bas d'un haut court se situe au niveau de la taille ou au-dessus ; des longueurs supérieures ne sont plus courtes"
       }
     },
     {
@@ -120,12 +402,19 @@
       "severity": "warning",
       "message": {
         "en": "Fitted (negative-ease) crops depend on fabric stretch; check the fabric card",
-        "es": "Los tops ajustados (holgura negativa) dependen del estiramiento de la tela; revisa la ficha de tela"
+        "es": "Los tops ajustados (holgura negativa) dependen del estiramiento de la tela; revisa la ficha de tela",
+        "fr": "Les hauts courts ajustés (aisance négative) dépendent de l'étirement du tissu ; vérifiez la fiche du tissu"
       }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["jersey-algodon"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "jersey-algodon"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
@@ -134,29 +423,60 @@
         "id": "neckline",
         "type": "neckline",
         "edges": [
-          { "piece": "front", "edge": "neck" },
-          { "piece": "back", "edge": "neck" }
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
         ],
-        "parameters": ["neck_girth", "binding_ratio"]
+        "parameters": [
+          "neck_girth",
+          "binding_ratio"
+        ]
       },
       {
         "id": "armscye",
         "type": "armscye",
         "edges": [
-          { "piece": "front", "edge": "armhole" },
-          { "piece": "back", "edge": "armhole" },
-          { "piece": "sleeve", "edge": "cap" }
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
         ],
-        "parameters": ["chest_girth", "knit_ease", "style"]
+        "parameters": [
+          "chest_girth",
+          "knit_ease",
+          "style"
+        ]
       },
       {
         "id": "hem",
         "type": "hem",
         "edges": [
-          { "piece": "front", "edge": "hem" },
-          { "piece": "back", "edge": "hem" }
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
         ],
-        "parameters": ["body_length", "hem_allowance"]
+        "parameters": [
+          "body_length",
+          "hem_allowance"
+        ]
       }
     ],
     "capabilities": {
@@ -167,7 +487,8 @@
     },
     "societal_benefit": {
       "en": "The crop top is a wardrobe staple that is trivial to draft badly and easy to draft honestly: a cropped knit block where the finishing binding is computed from measured curves, not guessed, and a single switch turns a tank into a sleeved tee — reuse over reinvention across the FC-100 knit family.",
-      "es": "El top corto es un básico fácil de trazar mal y fácil de trazar con honestidad: un bloque de punto corto donde el vivo de acabado se calcula a partir de curvas medidas, no se adivina, y un solo selector convierte una camiseta de tirantes en una playera con manga — reutilización sobre reinvención en la familia de punto del FC-100."
+      "es": "El top corto es un básico fácil de trazar mal y fácil de trazar con honestidad: un bloque de punto corto donde el vivo de acabado se calcula a partir de curvas medidas, no se adivina, y un solo selector convierte una camiseta de tirantes en una playera con manga — reutilización sobre reinvención en la familia de punto del FC-100.",
+      "fr": "Le haut court est un basique de la garde-robe trivial à tracer mal et facile à tracer honnêtement : un bloc de maille court où la ganse de finition est calculée à partir de courbes mesurées, non devinée, et un seul sélecteur transforme un débardeur en t-shirt à manches — réutilisation plutôt que réinvention dans toute la famille de maille du FC-100."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

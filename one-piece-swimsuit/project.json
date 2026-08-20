@@ -6,94 +6,595 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #54. The commons' hardest swim garment: a continuous full-torso maillot drafted on negative ease so the tricot grips the whole body. Front and back are fold-cut halves joined at the shoulder and side seams and closed at the crotch by a self+lining gusset matched by construction; a front lining mirrors the front. Neckline, armholes and legs are elastic-finished with exact-mm cut lengths. The fit-critical dimension is the torso loop — front centre + back centre + gusset span — drafted shorter than the body and checked to close.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #54 del FC-100. La prenda de baño más difícil del commons: un enterizo continuo de torso completo trazado con holgura negativa para que el tricot se ajuste a todo el cuerpo. Delantero y trasero se cortan al doblez y se unen en hombros y costados, cerrándose en la entrepierna con un refuerzo (tela + forro) igualado por construcción; un forro delantero replica el delantero. Escote, sisas y piernas se terminan con elástico con largos exactos en mm. La dimensión crítica del ajuste es el lazo del torso — centro delantero + centro trasero + tramo del refuerzo — trazado más corto que el cuerpo y comprobado al cerrar.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #54 del FC-100. La prenda de baño más difícil del commons: un enterizo continuo de torso completo trazado con holgura negativa para que el tricot se ajuste a todo el cuerpo. Delantero y trasero se cortan al doblez y se unen en hombros y costados, cerrándose en la entrepierna con un refuerzo (tela + forro) igualado por construcción; un forro delantero replica el delantero. Escote, sisas y piernas se terminan con elástico con largos exactos en mm. La dimensión crítica del ajuste es el lazo del torso — centro delantero + centro trasero + tramo del refuerzo — trazado más corto que el cuerpo y comprobado al cerrar.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "FC-100 rang n°54. Le maillot le plus difficile du commons : un maillot une pièce couvrant tout le torse, tracé en aisance négative pour que le tricot épouse tout le corps. Devant et dos sont des moitiés coupées au pli, assemblées aux coutures d'épaule et de côté, et fermées à l'entrejambe par une fourche (tissu + doublure) accordée par construction ; une doublure de devant reprend le devant. Encolure, emmanchures et jambes sont finies à l'élastique avec des longueurs de coupe exactes en mm. La dimension critique de l'ajustement est la boucle du torse — centre devant + centre dos + travée de la fourche — tracée plus courte que le corps et vérifiée pour se fermer.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "advanced",
-    "tags": ["swimsuit", "one-piece", "maillot", "swim", "activewear", "knit", "negative-ease", "elastic", "lined", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "swimsuit",
+      "one-piece",
+      "maillot",
+      "swim",
+      "activewear",
+      "knit",
+      "negative-ease",
+      "elastic",
+      "lined",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet", "license": "original" },
-        { "source": "projects/panties-bikini (negative-ease gusset + exact-mm elastic accounting)", "license": "LicenseRef-FC1-pending" },
-        { "source": "projects/tank-top (bodice + strap + bound/elastic-edge construction)", "license": "LicenseRef-FC1-pending" },
-        { "source": "projects/leggings (negative-ease SCALE idiom on a full stretch garment)", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "projects/panties-bikini (negative-ease gusset + exact-mm elastic accounting)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "projects/tank-top (bodice + strap + bound/elastic-edge construction)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "projects/leggings (negative-ease SCALE idiom on a full stretch garment)",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "one-piece",
-      "label": { "en": "One-piece swimsuit (all pieces)", "es": "Traje de baño completo (todas las piezas)" },
+      "label": {
+        "en": "One-piece swimsuit (all pieces)",
+        "es": "Traje de baño completo (todas las piezas)",
+        "fr": "Maillot une pièce (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "front_lining", "gusset"]
+      "pieces": [
+        "front",
+        "back",
+        "front_lining",
+        "gusset"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front (self)", "es": "Delantero (tela)" }, "default_color": "#2a7ea3", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "back", "label": { "en": "Back (scoop/racer)", "es": "Trasero (escote/olímpico)" }, "default_color": "#1f5f78", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "front_lining", "label": { "en": "Front lining", "es": "Forro delantero" }, "default_color": "#68b0c9", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "gusset", "label": { "en": "Gusset (self + lining)", "es": "Refuerzo (tela + forro)" }, "default_color": "#8fcadc", "cut": { "quantity": 2, "on_fold": true, "mirror": true } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (self)",
+        "es": "Delantero (tela)",
+        "fr": "Devant (tissu principal)"
+      },
+      "default_color": "#2a7ea3",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (scoop/racer)",
+        "es": "Trasero (escote/olímpico)",
+        "fr": "Dos (échancré/nageur)"
+      },
+      "default_color": "#1f5f78",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "front_lining",
+      "label": {
+        "en": "Front lining",
+        "es": "Forro delantero",
+        "fr": "Doublure devant"
+      },
+      "default_color": "#68b0c9",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "gusset",
+      "label": {
+        "en": "Gusset (self + lining)",
+        "es": "Refuerzo (tela + forro)",
+        "fr": "Gousset (tissu principal + doublure)"
+      },
+      "default_color": "#8fcadc",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    }
   ],
   "parameters": [
-    { "id": "bust_girth", "type": "slider", "default": 900, "min": 650, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Bust girth (mm)", "es": "Contorno de busto (mm)" } },
-    { "id": "hip_girth", "type": "slider", "default": 940, "min": 650, "max": 1600, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
-    { "id": "torso_girth", "type": "slider", "default": 1550, "min": 1200, "max": 2000, "step": 10, "measurement": { "standard": "iso_8559", "code": "vertical_trunk_girth" }, "label": { "en": "Torso girth, shoulder-crotch loop (mm)", "es": "Contorno de torso, lazo hombro-entrepierna (mm)" } },
-    { "id": "neck_girth", "type": "slider", "default": 380, "min": 300, "max": 520, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
-    { "id": "negative_ease_pct", "type": "slider", "default": 14, "min": 8, "max": 20, "step": 1, "label": { "en": "Negative ease, width (%)", "es": "Holgura negativa, ancho (%)" } },
-    { "id": "torso_neg_ease_pct", "type": "slider", "default": 8, "min": 0, "max": 15, "step": 1, "label": { "en": "Negative ease, torso length (%)", "es": "Holgura negativa, largo de torso (%)" } },
-    { "id": "back_style", "type": "select", "default": "scoop", "options": [
-        { "value": "scoop", "label": { "en": "Scoop back", "es": "Escote trasero" } },
-        { "value": "racer", "label": { "en": "Racer back", "es": "Espalda olímpica" } }
-      ], "label": { "en": "Back style", "es": "Estilo de espalda" } },
-    { "id": "strap_width", "type": "slider", "default": 34, "min": 18, "max": 70, "step": 2, "label": { "en": "Strap width (mm)", "es": "Ancho de tirante (mm)" } },
-    { "id": "gusset_front_w", "type": "slider", "default": 34, "min": 24, "max": 60, "step": 2, "advanced": true, "label": { "en": "Gusset front width (mm)", "es": "Ancho delantero del refuerzo (mm)" } },
-    { "id": "gusset_back_w", "type": "slider", "default": 40, "min": 24, "max": 60, "step": 2, "advanced": true, "label": { "en": "Gusset back width (mm)", "es": "Ancho trasero del refuerzo (mm)" } },
-    { "id": "neck_elastic_ratio", "type": "slider", "default": 0.9, "min": 0.8, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Neck elastic/opening ratio", "es": "Proporción elástico/abertura de escote" } },
-    { "id": "armhole_elastic_ratio", "type": "slider", "default": 0.88, "min": 0.8, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Armhole elastic/opening ratio", "es": "Proporción elástico/abertura de sisa" } },
-    { "id": "leg_elastic_ratio", "type": "slider", "default": 0.85, "min": 0.75, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Leg elastic/opening ratio", "es": "Proporción elástico/abertura de pierna" } },
-    { "id": "seam_allowance", "type": "slider", "default": 7, "min": 0, "max": 12, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } }
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "default": 900,
+      "min": 650,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de buste (mm)"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "default": 940,
+      "min": 650,
+      "max": 1600,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      }
+    },
+    {
+      "id": "torso_girth",
+      "type": "slider",
+      "default": 1550,
+      "min": 1200,
+      "max": 2000,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "vertical_trunk_girth"
+      },
+      "label": {
+        "en": "Torso girth, shoulder-crotch loop (mm)",
+        "es": "Contorno de torso, lazo hombro-entrepierna (mm)",
+        "fr": "Tour de torse, boucle épaule-entrejambe (mm)"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 380,
+      "min": 300,
+      "max": 520,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      }
+    },
+    {
+      "id": "negative_ease_pct",
+      "type": "slider",
+      "default": 14,
+      "min": 8,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Negative ease, width (%)",
+        "es": "Holgura negativa, ancho (%)",
+        "fr": "Aisance négative, largeur (%)"
+      }
+    },
+    {
+      "id": "torso_neg_ease_pct",
+      "type": "slider",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Negative ease, torso length (%)",
+        "es": "Holgura negativa, largo de torso (%)",
+        "fr": "Aisance négative, longueur de torse (%)"
+      }
+    },
+    {
+      "id": "back_style",
+      "type": "select",
+      "default": "scoop",
+      "options": [
+        {
+          "value": "scoop",
+          "label": {
+            "en": "Scoop back",
+            "es": "Escote trasero",
+            "fr": "Dos échancré"
+          }
+        },
+        {
+          "value": "racer",
+          "label": {
+            "en": "Racer back",
+            "es": "Espalda olímpica",
+            "fr": "Dos nageur"
+          }
+        }
+      ],
+      "label": {
+        "en": "Back style",
+        "es": "Estilo de espalda",
+        "fr": "Style de dos"
+      }
+    },
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "default": 34,
+      "min": 18,
+      "max": 70,
+      "step": 2,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de tirante (mm)",
+        "fr": "Largeur de bretelle (mm)"
+      }
+    },
+    {
+      "id": "gusset_front_w",
+      "type": "slider",
+      "default": 34,
+      "min": 24,
+      "max": 60,
+      "step": 2,
+      "advanced": true,
+      "label": {
+        "en": "Gusset front width (mm)",
+        "es": "Ancho delantero del refuerzo (mm)",
+        "fr": "Largeur avant du gousset (mm)"
+      }
+    },
+    {
+      "id": "gusset_back_w",
+      "type": "slider",
+      "default": 40,
+      "min": 24,
+      "max": 60,
+      "step": 2,
+      "advanced": true,
+      "label": {
+        "en": "Gusset back width (mm)",
+        "es": "Ancho trasero del refuerzo (mm)",
+        "fr": "Largeur arrière du gousset (mm)"
+      }
+    },
+    {
+      "id": "neck_elastic_ratio",
+      "type": "slider",
+      "default": 0.9,
+      "min": 0.8,
+      "max": 1.0,
+      "step": 0.01,
+      "advanced": true,
+      "label": {
+        "en": "Neck elastic/opening ratio",
+        "es": "Proporción elástico/abertura de escote",
+        "fr": "Proportion élastique/ouverture d'encolure"
+      }
+    },
+    {
+      "id": "armhole_elastic_ratio",
+      "type": "slider",
+      "default": 0.88,
+      "min": 0.8,
+      "max": 1.0,
+      "step": 0.01,
+      "advanced": true,
+      "label": {
+        "en": "Armhole elastic/opening ratio",
+        "es": "Proporción elástico/abertura de sisa",
+        "fr": "Rapport élastique/ouverture d'emmanchure"
+      }
+    },
+    {
+      "id": "leg_elastic_ratio",
+      "type": "slider",
+      "default": 0.85,
+      "min": 0.75,
+      "max": 1.0,
+      "step": 0.01,
+      "advanced": true,
+      "label": {
+        "en": "Leg elastic/opening ratio",
+        "es": "Proporción elástico/abertura de pierna",
+        "fr": "Proportion élastique/ouverture de jambe"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 7,
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-s", "label": { "en": "S", "es": "CH" }, "values": { "bust_girth": 840, "hip_girth": 880, "torso_girth": 1470, "neck_girth": 360 } },
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "bust_girth": 900, "hip_girth": 940, "torso_girth": 1550, "neck_girth": 380 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "bust_girth": 980, "hip_girth": 1020, "torso_girth": 1650, "neck_girth": 400 } },
-    { "id": "racer-l", "label": { "en": "Racer L", "es": "Olímpico G" }, "mode": "one-piece", "values": { "bust_girth": 980, "hip_girth": 1020, "torso_girth": 1650, "back_style": "racer" } }
+    {
+      "id": "size-s",
+      "label": {
+        "en": "S",
+        "es": "CH",
+        "fr": "S"
+      },
+      "values": {
+        "bust_girth": 840,
+        "hip_girth": 880,
+        "torso_girth": 1470,
+        "neck_girth": 360
+      }
+    },
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "bust_girth": 900,
+        "hip_girth": 940,
+        "torso_girth": 1550,
+        "neck_girth": 380
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G",
+        "fr": "L"
+      },
+      "values": {
+        "bust_girth": 980,
+        "hip_girth": 1020,
+        "torso_girth": 1650,
+        "neck_girth": 400
+      }
+    },
+    {
+      "id": "racer-l",
+      "label": {
+        "en": "Racer L",
+        "es": "Olímpico G",
+        "fr": "Nageur L"
+      },
+      "mode": "one-piece",
+      "values": {
+        "bust_girth": 980,
+        "hip_girth": 1020,
+        "torso_girth": 1650,
+        "back_style": "racer"
+      }
+    }
   ],
   "constraints": [
     {
       "expression": "negative_ease_pct >= 10",
       "severity": "warning",
-      "message": { "en": "Below 10% width negative ease a swimsuit grins away from the body when wet — expect a loose fit", "es": "Debajo de 10% de holgura negativa en ancho el traje se despega del cuerpo mojado — el ajuste quedará flojo" }
+      "message": {
+        "en": "Below 10% width negative ease a swimsuit grins away from the body when wet — expect a loose fit",
+        "es": "Debajo de 10% de holgura negativa en ancho el traje se despega del cuerpo mojado — el ajuste quedará flojo",
+        "fr": "En dessous de 10 % d'aisance négative en largeur, un maillot se décolle du corps une fois mouillé — attendez-vous à une coupe lâche"
+      }
     },
     {
       "expression": "torso_neg_ease_pct <= 12",
       "severity": "warning",
-      "message": { "en": "Above 12% torso-length negative ease pulls the crotch up hard; verify torso girth and fabric stretch", "es": "Arriba de 12% de holgura negativa de largo el tiro se sube con fuerza; verifica el contorno de torso y el estiramiento de la tela" }
+      "message": {
+        "en": "Above 12% torso-length negative ease pulls the crotch up hard; verify torso girth and fabric stretch",
+        "es": "Arriba de 12% de holgura negativa de largo el tiro se sube con fuerza; verifica el contorno de torso y el estiramiento de la tela",
+        "fr": "Au-dessus de 12 % d'aisance négative de longueur, l'entrejambe remonte fortement ; vérifiez le tour de torse et l'élasticité du tissu"
+      }
     },
     {
       "expression": "hip_girth >= bust_girth",
       "severity": "warning",
-      "message": { "en": "Hip smaller than bust — verify measurements or expect a pear-inverted fit", "es": "Cadera menor que busto — verifica las medidas o espera un ajuste invertido" }
+      "message": {
+        "en": "Hip smaller than bust — verify measurements or expect a pear-inverted fit",
+        "es": "Cadera menor que busto — verifica las medidas o espera un ajuste invertido",
+        "fr": "Hanches plus petites que la poitrine — vérifiez les mesures ou attendez-vous à une coupe en pyramide inversée"
+      }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["tricot-nylon-elastano"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "tricot-nylon-elastano"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "neckline", "type": "neckline", "label": { "en": "Neckline (elastic)", "es": "Escote (elástico)" }, "edges": [{ "piece": "front", "edge": "neck" }, { "piece": "back", "edge": "neck" }], "parameters": ["neck_girth", "neck_elastic_ratio"] },
-      { "id": "armscye", "type": "armscye", "label": { "en": "Armholes (elastic)", "es": "Sisas (elástico)" }, "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }], "parameters": ["bust_girth", "negative_ease_pct", "back_style", "armhole_elastic_ratio"] },
-      { "id": "shoulder", "type": "shoulder", "label": { "en": "Shoulder / strap seam", "es": "Costura de hombro / tirante" }, "edges": [{ "piece": "front", "edge": "shoulder" }, { "piece": "back", "edge": "shoulder" }], "parameters": ["strap_width"] },
-      { "id": "side_seam", "type": "side_seam", "label": { "en": "Side seam", "es": "Costura de costado" }, "edges": [{ "piece": "front", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["bust_girth", "hip_girth", "torso_girth"] },
-      { "id": "leg_openings", "type": "hem", "label": { "en": "Leg openings (elastic)", "es": "Aberturas de pierna (elástico)" }, "edges": [{ "piece": "front", "edge": "leg" }, { "piece": "back", "edge": "leg" }], "parameters": ["hip_girth", "leg_elastic_ratio"] },
-      { "id": "gusset", "type": "custom", "label": { "en": "Crotch gusset", "es": "Refuerzo de entrepierna" }, "edges": [{ "piece": "gusset", "edge": "front_edge" }, { "piece": "gusset", "edge": "back_edge" }], "parameters": ["gusset_front_w", "gusset_back_w"] }
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "label": {
+          "en": "Neckline (elastic)",
+          "es": "Escote (elástico)",
+          "fr": "Encolure (élastique)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "neck_elastic_ratio"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Armholes (elastic)",
+          "es": "Sisas (elástico)",
+          "fr": "Emmanchures (élastique)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "negative_ease_pct",
+          "back_style",
+          "armhole_elastic_ratio"
+        ]
+      },
+      {
+        "id": "shoulder",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder / strap seam",
+          "es": "Costura de hombro / tirante",
+          "fr": "Couture d'épaule / bretelle"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "back",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "strap_width"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam",
+          "es": "Costura de costado",
+          "fr": "Couture latérale"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "hip_girth",
+          "torso_girth"
+        ]
+      },
+      {
+        "id": "leg_openings",
+        "type": "hem",
+        "label": {
+          "en": "Leg openings (elastic)",
+          "es": "Aberturas de pierna (elástico)",
+          "fr": "Ouvertures de jambe (élastique)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "leg"
+          },
+          {
+            "piece": "back",
+            "edge": "leg"
+          }
+        ],
+        "parameters": [
+          "hip_girth",
+          "leg_elastic_ratio"
+        ]
+      },
+      {
+        "id": "gusset",
+        "type": "custom",
+        "label": {
+          "en": "Crotch gusset",
+          "es": "Refuerzo de entrepierna",
+          "fr": "Gousset d'entrejambe"
+        },
+        "edges": [
+          {
+            "piece": "gusset",
+            "edge": "front_edge"
+          },
+          {
+            "piece": "gusset",
+            "edge": "back_edge"
+          }
+        ],
+        "parameters": [
+          "gusset_front_w",
+          "gusset_back_w"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": true, "elastic_finish": true, "lined": true },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": true,
+      "elastic_finish": true,
+      "lined": true
+    },
     "societal_benefit": {
       "en": "The commons' full-torso swim reference: a front-lined negative-ease one-piece where the fit-critical torso loop — shoulder down the front through the crotch and up the back — is drafted shorter than the body and proven to close at render time, with exact-mm neckline, armhole and leg elastic cut lengths in the open. The vertical torso-length negative ease is the number swimwear makers guard; here it is a slider and a verified dimension.",
-      "es": "La referencia de baño de torso completo del commons: un enterizo forrado con holgura negativa donde el lazo crítico del torso — del hombro por el frente a la entrepierna y de vuelta por la espalda — se traza más corto que el cuerpo y se comprueba que cierra al renderizar, con largos exactos en mm de elástico para escote, sisas y piernas en abierto. La holgura negativa vertical de largo es el número que los fabricantes de baño resguardan; aquí es un control y una dimensión verificada."
+      "es": "La referencia de baño de torso completo del commons: un enterizo forrado con holgura negativa donde el lazo crítico del torso — del hombro por el frente a la entrepierna y de vuelta por la espalda — se traza más corto que el cuerpo y se comprueba que cierra al renderizar, con largos exactos en mm de elástico para escote, sisas y piernas en abierto. La holgura negativa vertical de largo es el número que los fabricantes de baño resguardan; aquí es un control y una dimensión verificada.",
+      "fr": "La référence de bain torse complet du commons : un maillot une pièce à aisance négative doublé au devant, où la boucle de torse critique pour l'ajustement — de l'épaule au devant, par l'entrejambe et jusqu'au dos — est tracée plus courte que le corps et prouvée fermée au moment du rendu, avec des longueurs de coupe d'élastique exactes en mm pour l'encolure, l'emmanchure et les jambes, en accès ouvert. L'aisance négative verticale de longueur est le chiffre que les fabricants de maillots gardent secret ; ici, c'est un curseur et une dimension vérifiée."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

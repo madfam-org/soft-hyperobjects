@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "A made-to-measure five-panel cap from the head girth: five crown gores (a front, two side, two back), a stiffened peak, and a snap-back tab bridged to the Yantra4D `snap-fit` closure. Fashion Cabinet owns the cap; Yantra4D owns the snap. FC-200 accessories capsule.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Una gorra de cinco paneles a la medida desde el contorno de cabeza: cinco gajos de copa (frente, dos laterales, dos traseros), una visera rígida y una lengüeta de ajuste puenteada al cierre `snap-fit` de Yantra4D. Fashion Cabinet posee la gorra; Yantra4D posee el broche.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Una gorra de cinco paneles a la medida desde el contorno de cabeza: cinco gajos de copa (frente, dos laterales, dos traseros), una visera rígida y una lengüeta de ajuste puenteada al cierre `snap-fit` de Yantra4D. Fashion Cabinet posee la gorra; Yantra4D posee el broche.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une casquette cinq panneaux sur mesure à partir du tour de tête : cinq quartiers de calotte (un devant, deux latéraux, deux dos), une visière rigidifiée et une patte de réglage arrière faisant le pont vers la fermeture `snap-fit` de Yantra4D. Fashion Cabinet possède la casquette ; Yantra4D possède le bouton-pression. Capsule accessoires FC-200.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
     "tags": [
@@ -34,7 +35,8 @@
       "id": "cap",
       "label": {
         "en": "Five-Panel Cap",
-        "es": "Gorra de cinco paneles"
+        "es": "Gorra de cinco paneles",
+        "fr": "Casquette cinq panneaux"
       },
       "script_file": "main.py",
       "pieces": [
@@ -51,7 +53,8 @@
       "id": "front-panel",
       "label": {
         "en": "Front panel",
-        "es": "Panel frontal"
+        "es": "Panel frontal",
+        "fr": "Panneau devant"
       },
       "default_color": "#2f3b4a",
       "cut": {
@@ -64,7 +67,8 @@
       "id": "side-panel",
       "label": {
         "en": "Side panel",
-        "es": "Panel lateral"
+        "es": "Panel lateral",
+        "fr": "Panneau latéral"
       },
       "default_color": "#2f3b4a",
       "cut": {
@@ -77,7 +81,8 @@
       "id": "back-panel",
       "label": {
         "en": "Back panel",
-        "es": "Panel trasero"
+        "es": "Panel trasero",
+        "fr": "Panneau dos"
       },
       "default_color": "#2f3b4a",
       "cut": {
@@ -90,7 +95,8 @@
       "id": "peak",
       "label": {
         "en": "Peak / brim",
-        "es": "Visera"
+        "es": "Visera",
+        "fr": "Visière / bord"
       },
       "default_color": "#252f3b",
       "cut": {
@@ -104,7 +110,8 @@
       "id": "snap-tab",
       "label": {
         "en": "Snap-back tab",
-        "es": "Lengüeta de ajuste"
+        "es": "Lengüeta de ajuste",
+        "fr": "Patte de réglage"
       },
       "default_color": "#2f3b4a",
       "cut": {
@@ -151,11 +158,13 @@
       "step": 5,
       "label": {
         "en": "Head girth (mm)",
-        "es": "Contorno de cabeza (mm)"
+        "es": "Contorno de cabeza (mm)",
+        "fr": "Tour de tête (mm)"
       },
       "tooltip": {
         "en": "Head circumference; the five panels sum to this",
-        "es": "Contorno de cabeza; los cinco paneles suman esto"
+        "es": "Contorno de cabeza; los cinco paneles suman esto",
+        "fr": "Tour de tête ; la somme des cinq panneaux vaut ceci"
       },
       "measurement": {
         "code": "head_girth",
@@ -172,11 +181,13 @@
       "step": 5,
       "label": {
         "en": "Crown height (mm)",
-        "es": "Altura de copa (mm)"
+        "es": "Altura de copa (mm)",
+        "fr": "Hauteur de calotte (mm)"
       },
       "tooltip": {
         "en": "Gore height from headband to apex",
-        "es": "Altura del gajo de la banda a la punta"
+        "es": "Altura del gajo de la banda a la punta",
+        "fr": "Hauteur du quartier de la bande à la pointe"
       }
     },
     {
@@ -189,11 +200,13 @@
       "step": 5,
       "label": {
         "en": "Peak length (mm)",
-        "es": "Largo de visera (mm)"
+        "es": "Largo de visera (mm)",
+        "fr": "Longueur de visière (mm)"
       },
       "tooltip": {
         "en": "How far the peak projects",
-        "es": "Cuánto se proyecta la visera"
+        "es": "Cuánto se proyecta la visera",
+        "fr": "Jusqu'où la visière se projette"
       }
     },
     {
@@ -206,11 +219,13 @@
       "step": 1,
       "label": {
         "en": "Snap diameter (mm)",
-        "es": "Diámetro del broche (mm)"
+        "es": "Diámetro del broche (mm)",
+        "fr": "Diamètre du bouton-pression (mm)"
       },
       "tooltip": {
         "en": "Passed to the Yantra4D snap so the tab holes fit",
-        "es": "Se pasa al broche de Yantra4D para que los ojales ajusten"
+        "es": "Se pasa al broche de Yantra4D para que los ojales ajusten",
+        "fr": "Transmis au bouton-pression Yantra4D pour que les trous de patte s'ajustent"
       }
     },
     {
@@ -223,11 +238,13 @@
       "step": 2,
       "label": {
         "en": "Fit ease (mm)",
-        "es": "Holgura (mm)"
+        "es": "Holgura (mm)",
+        "fr": "Aisance d'ajustement (mm)"
       },
       "tooltip": {
         "en": "Added to the head girth",
-        "es": "Se agrega al contorno de cabeza"
+        "es": "Se agrega al contorno de cabeza",
+        "fr": "Ajouté au tour de tête"
       }
     }
   ],
@@ -236,7 +253,8 @@
       "id": "classic",
       "label": {
         "en": "Classic",
-        "es": "Clásico"
+        "es": "Clásico",
+        "fr": "Classique"
       },
       "values": {
         "crown_height": 130,
@@ -247,7 +265,8 @@
       "id": "low-profile",
       "label": {
         "en": "Low profile",
-        "es": "Perfil bajo"
+        "es": "Perfil bajo",
+        "fr": "Profil bas"
       },
       "values": {
         "crown_height": 105,
@@ -282,7 +301,8 @@
         "type": "custom",
         "label": {
           "en": "Headband seam (panels ↔ band)",
-          "es": "Costura de banda"
+          "es": "Costura de banda",
+          "fr": "Couture de bandeau (panneaux ↔ bandeau)"
         },
         "edges": [
           {
@@ -304,7 +324,8 @@
     },
     "societal_benefit": {
       "en": "A cap fit to the actual head with an open, printable snap-back — headwear as a made-to-measure, repairable commons object instead of a fixed one-size good with a throwaway plastic strap.",
-      "es": "Una gorra ajustada a la cabeza real con un cierre imprimible abierto — sombrerería como objeto común, a la medida y reparable, en vez de un producto de talla única con correa plástica desechable."
+      "es": "Una gorra ajustada a la cabeza real con un cierre imprimible abierto — sombrerería como objeto común, a la medida y reparable, en vez de un producto de talla única con correa plástica desechable.",
+      "fr": "Une casquette ajustée à la tête réelle avec un bouton-pression arrière ouvert et imprimable — la chapellerie comme objet du commun, sur mesure et réparable, au lieu d'un produit taille unique avec une sangle plastique jetable."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

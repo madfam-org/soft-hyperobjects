@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "A wrap skirt that closes with magnetic clasps instead of ties or buttons — a wide-wrap A-line panel whose overlap and waistband snap shut, so it fastens one-handed, seated, or with limited fine-motor control. The magnetic-clasp solid bridges to Yantra4D `magnetic-clasp`. FC-200 long-tail (adaptive).\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Una falda cruzada que cierra con broches magnéticos en vez de lazos o botones — un panel amplio en A cuyo cruce y pretina se cierran a presión, para abrocharla con una mano, sentado o con motricidad fina limitada. El broche se puentea al `magnetic-clasp` de Yantra4D. Cola larga FC-200 (adaptativo).\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Una falda cruzada que cierra con broches magnéticos en vez de lazos o botones — un panel amplio en A cuyo cruce y pretina se cierran a presión, para abrocharla con una mano, sentado o con motricidad fina limitada. El broche se puentea al `magnetic-clasp` de Yantra4D. Cola larga FC-200 (adaptativo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une jupe portefeuille qui se ferme par fermoirs magnétiques au lieu de liens ou de boutons — un panneau trapèze à large croisement dont le chevauchement et la ceinture se ferment d'un clic, pour se fermer d'une main, assise, ou avec une motricité fine limitée. Le fermoir magnétique se relie au solide `magnetic-clasp` de Yantra4D. Longue traîne du FC-200 (adaptatif).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
     "tags": [
@@ -35,7 +36,8 @@
       "id": "set",
       "label": {
         "en": "Full Skirt",
-        "es": "Falda completa"
+        "es": "Falda completa",
+        "fr": "Jupe complète"
       },
       "script_file": "main.py",
       "pieces": [
@@ -49,7 +51,8 @@
       "id": "panel",
       "label": {
         "en": "Wrap panel",
-        "es": "Panel cruzado"
+        "es": "Panel cruzado",
+        "fr": "Panneau portefeuille"
       },
       "default_color": "#7a6a5a",
       "cut": {
@@ -62,7 +65,8 @@
       "id": "band",
       "label": {
         "en": "Waistband (clasps)",
-        "es": "Pretina (broches)"
+        "es": "Pretina (broches)",
+        "fr": "Ceinture (agrafes)"
       },
       "default_color": "#6a5a4a",
       "cut": {
@@ -113,11 +117,13 @@
       },
       "label": {
         "en": "Waist girth (mm)",
-        "es": "Contorno de cintura (mm)"
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
       },
       "tooltip": {
         "en": "Fitted waist",
-        "es": "Cintura ajustada"
+        "es": "Cintura ajustada",
+        "fr": "Taille ajustée"
       }
     },
     {
@@ -134,11 +140,13 @@
       },
       "label": {
         "en": "Hip girth (mm)",
-        "es": "Contorno de cadera (mm)"
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
       },
       "tooltip": {
         "en": "Full hip",
-        "es": "Cadera completa"
+        "es": "Cadera completa",
+        "fr": "Tour de hanches complet"
       }
     },
     {
@@ -151,11 +159,13 @@
       "step": 10,
       "label": {
         "en": "Length (mm)",
-        "es": "Largo (mm)"
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
       },
       "tooltip": {
         "en": "Waist to hem",
-        "es": "De la cintura al ruedo"
+        "es": "De la cintura al ruedo",
+        "fr": "De la taille à l'ourlet"
       }
     },
     {
@@ -168,11 +178,13 @@
       "step": 10,
       "label": {
         "en": "Wrap overlap (mm)",
-        "es": "Cruce (mm)"
+        "es": "Cruce (mm)",
+        "fr": "Chevauchement de croisement (mm)"
       },
       "tooltip": {
         "en": "How far the wrap crosses over",
-        "es": "Cuánto cruza el envolvente"
+        "es": "Cuánto cruza el envolvente",
+        "fr": "Jusqu'où le portefeuille croise"
       }
     },
     {
@@ -185,11 +197,13 @@
       "step": 5,
       "label": {
         "en": "Waistband height (mm)",
-        "es": "Alto de pretina (mm)"
+        "es": "Alto de pretina (mm)",
+        "fr": "Hauteur de ceinture (mm)"
       },
       "tooltip": {
         "en": "Finished band height",
-        "es": "Alto terminado de la pretina"
+        "es": "Alto terminado de la pretina",
+        "fr": "Hauteur finie de la ceinture"
       }
     },
     {
@@ -202,11 +216,13 @@
       "step": 1,
       "label": {
         "en": "Magnetic clasps",
-        "es": "Broches magnéticos"
+        "es": "Broches magnéticos",
+        "fr": "Fermoirs magnétiques"
       },
       "tooltip": {
         "en": "At the wrap overlap; sets the Yantra4D count",
-        "es": "En el cruce; define la cantidad de Yantra4D"
+        "es": "En el cruce; define la cantidad de Yantra4D",
+        "fr": "Au niveau du croisement ; définit le nombre de Yantra4D"
       }
     }
   ],
@@ -215,7 +231,8 @@
       "id": "everyday",
       "label": {
         "en": "Everyday",
-        "es": "Diario"
+        "es": "Diario",
+        "fr": "Quotidien"
       },
       "values": {
         "skirt_length": 620,
@@ -226,7 +243,8 @@
       "id": "midi",
       "label": {
         "en": "Midi",
-        "es": "Midi"
+        "es": "Midi",
+        "fr": "Midi"
       },
       "values": {
         "skirt_length": 820,
@@ -261,7 +279,8 @@
         "type": "waistband",
         "label": {
           "en": "Waist ↔ band",
-          "es": "Cintura ↔ pretina"
+          "es": "Cintura ↔ pretina",
+          "fr": "Taille ↔ ceinture"
         },
         "edges": [
           {
@@ -289,7 +308,8 @@
     },
     "societal_benefit": {
       "en": "An open, made-to-measure wrap skirt that closes with magnetic clasps instead of ties or buttons makes dressing independent for people with limited fine-motor control or one working hand — no fiddly fastening, from an open pattern anyone can adapt.",
-      "es": "Una falda cruzada abierta y a la medida que cierra con broches magnéticos en vez de lazos o botones hace el vestir independiente para personas con motricidad fina limitada o una sola mano funcional — sin abrochado complicado, desde un patrón abierto que cualquiera puede adaptar."
+      "es": "Una falda cruzada abierta y a la medida que cierra con broches magnéticos en vez de lazos o botones hace el vestir independiente para personas con motricidad fina limitada o una sola mano funcional — sin abrochado complicado, desde un patrón abierto que cualquiera puede adaptar.",
+      "fr": "Une jupe portefeuille ouverte et sur mesure qui se ferme par fermoirs magnétiques au lieu de liens ou de boutons rend l'habillage autonome pour les personnes à motricité fine limitée ou à une seule main valide — sans fermeture délicate, à partir d'un patron ouvert que chacun peut adapter."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

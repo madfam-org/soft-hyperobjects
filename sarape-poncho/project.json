@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "The sarape — a single rectangular woven blanket-garment worn over the head through a central neck slit, one of the most recognizable garments of Mexico, kin to the poncho. Its construction is the simplest possible: one rectangle, a head slit, finished (often fringed) edges. This cartridge drafts the garment geometry to measure; the weave — bands, the ojo (diamond), colour gradients — is the weaver's to supply. Offered with respect for the living tradition.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "El sarape — una manta-prenda rectangular tejida que se viste por la cabeza a través de una bocamanga central, una de las prendas más reconocibles de México, pariente del poncho. Su construcción es la más simple posible: un rectángulo, una abertura para la cabeza, orillas terminadas (a menudo con fleco). Este cartucho traza la geometría a la medida; el tejido — bandas, el ojo, los degradados de color — lo aporta quien teje. Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "El sarape — una manta-prenda rectangular tejida que se viste por la cabeza a través de una bocamanga central, una de las prendas más reconocibles de México, pariente del poncho. Su construcción es la más simple posible: un rectángulo, una abertura para la cabeza, orillas terminadas (a menudo con fleco). Este cartucho traza la geometría a la medida; el tejido — bandas, el ojo, los degradados de color — lo aporta quien teje. Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le sarape — une couverture-vêtement rectangulaire tissée que l'on enfile par la tête à travers une fente d'encolure centrale, l'un des vêtements les plus reconnaissables du Mexique, cousin du poncho. Sa construction est la plus simple possible : un rectangle, une fente pour la tête, des bords finis (souvent frangés). Cette cartouche trace la géométrie du vêtement sur mesure ; le tissage — bandes, l'ojo (losange), dégradés de couleur — revient au tisserand. Offert dans le respect de la tradition vivante.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
     "tags": [
@@ -35,7 +36,8 @@
       "id": "set",
       "label": {
         "en": "Sarape",
-        "es": "Sarape"
+        "es": "Sarape",
+        "fr": "Sarape"
       },
       "script_file": "main.py",
       "pieces": [
@@ -48,7 +50,8 @@
       "id": "body",
       "label": {
         "en": "Body",
-        "es": "Cuerpo"
+        "es": "Cuerpo",
+        "fr": "Corps"
       },
       "default_color": "#a83a2a",
       "cut": {
@@ -96,11 +99,13 @@
       "step": 10,
       "label": {
         "en": "Span width (mm)",
-        "es": "Ancho de envergadura (mm)"
+        "es": "Ancho de envergadura (mm)",
+        "fr": "Largeur d'envergure (mm)"
       },
       "tooltip": {
         "en": "Width across the body (shoulder span + drape)",
-        "es": "Ancho a través del cuerpo (envergadura + caída)"
+        "es": "Ancho a través del cuerpo (envergadura + caída)",
+        "fr": "Largeur en travers du corps (envergure d'épaules + tombant)"
       }
     },
     {
@@ -113,11 +118,13 @@
       "step": 10,
       "label": {
         "en": "Drop length (mm)",
-        "es": "Largo de caída (mm)"
+        "es": "Largo de caída (mm)",
+        "fr": "Longueur du tombant (mm)"
       },
       "tooltip": {
         "en": "Front (or back) drop from the shoulder fold",
-        "es": "Caída delantera (o trasera) desde el doblez del hombro"
+        "es": "Caída delantera (o trasera) desde el doblez del hombro",
+        "fr": "Tombant devant (ou dos) depuis le pli d'épaule"
       }
     },
     {
@@ -130,11 +137,13 @@
       "step": 10,
       "label": {
         "en": "Neck slit (mm)",
-        "es": "Bocamanga (mm)"
+        "es": "Bocamanga (mm)",
+        "fr": "Fente d'encolure (mm)"
       },
       "tooltip": {
         "en": "Length of the head slit along the fold",
-        "es": "Largo de la abertura para la cabeza en el doblez"
+        "es": "Largo de la abertura para la cabeza en el doblez",
+        "fr": "Longueur de la fente pour la tête le long du pli"
       }
     },
     {
@@ -147,11 +156,13 @@
       "step": 10,
       "label": {
         "en": "Head cut (mm)",
-        "es": "Corte de cabeza (mm)"
+        "es": "Corte de cabeza (mm)",
+        "fr": "Découpe de tête (mm)"
       },
       "tooltip": {
         "en": "Optional perpendicular cut for the head; 0 = plain slit",
-        "es": "Corte perpendicular opcional para la cabeza; 0 = solo abertura"
+        "es": "Corte perpendicular opcional para la cabeza; 0 = solo abertura",
+        "fr": "Coupe perpendiculaire optionnelle pour la tête ; 0 = simple fente"
       }
     },
     {
@@ -164,11 +175,13 @@
       "step": 5,
       "label": {
         "en": "Fringe allowance (mm)",
-        "es": "Margen de fleco (mm)"
+        "es": "Margen de fleco (mm)",
+        "fr": "Marge de frange (mm)"
       },
       "tooltip": {
         "en": "Marked fringe at the ends; 0 = none",
-        "es": "Fleco marcado en los extremos; 0 = ninguno"
+        "es": "Fleco marcado en los extremos; 0 = ninguno",
+        "fr": "Frange marquée aux extrémités ; 0 = aucune"
       }
     },
     {
@@ -181,11 +194,13 @@
       "step": 1,
       "label": {
         "en": "Weave bands",
-        "es": "Bandas de tejido"
+        "es": "Bandas de tejido",
+        "fr": "Bandes de tressage"
       },
       "tooltip": {
         "en": "Marked decorative bands for the weaver",
-        "es": "Bandas decorativas marcadas para quien teje"
+        "es": "Bandas decorativas marcadas para quien teje",
+        "fr": "Bandes décoratives marquées pour le tisserand"
       }
     }
   ],
@@ -194,7 +209,8 @@
       "id": "sarape",
       "label": {
         "en": "Sarape (fringed)",
-        "es": "Sarape (con fleco)"
+        "es": "Sarape (con fleco)",
+        "fr": "Sarape (à franges)"
       },
       "values": {
         "span_width": 1200,
@@ -206,7 +222,8 @@
       "id": "poncho",
       "label": {
         "en": "Poncho (head cut)",
-        "es": "Poncho (corte de cabeza)"
+        "es": "Poncho (corte de cabeza)",
+        "fr": "Poncho (ouverture tête)"
       },
       "values": {
         "span_width": 1300,
@@ -230,7 +247,8 @@
         "type": "shoulder",
         "label": {
           "en": "Shoulder fold + neck slit",
-          "es": "Doblez de hombro + bocamanga"
+          "es": "Doblez de hombro + bocamanga",
+          "fr": "Pli d'épaule + fente d'encolure"
         },
         "edges": [
           {
@@ -251,7 +269,8 @@
     },
     "societal_benefit": {
       "en": "An open, made-to-measure draft of the sarape's single-rectangle construction lets anyone size and finish the garment while leaving the weave — the part that carries its identity — entirely to the weaver. It serves the tradition it draws from rather than extracting from it, and teaches the most economical garment geometry there is: one rectangle, no waste.",
-      "es": "Un trazo abierto y a la medida de la construcción de un solo rectángulo del sarape permite a cualquiera dimensionar y terminar la prenda, dejando el tejido — lo que porta su identidad — enteramente a quien teje. Sirve a la tradición de la que parte en vez de extraer de ella, y enseña la geometría de prenda más económica que existe: un rectángulo, sin desperdicio."
+      "es": "Un trazo abierto y a la medida de la construcción de un solo rectángulo del sarape permite a cualquiera dimensionar y terminar la prenda, dejando el tejido — lo que porta su identidad — enteramente a quien teje. Sirve a la tradición de la que parte en vez de extraer de ella, y enseña la geometría de prenda más económica que existe: un rectángulo, sin desperdicio.",
+      "fr": "Un tracé ouvert et sur mesure de la construction en un seul rectangle du sarape permet à chacun de dimensionner et finir le vêtement, tout en laissant le tissage — la part qui porte son identité — entièrement au tisserand. Il sert la tradition dont il est issu plutôt que d'en extraire, et enseigne la géométrie de vêtement la plus économique qui soit : un rectangle, sans chute."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

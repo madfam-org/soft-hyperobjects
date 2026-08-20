@@ -6,82 +6,482 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #48. Relaxed pull-on summer romper in woven fabric: a sleeveless blouson bodice cut on fold front and back — no zipper; the back closes with a U-shaped CB neck keyhole and a button — joins an athletic-shorts block at an elasticized waist seam whose blouson surplus is computed from the same width formulas and declared as ease; the back short hem is solved analytically so the straight inseams match, and neck and armhole facings are derived from the measured openings.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #48 del FC-100. Mono corto veraniego de tela plana, holgado y sin cierre: un talle blusón sin mangas cortado al doblez por delante y por detrás — la espalda cierra con un ojal de lágrima en el escote CB y un botón — se une a un bloque de short deportivo en una costura de cintura elastizada cuyo sobrante de blusón se calcula con las mismas fórmulas de ancho y se declara como holgura; el dobladillo trasero del short se resuelve analíticamente para que las entrepiernas rectas coincidan, y las vistas de escote y sisa se derivan de las aberturas medidas.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #48 del FC-100. Mono corto veraniego de tela plana, holgado y sin cierre: un talle blusón sin mangas cortado al doblez por delante y por detrás — la espalda cierra con un ojal de lágrima en el escote CB y un botón — se une a un bloque de short deportivo en una costura de cintura elastizada cuyo sobrante de blusón se calcula con las mismas fórmulas de ancho y se declara como holgura; el dobladillo trasero del short se resuelve analíticamente para que las entrepiernas rectas coincidan, y las vistas de escote y sisa se derivan de las aberturas medidas.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "FC-100 rang n°48. Combishort d'été à enfiler décontracté en tissu chaîne et trame : un corsage blouson sans manches coupé au pli devant et dos — sans fermeture éclair ; le dos se ferme par un trou de serrure en U à l'encolure CB et un bouton — assemblé à un bloc de short athlétique à une couture de taille élastiquée dont le surplus blouson est calculé à partir des mêmes formules de largeur et déclaré comme aisance ; l'ourlet du short arrière est résolu analytiquement pour que les entrejambes droites s'accordent, et les parementures d'encolure et d'emmanchure sont dérivées des ouvertures mesurées.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["romper", "playsuit", "one-piece", "shorts", "sleeveless", "elastic-waist", "keyhole", "woven", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "romper",
+      "playsuit",
+      "one-piece",
+      "shorts",
+      "sleeveless",
+      "elastic-waist",
+      "keyhole",
+      "woven",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet", "license": "original" },
-        { "source": "Fashion Cabinet a-line-dress cartridge (fold-cut scooped bodice + derived facing strips)", "license": "LicenseRef-FC1-pending" },
-        { "source": "Fashion Cabinet athletic-shorts cartridge (short-leg block with the analytic back-hem solve)", "license": "LicenseRef-FC1-pending" },
-        { "source": "Fashion Cabinet maxi-dress cartridge (joined-seam surplus-as-ease accounting)", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "Fashion Cabinet a-line-dress cartridge (fold-cut scooped bodice + derived facing strips)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "Fashion Cabinet athletic-shorts cartridge (short-leg block with the analytic back-hem solve)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "Fashion Cabinet maxi-dress cartridge (joined-seam surplus-as-ease accounting)",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "romper",
-      "label": { "en": "Romper (all pieces)", "es": "Mono corto (todas las piezas)" },
+      "label": {
+        "en": "Romper (all pieces)",
+        "es": "Mono corto (todas las piezas)",
+        "fr": "Combishort (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["bodice_front", "bodice_back", "short_front", "short_back", "neck_facing", "armhole_facing"]
+      "pieces": [
+        "bodice_front",
+        "bodice_back",
+        "short_front",
+        "short_back",
+        "neck_facing",
+        "armhole_facing"
+      ]
     }
   ],
   "pieces": [
-    { "id": "bodice_front", "label": { "en": "Bodice Front", "es": "Talle Delantero" }, "default_color": "#c2703e", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "bodice_back", "label": { "en": "Bodice Back", "es": "Talle Trasero" }, "default_color": "#a85a32", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "short_front", "label": { "en": "Short Front", "es": "Short Delantero" }, "default_color": "#8f4a2a", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "short_back", "label": { "en": "Short Back", "es": "Short Trasero" }, "default_color": "#7a3d22", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "neck_facing", "label": { "en": "Neck Facing", "es": "Vista de Escote" }, "default_color": "#d99a6c", "cut": { "quantity": 1 } },
-    { "id": "armhole_facing", "label": { "en": "Armhole Facing", "es": "Vista de Sisa" }, "default_color": "#e8b892", "cut": { "quantity": 2 } }
+    {
+      "id": "bodice_front",
+      "label": {
+        "en": "Bodice Front",
+        "es": "Talle Delantero",
+        "fr": "Corsage devant"
+      },
+      "default_color": "#c2703e",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "bodice_back",
+      "label": {
+        "en": "Bodice Back",
+        "es": "Talle Trasero",
+        "fr": "Corsage dos"
+      },
+      "default_color": "#a85a32",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "short_front",
+      "label": {
+        "en": "Short Front",
+        "es": "Short Delantero",
+        "fr": "Short Devant"
+      },
+      "default_color": "#8f4a2a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "short_back",
+      "label": {
+        "en": "Short Back",
+        "es": "Short Trasero",
+        "fr": "Short Dos"
+      },
+      "default_color": "#7a3d22",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "neck_facing",
+      "label": {
+        "en": "Neck Facing",
+        "es": "Vista de Escote",
+        "fr": "Parementure d'encolure"
+      },
+      "default_color": "#d99a6c",
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "armhole_facing",
+      "label": {
+        "en": "Armhole Facing",
+        "es": "Vista de Sisa",
+        "fr": "Parementure d'emmanchure"
+      },
+      "default_color": "#e8b892",
+      "cut": {
+        "quantity": 2
+      }
+    }
   ],
   "parameters": [
-    { "id": "bust_girth", "type": "slider", "default": 940, "min": 600, "max": 1700, "step": 10, "measurement": { "standard": "iso_8559", "code": "bust_girth" }, "label": { "en": "Bust girth (mm)", "es": "Contorno de busto (mm)" } },
-    { "id": "waist_girth", "type": "slider", "default": 740, "min": 450, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "tooltip": { "en": "Sizes the waist elastic (cut at 0.95x)", "es": "Dimensiona el elástico de cintura (cortado a 0.95x)" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
-    { "id": "hip_girth", "type": "slider", "default": 980, "min": 650, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
-    { "id": "bodice_length", "type": "slider", "default": 400, "min": 320, "max": 600, "step": 10, "label": { "en": "Bodice length, HPS to waist seam (mm)", "es": "Largo de talle, hombro a costura de cintura (mm)" } },
-    { "id": "inseam_length", "type": "slider", "default": 90, "min": 70, "max": 350, "step": 5, "label": { "en": "Inseam length (mm)", "es": "Largo de entrepierna (mm)" } },
-    { "id": "front_rise", "type": "slider", "default": 260, "min": 190, "max": 380, "step": 5, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)" } },
-    { "id": "back_rise", "type": "slider", "default": 290, "min": 190, "max": 460, "step": 5, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)" } },
-    { "id": "blouson_ease", "type": "slider", "default": 200, "min": 80, "max": 400, "step": 10, "tooltip": { "en": "Roomy pull-on ease; feeds the blouson surplus at the waist", "es": "Holgura amplia para vestirse sin cierre; alimenta el sobrante de blusón en la cintura" }, "label": { "en": "Bodice blouson ease (mm)", "es": "Holgura blusón del talle (mm)" } },
-    { "id": "short_ease", "type": "slider", "default": 120, "min": 60, "max": 350, "step": 10, "label": { "en": "Short ease (mm)", "es": "Holgura del short (mm)" } },
-    { "id": "hem_width", "type": "slider", "default": 240, "min": 160, "max": 340, "step": 5, "tooltip": { "en": "Front half-hem, flat; the back hem width is solved from it", "es": "Medio dobladillo delantero, en plano; el ancho trasero se resuelve a partir de él" }, "label": { "en": "Short hem width (mm)", "es": "Ancho de dobladillo del short (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 25, "min": 0, "max": 60, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "default": 940,
+      "min": 600,
+      "max": 1700,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      },
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de buste (mm)"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "default": 740,
+      "min": 450,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "tooltip": {
+        "en": "Sizes the waist elastic (cut at 0.95x)",
+        "es": "Dimensiona el elástico de cintura (cortado a 0.95x)",
+        "fr": "Dimensionne l'élastique de taille (coupé à 0,95×)"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "default": 980,
+      "min": 650,
+      "max": 1800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      }
+    },
+    {
+      "id": "bodice_length",
+      "type": "slider",
+      "default": 400,
+      "min": 320,
+      "max": 600,
+      "step": 10,
+      "label": {
+        "en": "Bodice length, HPS to waist seam (mm)",
+        "es": "Largo de talle, hombro a costura de cintura (mm)",
+        "fr": "Longueur de corsage, point d'épaule à la couture de taille (mm)"
+      }
+    },
+    {
+      "id": "inseam_length",
+      "type": "slider",
+      "default": 90,
+      "min": 70,
+      "max": 350,
+      "step": 5,
+      "label": {
+        "en": "Inseam length (mm)",
+        "es": "Largo de entrepierna (mm)",
+        "fr": "Longueur d'entrejambe (mm)"
+      }
+    },
+    {
+      "id": "front_rise",
+      "type": "slider",
+      "default": 260,
+      "min": 190,
+      "max": 380,
+      "step": 5,
+      "label": {
+        "en": "Front rise (mm)",
+        "es": "Tiro delantero (mm)",
+        "fr": "Hauteur de fourche avant (mm)"
+      }
+    },
+    {
+      "id": "back_rise",
+      "type": "slider",
+      "default": 290,
+      "min": 190,
+      "max": 460,
+      "step": 5,
+      "label": {
+        "en": "Back rise (mm)",
+        "es": "Tiro trasero (mm)",
+        "fr": "Hauteur de fourche arrière (mm)"
+      }
+    },
+    {
+      "id": "blouson_ease",
+      "type": "slider",
+      "default": 200,
+      "min": 80,
+      "max": 400,
+      "step": 10,
+      "tooltip": {
+        "en": "Roomy pull-on ease; feeds the blouson surplus at the waist",
+        "es": "Holgura amplia para vestirse sin cierre; alimenta el sobrante de blusón en la cintura",
+        "fr": "Aisance ample pour enfiler ; alimente le surplus blouson à la taille"
+      },
+      "label": {
+        "en": "Bodice blouson ease (mm)",
+        "es": "Holgura blusón del talle (mm)",
+        "fr": "Aisance blouson du corsage (mm)"
+      }
+    },
+    {
+      "id": "short_ease",
+      "type": "slider",
+      "default": 120,
+      "min": 60,
+      "max": 350,
+      "step": 10,
+      "label": {
+        "en": "Short ease (mm)",
+        "es": "Holgura del short (mm)",
+        "fr": "Aisance du short (mm)"
+      }
+    },
+    {
+      "id": "hem_width",
+      "type": "slider",
+      "default": 240,
+      "min": 160,
+      "max": 340,
+      "step": 5,
+      "tooltip": {
+        "en": "Front half-hem, flat; the back hem width is solved from it",
+        "es": "Medio dobladillo delantero, en plano; el ancho trasero se resuelve a partir de él",
+        "fr": "Demi-ourlet devant, à plat ; la largeur d'ourlet du dos en découle"
+      },
+      "label": {
+        "en": "Short hem width (mm)",
+        "es": "Ancho de dobladillo del short (mm)",
+        "fr": "Largeur d'ourlet du short (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 25,
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-s", "label": { "en": "S", "es": "CH" }, "values": { "bust_girth": 880, "waist_girth": 680, "hip_girth": 920 } },
-    { "id": "longline", "label": { "en": "Longline", "es": "Talle largo" }, "values": { "bodice_length": 460, "inseam_length": 130 } }
+    {
+      "id": "size-s",
+      "label": {
+        "en": "S",
+        "es": "CH",
+        "fr": "S"
+      },
+      "values": {
+        "bust_girth": 880,
+        "waist_girth": 680,
+        "hip_girth": 920
+      }
+    },
+    {
+      "id": "longline",
+      "label": {
+        "en": "Longline",
+        "es": "Talle largo",
+        "fr": "Longue ligne"
+      },
+      "values": {
+        "bodice_length": 460,
+        "inseam_length": 130
+      }
+    }
   ],
   "constraints": [
     {
       "expression": "back_rise >= front_rise",
       "severity": "warning",
-      "message": { "en": "A back rise below the front rise is clamped by the draft; the CB sits higher than the CF on a shorts block", "es": "Un tiro trasero menor al delantero se limita en el trazo; el CB queda más alto que el CF en un bloque de short" }
+      "message": {
+        "en": "A back rise below the front rise is clamped by the draft; the CB sits higher than the CF on a shorts block",
+        "es": "Un tiro trasero menor al delantero se limita en el trazo; el CB queda más alto que el CF en un bloque de short",
+        "fr": "Une hauteur de fourche dos inférieure à celle du devant est bridée par le tracé ; le CB est plus haut que le CF sur un bloc de short"
+      }
     },
     {
       "expression": "bust_girth + blouson_ease >= hip_girth + short_ease",
       "severity": "warning",
-      "message": { "en": "When the shorts waist outruns the bodice, the draft widens the bodice to keep the blouson surplus non-negative", "es": "Cuando la cintura del short supera al talle, el trazo ensancha el talle para mantener el sobrante de blusón no negativo" }
+      "message": {
+        "en": "When the shorts waist outruns the bodice, the draft widens the bodice to keep the blouson surplus non-negative",
+        "es": "Cuando la cintura del short supera al talle, el trazo ensancha el talle para mantener el sobrante de blusón no negativo",
+        "fr": "Quand la taille du short dépasse celle du corsage, le tracé élargit le corsage pour garder un surplus blouson non négatif"
+      }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["popelina-algodon", "manta-cruda"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "popelina-algodon",
+    "manta-cruda"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "bodice_front", "edge": "neck" }, { "piece": "bodice_back", "edge": "neck" }], "parameters": ["bodice_length"] },
-      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "bodice_front", "edge": "armhole" }, { "piece": "bodice_back", "edge": "armhole" }], "parameters": ["bust_girth", "blouson_ease"] },
-      { "id": "waist_seam", "type": "waistband", "edges": [{ "piece": "bodice_front", "edge": "hem" }, { "piece": "bodice_back", "edge": "hem" }, { "piece": "short_front", "edge": "waist" }, { "piece": "short_back", "edge": "waist" }], "parameters": ["waist_girth", "blouson_ease", "short_ease"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "short_front", "edge": "hem" }, { "piece": "short_back", "edge": "hem" }], "parameters": ["inseam_length", "hem_width", "hem_allowance"] }
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "edges": [
+          {
+            "piece": "bodice_front",
+            "edge": "neck"
+          },
+          {
+            "piece": "bodice_back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "bodice_length"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "edges": [
+          {
+            "piece": "bodice_front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "bodice_back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "blouson_ease"
+        ]
+      },
+      {
+        "id": "waist_seam",
+        "type": "waistband",
+        "edges": [
+          {
+            "piece": "bodice_front",
+            "edge": "hem"
+          },
+          {
+            "piece": "bodice_back",
+            "edge": "hem"
+          },
+          {
+            "piece": "short_front",
+            "edge": "waist"
+          },
+          {
+            "piece": "short_back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "blouson_ease",
+          "short_ease"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "short_front",
+            "edge": "hem"
+          },
+          {
+            "piece": "short_back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "inseam_length",
+          "hem_width",
+          "hem_allowance"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
     "societal_benefit": {
       "en": "The first one-piece of the FC-100: a bodice lineage and a shorts lineage joined by one declared elasticized waist seam whose blouson surplus is computed, not guessed — teaching makers that a romper is two verified blocks and one honest seam, with no zipper required.",
-      "es": "La primera prenda de una pieza del FC-100: un linaje de talle y uno de short unidos por una costura de cintura elastizada declarada cuyo sobrante de blusón se calcula, no se adivina — enseña que un mono corto son dos bloques verificados y una costura honesta, sin necesidad de cierre."
+      "es": "La primera prenda de una pieza del FC-100: un linaje de talle y uno de short unidos por una costura de cintura elastizada declarada cuyo sobrante de blusón se calcula, no se adivina — enseña que un mono corto son dos bloques verificados y una costura honesta, sin necesidad de cierre.",
+      "fr": "La première pièce d'un seul tenant du FC-100 : une lignée de corsage et une lignée de short réunies par une seule couture de taille élastiquée déclarée dont le surplus blouson est calculé, non deviné — enseignant aux créateurs qu'une combishort, c'est deux blocs vérifiés et une couture honnête, sans fermeture à glissière requise."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

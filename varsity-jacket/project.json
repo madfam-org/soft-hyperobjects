@@ -6,85 +6,499 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #66. The classic baseball/letterman jacket: the bomber-jacket architecture with the front zipper swapped for a snap-button placket and the sleeves cut in a contrast fabric (the two-tone letterman look). The front is cut as two mirrored halves whose center edge is the snap stand (laps past center front by a placket extension), carrying five snap fasteners as drill cross-marks plus a hand welt-pocket marking and a chenille chest-patch placement zone. The long set-in sleeve cap is solved by bisection against the measured armhole pair; the collar, cuff and split waist ribs are derived from the measured openings (negative-eased knit trim), and the metadata records the two-tone body/sleeve split and the set-in-vs-raglan simplification. Snap hardware stays federated to Yantra4D via the shank-button notion cartridge.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #66 del FC-100. La clásica chamarra de béisbol/letterman: la arquitectura de la bomber con el cierre frontal sustituido por una tapeta de broches y las mangas cortadas en tela de contraste (el look bicolor letterman). El delantero se corta en dos mitades espejadas cuyo borde central es la tapeta de broches (traslapa el centro delantero por una extensión de tapeta), con cinco broches como marcas de barreno más la marca de bolsa de vivo y la zona de colocación del parche de chenilla en el pecho. La copa de la manga larga montada se resuelve por bisección contra la sisa medida; el cuello, los puños y la pretina dividida de rib se derivan de las aberturas medidas (rib negativo elástico), y los metadatos registran la división bicolor cuerpo/manga y la simplificación de manga montada frente a ranglán. El herraje de los broches sigue federado a Yantra4D vía el cartucho shank-button.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #66 del FC-100. La clásica chamarra de béisbol/letterman: la arquitectura de la bomber con el cierre frontal sustituido por una tapeta de broches y las mangas cortadas en tela de contraste (el look bicolor letterman). El delantero se corta en dos mitades espejadas cuyo borde central es la tapeta de broches (traslapa el centro delantero por una extensión de tapeta), con cinco broches como marcas de barreno más la marca de bolsa de vivo y la zona de colocación del parche de chenilla en el pecho. La copa de la manga larga montada se resuelve por bisección contra la sisa medida; el cuello, los puños y la pretina dividida de rib se derivan de las aberturas medidas (rib negativo elástico), y los metadatos registran la división bicolor cuerpo/manga y la simplificación de manga montada frente a ranglán. El herraje de los broches sigue federado a Yantra4D vía el cartucho shank-button.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "FC-100 rang n°66. Le classique blouson de baseball/teddy : l'architecture du bomber avec la fermeture éclair devant remplacée par une patte à boutons-pression et les manches coupées dans un tissu contrastant (le look teddy bicolore). Le Devant est coupé en deux moitiés en miroir dont le bord central est le tombant de pressions (chevauche le centre devant d'une extension de patte), portant cinq boutons-pression en repères de perçage en croix plus un repère de poche passepoilée à la main et une zone de placement d'écusson chenille sur la poitrine. La tête de la longue Manche montée est résolue par bissection contre la paire d'Emmanchures mesurées ; le col, les poignets et la ceinture fendue en côte sont dérivés des ouvertures mesurées (passementerie maille à aisance négative), et les métadonnées enregistrent la répartition bicolore corps/manche et la simplification montée-vs-raglan. La quincaillerie de pressions reste fédérée vers Yantra4D via la cartouche shank-button.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["varsity", "letterman", "baseball-jacket", "jacket", "outerwear", "snap-placket", "rib-trim", "two-tone", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "varsity",
+      "letterman",
+      "baseball-jacket",
+      "jacket",
+      "outerwear",
+      "snap-placket",
+      "rib-trim",
+      "two-tone",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet", "license": "original" },
-        { "source": "bomber-jacket (ribbed collar/cuff/hem + solved set-in cap)", "license": "LicenseRef-FC1-pending" },
-        { "source": "zip-hoodie (halved-front placket architecture)", "license": "LicenseRef-FC1-pending" },
-        { "source": "denim-jacket (button/snap placket cross-marks + two-fabric BOM idiom)", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "bomber-jacket (ribbed collar/cuff/hem + solved set-in cap)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "zip-hoodie (halved-front placket architecture)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "denim-jacket (button/snap placket cross-marks + two-fabric BOM idiom)",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "varsity-jacket",
-      "label": { "en": "Varsity jacket (all pieces)", "es": "Chamarra varsity (todas las piezas)" },
+      "label": {
+        "en": "Varsity jacket (all pieces)",
+        "es": "Chamarra varsity (todas las piezas)",
+        "fr": "Veste teddy (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "sleeve", "collar_rib", "cuff_rib", "hem_rib"]
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "collar_rib",
+        "cuff_rib",
+        "hem_rib"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front (snap-placket half)", "es": "Delantero (mitad con tapeta)" }, "default_color": "#3a3f4b", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Trasero" }, "default_color": "#31353f", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "sleeve", "label": { "en": "Sleeve (contrast)", "es": "Manga (contraste)" }, "default_color": "#c8b273", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "collar_rib", "label": { "en": "Collar (band rib)", "es": "Cuello (rib banda)" }, "default_color": "#8a9179", "cut": { "quantity": 1 } },
-    { "id": "cuff_rib", "label": { "en": "Cuff (rib)", "es": "Puño (rib)" }, "default_color": "#9ba287", "cut": { "quantity": 2 } },
-    { "id": "hem_rib", "label": { "en": "Waist Rib (split)", "es": "Pretina (rib dividida)" }, "default_color": "#9ba287", "cut": { "quantity": 1 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (snap-placket half)",
+        "es": "Delantero (mitad con tapeta)",
+        "fr": "Devant (moitié avec patte à pression)"
+      },
+      "default_color": "#3a3f4b",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Trasero",
+        "fr": "Dos"
+      },
+      "default_color": "#31353f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve (contrast)",
+        "es": "Manga (contraste)",
+        "fr": "Manche (contraste)"
+      },
+      "default_color": "#c8b273",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar_rib",
+      "label": {
+        "en": "Collar (band rib)",
+        "es": "Cuello (rib banda)",
+        "fr": "Col (côte en bande)"
+      },
+      "default_color": "#8a9179",
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "cuff_rib",
+      "label": {
+        "en": "Cuff (rib)",
+        "es": "Puño (rib)",
+        "fr": "Poignet (côtes)"
+      },
+      "default_color": "#9ba287",
+      "cut": {
+        "quantity": 2
+      }
+    },
+    {
+      "id": "hem_rib",
+      "label": {
+        "en": "Waist Rib (split)",
+        "es": "Pretina (rib dividida)",
+        "fr": "Bord-côte de taille (divisé)"
+      },
+      "default_color": "#9ba287",
+      "cut": {
+        "quantity": 1
+      }
+    }
   ],
   "parameters": [
-    { "id": "chest_girth", "type": "slider", "default": 1060, "min": 650, "max": 1900, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
-    { "id": "body_length", "type": "slider", "default": 610, "min": 420, "max": 900, "step": 10, "label": { "en": "Body length to waist-rib seam (mm)", "es": "Largo de cuerpo hasta pretina (mm)" } },
-    { "id": "neck_girth", "type": "slider", "default": 410, "min": 300, "max": 540, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
-    { "id": "sleeve_length", "type": "slider", "default": 610, "min": 200, "max": 780, "step": 10, "label": { "en": "Sleeve length to cuff seam (mm)", "es": "Largo de manga hasta puño (mm)" } },
-    { "id": "varsity_ease", "type": "slider", "default": 220, "min": 80, "max": 420, "step": 10, "label": { "en": "Total ease (mm)", "es": "Holgura total (mm)" } },
-    { "id": "placket_ext", "type": "slider", "default": 35, "min": 20, "max": 55, "step": 5, "label": { "en": "Snap placket extension past CF (mm)", "es": "Extensión de tapeta más allá del CF (mm)" } },
-    { "id": "snap_count", "type": "slider", "default": 5, "min": 3, "max": 8, "step": 1, "label": { "en": "Snap fasteners (count)", "es": "Broches (cantidad)" } },
-    { "id": "cuff_ratio", "type": "slider", "default": 0.75, "min": 0.6, "max": 0.95, "step": 0.01, "advanced": true, "label": { "en": "Cuff/opening ratio", "es": "Proporción puño/abertura" } },
-    { "id": "hem_ratio", "type": "slider", "default": 0.82, "min": 0.7, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Waist rib/hem ratio", "es": "Proporción pretina/dobladillo" } },
-    { "id": "collar_ratio", "type": "slider", "default": 0.8, "min": 0.6, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Collar/neck-opening ratio", "es": "Proporción cuello/abertura" } },
-    { "id": "collar_height", "type": "slider", "default": 45, "min": 20, "max": 80, "step": 5, "label": { "en": "Collar height (mm)", "es": "Alto de cuello (mm)" } },
-    { "id": "cuff_height", "type": "slider", "default": 60, "min": 30, "max": 100, "step": 5, "label": { "en": "Cuff height (mm)", "es": "Alto de puño (mm)" } },
-    { "id": "hem_height", "type": "slider", "default": 60, "min": 30, "max": 100, "step": 5, "label": { "en": "Waist rib height (mm)", "es": "Alto de pretina (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } }
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "default": 1060,
+      "min": 650,
+      "max": 1900,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "default": 610,
+      "min": 420,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Body length to waist-rib seam (mm)",
+        "es": "Largo de cuerpo hasta pretina (mm)",
+        "fr": "Longueur du corps jusqu'à la couture de la côte de taille (mm)"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 410,
+      "min": 300,
+      "max": 540,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 610,
+      "min": 200,
+      "max": 780,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length to cuff seam (mm)",
+        "es": "Largo de manga hasta puño (mm)",
+        "fr": "Longueur de manche jusqu'à la couture du poignet (mm)"
+      }
+    },
+    {
+      "id": "varsity_ease",
+      "type": "slider",
+      "default": 220,
+      "min": 80,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Total ease (mm)",
+        "es": "Holgura total (mm)",
+        "fr": "Aisance totale (mm)"
+      }
+    },
+    {
+      "id": "placket_ext",
+      "type": "slider",
+      "default": 35,
+      "min": 20,
+      "max": 55,
+      "step": 5,
+      "label": {
+        "en": "Snap placket extension past CF (mm)",
+        "es": "Extensión de tapeta más allá del CF (mm)",
+        "fr": "Extension de patte au-delà du milieu devant (mm)"
+      }
+    },
+    {
+      "id": "snap_count",
+      "type": "slider",
+      "default": 5,
+      "min": 3,
+      "max": 8,
+      "step": 1,
+      "label": {
+        "en": "Snap fasteners (count)",
+        "es": "Broches (cantidad)",
+        "fr": "Boutons-pression (quantité)"
+      }
+    },
+    {
+      "id": "cuff_ratio",
+      "type": "slider",
+      "default": 0.75,
+      "min": 0.6,
+      "max": 0.95,
+      "step": 0.01,
+      "advanced": true,
+      "label": {
+        "en": "Cuff/opening ratio",
+        "es": "Proporción puño/abertura",
+        "fr": "Rapport poignet/ouverture"
+      }
+    },
+    {
+      "id": "hem_ratio",
+      "type": "slider",
+      "default": 0.82,
+      "min": 0.7,
+      "max": 1.0,
+      "step": 0.01,
+      "advanced": true,
+      "label": {
+        "en": "Waist rib/hem ratio",
+        "es": "Proporción pretina/dobladillo",
+        "fr": "Rapport bord-côte de taille/ourlet"
+      }
+    },
+    {
+      "id": "collar_ratio",
+      "type": "slider",
+      "default": 0.8,
+      "min": 0.6,
+      "max": 1.0,
+      "step": 0.01,
+      "advanced": true,
+      "label": {
+        "en": "Collar/neck-opening ratio",
+        "es": "Proporción cuello/abertura",
+        "fr": "Rapport col/ouverture d'encolure"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "default": 45,
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "label": {
+        "en": "Collar height (mm)",
+        "es": "Alto de cuello (mm)",
+        "fr": "Hauteur du col (mm)"
+      }
+    },
+    {
+      "id": "cuff_height",
+      "type": "slider",
+      "default": 60,
+      "min": 30,
+      "max": 100,
+      "step": 5,
+      "label": {
+        "en": "Cuff height (mm)",
+        "es": "Alto de puño (mm)",
+        "fr": "Hauteur du poignet (mm)"
+      }
+    },
+    {
+      "id": "hem_height",
+      "type": "slider",
+      "default": 60,
+      "min": 30,
+      "max": 100,
+      "step": 5,
+      "label": {
+        "en": "Waist rib height (mm)",
+        "es": "Alto de pretina (mm)",
+        "fr": "Hauteur de bord-côte de taille (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1060, "body_length": 610, "sleeve_length": 610, "snap_count": 5 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1160, "body_length": 640, "sleeve_length": 630, "snap_count": 5 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "chest_girth": 1060,
+        "body_length": 610,
+        "sleeve_length": 610,
+        "snap_count": 5
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G",
+        "fr": "L"
+      },
+      "values": {
+        "chest_girth": 1160,
+        "body_length": 640,
+        "sleeve_length": 630,
+        "snap_count": 5
+      }
+    }
   ],
   "constraints": [
     {
       "expression": "varsity_ease >= 120",
       "severity": "warning",
-      "message": { "en": "Varsity jackets are outerwear worn over layers; under 120 mm of ease fits like a shirt", "es": "La varsity es prenda exterior sobre capas; menos de 120 mm de holgura queda como camisa" }
+      "message": {
+        "en": "Varsity jackets are outerwear worn over layers; under 120 mm of ease fits like a shirt",
+        "es": "La varsity es prenda exterior sobre capas; menos de 120 mm de holgura queda como camisa",
+        "fr": "Les blousons teddy sont un vêtement d'extérieur porté par-dessus des couches ; sous 120 mm d'aisance, la coupe tombe comme une chemise"
+      }
     },
     {
       "expression": "placket_ext * 2 <= chest_girth / 8",
       "severity": "warning",
-      "message": { "en": "Snap stand extension is wide relative to the front — the plackets may overlap past the pocket line", "es": "La extensión de la tapeta es ancha respecto al delantero — las tapetas podrían traslapar más allá de la línea de bolsa" }
+      "message": {
+        "en": "Snap stand extension is wide relative to the front — the plackets may overlap past the pocket line",
+        "es": "La extensión de la tapeta es ancha respecto al delantero — las tapetas podrían traslapar más allá de la línea de bolsa",
+        "fr": "L'extension du tombant de pressions est large par rapport au devant — les pattes risquent de chevaucher au-delà de la ligne de poche"
+      }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["felpa-algodon", "mezclilla-denim"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "felpa-algodon",
+    "mezclilla-denim"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "neck" }, { "piece": "back", "edge": "neck" }], "parameters": ["neck_girth", "collar_ratio", "collar_height"] },
-      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }, { "piece": "sleeve", "edge": "cap" }], "parameters": ["chest_girth", "varsity_ease"] },
-      { "id": "cuff", "type": "cuff", "edges": [{ "piece": "sleeve", "edge": "hem" }], "parameters": ["cuff_ratio", "cuff_height"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["hem_ratio", "hem_height"] },
-      { "id": "snap_placket", "type": "placket", "edges": [{ "piece": "front", "edge": "center" }], "parameters": ["placket_ext", "snap_count"] }
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "collar_ratio",
+          "collar_height"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "varsity_ease"
+        ]
+      },
+      {
+        "id": "cuff",
+        "type": "cuff",
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "cuff_ratio",
+          "cuff_height"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "hem_ratio",
+          "hem_height"
+        ]
+      },
+      {
+        "id": "snap_placket",
+        "type": "placket",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "center"
+          }
+        ],
+        "parameters": [
+          "placket_ext",
+          "snap_count"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": true },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": true
+    },
     "societal_benefit": {
       "en": "Extends the shared jacket architecture to the letterman: the same halved front and derived rib collar/cuffs/waist as the bomber, but the zipper becomes a federated snap placket (shank-button notion, no zipper) and the sleeves are cut in a second fabric card so the BOM orders body and contrast-sleeve yardage separately — the two-tone, snap-front, rib-trimmed pattern that varsity, team and club jackets across the FC-100 reuse. Snap hardware stays federated to Yantra4D, and the knit ribs demonstrate negative-ease trim (length = opening x ratio) verified by construction.",
-      "es": "Extiende la arquitectura compartida de chamarra al letterman: el mismo delantero partido y el cuello/puños/pretina de rib derivados de la bomber, pero el cierre se vuelve una tapeta de broches federada (notion shank-button, sin cierre) y las mangas se cortan en una segunda tarjeta de tela para que el BOM ordene por separado el metraje del cuerpo y el de las mangas de contraste — el patrón bicolor, de frente con broches y ribetes de rib que reutilizan las chamarras varsity, de equipo y de club del FC-100. El herraje de los broches sigue federado a Yantra4D, y los ribs de punto demuestran el ribete de holgura negativa (largo = abertura x proporción) verificado por construcción."
+      "es": "Extiende la arquitectura compartida de chamarra al letterman: el mismo delantero partido y el cuello/puños/pretina de rib derivados de la bomber, pero el cierre se vuelve una tapeta de broches federada (notion shank-button, sin cierre) y las mangas se cortan en una segunda tarjeta de tela para que el BOM ordene por separado el metraje del cuerpo y el de las mangas de contraste — el patrón bicolor, de frente con broches y ribetes de rib que reutilizan las chamarras varsity, de equipo y de club del FC-100. El herraje de los broches sigue federado a Yantra4D, y los ribs de punto demuestran el ribete de holgura negativa (largo = abertura x proporción) verificado por construcción.",
+      "fr": "Étend l'architecture de blouson partagée au teddy : le même Devant scindé et les mêmes col/poignets/ceinture en côte dérivés que le bomber, mais la fermeture éclair devient une patte à pressions fédérée (fourniture shank-button, sans fermeture éclair) et les manches sont coupées dans une seconde fiche de tissu, de sorte que la nomenclature commande séparément le métrage du corps et celui des manches contrastées — le patron bicolore, à devant à pressions et bordé de côtes que réutilisent les blousons teddy, d'équipe et de club à travers le FC-100. La quincaillerie de pressions reste fédérée vers Yantra4D, et les côtes en maille démontrent la passementerie à aisance négative (longueur = ouverture x ratio) vérifiée par construction."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

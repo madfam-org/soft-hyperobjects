@@ -6,45 +6,191 @@
     "engine": "fc",
     "description": {
       "en": "Yantra4D-bridged notion: slider and pull solids live in the Yantra4D commons; Fashion Cabinet owns tape geometry and installation math, rendered as a printable installation guide with stitch lines, stop marks, and transfer notches.",
-      "es": "Avío puenteado con Yantra4D: los sólidos de deslizador y tirador viven en el commons de Yantra4D; Fashion Cabinet posee la geometría de cinta y el cálculo de instalación, como guía imprimible con líneas de pespunte, marcas de tope y piquetes."
+      "es": "Avío puenteado con Yantra4D: los sólidos de deslizador y tirador viven en el commons de Yantra4D; Fashion Cabinet posee la geometría de cinta y el cálculo de instalación, como guía imprimible con líneas de pespunte, marcas de tope y piquetes.",
+      "fr": "Fourniture reliée à Yantra4D : les solides de curseur et de tirette vivent dans le commun Yantra4D ; Fashion Cabinet possède la géométrie du ruban et la mathématique de pose, rendues comme un guide de pose imprimable avec lignes de Piqure, marques d'arrêt et crans de report."
     },
     "difficulty": "beginner",
-    "tags": ["zipper", "notion", "hardware", "installation", "commons"],
-    "attribution": { "author": "Innovaciones MADFAM", "license": "LicenseRef-FC1-pending", "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }] }
+    "tags": [
+      "zipper",
+      "notion",
+      "hardware",
+      "installation",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
   },
-  "modes": [{ "id": "guide", "label": { "en": "Installation Guide", "es": "Guía de Instalación" }, "script_file": "main.py", "pieces": ["installation-guide"] }],
+  "modes": [
+    {
+      "id": "guide",
+      "label": {
+        "en": "Installation Guide",
+        "es": "Guía de Instalación",
+        "fr": "Guide d'installation"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "installation-guide"
+      ]
+    }
+  ],
   "pieces": [
-    { "id": "installation-guide", "label": { "en": "Installation Guide", "es": "Guía de Instalación" }, "default_color": "#6a7a8a", "cut": { "quantity": 1 } }
+    {
+      "id": "installation-guide",
+      "label": {
+        "en": "Installation Guide",
+        "es": "Guía de Instalación",
+        "fr": "Guide d'installation"
+      },
+      "default_color": "#6a7a8a",
+      "cut": {
+        "quantity": 1
+      }
+    }
   ],
   "parameters": [
-    { "id": "zipper_length", "type": "slider", "default": 180, "min": 80, "max": 900, "step": 10, "label": { "en": "Zipper length, stop to stop (mm)", "es": "Largo de cierre, tope a tope (mm)" } },
-    { "id": "tape_width", "type": "slider", "default": 32, "min": 20, "max": 60, "step": 2, "label": { "en": "Tape pair width (mm)", "es": "Ancho del par de cintas (mm)" } },
-    { "id": "end_margin", "type": "slider", "default": 25, "min": 10, "max": 60, "step": 5, "label": { "en": "End margin (mm)", "es": "Margen en extremos (mm)" } },
-    { "id": "stitch_offset", "type": "slider", "default": 7, "min": 3, "max": 20, "step": 1, "label": { "en": "Stitch line offset (mm)", "es": "Separación del pespunte (mm)" } }
+    {
+      "id": "zipper_length",
+      "type": "slider",
+      "default": 180,
+      "min": 80,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Zipper length, stop to stop (mm)",
+        "es": "Largo de cierre, tope a tope (mm)",
+        "fr": "Longueur de fermeture à glissière, butée à butée (mm)"
+      }
+    },
+    {
+      "id": "tape_width",
+      "type": "slider",
+      "default": 32,
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Tape pair width (mm)",
+        "es": "Ancho del par de cintas (mm)",
+        "fr": "Largeur de la paire de rubans (mm)"
+      }
+    },
+    {
+      "id": "end_margin",
+      "type": "slider",
+      "default": 25,
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "End margin (mm)",
+        "es": "Margen en extremos (mm)",
+        "fr": "Marge d'extrémité (mm)"
+      }
+    },
+    {
+      "id": "stitch_offset",
+      "type": "slider",
+      "default": 7,
+      "min": 3,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Stitch line offset (mm)",
+        "es": "Separación del pespunte (mm)",
+        "fr": "Décalage de la ligne de piqûre (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "skirt-18", "label": { "en": "Skirt 18 cm", "es": "Falda 18 cm" }, "values": { "zipper_length": 180 } },
-    { "id": "jacket-60", "label": { "en": "Jacket 60 cm", "es": "Chamarra 60 cm" }, "values": { "zipper_length": 600 } }
+    {
+      "id": "skirt-18",
+      "label": {
+        "en": "Skirt 18 cm",
+        "es": "Falda 18 cm",
+        "fr": "Jupe 18 cm"
+      },
+      "values": {
+        "zipper_length": 180
+      }
+    },
+    {
+      "id": "jacket-60",
+      "label": {
+        "en": "Jacket 60 cm",
+        "es": "Chamarra 60 cm",
+        "fr": "Veste 60 cm"
+      },
+      "values": {
+        "zipper_length": 600
+      }
+    }
   ],
   "constraints": [
-    { "expression": "stitch_offset < tape_width / 2", "severity": "error", "message": { "en": "Stitch lines must sit inside the tape", "es": "Los pespuntes deben quedar dentro de la cinta" } }
+    {
+      "expression": "stitch_offset < tape_width / 2",
+      "severity": "error",
+      "message": {
+        "en": "Stitch lines must sit inside the tape",
+        "es": "Los pespuntes deben quedar dentro de la cinta",
+        "fr": "Les lignes de Piqure doivent se situer à l'intérieur du ruban"
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
   "notion": {
     "kind": "zipper",
     "subtype": "closed-end-coil",
-    "hardware_ref": { "platform": "yantra4d", "project_slug": "zipper", "linked": true, "params_map": { "zip_length": "zipper_length", "tape_width": "tape_width" } }
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "zipper",
+      "linked": true,
+      "params_map": {
+        "zip_length": "zipper_length",
+        "tape_width": "tape_width"
+      }
+    }
   },
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "notion",
     "interfaces": [
-      { "id": "zipper_tape", "type": "zipper_tape", "edges": [{ "piece": "installation-guide", "edge": "guide" }], "parameters": ["zipper_length", "tape_width"] }
+      {
+        "id": "zipper_tape",
+        "type": "zipper_tape",
+        "edges": [
+          {
+            "piece": "installation-guide",
+            "edge": "guide"
+          }
+        ],
+        "parameters": [
+          "zipper_length",
+          "tape_width"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": false, "fold_cutting": false, "fabric_compensation": false },
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": false
+    },
     "societal_benefit": {
       "en": "Zipper insertion is the classic intermediate-sewist wall; a parametric guide with stops and stitch lines turns it into a transfer-and-follow operation, while the bridged hardware closes the loop to printable pulls.",
-      "es": "Instalar cierres es el muro clásico del nivel intermedio; una guía paramétrica con topes y pespuntes lo convierte en calcar y seguir, mientras el herraje puenteado cierra el ciclo hacia tiradores imprimibles."
+      "es": "Instalar cierres es el muro clásico del nivel intermedio; una guía paramétrica con topes y pespuntes lo convierte en calcar y seguir, mientras el herraje puenteado cierra el ciclo hacia tiradores imprimibles.",
+      "fr": "La pose de fermeture éclair est le mur classique du couturier intermédiaire ; un guide paramétrique avec arrêts et lignes de Piqure la transforme en une opération de report-et-suivi, tandis que la quincaillerie reliée boucle la boucle vers des tirettes imprimables."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

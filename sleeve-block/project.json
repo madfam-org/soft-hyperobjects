@@ -6,40 +6,210 @@
     "engine": "fc",
     "description": {
       "en": "Enabler block (not FC-100 counted): a woven set-in sleeve whose cap is solved to a target armscye length plus cap ease. Consumer half of the commons' first cross-cartridge interface, verified against the bodice block in CI.",
-      "es": "Bloque habilitador (no cuenta en el FC-100): manga montada de tela cuya copa se resuelve a un largo de sisa objetivo más embebido. Mitad consumidora de la primera interfaz entre cartuchos del commons, verificada contra el bloque de corpiño en CI."
+      "es": "Bloque habilitador (no cuenta en el FC-100): manga montada de tela cuya copa se resuelve a un largo de sisa objetivo más embebido. Mitad consumidora de la primera interfaz entre cartuchos del commons, verificada contra el bloque de corpiño en CI.",
+      "fr": "Bloc habilitant (non compté au FC-100) : une manche montée en toile tissée dont la tête est résolue à une longueur d'emmanchure cible plus l'embu de tête. Moitié consommatrice de la première interface inter-cartouches du commun, vérifiée contre le bloc de corsage en CI."
     },
     "difficulty": "intermediate",
-    "tags": ["sleeve", "block", "enabler", "interface", "commons"],
-    "attribution": { "author": "Innovaciones MADFAM", "license": "LicenseRef-FC1-pending", "lineage": [{ "source": "Original draft for Fashion Cabinet", "license": "original" }] }
+    "tags": [
+      "sleeve",
+      "block",
+      "enabler",
+      "interface",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
   },
-  "modes": [{ "id": "sleeve", "label": { "en": "Set-in sleeve", "es": "Manga montada" }, "script_file": "main.py", "pieces": ["sleeve"] }],
+  "modes": [
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Set-in sleeve",
+        "es": "Manga montada",
+        "fr": "Manche montée"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "sleeve"
+      ]
+    }
+  ],
   "pieces": [
-    { "id": "sleeve", "label": { "en": "Set-in Sleeve", "es": "Manga Montada" }, "default_color": "#7a6a99", "cut": { "quantity": 2, "mirror": true } }
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Set-in Sleeve",
+        "es": "Manga Montada",
+        "fr": "Manche Montée"
+      },
+      "default_color": "#7a6a99",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    }
   ],
   "parameters": [
-    { "id": "armscye_length", "type": "slider", "default": 0, "min": 0, "max": 750, "step": 5, "label": { "en": "Target armscye length (mm, 0 = auto)", "es": "Largo de sisa objetivo (mm, 0 = auto)" } },
-    { "id": "bust_girth", "type": "slider", "default": 880, "min": 600, "max": 1600, "step": 10, "measurement": { "standard": "iso_8559", "code": "bust_girth" }, "label": { "en": "Bust girth for auto mode (mm)", "es": "Contorno de busto para modo auto (mm)" } },
-    { "id": "cap_ease", "type": "slider", "default": 20, "min": 0, "max": 60, "step": 1, "label": { "en": "Cap ease (mm)", "es": "Embebido de copa (mm)" } },
-    { "id": "sleeve_length", "type": "slider", "default": 600, "min": 200, "max": 780, "step": 10, "label": { "en": "Sleeve length (mm)", "es": "Largo de manga (mm)" } },
-    { "id": "wrist_opening", "type": "slider", "default": 210, "min": 150, "max": 420, "step": 5, "label": { "en": "Wrist opening, flat (mm)", "es": "Abertura de puño (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 30, "min": 0, "max": 50, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "armscye_length",
+      "type": "slider",
+      "default": 0,
+      "min": 0,
+      "max": 750,
+      "step": 5,
+      "label": {
+        "en": "Target armscye length (mm, 0 = auto)",
+        "es": "Largo de sisa objetivo (mm, 0 = auto)",
+        "fr": "Longueur d'emmanchure cible (mm, 0 = auto)"
+      }
+    },
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "default": 880,
+      "min": 600,
+      "max": 1600,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      },
+      "label": {
+        "en": "Bust girth for auto mode (mm)",
+        "es": "Contorno de busto para modo auto (mm)",
+        "fr": "Tour de buste pour le mode auto (mm)"
+      }
+    },
+    {
+      "id": "cap_ease",
+      "type": "slider",
+      "default": 20,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "label": {
+        "en": "Cap ease (mm)",
+        "es": "Embebido de copa (mm)",
+        "fr": "Embu de tête de manche (mm)"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 600,
+      "min": 200,
+      "max": 780,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      }
+    },
+    {
+      "id": "wrist_opening",
+      "type": "slider",
+      "default": 210,
+      "min": 150,
+      "max": 420,
+      "step": 5,
+      "label": {
+        "en": "Wrist opening, flat (mm)",
+        "es": "Abertura de puño (mm)",
+        "fr": "Ouverture de poignet, à plat (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 30,
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
-  "presets": [{ "id": "default", "label": { "en": "Default", "es": "Predeterminado" }, "values": {} }],
+  "presets": [
+    {
+      "id": "default",
+      "label": {
+        "en": "Default",
+        "es": "Predeterminado",
+        "fr": "Par défaut"
+      },
+      "values": {}
+    }
+  ],
   "constraints": [
-    { "expression": "cap_ease <= 40", "severity": "warning", "message": { "en": "High cap ease needs easing/steam skills; typical woven ease is 15–30 mm", "es": "Un embebido alto exige destreza; lo típico en tela es 15–30 mm" } }
+    {
+      "expression": "cap_ease <= 40",
+      "severity": "warning",
+      "message": {
+        "en": "High cap ease needs easing/steam skills; typical woven ease is 15–30 mm",
+        "es": "Un embebido alto exige destreza; lo típico en tela es 15–30 mm",
+        "fr": "Un embu de tête élevé demande des compétences de soutien/vapeur ; l'embu typique en toile est de 15 à 30 mm"
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "block",
     "interfaces": [
-      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "sleeve", "edge": "cap" }], "parameters": ["armscye_length", "cap_ease"] }
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
+        ],
+        "parameters": [
+          "armscye_length",
+          "cap_ease"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false, "knit_negative_ease": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
     "societal_benefit": {
       "en": "The consumer half of the commons' first verified cross-cartridge interface: any bodice that exposes an armscye can receive this sleeve, checked in CI.",
-      "es": "La mitad consumidora de la primera interfaz verificada entre cartuchos del commons: cualquier corpiño que exponga una sisa puede recibir esta manga, comprobado en CI."
+      "es": "La mitad consumidora de la primera interfaz verificada entre cartuchos del commons: cualquier corpiño que exponga una sisa puede recibir esta manga, comprobado en CI.",
+      "fr": "La moitié consommatrice de la première interface inter-cartouches vérifiée du commun : tout corsage exposant une emmanchure peut recevoir cette manche, contrôlée en CI."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

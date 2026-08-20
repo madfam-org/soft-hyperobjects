@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "The falda de manta — the gathered skirt of traditional Mexican dress: wide widths of manta (plain cotton) or woven cloth gathered onto a fitted waistband, full and swishing, finished with embroidered or ribbon bands at the hem. Its construction is a rectangle gathered to a band; the fullness is the point and the decoration (deshilado, embroidery, listones) is the maker's. This cartridge drafts the garment geometry to measure. Offered with respect for the living tradition.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "La falda de manta — la falda fruncida del traje tradicional mexicano: anchos de manta (algodón liso) o tela tejida fruncidos sobre una pretina ajustada, amplia y con vuelo, rematada con bandas bordadas o de listón en el ruedo. Su construcción es un rectángulo fruncido a una pretina; el vuelo es lo esencial y la decoración (deshilado, bordado, listones) la aporta quien la elabora. Este cartucho traza la geometría a la medida. Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "La falda de manta — la falda fruncida del traje tradicional mexicano: anchos de manta (algodón liso) o tela tejida fruncidos sobre una pretina ajustada, amplia y con vuelo, rematada con bandas bordadas o de listón en el ruedo. Su construcción es un rectángulo fruncido a una pretina; el vuelo es lo esencial y la decoración (deshilado, bordado, listones) la aporta quien la elabora. Este cartucho traza la geometría a la medida. Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La falda de manta — la jupe froncée de l'habillement traditionnel mexicain : de larges lés de manta (coton uni) ou de tissu tissé froncés sur une ceinture ajustée, ample et virevoltante, finie de bandes brodées ou de rubans à l'ourlet. Sa construction est un rectangle froncé sur une ceinture ; l'ampleur est l'essentiel et la décoration (deshilado, broderie, rubans) revient à qui la confectionne. Cette cartouche trace la géométrie sur mesure. Proposé dans le respect de la tradition vivante.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
     "tags": [
@@ -34,7 +35,8 @@
       "id": "set",
       "label": {
         "en": "Full Skirt",
-        "es": "Falda completa"
+        "es": "Falda completa",
+        "fr": "Jupe complète"
       },
       "script_file": "main.py",
       "pieces": [
@@ -48,7 +50,8 @@
       "id": "skirt",
       "label": {
         "en": "Skirt",
-        "es": "Falda"
+        "es": "Falda",
+        "fr": "Jupe"
       },
       "default_color": "#f0ece0",
       "cut": {
@@ -62,7 +65,8 @@
       "id": "band",
       "label": {
         "en": "Waistband",
-        "es": "Pretina"
+        "es": "Pretina",
+        "fr": "Ceinture"
       },
       "default_color": "#e0d8c4",
       "cut": {
@@ -113,11 +117,13 @@
       },
       "label": {
         "en": "Waist girth (mm)",
-        "es": "Contorno de cintura (mm)"
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
       },
       "tooltip": {
         "en": "Fitted waist the band is cut to",
-        "es": "Cintura ajustada a la que se corta la pretina"
+        "es": "Cintura ajustada a la que se corta la pretina",
+        "fr": "Taille ajustée à laquelle la ceinture est coupée"
       }
     },
     {
@@ -130,11 +136,13 @@
       "step": 10,
       "label": {
         "en": "Length (mm)",
-        "es": "Largo (mm)"
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
       },
       "tooltip": {
         "en": "Waist to finished hem",
-        "es": "De la cintura al ruedo terminado"
+        "es": "De la cintura al ruedo terminado",
+        "fr": "De la taille à l'ourlet fini"
       }
     },
     {
@@ -147,11 +155,13 @@
       "step": 0.1,
       "label": {
         "en": "Gather ratio (fullness)",
-        "es": "Razón de frunce (vuelo)"
+        "es": "Razón de frunce (vuelo)",
+        "fr": "Rapport de fronçage (ampleur)"
       },
       "tooltip": {
         "en": "Skirt width / waist; higher = fuller",
-        "es": "Ancho de falda / cintura; mayor = más vuelo"
+        "es": "Ancho de falda / cintura; mayor = más vuelo",
+        "fr": "Largeur de jupe / tour de taille ; plus élevé = plus ample"
       }
     },
     {
@@ -164,11 +174,13 @@
       "step": 5,
       "label": {
         "en": "Waistband height (mm)",
-        "es": "Alto de pretina (mm)"
+        "es": "Alto de pretina (mm)",
+        "fr": "Hauteur de ceinture (mm)"
       },
       "tooltip": {
         "en": "Finished band height",
-        "es": "Alto terminado de la pretina"
+        "es": "Alto terminado de la pretina",
+        "fr": "Hauteur finie de la ceinture"
       }
     },
     {
@@ -181,11 +193,13 @@
       "step": 10,
       "label": {
         "en": "Hem band depth (mm)",
-        "es": "Profundidad de banda de ruedo (mm)"
+        "es": "Profundidad de banda de ruedo (mm)",
+        "fr": "Profondeur de bord-côte de bas (mm)"
       },
       "tooltip": {
         "en": "Marked decorative hem band; 0 = none",
-        "es": "Banda decorativa de ruedo marcada; 0 = ninguna"
+        "es": "Banda decorativa de ruedo marcada; 0 = ninguna",
+        "fr": "Bande décorative d'ourlet marquée ; 0 = aucune"
       }
     }
   ],
@@ -194,7 +208,8 @@
       "id": "everyday",
       "label": {
         "en": "Everyday",
-        "es": "Diario"
+        "es": "Diario",
+        "fr": "Quotidien"
       },
       "values": {
         "gather_ratio": 2.2,
@@ -205,7 +220,8 @@
       "id": "festival",
       "label": {
         "en": "Festival (very full)",
-        "es": "Fiesta (muy amplia)"
+        "es": "Fiesta (muy amplia)",
+        "fr": "Festival (très ample)"
       },
       "values": {
         "gather_ratio": 3.2,
@@ -228,7 +244,8 @@
         "type": "waistband",
         "label": {
           "en": "Gathered waist ↔ band",
-          "es": "Cintura fruncida ↔ pretina"
+          "es": "Cintura fruncida ↔ pretina",
+          "fr": "Taille froncée ↔ ceinture"
         },
         "edges": [
           {
@@ -254,7 +271,8 @@
     },
     "societal_benefit": {
       "en": "An open, made-to-measure draft of the falda de manta's gathered construction lets anyone cut and gather the skirt to fit, while leaving the deshilado, embroidery, and ribbon work — the regional identity — to the maker. It records a garment central to Mexican traditional dress and teaches gathered-fullness construction with almost no waste.",
-      "es": "Un trazo abierto y a la medida de la construcción fruncida de la falda de manta permite a cualquiera cortar y fruncir la falda a su talla, dejando el deshilado, el bordado y el listón — la identidad regional — a quien la elabora. Registra una prenda central del traje tradicional mexicano y enseña la construcción de vuelo fruncido casi sin desperdicio."
+      "es": "Un trazo abierto y a la medida de la construcción fruncida de la falda de manta permite a cualquiera cortar y fruncir la falda a su talla, dejando el deshilado, el bordado y el listón — la identidad regional — a quien la elabora. Registra una prenda central del traje tradicional mexicano y enseña la construcción de vuelo fruncido casi sin desperdicio.",
+      "fr": "Un tracé ouvert et sur mesure de la construction froncée de la falda de manta permet à quiconque de couper et froncer la jupe à sa taille, tout en laissant le deshilado, la broderie et le travail de ruban — l'identité régionale — à la personne qui la confectionne. Il consigne un vêtement central de l'habillement traditionnel mexicain et enseigne la construction par ampleur froncée avec presque aucune perte."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

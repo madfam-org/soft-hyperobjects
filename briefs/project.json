@@ -6,81 +6,417 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #9. Full-coverage classic briefs (men's / unisex), the higher-coverage sibling of the bikini panty: fold-cut flat front and full-seat back at 10% negative ease, joined by a real side seam and closed by a trapezoid gusset cut twice (self + liner) whose front and back edges match the bodies by construction. Waist and leg edges are elastic-finished and the BOM emits exact-mm elastic cut lengths derived from the measured openings.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #9 del FC-100. Trusa clásica de cobertura completa (hombre / unisex), la hermana de mayor cobertura de la pantaleta bikini: delantero plano y trasero de asentaderas completas cortados al doblez con 10% de holgura negativa, unidos por una costura lateral real y cerrados por un refuerzo trapezoidal cortado dos veces (tela + forro) cuyos bordes delantero y trasero igualan a los cuerpos por construcción. Cintura y piernas se terminan con elástico y la lista de materiales emite largos de elástico exactos en mm derivados de las aberturas medidas.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #9 del FC-100. Trusa clásica de cobertura completa (hombre / unisex), la hermana de mayor cobertura de la pantaleta bikini: delantero plano y trasero de asentaderas completas cortados al doblez con 10% de holgura negativa, unidos por una costura lateral real y cerrados por un refuerzo trapezoidal cortado dos veces (tela + forro) cuyos bordes delantero y trasero igualan a los cuerpos por construcción. Cintura y piernas se terminan con elástico y la lista de materiales emite largos de elástico exactos en mm derivados de las aberturas medidas.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Rang #9 du FC-100. Slip classique à couverture complète (homme / unisexe), le grand frère plus couvrant de la culotte bikini : devant plat coupé au pli et dos à fesses pleines à 10 % d'aisance négative, réunis par une vraie couture latérale et fermés par un gousset trapézoïdal coupé deux fois (tissu + doublure) dont les bords devant et dos correspondent aux corps par construction. La taille et les tours de jambe sont finis à l'élastique, et la nomenclature émet des longueurs de coupe d'élastique exactes en mm dérivées des ouvertures mesurées.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["briefs", "trusa", "underwear", "intimates", "knit", "negative-ease", "elastic", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "briefs",
+      "trusa",
+      "underwear",
+      "intimates",
+      "knit",
+      "negative-ease",
+      "elastic",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet", "license": "original" },
-        { "source": "projects/panties-bikini (intimates architecture: fold-cut bodies on negative ease, self+liner trapezoid gusset matching by construction, exact-mm elastic BOM)", "license": "LicenseRef-FC1-pending" },
-        { "source": "projects/leggings (negative-ease scale idiom)", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "projects/panties-bikini (intimates architecture: fold-cut bodies on negative ease, self+liner trapezoid gusset matching by construction, exact-mm elastic BOM)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "projects/leggings (negative-ease scale idiom)",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "briefs",
-      "label": { "en": "Briefs (all pieces)", "es": "Trusa (todas las piezas)" },
+      "label": {
+        "en": "Briefs (all pieces)",
+        "es": "Trusa (todas las piezas)",
+        "fr": "Slip (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "gusset"]
+      "pieces": [
+        "front",
+        "back",
+        "gusset"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front (flat, full coverage)", "es": "Delantero (plano, cobertura completa)" }, "default_color": "#4d6b8a", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "back", "label": { "en": "Back (full seat)", "es": "Trasero (asentaderas completas)" }, "default_color": "#3a5673", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "gusset", "label": { "en": "Gusset (self + liner)", "es": "Refuerzo (tela + forro)" }, "default_color": "#7a97b6", "cut": { "quantity": 2, "on_fold": true, "mirror": true } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (flat, full coverage)",
+        "es": "Delantero (plano, cobertura completa)",
+        "fr": "Devant (plat, couverture complète)"
+      },
+      "default_color": "#4d6b8a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (full seat)",
+        "es": "Trasero (asentaderas completas)",
+        "fr": "Dos (fessier complet)"
+      },
+      "default_color": "#3a5673",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "gusset",
+      "label": {
+        "en": "Gusset (self + liner)",
+        "es": "Refuerzo (tela + forro)",
+        "fr": "Gousset (tissu principal + doublure)"
+      },
+      "default_color": "#7a97b6",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    }
   ],
   "parameters": [
-    { "id": "hip_girth", "type": "slider", "default": 980, "min": 600, "max": 1700, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
-    { "id": "rise_height", "type": "slider", "default": 285, "min": 200, "max": 420, "step": 5, "label": { "en": "Rise, gusset to waist (mm)", "es": "Tiro, refuerzo a cintura (mm)" } },
-    { "id": "side_seam_h", "type": "slider", "default": 95, "min": 40, "max": 160, "step": 5, "label": { "en": "Side seam length (mm)", "es": "Largo de costura lateral (mm)" } },
-    { "id": "negative_ease_pct", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Negative ease (%)", "es": "Holgura negativa (%)" } },
-    { "id": "gusset_front_w", "type": "slider", "default": 60, "min": 40, "max": 110, "step": 2, "advanced": true, "label": { "en": "Gusset front width (mm)", "es": "Ancho delantero del refuerzo (mm)" } },
-    { "id": "gusset_back_w", "type": "slider", "default": 70, "min": 40, "max": 130, "step": 2, "advanced": true, "label": { "en": "Gusset back width (mm)", "es": "Ancho trasero del refuerzo (mm)" } },
-    { "id": "gusset_len", "type": "slider", "default": 90, "min": 60, "max": 150, "step": 5, "advanced": true, "label": { "en": "Gusset length (mm)", "es": "Largo del refuerzo (mm)" } },
-    { "id": "elastic_ratio", "type": "slider", "default": 0.92, "min": 0.8, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Waist elastic/opening ratio", "es": "Proporción elástico/abertura de cintura" } },
-    { "id": "leg_elastic_ratio", "type": "slider", "default": 0.88, "min": 0.75, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Leg elastic/opening ratio", "es": "Proporción elástico/abertura de pierna" } },
-    { "id": "seam_allowance", "type": "slider", "default": 6, "min": 0, "max": 12, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } }
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "default": 980,
+      "min": 600,
+      "max": 1700,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      }
+    },
+    {
+      "id": "rise_height",
+      "type": "slider",
+      "default": 285,
+      "min": 200,
+      "max": 420,
+      "step": 5,
+      "label": {
+        "en": "Rise, gusset to waist (mm)",
+        "es": "Tiro, refuerzo a cintura (mm)",
+        "fr": "Hauteur de fourche, soufflet à taille (mm)"
+      }
+    },
+    {
+      "id": "side_seam_h",
+      "type": "slider",
+      "default": 95,
+      "min": 40,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Side seam length (mm)",
+        "es": "Largo de costura lateral (mm)",
+        "fr": "Longueur de couture latérale (mm)"
+      }
+    },
+    {
+      "id": "negative_ease_pct",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Negative ease (%)",
+        "es": "Holgura negativa (%)",
+        "fr": "Aisance négative (%)"
+      }
+    },
+    {
+      "id": "gusset_front_w",
+      "type": "slider",
+      "default": 60,
+      "min": 40,
+      "max": 110,
+      "step": 2,
+      "advanced": true,
+      "label": {
+        "en": "Gusset front width (mm)",
+        "es": "Ancho delantero del refuerzo (mm)",
+        "fr": "Largeur avant du gousset (mm)"
+      }
+    },
+    {
+      "id": "gusset_back_w",
+      "type": "slider",
+      "default": 70,
+      "min": 40,
+      "max": 130,
+      "step": 2,
+      "advanced": true,
+      "label": {
+        "en": "Gusset back width (mm)",
+        "es": "Ancho trasero del refuerzo (mm)",
+        "fr": "Largeur arrière du gousset (mm)"
+      }
+    },
+    {
+      "id": "gusset_len",
+      "type": "slider",
+      "default": 90,
+      "min": 60,
+      "max": 150,
+      "step": 5,
+      "advanced": true,
+      "label": {
+        "en": "Gusset length (mm)",
+        "es": "Largo del refuerzo (mm)",
+        "fr": "Longueur du gousset (mm)"
+      }
+    },
+    {
+      "id": "elastic_ratio",
+      "type": "slider",
+      "default": 0.92,
+      "min": 0.8,
+      "max": 1.0,
+      "step": 0.01,
+      "advanced": true,
+      "label": {
+        "en": "Waist elastic/opening ratio",
+        "es": "Proporción elástico/abertura de cintura",
+        "fr": "Rapport élastique/ouverture de taille"
+      }
+    },
+    {
+      "id": "leg_elastic_ratio",
+      "type": "slider",
+      "default": 0.88,
+      "min": 0.75,
+      "max": 1.0,
+      "step": 0.01,
+      "advanced": true,
+      "label": {
+        "en": "Leg elastic/opening ratio",
+        "es": "Proporción elástico/abertura de pierna",
+        "fr": "Proportion élastique/ouverture de jambe"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 6,
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "hip_girth": 980, "rise_height": 285, "side_seam_h": 95 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "hip_girth": 1060, "rise_height": 300, "side_seam_h": 105 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "hip_girth": 980,
+        "rise_height": 285,
+        "side_seam_h": 95
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G",
+        "fr": "L"
+      },
+      "values": {
+        "hip_girth": 1060,
+        "rise_height": 300,
+        "side_seam_h": 105
+      }
+    }
   ],
   "constraints": [
     {
       "expression": "negative_ease_pct >= 5",
       "severity": "warning",
-      "message": { "en": "Below 5% negative ease the brief relies on elastic alone — expect a loose fit", "es": "Debajo de 5% de holgura negativa la prenda depende solo del elástico — el ajuste quedará flojo" }
+      "message": {
+        "en": "Below 5% negative ease the brief relies on elastic alone — expect a loose fit",
+        "es": "Debajo de 5% de holgura negativa la prenda depende solo del elástico — el ajuste quedará flojo",
+        "fr": "En dessous de 5 % d'aisance négative, le slip ne tient que par l'élastique — attendez-vous à un ajustement lâche"
+      }
     },
     {
       "expression": "negative_ease_pct <= 15",
       "severity": "warning",
-      "message": { "en": "Above 15% negative ease demands high-elastane jersey; check the fabric card", "es": "Arriba de 15% de holgura negativa exige jersey con alto elastano; revisa la ficha de tela" }
+      "message": {
+        "en": "Above 15% negative ease demands high-elastane jersey; check the fabric card",
+        "es": "Arriba de 15% de holgura negativa exige jersey con alto elastano; revisa la ficha de tela",
+        "fr": "Au-delà de 15 % d'aisance négative, il faut un jersey à fort élasthanne ; vérifiez la fiche du tissu"
+      }
     },
     {
       "expression": "side_seam_h <= rise_height - 40",
       "severity": "warning",
-      "message": { "en": "The side seam must stay shorter than the rise so the leg line sits below the waist", "es": "La costura lateral debe ser más corta que el tiro para que la línea de pierna quede debajo de la cintura" }
+      "message": {
+        "en": "The side seam must stay shorter than the rise so the leg line sits below the waist",
+        "es": "La costura lateral debe ser más corta que el tiro para que la línea de pierna quede debajo de la cintura",
+        "fr": "La couture latérale doit rester plus courte que la hauteur de montant pour que la ligne de jambe passe sous la taille"
+      }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["jersey-algodon"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "jersey-algodon"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "waistband", "type": "waistband", "label": { "en": "Waist elastic", "es": "Elástico de cintura" }, "edges": [{ "piece": "front", "edge": "waist" }, { "piece": "back", "edge": "waist" }], "parameters": ["hip_girth", "negative_ease_pct", "elastic_ratio"] },
-      { "id": "leg_openings", "type": "hem", "label": { "en": "Leg openings (elastic hem)", "es": "Aberturas de pierna (dobladillo elástico)" }, "edges": [{ "piece": "front", "edge": "leg" }, { "piece": "back", "edge": "leg" }], "parameters": ["rise_height", "side_seam_h", "leg_elastic_ratio"] },
-      { "id": "side_seams", "type": "side_seam", "label": { "en": "Side seams", "es": "Costuras laterales" }, "edges": [{ "piece": "front", "edge": "side" }, { "piece": "back", "edge": "side" }], "parameters": ["side_seam_h"] },
-      { "id": "gusset", "type": "custom", "label": { "en": "Gusset panel", "es": "Refuerzo de entrepierna" }, "edges": [{ "piece": "gusset", "edge": "front_edge" }, { "piece": "gusset", "edge": "back_edge" }], "parameters": ["gusset_front_w", "gusset_back_w", "gusset_len"] }
+      {
+        "id": "waistband",
+        "type": "waistband",
+        "label": {
+          "en": "Waist elastic",
+          "es": "Elástico de cintura",
+          "fr": "Élastique de taille"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "waist"
+          },
+          {
+            "piece": "back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "hip_girth",
+          "negative_ease_pct",
+          "elastic_ratio"
+        ]
+      },
+      {
+        "id": "leg_openings",
+        "type": "hem",
+        "label": {
+          "en": "Leg openings (elastic hem)",
+          "es": "Aberturas de pierna (dobladillo elástico)",
+          "fr": "Ouvertures de jambe (ourlet élastique)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "leg"
+          },
+          {
+            "piece": "back",
+            "edge": "leg"
+          }
+        ],
+        "parameters": [
+          "rise_height",
+          "side_seam_h",
+          "leg_elastic_ratio"
+        ]
+      },
+      {
+        "id": "side_seams",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seams",
+          "es": "Costuras laterales",
+          "fr": "Coutures latérales"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "side_seam_h"
+        ]
+      },
+      {
+        "id": "gusset",
+        "type": "custom",
+        "label": {
+          "en": "Gusset panel",
+          "es": "Refuerzo de entrepierna",
+          "fr": "Empiècement de gousset"
+        },
+        "edges": [
+          {
+            "piece": "gusset",
+            "edge": "front_edge"
+          },
+          {
+            "piece": "gusset",
+            "edge": "back_edge"
+          }
+        ],
+        "parameters": [
+          "gusset_front_w",
+          "gusset_back_w",
+          "gusset_len"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": true, "elastic_finish": true },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": true,
+      "elastic_finish": true
+    },
     "societal_benefit": {
       "en": "Full-coverage everyday underwear as an open, verifiable draft: the waist and leg elastic cut lengths are computed in exact millimetres from the measured pattern openings — the numbers usually locked inside factory spec sheets — and every seam (gusset-to-body and the side seam) is proven to fit at render time. A staple garment, made reproducible by anyone.",
-      "es": "Ropa interior de uso diario y cobertura completa como trazo abierto y verificable: los largos de elástico de cintura y piernas se calculan en milímetros exactos desde las aberturas medidas del patrón — los números que suelen quedar bajo llave en las hojas de especificación de fábrica — y cada costura (refuerzo a cuerpo y la costura lateral) se comprueba al renderizar. Una prenda básica, hecha reproducible por cualquiera."
+      "es": "Ropa interior de uso diario y cobertura completa como trazo abierto y verificable: los largos de elástico de cintura y piernas se calculan en milímetros exactos desde las aberturas medidas del patrón — los números que suelen quedar bajo llave en las hojas de especificación de fábrica — y cada costura (refuerzo a cuerpo y la costura lateral) se comprueba al renderizar. Una prenda básica, hecha reproducible por cualquiera.",
+      "fr": "Sous-vêtement de tous les jours à couverture complète sous forme de tracé ouvert et vérifiable : les longueurs de coupe d'élastique de taille et de jambe sont calculées au millimètre exact à partir des ouvertures mesurées du patron — les chiffres d'ordinaire enfermés dans les fiches techniques d'usine — et chaque couture (gousset-au-corps et couture latérale) est prouvée juste au moment du rendu. Un vêtement basique, rendu reproductible par n'importe qui."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

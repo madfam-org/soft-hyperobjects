@@ -6,56 +6,381 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #90 — the classic two-pocket utility / uniform work shirt, cut in chambray-weight denim: a slightly relaxed woven shirt with a wide topstitched CF button placket (seven buttons), a proper two-piece turndown collar whose stand is solved to the measured neckline and whose fall is solved to the stand's top edge, a doubled back yoke over a back with a marked CB box pleat, a set-in sleeve with a placket and barrel cuff, and — the signature — two chest flap pockets drafted as real cut pieces (a chamfered patch body plus a button-through flap each), appliquéd to marked placements.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #90 del FC-100 — la clásica camisa de trabajo / uniforme de dos bolsas, cortada en mezclilla ligera tipo chambray: una camisa de tejido plano ligeramente holgada con una tapeta central ancha y pespunteada (siete botones), un cuello de vuelta de dos piezas cuyo pie se resuelve al escote medido y cuya caída se resuelve al borde superior del pie, un canesú trasero doble sobre una espalda con tabla marcada en el centro espalda, una manga montada con abertura y puño de vuelta, y — el detalle distintivo — dos bolsas de pecho con cartera trazadas como piezas reales (un cuerpo de parche con esquinas achaflanadas más una cartera abotonable cada una), aplicadas sobre ubicaciones marcadas.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #90 del FC-100 — la clásica camisa de trabajo / uniforme de dos bolsas, cortada en mezclilla ligera tipo chambray: una camisa de tejido plano ligeramente holgada con una tapeta central ancha y pespunteada (siete botones), un cuello de vuelta de dos piezas cuyo pie se resuelve al escote medido y cuya caída se resuelve al borde superior del pie, un canesú trasero doble sobre una espalda con tabla marcada en el centro espalda, una manga montada con abertura y puño de vuelta, y — el detalle distintivo — dos bolsas de pecho con cartera trazadas como piezas reales (un cuerpo de parche con esquinas achaflanadas más una cartera abotonable cada una), aplicadas sobre ubicaciones marcadas.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "FC-100 rang n°90 — la classique chemise de travail / uniforme à deux poches, coupée dans un denim de grammage chambray : une chemise en tissé légèrement détendue avec une large patte de boutonnage CF surpiquée (sept boutons), un vrai col rabattu en deux pièces dont le pied est résolu à l'Encolure mesurée et dont la retombée est résolue au bord supérieur du pied, un empiècement dos doublé sur un Dos avec un pli creux repéré au milieu dos, une Manche montée avec fente et poignet mousquetaire, et — la signature — deux poches poitrine à rabat tracées comme de vraies pièces coupées (un corps de patch à angles chanfreinés plus un rabat boutonné chacune), appliquées à des emplacements repérés.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["shirt", "camisa", "work-shirt", "workwear", "uniform", "collar", "yoke", "flap-pocket", "denim", "chambray", "woven", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "shirt",
+      "camisa",
+      "work-shirt",
+      "workwear",
+      "uniform",
+      "collar",
+      "yoke",
+      "flap-pocket",
+      "denim",
+      "chambray",
+      "woven",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet", "license": "original" },
-        { "source": "Two-piece collar (stand + fall chained solve), yoke split, and cap bisection from the dress-shirt (rank #4) cartridge", "license": "LicenseRef-FC1-pending" },
-        { "source": "Button-placket front, buttonhole cross-marks, and real patch-pocket appliqué with topstitch guide from the casual-button-down (rank #20) and chore-coat (rank #65) cartridges", "license": "LicenseRef-FC1-pending" },
-        { "source": "Real button-through pocket-flap piece (angled-corner flap, flap-to-mouth balance seam) from the cargo-pants (rank #37) cartridge", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "Two-piece collar (stand + fall chained solve), yoke split, and cap bisection from the dress-shirt (rank #4) cartridge",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "Button-placket front, buttonhole cross-marks, and real patch-pocket appliqué with topstitch guide from the casual-button-down (rank #20) and chore-coat (rank #65) cartridges",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "Real button-through pocket-flap piece (angled-corner flap, flap-to-mouth balance seam) from the cargo-pants (rank #37) cartridge",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "shirt",
-      "label": { "en": "Work shirt (all pieces)", "es": "Camisa de trabajo (todas las piezas)" },
+      "label": {
+        "en": "Work shirt (all pieces)",
+        "es": "Camisa de trabajo (todas las piezas)",
+        "fr": "Chemise de travail (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "yoke", "sleeve", "cuff", "stand", "fall", "chest_pocket", "pocket_flap"]
+      "pieces": [
+        "front",
+        "back",
+        "yoke",
+        "sleeve",
+        "cuff",
+        "stand",
+        "fall",
+        "chest_pocket",
+        "pocket_flap"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#3f5573", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Espalda" }, "default_color": "#35485f", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "yoke", "label": { "en": "Yoke (doubled)", "es": "Canesú (doble)" }, "default_color": "#4a6284", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#586f8f", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "cuff", "label": { "en": "Cuff", "es": "Puño" }, "default_color": "#6a7f9c", "cut": { "quantity": 2 } },
-    { "id": "stand", "label": { "en": "Collar Stand", "es": "Pie de Cuello" }, "default_color": "#7c8fa9", "cut": { "quantity": 2, "on_fold": true, "mirror": true } },
-    { "id": "fall", "label": { "en": "Collar Fall", "es": "Cuello" }, "default_color": "#8ea0b7", "cut": { "quantity": 2, "on_fold": true, "mirror": true } },
-    { "id": "chest_pocket", "label": { "en": "Chest Pocket Body", "es": "Cuerpo de Bolsa de Pecho" }, "default_color": "#5f7794", "cut": { "quantity": 2 } },
-    { "id": "pocket_flap", "label": { "en": "Pocket Flap", "es": "Cartera de Bolsa" }, "default_color": "#4a6284", "cut": { "quantity": 2 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#3f5573",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#35485f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "yoke",
+      "label": {
+        "en": "Yoke (doubled)",
+        "es": "Canesú (doble)",
+        "fr": "Empiècement (doublé)"
+      },
+      "default_color": "#4a6284",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#586f8f",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Cuff",
+        "es": "Puño",
+        "fr": "Poignet"
+      },
+      "default_color": "#6a7f9c",
+      "cut": {
+        "quantity": 2
+      }
+    },
+    {
+      "id": "stand",
+      "label": {
+        "en": "Collar Stand",
+        "es": "Pie de Cuello",
+        "fr": "Pied de col"
+      },
+      "default_color": "#7c8fa9",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "fall",
+      "label": {
+        "en": "Collar Fall",
+        "es": "Cuello",
+        "fr": "Tombant de col"
+      },
+      "default_color": "#8ea0b7",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "chest_pocket",
+      "label": {
+        "en": "Chest Pocket Body",
+        "es": "Cuerpo de Bolsa de Pecho",
+        "fr": "Corps de la poche de poitrine"
+      },
+      "default_color": "#5f7794",
+      "cut": {
+        "quantity": 2
+      }
+    },
+    {
+      "id": "pocket_flap",
+      "label": {
+        "en": "Pocket Flap",
+        "es": "Cartera de Bolsa",
+        "fr": "Rabat de poche"
+      },
+      "default_color": "#4a6284",
+      "cut": {
+        "quantity": 2
+      }
+    }
   ],
   "parameters": [
-    { "id": "chest_girth", "type": "slider", "default": 1060, "min": 760, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
-    { "id": "body_length", "type": "slider", "default": 760, "min": 500, "max": 1000, "step": 10, "label": { "en": "Body length, nape to hem (mm)", "es": "Largo de cuerpo, nuca a dobladillo (mm)" } },
-    { "id": "neck_girth", "type": "slider", "default": 410, "min": 300, "max": 520, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
-    { "id": "sleeve_length", "type": "slider", "default": 620, "min": 400, "max": 760, "step": 10, "measurement": { "standard": "iso_8559", "code": "arm_length" }, "label": { "en": "Sleeve length, cap to wrist (mm)", "es": "Largo de manga, copa a muñeca (mm)" } },
-    { "id": "woven_ease", "type": "slider", "default": 200, "min": 100, "max": 400, "step": 10, "label": { "en": "Total ease (mm; relaxed utility fit)", "es": "Holgura total (mm; corte utilitario holgado)" } },
-    { "id": "placket_width", "type": "slider", "default": 38, "min": 28, "max": 55, "step": 1, "label": { "en": "CF placket width past CF (mm)", "es": "Ancho de tapeta después del centro frente (mm)" } },
-    { "id": "yoke_drop", "type": "slider", "default": 110, "min": 70, "max": 170, "step": 5, "advanced": true, "label": { "en": "Yoke drop below HPS (mm)", "es": "Caída del canesú bajo el hombro (mm)" } },
-    { "id": "wrist_opening", "type": "slider", "default": 250, "min": 200, "max": 320, "step": 10, "label": { "en": "Wrist opening (mm)", "es": "Abertura de puño (mm)" } },
-    { "id": "pocket_width", "type": "slider", "default": 130, "min": 105, "max": 175, "step": 5, "label": { "en": "Chest flap-pocket width (mm)", "es": "Ancho de bolsa de pecho con cartera (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 22, "min": 0, "max": 50, "step": 2, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "default": 1060,
+      "min": 760,
+      "max": 1800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "default": 760,
+      "min": 500,
+      "max": 1000,
+      "step": 10,
+      "label": {
+        "en": "Body length, nape to hem (mm)",
+        "es": "Largo de cuerpo, nuca a dobladillo (mm)",
+        "fr": "Longueur du corps, nuque à l'ourlet (mm)"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 410,
+      "min": 300,
+      "max": 520,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 620,
+      "min": 400,
+      "max": 760,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "arm_length"
+      },
+      "label": {
+        "en": "Sleeve length, cap to wrist (mm)",
+        "es": "Largo de manga, copa a muñeca (mm)",
+        "fr": "Longueur de manche, tête au poignet (mm)"
+      }
+    },
+    {
+      "id": "woven_ease",
+      "type": "slider",
+      "default": 200,
+      "min": 100,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Total ease (mm; relaxed utility fit)",
+        "es": "Holgura total (mm; corte utilitario holgado)",
+        "fr": "Aisance totale (mm; coupe utilitaire décontractée)"
+      }
+    },
+    {
+      "id": "placket_width",
+      "type": "slider",
+      "default": 38,
+      "min": 28,
+      "max": 55,
+      "step": 1,
+      "label": {
+        "en": "CF placket width past CF (mm)",
+        "es": "Ancho de tapeta después del centro frente (mm)",
+        "fr": "Largeur de la patte au-delà du milieu devant (mm)"
+      }
+    },
+    {
+      "id": "yoke_drop",
+      "type": "slider",
+      "default": 110,
+      "min": 70,
+      "max": 170,
+      "step": 5,
+      "advanced": true,
+      "label": {
+        "en": "Yoke drop below HPS (mm)",
+        "es": "Caída del canesú bajo el hombro (mm)",
+        "fr": "Chute d'empiècement sous le HPS (mm)"
+      }
+    },
+    {
+      "id": "wrist_opening",
+      "type": "slider",
+      "default": 250,
+      "min": 200,
+      "max": 320,
+      "step": 10,
+      "label": {
+        "en": "Wrist opening (mm)",
+        "es": "Abertura de puño (mm)",
+        "fr": "Ouverture de poignet (mm)"
+      }
+    },
+    {
+      "id": "pocket_width",
+      "type": "slider",
+      "default": 130,
+      "min": 105,
+      "max": 175,
+      "step": 5,
+      "label": {
+        "en": "Chest flap-pocket width (mm)",
+        "es": "Ancho de bolsa de pecho con cartera (mm)",
+        "fr": "Largeur de la poche de poitrine à rabat (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 22,
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1060, "body_length": 760, "neck_girth": 410, "sleeve_length": 620, "wrist_opening": 250 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1140, "body_length": 780, "neck_girth": 430, "sleeve_length": 645, "wrist_opening": 260, "pocket_width": 140 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "chest_girth": 1060,
+        "body_length": 760,
+        "neck_girth": 410,
+        "sleeve_length": 620,
+        "wrist_opening": 250
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G",
+        "fr": "L"
+      },
+      "values": {
+        "chest_girth": 1140,
+        "body_length": 780,
+        "neck_girth": 430,
+        "sleeve_length": 645,
+        "wrist_opening": 260,
+        "pocket_width": 140
+      }
+    }
   ],
   "constraints": [
     {
@@ -63,7 +388,8 @@
       "severity": "warning",
       "message": {
         "en": "Below ~30 mm the wide work placket crowds standard 11.5 mm shirt buttons and loses its topstitched look",
-        "es": "Debajo de ~30 mm la tapeta ancha aprieta los botones estándar de 11.5 mm y pierde su aspecto pespunteado"
+        "es": "Debajo de ~30 mm la tapeta ancha aprieta los botones estándar de 11.5 mm y pierde su aspecto pespunteado",
+        "fr": "En dessous d'environ 30 mm, la large patte de travail serre les boutons de chemise standard de 11,5 mm et perd son aspect surpiqué"
       }
     },
     {
@@ -71,7 +397,8 @@
       "severity": "warning",
       "message": {
         "en": "Very shallow yokes leave no room for the back neck curve",
-        "es": "Canesús muy bajos no dejan espacio para la curva del escote trasero"
+        "es": "Canesús muy bajos no dejan espacio para la curva del escote trasero",
+        "fr": "Des empiècements très bas ne laissent pas de place pour la courbe d'encolure arrière"
       }
     },
     {
@@ -79,12 +406,20 @@
       "severity": "warning",
       "message": {
         "en": "Chest flap pockets much wider than ~170 mm crowd the button placket on smaller chests",
-        "es": "Bolsas de pecho mucho más anchas de ~170 mm aprietan la tapeta en pechos pequeños"
+        "es": "Bolsas de pecho mucho más anchas de ~170 mm aprietan la tapeta en pechos pequeños",
+        "fr": "Des poches poitrine à rabat bien plus larges qu'environ 170 mm serrent la patte de boutonnage sur les petites poitrines"
       }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["mezclilla-denim", "manta-cruda"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "mezclilla-denim",
+    "manta-cruda"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
@@ -93,42 +428,88 @@
         "id": "neckline",
         "type": "neckline",
         "edges": [
-          { "piece": "front", "edge": "neck" },
-          { "piece": "yoke", "edge": "neck" },
-          { "piece": "stand", "edge": "neck" }
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "yoke",
+            "edge": "neck"
+          },
+          {
+            "piece": "stand",
+            "edge": "neck"
+          }
         ],
-        "parameters": ["neck_girth"]
+        "parameters": [
+          "neck_girth"
+        ]
       },
       {
         "id": "armscye",
         "type": "armscye",
         "edges": [
-          { "piece": "front", "edge": "armhole" },
-          { "piece": "back", "edge": "armhole" },
-          { "piece": "sleeve", "edge": "cap" }
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
         ],
-        "parameters": ["chest_girth", "woven_ease"]
+        "parameters": [
+          "chest_girth",
+          "woven_ease"
+        ]
       },
       {
         "id": "cuff",
         "type": "cuff",
-        "edges": [{ "piece": "sleeve", "edge": "hem" }],
-        "parameters": ["wrist_opening"]
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "wrist_opening"
+        ]
       },
       {
         "id": "button_placket",
         "type": "button_stand",
-        "edges": [{ "piece": "front", "edge": "center" }],
-        "parameters": ["placket_width", "body_length"]
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "center"
+          }
+        ],
+        "parameters": [
+          "placket_width",
+          "body_length"
+        ]
       },
       {
         "id": "flap_pocket",
         "type": "pocket",
         "edges": [
-          { "piece": "chest_pocket", "edge": "top" },
-          { "piece": "pocket_flap", "edge": "attach" }
+          {
+            "piece": "chest_pocket",
+            "edge": "top"
+          },
+          {
+            "piece": "pocket_flap",
+            "edge": "attach"
+          }
         ],
-        "parameters": ["pocket_width"]
+        "parameters": [
+          "pocket_width"
+        ]
       }
     ],
     "capabilities": {
@@ -139,7 +520,8 @@
     },
     "societal_benefit": {
       "en": "The work shirt is the uniform of trades and co-ops the world over; a verified parametric draft lets a workshop cut durable made-to-measure uniforms in local denim or canvas — sized to real bodies, repairable at the collar, cuffs, placket, and pockets, and reproducible year after year instead of re-bought from a fast-fashion sizing chart.",
-      "es": "La camisa de trabajo es el uniforme de los oficios y las cooperativas en todo el mundo; un trazo paramétrico verificado permite a un taller cortar uniformes duraderos a la medida en mezclilla o lona local — a la talla de cuerpos reales, reparables en cuello, puños, tapeta y bolsas, y reproducibles año tras año en lugar de recomprarse de una tabla de tallas de moda rápida."
+      "es": "La camisa de trabajo es el uniforme de los oficios y las cooperativas en todo el mundo; un trazo paramétrico verificado permite a un taller cortar uniformes duraderos a la medida en mezclilla o lona local — a la talla de cuerpos reales, reparables en cuello, puños, tapeta y bolsas, y reproducibles año tras año en lugar de recomprarse de una tabla de tallas de moda rápida.",
+      "fr": "La chemise de travail est l'uniforme des métiers et des coopératives partout dans le monde ; un tracé paramétrique vérifié permet à un atelier de couper des uniformes durables et sur mesure dans un denim ou une toile locale — dimensionnés à des corps réels, réparables au col, aux poignets, à la patte et aux poches, et reproductibles année après année plutôt que rachetés d'après une grille de tailles de mode rapide."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

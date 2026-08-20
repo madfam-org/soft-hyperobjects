@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "A pinafore (jumper) dress: a bib front + low back bodice on over-shoulder straps that cross at the back and button, seamed at the waist to a gathered skirt. Worn over a top or blouse; open at the sides (straps + waist seam hold it). A soft-goods garment — buttons are the maker's hardware. FC-200 long-tail (silhouette gap).\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Un vestido pichi (jumper): un peto frontal + corpiño bajo de espalda sobre tirantes que cruzan atrás y se abotonan, unido en la cintura a una falda fruncida. Se usa sobre un top o blusa; abierto en los costados (los tirantes + la costura de cintura lo sostienen). Una prenda textil — los botones son herraje de quien elabora. Cola larga FC-200 (hueco de silueta).\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Un vestido pichi (jumper): un peto frontal + corpiño bajo de espalda sobre tirantes que cruzan atrás y se abotonan, unido en la cintura a una falda fruncida. Se usa sobre un top o blusa; abierto en los costados (los tirantes + la costura de cintura lo sostienen). Una prenda textil — los botones son herraje de quien elabora. Cola larga FC-200 (hueco de silueta).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une robe chasuble : un devant à bavette + un corsage à dos bas sur des bretelles par-dessus l'épaule qui se croisent au dos et se boutonnent, assemblée à la taille à une jupe froncée. Se porte par-dessus un haut ou un chemisier ; ouverte sur les côtés (les bretelles + la couture de taille la maintiennent). Un vêtement textile — les boutons sont la quincaillerie de celui qui le confectionne. Longue traîne FC-200 (écart de silhouette).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
     "tags": [
@@ -34,7 +35,8 @@
       "id": "set",
       "label": {
         "en": "Full Dress",
-        "es": "Vestido completo"
+        "es": "Vestido completo",
+        "fr": "Robe complète"
       },
       "script_file": "main.py",
       "pieces": [
@@ -49,7 +51,8 @@
       "id": "bib",
       "label": {
         "en": "Bib front",
-        "es": "Peto frontal"
+        "es": "Peto frontal",
+        "fr": "Bavette devant"
       },
       "default_color": "#5a5a6a",
       "cut": {
@@ -63,7 +66,8 @@
       "id": "back",
       "label": {
         "en": "Back bodice",
-        "es": "Corpiño espalda"
+        "es": "Corpiño espalda",
+        "fr": "Corsage dos"
       },
       "default_color": "#5a5a6a",
       "cut": {
@@ -77,7 +81,8 @@
       "id": "skirt",
       "label": {
         "en": "Skirt",
-        "es": "Falda"
+        "es": "Falda",
+        "fr": "Jupe"
       },
       "default_color": "#4a4a5a",
       "cut": {
@@ -129,11 +134,13 @@
       },
       "label": {
         "en": "Waist girth (mm)",
-        "es": "Contorno de cintura (mm)"
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
       },
       "tooltip": {
         "en": "Skirt attaches here",
-        "es": "La falda se une aquí"
+        "es": "La falda se une aquí",
+        "fr": "La jupe se monte ici"
       }
     },
     {
@@ -146,11 +153,13 @@
       "step": 10,
       "label": {
         "en": "Bib width (mm)",
-        "es": "Ancho del peto (mm)"
+        "es": "Ancho del peto (mm)",
+        "fr": "Largeur de bavette (mm)"
       },
       "tooltip": {
         "en": "Bib width across the chest",
-        "es": "Ancho del peto en el pecho"
+        "es": "Ancho del peto en el pecho",
+        "fr": "Largeur de la bavette sur la poitrine"
       }
     },
     {
@@ -163,11 +172,13 @@
       "step": 10,
       "label": {
         "en": "Bib height (mm)",
-        "es": "Alto del peto (mm)"
+        "es": "Alto del peto (mm)",
+        "fr": "Hauteur de bavette (mm)"
       },
       "tooltip": {
         "en": "Waist to top of bib",
-        "es": "De la cintura a lo alto del peto"
+        "es": "De la cintura a lo alto del peto",
+        "fr": "De la taille au haut de la bavette"
       }
     },
     {
@@ -180,11 +191,13 @@
       "step": 10,
       "label": {
         "en": "Back height (mm)",
-        "es": "Alto de espalda (mm)"
+        "es": "Alto de espalda (mm)",
+        "fr": "Hauteur de dos (mm)"
       },
       "tooltip": {
         "en": "Waist to top of low back",
-        "es": "De la cintura a lo alto de la espalda baja"
+        "es": "De la cintura a lo alto de la espalda baja",
+        "fr": "De la taille au haut du dos bas"
       }
     },
     {
@@ -197,11 +210,13 @@
       "step": 10,
       "label": {
         "en": "Skirt length (mm)",
-        "es": "Largo de falda (mm)"
+        "es": "Largo de falda (mm)",
+        "fr": "Longueur de jupe (mm)"
       },
       "tooltip": {
         "en": "Waist to hem",
-        "es": "De la cintura al ruedo"
+        "es": "De la cintura al ruedo",
+        "fr": "De la taille à l'ourlet"
       }
     },
     {
@@ -214,11 +229,13 @@
       "step": 0.1,
       "label": {
         "en": "Skirt fullness",
-        "es": "Amplitud de falda"
+        "es": "Amplitud de falda",
+        "fr": "Ampleur de jupe"
       },
       "tooltip": {
         "en": "Skirt width ÷ waist",
-        "es": "Ancho de falda ÷ cintura"
+        "es": "Ancho de falda ÷ cintura",
+        "fr": "Largeur de jupe ÷ taille"
       }
     },
     {
@@ -231,11 +248,13 @@
       "step": 5,
       "label": {
         "en": "Strap width (mm)",
-        "es": "Ancho de tirante (mm)"
+        "es": "Ancho de tirante (mm)",
+        "fr": "Largeur de bretelle (mm)"
       },
       "tooltip": {
         "en": "Over-shoulder strap width",
-        "es": "Ancho del tirante"
+        "es": "Ancho del tirante",
+        "fr": "Largeur de la bretelle par-dessus l'épaule"
       }
     }
   ],
@@ -244,7 +263,8 @@
       "id": "everyday",
       "label": {
         "en": "Everyday",
-        "es": "Diario"
+        "es": "Diario",
+        "fr": "Quotidien"
       },
       "values": {
         "gather_ratio": 1.9,
@@ -255,7 +275,8 @@
       "id": "fuller",
       "label": {
         "en": "Fuller skirt",
-        "es": "Falda más amplia"
+        "es": "Falda más amplia",
+        "fr": "Jupe plus ample"
       },
       "values": {
         "gather_ratio": 2.4,
@@ -278,7 +299,8 @@
         "type": "waistband",
         "label": {
           "en": "Bib waist seam",
-          "es": "Costura de cintura del peto"
+          "es": "Costura de cintura del peto",
+          "fr": "Couture de taille de bavette"
         },
         "edges": [
           {
@@ -300,7 +322,8 @@
         "type": "waistband",
         "label": {
           "en": "Back waist seam",
-          "es": "Costura de cintura trasera"
+          "es": "Costura de cintura trasera",
+          "fr": "Couture de taille dos"
         },
         "edges": [
           {
@@ -324,7 +347,8 @@
     },
     "societal_benefit": {
       "en": "An open, made-to-measure pinafore is a forgiving layering dress with no fitted side seam — held by crossed straps and a waist seam — so it fits a wide range of bodies and grows with a child, makeable from sturdy everyday cloth.",
-      "es": "Un pichi abierto y a la medida es un vestido de capas indulgente sin costura lateral ajustada — sostenido por tirantes cruzados y una costura de cintura — así que se adapta a muchos cuerpos y crece con la infancia, fabricable con tela cotidiana resistente."
+      "es": "Un pichi abierto y a la medida es un vestido de capas indulgente sin costura lateral ajustada — sostenido por tirantes cruzados y una costura de cintura — así que se adapta a muchos cuerpos y crece con la infancia, fabricable con tela cotidiana resistente.",
+      "fr": "Une robe chasuble ouverte et sur mesure est une robe à superposer indulgente, sans couture de côté ajustée — tenue par des bretelles croisées et une couture de taille — de sorte qu'elle s'adapte à une large gamme de corps et grandit avec l'enfant, réalisable dans un tissu robuste du quotidien."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

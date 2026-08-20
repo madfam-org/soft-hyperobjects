@@ -6,62 +6,493 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #37. The chinos block relaxed for utility wear: front/back legs with the solved front-inseam bow, extra hip ease and a wide straight hem, a grown-on fly extension with J-topstitch guide, diagonal slash pockets with pocket-mouth notches on both side seams, two back waist darts with a patch-pocket placement, bellows cargo pockets drafted as real pieces — a hexagonal main-face-plus-fold-wings outline with bellows fold lines and an angled-corner flap — placed by a mid-thigh rectangle on each front leg, a two-half waistband whose tab half extends +60 mm into a crossover tab declared as seam ease, and six belt loops.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #37 del FC-100. El bloque del chino relajado para uso utilitario: piernas delantera/trasera con la entrepierna delantera resuelta, holgura extra de cadera y bajo recto amplio, aletilla de bragueta unida con guía de pespunte en J, bolsillos sesgados con piquetes de boca de bolsillo en ambas costuras laterales, dos pinzas traseras de cintura con marca de bolsillo de parche, bolsillos cargo de fuelle dibujados como piezas reales — un contorno hexagonal de cara principal más alas de doblez con líneas de fuelle y una tapa de esquinas en ángulo — ubicados por un rectángulo a medio muslo en cada pierna delantera, pretina en dos mitades cuya mitad de lengüeta se extiende +60 mm en una lengüeta cruzada declarada como holgura de costura, y seis trabillas.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #37 del FC-100. El bloque del chino relajado para uso utilitario: piernas delantera/trasera con la entrepierna delantera resuelta, holgura extra de cadera y bajo recto amplio, aletilla de bragueta unida con guía de pespunte en J, bolsillos sesgados con piquetes de boca de bolsillo en ambas costuras laterales, dos pinzas traseras de cintura con marca de bolsillo de parche, bolsillos cargo de fuelle dibujados como piezas reales — un contorno hexagonal de cara principal más alas de doblez con líneas de fuelle y una tapa de esquinas en ángulo — ubicados por un rectángulo a medio muslo en cada pierna delantera, pretina en dos mitades cuya mitad de lengüeta se extiende +60 mm en una lengüeta cruzada declarada como holgura de costura, y seis trabillas.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Rang #37 du FC-100. Le bloc du chino relâché pour l'usage utilitaire : jambes devant/dos avec l'entrejambe devant courbé résolu, aisance de hanches supplémentaire et bas droit large, une extension de braguette venue de coupe avec guide de piqûre en J, poches à même la couture en biais avec crans d'entrée de poche sur les deux coutures latérales, deux pinces de taille dos avec emplacement de poche plaquée, poches cargo à soufflet tracées comme de vraies pièces — un contour hexagonal face principale plus ailes de pli avec lignes de pli de soufflet et un rabat à coins en angle — placées par un rectangle à mi-cuisse sur chaque jambe devant, une ceinture en deux moitiés dont la moitié à patte se prolonge de +60 mm en une patte croisée déclarée comme aisance de couture, et six passants de ceinture.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["cargo-pants", "cargo", "trousers", "bottoms", "bellows-pockets", "utility", "fly-front", "woven", "fc100", "hyperobject", "commons"],
-    "attribution": { "author": "Innovaciones MADFAM", "license": "LicenseRef-FC1-pending", "lineage": [{ "source": "Fashion Cabinet 'chinos' cartridge — trouser block family (scrubs-pants woven block)", "license": "LicenseRef-FC1-pending" }] }
+    "tags": [
+      "cargo-pants",
+      "cargo",
+      "trousers",
+      "bottoms",
+      "bellows-pockets",
+      "utility",
+      "fly-front",
+      "woven",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Fashion Cabinet 'chinos' cartridge — trouser block family (scrubs-pants woven block)",
+          "license": "LicenseRef-FC1-pending"
+        }
+      ]
+    }
   },
-  "modes": [{ "id": "cargo-pants", "label": { "en": "Cargo pants (all pieces)", "es": "Pantalón cargo (todas las piezas)" }, "script_file": "main.py", "pieces": ["front", "back", "cargo_pocket", "flap", "waistband_tab", "waistband_plain", "belt_loop"] }],
+  "modes": [
+    {
+      "id": "cargo-pants",
+      "label": {
+        "en": "Cargo pants (all pieces)",
+        "es": "Pantalón cargo (todas las piezas)",
+        "fr": "Pantalon cargo (toutes les pièces)"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "cargo_pocket",
+        "flap",
+        "waistband_tab",
+        "waistband_plain",
+        "belt_loop"
+      ]
+    }
+  ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front Leg", "es": "Pierna Delantera" }, "default_color": "#5c6f94", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back Leg", "es": "Pierna Trasera" }, "default_color": "#4d5f82", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "cargo_pocket", "label": { "en": "Cargo Bellows Pocket", "es": "Bolsillo Cargo de Fuelle" }, "default_color": "#7488ad", "cut": { "quantity": 2 } },
-    { "id": "flap", "label": { "en": "Pocket Flap", "es": "Tapa de Bolsillo" }, "default_color": "#8b9cbd", "cut": { "quantity": 2 } },
-    { "id": "waistband_tab", "label": { "en": "Waistband Half (tab)", "es": "Pretina mitad (lengüeta)" }, "default_color": "#66779c", "cut": { "quantity": 1 } },
-    { "id": "waistband_plain", "label": { "en": "Waistband Half (plain)", "es": "Pretina mitad (lisa)" }, "default_color": "#7a8aae", "cut": { "quantity": 1 } },
-    { "id": "belt_loop", "label": { "en": "Belt Loop", "es": "Trabilla" }, "default_color": "#435377", "cut": { "quantity": 6 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front Leg",
+        "es": "Pierna Delantera",
+        "fr": "Jambe devant"
+      },
+      "default_color": "#5c6f94",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back Leg",
+        "es": "Pierna Trasera",
+        "fr": "Jambe dos"
+      },
+      "default_color": "#4d5f82",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "cargo_pocket",
+      "label": {
+        "en": "Cargo Bellows Pocket",
+        "es": "Bolsillo Cargo de Fuelle",
+        "fr": "Poche cargo à soufflet"
+      },
+      "default_color": "#7488ad",
+      "cut": {
+        "quantity": 2
+      }
+    },
+    {
+      "id": "flap",
+      "label": {
+        "en": "Pocket Flap",
+        "es": "Tapa de Bolsillo",
+        "fr": "Rabat de poche"
+      },
+      "default_color": "#8b9cbd",
+      "cut": {
+        "quantity": 2
+      }
+    },
+    {
+      "id": "waistband_tab",
+      "label": {
+        "en": "Waistband Half (tab)",
+        "es": "Pretina mitad (lengüeta)",
+        "fr": "Demi-ceinture (patte)"
+      },
+      "default_color": "#66779c",
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "waistband_plain",
+      "label": {
+        "en": "Waistband Half (plain)",
+        "es": "Pretina mitad (lisa)",
+        "fr": "Demi-ceinture (simple)"
+      },
+      "default_color": "#7a8aae",
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "belt_loop",
+      "label": {
+        "en": "Belt Loop",
+        "es": "Trabilla",
+        "fr": "Passant de ceinture"
+      },
+      "default_color": "#435377",
+      "cut": {
+        "quantity": 6
+      }
+    }
   ],
   "parameters": [
-    { "id": "hip_girth", "type": "slider", "default": 1020, "min": 650, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
-    { "id": "waist_girth", "type": "slider", "default": 880, "min": 500, "max": 1600, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
-    { "id": "inseam_length", "type": "slider", "default": 760, "min": 300, "max": 950, "step": 10, "measurement": { "standard": "iso_8559", "code": "inside_leg_length" }, "label": { "en": "Inseam (mm)", "es": "Entrepierna (mm)" } },
-    { "id": "front_rise", "type": "slider", "default": 275, "min": 190, "max": 380, "step": 5, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)" } },
-    { "id": "back_rise", "type": "slider", "default": 315, "min": 190, "max": 460, "step": 5, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)" } },
-    { "id": "cargo_ease", "type": "slider", "default": 160, "min": 40, "max": 400, "step": 10, "label": { "en": "Total hip ease (mm)", "es": "Holgura total de cadera (mm)" } },
-    { "id": "hem_width", "type": "slider", "default": 130, "min": 80, "max": 260, "step": 5, "label": { "en": "Hem half-width, flat (mm)", "es": "Medio bajo, extendido (mm)" } },
-    { "id": "pocket_width", "type": "slider", "default": 180, "min": 120, "max": 260, "step": 10, "label": { "en": "Cargo pocket width (mm)", "es": "Ancho del bolsillo cargo (mm)" } },
-    { "id": "pocket_height", "type": "slider", "default": 200, "min": 140, "max": 280, "step": 10, "label": { "en": "Cargo pocket height (mm)", "es": "Alto del bolsillo cargo (mm)" } },
-    { "id": "bellows", "type": "slider", "default": 30, "min": 10, "max": 60, "step": 5, "tooltip": { "en": "Side fold-wing depth of the bellows pocket", "es": "Profundidad de las alas de doblez del fuelle" }, "label": { "en": "Bellows depth (mm)", "es": "Profundidad del fuelle (mm)" } },
-    { "id": "fly_width", "type": "slider", "default": 38, "min": 20, "max": 60, "step": 2, "label": { "en": "Fly extension width (mm)", "es": "Ancho de aletilla (mm)" } },
-    { "id": "fly_depth", "type": "slider", "default": 200, "min": 80, "max": 300, "step": 5, "label": { "en": "Fly depth (mm)", "es": "Largo de bragueta (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 35, "min": 0, "max": 50, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "default": 1020,
+      "min": 650,
+      "max": 1800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "default": 880,
+      "min": 500,
+      "max": 1600,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      }
+    },
+    {
+      "id": "inseam_length",
+      "type": "slider",
+      "default": 760,
+      "min": 300,
+      "max": 950,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "inside_leg_length"
+      },
+      "label": {
+        "en": "Inseam (mm)",
+        "es": "Entrepierna (mm)",
+        "fr": "Entrejambe (mm)"
+      }
+    },
+    {
+      "id": "front_rise",
+      "type": "slider",
+      "default": 275,
+      "min": 190,
+      "max": 380,
+      "step": 5,
+      "label": {
+        "en": "Front rise (mm)",
+        "es": "Tiro delantero (mm)",
+        "fr": "Hauteur de fourche avant (mm)"
+      }
+    },
+    {
+      "id": "back_rise",
+      "type": "slider",
+      "default": 315,
+      "min": 190,
+      "max": 460,
+      "step": 5,
+      "label": {
+        "en": "Back rise (mm)",
+        "es": "Tiro trasero (mm)",
+        "fr": "Hauteur de fourche arrière (mm)"
+      }
+    },
+    {
+      "id": "cargo_ease",
+      "type": "slider",
+      "default": 160,
+      "min": 40,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Total hip ease (mm)",
+        "es": "Holgura total de cadera (mm)",
+        "fr": "Aisance totale aux hanches (mm)"
+      }
+    },
+    {
+      "id": "hem_width",
+      "type": "slider",
+      "default": 130,
+      "min": 80,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Hem half-width, flat (mm)",
+        "es": "Medio bajo, extendido (mm)",
+        "fr": "Demi-largeur de bas, à plat (mm)"
+      }
+    },
+    {
+      "id": "pocket_width",
+      "type": "slider",
+      "default": 180,
+      "min": 120,
+      "max": 260,
+      "step": 10,
+      "label": {
+        "en": "Cargo pocket width (mm)",
+        "es": "Ancho del bolsillo cargo (mm)",
+        "fr": "Largeur de la poche cargo (mm)"
+      }
+    },
+    {
+      "id": "pocket_height",
+      "type": "slider",
+      "default": 200,
+      "min": 140,
+      "max": 280,
+      "step": 10,
+      "label": {
+        "en": "Cargo pocket height (mm)",
+        "es": "Alto del bolsillo cargo (mm)",
+        "fr": "Hauteur de la poche cargo (mm)"
+      }
+    },
+    {
+      "id": "bellows",
+      "type": "slider",
+      "default": 30,
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "tooltip": {
+        "en": "Side fold-wing depth of the bellows pocket",
+        "es": "Profundidad de las alas de doblez del fuelle",
+        "fr": "Profondeur des ailes de pli latéral du soufflet"
+      },
+      "label": {
+        "en": "Bellows depth (mm)",
+        "es": "Profundidad del fuelle (mm)",
+        "fr": "Profondeur du soufflet (mm)"
+      }
+    },
+    {
+      "id": "fly_width",
+      "type": "slider",
+      "default": 38,
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Fly extension width (mm)",
+        "es": "Ancho de aletilla (mm)",
+        "fr": "Largeur de la patte de braguette (mm)"
+      }
+    },
+    {
+      "id": "fly_depth",
+      "type": "slider",
+      "default": 200,
+      "min": 80,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Fly depth (mm)",
+        "es": "Largo de bragueta (mm)",
+        "fr": "Longueur de braguette (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 35,
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "hip_girth": 1020, "waist_girth": 880, "inseam_length": 760 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "hip_girth": 1140, "waist_girth": 1000, "inseam_length": 800 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "hip_girth": 1020,
+        "waist_girth": 880,
+        "inseam_length": 760
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G",
+        "fr": "L"
+      },
+      "values": {
+        "hip_girth": 1140,
+        "waist_girth": 1000,
+        "inseam_length": 800
+      }
+    }
   ],
   "constraints": [
-    { "expression": "back_rise >= front_rise", "severity": "error", "message": { "en": "Back rise must be at least the front rise", "es": "El tiro trasero debe ser al menos el delantero" } },
-    { "expression": "fly_depth < front_rise", "severity": "error", "message": { "en": "Fly depth must stay above the crotch line (less than the front rise)", "es": "El largo de bragueta debe quedar arriba del tiro (menor que el tiro delantero)" } },
-    { "expression": "bellows <= pocket_width / 3", "severity": "error", "message": { "en": "Bellows depth must not exceed a third of the pocket width", "es": "La profundidad del fuelle no debe exceder un tercio del ancho del bolsillo" } }
+    {
+      "expression": "back_rise >= front_rise",
+      "severity": "error",
+      "message": {
+        "en": "Back rise must be at least the front rise",
+        "es": "El tiro trasero debe ser al menos el delantero",
+        "fr": "La hauteur de montant dos doit être au moins celle du devant"
+      }
+    },
+    {
+      "expression": "fly_depth < front_rise",
+      "severity": "error",
+      "message": {
+        "en": "Fly depth must stay above the crotch line (less than the front rise)",
+        "es": "El largo de bragueta debe quedar arriba del tiro (menor que el tiro delantero)",
+        "fr": "La profondeur de braguette doit rester au-dessus de la ligne d'entrejambe (inférieure à la hauteur de montant devant)"
+      }
+    },
+    {
+      "expression": "bellows <= pocket_width / 3",
+      "severity": "error",
+      "message": {
+        "en": "Bellows depth must not exceed a third of the pocket width",
+        "es": "La profundidad del fuelle no debe exceder un tercio del ancho del bolsillo",
+        "fr": "La profondeur du soufflet ne doit pas dépasser un tiers de la largeur de la poche"
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["mezclilla-denim", "popelina-algodon"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "mezclilla-denim",
+    "popelina-algodon"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "waistband", "type": "waistband", "edges": [{ "piece": "front", "edge": "waist" }, { "piece": "back", "edge": "waist" }], "parameters": ["waist_girth", "hip_girth"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["hem_width", "hem_allowance"] },
-      { "id": "fly", "type": "zipper_tape", "edges": [{ "piece": "front", "edge": "crotch" }], "parameters": ["fly_depth", "fly_width"] },
-      { "id": "cargo_pocket", "type": "pocket", "edges": [{ "piece": "cargo_pocket", "edge": "mouth" }, { "piece": "flap", "edge": "attach" }], "parameters": ["pocket_width", "pocket_height", "bellows"] }
+      {
+        "id": "waistband",
+        "type": "waistband",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "waist"
+          },
+          {
+            "piece": "back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "hip_girth"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "hem_width",
+          "hem_allowance"
+        ]
+      },
+      {
+        "id": "fly",
+        "type": "zipper_tape",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "crotch"
+          }
+        ],
+        "parameters": [
+          "fly_depth",
+          "fly_width"
+        ]
+      },
+      {
+        "id": "cargo_pocket",
+        "type": "pocket",
+        "edges": [
+          {
+            "piece": "cargo_pocket",
+            "edge": "mouth"
+          },
+          {
+            "piece": "flap",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "pocket_width",
+          "pocket_height",
+          "bellows"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false, "knit_negative_ease": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
     "societal_benefit": {
       "en": "The utility trouser as a commons object: a graded-by-measurement cargo pant whose bellows pockets and flaps are drafted as real pieces with fold lines and placement marks, cuttable in denim or cotton popeline by any small workshop without licensing a block.",
-      "es": "El pantalón utilitario como objeto del commons: un pantalón cargo graduado por medidas cuyos bolsillos de fuelle y tapas están dibujados como piezas reales con líneas de doblez y marcas de ubicación, cortable en mezclilla o popelina de algodón por cualquier taller pequeño sin licenciar un bloque."
+      "es": "El pantalón utilitario como objeto del commons: un pantalón cargo graduado por medidas cuyos bolsillos de fuelle y tapas están dibujados como piezas reales con líneas de doblez y marcas de ubicación, cortable en mezclilla o popelina de algodón por cualquier taller pequeño sin licenciar un bloque.",
+      "fr": "Le pantalon utilitaire comme objet commun : un pantalon cargo gradé par la mesure dont les poches à soufflet et les rabats sont tracés comme de vraies pièces avec lignes de pli et repères de placement, coupable en denim ou en popeline de coton par n'importe quel petit atelier sans licencier de bloc."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

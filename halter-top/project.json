@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "A halter top: a shaped front rising to a self-fabric neck strap tied behind the neck, with bare shoulders and an open upper back; a low back band wraps to centre back and closes there. Front and back share the band-girth side seam, so the sides balance by construction. A soft-goods garment — no hardware (the back closure is the maker's choice). FC-200 long-tail (silhouette gap).\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Un top halter: un frente moldeado que se eleva a una cinta de cuello de tela propia atada tras la nuca, con hombros descubiertos y espalda superior abierta; una banda baja de espalda envuelve hasta el centro de la espalda y cierra ahí. Frente y espalda comparten la costura lateral del contorno de banda, así que los lados se equilibran por construcción. Una prenda textil — sin herrajes (el cierre trasero es a elección de quien elabora). Cola larga FC-200 (hueco de silueta).\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Un top halter: un frente moldeado que se eleva a una cinta de cuello de tela propia atada tras la nuca, con hombros descubiertos y espalda superior abierta; una banda baja de espalda envuelve hasta el centro de la espalda y cierra ahí. Frente y espalda comparten la costura lateral del contorno de banda, así que los lados se equilibran por construcción. Una prenda textil — sin herrajes (el cierre trasero es a elección de quien elabora). Cola larga FC-200 (hueco de silueta).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un top dos-nu : un devant moulé s'élevant en une bride d'encolure en tissu propre nouée derrière la nuque, avec les épaules dénudées et le haut du dos ouvert ; une bande basse de dos enveloppe jusqu'au milieu du dos et s'y ferme. Devant et dos partagent la couture latérale du tour de bande, de sorte que les côtés s'équilibrent par construction. Un vêtement textile — sans quincaillerie (la fermeture dos est au choix de qui le confectionne). Longue traîne FC-200 (manque de silhouette).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
     "tags": [
@@ -33,7 +34,8 @@
       "id": "set",
       "label": {
         "en": "Full Top",
-        "es": "Top completo"
+        "es": "Top completo",
+        "fr": "Haut complet"
       },
       "script_file": "main.py",
       "pieces": [
@@ -47,7 +49,8 @@
       "id": "front",
       "label": {
         "en": "Front (halter)",
-        "es": "Frente (halter)"
+        "es": "Frente (halter)",
+        "fr": "Devant (dos-nu)"
       },
       "default_color": "#8a6a5a",
       "cut": {
@@ -61,7 +64,8 @@
       "id": "back",
       "label": {
         "en": "Back band",
-        "es": "Banda de espalda"
+        "es": "Banda de espalda",
+        "fr": "Bande dos"
       },
       "default_color": "#8a6a5a",
       "cut": {
@@ -113,11 +117,13 @@
       },
       "label": {
         "en": "Bust girth (mm)",
-        "es": "Contorno de busto (mm)"
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de buste (mm)"
       },
       "tooltip": {
         "en": "Full bust",
-        "es": "Busto completo"
+        "es": "Busto completo",
+        "fr": "Tour de poitrine complet"
       }
     },
     {
@@ -134,11 +140,13 @@
       },
       "label": {
         "en": "Under-bust girth (mm)",
-        "es": "Contorno bajo busto (mm)"
+        "es": "Contorno bajo busto (mm)",
+        "fr": "Tour sous-poitrine (mm)"
       },
       "tooltip": {
         "en": "Body band girth",
-        "es": "Contorno de la banda"
+        "es": "Contorno de la banda",
+        "fr": "Tour de la bande de corps"
       }
     },
     {
@@ -151,11 +159,13 @@
       "step": 10,
       "label": {
         "en": "Front length (mm)",
-        "es": "Largo del frente (mm)"
+        "es": "Largo del frente (mm)",
+        "fr": "Longueur devant (mm)"
       },
       "tooltip": {
         "en": "Under-bust to neck-strap point",
-        "es": "Del bajo busto al punto de la cinta"
+        "es": "Del bajo busto al punto de la cinta",
+        "fr": "Du dessous de poitrine au point de la bride d'encolure"
       }
     },
     {
@@ -168,11 +178,13 @@
       "step": 10,
       "label": {
         "en": "Back band height (mm)",
-        "es": "Altura de banda trasera (mm)"
+        "es": "Altura de banda trasera (mm)",
+        "fr": "Hauteur de bande dos (mm)"
       },
       "tooltip": {
         "en": "How high the low back rises",
-        "es": "Cuánto sube la espalda baja"
+        "es": "Cuánto sube la espalda baja",
+        "fr": "Jusqu'où s'élève le dos bas"
       }
     },
     {
@@ -185,11 +197,13 @@
       "step": 5,
       "label": {
         "en": "Neck strap width (mm)",
-        "es": "Ancho de cinta de cuello (mm)"
+        "es": "Ancho de cinta de cuello (mm)",
+        "fr": "Largeur de bride de cou (mm)"
       },
       "tooltip": {
         "en": "Self-fabric strap width",
-        "es": "Ancho de la cinta de tela propia"
+        "es": "Ancho de la cinta de tela propia",
+        "fr": "Largeur de la bride en tissu propre"
       }
     },
     {
@@ -202,11 +216,13 @@
       "step": 10,
       "label": {
         "en": "Fit ease (mm)",
-        "es": "Holgura (mm)"
+        "es": "Holgura (mm)",
+        "fr": "Aisance d'ajustement (mm)"
       },
       "tooltip": {
         "en": "Close fit",
-        "es": "Ajuste ceñido"
+        "es": "Ajuste ceñido",
+        "fr": "Ajustement ceint"
       }
     }
   ],
@@ -215,7 +231,8 @@
       "id": "fitted",
       "label": {
         "en": "Fitted",
-        "es": "Ceñido"
+        "es": "Ceñido",
+        "fr": "Ajusté"
       },
       "values": {
         "ease": 20,
@@ -226,7 +243,8 @@
       "id": "relaxed",
       "label": {
         "en": "Relaxed",
-        "es": "Holgado"
+        "es": "Holgado",
+        "fr": "Ample"
       },
       "values": {
         "ease": 80,
@@ -249,7 +267,8 @@
         "type": "side_seam",
         "label": {
           "en": "Side seam",
-          "es": "Costura lateral"
+          "es": "Costura lateral",
+          "fr": "Couture latérale"
         },
         "edges": [
           {
@@ -271,7 +290,8 @@
         "type": "custom",
         "label": {
           "en": "Neck strap point",
-          "es": "Punto de cinta de cuello"
+          "es": "Punto de cinta de cuello",
+          "fr": "Point de bride de cou"
         },
         "edges": [
           {
@@ -291,7 +311,8 @@
     },
     "societal_benefit": {
       "en": "An open, made-to-measure halter sizes the body band to the wearer's own under-bust and ties at the neck with a self-fabric strap, keeping a warm-weather staple makeable and adjustable from a firm woven without proprietary sizing.",
-      "es": "Un halter abierto y a la medida ajusta la banda del cuerpo al bajo busto de quien lo viste y ata al cuello con una cinta de tela propia, manteniendo un básico de clima cálido fabricable y ajustable a partir de un tejido firme sin tallaje propietario."
+      "es": "Un halter abierto y a la medida ajusta la banda del cuerpo al bajo busto de quien lo viste y ata al cuello con una cinta de tela propia, manteniendo un básico de clima cálido fabricable y ajustable a partir de un tejido firme sin tallaje propietario.",
+      "fr": "Un dos-nu ouvert et sur mesure dimensionne la bande de corps au propre dessous de poitrine de qui le porte et se noue au cou par une bride en tissu propre, gardant un classique de temps chaud fabricable et ajustable à partir d'un tissé ferme sans tailles propriétaires."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

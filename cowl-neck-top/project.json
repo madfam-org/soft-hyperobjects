@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "A relaxed top whose front neckline rises above the shoulder into a self-facing that folds back into a soft cowl — no separate collar. The front shoulder matches the back exactly, so the shoulder seam balances by construction; cut in a fluid fabric for the drape. A soft-goods garment — no hardware. FC-200 long-tail (silhouette gap).\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Un top holgado cuyo escote frontal se eleva por encima del hombro en una vista propia que se dobla en una caída suave (cowl) — sin cuello aparte. El hombro frontal coincide exactamente con la espalda, así que la costura de hombro se equilibra por construcción; córtese en tela fluida para el drapeado. Una prenda textil — sin herrajes. Cola larga FC-200 (hueco de silueta).\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Un top holgado cuyo escote frontal se eleva por encima del hombro en una vista propia que se dobla en una caída suave (cowl) — sin cuello aparte. El hombro frontal coincide exactamente con la espalda, así que la costura de hombro se equilibra por construcción; córtese en tela fluida para el drapeado. Una prenda textil — sin herrajes. Cola larga FC-200 (hueco de silueta).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un haut décontracté dont l'encolure devant s'élève au-dessus de l'épaule en une parementure à même qui se replie en un col bénitier souple — sans col séparé. L'épaule devant correspond exactement au dos, de sorte que la couture d'épaule s'équilibre par construction ; à couper dans un tissu fluide pour le drapé. Un vêtement textile — sans quincaillerie. Longue traîne FC-200 (lacune de silhouette).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
     "tags": [
@@ -33,7 +34,8 @@
       "id": "set",
       "label": {
         "en": "Full Top",
-        "es": "Top completo"
+        "es": "Top completo",
+        "fr": "Haut complet"
       },
       "script_file": "main.py",
       "pieces": [
@@ -47,7 +49,8 @@
       "id": "front",
       "label": {
         "en": "Front (cowl)",
-        "es": "Frente (cowl)"
+        "es": "Frente (cowl)",
+        "fr": "Devant (col bénitier)"
       },
       "default_color": "#5a6a7a",
       "cut": {
@@ -61,7 +64,8 @@
       "id": "back",
       "label": {
         "en": "Back",
-        "es": "Espalda"
+        "es": "Espalda",
+        "fr": "Dos"
       },
       "default_color": "#5a6a7a",
       "cut": {
@@ -105,11 +109,13 @@
       },
       "label": {
         "en": "Chest girth (mm)",
-        "es": "Contorno de pecho (mm)"
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
       },
       "tooltip": {
         "en": "Full chest",
-        "es": "Pecho completo"
+        "es": "Pecho completo",
+        "fr": "Poitrine complète"
       }
     },
     {
@@ -122,11 +128,13 @@
       "step": 10,
       "label": {
         "en": "Length (mm)",
-        "es": "Largo (mm)"
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
       },
       "tooltip": {
         "en": "Shoulder to hem",
-        "es": "Del hombro al ruedo"
+        "es": "Del hombro al ruedo",
+        "fr": "De l'épaule au bas"
       }
     },
     {
@@ -139,11 +147,13 @@
       "step": 5,
       "label": {
         "en": "Neck width (mm)",
-        "es": "Ancho de cuello (mm)"
+        "es": "Ancho de cuello (mm)",
+        "fr": "Largeur d'encolure (mm)"
       },
       "tooltip": {
         "en": "Base neck opening",
-        "es": "Abertura base de cuello"
+        "es": "Abertura base de cuello",
+        "fr": "Ouverture d'encolure de base"
       }
     },
     {
@@ -156,11 +166,13 @@
       "step": 10,
       "label": {
         "en": "Cowl depth (mm)",
-        "es": "Profundidad del cowl (mm)"
+        "es": "Profundidad del cowl (mm)",
+        "fr": "Profondeur du drapé (mm)"
       },
       "tooltip": {
         "en": "How deep the cowl folds",
-        "es": "Cuánto cae el cowl"
+        "es": "Cuánto cae el cowl",
+        "fr": "À quelle profondeur le col bénitier retombe"
       }
     },
     {
@@ -173,11 +185,13 @@
       "step": 10,
       "label": {
         "en": "Cowl rise (mm)",
-        "es": "Elevación del cowl (mm)"
+        "es": "Elevación del cowl (mm)",
+        "fr": "Relevé du drapé (mm)"
       },
       "tooltip": {
         "en": "Extra height above the shoulder",
-        "es": "Altura extra sobre el hombro"
+        "es": "Altura extra sobre el hombro",
+        "fr": "Hauteur supplémentaire au-dessus de l'épaule"
       }
     },
     {
@@ -190,11 +204,13 @@
       "step": 10,
       "label": {
         "en": "Grown sleeve (mm)",
-        "es": "Manga nacida (mm)"
+        "es": "Manga nacida (mm)",
+        "fr": "Manche montée d'une pièce (mm)"
       },
       "tooltip": {
         "en": "Grown-on cap sleeve",
-        "es": "Manga nacida"
+        "es": "Manga nacida",
+        "fr": "Manchette venue de coupe"
       }
     },
     {
@@ -207,11 +223,13 @@
       "step": 10,
       "label": {
         "en": "Fit ease (mm)",
-        "es": "Holgura (mm)"
+        "es": "Holgura (mm)",
+        "fr": "Aisance d'ajustement (mm)"
       },
       "tooltip": {
         "en": "Soft ease",
-        "es": "Holgura suave"
+        "es": "Holgura suave",
+        "fr": "Aisance souple"
       }
     }
   ],
@@ -220,7 +238,8 @@
       "id": "soft",
       "label": {
         "en": "Soft cowl",
-        "es": "Cowl suave"
+        "es": "Cowl suave",
+        "fr": "Col bénitier souple"
       },
       "values": {
         "cowl_rise": 90,
@@ -231,7 +250,8 @@
       "id": "deep",
       "label": {
         "en": "Deep cowl",
-        "es": "Cowl profundo"
+        "es": "Cowl profundo",
+        "fr": "Drapé profond"
       },
       "values": {
         "cowl_rise": 150,
@@ -254,7 +274,8 @@
         "type": "shoulder",
         "label": {
           "en": "Shoulder seam",
-          "es": "Costura de hombro"
+          "es": "Costura de hombro",
+          "fr": "Couture d'épaule"
         },
         "edges": [
           {
@@ -276,7 +297,8 @@
         "type": "side_seam",
         "label": {
           "en": "Side seam",
-          "es": "Costura lateral"
+          "es": "Costura lateral",
+          "fr": "Couture latérale"
         },
         "edges": [
           {
@@ -300,7 +322,8 @@
     },
     "societal_benefit": {
       "en": "An open, made-to-measure cowl top gets its drape from the front's own folded facing rather than a separate collar, so a draped neckline becomes a single-fabric, easy-to-cut commons object sized to the wearer.",
-      "es": "Un top cowl abierto y a la medida obtiene su drapeado de la vista doblada del propio frente en lugar de un cuello aparte, de modo que un escote drapeado se vuelve un objeto común de una sola tela, fácil de cortar y ajustado a quien lo viste."
+      "es": "Un top cowl abierto y a la medida obtiene su drapeado de la vista doblada del propio frente en lugar de un cuello aparte, de modo que un escote drapeado se vuelve un objeto común de una sola tela, fácil de cortar y ajustado a quien lo viste.",
+      "fr": "Un haut à col bénitier ouvert et sur mesure tire son drapé de la propre parementure repliée du devant plutôt que d'un col séparé, de sorte qu'une encolure drapée devient un objet commun d'une seule pièce de tissu, facile à couper et dimensionné à celui qui le porte."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "A made-to-measure webbing belt: one strap piece with a folded buckle end, a pointed billet, and punched adjustment eyelets, bridged to the Yantra4D `strap-buckle` solid. Fashion Cabinet owns the belt (length to the wearer's waist, taper, eyelet spacing); Yantra4D owns the buckle. FC-200 accessories capsule.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Un cinturón de correa a la medida: una pieza de correa con extremo de hebilla doblado, punta y ojales de ajuste, puenteado al sólido `strap-buckle` de Yantra4D. Fashion Cabinet posee el cinturón (largo a la cintura, conicidad, espaciado de ojales); Yantra4D posee la hebilla.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Un cinturón de correa a la medida: una pieza de correa con extremo de hebilla doblado, punta y ojales de ajuste, puenteado al sólido `strap-buckle` de Yantra4D. Fashion Cabinet posee el cinturón (largo a la cintura, conicidad, espaciado de ojales); Yantra4D posee la hebilla.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une ceinture en sangle sur mesure : une pièce de sangle avec une extrémité de boucle repliée, un bout pointu et des œillets de réglage poinçonnés, reliée au solide `strap-buckle` de Yantra4D. Fashion Cabinet possède la ceinture (longueur au Tour de taille du porteur, fuselage, espacement des œillets) ; Yantra4D possède la boucle. Capsule accessoires FC-200.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
     "tags": [
@@ -34,7 +35,8 @@
       "id": "belt",
       "label": {
         "en": "Webbing Belt",
-        "es": "Cinturón de correa"
+        "es": "Cinturón de correa",
+        "fr": "Ceinture en sangle"
       },
       "script_file": "main.py",
       "pieces": [
@@ -47,7 +49,8 @@
       "id": "strap",
       "label": {
         "en": "Belt strap",
-        "es": "Correa del cinturón"
+        "es": "Correa del cinturón",
+        "fr": "Sangle de ceinture"
       },
       "default_color": "#6b5b4b",
       "cut": {
@@ -86,11 +89,13 @@
       "step": 5,
       "label": {
         "en": "Waist girth (mm)",
-        "es": "Contorno de cintura (mm)"
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
       },
       "tooltip": {
         "en": "The wearer's waist where the belt sits; sets belt length",
-        "es": "Cintura donde se usa el cinturón; define el largo"
+        "es": "Cintura donde se usa el cinturón; define el largo",
+        "fr": "Le Tour de taille du porteur là où la ceinture se pose ; définit la longueur de la ceinture"
       },
       "measurement": {
         "code": "waist_girth",
@@ -107,11 +112,13 @@
       "step": 1,
       "label": {
         "en": "Strap width (mm)",
-        "es": "Ancho de correa (mm)"
+        "es": "Ancho de correa (mm)",
+        "fr": "Largeur de sangle (mm)"
       },
       "tooltip": {
         "en": "Passed to the Yantra4D buckle so the strap fits its slot",
-        "es": "Se pasa a la hebilla de Yantra4D para que la correa entre en la ranura"
+        "es": "Se pasa a la hebilla de Yantra4D para que la correa entre en la ranura",
+        "fr": "Transmis à la boucle Yantra4D pour que la sangle entre dans sa fente"
       }
     },
     {
@@ -124,11 +131,13 @@
       "step": 5,
       "label": {
         "en": "Billet tip length (mm)",
-        "es": "Largo de la punta (mm)"
+        "es": "Largo de la punta (mm)",
+        "fr": "Longueur de la pointe (mm)"
       },
       "tooltip": {
         "en": "The pointed tip past the last eyelet; 0 = square end",
-        "es": "La punta después del último ojal; 0 = extremo recto"
+        "es": "La punta después del último ojal; 0 = extremo recto",
+        "fr": "Le bout pointu au-delà du dernier œillet ; 0 = extrémité droite"
       }
     },
     {
@@ -141,11 +150,13 @@
       "step": 1,
       "label": {
         "en": "Adjustment eyelets",
-        "es": "Ojales de ajuste"
+        "es": "Ojales de ajuste",
+        "fr": "Œillets de réglage"
       },
       "tooltip": {
         "en": "Number of holes; the middle one lands at the measured waist",
-        "es": "Número de ojales; el central cae en la cintura medida"
+        "es": "Número de ojales; el central cae en la cintura medida",
+        "fr": "Nombre de trous ; celui du milieu tombe au Tour de taille mesuré"
       }
     },
     {
@@ -158,11 +169,13 @@
       "step": 1,
       "label": {
         "en": "Eyelet spacing (mm)",
-        "es": "Espaciado de ojales (mm)"
+        "es": "Espaciado de ojales (mm)",
+        "fr": "Espacement des œillets (mm)"
       },
       "tooltip": {
         "en": "Center-to-center between adjustment holes",
-        "es": "Centro a centro entre ojales"
+        "es": "Centro a centro entre ojales",
+        "fr": "Entraxe entre les trous de réglage"
       }
     },
     {
@@ -175,11 +188,13 @@
       "step": 5,
       "label": {
         "en": "Buckle fold return (mm)",
-        "es": "Retorno de hebilla (mm)"
+        "es": "Retorno de hebilla (mm)",
+        "fr": "Retour de pliure de la boucle (mm)"
       },
       "tooltip": {
         "en": "The end that folds back through the buckle and rivets down",
-        "es": "El extremo que se dobla por la hebilla y se remacha"
+        "es": "El extremo que se dobla por la hebilla y se remacha",
+        "fr": "L'extrémité qui se replie à travers la boucle et se rive"
       }
     }
   ],
@@ -188,7 +203,8 @@
       "id": "classic-38",
       "label": {
         "en": "Classic 38 mm",
-        "es": "Clásico 38 mm"
+        "es": "Clásico 38 mm",
+        "fr": "Classique 38 mm"
       },
       "values": {
         "strap_width": 38,
@@ -199,7 +215,8 @@
       "id": "narrow-25",
       "label": {
         "en": "Narrow 25 mm",
-        "es": "Angosto 25 mm"
+        "es": "Angosto 25 mm",
+        "fr": "Étroit 25 mm"
       },
       "values": {
         "strap_width": 25,
@@ -234,7 +251,8 @@
         "type": "custom",
         "label": {
           "en": "Buckle attachment end",
-          "es": "Extremo de la hebilla"
+          "es": "Extremo de la hebilla",
+          "fr": "Extrémité de fixation de la boucle"
         },
         "edges": [
           {
@@ -256,7 +274,8 @@
     },
     "societal_benefit": {
       "en": "A belt sized to the actual waist, with the buckle an open printable Yantra4D object — the whole thing repairable, resizable, and free to make, instead of a fixed-length good you replace.",
-      "es": "Un cinturón dimensionado a la cintura real, con la hebilla como objeto imprimible abierto de Yantra4D — todo reparable, redimensionable y libre de hacer, en vez de un producto de largo fijo que se reemplaza."
+      "es": "Un cinturón dimensionado a la cintura real, con la hebilla como objeto imprimible abierto de Yantra4D — todo reparable, redimensionable y libre de hacer, en vez de un producto de largo fijo que se reemplaza.",
+      "fr": "Une ceinture dimensionnée au Tour de taille réel, avec la boucle en objet Yantra4D ouvert et imprimable — l'ensemble réparable, redimensionnable et libre à confectionner, au lieu d'un article à longueur fixe que l'on remplace."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "A fitted knit top with a mock neck: a short stand collar (~50-70 mm) that stands at the neck without folding — distinct from a tall folding turtleneck. The band length is solved to the measured neckline so it eases on without gaps; front and back share the body width so the shoulder and side seams balance by construction. A soft-goods garment — no hardware. FC-200 long-tail (silhouette gap).\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Un top de punto ajustado con cuello mock: un cuello alto corto (~50-70 mm) que se mantiene erguido sin doblarse — distinto de un cuello de tortuga alto que se dobla. El largo de la banda se resuelve al escote medido para que entre sin huecos; frente y espalda comparten el ancho del cuerpo, así que las costuras de hombro y lateral se equilibran por construcción. Una prenda textil — sin herrajes. Cola larga FC-200 (hueco de silueta).\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Un top de punto ajustado con cuello mock: un cuello alto corto (~50-70 mm) que se mantiene erguido sin doblarse — distinto de un cuello de tortuga alto que se dobla. El largo de la banda se resuelve al escote medido para que entre sin huecos; frente y espalda comparten el ancho del cuerpo, así que las costuras de hombro y lateral se equilibran por construcción. Una prenda textil — sin herrajes. Cola larga FC-200 (hueco de silueta).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un haut en maille ajusté à col mock : un col droit court (~50-70 mm) qui se tient au cou sans se replier — distinct d'un col roulé haut qui se replie. La longueur de la bande est résolue à l'encolure mesurée pour qu'elle s'enfile sans écarts ; le devant et le dos partagent la largeur du corps, de sorte que les coutures d'épaule et de côté s'équilibrent par construction. Un vêtement textile — sans quincaillerie. Longue traîne FC-200 (silhouette manquante).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
     "tags": [
@@ -33,7 +34,8 @@
       "id": "set",
       "label": {
         "en": "Full Top",
-        "es": "Top completo"
+        "es": "Top completo",
+        "fr": "Haut complet"
       },
       "script_file": "main.py",
       "pieces": [
@@ -48,7 +50,8 @@
       "id": "front",
       "label": {
         "en": "Front",
-        "es": "Frente"
+        "es": "Frente",
+        "fr": "Devant"
       },
       "default_color": "#6a5a5a",
       "cut": {
@@ -62,7 +65,8 @@
       "id": "back",
       "label": {
         "en": "Back",
-        "es": "Espalda"
+        "es": "Espalda",
+        "fr": "Dos"
       },
       "default_color": "#6a5a5a",
       "cut": {
@@ -76,7 +80,8 @@
       "id": "band",
       "label": {
         "en": "Mock-neck band",
-        "es": "Banda de cuello mock"
+        "es": "Banda de cuello mock",
+        "fr": "Bande de col montant"
       },
       "default_color": "#5a4a4a",
       "cut": {
@@ -125,11 +130,13 @@
       },
       "label": {
         "en": "Chest girth (mm)",
-        "es": "Contorno de pecho (mm)"
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
       },
       "tooltip": {
         "en": "Full chest",
-        "es": "Pecho completo"
+        "es": "Pecho completo",
+        "fr": "Tour de poitrine complet"
       }
     },
     {
@@ -142,11 +149,13 @@
       "step": 10,
       "label": {
         "en": "Length (mm)",
-        "es": "Largo (mm)"
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
       },
       "tooltip": {
         "en": "Shoulder to hem",
-        "es": "Del hombro al ruedo"
+        "es": "Del hombro al ruedo",
+        "fr": "De l'épaule à l'ourlet"
       }
     },
     {
@@ -159,11 +168,13 @@
       "step": 5,
       "label": {
         "en": "Neck width (mm)",
-        "es": "Ancho de cuello (mm)"
+        "es": "Ancho de cuello (mm)",
+        "fr": "Largeur d'encolure (mm)"
       },
       "tooltip": {
         "en": "Jewel neck width",
-        "es": "Ancho de escote redondo"
+        "es": "Ancho de escote redondo",
+        "fr": "Largeur d'encolure ras-du-cou"
       }
     },
     {
@@ -176,11 +187,13 @@
       "step": 5,
       "label": {
         "en": "Mock height (mm)",
-        "es": "Alto del mock (mm)"
+        "es": "Alto del mock (mm)",
+        "fr": "Hauteur de col montant (mm)"
       },
       "tooltip": {
         "en": "Stand height (short — not a turtleneck)",
-        "es": "Altura del cuello (corto — no tortuga)"
+        "es": "Altura del cuello (corto — no tortuga)",
+        "fr": "Hauteur du col droit (court — pas un col roulé)"
       }
     },
     {
@@ -193,11 +206,13 @@
       "step": 10,
       "label": {
         "en": "Grown sleeve (mm)",
-        "es": "Manga nacida (mm)"
+        "es": "Manga nacida (mm)",
+        "fr": "Manche montée d'une pièce (mm)"
       },
       "tooltip": {
         "en": "Grown-on cap sleeve",
-        "es": "Manga nacida"
+        "es": "Manga nacida",
+        "fr": "Manche venue de coupe"
       }
     },
     {
@@ -210,11 +225,13 @@
       "step": 10,
       "label": {
         "en": "Fit ease (mm)",
-        "es": "Holgura (mm)"
+        "es": "Holgura (mm)",
+        "fr": "Aisance d'ajustement (mm)"
       },
       "tooltip": {
         "en": "Close knit fit",
-        "es": "Ajuste ceñido de punto"
+        "es": "Ajuste ceñido de punto",
+        "fr": "Ajustement près du corps en maille"
       }
     }
   ],
@@ -223,7 +240,8 @@
       "id": "fitted",
       "label": {
         "en": "Fitted",
-        "es": "Ceñido"
+        "es": "Ceñido",
+        "fr": "Ajusté"
       },
       "values": {
         "ease": 40,
@@ -234,7 +252,8 @@
       "id": "relaxed",
       "label": {
         "en": "Relaxed",
-        "es": "Holgado"
+        "es": "Holgado",
+        "fr": "Ample"
       },
       "values": {
         "ease": 140,
@@ -257,7 +276,8 @@
         "type": "shoulder",
         "label": {
           "en": "Shoulder seam",
-          "es": "Costura de hombro"
+          "es": "Costura de hombro",
+          "fr": "Couture d'épaule"
         },
         "edges": [
           {
@@ -279,7 +299,8 @@
         "type": "side_seam",
         "label": {
           "en": "Side seam",
-          "es": "Costura lateral"
+          "es": "Costura lateral",
+          "fr": "Couture latérale"
         },
         "edges": [
           {
@@ -300,7 +321,8 @@
         "type": "neckline",
         "label": {
           "en": "Mock-neck band",
-          "es": "Banda de cuello mock"
+          "es": "Banda de cuello mock",
+          "fr": "Bande de col montant"
         },
         "edges": [
           {
@@ -325,7 +347,8 @@
     },
     "societal_benefit": {
       "en": "An open, made-to-measure mock-neck top solves the neckband length from the wearer's own neckline so the collar sits clean, turning a knit staple into a repeatable commons object without factory grading.",
-      "es": "Un top de cuello mock abierto y a la medida resuelve el largo de la banda a partir del escote de quien lo viste para que el cuello asiente limpio, convirtiendo un básico de punto en un objeto común repetible sin escalado de fábrica."
+      "es": "Un top de cuello mock abierto y a la medida resuelve el largo de la banda a partir del escote de quien lo viste para que el cuello asiente limpio, convirtiendo un básico de punto en un objeto común repetible sin escalado de fábrica.",
+      "fr": "Un haut à col mock ouvert et sur mesure résout la longueur de la bande d'encolure à partir de l'encolure propre de qui le porte pour que le col repose net, transformant un basique en maille en un objet du commons reproductible sans gradation industrielle."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

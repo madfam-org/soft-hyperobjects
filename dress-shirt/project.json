@@ -6,79 +6,432 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #4. Woven yoke-split dress shirt: button-stand fronts with seven buttonhole marks, back ending at the yoke seam, yoke carrying the back neck and shoulders, long placket sleeve with cuff, and a two-piece collar whose stand is solved to the measured neckline and whose fall is solved to the stand's top edge — the commons' first chained multi-solve.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #4 del FC-100. Camisa de vestir de tejido plano con canesú: delanteros con tapeta de botones y siete marcas de ojal, espalda que termina en la costura del canesú, canesú que lleva el escote trasero y los hombros, manga larga con abertura y puño, y cuello de dos piezas cuyo pie se resuelve al escote medido y cuya caída se resuelve al borde superior del pie — la primera cadena de resoluciones múltiples del común.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #4 del FC-100. Camisa de vestir de tejido plano con canesú: delanteros con tapeta de botones y siete marcas de ojal, espalda que termina en la costura del canesú, canesú que lleva el escote trasero y los hombros, manga larga con abertura y puño, y cuello de dos piezas cuyo pie se resuelve al escote medido y cuya caída se resuelve al borde superior del pie — la primera cadena de resoluciones múltiples del común.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Rang #4 du FC-100. Chemise de ville en tissé à empiècement fendu : devants à patte de boutonnage avec sept repères de boutonnière, dos se terminant à la couture d'empiècement, empiècement portant l'encolure dos et les épaules, manche longue à patte capucin avec poignet, et un col deux pièces dont le pied est résolu à l'encolure mesurée et dont le tombant est résolu au bord supérieur du pied — la première résolution multiple enchaînée du commun.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["shirt", "woven", "collar", "yoke", "cuff", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "shirt",
+      "woven",
+      "collar",
+      "yoke",
+      "cuff",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet", "license": "original" },
-        { "source": "Sleeve-cap and neck-edge bisection method from the scrubs-top (rank #85) and collar-band enabler cartridges", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "Sleeve-cap and neck-edge bisection method from the scrubs-top (rank #85) and collar-band enabler cartridges",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "shirt",
-      "label": { "en": "Dress shirt (all pieces)", "es": "Camisa de vestir (todas las piezas)" },
+      "label": {
+        "en": "Dress shirt (all pieces)",
+        "es": "Camisa de vestir (todas las piezas)",
+        "fr": "Chemise habillée (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "yoke", "sleeve", "cuff", "stand", "fall"]
+      "pieces": [
+        "front",
+        "back",
+        "yoke",
+        "sleeve",
+        "cuff",
+        "stand",
+        "fall"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#7d9bbf", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Espalda" }, "default_color": "#5f80a8", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "yoke", "label": { "en": "Yoke (doubled)", "es": "Canesú (doble)" }, "default_color": "#94aecb", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#a9bfd6", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "cuff", "label": { "en": "Cuff", "es": "Puño" }, "default_color": "#c2d2e2", "cut": { "quantity": 2 } },
-    { "id": "stand", "label": { "en": "Collar Stand", "es": "Pie de Cuello" }, "default_color": "#d5e0ec", "cut": { "quantity": 2, "on_fold": true, "mirror": true } },
-    { "id": "fall", "label": { "en": "Collar Fall", "es": "Cuello" }, "default_color": "#e6edf4", "cut": { "quantity": 2, "on_fold": true, "mirror": true } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#7d9bbf",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#5f80a8",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "yoke",
+      "label": {
+        "en": "Yoke (doubled)",
+        "es": "Canesú (doble)",
+        "fr": "Empiècement (doublé)"
+      },
+      "default_color": "#94aecb",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#a9bfd6",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Cuff",
+        "es": "Puño",
+        "fr": "Poignet"
+      },
+      "default_color": "#c2d2e2",
+      "cut": {
+        "quantity": 2
+      }
+    },
+    {
+      "id": "stand",
+      "label": {
+        "en": "Collar Stand",
+        "es": "Pie de Cuello",
+        "fr": "Pied de col"
+      },
+      "default_color": "#d5e0ec",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "fall",
+      "label": {
+        "en": "Collar Fall",
+        "es": "Cuello",
+        "fr": "Tombant de col"
+      },
+      "default_color": "#e6edf4",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    }
   ],
   "parameters": [
-    { "id": "chest_girth", "type": "slider", "default": 1020, "min": 700, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
-    { "id": "body_length", "type": "slider", "default": 760, "min": 500, "max": 1000, "step": 10, "label": { "en": "Body length, nape to hem (mm)", "es": "Largo de cuerpo (mm)" } },
-    { "id": "neck_girth", "type": "slider", "default": 400, "min": 300, "max": 520, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
-    { "id": "sleeve_length", "type": "slider", "default": 620, "min": 400, "max": 750, "step": 10, "measurement": { "standard": "iso_8559", "code": "arm_length" }, "label": { "en": "Sleeve length, cap to wrist (mm)", "es": "Largo de manga (mm)" } },
-    { "id": "wrist_opening", "type": "slider", "default": 240, "min": 180, "max": 320, "step": 10, "label": { "en": "Wrist opening (mm)", "es": "Abertura de puño (mm)" } },
-    { "id": "woven_ease", "type": "slider", "default": 140, "min": 60, "max": 320, "step": 10, "label": { "en": "Total ease (mm)", "es": "Holgura total (mm)" } },
-    { "id": "button_stand", "type": "slider", "default": 32, "min": 20, "max": 50, "step": 2, "label": { "en": "Button stand width (mm)", "es": "Ancho de tapeta (mm)" } },
-    { "id": "yoke_drop", "type": "slider", "default": 100, "min": 60, "max": 160, "step": 5, "advanced": true, "label": { "en": "Yoke drop below HPS (mm)", "es": "Caída del canesú bajo el hombro (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 20, "min": 0, "max": 50, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "default": 1020,
+      "min": 700,
+      "max": 1800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "default": 760,
+      "min": 500,
+      "max": 1000,
+      "step": 10,
+      "label": {
+        "en": "Body length, nape to hem (mm)",
+        "es": "Largo de cuerpo (mm)",
+        "fr": "Longueur du corps, nuque à l'ourlet (mm)"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 400,
+      "min": 300,
+      "max": 520,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 620,
+      "min": 400,
+      "max": 750,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "arm_length"
+      },
+      "label": {
+        "en": "Sleeve length, cap to wrist (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche, tête au poignet (mm)"
+      }
+    },
+    {
+      "id": "wrist_opening",
+      "type": "slider",
+      "default": 240,
+      "min": 180,
+      "max": 320,
+      "step": 10,
+      "label": {
+        "en": "Wrist opening (mm)",
+        "es": "Abertura de puño (mm)",
+        "fr": "Ouverture de poignet (mm)"
+      }
+    },
+    {
+      "id": "woven_ease",
+      "type": "slider",
+      "default": 140,
+      "min": 60,
+      "max": 320,
+      "step": 10,
+      "label": {
+        "en": "Total ease (mm)",
+        "es": "Holgura total (mm)",
+        "fr": "Aisance totale (mm)"
+      }
+    },
+    {
+      "id": "button_stand",
+      "type": "slider",
+      "default": 32,
+      "min": 20,
+      "max": 50,
+      "step": 2,
+      "label": {
+        "en": "Button stand width (mm)",
+        "es": "Ancho de tapeta (mm)",
+        "fr": "Largeur de la patte de boutonnage (mm)"
+      }
+    },
+    {
+      "id": "yoke_drop",
+      "type": "slider",
+      "default": 100,
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "advanced": true,
+      "label": {
+        "en": "Yoke drop below HPS (mm)",
+        "es": "Caída del canesú bajo el hombro (mm)",
+        "fr": "Chute d'empiècement sous le HPS (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 20,
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1020, "body_length": 760, "neck_girth": 400, "sleeve_length": 620 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1100, "body_length": 780, "neck_girth": 420, "sleeve_length": 645, "wrist_opening": 250 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "chest_girth": 1020,
+        "body_length": 760,
+        "neck_girth": 400,
+        "sleeve_length": 620
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G",
+        "fr": "L"
+      },
+      "values": {
+        "chest_girth": 1100,
+        "body_length": 780,
+        "neck_girth": 420,
+        "sleeve_length": 645,
+        "wrist_opening": 250
+      }
+    }
   ],
   "constraints": [
     {
       "expression": "button_stand >= 25",
       "severity": "warning",
-      "message": { "en": "Narrow button stands crowd standard 11.5 mm shirt buttons", "es": "Tapetas angostas aprietan los botones de camisa estándar de 11.5 mm" }
+      "message": {
+        "en": "Narrow button stands crowd standard 11.5 mm shirt buttons",
+        "es": "Tapetas angostas aprietan los botones de camisa estándar de 11.5 mm",
+        "fr": "Des pattes de boutonnage étroites serrent les boutons de chemise standard de 11,5 mm"
+      }
     },
     {
       "expression": "yoke_drop >= 60",
       "severity": "warning",
-      "message": { "en": "Very shallow yokes leave no room for the back neck curve", "es": "Canesús muy bajos no dejan espacio para la curva del escote trasero" }
+      "message": {
+        "en": "Very shallow yokes leave no room for the back neck curve",
+        "es": "Canesús muy bajos no dejan espacio para la curva del escote trasero",
+        "fr": "Des empiècements très peu profonds ne laissent aucune place pour la courbe d'encolure dos"
+      }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["popelina-algodon"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "popelina-algodon"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "neck" }, { "piece": "yoke", "edge": "neck" }], "parameters": ["neck_girth"] },
-      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }], "parameters": ["chest_girth", "woven_ease"] },
-      { "id": "cuff", "type": "cuff", "edges": [{ "piece": "sleeve", "edge": "hem" }], "parameters": ["wrist_opening"] },
-      { "id": "button_stand", "type": "button_stand", "edges": [{ "piece": "front", "edge": "center" }], "parameters": ["button_stand", "body_length"] }
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "yoke",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "woven_ease"
+        ]
+      },
+      {
+        "id": "cuff",
+        "type": "cuff",
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "wrist_opening"
+        ]
+      },
+      {
+        "id": "button_stand",
+        "type": "button_stand",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "center"
+          }
+        ],
+        "parameters": [
+          "button_stand",
+          "body_length"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
     "societal_benefit": {
       "en": "The wardrobe's formal workhorse — and the cartridge that proves chained derivation: the collar stand is computed from the measured neckline, then the collar fall from the stand's own measured edge, so every derived piece stays true when the body measurements change.",
-      "es": "El caballo de batalla formal del guardarropa — y el cartucho que demuestra la derivación en cadena: el pie de cuello se calcula del escote medido y la caída del cuello del borde medido del propio pie, de modo que cada pieza derivada sigue siendo fiel cuando cambian las medidas del cuerpo."
+      "es": "El caballo de batalla formal del guardarropa — y el cartucho que demuestra la derivación en cadena: el pie de cuello se calcula del escote medido y la caída del cuello del borde medido del propio pie, de modo que cada pieza derivada sigue siendo fiel cuando cambian las medidas del cuerpo.",
+      "fr": "La bête de somme habillée du vestiaire — et la cartouche qui prouve la dérivation enchaînée : le pied de col est calculé à partir de l'encolure mesurée, puis le tombant du col à partir du propre bord mesuré du pied, de sorte que chaque pièce dérivée reste fidèle quand les mesures du corps changent."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

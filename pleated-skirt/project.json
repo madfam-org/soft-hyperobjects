@@ -6,51 +6,340 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #34. The commons' first pleat-spreading draft: a knife-pleated skirt from rectangular front and back panels cut on the fold, each half-width spread to (waist + ease) / 4 × pleat multiplier so at 3.0 every pleat hides twice its visible face. Fold lines, placement lines and fold-direction arrows are generated per pleat; a side zipper opens the front side seam, and the straight cut-1 waistband equals the finished pleated-down waist plus overlap, verified against the unpleated waist edges by an eased check computed from the pleat intake.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #34 del FC-100. El primer trazo con extendido de plisado del commons: falda de pliegues rectos a partir de paneles rectangulares delantero y trasero cortados al doblez, cada medio ancho extendido a (cintura + holgura) / 4 × multiplicador de plisado, de modo que en 3.0 cada pliegue oculta el doble de su cara visible. Las líneas de doblez, líneas de colocación y flechas de dirección se generan por pliegue; un cierre lateral abre la costura lateral delantera, y la pretina recta de un corte es igual a la cintura terminada ya plisada más traslape, verificada contra las cinturas sin plisar mediante una comprobación con embebido calculado del consumo de pliegues.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #34 del FC-100. El primer trazo con extendido de plisado del commons: falda de pliegues rectos a partir de paneles rectangulares delantero y trasero cortados al doblez, cada medio ancho extendido a (cintura + holgura) / 4 × multiplicador de plisado, de modo que en 3.0 cada pliegue oculta el doble de su cara visible. Las líneas de doblez, líneas de colocación y flechas de dirección se generan por pliegue; un cierre lateral abre la costura lateral delantera, y la pretina recta de un corte es igual a la cintura terminada ya plisada más traslape, verificada contra las cinturas sin plisar mediante una comprobación con embebido calculado del consumo de pliegues.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "FC-100 rang n°34. Le premier tracé à déploiement de plis du commons : une jupe à plis plats à partir de panneaux rectangulaires devant et dos coupés au pli, chaque demi-largeur déployée à (taille + aisance) / 4 × multiplicateur de pli, de sorte qu'à 3,0 chaque pli cache le double de sa face visible. Les lignes de pli, lignes de placement et flèches de sens de pli sont générées par pli ; une fermeture éclair de côté ouvre la couture de côté devant, et la ceinture droite coupée en 1 est égale à la taille finie plissée plus le recouvrement, vérifiée par rapport aux bords de taille non plissés par un contrôle d'embu calculé à partir de la valeur des plis.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["skirt", "pleated", "knife-pleats", "woven", "fc100", "hyperobject", "commons"],
-    "attribution": { "author": "Innovaciones MADFAM", "license": "LicenseRef-FC1-pending", "lineage": [{ "source": "Original draft for Fashion Cabinet (pleat-spreading rectangular draft)", "license": "original" }] }
+    "tags": [
+      "skirt",
+      "pleated",
+      "knife-pleats",
+      "woven",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet (pleat-spreading rectangular draft)",
+          "license": "original"
+        }
+      ]
+    }
   },
-  "modes": [{ "id": "pleated", "label": { "en": "Pleated skirt (all pieces)", "es": "Falda plisada (todas las piezas)" }, "script_file": "main.py", "pieces": ["front", "back", "waistband"] }],
+  "modes": [
+    {
+      "id": "pleated",
+      "label": {
+        "en": "Pleated skirt (all pieces)",
+        "es": "Falda plisada (todas las piezas)",
+        "fr": "Jupe plissée (toutes les pièces)"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "waistband"
+      ]
+    }
+  ],
   "pieces": [
-    { "id": "front", "label": { "en": "Pleated Skirt Front", "es": "Falda Plisada Delantera" }, "default_color": "#46608a", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "back", "label": { "en": "Pleated Skirt Back", "es": "Falda Plisada Trasera" }, "default_color": "#35496b", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "waistband", "label": { "en": "Waistband", "es": "Pretina" }, "default_color": "#6f83a9", "cut": { "quantity": 1 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Pleated Skirt Front",
+        "es": "Falda Plisada Delantera",
+        "fr": "Devant de jupe plissée"
+      },
+      "default_color": "#46608a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Pleated Skirt Back",
+        "es": "Falda Plisada Trasera",
+        "fr": "Dos de jupe plissée"
+      },
+      "default_color": "#35496b",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "Waistband",
+        "es": "Pretina",
+        "fr": "Ceinture"
+      },
+      "default_color": "#6f83a9",
+      "cut": {
+        "quantity": 1
+      }
+    }
   ],
   "parameters": [
-    { "id": "waist_girth", "type": "slider", "default": 700, "min": 450, "max": 1500, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
-    { "id": "skirt_length", "type": "slider", "default": 560, "min": 350, "max": 900, "step": 10, "label": { "en": "Skirt length (mm)", "es": "Largo de falda (mm)" } },
-    { "id": "waist_ease", "type": "slider", "default": 15, "min": 0, "max": 80, "step": 5, "label": { "en": "Waist ease (mm)", "es": "Holgura de cintura (mm)" } },
-    { "id": "pleat_multiplier", "type": "slider", "default": 3.0, "min": 2.0, "max": 3.5, "step": 0.1, "tooltip": { "en": "Flat fabric per unit of finished waist; 3.0 = fully pleated (each pleat hides 2× its face)", "es": "Tela plana por unidad de cintura terminada; 3.0 = plisado completo (cada pliegue oculta 2× su cara)" }, "label": { "en": "Pleat multiplier", "es": "Multiplicador de plisado" } },
-    { "id": "pleat_face", "type": "slider", "default": 30, "min": 15, "max": 60, "step": 5, "tooltip": { "en": "Visible width of each knife pleat at the waist", "es": "Ancho visible de cada pliegue en la cintura" }, "label": { "en": "Pleat face (mm)", "es": "Cara del pliegue (mm)" } },
-    { "id": "zipper_length", "type": "slider", "default": 180, "min": 120, "max": 250, "step": 10, "label": { "en": "Zipper length (mm)", "es": "Largo de cierre (mm)" } },
-    { "id": "overlap", "type": "slider", "default": 30, "min": 0, "max": 60, "step": 5, "label": { "en": "Waistband overlap (mm)", "es": "Traslape de pretina (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 12, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 30, "min": 0, "max": 60, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "default": 700,
+      "min": 450,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      }
+    },
+    {
+      "id": "skirt_length",
+      "type": "slider",
+      "default": 560,
+      "min": 350,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Skirt length (mm)",
+        "es": "Largo de falda (mm)",
+        "fr": "Longueur de jupe (mm)"
+      }
+    },
+    {
+      "id": "waist_ease",
+      "type": "slider",
+      "default": 15,
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "label": {
+        "en": "Waist ease (mm)",
+        "es": "Holgura de cintura (mm)",
+        "fr": "Aisance de taille (mm)"
+      }
+    },
+    {
+      "id": "pleat_multiplier",
+      "type": "slider",
+      "default": 3.0,
+      "min": 2.0,
+      "max": 3.5,
+      "step": 0.1,
+      "tooltip": {
+        "en": "Flat fabric per unit of finished waist; 3.0 = fully pleated (each pleat hides 2× its face)",
+        "es": "Tela plana por unidad de cintura terminada; 3.0 = plisado completo (cada pliegue oculta 2× su cara)",
+        "fr": "Tissu à plat par unité de taille finie ; 3,0 = entièrement plissé (chaque pli cache 2× sa face)"
+      },
+      "label": {
+        "en": "Pleat multiplier",
+        "es": "Multiplicador de plisado",
+        "fr": "Multiplicateur de plis"
+      }
+    },
+    {
+      "id": "pleat_face",
+      "type": "slider",
+      "default": 30,
+      "min": 15,
+      "max": 60,
+      "step": 5,
+      "tooltip": {
+        "en": "Visible width of each knife pleat at the waist",
+        "es": "Ancho visible de cada pliegue en la cintura",
+        "fr": "Largeur visible de chaque pli plat à la taille"
+      },
+      "label": {
+        "en": "Pleat face (mm)",
+        "es": "Cara del pliegue (mm)",
+        "fr": "Face du pli (mm)"
+      }
+    },
+    {
+      "id": "zipper_length",
+      "type": "slider",
+      "default": 180,
+      "min": 120,
+      "max": 250,
+      "step": 10,
+      "label": {
+        "en": "Zipper length (mm)",
+        "es": "Largo de cierre (mm)",
+        "fr": "Longueur de fermeture à glissière (mm)"
+      }
+    },
+    {
+      "id": "overlap",
+      "type": "slider",
+      "default": 30,
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Waistband overlap (mm)",
+        "es": "Traslape de pretina (mm)",
+        "fr": "Chevauchement de ceinture (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 12,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 30,
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "school", "label": { "en": "School (above knee)", "es": "Escolar (arriba de la rodilla)" }, "values": { "skirt_length": 480 } },
-    { "id": "midi", "label": { "en": "Midi", "es": "Midi" }, "values": { "skirt_length": 640 } }
+    {
+      "id": "school",
+      "label": {
+        "en": "School (above knee)",
+        "es": "Escolar (arriba de la rodilla)",
+        "fr": "Scolaire (au-dessus du genou)"
+      },
+      "values": {
+        "skirt_length": 480
+      }
+    },
+    {
+      "id": "midi",
+      "label": {
+        "en": "Midi",
+        "es": "Midi",
+        "fr": "Midi"
+      },
+      "values": {
+        "skirt_length": 640
+      }
+    }
   ],
   "constraints": [
-    { "expression": "pleat_multiplier >= 2.0 and pleat_multiplier <= 3.5", "severity": "warning", "message": { "en": "Pleat multiplier outside 2.0–3.5 is clamped by the draft; 3.0 gives fully pleated knife pleats", "es": "Un multiplicador fuera de 2.0–3.5 se limita en el trazo; 3.0 da pliegues rectos completamente plisados" } },
-    { "expression": "zipper_length < skirt_length / 2", "severity": "error", "message": { "en": "The side zipper must stay above half the skirt length", "es": "El cierre lateral debe quedar por encima de la mitad del largo de falda" } }
+    {
+      "expression": "pleat_multiplier >= 2.0 and pleat_multiplier <= 3.5",
+      "severity": "warning",
+      "message": {
+        "en": "Pleat multiplier outside 2.0–3.5 is clamped by the draft; 3.0 gives fully pleated knife pleats",
+        "es": "Un multiplicador fuera de 2.0–3.5 se limita en el trazo; 3.0 da pliegues rectos completamente plisados",
+        "fr": "Un multiplicateur de pli hors de 2,0–3,5 est bridé par le tracé ; 3,0 donne des plis plats entièrement plissés"
+      }
+    },
+    {
+      "expression": "zipper_length < skirt_length / 2",
+      "severity": "error",
+      "message": {
+        "en": "The side zipper must stay above half the skirt length",
+        "es": "El cierre lateral debe quedar por encima de la mitad del largo de falda",
+        "fr": "La fermeture éclair de côté doit rester au-dessus de la moitié de la longueur de la jupe"
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["popelina-algodon"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "popelina-algodon"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "waistband", "type": "waistband", "edges": [{ "piece": "front", "edge": "waist" }, { "piece": "back", "edge": "waist" }], "parameters": ["waist_girth", "waist_ease", "pleat_multiplier", "overlap"] },
-      { "id": "zipper_tape", "type": "zipper_tape", "edges": [{ "piece": "front", "edge": "side" }], "parameters": ["zipper_length"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["skirt_length", "hem_allowance"] }
+      {
+        "id": "waistband",
+        "type": "waistband",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "waist"
+          },
+          {
+            "piece": "back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "waist_ease",
+          "pleat_multiplier",
+          "overlap"
+        ]
+      },
+      {
+        "id": "zipper_tape",
+        "type": "zipper_tape",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "zipper_length"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "skirt_length",
+          "hem_allowance"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "pleat_spreading": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "pleat_spreading": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
     "societal_benefit": {
       "en": "The commons' first pleat-spreading draft: pleat fullness becomes closed arithmetic — panels spread by a multiplier, markings generated per pleat, and a waistband check proving the intake sums back to the finished waist before anything is cut.",
-      "es": "El primer trazo con extendido de plisado del commons: el vuelo del plisado se vuelve aritmética cerrada — paneles extendidos por un multiplicador, marcas generadas por pliegue y una comprobación de pretina que demuestra que el consumo suma de vuelta a la cintura terminada antes de cortar."
+      "es": "El primer trazo con extendido de plisado del commons: el vuelo del plisado se vuelve aritmética cerrada — paneles extendidos por un multiplicador, marcas generadas por pliegue y una comprobación de pretina que demuestra que el consumo suma de vuelta a la cintura terminada antes de cortar.",
+      "fr": "Le premier tracé à déploiement de plis du commons : l'ampleur des plis devient une arithmétique fermée — panneaux déployés par un multiplicateur, marques générées par pli, et un contrôle de ceinture prouvant que la valeur des plis se retotalise à la taille finie avant toute coupe."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

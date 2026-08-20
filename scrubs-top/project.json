@@ -6,10 +6,21 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #85 — the healthcare uniform staple, parametric. Boxy woven front and back cut on fold with a straight-line V-neck, a short sleeve whose cap is solved numerically to match the front + back armholes at zero ease, a V-neck facing strip derived from the measured neck opening, and a chest patch pocket.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #85 del FC-100 — el básico del uniforme médico, paramétrico. Delantero y trasero holgados de tejido plano cortados al doblez con escote en V de líneas rectas, una manga corta cuya copa se resuelve numéricamente para coincidir con las sisas delantera + trasera sin embebido, una vista del escote derivada de la abertura medida y una bolsa de parche al pecho.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #85 del FC-100 — el básico del uniforme médico, paramétrico. Delantero y trasero holgados de tejido plano cortados al doblez con escote en V de líneas rectas, una manga corta cuya copa se resuelve numéricamente para coincidir con las sisas delantera + trasera sin embebido, una vista del escote derivada de la abertura medida y una bolsa de parche al pecho.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Rang #85 du FC-100 — l'incontournable de l'uniforme de santé, paramétrique. Devant et dos boxy en toile tissée coupés au pli avec une encolure en V à lignes droites, une manche courte dont la tête est résolue numériquement pour rejoindre les emmanchures devant + dos sans embu, une parementure d'encolure en V dérivée de l'ouverture d'encolure mesurée, et une poche plaquée poitrine.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
-    "tags": ["scrubs", "filipina", "medical", "workwear", "uniform", "woven", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "scrubs",
+      "filipina",
+      "medical",
+      "workwear",
+      "uniform",
+      "woven",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
@@ -24,31 +35,231 @@
   "modes": [
     {
       "id": "scrubs",
-      "label": { "en": "Scrubs top (all pieces)", "es": "Filipina (todas las piezas)" },
+      "label": {
+        "en": "Scrubs top (all pieces)",
+        "es": "Filipina (todas las piezas)",
+        "fr": "Tunique de bloc (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "sleeve", "facing", "pocket"]
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "facing",
+        "pocket"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#3a9e8c", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Trasero" }, "default_color": "#2f7f70", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#5cb4a2", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "facing", "label": { "en": "V-neck Facing", "es": "Vista del Escote en V" }, "default_color": "#7fc6b6", "cut": { "quantity": 1 } },
-    { "id": "pocket", "label": { "en": "Chest Pocket", "es": "Bolsa de Pecho" }, "default_color": "#a2d8ca", "cut": { "quantity": 1 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#3a9e8c",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Trasero",
+        "fr": "Dos"
+      },
+      "default_color": "#2f7f70",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#5cb4a2",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "facing",
+      "label": {
+        "en": "V-neck Facing",
+        "es": "Vista del Escote en V",
+        "fr": "Parementure d'encolure en V"
+      },
+      "default_color": "#7fc6b6",
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pocket",
+      "label": {
+        "en": "Chest Pocket",
+        "es": "Bolsa de Pecho",
+        "fr": "Poche de poitrine"
+      },
+      "default_color": "#a2d8ca",
+      "cut": {
+        "quantity": 1
+      }
+    }
   ],
   "parameters": [
-    { "id": "chest_girth", "type": "slider", "default": 1000, "min": 600, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
-    { "id": "body_length", "type": "slider", "default": 700, "min": 400, "max": 1000, "step": 10, "label": { "en": "Body length, nape to hem (mm)", "es": "Largo de cuerpo, nuca a dobladillo (mm)" } },
-    { "id": "neck_girth", "type": "slider", "default": 400, "min": 300, "max": 520, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
-    { "id": "v_depth", "type": "slider", "default": 130, "min": 60, "max": 250, "step": 5, "label": { "en": "V-neck depth from HPS line (mm)", "es": "Profundidad del escote en V (mm)" } },
-    { "id": "sleeve_length", "type": "slider", "default": 200, "min": 80, "max": 450, "step": 5, "label": { "en": "Sleeve length, shoulder to hem (mm)", "es": "Largo de manga, hombro a dobladillo (mm)" } },
-    { "id": "woven_ease", "type": "slider", "default": 160, "min": 60, "max": 400, "step": 10, "label": { "en": "Total ease (mm; wovens need room)", "es": "Holgura total (mm; el tejido plano necesita amplitud)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 25, "min": 0, "max": 50, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "default": 1000,
+      "min": 600,
+      "max": 1800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "default": 700,
+      "min": 400,
+      "max": 1000,
+      "step": 10,
+      "label": {
+        "en": "Body length, nape to hem (mm)",
+        "es": "Largo de cuerpo, nuca a dobladillo (mm)",
+        "fr": "Longueur du corps, nuque à l'ourlet (mm)"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 400,
+      "min": 300,
+      "max": 520,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      }
+    },
+    {
+      "id": "v_depth",
+      "type": "slider",
+      "default": 130,
+      "min": 60,
+      "max": 250,
+      "step": 5,
+      "label": {
+        "en": "V-neck depth from HPS line (mm)",
+        "es": "Profundidad del escote en V (mm)",
+        "fr": "Profondeur de l'encolure en V depuis la ligne HPS (mm)"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 200,
+      "min": 80,
+      "max": 450,
+      "step": 5,
+      "label": {
+        "en": "Sleeve length, shoulder to hem (mm)",
+        "es": "Largo de manga, hombro a dobladillo (mm)",
+        "fr": "Longueur de manche, épaule à l'ourlet (mm)"
+      }
+    },
+    {
+      "id": "woven_ease",
+      "type": "slider",
+      "default": 160,
+      "min": 60,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Total ease (mm; wovens need room)",
+        "es": "Holgura total (mm; el tejido plano necesita amplitud)",
+        "fr": "Aisance totale (mm; les tissés ont besoin d'ampleur)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 25,
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1000, "body_length": 700, "neck_girth": 400, "sleeve_length": 200 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1090, "body_length": 730, "neck_girth": 415, "sleeve_length": 210 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "chest_girth": 1000,
+        "body_length": 700,
+        "neck_girth": 400,
+        "sleeve_length": 200
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G",
+        "fr": "L"
+      },
+      "values": {
+        "chest_girth": 1090,
+        "body_length": 730,
+        "neck_girth": 415,
+        "sleeve_length": 210
+      }
+    }
   ],
   "constraints": [
     {
@@ -56,7 +267,8 @@
       "severity": "warning",
       "message": {
         "en": "Below ~80 mm the V reads as a crew neck and a woven opening may not pass over the head",
-        "es": "Debajo de ~80 mm la V se lee como cuello redondo y una abertura de tejido plano puede no pasar la cabeza"
+        "es": "Debajo de ~80 mm la V se lee como cuello redondo y una abertura de tejido plano puede no pasar la cabeza",
+        "fr": "En dessous d'environ 80 mm, le V se lit comme une encolure ras-du-cou et une ouverture en toile risque de ne pas passer la tête"
       }
     },
     {
@@ -64,12 +276,19 @@
       "severity": "warning",
       "message": {
         "en": "Very deep V-necks need an inner layer or modesty panel for clinical wear",
-        "es": "Escotes en V muy profundos requieren capa interior o panel de modestia para uso clínico"
+        "es": "Escotes en V muy profundos requieren capa interior o panel de modestia para uso clínico",
+        "fr": "Les encolures en V très profondes nécessitent une couche intérieure ou une pièce de pudeur pour un usage clinique"
       }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["popelina-algodon"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "popelina-algodon"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
@@ -78,29 +297,59 @@
         "id": "neckline",
         "type": "neckline",
         "edges": [
-          { "piece": "front", "edge": "neck" },
-          { "piece": "back", "edge": "neck" }
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
         ],
-        "parameters": ["neck_girth", "v_depth"]
+        "parameters": [
+          "neck_girth",
+          "v_depth"
+        ]
       },
       {
         "id": "armscye",
         "type": "armscye",
         "edges": [
-          { "piece": "front", "edge": "armhole" },
-          { "piece": "back", "edge": "armhole" },
-          { "piece": "sleeve", "edge": "cap" }
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
         ],
-        "parameters": ["chest_girth", "woven_ease"]
+        "parameters": [
+          "chest_girth",
+          "woven_ease"
+        ]
       },
       {
         "id": "hem",
         "type": "hem",
         "edges": [
-          { "piece": "front", "edge": "hem" },
-          { "piece": "back", "edge": "hem" }
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
         ],
-        "parameters": ["body_length", "hem_allowance"]
+        "parameters": [
+          "body_length",
+          "hem_allowance"
+        ]
       }
     ],
     "capabilities": {
@@ -111,7 +360,8 @@
     },
     "societal_benefit": {
       "en": "Scrubs dress the world's healthcare shifts; a verified parametric filipina lets hospitals, clinics and sewing co-ops cut made-to-measure medical workwear locally — sized to each worker, repairable, and free of uniform-vendor lock-in.",
-      "es": "Las filipinas visten los turnos de salud del mundo; una filipina paramétrica verificada permite a hospitales, clínicas y cooperativas de costura cortar ropa de trabajo médica a la medida localmente — a la talla de cada persona, reparable y sin dependencia de proveedores de uniformes."
+      "es": "Las filipinas visten los turnos de salud del mundo; una filipina paramétrica verificada permite a hospitales, clínicas y cooperativas de costura cortar ropa de trabajo médica a la medida localmente — a la talla de cada persona, reparable y sin dependencia de proveedores de uniformes.",
+      "fr": "Les blouses médicales habillent les gardes de santé du monde entier ; une tunique médicale paramétrique vérifiée permet aux hôpitaux, cliniques et coopératives de couture de tailler localement des vêtements de travail médicaux sur mesure — à la taille de chaque personne, réparables et affranchis de la dépendance aux fournisseurs d'uniformes."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

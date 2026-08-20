@@ -6,51 +6,310 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #77 — the relaxed open-collar resort shirt (camp / Cuban / convertible collar). A woven-tops sibling of the casual button-down: the same drop-shoulder block and one-piece-per-half collar solve, but the collar is FLAT and OPEN instead of a standing band. A front cut 2 with the center edge extended 30 mm past CF as a folded button placket (six buttonhole cross-marks, chest patch-pocket placement, side-vent mark), a back cut on fold with a boxy straight body, a short set-flat sleeve whose cap is solved numerically to the front + back armholes at zero ease, a one-piece flat camp collar solved to the measured neckline with a forward collar point that opens the CF V-notch, and a real chest pocket piece.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #77 del FC-100 — la camisa relajada de cuello abierto tipo resort (cuello camp / cubano / convertible). Hermana de la camisa casual en la familia de tops de tejido plano: el mismo bloque de hombro caído y la misma resolución de cuello de una pieza por mitad, pero el cuello es PLANO y ABIERTO en lugar de una tira de pie. Un delantero cortado en 2 con el borde central extendido 30 mm después del centro frente como cartera doblada (seis cruces de ojal, ubicación de bolsa de parche al pecho, marca de abertura lateral), un trasero cortado al doblez con cuerpo recto holgado, una manga corta montada plana cuya copa se resuelve numéricamente contra las sisas delantera + trasera sin embebido, un cuello camp plano de una pieza resuelto al escote medido con una punta delantera que abre la V del centro frente, y una bolsa de pecho como pieza real.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #77 del FC-100 — la camisa relajada de cuello abierto tipo resort (cuello camp / cubano / convertible). Hermana de la camisa casual en la familia de tops de tejido plano: el mismo bloque de hombro caído y la misma resolución de cuello de una pieza por mitad, pero el cuello es PLANO y ABIERTO en lugar de una tira de pie. Un delantero cortado en 2 con el borde central extendido 30 mm después del centro frente como cartera doblada (seis cruces de ojal, ubicación de bolsa de parche al pecho, marca de abertura lateral), un trasero cortado al doblez con cuerpo recto holgado, una manga corta montada plana cuya copa se resuelve numéricamente contra las sisas delantera + trasera sin embebido, un cuello camp plano de una pieza resuelto al escote medido con una punta delantera que abre la V del centro frente, y una bolsa de pecho como pieza real.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Rang #77 du FC-100 — la chemise décontractée à col ouvert de style resort (col camp / cubain / convertible). Une cousine en tissé de la chemise casual : le même bloc à épaule tombante et la même résolution de col d'une pièce par moitié, mais le col est PLAT et OUVERT au lieu d'une bande montante. Un devant coupé en 2 avec le bord central prolongé de 30 mm au-delà du milieu devant en patte de boutonnage repliée (six croix de boutonnière, emplacement de poche plaquée poitrine, marque de fente latérale), un dos coupé au pli au corps droit et carré, une manche courte montée à plat dont la tête est résolue numériquement aux emmanchures devant + dos sans embu, un col camp plat d'une pièce résolu à l'encolure mesurée avec une pointe de col avancée qui ouvre l'encoche en V du milieu devant, et une vraie poche poitrine.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["shirt", "camisa", "camp-collar", "cuban-collar", "convertible-collar", "guayabera", "short-sleeve", "resort", "woven", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "shirt",
+      "camisa",
+      "camp-collar",
+      "cuban-collar",
+      "convertible-collar",
+      "guayabera",
+      "short-sleeve",
+      "resort",
+      "woven",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet", "license": "original" },
-        { "source": "Drop-shoulder woven shirt block, button-stand front, and one-piece-per-half collar solve adapted from the casual button-down (rank #20) cartridge", "license": "LicenseRef-FC1-pending" },
-        { "source": "Neck-edge bisection method (collar solved to the measured neckline) from the collar-band enabler and dress-shirt (rank #4) cartridges", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "Drop-shoulder woven shirt block, button-stand front, and one-piece-per-half collar solve adapted from the casual button-down (rank #20) cartridge",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "Neck-edge bisection method (collar solved to the measured neckline) from the collar-band enabler and dress-shirt (rank #4) cartridges",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "shirt",
-      "label": { "en": "Camp shirt (all pieces)", "es": "Camisa camp (todas las piezas)" },
+      "label": {
+        "en": "Camp shirt (all pieces)",
+        "es": "Camisa camp (todas las piezas)",
+        "fr": "Chemise à col camp (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "sleeve", "collar", "pocket"]
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "collar",
+        "pocket"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#c98a5e", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Trasero" }, "default_color": "#b6764a", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#d69f78", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "collar", "label": { "en": "Camp Collar", "es": "Cuello Camp" }, "default_color": "#e2b493", "cut": { "quantity": 2, "on_fold": true, "mirror": true } },
-    { "id": "pocket", "label": { "en": "Chest Pocket", "es": "Bolsa de Pecho" }, "default_color": "#eec9ad", "cut": { "quantity": 1 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#c98a5e",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Trasero",
+        "fr": "Dos"
+      },
+      "default_color": "#b6764a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#d69f78",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Camp Collar",
+        "es": "Cuello Camp",
+        "fr": "Col camp"
+      },
+      "default_color": "#e2b493",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "pocket",
+      "label": {
+        "en": "Chest Pocket",
+        "es": "Bolsa de Pecho",
+        "fr": "Poche de poitrine"
+      },
+      "default_color": "#eec9ad",
+      "cut": {
+        "quantity": 1
+      }
+    }
   ],
   "parameters": [
-    { "id": "chest_girth", "type": "slider", "default": 1060, "min": 700, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
-    { "id": "body_length", "type": "slider", "default": 720, "min": 400, "max": 1000, "step": 10, "label": { "en": "Body length, nape to hem (mm)", "es": "Largo de cuerpo, nuca a dobladillo (mm)" } },
-    { "id": "neck_girth", "type": "slider", "default": 400, "min": 300, "max": 520, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
-    { "id": "sleeve_length", "type": "slider", "default": 230, "min": 100, "max": 660, "step": 10, "label": { "en": "Sleeve length, shoulder to hem (mm)", "es": "Largo de manga, hombro a dobladillo (mm)" } },
-    { "id": "woven_ease", "type": "slider", "default": 200, "min": 80, "max": 420, "step": 10, "label": { "en": "Total ease (mm; relaxed boxy fit)", "es": "Holgura total (mm; corte holgado tipo caja)" } },
-    { "id": "button_stand", "type": "slider", "default": 30, "min": 20, "max": 40, "step": 2, "label": { "en": "Button-stand width past CF (mm)", "es": "Ancho de cartera después del centro frente (mm)" } },
-    { "id": "collar_width", "type": "slider", "default": 85, "min": 55, "max": 120, "step": 5, "label": { "en": "Camp collar depth (mm)", "es": "Profundidad del cuello camp (mm)" } },
-    { "id": "collar_point", "type": "slider", "default": 55, "min": 30, "max": 90, "step": 5, "label": { "en": "Collar-point reach at CF (mm)", "es": "Alcance de la punta del cuello en el centro frente (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 20, "min": 0, "max": 50, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "default": 1060,
+      "min": 700,
+      "max": 1800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "default": 720,
+      "min": 400,
+      "max": 1000,
+      "step": 10,
+      "label": {
+        "en": "Body length, nape to hem (mm)",
+        "es": "Largo de cuerpo, nuca a dobladillo (mm)",
+        "fr": "Longueur du corps, nuque à l'ourlet (mm)"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 400,
+      "min": 300,
+      "max": 520,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 230,
+      "min": 100,
+      "max": 660,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length, shoulder to hem (mm)",
+        "es": "Largo de manga, hombro a dobladillo (mm)",
+        "fr": "Longueur de manche, épaule à l'ourlet (mm)"
+      }
+    },
+    {
+      "id": "woven_ease",
+      "type": "slider",
+      "default": 200,
+      "min": 80,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Total ease (mm; relaxed boxy fit)",
+        "es": "Holgura total (mm; corte holgado tipo caja)",
+        "fr": "Aisance totale (mm; coupe carrée décontractée)"
+      }
+    },
+    {
+      "id": "button_stand",
+      "type": "slider",
+      "default": 30,
+      "min": 20,
+      "max": 40,
+      "step": 2,
+      "label": {
+        "en": "Button-stand width past CF (mm)",
+        "es": "Ancho de cartera después del centro frente (mm)",
+        "fr": "Largeur de la patte au-delà du milieu devant (mm)"
+      }
+    },
+    {
+      "id": "collar_width",
+      "type": "slider",
+      "default": 85,
+      "min": 55,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Camp collar depth (mm)",
+        "es": "Profundidad del cuello camp (mm)",
+        "fr": "Profondeur du col camp (mm)"
+      }
+    },
+    {
+      "id": "collar_point",
+      "type": "slider",
+      "default": 55,
+      "min": 30,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Collar-point reach at CF (mm)",
+        "es": "Alcance de la punta del cuello en el centro frente (mm)",
+        "fr": "Portée de la pointe de col au milieu devant (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 20,
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1060, "body_length": 720, "neck_girth": 400, "sleeve_length": 230 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1140, "body_length": 745, "neck_girth": 420, "sleeve_length": 245, "collar_width": 90 } },
-    { "id": "long-sleeve", "label": { "en": "Long sleeve", "es": "Manga larga" }, "values": { "sleeve_length": 600 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "chest_girth": 1060,
+        "body_length": 720,
+        "neck_girth": 400,
+        "sleeve_length": 230
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G",
+        "fr": "L"
+      },
+      "values": {
+        "chest_girth": 1140,
+        "body_length": 745,
+        "neck_girth": 420,
+        "sleeve_length": 245,
+        "collar_width": 90
+      }
+    },
+    {
+      "id": "long-sleeve",
+      "label": {
+        "en": "Long sleeve",
+        "es": "Manga larga",
+        "fr": "Manche longue"
+      },
+      "values": {
+        "sleeve_length": 600
+      }
+    }
   ],
   "constraints": [
     {
@@ -58,7 +317,8 @@
       "severity": "warning",
       "message": {
         "en": "A collar point shorter than ~40% of the collar depth reads stubby and loses the camp lapel line",
-        "es": "Una punta de cuello menor a ~40% de la profundidad se ve chata y pierde la línea de solapa camp"
+        "es": "Una punta de cuello menor a ~40% de la profundidad se ve chata y pierde la línea de solapa camp",
+        "fr": "Une pointe de col plus courte que ~40 % de la profondeur du col paraît trapue et perd la ligne de revers camp"
       }
     },
     {
@@ -66,12 +326,20 @@
       "severity": "warning",
       "message": {
         "en": "Below ~24 mm the stand crowds standard 12-15 mm camp-shirt buttons",
-        "es": "Debajo de ~24 mm la cartera queda justa para botones camp estándar de 12-15 mm"
+        "es": "Debajo de ~24 mm la cartera queda justa para botones camp estándar de 12-15 mm",
+        "fr": "En dessous de ~24 mm, la patte est trop juste pour des boutons de chemise camp standard de 12-15 mm"
       }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["popelina-algodon", "manta-cruda"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "popelina-algodon",
+    "manta-cruda"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
@@ -80,44 +348,86 @@
         "id": "neckline",
         "type": "neckline",
         "edges": [
-          { "piece": "front", "edge": "neck" },
-          { "piece": "back", "edge": "neck" },
-          { "piece": "collar", "edge": "neck" }
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          },
+          {
+            "piece": "collar",
+            "edge": "neck"
+          }
         ],
-        "parameters": ["neck_girth", "collar_width", "collar_point"]
+        "parameters": [
+          "neck_girth",
+          "collar_width",
+          "collar_point"
+        ]
       },
       {
         "id": "armscye",
         "type": "armscye",
         "edges": [
-          { "piece": "front", "edge": "armhole" },
-          { "piece": "back", "edge": "armhole" },
-          { "piece": "sleeve", "edge": "cap" }
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
         ],
-        "parameters": ["chest_girth", "woven_ease"]
+        "parameters": [
+          "chest_girth",
+          "woven_ease"
+        ]
       },
       {
         "id": "hem",
         "type": "hem",
         "edges": [
-          { "piece": "front", "edge": "hem" },
-          { "piece": "back", "edge": "hem" }
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
         ],
-        "parameters": ["body_length", "hem_allowance"]
+        "parameters": [
+          "body_length",
+          "hem_allowance"
+        ]
       },
       {
         "id": "button_stand",
         "type": "button_stand",
         "edges": [
-          { "piece": "front", "edge": "center" }
+          {
+            "piece": "front",
+            "edge": "center"
+          }
         ],
-        "parameters": ["button_stand"]
+        "parameters": [
+          "button_stand"
+        ]
       },
       {
         "id": "chest_pocket",
         "type": "pocket",
         "edges": [
-          { "piece": "pocket", "edge": "top" }
+          {
+            "piece": "pocket",
+            "edge": "top"
+          }
         ],
         "parameters": []
       }
@@ -130,7 +440,8 @@
     },
     "societal_benefit": {
       "en": "The camp collar is the open, unbuttoned face of the woven shirt — the guayabera, the resort shirt, the everyday warm-weather top across the Americas. Drafting it as a verified one-piece flat collar lets sewing co-ops cut breathable made-to-measure shirts locally, sized to real bodies, with a collar that needs no separate stand or fusible fall — simpler to make and to repair than a dress collar, and free of letter-size waste.",
-      "es": "El cuello camp es la cara abierta y desabotonada de la camisa de tejido plano — la guayabera, la camisa resort, el top cotidiano de clima cálido en toda América. Trazarlo como un cuello plano de una pieza verificado permite a cooperativas de costura cortar camisas frescas a la medida localmente, a la talla de cuerpos reales, con un cuello que no necesita pie ni caída fusionada por separado — más simple de coser y de reparar que un cuello de vestir, y sin desperdicio de tallas genéricas."
+      "es": "El cuello camp es la cara abierta y desabotonada de la camisa de tejido plano — la guayabera, la camisa resort, el top cotidiano de clima cálido en toda América. Trazarlo como un cuello plano de una pieza verificado permite a cooperativas de costura cortar camisas frescas a la medida localmente, a la talla de cuerpos reales, con un cuello que no necesita pie ni caída fusionada por separado — más simple de coser y de reparar que un cuello de vestir, y sin desperdicio de tallas genéricas.",
+      "fr": "Le col camp est le visage ouvert et déboutonné de la chemise tissée — la guayabera, la chemise resort, le haut quotidien de temps chaud dans toutes les Amériques. Le tracer comme un col plat d'une pièce vérifié permet aux coopératives de couture de couper localement des chemises respirantes sur mesure, dimensionnées à des corps réels, avec un col qui ne demande ni bande ni tombant thermocollant séparés — plus simple à confectionner et à réparer qu'un col habillé, et sans gaspillage de tailles génériques."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

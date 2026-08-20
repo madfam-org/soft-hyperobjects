@@ -6,71 +6,497 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #49. Denim dungarees on the side-seamed trouser block with no fly: front/back legs join up to a shaped chest bib (cut on the CF fold) at the front waist and to a lower back panel (cut on the CB fold) at the back waist. Both waist joins are declared seams driven by shared waist formulas so they close with delta ~ 0; the back leg waist inner x is solved analytically for the rise. Two adjustable straps cross in back and buckle to the bib, side hip button plackets open the waist, and heavy gold topstitch runs the out-seams, bib edges and pocket. All hardware (buckles, sliders, tack buttons, rivets) is a Yantra4D cartridge reference, never re-implemented.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #49 del FC-100. Overol de mezclilla sobre el bloque de pantalón con costura lateral y sin bragueta: las piernas delantera/trasera suben a un peto delantero moldeado (corte al doblez del CF) en la cintura delantera y a un panel trasero más bajo (corte al doblez del CB) en la cintura trasera. Ambas uniones de cintura son costuras declaradas gobernadas por fórmulas de cintura compartidas, por lo que cierran con delta ~ 0; la x interior de la cintura trasera se resuelve analíticamente por el tiro. Dos tirantes ajustables se cruzan atrás y se abrochan al peto, aberturas laterales de cadera con botones abren la cintura, y pespunte dorado grueso recorre las costuras exteriores, los bordes del peto y la bolsa. Toda la herrería (hebillas, correderas, botones, remaches) es una referencia de cartucho Yantra4D, nunca reimplementada.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #49 del FC-100. Overol de mezclilla sobre el bloque de pantalón con costura lateral y sin bragueta: las piernas delantera/trasera suben a un peto delantero moldeado (corte al doblez del CF) en la cintura delantera y a un panel trasero más bajo (corte al doblez del CB) en la cintura trasera. Ambas uniones de cintura son costuras declaradas gobernadas por fórmulas de cintura compartidas, por lo que cierran con delta ~ 0; la x interior de la cintura trasera se resuelve analíticamente por el tiro. Dos tirantes ajustables se cruzan atrás y se abrochan al peto, aberturas laterales de cadera con botones abren la cintura, y pespunte dorado grueso recorre las costuras exteriores, los bordes del peto y la bolsa. Toda la herrería (hebillas, correderas, botones, remaches) es una referencia de cartucho Yantra4D, nunca reimplementada.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Rang n°49 du FC-100. Salopette en denim sur le bloc de pantalon à couture de côté, sans braguette : les jambes devant/dos rejoignent en haut un bavoir de poitrine galbé (coupé au pli du milieu devant) à la taille devant et un panneau dos plus bas (coupé au pli du milieu dos) à la taille dos. Les deux jonctions de taille sont des coutures déclarées pilotées par des formules de taille partagées, si bien qu'elles se ferment à delta ~ 0 ; la coordonnée x intérieure de la taille de la jambe dos est résolue analytiquement pour la hauteur de fourche. Deux bretelles réglables se croisent au dos et se bouclent au bavoir, des pattes latérales de hanche à boutons ouvrent la taille, et une piqûre dorée épaisse court le long des coutures extérieures, des bords du bavoir et de la poche. Toute la quincaillerie (boucles, coulisseaux, boutons à griffes, rivets) est une référence de cartouche Yantra4D, jamais réimplémentée.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["overalls", "dungarees", "denim", "workwear", "bib", "bottoms", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "overalls",
+      "dungarees",
+      "denim",
+      "workwear",
+      "bib",
+      "bottoms",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet (denim dungarees on the side-seamed trouser block)", "license": "original" },
-        { "source": "chinos — Fashion Cabinet commons trouser block (side-seamed legs, solved inseam bow, topstitch idioms)", "license": "LicenseRef-FC1-pending" },
-        { "source": "jumpsuit — Fashion Cabinet commons (waist-seam method: top panel joined to legs via shared waist formulas, analytic back-waist inner x)", "license": "LicenseRef-FC1-pending" },
-        { "source": "denim-shorts — Fashion Cabinet commons (denim topstitch, rivet drill marks, hardware-as-Yantra4D BOM)", "license": "LicenseRef-FC1-pending" },
-        { "source": "bib-apron — Fashion Cabinet commons (bib panel + strap strips on fold)", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet (denim dungarees on the side-seamed trouser block)",
+          "license": "original"
+        },
+        {
+          "source": "chinos — Fashion Cabinet commons trouser block (side-seamed legs, solved inseam bow, topstitch idioms)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "jumpsuit — Fashion Cabinet commons (waist-seam method: top panel joined to legs via shared waist formulas, analytic back-waist inner x)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "denim-shorts — Fashion Cabinet commons (denim topstitch, rivet drill marks, hardware-as-Yantra4D BOM)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "bib-apron — Fashion Cabinet commons (bib panel + strap strips on fold)",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
-  "modes": [{ "id": "overalls", "label": { "en": "Bib Overalls (all pieces)", "es": "Overol de peto (todas las piezas)" }, "script_file": "main.py", "pieces": ["front", "back", "bib", "back_panel", "strap", "bib_pocket"] }],
+  "modes": [
+    {
+      "id": "overalls",
+      "label": {
+        "en": "Bib Overalls (all pieces)",
+        "es": "Overol de peto (todas las piezas)",
+        "fr": "Salopette à bavette (toutes les pièces)"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "bib",
+        "back_panel",
+        "strap",
+        "bib_pocket"
+      ]
+    }
+  ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front Leg", "es": "Pierna Delantera" }, "default_color": "#3f5573", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back Leg", "es": "Pierna Trasera" }, "default_color": "#354a66", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "bib", "label": { "en": "Bib (front)", "es": "Peto (delantero)" }, "default_color": "#4a6488", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "back_panel", "label": { "en": "Back Panel", "es": "Panel Trasero" }, "default_color": "#43597a", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "strap", "label": { "en": "Strap", "es": "Tirante" }, "default_color": "#5a76a6", "cut": { "quantity": 2 } },
-    { "id": "bib_pocket", "label": { "en": "Bib Pocket", "es": "Bolsa del Peto" }, "default_color": "#6884b4", "cut": { "quantity": 1, "on_fold": true, "mirror": true } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front Leg",
+        "es": "Pierna Delantera",
+        "fr": "Jambe devant"
+      },
+      "default_color": "#3f5573",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back Leg",
+        "es": "Pierna Trasera",
+        "fr": "Jambe dos"
+      },
+      "default_color": "#354a66",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "bib",
+      "label": {
+        "en": "Bib (front)",
+        "es": "Peto (delantero)",
+        "fr": "Bavette (devant)"
+      },
+      "default_color": "#4a6488",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back_panel",
+      "label": {
+        "en": "Back Panel",
+        "es": "Panel Trasero",
+        "fr": "Panneau dos"
+      },
+      "default_color": "#43597a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "strap",
+      "label": {
+        "en": "Strap",
+        "es": "Tirante",
+        "fr": "Bretelle"
+      },
+      "default_color": "#5a76a6",
+      "cut": {
+        "quantity": 2
+      }
+    },
+    {
+      "id": "bib_pocket",
+      "label": {
+        "en": "Bib Pocket",
+        "es": "Bolsa del Peto",
+        "fr": "Poche de bavette"
+      },
+      "default_color": "#6884b4",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    }
   ],
   "parameters": [
-    { "id": "hip_girth", "type": "slider", "default": 1020, "min": 650, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
-    { "id": "waist_girth", "type": "slider", "default": 900, "min": 500, "max": 1600, "step": 10, "measurement": { "standard": "iso_8559", "code": "waist_girth" }, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)" } },
-    { "id": "inseam_length", "type": "slider", "default": 720, "min": 300, "max": 950, "step": 10, "measurement": { "standard": "iso_8559", "code": "inside_leg_length" }, "label": { "en": "Inseam (mm)", "es": "Entrepierna (mm)" } },
-    { "id": "front_rise", "type": "slider", "default": 280, "min": 190, "max": 380, "step": 5, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)" } },
-    { "id": "back_rise", "type": "slider", "default": 330, "min": 190, "max": 470, "step": 5, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)" } },
-    { "id": "denim_ease", "type": "slider", "default": 140, "min": 60, "max": 400, "step": 10, "label": { "en": "Total hip ease (mm)", "es": "Holgura total de cadera (mm)" } },
-    { "id": "hem_width", "type": "slider", "default": 120, "min": 90, "max": 260, "step": 5, "label": { "en": "Hem half-width, flat (mm)", "es": "Medio bajo, extendido (mm)" } },
-    { "id": "bib_width", "type": "slider", "default": 260, "min": 180, "max": 380, "step": 10, "label": { "en": "Bib top width (mm)", "es": "Ancho superior del peto (mm)" } },
-    { "id": "bib_height", "type": "slider", "default": 300, "min": 200, "max": 420, "step": 10, "label": { "en": "Bib height above waist (mm)", "es": "Alto del peto sobre la cintura (mm)" } },
-    { "id": "back_height", "type": "slider", "default": 200, "min": 120, "max": 360, "step": 10, "label": { "en": "Back panel height above waist (mm)", "es": "Alto del panel trasero sobre la cintura (mm)" } },
-    { "id": "strap_width", "type": "slider", "default": 45, "min": 30, "max": 60, "step": 5, "label": { "en": "Strap width (mm)", "es": "Ancho del tirante (mm)" } },
-    { "id": "strap_length", "type": "slider", "default": 700, "min": 450, "max": 1000, "step": 10, "label": { "en": "Strap length, each (mm)", "es": "Largo de tirante, c/u (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 12, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 40, "min": 0, "max": 60, "step": 5, "label": { "en": "Hem allowance, turned twice (mm)", "es": "Dobladillo de doble doblez (mm)" } }
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "default": 1020,
+      "min": 650,
+      "max": 1800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "default": 900,
+      "min": 500,
+      "max": 1600,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      }
+    },
+    {
+      "id": "inseam_length",
+      "type": "slider",
+      "default": 720,
+      "min": 300,
+      "max": 950,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "inside_leg_length"
+      },
+      "label": {
+        "en": "Inseam (mm)",
+        "es": "Entrepierna (mm)",
+        "fr": "Entrejambe (mm)"
+      }
+    },
+    {
+      "id": "front_rise",
+      "type": "slider",
+      "default": 280,
+      "min": 190,
+      "max": 380,
+      "step": 5,
+      "label": {
+        "en": "Front rise (mm)",
+        "es": "Tiro delantero (mm)",
+        "fr": "Hauteur de fourche avant (mm)"
+      }
+    },
+    {
+      "id": "back_rise",
+      "type": "slider",
+      "default": 330,
+      "min": 190,
+      "max": 470,
+      "step": 5,
+      "label": {
+        "en": "Back rise (mm)",
+        "es": "Tiro trasero (mm)",
+        "fr": "Hauteur de fourche arrière (mm)"
+      }
+    },
+    {
+      "id": "denim_ease",
+      "type": "slider",
+      "default": 140,
+      "min": 60,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Total hip ease (mm)",
+        "es": "Holgura total de cadera (mm)",
+        "fr": "Aisance totale aux hanches (mm)"
+      }
+    },
+    {
+      "id": "hem_width",
+      "type": "slider",
+      "default": 120,
+      "min": 90,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Hem half-width, flat (mm)",
+        "es": "Medio bajo, extendido (mm)",
+        "fr": "Demi-largeur de bas, à plat (mm)"
+      }
+    },
+    {
+      "id": "bib_width",
+      "type": "slider",
+      "default": 260,
+      "min": 180,
+      "max": 380,
+      "step": 10,
+      "label": {
+        "en": "Bib top width (mm)",
+        "es": "Ancho superior del peto (mm)",
+        "fr": "Largeur supérieure de bavette (mm)"
+      }
+    },
+    {
+      "id": "bib_height",
+      "type": "slider",
+      "default": 300,
+      "min": 200,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Bib height above waist (mm)",
+        "es": "Alto del peto sobre la cintura (mm)",
+        "fr": "Hauteur de bavette au-dessus de la taille (mm)"
+      }
+    },
+    {
+      "id": "back_height",
+      "type": "slider",
+      "default": 200,
+      "min": 120,
+      "max": 360,
+      "step": 10,
+      "label": {
+        "en": "Back panel height above waist (mm)",
+        "es": "Alto del panel trasero sobre la cintura (mm)",
+        "fr": "Hauteur du panneau dos au-dessus de la taille (mm)"
+      }
+    },
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "default": 45,
+      "min": 30,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho del tirante (mm)",
+        "fr": "Largeur de bretelle (mm)"
+      }
+    },
+    {
+      "id": "strap_length",
+      "type": "slider",
+      "default": 700,
+      "min": 450,
+      "max": 1000,
+      "step": 10,
+      "label": {
+        "en": "Strap length, each (mm)",
+        "es": "Largo de tirante, c/u (mm)",
+        "fr": "Longueur de bretelle, chacune (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 12,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 40,
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance, turned twice (mm)",
+        "es": "Dobladillo de doble doblez (mm)",
+        "fr": "Marge d'ourlet, double rempli (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "hip_girth": 1020, "waist_girth": 900, "inseam_length": 720 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "hip_girth": 1140, "waist_girth": 1000, "inseam_length": 760 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "hip_girth": 1020,
+        "waist_girth": 900,
+        "inseam_length": 720
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G",
+        "fr": "L"
+      },
+      "values": {
+        "hip_girth": 1140,
+        "waist_girth": 1000,
+        "inseam_length": 760
+      }
+    }
   ],
   "constraints": [
-    { "expression": "back_rise >= front_rise", "severity": "error", "message": { "en": "Back rise must be at least the front rise", "es": "El tiro trasero debe ser al menos el delantero" } },
-    { "expression": "waist_girth <= hip_girth", "severity": "warning", "message": { "en": "A waist larger than the hip flattens the leg-to-waist suppression", "es": "Una cintura mayor que la cadera aplana la reducción de pierna a cintura" } },
-    { "expression": "denim_ease >= 60", "severity": "warning", "message": { "en": "Rigid denim overalls need at least 60 mm of ease or they bind", "es": "El overol de mezclilla rígida necesita al menos 60 mm de holgura o aprieta" } }
+    {
+      "expression": "back_rise >= front_rise",
+      "severity": "error",
+      "message": {
+        "en": "Back rise must be at least the front rise",
+        "es": "El tiro trasero debe ser al menos el delantero",
+        "fr": "La hauteur de fourche du dos doit valoir au moins celle du devant"
+      }
+    },
+    {
+      "expression": "waist_girth <= hip_girth",
+      "severity": "warning",
+      "message": {
+        "en": "A waist larger than the hip flattens the leg-to-waist suppression",
+        "es": "Una cintura mayor que la cadera aplana la reducción de pierna a cintura",
+        "fr": "Une taille plus grande que la hanche aplatit la reprise de jambe à taille"
+      }
+    },
+    {
+      "expression": "denim_ease >= 60",
+      "severity": "warning",
+      "message": {
+        "en": "Rigid denim overalls need at least 60 mm of ease or they bind",
+        "es": "El overol de mezclilla rígida necesita al menos 60 mm de holgura o aprieta",
+        "fr": "Une salopette en denim rigide a besoin d'au moins 60 mm d'aisance sinon elle serre"
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["mezclilla-denim"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "mezclilla-denim"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "bib_waist", "type": "waistband", "edges": [{ "piece": "bib", "edge": "bottom" }, { "piece": "front", "edge": "waist" }], "parameters": ["waist_girth", "bib_width"] },
-      { "id": "back_waist", "type": "waistband", "edges": [{ "piece": "back_panel", "edge": "bottom" }, { "piece": "back", "edge": "waist" }], "parameters": ["waist_girth", "back_height"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["hem_width", "hem_allowance"] },
-      { "id": "strap_buckle", "type": "custom", "edges": [{ "piece": "bib", "edge": "bib_top" }, { "piece": "strap", "edge": "end_b" }], "parameters": ["strap_width", "strap_length"] }
+      {
+        "id": "bib_waist",
+        "type": "waistband",
+        "edges": [
+          {
+            "piece": "bib",
+            "edge": "bottom"
+          },
+          {
+            "piece": "front",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "bib_width"
+        ]
+      },
+      {
+        "id": "back_waist",
+        "type": "waistband",
+        "edges": [
+          {
+            "piece": "back_panel",
+            "edge": "bottom"
+          },
+          {
+            "piece": "back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "back_height"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "hem_width",
+          "hem_allowance"
+        ]
+      },
+      {
+        "id": "strap_buckle",
+        "type": "custom",
+        "edges": [
+          {
+            "piece": "bib",
+            "edge": "bib_top"
+          },
+          {
+            "piece": "strap",
+            "edge": "end_b"
+          }
+        ],
+        "parameters": [
+          "strap_width",
+          "strap_length"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
     "societal_benefit": {
       "en": "The workwear icon as a commons object: made-to-measure denim dungarees a small workshop can cut in twelve-ounce mezclilla — a real bib, adjustable straps, side-button plackets and rivet marks — without licensing a block, with all hardware sourced as an open Yantra4D cartridge.",
-      "es": "El ícono de la ropa de trabajo como objeto del commons: overol de mezclilla a medida que cualquier taller pequeño puede cortar en mezclilla de doce onzas — peto real, tirantes ajustables, aberturas laterales con botón y marcas de remache — sin licenciar un bloque, con toda la herrería obtenida como cartucho abierto de Yantra4D."
+      "es": "El ícono de la ropa de trabajo como objeto del commons: overol de mezclilla a medida que cualquier taller pequeño puede cortar en mezclilla de doce onzas — peto real, tirantes ajustables, aberturas laterales con botón y marcas de remache — sin licenciar un bloque, con toda la herrería obtenida como cartucho abierto de Yantra4D.",
+      "fr": "L'icône du vêtement de travail comme objet du commun : une salopette en denim sur mesure qu'un petit atelier peut couper dans du denim de douze onces — un vrai bavoir, des bretelles réglables, des pattes latérales à boutons et des marques de rivet — sans licence de bloc, toute la quincaillerie étant fournie comme cartouche Yantra4D ouverte."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

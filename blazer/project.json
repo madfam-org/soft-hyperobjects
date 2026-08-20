@@ -6,88 +6,475 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #30. The commons' first tailoring garment: a teaching-grade single-breasted blazer, honestly simplified. The front's center edge runs up the button stand to the roll point at waist level, then breaks into a straight lapel out to the lapel point and a gorge edge back to the neck point, with a fisheye waist dart, hip flap-pocket markings, and the roll line marked. The back carries a shaped center-back seam with vent markings, the one-piece sleeve cap is solved to the measured armholes plus 25 mm of declared ease — the commons' first eased cap — the upper collar is solved to the gorge + back neck, and a straight front facing is verified against the measured center + lapel + gorge run. No lining or canvas in v0.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #30 del FC-100. La primera prenda de sastrería del común: un saco (blazer) de un solo pecho con grado didáctico, simplificado con honestidad. El canto delantero sube por la tapeta hasta el punto de quiebre a la altura de la cintura, y ahí rompe en una solapa recta hasta la punta de solapa y un escote (gorge) de regreso al punto de cuello, con pinza de pez en la cintura, marcas de bolsillo de cartera en la cadera y la línea de quiebre marcada. La espalda lleva costura central formada con marcas de abertura (vent), la copa de la manga de una pieza se resuelve a las sisas medidas más 25 mm de embebido declarado — la primera copa embebida del común — el cuello superior se resuelve al gorge más el escote trasero, y una vista delantera recta se verifica contra el recorrido medido de canto + solapa + gorge. Sin forro ni entretela de sastre en v0.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #30 del FC-100. La primera prenda de sastrería del común: un saco (blazer) de un solo pecho con grado didáctico, simplificado con honestidad. El canto delantero sube por la tapeta hasta el punto de quiebre a la altura de la cintura, y ahí rompe en una solapa recta hasta la punta de solapa y un escote (gorge) de regreso al punto de cuello, con pinza de pez en la cintura, marcas de bolsillo de cartera en la cadera y la línea de quiebre marcada. La espalda lleva costura central formada con marcas de abertura (vent), la copa de la manga de una pieza se resuelve a las sisas medidas más 25 mm de embebido declarado — la primera copa embebida del común — el cuello superior se resuelve al gorge más el escote trasero, y una vista delantera recta se verifica contra el recorrido medido de canto + solapa + gorge. Sin forro ni entretela de sastre en v0.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Rang n°30 du FC-100. Le premier vêtement de tailleur du commun : un blazer croisé simple de niveau pédagogique, honnêtement simplifié. Le bord central du devant remonte le long de la patte de boutonnage jusqu'au point de cassure au niveau de la taille, puis rompt en un revers droit jusqu'à la pointe de revers et un bord de cran qui revient au point d'encolure, avec une pince poisson de taille, des repères de poche à rabat de hanche, et la ligne de cassure tracée. Le dos porte une couture milieu dos galbée avec repères de fente, la tête de manche d'une pièce est résolue aux emmanchures mesurées plus 25 mm d'aisance déclarée — la première tête embue du commun — le dessus de col est résolu au cran + encolure dos, et une parementure droite de devant est vérifiée contre le parcours mesuré bord + revers + cran. Ni doublure ni entoilage en v0.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "advanced",
-    "tags": ["blazer", "tailoring", "lapel", "roll-line", "facing", "vent", "eased-cap", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "blazer",
+      "tailoring",
+      "lapel",
+      "roll-line",
+      "facing",
+      "vent",
+      "eased-cap",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet", "license": "original" },
-        { "source": "dress-shirt (rank #4) — woven front block, button stand, and chained-solve architecture", "license": "LicenseRef-FC1-pending" },
-        { "source": "collar-band enabler — neck-edge bisection method for the upper collar", "license": "LicenseRef-FC1-pending" },
-        { "source": "denim-jacket (rank #28) — jacket armhole depth and flap-pocket marking conventions", "license": "LicenseRef-FC1-pending" },
-        { "source": "robe (rank #42) — straight diagonal front-edge precedent for the lapel", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "dress-shirt (rank #4) — woven front block, button stand, and chained-solve architecture",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "collar-band enabler — neck-edge bisection method for the upper collar",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "denim-jacket (rank #28) — jacket armhole depth and flap-pocket marking conventions",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "robe (rank #42) — straight diagonal front-edge precedent for the lapel",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "blazer",
-      "label": { "en": "Blazer (all pieces)", "es": "Saco (todas las piezas)" },
+      "label": {
+        "en": "Blazer (all pieces)",
+        "es": "Saco (todas las piezas)",
+        "fr": "Blazer (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "sleeve", "collar", "facing"]
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "collar",
+        "facing"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#4a4458", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Espalda" }, "default_color": "#554e66", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#605a74", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "collar", "label": { "en": "Upper Collar", "es": "Cuello Superior" }, "default_color": "#6c6682", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "facing", "label": { "en": "Front Facing", "es": "Vista Delantera" }, "default_color": "#787290", "cut": { "quantity": 2, "mirror": true } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#4a4458",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#554e66",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#605a74",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Upper Collar",
+        "es": "Cuello Superior",
+        "fr": "Dessus de col"
+      },
+      "default_color": "#6c6682",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "facing",
+      "label": {
+        "en": "Front Facing",
+        "es": "Vista Delantera",
+        "fr": "Parementure devant"
+      },
+      "default_color": "#787290",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    }
   ],
   "parameters": [
-    { "id": "chest_girth", "type": "slider", "default": 1020, "min": 700, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
-    { "id": "body_length", "type": "slider", "default": 700, "min": 500, "max": 1000, "step": 10, "label": { "en": "Body length, nape to hem (mm)", "es": "Largo de cuerpo, nuca a bajo (mm)" } },
-    { "id": "neck_girth", "type": "slider", "default": 400, "min": 300, "max": 520, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
-    { "id": "sleeve_length", "type": "slider", "default": 620, "min": 400, "max": 750, "step": 10, "measurement": { "standard": "iso_8559", "code": "arm_length" }, "label": { "en": "Sleeve length, cap to wrist (mm)", "es": "Largo de manga (mm)" } },
-    { "id": "blazer_ease", "type": "slider", "default": 140, "min": 80, "max": 300, "step": 10, "label": { "en": "Total ease (mm)", "es": "Holgura total (mm)" } },
-    { "id": "button_stand", "type": "slider", "default": 20, "min": 15, "max": 35, "step": 1, "label": { "en": "Button stand width (mm)", "es": "Ancho de tapeta (mm)" } },
-    { "id": "lapel_width", "type": "slider", "default": 85, "min": 60, "max": 110, "step": 5, "label": { "en": "Lapel point past CF (mm)", "es": "Punta de solapa más allá del CF (mm)" } },
-    { "id": "roll_line_y", "type": "slider", "default": 300, "min": 220, "max": 420, "step": 10, "advanced": true, "label": { "en": "Roll point above hem (mm)", "es": "Punto de quiebre sobre el bajo (mm)" } },
-    { "id": "collar_height", "type": "slider", "default": 55, "min": 40, "max": 80, "step": 5, "label": { "en": "Collar height (mm)", "es": "Alto de cuello (mm)" } },
-    { "id": "cap_ease", "type": "slider", "default": 25, "min": 0, "max": 40, "step": 5, "advanced": true, "label": { "en": "Sleeve cap ease (mm)", "es": "Embebido de copa (mm)" } },
-    { "id": "vent_height", "type": "slider", "default": 180, "min": 120, "max": 260, "step": 10, "advanced": true, "label": { "en": "CB vent height (mm)", "es": "Alto de abertura trasera (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 12, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 40, "min": 20, "max": 60, "step": 5, "advanced": true, "label": { "en": "Hem allowance (mm)", "es": "Margen de bajo (mm)" } }
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "default": 1020,
+      "min": 700,
+      "max": 1800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "default": 700,
+      "min": 500,
+      "max": 1000,
+      "step": 10,
+      "label": {
+        "en": "Body length, nape to hem (mm)",
+        "es": "Largo de cuerpo, nuca a bajo (mm)",
+        "fr": "Longueur du corps, nuque à l'ourlet (mm)"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 400,
+      "min": 300,
+      "max": 520,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 620,
+      "min": 400,
+      "max": 750,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "arm_length"
+      },
+      "label": {
+        "en": "Sleeve length, cap to wrist (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche, tête au poignet (mm)"
+      }
+    },
+    {
+      "id": "blazer_ease",
+      "type": "slider",
+      "default": 140,
+      "min": 80,
+      "max": 300,
+      "step": 10,
+      "label": {
+        "en": "Total ease (mm)",
+        "es": "Holgura total (mm)",
+        "fr": "Aisance totale (mm)"
+      }
+    },
+    {
+      "id": "button_stand",
+      "type": "slider",
+      "default": 20,
+      "min": 15,
+      "max": 35,
+      "step": 1,
+      "label": {
+        "en": "Button stand width (mm)",
+        "es": "Ancho de tapeta (mm)",
+        "fr": "Largeur de la patte de boutonnage (mm)"
+      }
+    },
+    {
+      "id": "lapel_width",
+      "type": "slider",
+      "default": 85,
+      "min": 60,
+      "max": 110,
+      "step": 5,
+      "label": {
+        "en": "Lapel point past CF (mm)",
+        "es": "Punta de solapa más allá del CF (mm)",
+        "fr": "Pointe de revers au-delà du milieu devant (mm)"
+      }
+    },
+    {
+      "id": "roll_line_y",
+      "type": "slider",
+      "default": 300,
+      "min": 220,
+      "max": 420,
+      "step": 10,
+      "advanced": true,
+      "label": {
+        "en": "Roll point above hem (mm)",
+        "es": "Punto de quiebre sobre el bajo (mm)",
+        "fr": "Ligne de cassure au-dessus de l'ourlet (mm)"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "default": 55,
+      "min": 40,
+      "max": 80,
+      "step": 5,
+      "label": {
+        "en": "Collar height (mm)",
+        "es": "Alto de cuello (mm)",
+        "fr": "Hauteur du col (mm)"
+      }
+    },
+    {
+      "id": "cap_ease",
+      "type": "slider",
+      "default": 25,
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "advanced": true,
+      "label": {
+        "en": "Sleeve cap ease (mm)",
+        "es": "Embebido de copa (mm)",
+        "fr": "Embu de tête de manche (mm)"
+      }
+    },
+    {
+      "id": "vent_height",
+      "type": "slider",
+      "default": 180,
+      "min": 120,
+      "max": 260,
+      "step": 10,
+      "advanced": true,
+      "label": {
+        "en": "CB vent height (mm)",
+        "es": "Alto de abertura trasera (mm)",
+        "fr": "Hauteur de la fente milieu dos (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 12,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 40,
+      "min": 20,
+      "max": 60,
+      "step": 5,
+      "advanced": true,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de bajo (mm)",
+        "fr": "Marge de bas (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1020, "body_length": 700, "neck_girth": 400, "sleeve_length": 620 } },
-    { "id": "size-l", "label": { "en": "L", "es": "G" }, "values": { "chest_girth": 1100, "body_length": 720, "neck_girth": 420, "sleeve_length": 645, "roll_line_y": 310 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "chest_girth": 1020,
+        "body_length": 700,
+        "neck_girth": 400,
+        "sleeve_length": 620
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L",
+        "es": "G",
+        "fr": "L"
+      },
+      "values": {
+        "chest_girth": 1100,
+        "body_length": 720,
+        "neck_girth": 420,
+        "sleeve_length": 645,
+        "roll_line_y": 310
+      }
+    }
   ],
   "constraints": [
     {
       "expression": "roll_line_y <= body_length - 280",
       "severity": "warning",
-      "message": { "en": "A high roll point crowds the lapel against the chest line — keep it near waist level", "es": "Un punto de quiebre alto aprieta la solapa contra la línea de pecho — manténgalo cerca de la cintura" }
+      "message": {
+        "en": "A high roll point crowds the lapel against the chest line — keep it near waist level",
+        "es": "Un punto de quiebre alto aprieta la solapa contra la línea de pecho — manténgalo cerca de la cintura",
+        "fr": "Un point de cassure haut coince le revers contre la ligne de poitrine — gardez-le près du niveau de la taille"
+      }
     },
     {
       "expression": "cap_ease >= 15",
       "severity": "warning",
-      "message": { "en": "Tailored caps ease 15-35 mm into the armhole; below that the cap sews flat like a shirt", "es": "Las copas de sastre embeben 15-35 mm en la sisa; con menos, la copa se cose plana como camisa" }
+      "message": {
+        "en": "Tailored caps ease 15-35 mm into the armhole; below that the cap sews flat like a shirt",
+        "es": "Las copas de sastre embeben 15-35 mm en la sisa; con menos, la copa se cose plana como camisa",
+        "fr": "Les têtes de manche de tailleur s'embuent de 15 à 35 mm dans l'emmanchure ; en deçà, la tête se coud à plat comme une chemise"
+      }
     },
     {
       "expression": "lapel_width <= button_stand + 90",
       "severity": "warning",
-      "message": { "en": "Very wide lapels overwhelm the straight v0 facing strip", "es": "Solapas muy anchas rebasan la vista recta de la v0" }
+      "message": {
+        "en": "Very wide lapels overwhelm the straight v0 facing strip",
+        "es": "Solapas muy anchas rebasan la vista recta de la v0",
+        "fr": "Des revers très larges débordent la bande de parementure droite de la v0"
+      }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["popelina-algodon"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "popelina-algodon"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "gorge" }, { "piece": "back", "edge": "neck" }], "parameters": ["neck_girth", "lapel_width"] },
-      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }], "parameters": ["chest_girth", "blazer_ease", "cap_ease"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["chest_girth", "blazer_ease"] },
-      { "id": "button_stand", "type": "button_stand", "edges": [{ "piece": "front", "edge": "center" }], "parameters": ["button_stand", "roll_line_y"] }
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "gorge"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "lapel_width"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "blazer_ease",
+          "cap_ease"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "blazer_ease"
+        ]
+      },
+      {
+        "id": "button_stand",
+        "type": "button_stand",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "center"
+          }
+        ],
+        "parameters": [
+          "button_stand",
+          "roll_line_y"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "tailoring": true, "fabric_compensation": false, "knit_negative_ease": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "tailoring": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
     "societal_benefit": {
       "en": "Tailoring is the wardrobe's most gatekept craft, and the blazer is its gateway garment: this teaching-grade draft opens the roll line, the lapel break, the eased sleeve cap, and the shaped center-back seam as verified, regenerating geometry — every solve is declared and checked, so a learner can watch the cap grow exactly 25 mm past the armholes and understand why — turning the garment most often bought disposable-corporate into one that can be drafted, fitted, and repaired at home.",
-      "es": "La sastrería es el oficio más cerrado del guardarropa, y el saco es su prenda de entrada: este trazo didáctico abre la línea de quiebre, el rompimiento de la solapa, la copa embebida y la costura central formada como geometría verificada que se regenera — cada resolución está declarada y comprobada, así que quien aprende puede ver la copa crecer exactamente 25 mm sobre las sisas y entender por qué — convirtiendo la prenda que más se compra desechable-corporativa en una que puede trazarse, ajustarse y repararse en casa."
+      "es": "La sastrería es el oficio más cerrado del guardarropa, y el saco es su prenda de entrada: este trazo didáctico abre la línea de quiebre, el rompimiento de la solapa, la copa embebida y la costura central formada como geometría verificada que se regenera — cada resolución está declarada y comprobada, así que quien aprende puede ver la copa crecer exactamente 25 mm sobre las sisas y entender por qué — convirtiendo la prenda que más se compra desechable-corporativa en una que puede trazarse, ajustarse y repararse en casa.",
+      "fr": "Le tailleur est le métier le plus verrouillé de la garde-robe, et le blazer en est le vêtement d'entrée : ce tracé pédagogique ouvre la ligne de cassure, le rompu du revers, la tête de manche embue et la couture milieu dos galbée comme une géométrie vérifiée qui se régénère — chaque résolution est déclarée et contrôlée, si bien qu'un apprenant peut voir la tête croître exactement de 25 mm au-delà des emmanchures et comprendre pourquoi — transformant le vêtement le plus souvent acheté en version corporate jetable en un vêtement qu'on peut tracer, ajuster et réparer chez soi."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

@@ -6,10 +6,22 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #95. The polo-shirt block scaled to child proportions for a uniform-appropriate neat fit: a short CF button placket (2–3 buttons) with a faced backing strip, a folded rib collar band solved to the neck opening by a rib-stretch ratio (negative ease), short set-in sleeves finished with rib bands, side vents at the hem and a dropped 'tennis tail' back. Cotton pique/jersey with knit ease.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #95 del FC-100. El bloque de polo escalado a proporciones infantiles para un ajuste pulcro de uniforme: una tapeta corta de botones al centro (2–3 botones) con tira de refuerzo, un cuello de rib doblado resuelto a la abertura del escote por una razón de estiramiento (holgura negativa), mangas cortas montadas terminadas en puños de rib, aberturas laterales en el bajo y una 'cola de tenis' trasera más larga. Piqué/jersey de algodón con holgura de punto.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #95 del FC-100. El bloque de polo escalado a proporciones infantiles para un ajuste pulcro de uniforme: una tapeta corta de botones al centro (2–3 botones) con tira de refuerzo, un cuello de rib doblado resuelto a la abertura del escote por una razón de estiramiento (holgura negativa), mangas cortas montadas terminadas en puños de rib, aberturas laterales en el bajo y una 'cola de tenis' trasera más larga. Piqué/jersey de algodón con holgura de punto.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Rang #95 du FC-100. Le bloc de polo mis à l'échelle des proportions enfantines pour une coupe nette adaptée à l'uniforme : une patte de boutonnage courte au CF (2 à 3 boutons) avec bande de renfort parementée, un col côtelé plié résolu à l'ouverture d'encolure par un rapport d'étirement de la côte (aisance négative), des manches montées courtes finies par des bords côtelés, des fentes latérales à l'ourlet et un dos rallongé en « queue de tennis ». Piqué/jersey de coton avec aisance de maille.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
-    "tags": ["polo", "school", "uniform", "kids", "placket", "collar", "knit", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "polo",
+      "school",
+      "uniform",
+      "kids",
+      "placket",
+      "collar",
+      "knit",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
@@ -32,39 +44,356 @@
   "modes": [
     {
       "id": "polo",
-      "label": { "en": "School polo (all pieces)", "es": "Polo escolar (todas las piezas)" },
+      "label": {
+        "en": "School polo (all pieces)",
+        "es": "Polo escolar (todas las piezas)",
+        "fr": "Polo scolaire (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "sleeve", "collar", "placket_backing", "cuff"]
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "collar",
+        "placket_backing",
+        "cuff"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#4f79c7", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Trasero" }, "default_color": "#3a5fa3", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#6f95d6", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "collar", "label": { "en": "Collar (rib band)", "es": "Cuello (banda rib)" }, "default_color": "#9ab8e6", "cut": { "quantity": 1 } },
-    { "id": "placket_backing", "label": { "en": "Placket Backing", "es": "Refuerzo de Tapeta" }, "default_color": "#c4d6f2", "cut": { "quantity": 1 } },
-    { "id": "cuff", "label": { "en": "Sleeve Band (rib)", "es": "Puño (rib)" }, "default_color": "#b0c8ec", "cut": { "quantity": 2 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#4f79c7",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Trasero",
+        "fr": "Dos"
+      },
+      "default_color": "#3a5fa3",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#6f95d6",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Collar (rib band)",
+        "es": "Cuello (banda rib)",
+        "fr": "Col (bande côtelée)"
+      },
+      "default_color": "#9ab8e6",
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "placket_backing",
+      "label": {
+        "en": "Placket Backing",
+        "es": "Refuerzo de Tapeta",
+        "fr": "Renfort de patte"
+      },
+      "default_color": "#c4d6f2",
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Sleeve Band (rib)",
+        "es": "Puño (rib)",
+        "fr": "Poignet (côtes)"
+      },
+      "default_color": "#b0c8ec",
+      "cut": {
+        "quantity": 2
+      }
+    }
   ],
   "parameters": [
-    { "id": "chest_girth", "type": "slider", "default": 700, "min": 500, "max": 1000, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
-    { "id": "body_length", "type": "slider", "default": 460, "min": 320, "max": 620, "step": 10, "label": { "en": "Body length, nape to hem (mm)", "es": "Largo de cuerpo, nuca a dobladillo (mm)" } },
-    { "id": "neck_girth", "type": "slider", "default": 300, "min": 240, "max": 400, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
-    { "id": "sleeve_length", "type": "slider", "default": 150, "min": 70, "max": 320, "step": 5, "label": { "en": "Sleeve length, shoulder to hem (mm)", "es": "Largo de manga, hombro a dobladillo (mm)" } },
-    { "id": "knit_ease", "type": "slider", "default": 60, "min": -40, "max": 200, "step": 10, "label": { "en": "Total ease (mm, negative = compression)", "es": "Holgura total (mm, negativa = compresión)" } },
-    { "id": "placket_length", "type": "slider", "default": 110, "min": 60, "max": 180, "step": 5, "label": { "en": "Placket length (mm)", "es": "Largo de tapeta (mm)" } },
-    { "id": "placket_width", "type": "slider", "default": 28, "min": 18, "max": 40, "step": 1, "label": { "en": "Placket width (mm)", "es": "Ancho de tapeta (mm)" } },
-    { "id": "collar_height", "type": "slider", "default": 55, "min": 35, "max": 80, "step": 5, "label": { "en": "Collar height (mm)", "es": "Alto de cuello (mm)" } },
-    { "id": "collar_ratio", "type": "slider", "default": 0.88, "min": 0.75, "max": 1.0, "step": 0.01, "advanced": true, "label": { "en": "Rib stretch ratio (band length / opening)", "es": "Razón de estiramiento rib (largo banda / abertura)" } },
-    { "id": "button_count", "type": "select", "default": 2, "options": [ { "value": 2, "label": { "en": "2 buttons", "es": "2 botones" } }, { "value": 3, "label": { "en": "3 buttons", "es": "3 botones" } } ], "label": { "en": "Buttons", "es": "Botones" } },
-    { "id": "back_tail_drop", "type": "slider", "default": 20, "min": 0, "max": 60, "step": 5, "advanced": true, "label": { "en": "Tennis-tail back drop (mm, 0 = level hem)", "es": "Cola de tenis, caída trasera (mm, 0 = bajo recto)" } },
-    { "id": "vent_height", "type": "slider", "default": 40, "min": 0, "max": 90, "step": 5, "advanced": true, "label": { "en": "Side vent height (mm, 0 = closed side)", "es": "Alto de abertura lateral (mm, 0 = costado cerrado)" } },
-    { "id": "cuff_height", "type": "slider", "default": 22, "min": 0, "max": 45, "step": 1, "advanced": true, "label": { "en": "Sleeve rib band height (mm, 0 = plain hem)", "es": "Alto del puño rib (mm, 0 = dobladillo liso)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 7, "min": 0, "max": 15, "step": 1, "advanced": true, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 20, "min": 0, "max": 40, "step": 5, "advanced": true, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "default": 700,
+      "min": 500,
+      "max": 1000,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "default": 460,
+      "min": 320,
+      "max": 620,
+      "step": 10,
+      "label": {
+        "en": "Body length, nape to hem (mm)",
+        "es": "Largo de cuerpo, nuca a dobladillo (mm)",
+        "fr": "Longueur du corps, nuque à l'ourlet (mm)"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 300,
+      "min": 240,
+      "max": 400,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 150,
+      "min": 70,
+      "max": 320,
+      "step": 5,
+      "label": {
+        "en": "Sleeve length, shoulder to hem (mm)",
+        "es": "Largo de manga, hombro a dobladillo (mm)",
+        "fr": "Longueur de manche, épaule à l'ourlet (mm)"
+      }
+    },
+    {
+      "id": "knit_ease",
+      "type": "slider",
+      "default": 60,
+      "min": -40,
+      "max": 200,
+      "step": 10,
+      "label": {
+        "en": "Total ease (mm, negative = compression)",
+        "es": "Holgura total (mm, negativa = compresión)",
+        "fr": "Aisance totale (mm, négative = compression)"
+      }
+    },
+    {
+      "id": "placket_length",
+      "type": "slider",
+      "default": 110,
+      "min": 60,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Placket length (mm)",
+        "es": "Largo de tapeta (mm)",
+        "fr": "Longueur de la patte (mm)"
+      }
+    },
+    {
+      "id": "placket_width",
+      "type": "slider",
+      "default": 28,
+      "min": 18,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Placket width (mm)",
+        "es": "Ancho de tapeta (mm)",
+        "fr": "Largeur de la patte (mm)"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "default": 55,
+      "min": 35,
+      "max": 80,
+      "step": 5,
+      "label": {
+        "en": "Collar height (mm)",
+        "es": "Alto de cuello (mm)",
+        "fr": "Hauteur du col (mm)"
+      }
+    },
+    {
+      "id": "collar_ratio",
+      "type": "slider",
+      "default": 0.88,
+      "min": 0.75,
+      "max": 1.0,
+      "step": 0.01,
+      "advanced": true,
+      "label": {
+        "en": "Rib stretch ratio (band length / opening)",
+        "es": "Razón de estiramiento rib (largo banda / abertura)",
+        "fr": "Taux d'étirement du bord-côte (longueur bande / ouverture)"
+      }
+    },
+    {
+      "id": "button_count",
+      "type": "select",
+      "default": 2,
+      "options": [
+        {
+          "value": 2,
+          "label": {
+            "en": "2 buttons",
+            "es": "2 botones",
+            "fr": "2 boutons"
+          }
+        },
+        {
+          "value": 3,
+          "label": {
+            "en": "3 buttons",
+            "es": "3 botones",
+            "fr": "3 boutons"
+          }
+        }
+      ],
+      "label": {
+        "en": "Buttons",
+        "es": "Botones",
+        "fr": "Boutons"
+      }
+    },
+    {
+      "id": "back_tail_drop",
+      "type": "slider",
+      "default": 20,
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "advanced": true,
+      "label": {
+        "en": "Tennis-tail back drop (mm, 0 = level hem)",
+        "es": "Cola de tenis, caída trasera (mm, 0 = bajo recto)",
+        "fr": "Basque tennis, chute dos (mm, 0 = ourlet droit)"
+      }
+    },
+    {
+      "id": "vent_height",
+      "type": "slider",
+      "default": 40,
+      "min": 0,
+      "max": 90,
+      "step": 5,
+      "advanced": true,
+      "label": {
+        "en": "Side vent height (mm, 0 = closed side)",
+        "es": "Alto de abertura lateral (mm, 0 = costado cerrado)",
+        "fr": "Hauteur de fente latérale (mm, 0 = côté fermé)"
+      }
+    },
+    {
+      "id": "cuff_height",
+      "type": "slider",
+      "default": 22,
+      "min": 0,
+      "max": 45,
+      "step": 1,
+      "advanced": true,
+      "label": {
+        "en": "Sleeve rib band height (mm, 0 = plain hem)",
+        "es": "Alto del puño rib (mm, 0 = dobladillo liso)",
+        "fr": "Hauteur de poignet côtelé (mm, 0 = ourlet simple)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 7,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "advanced": true,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 20,
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "advanced": true,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "Age 7–8 (M)", "es": "7–8 años (M)" }, "values": { "chest_girth": 700, "body_length": 460, "neck_girth": 300, "sleeve_length": 150 } },
-    { "id": "size-l", "label": { "en": "Age 9–10 (L)", "es": "9–10 años (G)" }, "values": { "chest_girth": 760, "body_length": 500, "neck_girth": 315, "sleeve_length": 165 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "Age 7–8 (M)",
+        "es": "7–8 años (M)",
+        "fr": "7–8 ans (M)"
+      },
+      "values": {
+        "chest_girth": 700,
+        "body_length": 460,
+        "neck_girth": 300,
+        "sleeve_length": 150
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "Age 9–10 (L)",
+        "es": "9–10 años (G)",
+        "fr": "9–10 ans (L)"
+      },
+      "values": {
+        "chest_girth": 760,
+        "body_length": 500,
+        "neck_girth": 315,
+        "sleeve_length": 165
+      }
+    }
   ],
   "constraints": [
     {
@@ -72,7 +401,8 @@
       "severity": "warning",
       "message": {
         "en": "A placket longer than half the child body reads as a henley/quarter-zip draft, not a school polo",
-        "es": "Una tapeta más larga que la mitad del cuerpo infantil se lee como henley o cierre medio, no como polo escolar"
+        "es": "Una tapeta más larga que la mitad del cuerpo infantil se lee como henley o cierre medio, no como polo escolar",
+        "fr": "Une patte plus longue que la moitié du corps de l'enfant se lit comme un tracé de henley/quart-de-zip, non comme un polo scolaire"
       }
     },
     {
@@ -80,7 +410,8 @@
       "severity": "warning",
       "message": {
         "en": "Very narrow plackets are hard to sew cleanly and crowd the buttonholes",
-        "es": "Las tapetas muy angostas son difíciles de coser con limpieza y aprietan los ojales"
+        "es": "Las tapetas muy angostas son difíciles de coser con limpieza y aprietan los ojales",
+        "fr": "Les pattes très étroites sont difficiles à coudre proprement et resserrent les boutonnières"
       }
     },
     {
@@ -88,26 +419,136 @@
       "severity": "warning",
       "message": {
         "en": "A rib collar with little or no negative ease will not hug the neck and may gape",
-        "es": "Un cuello rib con poca o ninguna holgura negativa no ajusta al cuello y puede abrirse"
+        "es": "Un cuello rib con poca o ninguna holgura negativa no ajusta al cuello y puede abrirse",
+        "fr": "Un col côtelé avec peu ou pas d'aisance négative n'épouse pas le cou et risque de bâiller"
       }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["jersey-algodon"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "jersey-algodon"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "neckline", "type": "neckline", "edges": [{ "piece": "front", "edge": "neck" }, { "piece": "back", "edge": "neck" }, { "piece": "collar", "edge": "neck" }], "parameters": ["neck_girth", "collar_height", "collar_ratio"] },
-      { "id": "armscye", "type": "armscye", "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }, { "piece": "sleeve", "edge": "cap" }], "parameters": ["chest_girth", "knit_ease"] },
-      { "id": "cuff", "type": "cuff", "edges": [{ "piece": "sleeve", "edge": "hem" }, { "piece": "cuff", "edge": "bottom" }], "parameters": ["cuff_height", "collar_ratio"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["body_length", "hem_allowance", "back_tail_drop", "vent_height"] },
-      { "id": "placket", "type": "placket", "edges": [{ "piece": "placket_backing", "edge": "side_a" }, { "piece": "placket_backing", "edge": "side_b" }], "parameters": ["placket_length", "placket_width", "button_count"] }
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          },
+          {
+            "piece": "collar",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "collar_height",
+          "collar_ratio"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "knit_ease"
+        ]
+      },
+      {
+        "id": "cuff",
+        "type": "cuff",
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "hem"
+          },
+          {
+            "piece": "cuff",
+            "edge": "bottom"
+          }
+        ],
+        "parameters": [
+          "cuff_height",
+          "collar_ratio"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "body_length",
+          "hem_allowance",
+          "back_tail_drop",
+          "vent_height"
+        ]
+      },
+      {
+        "id": "placket",
+        "type": "placket",
+        "edges": [
+          {
+            "piece": "placket_backing",
+            "edge": "side_a"
+          },
+          {
+            "piece": "placket_backing",
+            "edge": "side_b"
+          }
+        ],
+        "parameters": [
+          "placket_length",
+          "placket_width",
+          "button_count"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": true },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": true
+    },
     "societal_benefit": {
       "en": "The school polo is the daily uniform of millions of children across Latin America; a verified parametric draft in child proportions lets small workshops and cooperatives make uniforms to measure instead of buying imported stock, and its rib collar and short placket teach the two tier-2 constructions that grow a basic knit tee into a proper polo.",
-      "es": "El polo escolar es el uniforme diario de millones de niñas y niños en América Latina; un trazo paramétrico verificado en proporciones infantiles permite a talleres y cooperativas hacer uniformes a medida en lugar de comprar producto importado, y su cuello de rib y tapeta corta enseñan las dos construcciones de nivel 2 que convierten una playera de punto básica en un polo."
+      "es": "El polo escolar es el uniforme diario de millones de niñas y niños en América Latina; un trazo paramétrico verificado en proporciones infantiles permite a talleres y cooperativas hacer uniformes a medida en lugar de comprar producto importado, y su cuello de rib y tapeta corta enseñan las dos construcciones de nivel 2 que convierten una playera de punto básica en un polo.",
+      "fr": "Le polo scolaire est l'uniforme quotidien de millions d'enfants à travers l'Amérique latine ; un tracé paramétrique vérifié aux proportions enfantines permet aux petits ateliers et coopératives de faire des uniformes sur mesure au lieu d'acheter du stock importé, et son col côtelé et sa patte courte enseignent les deux constructions de niveau 2 qui font d'un tee-shirt en maille de base un vrai polo."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

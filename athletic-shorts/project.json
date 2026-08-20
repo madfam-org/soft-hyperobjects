@@ -6,49 +6,302 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #18. Short-inseam technical shorts with a gently curved hem and elastic casing waist. The back hem width is solved analytically so the straight inseams match exactly — the commons' third seam-matching strategy.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #18 del FC-100. Shorts deportivos de entrepierna corta con bajo ligeramente curvo y pretina de casing. El ancho trasero del bajo se resuelve analíticamente para que las entrepiernas coincidan — la tercera estrategia de igualación de costuras del commons.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #18 del FC-100. Shorts deportivos de entrepierna corta con bajo ligeramente curvo y pretina de casing. El ancho trasero del bajo se resuelve analíticamente para que las entrepiernas coincidan — la tercera estrategia de igualación de costuras del commons.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Rang n°18 du FC-100. Short technique à entrejambe court, à ourlet légèrement galbé et ceinture à coulisse élastique. La largeur d'ourlet du dos est résolue analytiquement pour que les entrejambes droits coïncident exactement — la troisième stratégie d'appariement de coutures du commun.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
-    "tags": ["shorts", "athletic", "activewear", "fc100", "hyperobject", "commons"],
-    "attribution": { "author": "Innovaciones MADFAM", "license": "LicenseRef-FC1-pending", "lineage": [{ "source": "Original draft for Fashion Cabinet (trouser block family)", "license": "original" }] }
+    "tags": [
+      "shorts",
+      "athletic",
+      "activewear",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet (trouser block family)",
+          "license": "original"
+        }
+      ]
+    }
   },
-  "modes": [{ "id": "shorts", "label": { "en": "Shorts (all pieces)", "es": "Shorts (todas las piezas)" }, "script_file": "main.py", "pieces": ["front", "back", "waistband"] }],
+  "modes": [
+    {
+      "id": "shorts",
+      "label": {
+        "en": "Shorts (all pieces)",
+        "es": "Shorts (todas las piezas)",
+        "fr": "Short (toutes les pièces)"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "waistband"
+      ]
+    }
+  ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front", "es": "Delantero" }, "default_color": "#4a9f8e", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Trasero" }, "default_color": "#3a7f72", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "waistband", "label": { "en": "Waistband Casing", "es": "Pretina (casing)" }, "default_color": "#6ab9aa", "cut": { "quantity": 1 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#4a9f8e",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Trasero",
+        "fr": "Dos"
+      },
+      "default_color": "#3a7f72",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "Waistband Casing",
+        "es": "Pretina (casing)",
+        "fr": "Coulisse de ceinture"
+      },
+      "default_color": "#6ab9aa",
+      "cut": {
+        "quantity": 1
+      }
+    }
   ],
   "parameters": [
-    { "id": "hip_girth", "type": "slider", "default": 1000, "min": 650, "max": 1800, "step": 10, "measurement": { "standard": "iso_8559", "code": "hip_girth" }, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)" } },
-    { "id": "inseam_length", "type": "slider", "default": 130, "min": 70, "max": 350, "step": 10, "label": { "en": "Inseam (mm)", "es": "Entrepierna (mm)" } },
-    { "id": "front_rise", "type": "slider", "default": 260, "min": 190, "max": 380, "step": 5, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)" } },
-    { "id": "back_rise", "type": "slider", "default": 295, "min": 190, "max": 440, "step": 5, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)" } },
-    { "id": "sport_ease", "type": "slider", "default": 120, "min": 60, "max": 350, "step": 10, "label": { "en": "Total ease (mm)", "es": "Holgura total (mm)" } },
-    { "id": "hem_width", "type": "slider", "default": 240, "min": 160, "max": 340, "step": 5, "label": { "en": "Front hem half-width (mm)", "es": "Medio bajo delantero (mm)" } },
-    { "id": "elastic_width", "type": "slider", "default": 35, "min": 20, "max": 60, "step": 5, "label": { "en": "Elastic width (mm)", "es": "Ancho de elástico (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 7, "min": 0, "max": 20, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 20, "min": 0, "max": 40, "step": 5, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "default": 1000,
+      "min": 650,
+      "max": 1800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      }
+    },
+    {
+      "id": "inseam_length",
+      "type": "slider",
+      "default": 130,
+      "min": 70,
+      "max": 350,
+      "step": 10,
+      "label": {
+        "en": "Inseam (mm)",
+        "es": "Entrepierna (mm)",
+        "fr": "Entrejambe (mm)"
+      }
+    },
+    {
+      "id": "front_rise",
+      "type": "slider",
+      "default": 260,
+      "min": 190,
+      "max": 380,
+      "step": 5,
+      "label": {
+        "en": "Front rise (mm)",
+        "es": "Tiro delantero (mm)",
+        "fr": "Hauteur de fourche avant (mm)"
+      }
+    },
+    {
+      "id": "back_rise",
+      "type": "slider",
+      "default": 295,
+      "min": 190,
+      "max": 440,
+      "step": 5,
+      "label": {
+        "en": "Back rise (mm)",
+        "es": "Tiro trasero (mm)",
+        "fr": "Hauteur de fourche arrière (mm)"
+      }
+    },
+    {
+      "id": "sport_ease",
+      "type": "slider",
+      "default": 120,
+      "min": 60,
+      "max": 350,
+      "step": 10,
+      "label": {
+        "en": "Total ease (mm)",
+        "es": "Holgura total (mm)",
+        "fr": "Aisance totale (mm)"
+      }
+    },
+    {
+      "id": "hem_width",
+      "type": "slider",
+      "default": 240,
+      "min": 160,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Front hem half-width (mm)",
+        "es": "Medio bajo delantero (mm)",
+        "fr": "Demi-largeur d'ourlet devant (mm)"
+      }
+    },
+    {
+      "id": "elastic_width",
+      "type": "slider",
+      "default": 35,
+      "min": 20,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Elastic width (mm)",
+        "es": "Ancho de elástico (mm)",
+        "fr": "Largeur de l'élastique (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 7,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 20,
+      "min": 0,
+      "max": 40,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "hip_girth": 1000 } },
-    { "id": "longer-7in", "label": { "en": "7-inch inseam", "es": "Entrepierna 18 cm" }, "values": { "inseam_length": 180 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "hip_girth": 1000
+      }
+    },
+    {
+      "id": "longer-7in",
+      "label": {
+        "en": "7-inch inseam",
+        "es": "Entrepierna 18 cm",
+        "fr": "Entrejambe 18 cm"
+      },
+      "values": {
+        "inseam_length": 180
+      }
+    }
   ],
   "constraints": [
-    { "expression": "hem_width >= inseam_length", "severity": "warning", "message": { "en": "Very long inseams on narrow hems distort the solved back hem", "es": "Entrepiernas largas con bajos angostos distorsionan el bajo trasero resuelto" } }
+    {
+      "expression": "hem_width >= inseam_length",
+      "severity": "warning",
+      "message": {
+        "en": "Very long inseams on narrow hems distort the solved back hem",
+        "es": "Entrepiernas largas con bajos angostos distorsionan el bajo trasero resuelto",
+        "fr": "Des entrejambes très longs sur des ourlets étroits déforment l'ourlet du dos résolu"
+      }
+    }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["jersey-algodon"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "jersey-algodon"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "waistband", "type": "waistband", "edges": [{ "piece": "front", "edge": "waist" }, { "piece": "back", "edge": "waist" }], "parameters": ["hip_girth", "elastic_width"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["hem_width", "hem_allowance"] }
+      {
+        "id": "waistband",
+        "type": "waistband",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "waist"
+          },
+          {
+            "piece": "back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "hip_girth",
+          "elastic_width"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "hem_width",
+          "hem_allowance"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": false, "fabric_compensation": false, "knit_negative_ease": false },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "knit_negative_ease": false
+    },
     "societal_benefit": {
       "en": "Everyday activewear with a drafting lesson inside: when a curve can't bridge a seam gap, solve the geometry that can — here, the back hem width.",
-      "es": "Ropa deportiva cotidiana con una lección de trazo dentro: cuando una curva no puede salvar la diferencia de costura, se resuelve la geometría que sí puede — aquí, el ancho trasero del bajo."
+      "es": "Ropa deportiva cotidiana con una lección de trazo dentro: cuando una curva no puede salvar la diferencia de costura, se resuelve la geometría que sí puede — aquí, el ancho trasero del bajo.",
+      "fr": "Un vêtement de sport du quotidien avec une leçon de tracé à l'intérieur : quand une courbe ne peut combler un écart de couture, on résout la géométrie qui le peut — ici, la largeur d'ourlet du dos."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

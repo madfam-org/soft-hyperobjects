@@ -6,84 +6,455 @@
     "engine": "fc",
     "description": {
       "en": "FC-100 rank #99. A loose, wide, T-shaped tunic-robe of the heritage-global family, pulled overhead with no closures. Back and front panels are cut on fold at the centre line in the flat, rectangular economy of the traditional cut; a narrow deep keyhole neckline is finished by a shaped neck facing; wide dropped set-in sleeves are solved to the armholes; side seams open into notched slits; an optional tie sash cinches the waist. Drafted respectfully as a teaching-grade block.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Rango #99 del FC-100. Una túnica-bata amplia y holgada en forma de T, de la familia patrimonial global, que se viste por la cabeza sin cierres. Los paneles trasero y delantero se cortan al doblez en la línea central con la economía plana y rectangular del corte tradicional; un escote de ojo de cerradura, estrecho y profundo, se remata con una vista de escote conformada; mangas amplias montadas de hombro caído resueltas a las sisas; los laterales se abren en aberturas marcadas con piquetes; una faja opcional ciñe la cintura. Trazada con respeto como bloque didáctico.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Rango #99 del FC-100. Una túnica-bata amplia y holgada en forma de T, de la familia patrimonial global, que se viste por la cabeza sin cierres. Los paneles trasero y delantero se cortan al doblez en la línea central con la economía plana y rectangular del corte tradicional; un escote de ojo de cerradura, estrecho y profundo, se remata con una vista de escote conformada; mangas amplias montadas de hombro caído resueltas a las sisas; los laterales se abren en aberturas marcadas con piquetes; una faja opcional ciñe la cintura. Trazada con respeto como bloque didáctico.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "FC-100 rang no 99. Une tunique-robe ample, large, en forme de T, de la famille patrimoniale mondiale, enfilée par la tête sans fermetures. Les panneaux dos et devant sont coupés au pli sur la ligne médiane dans l'économie plate et rectangulaire de la coupe traditionnelle ; une encolure trou de serrure étroite et profonde est finie par une parementure d'encolure façonnée ; de larges manches montées tombantes sont résolues aux emmanchures ; les coutures de côté s'ouvrent en fentes crantées ; une ceinture nouée facultative marque la taille. Tracé avec respect comme bloc pédagogique.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "beginner",
-    "tags": ["kaftan", "caftan", "caftán", "robe", "heritage", "keyhole", "woven", "fc100", "hyperobject", "commons"],
+    "tags": [
+      "kaftan",
+      "caftan",
+      "caftán",
+      "robe",
+      "heritage",
+      "keyhole",
+      "woven",
+      "fc100",
+      "hyperobject",
+      "commons"
+    ],
     "attribution": {
       "author": "Innovaciones MADFAM",
       "license": "LicenseRef-FC1-pending",
       "lineage": [
-        { "source": "Original draft for Fashion Cabinet", "license": "original" },
-        { "source": "projects/robe (flowing panel + shoulder/side/sleeve idiom, on-fold back)", "license": "LicenseRef-FC1-pending" },
-        { "source": "projects/tunic (neck-facing + side-slit conventions)", "license": "LicenseRef-FC1-pending" }
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "projects/robe (flowing panel + shoulder/side/sleeve idiom, on-fold back)",
+          "license": "LicenseRef-FC1-pending"
+        },
+        {
+          "source": "projects/tunic (neck-facing + side-slit conventions)",
+          "license": "LicenseRef-FC1-pending"
+        }
       ]
     }
   },
   "modes": [
     {
       "id": "kaftan",
-      "label": { "en": "Kaftan (all pieces)", "es": "Caftán (todas las piezas)" },
+      "label": {
+        "en": "Kaftan (all pieces)",
+        "es": "Caftán (todas las piezas)",
+        "fr": "Caftan (toutes les pièces)"
+      },
       "script_file": "main.py",
-      "pieces": ["front", "back", "sleeve", "facing", "belt"]
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "facing",
+        "belt"
+      ]
     }
   ],
   "pieces": [
-    { "id": "front", "label": { "en": "Front (keyhole)", "es": "Delantero (ojo de cerradura)" }, "default_color": "#7d6a4f", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "back", "label": { "en": "Back", "es": "Trasero" }, "default_color": "#6a5a41", "cut": { "quantity": 1, "on_fold": true, "mirror": true } },
-    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga" }, "default_color": "#94805f", "cut": { "quantity": 2, "mirror": true } },
-    { "id": "facing", "label": { "en": "Neck facing", "es": "Vista de escote" }, "default_color": "#b0a07d", "cut": { "quantity": 1 } },
-    { "id": "belt", "label": { "en": "Tie belt (sash)", "es": "Faja" }, "default_color": "#c7b896", "cut": { "quantity": 1 } }
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (keyhole)",
+        "es": "Delantero (ojo de cerradura)",
+        "fr": "Devant (trou de serrure)"
+      },
+      "default_color": "#7d6a4f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Trasero",
+        "fr": "Dos"
+      },
+      "default_color": "#6a5a41",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#94805f",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "facing",
+      "label": {
+        "en": "Neck facing",
+        "es": "Vista de escote",
+        "fr": "Parementure d'encolure"
+      },
+      "default_color": "#b0a07d",
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "belt",
+      "label": {
+        "en": "Tie belt (sash)",
+        "es": "Faja",
+        "fr": "Ceinture à nouer (écharpe)"
+      },
+      "default_color": "#c7b896",
+      "cut": {
+        "quantity": 1
+      }
+    }
   ],
   "parameters": [
-    { "id": "chest_girth", "type": "slider", "default": 1060, "min": 700, "max": 1900, "step": 10, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)" } },
-    { "id": "kaftan_length", "type": "slider", "default": 1200, "min": 900, "max": 1400, "step": 10, "label": { "en": "Kaftan length, nape to hem (mm)", "es": "Largo del caftán, nuca a dobladillo (mm)" } },
-    { "id": "neck_girth", "type": "slider", "default": 400, "min": 320, "max": 520, "step": 5, "measurement": { "standard": "iso_8559", "code": "neck_girth" }, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)" } },
-    { "id": "keyhole_drop", "type": "slider", "default": 220, "min": 90, "max": 380, "step": 10, "label": { "en": "Keyhole neck depth at CF (mm)", "es": "Profundidad del escote en el CF (mm)" } },
-    { "id": "sleeve_length", "type": "slider", "default": 420, "min": 200, "max": 700, "step": 10, "label": { "en": "Sleeve length to opening (mm)", "es": "Largo de manga a la bocamanga (mm)" } },
-    { "id": "kaftan_ease", "type": "slider", "default": 300, "min": 180, "max": 600, "step": 10, "label": { "en": "Total wearing ease (mm)", "es": "Holgura total de uso (mm)" } },
-    { "id": "slit_height", "type": "slider", "default": 320, "min": 0, "max": 600, "step": 10, "label": { "en": "Side slit height above hem (mm)", "es": "Alto de abertura lateral (mm)" } },
-    { "id": "facing_width", "type": "slider", "default": 55, "min": 35, "max": 90, "step": 5, "label": { "en": "Neck facing depth (mm)", "es": "Profundidad de la vista (mm)" } },
-    { "id": "belt_width", "type": "slider", "default": 70, "min": 40, "max": 110, "step": 5, "advanced": true, "label": { "en": "Sash width (mm)", "es": "Ancho de la faja (mm)" } },
-    { "id": "seam_allowance", "type": "slider", "default": 10, "min": 0, "max": 20, "step": 1, "advanced": true, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)" } },
-    { "id": "hem_allowance", "type": "slider", "default": 30, "min": 0, "max": 60, "step": 5, "advanced": true, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)" } }
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "default": 1060,
+      "min": 700,
+      "max": 1900,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      }
+    },
+    {
+      "id": "kaftan_length",
+      "type": "slider",
+      "default": 1200,
+      "min": 900,
+      "max": 1400,
+      "step": 10,
+      "label": {
+        "en": "Kaftan length, nape to hem (mm)",
+        "es": "Largo del caftán, nuca a dobladillo (mm)",
+        "fr": "Longueur de caftan, nuque à l'ourlet (mm)"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "default": 400,
+      "min": 320,
+      "max": 520,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      }
+    },
+    {
+      "id": "keyhole_drop",
+      "type": "slider",
+      "default": 220,
+      "min": 90,
+      "max": 380,
+      "step": 10,
+      "label": {
+        "en": "Keyhole neck depth at CF (mm)",
+        "es": "Profundidad del escote en el CF (mm)",
+        "fr": "Profondeur d'encolure goutte au milieu devant (mm)"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "default": 420,
+      "min": 200,
+      "max": 700,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length to opening (mm)",
+        "es": "Largo de manga a la bocamanga (mm)",
+        "fr": "Longueur de manche jusqu'à l'ouverture (mm)"
+      }
+    },
+    {
+      "id": "kaftan_ease",
+      "type": "slider",
+      "default": 300,
+      "min": 180,
+      "max": 600,
+      "step": 10,
+      "label": {
+        "en": "Total wearing ease (mm)",
+        "es": "Holgura total de uso (mm)",
+        "fr": "Aisance de port totale (mm)"
+      }
+    },
+    {
+      "id": "slit_height",
+      "type": "slider",
+      "default": 320,
+      "min": 0,
+      "max": 600,
+      "step": 10,
+      "label": {
+        "en": "Side slit height above hem (mm)",
+        "es": "Alto de abertura lateral (mm)",
+        "fr": "Hauteur de fente latérale au-dessus de l'ourlet (mm)"
+      }
+    },
+    {
+      "id": "facing_width",
+      "type": "slider",
+      "default": 55,
+      "min": 35,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Neck facing depth (mm)",
+        "es": "Profundidad de la vista (mm)",
+        "fr": "Profondeur de la parementure (mm)"
+      }
+    },
+    {
+      "id": "belt_width",
+      "type": "slider",
+      "default": 70,
+      "min": 40,
+      "max": 110,
+      "step": 5,
+      "advanced": true,
+      "label": {
+        "en": "Sash width (mm)",
+        "es": "Ancho de la faja (mm)",
+        "fr": "Largeur de la ceinture-écharpe (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "advanced": true,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "default": 30,
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "advanced": true,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      }
+    }
   ],
   "presets": [
-    { "id": "size-m", "label": { "en": "M", "es": "M" }, "values": { "chest_girth": 1060, "kaftan_length": 1200, "kaftan_ease": 300, "sleeve_length": 420 } },
-    { "id": "size-l", "label": { "en": "L (long)", "es": "G (largo)" }, "values": { "chest_girth": 1240, "kaftan_length": 1300, "kaftan_ease": 360, "sleeve_length": 440 } },
-    { "id": "ankle-flowy", "label": { "en": "Ankle, flowing", "es": "Al tobillo, vaporoso" }, "values": { "chest_girth": 1120, "kaftan_length": 1380, "kaftan_ease": 480, "slit_height": 460, "keyhole_drop": 300 } }
+    {
+      "id": "size-m",
+      "label": {
+        "en": "M",
+        "es": "M",
+        "fr": "M"
+      },
+      "values": {
+        "chest_girth": 1060,
+        "kaftan_length": 1200,
+        "kaftan_ease": 300,
+        "sleeve_length": 420
+      }
+    },
+    {
+      "id": "size-l",
+      "label": {
+        "en": "L (long)",
+        "es": "G (largo)",
+        "fr": "L (long)"
+      },
+      "values": {
+        "chest_girth": 1240,
+        "kaftan_length": 1300,
+        "kaftan_ease": 360,
+        "sleeve_length": 440
+      }
+    },
+    {
+      "id": "ankle-flowy",
+      "label": {
+        "en": "Ankle, flowing",
+        "es": "Al tobillo, vaporoso",
+        "fr": "À la cheville, fluide"
+      },
+      "values": {
+        "chest_girth": 1120,
+        "kaftan_length": 1380,
+        "kaftan_ease": 480,
+        "slit_height": 460,
+        "keyhole_drop": 300
+      }
+    }
   ],
   "constraints": [
     {
       "expression": "kaftan_ease >= 200",
       "severity": "warning",
-      "message": { "en": "A pull-over kaftan needs generous ease; below 200 mm it loses its loose T-shape", "es": "Un caftán que se viste por la cabeza necesita holgura generosa; debajo de 200 mm pierde su forma de T holgada" }
+      "message": {
+        "en": "A pull-over kaftan needs generous ease; below 200 mm it loses its loose T-shape",
+        "es": "Un caftán que se viste por la cabeza necesita holgura generosa; debajo de 200 mm pierde su forma de T holgada",
+        "fr": "Un caftan enfilé par la tête a besoin d'une aisance généreuse ; en dessous de 200 mm, il perd sa forme de T ample"
+      }
     },
     {
       "expression": "keyhole_drop >= neck_girth / 4",
       "severity": "warning",
-      "message": { "en": "The keyhole must be deep enough to pull over the head; keep it at least a quarter of the neck girth", "es": "El escote debe ser lo bastante profundo para pasar por la cabeza; consérvalo al menos en un cuarto del contorno de cuello" }
+      "message": {
+        "en": "The keyhole must be deep enough to pull over the head; keep it at least a quarter of the neck girth",
+        "es": "El escote debe ser lo bastante profundo para pasar por la cabeza; consérvalo al menos en un cuarto del contorno de cuello",
+        "fr": "Le trou de serrure doit être assez profond pour passer par-dessus la tête ; conservez-le à au moins un quart du tour de cou"
+      }
     },
     {
       "expression": "slit_height < kaftan_length / 2",
       "severity": "warning",
-      "message": { "en": "Side slits taller than half the length destabilize the panels", "es": "Aberturas mayores a la mitad del largo desestabilizan los paneles" }
+      "message": {
+        "en": "Side slits taller than half the length destabilize the panels",
+        "es": "Aberturas mayores a la mitad del largo desestabilizan los paneles",
+        "fr": "Des fentes de côté plus hautes que la moitié de la longueur déstabilisent les panneaux"
+      }
     }
   ],
-  "export_formats": ["svg", "dxf", "json"],
-  "fabrics": ["popelina-algodon", "manta-cruda"],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "popelina-algodon",
+    "manta-cruda"
+  ],
   "hyperobject": {
     "is_hyperobject": true,
     "domain": "garment",
     "interfaces": [
-      { "id": "neckline", "type": "neckline", "label": { "en": "Keyhole neckline", "es": "Escote de ojo de cerradura" }, "edges": [{ "piece": "front", "edge": "neck" }, { "piece": "back", "edge": "neck" }, { "piece": "facing", "edge": "inner" }], "parameters": ["neck_girth", "keyhole_drop"] },
-      { "id": "armscye", "type": "armscye", "label": { "en": "Dropped armhole", "es": "Sisa caída" }, "edges": [{ "piece": "front", "edge": "armhole" }, { "piece": "back", "edge": "armhole" }, { "piece": "sleeve", "edge": "cap" }], "parameters": ["chest_girth", "kaftan_ease"] },
-      { "id": "hem", "type": "hem", "edges": [{ "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" }], "parameters": ["kaftan_length", "hem_allowance"] }
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "label": {
+          "en": "Keyhole neckline",
+          "es": "Escote de ojo de cerradura",
+          "fr": "Encolure goutte d'eau"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          },
+          {
+            "piece": "facing",
+            "edge": "inner"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "keyhole_drop"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Dropped armhole",
+          "es": "Sisa caída",
+          "fr": "Emmanchure tombante"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "kaftan_ease"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "kaftan_length",
+          "hem_allowance"
+        ]
+      }
     ],
-    "capabilities": { "made_to_measure": true, "fold_cutting": true, "fabric_compensation": false, "knit_negative_ease": false, "faced_neckline": true, "side_slits": true, "closure_free": true },
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": false,
+      "faced_neckline": true,
+      "side_slits": true,
+      "closure_free": true
+    },
     "societal_benefit": {
       "en": "A respectful, buildable draft of a heritage garment worn across North Africa, West Africa, the Middle East, and South Asia: the wide fold-cut T needs no closures and fits a broad range of bodies from one draft, while the faced keyhole teaches how a pull-over opening is engineered for both head clearance and a clean finish — the commons' reference for closure-free heritage dress.",
-      "es": "Un trazo respetuoso y realizable de una prenda patrimonial usada en el norte de África, África occidental, Medio Oriente y el sur de Asia: la T ancha cortada al doblez no necesita cierres y ajusta a una amplia gama de cuerpos desde un solo trazo, mientras la vista del escote enseña cómo se diseña una abertura para pasar por la cabeza con holgura y un acabado limpio — la referencia del commons para vestir patrimonial sin cierres."
+      "es": "Un trazo respetuoso y realizable de una prenda patrimonial usada en el norte de África, África occidental, Medio Oriente y el sur de Asia: la T ancha cortada al doblez no necesita cierres y ajusta a una amplia gama de cuerpos desde un solo trazo, mientras la vista del escote enseña cómo se diseña una abertura para pasar por la cabeza con holgura y un acabado limpio — la referencia del commons para vestir patrimonial sin cierres.",
+      "fr": "Un tracé respectueux et réalisable d'un vêtement patrimonial porté en Afrique du Nord, en Afrique de l'Ouest, au Moyen-Orient et en Asie du Sud : le T large coupé au pli ne nécessite aucune fermeture et convient à un large éventail de corps depuis un seul tracé, tandis que le trou de serrure paré enseigne comment une ouverture à enfiler est conçue à la fois pour le passage de la tête et pour une finition nette — la référence du commons pour l'habillement patrimonial sans fermeture."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }

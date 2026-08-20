@@ -6,7 +6,8 @@
     "engine": "fc",
     "description": {
       "en": "A curved-front belt bag (fanny pack): a body panel (front + base + back folded at the base), a top zip, and a webbing belt threaded through two loops. The zip bridges to the Yantra4D `zipper` solid sized to the bag's own length. Fashion Cabinet owns the bag; Yantra4D owns the zip (and, with the same webbing width, the belt buckle). FC-200 accessories capsule.\n\nOfficial visualizer and configurator: Fashion Cabinet",
-      "es": "Una riñonera de frente curvo: un panel de cuerpo (frente + base + espalda doblado en la base), un cierre superior y un cinturón de correa que pasa por dos pasadores. El cierre se puentea al sólido `zipper` de Yantra4D dimensionado al largo de la propia bolsa. Fashion Cabinet posee la bolsa; Yantra4D posee el cierre.\n\nVisualizador y configurador oficial: Fashion Cabinet"
+      "es": "Una riñonera de frente curvo: un panel de cuerpo (frente + base + espalda doblado en la base), un cierre superior y un cinturón de correa que pasa por dos pasadores. El cierre se puentea al sólido `zipper` de Yantra4D dimensionado al largo de la propia bolsa. Fashion Cabinet posee la bolsa; Yantra4D posee el cierre.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une banane à devant galbé : un panneau de corps (devant + fond + dos plié au fond), une fermeture éclair supérieure, et une ceinture en sangle enfilée dans deux passants. La fermeture se relie au solide `zipper` de Yantra4D dimensionné à la longueur propre du sac. Fashion Cabinet possède le sac ; Yantra4D possède la fermeture (et, à la même largeur de sangle, la boucle de ceinture). Capsule accessoires du FC-200.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
     },
     "difficulty": "intermediate",
     "tags": [
@@ -35,7 +36,8 @@
       "id": "set",
       "label": {
         "en": "Full Belt Bag",
-        "es": "Riñonera completa"
+        "es": "Riñonera completa",
+        "fr": "Sac banane complet"
       },
       "script_file": "main.py",
       "pieces": [
@@ -49,7 +51,8 @@
       "id": "body",
       "label": {
         "en": "Body (front + base + back)",
-        "es": "Cuerpo (frente + base + espalda)"
+        "es": "Cuerpo (frente + base + espalda)",
+        "fr": "Corps (devant + base + dos)"
       },
       "default_color": "#3a5a4a",
       "cut": {
@@ -62,7 +65,8 @@
       "id": "belt_loop",
       "label": {
         "en": "Belt loop",
-        "es": "Pasador"
+        "es": "Pasador",
+        "fr": "Passant de ceinture"
       },
       "default_color": "#2a4a3a",
       "cut": {
@@ -93,11 +97,13 @@
       "step": 10,
       "label": {
         "en": "Width (mm)",
-        "es": "Ancho (mm)"
+        "es": "Ancho (mm)",
+        "fr": "Largeur (mm)"
       },
       "tooltip": {
         "en": "Width the zip runs along; drives the Yantra4D zip length",
-        "es": "Ancho por donde corre el cierre; define el largo del cierre"
+        "es": "Ancho por donde corre el cierre; define el largo del cierre",
+        "fr": "Largeur le long de laquelle court la fermeture ; pilote la longueur de fermeture Yantra4D"
       }
     },
     {
@@ -110,11 +116,13 @@
       "step": 10,
       "label": {
         "en": "Height (mm)",
-        "es": "Alto (mm)"
+        "es": "Alto (mm)",
+        "fr": "Hauteur (mm)"
       },
       "tooltip": {
         "en": "Front-face height",
-        "es": "Alto de la cara"
+        "es": "Alto de la cara",
+        "fr": "Hauteur de la face avant"
       }
     },
     {
@@ -127,11 +135,13 @@
       "step": 5,
       "label": {
         "en": "Depth (mm)",
-        "es": "Fondo (mm)"
+        "es": "Fondo (mm)",
+        "fr": "Profondeur (mm)"
       },
       "tooltip": {
         "en": "Box depth",
-        "es": "Fondo de la caja"
+        "es": "Fondo de la caja",
+        "fr": "Profondeur de la boîte"
       }
     },
     {
@@ -144,11 +154,13 @@
       "step": 2,
       "label": {
         "en": "Belt width (mm)",
-        "es": "Ancho de cinturón (mm)"
+        "es": "Ancho de cinturón (mm)",
+        "fr": "Largeur de ceinture (mm)"
       },
       "tooltip": {
         "en": "Webbing belt width; sizes the loops",
-        "es": "Ancho de la correa; dimensiona los pasadores"
+        "es": "Ancho de la correa; dimensiona los pasadores",
+        "fr": "Largeur de la ceinture en sangle ; dimensionne les passants"
       }
     },
     {
@@ -161,11 +173,13 @@
       "step": 1,
       "label": {
         "en": "Seam allowance (mm)",
-        "es": "Margen de costura (mm)"
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
       },
       "tooltip": {
         "en": "Where the body sews to the zip and loops",
-        "es": "Donde el cuerpo se cose al cierre y pasadores"
+        "es": "Donde el cuerpo se cose al cierre y pasadores",
+        "fr": "Là où le corps se coud à la fermeture et aux passants"
       },
       "advanced": true
     }
@@ -175,7 +189,8 @@
       "id": "classic",
       "label": {
         "en": "Classic",
-        "es": "Clásico"
+        "es": "Clásico",
+        "fr": "Classique"
       },
       "values": {
         "bag_width": 260,
@@ -186,7 +201,8 @@
       "id": "sling",
       "label": {
         "en": "Sling (wider)",
-        "es": "Cruzada (más ancha)"
+        "es": "Cruzada (más ancha)",
+        "fr": "Bretelle croisée (plus large)"
       },
       "values": {
         "bag_width": 340,
@@ -221,7 +237,8 @@
         "type": "zipper_tape",
         "label": {
           "en": "Top zip tape",
-          "es": "Cinta del cierre"
+          "es": "Cinta del cierre",
+          "fr": "Ruban de la fermeture à glissière"
         },
         "edges": [
           {
@@ -243,7 +260,8 @@
     },
     "societal_benefit": {
       "en": "A belt bag sized to what you carry, with the zip an open printable Yantra4D object sized to the bag's own length — a durable, repairable, made-to-measure pack instead of a disposable one.",
-      "es": "Una riñonera dimensionada a lo que cargas, con el cierre como objeto imprimible abierto de Yantra4D dimensionado al largo de la propia bolsa — una bolsa durable, reparable y a la medida en vez de una desechable."
+      "es": "Una riñonera dimensionada a lo que cargas, con el cierre como objeto imprimible abierto de Yantra4D dimensionado al largo de la propia bolsa — una bolsa durable, reparable y a la medida en vez de una desechable.",
+      "fr": "Une banane dimensionnée à ce que vous transportez, avec la fermeture comme objet Yantra4D ouvert et imprimable dimensionné à la longueur propre du sac — un sac durable, réparable et sur mesure au lieu d'un jetable."
     },
     "commons_license": "LicenseRef-FC1-pending"
   }
