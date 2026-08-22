@@ -1,0 +1,378 @@
+{
+  "project": {
+    "name": "Turban Band",
+    "slug": "turban-band",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A pleated turban band: a wide fabric band knife-pleated across its length, wrapped around and sewn to a rigid Yantra4D `headband-blank`, with a knot panel at centre front for the signature twist. The band is drafted flat and pleated down to the blank's own arc, so the pleats do the shaping rather than a curved seam. The bridge is dimensional — the casing's finished width is the blank's `band_w`. Fashion Cabinet owns the band, pleats and knot; Yantra4D owns the rigid arc. FC-300 millinery lane.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una banda turbante plisada: una banda ancha de tela con tablas encontradas a lo largo, envuelta y cosida a una diadema rígida `headband-blank` de Yantra4D, con un panel de nudo al centro delantero para el torcido característico. La banda se traza plana y se pliega hasta el arco de la diadema, de modo que las tablas dan la forma en vez de una costura curva. El puente es dimensional — el ancho acabado de la jareta es el `band_w` de la diadema. Fashion Cabinet posee la banda, las tablas y el nudo; Yantra4D posee el arco rígido. Línea de sombrerería FC-300.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un bandeau turban plissé : une large bande de tissu plissée à plis couchés sur toute sa longueur, enroulée et cousue sur un serre-tête rigide `headband-blank` de Yantra4D, avec un panneau de nœud au milieu devant pour la torsade caractéristique. La bande est tracée à plat puis plissée jusqu'à l'arc du serre-tête, de sorte que les plis font la forme plutôt qu'une couture courbe. Le pont est dimensionnel — la largeur finie de la coulisse est le `band_w` du serre-tête. Fashion Cabinet possède la bande, les plis et le nœud ; Yantra4D possède l'arc rigide. Ligne chapellerie FC-300.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "turban",
+      "headband",
+      "millinery",
+      "accessory",
+      "hardware",
+      "pleated",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full turban band",
+        "es": "Banda turbante completa",
+        "fr": "Bandeau turban complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "band",
+        "knot",
+        "band-lining"
+      ]
+    },
+    {
+      "id": "plain",
+      "label": {
+        "en": "Plain band (no knot)",
+        "es": "Banda lisa (sin nudo)",
+        "fr": "Bandeau simple (sans nœud)"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "band",
+        "band-lining"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "band",
+      "label": {
+        "en": "Pleated band",
+        "es": "Banda plisada",
+        "fr": "Bande plissée"
+      },
+      "default_color": "#8a5a4a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "knot",
+      "label": {
+        "en": "Knot panel",
+        "es": "Panel del nudo",
+        "fr": "Panneau du nœud"
+      },
+      "default_color": "#a06a58",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "band-lining",
+      "label": {
+        "en": "Band lining / blank casing",
+        "es": "Forro de la banda / jareta de la diadema",
+        "fr": "Doublure / coulisse du serre-tête"
+      },
+      "default_color": "#6a4438",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & style",
+        "es": "Ajuste y estilo",
+        "fr": "Coupe et style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "head_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 570,
+      "min": 480,
+      "max": 640,
+      "step": 5,
+      "label": {
+        "en": "Head girth (mm)",
+        "es": "Contorno de cabeza (mm)",
+        "fr": "Tour de tête (mm)"
+      },
+      "tooltip": {
+        "en": "The head the band wraps; it sets how much of the circumference the blank's arc covers",
+        "es": "La cabeza que envuelve la banda; define cuánto del contorno cubre el arco de la diadema",
+        "fr": "La tête que la bande enveloppe ; elle fixe la part du tour couverte par l'arc du serre-tête"
+      },
+      "measurement": {
+        "code": "head_girth",
+        "standard": "iso_8559"
+      }
+    },
+    {
+      "id": "band_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 55,
+      "min": 25,
+      "max": 110,
+      "step": 5,
+      "label": {
+        "en": "Band width (mm)",
+        "es": "Ancho de la banda (mm)",
+        "fr": "Largeur du bandeau (mm)"
+      },
+      "tooltip": {
+        "en": "The finished band width — it is also the Yantra4D blank's band_w, so the casing fits the arc exactly",
+        "es": "El ancho acabado de la banda — también es el band_w de la diadema de Yantra4D, así la jareta calza exacta",
+        "fr": "La largeur finie du bandeau — c'est aussi le band_w du serre-tête Yantra4D, la coulisse épouse donc l'arc exactement"
+      }
+    },
+    {
+      "id": "blank_arc",
+      "type": "slider",
+      "group": "fit",
+      "default": 340,
+      "min": 200,
+      "max": 460,
+      "step": 10,
+      "label": {
+        "en": "Blank arc run (mm)",
+        "es": "Recorrido del arco de la diadema (mm)",
+        "fr": "Parcours de l'arc du serre-tête (mm)"
+      },
+      "tooltip": {
+        "en": "How far the rigid blank reaches around the head; the pleated band finishes to this",
+        "es": "Cuánto rodea la cabeza la diadema rígida; la banda plisada termina en esto",
+        "fr": "Jusqu'où le serre-tête rigide entoure la tête ; la bande plissée y finit"
+      }
+    },
+    {
+      "id": "pleat_ratio",
+      "type": "slider",
+      "group": "construction",
+      "default": 1.8,
+      "min": 1.2,
+      "max": 3,
+      "step": 0.1,
+      "label": {
+        "en": "Pleat ratio",
+        "es": "Proporción de tablas",
+        "fr": "Ratio de plis"
+      },
+      "tooltip": {
+        "en": "Flat cut length divided by finished length; more ratio means deeper, richer pleats",
+        "es": "Largo plano dividido entre largo acabado; más proporción da tablas más profundas y ricas",
+        "fr": "Longueur coupée à plat divisée par la longueur finie ; plus le ratio est élevé, plus les plis sont profonds"
+      }
+    },
+    {
+      "id": "knot_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 110,
+      "min": 50,
+      "max": 220,
+      "step": 5,
+      "label": {
+        "en": "Knot panel width (mm)",
+        "es": "Ancho del panel del nudo (mm)",
+        "fr": "Largeur du panneau du nœud (mm)"
+      },
+      "tooltip": {
+        "en": "How much fabric the centre-front twist consumes",
+        "es": "Cuánta tela consume el torcido del centro delantero",
+        "fr": "La quantité de tissu que consomme la torsade au milieu devant"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Where the pleated band is caught to the casing over the blank",
+        "es": "Donde la banda plisada se sujeta a la jareta sobre la diadema",
+        "fr": "Où la bande plissée est prise dans la coulisse sur le serre-tête"
+      },
+      "advanced": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic-turban",
+      "label": {
+        "en": "Classic turban",
+        "es": "Turbante clásico",
+        "fr": "Turban classique"
+      },
+      "values": {
+        "band_width": 55,
+        "blank_arc": 340,
+        "pleat_ratio": 1.8,
+        "knot_width": 110
+      }
+    },
+    {
+      "id": "narrow-day",
+      "label": {
+        "en": "Narrow day band",
+        "es": "Banda estrecha de diario",
+        "fr": "Bandeau étroit de jour"
+      },
+      "values": {
+        "band_width": 32,
+        "blank_arc": 320,
+        "pleat_ratio": 1.4,
+        "knot_width": 70
+      }
+    },
+    {
+      "id": "wide-statement",
+      "label": {
+        "en": "Wide statement",
+        "es": "Ancha de impacto",
+        "fr": "Large affirmé"
+      },
+      "values": {
+        "band_width": 95,
+        "blank_arc": 400,
+        "pleat_ratio": 2.6,
+        "knot_width": 190
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "turban band headband casing",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "headband-blank",
+      "linked": true,
+      "params_map": {
+        "band_w": "band_width",
+        "head_width": "head_girth / 3",
+        "sew_holes": "max(4, round(blank_arc / 60))"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "casing",
+        "type": "custom",
+        "label": {
+          "en": "Blank casing (band ↔ rigid arc)",
+          "es": "Jareta de la diadema (banda ↔ arco rígido)",
+          "fr": "Coulisse du serre-tête (bande ↔ arc rigide)"
+        },
+        "edges": [
+          {
+            "piece": "band-lining",
+            "edge": "casing"
+          },
+          {
+            "piece": "band",
+            "edge": "casing"
+          }
+        ],
+        "parameters": [
+          "band_width",
+          "blank_arc",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "knot_join",
+        "type": "custom",
+        "label": {
+          "en": "Knot panel join",
+          "es": "Unión del panel del nudo",
+          "fr": "Jonction du panneau du nœud"
+        },
+        "edges": [
+          {
+            "piece": "knot",
+            "edge": "lower"
+          }
+        ],
+        "parameters": [
+          "knot_width",
+          "band_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A turban band whose rigid arc is an open printable Yantra4D object sized to the same width as the casing that encloses it — head covering for chemotherapy, alopecia, faith or fashion that can be re-covered in any fabric and re-fitted to the wearer, instead of bought as a fixed, sized-for-nobody accessory.",
+      "es": "Una banda turbante cuyo arco rígido es un objeto imprimible abierto de Yantra4D dimensionado al mismo ancho que la jareta que lo envuelve — cobertura de cabeza para quimioterapia, alopecia, fe o moda, que puede volver a forrarse en cualquier tela y reajustarse a quien la lleva, en vez de comprarse como accesorio fijo hecho para nadie.",
+      "fr": "Un bandeau turban dont l'arc rigide est un objet Yantra4D ouvert et imprimable dimensionné à la même largeur que la coulisse qui l'enveloppe — un couvre-chef pour la chimiothérapie, l'alopécie, la foi ou la mode, que l'on peut recouvrir de n'importe quel tissu et réajuster à la personne, au lieu de l'acheter comme accessoire figé taillé pour personne."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

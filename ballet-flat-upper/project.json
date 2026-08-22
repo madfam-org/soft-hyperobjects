@@ -1,0 +1,336 @@
+{
+  "project": {
+    "name": "Ballet Flat Upper",
+    "slug": "ballet-flat-upper",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The upper of a ballet flat: a one-piece wrap cut on the fold at centre front, with a deep scooped topline bound by a folded strip that doubles as an elastic casing, and a single heel seam at centre back. Hardware-free by design — the casing IS the closure. The elastic is cut shorter than the topline by a drawn-in amount, and the binding is drafted at the true folded width to pass its own elastic. FC-300 lane 4, footwear soft goods.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El corte de una bailarina: una envolvente de una pieza cortada al doblez en el centro delantero, con una línea superior muy escotada ribeteada por una tira doblada que hace también de jareta para el elástico, y una sola costura de talón al centro de atrás. Sin herrajes por diseño — la jareta ES el cierre. El elástico se corta más corto que la línea superior por una cantidad de fruncido, y el ribete se traza al ancho doblado real para dejar pasar su propio elástico. FC-300 carril 4, calzado blando.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La tige d'une ballerine : une enveloppe d'une seule pièce coupée au pli au milieu devant, avec une ligne d'entrée profondément échancrée bordée d'une bande pliée qui sert aussi de coulisse à élastique, et une unique couture de talon au milieu dos. Sans quincaillerie par conception — la coulisse EST la fermeture. L'élastique est coupé plus court que la ligne d'entrée d'une valeur de fronçage, et la bordure est tracée à la largeur pliée réelle pour laisser passer son propre élastique. FC-300 voie 4, chaussant souple.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "ballet-flat",
+      "footwear",
+      "upper",
+      "elastic-casing",
+      "hardware-free",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Upper",
+        "es": "Corte completo",
+        "fr": "Tige complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "upper",
+        "binding"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "upper",
+      "label": {
+        "en": "Upper (one-piece wrap)",
+        "es": "Corte (envolvente de una pieza)",
+        "fr": "Tige (enveloppe d'une pièce)"
+      },
+      "default_color": "#b08a92",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "binding",
+      "label": {
+        "en": "Binding (elastic casing)",
+        "es": "Ribete (jareta del elástico)",
+        "fr": "Bordure (coulisse à élastique)"
+      },
+      "default_color": "#96727a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Foot",
+        "es": "Pie",
+        "fr": "Pied"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Aisance"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Casing",
+        "es": "Jareta",
+        "fr": "Coulisse"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "foot_length",
+      "type": "slider",
+      "group": "body",
+      "default": 250,
+      "min": 150,
+      "max": 330,
+      "step": 5,
+      "label": {
+        "en": "Foot length (mm)",
+        "es": "Largo del pie (mm)",
+        "fr": "Longueur du pied (mm)"
+      },
+      "tooltip": {
+        "en": "Heel to longest toe. A plain sized parameter — ISO 8559 has no foot landmark code, so none is claimed.",
+        "es": "Del talón al dedo más largo. Parámetro simple — ISO 8559 no tiene código de referencia del pie, así que no se reclama ninguno.",
+        "fr": "Du talon à l'orteil le plus long. Paramètre simple — l'ISO 8559 n'a aucun code de repère du pied, aucun n'est donc revendiqué."
+      }
+    },
+    {
+      "id": "foot_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 230,
+      "min": 150,
+      "max": 320,
+      "step": 5,
+      "label": {
+        "en": "Ball girth (mm)",
+        "es": "Contorno de la planta (mm)",
+        "fr": "Carrure de la plante (mm)"
+      },
+      "tooltip": {
+        "en": "Around the widest part of the foot; sets the wrap's half-width.",
+        "es": "Alrededor de la parte más ancha del pie; define el semiancho de la envolvente.",
+        "fr": "Autour de la partie la plus large du pied ; définit la demi-largeur de l'enveloppe."
+      }
+    },
+    {
+      "id": "topline_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 58,
+      "min": 20,
+      "max": 120,
+      "step": 2,
+      "label": {
+        "en": "Topline scoop (mm)",
+        "es": "Escote de la línea superior (mm)",
+        "fr": "Échancrure de la ligne d'entrée (mm)"
+      },
+      "tooltip": {
+        "en": "How deep the topline cuts down over the instep — the ballet flat's low vamp.",
+        "es": "Cuánto baja la línea superior sobre el empeine — el escote bajo de la bailarina.",
+        "fr": "Profondeur de l'échancrure sur le cou-de-pied — la découpe basse de la ballerine."
+      }
+    },
+    {
+      "id": "heel_height",
+      "type": "slider",
+      "group": "fit",
+      "default": 56,
+      "min": 25,
+      "max": 120,
+      "step": 2,
+      "label": {
+        "en": "Heel height (mm)",
+        "es": "Alto del talón (mm)",
+        "fr": "Hauteur de talon (mm)"
+      },
+      "tooltip": {
+        "en": "How high the quarter stands at the back of the foot.",
+        "es": "Cuán alto se levanta el cuarto en la parte trasera del pie.",
+        "fr": "Hauteur du quartier à l'arrière du pied."
+      }
+    },
+    {
+      "id": "elastic_w",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 3,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Elastic width (mm)",
+        "es": "Ancho del elástico (mm)",
+        "fr": "Largeur de l'élastique (mm)"
+      },
+      "tooltip": {
+        "en": "The elastic the casing must pass; it sets the binding's real folded width.",
+        "es": "El elástico que la jareta debe dejar pasar; define el ancho doblado real del ribete.",
+        "fr": "L'élastique que la coulisse doit laisser passer ; définit la largeur pliée réelle de la bordure."
+      }
+    },
+    {
+      "id": "draw_in",
+      "type": "slider",
+      "group": "construction",
+      "default": 34,
+      "min": 0,
+      "max": 90,
+      "step": 2,
+      "label": {
+        "en": "Elastic draw-in (mm)",
+        "es": "Fruncido del elástico (mm)",
+        "fr": "Fronçage de l'élastique (mm)"
+      },
+      "tooltip": {
+        "en": "How much SHORTER the elastic is cut than the topline — the gather that holds the shoe on. Zero means no draw-in.",
+        "es": "Cuánto MÁS CORTO se corta el elástico que la línea superior — el fruncido que sujeta el zapato. Cero significa sin fruncido.",
+        "fr": "De combien l'élastique est coupé PLUS COURT que la ligne d'entrée — le fronçage qui retient la chaussure. Zéro signifie sans fronçage."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 7,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "At the heel seam and the lasting edge; also the casing's turn-under.",
+        "es": "En la costura del talón y el borde de montado; también el dobladillo de la jareta.",
+        "fr": "À la couture de talon et au bord de montage ; aussi le rentré de la coulisse."
+      },
+      "advanced": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic low-cut",
+        "es": "Clásica muy escotada",
+        "fr": "Classique très échancrée"
+      },
+      "values": {
+        "topline_depth": 58,
+        "draw_in": 34,
+        "elastic_w": 6
+      }
+    },
+    {
+      "id": "high_vamp",
+      "label": {
+        "en": "High vamp (secure)",
+        "es": "Empeine alto (más sujeta)",
+        "fr": "Cou-de-pied haut (plus tenue)"
+      },
+      "values": {
+        "topline_depth": 32,
+        "heel_height": 74,
+        "draw_in": 50
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "elastic_casing",
+        "type": "custom",
+        "label": {
+          "en": "Topline elastic casing",
+          "es": "Jareta del elástico en la línea superior",
+          "fr": "Coulisse à élastique de la ligne d'entrée"
+        },
+        "edges": [
+          {
+            "piece": "binding",
+            "edge": "attach"
+          },
+          {
+            "piece": "upper",
+            "edge": "topline"
+          }
+        ],
+        "parameters": [
+          "elastic_w",
+          "draw_in",
+          "topline_depth",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "lasting_edge",
+        "type": "hem",
+        "label": {
+          "en": "Lasting edge (sole stitch-down)",
+          "es": "Borde de montado (cosido a la suela)",
+          "fr": "Bord de montage (couture semelle)"
+        },
+        "edges": [
+          {
+            "piece": "upper",
+            "edge": "lasting"
+          }
+        ],
+        "parameters": [
+          "foot_length",
+          "foot_girth",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": false
+    },
+    "societal_benefit": {
+      "en": "The ballet flat is the rare shoe that closes with nothing but a drawn-in elastic — no buckle, no zip, no part that can break and cannot be replaced. Publishing it as two pieces cut to a real foot, with the casing width and the draw-in stated as the honest numbers they are, keeps a shoe anyone can make and anyone can re-elasticate rather than discard.",
+      "es": "La bailarina es el zapato raro que cierra con nada más que un elástico fruncido — sin hebilla, sin cierre, sin pieza que se rompa y no pueda reemplazarse. Publicarla como dos piezas cortadas a un pie real, con el ancho de la jareta y el fruncido declarados como los números honestos que son, mantiene un zapato que cualquiera puede hacer y a cualquiera le puede cambiar el elástico en vez de tirarlo.",
+      "fr": "La ballerine est la rare chaussure qui se ferme avec rien d'autre qu'un élastique froncé — sans boucle, sans fermeture éclair, sans pièce qui casse et ne puisse être remplacée. La publier en deux pièces taillées à un pied réel, avec la largeur de coulisse et le fronçage énoncés comme les chiffres honnêtes qu'ils sont, préserve une chaussure que chacun peut fabriquer et dont chacun peut refaire l'élastique plutôt que de la jeter."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

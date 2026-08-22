@@ -1,0 +1,391 @@
+{
+  "project": {
+    "name": "Sandal Strap Set",
+    "slug": "sandal-strap-set",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The strap set of a flat sandal: a buckling ankle strap, a forefoot toe strap, and a heel strap linking them, all mounting to a footbed. Every strap shares ONE width — a sandal that mixes strap widths cannot share hardware — and that single width is the dimensional handshake with the Yantra4D `belt-buckle`, whose strap slot and anchor flange are sized from it. FC-300 lane 4, footwear soft goods.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El juego de correas de una sandalia plana: una correa de tobillo con hebilla, una correa de empeine y una correa de talón que las une, todas montadas a una plantilla. Todas las correas comparten UN solo ancho — una sandalia que mezcla anchos no puede compartir herrajes — y ese ancho único es el apretón de manos dimensional con la `belt-buckle` de Yantra4D, cuya ranura y brida se dimensionan a partir de él. FC-300 carril 4, calzado blando.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le jeu de brides d'une sandale plate : une bride de cheville à boucle, une bride d'avant-pied et une bride de talon qui les relie, toutes montées sur une semelle. Toutes les brides partagent UNE seule largeur — une sandale qui mélange les largeurs ne peut pas partager sa quincaillerie — et cette largeur unique est la poignée de main dimensionnelle avec la `belt-buckle` de Yantra4D, dont la fente et la bride d'ancrage en sont dimensionnées. FC-300 voie 4, chaussant souple.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "sandal",
+      "strap",
+      "footwear",
+      "buckle",
+      "hardware",
+      "leather",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Strap Set",
+        "es": "Juego completo de correas",
+        "fr": "Jeu de brides complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "ankle_strap",
+        "toe_strap",
+        "heel_strap"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "ankle_strap",
+      "label": {
+        "en": "Ankle strap (buckling)",
+        "es": "Correa de tobillo (con hebilla)",
+        "fr": "Bride de cheville (à boucle)"
+      },
+      "default_color": "#8a5a3c",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "toe_strap",
+      "label": {
+        "en": "Toe strap (forefoot cross)",
+        "es": "Correa de empeine",
+        "fr": "Bride d'avant-pied"
+      },
+      "default_color": "#a06f4a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "heel_strap",
+      "label": {
+        "en": "Heel strap (link)",
+        "es": "Correa de talón (unión)",
+        "fr": "Bride de talon (liaison)"
+      },
+      "default_color": "#6f472e",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Foot",
+        "es": "Pie",
+        "fr": "Pied"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Aisance"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "ankle_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 245,
+      "min": 160,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Ankle girth (mm)",
+        "es": "Contorno del tobillo (mm)",
+        "fr": "Tour de cheville (mm)"
+      },
+      "tooltip": {
+        "en": "Around the ankle; the strap wraps it and buckles. A true ISO 8559 landmark.",
+        "es": "Alrededor del tobillo; la correa lo envuelve y abrocha. Referencia ISO 8559 real.",
+        "fr": "Autour de la cheville ; la bride l'entoure et se boucle. Un vrai repère ISO 8559."
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "ankle_girth"
+      }
+    },
+    {
+      "id": "foot_length",
+      "type": "slider",
+      "group": "body",
+      "default": 255,
+      "min": 150,
+      "max": 330,
+      "step": 5,
+      "label": {
+        "en": "Foot length (mm)",
+        "es": "Largo del pie (mm)",
+        "fr": "Longueur du pied (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the forefoot strap run. A plain sized parameter — ISO 8559 has no foot landmark code, so none is claimed.",
+        "es": "Define el largo de la correa de empeine. Parámetro simple — ISO 8559 no tiene código de referencia del pie, así que no se reclama ninguno.",
+        "fr": "Définit la longueur de la bride d'avant-pied. Paramètre simple — l'ISO 8559 n'a aucun code de repère du pied, aucun n'est donc revendiqué."
+      }
+    },
+    {
+      "id": "strap_w",
+      "type": "slider",
+      "group": "construction",
+      "default": 20,
+      "min": 8,
+      "max": 50,
+      "step": 1,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de correa (mm)",
+        "fr": "Largeur de bride (mm)"
+      },
+      "tooltip": {
+        "en": "ONE width for every strap in the set — it sizes the strap mount edges and drives the Yantra4D buckle's strap slot and anchor flange.",
+        "es": "UN solo ancho para todas las correas — dimensiona los bordes de montaje y define la ranura y la brida de la hebilla de Yantra4D.",
+        "fr": "UNE seule largeur pour toutes les brides — elle dimensionne les bords de montage et pilote la fente et la bride d'ancrage de la boucle Yantra4D."
+      }
+    },
+    {
+      "id": "overlap",
+      "type": "slider",
+      "group": "fit",
+      "default": 85,
+      "min": 30,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Tongue overlap (mm)",
+        "es": "Sobrante de la lengüeta (mm)",
+        "fr": "Dépassement de l'ardillon (mm)"
+      },
+      "tooltip": {
+        "en": "How far the strap runs past the buckle; the adjustment range.",
+        "es": "Cuánto sobresale la correa más allá de la hebilla; el rango de ajuste.",
+        "fr": "De combien la bride dépasse la boucle ; la plage de réglage."
+      }
+    },
+    {
+      "id": "hole_count",
+      "type": "slider",
+      "group": "fit",
+      "default": 5,
+      "min": 2,
+      "max": 9,
+      "step": 1,
+      "label": {
+        "en": "Adjustment holes",
+        "es": "Agujeros de ajuste",
+        "fr": "Trous de réglage"
+      },
+      "tooltip": {
+        "en": "Prong holes down the tongue.",
+        "es": "Agujeros para el pincho a lo largo de la lengüeta.",
+        "fr": "Trous d'ardillon le long de la languette."
+      }
+    },
+    {
+      "id": "hole_pitch",
+      "type": "slider",
+      "group": "fit",
+      "default": 15,
+      "min": 8,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Hole spacing (mm)",
+        "es": "Separación de agujeros (mm)",
+        "fr": "Écartement des trous (mm)"
+      },
+      "tooltip": {
+        "en": "Distance between adjustment holes.",
+        "es": "Distancia entre agujeros de ajuste.",
+        "fr": "Distance entre les trous de réglage."
+      }
+    },
+    {
+      "id": "heel_rise",
+      "type": "slider",
+      "group": "fit",
+      "default": 68,
+      "min": 30,
+      "max": 150,
+      "step": 2,
+      "label": {
+        "en": "Heel rise (mm)",
+        "es": "Altura del talón (mm)",
+        "fr": "Hauteur de talon (mm)"
+      },
+      "tooltip": {
+        "en": "Footbed to ankle strap, up the back of the heel.",
+        "es": "De la plantilla a la correa de tobillo, por detrás del talón.",
+        "fr": "De la semelle à la bride de cheville, à l'arrière du talon."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 5,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "At the strap mount ends; straps are usually riveted or bar-tacked.",
+        "es": "En los extremos de montaje; las correas suelen remacharse o rematarse.",
+        "fr": "Aux extrémités de montage ; les brides sont rivetées ou arrêtées."
+      },
+      "advanced": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic flat sandal",
+        "es": "Sandalia plana clásica",
+        "fr": "Sandale plate classique"
+      },
+      "values": {
+        "strap_w": 20,
+        "hole_count": 5,
+        "heel_rise": 68
+      }
+    },
+    {
+      "id": "wide_strap",
+      "label": {
+        "en": "Wide strap",
+        "es": "Correa ancha",
+        "fr": "Bride large"
+      },
+      "values": {
+        "strap_w": 34,
+        "hole_pitch": 20,
+        "overlap": 110
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "buckle",
+    "subtype": "sandal ankle-strap buckle",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "belt-buckle",
+      "linked": true,
+      "params_map": {
+        "strap_width": "strap_w",
+        "prong_d": "min(4, strap_w / 5)"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "buckle_strap_end",
+        "type": "custom",
+        "label": {
+          "en": "Buckle strap end",
+          "es": "Extremo de correa en la hebilla",
+          "fr": "Extrémité de bride à la boucle"
+        },
+        "edges": [
+          {
+            "piece": "ankle_strap",
+            "edge": "attach_b"
+          }
+        ],
+        "parameters": [
+          "strap_w",
+          "overlap",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "strap_mounts",
+        "type": "custom",
+        "label": {
+          "en": "Footbed strap mounts",
+          "es": "Montajes de correa a la plantilla",
+          "fr": "Points de montage des brides"
+        },
+        "edges": [
+          {
+            "piece": "toe_strap",
+            "edge": "attach_a"
+          },
+          {
+            "piece": "toe_strap",
+            "edge": "attach_b"
+          },
+          {
+            "piece": "heel_strap",
+            "edge": "attach_a"
+          }
+        ],
+        "parameters": [
+          "strap_w",
+          "foot_length",
+          "heel_rise"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A sandal is straps and a footbed — the most repairable shoe there is, if the straps are replaceable and the buckle is not a proprietary part. Publishing the strap set parametrically, with the buckle an open printable Yantra4D object sized to your own strap width, means a broken sandal is a twenty-minute fix rather than landfill.",
+      "es": "Una sandalia son correas y una plantilla — el zapato más reparable que existe, si las correas son reemplazables y la hebilla no es una pieza propietaria. Publicar el juego de correas de forma paramétrica, con la hebilla como objeto imprimible abierto de Yantra4D dimensionado a tu propio ancho de correa, convierte una sandalia rota en un arreglo de veinte minutos en vez de basura.",
+      "fr": "Une sandale, ce sont des brides et une semelle — la chaussure la plus réparable qui soit, si les brides sont remplaçables et la boucle n'est pas une pièce propriétaire. Publier le jeu de brides de façon paramétrique, avec la boucle comme objet Yantra4D imprimable et ouvert dimensionné à votre propre largeur de bride, fait d'une sandale cassée une réparation de vingt minutes plutôt qu'un déchet."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

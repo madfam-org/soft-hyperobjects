@@ -1,0 +1,490 @@
+{
+  "project": {
+    "name": "Garter Belt",
+    "slug": "garter-belt",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A shaped suspender belt that sits between waist and high hip and hangs four straps to stocking clips. The belt is drafted as a flattened truncated cone — its top edge sums to the waist ring and its hem to the high-hip ring — which is why it stays put where a straight strip rides up or falls down. The clips are a Yantra4D solid (`garter-clip`); the garment's strap width drives BOTH the drafted strap's cut width and the clip's slot, so the strap threads its hardware by construction rather than by luck. FC-300 lane 3 (structured intimates).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un liguero moldeado que se asienta entre la cintura y la cadera alta y cuelga cuatro tirantes hacia broches de media. El cinturón se traza como un cono truncado desplegado — su canto superior suma el anillo de cintura y su ruedo el de cadera alta — por eso se queda en su sitio donde una tira recta se sube o se cae. Los broches son un sólido de Yantra4D (`garter-clip`); el ancho de tirante de la prenda define TANTO el ancho de corte del tirante trazado COMO la ranura del broche, así el tirante enhebra su herraje por construcción y no por suerte. Carril 3 de FC-300 (lencería estructurada).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un porte-jarretelles mis en forme qui se place entre la taille et la hanche haute et suspend quatre jarretelles vers des pinces à bas. La ceinture est tracée comme un cône tronqué déplié — son bord supérieur totalise l'anneau de taille et son ourlet celui de la hanche haute — c'est pourquoi elle reste en place là où une bande droite remonte ou tombe. Les pinces sont un solide Yantra4D (`garter-clip`) ; la largeur de jarretelle du vêtement pilote À LA FOIS la largeur de coupe de la jarretelle tracée ET la fente de la pince, de sorte que la jarretelle enfile sa quincaillerie par construction et non par chance. Couloir 3 de FC-300 (lingerie structurée).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "garter-belt",
+      "suspender-belt",
+      "lingerie",
+      "shaped-ring",
+      "hardware",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Belt",
+        "es": "Liguero completo",
+        "fr": "Porte-jarretelles complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front_panel",
+        "side_panel",
+        "back_panel",
+        "strap"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front_panel",
+      "label": {
+        "en": "Front panel (on fold, 2 strap positions)",
+        "es": "Panel frontal (al doblez, 2 posiciones de tirante)",
+        "fr": "Panneau devant (au pli, 2 positions de jarretelle)"
+      },
+      "default_color": "#7a4a63",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": false
+      }
+    },
+    {
+      "id": "side_panel",
+      "label": {
+        "en": "Side panel",
+        "es": "Panel lateral",
+        "fr": "Panneau côté"
+      },
+      "default_color": "#8a5a72",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back_panel",
+      "label": {
+        "en": "Back panel (on fold, 2 strap positions, hook closure)",
+        "es": "Panel trasero (al doblez, 2 posiciones, cierre de broches)",
+        "fr": "Panneau dos (au pli, 2 positions, fermeture à agrafes)"
+      },
+      "default_color": "#7a4a63",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": false
+      }
+    },
+    {
+      "id": "strap",
+      "label": {
+        "en": "Suspender strap (cut 4)",
+        "es": "Tirante de liga (cortar 4)",
+        "fr": "Jarretelle (couper 4)"
+      },
+      "default_color": "#5e3a4c",
+      "cut": {
+        "quantity": 4,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Ajustement"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 700,
+      "min": 500,
+      "max": 1400,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "The belt's top edge sums to this ring",
+        "es": "El canto superior del cinturón suma este anillo",
+        "fr": "Le bord supérieur de la ceinture totalise cet anneau"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 960,
+      "min": 600,
+      "max": 1700,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      },
+      "tooltip": {
+        "en": "The belt's hem sums to this ring — the difference is the cone flare",
+        "es": "El ruedo suma este anillo — la diferencia es la abertura del cono",
+        "fr": "L'ourlet totalise cet anneau — la différence est l'évasement du cône"
+      }
+    },
+    {
+      "id": "belt_depth",
+      "type": "slider",
+      "group": "construction",
+      "default": 90,
+      "min": 45,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Belt depth (mm)",
+        "es": "Profundidad del cinturón (mm)",
+        "fr": "Profondeur de ceinture (mm)"
+      },
+      "tooltip": {
+        "en": "Waist edge to hem",
+        "es": "Del canto de cintura al ruedo",
+        "fr": "Du bord de taille à l'ourlet"
+      }
+    },
+    {
+      "id": "strap_w",
+      "type": "slider",
+      "group": "construction",
+      "default": 16,
+      "min": 8,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de tirante (mm)",
+        "fr": "Largeur de jarretelle (mm)"
+      },
+      "tooltip": {
+        "en": "Cut width of the strap AND the width of the clip's slot — one number",
+        "es": "Ancho de corte del tirante Y de la ranura del broche — un solo número",
+        "fr": "Largeur de coupe de la jarretelle ET de la fente de la pince — un seul nombre"
+      }
+    },
+    {
+      "id": "strap_t",
+      "type": "slider",
+      "group": "construction",
+      "default": 2.4,
+      "min": 1,
+      "max": 6,
+      "step": 0.2,
+      "label": {
+        "en": "Strap thickness (mm)",
+        "es": "Grosor de tirante (mm)",
+        "fr": "Épaisseur de jarretelle (mm)"
+      },
+      "tooltip": {
+        "en": "Finished folded thickness — sets the clip slot clearance",
+        "es": "Grosor final doblado — define la holgura de la ranura del broche",
+        "fr": "Épaisseur finie pliée — fixe le jeu de la fente de la pince"
+      }
+    },
+    {
+      "id": "strap_drop",
+      "type": "slider",
+      "group": "fit",
+      "default": 180,
+      "min": 80,
+      "max": 340,
+      "step": 10,
+      "label": {
+        "en": "Strap drop (mm)",
+        "es": "Caída del tirante (mm)",
+        "fr": "Chute de jarretelle (mm)"
+      },
+      "tooltip": {
+        "en": "Belt hem to clip — set so the clip lands on the stocking welt",
+        "es": "Del ruedo al broche — ajústalo para que caiga sobre la ceja de la media",
+        "fr": "De l'ourlet à la pince — réglez pour que la pince tombe sur le bord du bas"
+      }
+    },
+    {
+      "id": "negative_ease_pct",
+      "type": "slider",
+      "group": "fit",
+      "default": 6,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Negative ease (%)",
+        "es": "Holgura negativa (%)",
+        "fr": "Aisance négative (%)"
+      },
+      "tooltip": {
+        "en": "A garter belt works by shape, not squeeze — keep this low",
+        "es": "Un liguero funciona por forma, no por apriete — mantenlo bajo",
+        "fr": "Un porte-jarretelles agit par la forme, pas par la pression — gardez-le faible"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Panel seams; the belt is fully lined",
+        "es": "Costuras de panel; el cinturón va totalmente forrado",
+        "fr": "Coutures de panneau ; la ceinture est entièrement doublée"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic",
+        "es": "Clásico",
+        "fr": "Classique"
+      },
+      "values": {
+        "belt_depth": 90,
+        "strap_drop": 180
+      }
+    },
+    {
+      "id": "deep_waist",
+      "label": {
+        "en": "Deep waist",
+        "es": "Cintura alta",
+        "fr": "Taille haute"
+      },
+      "values": {
+        "belt_depth": 150,
+        "strap_drop": 140
+      }
+    },
+    {
+      "id": "narrow",
+      "label": {
+        "en": "Narrow band",
+        "es": "Banda angosta",
+        "fr": "Bande étroite"
+      },
+      "values": {
+        "belt_depth": 55,
+        "strap_w": 12,
+        "strap_drop": 220
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "hip_girth > waist_girth",
+      "message": {
+        "en": "Hip girth must exceed waist girth — the difference is the cone flare that keeps the belt in place.",
+        "es": "La cadera debe superar la cintura — la diferencia es la abertura del cono que mantiene el cinturón en su sitio.",
+        "fr": "Le tour de hanches doit dépasser celui de taille — la différence est l'évasement qui maintient la ceinture."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "garter clip on suspender strap",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "garter-clip",
+      "linked": true,
+      "params_map": {
+        "strap_w": "strap_w",
+        "strap_t": "strap_t",
+        "grip_clear": "0.3"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "strap_edge",
+        "type": "custom",
+        "label": {
+          "en": "Strap edge (threads the clip slot)",
+          "es": "Canto del tirante (enhebra la ranura del broche)",
+          "fr": "Bord de jarretelle (enfile la fente de la pince)"
+        },
+        "edges": [
+          {
+            "piece": "strap",
+            "edge": "strap_edge"
+          },
+          {
+            "piece": "strap",
+            "edge": "end_clip"
+          }
+        ],
+        "parameters": [
+          "strap_w",
+          "strap_t",
+          "strap_drop"
+        ]
+      },
+      {
+        "id": "waistband",
+        "type": "waistband",
+        "label": {
+          "en": "Waist edge (sums to the waist ring)",
+          "es": "Canto de cintura (suma el anillo de cintura)",
+          "fr": "Bord de taille (totalise l'anneau de taille)"
+        },
+        "edges": [
+          {
+            "piece": "front_panel",
+            "edge": "waist"
+          },
+          {
+            "piece": "side_panel",
+            "edge": "waist"
+          },
+          {
+            "piece": "back_panel",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "negative_ease_pct"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "label": {
+          "en": "Hem (sums to the high-hip ring)",
+          "es": "Ruedo (suma el anillo de cadera alta)",
+          "fr": "Ourlet (totalise l'anneau de hanche haute)"
+        },
+        "edges": [
+          {
+            "piece": "front_panel",
+            "edge": "hem"
+          },
+          {
+            "piece": "side_panel",
+            "edge": "hem"
+          },
+          {
+            "piece": "back_panel",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "hip_girth",
+          "belt_depth",
+          "negative_ease_pct"
+        ]
+      },
+      {
+        "id": "panel_seams",
+        "type": "side_seam",
+        "label": {
+          "en": "Panel ring seams (the cone flare)",
+          "es": "Costuras del anillo de paneles (la abertura del cono)",
+          "fr": "Coutures de l'anneau de panneaux (l'évasement)"
+        },
+        "edges": [
+          {
+            "piece": "front_panel",
+            "edge": "seam"
+          },
+          {
+            "piece": "side_panel",
+            "edge": "seam"
+          },
+          {
+            "piece": "back_panel",
+            "edge": "seam"
+          }
+        ],
+        "parameters": [
+          "belt_depth",
+          "waist_girth",
+          "hip_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true,
+      "shaped_ring": true,
+      "hook_closure": true
+    },
+    "societal_benefit": {
+      "en": "Two failures make cheap garter belts unwearable, and both are dimensional. A straight strip of elastic cannot sit between a waist and a hip, so it rides up or falls down; and a strap cut to whatever webbing was on hand either will not thread its clip or twists inside an oversized slot. This cartridge fixes both by construction: the belt is drafted as a flattened cone that closes exactly on the wearer's own two rings, and the strap width is the same single number that sizes the printable clip's slot. The result is a repairable object whose clips — the part that always breaks first — can be reprinted to the straps already sewn.",
+      "es": "Dos fallas hacen impracticables los ligueros baratos, y ambas son dimensionales. Una tira recta de elástico no puede asentarse entre una cintura y una cadera, así que se sube o se cae; y un tirante cortado del elástico que hubiera a mano o no enhebra su broche o se tuerce dentro de una ranura holgada. Este cartucho corrige ambas por construcción: el cinturón se traza como un cono desplegado que cierra exactamente sobre los dos anillos propios de quien lo usa, y el ancho del tirante es el mismo número único que dimensiona la ranura del broche imprimible. El resultado es un objeto reparable cuyos broches — la pieza que siempre se rompe primero — pueden reimprimirse a los tirantes ya cosidos.",
+      "fr": "Deux défauts rendent les porte-jarretelles bon marché inutilisables, et tous deux sont dimensionnels. Une bande élastique droite ne peut se placer entre une taille et une hanche : elle remonte ou tombe ; et une jarretelle coupée dans l'élastique disponible soit n'enfile pas sa pince, soit vrille dans une fente trop large. Ce cartouche corrige les deux par construction : la ceinture est tracée comme un cône déplié qui se referme exactement sur les deux anneaux de la personne, et la largeur de jarretelle est le même nombre unique qui dimensionne la fente de la pince imprimable. Le résultat est un objet réparable dont les pinces — la pièce qui casse toujours en premier — peuvent être réimprimées aux jarretelles déjà cousues."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

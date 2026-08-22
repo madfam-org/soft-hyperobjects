@@ -1,0 +1,432 @@
+{
+  "project": {
+    "name": "Messenger Bag",
+    "slug": "messenger-bag",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A flap-over messenger: a body panel folded at the base, wrap-around side gussets, a curved cover flap, and a webbing closure strap that feeds a cam buckle. The buckle bridges to the Yantra4D `cam-buckle` solid, whose webbing throat takes the same webbing width as the closure strap — a cam buckle is one-handed, which is why messengers use them. Both the gusset span and the flap attachment are measured off the drafted geometry, so the seams verify rather than being eased in.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un bolso mensajero con solapa: un panel de cuerpo doblado en la base, fuelles laterales envolventes, una solapa curva y una correa de cincha que alimenta una hebilla de leva. La hebilla se puentea al sólido `cam-buckle` de Yantra4D, cuya garganta de cincha admite el mismo ancho que la correa de cierre — una hebilla de leva se opera con una mano, por eso la usan los mensajeros. Tanto el tramo del fuelle como la unión de la solapa se miden sobre la geometría trazada, de modo que las costuras se verifican en vez de forzarse.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une sacoche à rabat : un panneau de corps plié au fond, des soufflets latéraux enveloppants, un rabat courbé et une sangle de fermeture qui alimente une boucle à came. La boucle fait le pont vers le solide `cam-buckle` de Yantra4D, dont la gorge de sangle reçoit la même largeur que la sangle de fermeture — une boucle à came s'actionne d'une main, d'où son usage par les coursiers. Le parcours du soufflet et la fixation du rabat sont mesurés sur la géométrie tracée, de sorte que les coutures se vérifient au lieu d'être forcées.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "messenger-bag",
+      "bag",
+      "flap",
+      "gusset",
+      "hardware",
+      "cam-buckle",
+      "webbing",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full messenger",
+        "es": "Mensajero completo",
+        "fr": "Sacoche complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "body",
+        "gusset",
+        "flap",
+        "strap"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body (front + base + back)",
+        "es": "Cuerpo (frente + base + espalda)",
+        "fr": "Corps (devant + fond + dos)"
+      },
+      "default_color": "#4b4436",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "gusset",
+      "label": {
+        "en": "Side gusset",
+        "es": "Fuelle lateral",
+        "fr": "Soufflet latéral"
+      },
+      "default_color": "#3d372c",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "flap",
+      "label": {
+        "en": "Cover flap",
+        "es": "Solapa",
+        "fr": "Rabat"
+      },
+      "default_color": "#5c5342",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "strap",
+      "label": {
+        "en": "Closure strap (webbing)",
+        "es": "Correa de cierre (cincha)",
+        "fr": "Sangle de fermeture"
+      },
+      "default_color": "#6f6449",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Size",
+        "es": "Tamaño",
+        "fr": "Taille"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bag_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 380,
+      "min": 240,
+      "max": 500,
+      "step": 10,
+      "label": {
+        "en": "Width (mm)",
+        "es": "Ancho (mm)",
+        "fr": "Largeur (mm)"
+      },
+      "tooltip": {
+        "en": "Width across the front; also the flap width",
+        "es": "Ancho del frente; también el ancho de la solapa",
+        "fr": "Largeur du devant ; également la largeur du rabat"
+      }
+    },
+    {
+      "id": "bag_height",
+      "type": "slider",
+      "group": "fit",
+      "default": 280,
+      "min": 180,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Height (mm)",
+        "es": "Alto (mm)",
+        "fr": "Hauteur (mm)"
+      },
+      "tooltip": {
+        "en": "Front-face height from base fold to opening",
+        "es": "Alto de la cara frontal, del doblez de base a la abertura",
+        "fr": "Hauteur de la face avant, du pli de fond à l'ouverture"
+      }
+    },
+    {
+      "id": "bag_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 110,
+      "min": 50,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Depth (mm)",
+        "es": "Fondo (mm)",
+        "fr": "Profondeur (mm)"
+      },
+      "tooltip": {
+        "en": "Gusset width; the bag's carrying depth",
+        "es": "Ancho del fuelle; el fondo de carga del bolso",
+        "fr": "Largeur du soufflet ; la profondeur de charge du sac"
+      }
+    },
+    {
+      "id": "flap_drop",
+      "type": "slider",
+      "group": "fit",
+      "default": 210,
+      "min": 80,
+      "max": 340,
+      "step": 10,
+      "label": {
+        "en": "Flap drop (mm)",
+        "es": "Caída de la solapa (mm)",
+        "fr": "Retombée du rabat (mm)"
+      },
+      "tooltip": {
+        "en": "How far the flap falls down the front face",
+        "es": "Cuánto cae la solapa sobre la cara frontal",
+        "fr": "Hauteur de retombée du rabat sur la face avant"
+      }
+    },
+    {
+      "id": "webbing_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 38,
+      "min": 20,
+      "max": 50,
+      "step": 1,
+      "label": {
+        "en": "Webbing width (mm)",
+        "es": "Ancho de cincha (mm)",
+        "fr": "Largeur de sangle (mm)"
+      },
+      "tooltip": {
+        "en": "Closure-strap webbing; drives the Yantra4D cam buckle's webbing throat",
+        "es": "Cincha de la correa de cierre; define la garganta de la hebilla Yantra4D",
+        "fr": "Sangle de fermeture ; pilote la gorge de sangle de la boucle Yantra4D"
+      }
+    },
+    {
+      "id": "strap_length",
+      "type": "slider",
+      "group": "construction",
+      "default": 420,
+      "min": 200,
+      "max": 700,
+      "step": 10,
+      "label": {
+        "en": "Closure strap length (mm)",
+        "es": "Largo de la correa de cierre (mm)",
+        "fr": "Longueur de la sangle de fermeture (mm)"
+      },
+      "tooltip": {
+        "en": "Cut length of the strap that feeds the cam buckle",
+        "es": "Largo de corte de la correa que alimenta la hebilla de leva",
+        "fr": "Longueur de coupe de la sangle qui alimente la boucle à came"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to the gusset, flap and body seams",
+        "es": "Aplicado a las costuras de fuelle, solapa y cuerpo",
+        "fr": "Appliquée aux coutures du soufflet, du rabat et du corps"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "flap_drop >= bag_height * 0.5",
+      "severity": "warning",
+      "message": {
+        "en": "A flap covering less than half the front will not keep weather out of the opening.",
+        "es": "Una solapa que cubre menos de la mitad del frente no protege la abertura.",
+        "fr": "Un rabat couvrant moins de la moitié du devant ne protège pas l'ouverture."
+      }
+    },
+    {
+      "expression": "strap_length >= flap_drop",
+      "severity": "warning",
+      "message": {
+        "en": "The closure strap must at least reach from the flap tack down to the keeper.",
+        "es": "La correa debe alcanzar al menos del remate de la solapa hasta el pasador.",
+        "fr": "La sangle doit au moins atteindre du point d'arrêt du rabat jusqu'au passant."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "courier",
+      "label": {
+        "en": "Courier",
+        "es": "Mensajería",
+        "fr": "Coursier"
+      },
+      "values": {
+        "bag_width": 440,
+        "bag_height": 320,
+        "bag_depth": 160,
+        "flap_drop": 260
+      }
+    },
+    {
+      "id": "laptop",
+      "label": {
+        "en": "Laptop",
+        "es": "Portátil",
+        "fr": "Ordinateur portable"
+      },
+      "values": {
+        "bag_width": 380,
+        "bag_height": 280,
+        "bag_depth": 110,
+        "flap_drop": 210
+      }
+    },
+    {
+      "id": "musette",
+      "label": {
+        "en": "Musette",
+        "es": "Musette",
+        "fr": "Musette"
+      },
+      "values": {
+        "bag_width": 260,
+        "bag_height": 200,
+        "bag_depth": 60,
+        "flap_drop": 110
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "nylon-ripstop-shell"
+  ],
+  "notion": {
+    "kind": "buckle",
+    "subtype": "messenger closure cam buckle",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "cam-buckle",
+      "linked": true,
+      "params_map": {
+        "webbing_w": "webbing_width",
+        "webbing_t": "max(2, webbing_width / 12)"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "closure_webbing",
+        "type": "custom",
+        "label": {
+          "en": "Closure-strap webbing end",
+          "es": "Extremo de cincha de la correa de cierre",
+          "fr": "Extrémité de sangle de fermeture"
+        },
+        "edges": [
+          {
+            "piece": "strap",
+            "edge": "buckle_end"
+          }
+        ],
+        "parameters": [
+          "webbing_width"
+        ]
+      },
+      {
+        "id": "gusset_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Gusset seam",
+          "es": "Costura del fuelle",
+          "fr": "Couture du soufflet"
+        },
+        "edges": [
+          {
+            "piece": "gusset",
+            "edge": "join"
+          },
+          {
+            "piece": "body",
+            "edge": "side_l"
+          }
+        ],
+        "parameters": [
+          "bag_depth",
+          "bag_height",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "flap_seam",
+        "type": "custom",
+        "label": {
+          "en": "Flap attachment seam",
+          "es": "Costura de unión de la solapa",
+          "fr": "Couture de fixation du rabat"
+        },
+        "edges": [
+          {
+            "piece": "flap",
+            "edge": "attach"
+          },
+          {
+            "piece": "body",
+            "edge": "top_back"
+          }
+        ],
+        "parameters": [
+          "bag_width",
+          "flap_drop",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A work bag whose one-handed cam buckle — the part that decides whether the bag is usable on a bike and the part that breaks first — is an open printable Yantra4D object dimensioned to the bag's own webbing, so a broken closure never retires a sound bag.",
+      "es": "Un bolso de trabajo cuya hebilla de leva de una mano — la pieza que decide si el bolso sirve en bicicleta y la primera que se rompe — es un objeto imprimible abierto de Yantra4D dimensionado a la propia cincha, de modo que un cierre roto nunca jubila un bolso sano.",
+      "fr": "Un sac de travail dont la boucle à came à une main — la pièce qui décide si le sac est utilisable à vélo et la première à casser — est un objet Yantra4D ouvert et imprimable dimensionné à la sangle du sac, de sorte qu'une fermeture cassée ne met jamais au rebut un sac sain."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

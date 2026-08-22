@@ -1,0 +1,374 @@
+{
+  "project": {
+    "name": "Camera Strap",
+    "slug": "camera-strap",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "An adjustable webbing camera strap: two tails that thread the camera lugs, a length-adjusting tri-glide slider, and a shaped shoulder pad with a webbing channel through it so the pad slides to where the shoulder wants it. The slider bridges to the Yantra4D `tri-glide-slider` solid, whose webbing openings take the same webbing width as the tails — one slider is the entire adjustment mechanism. The channel length is taken from the measured Bezier run of the pad's inner edge, which has no closed form.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una correa de cámara de cincha ajustable: dos colas que pasan por las orejas de la cámara, un regulador tri-glide de longitud y una hombrera perfilada con un canal de cincha para que la almohadilla se deslice a donde el hombro la quiere. El regulador se puentea al sólido `tri-glide-slider` de Yantra4D, cuyas aberturas de cincha admiten el mismo ancho que las colas — un solo regulador es todo el mecanismo de ajuste. El largo del canal se toma del recorrido Bézier medido del borde interior de la hombrera, que no tiene forma cerrada.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une courroie d'appareil photo en sangle réglable : deux brins qui passent dans les œillets du boîtier, un régleur tri-glide de longueur, et une épaulette profilée traversée d'un canal de sangle pour que le rembourrage coulisse là où l'épaule le veut. Le régleur fait le pont vers le solide `tri-glide-slider` de Yantra4D, dont les ouvertures de sangle reçoivent la même largeur que les brins — un seul régleur constitue tout le mécanisme de réglage. La longueur du canal est prise du parcours de Bézier mesuré du bord intérieur de l'épaulette, qui n'a pas de forme close.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "camera-strap",
+      "strap",
+      "webbing",
+      "adjustable",
+      "hardware",
+      "tri-glide-slider",
+      "shoulder-pad",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full strap",
+        "es": "Correa completa",
+        "fr": "Courroie complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "tail",
+        "pad",
+        "channel"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "tail",
+      "label": {
+        "en": "Webbing tail",
+        "es": "Cola de cincha",
+        "fr": "Brin de sangle"
+      },
+      "default_color": "#5b5342",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "pad",
+      "label": {
+        "en": "Shoulder pad",
+        "es": "Hombrera",
+        "fr": "Épaulette"
+      },
+      "default_color": "#40474f",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "channel",
+      "label": {
+        "en": "Webbing channel",
+        "es": "Canal de cincha",
+        "fr": "Canal de sangle"
+      },
+      "default_color": "#343a41",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Size",
+        "es": "Tamaño",
+        "fr": "Taille"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "strap_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 1250,
+      "min": 700,
+      "max": 1700,
+      "step": 10,
+      "label": {
+        "en": "Strap length (mm)",
+        "es": "Largo de la correa (mm)",
+        "fr": "Longueur de courroie (mm)"
+      },
+      "tooltip": {
+        "en": "Full span lug to lug; the slider takes up the difference",
+        "es": "Tramo completo entre orejas; el regulador absorbe la diferencia",
+        "fr": "Portée complète d'œillet à œillet ; le régleur absorbe la différence"
+      }
+    },
+    {
+      "id": "webbing_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 25,
+      "min": 10,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Webbing width (mm)",
+        "es": "Ancho de cincha (mm)",
+        "fr": "Largeur de sangle (mm)"
+      },
+      "tooltip": {
+        "en": "Tail webbing; drives the Yantra4D tri-glide slider's webbing openings",
+        "es": "Cincha de las colas; define las aberturas del regulador Yantra4D",
+        "fr": "Sangle des brins ; pilote les ouvertures du régleur Yantra4D"
+      }
+    },
+    {
+      "id": "pad_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 340,
+      "min": 160,
+      "max": 520,
+      "step": 10,
+      "label": {
+        "en": "Pad length (mm)",
+        "es": "Largo de la hombrera (mm)",
+        "fr": "Longueur d'épaulette (mm)"
+      },
+      "tooltip": {
+        "en": "How much of the strap is padded across the shoulder",
+        "es": "Cuánto de la correa va acolchado sobre el hombro",
+        "fr": "Longueur de courroie rembourrée sur l'épaule"
+      }
+    },
+    {
+      "id": "pad_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 62,
+      "min": 30,
+      "max": 110,
+      "step": 2,
+      "label": {
+        "en": "Pad width (mm)",
+        "es": "Ancho de la hombrera (mm)",
+        "fr": "Largeur d'épaulette (mm)"
+      },
+      "tooltip": {
+        "en": "Widest point of the pad; wider spreads a heavier body's load",
+        "es": "Punto más ancho de la hombrera; más ancho reparte más carga",
+        "fr": "Point le plus large de l'épaulette ; plus large répartit une charge plus lourde"
+      }
+    },
+    {
+      "id": "lug_taper",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 8,
+      "max": 25,
+      "step": 1,
+      "label": {
+        "en": "Lug-end width (mm)",
+        "es": "Ancho en la oreja (mm)",
+        "fr": "Largeur à l'œillet (mm)"
+      },
+      "tooltip": {
+        "en": "Narrowed tail width at the camera lug; clamped to the webbing width",
+        "es": "Ancho reducido de la cola en la oreja; limitado al ancho de cincha",
+        "fr": "Largeur réduite du brin à l'œillet ; limitée à la largeur de sangle"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to the pad and channel seams; the webbing tails are cut edge-finished",
+        "es": "Aplicado a hombrera y canal; las colas de cincha se cortan y sellan",
+        "fr": "Appliquée à l'épaulette et au canal ; les brins sont coupés et thermosoudés"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "pad_length < strap_length",
+      "severity": "error",
+      "message": {
+        "en": "The pad cannot be longer than the strap it rides on.",
+        "es": "La hombrera no puede ser más larga que la correa que la lleva.",
+        "fr": "L'épaulette ne peut être plus longue que la courroie qui la porte."
+      }
+    },
+    {
+      "expression": "pad_width > webbing_width",
+      "severity": "warning",
+      "message": {
+        "en": "A pad no wider than the webbing spreads no load — it is just more webbing.",
+        "es": "Una hombrera no más ancha que la cincha no reparte carga — es más cincha.",
+        "fr": "Une épaulette pas plus large que la sangle ne répartit rien — c'est de la sangle."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "mirrorless",
+      "label": {
+        "en": "Mirrorless",
+        "es": "Sin espejo",
+        "fr": "Hybride"
+      },
+      "values": {
+        "strap_length": 1150,
+        "webbing_width": 20,
+        "pad_length": 280,
+        "pad_width": 50
+      }
+    },
+    {
+      "id": "dslr",
+      "label": {
+        "en": "DSLR",
+        "es": "Réflex",
+        "fr": "Reflex"
+      },
+      "values": {
+        "strap_length": 1250,
+        "webbing_width": 25,
+        "pad_length": 340,
+        "pad_width": 62
+      }
+    },
+    {
+      "id": "telephoto",
+      "label": {
+        "en": "Telephoto",
+        "es": "Teleobjetivo",
+        "fr": "Téléobjectif"
+      },
+      "values": {
+        "strap_length": 1450,
+        "webbing_width": 38,
+        "pad_length": 460,
+        "pad_width": 95
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "nylon-ripstop-shell"
+  ],
+  "notion": {
+    "kind": "buckle",
+    "subtype": "camera strap length adjuster",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "tri-glide-slider",
+      "linked": true,
+      "params_map": {
+        "webbing_w": "webbing_width",
+        "webbing_t": "max(1.5, webbing_width / 14)"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "slider_webbing",
+        "type": "custom",
+        "label": {
+          "en": "Slider webbing end",
+          "es": "Extremo de cincha del regulador",
+          "fr": "Extrémité de sangle du régleur"
+        },
+        "edges": [
+          {
+            "piece": "tail",
+            "edge": "slider_end"
+          }
+        ],
+        "parameters": [
+          "webbing_width"
+        ]
+      },
+      {
+        "id": "pad_channel",
+        "type": "custom",
+        "label": {
+          "en": "Pad webbing channel",
+          "es": "Canal de cincha de la hombrera",
+          "fr": "Canal de sangle de l'épaulette"
+        },
+        "edges": [
+          {
+            "piece": "channel",
+            "edge": "join"
+          },
+          {
+            "piece": "pad",
+            "edge": "inner"
+          }
+        ],
+        "parameters": [
+          "pad_length",
+          "webbing_width",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A camera strap whose entire adjustment mechanism is one printable Yantra4D slider sized to the strap's own webbing — the smallest, cheapest part of the strap, and the one whose loss usually sends the whole strap to landfill.",
+      "es": "Una correa de cámara cuyo mecanismo de ajuste completo es un solo regulador Yantra4D imprimible dimensionado a la propia cincha — la pieza más pequeña y barata, y la que al perderse suele mandar toda la correa a la basura.",
+      "fr": "Une courroie d'appareil photo dont tout le mécanisme de réglage est un unique régleur Yantra4D imprimable dimensionné à sa propre sangle — la pièce la plus petite et la moins chère, et celle dont la perte envoie d'ordinaire toute la courroie à la décharge."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

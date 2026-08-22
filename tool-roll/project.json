@@ -1,0 +1,451 @@
+{
+  "project": {
+    "name": "Tool Roll",
+    "slug": "tool-roll",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The pocket-row tool roll: a flat panel of tough cloth with one continuous pocket strip stitched down at every divider, so each pocket takes the exact width of the tool it carries and the divider pitch is the tool list. A flap covers the tool tips, and the whole roll winds around its own contents and ties on a cord whose ends carry pressed-on strap-end tips. The tip solid is Yantra4D territory; Fashion Cabinet owns the roll. FC-300 technical & outdoor.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El portaherramientas de hilera de bolsillos: un panel plano de tela dura con una tira de bolsillos continua pespunteada en cada divisor, de modo que cada bolsillo toma el ancho exacto de la herramienta que carga y el paso de los divisores ES la lista de herramientas. Una solapa cubre las puntas, y el rollo se enrolla sobre su propio contenido y se ata con un cordón cuyos extremos llevan puntas prensadas. El sólido de la punta es territorio de Yantra4D; Fashion Cabinet posee el rollo.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La trousse à outils à rangée de poches : un panneau plat de toile robuste avec une bande de poches continue piquée à chaque cloison, de sorte que chaque poche prend la largeur exacte de l'outil qu'elle porte et que le pas des cloisons EST la liste d'outils. Un rabat couvre les pointes, et le tout s'enroule sur son propre contenu et se noue par un cordon dont les extrémités portent des embouts sertis. Le solide de l'embout relève de Yantra4D ; Fashion Cabinet possède la trousse.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "tool-roll",
+      "outdoor",
+      "technical",
+      "workwear",
+      "accessory",
+      "hardware",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full roll",
+        "es": "Rollo completo",
+        "fr": "Trousse complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "body",
+        "pockets",
+        "tie"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Roll body + flap",
+        "es": "Cuerpo del rollo + solapa",
+        "fr": "Corps de la trousse + rabat"
+      },
+      "default_color": "#8a6f4a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "pockets",
+      "label": {
+        "en": "Pocket strip",
+        "es": "Tira de bolsillos",
+        "fr": "Bande de poches"
+      },
+      "default_color": "#6d5537",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "tie",
+      "label": {
+        "en": "Tie tab",
+        "es": "Lengüeta del cordón",
+        "fr": "Patte de nouage"
+      },
+      "default_color": "#4a3a26",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Tool list and size",
+        "es": "Lista de herramientas y tamaño",
+        "fr": "Liste d'outils et taille"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "pockets",
+      "type": "slider",
+      "group": "fit",
+      "default": 8,
+      "min": 2,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Tools in the row",
+        "es": "Herramientas en la hilera",
+        "fr": "Outils dans la rangée"
+      },
+      "tooltip": {
+        "en": "The divider pitch is the tool list — count what you actually carry",
+        "es": "El paso de los divisores es la lista — cuenta lo que realmente cargas",
+        "fr": "Le pas des cloisons est la liste — comptez ce que vous portez vraiment"
+      }
+    },
+    {
+      "id": "pocket_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 46,
+      "min": 18,
+      "max": 130,
+      "step": 2,
+      "label": {
+        "en": "Pocket width (mm)",
+        "es": "Ancho de bolsillo (mm)",
+        "fr": "Largeur de poche (mm)"
+      },
+      "tooltip": {
+        "en": "Measure the widest tool at its handle",
+        "es": "Mide la herramienta más ancha en su mango",
+        "fr": "Mesurez l'outil le plus large à son manche"
+      }
+    },
+    {
+      "id": "pocket_height",
+      "type": "slider",
+      "group": "fit",
+      "default": 175,
+      "min": 60,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Pocket depth (mm)",
+        "es": "Profundidad del bolsillo (mm)",
+        "fr": "Profondeur de poche (mm)"
+      },
+      "tooltip": {
+        "en": "Deep enough that a tool cannot walk out when rolled",
+        "es": "Suficiente para que la herramienta no salga al enrollar",
+        "fr": "Assez profonde pour qu'un outil ne sorte pas une fois roulé"
+      }
+    },
+    {
+      "id": "tool_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 250,
+      "min": 90,
+      "max": 520,
+      "step": 5,
+      "label": {
+        "en": "Longest tool (mm)",
+        "es": "Herramienta más larga (mm)",
+        "fr": "Outil le plus long (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the body height; the flap covers what sticks out",
+        "es": "Define el alto del cuerpo; la solapa cubre lo que sobresale",
+        "fr": "Définit la hauteur du corps ; le rabat couvre ce qui dépasse"
+      }
+    },
+    {
+      "id": "flap_depth",
+      "type": "slider",
+      "group": "construction",
+      "default": 90,
+      "min": 0,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Tip-flap depth (mm)",
+        "es": "Profundidad de la solapa (mm)",
+        "fr": "Profondeur du rabat (mm)"
+      },
+      "tooltip": {
+        "en": "Folds down over the tool tips before rolling",
+        "es": "Se dobla sobre las puntas antes de enrollar",
+        "fr": "Se replie sur les pointes avant de rouler"
+      }
+    },
+    {
+      "id": "bellows",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Bellows per pocket (mm)",
+        "es": "Fuelle por bolsillo (mm)",
+        "fr": "Soufflet par poche (mm)"
+      },
+      "tooltip": {
+        "en": "Ease each divider takes up so a thick tool still fits",
+        "es": "Holgura que toma cada divisor para que quepa una herramienta gruesa",
+        "fr": "Aisance prise par chaque cloison pour un outil épais"
+      }
+    },
+    {
+      "id": "tie_cord_dia",
+      "type": "slider",
+      "group": "construction",
+      "default": 5,
+      "min": 2,
+      "max": 10,
+      "step": 0.5,
+      "label": {
+        "en": "Tie cord diameter (mm)",
+        "es": "Diámetro del cordón (mm)",
+        "fr": "Diamètre du cordon (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the Yantra4D strap-end tip that finishes each cord end",
+        "es": "Define la punta de Yantra4D que remata cada extremo del cordón",
+        "fr": "Définit l'embout Yantra4D qui termine chaque bout de cordon"
+      }
+    },
+    {
+      "id": "tie_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 26,
+      "min": 14,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Tie tab width (mm)",
+        "es": "Ancho de la lengüeta (mm)",
+        "fr": "Largeur de la patte (mm)"
+      },
+      "tooltip": {
+        "en": "Wide enough to bar-tack into the side seam",
+        "es": "Suficiente para rematar en la costura lateral",
+        "fr": "Assez large pour être arrêtée dans la couture latérale"
+      },
+      "advanced": true
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Valeur de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Added outside the stitch line",
+        "es": "Se agrega fuera de la línea de costura",
+        "fr": "Ajoutée à l'extérieur de la ligne de piqûre"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "pocket_height < tool_length",
+      "severity": "error",
+      "message": {
+        "en": "The pocket cannot be deeper than the tool is long — the tool must show above the mouth to be drawn",
+        "es": "El bolsillo no puede ser más profundo que la herramienta — debe asomar para poder sacarla",
+        "fr": "La poche ne peut être plus profonde que l'outil n'est long — il doit dépasser pour être saisi"
+      }
+    },
+    {
+      "expression": "flap_depth >= (tool_length - pocket_height) / 2",
+      "severity": "warning",
+      "message": {
+        "en": "A short flap leaves tool tips exposed when the roll is closed",
+        "es": "Una solapa corta deja las puntas expuestas al cerrar el rollo",
+        "fr": "Un rabat court laisse les pointes exposées une fois la trousse fermée"
+      }
+    },
+    {
+      "expression": "bellows >= 4",
+      "severity": "warning",
+      "message": {
+        "en": "Without bellows the pockets pull flat and thick-handled tools will not seat",
+        "es": "Sin fuelle los bolsillos quedan planos y no entran mangos gruesos",
+        "fr": "Sans soufflet, les poches s'aplatissent et les manches épais ne rentrent pas"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "bike",
+      "label": {
+        "en": "Bike / multi-tool",
+        "es": "Bici / multiherramienta",
+        "fr": "Vélo / multi-outils"
+      },
+      "values": {
+        "pockets": 10,
+        "pocket_width": 30,
+        "tool_length": 170,
+        "pocket_height": 110
+      }
+    },
+    {
+      "id": "chisel",
+      "label": {
+        "en": "Chisel roll",
+        "es": "Rollo de formones",
+        "fr": "Trousse à ciseaux"
+      },
+      "values": {
+        "pockets": 6,
+        "pocket_width": 60,
+        "tool_length": 340,
+        "pocket_height": 230
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "tie-cord strap-end tip",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "cord-end",
+      "linked": true,
+      "params_map": {
+        "cord_dia": "tie_cord_dia",
+        "wall": "max(0.8, tie_cord_dia * 0.22)",
+        "tip_length": "tie_cord_dia * 4.0",
+        "bell_flare": "tie_cord_dia * 0.5"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "tie_closure",
+        "type": "custom",
+        "label": {
+          "en": "Cord tie closure",
+          "es": "Cierre de cordón",
+          "fr": "Fermeture à cordon"
+        },
+        "edges": [
+          {
+            "piece": "tie",
+            "edge": "cord_end"
+          },
+          {
+            "piece": "tie",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "tie_cord_dia",
+          "tie_width"
+        ]
+      },
+      {
+        "id": "pocket_row",
+        "type": "pocket",
+        "label": {
+          "en": "Divided pocket row",
+          "es": "Hilera de bolsillos divididos",
+          "fr": "Rangée de poches cloisonnées"
+        },
+        "edges": [
+          {
+            "piece": "pockets",
+            "edge": "mouth"
+          },
+          {
+            "piece": "pockets",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "pockets",
+          "pocket_width",
+          "pocket_height",
+          "bellows"
+        ]
+      },
+      {
+        "id": "tip_flap",
+        "type": "hem",
+        "label": {
+          "en": "Tool-tip flap",
+          "es": "Solapa sobre las puntas",
+          "fr": "Rabat sur les pointes"
+        },
+        "edges": [
+          {
+            "piece": "body",
+            "edge": "flap_edge"
+          }
+        ],
+        "parameters": [
+          "flap_depth",
+          "tool_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A tool roll whose divider pitch is set by the tools you actually own turns a generic container into a repairable, re-dividable one — and with printable cord tips there is nothing in it that a maker cannot replace themselves.",
+      "es": "Un portaherramientas cuyo paso de divisores lo fijan las herramientas que realmente tienes convierte un contenedor genérico en uno reparable y redivisible — y con puntas de cordón imprimibles no hay nada que quien lo hizo no pueda reemplazar.",
+      "fr": "Une trousse dont le pas des cloisons est fixé par les outils que l'on possède réellement transforme un contenant générique en un objet réparable et re-cloisonnable — et avec des embouts imprimables, rien en elle n'échappe à qui l'a faite."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

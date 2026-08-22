@@ -1,0 +1,495 @@
+{
+  "project": {
+    "name": "Dog Coat",
+    "slug": "dog-coat",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A working dog's coat: a shaped back panel cut on the spine fold with a neck scoop and a tail taper so it lies flat over a moving back, a belly strap under the ribs, and a chest strap ahead of the shoulder — both closed with hook-and-loop tape so the coat goes on and off over an existing harness with cold hands and no buckles to freeze. The tape solid is Yantra4D territory; Fashion Cabinet owns the coat. FC-300 technical & outdoor.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El abrigo de un perro de trabajo: un panel dorsal conformado, cortado al doblez del lomo con escote de cuello y afinado de cola para que asiente plano sobre un lomo en movimiento, una correa de vientre bajo las costillas y una de pecho por delante del hombro — ambas cerradas con cinta de gancho y bucle para poner y quitar el abrigo sobre un arnés existente con manos frías y sin hebillas que se congelen. El sólido de la cinta es territorio de Yantra4D; Fashion Cabinet posee el abrigo.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le manteau d'un chien de travail : un panneau dorsal façonné, coupé au pli de l'échine avec une échancrure d'encolure et un fuselage de queue pour qu'il repose à plat sur un dos en mouvement, une sangle ventrale sous les côtes et une sangle de poitrail devant l'épaule — toutes deux fermées par bande auto-agrippante, pour enfiler et retirer le manteau par-dessus un harnais existant avec les mains froides et sans boucle qui gèle. Le solide de la bande relève de Yantra4D ; Fashion Cabinet possède le manteau.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "dog-coat",
+      "outdoor",
+      "technical",
+      "animal",
+      "hook-and-loop",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full coat",
+        "es": "Abrigo completo",
+        "fr": "Manteau complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "panel",
+        "belly",
+        "chest"
+      ]
+    },
+    {
+      "id": "panel",
+      "label": {
+        "en": "Back panel only",
+        "es": "Solo el panel dorsal",
+        "fr": "Panneau dorsal seul"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "panel"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "panel",
+      "label": {
+        "en": "Back panel",
+        "es": "Panel dorsal",
+        "fr": "Panneau dorsal"
+      },
+      "default_color": "#7d3f34",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "belly",
+      "label": {
+        "en": "Belly strap",
+        "es": "Correa de vientre",
+        "fr": "Sangle ventrale"
+      },
+      "default_color": "#5c2d25",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "chest",
+      "label": {
+        "en": "Chest strap",
+        "es": "Correa de pecho",
+        "fr": "Sangle de poitrail"
+      },
+      "default_color": "#4a241e",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Dog measurements",
+        "es": "Medidas del perro",
+        "fr": "Mesures du chien"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit and coverage",
+        "es": "Ajuste y cobertura",
+        "fr": "Aisance et couverture"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "back_length",
+      "type": "slider",
+      "group": "body",
+      "default": 550,
+      "min": 200,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Back length, withers to tail (mm)",
+        "es": "Largo de lomo, cruz a cola (mm)",
+        "fr": "Longueur de dos, garrot à la queue (mm)"
+      },
+      "tooltip": {
+        "en": "The single measurement that sets the panel; take it with the dog standing",
+        "es": "La medida que define el panel; tómala con el perro de pie",
+        "fr": "La mesure qui définit le panneau ; prenez-la chien debout"
+      }
+    },
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 720,
+      "min": 300,
+      "max": 1200,
+      "step": 10,
+      "label": {
+        "en": "Chest girth behind the legs (mm)",
+        "es": "Contorno de pecho tras las patas (mm)",
+        "fr": "Tour de poitrine derrière les pattes (mm)"
+      },
+      "tooltip": {
+        "en": "The deepest girth; sets the belly strap run",
+        "es": "El contorno más profundo; define el largo de la correa de vientre",
+        "fr": "Le tour le plus profond ; définit la longueur de la sangle ventrale"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 460,
+      "min": 200,
+      "max": 800,
+      "step": 10,
+      "label": {
+        "en": "Base-of-neck girth (mm)",
+        "es": "Contorno de la base del cuello (mm)",
+        "fr": "Tour de la base du cou (mm)"
+      },
+      "tooltip": {
+        "en": "Where the collar sits; sets the neck scoop and the chest strap",
+        "es": "Donde va el collar; define el escote y la correa de pecho",
+        "fr": "Où se pose le collier ; définit l'échancrure et la sangle de poitrail"
+      }
+    },
+    {
+      "id": "flank_drop",
+      "type": "slider",
+      "group": "fit",
+      "default": 210,
+      "min": 80,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Flank coverage (mm)",
+        "es": "Cobertura del flanco (mm)",
+        "fr": "Couverture du flanc (mm)"
+      },
+      "tooltip": {
+        "en": "How far down the side the panel reaches — never past the elbow",
+        "es": "Qué tan abajo llega el panel — nunca más allá del codo",
+        "fr": "Jusqu'où descend le panneau — jamais au-delà du coude"
+      }
+    },
+    {
+      "id": "coat_ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 90,
+      "min": 20,
+      "max": 220,
+      "step": 10,
+      "label": {
+        "en": "Ease over coat and harness (mm)",
+        "es": "Holgura sobre pelaje y arnés (mm)",
+        "fr": "Aisance sur le poil et le harnais (mm)"
+      },
+      "tooltip": {
+        "en": "A working dog is usually already wearing a harness",
+        "es": "Un perro de trabajo suele ya traer arnés",
+        "fr": "Un chien de travail porte souvent déjà un harnais"
+      }
+    },
+    {
+      "id": "tape_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 38,
+      "min": 16,
+      "max": 70,
+      "step": 2,
+      "label": {
+        "en": "Hook-and-loop tape width (mm)",
+        "es": "Ancho de la cinta de gancho y bucle (mm)",
+        "fr": "Largeur de la bande auto-agrippante (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the Yantra4D tape's sewn face",
+        "es": "Define la cara cosida de la cinta de Yantra4D",
+        "fr": "Définit la face cousue de la bande Yantra4D"
+      }
+    },
+    {
+      "id": "tape_run",
+      "type": "slider",
+      "group": "construction",
+      "default": 110,
+      "min": 40,
+      "max": 260,
+      "step": 10,
+      "label": {
+        "en": "Tape run per closure (mm)",
+        "es": "Largo de cinta por cierre (mm)",
+        "fr": "Longueur de bande par fermeture (mm)"
+      },
+      "tooltip": {
+        "en": "The overlap range — a long run is what makes one coat fit a growing dog",
+        "es": "El rango de traslape — un largo generoso hace que un abrigo sirva a un perro que crece",
+        "fr": "La plage de recouvrement — c'est elle qui fait qu'un manteau suit un chien qui grandit"
+      }
+    },
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 55,
+      "min": 25,
+      "max": 110,
+      "step": 5,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de la correa (mm)",
+        "fr": "Largeur de sangle (mm)"
+      },
+      "tooltip": {
+        "en": "Wider straps spread the pull and do not cut in",
+        "es": "Correas más anchas reparten el jalón y no se entierran",
+        "fr": "Des sangles larges répartissent la traction sans cisailler"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Valeur de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Added outside the stitch line",
+        "es": "Se agrega fuera de la línea de costura",
+        "fr": "Ajoutée à l'extérieur de la ligne de piqûre"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "tape_width <= strap_width",
+      "severity": "error",
+      "message": {
+        "en": "The tape cannot be wider than the strap it is sewn to",
+        "es": "La cinta no puede ser más ancha que la correa a la que se cose",
+        "fr": "La bande ne peut être plus large que la sangle sur laquelle elle est cousue"
+      }
+    },
+    {
+      "expression": "flank_drop <= back_length / 2",
+      "severity": "warning",
+      "message": {
+        "en": "Coverage past half the back length reaches the elbow and the dog's gait will chafe",
+        "es": "Cubrir más de medio lomo llega al codo y el andar del perro rozará",
+        "fr": "Une couverture au-delà de la moitié du dos atteint le coude et la foulée frottera"
+      }
+    },
+    {
+      "expression": "tape_run >= 60",
+      "severity": "warning",
+      "message": {
+        "en": "A short tape run gives almost no fit range — the closure becomes a size, not an adjustment",
+        "es": "Un largo de cinta corto casi no da rango — el cierre se vuelve una talla, no un ajuste",
+        "fr": "Une bande courte n'offre presque aucune plage — la fermeture devient une taille, pas un réglage"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "terrier",
+      "label": {
+        "en": "Small terrier",
+        "es": "Terrier pequeño",
+        "fr": "Petit terrier"
+      },
+      "values": {
+        "back_length": 320,
+        "chest_girth": 440,
+        "neck_girth": 300,
+        "flank_drop": 130
+      }
+    },
+    {
+      "id": "shepherd",
+      "label": {
+        "en": "Working shepherd",
+        "es": "Pastor de trabajo",
+        "fr": "Berger de travail"
+      },
+      "values": {
+        "back_length": 640,
+        "chest_girth": 820,
+        "neck_girth": 520,
+        "flank_drop": 250
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "strap hook-and-loop closure tape",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "hook-loop-tape",
+      "linked": true,
+      "params_map": {
+        "strip_length": "tape_run",
+        "strip_width": "tape_width",
+        "sew_margin": "max(2.0, tape_width * 0.08)",
+        "base_t": "max(1.0, tape_width * 0.04)"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "tape_run",
+        "type": "custom",
+        "label": {
+          "en": "Hook-and-loop tape run",
+          "es": "Recorrido de la cinta de gancho y bucle",
+          "fr": "Course de la bande auto-agrippante"
+        },
+        "edges": [
+          {
+            "piece": "belly",
+            "edge": "free_end"
+          },
+          {
+            "piece": "chest",
+            "edge": "free_end"
+          }
+        ],
+        "parameters": [
+          "tape_run",
+          "tape_width",
+          "strap_width"
+        ]
+      },
+      {
+        "id": "strap_roots",
+        "type": "custom",
+        "label": {
+          "en": "Strap roots on the panel",
+          "es": "Raíces de correa en el panel",
+          "fr": "Attaches de sangle sur le panneau"
+        },
+        "edges": [
+          {
+            "piece": "belly",
+            "edge": "attach"
+          },
+          {
+            "piece": "chest",
+            "edge": "attach"
+          },
+          {
+            "piece": "panel",
+            "edge": "flank"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "neck_girth",
+          "coat_ease",
+          "strap_width"
+        ]
+      },
+      {
+        "id": "neck_scoop",
+        "type": "neckline",
+        "label": {
+          "en": "Neck scoop",
+          "es": "Escote del cuello",
+          "fr": "Échancrure d'encolure"
+        },
+        "edges": [
+          {
+            "piece": "panel",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "coat_ease"
+        ]
+      },
+      {
+        "id": "tail_hem",
+        "type": "hem",
+        "label": {
+          "en": "Tail-end hem",
+          "es": "Ruedo del extremo de la cola",
+          "fr": "Ourlet côté queue"
+        },
+        "edges": [
+          {
+            "piece": "panel",
+            "edge": "tail"
+          }
+        ],
+        "parameters": [
+          "back_length",
+          "flank_drop"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A dog coat drafted from three measurements of the animal in front of you fits a body that no size chart describes — mixed breeds, old joints, working dogs in harness — and hook-and-loop closures with a long tape run mean the same coat keeps fitting as the dog changes.",
+      "es": "Un abrigo trazado desde tres medidas del animal que tienes enfrente le queda a un cuerpo que ninguna tabla de tallas describe — mestizos, articulaciones viejas, perros de trabajo con arnés — y cierres de gancho y bucle con largo generoso hacen que el mismo abrigo siga sirviendo mientras el perro cambia.",
+      "fr": "Un manteau tracé à partir de trois mesures de l'animal devant vous va à un corps qu'aucun tableau de tailles ne décrit — croisés, articulations âgées, chiens de travail en harnais — et des fermetures auto-agrippantes à longue plage font que le même manteau continue d'aller quand le chien change."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

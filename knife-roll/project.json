@@ -1,0 +1,468 @@
+{
+  "project": {
+    "name": "Knife Roll",
+    "slug": "knife-roll",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The chef's and bushcraft knife roll: padded blade channels quilted over batting so each edge rides in its own slot and never touches another, under a long tip flap that folds past every point, with the whole roll winding up and tying on a cord whose ends carry pressed-on tips. The slot pitch is solved to the blade list. The cord-end solid is Yantra4D territory; Fashion Cabinet owns the roll. FC-300 technical & outdoor.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El rollo de cuchillos de cocina y de monte: canales acolchados matelaseados sobre guata para que cada filo viaje en su propia ranura sin tocar a otro, bajo una solapa larga que se dobla más allá de cada punta, y el rollo entero se enrolla y se ata con un cordón cuyos extremos llevan puntas prensadas. El paso de las ranuras se resuelve a la lista de hojas. El sólido de la punta es territorio de Yantra4D; Fashion Cabinet posee el rollo.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La trousse à couteaux du cuisinier et du bushcraft : des canaux de lame rembourrés matelassés sur ouatine pour que chaque tranchant ait sa fente et n'en touche jamais un autre, sous un long rabat qui se replie au-delà de chaque pointe, l'ensemble s'enroulant et se nouant par un cordon à embouts sertis. Le pas des fentes est résolu à la liste des lames. Le solide de l'embout relève de Yantra4D ; Fashion Cabinet possède la trousse.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "knife-roll",
+      "outdoor",
+      "technical",
+      "kitchen",
+      "accessory",
+      "padded",
+      "hardware",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full roll",
+        "es": "Rollo completo",
+        "fr": "Trousse complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "body",
+        "slots",
+        "batting",
+        "tie"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Padded body + tip flap",
+        "es": "Cuerpo acolchado + solapa",
+        "fr": "Corps rembourré + rabat"
+      },
+      "default_color": "#6b4f38",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "slots",
+      "label": {
+        "en": "Padded slot strip",
+        "es": "Tira de ranuras acolchadas",
+        "fr": "Bande de fentes rembourrées"
+      },
+      "default_color": "#8e7150",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "batting",
+      "label": {
+        "en": "Batting layer",
+        "es": "Capa de guata",
+        "fr": "Couche d'ouatine"
+      },
+      "default_color": "#d7cdbc",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "tie",
+      "label": {
+        "en": "Tie tab",
+        "es": "Lengüeta del cordón",
+        "fr": "Patte de nouage"
+      },
+      "default_color": "#3f2f1f",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Blade list and size",
+        "es": "Lista de hojas y tamaño",
+        "fr": "Liste de lames et taille"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "slots",
+      "type": "slider",
+      "group": "fit",
+      "default": 6,
+      "min": 2,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Blades carried",
+        "es": "Hojas transportadas",
+        "fr": "Lames transportées"
+      },
+      "tooltip": {
+        "en": "One padded channel per blade — count the knives you actually travel with",
+        "es": "Un canal acolchado por hoja — cuenta los cuchillos que realmente llevas",
+        "fr": "Un canal rembourré par lame — comptez les couteaux que vous emportez"
+      }
+    },
+    {
+      "id": "slot_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 62,
+      "min": 25,
+      "max": 140,
+      "step": 2,
+      "label": {
+        "en": "Widest blade at the heel (mm)",
+        "es": "Hoja más ancha en el talón (mm)",
+        "fr": "Lame la plus large au talon (mm)"
+      },
+      "tooltip": {
+        "en": "Measure the widest blade where it is deepest",
+        "es": "Mide la hoja más ancha donde es más alta",
+        "fr": "Mesurez la lame la plus large à sa plus grande hauteur"
+      }
+    },
+    {
+      "id": "slot_height",
+      "type": "slider",
+      "group": "fit",
+      "default": 230,
+      "min": 90,
+      "max": 400,
+      "step": 5,
+      "label": {
+        "en": "Slot depth (mm)",
+        "es": "Profundidad de ranura (mm)",
+        "fr": "Profondeur de fente (mm)"
+      },
+      "tooltip": {
+        "en": "Deep enough that the edge is fully covered when rolled",
+        "es": "Suficiente para que el filo quede cubierto al enrollar",
+        "fr": "Assez profonde pour couvrir le tranchant une fois roulé"
+      }
+    },
+    {
+      "id": "blade_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 330,
+      "min": 140,
+      "max": 600,
+      "step": 5,
+      "label": {
+        "en": "Longest blade, tip to butt (mm)",
+        "es": "Hoja más larga, punta a mango (mm)",
+        "fr": "Lame la plus longue, pointe au talon (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the body height under the flap",
+        "es": "Define el alto del cuerpo bajo la solapa",
+        "fr": "Définit la hauteur du corps sous le rabat"
+      }
+    },
+    {
+      "id": "flap_drop",
+      "type": "slider",
+      "group": "construction",
+      "default": 120,
+      "min": 40,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Tip-flap drop (mm)",
+        "es": "Caída de la solapa (mm)",
+        "fr": "Retombée du rabat (mm)"
+      },
+      "tooltip": {
+        "en": "Must fold past every point before the roll winds up",
+        "es": "Debe doblar más allá de cada punta antes de enrollar",
+        "fr": "Doit se replier au-delà de chaque pointe avant de rouler"
+      }
+    },
+    {
+      "id": "pad_ease",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 4,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Padding ease per slot (mm)",
+        "es": "Holgura de acolchado por ranura (mm)",
+        "fr": "Aisance de rembourrage par fente (mm)"
+      },
+      "tooltip": {
+        "en": "The batting takes this up — without it the slots pull flat",
+        "es": "La guata toma esto — sin ella las ranuras quedan planas",
+        "fr": "L'ouatine la consomme — sans elle les fentes s'aplatissent"
+      }
+    },
+    {
+      "id": "cord_dia",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 3,
+      "max": 12,
+      "step": 0.5,
+      "label": {
+        "en": "Tie cord diameter (mm)",
+        "es": "Diámetro del cordón (mm)",
+        "fr": "Diamètre du cordon (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the Yantra4D cord-end tip that finishes each cord end",
+        "es": "Define la punta de Yantra4D que remata cada extremo del cordón",
+        "fr": "Définit l'embout Yantra4D qui termine chaque bout de cordon"
+      }
+    },
+    {
+      "id": "tie_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 30,
+      "min": 16,
+      "max": 70,
+      "step": 2,
+      "label": {
+        "en": "Tie tab width (mm)",
+        "es": "Ancho de la lengüeta (mm)",
+        "fr": "Largeur de la patte (mm)"
+      },
+      "tooltip": {
+        "en": "Wide enough to bar-tack into the side seam",
+        "es": "Suficiente para rematar en la costura lateral",
+        "fr": "Assez large pour être arrêtée dans la couture latérale"
+      },
+      "advanced": true
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 0,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Valeur de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Added outside the stitch line",
+        "es": "Se agrega fuera de la línea de costura",
+        "fr": "Ajoutée à l'extérieur de la ligne de piqûre"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "slot_height < blade_length",
+      "severity": "error",
+      "message": {
+        "en": "A slot deeper than the blade is long swallows the handle and the knife cannot be drawn",
+        "es": "Una ranura más profunda que la hoja se traga el mango y el cuchillo no sale",
+        "fr": "Une fente plus profonde que la lame avale le manche et le couteau ne sort plus"
+      }
+    },
+    {
+      "expression": "flap_drop >= blade_length - slot_height",
+      "severity": "warning",
+      "message": {
+        "en": "The flap must fold past every point or an exposed tip will cut through the roll",
+        "es": "La solapa debe doblar más allá de cada punta o una punta expuesta corta el rollo",
+        "fr": "Le rabat doit dépasser chaque pointe, sinon une pointe exposée traverse la trousse"
+      }
+    },
+    {
+      "expression": "pad_ease >= 6",
+      "severity": "warning",
+      "message": {
+        "en": "Below about 6 mm of ease the batting cannot loft and the slots stop being padded",
+        "es": "Por debajo de unos 6 mm de holgura la guata no esponja y las ranuras dejan de acolchar",
+        "fr": "En dessous d'environ 6 mm d'aisance, l'ouatine ne gonfle plus et les fentes ne rembourrent plus"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "chef",
+      "label": {
+        "en": "Chef's kit",
+        "es": "Equipo de cocina",
+        "fr": "Malette de cuisinier"
+      },
+      "values": {
+        "slots": 8,
+        "slot_width": 70,
+        "blade_length": 400,
+        "slot_height": 270
+      }
+    },
+    {
+      "id": "bushcraft",
+      "label": {
+        "en": "Bushcraft trio",
+        "es": "Trío de monte",
+        "fr": "Trio bushcraft"
+      },
+      "values": {
+        "slots": 3,
+        "slot_width": 55,
+        "blade_length": 260,
+        "slot_height": 175
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "tie-cord end tip",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "cord-end",
+      "linked": true,
+      "params_map": {
+        "cord_dia": "cord_dia",
+        "wall": "max(0.9, cord_dia * 0.2)",
+        "tip_length": "cord_dia * 4.5",
+        "bell_flare": "cord_dia * 0.45",
+        "lanyard_hole": "max(2.0, cord_dia * 0.5)"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "tie_closure",
+        "type": "custom",
+        "label": {
+          "en": "Cord tie closure",
+          "es": "Cierre de cordón",
+          "fr": "Fermeture à cordon"
+        },
+        "edges": [
+          {
+            "piece": "tie",
+            "edge": "cord_end"
+          },
+          {
+            "piece": "tie",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "cord_dia",
+          "tie_width"
+        ]
+      },
+      {
+        "id": "slot_row",
+        "type": "pocket",
+        "label": {
+          "en": "Padded blade slots",
+          "es": "Ranuras acolchadas para hojas",
+          "fr": "Fentes de lame rembourrées"
+        },
+        "edges": [
+          {
+            "piece": "slots",
+            "edge": "mouth"
+          },
+          {
+            "piece": "slots",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "slots",
+          "slot_width",
+          "slot_height",
+          "pad_ease"
+        ]
+      },
+      {
+        "id": "tip_flap",
+        "type": "hem",
+        "label": {
+          "en": "Tip flap",
+          "es": "Solapa de puntas",
+          "fr": "Rabat de pointes"
+        },
+        "edges": [
+          {
+            "piece": "body",
+            "edge": "flap_edge"
+          }
+        ],
+        "parameters": [
+          "flap_drop",
+          "blade_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Padded slots sized to the knives someone actually owns protect both the edges and the hands that reach for them, and an open pattern with printable cord tips means a cook or a woodworker can rebuild the roll around a changing kit instead of buying a new case.",
+      "es": "Ranuras acolchadas a la medida de los cuchillos que alguien realmente tiene protegen tanto los filos como las manos que los buscan, y un patrón abierto con puntas imprimibles permite a quien cocina o trabaja la madera rehacer el rollo alrededor de un equipo cambiante en vez de comprar otro estuche.",
+      "fr": "Des fentes rembourrées à la mesure des couteaux que l'on possède réellement protègent les tranchants comme les mains qui les cherchent, et un patron ouvert à embouts imprimables permet à un cuisinier ou un menuisier de refaire la trousse autour d'un équipement qui change plutôt que de racheter un étui."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

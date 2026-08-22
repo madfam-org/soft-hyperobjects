@@ -1,0 +1,545 @@
+{
+  "project": {
+    "name": "Harness Vest",
+    "slug": "harness-vest",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A load-carrying harness vest: a shoulder yoke that spans the trapezius and takes the whole load off the neck, with webbing channels running down the front and back panels through ladder-lock adjusters so one vest fits a range of torsos and layer thicknesses. Front and back share the body quarter, so the shoulder and side seams balance by construction. The adjuster solid is Yantra4D territory; Fashion Cabinet owns the vest. Made to measure from ISO 8559 chest girth, across-back, shoulder length, and neck girth. FC-300 technical & outdoor.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un chaleco de arnés portacargas: un canesú de hombro que abarca el trapecio y toma toda la carga del cuello, con canales de cincha que bajan por los paneles delantero y trasero a través de reguladores escalera para que un chaleco sirva a varios torsos y grosores de capa. Delantero y espalda comparten el cuarto de cuerpo, así que hombros y costados equilibran por construcción. El sólido del regulador es territorio de Yantra4D; Fashion Cabinet posee el chaleco. A la medida desde pecho, ancho de espalda, largo de hombro y cuello ISO 8559.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un gilet-harnais porteur : un empiècement d'épaule qui couvre le trapèze et décharge entièrement la nuque, avec des passages de sangle descendant les panneaux devant et dos par des régleurs à échelle pour qu'un seul gilet aille à des torses et des épaisseurs de couches variés. Devant et dos partagent le quart de corps, si bien que les coutures d'épaule et de côté s'équilibrent par construction. Le solide du régleur relève de Yantra4D ; Fashion Cabinet possède le gilet. Sur mesure d'après poitrine, carrure dos, longueur d'épaule et encolure ISO 8559.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "harness-vest",
+      "outdoor",
+      "technical",
+      "load-carriage",
+      "workwear",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full vest",
+        "es": "Chaleco completo",
+        "fr": "Gilet complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "yoke",
+        "front",
+        "back",
+        "webbing"
+      ]
+    },
+    {
+      "id": "yoke",
+      "label": {
+        "en": "Yoke only",
+        "es": "Solo el canesú",
+        "fr": "Empiècement seul"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "yoke"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "yoke",
+      "label": {
+        "en": "Load-bearing yoke",
+        "es": "Canesú portacargas",
+        "fr": "Empiècement porteur"
+      },
+      "default_color": "#41525c",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "front",
+      "label": {
+        "en": "Front panel",
+        "es": "Panel delantero",
+        "fr": "Panneau devant"
+      },
+      "default_color": "#5a6f7b",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back panel",
+        "es": "Panel trasero",
+        "fr": "Panneau dos"
+      },
+      "default_color": "#4e626d",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "webbing",
+      "label": {
+        "en": "Adjuster webbing",
+        "es": "Cincha del regulador",
+        "fr": "Sangle de réglage"
+      },
+      "default_color": "#22303a",
+      "cut": {
+        "quantity": 4,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit and ease",
+        "es": "Ajuste y holgura",
+        "fr": "Aisance et ajustement"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 1000,
+      "min": 700,
+      "max": 1700,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Front and back share the body quarter derived from this",
+        "es": "Delantero y espalda comparten el cuarto de cuerpo derivado de esto",
+        "fr": "Devant et dos partagent le quart de corps qui en découle"
+      }
+    },
+    {
+      "id": "across_back",
+      "type": "slider",
+      "group": "body",
+      "default": 380,
+      "min": 280,
+      "max": 560,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "across_back"
+      },
+      "label": {
+        "en": "Across back (mm)",
+        "es": "Ancho de espalda (mm)",
+        "fr": "Carrure dos (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the yoke span across the trapezius",
+        "es": "Define la envergadura del canesú sobre el trapecio",
+        "fr": "Définit l'envergure de l'empiècement sur le trapèze"
+      }
+    },
+    {
+      "id": "shoulder_len",
+      "type": "slider",
+      "group": "body",
+      "default": 140,
+      "min": 90,
+      "max": 220,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "shoulder_length"
+      },
+      "label": {
+        "en": "Shoulder length (mm)",
+        "es": "Largo de hombro (mm)",
+        "fr": "Longueur d'épaule (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the yoke's shoulder slope",
+        "es": "Define la caída de hombro del canesú",
+        "fr": "Définit la pente d'épaule de l'empiècement"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 400,
+      "min": 300,
+      "max": 560,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "The yoke scoops clear of the neck so the load never rides it",
+        "es": "El canesú escota el cuello para que la carga nunca lo monte",
+        "fr": "L'empiècement dégage le cou pour que la charge ne l'écrase pas"
+      }
+    },
+    {
+      "id": "panel_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 460,
+      "min": 280,
+      "max": 700,
+      "step": 10,
+      "label": {
+        "en": "Panel length, yoke to hem (mm)",
+        "es": "Largo del panel, canesú a ruedo (mm)",
+        "fr": "Longueur du panneau, empiècement à l'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Short enough to clear a pack's hip belt",
+        "es": "Corto para librar el cinturón de una mochila",
+        "fr": "Assez court pour dégager la ceinture d'un sac"
+      }
+    },
+    {
+      "id": "yoke_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 130,
+      "min": 80,
+      "max": 240,
+      "step": 5,
+      "label": {
+        "en": "Yoke drop (mm)",
+        "es": "Caída del canesú (mm)",
+        "fr": "Retombée de l'empiècement (mm)"
+      },
+      "tooltip": {
+        "en": "A deeper yoke spreads the load further down the back",
+        "es": "Un canesú más profundo reparte la carga más abajo",
+        "fr": "Un empiècement plus profond répartit la charge plus bas"
+      }
+    },
+    {
+      "id": "layer_ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 240,
+      "min": 100,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Ease over layers (mm)",
+        "es": "Holgura sobre capas (mm)",
+        "fr": "Aisance par-dessus les couches (mm)"
+      },
+      "tooltip": {
+        "en": "The vest goes over a shell or a puffy — the adjusters take up the rest",
+        "es": "El chaleco va sobre una chamarra — los reguladores recogen el resto",
+        "fr": "Le gilet se porte sur une veste — les régleurs reprennent le reste"
+      }
+    },
+    {
+      "id": "webbing",
+      "type": "slider",
+      "group": "construction",
+      "default": 25,
+      "min": 15,
+      "max": 50,
+      "step": 5,
+      "label": {
+        "en": "Channel webbing width (mm)",
+        "es": "Ancho de cincha del canal (mm)",
+        "fr": "Largeur de sangle du passage (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the Yantra4D ladder-lock slot",
+        "es": "Define la ranura del regulador de Yantra4D",
+        "fr": "Définit la fente du régleur Yantra4D"
+      }
+    },
+    {
+      "id": "adjust_run",
+      "type": "slider",
+      "group": "construction",
+      "default": 200,
+      "min": 80,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Adjuster travel (mm)",
+        "es": "Recorrido del regulador (mm)",
+        "fr": "Course du régleur (mm)"
+      },
+      "tooltip": {
+        "en": "How much torso range one vest can cover",
+        "es": "Cuánto rango de torso cubre un solo chaleco",
+        "fr": "L'amplitude de torse qu'un seul gilet couvre"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 0,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Valeur de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Added outside the stitch line",
+        "es": "Se agrega fuera de la línea de costura",
+        "fr": "Ajoutée à l'extérieur de la ligne de piqûre"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "adjust_run < panel_length",
+      "severity": "error",
+      "message": {
+        "en": "The adjuster cannot travel further than the panel is long",
+        "es": "El regulador no puede recorrer más de lo que mide el panel",
+        "fr": "Le régleur ne peut coulisser plus que la longueur du panneau"
+      }
+    },
+    {
+      "expression": "yoke_depth >= 80",
+      "severity": "warning",
+      "message": {
+        "en": "A shallow yoke concentrates the load at the neck instead of spreading it over the trapezius",
+        "es": "Un canesú somero concentra la carga en el cuello en vez de repartirla sobre el trapecio",
+        "fr": "Un empiècement peu profond concentre la charge au cou au lieu de la répartir sur le trapèze"
+      }
+    },
+    {
+      "expression": "across_back <= chest_girth / 2",
+      "severity": "warning",
+      "message": {
+        "en": "The yoke span cannot exceed half the chest girth — check the measurements",
+        "es": "La envergadura del canesú no puede superar medio contorno de pecho — revisa las medidas",
+        "fr": "L'envergure de l'empiècement ne peut dépasser la moitié du tour de poitrine — vérifiez les mesures"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "survey",
+      "label": {
+        "en": "Survey / field crew",
+        "es": "Topografía / cuadrilla",
+        "fr": "Relevé / équipe terrain"
+      },
+      "values": {
+        "panel_length": 520,
+        "yoke_depth": 160,
+        "webbing": 38
+      }
+    },
+    {
+      "id": "camera",
+      "label": {
+        "en": "Camera crew",
+        "es": "Equipo de cámara",
+        "fr": "Équipe caméra"
+      },
+      "values": {
+        "panel_length": 380,
+        "yoke_depth": 190,
+        "adjust_run": 260
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "buckle",
+    "subtype": "harness ladder-lock adjuster",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "strap-buckle",
+      "linked": true,
+      "params_map": {
+        "webbing": "webbing",
+        "web_t": "max(1.4, webbing * 0.06)"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "yoke_seam",
+        "type": "shoulder",
+        "label": {
+          "en": "Yoke-to-panel seam",
+          "es": "Costura canesú a panel",
+          "fr": "Couture empiècement-panneau"
+        },
+        "edges": [
+          {
+            "piece": "yoke",
+            "edge": "panel_seam"
+          },
+          {
+            "piece": "front",
+            "edge": "yoke_seam"
+          },
+          {
+            "piece": "back",
+            "edge": "yoke_seam"
+          }
+        ],
+        "parameters": [
+          "across_back",
+          "yoke_depth",
+          "chest_girth"
+        ]
+      },
+      {
+        "id": "webbing_channel",
+        "type": "custom",
+        "label": {
+          "en": "Webbing channel run",
+          "es": "Recorrido del canal de cincha",
+          "fr": "Passage de sangle"
+        },
+        "edges": [
+          {
+            "piece": "webbing",
+            "edge": "anchor_end"
+          },
+          {
+            "piece": "front",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "webbing",
+          "adjust_run",
+          "panel_length"
+        ]
+      },
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "label": {
+          "en": "Yoke neckline",
+          "es": "Escote del canesú",
+          "fr": "Encolure de l'empiècement"
+        },
+        "edges": [
+          {
+            "piece": "yoke",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "shoulder_len"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam",
+          "es": "Costura lateral",
+          "fr": "Couture latérale"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "layer_ease",
+          "panel_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A harness vest whose yoke is cut to the wearer's own shoulders puts the weight where the body can carry it, and adjusters instead of sizes mean one open pattern serves a whole crew across seasons and layers rather than a rack of disposable fixed-size rigs.",
+      "es": "Un chaleco de arnés cuyo canesú se corta a los hombros de quien lo usa pone el peso donde el cuerpo puede cargarlo, y usar reguladores en vez de tallas hace que un patrón abierto sirva a toda una cuadrilla entre estaciones y capas, en vez de un estante de equipos desechables de talla fija.",
+      "fr": "Un gilet-harnais dont l'empiècement est coupé aux épaules de qui le porte place le poids là où le corps peut le porter, et des régleurs plutôt que des tailles font qu'un seul patron ouvert sert toute une équipe au fil des saisons et des couches, au lieu d'un rayon d'équipements jetables à taille fixe."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

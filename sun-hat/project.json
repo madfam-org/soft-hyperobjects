@@ -1,0 +1,384 @@
+{
+  "project": {
+    "name": "Wide-Brim Sun Hat",
+    "slug": "sun-hat",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A packable wide-brim sun hat cut to the actual head: a six-gore crown whose gore bases sum to the head opening, a straight sweatband at the head line, and a wide shade brim drafted as a half-annulus cut on the fold and mirrored into the full ring. Pure soft goods — no hardware. FC-300 millinery lane.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un sombrero de ala ancha plegable cortado a la cabeza real: una copa de seis gajos cuyas bases suman la abertura de la cabeza, una badana recta en la línea de la cabeza y una amplia ala de sombra trazada como media corona cortada al doblez y reflejada para formar el aro completo. Puro género textil — sin herrajes. Línea de sombrerería FC-300.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un chapeau de soleil à large bord, pliable et coupé à la tête réelle : une calotte à six godets dont les bases totalisent l'ouverture de tête, un bandeau de propreté droit à la ligne de tête, et un large bord d'ombre tracé en demi-couronne coupée au pli puis mise en miroir pour former l'anneau complet. Pur textile — sans quincaillerie. Ligne chapellerie FC-300.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "sun-hat",
+      "millinery",
+      "hat",
+      "wide-brim",
+      "accessory",
+      "gored",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full sun hat",
+        "es": "Sombrero completo",
+        "fr": "Chapeau complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "crown-gore",
+        "sweatband",
+        "brim"
+      ]
+    },
+    {
+      "id": "crown",
+      "label": {
+        "en": "Crown only",
+        "es": "Solo la copa",
+        "fr": "Calotte seule"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "crown-gore"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "crown-gore",
+      "label": {
+        "en": "Crown gore",
+        "es": "Gajo de la copa",
+        "fr": "Godet de calotte"
+      },
+      "default_color": "#c2a878",
+      "cut": {
+        "quantity": 6,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sweatband",
+      "label": {
+        "en": "Sweatband",
+        "es": "Badana",
+        "fr": "Bandeau de propreté"
+      },
+      "default_color": "#a08858",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "brim",
+      "label": {
+        "en": "Brim",
+        "es": "Ala",
+        "fr": "Bord"
+      },
+      "default_color": "#d8c398",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & style",
+        "es": "Ajuste y estilo",
+        "fr": "Coupe et style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "head_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 570,
+      "min": 480,
+      "max": 640,
+      "step": 5,
+      "label": {
+        "en": "Head girth (mm)",
+        "es": "Contorno de cabeza (mm)",
+        "fr": "Tour de tête (mm)"
+      },
+      "tooltip": {
+        "en": "The head circumference at the sweatband; the gore bases sum to it and the brim's inner ring matches it",
+        "es": "El contorno de cabeza en la badana; las bases de los gajos lo suman y el aro interior del ala lo iguala",
+        "fr": "Le tour de tête au bandeau ; les bases des godets le totalisent et l'anneau intérieur du bord l'égale"
+      },
+      "measurement": {
+        "code": "head_girth",
+        "standard": "iso_8559"
+      }
+    },
+    {
+      "id": "crown_height",
+      "type": "slider",
+      "group": "fit",
+      "default": 105,
+      "min": 60,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Crown height (mm)",
+        "es": "Alto de la copa (mm)",
+        "fr": "Hauteur de calotte (mm)"
+      },
+      "tooltip": {
+        "en": "How deep the gored crown sits over the head",
+        "es": "Qué tan profunda se asienta la copa de gajos sobre la cabeza",
+        "fr": "La profondeur de la calotte à godets sur la tête"
+      }
+    },
+    {
+      "id": "brim_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 95,
+      "min": 50,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Brim width (mm)",
+        "es": "Ancho del ala (mm)",
+        "fr": "Largeur du bord"
+      },
+      "tooltip": {
+        "en": "How far the shade brim reaches past the head line",
+        "es": "Cuánto se extiende el ala de sombra más allá de la línea de la cabeza",
+        "fr": "Jusqu'où le bord d'ombre dépasse la ligne de tête"
+      }
+    },
+    {
+      "id": "gores",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 4,
+      "max": 10,
+      "step": 1,
+      "label": {
+        "en": "Crown gores",
+        "es": "Gajos de la copa",
+        "fr": "Godets de calotte"
+      },
+      "tooltip": {
+        "en": "More gores give a rounder crown; their bases always sum to the head opening",
+        "es": "Más gajos dan una copa más redonda; sus bases siempre suman la abertura de la cabeza",
+        "fr": "Plus de godets donnent une calotte plus ronde ; leurs bases totalisent toujours l'ouverture de tête"
+      }
+    },
+    {
+      "id": "sweatband_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 38,
+      "min": 18,
+      "max": 70,
+      "step": 2,
+      "label": {
+        "en": "Sweatband height (mm)",
+        "es": "Alto de la badana (mm)",
+        "fr": "Hauteur du bandeau"
+      },
+      "tooltip": {
+        "en": "The straight band between the crown and the brim",
+        "es": "La banda recta entre la copa y el ala",
+        "fr": "La bande droite entre la calotte et le bord"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 10,
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Ease (mm)",
+        "es": "Holgura (mm)",
+        "fr": "Aisance (mm)"
+      },
+      "tooltip": {
+        "en": "Added to the head girth — a sun hat wants a little room to breathe",
+        "es": "Se suma al contorno de cabeza — un sombrero de sol quiere algo de aire",
+        "fr": "Ajoutée au tour de tête — un chapeau de soleil veut un peu d'air"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Gore seams, the sweatband join and the brim's inner ring",
+        "es": "Costuras de gajos, unión de la badana y aro interior del ala",
+        "fr": "Coutures des godets, jonction du bandeau et anneau intérieur du bord"
+      },
+      "advanced": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "beach",
+      "label": {
+        "en": "Beach",
+        "es": "Playa",
+        "fr": "Plage"
+      },
+      "values": {
+        "head_girth": 570,
+        "crown_height": 105,
+        "brim_width": 120,
+        "gores": 6
+      }
+    },
+    {
+      "id": "garden",
+      "label": {
+        "en": "Garden",
+        "es": "Jardín",
+        "fr": "Jardin"
+      },
+      "values": {
+        "head_girth": 570,
+        "crown_height": 95,
+        "brim_width": 80,
+        "gores": 6
+      }
+    },
+    {
+      "id": "field",
+      "label": {
+        "en": "Field (deep crown)",
+        "es": "Campo (copa profunda)",
+        "fr": "Champ (calotte profonde)"
+      },
+      "values": {
+        "head_girth": 590,
+        "crown_height": 150,
+        "brim_width": 100,
+        "gores": 8
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "head_line",
+        "type": "custom",
+        "label": {
+          "en": "Head line (sweatband ↔ brim)",
+          "es": "Línea de la cabeza (badana ↔ ala)",
+          "fr": "Ligne de tête (bandeau ↔ bord)"
+        },
+        "edges": [
+          {
+            "piece": "sweatband",
+            "edge": "head_line"
+          },
+          {
+            "piece": "brim",
+            "edge": "inner"
+          }
+        ],
+        "parameters": [
+          "head_girth",
+          "ease",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "crown_seam",
+        "type": "custom",
+        "label": {
+          "en": "Crown ↔ sweatband seam",
+          "es": "Costura copa ↔ badana",
+          "fr": "Couture calotte ↔ bandeau"
+        },
+        "edges": [
+          {
+            "piece": "sweatband",
+            "edge": "crown_edge"
+          }
+        ],
+        "parameters": [
+          "head_girth",
+          "ease",
+          "gores"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": false
+    },
+    "societal_benefit": {
+      "en": "Sun protection cut to the actual head rather than sold as one-size: a wide brim is the cheapest, least-consumable skin protection there is, and this one is a washable, repairable, re-cuttable open pattern instead of a season's disposable straw.",
+      "es": "Protección solar cortada a la cabeza real en vez de vendida en talla única: un ala ancha es la protección de piel más barata y menos consumible que existe, y esta es un patrón abierto lavable, reparable y recortable en vez de una paja desechable de temporada.",
+      "fr": "Une protection solaire coupée à la tête réelle plutôt que vendue en taille unique : un large bord est la protection cutanée la moins chère et la moins consommable qui soit, et celui-ci est un patron ouvert lavable, réparable et recoupable au lieu d'une paille jetable d'une saison."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

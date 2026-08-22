@@ -1,0 +1,390 @@
+{
+  "project": {
+    "name": "Mary Jane Upper",
+    "slug": "mary-jane-upper",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The upper of a Mary Jane: a low-cut quarter with a scooped topline, closing at the heel, crossed by an instep strap that buttons on the outer side. The button is a sew-through, bridged to the Yantra4D `sew-through-button` — and the button's ligne (the trade's own diameter unit, 1 ligne = 0.635 mm) is the shared dimension: it sizes the hardware AND the buttonhole slot drafted into the strap, so the finished hole actually passes the button it is bridged to. FC-300 lane 4, footwear soft goods.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El corte de una Mary Jane: un cuarto bajo de línea superior escotada, cerrado en el talón, cruzado por una correa de empeine que abotona en el lado exterior. El botón es de coser, puenteado al `sew-through-button` de Yantra4D — y la línea del botón (la unidad de diámetro del oficio, 1 ligne = 0.635 mm) es la dimensión compartida: dimensiona el herraje Y el ojal trazado en la correa, de modo que el ojal terminado realmente pase el botón al que está puenteado. FC-300 carril 4, calzado blando.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La tige d'une Mary Jane : un quartier bas à ligne d'entrée échancrée, fermé au talon, traversé par une bride de cou-de-pied qui se boutonne à l'extérieur. Le bouton est à trous, relié au `sew-through-button` de Yantra4D — et la ligne du bouton (l'unité de diamètre du métier, 1 ligne = 0,635 mm) est la dimension partagée : elle dimensionne la quincaillerie ET la boutonnière tracée dans la bride, pour que la boutonnière finie passe réellement le bouton auquel elle est reliée. FC-300 voie 4, chaussant souple.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "mary-jane",
+      "footwear",
+      "upper",
+      "button",
+      "strap",
+      "hardware",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Upper",
+        "es": "Corte completo",
+        "fr": "Tige complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "quarter",
+        "instep_strap"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "quarter",
+      "label": {
+        "en": "Quarter (shoe body)",
+        "es": "Cuarto (cuerpo del zapato)",
+        "fr": "Quartier (corps de la chaussure)"
+      },
+      "default_color": "#3c3540",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "instep_strap",
+      "label": {
+        "en": "Instep strap (buttoning)",
+        "es": "Correa de empeine (con botón)",
+        "fr": "Bride de cou-de-pied (boutonnée)"
+      },
+      "default_color": "#524757",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Foot",
+        "es": "Pie",
+        "fr": "Pied"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Aisance"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Closure",
+        "es": "Cierre",
+        "fr": "Fermeture"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "foot_length",
+      "type": "slider",
+      "group": "body",
+      "default": 250,
+      "min": 150,
+      "max": 330,
+      "step": 5,
+      "label": {
+        "en": "Foot length (mm)",
+        "es": "Largo del pie (mm)",
+        "fr": "Longueur du pied (mm)"
+      },
+      "tooltip": {
+        "en": "Heel to longest toe. A plain sized parameter — ISO 8559 has no foot landmark code, so none is claimed.",
+        "es": "Del talón al dedo más largo. Parámetro simple — ISO 8559 no tiene código de referencia del pie, así que no se reclama ninguno.",
+        "fr": "Du talon à l'orteil le plus long. Paramètre simple — l'ISO 8559 n'a aucun code de repère du pied, aucun n'est donc revendiqué."
+      }
+    },
+    {
+      "id": "foot_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 230,
+      "min": 150,
+      "max": 320,
+      "step": 5,
+      "label": {
+        "en": "Ball girth (mm)",
+        "es": "Contorno de la planta (mm)",
+        "fr": "Carrure de la plante (mm)"
+      },
+      "tooltip": {
+        "en": "Around the widest part of the foot; sets the quarter's width.",
+        "es": "Alrededor de la parte más ancha del pie; define el ancho del cuarto.",
+        "fr": "Autour de la partie la plus large du pied ; définit la largeur du quartier."
+      }
+    },
+    {
+      "id": "topline_drop",
+      "type": "slider",
+      "group": "fit",
+      "default": 34,
+      "min": 12,
+      "max": 90,
+      "step": 2,
+      "label": {
+        "en": "Topline drop (mm)",
+        "es": "Escote de la línea superior (mm)",
+        "fr": "Échancrure de la ligne d'entrée (mm)"
+      },
+      "tooltip": {
+        "en": "How low the topline scoops over the instep — the Mary Jane's low cut.",
+        "es": "Cuánto baja la línea superior sobre el empeine — el escote bajo de la Mary Jane.",
+        "fr": "Profondeur de l'échancrure sur le cou-de-pied — la coupe basse de la Mary Jane."
+      }
+    },
+    {
+      "id": "strap_w",
+      "type": "slider",
+      "group": "fit",
+      "default": 24,
+      "min": 10,
+      "max": 45,
+      "step": 1,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de la correa (mm)",
+        "fr": "Largeur de la bride (mm)"
+      },
+      "tooltip": {
+        "en": "Width of the instep strap. Widened automatically if the buttonhole for your chosen ligne needs more room.",
+        "es": "Ancho de la correa de empeine. Se ensancha automáticamente si el ojal de la línea elegida necesita más espacio.",
+        "fr": "Largeur de la bride. Élargie automatiquement si la boutonnière de la ligne choisie exige plus de place."
+      }
+    },
+    {
+      "id": "strap_len",
+      "type": "slider",
+      "group": "fit",
+      "default": 132,
+      "min": 70,
+      "max": 230,
+      "step": 2,
+      "label": {
+        "en": "Strap length (mm)",
+        "es": "Largo de la correa (mm)",
+        "fr": "Longueur de la bride (mm)"
+      },
+      "tooltip": {
+        "en": "Free length from the anchor to the buttonhole end.",
+        "es": "Largo libre desde el anclaje hasta el extremo del ojal.",
+        "fr": "Longueur libre de l'ancrage à l'extrémité de la boutonnière."
+      }
+    },
+    {
+      "id": "button_ligne",
+      "type": "slider",
+      "group": "construction",
+      "default": 24,
+      "min": 14,
+      "max": 45,
+      "step": 1,
+      "label": {
+        "en": "Button size (ligne)",
+        "es": "Tamaño del botón (línea)",
+        "fr": "Taille du bouton (ligne)"
+      },
+      "tooltip": {
+        "en": "The trade's diameter unit — 1 ligne = 0.635 mm. Sizes the Yantra4D button AND the buttonhole slot in the strap.",
+        "es": "La unidad de diámetro del oficio — 1 línea = 0.635 mm. Dimensiona el botón de Yantra4D Y el ojal de la correa.",
+        "fr": "L'unité de diamètre du métier — 1 ligne = 0,635 mm. Dimensionne le bouton Yantra4D ET la boutonnière de la bride."
+      }
+    },
+    {
+      "id": "button_thickness",
+      "type": "slider",
+      "group": "construction",
+      "default": 3,
+      "min": 1,
+      "max": 8,
+      "step": 0.5,
+      "label": {
+        "en": "Button thickness (mm)",
+        "es": "Grosor del botón (mm)",
+        "fr": "Épaisseur du bouton (mm)"
+      },
+      "tooltip": {
+        "en": "Added to the diameter for the buttonhole slot — the standard allowance.",
+        "es": "Se suma al diámetro para el ojal — la tolerancia estándar.",
+        "fr": "Ajoutée au diamètre pour la boutonnière — l'allocation standard."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 7,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "At the heel seam, the lasting edge, and the strap anchor.",
+        "es": "En la costura del talón, el borde de montado y el anclaje de la correa.",
+        "fr": "À la couture de talon, au bord de montage et à l'ancrage de la bride."
+      },
+      "advanced": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic",
+        "es": "Clásica",
+        "fr": "Classique"
+      },
+      "values": {
+        "button_ligne": 24,
+        "strap_w": 24,
+        "topline_drop": 34
+      }
+    },
+    {
+      "id": "wide_strap",
+      "label": {
+        "en": "Wide strap, big button",
+        "es": "Correa ancha, botón grande",
+        "fr": "Bride large, gros bouton"
+      },
+      "values": {
+        "strap_w": 38,
+        "button_ligne": 36,
+        "topline_drop": 48
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "button",
+    "subtype": "mary-jane instep-strap button",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "thickness": "button_thickness",
+        "hole_count": "4",
+        "card_count": "1"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "button_closure",
+        "type": "button_stand",
+        "label": {
+          "en": "Buttoning strap end",
+          "es": "Extremo abotonado de la correa",
+          "fr": "Extrémité boutonnée de la bride"
+        },
+        "edges": [
+          {
+            "piece": "instep_strap",
+            "edge": "free_end"
+          },
+          {
+            "piece": "instep_strap",
+            "edge": "edge_bottom"
+          }
+        ],
+        "parameters": [
+          "button_ligne",
+          "button_thickness",
+          "strap_w",
+          "strap_len"
+        ]
+      },
+      {
+        "id": "lasting_edge",
+        "type": "hem",
+        "label": {
+          "en": "Lasting edge (sole stitch-down)",
+          "es": "Borde de montado (cosido a la suela)",
+          "fr": "Bord de montage (couture semelle)"
+        },
+        "edges": [
+          {
+            "piece": "quarter",
+            "edge": "lasting"
+          }
+        ],
+        "parameters": [
+          "foot_length",
+          "foot_girth",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "topline",
+        "type": "custom",
+        "label": {
+          "en": "Scooped topline",
+          "es": "Línea superior escotada",
+          "fr": "Ligne d'entrée échancrée"
+        },
+        "edges": [
+          {
+            "piece": "quarter",
+            "edge": "topline"
+          }
+        ],
+        "parameters": [
+          "topline_drop",
+          "foot_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A shoe fails at its closure long before its upper wears out — and a button is the one closure a person can replace with a needle. Publishing a Mary Jane whose button is an open printable Yantra4D object, at a ligne the pattern itself is drafted around, means the commonest reason a child's shoe is thrown away becomes a five-minute repair.",
+      "es": "Un zapato falla en su cierre mucho antes de que se gaste el corte — y un botón es el único cierre que una persona puede reemplazar con una aguja. Publicar una Mary Jane cuyo botón es un objeto imprimible abierto de Yantra4D, en una línea alrededor de la cual se traza el propio patrón, convierte la razón más común por la que se tira el zapato de un niño en un arreglo de cinco minutos.",
+      "fr": "Une chaussure lâche à sa fermeture bien avant que sa tige ne s'use — et un bouton est la seule fermeture qu'une personne peut remplacer avec une aiguille. Publier une Mary Jane dont le bouton est un objet Yantra4D imprimable et ouvert, à une ligne autour de laquelle le patron lui-même est tracé, transforme la raison la plus courante pour laquelle on jette la chaussure d'un enfant en une réparation de cinq minutes."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

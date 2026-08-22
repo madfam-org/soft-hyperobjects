@@ -1,0 +1,381 @@
+{
+  "project": {
+    "name": "Chalk Bag",
+    "slug": "chalk-bag",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The climber's chalk bag: a stiff fleece-lined cylinder worn at the small of the back, with a rolled fleece cuff at the mouth that keeps the dust in and a drawcord through a top casing that a cord-lock pinches shut between climbs. The base is a true 48-segment disc whose perimeter is solved to the wall run, so the base seam verifies. The cord-lock solid is Yantra4D territory; Fashion Cabinet owns the bag. FC-300 technical & outdoor.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La bolsa de magnesio de escalada: un cilindro rígido forrado de polar que se lleva en la espalda baja, con un puño de polar enrollado en la boca que retiene el polvo y un cordón por una jareta superior que un tope cierra entre vías. La base es un disco real de 48 segmentos cuyo perímetro se resuelve al desarrollo de la pared, para que la costura de base verifique. El sólido del tope es territorio de Yantra4D; Fashion Cabinet posee la bolsa.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le sac à magnésie du grimpeur : un cylindre rigide doublé de polaire porté au creux des reins, avec un revers de polaire roulé à l'ouverture qui retient la poussière et un cordon dans une coulisse haute qu'un arrêt de cordon pince entre les voies. La base est un vrai disque à 48 segments dont le périmètre est résolu au développé de la paroi, si bien que la couture de fond se vérifie. Le solide de l'arrêt relève de Yantra4D ; Fashion Cabinet possède le sac.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "chalk-bag",
+      "climbing",
+      "outdoor",
+      "technical",
+      "accessory",
+      "hardware",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full chalk bag",
+        "es": "Bolsa de magnesio completa",
+        "fr": "Sac à magnésie complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "body",
+        "base",
+        "cuff"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Cylinder wall",
+        "es": "Pared del cilindro",
+        "fr": "Paroi du cylindre"
+      },
+      "default_color": "#7a5c3e",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "base",
+      "label": {
+        "en": "Base disc",
+        "es": "Disco de base",
+        "fr": "Disque de fond"
+      },
+      "default_color": "#5d452e",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Fleece mouth cuff",
+        "es": "Puño de polar en la boca",
+        "fr": "Revers polaire d'ouverture"
+      },
+      "default_color": "#b8a68e",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Size and shape",
+        "es": "Tamaño y forma",
+        "fr": "Taille et forme"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "mouth_dia",
+      "type": "slider",
+      "group": "fit",
+      "default": 130,
+      "min": 90,
+      "max": 190,
+      "step": 5,
+      "label": {
+        "en": "Mouth diameter (mm)",
+        "es": "Diámetro de boca (mm)",
+        "fr": "Diamètre d'ouverture (mm)"
+      },
+      "tooltip": {
+        "en": "Wide enough for a chalked hand, narrow enough to close",
+        "es": "Amplio para una mano con magnesio, angosto para cerrar",
+        "fr": "Assez large pour une main, assez étroit pour fermer"
+      }
+    },
+    {
+      "id": "bag_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 175,
+      "min": 110,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Depth, mouth to base (mm)",
+        "es": "Profundidad, boca a base (mm)",
+        "fr": "Profondeur, ouverture au fond (mm)"
+      },
+      "tooltip": {
+        "en": "Deeper bags hold more but hang lower on the belt",
+        "es": "Bolsas más profundas cargan más pero cuelgan más bajo",
+        "fr": "Un sac profond contient plus mais pend plus bas"
+      }
+    },
+    {
+      "id": "cuff_depth",
+      "type": "slider",
+      "group": "construction",
+      "default": 55,
+      "min": 25,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Fleece cuff depth (mm)",
+        "es": "Profundidad del puño de polar (mm)",
+        "fr": "Profondeur du revers polaire (mm)"
+      },
+      "tooltip": {
+        "en": "The rolled cuff is what actually keeps the dust in",
+        "es": "El puño enrollado es lo que realmente retiene el polvo",
+        "fr": "C'est le revers roulé qui retient réellement la poussière"
+      }
+    },
+    {
+      "id": "casing_depth",
+      "type": "slider",
+      "group": "construction",
+      "default": 22,
+      "min": 12,
+      "max": 40,
+      "step": 2,
+      "label": {
+        "en": "Drawcord casing (mm)",
+        "es": "Jareta del cordón (mm)",
+        "fr": "Coulisse du cordon (mm)"
+      },
+      "tooltip": {
+        "en": "Deep enough for the cord to run freely",
+        "es": "Suficiente para que el cordón corra libre",
+        "fr": "Assez profonde pour que le cordon coulisse"
+      }
+    },
+    {
+      "id": "cord_dia",
+      "type": "slider",
+      "group": "construction",
+      "default": 4,
+      "min": 2,
+      "max": 8,
+      "step": 0.5,
+      "label": {
+        "en": "Drawcord diameter (mm)",
+        "es": "Diámetro del cordón (mm)",
+        "fr": "Diamètre du cordon (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the Yantra4D cord-lock bore",
+        "es": "Define el barreno del tope de Yantra4D",
+        "fr": "Définit l'alésage de l'arrêt Yantra4D"
+      }
+    },
+    {
+      "id": "belt_loop_w",
+      "type": "slider",
+      "group": "construction",
+      "default": 45,
+      "min": 25,
+      "max": 80,
+      "step": 5,
+      "label": {
+        "en": "Belt loop width (mm)",
+        "es": "Ancho de la presilla (mm)",
+        "fr": "Largeur du passant (mm)"
+      },
+      "tooltip": {
+        "en": "Wide enough for a chalk-bag belt or a harness loop",
+        "es": "Suficiente para un cinturón de bolsa o un anillo de arnés",
+        "fr": "Assez large pour une ceinture ou un anneau de baudrier"
+      },
+      "advanced": true
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Valeur de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Added outside the stitch line",
+        "es": "Se agrega fuera de la línea de costura",
+        "fr": "Ajoutée à l'extérieur de la ligne de piqûre"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "cuff_depth <= bag_depth / 2",
+      "severity": "warning",
+      "message": {
+        "en": "A cuff deeper than half the bag swallows the opening when it rolls",
+        "es": "Un puño más profundo que la mitad de la bolsa se traga la boca al enrollarse",
+        "fr": "Un revers plus profond que la moitié du sac avale l'ouverture en se roulant"
+      }
+    },
+    {
+      "expression": "casing_depth >= cord_dia * 3",
+      "severity": "warning",
+      "message": {
+        "en": "The casing must be at least three cord diameters deep or the cord binds",
+        "es": "La jareta debe medir al menos tres diámetros de cordón o el cordón se atora",
+        "fr": "La coulisse doit faire au moins trois diamètres de cordon, sinon il coince"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "boulder",
+      "label": {
+        "en": "Bouldering bucket",
+        "es": "Cubeta de boulder",
+        "fr": "Seau de bloc"
+      },
+      "values": {
+        "mouth_dia": 180,
+        "bag_depth": 200,
+        "cuff_depth": 70
+      }
+    },
+    {
+      "id": "sport",
+      "label": {
+        "en": "Sport-route bag",
+        "es": "Bolsa de vía deportiva",
+        "fr": "Sac de voie sportive"
+      },
+      "values": {
+        "mouth_dia": 115,
+        "bag_depth": 160,
+        "cuff_depth": 45
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "chalk-bag drawcord stopper",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "cord-lock",
+      "linked": true,
+      "params_map": {
+        "cord_dia": "cord_dia",
+        "cords": "2",
+        "body_size": "max(14.0, cord_dia * 4.0)"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "mouth_casing",
+        "type": "cuff",
+        "label": {
+          "en": "Mouth drawcord casing",
+          "es": "Jareta de la boca",
+          "fr": "Coulisse d'ouverture"
+        },
+        "edges": [
+          {
+            "piece": "body",
+            "edge": "mouth"
+          },
+          {
+            "piece": "cuff",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "mouth_dia",
+          "casing_depth",
+          "cord_dia"
+        ]
+      },
+      {
+        "id": "base_seam",
+        "type": "custom",
+        "label": {
+          "en": "Base disc seam",
+          "es": "Costura del disco de base",
+          "fr": "Couture du disque de fond"
+        },
+        "edges": [
+          {
+            "piece": "body",
+            "edge": "base_edge"
+          },
+          {
+            "piece": "base",
+            "edge": "rim"
+          }
+        ],
+        "parameters": [
+          "mouth_dia",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A chalk bag anyone can sew from scrap shell fabric and offcut fleece, closed by a cord-lock they can print, keeps a durable climbing accessory out of the throwaway-gear cycle and in the hands of the people who use it.",
+      "es": "Una bolsa de magnesio que cualquiera puede coser con retazos de tela técnica y sobrantes de polar, cerrada con un tope que puede imprimir, mantiene un accesorio durable de escalada fuera del ciclo del equipo desechable y en manos de quien lo usa.",
+      "fr": "Un sac à magnésie que chacun peut coudre dans des chutes de tissu technique et de polaire, fermé par un arrêt de cordon imprimable, garde un accessoire d'escalade durable hors du cycle du matériel jetable et entre les mains de qui s'en sert."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

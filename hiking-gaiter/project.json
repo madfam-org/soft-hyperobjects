@@ -1,0 +1,472 @@
+{
+  "project": {
+    "name": "Hiking Gaiter",
+    "slug": "hiking-gaiter",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The full-height gaiter: a truncated-cone sleeve that wraps the boot top and lower leg to keep scree, snow, mud, and burrs out of the boot. It opens down the front on a lacing-hook column seated in eyelets, draws in at the top on a drawcord stopped by a cord-lock, and is held down by an instep strap under the boot arch. The eyelet solid is Yantra4D territory; Fashion Cabinet owns the sleeve. Made to measure from ISO 8559 calf and ankle girths. FC-300 technical & outdoor.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La polaina de altura completa: una manga de cono truncado que envuelve la caña de la bota y la pierna baja para mantener fuera piedra suelta, nieve, lodo y abrojos. Abre al frente sobre una columna de ganchos de cordón asentados en ojales, se ciñe arriba con un cordón detenido por un tope de cordón, y se sujeta con una correa de empeine bajo el arco de la bota. El sólido del ojal es territorio de Yantra4D; Fashion Cabinet posee la manga. A la medida desde los contornos de pantorrilla y tobillo ISO 8559. Técnico y exterior FC-300.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La guêtre pleine hauteur : un manchon tronconique qui enveloppe le haut de la chaussure et le bas de jambe pour tenir dehors éboulis, neige, boue et bardanes. Elle s'ouvre devant sur une colonne de crochets de laçage sertis dans des œillets, se resserre en haut par un cordon bloqué par un arrêt de cordon, et se maintient par une sangle de cou-de-pied sous le cambrion. Le solide de l'œillet relève de Yantra4D ; Fashion Cabinet possède le manchon. Sur mesure d'après les tours de mollet et de cheville ISO 8559. Technique et plein air FC-300.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "gaiter",
+      "outdoor",
+      "hiking",
+      "technical",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full gaiter",
+        "es": "Polaina completa",
+        "fr": "Guêtre complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "sleeve",
+        "strap"
+      ]
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve only",
+        "es": "Solo la manga",
+        "fr": "Manchon seul"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "sleeve"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Gaiter sleeve",
+        "es": "Manga de polaina",
+        "fr": "Manchon de guêtre"
+      },
+      "default_color": "#4d6357",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "strap",
+      "label": {
+        "en": "Instep strap",
+        "es": "Correa de empeine",
+        "fr": "Sangle de cou-de-pied"
+      },
+      "default_color": "#2f3a34",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit and ease",
+        "es": "Ajuste y holgura",
+        "fr": "Aisance et ajustement"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "calf_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 380,
+      "min": 260,
+      "max": 560,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "calf_girth"
+      },
+      "label": {
+        "en": "Calf girth (mm)",
+        "es": "Contorno de pantorrilla (mm)",
+        "fr": "Tour de mollet (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the top of the gaiter cone",
+        "es": "Define la boca superior del cono",
+        "fr": "Définit le haut du cône de la guêtre"
+      }
+    },
+    {
+      "id": "ankle_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 250,
+      "min": 180,
+      "max": 360,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "ankle_girth"
+      },
+      "label": {
+        "en": "Ankle girth (mm)",
+        "es": "Contorno de tobillo (mm)",
+        "fr": "Tour de cheville (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the boot end of the gaiter cone",
+        "es": "Define el extremo de bota del cono",
+        "fr": "Définit l'extrémité chaussure du cône"
+      }
+    },
+    {
+      "id": "gaiter_height",
+      "type": "slider",
+      "group": "fit",
+      "default": 400,
+      "min": 200,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Height, boot top to leg (mm)",
+        "es": "Altura, caña de bota a pierna (mm)",
+        "fr": "Hauteur, haut de chaussure à jambe (mm)"
+      },
+      "tooltip": {
+        "en": "Full-height gaiters stop just below the knee",
+        "es": "Las polainas altas terminan justo bajo la rodilla",
+        "fr": "Les guêtres hautes s'arrêtent juste sous le genou"
+      }
+    },
+    {
+      "id": "boot_ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 120,
+      "min": 40,
+      "max": 220,
+      "step": 10,
+      "label": {
+        "en": "Ease over the boot cuff (mm)",
+        "es": "Holgura sobre la caña de la bota (mm)",
+        "fr": "Aisance sur la tige de la chaussure (mm)"
+      },
+      "tooltip": {
+        "en": "The gaiter must clear a laced boot, not the bare ankle",
+        "es": "La polaina debe librar una bota atada, no el tobillo desnudo",
+        "fr": "La guêtre doit passer par-dessus une chaussure lacée"
+      }
+    },
+    {
+      "id": "calf_ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 60,
+      "min": 20,
+      "max": 160,
+      "step": 10,
+      "label": {
+        "en": "Ease over the trouser leg (mm)",
+        "es": "Holgura sobre la pierna del pantalón (mm)",
+        "fr": "Aisance sur la jambe du pantalon (mm)"
+      },
+      "tooltip": {
+        "en": "The drawcord takes up what the ease leaves loose",
+        "es": "El cordón recoge lo que la holgura deja suelto",
+        "fr": "Le cordon reprend ce que l'aisance laisse libre"
+      }
+    },
+    {
+      "id": "hooks",
+      "type": "slider",
+      "group": "construction",
+      "default": 7,
+      "min": 3,
+      "max": 14,
+      "step": 1,
+      "label": {
+        "en": "Lacing hooks down the front",
+        "es": "Ganchos de cordón al frente",
+        "fr": "Crochets de laçage sur le devant"
+      },
+      "tooltip": {
+        "en": "More hooks close the front more evenly",
+        "es": "Más ganchos cierran el frente más parejo",
+        "fr": "Plus de crochets ferment le devant plus régulièrement"
+      }
+    },
+    {
+      "id": "hook_dia",
+      "type": "slider",
+      "group": "construction",
+      "default": 9,
+      "min": 5,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Hook eyelet diameter (mm)",
+        "es": "Diámetro del ojal del gancho (mm)",
+        "fr": "Diamètre de l'œillet de crochet (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the Yantra4D eyelet that seats each lacing hook",
+        "es": "Define el ojal de Yantra4D que asienta cada gancho",
+        "fr": "Définit l'œillet Yantra4D qui reçoit chaque crochet"
+      }
+    },
+    {
+      "id": "casing_depth",
+      "type": "slider",
+      "group": "construction",
+      "default": 26,
+      "min": 14,
+      "max": 45,
+      "step": 2,
+      "label": {
+        "en": "Top drawcord casing (mm)",
+        "es": "Jareta del cordón superior (mm)",
+        "fr": "Coulisse du cordon supérieur (mm)"
+      },
+      "tooltip": {
+        "en": "Deep enough for the cord plus the cord-lock's tail",
+        "es": "Suficiente para el cordón y la cola del tope",
+        "fr": "Assez profonde pour le cordon et la queue de l'arrêt"
+      }
+    },
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 22,
+      "min": 12,
+      "max": 40,
+      "step": 2,
+      "label": {
+        "en": "Instep strap width (mm)",
+        "es": "Ancho de correa de empeine (mm)",
+        "fr": "Largeur de sangle de cou-de-pied (mm)"
+      },
+      "tooltip": {
+        "en": "Wider straps last longer under a boot sole",
+        "es": "Correas más anchas duran más bajo la suela",
+        "fr": "Les sangles larges durent plus sous une semelle"
+      },
+      "advanced": true
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Valeur de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Added outside the stitch line",
+        "es": "Se agrega fuera de la línea de costura",
+        "fr": "Ajoutée à l'extérieur de la ligne de piqûre"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "boot_ease >= 40",
+      "severity": "warning",
+      "message": {
+        "en": "The gaiter passes over a laced boot — it needs generous ease at the boot end",
+        "es": "La polaina pasa sobre una bota atada — necesita holgura amplia en el extremo de bota",
+        "fr": "La guêtre passe par-dessus une chaussure lacée — il lui faut une aisance généreuse en bas"
+      }
+    },
+    {
+      "expression": "calf_girth > ankle_girth",
+      "severity": "error",
+      "message": {
+        "en": "The calf must be larger than the ankle — the gaiter is a cone, not a cylinder",
+        "es": "La pantorrilla debe ser mayor que el tobillo — la polaina es un cono, no un cilindro",
+        "fr": "Le mollet doit être plus grand que la cheville — la guêtre est un cône, pas un cylindre"
+      }
+    },
+    {
+      "expression": "casing_depth >= 14",
+      "severity": "warning",
+      "message": {
+        "en": "A shallow casing binds the cord and the cord-lock cannot travel",
+        "es": "Una jareta somera aprisiona el cordón y el tope no puede correr",
+        "fr": "Une coulisse trop plate coince le cordon et l'arrêt ne peut coulisser"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "alpine",
+      "label": {
+        "en": "Alpine / snow",
+        "es": "Alpina / nieve",
+        "fr": "Alpine / neige"
+      },
+      "values": {
+        "gaiter_height": 460,
+        "boot_ease": 160,
+        "hooks": 9
+      }
+    },
+    {
+      "id": "trail",
+      "label": {
+        "en": "Trail / scree",
+        "es": "Sendero / piedra suelta",
+        "fr": "Sentier / éboulis"
+      },
+      "values": {
+        "gaiter_height": 330,
+        "boot_ease": 100,
+        "hooks": 6
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "eyelet",
+    "subtype": "gaiter lacing-hook eyelet seat",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "garment-eyelet",
+      "linked": true,
+      "params_map": {
+        "inner_dia": "hook_dia",
+        "flange_dia": "hook_dia * 2.2",
+        "barrel_h": "max(2.0, seam_allowance * 0.3)"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "front_opening",
+        "type": "placket",
+        "label": {
+          "en": "Front lacing-hook opening",
+          "es": "Abertura frontal de ganchos",
+          "fr": "Ouverture avant à crochets"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "front_opening"
+          }
+        ],
+        "parameters": [
+          "hooks",
+          "hook_dia",
+          "gaiter_height"
+        ]
+      },
+      {
+        "id": "top_casing",
+        "type": "cuff",
+        "label": {
+          "en": "Top drawcord casing",
+          "es": "Jareta superior de cordón",
+          "fr": "Coulisse supérieure du cordon"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "top"
+          }
+        ],
+        "parameters": [
+          "calf_girth",
+          "calf_ease",
+          "casing_depth"
+        ]
+      },
+      {
+        "id": "boot_opening",
+        "type": "hem",
+        "label": {
+          "en": "Boot-end opening",
+          "es": "Boca del extremo de bota",
+          "fr": "Ouverture côté chaussure"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "boot_edge"
+          }
+        ],
+        "parameters": [
+          "ankle_girth",
+          "boot_ease"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure gaiter lets walkers and workers keep water, snow, and grit out of their own boots with cloth they can re-hem and hooks they can print, instead of replacing a fixed-size shell every season.",
+      "es": "Una polaina abierta y a la medida permite a caminantes y trabajadoras mantener agua, nieve y grava fuera de sus propias botas con tela que pueden volver a dobladillar y ganchos que pueden imprimir, en vez de reemplazar una carcasa de talla fija cada temporada.",
+      "fr": "Une guêtre ouverte et sur mesure permet aux marcheurs et aux travailleurs de garder l'eau, la neige et les graviers hors de leurs propres chaussures avec un tissu qu'ils peuvent réourler et des crochets qu'ils peuvent imprimer, au lieu de remplacer une coque de taille fixe chaque saison."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

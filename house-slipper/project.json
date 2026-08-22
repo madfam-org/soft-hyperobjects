@@ -1,0 +1,346 @@
+{
+  "project": {
+    "name": "House Slipper",
+    "slug": "house-slipper",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A soft indoor slipper in the classic three-part cut: a vamp over the toes, a sole-line upper (the quarters, cut on the fold at centre back and running round past the heel), and a folded collar band binding the foot opening. Sized S–XL from a discrete size step — ISO 8559 declares no foot landmark codes, so this cartridge is honestly sized rather than measured. FC-300 lane 4, footwear soft goods.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una pantufla suave de interior en el corte clásico de tres partes: una pala sobre los dedos, un corte de línea de suela (los cuartos, cortados al doblez en el centro de atrás y girando por el talón) y una tira de collar doblada que ribetea la entrada del pie. Tallas S–XL por paso discreto — ISO 8559 no declara códigos de referencia del pie, así que este cartucho se dimensiona por talla y no por medida. FC-300 carril 4, calzado blando.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un chausson d'intérieur souple dans la coupe classique en trois parties : une empeigne sur les orteils, une tige de ligne de semelle (les quartiers, coupés au pli au milieu dos et contournant le talon), et une bande de col pliée bordant l'ouverture du pied. Tailles S–XL par pas discret — l'ISO 8559 ne déclare aucun code de repère du pied, ce cartouche est donc honnêtement taillé plutôt que mesuré. FC-300 voie 4, chaussant souple.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "slipper",
+      "house-shoe",
+      "footwear",
+      "indoor",
+      "sized",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Slipper",
+        "es": "Pantufla completa",
+        "fr": "Chausson complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "vamp",
+        "sole_upper",
+        "collar"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "vamp",
+      "label": {
+        "en": "Vamp (toe cover)",
+        "es": "Pala (cubre dedos)",
+        "fr": "Empeigne (couvre-orteils)"
+      },
+      "default_color": "#7d6b8f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "sole_upper",
+      "label": {
+        "en": "Sole-line upper (quarters)",
+        "es": "Corte de línea de suela (cuartos)",
+        "fr": "Tige de ligne de semelle (quartiers)"
+      },
+      "default_color": "#6a5a7a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Collar band",
+        "es": "Tira de collar",
+        "fr": "Bande de col"
+      },
+      "default_color": "#9a86ad",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Size",
+        "es": "Talla",
+        "fr": "Taille"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Aisance"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "size",
+      "type": "select",
+      "group": "body",
+      "default": "m",
+      "options": [
+        {
+          "value": "s",
+          "label": {
+            "en": "S (foot ≈ 235 mm)",
+            "es": "S (pie ≈ 235 mm)",
+            "fr": "S (pied ≈ 235 mm)"
+          }
+        },
+        {
+          "value": "m",
+          "label": {
+            "en": "M (foot ≈ 255 mm)",
+            "es": "M (pie ≈ 255 mm)",
+            "fr": "M (pied ≈ 255 mm)"
+          }
+        },
+        {
+          "value": "l",
+          "label": {
+            "en": "L (foot ≈ 275 mm)",
+            "es": "L (pie ≈ 275 mm)",
+            "fr": "L (pied ≈ 275 mm)"
+          }
+        },
+        {
+          "value": "xl",
+          "label": {
+            "en": "XL (foot ≈ 295 mm)",
+            "es": "XL (pie ≈ 295 mm)",
+            "fr": "XL (pied ≈ 295 mm)"
+          }
+        }
+      ],
+      "label": {
+        "en": "Size",
+        "es": "Talla",
+        "fr": "Taille"
+      },
+      "tooltip": {
+        "en": "S–XL step. Sized, not measured — ISO 8559 has no foot landmark code, so none is claimed.",
+        "es": "Paso S–XL. Por talla, no por medida — ISO 8559 no tiene código de referencia del pie, así que no se reclama ninguno.",
+        "fr": "Pas S–XL. Taillé, non mesuré — l'ISO 8559 n'a aucun code de repère du pied, aucun n'est donc revendiqué."
+      }
+    },
+    {
+      "id": "vamp_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 105,
+      "min": 60,
+      "max": 170,
+      "step": 5,
+      "label": {
+        "en": "Vamp length (mm)",
+        "es": "Largo de la pala (mm)",
+        "fr": "Longueur de l'empeigne (mm)"
+      },
+      "tooltip": {
+        "en": "How far back the toe cover reaches; also sets the quarters' join and their height budget.",
+        "es": "Cuánto avanza el cubre dedos; también define la unión de los cuartos y su altura disponible.",
+        "fr": "Jusqu'où remonte le couvre-orteils ; définit aussi la jonction des quartiers et leur hauteur disponible."
+      }
+    },
+    {
+      "id": "collar_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 34,
+      "min": 15,
+      "max": 70,
+      "step": 1,
+      "label": {
+        "en": "Collar width (mm)",
+        "es": "Ancho del collar (mm)",
+        "fr": "Largeur du col (mm)"
+      },
+      "tooltip": {
+        "en": "Finished band width round the foot opening; cut double and folded.",
+        "es": "Ancho terminado de la tira en la entrada del pie; se corta doble y se dobla.",
+        "fr": "Largeur finie de la bande à l'ouverture du pied ; coupée double et pliée."
+      }
+    },
+    {
+      "id": "foot_ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 22,
+      "min": 0,
+      "max": 70,
+      "step": 2,
+      "label": {
+        "en": "Ease (mm)",
+        "es": "Holgura (mm)",
+        "fr": "Aisance (mm)"
+      },
+      "tooltip": {
+        "en": "Slouch room round the foot — a slipper wants more than a shoe.",
+        "es": "Holgura alrededor del pie — una pantufla pide más que un zapato.",
+        "fr": "Aisance autour du pied — un chausson en demande plus qu'une chaussure."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "On the vamp join, the centre back, and the collar attach.",
+        "es": "En la unión de la pala, el centro de atrás y el pegado del collar.",
+        "fr": "Sur la jonction d'empeigne, le milieu dos et le montage du col."
+      },
+      "advanced": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic",
+        "es": "Clásica",
+        "fr": "Classique"
+      },
+      "values": {
+        "size": "m",
+        "vamp_length": 105,
+        "collar_width": 34
+      }
+    },
+    {
+      "id": "cosy",
+      "label": {
+        "en": "Cosy (deep collar)",
+        "es": "Acogedora (collar alto)",
+        "fr": "Douillet (col profond)"
+      },
+      "values": {
+        "collar_width": 52,
+        "vamp_length": 130,
+        "foot_ease": 34
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "sole_line",
+        "type": "hem",
+        "label": {
+          "en": "Sole line",
+          "es": "Línea de suela",
+          "fr": "Ligne de semelle"
+        },
+        "edges": [
+          {
+            "piece": "sole_upper",
+            "edge": "sole_line"
+          },
+          {
+            "piece": "vamp",
+            "edge": "toe"
+          }
+        ],
+        "parameters": [
+          "size",
+          "foot_ease",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "collar_opening",
+        "type": "cuff",
+        "label": {
+          "en": "Collar opening",
+          "es": "Entrada del collar",
+          "fr": "Ouverture du col"
+        },
+        "edges": [
+          {
+            "piece": "collar",
+            "edge": "attach"
+          },
+          {
+            "piece": "sole_upper",
+            "edge": "collar_line"
+          }
+        ],
+        "parameters": [
+          "collar_width",
+          "vamp_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": false
+    },
+    "societal_benefit": {
+      "en": "Slippers are among the most-discarded shoes on earth — glued, unrepairable, worn out in a season. A three-piece slipper anyone can cut from a worn blanket or an offcut of fleece, in four honest sizes, turns a disposable purchase into an afternoon's mending.",
+      "es": "Las pantuflas están entre los zapatos más desechados del planeta — pegadas, irreparables, gastadas en una temporada. Una pantufla de tres piezas que cualquiera puede cortar de una cobija vieja o un retazo de polar, en cuatro tallas honestas, convierte una compra desechable en una tarde de remiendo.",
+      "fr": "Les chaussons comptent parmi les chaussures les plus jetées au monde — collés, irréparables, usés en une saison. Un chausson en trois pièces que chacun peut tailler dans une couverture usée ou une chute de polaire, en quatre tailles honnêtes, transforme un achat jetable en un après-midi de raccommodage."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

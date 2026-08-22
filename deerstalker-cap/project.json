@@ -1,0 +1,442 @@
+{
+  "project": {
+    "name": "Deerstalker Cap",
+    "slug": "deerstalker-cap",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The deerstalker: a four-gore crown, twin peaks front and rear (the cap's defining feature), and ear flaps that either cover the ears or fold up and tie across the crown with self-fabric tapes. The head line is provably tiled — the two peaks and two flaps sum to the headband run — and the gore bases sum to the same opening. Pure soft goods, no hardware. FC-300 millinery lane.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La gorra de cazador: una copa de cuatro gajos, dos viseras al frente y atrás (el rasgo que la define) y orejeras que cubren las orejas o se doblan hacia arriba y se atan sobre la copa con cintas de la misma tela. La línea de la cabeza queda demostrablemente cubierta — las dos viseras y las dos orejeras suman el recorrido de la badana — y las bases de los gajos suman esa misma abertura. Puro género textil, sin herrajes. Línea de sombrerería FC-300.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La casquette de chasse : une calotte à quatre godets, deux visières devant et derrière (le trait qui la définit) et des oreillettes qui couvrent les oreilles ou se replient et se nouent sur la calotte par des rubans en tissu assorti. La ligne de tête est démontrablement pavée — les deux visières et les deux oreillettes totalisent le parcours du bandeau — et les bases des godets totalisent cette même ouverture. Pur textile, sans quincaillerie. Ligne chapellerie FC-300.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "deerstalker",
+      "cap",
+      "millinery",
+      "hat",
+      "accessory",
+      "ear-flaps",
+      "gored",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full deerstalker",
+        "es": "Gorra de cazador completa",
+        "fr": "Casquette de chasse complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "crown-gore",
+        "headband",
+        "peak",
+        "ear-flap",
+        "flap-tie"
+      ]
+    },
+    {
+      "id": "crown",
+      "label": {
+        "en": "Crown & headband only",
+        "es": "Solo copa y badana",
+        "fr": "Calotte et bandeau seuls"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "crown-gore",
+        "headband"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "crown-gore",
+      "label": {
+        "en": "Crown gore",
+        "es": "Gajo de la copa",
+        "fr": "Godet de calotte"
+      },
+      "default_color": "#7a6a4a",
+      "cut": {
+        "quantity": 4,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "headband",
+      "label": {
+        "en": "Headband",
+        "es": "Badana",
+        "fr": "Bandeau"
+      },
+      "default_color": "#5a4a32",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "peak",
+      "label": {
+        "en": "Peak (front & rear)",
+        "es": "Visera (frente y atrás)",
+        "fr": "Visière (devant et derrière)"
+      },
+      "default_color": "#8a7a5a",
+      "cut": {
+        "quantity": 4,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "ear-flap",
+      "label": {
+        "en": "Ear flap",
+        "es": "Orejera",
+        "fr": "Oreillette"
+      },
+      "default_color": "#9a8a6a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "flap-tie",
+      "label": {
+        "en": "Flap tie",
+        "es": "Cinta de la orejera",
+        "fr": "Ruban d'oreillette"
+      },
+      "default_color": "#6a5a3a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & style",
+        "es": "Ajuste y estilo",
+        "fr": "Coupe et style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "head_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 580,
+      "min": 480,
+      "max": 640,
+      "step": 5,
+      "label": {
+        "en": "Head girth (mm)",
+        "es": "Contorno de cabeza (mm)",
+        "fr": "Tour de tête (mm)"
+      },
+      "tooltip": {
+        "en": "The head circumference at the headband; the gores and the peak/flap tiling both sum to it",
+        "es": "El contorno de cabeza en la badana; los gajos y el reparto visera/orejera lo suman",
+        "fr": "Le tour de tête au bandeau ; les godets et le pavage visière/oreillette le totalisent"
+      },
+      "measurement": {
+        "code": "head_girth",
+        "standard": "iso_8559"
+      }
+    },
+    {
+      "id": "crown_height",
+      "type": "slider",
+      "group": "fit",
+      "default": 120,
+      "min": 80,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Crown height (mm)",
+        "es": "Alto de la copa (mm)",
+        "fr": "Hauteur de calotte (mm)"
+      },
+      "tooltip": {
+        "en": "How deep the gored crown sits over the head",
+        "es": "Qué tan profunda se asienta la copa de gajos",
+        "fr": "La profondeur de la calotte à godets sur la tête"
+      }
+    },
+    {
+      "id": "peak_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 68,
+      "min": 35,
+      "max": 110,
+      "step": 1,
+      "label": {
+        "en": "Peak length (mm)",
+        "es": "Largo de la visera (mm)",
+        "fr": "Longueur de visière (mm)"
+      },
+      "tooltip": {
+        "en": "How far each peak projects; the deerstalker has two, front and rear",
+        "es": "Cuánto se proyecta cada visera; la gorra de cazador tiene dos, al frente y atrás",
+        "fr": "De combien chaque visière avance ; la casquette en a deux, devant et derrière"
+      }
+    },
+    {
+      "id": "flap_drop",
+      "type": "slider",
+      "group": "fit",
+      "default": 95,
+      "min": 50,
+      "max": 170,
+      "step": 5,
+      "label": {
+        "en": "Ear flap drop (mm)",
+        "es": "Caída de la orejera (mm)",
+        "fr": "Tombée de l'oreillette (mm)"
+      },
+      "tooltip": {
+        "en": "How far the flaps fall over the ears when let down",
+        "es": "Cuánto caen las orejeras sobre las orejas al soltarlas",
+        "fr": "Jusqu'où les oreillettes tombent sur les oreilles une fois baissées"
+      }
+    },
+    {
+      "id": "gores",
+      "type": "slider",
+      "group": "construction",
+      "default": 4,
+      "min": 4,
+      "max": 8,
+      "step": 1,
+      "label": {
+        "en": "Crown gores",
+        "es": "Gajos de la copa",
+        "fr": "Godets de calotte"
+      },
+      "tooltip": {
+        "en": "Four is the classic deerstalker; more gores give a rounder crown",
+        "es": "Cuatro es la clásica gorra de cazador; más gajos dan una copa más redonda",
+        "fr": "Quatre est le classique ; plus de godets donnent une calotte plus ronde"
+      }
+    },
+    {
+      "id": "headband_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 34,
+      "min": 18,
+      "max": 60,
+      "step": 1,
+      "label": {
+        "en": "Headband height (mm)",
+        "es": "Alto de la badana (mm)",
+        "fr": "Hauteur du bandeau (mm)"
+      },
+      "tooltip": {
+        "en": "The band between the crown and the peaks/flaps",
+        "es": "La banda entre la copa y las viseras/orejeras",
+        "fr": "La bande entre la calotte et les visières/oreillettes"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 10,
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Ease (mm)",
+        "es": "Holgura (mm)",
+        "fr": "Aisance (mm)"
+      },
+      "tooltip": {
+        "en": "Added to the head girth — a tweed cap wants room over a lining",
+        "es": "Se suma al contorno de cabeza — una gorra de tweed quiere aire sobre el forro",
+        "fr": "Ajoutée au tour de tête — une casquette en tweed veut de l'air sur la doublure"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Gore seams, the headband join, and where the peaks and flaps meet the head line",
+        "es": "Costuras de gajos, unión de la badana y donde viseras y orejeras encuentran la línea de la cabeza",
+        "fr": "Coutures des godets, jonction du bandeau, et où visières et oreillettes rejoignent la ligne de tête"
+      },
+      "advanced": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic-tweed",
+      "label": {
+        "en": "Classic tweed",
+        "es": "Tweed clásico",
+        "fr": "Tweed classique"
+      },
+      "values": {
+        "head_girth": 580,
+        "crown_height": 120,
+        "peak_length": 68,
+        "flap_drop": 95,
+        "gores": 4
+      }
+    },
+    {
+      "id": "winter-field",
+      "label": {
+        "en": "Winter field",
+        "es": "Campo de invierno",
+        "fr": "Champ d'hiver"
+      },
+      "values": {
+        "head_girth": 590,
+        "crown_height": 135,
+        "peak_length": 75,
+        "flap_drop": 155,
+        "gores": 6
+      }
+    },
+    {
+      "id": "compact",
+      "label": {
+        "en": "Compact",
+        "es": "Compacta",
+        "fr": "Compacte"
+      },
+      "values": {
+        "head_girth": 555,
+        "crown_height": 95,
+        "peak_length": 45,
+        "flap_drop": 60,
+        "gores": 4
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "head_line",
+        "type": "custom",
+        "label": {
+          "en": "Head line (peaks + flaps ↔ headband)",
+          "es": "Línea de la cabeza (viseras + orejeras ↔ badana)",
+          "fr": "Ligne de tête (visières + oreillettes ↔ bandeau)"
+        },
+        "edges": [
+          {
+            "piece": "headband",
+            "edge": "head_line"
+          },
+          {
+            "piece": "peak",
+            "edge": "back"
+          },
+          {
+            "piece": "ear-flap",
+            "edge": "head_edge"
+          }
+        ],
+        "parameters": [
+          "head_girth",
+          "ease",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "crown_seam",
+        "type": "custom",
+        "label": {
+          "en": "Crown ↔ headband seam",
+          "es": "Costura copa ↔ badana",
+          "fr": "Couture calotte ↔ bandeau"
+        },
+        "edges": [
+          {
+            "piece": "headband",
+            "edge": "crown_edge"
+          }
+        ],
+        "parameters": [
+          "head_girth",
+          "ease",
+          "gores"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": false
+    },
+    "societal_benefit": {
+      "en": "A cold-weather working cap that covers the ears and the nape without a single piece of hardware — the flaps tie with self-fabric tapes, so nothing can snap, corrode or be discontinued. Cut to the wearer's own head from a metre of tweed, it is repairable indefinitely and re-cuttable as the head or the fabric changes.",
+      "es": "Una gorra de trabajo para el frío que cubre orejas y nuca sin una sola pieza de herraje — las orejeras se atan con cintas de la misma tela, así que nada puede romperse, corroerse ni descontinuarse. Cortada a la cabeza real desde un metro de tweed, es reparable indefinidamente y recortable conforme cambian la cabeza o la tela.",
+      "fr": "Une casquette de travail par temps froid qui couvre les oreilles et la nuque sans la moindre quincaillerie — les oreillettes se nouent par des rubans en tissu assorti, rien ne peut donc casser, se corroder ni être arrêté. Coupée à la tête réelle dans un mètre de tweed, elle est réparable indéfiniment et recoupable à mesure que la tête ou le tissu change."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

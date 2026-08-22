@@ -1,0 +1,532 @@
+{
+  "project": {
+    "name": "Radio Chest Pack",
+    "slug": "radio-chest-pack",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The chest-mounted radio pouch: a boxed pouch riding high on the sternum where a hand finds it without looking, carried on an H-harness whose four straps run through ladder-lock adjusters so one rig fits over a shell, a puffy, or bare shoulders. A storm flap covers the radio head with an antenna slot, and the mic lead exits clear of a pack's shoulder straps and hip belt. Built on the house boxed-wrap construction with gussets solved to the panel's own side run. The adjuster solid is Yantra4D territory; Fashion Cabinet owns the pack. Made to measure from ISO 8559 chest girth and across-front. FC-300 technical & outdoor.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La bolsa de radio al pecho: una bolsa escuadrada que va alta sobre el esternón, donde la mano la halla sin mirar, cargada en un arnés en H cuyas cuatro cinchas corren por reguladores escalera para que un solo equipo sirva sobre una chamarra, un plumas o los hombros desnudos. Una solapa cubre la cabeza del radio con ranura de antena, y el cable del micrófono sale libre de las cinchas y el cinturón de una mochila. Construida con la envolvente escuadrada de la casa y fuelles resueltos al desarrollo lateral del panel. El sólido del regulador es territorio de Yantra4D; Fashion Cabinet posee la bolsa. A la medida desde pecho y ancho de frente ISO 8559.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La sacoche radio de poitrine : une poche cubée portée haut sur le sternum, là où la main la trouve sans regarder, sur un harnais en H dont les quatre sangles passent par des régleurs à échelle pour qu'un seul équipement aille sur une veste, une doudoune ou des épaules nues. Un rabat couvre la tête de la radio avec une fente d'antenne, et le cordon de micro sort à l'écart des bretelles et de la ceinture d'un sac. Bâtie sur l'enveloppe cubée maison avec soufflets résolus au développé latéral du panneau. Le solide du régleur relève de Yantra4D ; Fashion Cabinet possède la sacoche. Sur mesure d'après tour de poitrine et carrure devant ISO 8559.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "radio-pack",
+      "chest-pack",
+      "outdoor",
+      "technical",
+      "sar",
+      "workwear",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full chest pack",
+        "es": "Bolsa de pecho completa",
+        "fr": "Sacoche de poitrine complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "pouch",
+        "gusset",
+        "flap",
+        "strap"
+      ]
+    },
+    {
+      "id": "pouch",
+      "label": {
+        "en": "Pouch only",
+        "es": "Solo la bolsa",
+        "fr": "Poche seule"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "pouch",
+        "gusset"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "pouch",
+      "label": {
+        "en": "Pouch (front + base + back)",
+        "es": "Bolsa (frente + base + espalda)",
+        "fr": "Poche (devant + base + dos)"
+      },
+      "default_color": "#3a4b3f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "gusset",
+      "label": {
+        "en": "Side gusset",
+        "es": "Fuelle lateral",
+        "fr": "Soufflet latéral"
+      },
+      "default_color": "#4d6153",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "flap",
+      "label": {
+        "en": "Storm flap",
+        "es": "Solapa contra el clima",
+        "fr": "Rabat de protection"
+      },
+      "default_color": "#2b382f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "strap",
+      "label": {
+        "en": "H-harness strap",
+        "es": "Cincha del arnés en H",
+        "fr": "Sangle du harnais en H"
+      },
+      "default_color": "#1b241e",
+      "cut": {
+        "quantity": 4,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Radio envelope",
+        "es": "Envolvente del radio",
+        "fr": "Encombrement de la radio"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 1000,
+      "min": 700,
+      "max": 1700,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the side straps that close the H behind the ribs",
+        "es": "Define las cinchas laterales que cierran la H tras las costillas",
+        "fr": "Définit les sangles latérales qui ferment le H derrière les côtes"
+      }
+    },
+    {
+      "id": "across_front",
+      "type": "slider",
+      "group": "body",
+      "default": 360,
+      "min": 260,
+      "max": 540,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "across_front"
+      },
+      "label": {
+        "en": "Across front (mm)",
+        "es": "Ancho de frente (mm)",
+        "fr": "Carrure devant (mm)"
+      },
+      "tooltip": {
+        "en": "The span the shoulder straps must clear without pinching the neck",
+        "es": "El tramo que las cinchas de hombro deben librar sin apretar el cuello",
+        "fr": "L'envergure que les bretelles doivent franchir sans pincer le cou"
+      }
+    },
+    {
+      "id": "radio_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 68,
+      "min": 40,
+      "max": 140,
+      "step": 2,
+      "label": {
+        "en": "Radio body width (mm)",
+        "es": "Ancho del cuerpo del radio (mm)",
+        "fr": "Largeur du corps de la radio (mm)"
+      },
+      "tooltip": {
+        "en": "Measure across the widest point including the belt clip",
+        "es": "Mide en el punto más ancho incluyendo el clip de cinturón",
+        "fr": "Mesurez au point le plus large, clip de ceinture compris"
+      }
+    },
+    {
+      "id": "radio_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 40,
+      "min": 20,
+      "max": 90,
+      "step": 2,
+      "label": {
+        "en": "Radio body depth (mm)",
+        "es": "Profundidad del radio (mm)",
+        "fr": "Profondeur de la radio (mm)"
+      },
+      "tooltip": {
+        "en": "Front to back, with the battery fitted",
+        "es": "De frente a espalda, con la batería puesta",
+        "fr": "D'avant en arrière, batterie en place"
+      }
+    },
+    {
+      "id": "radio_height",
+      "type": "slider",
+      "group": "fit",
+      "default": 140,
+      "min": 70,
+      "max": 280,
+      "step": 5,
+      "label": {
+        "en": "Radio height, no antenna (mm)",
+        "es": "Alto del radio, sin antena (mm)",
+        "fr": "Hauteur de la radio, sans antenne (mm)"
+      },
+      "tooltip": {
+        "en": "The antenna passes through the flap's slot, not the pouch",
+        "es": "La antena pasa por la ranura de la solapa, no por la bolsa",
+        "fr": "L'antenne passe par la fente du rabat, pas par la poche"
+      }
+    },
+    {
+      "id": "pouch_ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 14,
+      "min": 4,
+      "max": 40,
+      "step": 2,
+      "label": {
+        "en": "Ease around the radio (mm)",
+        "es": "Holgura alrededor del radio (mm)",
+        "fr": "Aisance autour de la radio (mm)"
+      },
+      "tooltip": {
+        "en": "Enough to draw the radio with a gloved hand",
+        "es": "Suficiente para sacar el radio con guante",
+        "fr": "Assez pour sortir la radio avec un gant"
+      }
+    },
+    {
+      "id": "flap_drop",
+      "type": "slider",
+      "group": "construction",
+      "default": 75,
+      "min": 30,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Storm-flap drop (mm)",
+        "es": "Caída de la solapa (mm)",
+        "fr": "Retombée du rabat (mm)"
+      },
+      "tooltip": {
+        "en": "Covers the radio head and sheds rain off the front",
+        "es": "Cubre la cabeza del radio y escurre la lluvia",
+        "fr": "Couvre la tête de la radio et fait ruisseler la pluie"
+      }
+    },
+    {
+      "id": "webbing",
+      "type": "slider",
+      "group": "construction",
+      "default": 25,
+      "min": 15,
+      "max": 50,
+      "step": 5,
+      "label": {
+        "en": "Harness webbing width (mm)",
+        "es": "Ancho de cincha del arnés (mm)",
+        "fr": "Largeur de sangle du harnais (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the Yantra4D ladder-lock slot",
+        "es": "Define la ranura del regulador de Yantra4D",
+        "fr": "Définit la fente du régleur Yantra4D"
+      }
+    },
+    {
+      "id": "strap_run",
+      "type": "slider",
+      "group": "construction",
+      "default": 420,
+      "min": 200,
+      "max": 800,
+      "step": 10,
+      "label": {
+        "en": "Harness strap run (mm)",
+        "es": "Largo de la cincha del arnés (mm)",
+        "fr": "Longueur de sangle du harnais (mm)"
+      },
+      "tooltip": {
+        "en": "Long enough to close over a shell and a pack's straps",
+        "es": "Suficiente para cerrar sobre una chamarra y las cinchas de una mochila",
+        "fr": "Assez longue pour fermer sur une veste et les bretelles d'un sac"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Valeur de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Added outside the stitch line",
+        "es": "Se agrega fuera de la línea de costura",
+        "fr": "Ajoutée à l'extérieur de la ligne de piqûre"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "pouch_ease >= 8",
+      "severity": "warning",
+      "message": {
+        "en": "Below about 8 mm the radio cannot be drawn or replaced with a gloved hand",
+        "es": "Por debajo de unos 8 mm el radio no se saca ni se guarda con guante",
+        "fr": "En dessous d'environ 8 mm, la radio ne se sort ni ne se range avec un gant"
+      }
+    },
+    {
+      "expression": "flap_drop >= radio_depth",
+      "severity": "warning",
+      "message": {
+        "en": "The flap must at least cover the pouch depth or rain runs straight into the mouth",
+        "es": "La solapa debe cubrir al menos la profundidad o la lluvia entra directo por la boca",
+        "fr": "Le rabat doit au moins couvrir la profondeur, sinon la pluie entre droit par l'ouverture"
+      }
+    },
+    {
+      "expression": "strap_run >= across_front",
+      "severity": "error",
+      "message": {
+        "en": "A strap shorter than the across-front span cannot reach around to close the H",
+        "es": "Una cincha más corta que el ancho de frente no alcanza a cerrar la H",
+        "fr": "Une sangle plus courte que la carrure devant ne peut faire le tour pour fermer le H"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "wildland",
+      "label": {
+        "en": "Wildland crew",
+        "es": "Cuadrilla forestal",
+        "fr": "Équipe feux de forêt"
+      },
+      "values": {
+        "radio_width": 80,
+        "radio_height": 175,
+        "flap_drop": 110,
+        "webbing": 38
+      }
+    },
+    {
+      "id": "marshal",
+      "label": {
+        "en": "Race marshal",
+        "es": "Comisario de carrera",
+        "fr": "Commissaire de course"
+      },
+      "values": {
+        "radio_width": 58,
+        "radio_height": 110,
+        "flap_drop": 50,
+        "strap_run": 320
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "buckle",
+    "subtype": "H-harness ladder-lock adjuster",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "strap-buckle",
+      "linked": true,
+      "params_map": {
+        "webbing": "webbing",
+        "web_t": "max(1.4, webbing * 0.06)",
+        "wall": "max(2.0, webbing * 0.09)"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "harness_strap",
+        "type": "custom",
+        "label": {
+          "en": "H-harness strap run",
+          "es": "Recorrido de la cincha del arnés",
+          "fr": "Course de la sangle du harnais"
+        },
+        "edges": [
+          {
+            "piece": "strap",
+            "edge": "anchor_end"
+          },
+          {
+            "piece": "strap",
+            "edge": "free_end"
+          }
+        ],
+        "parameters": [
+          "webbing",
+          "strap_run",
+          "across_front",
+          "chest_girth"
+        ]
+      },
+      {
+        "id": "pouch_mouth",
+        "type": "custom",
+        "label": {
+          "en": "Pouch mouth",
+          "es": "Boca de la bolsa",
+          "fr": "Ouverture de la poche"
+        },
+        "edges": [
+          {
+            "piece": "pouch",
+            "edge": "top_front"
+          },
+          {
+            "piece": "pouch",
+            "edge": "top_back"
+          },
+          {
+            "piece": "flap",
+            "edge": "hinge"
+          }
+        ],
+        "parameters": [
+          "radio_width",
+          "pouch_ease",
+          "flap_drop"
+        ]
+      },
+      {
+        "id": "gusset_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Gusset side seam",
+          "es": "Costura del fuelle lateral",
+          "fr": "Couture du soufflet latéral"
+        },
+        "edges": [
+          {
+            "piece": "gusset",
+            "edge": "front_edge"
+          },
+          {
+            "piece": "gusset",
+            "edge": "base"
+          },
+          {
+            "piece": "gusset",
+            "edge": "back_edge"
+          },
+          {
+            "piece": "pouch",
+            "edge": "left"
+          }
+        ],
+        "parameters": [
+          "radio_depth",
+          "radio_height",
+          "pouch_ease"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A radio you can reach without looking is a safety item, not an accessory; an open pattern sized to the radio a crew actually issues — with printable adjusters — lets volunteer and low-budget teams equip themselves properly instead of clipping handsets to a belt where a pack strap buries them.",
+      "es": "Un radio que puedes alcanzar sin mirar es equipo de seguridad, no un accesorio; un patrón abierto dimensionado al radio que una cuadrilla realmente usa — con reguladores imprimibles — permite a equipos voluntarios y de bajo presupuesto equiparse bien en vez de colgar el aparato al cinturón donde una cincha lo sepulta.",
+      "fr": "Une radio que l'on atteint sans regarder est un élément de sécurité, pas un accessoire ; un patron ouvert dimensionné à la radio qu'une équipe utilise réellement — avec des régleurs imprimables — permet aux équipes bénévoles et à petit budget de s'équiper correctement au lieu d'accrocher le poste à une ceinture où une bretelle l'enfouit."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

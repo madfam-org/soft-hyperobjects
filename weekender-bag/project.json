@@ -1,0 +1,396 @@
+{
+  "project": {
+    "name": "Weekender Bag",
+    "slug": "weekender-bag",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A boxed weekender on the dopp-kit precedent, scaled to overnight luggage: a wrap body folded at the base, two end gussets that give it its rigid box shape, a top zip and two carry handles. Bag feet are riveted through the marked base bores so a loaded bag never sits its fabric on the floor — the foot bridges to the Yantra4D `bag-feet` solid as point-placed hardware, with no sewn flange. The end gussets crown toward the zip, so the body panel height is derived from the measured gusset run rather than from height and depth.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un bolso de fin de semana de fondo cuadrado según el precedente del neceser, a escala de equipaje de una noche: un cuerpo envolvente doblado en la base, dos fuelles de extremo que le dan forma rígida, un cierre superior y dos asas. Los tacones se remachan por los taladros marcados en la base para que un bolso cargado nunca apoye la tela en el suelo — el tacón se puentea al sólido `bag-feet` de Yantra4D como herraje de colocación puntual, sin pestaña cosida. Los fuelles se abomban hacia el cierre, así que el alto del panel del cuerpo se deriva del recorrido medido del fuelle y no de alto y fondo.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un sac week-end à fond carré selon le précédent de la trousse de toilette, à l'échelle d'un bagage d'une nuit : un corps enveloppant plié au fond, deux soufflets d'extrémité qui lui donnent sa forme rigide, une fermeture éclair supérieure et deux poignées. Des pieds de sac sont rivés dans les perçages marqués du fond pour qu'un sac chargé ne pose jamais son tissu au sol — le pied fait le pont vers le solide `bag-feet` de Yantra4D en quincaillerie à pose ponctuelle, sans bride cousue. Les soufflets bombent vers la fermeture, si bien que la hauteur du panneau de corps est déduite du parcours mesuré du soufflet et non de la hauteur et de la profondeur.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "weekender-bag",
+      "bag",
+      "luggage",
+      "boxed",
+      "hardware",
+      "bag-feet",
+      "point-placed",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "Boxed-bag construction precedent: Fashion Cabinet dopp-kit cartridge",
+          "license": "LicenseRef-FC1-pending"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full weekender",
+        "es": "Bolso completo",
+        "fr": "Sac week-end complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "body",
+        "end",
+        "handle"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body (front + base + back)",
+        "es": "Cuerpo (frente + base + espalda)",
+        "fr": "Corps (devant + fond + dos)"
+      },
+      "default_color": "#5a4a3a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "end",
+      "label": {
+        "en": "End gusset",
+        "es": "Fuelle de extremo",
+        "fr": "Soufflet d'extrémité"
+      },
+      "default_color": "#4a3d30",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "handle",
+      "label": {
+        "en": "Carry handle",
+        "es": "Asa de transporte",
+        "fr": "Poignée de transport"
+      },
+      "default_color": "#6d5c44",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Size",
+        "es": "Tamaño",
+        "fr": "Taille"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bag_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 520,
+      "min": 320,
+      "max": 750,
+      "step": 10,
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
+      },
+      "tooltip": {
+        "en": "Length the zip runs along; the bag's longest dimension",
+        "es": "Largo por donde corre el cierre; la dimensión mayor del bolso",
+        "fr": "Longueur le long de laquelle court la fermeture ; la plus grande dimension"
+      }
+    },
+    {
+      "id": "bag_height",
+      "type": "slider",
+      "group": "fit",
+      "default": 300,
+      "min": 180,
+      "max": 460,
+      "step": 10,
+      "label": {
+        "en": "Height (mm)",
+        "es": "Alto (mm)",
+        "fr": "Hauteur (mm)"
+      },
+      "tooltip": {
+        "en": "Front-face height from the base fold up to the zip",
+        "es": "Alto de la cara frontal, del doblez de base al cierre",
+        "fr": "Hauteur de la face avant, du pli de fond à la fermeture"
+      }
+    },
+    {
+      "id": "bag_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 260,
+      "min": 120,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Depth (mm)",
+        "es": "Fondo (mm)",
+        "fr": "Profondeur (mm)"
+      },
+      "tooltip": {
+        "en": "Box depth; the end-gusset width and the base panel's span",
+        "es": "Fondo de la caja; ancho del fuelle y tramo del panel de base",
+        "fr": "Profondeur de la boîte ; largeur du soufflet et portée du fond"
+      }
+    },
+    {
+      "id": "handle_length",
+      "type": "slider",
+      "group": "construction",
+      "default": 620,
+      "min": 300,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Handle length (mm)",
+        "es": "Largo del asa (mm)",
+        "fr": "Longueur de poignée (mm)"
+      },
+      "tooltip": {
+        "en": "Cut length of each carry handle",
+        "es": "Largo de corte de cada asa",
+        "fr": "Longueur de coupe de chaque poignée"
+      }
+    },
+    {
+      "id": "handle_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 38,
+      "min": 20,
+      "max": 60,
+      "step": 1,
+      "label": {
+        "en": "Handle width (mm)",
+        "es": "Ancho del asa (mm)",
+        "fr": "Largeur de poignée (mm)"
+      },
+      "tooltip": {
+        "en": "Webbing or leather width for the carry handles",
+        "es": "Ancho de cincha o cuero para las asas",
+        "fr": "Largeur de sangle ou de cuir pour les poignées"
+      }
+    },
+    {
+      "id": "foot_diameter",
+      "type": "slider",
+      "group": "construction",
+      "default": 18,
+      "min": 10,
+      "max": 34,
+      "step": 1,
+      "label": {
+        "en": "Bag-foot diameter (mm)",
+        "es": "Diámetro del tacón (mm)",
+        "fr": "Diamètre du pied de sac (mm)"
+      },
+      "tooltip": {
+        "en": "Foot flange size; sets the base bore marks and drives the Yantra4D foot",
+        "es": "Tamaño de la pestaña del tacón; define los taladros y el tacón Yantra4D",
+        "fr": "Taille de la bride du pied ; définit les perçages et pilote le pied Yantra4D"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied where the body boxes to the end gussets and to the zip",
+        "es": "Aplicado donde el cuerpo se une a los fuelles y al cierre",
+        "fr": "Appliquée où le corps se joint aux soufflets et à la fermeture"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "bag_length > bag_depth",
+      "severity": "warning",
+      "message": {
+        "en": "A weekender reads as luggage when it is longer than it is deep.",
+        "es": "Un bolso de fin de semana se lee como equipaje cuando es más largo que profundo.",
+        "fr": "Un sac week-end se lit comme un bagage lorsqu'il est plus long que profond."
+      }
+    },
+    {
+      "expression": "bag_depth >= foot_diameter * 6",
+      "severity": "warning",
+      "message": {
+        "en": "The base needs room to place four feet clear of the box corners.",
+        "es": "La base necesita espacio para cuatro tacones libres de las esquinas.",
+        "fr": "Le fond doit avoir la place de poser quatre pieds à l'écart des angles."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "overnight",
+      "label": {
+        "en": "Overnight",
+        "es": "Una noche",
+        "fr": "Une nuit"
+      },
+      "values": {
+        "bag_length": 520,
+        "bag_height": 300,
+        "bag_depth": 260
+      }
+    },
+    {
+      "id": "carry_on",
+      "label": {
+        "en": "Carry-on",
+        "es": "Equipaje de mano",
+        "fr": "Bagage cabine"
+      },
+      "values": {
+        "bag_length": 560,
+        "bag_height": 350,
+        "bag_depth": 230
+      }
+    },
+    {
+      "id": "grand_tour",
+      "label": {
+        "en": "Grand tour",
+        "es": "Gran viaje",
+        "fr": "Grand voyage"
+      },
+      "values": {
+        "bag_length": 720,
+        "bag_height": 430,
+        "bag_depth": 380
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "notion": {
+    "kind": "rivet",
+    "subtype": "weekender base feet",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "bag-feet",
+      "linked": true,
+      "params_map": {
+        "foot_dia": "foot_diameter",
+        "foot_h": "max(6, foot_diameter / 2)",
+        "washer_dia": "foot_diameter * 0.8"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "box_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Box seam (body to end gusset)",
+          "es": "Costura de caja (cuerpo a fuelle)",
+          "fr": "Couture de boîte (corps au soufflet)"
+        },
+        "edges": [
+          {
+            "piece": "body",
+            "edge": "side_l"
+          },
+          {
+            "piece": "end",
+            "edge": "attach_l"
+          }
+        ],
+        "parameters": [
+          "bag_height",
+          "bag_depth",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "zip_tape",
+        "type": "zipper_tape",
+        "label": {
+          "en": "Top zip tape",
+          "es": "Cinta del cierre superior",
+          "fr": "Ruban de la fermeture supérieure"
+        },
+        "edges": [
+          {
+            "piece": "body",
+            "edge": "zip_front"
+          }
+        ],
+        "parameters": [
+          "bag_length",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "An overnight bag whose base feet — the small parts that decide whether a bag survives being set down on wet ground, and the parts no shop stocks as spares — are open printable Yantra4D objects sized to the bag's own base, so the bag is repairable rather than replaceable.",
+      "es": "Un bolso de una noche cuyos tacones de base — las piezas pequeñas que deciden si un bolso sobrevive apoyarse en suelo mojado, y las que ninguna tienda vende como repuesto — son objetos imprimibles abiertos de Yantra4D dimensionados a la propia base, de modo que el bolso es reparable en vez de reemplazable.",
+      "fr": "Un sac d'une nuit dont les pieds de fond — les petites pièces qui décident si un sac survit à être posé sur un sol mouillé, et celles qu'aucune boutique ne vend en pièces détachées — sont des objets Yantra4D ouverts et imprimables dimensionnés au fond du sac, de sorte que le sac est réparable et non remplaçable."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

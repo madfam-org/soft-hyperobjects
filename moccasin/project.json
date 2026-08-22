@@ -1,0 +1,380 @@
+{
+  "project": {
+    "name": "Moccasin",
+    "slug": "moccasin",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The classic plug-vamp moccasin: one piece of hide wrapped up from under the foot to be sole and sides at once, an apron plug set into the gathered throat with a whipstitch, and an ankle collar band. The vamp throat is drafted longer than the plug it sews to — that gather is the moccasin's signature, and both throat seams declare it as explicit ease rather than pretending the edges match. FC-300 lane 4, footwear soft goods.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El clásico mocasín de pala con plantilla: una sola pieza de piel envuelta desde debajo del pie para ser suela y costados a la vez, un plug (delantal) montado en la garganta fruncida con puntada sobrehilada, y una tira de collar al tobillo. La garganta de la pala se traza más larga que el plug al que se cose — ese fruncido es la firma del mocasín, y ambas costuras lo declaran como holgura explícita en vez de fingir que los bordes coinciden. FC-300 carril 4, calzado blando.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le mocassin classique à empeigne et plastron : une seule pièce de cuir remontée de sous le pied pour être semelle et côtés à la fois, un plastron monté dans la gorge froncée au point de surjet, et une bande de col à la cheville. La gorge de l'empeigne est tracée plus longue que le plastron auquel elle se coud — ce fronçage est la signature du mocassin, et les deux coutures le déclarent comme aisance explicite au lieu de prétendre que les bords coïncident. FC-300 voie 4, chaussant souple.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "moccasin",
+      "footwear",
+      "leather",
+      "whipstitch",
+      "plug-vamp",
+      "handsewn",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Moccasin",
+        "es": "Mocasín completo",
+        "fr": "Mocassin complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "vamp",
+        "plug",
+        "collar"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "vamp",
+      "label": {
+        "en": "Vamp (wrap-up sole + sides)",
+        "es": "Pala (suela y costados envolventes)",
+        "fr": "Empeigne (semelle et côtés remontés)"
+      },
+      "default_color": "#8a6642",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "plug",
+      "label": {
+        "en": "Plug (apron panel)",
+        "es": "Plug (delantal)",
+        "fr": "Plastron (tablier)"
+      },
+      "default_color": "#a37a51",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Collar (ankle band)",
+        "es": "Collar (tira al tobillo)",
+        "fr": "Col (bande de cheville)"
+      },
+      "default_color": "#6f5133",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Foot",
+        "es": "Pie",
+        "fr": "Pied"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Aisance"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "foot_length",
+      "type": "slider",
+      "group": "body",
+      "default": 255,
+      "min": 150,
+      "max": 330,
+      "step": 5,
+      "label": {
+        "en": "Foot length (mm)",
+        "es": "Largo del pie (mm)",
+        "fr": "Longueur du pied (mm)"
+      },
+      "tooltip": {
+        "en": "Heel to longest toe. A plain sized parameter — ISO 8559 has no foot landmark code, so none is claimed.",
+        "es": "Del talón al dedo más largo. Parámetro simple — ISO 8559 no tiene código de referencia del pie, así que no se reclama ninguno.",
+        "fr": "Du talon à l'orteil le plus long. Paramètre simple — l'ISO 8559 n'a aucun code de repère du pied, aucun n'est donc revendiqué."
+      }
+    },
+    {
+      "id": "foot_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 235,
+      "min": 150,
+      "max": 320,
+      "step": 5,
+      "label": {
+        "en": "Ball girth (mm)",
+        "es": "Contorno de la planta (mm)",
+        "fr": "Carrure de la plante (mm)"
+      },
+      "tooltip": {
+        "en": "Around the widest part of the foot; sets how far the vamp wraps up the sides.",
+        "es": "Alrededor de la parte más ancha del pie; define cuánto sube la pala por los costados.",
+        "fr": "Autour de la partie la plus large du pied ; définit la remontée de l'empeigne sur les côtés."
+      }
+    },
+    {
+      "id": "ankle_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 245,
+      "min": 160,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Ankle girth (mm)",
+        "es": "Contorno del tobillo (mm)",
+        "fr": "Tour de cheville (mm)"
+      },
+      "tooltip": {
+        "en": "Around the ankle; the collar band must clear it. A true ISO 8559 landmark.",
+        "es": "Alrededor del tobillo; la tira de collar debe librarlo. Referencia ISO 8559 real.",
+        "fr": "Autour de la cheville ; la bande de col doit la dégager. Un vrai repère ISO 8559."
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "ankle_girth"
+      }
+    },
+    {
+      "id": "plug_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 62,
+      "min": 35,
+      "max": 110,
+      "step": 1,
+      "label": {
+        "en": "Plug width (mm)",
+        "es": "Ancho del plug (mm)",
+        "fr": "Largeur du plastron (mm)"
+      },
+      "tooltip": {
+        "en": "Width of the apron panel over the instep.",
+        "es": "Ancho del delantal sobre el empeine.",
+        "fr": "Largeur du tablier sur le cou-de-pied."
+      }
+    },
+    {
+      "id": "plug_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 130,
+      "min": 70,
+      "max": 210,
+      "step": 5,
+      "label": {
+        "en": "Plug length (mm)",
+        "es": "Largo del plug (mm)",
+        "fr": "Longueur du plastron (mm)"
+      },
+      "tooltip": {
+        "en": "How far back the apron runs; sets the whipstitched throat run.",
+        "es": "Cuánto avanza el delantal hacia atrás; define el largo de la garganta sobrehilada.",
+        "fr": "Jusqu'où le tablier remonte ; définit la longueur de gorge surjetée."
+      }
+    },
+    {
+      "id": "gather_ratio",
+      "type": "slider",
+      "group": "construction",
+      "default": 1.22,
+      "min": 1,
+      "max": 1.6,
+      "step": 0.01,
+      "label": {
+        "en": "Throat gather ratio",
+        "es": "Razón de fruncido de la garganta",
+        "fr": "Rapport de fronçage de la gorge"
+      },
+      "tooltip": {
+        "en": "How much longer the vamp throat is than the plug side. The whipstitch takes up the difference; 1.0 is no gather.",
+        "es": "Cuánto más larga es la garganta de la pala que el costado del plug. La puntada sobrehilada absorbe la diferencia; 1.0 es sin fruncido.",
+        "fr": "De combien la gorge de l'empeigne dépasse le côté du plastron. Le surjet absorbe la différence ; 1,0 signifie sans fronçage."
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "group": "fit",
+      "default": 52,
+      "min": 25,
+      "max": 120,
+      "step": 2,
+      "label": {
+        "en": "Collar height (mm)",
+        "es": "Alto del collar (mm)",
+        "fr": "Hauteur du col (mm)"
+      },
+      "tooltip": {
+        "en": "How high the ankle band stands.",
+        "es": "Cuán alto se levanta la tira del tobillo.",
+        "fr": "Hauteur de la bande de cheville."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Hide is whipstitched edge-to-edge, so this stays small.",
+        "es": "La piel se sobrehíla borde con borde, así que esto se mantiene pequeño.",
+        "fr": "Le cuir se surjette bord à bord, cette valeur reste donc faible."
+      },
+      "advanced": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic gathered",
+        "es": "Clásico fruncido",
+        "fr": "Classique froncé"
+      },
+      "values": {
+        "gather_ratio": 1.22,
+        "plug_width": 62,
+        "collar_height": 52
+      }
+    },
+    {
+      "id": "flat_plug",
+      "label": {
+        "en": "Flat plug (no gather)",
+        "es": "Plug liso (sin fruncido)",
+        "fr": "Plastron plat (sans fronçage)"
+      },
+      "values": {
+        "gather_ratio": 1,
+        "plug_width": 78
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "throat_whipstitch",
+        "type": "custom",
+        "label": {
+          "en": "Throat (whipstitched gather)",
+          "es": "Garganta (fruncido sobrehilado)",
+          "fr": "Gorge (fronçage surjeté)"
+        },
+        "edges": [
+          {
+            "piece": "vamp",
+            "edge": "throat"
+          },
+          {
+            "piece": "plug",
+            "edge": "side_r"
+          },
+          {
+            "piece": "plug",
+            "edge": "side_l"
+          }
+        ],
+        "parameters": [
+          "plug_length",
+          "gather_ratio",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "collar_opening",
+        "type": "cuff",
+        "label": {
+          "en": "Ankle collar opening",
+          "es": "Entrada del collar al tobillo",
+          "fr": "Ouverture du col à la cheville"
+        },
+        "edges": [
+          {
+            "piece": "collar",
+            "edge": "attach"
+          },
+          {
+            "piece": "vamp",
+            "edge": "collar_line"
+          }
+        ],
+        "parameters": [
+          "ankle_girth",
+          "collar_height"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": false
+    },
+    "societal_benefit": {
+      "en": "The moccasin is the oldest shoe still made the same way — hand-sewn, hardware-free, resoleable forever, and buildable from a single hide by one person with a needle. Publishing it parametrically keeps a genuinely repairable shoe, and the whipstitch skill it teaches, in open hands rather than only in the few workshops that still know it.",
+      "es": "El mocasín es el zapato más antiguo que aún se hace igual — cosido a mano, sin herrajes, resoleable para siempre, y construible de una sola piel por una persona con una aguja. Publicarlo de forma paramétrica mantiene en manos abiertas un zapato genuinamente reparable, y la técnica de sobrehilado que enseña, en vez de dejarlos solo en los pocos talleres que aún la conocen.",
+      "fr": "Le mocassin est la plus ancienne chaussure encore fabriquée de la même façon — cousue main, sans quincaillerie, ressemelable indéfiniment, et réalisable à partir d'une seule peau par une personne munie d'une aiguille. Le publier de façon paramétrique garde en mains ouvertes une chaussure vraiment réparable, et le savoir-faire du surjet qu'elle transmet, plutôt que dans les seuls ateliers qui le connaissent encore."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

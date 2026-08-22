@@ -1,0 +1,544 @@
+{
+  "project": {
+    "name": "Shaping Bodysuit",
+    "slug": "shaping-bodysuit",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A compression bodysuit shaped by princess seams rather than by darts or by stretch alone. A dart takes fullness out at a POINT and leaves a bubble either side; a princess seam takes it out along a continuous curve from armhole over bust, in to waist and out over hip — so the shaping is distributed the whole length of the body. In a compression garment that matters twice over: a dart tip under tension is a stress riser that eventually blows out, and the seam itself, being stiffer than the cloth, becomes a structural line doing the job boning does in a corset without any boning at all. All-over compression plus an explicit waist reduction, both stated as numbers. The crotch closes on a Yantra4D hook-and-eye tape — a point/slot fitting with no sewn flange, so only the tape's counts cross the bridge. Made to measure to bust, waist and hip girths plus body rise. FC-300 lane 3 (structured intimates).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un body de compresión moldeado por costuras princesa y no por pinzas ni sólo por la elasticidad. Una pinza saca el volumen en un PUNTO y deja una burbuja a los lados; una costura princesa lo saca a lo largo de una curva continua desde la sisa sobre el busto, hacia dentro en la cintura y hacia fuera sobre la cadera — así el moldeado se reparte por todo el largo del cuerpo. En una prenda de compresión eso importa doble: la punta de una pinza bajo tensión es un concentrador de esfuerzo que acaba reventando, y la costura misma, más rígida que la tela, se vuelve una línea estructural que hace el trabajo de las ballenas de un corsé sin ballena alguna. Compresión general más una reducción de cintura explícita, ambas declaradas como números. La entrepierna cierra con cinta de broches de Yantra4D — un ajuste de punto/ranura sin brida cosida, así que sólo los conteos cruzan el puente. Hecho a medida a busto, cintura y cadera más el tiro. Carril 3 de FC-300 (lencería estructurada).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un body de compression mis en forme par des coutures princesse plutôt que par des pinces ou par la seule élasticité. Une pince retire l'ampleur en un POINT et laisse une bulle de part et d'autre ; une couture princesse la retire le long d'une courbe continue de l'emmanchure sur la poitrine, vers l'intérieur à la taille et vers l'extérieur sur la hanche — la mise en forme est donc répartie sur toute la longueur du corps. Dans un vêtement de compression cela compte doublement : une pointe de pince sous tension est un concentrateur de contrainte qui finit par céder, et la couture elle-même, plus rigide que le tissu, devient une ligne structurelle faisant le travail des baleines d'un corset sans aucune baleine. Compression générale plus une réduction de taille explicite, toutes deux énoncées en nombres. L'entrejambe se ferme sur un ruban d'agrafes Yantra4D — un ajustement point/fente sans bride cousue, seuls les comptes traversent donc le pont. Fait sur mesure aux tours de poitrine, de taille et de hanches plus la hauteur d'enfourchure. Couloir 3 de FC-300 (lingerie structurée).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "bodysuit",
+      "shapewear",
+      "princess-seam",
+      "compression",
+      "powernet",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Bodysuit",
+        "es": "Body completo",
+        "fr": "Body complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "cf_panel",
+        "side_front_panel",
+        "side_back_panel",
+        "gusset"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "cf_panel",
+      "label": {
+        "en": "Centre-front panel",
+        "es": "Panel central frontal",
+        "fr": "Panneau centre devant"
+      },
+      "default_color": "#4e4658",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "side_front_panel",
+      "label": {
+        "en": "Side-front panel",
+        "es": "Panel lateral frontal",
+        "fr": "Panneau côté devant"
+      },
+      "default_color": "#5c5468",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "side_back_panel",
+      "label": {
+        "en": "Side-back panel",
+        "es": "Panel lateral trasero",
+        "fr": "Panneau côté dos"
+      },
+      "default_color": "#443c50",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "gusset",
+      "label": {
+        "en": "Gusset (hook-and-eye crotch)",
+        "es": "Escudete (entrepierna con broches)",
+        "fr": "Gousset (entrejambe à agrafes)"
+      },
+      "default_color": "#c8c4bc",
+      "cut": {
+        "quantity": 2,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Shaping",
+        "es": "Moldeado",
+        "fr": "Mise en forme"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 940,
+      "min": 640,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      },
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "The princess seams pass over this ring",
+        "es": "Las costuras princesa pasan por este anillo",
+        "fr": "Les coutures princesse passent par cet anneau"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 760,
+      "min": 520,
+      "max": 1400,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "Measured body waist, before compression or reduction",
+        "es": "Cintura medida, antes de compresión o reducción",
+        "fr": "Taille mesurée, avant compression ou réduction"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 990,
+      "min": 620,
+      "max": 1700,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      },
+      "tooltip": {
+        "en": "Fullest hip",
+        "es": "Cadera más amplia",
+        "fr": "Hanche la plus forte"
+      }
+    },
+    {
+      "id": "body_rise",
+      "type": "slider",
+      "group": "body",
+      "default": 285,
+      "min": 180,
+      "max": 420,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "body_rise"
+      },
+      "label": {
+        "en": "Body rise (mm)",
+        "es": "Tiro (mm)",
+        "fr": "Hauteur d'enfourchure (mm)"
+      },
+      "tooltip": {
+        "en": "Waist to crotch, seated — sets where the gusset lands",
+        "es": "De la cintura a la entrepierna, sentado — define dónde cae el escudete",
+        "fr": "De la taille à l'entrejambe, assis — fixe où tombe le gousset"
+      }
+    },
+    {
+      "id": "front_neck_to_waist",
+      "type": "slider",
+      "group": "body",
+      "default": 360,
+      "min": 240,
+      "max": 520,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "front_neck_to_waist"
+      },
+      "label": {
+        "en": "Front neck to waist (mm)",
+        "es": "Del cuello frontal a la cintura (mm)",
+        "fr": "Du cou devant à la taille (mm)"
+      },
+      "tooltip": {
+        "en": "Bodice height above the waist line",
+        "es": "Alto del cuerpo sobre la línea de cintura",
+        "fr": "Hauteur du corsage au-dessus de la ligne de taille"
+      }
+    },
+    {
+      "id": "compression_pct",
+      "type": "slider",
+      "group": "fit",
+      "default": 12,
+      "min": 0,
+      "max": 25,
+      "step": 1,
+      "label": {
+        "en": "All-over compression (%)",
+        "es": "Compresión general (%)",
+        "fr": "Compression générale (%)"
+      },
+      "tooltip": {
+        "en": "Negative ease applied to every ring",
+        "es": "Holgura negativa aplicada a cada anillo",
+        "fr": "Aisance négative appliquée à chaque anneau"
+      }
+    },
+    {
+      "id": "waist_reduction",
+      "type": "slider",
+      "group": "fit",
+      "default": 40,
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Extra waist reduction (mm)",
+        "es": "Reducción extra de cintura (mm)",
+        "fr": "Réduction de taille supplémentaire (mm)"
+      },
+      "tooltip": {
+        "en": "Taken at the waist ON TOP of the all-over compression",
+        "es": "Se toma en la cintura ADEMÁS de la compresión general",
+        "fr": "Prise à la taille EN PLUS de la compression générale"
+      }
+    },
+    {
+      "id": "gusset_w",
+      "type": "slider",
+      "group": "construction",
+      "default": 75,
+      "min": 45,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Gusset width (mm)",
+        "es": "Ancho de escudete (mm)",
+        "fr": "Largeur de gousset (mm)"
+      },
+      "tooltip": {
+        "en": "Cut twice: self plus a cotton lining",
+        "es": "Se corta dos veces: tela y forro de algodón",
+        "fr": "Coupé deux fois : tissu et doublure coton"
+      }
+    },
+    {
+      "id": "strap_w",
+      "type": "slider",
+      "group": "construction",
+      "default": 18,
+      "min": 8,
+      "max": 32,
+      "step": 1,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombro (mm)",
+        "fr": "Largeur d'épaule (mm)"
+      },
+      "tooltip": {
+        "en": "Finished shoulder/strap width at the top edge",
+        "es": "Ancho final de hombro/tirante en el canto superior",
+        "fr": "Largeur finie d'épaule/bretelle au bord supérieur"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Overlocked princess seams",
+        "es": "Costuras princesa overlock",
+        "fr": "Coutures princesse surjetées"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "everyday_smoothing",
+      "label": {
+        "en": "Everyday smoothing",
+        "es": "Alisado diario",
+        "fr": "Lissage quotidien"
+      },
+      "values": {
+        "compression_pct": 8,
+        "waist_reduction": 20
+      }
+    },
+    {
+      "id": "firm_shaping",
+      "label": {
+        "en": "Firm shaping",
+        "es": "Moldeado firme",
+        "fr": "Galbe ferme"
+      },
+      "values": {
+        "compression_pct": 20,
+        "waist_reduction": 80
+      }
+    },
+    {
+      "id": "long_torso",
+      "label": {
+        "en": "Long torso",
+        "es": "Torso largo",
+        "fr": "Buste long"
+      },
+      "values": {
+        "front_neck_to_waist": 430,
+        "body_rise": 320
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "waist_reduction < waist_girth * 0.15",
+      "message": {
+        "en": "Reductions beyond about a seventh of the waist will not pull on and are unsafe in a knit.",
+        "es": "Reducciones de más de un séptimo de la cintura no se pondrán y son inseguras en un tejido de punto.",
+        "fr": "Une réduction de plus d'un septième du tour de taille ne s'enfilera pas et est dangereuse en maille."
+      },
+      "severity": "error"
+    },
+    {
+      "expression": "hip_girth > waist_girth",
+      "message": {
+        "en": "Hip girth is normally larger than waist girth; check the measurements.",
+        "es": "La cadera suele ser mayor que la cintura; revisa las medidas.",
+        "fr": "Le tour de hanches est normalement supérieur à celui de taille ; vérifiez les mesures."
+      },
+      "severity": "warning"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "hook",
+    "subtype": "hook-and-eye gusset closure (3 cols x 2 rows)",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "hook-and-eye",
+      "linked": true,
+      "params_map": {
+        "columns": "3",
+        "rows": "2"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "princess_seams",
+        "type": "custom",
+        "label": {
+          "en": "Princess seams (distributed shaping, structural lines)",
+          "es": "Costuras princesa (moldeado repartido, líneas estructurales)",
+          "fr": "Coutures princesse (mise en forme répartie, lignes structurelles)"
+        },
+        "edges": [
+          {
+            "piece": "cf_panel",
+            "edge": "seam_r"
+          },
+          {
+            "piece": "side_front_panel",
+            "edge": "seam_l"
+          },
+          {
+            "piece": "side_front_panel",
+            "edge": "seam_r"
+          },
+          {
+            "piece": "side_back_panel",
+            "edge": "seam_l"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "waist_girth",
+          "hip_girth",
+          "waist_reduction",
+          "compression_pct"
+        ]
+      },
+      {
+        "id": "gusset",
+        "type": "custom",
+        "label": {
+          "en": "Gusset crotch closure (hook-and-eye, point/slot)",
+          "es": "Cierre de entrepierna del escudete (broches, punto/ranura)",
+          "fr": "Fermeture d'entrejambe du gousset (agrafes, point/fente)"
+        },
+        "edges": [
+          {
+            "piece": "gusset",
+            "edge": "front_end"
+          },
+          {
+            "piece": "gusset",
+            "edge": "hook_end"
+          },
+          {
+            "piece": "cf_panel",
+            "edge": "crotch"
+          }
+        ],
+        "parameters": [
+          "gusset_w",
+          "body_rise"
+        ]
+      },
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "label": {
+          "en": "Neck and shoulder edges (soft elastic)",
+          "es": "Cantos de cuello y hombro (elástico suave)",
+          "fr": "Bords d'encolure et d'épaule (élastique doux)"
+        },
+        "edges": [
+          {
+            "piece": "cf_panel",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "side_back_panel",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "front_neck_to_waist",
+          "strap_w"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Armhole edge (soft elastic)",
+          "es": "Canto de sisa (elástico suave)",
+          "fr": "Bord d'emmanchure (élastique doux)"
+        },
+        "edges": [
+          {
+            "piece": "side_front_panel",
+            "edge": "armscye"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "strap_w"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true,
+      "knit_negative_ease": true,
+      "princess_seamed": true,
+      "elastic_finish": true
+    },
+    "societal_benefit": {
+      "en": "Shaping garments fail in two predictable places: at dart tips, where tension concentrates until the stitching blows out, and at the size label, which collapses three independent body measurements into one letter. This cartridge removes both. Shaping is distributed along princess seams that pass through the bust, waist and hip rings — no stress risers, and the seams double as the structural lines that boning would otherwise supply — and every ring is drafted from its own measurement with the compression and the waist reduction stated separately in millimetres. What comes out is a bodysuit a person can fit to a body that does not match any grid, reproduce exactly, and re-cut in a different knit from the same numbers.",
+      "es": "Las prendas moldeadoras fallan en dos lugares predecibles: en las puntas de las pinzas, donde la tensión se concentra hasta que revienta la costura, y en la etiqueta de talla, que reduce tres medidas corporales independientes a una letra. Este cartucho elimina ambos. El moldeado se reparte por costuras princesa que pasan por los anillos de busto, cintura y cadera — sin concentradores de esfuerzo, y las costuras hacen de líneas estructurales que de otro modo darían las ballenas — y cada anillo se traza desde su propia medida, con la compresión y la reducción de cintura declaradas por separado en milímetros. Sale un body ajustable a un cuerpo que no coincide con ninguna tabla, reproducible con exactitud, y recortable en otro tejido con los mismos números.",
+      "fr": "Les vêtements gainants échouent à deux endroits prévisibles : aux pointes de pinces, où la tension se concentre jusqu'à ce que la couture cède, et à l'étiquette de taille, qui réduit trois mesures corporelles indépendantes à une lettre. Ce cartouche supprime les deux. La mise en forme est répartie le long de coutures princesse qui traversent les anneaux de poitrine, de taille et de hanches — sans concentrateurs de contrainte, et les coutures font office de lignes structurelles que les baleines fourniraient autrement — et chaque anneau est tracé depuis sa propre mesure, la compression et la réduction de taille étant énoncées séparément en millimètres. Il en sort un body ajustable à un corps qui ne correspond à aucune grille, reproductible exactement, et recoupable dans une autre maille avec les mêmes nombres."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

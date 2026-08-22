@@ -1,0 +1,395 @@
+{
+  "project": {
+    "name": "Wallet Organizer",
+    "slug": "wallet-organizer",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A folded multi-pocket organizer: a shell panel that folds down its centre, a ladder of card-pocket tiers on each inner face, a cash sleeve behind them, and chicago screws binding the four corners. The screw bridges to the Yantra4D `chicago-screw` solid as point-placed hardware — a threaded post through a drilled bore stack, with no sewn flange. Its stack length is driven by the COMPUTED bound stack (shell doubled plus every tier plus the cash sleeve, each one material thickness), so the screw is dimensioned to the wallet it actually closes rather than to a nominal guess.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una cartera organizadora plegable: un panel de carcasa que se dobla por el centro, una escalera de bolsillos para tarjetas en cada cara interior, un billetero detrás y tornillos chicago que unen las cuatro esquinas. El tornillo se puentea al sólido `chicago-screw` de Yantra4D como herraje de colocación puntual — un poste roscado a través de una pila de taladros, sin pestaña cosida. Su largo de pila lo define la pila CALCULADA (carcasa doblada más cada nivel más el billetero, cada uno de un espesor de material), así que el tornillo se dimensiona a la cartera que realmente cierra y no a una estimación nominal.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un organiseur pliant multi-poches : un panneau de coque qui se plie en son centre, une échelle d'étages de poches à cartes sur chaque face intérieure, une pochette à billets derrière, et des vis chicago reliant les quatre coins. La vis fait le pont vers le solide `chicago-screw` de Yantra4D en quincaillerie à pose ponctuelle — un fût fileté traversant une pile de perçages, sans bride cousue. Sa longueur de pile est pilotée par la pile CALCULÉE (coque doublée plus chaque étage plus la pochette, chacun d'une épaisseur de matière), de sorte que la vis est dimensionnée au portefeuille qu'elle ferme réellement et non à une estimation nominale.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "wallet-organizer",
+      "wallet",
+      "leather",
+      "folded",
+      "hardware",
+      "chicago-screw",
+      "point-placed",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full organizer",
+        "es": "Organizadora completa",
+        "fr": "Organiseur complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "shell",
+        "pocket",
+        "cash"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "shell",
+      "label": {
+        "en": "Shell (folds at centre)",
+        "es": "Carcasa (se dobla al centro)",
+        "fr": "Coque (pliage central)"
+      },
+      "default_color": "#5c3f2c",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "pocket",
+      "label": {
+        "en": "Card pocket tier",
+        "es": "Nivel de bolsillo para tarjetas",
+        "fr": "Étage de poche à cartes"
+      },
+      "default_color": "#74513a",
+      "cut": {
+        "quantity": 6,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "cash",
+      "label": {
+        "en": "Cash sleeve",
+        "es": "Billetero",
+        "fr": "Pochette à billets"
+      },
+      "default_color": "#49321f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Size",
+        "es": "Tamaño",
+        "fr": "Taille"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "wallet_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 100,
+      "min": 70,
+      "max": 150,
+      "step": 5,
+      "label": {
+        "en": "Closed width (mm)",
+        "es": "Ancho cerrado (mm)",
+        "fr": "Largeur fermée (mm)"
+      },
+      "tooltip": {
+        "en": "Width of one face; the shell opens to twice this",
+        "es": "Ancho de una cara; la carcasa abre al doble",
+        "fr": "Largeur d'une face ; la coque s'ouvre au double"
+      }
+    },
+    {
+      "id": "wallet_height",
+      "type": "slider",
+      "group": "fit",
+      "default": 95,
+      "min": 70,
+      "max": 130,
+      "step": 5,
+      "label": {
+        "en": "Closed height (mm)",
+        "es": "Alto cerrado (mm)",
+        "fr": "Hauteur fermée (mm)"
+      },
+      "tooltip": {
+        "en": "Wallet height; the tier ladder must fit inside it",
+        "es": "Alto de la cartera; la escalera de niveles debe caber dentro",
+        "fr": "Hauteur du portefeuille ; l'échelle d'étages doit y tenir"
+      }
+    },
+    {
+      "id": "card_reveal",
+      "type": "slider",
+      "group": "fit",
+      "default": 14,
+      "min": 8,
+      "max": 26,
+      "step": 1,
+      "label": {
+        "en": "Card reveal (mm)",
+        "es": "Escalón entre tarjetas (mm)",
+        "fr": "Décalage entre cartes (mm)"
+      },
+      "tooltip": {
+        "en": "Step between tiers; auto-capped so the ladder always fits the height",
+        "es": "Escalón entre niveles; se limita solo para que la escalera quepa",
+        "fr": "Pas entre étages ; plafonné automatiquement pour tenir dans la hauteur"
+      }
+    },
+    {
+      "id": "pocket_tiers",
+      "type": "slider",
+      "group": "fit",
+      "default": 3,
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "label": {
+        "en": "Card tiers per face",
+        "es": "Niveles de tarjetas por cara",
+        "fr": "Étages de cartes par face"
+      },
+      "tooltip": {
+        "en": "How many card pockets step up each inner face",
+        "es": "Cuántos bolsillos escalonan cada cara interior",
+        "fr": "Nombre de poches étagées sur chaque face intérieure"
+      }
+    },
+    {
+      "id": "material_thickness",
+      "type": "slider",
+      "group": "construction",
+      "default": 1.2,
+      "min": 0.6,
+      "max": 3,
+      "step": 0.1,
+      "label": {
+        "en": "Material thickness (mm)",
+        "es": "Espesor del material (mm)",
+        "fr": "Épaisseur de la matière (mm)"
+      },
+      "tooltip": {
+        "en": "Leather substance; with the tier count it computes the screw's bound stack",
+        "es": "Grosor del cuero; con el número de niveles calcula la pila del tornillo",
+        "fr": "Épaisseur du cuir ; avec le nombre d'étages elle calcule la pile de la vis"
+      }
+    },
+    {
+      "id": "screw_head",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 5,
+      "max": 14,
+      "step": 0.5,
+      "label": {
+        "en": "Screw head diameter (mm)",
+        "es": "Diámetro de la cabeza del tornillo (mm)",
+        "fr": "Diamètre de tête de vis (mm)"
+      },
+      "tooltip": {
+        "en": "Chicago-screw head; sets the corner bore inset and drives the Yantra4D screw",
+        "es": "Cabeza del tornillo chicago; define el margen del taladro y el tornillo Yantra4D",
+        "fr": "Tête de vis chicago ; définit le retrait des perçages et pilote la vis Yantra4D"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 4,
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to the bound edges; the card mouths are finished, not sewn",
+        "es": "Aplicado a los bordes unidos; las bocas de tarjeta se rematan, no se cosen",
+        "fr": "Appliquée aux bords reliés ; les entrées de cartes sont finies, non cousues"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "wallet_height >= card_reveal * pocket_tiers",
+      "severity": "warning",
+      "message": {
+        "en": "The tier ladder is taller than the wallet; the reveal is capped to fit.",
+        "es": "La escalera de niveles supera el alto de la cartera; el escalón se limita.",
+        "fr": "L'échelle d'étages dépasse la hauteur ; le décalage est plafonné pour tenir."
+      }
+    },
+    {
+      "expression": "wallet_width >= screw_head * 4",
+      "severity": "warning",
+      "message": {
+        "en": "The corner bores need clearance from each other and from the fold.",
+        "es": "Los taladros de esquina necesitan holgura entre sí y respecto al doblez.",
+        "fr": "Les perçages d'angle ont besoin de dégagement entre eux et du pli."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "bifold",
+      "label": {
+        "en": "Bifold",
+        "es": "Cartera doblada",
+        "fr": "Portefeuille deux volets"
+      },
+      "values": {
+        "wallet_width": 100,
+        "wallet_height": 95,
+        "card_reveal": 14,
+        "pocket_tiers": 3
+      }
+    },
+    {
+      "id": "slim",
+      "label": {
+        "en": "Slim",
+        "es": "Delgada",
+        "fr": "Fin"
+      },
+      "values": {
+        "wallet_width": 85,
+        "wallet_height": 75,
+        "card_reveal": 12,
+        "pocket_tiers": 1
+      }
+    },
+    {
+      "id": "travel_organizer",
+      "label": {
+        "en": "Travel organizer",
+        "es": "Organizadora de viaje",
+        "fr": "Organiseur de voyage"
+      },
+      "values": {
+        "wallet_width": 140,
+        "wallet_height": 125,
+        "card_reveal": 18,
+        "pocket_tiers": 5
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "notion": {
+    "kind": "rivet",
+    "subtype": "wallet corner binding screw",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "chicago-screw",
+      "linked": true,
+      "params_map": {
+        "head_dia": "screw_head",
+        "post_dia": "screw_head * 0.45",
+        "stack_t": "material_thickness * (3 + pocket_tiers)"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "corner_binding",
+        "type": "custom",
+        "label": {
+          "en": "Chicago-screw corner binding",
+          "es": "Unión de esquina con tornillo chicago",
+          "fr": "Assemblage d'angle par vis chicago"
+        },
+        "edges": [
+          {
+            "piece": "pocket",
+            "edge": "bind_l"
+          },
+          {
+            "piece": "cash",
+            "edge": "bind_l"
+          }
+        ],
+        "parameters": [
+          "screw_head",
+          "material_thickness",
+          "pocket_tiers"
+        ]
+      },
+      {
+        "id": "card_mouth",
+        "type": "pocket",
+        "label": {
+          "en": "Card pocket mouth",
+          "es": "Boca del bolsillo de tarjetas",
+          "fr": "Entrée de poche à cartes"
+        },
+        "edges": [
+          {
+            "piece": "pocket",
+            "edge": "mouth"
+          }
+        ],
+        "parameters": [
+          "wallet_width",
+          "card_reveal"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A wallet bound with screws rather than glue and rivets: every tier can be taken apart, re-cut and re-assembled, and the screws themselves are open printable Yantra4D objects dimensioned to the exact stack this wallet builds — a repairable everyday object instead of a sealed one.",
+      "es": "Una cartera unida con tornillos en vez de pegamento y remaches: cada nivel se puede desarmar, recortar y volver a montar, y los tornillos son objetos imprimibles abiertos de Yantra4D dimensionados a la pila exacta que arma esta cartera — un objeto cotidiano reparable en vez de sellado.",
+      "fr": "Un portefeuille assemblé par vis plutôt que par colle et rivets : chaque étage peut être démonté, recoupé et remonté, et les vis elles-mêmes sont des objets Yantra4D ouverts et imprimables dimensionnés à la pile exacte que construit ce portefeuille — un objet du quotidien réparable au lieu d'être scellé."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

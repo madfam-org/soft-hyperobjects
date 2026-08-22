@@ -1,0 +1,422 @@
+{
+  "project": {
+    "name": "Ankle Gaiter",
+    "slug": "ankle-gaiter",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A short tapered wrap gaiter worn over the boot top, closing up the front on a ladder of lacing hooks and held down by an under-instep strap. This is the cartridge that finally consumes Yantra4D's `lacing-hook` — one of the two honestly-unbridged shelf findings. The hook ladder is dimensional, not decorative: the hook count and pitch determine the run the hooks occupy, and the closure edge is drafted to at least that run, so the hardware fits the edge it mounts to. FC-300 lane 4, footwear soft goods.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una polaina corta y ahusada que se lleva sobre la caña de la bota, cerrando al frente con una escalera de ganchos de cordón y sujeta por una correa bajo el empeine. Este es el cartucho que por fin consume el `lacing-hook` de Yantra4D — uno de los dos hallazgos del estante honestamente sin puente. La escalera de ganchos es dimensional, no decorativa: la cantidad y el paso determinan el tramo que ocupan, y el borde de cierre se traza al menos a ese tramo, para que el herraje quepa en el borde donde se monta. FC-300 carril 4, calzado blando.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une guêtre courte et fuselée portée sur la tige de la botte, se fermant sur le devant par une échelle de crochets de laçage et maintenue par une sous-pied. C'est le cartouche qui consomme enfin le `lacing-hook` de Yantra4D — l'une des deux trouvailles d'étagère honnêtement non reliées. L'échelle de crochets est dimensionnelle, non décorative : le nombre et le pas déterminent la course qu'ils occupent, et le bord de fermeture est tracé au moins à cette course, pour que la quincaillerie tienne sur le bord où elle se monte. FC-300 voie 4, chaussant souple.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "gaiter",
+      "ankle-gaiter",
+      "footwear",
+      "outdoor",
+      "lacing-hook",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Gaiter",
+        "es": "Polaina completa",
+        "fr": "Guêtre complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "wrap",
+        "instep_strap"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "wrap",
+      "label": {
+        "en": "Wrap (gaiter body)",
+        "es": "Envolvente (cuerpo de la polaina)",
+        "fr": "Enveloppe (corps de la guêtre)"
+      },
+      "default_color": "#4a5240",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "instep_strap",
+      "label": {
+        "en": "Instep strap",
+        "es": "Correa de empeine",
+        "fr": "Sous-pied"
+      },
+      "default_color": "#3a4132",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Leg",
+        "es": "Pierna",
+        "fr": "Jambe"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Aisance"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Closure",
+        "es": "Cierre",
+        "fr": "Fermeture"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "ankle_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 245,
+      "min": 160,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Ankle girth (mm)",
+        "es": "Contorno del tobillo (mm)",
+        "fr": "Tour de cheville (mm)"
+      },
+      "tooltip": {
+        "en": "Around the ankle; the gaiter's bottom edge wraps it over the boot.",
+        "es": "Alrededor del tobillo; el borde inferior lo envuelve sobre la bota.",
+        "fr": "Autour de la cheville ; le bord inférieur l'entoure par-dessus la botte."
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "ankle_girth"
+      }
+    },
+    {
+      "id": "calf_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 370,
+      "min": 220,
+      "max": 520,
+      "step": 5,
+      "label": {
+        "en": "Calf girth (mm)",
+        "es": "Contorno de la pantorrilla (mm)",
+        "fr": "Tour de mollet (mm)"
+      },
+      "tooltip": {
+        "en": "Around the calf; sets the taper of the gaiter's top edge.",
+        "es": "Alrededor de la pantorrilla; define el ahusado del borde superior.",
+        "fr": "Autour du mollet ; définit l'évasement du bord supérieur."
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "calf_girth"
+      }
+    },
+    {
+      "id": "gaiter_height",
+      "type": "slider",
+      "group": "fit",
+      "default": 175,
+      "min": 80,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Gaiter height (mm)",
+        "es": "Alto de la polaina (mm)",
+        "fr": "Hauteur de la guêtre (mm)"
+      },
+      "tooltip": {
+        "en": "Ankle to top edge. Raised automatically if the hook ladder needs more run than this.",
+        "es": "Del tobillo al borde superior. Se eleva automáticamente si la escalera de ganchos necesita más tramo.",
+        "fr": "De la cheville au bord supérieur. Relevé automatiquement si l'échelle de crochets exige plus de course."
+      }
+    },
+    {
+      "id": "wrap_ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 28,
+      "min": 0,
+      "max": 90,
+      "step": 2,
+      "label": {
+        "en": "Boot ease (mm)",
+        "es": "Holgura sobre la bota (mm)",
+        "fr": "Aisance sur la botte (mm)"
+      },
+      "tooltip": {
+        "en": "Extra room so the gaiter clears the boot it wraps.",
+        "es": "Espacio extra para que la polaina libre la bota que envuelve.",
+        "fr": "Jeu supplémentaire pour que la guêtre dégage la botte qu'elle enveloppe."
+      }
+    },
+    {
+      "id": "hook_count",
+      "type": "slider",
+      "group": "construction",
+      "default": 5,
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "label": {
+        "en": "Lacing hooks per side",
+        "es": "Ganchos de cordón por lado",
+        "fr": "Crochets de laçage par côté"
+      },
+      "tooltip": {
+        "en": "How many hooks up each closure edge; drives the Yantra4D hook count and the run they occupy.",
+        "es": "Cuántos ganchos por cada borde de cierre; define la cantidad de Yantra4D y el tramo que ocupan.",
+        "fr": "Nombre de crochets par bord de fermeture ; pilote la quantité Yantra4D et la course qu'ils occupent."
+      }
+    },
+    {
+      "id": "hook_pitch",
+      "type": "slider",
+      "group": "construction",
+      "default": 26,
+      "min": 12,
+      "max": 45,
+      "step": 1,
+      "label": {
+        "en": "Hook pitch (mm)",
+        "es": "Paso entre ganchos (mm)",
+        "fr": "Pas des crochets (mm)"
+      },
+      "tooltip": {
+        "en": "Rivet-to-rivet spacing up the closure edge; drives the Yantra4D hook pitch.",
+        "es": "Separación remache a remache en el borde de cierre; define el paso del gancho de Yantra4D.",
+        "fr": "Espacement rivet à rivet sur le bord de fermeture ; pilote le pas du crochet Yantra4D."
+      }
+    },
+    {
+      "id": "hook_plate_w",
+      "type": "slider",
+      "group": "construction",
+      "default": 14,
+      "min": 6,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Hook plate width (mm)",
+        "es": "Ancho de la placa del gancho (mm)",
+        "fr": "Largeur de la platine du crochet (mm)"
+      },
+      "tooltip": {
+        "en": "The hook's riveted base plate. It sizes the Yantra4D sew plate AND the closure edge it mounts to — the shared dimension.",
+        "es": "La placa remachada del gancho. Dimensiona la placa de Yantra4D Y el borde de cierre donde se monta — la dimensión compartida.",
+        "fr": "La platine rivetée du crochet. Elle dimensionne la platine Yantra4D ET le bord de fermeture où elle se monte — la dimension partagée."
+      }
+    },
+    {
+      "id": "strap_w",
+      "type": "slider",
+      "group": "fit",
+      "default": 22,
+      "min": 10,
+      "max": 50,
+      "step": 1,
+      "label": {
+        "en": "Instep strap width (mm)",
+        "es": "Ancho de la correa de empeine (mm)",
+        "fr": "Largeur du sous-pied (mm)"
+      },
+      "tooltip": {
+        "en": "Width of the strap that passes under the boot.",
+        "es": "Ancho de la correa que pasa bajo la bota.",
+        "fr": "Largeur de la bride qui passe sous la botte."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "On the closure edges and the strap mounts.",
+        "es": "En los bordes de cierre y los montajes de la correa.",
+        "fr": "Sur les bords de fermeture et les montages de la bride."
+      },
+      "advanced": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "trail",
+      "label": {
+        "en": "Trail (short)",
+        "es": "Sendero (corta)",
+        "fr": "Sentier (courte)"
+      },
+      "values": {
+        "gaiter_height": 175,
+        "hook_count": 5,
+        "hook_pitch": 26
+      }
+    },
+    {
+      "id": "scree",
+      "label": {
+        "en": "Scree (tall, close-laced)",
+        "es": "Pedrera (alta, muy encordada)",
+        "fr": "Pierrier (haute, laçage serré)"
+      },
+      "values": {
+        "gaiter_height": 260,
+        "hook_count": 8,
+        "hook_pitch": 22,
+        "wrap_ease": 44
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "hook",
+    "subtype": "gaiter lacing-hook ladder",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "lacing-hook",
+      "linked": true,
+      "params_map": {
+        "hook_count": "hook_count",
+        "pitch": "hook_pitch",
+        "plate_w": "hook_plate_w"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "hook_closure",
+        "type": "placket",
+        "label": {
+          "en": "Hook-ladder closure edge",
+          "es": "Borde de cierre con escalera de ganchos",
+          "fr": "Bord de fermeture à échelle de crochets"
+        },
+        "edges": [
+          {
+            "piece": "wrap",
+            "edge": "closure_l"
+          },
+          {
+            "piece": "wrap",
+            "edge": "closure_r"
+          }
+        ],
+        "parameters": [
+          "hook_plate_w",
+          "hook_pitch",
+          "hook_count",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "ankle_opening",
+        "type": "hem",
+        "label": {
+          "en": "Ankle edge (over the boot)",
+          "es": "Borde del tobillo (sobre la bota)",
+          "fr": "Bord de cheville (sur la botte)"
+        },
+        "edges": [
+          {
+            "piece": "wrap",
+            "edge": "ankle_edge"
+          },
+          {
+            "piece": "instep_strap",
+            "edge": "attach_a"
+          }
+        ],
+        "parameters": [
+          "ankle_girth",
+          "wrap_ease",
+          "strap_w"
+        ]
+      },
+      {
+        "id": "calf_opening",
+        "type": "cuff",
+        "label": {
+          "en": "Top edge (calf)",
+          "es": "Borde superior (pantorrilla)",
+          "fr": "Bord supérieur (mollet)"
+        },
+        "edges": [
+          {
+            "piece": "wrap",
+            "edge": "top_edge"
+          }
+        ],
+        "parameters": [
+          "calf_girth",
+          "gaiter_height"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Gaiters keep scree, snow, and water out of a boot, extending the life of footwear that would otherwise be soaked through and thrown away. Publishing one that fits your own ankle and calf, with the lacing hooks an open printable Yantra4D object at your own chosen pitch, puts a repairable piece of outdoor kit within reach of anyone — including the hooks, which are usually the first part to break and the hardest to source.",
+      "es": "Las polainas mantienen fuera de la bota la pedrera, la nieve y el agua, alargando la vida de un calzado que si no se empaparía y acabaría en la basura. Publicar una a la medida de tu propio tobillo y pantorrilla, con los ganchos como objeto imprimible abierto de Yantra4D al paso que elijas, pone al alcance de cualquiera una pieza reparable de equipo de montaña — incluidos los ganchos, que suelen ser lo primero que se rompe y lo más difícil de conseguir.",
+      "fr": "Les guêtres empêchent pierraille, neige et eau d'entrer dans la botte, prolongeant la vie d'une chaussure qui autrement serait trempée et jetée. En publier une à la mesure de votre cheville et de votre mollet, avec les crochets de laçage comme objet Yantra4D imprimable et ouvert au pas de votre choix, met à portée de tous une pièce d'équipement de plein air réparable — y compris les crochets, souvent les premiers à casser et les plus difficiles à trouver."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

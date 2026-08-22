@@ -1,0 +1,362 @@
+{
+  "project": {
+    "name": "Kiss-Lock Purse",
+    "slug": "kiss-lock-purse",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A curved-top clutch whose mouth is sewn INTO the kiss-lock frame's channel. The frame is edge-mated hardware, not a point fastener: the purse's mouth curve is solved by bisection until its run equals the frame's own measured arc, so the mouth seats in the channel instead of being eased into it. The frame bridges to the Yantra4D `kiss-lock-frame` solid; Fashion Cabinet owns the purse body, its arch and the gusset.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un bolso de boquilla de parte superior curva cuya boca se cose DENTRO del canal del cierre de boquilla. La boquilla es un herraje unido por el borde, no un cierre puntual: la curva de la boca del bolso se resuelve por bisección hasta que su recorrido iguala el arco medido de la propia boquilla, de modo que la boca se asienta en el canal en vez de forzarse. La boquilla se puentea al sólido `kiss-lock-frame` de Yantra4D; Fashion Cabinet posee el cuerpo del bolso, su arco y el fuelle.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une pochette à dessus courbé dont l'entrée est cousue DANS le canal du fermoir à baiser. Le fermoir est une quincaillerie appariée par le bord, non une attache ponctuelle : la courbe d'entrée de la pochette est résolue par bissection jusqu'à ce que son parcours égale l'arc mesuré du fermoir lui-même, de sorte que l'entrée s'assied dans le canal au lieu d'y être forcée. Le fermoir fait le pont vers le solide `kiss-lock-frame` de Yantra4D ; Fashion Cabinet possède le corps de la pochette, son arc et le soufflet.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "kiss-lock-purse",
+      "clutch",
+      "bag",
+      "frame",
+      "hardware",
+      "kiss-lock-frame",
+      "edge-mated",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full purse",
+        "es": "Bolso completo",
+        "fr": "Pochette complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "gusset"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Purse panel",
+        "es": "Panel del bolso",
+        "fr": "Panneau de la pochette"
+      },
+      "default_color": "#6a4358",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "gusset",
+      "label": {
+        "en": "Side/base gusset",
+        "es": "Fuelle lateral e inferior",
+        "fr": "Soufflet latéral et de fond"
+      },
+      "default_color": "#57364a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Size",
+        "es": "Tamaño",
+        "fr": "Taille"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "frame_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 200,
+      "min": 90,
+      "max": 320,
+      "step": 5,
+      "label": {
+        "en": "Frame width (mm)",
+        "es": "Ancho de la boquilla (mm)",
+        "fr": "Largeur du fermoir (mm)"
+      },
+      "tooltip": {
+        "en": "Frame opening across the hinges; drives the Yantra4D frame and the mouth run",
+        "es": "Abertura de la boquilla entre bisagras; define la boquilla Yantra4D y el recorrido de la boca",
+        "fr": "Ouverture du fermoir entre charnières ; pilote le fermoir Yantra4D et le parcours d'entrée"
+      }
+    },
+    {
+      "id": "frame_arch",
+      "type": "slider",
+      "group": "fit",
+      "default": 34,
+      "min": 10,
+      "max": 80,
+      "step": 2,
+      "label": {
+        "en": "Frame arch rise (mm)",
+        "es": "Alzada del arco (mm)",
+        "fr": "Hauteur d'arc du fermoir (mm)"
+      },
+      "tooltip": {
+        "en": "How high the frame crowns above the hinges; lengthens the channel run",
+        "es": "Cuánto se eleva la boquilla sobre las bisagras; alarga el recorrido del canal",
+        "fr": "Hauteur du sommet du fermoir au-dessus des charnières ; allonge le parcours du canal"
+      }
+    },
+    {
+      "id": "purse_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 150,
+      "min": 70,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Body depth (mm)",
+        "es": "Profundidad del cuerpo (mm)",
+        "fr": "Profondeur du corps (mm)"
+      },
+      "tooltip": {
+        "en": "How far the purse body drops below the hinges",
+        "es": "Cuánto baja el cuerpo del bolso desde las bisagras",
+        "fr": "Hauteur de chute du corps sous les charnières"
+      }
+    },
+    {
+      "id": "gusset_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 46,
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "label": {
+        "en": "Gusset width (mm)",
+        "es": "Ancho del fuelle (mm)",
+        "fr": "Largeur du soufflet"
+      },
+      "tooltip": {
+        "en": "Depth of the side/base gusset; zero gives a flat clutch",
+        "es": "Fondo del fuelle lateral e inferior; cero da un clutch plano",
+        "fr": "Profondeur du soufflet ; zéro donne une pochette plate"
+      }
+    },
+    {
+      "id": "channel_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 3,
+      "max": 14,
+      "step": 0.5,
+      "label": {
+        "en": "Frame channel width (mm)",
+        "es": "Ancho del canal de la boquilla (mm)",
+        "fr": "Largeur du canal du fermoir (mm)"
+      },
+      "tooltip": {
+        "en": "The frame's sew channel; becomes the mouth's turn-in allowance and drives the Yantra4D channel",
+        "es": "Canal de costura de la boquilla; es el margen de la boca y define el canal en Yantra4D",
+        "fr": "Canal de couture du fermoir ; devient la marge d'entrée et pilote le canal Yantra4D"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to the gusset seams; the mouth uses the channel width instead",
+        "es": "Aplicado a las costuras del fuelle; la boca usa el ancho del canal",
+        "fr": "Appliquée aux coutures du soufflet ; l'entrée utilise la largeur du canal"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "frame_arch <= frame_width / 2",
+      "severity": "warning",
+      "message": {
+        "en": "An arch taller than the frame half-width curls the mouth past a sewable line.",
+        "es": "Un arco más alto que la mitad del ancho curva la boca más allá de una línea cosible.",
+        "fr": "Un arc plus haut que la demi-largeur courbe l'entrée au-delà d'une ligne cousable."
+      }
+    },
+    {
+      "expression": "purse_depth >= frame_arch",
+      "severity": "warning",
+      "message": {
+        "en": "The body must drop further than the frame crowns or the purse has no volume.",
+        "es": "El cuerpo debe bajar más que la alzada del arco o el bolso no tiene volumen.",
+        "fr": "Le corps doit descendre plus que la hauteur d'arc, sinon la pochette n'a pas de volume."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "evening_clutch",
+      "label": {
+        "en": "Evening clutch",
+        "es": "Clutch de noche",
+        "fr": "Pochette de soirée"
+      },
+      "values": {
+        "frame_width": 200,
+        "frame_arch": 34,
+        "purse_depth": 150,
+        "gusset_width": 46
+      }
+    },
+    {
+      "id": "coin_purse",
+      "label": {
+        "en": "Coin purse",
+        "es": "Monedero",
+        "fr": "Porte-monnaie"
+      },
+      "values": {
+        "frame_width": 100,
+        "frame_arch": 18,
+        "purse_depth": 85,
+        "gusset_width": 20
+      }
+    },
+    {
+      "id": "doctor_bag",
+      "label": {
+        "en": "Doctor bag",
+        "es": "Bolso de médico",
+        "fr": "Sac de médecin"
+      },
+      "values": {
+        "frame_width": 300,
+        "frame_arch": 60,
+        "purse_depth": 230,
+        "gusset_width": 110
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "popelina-algodon"
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "kiss-lock frame channel",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "kiss-lock-frame",
+      "linked": true,
+      "params_map": {
+        "frame_w": "frame_width",
+        "arch_h": "frame_arch",
+        "channel_w": "channel_width"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "frame_mouth",
+        "type": "custom",
+        "label": {
+          "en": "Frame-channel mouth",
+          "es": "Boca del canal de la boquilla",
+          "fr": "Entrée du canal du fermoir"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "mouth"
+          }
+        ],
+        "parameters": [
+          "frame_width",
+          "frame_arch",
+          "channel_width"
+        ]
+      },
+      {
+        "id": "gusset_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Gusset seam",
+          "es": "Costura del fuelle",
+          "fr": "Couture du soufflet"
+        },
+        "edges": [
+          {
+            "piece": "gusset",
+            "edge": "join_a"
+          },
+          {
+            "piece": "front",
+            "edge": "base"
+          }
+        ],
+        "parameters": [
+          "gusset_width",
+          "purse_depth",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A frame purse whose mouth is drafted to the exact arc of a printable, replaceable Yantra4D frame — the one heirloom bag style most often thrown away when its frame bends, made repairable because the frame and the mouth are dimensioned from the same numbers.",
+      "es": "Un bolso de boquilla cuya boca se traza al arco exacto de una boquilla Yantra4D imprimible y reemplazable — el estilo de bolso heredable que más se desecha cuando se dobla su boquilla, hecho reparable porque boquilla y boca se dimensionan con los mismos números.",
+      "fr": "Une pochette à fermoir dont l'entrée est tracée à l'arc exact d'un fermoir Yantra4D imprimable et remplaçable — le style de sac d'héritage le plus souvent jeté quand son fermoir se tord, rendu réparable parce que le fermoir et l'entrée sont dimensionnés à partir des mêmes nombres."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

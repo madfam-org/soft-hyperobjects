@@ -1,0 +1,368 @@
+{
+  "project": {
+    "name": "Espadrille Upper",
+    "slug": "espadrille-upper",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The two-piece canvas upper of an espadrille: a vamp over the toes and instep, and a heel counter round the back of the foot, joined at two side seams and stitched down to a jute-braid sole along the lasting edge. An optional eyelet ladder up the counter takes ankle ties (the alpargata con cintas); the eyelets bridge to the Yantra4D `garment-eyelet` solid. Sized from foot length and ball girth as plain parameters — ISO 8559 declares no foot landmark codes, so this cartridge claims none. FC-300 lane 4, footwear soft goods.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El corte de lona de dos piezas de una alpargata: una pala sobre los dedos y el empeine, y un talón que envuelve la parte trasera del pie, unidos por dos costuras laterales y cosidos a una suela de yute por el borde de montado. Una escalera opcional de ojales en el talón recibe las cintas al tobillo; los ojales se puentean al sólido `garment-eyelet` de Yantra4D. Dimensionado por largo del pie y contorno de la planta como parámetros simples — ISO 8559 no declara códigos de referencia del pie, así que este cartucho no reclama ninguno. FC-300 carril 4, calzado blando.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La tige en toile en deux pièces d'une espadrille : un empeigne sur les orteils et le cou-de-pied, et un contrefort enveloppant l'arrière du pied, réunis par deux coutures latérales et cousus à une semelle de jute le long du bord de montage. Une échelle d'œillets optionnelle sur le contrefort reçoit les rubans de cheville ; les œillets se relient au solide `garment-eyelet` de Yantra4D. Dimensionné d'après la longueur du pied et la carrure de la plante comme paramètres simples — l'ISO 8559 ne déclare aucun code de repère du pied, ce cartouche n'en revendique donc aucun. FC-300 voie 4, chaussant souple.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "espadrille",
+      "alpargata",
+      "footwear",
+      "upper",
+      "canvas",
+      "eyelet",
+      "hardware",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Upper",
+        "es": "Corte completo",
+        "fr": "Tige complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "vamp",
+        "heel_counter"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "vamp",
+      "label": {
+        "en": "Vamp (toe + instep)",
+        "es": "Pala (dedos + empeine)",
+        "fr": "Empeigne (orteils + cou-de-pied)"
+      },
+      "default_color": "#c9b79a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "heel_counter",
+      "label": {
+        "en": "Heel counter",
+        "es": "Talón",
+        "fr": "Contrefort"
+      },
+      "default_color": "#b3a086",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Foot",
+        "es": "Pie",
+        "fr": "Pied"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Aisance"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "foot_length",
+      "type": "slider",
+      "group": "body",
+      "default": 255,
+      "min": 150,
+      "max": 330,
+      "step": 5,
+      "label": {
+        "en": "Foot length (mm)",
+        "es": "Largo del pie (mm)",
+        "fr": "Longueur du pied (mm)"
+      },
+      "tooltip": {
+        "en": "Heel to longest toe. A plain sized parameter — ISO 8559 has no foot landmark code, so none is claimed.",
+        "es": "Del talón al dedo más largo. Parámetro simple — ISO 8559 no tiene código de referencia del pie, así que no se reclama ninguno.",
+        "fr": "Du talon à l'orteil le plus long. Paramètre simple — l'ISO 8559 n'a aucun code de repère du pied, aucun n'est donc revendiqué."
+      }
+    },
+    {
+      "id": "foot_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 235,
+      "min": 150,
+      "max": 320,
+      "step": 5,
+      "label": {
+        "en": "Ball girth (mm)",
+        "es": "Contorno de la planta (mm)",
+        "fr": "Carrure de la plante (mm)"
+      },
+      "tooltip": {
+        "en": "Around the widest part of the foot; sets how wide the vamp wraps.",
+        "es": "Alrededor de la parte más ancha del pie; define cuánto envuelve la pala.",
+        "fr": "Autour de la partie la plus large du pied ; définit l'enveloppement de l'empeigne."
+      }
+    },
+    {
+      "id": "vamp_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 95,
+      "min": 50,
+      "max": 170,
+      "step": 5,
+      "label": {
+        "en": "Vamp depth (mm)",
+        "es": "Profundidad de la pala (mm)",
+        "fr": "Profondeur de l'empeigne (mm)"
+      },
+      "tooltip": {
+        "en": "How far back over the instep the vamp reaches; also splits the lasting edge between the two pieces.",
+        "es": "Cuánto avanza la pala sobre el empeine; también reparte el borde de montado entre las dos piezas.",
+        "fr": "Jusqu'où l'empeigne remonte sur le cou-de-pied ; répartit aussi le bord de montage entre les deux pièces."
+      }
+    },
+    {
+      "id": "counter_height",
+      "type": "slider",
+      "group": "fit",
+      "default": 62,
+      "min": 35,
+      "max": 130,
+      "step": 2,
+      "label": {
+        "en": "Counter height (mm)",
+        "es": "Altura del talón (mm)",
+        "fr": "Hauteur du contrefort (mm)"
+      },
+      "tooltip": {
+        "en": "How high the heel counter wraps up the back of the foot.",
+        "es": "Cuán alto envuelve el talón la parte trasera del pie.",
+        "fr": "Hauteur d'enveloppement du contrefort à l'arrière du pied."
+      }
+    },
+    {
+      "id": "eyelets",
+      "type": "checkbox",
+      "group": "construction",
+      "default": true,
+      "label": {
+        "en": "Ankle-tie eyelets",
+        "es": "Ojales para cintas",
+        "fr": "Œillets pour rubans"
+      },
+      "tooltip": {
+        "en": "Mark an eyelet ladder on the counter for ankle ties.",
+        "es": "Marca una escalera de ojales en el talón para las cintas.",
+        "fr": "Marque une échelle d'œillets sur le contrefort pour les rubans."
+      }
+    },
+    {
+      "id": "eyelet_pairs",
+      "type": "slider",
+      "group": "construction",
+      "default": 3,
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "label": {
+        "en": "Eyelets per side",
+        "es": "Ojales por lado",
+        "fr": "Œillets par côté"
+      },
+      "tooltip": {
+        "en": "How many eyelets up each side of the counter; drives the Yantra4D eyelet quantity.",
+        "es": "Cuántos ojales por cada lado del talón; define la cantidad de ojales de Yantra4D.",
+        "fr": "Nombre d'œillets de chaque côté du contrefort ; pilote la quantité d'œillets Yantra4D."
+      }
+    },
+    {
+      "id": "eyelet_dia",
+      "type": "slider",
+      "group": "construction",
+      "default": 5,
+      "min": 3,
+      "max": 12,
+      "step": 0.5,
+      "label": {
+        "en": "Eyelet hole (mm)",
+        "es": "Ojal, diámetro (mm)",
+        "fr": "Trou d'œillet (mm)"
+      },
+      "tooltip": {
+        "en": "Finished lace-hole diameter; drives the Yantra4D eyelet inner bore.",
+        "es": "Diámetro terminado del ojal; define el barreno interior del ojal de Yantra4D.",
+        "fr": "Diamètre fini du trou de laçage ; pilote l'alésage intérieur de l'œillet Yantra4D."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "On the side seams and the lasting edge.",
+        "es": "En las costuras laterales y el borde de montado.",
+        "fr": "Sur les coutures latérales et le bord de montage."
+      },
+      "advanced": true
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic slip-on",
+        "es": "Clásica sin cintas",
+        "fr": "Classique sans rubans"
+      },
+      "values": {
+        "vamp_depth": 95,
+        "eyelets": false
+      }
+    },
+    {
+      "id": "ankle_tie",
+      "label": {
+        "en": "Ankle-tie alpargata",
+        "es": "Alpargata con cintas",
+        "fr": "Alpargata à rubans"
+      },
+      "values": {
+        "eyelets": true,
+        "eyelet_pairs": 4,
+        "counter_height": 88
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "eyelet",
+    "subtype": "espadrille ankle-tie eyelet",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "garment-eyelet",
+      "linked": true,
+      "params_map": {
+        "inner_dia": "eyelet_dia",
+        "barrel_h": "max(3, seam_allowance)"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "lasting_edge",
+        "type": "hem",
+        "label": {
+          "en": "Lasting edge (sole stitch-down)",
+          "es": "Borde de montado (cosido a la suela)",
+          "fr": "Bord de montage (couture semelle)"
+        },
+        "edges": [
+          {
+            "piece": "vamp",
+            "edge": "lasting"
+          },
+          {
+            "piece": "heel_counter",
+            "edge": "lasting"
+          }
+        ],
+        "parameters": [
+          "foot_length",
+          "vamp_depth",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "topline",
+        "type": "custom",
+        "label": {
+          "en": "Topline (foot opening)",
+          "es": "Línea superior (entrada del pie)",
+          "fr": "Ligne d'entrée (ouverture du pied)"
+        },
+        "edges": [
+          {
+            "piece": "vamp",
+            "edge": "topline"
+          },
+          {
+            "piece": "heel_counter",
+            "edge": "topline"
+          }
+        ],
+        "parameters": [
+          "foot_girth",
+          "counter_height"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The espadrille is one of the last widely-worn shoes an ordinary person can still make at home: canvas, jute, thread. Publishing its upper as an open parametric draft — sized to your own foot, with the eyelets an open printable Yantra4D object — keeps a repairable, biodegradable shoe within reach of anyone with a needle, instead of behind a factory.",
+      "es": "La alpargata es uno de los últimos zapatos de uso común que una persona corriente aún puede hacer en casa: lona, yute, hilo. Publicar su corte como patrón paramétrico abierto — a la medida de tu propio pie, con los ojales como objeto imprimible abierto de Yantra4D — mantiene al alcance de cualquiera con una aguja un zapato reparable y biodegradable, en vez de dejarlo tras una fábrica.",
+      "fr": "L'espadrille est l'une des dernières chaussures d'usage courant qu'une personne ordinaire peut encore fabriquer chez elle : toile, jute, fil. Publier sa tige comme patron paramétrique ouvert — à la mesure de votre propre pied, avec les œillets comme objet Yantra4D imprimable et ouvert — garde à portée de quiconque possède une aiguille une chaussure réparable et biodégradable, plutôt que derrière une usine."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

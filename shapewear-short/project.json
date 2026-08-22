@@ -1,0 +1,559 @@
+{
+  "project": {
+    "name": "Shapewear Short",
+    "slug": "shapewear-short",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A high-waisted pull-on compression short in powernet, waist to mid-thigh, with GRADUATED compression stated as an explicit percentage per zone rather than hidden behind a size letter: most at the waist, less at the hip, least at the thigh — because a leg opening cut too tight rolls up and cuts in, which is the failure mode of cheap shapewear and a drafting decision rather than a fabric problem. Seat room enters as a deeper back crotch curve, not as extra side-seam width, so the side seams stay balanced. Every finished ring is printed beside the body measurement it came from, so the compression is auditable. No hardware: a pull-on garment has no closure. Made to measure to waist, hip and thigh girths plus body rise. FC-300 lane 3 (structured intimates).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un short de compresión de tiro alto en powernet, de la cintura al medio muslo, con compresión GRADUADA declarada como un porcentaje explícito por zona en vez de esconderse tras una letra de talla: más en la cintura, menos en la cadera, mínima en el muslo — porque una abertura de pierna demasiado ajustada se enrolla y se clava, que es la falla típica de la faja barata y una decisión de trazo, no un problema de tela. El espacio del asiento entra como una curva de tiro trasero más profunda, no como ancho extra en el costado, así las costuras laterales quedan balanceadas. Cada anillo terminado se imprime junto a la medida corporal de la que salió, así la compresión es auditable. Sin herrajes: una prenda que se pone jalando no tiene cierre. Hecho a medida a cintura, cadera y muslo más el tiro. Carril 3 de FC-300 (lencería estructurada).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un short de compression taille haute en powernet, de la taille à mi-cuisse, avec une compression GRADUÉE énoncée en pourcentage explicite par zone plutôt que cachée derrière une lettre de taille : maximale à la taille, moindre à la hanche, minimale à la cuisse — car une ouverture de jambe trop serrée roule et cisaille, ce qui est le défaut typique des gaines bon marché et une décision de tracé, non un problème de tissu. L'aisance du siège entre comme une courbe d'enfourchure dos plus profonde, non comme une largeur supplémentaire au côté, de sorte que les coutures latérales restent équilibrées. Chaque anneau fini est imprimé à côté de la mesure corporelle dont il provient, rendant la compression vérifiable. Sans quincaillerie : un vêtement qui s'enfile n'a pas de fermeture. Fait sur mesure aux tours de taille, de hanches et de cuisse plus la hauteur d'enfourchure. Couloir 3 de FC-300 (lingerie structurée).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "shapewear",
+      "compression",
+      "powernet",
+      "high-waist",
+      "pull-on",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Short",
+        "es": "Short completo",
+        "fr": "Short complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front_leg",
+        "back_leg",
+        "waistband",
+        "gusset"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front_leg",
+      "label": {
+        "en": "Front leg panel",
+        "es": "Panel de pierna frontal",
+        "fr": "Panneau de jambe devant"
+      },
+      "default_color": "#4a4a58",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back_leg",
+      "label": {
+        "en": "Back leg panel (deeper seat curve)",
+        "es": "Panel de pierna trasero (curva de asiento más profunda)",
+        "fr": "Panneau de jambe dos (courbe de siège plus profonde)"
+      },
+      "default_color": "#3e3e4c",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "High waistband",
+        "es": "Pretina alta",
+        "fr": "Ceinture haute"
+      },
+      "default_color": "#565668",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "gusset",
+      "label": {
+        "en": "Gusset (cotton jersey)",
+        "es": "Escudete (jersey de algodón)",
+        "fr": "Gousset (jersey de coton)"
+      },
+      "default_color": "#c8c4bc",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Compression",
+        "es": "Compresión",
+        "fr": "Compression"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 760,
+      "min": 520,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "Measured body waist, before compression",
+        "es": "Cintura medida, antes de la compresión",
+        "fr": "Taille mesurée, avant compression"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 990,
+      "min": 620,
+      "max": 1800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      },
+      "tooltip": {
+        "en": "Fullest hip, before compression",
+        "es": "Cadera más amplia, antes de la compresión",
+        "fr": "Hanche la plus forte, avant compression"
+      }
+    },
+    {
+      "id": "thigh_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 580,
+      "min": 350,
+      "max": 1000,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "thigh_girth"
+      },
+      "label": {
+        "en": "Thigh girth (mm)",
+        "es": "Contorno de muslo (mm)",
+        "fr": "Tour de cuisse (mm)"
+      },
+      "tooltip": {
+        "en": "At the hem position, before compression",
+        "es": "En la posición del ruedo, antes de la compresión",
+        "fr": "À la hauteur de l'ourlet, avant compression"
+      }
+    },
+    {
+      "id": "body_rise",
+      "type": "slider",
+      "group": "body",
+      "default": 280,
+      "min": 180,
+      "max": 420,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "body_rise"
+      },
+      "label": {
+        "en": "Body rise (mm)",
+        "es": "Tiro (mm)",
+        "fr": "Hauteur d'enfourchure (mm)"
+      },
+      "tooltip": {
+        "en": "Waist to crotch, seated — the band plus leg rise must fit inside it",
+        "es": "De la cintura a la entrepierna, sentado — la pretina más el tiro de pierna caben aquí",
+        "fr": "De la taille à l'entrejambe, assis — la ceinture plus la montée de jambe y tiennent"
+      }
+    },
+    {
+      "id": "inseam_len",
+      "type": "slider",
+      "group": "construction",
+      "default": 180,
+      "min": 60,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Inseam length (mm)",
+        "es": "Largo de entrepierna (mm)",
+        "fr": "Longueur d'entrejambe (mm)"
+      },
+      "tooltip": {
+        "en": "Crotch to hem — mid-thigh is the classic short",
+        "es": "De la entrepierna al ruedo — medio muslo es el short clásico",
+        "fr": "De l'entrejambe à l'ourlet — mi-cuisse est le short classique"
+      }
+    },
+    {
+      "id": "waistband_h",
+      "type": "slider",
+      "group": "construction",
+      "default": 120,
+      "min": 30,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Waistband depth (mm)",
+        "es": "Profundidad de pretina (mm)",
+        "fr": "Profondeur de ceinture (mm)"
+      },
+      "tooltip": {
+        "en": "How far above the hip the band reaches",
+        "es": "Cuánto sube la pretina sobre la cadera",
+        "fr": "Jusqu'où la ceinture monte au-dessus de la hanche"
+      }
+    },
+    {
+      "id": "waist_compression",
+      "type": "slider",
+      "group": "fit",
+      "default": 18,
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Waist compression (%)",
+        "es": "Compresión de cintura (%)",
+        "fr": "Compression taille (%)"
+      },
+      "tooltip": {
+        "en": "Negative ease at the waist — the zone shapewear is bought for",
+        "es": "Holgura negativa en la cintura — la zona por la que se compra una faja",
+        "fr": "Aisance négative à la taille — la zone pour laquelle on achète une gaine"
+      }
+    },
+    {
+      "id": "hip_compression",
+      "type": "slider",
+      "group": "fit",
+      "default": 12,
+      "min": 0,
+      "max": 25,
+      "step": 1,
+      "label": {
+        "en": "Hip compression (%)",
+        "es": "Compresión de cadera (%)",
+        "fr": "Compression hanches (%)"
+      },
+      "tooltip": {
+        "en": "Less than the waist — over-compressing a hip just moves volume elsewhere",
+        "es": "Menos que la cintura — comprimir de más la cadera sólo mueve el volumen",
+        "fr": "Moins que la taille — trop comprimer la hanche ne fait que déplacer le volume"
+      }
+    },
+    {
+      "id": "thigh_compression",
+      "type": "slider",
+      "group": "fit",
+      "default": 7,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Thigh compression (%)",
+        "es": "Compresión de muslo (%)",
+        "fr": "Compression cuisse (%)"
+      },
+      "tooltip": {
+        "en": "Keep this lowest — a tight leg opening rolls up and cuts in",
+        "es": "Manténla mínima — una abertura de pierna apretada se enrolla y se clava",
+        "fr": "Gardez-la minimale — une ouverture de jambe serrée roule et cisaille"
+      }
+    },
+    {
+      "id": "gusset_w",
+      "type": "slider",
+      "group": "construction",
+      "default": 70,
+      "min": 40,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Gusset width (mm)",
+        "es": "Ancho de escudete (mm)",
+        "fr": "Largeur de gousset (mm)"
+      },
+      "tooltip": {
+        "en": "A breathable cotton gusset is not optional in a compression garment",
+        "es": "Un escudete de algodón transpirable no es opcional en una prenda de compresión",
+        "fr": "Un gousset en coton respirant n'est pas optionnel dans un vêtement de compression"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Overlocked seams",
+        "es": "Costuras overlock",
+        "fr": "Coutures surjetées"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "light_smoothing",
+      "label": {
+        "en": "Light smoothing",
+        "es": "Alisado ligero",
+        "fr": "Lissage léger"
+      },
+      "values": {
+        "waist_compression": 8,
+        "hip_compression": 6,
+        "thigh_compression": 4
+      }
+    },
+    {
+      "id": "firm_control",
+      "label": {
+        "en": "Firm control",
+        "es": "Control firme",
+        "fr": "Maintien ferme"
+      },
+      "values": {
+        "waist_compression": 26,
+        "hip_compression": 18,
+        "thigh_compression": 10
+      }
+    },
+    {
+      "id": "long_leg",
+      "label": {
+        "en": "Long leg",
+        "es": "Pierna larga",
+        "fr": "Jambe longue"
+      },
+      "values": {
+        "inseam_len": 320,
+        "thigh_compression": 5
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "waistband_h < body_rise - 40",
+      "message": {
+        "en": "The waistband cannot be deeper than the rise it sits on.",
+        "es": "La pretina no puede ser más profunda que el tiro sobre el que se asienta.",
+        "fr": "La ceinture ne peut être plus profonde que l'enfourchure sur laquelle elle repose."
+      },
+      "severity": "error"
+    },
+    {
+      "expression": "thigh_compression <= hip_compression",
+      "message": {
+        "en": "Thigh compression must not exceed hip compression — a tight leg opening rolls up and cuts in.",
+        "es": "La compresión de muslo no debe superar la de cadera — una abertura apretada se enrolla y se clava.",
+        "fr": "La compression de cuisse ne doit pas dépasser celle de la hanche — une ouverture serrée roule et cisaille."
+      },
+      "severity": "warning"
+    },
+    {
+      "expression": "hip_girth > waist_girth",
+      "message": {
+        "en": "Hip girth is normally larger than waist girth; check the measurements.",
+        "es": "La cadera suele ser mayor que la cintura; revisa las medidas.",
+        "fr": "Le tour de hanches est normalement supérieur à celui de taille ; vérifiez les mesures."
+      },
+      "severity": "warning"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "waistband",
+        "type": "waistband",
+        "label": {
+          "en": "High waistband join",
+          "es": "Unión de pretina alta",
+          "fr": "Assemblage de ceinture haute"
+        },
+        "edges": [
+          {
+            "piece": "waistband",
+            "edge": "lower"
+          },
+          {
+            "piece": "front_leg",
+            "edge": "waist"
+          },
+          {
+            "piece": "back_leg",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "waist_compression",
+          "waistband_h"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seams (straight, balanced)",
+          "es": "Costuras laterales (rectas, balanceadas)",
+          "fr": "Coutures latérales (droites, équilibrées)"
+        },
+        "edges": [
+          {
+            "piece": "front_leg",
+            "edge": "side_seam"
+          },
+          {
+            "piece": "back_leg",
+            "edge": "side_seam"
+          }
+        ],
+        "parameters": [
+          "hip_girth",
+          "hip_compression",
+          "body_rise"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "label": {
+          "en": "Leg hem (lightly stabilised)",
+          "es": "Ruedo de pierna (estabilizado ligeramente)",
+          "fr": "Ourlet de jambe (légèrement stabilisé)"
+        },
+        "edges": [
+          {
+            "piece": "front_leg",
+            "edge": "hem"
+          },
+          {
+            "piece": "back_leg",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "thigh_girth",
+          "thigh_compression",
+          "inseam_len"
+        ]
+      },
+      {
+        "id": "gusset",
+        "type": "custom",
+        "label": {
+          "en": "Gusset inseam join",
+          "es": "Unión de entrepierna del escudete",
+          "fr": "Assemblage d'entrejambe du gousset"
+        },
+        "edges": [
+          {
+            "piece": "gusset",
+            "edge": "side_a"
+          },
+          {
+            "piece": "gusset",
+            "edge": "side_b"
+          },
+          {
+            "piece": "front_leg",
+            "edge": "inseam"
+          },
+          {
+            "piece": "back_leg",
+            "edge": "inseam"
+          }
+        ],
+        "parameters": [
+          "gusset_w",
+          "inseam_len"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": false,
+      "knit_negative_ease": true,
+      "graduated_compression": true
+    },
+    "societal_benefit": {
+      "en": "Shapewear sells compression as a size letter and an adjective — \"firm control\" — which tells a wearer nothing, cannot be reproduced, and hides the one decision that determines whether the garment is comfortable or a tourniquet. This cartridge states compression as an explicit percentage for each of three zones, prints every finished ring beside the body measurement it came from, and refuses by construction to compress the thigh harder than the hip. The result is a compression garment a person can audit, reproduce, and adjust — and, because the numbers are kept, re-cut in a firmer or softer powernet without starting over.",
+      "es": "La faja vende la compresión como una letra de talla y un adjetivo — \"control firme\" — que no dice nada a quien la usa, no puede reproducirse y esconde la única decisión que determina si la prenda es cómoda o un torniquete. Este cartucho declara la compresión como un porcentaje explícito para cada una de tres zonas, imprime cada anillo terminado junto a la medida corporal de la que salió, y se niega por construcción a comprimir el muslo más que la cadera. El resultado es una prenda de compresión auditable, reproducible y ajustable — y, como los números se conservan, recortable en un powernet más firme o más suave sin empezar de cero.",
+      "fr": "La gaine vend la compression comme une lettre de taille et un adjectif — « maintien ferme » — qui ne dit rien à la personne, ne peut être reproduit, et masque la seule décision qui détermine si le vêtement est confortable ou un garrot. Ce cartouche énonce la compression en pourcentage explicite pour chacune des trois zones, imprime chaque anneau fini à côté de la mesure corporelle dont il provient, et refuse par construction de comprimer la cuisse plus que la hanche. Le résultat est un vêtement de compression vérifiable, reproductible et ajustable — et, les nombres étant conservés, recoupable dans un powernet plus ferme ou plus souple sans repartir de zéro."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
