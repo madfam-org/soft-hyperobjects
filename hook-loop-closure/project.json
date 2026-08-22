@@ -1,0 +1,268 @@
+{
+  "project": {
+    "name": "Hook-and-Loop Closure",
+    "slug": "hook-loop-closure",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A Yantra4D-bridged notion: the hook and loop tape solid lives in the Yantra4D commons (CadQuery, STL/3MF), while Fashion Cabinet owns the closure — the strip footprint, the sewing line inset far enough from the edge that the stitching never rides the hook field, and the segmentation that lets a long run peel progressively instead of all at once. Renders a printable tape placement template with per-segment notches.\n\nThe one-handed closure: the adaptive-dressing alternative to buttons, and to the magnetic clasps Fashion Cabinet's adaptive garments already carry.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un avío puenteado con Yantra4D: la cinta de gancho y bucle sólida vive en el commons de Yantra4D (CadQuery, STL/3MF), mientras Fashion Cabinet posee el cierre — la huella de la tira, la línea de costura retranqueada lo suficiente para que el pespunte nunca pise el campo de ganchos, y la segmentación que permite que un tramo largo se despegue progresivamente. Genera una plantilla de colocación imprimible con piquetes por segmento.\n\nEl cierre de una sola mano: la alternativa de vestido adaptativo a los botones y a los broches magnéticos que ya llevan las prendas adaptativas de Fashion Cabinet.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une fourniture pontée vers Yantra4D : la bande auto-agrippante pleine vit dans le commun Yantra4D (CadQuery, STL/3MF), tandis que Fashion Cabinet possède la fermeture — l'empreinte de la bande, la ligne de couture suffisamment en retrait pour que la piqûre ne morde jamais le champ de crochets, et la segmentation qui permet à une longue course de se décoller progressivement. Génère un gabarit de pose imprimable avec des crans par segment.\n\nLa fermeture à une main : l'alternative d'habillage adapté aux boutons et aux fermoirs magnétiques que portent déjà les vêtements adaptatifs de Fashion Cabinet.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "closure",
+      "notion",
+      "hardware",
+      "finding",
+      "adaptive",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Tape Template",
+        "es": "Plantilla de cinta",
+        "fr": "Gabarit de bande"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "placement-guide"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Hook-and-Loop Tape Template",
+        "es": "Plantilla de cinta de gancho y bucle",
+        "fr": "Gabarit de bande auto-agrippante"
+      },
+      "default_color": "#6b8a6b",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "strip_length",
+      "type": "slider",
+      "group": "construction",
+      "default": 200,
+      "min": 40,
+      "max": 900,
+      "step": 5,
+      "label": {
+        "en": "Strip length per segment (mm)",
+        "es": "Largo de tira por segmento (mm)",
+        "fr": "Longueur de bande par segment (mm)"
+      },
+      "tooltip": {
+        "en": "Cut length of one piece of tape.",
+        "es": "Largo de corte de un trozo de cinta.",
+        "fr": "Longueur de coupe d'un morceau de bande."
+      }
+    },
+    {
+      "id": "strip_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 25,
+      "min": 12,
+      "max": 60,
+      "step": 1,
+      "label": {
+        "en": "Strip width (mm)",
+        "es": "Ancho de la tira (mm)",
+        "fr": "Largeur de la bande (mm)"
+      },
+      "tooltip": {
+        "en": "Wider tape holds more force but is harder to peel one-handed.",
+        "es": "Una cinta más ancha aguanta más fuerza pero cuesta más despegar con una mano.",
+        "fr": "Une bande plus large tient plus fort mais se décolle plus difficilement d'une main."
+      }
+    },
+    {
+      "id": "sew_margin",
+      "type": "slider",
+      "group": "construction",
+      "default": 3,
+      "min": 2,
+      "max": 8,
+      "step": 0.5,
+      "label": {
+        "en": "Sew margin from tape edge (mm)",
+        "es": "Margen de costura desde el borde (mm)",
+        "fr": "Marge de couture depuis le bord (mm)"
+      },
+      "tooltip": {
+        "en": "Inset of the stitching line — too small and the needle rides the hooks.",
+        "es": "Retranqueo de la línea de costura — si es muy pequeño, la aguja pisa los ganchos.",
+        "fr": "Retrait de la ligne de piqûre — trop faible, l'aiguille mord les crochets."
+      }
+    },
+    {
+      "id": "segments",
+      "type": "slider",
+      "group": "construction",
+      "default": 1,
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Segment count",
+        "es": "Número de segmentos",
+        "fr": "Nombre de segments"
+      },
+      "tooltip": {
+        "en": "Splitting a long run into segments makes it peel progressively.",
+        "es": "Dividir un tramo largo en segmentos hace que se despegue progresivamente.",
+        "fr": "Diviser une longue course en segments la fait se décoller progressivement."
+      }
+    },
+    {
+      "id": "segment_gap",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Gap between segments (mm)",
+        "es": "Separación entre segmentos (mm)",
+        "fr": "Écart entre segments (mm)"
+      },
+      "tooltip": {
+        "en": "Unclosed space between tape pieces — where the closure flexes.",
+        "es": "Espacio sin cerrar entre trozos de cinta — donde el cierre flexiona.",
+        "fr": "Espace non fermé entre les morceaux — là où la fermeture fléchit."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "cuff-tab",
+      "label": {
+        "en": "Cuff tab (single 60 mm)",
+        "es": "Lengüeta de puño (60 mm)",
+        "fr": "Patte de poignet (60 mm)"
+      },
+      "values": {
+        "strip_length": 60,
+        "strip_width": 25,
+        "segments": 1
+      }
+    },
+    {
+      "id": "adaptive-front",
+      "label": {
+        "en": "Adaptive front (5 × 90 mm)",
+        "es": "Frente adaptativo (5 × 90 mm)",
+        "fr": "Devant adapté (5 × 90 mm)"
+      },
+      "values": {
+        "strip_length": 90,
+        "strip_width": 20,
+        "segments": 5,
+        "segment_gap": 20
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "sew_margin * 2 < strip_width",
+      "severity": "error",
+      "message": {
+        "en": "The sew margins meet in the middle of the tape",
+        "es": "Los márgenes de costura se juntan en el centro de la cinta",
+        "fr": "Les marges de couture se rejoignent au milieu de la bande"
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "hook-and-loop tape closure",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "hook-loop-tape",
+      "linked": true,
+      "params_map": {
+        "strip_length": "strip_length",
+        "strip_width": "strip_width",
+        "sew_margin": "sew_margin"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "notion",
+    "interfaces": [
+      {
+        "id": "tape_run",
+        "type": "custom",
+        "label": {
+          "en": "Tape sewing run",
+          "es": "Tramo de costura de la cinta",
+          "fr": "Course de couture de la bande"
+        },
+        "edges": [
+          {
+            "piece": "placement-guide",
+            "edge": "guide"
+          }
+        ],
+        "parameters": [
+          "strip_length",
+          "strip_width",
+          "sew_margin",
+          "segments"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Hook-and-loop is the closure that makes dressing possible without fine motor control, and it is almost always retrofitted badly — stitched through the hook field, or run in one unbroken strip that takes two hands to peel. Publishing the sew margin and the segmentation as parameters turns adaptive dressing from an improvised alteration into a drafted, reproducible closure.",
+      "es": "El gancho y bucle es el cierre que hace posible vestirse sin motricidad fina, y casi siempre se adapta mal: cosido a través del campo de ganchos, o en una tira continua que exige dos manos para despegar. Publicar el margen de costura y la segmentación como parámetros convierte el vestido adaptativo de un arreglo improvisado en un cierre trazado y reproducible.",
+      "fr": "L'auto-agrippant est la fermeture qui rend l'habillage possible sans motricité fine, et il est presque toujours mal adapté : piqué à travers le champ de crochets, ou posé en une bande continue qu'il faut deux mains pour décoller. Publier la marge de couture et la segmentation comme paramètres transforme l'habillage adapté d'une retouche improvisée en une fermeture tracée et reproductible."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

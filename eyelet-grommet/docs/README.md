@@ -3,7 +3,7 @@
 A **Yantra4D-bridged notion** — the 2-D **placement guide** for the reinforced eyelet that carries lacing, a drawcord, or a hanging point. Fashion
 Cabinet owns the fashion (spacing, placement, the guide that transfers every position
 to the garment); the fastener **solid** is the Yantra4D
-[`desk-grommet`](https://app.yantra4d.com) cartridge, referenced through
+[`garment-eyelet`](https://app.yantra4d.com) cartridge, referenced through
 `notion.hardware_ref`.
 
 Part of the **Fashion Cabinet Commons** (FC-200, Lane 1 — findings & fasteners).
@@ -34,17 +34,19 @@ edge. Print/plot flat, mark, then set the Yantra4D-printed (or off-the-shelf) fa
 ## The cross-commons bridge (`notion.hardware_ref`)
 
 This notion's manifest declares a **linked hardware reference** to the Yantra4D
-`desk-grommet` cartridge and maps the garment `hole_dia` to the solid's `bore_dia`. Resolution is enforced in CI by
+`garment-eyelet` cartridge and maps the garment `hole_dia` to the solid's `inner_dia`,
+and `hole_dia * 2.2` to its `flange_dia`. Resolution is enforced in CI by
 `scripts/qa/verify_hardware_links.py` against the pinned snapshot
-`docs/interfaces/yantra4d-hardware.snapshot.json`. The fastener attaches at a point/slot
-(not a sewn edge), so the bridge is name + parameter resolution — no edge-length
-handshake.
+`docs/interfaces/yantra4d-hardware.snapshot.json`. `garment-eyelet` declares a
+`set_face` **flange** interface driven by `flange_dia`, so this link also carries the
+**dimensional handshake**: `hole_dia` feeds that flange dimension *and* drives the
+`placement_line` garment interface, so the two edges are dimensionally coupled.
 
 ## How the two commons divide the work
 
 - **Fashion Cabinet** (this card): the fastener as *placement* — spacing math, the
   guide, transfer to the garment.
-- **Yantra4D** (`desk-grommet`): the fastener as a *solid* — the printable geometry.
+- **Yantra4D** (`garment-eyelet`): the fastener as a *solid* — the printable geometry.
 
 ## Provenance
 

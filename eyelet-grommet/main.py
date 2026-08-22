@@ -1,7 +1,7 @@
 """
 Eyelet Grommet — Fashion Cabinet Notion Cartridge (Yantra4D-bridged hard good).
 
-The fastener SOLID is Yantra4D territory (desk-grommet; see the manifest's
+The fastener SOLID is Yantra4D territory (garment-eyelet; see the manifest's
 notion.hardware_ref). What Fashion Cabinet owns is the fashion — spacing and
 placement — and the 2-D fabrication output: a PLACEMENT GUIDE strip that pins to a
 garment placement line and transfers every fastener position as a drill-cross plus an
@@ -116,7 +116,7 @@ def build():
         "spacing_mm": round((run_length - 2 * end_offset) / max(count - 1, 1), 2),
         "run_length_mm": round(run_length, 1),
         "hardware": "solid geometry delegated to Yantra4D "
-                    "(see manifest notion.hardware_ref -> desk-grommet)",
+                    "(see manifest notion.hardware_ref -> garment-eyelet)",
     }
     return pattern
 

@@ -1,0 +1,308 @@
+{
+  "project": {
+    "name": "Sew-Through Button",
+    "slug": "sew-through-button",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A Yantra4D-bridged notion: the solid 2- or 4-hole sew-through button lives in the Yantra4D commons (CadQuery, STL/3MF), while Fashion Cabinet owns the fashion semantics — ligne sizing, placement math, and the thread-hole pattern the sewer must hit — and renders a printable placement guide that transfers every button position and its hole square to the placket.\n\nThe complement of the shank button: sewn through its own face, so the guide carries the holes, not just the centre.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un avío puenteado con Yantra4D: el botón de 2 o 4 agujeros sólido vive en el commons de Yantra4D (CadQuery, STL/3MF), mientras Fashion Cabinet posee la semántica de moda — talla en líneas, cálculo de colocación y el patrón de agujeros que la costurera debe marcar — y genera una guía de colocación imprimible que transfiere cada posición y su cuadro de agujeros a la cartera.\n\nEl complemento del botón de pie: se cose a través de su propia cara, así que la guía lleva los agujeros, no sólo el centro.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une fourniture pontée vers Yantra4D : le bouton plein à 2 ou 4 trous vit dans le commun Yantra4D (CadQuery, STL/3MF), tandis que Fashion Cabinet possède la sémantique mode — dimensionnement en lignes, calcul de placement et le motif de trous que la couturière doit viser — et génère un guide de placement imprimable qui transfère chaque position et son carré de trous sur la patte.\n\nLe complément du bouton à tige : cousu à travers sa propre face, le guide porte donc les trous, pas seulement le centre.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "button",
+      "notion",
+      "hardware",
+      "finding",
+      "placement",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Placement Guide",
+        "es": "Guía de colocación",
+        "fr": "Guide de placement"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "placement-guide"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Button Placement Guide",
+        "es": "Guía de colocación de botones",
+        "fr": "Guide de placement des boutons"
+      },
+      "default_color": "#8a6d3b",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "button_ligne",
+      "type": "slider",
+      "group": "construction",
+      "default": 24,
+      "min": 10,
+      "max": 80,
+      "step": 1,
+      "label": {
+        "en": "Button size (ligne, 1L = 0.635 mm)",
+        "es": "Tamaño del botón (líneas, 1L = 0.635 mm)",
+        "fr": "Taille du bouton (ligne, 1L = 0,635 mm)"
+      },
+      "tooltip": {
+        "en": "Trade sizing: a shirt button is 16–20L, a coat button 30–40L.",
+        "es": "Talla de oficio: un botón de camisa es 16–20L; uno de abrigo, 30–40L.",
+        "fr": "Dimensionnement métier : un bouton de chemise fait 16–20L, un bouton de manteau 30–40L."
+      }
+    },
+    {
+      "id": "button_count",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 1,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Button count",
+        "es": "Número de botones",
+        "fr": "Nombre de boutons"
+      },
+      "tooltip": {
+        "en": "How many buttons space along the placket.",
+        "es": "Cuántos botones se reparten a lo largo de la cartera.",
+        "fr": "Combien de boutons se répartissent le long de la patte."
+      }
+    },
+    {
+      "id": "placket_length",
+      "type": "slider",
+      "group": "construction",
+      "default": 300,
+      "min": 60,
+      "max": 1200,
+      "step": 5,
+      "label": {
+        "en": "Placket length (mm)",
+        "es": "Largo de la cartera (mm)",
+        "fr": "Longueur de la patte (mm)"
+      },
+      "tooltip": {
+        "en": "The run the buttons are spaced along.",
+        "es": "El tramo a lo largo del cual se espacian los botones.",
+        "fr": "La longueur sur laquelle les boutons sont espacés."
+      }
+    },
+    {
+      "id": "end_offset",
+      "type": "slider",
+      "group": "construction",
+      "default": 15,
+      "min": 5,
+      "max": 100,
+      "step": 1,
+      "label": {
+        "en": "End offset (mm)",
+        "es": "Margen en extremos (mm)",
+        "fr": "Décalage d'extrémité (mm)"
+      },
+      "tooltip": {
+        "en": "First and last button inset from the ends of the placket.",
+        "es": "Distancia del primer y último botón a los extremos de la cartera.",
+        "fr": "Retrait du premier et du dernier bouton par rapport aux extrémités."
+      }
+    },
+    {
+      "id": "strip_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 40,
+      "min": 24,
+      "max": 120,
+      "step": 2,
+      "label": {
+        "en": "Guide strip width (mm)",
+        "es": "Ancho de la guía (mm)",
+        "fr": "Largeur de la bande guide (mm)"
+      },
+      "tooltip": {
+        "en": "Width of the printed template strip.",
+        "es": "Ancho de la tira de plantilla impresa.",
+        "fr": "Largeur de la bande de gabarit imprimée."
+      }
+    },
+    {
+      "id": "hole_count",
+      "type": "slider",
+      "group": "construction",
+      "default": 4,
+      "min": 2,
+      "max": 4,
+      "step": 2,
+      "label": {
+        "en": "Thread holes per button (2 or 4)",
+        "es": "Agujeros de hilo por botón (2 o 4)",
+        "fr": "Trous de fil par bouton (2 ou 4)"
+      },
+      "tooltip": {
+        "en": "Two holes sew as a bar; four holes sew as a cross or parallel pair.",
+        "es": "Dos agujeros se cosen en barra; cuatro, en cruz o en paralelo.",
+        "fr": "Deux trous se cousent en barre ; quatre, en croix ou en parallèle."
+      }
+    },
+    {
+      "id": "show_outline",
+      "type": "checkbox",
+      "group": "construction",
+      "default": true,
+      "label": {
+        "en": "Draw button outlines",
+        "es": "Dibujar contornos de botón",
+        "fr": "Tracer les contours des boutons"
+      },
+      "tooltip": {
+        "en": "Marks the button footprint around each hole cluster.",
+        "es": "Marca la huella del botón alrededor de cada grupo de agujeros.",
+        "fr": "Marque l'empreinte du bouton autour de chaque groupe de trous."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "shirt-front",
+      "label": {
+        "en": "Shirt front (18L × 7, 4-hole)",
+        "es": "Frente de camisa (18L × 7, 4 agujeros)",
+        "fr": "Devant de chemise (18L × 7, 4 trous)"
+      },
+      "values": {
+        "button_ligne": 18,
+        "button_count": 7,
+        "placket_length": 380,
+        "end_offset": 12,
+        "hole_count": 4
+      }
+    },
+    {
+      "id": "cuff-pair",
+      "label": {
+        "en": "Cuff pair (16L × 2, 2-hole)",
+        "es": "Par de puño (16L × 2, 2 agujeros)",
+        "fr": "Paire de poignet (16L × 2, 2 trous)"
+      },
+      "values": {
+        "button_ligne": 16,
+        "button_count": 2,
+        "placket_length": 90,
+        "end_offset": 20,
+        "hole_count": 2
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "end_offset * 2 < placket_length",
+      "severity": "error",
+      "message": {
+        "en": "End offsets exceed the placket length",
+        "es": "Los márgenes de extremo exceden el largo de la cartera",
+        "fr": "Les marges d'extrémité dépassent la longueur de la patte"
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "button",
+    "subtype": "sew-through (2/4-hole)",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "hole_count": "hole_count",
+        "hole_spacing": "button_ligne * 0.635 / 3",
+        "hole_dia": "1.8"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "notion",
+    "interfaces": [
+      {
+        "id": "button_stand",
+        "type": "button_stand",
+        "label": {
+          "en": "Button stand placement line",
+          "es": "Línea de colocación de la tapeta",
+          "fr": "Ligne de placement de la patte de boutonnage"
+        },
+        "edges": [
+          {
+            "piece": "placement-guide",
+            "edge": "guide"
+          }
+        ],
+        "parameters": [
+          "button_ligne",
+          "button_count",
+          "placket_length",
+          "end_offset",
+          "hole_count"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The sew-through button is the most-replaced component in the world's wardrobe, and the reason a garment is thrown away is almost never the button — it is not knowing where the holes went. A parametric guide makes the spacing and hole pattern reproducible from a phone, and the bridged Yantra4D solid means a lost button can be printed rather than sourced.",
+      "es": "El botón de agujeros es el componente más reemplazado del guardarropa mundial, y la razón por la que se desecha una prenda casi nunca es el botón: es no saber dónde iban los agujeros. Una guía paramétrica vuelve reproducible el espaciado y el patrón de agujeros desde un teléfono, y el sólido puenteado de Yantra4D permite imprimir un botón perdido en vez de buscarlo.",
+      "fr": "Le bouton à trous est le composant le plus remplacé de la garde-robe mondiale, et si un vêtement est jeté, ce n'est presque jamais à cause du bouton : c'est parce qu'on ignore où allaient les trous. Un guide paramétrique rend l'espacement et le motif de trous reproductibles depuis un téléphone, et le solide Yantra4D ponté permet d'imprimer un bouton perdu plutôt que de le chercher."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

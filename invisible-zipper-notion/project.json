@@ -1,0 +1,278 @@
+{
+  "project": {
+    "name": "Invisible Zipper",
+    "slug": "invisible-zipper-notion",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A Yantra4D-bridged notion: the concealed coil zipper solid lives in the Yantra4D commons (CadQuery, STL/3MF), while Fashion Cabinet owns the installation — the stitch line that sits one coil radius off the seam so the coil rolls under and the stitching disappears — and renders a printable installation guide carrying that offset, the tape width, and notches at the top stop, any crossing seam, and the bottom stop.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un avío puenteado con Yantra4D: el cierre de espiral oculta sólido vive en el commons de Yantra4D (CadQuery, STL/3MF), mientras Fashion Cabinet posee la instalación — la línea de pespunte a un radio de espiral de la costura, para que la espiral se enrolle debajo y el pespunte desaparezca — y genera una guía de instalación imprimible con ese desplazamiento, el ancho de cinta y piquetes en el tope superior, cualquier costura cruzada y el tope inferior.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une fourniture pontée vers Yantra4D : la fermeture à glissière invisible pleine vit dans le commun Yantra4D (CadQuery, STL/3MF), tandis que Fashion Cabinet possède la pose — la ligne de piqûre placée à un rayon de spirale de la couture, pour que la spirale s'enroule dessous et que la piqûre disparaisse — et génère un guide de pose imprimable portant ce décalage, la largeur du ruban et des crans aux arrêts haut et bas ainsi qu'à toute couture transversale.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "zipper",
+      "notion",
+      "hardware",
+      "finding",
+      "closure",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "installation-guide",
+      "label": {
+        "en": "Installation Guide",
+        "es": "Guía de instalación",
+        "fr": "Guide de pose"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "installation-guide"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "installation-guide",
+      "label": {
+        "en": "Zipper Installation Guide",
+        "es": "Guía de instalación del cierre",
+        "fr": "Guide de pose de la fermeture"
+      },
+      "default_color": "#4a6b8a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "zipper_length",
+      "type": "slider",
+      "group": "construction",
+      "default": 560,
+      "min": 100,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Zipper length, stop to stop (mm)",
+        "es": "Largo del cierre, tope a tope (mm)",
+        "fr": "Longueur de la fermeture, arrêt à arrêt (mm)"
+      },
+      "tooltip": {
+        "en": "Measured between the metal stops, not the tape ends.",
+        "es": "Medido entre los topes metálicos, no entre los extremos de la cinta.",
+        "fr": "Mesurée entre les arrêts métalliques, pas entre les extrémités du ruban."
+      }
+    },
+    {
+      "id": "tape_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 24,
+      "min": 18,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Tape width (mm)",
+        "es": "Ancho de la cinta (mm)",
+        "fr": "Largeur du ruban (mm)"
+      },
+      "tooltip": {
+        "en": "Full width of one zipper tape — sets how much seam allowance the seam needs.",
+        "es": "Ancho total de una cinta del cierre — define cuánto margen necesita la costura.",
+        "fr": "Largeur totale d'un ruban — détermine la valeur de couture nécessaire."
+      }
+    },
+    {
+      "id": "coil_dia",
+      "type": "slider",
+      "group": "construction",
+      "default": 4,
+      "min": 3,
+      "max": 7,
+      "step": 0.5,
+      "label": {
+        "en": "Coil diameter (mm)",
+        "es": "Diámetro de la espiral (mm)",
+        "fr": "Diamètre de la spirale (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the stitch offset: the foot rides half a coil off the seam line.",
+        "es": "Define el desplazamiento del pespunte: el prensatelas va a media espiral de la costura.",
+        "fr": "Détermine le décalage de piqûre : le pied passe à une demi-spirale de la couture."
+      }
+    },
+    {
+      "id": "end_margin",
+      "type": "slider",
+      "group": "construction",
+      "default": 30,
+      "min": 10,
+      "max": 80,
+      "step": 5,
+      "label": {
+        "en": "Guide margin past each stop (mm)",
+        "es": "Margen de la guía más allá de cada tope (mm)",
+        "fr": "Marge du guide au-delà de chaque arrêt (mm)"
+      },
+      "tooltip": {
+        "en": "Extra guide length so the template can be pinned beyond the zipper itself.",
+        "es": "Largo extra de la guía para poder prenderla más allá del cierre.",
+        "fr": "Longueur supplémentaire pour épingler le gabarit au-delà de la fermeture."
+      }
+    },
+    {
+      "id": "cross_seam",
+      "type": "slider",
+      "group": "construction",
+      "default": 0,
+      "min": 0,
+      "max": 600,
+      "step": 5,
+      "label": {
+        "en": "Crossing seam, from top stop (mm; 0 = none)",
+        "es": "Costura cruzada, desde el tope superior (mm; 0 = ninguna)",
+        "fr": "Couture transversale, depuis l'arrêt haut (mm ; 0 = aucune)"
+      },
+      "tooltip": {
+        "en": "A waist or midriff seam the zipper crosses — it must match across the opening.",
+        "es": "Una costura de cintura o talle que cruza el cierre — debe casar de un lado al otro.",
+        "fr": "Une couture de taille que la fermeture traverse — elle doit se raccorder de part et d'autre."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "dress-centre-back",
+      "label": {
+        "en": "Dress centre back (560 mm, waist seam)",
+        "es": "Centro espalda de vestido (560 mm, costura de cintura)",
+        "fr": "Milieu dos de robe (560 mm, couture de taille)"
+      },
+      "values": {
+        "zipper_length": 560,
+        "tape_width": 24,
+        "coil_dia": 4,
+        "cross_seam": 240
+      }
+    },
+    {
+      "id": "skirt-side",
+      "label": {
+        "en": "Skirt side seam (180 mm)",
+        "es": "Costado de falda (180 mm)",
+        "fr": "Couture côté de jupe (180 mm)"
+      },
+      "values": {
+        "zipper_length": 180,
+        "tape_width": 20,
+        "coil_dia": 3,
+        "cross_seam": 0
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "cross_seam <= zipper_length",
+      "severity": "error",
+      "message": {
+        "en": "The crossing seam falls outside the zipper run",
+        "es": "La costura cruzada cae fuera del tramo del cierre",
+        "fr": "La couture transversale tombe hors de la course de la fermeture"
+      }
+    },
+    {
+      "expression": "coil_dia < tape_width",
+      "severity": "error",
+      "message": {
+        "en": "The coil cannot be wider than the tape it sits on",
+        "es": "La espiral no puede ser más ancha que la cinta que la soporta",
+        "fr": "La spirale ne peut pas être plus large que le ruban qui la porte"
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "zipper",
+    "subtype": "invisible / concealed coil",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "invisible-zipper",
+      "linked": true,
+      "params_map": {
+        "zip_length": "zipper_length",
+        "tape_width": "tape_width",
+        "coil_dia": "coil_dia"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "notion",
+    "interfaces": [
+      {
+        "id": "zipper_tape",
+        "type": "zipper_tape",
+        "label": {
+          "en": "Zipper tape seam",
+          "es": "Costura de la cinta del cierre",
+          "fr": "Couture du ruban de fermeture"
+        },
+        "edges": [
+          {
+            "piece": "installation-guide",
+            "edge": "guide"
+          }
+        ],
+        "parameters": [
+          "zipper_length",
+          "tape_width",
+          "coil_dia",
+          "end_margin"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The invisible zipper is the closure home sewers most often abandon a project over, because the one thing that makes it work — stitching a coil radius off the seam line — is invisible in every finished garment they can inspect. Publishing that offset as a printable guide, parametric in the coil size actually bought, turns a craft secret into a commons.",
+      "es": "El cierre oculto es la abertura que más proyectos caseros hace abandonar, porque lo único que lo hace funcionar — coser a un radio de espiral de la costura — es invisible en toda prenda terminada que se pueda examinar. Publicar ese desplazamiento como guía imprimible, paramétrica según la espiral realmente comprada, convierte un secreto de oficio en un bien común.",
+      "fr": "La fermeture invisible est la fermeture qui fait le plus souvent abandonner un projet à la maison, car la seule chose qui la fait fonctionner — piquer à un rayon de spirale de la couture — est invisible sur tout vêtement fini que l'on peut examiner. Publier ce décalage comme guide imprimable, paramétré sur la spirale réellement achetée, transforme un secret de métier en bien commun."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

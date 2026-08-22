@@ -195,14 +195,15 @@
   ],
   "fabrics": [],
   "notion": {
-    "kind": "custom",
-    "subtype": "eyelet grommet",
+    "kind": "eyelet",
+    "subtype": "garment eyelet + washer",
     "hardware_ref": {
       "platform": "yantra4d",
-      "project_slug": "desk-grommet",
+      "project_slug": "garment-eyelet",
       "linked": true,
       "params_map": {
-        "bore_dia": "hole_dia"
+        "inner_dia": "hole_dia",
+        "flange_dia": "hole_dia * 2.2"
       }
     }
   },
@@ -227,7 +228,8 @@
         "parameters": [
           "count",
           "run_length",
-          "end_offset"
+          "end_offset",
+          "hole_dia"
         ]
       }
     ],

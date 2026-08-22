@@ -1,0 +1,288 @@
+{
+  "project": {
+    "name": "Boning Channel",
+    "slug": "boning-channel",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A Yantra4D-bridged notion: the spiral or flat stay lives in the Yantra4D commons (CadQuery, STL/3MF), while Fashion Cabinet owns the channel it runs in — the twin stitch lines set at the stay width plus its running clearance, squared off by bar tacks at each stay end, held clear of the seam allowances. Renders a printable channel-stitching template for any stay count and spacing.\n\nThe companion to the structured corset, which marks its channels but bridges its single hardware link to the busk.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un avío puenteado con Yantra4D: la ballena espiral o plana vive en el commons de Yantra4D (CadQuery, STL/3MF), mientras Fashion Cabinet posee el canal por el que corre — las dos líneas de pespunte al ancho de la ballena más su holgura, rematadas con presillas en cada extremo y separadas de los márgenes de costura. Genera una plantilla de pespunte imprimible para cualquier número y separación de ballenas.\n\nEl complemento del corsé estructurado, que marca sus canales pero gasta su único enlace de herraje en el busto.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une fourniture pontée vers Yantra4D : la baleine spiralée ou plate vit dans le commun Yantra4D (CadQuery, STL/3MF), tandis que Fashion Cabinet possède la coulisse qui l'accueille — les deux lignes de piqûre à la largeur de la baleine plus son jeu, arrêtées par des points d'arrêt à chaque extrémité et dégagées des valeurs de couture. Génère un gabarit de piqûre imprimable pour tout nombre et tout espacement de baleines.\n\nLe complément du corset structuré, qui trace ses coulisses mais consacre son unique lien de quincaillerie à la busc.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "boning",
+      "notion",
+      "hardware",
+      "finding",
+      "structure",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Channel Template",
+        "es": "Plantilla de canales",
+        "fr": "Gabarit de coulisses"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "placement-guide"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Boning Channel Template",
+        "es": "Plantilla de canal de ballenas",
+        "fr": "Gabarit de coulisse de baleines"
+      },
+      "default_color": "#7a6a8a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "stay_length",
+      "type": "slider",
+      "group": "construction",
+      "default": 300,
+      "min": 80,
+      "max": 500,
+      "step": 5,
+      "label": {
+        "en": "Stay length (mm)",
+        "es": "Largo de la ballena (mm)",
+        "fr": "Longueur de la baleine (mm)"
+      },
+      "tooltip": {
+        "en": "Cut length of one bone — the channel is squared off at exactly this.",
+        "es": "Largo de corte de una ballena — el canal se remata exactamente a esta medida.",
+        "fr": "Longueur de coupe d'une baleine — la coulisse est arrêtée exactement à cette mesure."
+      }
+    },
+    {
+      "id": "stay_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 7,
+      "min": 4,
+      "max": 14,
+      "step": 0.5,
+      "label": {
+        "en": "Stay width (mm)",
+        "es": "Ancho de la ballena (mm)",
+        "fr": "Largeur de la baleine (mm)"
+      },
+      "tooltip": {
+        "en": "Spiral steel is commonly 5–7 mm; flat steel 8–12 mm.",
+        "es": "El acero espiral suele ser de 5–7 mm; el plano, de 8–12 mm.",
+        "fr": "L'acier spiralé fait couramment 5–7 mm ; l'acier plat 8–12 mm."
+      }
+    },
+    {
+      "id": "channel_clear",
+      "type": "slider",
+      "group": "construction",
+      "default": 0.5,
+      "min": 0.2,
+      "max": 1.5,
+      "step": 0.1,
+      "label": {
+        "en": "Channel clearance per side (mm)",
+        "es": "Holgura del canal por lado (mm)",
+        "fr": "Jeu de coulisse par côté (mm)"
+      },
+      "tooltip": {
+        "en": "Running ease so the stay slides in without buckling the fabric.",
+        "es": "Holgura para que la ballena entre sin arrugar la tela.",
+        "fr": "Jeu de glissement pour que la baleine entre sans gondoler le tissu."
+      }
+    },
+    {
+      "id": "stay_count",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 1,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Channel count",
+        "es": "Número de canales",
+        "fr": "Nombre de coulisses"
+      },
+      "tooltip": {
+        "en": "How many channels the template lays out side by side.",
+        "es": "Cuántos canales dispone la plantilla uno junto a otro.",
+        "fr": "Combien de coulisses le gabarit dispose côte à côte."
+      }
+    },
+    {
+      "id": "channel_pitch",
+      "type": "slider",
+      "group": "construction",
+      "default": 60,
+      "min": 20,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Channel pitch, centre to centre (mm)",
+        "es": "Paso entre canales, centro a centro (mm)",
+        "fr": "Pas entre coulisses, axe à axe (mm)"
+      },
+      "tooltip": {
+        "en": "Closer pitch means smoother shaping and a stiffer garment.",
+        "es": "Un paso más cerrado da un moldeado más suave y una prenda más rígida.",
+        "fr": "Un pas plus serré donne un galbe plus lisse et un vêtement plus rigide."
+      }
+    },
+    {
+      "id": "end_clear",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 2,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Stay end clearance (mm)",
+        "es": "Holgura en extremos de ballena (mm)",
+        "fr": "Dégagement d'extrémité de baleine (mm)"
+      },
+      "tooltip": {
+        "en": "Keeps the bone end out of the seam allowance so it cannot work through.",
+        "es": "Mantiene el extremo de la ballena fuera del margen de costura para que no lo perfore.",
+        "fr": "Maintient l'extrémité hors de la valeur de couture pour qu'elle ne la transperce pas."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "corset-8-panel",
+      "label": {
+        "en": "Corset, 8 spiral channels",
+        "es": "Corsé, 8 canales espirales",
+        "fr": "Corset, 8 coulisses spiralées"
+      },
+      "values": {
+        "stay_length": 300,
+        "stay_width": 7,
+        "stay_count": 8,
+        "channel_pitch": 60
+      }
+    },
+    {
+      "id": "bodice-light",
+      "label": {
+        "en": "Bodice, 4 light stays",
+        "es": "Corpiño, 4 ballenas ligeras",
+        "fr": "Corsage, 4 baleines légères"
+      },
+      "values": {
+        "stay_length": 180,
+        "stay_width": 5,
+        "stay_count": 4,
+        "channel_pitch": 90
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "stay_width + 2 * channel_clear < channel_pitch",
+      "severity": "error",
+      "message": {
+        "en": "Channels overlap: the finished channel is wider than the pitch",
+        "es": "Los canales se solapan: el canal terminado es más ancho que el paso",
+        "fr": "Les coulisses se chevauchent : la coulisse finie est plus large que le pas"
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "boning",
+    "subtype": "spiral/flat stay channel",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "boning-stay",
+      "linked": true,
+      "params_map": {
+        "stay_length": "stay_length",
+        "stay_width": "stay_width",
+        "channel_clear": "channel_clear"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "notion",
+    "interfaces": [
+      {
+        "id": "channel_run",
+        "type": "custom",
+        "label": {
+          "en": "Boning channel run",
+          "es": "Tramo del canal de ballenas",
+          "fr": "Course de la coulisse de baleines"
+        },
+        "edges": [
+          {
+            "piece": "placement-guide",
+            "edge": "guide"
+          }
+        ],
+        "parameters": [
+          "stay_length",
+          "stay_count",
+          "channel_pitch",
+          "end_clear"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Structured garments fail at the bone end long before they fail anywhere else — a stay that reaches into a seam allowance works through the fabric and ends the garment. Publishing the channel as a parametric template, clearance and end-stop included, makes a repairable, re-bonable garment the default rather than the expert case.",
+      "es": "Las prendas estructuradas fallan en el extremo de la ballena mucho antes que en cualquier otro punto: una ballena que llega al margen de costura perfora la tela y acaba con la prenda. Publicar el canal como plantilla paramétrica, con holgura y tope de extremo incluidos, vuelve predeterminada la prenda reparable y re-emballenable, no la excepción experta.",
+      "fr": "Les vêtements structurés cèdent à l'extrémité de la baleine bien avant tout autre point : une baleine qui atteint la valeur de couture transperce le tissu et achève le vêtement. Publier la coulisse comme gabarit paramétrique, jeu et arrêt d'extrémité compris, fait du vêtement réparable et rebaleinable la norme plutôt que le cas d'expert."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

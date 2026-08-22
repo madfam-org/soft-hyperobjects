@@ -1,0 +1,269 @@
+{
+  "project": {
+    "name": "Trouser Hook and Bar",
+    "slug": "trouser-hook-notion",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A Yantra4D-bridged notion: the hook and bar plates live in the Yantra4D commons (CadQuery, STL/3MF), while Fashion Cabinet owns the waistband closure — the hook on the underlap, the bar on the overlap, offset so the two meet with the fly centred, each inset from the waistband end and sewn through holes that clear the waistband seams. Renders a printable closure template with both plate footprints, their sew-hole crosses, and per-plate notches.\n\nThe flat closure trousers use because a button would print through under a jacket.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un avío puenteado con Yantra4D: las placas de gancho y barra viven en el commons de Yantra4D (CadQuery, STL/3MF), mientras Fashion Cabinet posee el cierre de la pretina — el gancho en el solapo interior, la barra en el exterior, desfasados para que se encuentren con la bragueta centrada, cada uno retranqueado del extremo y cosido por agujeros que libran las costuras. Genera una plantilla de cierre imprimible con ambas huellas de placa, sus cruces de costura y piquetes por placa.\n\nEl cierre plano que usan los pantalones porque un botón se marcaría bajo el saco.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une fourniture pontée vers Yantra4D : les plaques d'agrafe et de barrette vivent dans le commun Yantra4D (CadQuery, STL/3MF), tandis que Fashion Cabinet possède la fermeture de ceinture — l'agrafe sur le sous-pont, la barrette sur le dessus, décalées pour se rejoindre braguette centrée, chacune en retrait de l'extrémité et cousue par des trous qui dégagent les coutures. Génère un gabarit de fermeture imprimable avec les deux empreintes de plaque, leurs croix de couture et des crans par plaque.\n\nLa fermeture plate qu'utilisent les pantalons, car un bouton se marquerait sous la veste.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "hook",
+      "notion",
+      "hardware",
+      "finding",
+      "waistband",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Closure Template",
+        "es": "Plantilla de cierre",
+        "fr": "Gabarit de fermeture"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "placement-guide"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Waistband Hook-and-Bar Template",
+        "es": "Plantilla de gancho y barra de pretina",
+        "fr": "Gabarit d'agrafe et barrette de ceinture"
+      },
+      "default_color": "#5a6a7a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "hook_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 18,
+      "min": 10,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Hook plate width (mm)",
+        "es": "Ancho de la placa del gancho (mm)",
+        "fr": "Largeur de la plaque d'agrafe (mm)"
+      },
+      "tooltip": {
+        "en": "Must fit inside the finished waistband without showing at the edges.",
+        "es": "Debe caber dentro de la pretina terminada sin asomar por los bordes.",
+        "fr": "Doit tenir dans la ceinture finie sans dépasser aux bords."
+      }
+    },
+    {
+      "id": "waistband_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 40,
+      "min": 25,
+      "max": 70,
+      "step": 1,
+      "label": {
+        "en": "Waistband height (mm)",
+        "es": "Alto de la pretina (mm)",
+        "fr": "Hauteur de la ceinture (mm)"
+      },
+      "tooltip": {
+        "en": "Finished height — the plates are centred on it.",
+        "es": "Alto terminado — las placas se centran sobre él.",
+        "fr": "Hauteur finie — les plaques y sont centrées."
+      }
+    },
+    {
+      "id": "end_offset",
+      "type": "slider",
+      "group": "construction",
+      "default": 15,
+      "min": 5,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Plate inset from waistband end (mm)",
+        "es": "Retranqueo de la placa desde el extremo (mm)",
+        "fr": "Retrait de la plaque depuis l'extrémité (mm)"
+      },
+      "tooltip": {
+        "en": "Keeps the plate clear of the finished end and its turn-back.",
+        "es": "Mantiene la placa libre del extremo terminado y su vuelta.",
+        "fr": "Dégage la plaque de l'extrémité finie et de son rempli."
+      }
+    },
+    {
+      "id": "underlap",
+      "type": "slider",
+      "group": "construction",
+      "default": 40,
+      "min": 15,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Underlap, hook to bar (mm)",
+        "es": "Solapo, gancho a barra (mm)",
+        "fr": "Sous-pont, agrafe à barrette (mm)"
+      },
+      "tooltip": {
+        "en": "The overlap of the two waistband ends — sets where the fly falls.",
+        "es": "El solapo de los dos extremos de la pretina — define dónde cae la bragueta.",
+        "fr": "Le croisement des deux extrémités — détermine où tombe la braguette."
+      }
+    },
+    {
+      "id": "sew_holes",
+      "type": "slider",
+      "group": "construction",
+      "default": 4,
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "label": {
+        "en": "Sew holes per plate",
+        "es": "Agujeros de costura por placa",
+        "fr": "Trous de couture par plaque"
+      },
+      "tooltip": {
+        "en": "More holes spread the strain of the closure across the waistband.",
+        "es": "Más agujeros reparten la tensión del cierre a lo largo de la pretina.",
+        "fr": "Plus de trous répartissent la tension de la fermeture sur la ceinture."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "suit-trouser",
+      "label": {
+        "en": "Suit trouser (18 mm, 40 mm band)",
+        "es": "Pantalón de traje (18 mm, pretina 40 mm)",
+        "fr": "Pantalon de costume (18 mm, ceinture 40 mm)"
+      },
+      "values": {
+        "hook_width": 18,
+        "waistband_height": 40,
+        "underlap": 40,
+        "sew_holes": 4
+      }
+    },
+    {
+      "id": "skirt-band",
+      "label": {
+        "en": "Skirt band (14 mm, 30 mm band)",
+        "es": "Pretina de falda (14 mm, 30 mm)",
+        "fr": "Ceinture de jupe (14 mm, 30 mm)"
+      },
+      "values": {
+        "hook_width": 14,
+        "waistband_height": 30,
+        "underlap": 25,
+        "sew_holes": 2
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "hook_width < waistband_height",
+      "severity": "error",
+      "message": {
+        "en": "The plate is wider than the waistband it must hide inside",
+        "es": "La placa es más ancha que la pretina en la que debe ocultarse",
+        "fr": "La plaque est plus large que la ceinture qui doit la cacher"
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "hook",
+    "subtype": "trouser hook and bar (waistband)",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "trouser-hook-bar",
+      "linked": true,
+      "params_map": {
+        "hook_width": "hook_width",
+        "sew_holes": "sew_holes"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "notion",
+    "interfaces": [
+      {
+        "id": "waistband_closure",
+        "type": "waistband",
+        "label": {
+          "en": "Waistband closure line",
+          "es": "Línea de cierre de la pretina",
+          "fr": "Ligne de fermeture de ceinture"
+        },
+        "edges": [
+          {
+            "piece": "placement-guide",
+            "edge": "guide"
+          }
+        ],
+        "parameters": [
+          "hook_width",
+          "waistband_height",
+          "end_offset",
+          "underlap",
+          "sew_holes"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The waistband hook and bar is the single most-repaired fastening on tailored trousers, and it is invisible in every finished pair, so nobody learns where it goes. Publishing the underlap, the inset, and the sew-hole pattern as a printable template makes altering a waistband — the most common alteration there is — a drafted operation instead of a guess.",
+      "es": "El gancho y barra de pretina es el cierre que más se repara en pantalones de sastre, y es invisible en toda prenda terminada, así que nadie aprende dónde va. Publicar el solapo, el retranqueo y el patrón de agujeros como plantilla imprimible convierte ajustar una pretina — el arreglo más común que existe — en una operación trazada en vez de una conjetura.",
+      "fr": "L'agrafe et barrette de ceinture est la fermeture la plus réparée des pantalons de tailleur, et elle est invisible sur tout vêtement fini : personne n'apprend donc où elle se pose. Publier le sous-pont, le retrait et le motif de trous comme gabarit imprimable fait de la retouche d'une ceinture — la plus courante qui soit — une opération tracée plutôt qu'une supposition."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

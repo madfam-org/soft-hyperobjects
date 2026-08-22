@@ -1,0 +1,279 @@
+{
+  "project": {
+    "name": "Cord End",
+    "slug": "cord-end-notion",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A Yantra4D-bridged notion: the aglet or bell tip solid lives in the Yantra4D commons (CadQuery, STL/3MF), while Fashion Cabinet owns the cord — the cut length that accounts for the cord each tip swallows in its crimp, where the crimp lines fall, and where the cord enters and leaves the casing so the pull tails come out even. Renders a printable cord cutting and tip guide.\n\nDistinct from the cord lock (the spring stopper): this is the tip that stops the cord fraying and lets it be threaded at all.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un avío puenteado con Yantra4D: la punta o herrete sólida vive en el commons de Yantra4D (CadQuery, STL/3MF), mientras Fashion Cabinet posee el cordón — el largo de corte que contempla el cordón que cada punta se traga al prensar, dónde caen las líneas de prensado y por dónde entra y sale del túnel para que las colas queden parejas. Genera una guía de corte y punta imprimible.\n\nDistinta del tope de cordón (el resorte): ésta es la punta que evita que el cordón se deshilache y permite enhebrarlo.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une fourniture pontée vers Yantra4D : l'embout ou ferret plein vit dans le commun Yantra4D (CadQuery, STL/3MF), tandis que Fashion Cabinet possède le cordon — la longueur de coupe qui tient compte du cordon que chaque embout avale au sertissage, l'emplacement des lignes de sertissage, et l'entrée et la sortie de coulisse pour que les tirants sortent à égalité. Génère un guide de coupe et d'embout imprimable.\n\nDistinct du bloque-cordon (le ressort) : c'est l'embout qui empêche l'effilochage et rend l'enfilage possible.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "cord",
+      "notion",
+      "hardware",
+      "finding",
+      "drawcord",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Cord Cutting Guide",
+        "es": "Guía de corte de cordón",
+        "fr": "Guide de coupe du cordon"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "placement-guide"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Cord Cutting and Tip Guide",
+        "es": "Guía de corte y punta de cordón",
+        "fr": "Guide de coupe et d'embout de cordon"
+      },
+      "default_color": "#8a7a5a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "cord_dia",
+      "type": "slider",
+      "group": "construction",
+      "default": 5,
+      "min": 2,
+      "max": 10,
+      "step": 0.5,
+      "label": {
+        "en": "Cord diameter (mm)",
+        "es": "Diámetro del cordón (mm)",
+        "fr": "Diamètre du cordon (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the tip bore — the tip must grip this cord, not a nominal one.",
+        "es": "Define el barreno de la punta — la punta debe agarrar este cordón, no uno nominal.",
+        "fr": "Détermine l'alésage de l'embout — il doit serrer ce cordon, pas un cordon nominal."
+      }
+    },
+    {
+      "id": "cord_length",
+      "type": "slider",
+      "group": "construction",
+      "default": 900,
+      "min": 200,
+      "max": 2000,
+      "step": 10,
+      "label": {
+        "en": "Finished cord length, tip to tip (mm)",
+        "es": "Largo terminado del cordón, punta a punta (mm)",
+        "fr": "Longueur finie du cordon, embout à embout (mm)"
+      },
+      "tooltip": {
+        "en": "What the wearer sees — the cut length is longer by the crimp allowance.",
+        "es": "Lo que ve quien la usa — el largo de corte es mayor por el margen de prensado.",
+        "fr": "Ce que voit le porteur — la longueur de coupe est plus grande du sertissage."
+      }
+    },
+    {
+      "id": "tip_length",
+      "type": "slider",
+      "group": "construction",
+      "default": 20,
+      "min": 10,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Tip length (mm)",
+        "es": "Largo de la punta (mm)",
+        "fr": "Longueur de l'embout (mm)"
+      },
+      "tooltip": {
+        "en": "The cord this tip swallows — added to the cut length once per tipped end.",
+        "es": "El cordón que se traga esta punta — se suma al corte una vez por extremo.",
+        "fr": "Le cordon avalé par l'embout — ajouté à la coupe une fois par extrémité."
+      }
+    },
+    {
+      "id": "ends",
+      "type": "slider",
+      "group": "construction",
+      "default": 2,
+      "min": 1,
+      "max": 2,
+      "step": 1,
+      "label": {
+        "en": "Tipped ends (1 or 2)",
+        "es": "Extremos con punta (1 o 2)",
+        "fr": "Extrémités ferrées (1 ou 2)"
+      },
+      "tooltip": {
+        "en": "One tip for a cord anchored at the far end; two for a free drawcord.",
+        "es": "Una punta si el cordón va fijo al otro extremo; dos si es un cordón libre.",
+        "fr": "Un embout si le cordon est fixé à l'autre bout ; deux pour un cordon libre."
+      }
+    },
+    {
+      "id": "channel_run",
+      "type": "slider",
+      "group": "construction",
+      "default": 700,
+      "min": 0,
+      "max": 2000,
+      "step": 10,
+      "label": {
+        "en": "Casing run the cord threads (mm)",
+        "es": "Tramo de túnel que recorre el cordón (mm)",
+        "fr": "Longueur de coulisse traversée (mm)"
+      },
+      "tooltip": {
+        "en": "The channel length — what is left over becomes the two pull tails.",
+        "es": "El largo del túnel — lo que sobra son las dos colas de tiro.",
+        "fr": "La longueur de coulisse — le reste forme les deux tirants."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "hood-drawcord",
+      "label": {
+        "en": "Hood drawcord (2 tips)",
+        "es": "Cordón de capucha (2 puntas)",
+        "fr": "Cordon de capuche (2 embouts)"
+      },
+      "values": {
+        "cord_dia": 5,
+        "cord_length": 900,
+        "tip_length": 20,
+        "ends": 2,
+        "channel_run": 700
+      }
+    },
+    {
+      "id": "waist-drawstring",
+      "label": {
+        "en": "Waist drawstring (thin, 2 tips)",
+        "es": "Cordón de cintura (delgado, 2 puntas)",
+        "fr": "Cordon de taille (fin, 2 embouts)"
+      },
+      "values": {
+        "cord_dia": 3,
+        "cord_length": 1400,
+        "tip_length": 15,
+        "ends": 2,
+        "channel_run": 1100
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "channel_run <= cord_length",
+      "severity": "error",
+      "message": {
+        "en": "The casing is longer than the cord that must thread it",
+        "es": "El túnel es más largo que el cordón que debe recorrerlo",
+        "fr": "La coulisse est plus longue que le cordon qui doit la traverser"
+      }
+    },
+    {
+      "expression": "tip_length * ends < cord_length",
+      "severity": "error",
+      "message": {
+        "en": "The tips swallow the whole cord",
+        "es": "Las puntas se tragan todo el cordón",
+        "fr": "Les embouts avalent tout le cordon"
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "cord end / aglet",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "cord-end",
+      "linked": true,
+      "params_map": {
+        "cord_dia": "cord_dia",
+        "tip_length": "tip_length"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "notion",
+    "interfaces": [
+      {
+        "id": "cord_run",
+        "type": "custom",
+        "label": {
+          "en": "Cord run through the casing",
+          "es": "Recorrido del cordón por el túnel",
+          "fr": "Course du cordon dans la coulisse"
+        },
+        "edges": [
+          {
+            "piece": "placement-guide",
+            "edge": "guide"
+          }
+        ],
+        "parameters": [
+          "cord_dia",
+          "cord_length",
+          "tip_length",
+          "channel_run"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A drawcord dies at its ends: once the tip is lost the cord frays, cannot be re-threaded, and the garment loses its adjustment for good. A printable tip is the cheapest possible repair, and publishing the cut length with its crimp allowance means the replacement cord comes out the right length the first time rather than a tip short.",
+      "es": "Un cordón muere por sus extremos: perdida la punta, se deshilacha, ya no se puede enhebrar y la prenda pierde su ajuste para siempre. Una punta imprimible es la reparación más barata posible, y publicar el largo de corte con su margen de prensado hace que el cordón de repuesto salga del largo correcto a la primera, no una punta más corto.",
+      "fr": "Un cordon meurt par ses extrémités : l'embout perdu, il s'effiloche, ne se réenfile plus et le vêtement perd son réglage définitivement. Un embout imprimable est la réparation la moins chère qui soit, et publier la longueur de coupe avec sa réserve de sertissage fait sortir le cordon de remplacement à la bonne longueur du premier coup."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

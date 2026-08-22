@@ -194,14 +194,15 @@
   ],
   "fabrics": [],
   "notion": {
-    "kind": "custom",
-    "subtype": "snap fastener",
+    "kind": "snap",
+    "subtype": "sew-on snap (rim holes)",
     "hardware_ref": {
       "platform": "yantra4d",
-      "project_slug": "snap-fit",
+      "project_slug": "sew-on-snap",
       "linked": true,
       "params_map": {
-        "bore_dia": "socket_dia"
+        "snap_dia": "socket_dia",
+        "sew_holes": "4"
       }
     }
   },
@@ -226,7 +227,8 @@
         "parameters": [
           "count",
           "run_length",
-          "end_offset"
+          "end_offset",
+          "socket_dia"
         ]
       }
     ],
