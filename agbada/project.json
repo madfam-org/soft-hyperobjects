@@ -1,0 +1,542 @@
+{
+  "project": {
+    "name": "Agbàdá",
+    "slug": "agbada",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The wide-sleeved flowing outer robe of the Yorùbá of southwestern Nigéria and Bénin, worn over a bùbá tunic and ṣòkòtò trousers; cognate with the Hausa babban riga and the Wolof and Mande grand boubou. Its geometry follows from one material fact: traditional aṣọ òkè comes off a narrow treadle loom in strips roughly 100–150 mm wide, so a robe this wide is assembled from many strips sewn selvedge to selvedge. This cartridge solves an integer strip count and recomputes the assembled span from it — reporting the honest delta against the width you asked for, because you cannot half-weave a strip. There is no armscye and no set-in sleeve: the body continues outward past the shoulder to the full wing span, and the wing is the sleeve. The neck facing is measured from its drafted curve so it matches the opening it faces. The embroidery field is marked; the embroidery itself is left to the embroiderer. Title and chieftaincy regalia are deliberately excluded. Offered with respect for the living tradition.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La túnica exterior amplia y de mangas anchas de los yorùbá del suroeste de Nigeria y Benín, que se lleva sobre una túnica bùbá y un pantalón ṣòkòtò; emparentada con la babban riga hausa y el grand boubou wólof y mandé. Su geometría se desprende de un hecho material: el aṣọ òkè tradicional sale de un telar estrecho de pedal en tiras de unos 100–150 mm, de modo que una túnica así se arma con muchas tiras cosidas orillo con orillo. Este cartucho resuelve un número entero de tiras y recalcula la envergadura montada a partir de él — informando la diferencia real respecto al ancho solicitado, porque no se puede tejer media tira. No hay sisa ni manga montada: el cuerpo se prolonga hacia afuera más allá del hombro hasta la envergadura completa, y el ala es la manga. La vista del cuello se mide sobre su curva trazada para que coincida con la abertura que remata. El campo de bordado queda marcado; el bordado mismo se deja a quien borda. Las insignias de título y jefatura quedan deliberadamente excluidas. Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La grande robe fluide à manches larges des Yorùbá du sud-ouest du Nigéria et du Bénin, portée sur une tunique bùbá et un pantalon ṣòkòtò ; apparentée à la babban riga haoussa et au grand boubou wolof et mandé. Sa géométrie découle d'un fait matériel : l'aṣọ òkè traditionnel sort d'un métier à pédales étroit en bandes d'environ 100 à 150 mm, si bien qu'une robe de cette ampleur s'assemble à partir de nombreuses bandes cousues lisière contre lisière. Cette cartouche résout un nombre entier de bandes et recalcule l'envergure assemblée à partir de lui — en signalant l'écart réel avec la largeur demandée, car on ne tisse pas une demi-bande. Ni emmanchure ni manche rapportée : le corps se prolonge au-delà de l'épaule jusqu'à l'envergure complète, et l'aile est la manche. La parementure d'encolure est mesurée sur sa courbe tracée afin d'épouser l'ouverture qu'elle borde. Le champ de broderie est marqué ; la broderie elle-même revient au brodeur. Les insignes de titre et de chefferie sont délibérément exclus. Proposé dans le respect de la tradition vivante.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "agbada",
+      "yoruba",
+      "west-african",
+      "heritage",
+      "robe",
+      "strip-woven",
+      "aso-oke",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Robe",
+        "es": "Túnica completa",
+        "fr": "Robe complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "body",
+        "neck_facing",
+        "chest_panel"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Robe body + wing",
+        "es": "Cuerpo y ala de la túnica",
+        "fr": "Corps et aile de la robe"
+      },
+      "default_color": "#d8c48a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "fold_edge": "shoulder",
+        "mirror": true
+      }
+    },
+    {
+      "id": "neck_facing",
+      "label": {
+        "en": "Neck facing (ìdí ọrùn)",
+        "es": "Vista de cuello (ìdí ọrùn)",
+        "fr": "Parementure d'encolure (ìdí ọrùn)"
+      },
+      "default_color": "#b89a5c",
+      "cut": {
+        "quantity": 4,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "chest_panel",
+      "label": {
+        "en": "Breast panel (onídìí)",
+        "es": "Panel pectoral (onídìí)",
+        "fr": "Panneau de poitrine (onídìí)"
+      },
+      "default_color": "#c4a86a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "style",
+      "label": {
+        "en": "Neck & Field",
+        "es": "Cuello y campo",
+        "fr": "Encolure et champ"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "wing_span",
+      "type": "slider",
+      "group": "body",
+      "default": 2100,
+      "min": 1400,
+      "max": 3000,
+      "step": 20,
+      "label": {
+        "en": "Wing span (mm)",
+        "es": "Envergadura (mm)",
+        "fr": "Envergure (mm)"
+      },
+      "tooltip": {
+        "en": "Fingertip to fingertip — the wing is the sleeve, so this is one dimension, not two",
+        "es": "De punta a punta de los dedos — el ala es la manga, así que es una sola medida",
+        "fr": "D'un bout des doigts à l'autre — l'aile est la manche, donc une seule mesure"
+      }
+    },
+    {
+      "id": "robe_length",
+      "type": "slider",
+      "group": "body",
+      "default": 1250,
+      "min": 800,
+      "max": 1600,
+      "step": 10,
+      "label": {
+        "en": "Robe length (mm)",
+        "es": "Largo de la túnica (mm)",
+        "fr": "Longueur de la robe (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to hem — traditionally at or below the calf",
+        "es": "Del hombro al ruedo — tradicionalmente a la pantorrilla o más abajo",
+        "fr": "De l'épaule à l'ourlet — traditionnellement au mollet ou plus bas"
+      }
+    },
+    {
+      "id": "body_width",
+      "type": "slider",
+      "group": "body",
+      "default": 720,
+      "min": 450,
+      "max": 1100,
+      "step": 10,
+      "label": {
+        "en": "Body half-width (mm)",
+        "es": "Semiancho del cuerpo (mm)",
+        "fr": "Demi-largeur du corps (mm)"
+      },
+      "tooltip": {
+        "en": "Where the side seam falls — it also sets where the wing begins to hang",
+        "es": "Dónde cae la costura lateral — también fija dónde empieza a colgar el ala",
+        "fr": "Où tombe la couture côté — fixe aussi où l'aile commence à pendre"
+      }
+    },
+    {
+      "id": "neck_width",
+      "type": "slider",
+      "group": "style",
+      "default": 220,
+      "min": 150,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Neck opening width (mm)",
+        "es": "Ancho de la abertura de cuello (mm)",
+        "fr": "Largeur d'ouverture d'encolure (mm)"
+      },
+      "tooltip": {
+        "en": "The ọrùn — it must pass the head, since there is no closure",
+        "es": "El ọrùn — debe pasar la cabeza, pues no hay cierre",
+        "fr": "L'ọrùn — il doit laisser passer la tête, car il n'y a aucune fermeture"
+      }
+    },
+    {
+      "id": "neck_drop",
+      "type": "slider",
+      "group": "style",
+      "default": 130,
+      "min": 70,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Neck opening depth (mm)",
+        "es": "Profundidad del cuello (mm)",
+        "fr": "Profondeur d'encolure (mm)"
+      },
+      "tooltip": {
+        "en": "How far the opening scoops below the shoulder line",
+        "es": "Cuánto baja la abertura por debajo de la línea de hombro",
+        "fr": "Profondeur de l'échancrure sous la ligne d'épaule"
+      }
+    },
+    {
+      "id": "slit_length",
+      "type": "slider",
+      "group": "style",
+      "default": 260,
+      "min": 80,
+      "max": 520,
+      "step": 10,
+      "label": {
+        "en": "Front slit (ìlà) length (mm)",
+        "es": "Largo de la abertura frontal (ìlà) (mm)",
+        "fr": "Longueur de la fente devant (ìlà) (mm)"
+      },
+      "tooltip": {
+        "en": "The slit below the neck opening — with the opening, it is what admits the head",
+        "es": "La abertura bajo el cuello — junto con él, es lo que deja pasar la cabeza",
+        "fr": "La fente sous l'encolure — avec elle, c'est ce qui laisse passer la tête"
+      }
+    },
+    {
+      "id": "chest_field",
+      "type": "slider",
+      "group": "style",
+      "default": 380,
+      "min": 200,
+      "max": 700,
+      "step": 10,
+      "label": {
+        "en": "Embroidery field width (mm)",
+        "es": "Ancho del campo de bordado (mm)",
+        "fr": "Largeur du champ de broderie (mm)"
+      },
+      "tooltip": {
+        "en": "The marked field where the embroiderer works — the motifs are not drafted",
+        "es": "El campo marcado donde trabaja quien borda — los motivos no se trazan",
+        "fr": "Le champ marqué où travaille le brodeur — les motifs ne sont pas tracés"
+      }
+    },
+    {
+      "id": "chest_depth",
+      "type": "slider",
+      "group": "style",
+      "default": 420,
+      "min": 200,
+      "max": 700,
+      "step": 10,
+      "label": {
+        "en": "Embroidery field depth (mm)",
+        "es": "Alto del campo de bordado (mm)",
+        "fr": "Hauteur du champ de broderie (mm)"
+      },
+      "tooltip": {
+        "en": "How far the worked breast panel extends down the chest",
+        "es": "Cuánto baja por el pecho el panel bordado",
+        "fr": "Jusqu'où le panneau brodé descend sur la poitrine"
+      }
+    },
+    {
+      "id": "strip_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 120,
+      "min": 60,
+      "max": 400,
+      "step": 5,
+      "label": {
+        "en": "Loom strip width (mm)",
+        "es": "Ancho de tira del telar (mm)",
+        "fr": "Largeur de bande du métier (mm)"
+      },
+      "tooltip": {
+        "en": "Traditional aṣọ òkè is 100–150 mm; the strip count is an integer solved from it",
+        "es": "El aṣọ òkè tradicional mide 100–150 mm; el número de tiras es un entero que se despeja de él",
+        "fr": "L'aṣọ òkè traditionnel fait 100–150 mm ; le nombre de bandes en est déduit en entier"
+      }
+    },
+    {
+      "id": "facing_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 55,
+      "min": 30,
+      "max": 110,
+      "step": 5,
+      "label": {
+        "en": "Neck facing depth (mm)",
+        "es": "Ancho de la vista de cuello (mm)",
+        "fr": "Largeur de parementure (mm)"
+      },
+      "tooltip": {
+        "en": "How wide the facing is around the opening",
+        "es": "Cuánto abarca la vista alrededor de la abertura",
+        "fr": "Largeur de la parementure autour de l'ouverture"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 6,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Added to every joined edge",
+        "es": "Añadido a cada borde unido",
+        "fr": "Ajoutée à chaque bord assemblé"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 35,
+      "min": 15,
+      "max": 80,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de ruedo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Added at the hem",
+        "es": "Añadido en el ruedo",
+        "fr": "Ajoutée à l'ourlet"
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "wing_span > body_width * 2 + 200",
+      "severity": "warning",
+      "message": {
+        "en": "The wing must extend well past the body or there is no agbàdá — only a tunic.",
+        "es": "El ala debe rebasar ampliamente el cuerpo o no hay agbàdá — solo una túnica.",
+        "fr": "L'aile doit dépasser largement le corps, sinon ce n'est pas un agbàdá — juste une tunique."
+      }
+    },
+    {
+      "expression": "neck_width + slit_length > 300",
+      "severity": "warning",
+      "message": {
+        "en": "The opening and slit together must admit the head — the agbàdá has no closure.",
+        "es": "La abertura y la ranura juntas deben dejar pasar la cabeza — el agbàdá no tiene cierre.",
+        "fr": "L'ouverture et la fente doivent ensemble laisser passer la tête — l'agbàdá n'a aucune fermeture."
+      }
+    },
+    {
+      "expression": "chest_field * 2 < body_width * 2",
+      "severity": "warning",
+      "message": {
+        "en": "The embroidery field cannot be wider than the chest it sits on.",
+        "es": "El campo de bordado no puede exceder el pecho sobre el que se asienta.",
+        "fr": "Le champ de broderie ne peut dépasser la poitrine qui le porte."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "everyday",
+      "label": {
+        "en": "Everyday",
+        "es": "Diario",
+        "fr": "Quotidien"
+      },
+      "values": {
+        "wing_span": 1900,
+        "robe_length": 1150,
+        "chest_field": 300,
+        "chest_depth": 340
+      }
+    },
+    {
+      "id": "ceremonial-cut",
+      "label": {
+        "en": "Full ceremonial cut",
+        "es": "Corte ceremonial completo",
+        "fr": "Coupe de cérémonie"
+      },
+      "values": {
+        "wing_span": 2600,
+        "robe_length": 1400,
+        "chest_field": 480,
+        "chest_depth": 520
+      }
+    },
+    {
+      "id": "wide-loom",
+      "label": {
+        "en": "Wide mill cloth",
+        "es": "Tela de telar ancho",
+        "fr": "Tissu de métier large"
+      },
+      "values": {
+        "strip_width": 380,
+        "wing_span": 2280
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "popelina-algodon"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "agbada_side",
+        "type": "side_seam",
+        "geometry_type": "seam",
+        "label": {
+          "en": "Side seam (below the underarm)",
+          "es": "Costura lateral (bajo la axila)",
+          "fr": "Couture côté (sous l'aisselle)"
+        },
+        "edges": [
+          {
+            "piece": "body",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "body_width",
+          "robe_length"
+        ]
+      },
+      {
+        "id": "wing_seam",
+        "type": "custom",
+        "geometry_type": "seam",
+        "label": {
+          "en": "Wing underseam (underarm to wingtip)",
+          "es": "Costura inferior del ala (axila a punta)",
+          "fr": "Couture inférieure de l'aile (aisselle à la pointe)"
+        },
+        "edges": [
+          {
+            "piece": "body",
+            "edge": "wing_under"
+          }
+        ],
+        "parameters": [
+          "wing_span",
+          "strip_width",
+          "body_width"
+        ]
+      },
+      {
+        "id": "orun",
+        "type": "neckline",
+        "geometry_type": "seam",
+        "label": {
+          "en": "Neck opening (ọrùn) and its facing",
+          "es": "Abertura de cuello (ọrùn) y su vista",
+          "fr": "Encolure (ọrùn) et sa parementure"
+        },
+        "edges": [
+          {
+            "piece": "neck_facing",
+            "edge": "inner"
+          },
+          {
+            "piece": "body",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "neck_width",
+          "neck_drop",
+          "facing_width"
+        ]
+      },
+      {
+        "id": "chest_field_seam",
+        "type": "pocket",
+        "geometry_type": "seam",
+        "label": {
+          "en": "Breast panel application",
+          "es": "Aplicación del panel pectoral",
+          "fr": "Application du panneau de poitrine"
+        },
+        "edges": [
+          {
+            "piece": "chest_panel",
+            "edge": "top"
+          },
+          {
+            "piece": "body",
+            "edge": "center"
+          }
+        ],
+        "parameters": [
+          "chest_field",
+          "chest_depth",
+          "slit_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "heritage": true,
+      "hardware_bridge": false
+    },
+    "societal_benefit": {
+      "en": "Strip-woven cloth is bought by the strip, and an agbàdá's cost is set by how many strips it eats. A draft that solves the strip count as an integer and reports the assembled span honestly tells a weaver and a tailor exactly what the garment will consume before a thread is cut — which is the difference between commissioning a robe and guessing at one. Keeping the pattern open keeps that arithmetic with the people who weave, sew and wear it, while the embroidery, which carries lineage and title, stays with the embroiderers whose knowledge it is.",
+      "es": "La tela de tiras se compra por tira, y el costo de un agbàdá lo fija cuántas consume. Un trazado que resuelve el número de tiras como entero e informa con honestidad la envergadura montada le dice a quien teje y a quien cose exactamente qué consumirá la prenda antes de cortar un hilo — la diferencia entre encargar una túnica y adivinarla. Mantener el patrón abierto conserva esa aritmética en manos de quienes tejen, cosen y visten, mientras el bordado, que porta linaje y título, permanece con las bordadoras y bordadores cuyo saber es.",
+      "fr": "Le tissu en bandes s'achète à la bande, et le coût d'un agbàdá tient au nombre de bandes qu'il consomme. Un tracé qui résout ce nombre en entier et annonce honnêtement l'envergure assemblée indique au tisserand et au tailleur ce que le vêtement consommera avant qu'un fil soit coupé — toute la différence entre commander une robe et la deviner. Garder le patron ouvert laisse cette arithmétique aux mains de celles et ceux qui tissent, cousent et portent, tandis que la broderie, porteuse de lignage et de titre, reste au savoir des brodeurs."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

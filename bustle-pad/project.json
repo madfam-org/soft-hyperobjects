@@ -1,0 +1,431 @@
+{
+  "project": {
+    "name": "Bustle Pad",
+    "slug": "bustle-pad",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The small stuffed bustle of the later 19th century — the soft pad, as against the caged or wired bustle of the same decades. A crescent, deepest at the centre back and tapering to nothing at the sides so the fullness is held out behind while the hips stay flat: two crescent faces joined by a depth gusset, divided into stitched compartments so the stuffing cannot migrate, carried on a hooked waist tape. The gusset is cut to the MEASURED length of the crescent's curved outer polyline, and the inner run is measured too, because the difference between the two curves is the pad's whole shape.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El polisón blando de finales del siglo XIX — la almohadilla, frente al polisón de jaula o alambre de esas mismas décadas. Una media luna, más profunda en el centro de la espalda y afinada hasta desaparecer en los costados, de modo que el vuelo se sostiene atrás y las caderas quedan planas: dos caras de media luna unidas por un fuelle de profundidad, divididas en compartimentos cosidos para que el relleno no emigre, sostenidas por una cinta de cintura con corchetes. El fuelle se corta a la longitud MEDIDA del contorno exterior, y el interior también se mide, porque la diferencia entre ambas curvas es toda la forma de la pieza.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La petite tournure rembourrée de la fin du XIXe siècle — le coussin souple, par opposition à la tournure à cage ou à baleines des mêmes décennies. Un croissant, plus profond au milieu du dos et s'effilant jusqu'à rien sur les côtés, pour que l'ampleur soit soutenue derrière et que les hanches restent plates : deux faces en croissant réunies par un soufflet de profondeur, divisées en compartiments piqués pour que le rembourrage ne migre pas, portées par un ruban de taille à agrafes. Le soufflet est coupé à la longueur MESURÉE du contour extérieur, et le contour intérieur est mesuré aussi, car l'écart entre les deux courbes fait toute la forme.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "bustle-pad",
+      "bustle",
+      "historical",
+      "costume",
+      "understructure",
+      "victorian",
+      "19th-century",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Drafted from the documented construction tradition of the soft stuffed bustle: a crescent pad deepest at the centre back and tapering at the sides, two faces joined by a depth gusset, horizontal stitched channels compartmenting the stuffing, and a waist tape fastening at the front. Not traced from any single extant garment or published pattern.",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Complete pad",
+        "es": "Polisón completo",
+        "fr": "Tournure complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "crescent",
+        "gusset",
+        "waist_tape"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "crescent",
+      "label": {
+        "en": "Crescent face",
+        "es": "Cara de media luna",
+        "fr": "Face en croissant"
+      },
+      "default_color": "#c9bfa8",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "gusset",
+      "label": {
+        "en": "Depth gusset",
+        "es": "Fuelle de profundidad",
+        "fr": "Soufflet de profondeur"
+      },
+      "default_color": "#b8ad94",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "waist_tape",
+      "label": {
+        "en": "Waist tape",
+        "es": "Cinta de cintura",
+        "fr": "Ruban de taille"
+      },
+      "default_color": "#a1967d",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "shape",
+      "label": {
+        "en": "Pad shape",
+        "es": "Forma del polisón",
+        "fr": "Forme de la tournure"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "pad_span",
+      "type": "slider",
+      "group": "shape",
+      "default": 420,
+      "min": 220,
+      "max": 620,
+      "step": 10,
+      "label": {
+        "en": "Pad span (mm)",
+        "es": "Anchura del polisón (mm)",
+        "fr": "Envergure de la tournure (mm)"
+      },
+      "tooltip": {
+        "en": "Side to side across the back. The pad tapers to NOTHING at each tip — that taper is what keeps the hips flat",
+        "es": "De costado a costado por la espalda. El polisón se afina hasta CERO en las puntas — ese afinado mantiene planas las caderas",
+        "fr": "D'un côté à l'autre du dos. La tournure s'effile jusqu'à RIEN aux pointes — c'est ce qui garde les hanches plates"
+      }
+    },
+    {
+      "id": "pad_drop",
+      "type": "slider",
+      "group": "shape",
+      "default": 260,
+      "min": 120,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Pad drop (mm)",
+        "es": "Caída del polisón (mm)",
+        "fr": "Hauteur de la tournure (mm)"
+      },
+      "tooltip": {
+        "en": "Waist down to the pad's lowest point; sets where the skirt's fullness breaks",
+        "es": "De la cintura al punto más bajo; define dónde quiebra el vuelo de la falda",
+        "fr": "De la taille au point le plus bas ; définit où l'ampleur de la jupe se casse"
+      }
+    },
+    {
+      "id": "pad_depth",
+      "type": "slider",
+      "group": "shape",
+      "default": 110,
+      "min": 40,
+      "max": 220,
+      "step": 5,
+      "label": {
+        "en": "Pad depth (mm)",
+        "es": "Profundidad del polisón (mm)",
+        "fr": "Profondeur de la tournure (mm)"
+      },
+      "tooltip": {
+        "en": "How far it stands out at the centre back — the gusset width. Clamped below the drop, since a pad standing out further than it is tall is a shelf",
+        "es": "Cuánto sobresale en el centro de la espalda — el ancho del fuelle. Limitado por debajo de la caída: si sobresale más de lo que baja, es una repisa",
+        "fr": "De combien elle dépasse au milieu du dos — la largeur du soufflet. Bornée sous la hauteur : dépasser plus que haut donne une étagère"
+      }
+    },
+    {
+      "id": "channel_count",
+      "type": "slider",
+      "group": "construction",
+      "default": 3,
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "label": {
+        "en": "Stuffing compartments",
+        "es": "Compartimentos de relleno",
+        "fr": "Compartiments de rembourrage"
+      },
+      "tooltip": {
+        "en": "Stitched channels dividing the bag; each is a DIFFERENT length as the crescent tapers, and the lengths are reported individually",
+        "es": "Canales cosidos que dividen la bolsa; cada uno es de DISTINTA longitud al afinarse la media luna, y se informan por separado",
+        "fr": "Canaux piqués divisant le sac ; chacun d'une longueur DIFFÉRENTE selon l'effilement, et rapportés individuellement"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "construction",
+      "default": 700,
+      "min": 500,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "Measured over the stays, not on the bare body — the pad is worn over a corset",
+        "es": "Medido sobre el corsé, no sobre el cuerpo desnudo — el polisón se lleva encima del corsé",
+        "fr": "Mesuré par-dessus le corset, non à même le corps — la tournure se porte sur un corset"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      }
+    },
+    {
+      "id": "hook_pitch",
+      "type": "slider",
+      "group": "construction",
+      "default": 45,
+      "min": 25,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Hook pitch (mm)",
+        "es": "Paso de corchetes (mm)",
+        "fr": "Pas des agrafes (mm)"
+      },
+      "tooltip": {
+        "en": "Spacing along the waist tape; several hooks give real adjustment, which matters because the pad fastens over stays",
+        "es": "Separación en la cinta; varios corchetes dan ajuste real, que importa porque se abrocha sobre el corsé",
+        "fr": "Espacement sur le ruban ; plusieurs agrafes donnent un vrai réglage, utile car elle se ferme sur un corset"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "The body edge carries extra — it turns onto the waist tape",
+        "es": "El canto del cuerpo lleva extra — se vuelve sobre la cinta de cintura",
+        "fr": "Le bord côté corps porte un extra — il se rabat sur le ruban de taille"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "pad_depth < pad_drop",
+      "severity": "error",
+      "message": {
+        "en": "A pad standing out further than it is tall is a shelf, not a bustle.",
+        "es": "Un polisón que sobresale más de lo que baja es una repisa, no un polisón.",
+        "fr": "Une tournure qui dépasse plus qu'elle n'est haute est une étagère, pas une tournure."
+      }
+    },
+    {
+      "expression": "pad_span > pad_depth",
+      "severity": "warning",
+      "message": {
+        "en": "A depth approaching the span loses the crescent and gives a cushion that widens the hips.",
+        "es": "Una profundidad cercana a la anchura pierde la media luna y da un cojín que ensancha caderas.",
+        "fr": "Une profondeur proche de l'envergure perd le croissant et donne un coussin qui élargit les hanches."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "early_seventies",
+      "label": {
+        "en": "Early 1870s, modest",
+        "es": "Principios de 1870, discreto",
+        "fr": "Début des années 1870, discret"
+      },
+      "values": {
+        "pad_span": 360,
+        "pad_drop": 220,
+        "pad_depth": 80,
+        "channel_count": 2
+      }
+    },
+    {
+      "id": "eighties_shelf",
+      "label": {
+        "en": "1880s, full",
+        "es": "1880, amplio",
+        "fr": "Années 1880, ample"
+      },
+      "values": {
+        "pad_span": 480,
+        "pad_drop": 320,
+        "pad_depth": 175,
+        "channel_count": 4
+      }
+    },
+    {
+      "id": "minimal_pad",
+      "label": {
+        "en": "Minimal skirt support",
+        "es": "Soporte mínimo de falda",
+        "fr": "Soutien de jupe minimal"
+      },
+      "values": {
+        "pad_span": 280,
+        "pad_drop": 160,
+        "pad_depth": 55,
+        "channel_count": 1
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "pdf",
+    "json"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "notion": {
+    "kind": "hook",
+    "subtype": "adjustable waist-tape hooks worn over stays",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "trouser-hook-bar",
+      "linked": true,
+      "params_map": {
+        "hook_width": "12",
+        "plate_len": "hook_pitch * 0.6",
+        "plate_t": "1",
+        "wire_d": "1",
+        "sew_holes": "2"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "bag_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Outer bag seam (crescent to gusset)",
+          "es": "Costura exterior (media luna al fuelle)",
+          "fr": "Couture extérieure (croissant au soufflet)"
+        },
+        "edges": [
+          {
+            "piece": "crescent",
+            "edge": "outer"
+          },
+          {
+            "piece": "gusset",
+            "edge": "seam_a"
+          }
+        ],
+        "parameters": [
+          "pad_span",
+          "pad_drop",
+          "pad_depth"
+        ]
+      },
+      {
+        "id": "stuffing_channels",
+        "type": "custom",
+        "label": {
+          "en": "Compartmenting channels",
+          "es": "Canales de compartimentado",
+          "fr": "Canaux de compartimentage"
+        },
+        "edges": [
+          {
+            "piece": "crescent",
+            "edge": "inner"
+          },
+          {
+            "piece": "gusset",
+            "edge": "seam_b"
+          }
+        ],
+        "parameters": [
+          "channel_count",
+          "pad_span",
+          "pad_drop"
+        ]
+      },
+      {
+        "id": "tape_attachment",
+        "type": "waistband",
+        "label": {
+          "en": "Waist tape attachment and hook closure",
+          "es": "Fijación a la cinta y cierre de corchetes",
+          "fr": "Fixation au ruban et fermeture à agrafes"
+        },
+        "edges": [
+          {
+            "piece": "waist_tape",
+            "edge": "upper"
+          },
+          {
+            "piece": "crescent",
+            "edge": "inner"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "hook_pitch",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Understructure is the part of historical dress most often faked, because it is invisible once the skirt is on — and getting it wrong makes every layer above it hang wrong. The soft bustle is also the accessible one: it needs no cane, no steel, no specialist supplier, and it is the single cheapest piece of equipment that makes a Victorian skirt sit correctly. Publishing it parametrically, with the crescent's two curves measured separately and each stuffing compartment's true length reported rather than batched to one figure, lets a reenactor, a student, or a theatre wardrobe build the right shape for a specific body out of scrap cloth and wadding.",
+      "es": "La estructura interior es la parte del traje histórico que más se falsea, porque es invisible una vez puesta la falda — y equivocarla hace caer mal todas las capas superiores. El polisón blando es además el accesible: no necesita caña, ni acero, ni proveedor especializado, y es la pieza más barata que hace que una falda victoriana siente bien. Publicarlo de forma paramétrica, midiendo por separado las dos curvas de la media luna e informando la longitud real de cada compartimento en vez de igualarlos, permite a un recreador, un estudiante o un vestuario teatral construir la forma correcta para un cuerpo concreto con retales y guata.",
+      "fr": "La structure intérieure est la partie du costume historique la plus souvent truquée, car elle est invisible une fois la jupe enfilée — et la rater fait mal tomber toutes les couches au-dessus. La tournure souple est de plus la plus accessible : ni rotin, ni acier, ni fournisseur spécialisé, et c'est la pièce la moins chère qui fait bien tomber une jupe victorienne. La publier de façon paramétrique, en mesurant séparément les deux courbes du croissant et en donnant la longueur réelle de chaque compartiment plutôt qu'un chiffre unique, permet à un reconstituteur, un étudiant ou un atelier de théâtre de bâtir la bonne forme pour un corps précis avec des chutes et de la ouate."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

@@ -1,0 +1,598 @@
+{
+  "project": {
+    "name": "Illuminated Cycling Gilet",
+    "slug": "illuminated-gilet",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A close-fitting sleeveless windshell drafted for the drops: short in front, long and curved at the back, with the LED harness routed along a real seam instead of cable-tied to whatever the rider already owns. This is not the boxy `hi-vis-vest` worn over street clothes, and not the raglan `led-trim-jacket`; this one is cut for the cycling posture, and the posture is the pattern problem. Both side seams are shaped by `waist_suppress`, which makes a bowed edge longer than the vertical drop it spans — so the front's hem height is bisected until its drawn side edge MEASURES the back's, rather than assumed from `armhole_drop + back_side_len`. That closed form treats arc length as drop and overshoots by an error that grows with the suppression; at a racing fit it is nearly two centimetres. The Yantra4D `seam-conduit-clip` footprints are then spaced by arc length along that same measured run and seated on the drawn curve, so a clip lands in the seam it is meant to be caught in.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un cortavientos sin mangas y ceñido, trazado para la postura de carrera: corto al frente, largo y curvo atrás, con el arnés de LED enrutado por una costura real en vez de amarrado con bridas a lo que el ciclista ya traiga puesto. No es el `hi-vis-vest` cuadrado que se usa sobre la ropa de calle, ni la `led-trim-jacket` ranglán; éste se corta para la postura ciclista, y la postura es el problema del patrón. Ambas costuras laterales llevan forma por `waist_suppress`, lo que hace que un borde curvado sea más largo que la caída vertical que abarca — así que la altura del bajo delantero se biseca hasta que su borde lateral trazado MIDA lo mismo que el trasero, en vez de asumirse como `armhole_drop + back_side_len`. Esa forma cerrada trata la longitud de arco como si fuera la caída y se pasa por un error que crece con la supresión; en un ajuste de carrera son casi dos centímetros. Las huellas del `seam-conduit-clip` de Yantra4D se espacian luego por longitud de arco sobre ese mismo recorrido medido y se asientan en la curva trazada, para que cada clip caiga en la costura que debe atraparlo.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un coupe-vent sans manches et près du corps, tracé pour la position en danseuse : court devant, long et courbe dans le dos, avec le faisceau LED acheminé le long d'une vraie couture au lieu d'être attaché par colliers à ce que le cycliste porte déjà. Ce n'est pas le `hi-vis-vest` carré porté par-dessus les vêtements de ville, ni la `led-trim-jacket` raglan ; celui-ci est coupé pour la posture cycliste, et la posture est le problème du patron. Les deux coutures latérales sont cintrées par `waist_suppress`, ce qui rend un bord bombé plus long que la chute verticale qu'il couvre — la hauteur de l'ourlet devant est donc bissectée jusqu'à ce que son bord latéral tracé MESURE celui du dos, plutôt que déduite de `armhole_drop + back_side_len`. Cette forme fermée traite la longueur d'arc comme la chute et dépasse d'une erreur qui croît avec le cintrage ; sur une coupe de course c'est près de deux centimètres. Les empreintes du `seam-conduit-clip` Yantra4D sont ensuite espacées par longueur d'arc sur ce même parcours mesuré et assises sur la courbe tracée, pour qu'un clip tombe dans la couture censée le retenir.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "illuminated-gilet",
+      "gilet",
+      "cycling",
+      "e-textile",
+      "led",
+      "visibility",
+      "drop-tail",
+      "seam-conduit-clip",
+      "hardware",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full gilet",
+        "es": "Chaleco completo",
+        "fr": "Gilet complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "placket"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (cut 2, mirrored)",
+        "es": "Delantero (cortar 2, en espejo)",
+        "fr": "Devant (couper 2, en miroir)"
+      },
+      "default_color": "#3a4a2e",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (drop tail, on fold)",
+        "es": "Espalda (faldón, al hilo doble)",
+        "fr": "Dos (basque, au pli)"
+      },
+      "default_color": "#4c6039",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "placket",
+      "label": {
+        "en": "Zip placket facing (cut 2)",
+        "es": "Vista de la tapeta del cierre (cortar 2)",
+        "fr": "Parementure de patte de zip (couper 2)"
+      },
+      "default_color": "#65794f",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Ajustement"
+      }
+    },
+    {
+      "id": "posture",
+      "label": {
+        "en": "Riding posture",
+        "es": "Postura de pedaleo",
+        "fr": "Position de pédalage"
+      }
+    },
+    {
+      "id": "lighting",
+      "label": {
+        "en": "Lighting",
+        "es": "Iluminación",
+        "fr": "Éclairage"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 960,
+      "min": 720,
+      "max": 1400,
+      "step": 10,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Measured over the jersey the gilet goes on top of, not over bare skin",
+        "es": "Medido sobre el maillot bajo el que va el chaleco, no sobre la piel",
+        "fr": "Mesuré par-dessus le maillot sous lequel va le gilet, pas à même la peau"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "front_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 520,
+      "min": 380,
+      "max": 720,
+      "step": 10,
+      "label": {
+        "en": "Front length (mm)",
+        "es": "Largo delantero (mm)",
+        "fr": "Longueur devant (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to front hem; deliberately short so it does not bunch at the bars",
+        "es": "Del hombro al bajo delantero; corto a propósito para que no se arrugue en el manubrio",
+        "fr": "De l'épaule à l'ourlet devant ; volontairement court pour ne pas godailler au guidon"
+      }
+    },
+    {
+      "id": "gilet_ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 60,
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "label": {
+        "en": "Wearing ease (mm)",
+        "es": "Holgura de uso (mm)",
+        "fr": "Aisance de port (mm)"
+      },
+      "tooltip": {
+        "en": "Small by design — an aero gilet that flaps is slower and louder than no gilet",
+        "es": "Pequeña a propósito: un chaleco aero que ondea es más lento y más ruidoso que ninguno",
+        "fr": "Faible par choix — un gilet aéro qui claque est plus lent et plus bruyant que pas de gilet"
+      }
+    },
+    {
+      "id": "waist_suppress",
+      "type": "slider",
+      "group": "fit",
+      "default": 22,
+      "min": 0,
+      "max": 70,
+      "step": 2,
+      "label": {
+        "en": "Waist suppression (mm)",
+        "es": "Supresión de cintura (mm)",
+        "fr": "Cintrage à la taille (mm)"
+      },
+      "tooltip": {
+        "en": "How far the side seam bows in at the waist — this is what makes the side seam longer than its vertical drop, and what the front hem is solved against",
+        "es": "Cuánto se curva hacia dentro la costura lateral en la cintura — es lo que la hace más larga que su caída vertical, y contra lo que se resuelve el bajo delantero",
+        "fr": "De combien la couture latérale se cintre à la taille — c'est ce qui la rend plus longue que sa chute verticale, et ce contre quoi l'ourlet devant est résolu"
+      }
+    },
+    {
+      "id": "tail_drop",
+      "type": "slider",
+      "group": "posture",
+      "default": 130,
+      "min": 40,
+      "max": 260,
+      "step": 10,
+      "label": {
+        "en": "Tail drop (mm)",
+        "es": "Caída del faldón (mm)",
+        "fr": "Chute de la basque (mm)"
+      },
+      "tooltip": {
+        "en": "Extra length at centre back; on a bike the spine lengthens and this is what covers it",
+        "es": "Largo extra en el centro de la espalda; sobre la bici la columna se alarga y esto es lo que la cubre",
+        "fr": "Longueur supplémentaire au milieu dos ; à vélo la colonne s'allonge et c'est ce qui la couvre"
+      }
+    },
+    {
+      "id": "tail_curve",
+      "type": "slider",
+      "group": "posture",
+      "default": 0.3,
+      "min": 0.05,
+      "max": 0.6,
+      "step": 0.05,
+      "label": {
+        "en": "Tail hem curve",
+        "es": "Curvatura del bajo trasero",
+        "fr": "Courbure de l'ourlet dos"
+      },
+      "tooltip": {
+        "en": "How much the drop tail's hem bows; a flat tail catches wind at its corners",
+        "es": "Cuánto se curva el bajo del faldón; un faldón plano atrapa aire en las esquinas",
+        "fr": "De combien l'ourlet de la basque se courbe ; une basque plate prend le vent aux angles"
+      }
+    },
+    {
+      "id": "armhole_drop",
+      "type": "slider",
+      "group": "posture",
+      "default": 250,
+      "min": 150,
+      "max": 360,
+      "step": 10,
+      "label": {
+        "en": "Armhole depth (mm)",
+        "es": "Profundidad de sisa (mm)",
+        "fr": "Profondeur d'emmanchure (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder down to underarm; the kernel floors the body left below it at 90 mm",
+        "es": "Del hombro a la axila; el kernel deja al menos 90 mm de cuerpo por debajo",
+        "fr": "De l'épaule au dessous de bras ; le noyau garde au moins 90 mm de corps en dessous"
+      }
+    },
+    {
+      "id": "neck_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 170,
+      "min": 120,
+      "max": 240,
+      "step": 5,
+      "label": {
+        "en": "Neck width (mm)",
+        "es": "Ancho de escote (mm)",
+        "fr": "Largeur d'encolure (mm)"
+      },
+      "tooltip": {
+        "en": "Neck opening across; the front neckline is drafted deeper than the back",
+        "es": "Ancho de la abertura de cuello; el escote delantero se traza más profundo que el trasero",
+        "fr": "Largeur de l'ouverture d'encolure ; l'encolure devant est tracée plus profonde que le dos"
+      }
+    },
+    {
+      "id": "shoulder_w",
+      "type": "slider",
+      "group": "fit",
+      "default": 110,
+      "min": 70,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombro (mm)",
+        "fr": "Largeur d'épaule (mm)"
+      },
+      "tooltip": {
+        "en": "Neck point to shoulder tip, one side",
+        "es": "Del punto de cuello a la punta del hombro, de un lado",
+        "fr": "Du point d'encolure à la pointe d'épaule, d'un côté"
+      }
+    },
+    {
+      "id": "strip_w",
+      "type": "slider",
+      "group": "lighting",
+      "default": 10,
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "LED strip width (mm)",
+        "es": "Ancho de la tira LED (mm)",
+        "fr": "Largeur de la bande LED (mm)"
+      },
+      "tooltip": {
+        "en": "Also sizes the battery pocket, the rear-light seat and the placket facing",
+        "es": "También dimensiona el bolsillo de batería, el asiento de la luz trasera y la vista de la tapeta",
+        "fr": "Dimensionne aussi la poche de batterie, le siège du feu arrière et la parementure"
+      }
+    },
+    {
+      "id": "clip_pitch",
+      "type": "slider",
+      "group": "lighting",
+      "default": 90,
+      "min": 40,
+      "max": 240,
+      "step": 10,
+      "label": {
+        "en": "Conduit clip pitch (mm)",
+        "es": "Paso de los clips de conducto (mm)",
+        "fr": "Pas des clips de conduit (mm)"
+      },
+      "tooltip": {
+        "en": "Target spacing; the actual count is floor-divided from the MEASURED side seam and then respaced evenly along it",
+        "es": "Espaciado objetivo; la cuenta real se obtiene de la costura lateral MEDIDA y luego se reespacia uniformemente",
+        "fr": "Espacement visé ; le compte réel est déduit de la couture latérale MESURÉE puis réespacé uniformément"
+      }
+    },
+    {
+      "id": "clip_tab",
+      "type": "slider",
+      "group": "lighting",
+      "default": 16,
+      "min": 8,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Clip sewn-tab width (mm)",
+        "es": "Ancho de la pestaña cosida del clip (mm)",
+        "fr": "Largeur de la patte cousue du clip (mm)"
+      },
+      "tooltip": {
+        "en": "The Yantra4D seam-conduit-clip's sewn flange; capped by the kernel at 2.4× the seam allowance it is caught in",
+        "es": "La brida cosida del seam-conduit-clip de Yantra4D; el kernel la limita a 2.4× el margen de costura que la atrapa",
+        "fr": "La bride cousue du seam-conduit-clip Yantra4D ; le noyau la plafonne à 2,4× la marge de couture qui la retient"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 18,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "The clips are caught in this; too narrow and the tab has nothing to bite",
+        "es": "Los clips quedan atrapados aquí; si es muy estrecho la pestaña no tiene de dónde morder",
+        "fr": "Les clips y sont pris ; trop étroite, la patte n'a rien où mordre"
+      },
+      "advanced": true
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 22,
+      "min": 8,
+      "max": 50,
+      "step": 2,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de bajo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Enough to take a gripper elastic; the drop tail flaps at speed without one",
+        "es": "Suficiente para alojar un elástico antideslizante; sin él el faldón ondea a velocidad",
+        "fr": "Assez pour loger un élastique antiglisse ; sans lui la basque claque à vitesse"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "armhole_drop <= front_length - 90",
+      "severity": "error",
+      "message": {
+        "en": "The armhole would swallow the front: leave at least 90 mm of body below the underarm.",
+        "es": "La sisa se comería el delantero: deja al menos 90 mm de cuerpo bajo la axila.",
+        "fr": "L'emmanchure avalerait le devant : laissez au moins 90 mm de corps sous l'aisselle."
+      }
+    },
+    {
+      "expression": "clip_tab <= seam_allowance * 2.4",
+      "severity": "warning",
+      "message": {
+        "en": "A clip tab wider than the seam allowance can hold has nothing to be caught in.",
+        "es": "Una pestaña de clip más ancha de lo que el margen de costura puede sujetar no tiene dónde quedar atrapada.",
+        "fr": "Une patte de clip plus large que la marge de couture ne peut pas être prise dedans."
+      }
+    },
+    {
+      "expression": "waist_suppress <= (chest_girth + gilet_ease) / 4 * 0.30",
+      "severity": "warning",
+      "message": {
+        "en": "Suppressing the waist past a third of the quarter-width pulls the side seam toward the centre line.",
+        "es": "Suprimir la cintura más de un tercio del cuarto de ancho jala la costura lateral hacia el centro.",
+        "fr": "Cintrer la taille au-delà d'un tiers du quart de largeur tire la couture latérale vers l'axe."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "race_fit",
+      "label": {
+        "en": "Race fit",
+        "es": "Ajuste de carrera",
+        "fr": "Coupe course"
+      },
+      "values": {
+        "gilet_ease": 20,
+        "waist_suppress": 48,
+        "tail_drop": 170,
+        "tail_curve": 0.4,
+        "front_length": 480
+      }
+    },
+    {
+      "id": "commuter",
+      "label": {
+        "en": "Commuter",
+        "es": "Urbano",
+        "fr": "Trajet quotidien"
+      },
+      "values": {
+        "gilet_ease": 120,
+        "waist_suppress": 8,
+        "tail_drop": 90,
+        "clip_pitch": 120,
+        "strip_w": 14
+      }
+    },
+    {
+      "id": "night_visible",
+      "label": {
+        "en": "Night visibility",
+        "es": "Visibilidad nocturna",
+        "fr": "Visibilité nocturne"
+      },
+      "values": {
+        "strip_w": 20,
+        "clip_pitch": 60,
+        "clip_tab": 22,
+        "seam_allowance": 12
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "nylon-ripstop-shell"
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "seam conduit clip threading the side-seam LED harness",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "seam-conduit-clip",
+      "linked": true,
+      "params_map": {
+        "tab_w": "clip_tab",
+        "tab_t": "clip_tab * 0.12",
+        "clip_len": "clip_tab * 1.4",
+        "hole_dia": "clip_tab * 0.14",
+        "bundle_dia": "strip_w * 0.5",
+        "wall": "strip_w * 0.16",
+        "run_pitch": "clip_pitch"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "e_textile",
+    "interfaces": [
+      {
+        "id": "side_harness_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam with conduit clips",
+          "es": "Costura lateral con clips de conducto",
+          "fr": "Couture latérale avec clips de conduit"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "clip_tab",
+          "clip_pitch",
+          "strip_w",
+          "waist_suppress",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "drop_tail_hem",
+        "type": "hem",
+        "label": {
+          "en": "Drop-tail hem",
+          "es": "Bajo del faldón",
+          "fr": "Ourlet de basque"
+        },
+        "edges": [
+          {
+            "piece": "back",
+            "edge": "hem"
+          },
+          {
+            "piece": "front",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "tail_drop",
+          "tail_curve",
+          "hem_allowance",
+          "front_length"
+        ]
+      },
+      {
+        "id": "front_zip",
+        "type": "zipper_tape",
+        "label": {
+          "en": "Centre-front zip",
+          "es": "Cierre de centro delantero",
+          "fr": "Zip milieu devant"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "cf"
+          },
+          {
+            "piece": "placket",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "front_length",
+          "neck_width",
+          "strip_w"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Lit cycling kit is sold either as a disposable slap-on strip or as a sealed garment you cannot wash, resize, or repair — and the sealed ones fit like a sack, because they are cut as a vest rather than for the posture a cyclist actually holds. A gilet drafted to a measured body, with the harness routed through replaceable printed clips along a real seam, is repairable at the exact point these garments fail: the wire, where it flexes. Being visible after dark should not require throwing away a jacket every season, and should not require the person most exposed on the road to be the one who pays most for it.",
+      "es": "El equipo ciclista iluminado se vende o como tira desechable de pegar o como prenda sellada que no puedes lavar, ajustar ni reparar — y las selladas quedan como costal, porque se cortan como chaleco y no para la postura que un ciclista realmente sostiene. Un chaleco trazado sobre un cuerpo medido, con el arnés enrutado por clips impresos reemplazables a lo largo de una costura real, es reparable justo donde estas prendas fallan: el cable, donde flexiona. Ser visible de noche no debería exigir tirar una chamarra cada temporada, ni que quien está más expuesto en la calle sea quien más pague por ello.",
+      "fr": "L'équipement cycliste éclairé se vend soit en bande jetable à coller, soit en vêtement scellé qu'on ne peut ni laver, ni ajuster, ni réparer — et les scellés tombent comme un sac, car ils sont coupés en gilet et non pour la posture qu'un cycliste tient réellement. Un gilet tracé sur un corps mesuré, avec le faisceau acheminé par des clips imprimés remplaçables le long d'une vraie couture, se répare exactement là où ces vêtements lâchent : le câble, à l'endroit où il fléchit. Être visible la nuit ne devrait pas exiger de jeter une veste chaque saison, ni que la personne la plus exposée sur la route soit celle qui paie le plus."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

@@ -1,0 +1,484 @@
+{
+  "project": {
+    "name": "Haptic Navigation Belt",
+    "slug": "haptic-nav-belt",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A soft waist belt that gives direction by touch: vibration tactors spaced evenly around the waist, so \"north\" or \"turn left\" arrives as a buzz at a place on your body instead of a sound in your ear or a line on a screen. Drafted as an actual belt — an outer shell, an inner tactor layer carrying the motor pockets, and a buckle tail with its adjustment ladder — not as webbing with motors glued on. The pattern's real problem is the tactor spacing, and the kernel refuses to fake it: the motors must be evenly spaced around the WEARER, so the pitch is the shell's measured `body_run` edge divided by the count, with the buckle overlap excluded. Include the overlap and every motor's bearing is skewed. Each tactor pocket is paired with a Yantra4D `seam-strain-relief` plate sewn into the top seam beside it, its footprint the belt's own `relief_len` × `relief_width` — because a terminated wire at a flexing waist is where this garment fails first.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un cinturón blando que da dirección al tacto: tactores de vibración espaciados uniformemente alrededor de la cintura, de modo que «norte» o «gira a la izquierda» llega como una vibración en un punto del cuerpo en vez de un sonido al oído o una línea en una pantalla. Trazado como un cinturón de verdad — un exterior, una capa interior de tactores con los bolsillos de motor, y una lengüeta de hebilla con su escalera de ajuste — no como una cincha con motores pegados. El problema real del patrón es el espaciado de los tactores, y el kernel se niega a fingirlo: los motores deben quedar espaciados uniformemente alrededor de QUIEN LO USA, así que el paso es el borde `body_run` medido del exterior dividido entre la cuenta, excluyendo el traslape de la hebilla. Si se incluye el traslape, la orientación de cada motor queda sesgada. Cada bolsillo de tactor se acompaña de una placa `seam-strain-relief` de Yantra4D cosida en la costura superior a su lado, con la huella del propio `relief_len` × `relief_width` del cinturón — porque un cable terminado en una cintura que flexiona es donde esta prenda falla primero.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une ceinture souple qui donne la direction par le toucher : des tacteurs vibrants espacés uniformément autour de la taille, de sorte que « nord » ou « tourne à gauche » arrive comme une vibration à un endroit du corps plutôt qu'un son à l'oreille ou une ligne sur un écran. Tracée comme une vraie ceinture — un extérieur, une couche intérieure de tacteurs portant les poches de moteur, et une languette de boucle avec son échelle de réglage — non comme une sangle avec des moteurs collés dessus. Le vrai problème du patron est l'espacement des tacteurs, et le noyau refuse de le simuler : les moteurs doivent être espacés uniformément autour du PORTEUR, donc le pas est le bord `body_run` mesuré de l'extérieur divisé par le compte, le recouvrement de boucle exclu. Inclure le recouvrement et l'orientation de chaque moteur est faussée. Chaque poche de tacteur est associée à une plaque `seam-strain-relief` Yantra4D cousue dans la couture supérieure à côté d'elle, son empreinte étant les propres `relief_len` × `relief_width` de la ceinture — car un câble terminé sur une taille qui fléchit est là où ce vêtement lâche en premier.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "haptic-nav-belt",
+      "belt",
+      "e-textile",
+      "haptic",
+      "wayfinding",
+      "accessibility",
+      "seam-strain-relief",
+      "hardware",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full belt",
+        "es": "Cinturón completo",
+        "fr": "Ceinture complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "shell",
+        "tactor",
+        "tail"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "shell",
+      "label": {
+        "en": "Shell (outer belt)",
+        "es": "Exterior (cinturón)",
+        "fr": "Extérieur (ceinture)"
+      },
+      "default_color": "#2f3a34",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "tactor",
+      "label": {
+        "en": "Tactor layer (motor pockets)",
+        "es": "Capa de tactores (bolsillos de motor)",
+        "fr": "Couche de tacteurs (poches de moteur)"
+      },
+      "default_color": "#455a4c",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "tail",
+      "label": {
+        "en": "Buckle tail",
+        "es": "Lengüeta de hebilla",
+        "fr": "Languette de boucle"
+      },
+      "default_color": "#5c7563",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Ajustement"
+      }
+    },
+    {
+      "id": "haptics",
+      "label": {
+        "en": "Haptics",
+        "es": "Háptica",
+        "fr": "Haptique"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 880,
+      "min": 560,
+      "max": 1500,
+      "step": 10,
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "Measured over the clothing the belt will be worn on top of; this is the run the tactors are spaced around",
+        "es": "Medido sobre la ropa encima de la cual se usará el cinturón; es el recorrido en que se espacian los tactores",
+        "fr": "Mesuré par-dessus les vêtements sur lesquels la ceinture se portera ; c'est le parcours où les tacteurs s'espacent"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      }
+    },
+    {
+      "id": "belt_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 70,
+      "min": 35,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Belt width (mm)",
+        "es": "Ancho del cinturón (mm)",
+        "fr": "Largeur de la ceinture (mm)"
+      },
+      "tooltip": {
+        "en": "Floored by the kernel at the motor plus the relief plate plus seating margin — the two must stack without touching",
+        "es": "El kernel impone un mínimo: el motor más la placa de alivio más el margen de asiento; ambos deben apilarse sin tocarse",
+        "fr": "Le noyau impose un plancher : le moteur plus la plaque de décharge plus la marge d'assise ; les deux doivent s'empiler sans se toucher"
+      }
+    },
+    {
+      "id": "overlap",
+      "type": "slider",
+      "group": "fit",
+      "default": 180,
+      "min": 80,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Buckle overlap (mm)",
+        "es": "Traslape de la hebilla (mm)",
+        "fr": "Recouvrement de boucle (mm)"
+      },
+      "tooltip": {
+        "en": "The belt's adjustment range; excluded from the tactor spacing because it does not go round the wearer",
+        "es": "El rango de ajuste del cinturón; se excluye del espaciado de tactores porque no rodea al cuerpo",
+        "fr": "La plage de réglage de la ceinture ; exclue de l'espacement des tacteurs car elle ne fait pas le tour du corps"
+      }
+    },
+    {
+      "id": "tactor_count",
+      "type": "slider",
+      "group": "haptics",
+      "default": 8,
+      "min": 4,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Tactor count",
+        "es": "Número de tactores",
+        "fr": "Nombre de tacteurs"
+      },
+      "tooltip": {
+        "en": "Vibration motors round the waist; 8 gives the compass points, 4 the cardinals, 16 a fine bearing",
+        "es": "Motores de vibración alrededor de la cintura; 8 da los puntos de la rosa, 4 los cardinales, 16 una orientación fina",
+        "fr": "Moteurs vibrants autour de la taille ; 8 donne les points de la rose, 4 les cardinaux, 16 un cap fin"
+      }
+    },
+    {
+      "id": "tactor_dia",
+      "type": "slider",
+      "group": "haptics",
+      "default": 12,
+      "min": 6,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Tactor diameter (mm)",
+        "es": "Diámetro del tactor (mm)",
+        "fr": "Diamètre du tacteur (mm)"
+      },
+      "tooltip": {
+        "en": "Motor body; the marked pocket is drawn 4 mm clear of it all round",
+        "es": "Cuerpo del motor; el bolsillo marcado se traza con 4 mm de holgura por todo el contorno",
+        "fr": "Corps du moteur ; la poche marquée est tracée avec 4 mm de dégagement tout autour"
+      }
+    },
+    {
+      "id": "relief_len",
+      "type": "slider",
+      "group": "haptics",
+      "default": 26,
+      "min": 12,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Strain-relief plate length (mm)",
+        "es": "Largo de la placa de alivio (mm)",
+        "fr": "Longueur de la plaque de décharge (mm)"
+      },
+      "tooltip": {
+        "en": "The Yantra4D seam-strain-relief footprint along the seam; capped at half the tactor pitch so plates never collide",
+        "es": "La huella del seam-strain-relief de Yantra4D a lo largo de la costura; limitada a medio paso de tactor para que no se toquen",
+        "fr": "L'empreinte du seam-strain-relief Yantra4D le long de la couture ; plafonnée à un demi-pas de tacteur pour éviter les collisions"
+      }
+    },
+    {
+      "id": "relief_width",
+      "type": "slider",
+      "group": "haptics",
+      "default": 14,
+      "min": 6,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Strain-relief plate width (mm)",
+        "es": "Ancho de la placa de alivio (mm)",
+        "fr": "Largeur de la plaque de décharge (mm)"
+      },
+      "tooltip": {
+        "en": "The plate's depth into the belt from the seam; it stacks above the motor pocket, never over it",
+        "es": "La profundidad de la placa dentro del cinturón desde la costura; se apila sobre el bolsillo del motor, nunca encima de él",
+        "fr": "La profondeur de la plaque dans la ceinture depuis la couture ; elle s'empile au-dessus de la poche moteur, jamais dessus"
+      }
+    },
+    {
+      "id": "tail_rows",
+      "type": "slider",
+      "group": "construction",
+      "default": 5,
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "label": {
+        "en": "Adjustment ladder rows",
+        "es": "Filas de la escalera de ajuste",
+        "fr": "Rangées de l'échelle de réglage"
+      },
+      "tooltip": {
+        "en": "Punched rows across the tail; more rows subdivide the same overlap more finely",
+        "es": "Filas perforadas en la lengüeta; más filas subdividen el mismo traslape con mayor finura",
+        "fr": "Rangées perforées sur la languette ; plus de rangées subdivisent le même recouvrement plus finement"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 18,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "The belt is turned and topstitched; the relief plates are caught in this allowance",
+        "es": "El cinturón se voltea y pespuntea; las placas de alivio quedan atrapadas en este margen",
+        "fr": "La ceinture est retournée et surpiquée ; les plaques de décharge sont prises dans cette marge"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "belt_width >= tactor_dia + relief_width + 22",
+      "severity": "error",
+      "message": {
+        "en": "The belt must be tall enough to stack a motor pocket and a relief plate without them touching.",
+        "es": "El cinturón debe ser lo bastante alto para apilar un bolsillo de motor y una placa de alivio sin que se toquen.",
+        "fr": "La ceinture doit être assez haute pour empiler une poche moteur et une plaque de décharge sans qu'elles se touchent."
+      }
+    },
+    {
+      "expression": "relief_len <= waist_girth / tactor_count * 0.5",
+      "severity": "warning",
+      "message": {
+        "en": "A relief plate longer than half the tactor pitch will collide with its neighbour along the seam.",
+        "es": "Una placa de alivio más larga que medio paso de tactor chocará con su vecina en la costura.",
+        "fr": "Une plaque de décharge plus longue qu'un demi-pas de tacteur heurtera sa voisine le long de la couture."
+      }
+    },
+    {
+      "expression": "overlap <= waist_girth * 0.45",
+      "severity": "warning",
+      "message": {
+        "en": "An overlap approaching half the waist wraps the tail back over the tactors it should clear.",
+        "es": "Un traslape cercano a media cintura hace que la lengüeta vuelva sobre los tactores que debería librar.",
+        "fr": "Un recouvrement approchant la moitié de la taille ramène la languette sur les tacteurs qu'elle devrait dégager."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "compass_eight",
+      "label": {
+        "en": "Eight-point compass",
+        "es": "Rosa de ocho puntos",
+        "fr": "Rose à huit points"
+      },
+      "values": {
+        "tactor_count": 8,
+        "tactor_dia": 12,
+        "belt_width": 70
+      }
+    },
+    {
+      "id": "cardinal_four",
+      "label": {
+        "en": "Four cardinals",
+        "es": "Cuatro cardinales",
+        "fr": "Quatre cardinaux"
+      },
+      "values": {
+        "tactor_count": 4,
+        "tactor_dia": 18,
+        "belt_width": 80,
+        "relief_len": 34
+      }
+    },
+    {
+      "id": "fine_bearing",
+      "label": {
+        "en": "Fine bearing",
+        "es": "Orientación fina",
+        "fr": "Cap fin"
+      },
+      "values": {
+        "tactor_count": 16,
+        "tactor_dia": 8,
+        "relief_len": 16,
+        "relief_width": 10,
+        "belt_width": 50
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "nylon-ripstop-shell"
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "seam strain relief plate beside each tactor pocket",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "seam-strain-relief",
+      "linked": true,
+      "params_map": {
+        "plate_len": "relief_len",
+        "plate_w": "relief_width",
+        "plate_t": "relief_width * 0.14",
+        "sew_holes": "round(relief_len / 9)",
+        "hole_dia": "relief_width * 0.14",
+        "cable_dia": "tactor_dia * 0.22"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "e_textile",
+    "interfaces": [
+      {
+        "id": "relief_seam",
+        "type": "custom",
+        "label": {
+          "en": "Strain-relief plate seam",
+          "es": "Costura de la placa de alivio",
+          "fr": "Couture de la plaque de décharge"
+        },
+        "edges": [
+          {
+            "piece": "tactor",
+            "edge": "top"
+          },
+          {
+            "piece": "shell",
+            "edge": "body_top"
+          }
+        ],
+        "parameters": [
+          "relief_len",
+          "relief_width",
+          "seam_allowance",
+          "tactor_dia"
+        ]
+      },
+      {
+        "id": "tactor_seat",
+        "type": "pocket",
+        "label": {
+          "en": "Tactor motor pocket",
+          "es": "Bolsillo del motor tactor",
+          "fr": "Poche du moteur tacteur"
+        },
+        "edges": [
+          {
+            "piece": "tactor",
+            "edge": "body_run"
+          }
+        ],
+        "parameters": [
+          "tactor_count",
+          "tactor_dia",
+          "waist_girth"
+        ]
+      },
+      {
+        "id": "buckle_tail",
+        "type": "waistband",
+        "label": {
+          "en": "Buckle tail attachment",
+          "es": "Unión de la lengüeta de hebilla",
+          "fr": "Attache de la languette de boucle"
+        },
+        "edges": [
+          {
+            "piece": "tail",
+            "edge": "attach"
+          },
+          {
+            "piece": "shell",
+            "edge": "tail_end"
+          }
+        ],
+        "parameters": [
+          "overlap",
+          "tail_rows",
+          "belt_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Tactile wayfinding belts exist almost entirely as research prototypes and one-off assistive-tech builds, each rebuilt from scratch because there is no pattern to start from. Direction delivered to the waist frees the ears — which matters most to the people whose ears are already doing the navigation, and to anyone working where a screen or an earpiece is unsafe. This is a cuttable, resizable belt with the electrical failure point designed for rather than discovered: every motor's wire is clamped by a printed plate before it reaches the flex zone. It is a garment pattern; it carries motors and makes no claim to locate anything.",
+      "es": "Los cinturones de orientación táctil existen casi solo como prototipos de investigación y montajes únicos de tecnología asistiva, cada uno rehecho desde cero porque no hay patrón del cual partir. Entregar la dirección a la cintura libera los oídos — lo que más importa a quienes ya navegan con el oído, y a quien trabaja donde una pantalla o un auricular resultan inseguros. Este es un cinturón cortable y redimensionable con el punto de falla eléctrico previsto en vez de descubierto: el cable de cada motor queda sujeto por una placa impresa antes de llegar a la zona de flexión. Es un patrón de prenda; porta motores y no pretende ubicar nada.",
+      "fr": "Les ceintures d'orientation tactile n'existent presque que comme prototypes de recherche et montages uniques de technologie d'assistance, chacun refait de zéro faute de patron de départ. Livrer la direction à la taille libère les oreilles — ce qui compte surtout pour celles et ceux dont les oreilles naviguent déjà, et pour quiconque travaille là où un écran ou une oreillette sont dangereux. Voici une ceinture coupable et redimensionnable dont le point de défaillance électrique est prévu plutôt que découvert : le câble de chaque moteur est bridé par une plaque imprimée avant d'atteindre la zone de flexion. C'est un patron de vêtement ; il porte des moteurs et ne prétend localiser quoi que ce soit."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

@@ -1,0 +1,377 @@
+{
+  "project": {
+    "name": "Lingerie Travel Pouch",
+    "slug": "lingerie-travel-pouch",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The two-compartment travel pouch that keeps clean underthings away from worn ones — the most useful and least glamorous object in a suitcase. A shaped shell front and back, a boxed base, a mesh divider that splits the interior, and a zip that runs three sides so the pouch opens flat rather than gaping through a slot. The zip runs a U — down one side, across the top, down the other — around a shell whose top corners are rounded, so its length is not two heights plus a width; it is the measured length of that rounded three-sided path. This cartridge polygonises the corner arcs, measures the U, and both sizes the zipper from that measurement and declares the seam against it. The boxed base corners are solved the same way, by measuring how much a removed corner square shortens the side and bottom edges. The zip bridges to the Yantra4D `zipper` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La bolsa de viaje de dos compartimentos que separa la ropa interior limpia de la usada: el objeto más útil y menos vistoso de una maleta. Un cuerpo delantero y trasero con forma, una base con esquinas en caja, un divisor de malla que parte el interior y una cremallera que recorre tres lados para que la bolsa se abra plana en vez de asomarse por una ranura. La cremallera describe una U —baja por un lado, cruza arriba, baja por el otro— alrededor de un cuerpo de esquinas superiores redondeadas, así que su largo no es dos alturas más un ancho: es el largo medido de ese recorrido curvo de tres lados. Este cartucho poligoniza los arcos de esquina, mide la U, y con esa medida dimensiona la cremallera y declara la costura. Las esquinas en caja de la base se resuelven igual, midiendo cuánto acorta los bordes el cuadrado retirado. La cremallera se puentea al sólido `zipper` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La pochette de voyage à deux compartiments qui sépare le linge propre du linge porté — l'objet le plus utile et le moins glamour d'une valise. Un corps devant et dos profilé, une base à fond carré, un séparateur en filet qui partage l'intérieur, et une fermeture éclair sur trois côtés pour que la pochette s'ouvre à plat au lieu de bâiller par une fente. La fermeture décrit un U — elle descend d'un côté, traverse le haut, redescend de l'autre — autour d'un corps aux coins supérieurs arrondis : sa longueur n'est donc pas deux hauteurs plus une largeur, mais la longueur mesurée de ce parcours courbe à trois côtés. Ce cartouche polygonise les arcs d'angle, mesure le U, et à partir de cette mesure dimensionne la fermeture et déclare la couture. Les coins carrés de la base se résolvent de même, en mesurant de combien le carré retiré raccourcit les bords. La fermeture fait le pont vers le solide `zipper` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "lingerie-travel-pouch",
+      "care",
+      "storage",
+      "travel",
+      "boxed-base",
+      "zipper",
+      "hardware",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full travel pouch",
+        "es": "Bolsa de viaje completa",
+        "fr": "Pochette de voyage complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "shell",
+        "base",
+        "divider",
+        "pull_tab"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "shell",
+      "label": {
+        "en": "Shell panel (rounded top, boxed base)",
+        "es": "Panel del cuerpo (cima redonda, base en caja)",
+        "fr": "Panneau du corps (haut arrondi, base carrée)"
+      },
+      "default_color": "#4f5b6b",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "base",
+      "label": {
+        "en": "Boxed base",
+        "es": "Base en caja",
+        "fr": "Base carrée"
+      },
+      "default_color": "#3f4a57",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "divider",
+      "label": {
+        "en": "Mesh divider (clean / worn)",
+        "es": "Divisor de malla (limpio / usado)",
+        "fr": "Séparateur en filet (propre / porté)"
+      },
+      "default_color": "#6d7a88",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "pull_tab",
+      "label": {
+        "en": "Zip pull tab",
+        "es": "Lengüeta del tirador",
+        "fr": "Patte de tirette"
+      },
+      "default_color": "#87939f",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Size",
+        "es": "Tamaño",
+        "fr": "Taille"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "pouch_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 300,
+      "min": 180,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Width (mm)",
+        "es": "Ancho (mm)",
+        "fr": "Largeur (mm)"
+      },
+      "tooltip": {
+        "en": "Across the shell; part of the measured U the zip is cut to",
+        "es": "A lo ancho del cuerpo; parte de la U medida a la que se corta la cremallera",
+        "fr": "En largeur du corps ; partie du U mesuré auquel la fermeture est coupée"
+      }
+    },
+    {
+      "id": "pouch_height",
+      "type": "slider",
+      "group": "fit",
+      "default": 210,
+      "min": 120,
+      "max": 320,
+      "step": 10,
+      "label": {
+        "en": "Height (mm)",
+        "es": "Alto (mm)",
+        "fr": "Hauteur (mm)"
+      },
+      "tooltip": {
+        "en": "Base to zip top; the two sides of the U that let the pouch open flat",
+        "es": "De la base al alto de la cremallera; los dos lados de la U que la abren plana",
+        "fr": "De la base au haut de la fermeture ; les deux côtés du U qui ouvrent à plat"
+      }
+    },
+    {
+      "id": "pouch_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 90,
+      "min": 40,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Depth (mm)",
+        "es": "Fondo (mm)",
+        "fr": "Profondeur (mm)"
+      },
+      "tooltip": {
+        "en": "The boxed base; each bottom corner loses a square of half this side",
+        "es": "La base en caja; cada esquina inferior pierde un cuadrado de la mitad de este lado",
+        "fr": "La base carrée ; chaque coin bas perd un carré de la moitié de ce côté"
+      }
+    },
+    {
+      "id": "corner_radius",
+      "type": "slider",
+      "group": "construction",
+      "default": 40,
+      "min": 10,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Top corner radius (mm)",
+        "es": "Radio de esquina superior (mm)",
+        "fr": "Rayon des coins hauts (mm)"
+      },
+      "tooltip": {
+        "en": "Rounds the zip's turns; a larger radius lengthens the measured U",
+        "es": "Redondea los giros de la cremallera; más radio alarga la U medida",
+        "fr": "Arrondit les virages de la fermeture ; un rayon plus grand allonge le U mesuré"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam including the boxed corners",
+        "es": "Aplicado a todas las costuras, incluidas las esquinas en caja",
+        "fr": "Appliquée à toutes les coutures, y compris les coins carrés"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "corner_radius * 2 < pouch_width",
+      "severity": "error",
+      "message": {
+        "en": "Two corner radii wider than the pouch leave no straight top for the zip to cross.",
+        "es": "Dos radios de esquina más anchos que la bolsa no dejan cima recta que cruce la cremallera.",
+        "fr": "Deux rayons d'angle plus larges que la pochette ne laissent aucun haut droit à traverser par la fermeture."
+      }
+    },
+    {
+      "expression": "pouch_depth < pouch_width * 0.6",
+      "severity": "warning",
+      "message": {
+        "en": "A base this deep relative to the width boxes away most of the shell's bottom edge.",
+        "es": "Una base tan profunda respecto al ancho consume casi todo el borde inferior del cuerpo.",
+        "fr": "Une base aussi profonde par rapport à la largeur consomme presque tout le bord bas du corps."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "carry-on",
+      "label": {
+        "en": "Carry-on",
+        "es": "Equipaje de mano",
+        "fr": "Bagage cabine"
+      },
+      "values": {
+        "pouch_width": 260,
+        "pouch_height": 180,
+        "pouch_depth": 70
+      }
+    },
+    {
+      "id": "week",
+      "label": {
+        "en": "One week",
+        "es": "Una semana",
+        "fr": "Une semaine"
+      },
+      "values": {
+        "pouch_width": 300,
+        "pouch_height": 210,
+        "pouch_depth": 90
+      }
+    },
+    {
+      "id": "long-trip",
+      "label": {
+        "en": "Long trip",
+        "es": "Viaje largo",
+        "fr": "Long voyage"
+      },
+      "values": {
+        "pouch_width": 380,
+        "pouch_height": 280,
+        "pouch_depth": 130
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "nylon-ripstop-shell"
+  ],
+  "notion": {
+    "kind": "zipper",
+    "subtype": "three-sided U-path zip",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "zipper",
+      "linked": true,
+      "params_map": {
+        "zip_length": "pouch_width + pouch_height * 2",
+        "tape_width": "corner_radius * 0.25",
+        "chain_size": "5"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "zip_tape",
+        "type": "zipper_tape",
+        "label": {
+          "en": "Three-sided zip tape",
+          "es": "Cinta de cremallera de tres lados",
+          "fr": "Ruban de fermeture sur trois côtés"
+        },
+        "edges": [
+          {
+            "piece": "shell",
+            "edge": "zip_top"
+          },
+          {
+            "piece": "shell",
+            "edge": "zip_l"
+          },
+          {
+            "piece": "shell",
+            "edge": "zip_r"
+          }
+        ],
+        "parameters": [
+          "pouch_width",
+          "pouch_height",
+          "corner_radius"
+        ]
+      },
+      {
+        "id": "boxed_corner_seam",
+        "type": "hem",
+        "label": {
+          "en": "Boxed base corner seam",
+          "es": "Costura de esquina de la base en caja",
+          "fr": "Couture d'angle de la base carrée"
+        },
+        "edges": [
+          {
+            "piece": "shell",
+            "edge": "base_seam"
+          },
+          {
+            "piece": "base",
+            "edge": "base_edge"
+          }
+        ],
+        "parameters": [
+          "pouch_depth",
+          "pouch_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Packing cubes arrive in sets, in laminated polyester that delaminates within a few trips and cannot be repaired or recycled. Drafting the pouch to the measured zip path means one cube cut to the case someone actually travels with, in ripstop offcuts, with a seam a home machine can reopen. The zipper is an open printable Yantra4D object dimensioned to the same U, so a failed slider is a part rather than a discarded bag.",
+      "es": "Los organizadores de maleta llegan en juegos, en poliéster laminado que se despega en pocos viajes y no se puede reparar ni reciclar. Trazar la bolsa según el recorrido medido de la cremallera da un organizador cortado a la maleta con la que alguien realmente viaja, con retazos de ripstop y una costura que una máquina doméstica puede reabrir. La cremallera es un objeto imprimible abierto de Yantra4D dimensionado a la misma U: un cursor roto es una pieza, no una bolsa desechada.",
+      "fr": "Les cubes de rangement arrivent en lots, en polyester laminé qui se délamine en quelques voyages et ne peut être ni réparé ni recyclé. Tracer la pochette d'après le parcours mesuré de la fermeture donne un cube coupé à la valise avec laquelle on voyage vraiment, en chutes de ripstop, avec une couture qu'une machine domestique peut rouvrir. La fermeture est un objet Yantra4D ouvert et imprimable dimensionné au même U : un curseur cassé est une pièce, pas un sac jeté."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

@@ -1,0 +1,506 @@
+{
+  "project": {
+    "name": "Rehab Sensor Cuff",
+    "slug": "rehab-sensor-cuff",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A forearm cuff that holds a motion sensor in one place on a limb that is trying to push it off. The sensor's numbers are only worth anything if it did not rotate or migrate between sessions, and on a tapering forearm a straight tube cuff does both. So this is drafted as a truncated cone — and the flat pattern of a truncated cone is an ANNULAR SECTOR, not a trapezoid. The kernel solves the sector from the two girths and the slant (`R_d = r_d·slant/(r_p−r_d)`, `R_p = R_d+slant`, `θ = C_p/R_p`), and `R_d·θ` then equals the distal girth exactly — which is the proof the draft is right, reported as `dist_arc_error_mm`. The slant, not the axial height, is the radial span; substituting the height cuts the cuff short — by nearly 24 mm at an extreme taper. As the taper goes to zero the sector radius diverges, so the fallback is guarded on `R_d/slant` rather than on a bare epsilon: a 10 mm taper over a 380 mm calf is numerically fine and geometrically absurd, and it is drafted honestly as a rectangle that declares the taper it gave up. The sensor seat is placed by arc-length fraction, so `sensor_offset` names the same anatomical landmark on every limb size.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un puño de antebrazo que sostiene un sensor de movimiento en un solo lugar sobre una extremidad que intenta expulsarlo. Los números del sensor sólo valen algo si no rotó ni migró entre sesiones, y en un antebrazo cónico un puño tubular hace ambas cosas. Por eso se traza como un cono truncado — y el patrón plano de un cono truncado es un SECTOR ANULAR, no un trapecio. El kernel resuelve el sector a partir de los dos contornos y la generatriz (`R_d = r_d·gen/(r_p−r_d)`, `R_p = R_d+gen`, `θ = C_p/R_p`), y entonces `R_d·θ` da exactamente el contorno distal — la prueba de que el trazo es correcto, reportada como `dist_arc_error_mm`. La generatriz, no la altura axial, es el alcance radial; sustituirla por la altura deja el puño corto — casi 24 mm con una conicidad extrema. Conforme la conicidad tiende a cero el radio del sector diverge, así que el respaldo se guarda por `R_d/generatriz` y no por un épsilon simple: 10 mm de conicidad sobre una pantorrilla de 380 mm es numéricamente válido y geométricamente absurdo, y se traza honestamente como un rectángulo que declara la conicidad que cedió. El asiento del sensor se coloca por fracción de longitud de arco, así que `sensor_offset` nombra el mismo punto anatómico en cualquier talla.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une manchette d'avant-bras qui maintient un capteur de mouvement à un seul endroit sur un membre qui cherche à l'expulser. Les chiffres du capteur ne valent quelque chose que s'il n'a ni tourné ni migré entre les séances, et sur un avant-bras conique une manchette tubulaire fait les deux. Elle est donc tracée comme un cône tronqué — et le patron à plat d'un cône tronqué est un SECTEUR ANNULAIRE, non un trapèze. Le noyau résout le secteur à partir des deux tours et de l'apothème (`R_d = r_d·ap/(r_p−r_d)`, `R_p = R_d+ap`, `θ = C_p/R_p`), et `R_d·θ` donne alors exactement le tour distal — la preuve que le tracé est juste, rapportée comme `dist_arc_error_mm`. L'apothème, non la hauteur axiale, est la portée radiale ; y substituer la hauteur raccourcit la manchette — de près de 24 mm à conicité extrême. À mesure que la conicité tend vers zéro le rayon du secteur diverge, aussi le repli est-il gardé sur `R_d/apothème` et non sur un simple epsilon : 10 mm de conicité sur un mollet de 380 mm est numériquement valide et géométriquement absurde, et se trace honnêtement en rectangle qui déclare la conicité abandonnée. Le siège du capteur est placé par fraction de longueur d'arc, de sorte que `sensor_offset` désigne le même repère anatomique à toute taille.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "rehab-sensor-cuff",
+      "cuff",
+      "e-textile",
+      "biometric",
+      "rehabilitation",
+      "frustum",
+      "sensor-mount-plate",
+      "hardware",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full cuff",
+        "es": "Puño completo",
+        "fr": "Manchette complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "cuff",
+        "lining",
+        "strap"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Cuff shell (annular sector)",
+        "es": "Exterior del puño (sector anular)",
+        "fr": "Extérieur de manchette (secteur annulaire)"
+      },
+      "default_color": "#2f4550",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "lining",
+      "label": {
+        "en": "Lining (grip side)",
+        "es": "Forro (lado antideslizante)",
+        "fr": "Doublure (côté antiglisse)"
+      },
+      "default_color": "#3f5b68",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "strap",
+      "label": {
+        "en": "Closure strap",
+        "es": "Correa de cierre",
+        "fr": "Sangle de fermeture"
+      },
+      "default_color": "#547180",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "limb",
+      "label": {
+        "en": "Limb",
+        "es": "Extremidad",
+        "fr": "Membre"
+      }
+    },
+    {
+      "id": "sensing",
+      "label": {
+        "en": "Sensing",
+        "es": "Sensado",
+        "fr": "Captation"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "prox_girth",
+      "type": "slider",
+      "group": "limb",
+      "default": 280,
+      "min": 150,
+      "max": 520,
+      "step": 5,
+      "label": {
+        "en": "Proximal girth (mm)",
+        "es": "Contorno proximal (mm)",
+        "fr": "Tour proximal (mm)"
+      },
+      "tooltip": {
+        "en": "The elbow end — the wider one. The kernel orders the two girths rather than trusting which is which",
+        "es": "El extremo del codo — el más ancho. El kernel ordena los dos contornos en vez de confiar en cuál es cuál",
+        "fr": "L'extrémité du coude — la plus large. Le noyau ordonne les deux tours plutôt que de se fier à leur saisie"
+      }
+    },
+    {
+      "id": "dist_girth",
+      "type": "slider",
+      "group": "limb",
+      "default": 220,
+      "min": 120,
+      "max": 500,
+      "step": 5,
+      "label": {
+        "en": "Distal girth (mm)",
+        "es": "Contorno distal (mm)",
+        "fr": "Tour distal (mm)"
+      },
+      "tooltip": {
+        "en": "The wrist end. The difference between the two girths is what makes the pattern a cone rather than a tube",
+        "es": "El extremo de la muñeca. La diferencia entre ambos contornos es lo que hace del patrón un cono y no un tubo",
+        "fr": "L'extrémité du poignet. L'écart entre les deux tours est ce qui fait du patron un cône et non un tube"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "wrist_girth"
+      }
+    },
+    {
+      "id": "cuff_height",
+      "type": "slider",
+      "group": "limb",
+      "default": 120,
+      "min": 50,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Cuff height (mm)",
+        "es": "Alto del puño (mm)",
+        "fr": "Hauteur de manchette (mm)"
+      },
+      "tooltip": {
+        "en": "Along the limb, axially — the kernel converts it to the cone's slant, which is the longer of the two",
+        "es": "A lo largo de la extremidad, axial — el kernel lo convierte en la generatriz del cono, que es la mayor de las dos",
+        "fr": "Le long du membre, axialement — le noyau le convertit en apothème du cône, qui est la plus grande des deux"
+      }
+    },
+    {
+      "id": "compression",
+      "type": "slider",
+      "group": "limb",
+      "default": 0.08,
+      "min": 0,
+      "max": 0.22,
+      "step": 0.01,
+      "label": {
+        "en": "Compression",
+        "es": "Compresión",
+        "fr": "Compression"
+      },
+      "tooltip": {
+        "en": "Negative ease applied equally to both ends; this is what holds the sensor still, and the strap's tension index marks it",
+        "es": "Holgura negativa aplicada por igual a ambos extremos; es lo que mantiene quieto el sensor, y el índice de tensión de la correa lo marca",
+        "fr": "Aisance négative appliquée également aux deux extrémités ; c'est ce qui immobilise le capteur, et l'index de tension de la sangle le repère"
+      }
+    },
+    {
+      "id": "plate_w",
+      "type": "slider",
+      "group": "sensing",
+      "default": 38,
+      "min": 14,
+      "max": 90,
+      "step": 2,
+      "label": {
+        "en": "Sensor plate width (mm)",
+        "es": "Ancho de la placa del sensor (mm)",
+        "fr": "Largeur de la plaque capteur (mm)"
+      },
+      "tooltip": {
+        "en": "The Yantra4D sensor-mount-plate's base width; also the marked footprint on the shell",
+        "es": "El ancho de base del sensor-mount-plate de Yantra4D; también la huella marcada en el exterior",
+        "fr": "La largeur de base du sensor-mount-plate Yantra4D ; aussi l'empreinte marquée sur l'extérieur"
+      }
+    },
+    {
+      "id": "plate_d",
+      "type": "slider",
+      "group": "sensing",
+      "default": 30,
+      "min": 12,
+      "max": 90,
+      "step": 2,
+      "label": {
+        "en": "Sensor plate depth (mm)",
+        "es": "Fondo de la placa del sensor (mm)",
+        "fr": "Profondeur de la plaque capteur (mm)"
+      },
+      "tooltip": {
+        "en": "The plate's dimension along the limb; the cuff height is floored at this plus 30 mm",
+        "es": "La dimensión de la placa a lo largo de la extremidad; el alto del puño tiene como mínimo esto más 30 mm",
+        "fr": "La dimension de la plaque le long du membre ; la hauteur de manchette a pour plancher ceci plus 30 mm"
+      }
+    },
+    {
+      "id": "sensor_offset",
+      "type": "slider",
+      "group": "sensing",
+      "default": 0.25,
+      "min": 0.05,
+      "max": 0.95,
+      "step": 0.05,
+      "label": {
+        "en": "Sensor position round the arc",
+        "es": "Posición del sensor sobre el arco",
+        "fr": "Position du capteur sur l'arc"
+      },
+      "tooltip": {
+        "en": "Placed by ARC-LENGTH fraction, so the same value names the same anatomical landmark on every limb size",
+        "es": "Colocado por fracción de LONGITUD DE ARCO, de modo que el mismo valor nombra el mismo punto anatómico en cualquier talla",
+        "fr": "Placé par fraction de LONGUEUR D'ARC, de sorte que la même valeur désigne le même repère anatomique à toute taille"
+      }
+    },
+    {
+      "id": "grip_bands",
+      "type": "slider",
+      "group": "construction",
+      "default": 3,
+      "min": 0,
+      "max": 8,
+      "step": 1,
+      "label": {
+        "en": "Grip band rows",
+        "es": "Filas de bandas antideslizantes",
+        "fr": "Rangées de bandes antiglisse"
+      },
+      "tooltip": {
+        "en": "Silicone rows on the lining, following the arcs; this is what stops the cuff walking distally between sessions",
+        "es": "Filas de silicón en el forro, siguiendo los arcos; es lo que impide que el puño camine hacia la muñeca entre sesiones",
+        "fr": "Rangées de silicone sur la doublure, suivant les arcs ; c'est ce qui empêche la manchette de glisser vers le poignet entre les séances"
+      }
+    },
+    {
+      "id": "strap_overlap",
+      "type": "slider",
+      "group": "construction",
+      "default": 60,
+      "min": 20,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Closure overlap (mm)",
+        "es": "Traslape del cierre (mm)",
+        "fr": "Recouvrement de fermeture (mm)"
+      },
+      "tooltip": {
+        "en": "The strap is cut to the MEASURED proximal arc plus this; the overlap is the whole adjustment range",
+        "es": "La correa se corta al arco proximal MEDIDO más esto; el traslape es todo el rango de ajuste",
+        "fr": "La sangle est coupée à l'arc proximal MESURÉ plus ceci ; le recouvrement est toute la plage de réglage"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Narrow — the cuff is overlocked and turned, never pressed open on a curve",
+        "es": "Estrecho — el puño va overlock y volteado, nunca abierto a plancha sobre una curva",
+        "fr": "Étroite — la manchette est surjetée et retournée, jamais ouverte au fer sur une courbe"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "cuff_height >= plate_d + 30",
+      "severity": "error",
+      "message": {
+        "en": "The cuff must clear the sensor plate along the limb with a seating margin.",
+        "es": "El puño debe librar la placa del sensor a lo largo de la extremidad con margen de asiento.",
+        "fr": "La manchette doit dégager la plaque capteur le long du membre avec une marge d'assise."
+      }
+    },
+    {
+      "expression": "dist_girth <= prox_girth",
+      "severity": "warning",
+      "message": {
+        "en": "A forearm narrows toward the wrist; entered the other way round, the kernel swaps the two rather than coning backwards.",
+        "es": "El antebrazo se angosta hacia la muñeca; si se ingresan al revés, el kernel los intercambia en vez de conificar al contrario.",
+        "fr": "L'avant-bras se rétrécit vers le poignet ; saisis à l'envers, le noyau les échange plutôt que de coniser à l'envers."
+      }
+    },
+    {
+      "expression": "plate_w <= dist_girth * 0.45",
+      "severity": "warning",
+      "message": {
+        "en": "A plate spanning nearly half the limb's circumference cannot lie flat on a curved surface.",
+        "es": "Una placa que abarca casi medio contorno de la extremidad no puede asentar plana sobre una superficie curva.",
+        "fr": "Une plaque couvrant près de la moitié de la circonférence du membre ne peut pas reposer à plat sur une surface courbe."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "forearm_imu",
+      "label": {
+        "en": "Forearm IMU",
+        "es": "IMU de antebrazo",
+        "fr": "IMU d'avant-bras"
+      },
+      "values": {
+        "prox_girth": 280,
+        "dist_girth": 180,
+        "cuff_height": 130,
+        "plate_w": 38,
+        "plate_d": 30
+      }
+    },
+    {
+      "id": "calf_untapered",
+      "label": {
+        "en": "Calf (little taper)",
+        "es": "Pantorrilla (poca conicidad)",
+        "fr": "Mollet (peu conique)"
+      },
+      "values": {
+        "prox_girth": 380,
+        "dist_girth": 370,
+        "cuff_height": 150,
+        "grip_bands": 5
+      }
+    },
+    {
+      "id": "clinic_repeatable",
+      "label": {
+        "en": "Clinic repeatable",
+        "es": "Repetible en clínica",
+        "fr": "Répétable en clinique"
+      },
+      "values": {
+        "compression": 0.14,
+        "grip_bands": 6,
+        "strap_overlap": 90,
+        "sensor_offset": 0.5
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "poliester-elastano-compresion"
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "sensor mount plate sewn at four points on the cuff shell",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sensor-mount-plate",
+      "linked": true,
+      "params_map": {
+        "base_w": "plate_w",
+        "base_d": "plate_d",
+        "base_thick": "plate_d * 0.08",
+        "corner_r": "plate_d * 0.12",
+        "screw_holes": "4",
+        "screw_dia": "plate_d * 0.09",
+        "screw_inset": "plate_d * 0.13"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "e_textile",
+    "interfaces": [
+      {
+        "id": "sensor_seat",
+        "type": "pocket",
+        "label": {
+          "en": "Sensor plate seat",
+          "es": "Asiento de la placa del sensor",
+          "fr": "Siège de la plaque capteur"
+        },
+        "edges": [
+          {
+            "piece": "cuff",
+            "edge": "prox"
+          }
+        ],
+        "parameters": [
+          "plate_w",
+          "plate_d",
+          "sensor_offset",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "frustum_arcs",
+        "type": "cuff",
+        "label": {
+          "en": "Solved frustum arcs",
+          "es": "Arcos resueltos del tronco de cono",
+          "fr": "Arcs résolus du tronc de cône"
+        },
+        "edges": [
+          {
+            "piece": "cuff",
+            "edge": "dist"
+          },
+          {
+            "piece": "lining",
+            "edge": "dist"
+          }
+        ],
+        "parameters": [
+          "prox_girth",
+          "dist_girth",
+          "cuff_height",
+          "compression"
+        ]
+      },
+      {
+        "id": "closure_strap",
+        "type": "placket",
+        "label": {
+          "en": "Closure strap attachment",
+          "es": "Unión de la correa de cierre",
+          "fr": "Attache de la sangle de fermeture"
+        },
+        "edges": [
+          {
+            "piece": "strap",
+            "edge": "attach"
+          },
+          {
+            "piece": "cuff",
+            "edge": "closure_p"
+          }
+        ],
+        "parameters": [
+          "strap_overlap",
+          "grip_bands",
+          "compression"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Motion-capture rehab hardware is sold with straps in two or three sizes, and the strap is where the measurement quality actually goes: a cuff that rotates or slides gives you a session that cannot be compared to last week's. Clinics work around it with tape and marker pen. A cuff cut to a measured limb as a properly solved cone, with the sensor sewn at four points so it cannot hinge and a tension index that reproduces the same compression every session, makes the repeatability a property of the garment instead of the technician's memory. It is a garment pattern, not a medical device: it holds a sensor and makes no measurement or clinical claim.",
+      "es": "El hardware de captura de movimiento para rehabilitación se vende con correas en dos o tres tallas, y la correa es justo donde se pierde la calidad de la medición: un puño que rota o se desliza da una sesión que no puede compararse con la de la semana pasada. Las clínicas lo remedian con cinta y plumón. Un puño cortado a una extremidad medida como un cono correctamente resuelto, con el sensor cosido en cuatro puntos para que no bisagre y un índice de tensión que reproduce la misma compresión cada sesión, convierte la repetibilidad en una propiedad de la prenda y no en la memoria del técnico. Es un patrón de prenda, no un dispositivo médico: sostiene un sensor y no hace ninguna afirmación de medición ni clínica.",
+      "fr": "Le matériel de capture de mouvement en rééducation se vend avec des sangles en deux ou trois tailles, et la sangle est précisément là où se perd la qualité de mesure : une manchette qui tourne ou glisse donne une séance incomparable à celle de la semaine passée. Les cliniques compensent au ruban adhésif et au marqueur. Une manchette coupée sur un membre mesuré comme un cône correctement résolu, avec le capteur cousu en quatre points pour qu'il ne fasse pas charnière et un index de tension qui reproduit la même compression à chaque séance, fait de la répétabilité une propriété du vêtement plutôt que de la mémoire du technicien. C'est un patron de vêtement, pas un dispositif médical : il tient un capteur et ne formule aucune revendication de mesure ni clinique."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

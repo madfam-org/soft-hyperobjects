@@ -1,0 +1,484 @@
+{
+  "project": {
+    "name": "Sarafan",
+    "slug": "sarafan",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The Russian sarafan (сарафан): a long trapezoidal pinafore-dress worn over a shift, suspended from two shoulder straps and hanging free from a narrow band above the bust. This cartridge drafts the later straight sarafan (прямой сарафан) — straight loom-width panels gathered into the chest band — because the older oblique-gore form (косоклинный) is cut to a specific historical loom width and does not generalise parametrically. The panel count is derived from the hem sweep and the real usable fabric width, and the band-to-skirt seam is declared as a true gather whose ease equals the surplus the gather ratio calls for. Strap buttons bridge to the Yantra4D `sew-through-button` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El sarafán ruso (сарафан): un vestido-delantal largo y trapezoidal que se lleva sobre una camisa, suspendido de dos tirantes y colgando libre desde una banda estrecha por encima del busto. Este cartucho traza el sarafán recto tardío (прямой сарафан) — paños rectos del ancho del telar fruncidos en la banda del pecho — porque la forma antigua de cuchillas oblicuas (косоклинный) se corta a un ancho de telar histórico concreto y no se generaliza de forma paramétrica. El número de paños se deriva del vuelo del ruedo y del ancho útil real de la tela, y la costura banda-falda se declara como un frunce verdadero cuya holgura equivale al excedente que pide la proporción de fruncido. Los botones de los tirantes se puentean al sólido `sew-through-button` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le sarafane russe (сарафан) : une longue robe-chasuble trapézoïdale portée sur une chemise, suspendue par deux bretelles et tombant librement depuis une bande étroite au-dessus de la poitrine. Cette cartouche trace le sarafane droit tardif (прямой сарафан) — des lés droits à la largeur du métier, froncés dans la bande de poitrine — car la forme ancienne à lés obliques (косоклинный) se coupe à une largeur de métier historique précise et ne se généralise pas de façon paramétrique. Le nombre de lés se déduit de l'ampleur de l'ourlet et de la largeur utile réelle du tissu, et la couture bande-jupe est déclarée comme un vrai fronçage dont l'embu égale le surplus qu'exige le rapport de fronçage. Les boutons de bretelles font le pont vers le solide `sew-through-button` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "sarafan",
+      "russia",
+      "heritage",
+      "pinafore",
+      "dress",
+      "gathered",
+      "hardware",
+      "sew-through-button",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet, after the straight (прямой) sarafan of the Russian North and Volga regions",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full sarafan",
+        "es": "Sarafán completo",
+        "fr": "Sarafane complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "band",
+        "skirt",
+        "strap"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "band",
+      "label": {
+        "en": "Chest band (нагрудник)",
+        "es": "Banda de pecho (нагрудник)",
+        "fr": "Bande de poitrine (нагрудник)"
+      },
+      "default_color": "#8c3b4a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "skirt",
+      "label": {
+        "en": "Skirt panel (полотнище)",
+        "es": "Paño de falda (полотнище)",
+        "fr": "Lé de jupe (полотнище)"
+      },
+      "default_color": "#a84b58",
+      "cut": {
+        "quantity": 3,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "strap",
+      "label": {
+        "en": "Shoulder strap (лямка)",
+        "es": "Tirante (лямка)",
+        "fr": "Bretelle (лямка)"
+      },
+      "default_color": "#6d2f3b",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Ajustement"
+      }
+    },
+    {
+      "id": "style",
+      "label": {
+        "en": "Style",
+        "es": "Estilo",
+        "fr": "Style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "band_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 860,
+      "min": 600,
+      "max": 1300,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Band girth (mm)",
+        "es": "Contorno de banda (mm)",
+        "fr": "Tour de bande (mm)"
+      },
+      "tooltip": {
+        "en": "Circuit above the bust where the band sits — it carries the whole dress",
+        "es": "Contorno por encima del busto donde asienta la banda — sostiene todo el vestido",
+        "fr": "Tour au-dessus de la poitrine où repose la bande — elle porte toute la robe"
+      }
+    },
+    {
+      "id": "band_height",
+      "type": "slider",
+      "group": "style",
+      "default": 110,
+      "min": 60,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Band depth (mm)",
+        "es": "Alto de banda (mm)",
+        "fr": "Hauteur de bande (mm)"
+      },
+      "tooltip": {
+        "en": "How deep the chest band is from top edge to the gather seam",
+        "es": "Profundidad de la banda del borde superior a la costura de frunce",
+        "fr": "Profondeur de la bande du bord supérieur à la couture de fronçage"
+      }
+    },
+    {
+      "id": "dress_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 1150,
+      "min": 700,
+      "max": 1500,
+      "step": 10,
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
+      },
+      "tooltip": {
+        "en": "Band top to hem; the traditional sarafan reaches the ankle",
+        "es": "De la banda al ruedo; el sarafán tradicional llega al tobillo",
+        "fr": "De la bande à l'ourlet ; le sarafane traditionnel tombe à la cheville"
+      }
+    },
+    {
+      "id": "hem_sweep",
+      "type": "slider",
+      "group": "style",
+      "default": 2600,
+      "min": 1400,
+      "max": 4200,
+      "step": 50,
+      "label": {
+        "en": "Hem sweep (mm)",
+        "es": "Vuelo del ruedo (mm)",
+        "fr": "Ampleur d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Finished hem circuit; with the fabric width this sets the panel count",
+        "es": "Contorno final del ruedo; con el ancho de tela define el número de paños",
+        "fr": "Tour d'ourlet fini ; avec la largeur du tissu il fixe le nombre de lés"
+      }
+    },
+    {
+      "id": "gather_ratio",
+      "type": "slider",
+      "group": "style",
+      "default": 2.2,
+      "min": 1.4,
+      "max": 3.2,
+      "step": 0.1,
+      "label": {
+        "en": "Gather ratio",
+        "es": "Proporción de frunce",
+        "fr": "Rapport de fronçage"
+      },
+      "tooltip": {
+        "en": "Skirt top length divided by band length; 2.2 is a full traditional gather",
+        "es": "Largo del alto de falda dividido por el de la banda; 2,2 es un frunce tradicional pleno",
+        "fr": "Longueur du haut de jupe divisée par celle de la bande ; 2,2 est un fronçage traditionnel plein"
+      }
+    },
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "group": "style",
+      "default": 45,
+      "min": 25,
+      "max": 80,
+      "step": 5,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho del tirante (mm)",
+        "fr": "Largeur de bretelle (mm)"
+      },
+      "tooltip": {
+        "en": "Width of each лямка; wider straps spread the dress's weight",
+        "es": "Ancho de cada лямка; los tirantes anchos reparten el peso del vestido",
+        "fr": "Largeur de chaque лямка ; des bretelles larges répartissent le poids"
+      }
+    },
+    {
+      "id": "shoulder_run",
+      "type": "slider",
+      "group": "fit",
+      "default": 420,
+      "min": 280,
+      "max": 600,
+      "step": 10,
+      "label": {
+        "en": "Over-shoulder run (mm)",
+        "es": "Recorrido sobre el hombro (mm)",
+        "fr": "Passage sur l'épaule (mm)"
+      },
+      "tooltip": {
+        "en": "Band back to band front over the shoulder; sets the strap length",
+        "es": "De la banda trasera a la delantera sobre el hombro; define el largo del tirante",
+        "fr": "De la bande arrière à l'avant par-dessus l'épaule ; fixe la longueur de bretelle"
+      }
+    },
+    {
+      "id": "button_ligne",
+      "type": "slider",
+      "group": "construction",
+      "default": 24,
+      "min": 14,
+      "max": 40,
+      "step": 2,
+      "label": {
+        "en": "Button size (ligne)",
+        "es": "Tamaño de botón (línea)",
+        "fr": "Taille de bouton (ligne)"
+      },
+      "tooltip": {
+        "en": "Strap button; drives the Yantra4D sew-through-button and the buttonhole",
+        "es": "Botón del tirante; define el sew-through-button de Yantra4D y el ojal",
+        "fr": "Bouton de bretelle ; pilote le sew-through-button de Yantra4D et la boutonnière"
+      }
+    },
+    {
+      "id": "fabric_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 900,
+      "min": 600,
+      "max": 1600,
+      "step": 50,
+      "label": {
+        "en": "Usable fabric width (mm)",
+        "es": "Ancho útil de tela (mm)",
+        "fr": "Largeur utile du tissu (mm)"
+      },
+      "tooltip": {
+        "en": "Real cloth width after selvedges; with the hem sweep it sets the panel count",
+        "es": "Ancho real tras los orillos; con el vuelo define el número de paños",
+        "fr": "Largeur réelle après lisières ; avec l'ampleur elle fixe le nombre de lés"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 6,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to the band, panel and strap seams",
+        "es": "Aplicado a las costuras de banda, paños y tirantes",
+        "fr": "Appliquée aux coutures de bande, de lés et de bretelles"
+      },
+      "advanced": true
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 45,
+      "min": 10,
+      "max": 80,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de ruedo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "A deep hem weights the skirt so the trapezoid hangs true",
+        "es": "Un ruedo profundo pesa la falda para que el trapecio caiga bien",
+        "fr": "Un ourlet profond leste la jupe pour que le trapèze tombe droit"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "hem_sweep > band_girth * gather_ratio",
+      "severity": "warning",
+      "message": {
+        "en": "A sarafan flares: the hem should be wider than the gathered top.",
+        "es": "El sarafán ensancha: el ruedo debe ser más ancho que el alto fruncido.",
+        "fr": "Le sarafane s'évase : l'ourlet doit être plus large que le haut froncé."
+      }
+    },
+    {
+      "expression": "dress_length > band_height * 4",
+      "severity": "warning",
+      "message": {
+        "en": "The band should read as a narrow yoke, not as a bodice.",
+        "es": "La banda debe leerse como un canesú estrecho, no como un corpiño.",
+        "fr": "La bande doit se lire comme un empiècement étroit, non comme un corsage."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "everyday",
+      "label": {
+        "en": "Everyday",
+        "es": "Diario",
+        "fr": "Quotidien"
+      },
+      "values": {
+        "dress_length": 1150,
+        "hem_sweep": 2600,
+        "gather_ratio": 2.2
+      }
+    },
+    {
+      "id": "festival",
+      "label": {
+        "en": "Festival",
+        "es": "De fiesta",
+        "fr": "De fête"
+      },
+      "values": {
+        "dress_length": 1300,
+        "hem_sweep": 3600,
+        "gather_ratio": 2.9
+      }
+    },
+    {
+      "id": "narrow-loom",
+      "label": {
+        "en": "Narrow loom",
+        "es": "Telar angosto",
+        "fr": "Métier étroit"
+      },
+      "values": {
+        "fabric_width": 700,
+        "hem_sweep": 2400,
+        "gather_ratio": 2.0
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "notion": {
+    "kind": "button",
+    "subtype": "sarafan strap button",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "hole_count": "4",
+        "hole_spacing": "button_ligne * 0.635 / 3",
+        "hole_dia": "1.8"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "strap_button_seat",
+        "type": "button_stand",
+        "label": {
+          "en": "Strap button seat",
+          "es": "Asiento del botón del tirante",
+          "fr": "Siège du bouton de bretelle"
+        },
+        "edges": [
+          {
+            "piece": "strap",
+            "edge": "front_end"
+          }
+        ],
+        "parameters": [
+          "button_ligne",
+          "strap_width",
+          "shoulder_run"
+        ]
+      },
+      {
+        "id": "band_gather_seam",
+        "type": "waistband",
+        "label": {
+          "en": "Band-to-skirt gather seam",
+          "es": "Costura de frunce banda-falda",
+          "fr": "Couture de fronçage bande-jupe"
+        },
+        "edges": [
+          {
+            "piece": "band",
+            "edge": "bottom"
+          },
+          {
+            "piece": "skirt",
+            "edge": "top"
+          }
+        ],
+        "parameters": [
+          "band_girth",
+          "gather_ratio",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A dress that fits by gathering rather than by tailoring: the sarafan's straight panels waste almost no cloth, adjust across a wide range of bodies and pregnancies from the same pattern, and can be let out or handed on. Drafting it from the real usable fabric width keeps a narrow handloom as valid an input as a mill bolt.",
+      "es": "Un vestido que ajusta por frunce y no por sastrería: los paños rectos del sarafán casi no desperdician tela, se adaptan a cuerpos y embarazos muy distintos desde el mismo patrón, y pueden soltarse o heredarse. Trazarlo desde el ancho útil real de la tela mantiene un telar manual angosto tan válido como un rollo industrial.",
+      "fr": "Une robe qui s'ajuste par le fronçage plutôt que par la coupe : les lés droits du sarafane ne gaspillent presque pas de tissu, s'adaptent à des corps et des grossesses très divers depuis le même patron, et peuvent être élargis ou transmis. Le tracer depuis la largeur utile réelle du tissu rend un métier à bras étroit aussi valable qu'un rouleau industriel."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

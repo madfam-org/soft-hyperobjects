@@ -1,0 +1,606 @@
+{
+  "project": {
+    "name": "Leg-o'-Mutton Blouse",
+    "slug": "leg-o-mutton-blouse",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The 1890s shirtwaist with the enormous gigot sleeve — hugely full from shoulder to elbow, close from elbow to wrist — worn loose and bloused over the skirt band, closed with small buttons up the centre front under a standing collar. The armhole does NOT grow to match the sleeve: the whole technique is a sleeve head two to three times the armscye, gathered into an armhole of ordinary size. The head width is SOLVED by bisection until the built cap MEASURES armscye × gather ratio, and the gathered-away surplus is declared as the seam's ease so the check tests the real relationship.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La blusa camisera de los 1890 con la manga gigot enorme — amplísima del hombro al codo, ceñida del codo a la muñeca — llevada holgada y ahuecada sobre la pretina, cerrada con botones pequeños al centro delantero bajo un cuello de tira. La sisa NO crece para igualar la manga: toda la técnica es una copa de dos a tres veces la sisa, fruncida en un hueco de tamaño normal. El ancho de la copa se RESUELVE por bisección hasta que la copa construida MIDE sisa × proporción de fruncido, y el excedente fruncido se declara como holgura de la costura para que la verificación compruebe la relación real.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le corsage-chemisier des années 1890 à manche gigot énorme — très ample de l'épaule au coude, ajustée du coude au poignet — porté lâche et blousant sur la ceinture, fermé de petits boutons au milieu devant sous un col montant. L'emmanchure ne s'agrandit PAS pour égaler la manche : toute la technique est une tête de deux à trois fois l'emmanchure, froncée dans une ouverture de taille ordinaire. La largeur de tête est RÉSOLUE par bissection jusqu'à ce que la tête construite MESURE emmanchure × rapport de fronçage, et le surplus froncé est déclaré comme aisance de la couture pour que le contrôle vérifie la relation réelle.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "leg-o-mutton-blouse",
+      "gigot-sleeve",
+      "historical",
+      "costume",
+      "1890s",
+      "shirtwaist",
+      "victorian",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Drafted from the documented construction tradition of the mid-1890s shirtwaist: a loose body bloused over the skirt band, centre-front buttons, a standing collar band, and a gigot sleeve full above the elbow and close below it whose head is gathered into an armscye of ordinary size and supported from inside. Not traced from any single extant garment or published pattern.",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Complete blouse",
+        "es": "Blusa completa",
+        "fr": "Corsage complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "cuff",
+        "collar"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Blouse front",
+        "es": "Delantero de blusa",
+        "fr": "Devant du corsage"
+      },
+      "default_color": "#d8d2c4",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Blouse back",
+        "es": "Espalda de blusa",
+        "fr": "Dos du corsage"
+      },
+      "default_color": "#cbc4b4",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": false
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Gigot sleeve",
+        "es": "Manga gigot",
+        "fr": "Manche gigot"
+      },
+      "default_color": "#e3ded2",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Cuff",
+        "es": "Puño",
+        "fr": "Poignet"
+      },
+      "default_color": "#bcb4a2",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Standing collar band",
+        "es": "Cuello de tira",
+        "fr": "Col montant"
+      },
+      "default_color": "#aea695",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Body fit",
+        "es": "Ajuste al cuerpo",
+        "fr": "Ajustement au corps"
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "The gigot sleeve",
+        "es": "La manga gigot",
+        "fr": "La manche gigot"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 920,
+      "min": 720,
+      "max": 1400,
+      "step": 10,
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "A shirtwaist is worn LOOSE — real ease is drafted in, unlike a fitted bodice of the same decade",
+        "es": "La blusa camisera se lleva HOLGADA — lleva holgura real, a diferencia de un corpiño entallado de la época",
+        "fr": "Un chemisier se porte LÂCHE — une aisance réelle est prévue, contrairement au corsage ajusté de la même décennie"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 720,
+      "min": 540,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "Generous by design — the surplus is gathered onto the skirt band and blouses over it as the period 'pouter pigeon' front",
+        "es": "Amplio a propósito — el excedente se frunce sobre la pretina y ahueca como el frente 'pouter pigeon' de época",
+        "fr": "Ample à dessein — le surplus est froncé sur la ceinture et blouse en un devant « pouter pigeon » d'époque"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      }
+    },
+    {
+      "id": "back_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 400,
+      "min": 300,
+      "max": 520,
+      "step": 5,
+      "label": {
+        "en": "Nape to waist (mm)",
+        "es": "De nuca a cintura (mm)",
+        "fr": "De la nuque à la taille (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the body length and, with it, the armhole depth the sleeve is solved against",
+        "es": "Define el largo del cuerpo y con él la profundidad de sisa contra la que se resuelve la manga",
+        "fr": "Définit la longueur du corps et, avec elle, la profondeur d'emmanchure servant au calcul de la manche"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 128,
+      "min": 95,
+      "max": 185,
+      "step": 5,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombro (mm)",
+        "fr": "Largeur d'épaule (mm)"
+      },
+      "tooltip": {
+        "en": "Neck point out to shoulder point; each panel's shoulder drop is solved from it so both seams match",
+        "es": "Del punto de cuello al de hombro; la caída de cada panel se resuelve para que ambas costuras coincidan",
+        "fr": "Du point d'encolure au point d'épaule ; la pente de chaque panneau en découle pour égaliser les coutures"
+      }
+    },
+    {
+      "id": "gather_ratio",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 2.4,
+      "min": 1.15,
+      "max": 3.2,
+      "step": 0.05,
+      "label": {
+        "en": "Gather ratio (head : armscye)",
+        "es": "Proporción de fruncido (copa : sisa)",
+        "fr": "Rapport de fronçage (tête : emmanchure)"
+      },
+      "tooltip": {
+        "en": "THE parameter of this garment. 2.4 is a full mid-1890s gigot; 3.2 is the 1895 extreme; below about 1.4 it stops reading as leg-o'-mutton at all",
+        "es": "EL parámetro de esta prenda. 2,4 es un gigot pleno de mediados de 1890; 3,2 el extremo de 1895; bajo 1,4 deja de leerse como gigot",
+        "fr": "LE paramètre de ce vêtement. 2,4 est un gigot plein du milieu des années 1890 ; 3,2 l'extrême de 1895 ; sous 1,4 ce n'est plus un gigot"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 580,
+      "min": 420,
+      "max": 720,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder point down to the wrist",
+        "es": "Del punto de hombro a la muñeca",
+        "fr": "Du point d'épaule au poignet"
+      }
+    },
+    {
+      "id": "elbow_frac",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 0.52,
+      "min": 0.35,
+      "max": 0.7,
+      "step": 0.01,
+      "label": {
+        "en": "Elbow position (fraction)",
+        "es": "Posición del codo (fracción)",
+        "fr": "Position du coude (fraction)"
+      },
+      "tooltip": {
+        "en": "Where the sleeve stops being full and becomes close — the break that makes it a leg of mutton rather than a balloon",
+        "es": "Donde la manga deja de ser amplia y se ciñe — el quiebre que la hace pierna de cordero y no globo",
+        "fr": "Où la manche cesse d'être ample et devient ajustée — la cassure qui en fait un gigot et non un ballon"
+      }
+    },
+    {
+      "id": "wrist_girth",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 175,
+      "min": 130,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Wrist girth (mm)",
+        "es": "Contorno de muñeca (mm)",
+        "fr": "Tour de poignet (mm)"
+      },
+      "tooltip": {
+        "en": "The close end of the sleeve; sets the cuff length",
+        "es": "El extremo ceñido de la manga; define el largo del puño",
+        "fr": "L'extrémité ajustée de la manche ; fixe la longueur du poignet"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 42,
+      "min": 20,
+      "max": 75,
+      "step": 2,
+      "label": {
+        "en": "Collar height (mm)",
+        "es": "Alto del cuello (mm)",
+        "fr": "Hauteur du col"
+      },
+      "tooltip": {
+        "en": "The standing band; the period neck is high, and the band must be interfaced to hold up on its own",
+        "es": "La tira del cuello; el cuello de época es alto y necesita entretela para sostenerse",
+        "fr": "Le col montant ; l'encolure d'époque est haute et la bande doit être entoilée pour tenir"
+      }
+    },
+    {
+      "id": "button_pitch",
+      "type": "slider",
+      "group": "construction",
+      "default": 62,
+      "min": 30,
+      "max": 110,
+      "step": 2,
+      "label": {
+        "en": "Button pitch (mm)",
+        "es": "Paso de botones (mm)",
+        "fr": "Pas des boutons (mm)"
+      },
+      "tooltip": {
+        "en": "Spacing up the centre-front stand; it also drives the bridged button's hole spacing and card count",
+        "es": "Separación en la tapeta delantera; también define el espaciado de agujeros y el conteo del botón enlazado",
+        "fr": "Espacement sur la patte devant ; il pilote aussi l'entraxe des trous et le compte du bouton lié"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "The centre front carries a much deeper allowance — it is the button stand",
+        "es": "El centro delantero lleva un margen mucho mayor — es la tapeta de botones",
+        "fr": "Le milieu devant porte une marge bien plus profonde — c'est la patte de boutonnage"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "gather_ratio > 1",
+      "severity": "error",
+      "message": {
+        "en": "A gather ratio of 1 or less means no gathering at all — that is a plain set-in sleeve, not a gigot.",
+        "es": "Una proporción de 1 o menos significa que no hay fruncido — eso es una manga lisa, no un gigot.",
+        "fr": "Un rapport de 1 ou moins signifie aucun fronçage — c'est une manche montée simple, pas un gigot."
+      }
+    },
+    {
+      "expression": "gather_ratio > 1.4",
+      "severity": "warning",
+      "message": {
+        "en": "Below about 1.4 the sleeve stops reading as leg-o'-mutton; it becomes a generically puffed sleeve.",
+        "es": "Por debajo de 1,4 la manga deja de leerse como gigot; queda como una manga abullonada genérica.",
+        "fr": "Sous 1,4 environ la manche ne se lit plus comme gigot ; elle devient une manche bouffante générique."
+      }
+    },
+    {
+      "expression": "bust_girth > wrist_girth",
+      "severity": "error",
+      "message": {
+        "en": "The wrist cannot be wider than the bust — check the units, these are millimetres.",
+        "es": "La muñeca no puede ser más ancha que el busto — revisa las unidades, son milímetros.",
+        "fr": "Le poignet ne peut être plus large que la poitrine — vérifiez les unités, ce sont des millimètres."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "gigot_1895",
+      "label": {
+        "en": "1895 extreme",
+        "es": "Extremo de 1895",
+        "fr": "Extrême de 1895"
+      },
+      "values": {
+        "gather_ratio": 3.1,
+        "elbow_frac": 0.55,
+        "collar_height": 52
+      }
+    },
+    {
+      "id": "day_shirtwaist",
+      "label": {
+        "en": "Day shirtwaist",
+        "es": "Blusa camisera de día",
+        "fr": "Chemisier de jour"
+      },
+      "values": {
+        "gather_ratio": 2.0,
+        "elbow_frac": 0.5,
+        "collar_height": 38,
+        "button_pitch": 55
+      }
+    },
+    {
+      "id": "late_nineties",
+      "label": {
+        "en": "Late 1890s, deflating",
+        "es": "Final de los 1890, desinflándose",
+        "fr": "Fin des années 1890, dégonflée"
+      },
+      "values": {
+        "gather_ratio": 1.5,
+        "elbow_frac": 0.42,
+        "sleeve_length": 600
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "pdf",
+    "json"
+  ],
+  "fabrics": [
+    "popelina-algodon"
+  ],
+  "notion": {
+    "kind": "button",
+    "subtype": "small centre-front and cuff buttons on a stand",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "18",
+        "hole_count": "4",
+        "hole_spacing": "button_pitch / 10",
+        "card_count": "round(back_length / button_pitch) + 2"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "gigot_setting",
+        "type": "armscye",
+        "label": {
+          "en": "Gathered gigot head into the measured armscye",
+          "es": "Copa gigot fruncida en la sisa medida",
+          "fr": "Tête gigot froncée dans l'emmanchure mesurée"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          },
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "gather_ratio",
+          "back_length",
+          "shoulder_width",
+          "bust_girth"
+        ]
+      },
+      {
+        "id": "front_stand",
+        "type": "button_stand",
+        "label": {
+          "en": "Centre-front button stand",
+          "es": "Tapeta de botones delantera",
+          "fr": "Patte de boutonnage devant"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "cf"
+          }
+        ],
+        "parameters": [
+          "button_pitch",
+          "back_length",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "collar_seam",
+        "type": "neckline",
+        "label": {
+          "en": "Standing band onto the measured neck run",
+          "es": "Tira de cuello sobre el escote medido",
+          "fr": "Col montant sur l'encolure mesurée"
+        },
+        "edges": [
+          {
+            "piece": "collar",
+            "edge": "neck_seam"
+          },
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "collar_height",
+          "shoulder_width"
+        ]
+      },
+      {
+        "id": "cuff_seam",
+        "type": "cuff",
+        "label": {
+          "en": "Cuff at the close end of the sleeve",
+          "es": "Puño en el extremo ceñido",
+          "fr": "Poignet à l'extrémité ajustée"
+        },
+        "edges": [
+          {
+            "piece": "cuff",
+            "edge": "lower"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "wrist"
+          }
+        ],
+        "parameters": [
+          "wrist_girth",
+          "sleeve_length",
+          "elbow_frac"
+        ]
+      },
+      {
+        "id": "waist_blouse",
+        "type": "waistband",
+        "label": {
+          "en": "Waist gathered onto the skirt band",
+          "es": "Cintura fruncida sobre la pretina",
+          "fr": "Taille froncée sur la ceinture"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "waist"
+          },
+          {
+            "piece": "back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "bust_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The gigot sleeve is the case where the usual pattern-checking rule — cap should roughly equal armscye — is exactly wrong, and following it destroys the garment: the armhole gets enlarged to 'fit' the sleeve, the shoulder point drops, and the silhouette is gone. Encoding the real relationship instead, as a solved ratio with the gathered surplus reported as a number the maker can plan for, means the technique survives contact with automated checking rather than being quietly normalised away. It also lets a maker dial the decade — a 2.0 sleeve and a 3.1 sleeve are different years — on a body that is theirs.",
+      "es": "La manga gigot es el caso donde la regla habitual de verificación — la copa debe igualar la sisa — es justo la equivocada, y seguirla destruye la prenda: se agranda la sisa para «que entre» la manga, cae el punto de hombro y se pierde la silueta. Codificar la relación real, como una proporción resuelta con el excedente fruncido informado como número planificable, hace que la técnica sobreviva al chequeo automático en vez de ser normalizada en silencio. Además permite marcar la década — una manga de 2,0 y una de 3,1 son años distintos — sobre un cuerpo propio.",
+      "fr": "La manche gigot est le cas où la règle de contrôle habituelle — la tête doit à peu près égaler l'emmanchure — est précisément fausse, et la suivre détruit le vêtement : on agrandit l'emmanchure pour « faire entrer » la manche, le point d'épaule tombe, la silhouette disparaît. Encoder plutôt la relation réelle, en rapport résolu avec le surplus froncé donné comme un nombre que l'on peut prévoir, fait survivre la technique au contrôle automatisé au lieu de la normaliser en douce. Cela permet aussi de choisir la décennie — une manche à 2,0 et une à 3,1 ne sont pas les mêmes années — sur un corps qui est le sien."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

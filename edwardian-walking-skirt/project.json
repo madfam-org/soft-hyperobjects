@@ -1,0 +1,550 @@
+{
+  "project": {
+    "name": "Edwardian Walking Skirt",
+    "slug": "edwardian-walking-skirt",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The practical gored skirt of c. 1900–1910, cut to clear the ground: shaped gores narrow at the waist and wide at the hem, smooth and flat over the front with the fullness carried progressively toward the back, closed by a centre-back placket of hooks and bars under a shaped waistband. Adjacent gores are sewn along one seam, so the common seam length is SOLVED from the widest gore and every narrower gore's hem is dropped by a bisection-solved amount until its own seam measures the same — the chain closes with a 0.00 mm residual instead of a widened tolerance.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La falda de nesgas práctica de c. 1900–1910, cortada para no rozar el suelo: nesgas conformadas, estrechas en la cintura y anchas en el bajo, lisas y planas por delante con el vuelo llevado progresivamente hacia atrás, cerrada por una abertura trasera de corchetes bajo una pretina conformada. Las nesgas contiguas se cosen por una misma costura, así que la longitud común se RESUELVE a partir de la nesga más ancha y el bajo de cada nesga más estrecha baja por bisección hasta que su costura mide lo mismo — la cadena cierra con residuo 0,00 mm en vez de con una tolerancia ensanchada.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La jupe à lés pratique de c. 1900–1910, coupée pour ne pas traîner : des lés façonnés, étroits à la taille et larges à l'ourlet, lisses et plats sur le devant avec l'ampleur reportée progressivement vers le dos, fermés par une patte de dos à agrafes sous une ceinture façonnée. Les lés voisins sont cousus par une même couture, donc la longueur commune est RÉSOLUE à partir du lé le plus large et l'ourlet de chaque lé plus étroit descend par bissection jusqu'à ce que sa couture mesure autant — la chaîne se ferme avec un résidu de 0,00 mm plutôt qu'avec une tolérance élargie.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "edwardian-walking-skirt",
+      "historical",
+      "costume",
+      "edwardian",
+      "gored-skirt",
+      "1900s",
+      "placket",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Drafted from the documented construction tradition of the Edwardian walking skirt: a body of shaped gores fitted over the hip and flaring below it, fullness graded from a flat front to a full back, a shaped waistband over an inside waist stay, and a centre-back placket closed with hooks and bars. Not traced from any single extant garment or published pattern.",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Complete skirt",
+        "es": "Falda completa",
+        "fr": "Jupe complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front_gore",
+        "side_gore",
+        "back_gore",
+        "waistband"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front_gore",
+      "label": {
+        "en": "Front gore",
+        "es": "Nesga delantera",
+        "fr": "Lé devant"
+      },
+      "default_color": "#4f5a68",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": false
+      }
+    },
+    {
+      "id": "side_gore",
+      "label": {
+        "en": "Side gore",
+        "es": "Nesga lateral",
+        "fr": "Lé de côté"
+      },
+      "default_color": "#5c6878",
+      "cut": {
+        "quantity": 4,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back_gore",
+      "label": {
+        "en": "Back gore (placket)",
+        "es": "Nesga trasera (abertura)",
+        "fr": "Lé dos (patte)"
+      },
+      "default_color": "#6a7788",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "Shaped waistband",
+        "es": "Pretina conformada",
+        "fr": "Ceinture façonnée"
+      },
+      "default_color": "#414b57",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Body fit",
+        "es": "Ajuste al cuerpo",
+        "fr": "Ajustement au corps"
+      }
+    },
+    {
+      "id": "silhouette",
+      "label": {
+        "en": "Gores & sweep",
+        "es": "Nesgas y vuelo",
+        "fr": "Lés et ampleur"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 700,
+      "min": 500,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "The gores' waist shares sum to this exactly — the skirt has to fit the waist, so the flare lives below it",
+        "es": "Las porciones de cintura de las nesgas suman exactamente esto — la falda debe ajustar, así que el vuelo va abajo",
+        "fr": "Les parts de taille des lés totalisent exactement ceci — la jupe doit ajuster, l'ampleur vient dessous"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 980,
+      "min": 700,
+      "max": 1600,
+      "step": 10,
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      },
+      "tooltip": {
+        "en": "The skirt is FITTED to here and flares only below it; clamped to always clear the waist",
+        "es": "La falda ajusta hasta aquí y sólo vuela por debajo; limitado para superar siempre la cintura",
+        "fr": "La jupe ajuste jusqu'ici et ne s'évase qu'en dessous ; bornée pour toujours dépasser la taille"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      }
+    },
+    {
+      "id": "hip_drop",
+      "type": "slider",
+      "group": "fit",
+      "default": 210,
+      "min": 140,
+      "max": 320,
+      "step": 5,
+      "label": {
+        "en": "Waist to hip (mm)",
+        "es": "De cintura a cadera (mm)",
+        "fr": "De la taille à la hanche (mm)"
+      },
+      "tooltip": {
+        "en": "Where the fitted curve ends and the straight flare begins",
+        "es": "Donde acaba la curva ajustada y empieza el vuelo recto",
+        "fr": "Où finit la courbe ajustée et où commence l'évasement droit"
+      }
+    },
+    {
+      "id": "skirt_length",
+      "type": "slider",
+      "group": "silhouette",
+      "default": 950,
+      "min": 700,
+      "max": 1200,
+      "step": 10,
+      "label": {
+        "en": "Skirt length (mm)",
+        "es": "Largo de falda (mm)",
+        "fr": "Longueur de jupe (mm)"
+      },
+      "tooltip": {
+        "en": "Waist to hem. A WALKING skirt clears the ground — that is what distinguishes it from the trained skirt of the same years",
+        "es": "De cintura a bajo. Una falda de PASEO no roza el suelo — eso la distingue de la falda con cola de esos años",
+        "fr": "De la taille à l'ourlet. Une jupe de MARCHE ne traîne pas — c'est ce qui la distingue de la jupe à traîne"
+      }
+    },
+    {
+      "id": "hem_sweep",
+      "type": "slider",
+      "group": "silhouette",
+      "default": 3000,
+      "min": 1600,
+      "max": 6000,
+      "step": 50,
+      "label": {
+        "en": "Hem sweep (mm)",
+        "es": "Vuelo del bajo (mm)",
+        "fr": "Ampleur de l'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Target circumference at the hem; the ACHIEVED sweep is measured off the built gores and reported separately",
+        "es": "Circunferencia objetivo en el bajo; el vuelo LOGRADO se mide sobre las nesgas y se informa aparte",
+        "fr": "Circonférence visée à l'ourlet ; l'ampleur OBTENUE est mesurée sur les lés et rapportée à part"
+      }
+    },
+    {
+      "id": "gore_pairs",
+      "type": "slider",
+      "group": "silhouette",
+      "default": 2,
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": {
+        "en": "Side-gore pairs",
+        "es": "Pares de nesgas laterales",
+        "fr": "Paires de lés de côté"
+      },
+      "tooltip": {
+        "en": "Gores between the front and back on each side; more gores means a smoother flare and more seams",
+        "es": "Nesgas entre delantero y trasero a cada lado; más nesgas dan vuelo más suave y más costuras",
+        "fr": "Lés entre devant et dos de chaque côté ; plus de lés donne un évasement plus doux et plus de coutures"
+      }
+    },
+    {
+      "id": "back_fullness",
+      "type": "slider",
+      "group": "silhouette",
+      "default": 1.6,
+      "min": 1,
+      "max": 3,
+      "step": 0.1,
+      "label": {
+        "en": "Back fullness ratio",
+        "es": "Proporción de vuelo trasero",
+        "fr": "Rapport d'ampleur au dos"
+      },
+      "tooltip": {
+        "en": "How much more hem the back gore takes than the front; this PROGRESSION is the Edwardian silhouette, and 1.0 flattens it away",
+        "es": "Cuánto más bajo toma la nesga trasera que la delantera; esa PROGRESIÓN es la silueta eduardiana, y 1,0 la anula",
+        "fr": "Combien d'ourlet le lé dos prend de plus que le devant ; cette PROGRESSION est la silhouette édouardienne, 1,0 l'annule"
+      }
+    },
+    {
+      "id": "band_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 42,
+      "min": 20,
+      "max": 80,
+      "step": 2,
+      "label": {
+        "en": "Waistband height (mm)",
+        "es": "Alto de la pretina (mm)",
+        "fr": "Hauteur de ceinture (mm)"
+      },
+      "tooltip": {
+        "en": "Finished depth of the band; it also bounds how wide a hook plate can sit inside it",
+        "es": "Alto acabado de la pretina; también limita el ancho de la placa del corchete que cabe dentro",
+        "fr": "Hauteur finie de la ceinture ; elle borne aussi la largeur de plaque d'agrafe qui y tient"
+      }
+    },
+    {
+      "id": "hook_pitch",
+      "type": "slider",
+      "group": "construction",
+      "default": 55,
+      "min": 30,
+      "max": 110,
+      "step": 5,
+      "label": {
+        "en": "Hook pitch (mm)",
+        "es": "Paso de corchetes (mm)",
+        "fr": "Pas des agrafes (mm)"
+      },
+      "tooltip": {
+        "en": "Spacing of the hooks and bars up the centre-back placket; period plackets close with hooks, not with a zip",
+        "es": "Separación de corchetes en la abertura trasera; las aberturas de época cierran con corchetes, no con cremallera",
+        "fr": "Espacement des agrafes sur la patte de dos ; les pattes d'époque ferment par agrafes, pas par fermeture éclair"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "The hem carries a much deeper allowance — a walking skirt takes its wear at the hem and is faced there",
+        "es": "El bajo lleva un margen mucho mayor — una falda de paseo se desgasta en el bajo y se forra ahí",
+        "fr": "L'ourlet porte une marge bien plus profonde — une jupe de marche s'use à l'ourlet et y est doublée"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "hip_girth > waist_girth",
+      "severity": "error",
+      "message": {
+        "en": "The hip must clear the waist, or the gores have nothing to shape over.",
+        "es": "La cadera debe superar a la cintura, o las nesgas no tienen nada que conformar.",
+        "fr": "La hanche doit dépasser la taille, sinon les lés n'ont rien à façonner."
+      }
+    },
+    {
+      "expression": "hem_sweep > hip_girth",
+      "severity": "error",
+      "message": {
+        "en": "A hem no wider than the hip makes a tube — the gores would do no work at all.",
+        "es": "Un bajo que no supera la cadera hace un tubo — las nesgas no harían ningún trabajo.",
+        "fr": "Un ourlet pas plus large que la hanche fait un tube — les lés ne serviraient à rien."
+      }
+    },
+    {
+      "expression": "skirt_length > hip_drop",
+      "severity": "error",
+      "message": {
+        "en": "The skirt must be longer than the waist-to-hip run or there is no flare below the hip.",
+        "es": "La falda debe ser más larga que el tramo cintura-cadera o no hay vuelo bajo la cadera.",
+        "fr": "La jupe doit dépasser la longueur taille-hanche, sinon aucun évasement sous la hanche."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "tailored_walking",
+      "label": {
+        "en": "Tailored walking skirt",
+        "es": "Falda de paseo sastre",
+        "fr": "Jupe de marche tailleur"
+      },
+      "values": {
+        "skirt_length": 900,
+        "hem_sweep": 2600,
+        "gore_pairs": 2,
+        "back_fullness": 1.4
+      }
+    },
+    {
+      "id": "full_seven_gore",
+      "label": {
+        "en": "Full seven-gore",
+        "es": "Siete nesgas, vuelo amplio",
+        "fr": "Sept lés, ample"
+      },
+      "values": {
+        "gore_pairs": 3,
+        "hem_sweep": 4200,
+        "back_fullness": 2.2,
+        "skirt_length": 1000
+      }
+    },
+    {
+      "id": "narrow_late",
+      "label": {
+        "en": "Narrow, late 1900s",
+        "es": "Estrecha, final de los 1900",
+        "fr": "Étroite, fin des années 1900"
+      },
+      "values": {
+        "hem_sweep": 1900,
+        "back_fullness": 1.2,
+        "gore_pairs": 1,
+        "skirt_length": 980
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "pdf",
+    "json"
+  ],
+  "fabrics": [
+    "lana-peinada-traje"
+  ],
+  "notion": {
+    "kind": "hook",
+    "subtype": "centre-back placket hooks and bars under a shaped band",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "trouser-hook-bar",
+      "linked": true,
+      "params_map": {
+        "hook_width": "band_height * 0.45",
+        "plate_len": "hook_pitch * 0.5",
+        "plate_t": "1",
+        "wire_d": "1",
+        "sew_holes": "3"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "gore_chain",
+        "type": "side_seam",
+        "label": {
+          "en": "Gore-to-gore seam (solved common length)",
+          "es": "Costura nesga a nesga (longitud común resuelta)",
+          "fr": "Couture lé à lé (longueur commune résolue)"
+        },
+        "edges": [
+          {
+            "piece": "front_gore",
+            "edge": "side"
+          },
+          {
+            "piece": "side_gore",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "hem_sweep",
+          "hip_girth",
+          "skirt_length",
+          "back_fullness",
+          "gore_pairs",
+          "hip_drop"
+        ]
+      },
+      {
+        "id": "band_seam",
+        "type": "waistband",
+        "label": {
+          "en": "Waistband onto the measured waist run",
+          "es": "Pretina sobre el contorno medido",
+          "fr": "Ceinture sur le tour mesuré"
+        },
+        "edges": [
+          {
+            "piece": "waistband",
+            "edge": "lower"
+          },
+          {
+            "piece": "front_gore",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "band_height",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "back_placket",
+        "type": "placket",
+        "label": {
+          "en": "Centre-back hook placket",
+          "es": "Abertura trasera de corchetes",
+          "fr": "Patte de dos à agrafes"
+        },
+        "edges": [
+          {
+            "piece": "back_gore",
+            "edge": "centre"
+          },
+          {
+            "piece": "waistband",
+            "edge": "end_r"
+          }
+        ],
+        "parameters": [
+          "hook_pitch",
+          "band_height",
+          "skirt_length"
+        ]
+      },
+      {
+        "id": "faced_hem",
+        "type": "hem",
+        "label": {
+          "en": "Faced walking hem",
+          "es": "Bajo forrado de paseo",
+          "fr": "Ourlet doublé de marche"
+        },
+        "edges": [
+          {
+            "piece": "front_gore",
+            "edge": "hem"
+          },
+          {
+            "piece": "back_gore",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "hem_sweep",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A gored skirt is a chain of seams that has to close all the way round the body, and it is the classic case where a costume draft passes a check only because the tolerance was widened until it stopped complaining. Solving one common seam length and building every gore to it — then reporting the residual as the zero it actually is — turns that from a judgement call into a number anyone can check. Publishing it parametrically also means the sweep, the gore count, and the fullness progression can be fitted to a real body and a real bolt width, rather than graded from a printed size that no longer exists.",
+      "es": "Una falda de nesgas es una cadena de costuras que debe cerrar alrededor de todo el cuerpo, y es el caso clásico en que un patrón de vestuario pasa la verificación sólo porque se ensanchó la tolerancia hasta que dejó de quejarse. Resolver una longitud de costura común y construir cada nesga contra ella — informando el residuo como el cero que realmente es — convierte eso de un criterio en un número comprobable por cualquiera. Publicarlo de forma paramétrica permite además ajustar el vuelo, el número de nesgas y la progresión a un cuerpo real y a un ancho de tela real, en vez de graduar desde una talla impresa que ya no existe.",
+      "fr": "Une jupe à lés est une chaîne de coutures qui doit se refermer tout autour du corps, et c'est le cas classique où un patron de costume passe le contrôle seulement parce qu'on a élargi la tolérance jusqu'à ce qu'elle se taise. Résoudre une longueur de couture commune et bâtir chaque lé dessus — puis déclarer le résidu comme le zéro qu'il est vraiment — transforme un jugement en un nombre vérifiable par quiconque. Le publier de façon paramétrique permet aussi d'ajuster l'ampleur, le nombre de lés et la progression à un corps réel et à une laize réelle, au lieu de graduer depuis une taille imprimée qui n'existe plus."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

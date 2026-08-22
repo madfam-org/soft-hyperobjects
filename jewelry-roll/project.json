@@ -1,0 +1,387 @@
+{
+  "project": {
+    "name": "Jewelry Roll",
+    "slug": "jewelry-roll",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The travelling jewelry roll: a padded rectangle that lies flat, carries a band of compartments across its lining, then rolls up on itself and cinches with a webbing tie through a D-ring. Chains do not tangle because each one gets its own pocket and the curl of the roll keeps them under tension. A roll is a spiral, not a cylinder — every wrap sits one fabric-thickness further out than the last — so the outer shell is cut longer than the lining by an allowance obtained from walking an Archimedean spiral numerically and measuring it, rather than guessed. The webbing tie bridges to the Yantra4D `d-ring` solid, whose bar is driven by the same tie width.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El joyero enrollable de viaje: un rectángulo acolchado que se extiende plano, lleva una banda de compartimentos sobre su forro, y luego se enrolla sobre sí mismo y se ciñe con una cinta que pasa por una anilla en D. Las cadenas no se enredan porque cada una tiene su propio bolsillo y la curvatura del rollo las mantiene en tensión. Un rollo es una espiral, no un cilindro —cada vuelta queda un grosor de tela más afuera que la anterior—, así que la capa exterior se corta más larga que el forro según una holgura obtenida recorriendo numéricamente una espiral de Arquímedes y midiéndola, en vez de estimarla. La cinta de cierre se puentea al sólido `d-ring` de Yantra4D, cuya barra se rige por el mismo ancho de cinta.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La trousse à bijoux de voyage : un rectangle matelassé qui s'étale à plat, porte une bande de compartiments sur sa doublure, puis s'enroule sur lui-même et se serre par une sangle passée dans un anneau en D. Les chaînes ne s'emmêlent pas car chacune reçoit sa propre poche et la courbure du rouleau les maintient en tension. Un rouleau est une spirale, non un cylindre — chaque tour se place une épaisseur de tissu plus loin que le précédent — aussi la coque extérieure est-elle coupée plus longue que la doublure d'une aisance obtenue en parcourant numériquement une spirale d'Archimède et en la mesurant, plutôt qu'estimée. La sangle fait le pont vers le solide `d-ring` de Yantra4D, dont la barre est pilotée par la même largeur de sangle.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "jewelry-roll",
+      "care",
+      "storage",
+      "travel",
+      "padded",
+      "d-ring",
+      "hardware",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full jewelry roll",
+        "es": "Joyero enrollable completo",
+        "fr": "Trousse à bijoux complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "shell",
+        "lining",
+        "pocket",
+        "tie"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "shell",
+      "label": {
+        "en": "Outer shell (spiral-lengthened)",
+        "es": "Capa exterior (alargada por la espiral)",
+        "fr": "Coque extérieure (allongée par la spirale)"
+      },
+      "default_color": "#6b4a5f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "lining",
+      "label": {
+        "en": "Lining (carries the pockets)",
+        "es": "Forro (lleva los bolsillos)",
+        "fr": "Doublure (porte les poches)"
+      },
+      "default_color": "#8a6b7c",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "pocket",
+      "label": {
+        "en": "Compartment band",
+        "es": "Banda de compartimentos",
+        "fr": "Bande de compartiments"
+      },
+      "default_color": "#9c7f8d",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "tie",
+      "label": {
+        "en": "Webbing cinch tie",
+        "es": "Cinta de cierre",
+        "fr": "Sangle de serrage"
+      },
+      "default_color": "#5a3d4d",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Size",
+        "es": "Tamaño",
+        "fr": "Taille"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "roll_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 300,
+      "min": 180,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Roll width (mm)",
+        "es": "Ancho del rollo (mm)",
+        "fr": "Largeur du rouleau (mm)"
+      },
+      "tooltip": {
+        "en": "The roll's axis — the length a necklace can lie along without doubling back",
+        "es": "El eje del rollo: el largo que un collar puede ocupar sin doblarse",
+        "fr": "L'axe du rouleau : la longueur qu'un collier occupe sans se replier"
+      }
+    },
+    {
+      "id": "roll_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 240,
+      "min": 150,
+      "max": 360,
+      "step": 10,
+      "label": {
+        "en": "Unrolled length (mm)",
+        "es": "Largo desenrollado (mm)",
+        "fr": "Longueur déroulée (mm)"
+      },
+      "tooltip": {
+        "en": "The rolling direction; more length means more wraps and a thicker finished roll",
+        "es": "La dirección de enrollado; más largo significa más vueltas y un rollo más grueso",
+        "fr": "Le sens d'enroulement ; plus de longueur donne plus de tours et un rouleau plus épais"
+      }
+    },
+    {
+      "id": "pocket_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 85,
+      "min": 40,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Pocket depth (mm)",
+        "es": "Profundidad del bolsillo (mm)",
+        "fr": "Profondeur de poche (mm)"
+      },
+      "tooltip": {
+        "en": "Finished height of the compartment band, before its top hem",
+        "es": "Altura acabada de la banda de compartimentos, antes de su dobladillo superior",
+        "fr": "Hauteur finie de la bande de compartiments, avant son ourlet supérieur"
+      }
+    },
+    {
+      "id": "tie_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 20,
+      "min": 10,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Tie width (mm)",
+        "es": "Ancho de la cinta (mm)",
+        "fr": "Largeur de la sangle (mm)"
+      },
+      "tooltip": {
+        "en": "Also the D-ring's bar width — the tie must pass through it without folding",
+        "es": "También el ancho de la barra de la anilla: la cinta debe pasar sin doblarse",
+        "fr": "Aussi la largeur de la barre de l'anneau : la sangle doit passer sans se plier"
+      }
+    },
+    {
+      "id": "batting_thickness",
+      "type": "slider",
+      "group": "construction",
+      "default": 5,
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Batting thickness (mm)",
+        "es": "Grosor de la guata (mm)",
+        "fr": "Épaisseur du molleton (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the spiral allowance: thicker loft pushes each wrap further out",
+        "es": "Rige la holgura de la espiral: más volumen empuja cada vuelta más afuera",
+        "fr": "Pilote l'aisance de la spirale : plus de volume pousse chaque tour plus loin"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam; the pocket's top hem is drafted separately",
+        "es": "Aplicado a todas las costuras; el dobladillo del bolsillo se traza aparte",
+        "fr": "Appliquée à toutes les coutures ; l'ourlet de la poche est tracé à part"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "pocket_depth < roll_length * 0.6",
+      "severity": "error",
+      "message": {
+        "en": "The compartment band must be shallower than the roll it sits on, or there is no lining left to roll.",
+        "es": "La banda de compartimentos debe ser menos profunda que el rollo que la sostiene, o no queda forro que enrollar.",
+        "fr": "La bande de compartiments doit être moins profonde que le rouleau qui la porte, sinon il ne reste pas de doublure à enrouler."
+      }
+    },
+    {
+      "expression": "roll_width >= tie_width * 6",
+      "severity": "warning",
+      "message": {
+        "en": "A tie this wide relative to the roll will cinch it into a waist rather than hold it round.",
+        "es": "Una cinta así de ancha respecto al rollo lo estrangulará en vez de mantenerlo redondo.",
+        "fr": "Une sangle aussi large par rapport au rouleau l'étranglera au lieu de le maintenir rond."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "earrings",
+      "label": {
+        "en": "Earrings & studs",
+        "es": "Aretes y broqueles",
+        "fr": "Boucles d'oreilles"
+      },
+      "values": {
+        "roll_width": 200,
+        "roll_length": 170,
+        "pocket_depth": 55
+      }
+    },
+    {
+      "id": "everyday",
+      "label": {
+        "en": "Everyday mix",
+        "es": "Mezcla diaria",
+        "fr": "Mélange quotidien"
+      },
+      "values": {
+        "roll_width": 300,
+        "roll_length": 240,
+        "pocket_depth": 85
+      }
+    },
+    {
+      "id": "necklaces",
+      "label": {
+        "en": "Long necklaces",
+        "es": "Collares largos",
+        "fr": "Colliers longs"
+      },
+      "values": {
+        "roll_width": 400,
+        "roll_length": 300,
+        "pocket_depth": 120
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "popelina-algodon"
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "webbing tie D-ring",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "d-ring",
+      "linked": true,
+      "params_map": {
+        "webbing": "tie_width",
+        "wire_t": "batting_thickness * 0.6",
+        "bow_depth": "tie_width * 0.8"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "tie_anchor",
+        "type": "custom",
+        "label": {
+          "en": "Tie anchor at the D-ring end",
+          "es": "Anclaje de la cinta en el extremo de la anilla",
+          "fr": "Ancrage de la sangle côté anneau"
+        },
+        "edges": [
+          {
+            "piece": "tie",
+            "edge": "ring_end"
+          }
+        ],
+        "parameters": [
+          "tie_width",
+          "batting_thickness"
+        ]
+      },
+      {
+        "id": "roll_spiral_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Shell-to-lining spiral seam",
+          "es": "Costura en espiral de capa a forro",
+          "fr": "Couture en spirale coque-doublure"
+        },
+        "edges": [
+          {
+            "piece": "shell",
+            "edge": "bottom"
+          },
+          {
+            "piece": "lining",
+            "edge": "bottom"
+          }
+        ],
+        "parameters": [
+          "roll_length",
+          "batting_thickness"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Fine chains are usually stored in the blister packaging they arrived in, then thrown away tangled and kinked. A cut-to-size padded roll makes a repairable, launderable home for jewelry that already exists, in cotton rather than the flocked polystyrene trays that cannot be cleaned. The D-ring is an open printable Yantra4D object sized to the tie, so a broken fastening is a part you print rather than a roll you replace.",
+      "es": "Las cadenas finas suelen guardarse en el mismo blíster en el que llegaron y acaban tiradas, enredadas y dobladas. Un rollo acolchado cortado a medida ofrece un hogar reparable y lavable a joyería que ya existe, en algodón en vez de las bandejas de poliestireno afelpado que no se pueden limpiar. La anilla en D es un objeto imprimible abierto de Yantra4D dimensionado a la cinta: un cierre roto es una pieza que se imprime, no un joyero que se reemplaza.",
+      "fr": "Les chaînes fines sont d'ordinaire rangées dans l'emballage où elles sont arrivées, puis jetées emmêlées et pliées. Un rouleau matelassé coupé sur mesure offre un logement réparable et lavable à des bijoux qui existent déjà, en coton plutôt que les plateaux en polystyrène floqué impossibles à nettoyer. L'anneau en D est un objet Yantra4D ouvert et imprimable dimensionné à la sangle : une fermeture cassée est une pièce à imprimer, pas une trousse à remplacer."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

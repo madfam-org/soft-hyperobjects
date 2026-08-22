@@ -1,0 +1,402 @@
+{
+  "project": {
+    "name": "Drop-Back Jumpsuit",
+    "slug": "drop-back-jumpsuit",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A jumpsuit whose entire seat drops away on two webbing straps, so a seated wearer can use a toilet without taking the garment off, without standing, and without a second person in the room. A one-piece is the warmest, tidiest, least-riding-up thing a wheelchair user can wear, and normally the one that turns a five-minute transfer into a twenty-minute undressing — so the usual advice is simply not to wear one. This keeps the jumpsuit and removes the reason. The panel is hinged at the front crotch and never detaches, so it cannot be dropped, lost, or land on a wet floor, which is the failure mode of a detachable panel; rehooking is a one-handed upward pull against a D-ring that holds tension while the hand lets go. The seated rise tilt is taken at centre front and centre back, never at the side, so front and back share one side-waist point — applying it at the side too would make the two side edges differ by the full rise extra, and that seam is what the garment hangs from. The rings bridge to the Yantra4D `d-ring` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un mameluco cuyo asiento entero se descuelga sobre dos correas, para que alguien sentado pueda usar el baño sin quitarse la prenda, sin ponerse de pie y sin una segunda persona en el cuarto. Una prenda de una pieza es lo más abrigador, ordenado y que menos se sube que puede usar un usuario de silla de ruedas, y normalmente la que convierte una transferencia de cinco minutos en veinte de desvestirse — así que el consejo habitual es sencillamente no usarla. Esto conserva el mameluco y elimina la razón. El panel va abisagrado en la entrepierna delantera y nunca se desprende, de modo que no puede caerse, perderse ni terminar en un piso mojado, que es la falla típica de un panel desmontable; volver a engancharlo es un tirón hacia arriba con una sola mano contra una anilla D que sostiene la tensión mientras la mano suelta. La inclinación de tiro para persona sentada se toma en el centro delantero y el centro trasero, nunca en el costado, para que delantero y espalda compartan un mismo punto de cintura lateral — aplicarla también en el costado haría que los dos costados difirieran por todo el extra de tiro, y esa costura es de la que cuelga la prenda. Las anillas se puentean al sólido `d-ring` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une combinaison dont l'assise entière se décroche sur deux sangles, pour qu'une personne assise puisse aller aux toilettes sans retirer le vêtement, sans se lever et sans un tiers dans la pièce. Une pièce unique est ce qu'un utilisateur de fauteuil roulant peut porter de plus chaud, de plus net et de moins remontant — et normalement ce qui transforme un transfert de cinq minutes en vingt minutes de déshabillage : le conseil habituel est donc de ne pas en porter. Ceci garde la combinaison et supprime la raison. Le panneau est articulé à l'entrejambe devant et ne se détache jamais : il ne peut donc ni tomber, ni se perdre, ni atterrir sur un sol mouillé, mode de défaillance du panneau amovible ; le raccrocher est une traction vers le haut d'une seule main contre un anneau en D qui tient la tension pendant que la main lâche. L'inclinaison de fourche pour personne assise est prise au milieu devant et au milieu dos, jamais au côté, si bien que devant et dos partagent un même point de taille latérale — l'appliquer aussi au côté ferait différer les deux côtés de tout le supplément de fourche, et c'est cette couture qui porte le vêtement. Les anneaux font le pont vers le solide `d-ring` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "drop-back-jumpsuit",
+      "adaptive",
+      "wheelchair",
+      "seated-cut",
+      "independent-toileting",
+      "drop-seat",
+      "jumpsuit",
+      "hardware",
+      "d-ring",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full jumpsuit",
+        "es": "Mameluco completo",
+        "fr": "Combinaison complète"
+      },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "seat", "band", "strap"]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Jumpsuit front (shortened rise)",
+        "es": "Delantero (tiro acortado)",
+        "fr": "Devant (fourche raccourcie)"
+      },
+      "default_color": "#4a6274",
+      "cut": { "quantity": 2, "on_fold": false, "mirror": true }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Jumpsuit back (seat cut away)",
+        "es": "Espalda (asiento recortado)",
+        "fr": "Dos (assise découpée)"
+      },
+      "default_color": "#3d5464",
+      "cut": { "quantity": 2, "on_fold": false, "mirror": true }
+    },
+    {
+      "id": "seat",
+      "label": {
+        "en": "Drop seat panel (hinged at front crotch)",
+        "es": "Panel de asiento abatible (abisagrado en la entrepierna)",
+        "fr": "Panneau d'assise rabattable (articulé à l'entrejambe)"
+      },
+      "default_color": "#5f7c90",
+      "cut": { "quantity": 1, "on_fold": true, "mirror": false }
+    },
+    {
+      "id": "band",
+      "label": {
+        "en": "Waistband (carries both D-ring anchors)",
+        "es": "Pretina (lleva los dos anclajes de anilla)",
+        "fr": "Ceinture (porte les deux ancrages d'anneau)"
+      },
+      "default_color": "#71909f",
+      "cut": { "quantity": 1, "on_fold": true, "mirror": false }
+    },
+    {
+      "id": "strap",
+      "label": {
+        "en": "Ring strap facing",
+        "es": "Forro de correa de anilla",
+        "fr": "Parementure de sangle d'anneau"
+      },
+      "default_color": "#89a5b2",
+      "cut": { "quantity": 2, "on_fold": false, "mirror": false }
+    }
+  ],
+  "parameter_groups": [
+    { "id": "fit", "label": { "en": "Fit", "es": "Ajuste", "fr": "Ajustement" } },
+    { "id": "seated", "label": { "en": "Seated cut", "es": "Corte sentado", "fr": "Coupe assise" } },
+    { "id": "closure", "label": { "en": "Closure", "es": "Cierre", "fr": "Fermeture" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction" } }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 980,
+      "min": 720,
+      "max": 1500,
+      "step": 10,
+      "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)" },
+      "tooltip": {
+        "en": "Body chest; 150 mm of ease — a one-piece must admit a whole body at once",
+        "es": "Pecho del cuerpo; 150 mm de holgura — una pieza única debe admitir el cuerpo entero de una vez",
+        "fr": "Poitrine du corps ; 150 mm d'aisance — une pièce unique doit admettre le corps entier d'un coup"
+      },
+      "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 860,
+      "min": 600,
+      "max": 1400,
+      "step": 10,
+      "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)" },
+      "tooltip": {
+        "en": "Sets the shared side-waist point both pieces are solved against",
+        "es": "Define el punto de cintura lateral compartido contra el que se resuelven ambas piezas",
+        "fr": "Définit le point de taille latérale partagé contre lequel les deux pièces sont résolues"
+      },
+      "measurement": { "standard": "iso_8559", "code": "waist_girth" }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 1020,
+      "min": 700,
+      "max": 1550,
+      "step": 10,
+      "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)", "fr": "Tour de hanches (mm)" },
+      "tooltip": {
+        "en": "Sets the seat panel's width and the back's hip step",
+        "es": "Define el ancho del panel de asiento y el escalón de cadera de la espalda",
+        "fr": "Définit la largeur du panneau d'assise et le décroché de hanche du dos"
+      },
+      "measurement": { "standard": "iso_8559", "code": "hip_girth" }
+    },
+    {
+      "id": "bodice_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 420,
+      "min": 320,
+      "max": 560,
+      "step": 10,
+      "label": { "en": "Bodice length (mm)", "es": "Largo del cuerpo (mm)", "fr": "Longueur du corsage (mm)" },
+      "tooltip": {
+        "en": "Waist to top; this is the side seam the whole garment hangs from",
+        "es": "De cintura a la parte alta; es la costura lateral de la que cuelga toda la prenda",
+        "fr": "De la taille au haut ; c'est la couture latérale qui porte tout le vêtement"
+      }
+    },
+    {
+      "id": "inseam_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 740,
+      "min": 520,
+      "max": 950,
+      "step": 10,
+      "label": { "en": "Inseam length (mm)", "es": "Largo de entrepierna (mm)", "fr": "Longueur d'entrejambe (mm)" },
+      "tooltip": {
+        "en": "Crotch to hem; measure it seated, not standing",
+        "es": "De entrepierna al bajo; mídelo sentado, no de pie",
+        "fr": "De l'entrejambe à l'ourlet ; à mesurer assis, pas debout"
+      },
+      "measurement": { "standard": "iso_8559", "code": "inside_leg_length" }
+    },
+    {
+      "id": "front_rise",
+      "type": "slider",
+      "group": "seated",
+      "default": 290,
+      "min": 220,
+      "max": 400,
+      "step": 5,
+      "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)", "fr": "Fourche devant (mm)" },
+      "tooltip": {
+        "en": "Before the seated tilt; the front then LOSES part of the rise extra",
+        "es": "Antes de la inclinación sentada; el delantero luego PIERDE parte del extra de tiro",
+        "fr": "Avant l'inclinaison assise ; le devant PERD ensuite une part du supplément"
+      }
+    },
+    {
+      "id": "seat_rise_extra",
+      "type": "slider",
+      "group": "seated",
+      "default": 55,
+      "min": 0,
+      "max": 130,
+      "step": 5,
+      "label": { "en": "Seated rise extra (mm)", "es": "Extra de tiro sentado (mm)", "fr": "Supplément de fourche assise (mm)" },
+      "tooltip": {
+        "en": "Added to the back rise, taken at CB only — never at the side, or the side seams part company",
+        "es": "Se suma al tiro trasero, solo en el centro trasero — nunca en el costado, o los costados se separan",
+        "fr": "Ajouté à la fourche dos, au milieu dos seulement — jamais au côté, sinon les côtés divergent"
+      }
+    },
+    {
+      "id": "hem_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 210,
+      "min": 140,
+      "max": 320,
+      "step": 10,
+      "label": { "en": "Hem width (mm)", "es": "Ancho del bajo (mm)", "fr": "Largeur d'ourlet (mm)" },
+      "tooltip": {
+        "en": "Front hem; the back's is then SOLVED so the outer legs measure equal",
+        "es": "Bajo delantero; el trasero se RESUELVE luego para que los costados midan igual",
+        "fr": "Ourlet devant ; celui du dos est ensuite RÉSOLU pour que les côtés mesurent pareil"
+      }
+    },
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "group": "closure",
+      "default": 30,
+      "min": 18,
+      "max": 50,
+      "step": 2,
+      "label": { "en": "Strap width (mm)", "es": "Ancho de correa (mm)", "fr": "Largeur de sangle (mm)" },
+      "tooltip": {
+        "en": "Cuts the strap AND drives the Yantra4D D-ring's webbing bar — one dimension, both sides",
+        "es": "Corta la correa Y define la barra para cincha de la anilla D de Yantra4D — una medida, ambos lados",
+        "fr": "Coupe la sangle ET pilote la barre à sangle de l'anneau D Yantra4D — une dimension, des deux côtés"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 8,
+      "max": 18,
+      "step": 1,
+      "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)" },
+      "tooltip": {
+        "en": "Hems take 34 mm; the panel's hinge and the band fold take none",
+        "es": "Los bajos llevan 34 mm; la bisagra del panel y el doblez de pretina no llevan",
+        "fr": "Les ourlets prennent 34 mm ; la charnière du panneau et le pli de ceinture aucun"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "hem_width < hip_girth / 3",
+      "severity": "warning",
+      "message": {
+        "en": "A hem this wide relative to the hip leaves a leg that catches in the castors.",
+        "es": "Un bajo tan ancho para esta cadera deja una pierna que se atora en las ruedas.",
+        "fr": "Un ourlet aussi large pour cette hanche laisse une jambe qui accroche les roulettes."
+      }
+    },
+    {
+      "expression": "seat_rise_extra < front_rise / 2",
+      "severity": "warning",
+      "message": {
+        "en": "A rise extra above half the front rise leaves almost no front rise to sit in.",
+        "es": "Un extra de tiro mayor que medio tiro delantero deja casi sin tiro delantero.",
+        "fr": "Un supplément supérieur à la demi-fourche devant ne laisse presque plus de fourche devant."
+      }
+    },
+    {
+      "expression": "strap_width < bodice_length / 6",
+      "severity": "warning",
+      "message": {
+        "en": "A strap this wide will not lie flat between the panel top and the band.",
+        "es": "Una correa tan ancha no queda plana entre el panel y la pretina.",
+        "fr": "Une sangle aussi large ne restera pas à plat entre le panneau et la ceinture."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "daily-chair",
+      "label": { "en": "Daily chair use", "es": "Uso diario en silla", "fr": "Usage quotidien en fauteuil" },
+      "values": { "hip_girth": 1020, "seat_rise_extra": 55, "hem_width": 210, "strap_width": 30 }
+    },
+    {
+      "id": "deep-seated-tilt",
+      "label": { "en": "Deep seated tilt", "es": "Inclinación sentada profunda", "fr": "Inclinaison assise prononcée" },
+      "values": { "seat_rise_extra": 110, "front_rise": 320, "inseam_length": 700, "hip_girth": 1150 }
+    },
+    {
+      "id": "wide-strap-weak-grip",
+      "label": { "en": "Wide strap (weak grip)", "es": "Correa ancha (agarre débil)", "fr": "Sangle large (préhension faible)" },
+      "values": { "strap_width": 46, "bodice_length": 480, "waist_girth": 1000 }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["mezclilla-denim"],
+  "notion": {
+    "kind": "buckle",
+    "subtype": "drop-seat D-ring suspension",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "d-ring",
+      "linked": true,
+      "params_map": {
+        "webbing": "strap_width",
+        "bow_depth": "strap_width * 0.8",
+        "wire_t": "4.0",
+        "wire_h": "5.0"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "drop_seat_suspension",
+        "type": "custom",
+        "label": {
+          "en": "Drop-seat D-ring suspension",
+          "es": "Suspensión de asiento abatible con anillas D",
+          "fr": "Suspension d'assise rabattable à anneaux D"
+        },
+        "edges": [
+          { "piece": "seat", "edge": "panel_top" },
+          { "piece": "strap", "edge": "end_panel" },
+          { "piece": "band", "edge": "lower" }
+        ],
+        "parameters": ["strap_width", "hip_girth", "seat_rise_extra", "bodice_length"]
+      },
+      {
+        "id": "seat_opening",
+        "type": "custom",
+        "label": {
+          "en": "Seat opening to drop panel",
+          "es": "Abertura de asiento al panel abatible",
+          "fr": "Ouverture d'assise au panneau rabattable"
+        },
+        "edges": [
+          { "piece": "back", "edge": "seat_opening" },
+          { "piece": "seat", "edge": "attach" }
+        ],
+        "parameters": ["hip_girth", "seat_rise_extra", "front_rise", "inseam_length"]
+      },
+      {
+        "id": "shared_side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Shared side-waist seam",
+          "es": "Costura lateral de cintura compartida",
+          "fr": "Couture latérale à taille partagée"
+        },
+        "edges": [
+          { "piece": "front", "edge": "side" },
+          { "piece": "back", "edge": "side" }
+        ],
+        "parameters": ["waist_girth", "chest_girth", "bodice_length", "front_rise"]
+      },
+      {
+        "id": "jumpsuit_waistband",
+        "type": "waistband",
+        "label": {
+          "en": "Waistband",
+          "es": "Pretina",
+          "fr": "Ceinture"
+        },
+        "edges": [
+          { "piece": "band", "edge": "lower" },
+          { "piece": "front", "edge": "side" },
+          { "piece": "back", "edge": "side" }
+        ],
+        "parameters": ["waist_girth", "strap_width", "seam_allowance"]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Independent toileting is the single most-cited determinant of whether a wheelchair user can hold a job, travel, or live alone — and clothing is often the only thing standing in the way of it. Commercial drop-seat garments exist, cost several times a plain jumpsuit, and mostly use a fully detachable panel that can be dropped on a wet floor, which is why people abandon them. Hinging the panel and hanging it from two printable D-rings costs pennies and fails better. The same rings and the same panel geometry convert a jumpsuit somebody already owns; the pattern is one route to the result, not a condition for it.",
+      "es": "La autonomía para ir al baño es el factor más citado para determinar si un usuario de silla de ruedas puede conservar un empleo, viajar o vivir solo — y la ropa suele ser lo único que se interpone. Existen prendas comerciales de asiento abatible, cuestan varias veces un mameluco liso y en su mayoría usan un panel totalmente desmontable que puede caer en un piso mojado, razón por la que la gente las abandona. Abisagrar el panel y colgarlo de dos anillas D imprimibles cuesta centavos y falla mejor. Las mismas anillas y la misma geometría de panel convierten un mameluco que la persona ya tiene; el patrón es una vía al resultado, no una condición.",
+      "fr": "L'autonomie aux toilettes est le déterminant le plus cité de la capacité d'un utilisateur de fauteuil roulant à garder un emploi, voyager ou vivre seul — et le vêtement est souvent la seule chose qui s'y oppose. Des vêtements d'assise rabattable existent dans le commerce, coûtent plusieurs fois le prix d'une combinaison unie et utilisent le plus souvent un panneau entièrement amovible qui peut tomber sur un sol mouillé, d'où leur abandon. Articuler le panneau et le suspendre à deux anneaux en D imprimables coûte quelques centimes et échoue mieux. Les mêmes anneaux et la même géométrie de panneau convertissent une combinaison déjà possédée ; le patron est une voie vers le résultat, non une condition."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

@@ -1,0 +1,603 @@
+{
+  "project": {
+    "name": "Hakama (袴)",
+    "slug": "hakama",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The pleated over-garment worn from the waist down over a kimono: formal wear, and the working dress of kendō, aikidō, kyūdō and Shintō practice. This cartridge drafts the 馬乗り (umanori, \"horse-riding\") form — the divided hakama, split into two legs. Its construction is unlike a Western trouser at every point: no crotch curve, no seat shaping, no rise. The legs are straight panels divided by a seam that stops partway up, leaving the 相引き (aibiki) side opening. The pleating is asymmetric and structural — five pleats in front, two behind — so front and back pleat into different spans and each depth is back-solved independently from its own integer count. The 腰板 (koshiita) back board is a trapezoid whose measured lower edge, not its top, is the seam the back pleating meets. Four straps (紐 himo) fasten the garment; there is no hardware. Undivided andon hakama, trailing nagabakama, and rank- or office-bearing forms are deliberately excluded. Offered with respect for the living tradition.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La prenda plisada que se lleva de la cintura para abajo sobre el kimono: vestimenta formal y atuendo de trabajo del kendō, el aikidō, el kyūdō y la práctica sintoísta. Este cartucho traza la forma 馬乗り (umanori, «de montar a caballo») — el hakama dividido en dos perneras. Su construcción no se parece en nada a un pantalón occidental: sin curva de tiro, sin entalle de asiento, sin altura de tiro. Las perneras son paños rectos divididos por una costura que se detiene a media altura y deja la abertura lateral 相引き (aibiki). El plisado es asimétrico y estructural — cinco pliegues delante, dos detrás — de modo que delantero y trasero se plisan sobre tramos distintos y cada profundidad se despeja por separado a partir de su propio número entero de pliegues. La tabla trasera 腰板 (koshiita) es un trapecio cuyo borde inferior medido, y no el superior, es la costura que recibe el plisado trasero. Cuatro cintas (紐 himo) cierran la prenda; no hay herrajes. El hakama sin dividir (andon), el nagabakama de cola y las formas que marcan rango o cargo quedan deliberadamente excluidos. Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le vêtement plissé porté de la taille aux pieds par-dessus le kimono : tenue de cérémonie et vêtement de travail du kendō, de l'aïkidō, du kyūdō et de la pratique shintō. Cette cartouche trace la forme 馬乗り (umanori, « pour monter à cheval ») — le hakama divisé en deux jambes. Sa construction ne ressemble en rien à un pantalon occidental : pas de courbe d'entrejambe, pas de galbe de fessier, pas de hauteur de fourche. Les jambes sont des panneaux droits séparés par une couture qui s'arrête à mi-hauteur, laissant l'ouverture latérale 相引き (aibiki). Le plissage est asymétrique et structurel — cinq plis devant, deux derrière — si bien que devant et dos se plissent sur des empans différents et que chaque profondeur est déduite séparément de son propre nombre entier de plis. La planche dorsale 腰板 (koshiita) est un trapèze dont le bord inférieur mesuré, et non le supérieur, reçoit le plissage du dos. Quatre liens (紐 himo) ferment le vêtement ; aucune quincaillerie. Le hakama non divisé (andon), le nagabakama à traîne et les formes marquant le rang ou la charge sont délibérément exclus. Proposé dans le respect de la tradition vivante.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "hakama",
+      "japanese",
+      "heritage",
+      "pleated",
+      "divided",
+      "umanori",
+      "martial-arts",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Hakama",
+        "es": "Hakama completo",
+        "fr": "Hakama complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "koshiita",
+        "himo_long",
+        "himo_short"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front width (maemigoro)",
+        "es": "Ancho delantero (maemigoro)",
+        "fr": "Laize devant (maemigoro)"
+      },
+      "default_color": "#39424f",
+      "cut": {
+        "quantity": 8,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back width (ushiromigoro)",
+        "es": "Ancho trasero (ushiromigoro)",
+        "fr": "Laize dos (ushiromigoro)"
+      },
+      "default_color": "#39424f",
+      "cut": {
+        "quantity": 6,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "koshiita",
+      "label": {
+        "en": "Back board (koshiita)",
+        "es": "Tabla trasera (koshiita)",
+        "fr": "Planche dorsale (koshiita)"
+      },
+      "default_color": "#2b323d",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "himo_long",
+      "label": {
+        "en": "Front strap (mae-himo)",
+        "es": "Cinta delantera (mae-himo)",
+        "fr": "Lien devant (mae-himo)"
+      },
+      "default_color": "#4d5866",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "fold_edge": "fold",
+        "mirror": true
+      }
+    },
+    {
+      "id": "himo_short",
+      "label": {
+        "en": "Back strap (ushiro-himo)",
+        "es": "Cinta trasera (ushiro-himo)",
+        "fr": "Lien dos (ushiro-himo)"
+      },
+      "default_color": "#4d5866",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "fold_edge": "fold",
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "pleating",
+      "label": {
+        "en": "Pleating",
+        "es": "Plisado",
+        "fr": "Plissage"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 820,
+      "min": 600,
+      "max": 1400,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "The hakama ties at the hip bone, not the natural waist",
+        "es": "El hakama se ata en la cadera, no en la cintura natural",
+        "fr": "Le hakama se noue sur la hanche, pas à la taille naturelle"
+      }
+    },
+    {
+      "id": "hakama_length",
+      "type": "slider",
+      "group": "body",
+      "default": 960,
+      "min": 600,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Hakama length (mm)",
+        "es": "Largo del hakama (mm)",
+        "fr": "Longueur du hakama (mm)"
+      },
+      "tooltip": {
+        "en": "Tie point to ankle bone — it should just clear the floor",
+        "es": "Del punto de atado al tobillo — debe rozar apenas el suelo",
+        "fr": "Du point de nouage à la cheville — il doit affleurer le sol"
+      }
+    },
+    {
+      "id": "leg_width",
+      "type": "slider",
+      "group": "body",
+      "default": 420,
+      "min": 280,
+      "max": 620,
+      "step": 10,
+      "label": {
+        "en": "Leg width (mm)",
+        "es": "Ancho de pernera (mm)",
+        "fr": "Largeur de jambe (mm)"
+      },
+      "tooltip": {
+        "en": "Flat half-width of one leg at the hem",
+        "es": "Semiancho plano de una pernera en el ruedo",
+        "fr": "Demi-largeur à plat d'une jambe à l'ourlet"
+      }
+    },
+    {
+      "id": "aibiki_drop",
+      "type": "slider",
+      "group": "construction",
+      "default": 300,
+      "min": 150,
+      "max": 480,
+      "step": 10,
+      "label": {
+        "en": "Aibiki opening (mm)",
+        "es": "Abertura aibiki (mm)",
+        "fr": "Ouverture aibiki (mm)"
+      },
+      "tooltip": {
+        "en": "Depth of the open side gap above the leg seam — it is what lets you move",
+        "es": "Profundidad de la abertura lateral sobre la costura — es lo que permite moverse",
+        "fr": "Profondeur de l'ouverture latérale au-dessus de la couture — elle permet le mouvement"
+      }
+    },
+    {
+      "id": "front_pleats",
+      "type": "slider",
+      "group": "pleating",
+      "default": 5,
+      "min": 3,
+      "max": 9,
+      "step": 1,
+      "label": {
+        "en": "Front pleat count",
+        "es": "Pliegues delanteros",
+        "fr": "Plis devant"
+      },
+      "tooltip": {
+        "en": "Traditionally five; the front and back counts are deliberately different",
+        "es": "Tradicionalmente cinco; delantero y trasero difieren a propósito",
+        "fr": "Traditionnellement cinq ; devant et dos diffèrent volontairement"
+      }
+    },
+    {
+      "id": "back_pleats",
+      "type": "slider",
+      "group": "pleating",
+      "default": 2,
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "label": {
+        "en": "Back pleat count",
+        "es": "Pliegues traseros",
+        "fr": "Plis dos"
+      },
+      "tooltip": {
+        "en": "Traditionally two — the back is bounded by the koshiita board",
+        "es": "Tradicionalmente dos — el trasero lo delimita la tabla koshiita",
+        "fr": "Traditionnellement deux — le dos est borné par la planche koshiita"
+      }
+    },
+    {
+      "id": "wrap_overlap",
+      "type": "slider",
+      "group": "pleating",
+      "default": 200,
+      "min": 80,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Front wrap overlap (mm)",
+        "es": "Cruce delantero (mm)",
+        "fr": "Croisement devant (mm)"
+      },
+      "tooltip": {
+        "en": "Extra front span the wrap needs — it is why front and back pleat differently",
+        "es": "Tramo delantero extra del cruce — por eso delantero y trasero plisan distinto",
+        "fr": "Empan devant supplémentaire du croisement — d'où le plissage différent"
+      }
+    },
+    {
+      "id": "koshiita_h",
+      "type": "slider",
+      "group": "construction",
+      "default": 150,
+      "min": 90,
+      "max": 250,
+      "step": 5,
+      "label": {
+        "en": "Back board height (mm)",
+        "es": "Alto de la tabla trasera (mm)",
+        "fr": "Hauteur de la planche dorsale (mm)"
+      },
+      "tooltip": {
+        "en": "The koshiita sits in the small of the back and holds the posture",
+        "es": "El koshiita se asienta en la lumbar y sostiene la postura",
+        "fr": "Le koshiita se loge dans le creux des reins et tient la posture"
+      }
+    },
+    {
+      "id": "koshiita_taper",
+      "type": "slider",
+      "group": "construction",
+      "default": 60,
+      "min": 10,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Board side taper (mm)",
+        "es": "Estrechamiento lateral de la tabla (mm)",
+        "fr": "Fuseau latéral de la planche (mm)"
+      },
+      "tooltip": {
+        "en": "How far each side slants in — it makes the board's bottom edge shorter than its top",
+        "es": "Cuánto se inclina cada lado — deja el borde inferior más corto que el superior",
+        "fr": "Inclinaison de chaque côté — le bord inférieur devient plus court que le supérieur"
+      }
+    },
+    {
+      "id": "himo_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 55,
+      "min": 30,
+      "max": 100,
+      "step": 5,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de cinta (mm)",
+        "fr": "Largeur de lien (mm)"
+      },
+      "tooltip": {
+        "en": "Finished width of the himo",
+        "es": "Ancho acabado del himo",
+        "fr": "Largeur finie du himo"
+      }
+    },
+    {
+      "id": "fabric_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 380,
+      "min": 300,
+      "max": 1200,
+      "step": 10,
+      "label": {
+        "en": "Usable fabric width (mm)",
+        "es": "Ancho útil de la tela (mm)",
+        "fr": "Largeur utile du tissu (mm)"
+      },
+      "tooltip": {
+        "en": "Traditional tanmono bolt is ~380 mm — that narrowness is why a hakama is pieced",
+        "es": "El rollo tanmono tradicional mide ~380 mm — esa estrechez obliga a unir paños",
+        "fr": "Le rouleau tanmono traditionnel fait ~380 mm — d'où l'assemblage de laizes"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 6,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Added to every joined edge",
+        "es": "Añadido a cada borde unido",
+        "fr": "Ajoutée à chaque bord assemblé"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 40,
+      "min": 15,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de ruedo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Added at the ankle",
+        "es": "Añadido en el tobillo",
+        "fr": "Ajoutée à la cheville"
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "hakama_length > aibiki_drop + koshiita_h + 200",
+      "severity": "warning",
+      "message": {
+        "en": "The aibiki and the board must leave a real sewn leg seam below them.",
+        "es": "El aibiki y la tabla deben dejar una costura de pernera real debajo.",
+        "fr": "L'aibiki et la planche doivent laisser une vraie couture de jambe en dessous."
+      }
+    },
+    {
+      "expression": "front_pleats > back_pleats",
+      "severity": "warning",
+      "message": {
+        "en": "The hakama pleats asymmetrically: more in front than behind. Equal counts are not a hakama.",
+        "es": "El hakama plisa de forma asimétrica: más delante que detrás. Contarlos iguales no es un hakama.",
+        "fr": "Le hakama se plisse asymétriquement : plus devant que derrière. Des comptes égaux n'en font pas un hakama."
+      }
+    },
+    {
+      "expression": "koshiita_taper * 2 < waist_girth / 2",
+      "severity": "warning",
+      "message": {
+        "en": "The board's taper cannot consume its own width — the bottom edge would vanish.",
+        "es": "El estrechamiento no puede consumir el ancho de la tabla — el borde inferior desaparecería.",
+        "fr": "Le fuseau ne peut consommer la largeur de la planche — le bord inférieur disparaîtrait."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "budo",
+      "label": {
+        "en": "Budō practice",
+        "es": "Práctica budō",
+        "fr": "Pratique budō"
+      },
+      "values": {
+        "hakama_length": 960,
+        "front_pleats": 5,
+        "back_pleats": 2,
+        "aibiki_drop": 300
+      }
+    },
+    {
+      "id": "formal",
+      "label": {
+        "en": "Formal",
+        "es": "Formal",
+        "fr": "Cérémonie"
+      },
+      "values": {
+        "hakama_length": 1020,
+        "wrap_overlap": 260,
+        "koshiita_h": 170
+      }
+    },
+    {
+      "id": "youth",
+      "label": {
+        "en": "Youth",
+        "es": "Juvenil",
+        "fr": "Jeune"
+      },
+      "values": {
+        "waist_girth": 660,
+        "hakama_length": 720,
+        "aibiki_drop": 200,
+        "koshiita_h": 110
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "board_seam",
+        "type": "waistband",
+        "geometry_type": "seam",
+        "label": {
+          "en": "Board seam (back pleating to koshiita)",
+          "es": "Costura de tabla (plisado trasero al koshiita)",
+          "fr": "Couture de planche (plissage dos au koshiita)"
+        },
+        "edges": [
+          {
+            "piece": "back",
+            "edge": "top"
+          },
+          {
+            "piece": "koshiita",
+            "edge": "bottom"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "back_pleats",
+          "koshiita_taper"
+        ]
+      },
+      {
+        "id": "leg_seam",
+        "type": "custom",
+        "geometry_type": "seam",
+        "label": {
+          "en": "Leg division seam (stops at the aibiki)",
+          "es": "Costura de división de pernera (se detiene en el aibiki)",
+          "fr": "Couture de division de jambe (s'arrête à l'aibiki)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "inner"
+          },
+          {
+            "piece": "back",
+            "edge": "inner"
+          }
+        ],
+        "parameters": [
+          "aibiki_drop",
+          "hakama_length",
+          "leg_width"
+        ]
+      },
+      {
+        "id": "hakama_side",
+        "type": "side_seam",
+        "geometry_type": "seam",
+        "label": {
+          "en": "Side seam (front to back)",
+          "es": "Costura lateral (delantero a trasero)",
+          "fr": "Couture côté (devant au dos)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "outer"
+          },
+          {
+            "piece": "back",
+            "edge": "outer"
+          }
+        ],
+        "parameters": [
+          "hakama_length",
+          "fabric_width"
+        ]
+      },
+      {
+        "id": "himo_anchor",
+        "type": "custom",
+        "geometry_type": "seam",
+        "label": {
+          "en": "Strap anchor (himo to panel and board)",
+          "es": "Anclaje de cinta (himo al paño y a la tabla)",
+          "fr": "Ancrage de lien (himo au panneau et à la planche)"
+        },
+        "edges": [
+          {
+            "piece": "himo_long",
+            "edge": "body_end"
+          },
+          {
+            "piece": "himo_short",
+            "edge": "board_end"
+          }
+        ],
+        "parameters": [
+          "himo_width",
+          "wrap_overlap"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "heritage": true,
+      "hardware_bridge": false
+    },
+    "societal_benefit": {
+      "en": "Hakama are expensive, wear out at the pleats and the hem, and are usually replaced rather than repaired because the pleat geometry is treated as trade knowledge. An open, made-to-measure draft that solves the pleat depths, the piecing from a real bolt width, and the koshiita's measured lower edge puts that geometry back in the hands of the people who wear the garment — practitioners who need it to fit their own body and their own height, not a size chart. Rank-, office- and ritual-bearing forms are left out rather than flattened into options.",
+      "es": "Los hakama son caros, se desgastan en los pliegues y el ruedo, y suelen reemplazarse en vez de repararse porque la geometría del plisado se guarda como saber de oficio. Un trazado abierto y a la medida que resuelve las profundidades de los pliegues, la unión de paños a partir de un ancho de rollo real y el borde inferior medido del koshiita devuelve esa geometría a quienes visten la prenda — practicantes que la necesitan ajustada a su cuerpo y su estatura, no a una tabla de tallas. Las formas que marcan rango, cargo o rito quedan fuera en lugar de aplanarse en opciones.",
+      "fr": "Les hakama coûtent cher, s'usent aux plis et à l'ourlet, et sont le plus souvent remplacés plutôt que réparés parce que la géométrie du plissage reste un savoir de métier. Un tracé ouvert et sur mesure qui résout les profondeurs de plis, l'assemblage à partir d'une largeur de rouleau réelle et le bord inférieur mesuré du koshiita rend cette géométrie aux personnes qui portent le vêtement — des pratiquants qui en ont besoin à leur corps et à leur taille, non à un tableau de tailles. Les formes marquant rang, charge ou rite sont écartées plutôt qu'aplaties en options."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

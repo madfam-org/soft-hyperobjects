@@ -1,0 +1,477 @@
+{
+  "project": {
+    "name": "Heated Glove Liner",
+    "slug": "heated-glove-liner",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A four-piece knit glove liner drafted around its heater harness: the back-of-hand trank carries serpentine heating traces over the metacarpals and a spur up each finger back, the wrist cuff carries the cable exit and its strain-relief plate, two fourchette strips form the finger side-walls, and a thumb gusset closes the hand. A Yantra4D `seam-conduit-clip` rides the thumb-side seam so the heater bundle never crosses the knuckle flex crease; the clip's sewn tab and the trank's clip footprints are the same `conduit_tab` dimension. The fourchette is cut to the measured slit-run perimeter of the drafted trank — walls plus tip arcs — so the trank-to-fourchette seam matches the geometry actually drawn.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un forro de guante de punto en cuatro piezas trazado alrededor de su arnés calefactor: el dorso (trank) lleva las trazas serpenteantes sobre los metacarpianos y un ramal por el dorso de cada dedo, el puño de muñeca lleva la salida de cable y su placa antitirón, dos fourchettes forman las paredes laterales de los dedos y una nesga de pulgar cierra la mano. Un `seam-conduit-clip` de Yantra4D va montado en la costura del lado del pulgar para que el mazo de cables nunca cruce el pliegue de flexión de los nudillos; la lengüeta cosida del clip y las marcas del trank son la misma cota `conduit_tab`. La fourchette se corta al perímetro medido del recorrido de las aberturas del trank trazado —paredes más arcos de punta— de modo que la costura trank-fourchette coincide con la geometría realmente dibujada.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une doublure de gant en maille en quatre pièces tracée autour de son faisceau chauffant : le dos de main (trank) porte les tracés en serpentin sur les métacarpiens et une dérivation le long du dos de chaque doigt, le poignet porte la sortie de câble et sa plaque anti-traction, deux fourchettes forment les parois latérales des doigts, et un soufflet de pouce ferme la main. Un `seam-conduit-clip` Yantra4D chevauche la couture côté pouce pour que le faisceau chauffant ne traverse jamais le pli de flexion des articulations ; la patte cousue du clip et les repères du trank sont la même cote `conduit_tab`. La fourchette est coupée au périmètre mesuré du parcours des fentes du trank tracé — parois plus arcs de pointe — pour que la couture trank-fourchette corresponde à la géométrie réellement dessinée.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "heated-glove-liner",
+      "glove",
+      "e-textile",
+      "heated",
+      "conduit",
+      "seam-conduit-clip",
+      "hardware",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full liner",
+        "es": "Forro completo",
+        "fr": "Doublure complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "trank",
+        "fourchette",
+        "thumb",
+        "cuff"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "trank",
+      "label": {
+        "en": "Trank (back of hand, heated)",
+        "es": "Trank (dorso de la mano, calefactado)",
+        "fr": "Trank (dos de main, chauffant)"
+      },
+      "default_color": "#3a4a5e",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "fourchette",
+      "label": {
+        "en": "Fourchette (finger side-wall)",
+        "es": "Fourchette (pared lateral de dedos)",
+        "fr": "Fourchette (paroi latérale des doigts)"
+      },
+      "default_color": "#4d5f70",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "thumb",
+      "label": {
+        "en": "Thumb gusset",
+        "es": "Nesga de pulgar",
+        "fr": "Soufflet de pouce"
+      },
+      "default_color": "#5b6b7c",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Wrist cuff (cable exit)",
+        "es": "Puño de muñeca (salida de cable)",
+        "fr": "Poignet (sortie de câble)"
+      },
+      "default_color": "#2f3d4d",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Hand fit",
+        "es": "Ajuste de mano",
+        "fr": "Ajustement de la main"
+      }
+    },
+    {
+      "id": "electronics",
+      "label": {
+        "en": "Electronics",
+        "es": "Electrónica",
+        "fr": "Électronique"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "hand_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 92,
+      "min": 60,
+      "max": 130,
+      "step": 1,
+      "label": {
+        "en": "Hand width across knuckles (mm)",
+        "es": "Ancho de mano sobre nudillos (mm)",
+        "fr": "Largeur de main aux articulations (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the trank width and the four finger channels",
+        "es": "Define el ancho del trank y los cuatro canales de dedos",
+        "fr": "Définit la largeur du trank et les quatre canaux de doigts"
+      }
+    },
+    {
+      "id": "hand_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 190,
+      "min": 140,
+      "max": 250,
+      "step": 1,
+      "label": {
+        "en": "Hand length (mm)",
+        "es": "Largo de mano (mm)",
+        "fr": "Longueur de main (mm)"
+      },
+      "tooltip": {
+        "en": "Wrist crease to middle fingertip; palm length is the remainder after the fingers",
+        "es": "Del pliegue de muñeca a la punta del dedo medio; el largo de palma es el resto tras los dedos",
+        "fr": "Du pli du poignet au bout du majeur ; la longueur de paume est le reste après les doigts"
+      }
+    },
+    {
+      "id": "finger_len",
+      "type": "slider",
+      "group": "fit",
+      "default": 78,
+      "min": 50,
+      "max": 110,
+      "step": 1,
+      "label": {
+        "en": "Middle finger length (mm)",
+        "es": "Largo del dedo medio (mm)",
+        "fr": "Longueur du majeur (mm)"
+      },
+      "tooltip": {
+        "en": "Knuckle to tip; drives the slit depths and so the fourchette cut length",
+        "es": "Del nudillo a la punta; define la profundidad de las aberturas y el largo de la fourchette",
+        "fr": "De l'articulation au bout ; pilote la profondeur des fentes et donc la longueur de la fourchette"
+      }
+    },
+    {
+      "id": "wrist_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 172,
+      "min": 130,
+      "max": 230,
+      "step": 1,
+      "label": {
+        "en": "Wrist girth (mm)",
+        "es": "Contorno de muñeca (mm)",
+        "fr": "Tour de poignet (mm)"
+      },
+      "tooltip": {
+        "en": "Floor for the cuff cut length so the liner never grips tighter than the wrist",
+        "es": "Mínimo del largo de corte del puño, para que el forro nunca apriete más que la muñeca",
+        "fr": "Plancher de la longueur de coupe du poignet, pour que la doublure ne serre jamais plus que le poignet"
+      }
+    },
+    {
+      "id": "cuff_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 70,
+      "min": 35,
+      "max": 140,
+      "step": 1,
+      "label": {
+        "en": "Cuff depth (mm)",
+        "es": "Alto del puño (mm)",
+        "fr": "Hauteur du poignet (mm)"
+      },
+      "tooltip": {
+        "en": "Cuff height above the wrist; the cable exit and strain-relief plate sit inside it",
+        "es": "Alto del puño sobre la muñeca; la salida de cable y la placa antitirón van dentro",
+        "fr": "Hauteur du poignet au-dessus du poignet ; la sortie de câble et la plaque anti-traction s'y logent"
+      }
+    },
+    {
+      "id": "conduit_tab",
+      "type": "slider",
+      "group": "electronics",
+      "default": 14,
+      "min": 8,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Conduit clip tab (mm)",
+        "es": "Lengüeta del clip de conducto (mm)",
+        "fr": "Patte du clip de conduit (mm)"
+      },
+      "tooltip": {
+        "en": "Sewn tab length of the Yantra4D seam-conduit-clip; the trank's clip footprints are drilled to it",
+        "es": "Largo de la lengüeta cosida del seam-conduit-clip de Yantra4D; las marcas del trank se perforan a esta medida",
+        "fr": "Longueur de la patte cousue du seam-conduit-clip Yantra4D ; les repères du trank y sont percés"
+      }
+    },
+    {
+      "id": "heat_zones",
+      "type": "slider",
+      "group": "electronics",
+      "default": 3,
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "label": {
+        "en": "Heating zones",
+        "es": "Zonas de calefacción",
+        "fr": "Zones de chauffage"
+      },
+      "tooltip": {
+        "en": "Serpentine trace runs across the metacarpals; more zones means finer control and more wire",
+        "es": "Trazas serpenteantes sobre los metacarpianos; más zonas dan control más fino y más cable",
+        "fr": "Tracés en serpentin sur les métacarpiens ; plus de zones donne un contrôle plus fin et plus de fil"
+      }
+    },
+    {
+      "id": "knit_stretch",
+      "type": "slider",
+      "group": "construction",
+      "default": 0.18,
+      "min": 0,
+      "max": 0.35,
+      "step": 0.01,
+      "label": {
+        "en": "Knit negative ease",
+        "es": "Holgura negativa del punto",
+        "fr": "Aisance négative du tricot"
+      },
+      "tooltip": {
+        "en": "How far under the body measure the cuff is cut so it grips",
+        "es": "Cuánto por debajo de la medida del cuerpo se corta el puño para que agarre",
+        "fr": "De combien sous la mesure du corps le poignet est coupé pour qu'il serre"
+      },
+      "advanced": true
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Narrow throughout — glove seams are overlocked, not pressed open",
+        "es": "Estrecho en todo — las costuras de guante van overlock, no abiertas a plancha",
+        "fr": "Étroite partout — les coutures de gant sont surjetées, non ouvertes au fer"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "finger_len < hand_length * 0.55",
+      "severity": "warning",
+      "message": {
+        "en": "Fingers longer than half the hand leave no palm for the heating traces.",
+        "es": "Dedos más largos que media mano no dejan palma para las trazas calefactoras.",
+        "fr": "Des doigts plus longs que la moitié de la main ne laissent pas de paume pour les tracés chauffants."
+      }
+    },
+    {
+      "expression": "conduit_tab * 2 < hand_width * 0.5",
+      "severity": "warning",
+      "message": {
+        "en": "A conduit tab that wide crowds the thumb-side seam of a hand this narrow.",
+        "es": "Una lengüeta de conducto tan ancha satura la costura del lado del pulgar en una mano tan estrecha.",
+        "fr": "Une patte de conduit aussi large encombre la couture côté pouce d'une main aussi étroite."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "womens_medium",
+      "label": {
+        "en": "Women's medium",
+        "es": "Mujer mediana",
+        "fr": "Femme moyen"
+      },
+      "values": {
+        "hand_width": 82,
+        "hand_length": 175,
+        "finger_len": 72,
+        "wrist_girth": 158
+      }
+    },
+    {
+      "id": "mens_large",
+      "label": {
+        "en": "Men's large",
+        "es": "Hombre grande",
+        "fr": "Homme grand"
+      },
+      "values": {
+        "hand_width": 104,
+        "hand_length": 208,
+        "finger_len": 86,
+        "wrist_girth": 190
+      }
+    },
+    {
+      "id": "raynaud_high_zone",
+      "label": {
+        "en": "Raynaud's (max zones)",
+        "es": "Raynaud (zonas máximas)",
+        "fr": "Raynaud (zones maximales)"
+      },
+      "values": {
+        "heat_zones": 5,
+        "cuff_depth": 120,
+        "conduit_tab": 18
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "jersey-algodon"
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "seam conduit routing for a heater bundle",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "seam-conduit-clip",
+      "linked": true,
+      "params_map": {
+        "clip_len": "conduit_tab",
+        "tab_w": "conduit_tab * 0.6",
+        "run_count": "heat_zones",
+        "bundle_dia": "conduit_tab * 0.3"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "e_textile",
+    "interfaces": [
+      {
+        "id": "conduit_seam",
+        "type": "custom",
+        "label": {
+          "en": "Conduit-clip seam run",
+          "es": "Recorrido de costura del clip de conducto",
+          "fr": "Parcours de couture du clip de conduit"
+        },
+        "edges": [
+          {
+            "piece": "trank",
+            "edge": "side_r"
+          }
+        ],
+        "parameters": [
+          "conduit_tab",
+          "heat_zones"
+        ]
+      },
+      {
+        "id": "finger_wall",
+        "type": "custom",
+        "label": {
+          "en": "Slit-to-fourchette seam",
+          "es": "Costura de abertura a fourchette",
+          "fr": "Couture fente-fourchette"
+        },
+        "edges": [
+          {
+            "piece": "fourchette",
+            "edge": "seam"
+          }
+        ],
+        "parameters": [
+          "finger_len",
+          "hand_width",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "wrist_attach",
+        "type": "cuff",
+        "label": {
+          "en": "Cuff attachment",
+          "es": "Unión del puño",
+          "fr": "Montage du poignet"
+        },
+        "edges": [
+          {
+            "piece": "trank",
+            "edge": "wrist"
+          },
+          {
+            "piece": "cuff",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "wrist_girth",
+          "knit_stretch",
+          "cuff_depth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Cold hands are a disability question long before they are a comfort question — Raynaud's, arthritis, and outdoor work all get worse when fingers stop moving. A liner drafted to a measured hand, with the heater routed off the flex creases and clipped in replaceable printed hardware, is repairable: when the element fails you replace the element, not the glove.",
+      "es": "Las manos frías son una cuestión de discapacidad mucho antes que de confort — el Raynaud, la artritis y el trabajo a la intemperie empeoran cuando los dedos dejan de moverse. Un forro trazado a una mano medida, con el calefactor ruteado fuera de los pliegues de flexión y sujeto con herrajes impresos reemplazables, es reparable: cuando falla el elemento se reemplaza el elemento, no el guante.",
+      "fr": "Les mains froides relèvent du handicap bien avant de relever du confort — le syndrome de Raynaud, l'arthrite et le travail en extérieur empirent quand les doigts cessent de bouger. Une doublure tracée sur une main mesurée, avec le chauffage routé hors des plis de flexion et fixé par une quincaillerie imprimée remplaçable, est réparable : quand l'élément lâche, on remplace l'élément, pas le gant."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

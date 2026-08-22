@@ -1,0 +1,493 @@
+{
+  "project": {
+    "name": "Biometric Bra Band",
+    "slug": "biometric-bra-band",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A standalone under-bust sensing band: the compression ring that carries ECG/EMG electrodes against the ribcage, worn under any bra or on its own. Not a sports bra — this is the sensing layer alone, drafted so the electrodes sit where the signal is and stay there while the ribcage moves. A shell ring and a lining ring are cut for different negative ease; the lining carries the electrode pocket windows and its cut length is derived from the shell's measured geometry, with the difference declared as seam ease so the two rings sew flat instead of one rippling inside the other. Each window seats a Yantra4D `snap-electrode-carrier` whose disc diameter is the band's own `electrode_dia`. This is a garment pattern: it carries electrodes, it does not measure or diagnose anything.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una banda de sensado bajo el busto, independiente: el aro de compresión que lleva los electrodos ECG/EMG contra la caja torácica, bajo cualquier sostén o sola. No es un top deportivo — es sólo la capa de sensado, trazada para que los electrodos queden donde está la señal y sigan ahí mientras la caja torácica se mueve. Un aro exterior y un forro se cortan con holgura negativa distinta; el forro lleva las ventanas de bolsillo de electrodo y su largo de corte se deriva de la geometría medida del exterior, declarando la diferencia como holgura de costura para que ambos aros se cosan planos en vez de que uno ondule dentro del otro. Cada ventana asienta un `snap-electrode-carrier` de Yantra4D cuyo diámetro de disco es el propio `electrode_dia` de la banda. Esto es un patrón de prenda: porta electrodos, no mide ni diagnostica nada.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une bande de captation sous-poitrine autonome : l'anneau de compression qui porte les électrodes ECG/EMG contre la cage thoracique, sous n'importe quel soutien-gorge ou seule. Ce n'est pas une brassière de sport — c'est la couche de captation seule, tracée pour que les électrodes se placent là où est le signal et y restent pendant que la cage thoracique bouge. Un anneau extérieur et une doublure sont coupés avec des aisances négatives différentes ; la doublure porte les fenêtres de poche d'électrode et sa longueur de coupe dérive de la géométrie mesurée de l'extérieur, la différence étant déclarée comme aisance de couture pour que les deux anneaux se cousent à plat au lieu que l'un gondole dans l'autre. Chaque fenêtre reçoit un `snap-electrode-carrier` Yantra4D dont le diamètre de disque est le propre `electrode_dia` de la bande. Ceci est un patron de vêtement : il porte des électrodes, il ne mesure ni ne diagnostique rien.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "biometric-bra-band",
+      "band",
+      "e-textile",
+      "biometric",
+      "electrode",
+      "snap-electrode-carrier",
+      "hardware",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full band",
+        "es": "Banda completa",
+        "fr": "Bande complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "shell",
+        "lining",
+        "closure"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "shell",
+      "label": {
+        "en": "Shell (compression ring)",
+        "es": "Exterior (aro de compresión)",
+        "fr": "Extérieur (anneau de compression)"
+      },
+      "default_color": "#2e3b46",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "lining",
+      "label": {
+        "en": "Lining (electrode windows)",
+        "es": "Forro (ventanas de electrodo)",
+        "fr": "Doublure (fenêtres d'électrode)"
+      },
+      "default_color": "#41525f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "closure",
+      "label": {
+        "en": "Closure extension",
+        "es": "Extensión de cierre",
+        "fr": "Extension de fermeture"
+      },
+      "default_color": "#55677a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Ajustement"
+      }
+    },
+    {
+      "id": "sensing",
+      "label": {
+        "en": "Sensing",
+        "es": "Sensado",
+        "fr": "Captation"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "underbust_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 760,
+      "min": 560,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Under-bust girth (mm)",
+        "es": "Contorno bajo busto (mm)",
+        "fr": "Tour sous-poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Snug body measure; the compression factor is applied on top of it",
+        "es": "Medida ceñida del cuerpo; el factor de compresión se aplica sobre ella",
+        "fr": "Mesure ajustée du corps ; le facteur de compression s'applique par-dessus"
+      }
+    },
+    {
+      "id": "band_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 90,
+      "min": 45,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Band depth (mm)",
+        "es": "Alto de la banda (mm)",
+        "fr": "Hauteur de la bande (mm)"
+      },
+      "tooltip": {
+        "en": "Height on the ribcage; floored at the electrode diameter plus a seating margin",
+        "es": "Alto sobre la caja torácica; mínimo el diámetro del electrodo más margen de asiento",
+        "fr": "Hauteur sur la cage thoracique ; plancher au diamètre d'électrode plus une marge d'assise"
+      }
+    },
+    {
+      "id": "rib_taper",
+      "type": "slider",
+      "group": "fit",
+      "default": 26,
+      "min": 0,
+      "max": 70,
+      "step": 2,
+      "label": {
+        "en": "Ribcage taper (mm)",
+        "es": "Conicidad de la caja torácica (mm)",
+        "fr": "Conicité de la cage thoracique (mm)"
+      },
+      "tooltip": {
+        "en": "The ribcage is a cone: the top edge is drafted shorter so the band hugs upward instead of rolling down",
+        "es": "La caja torácica es un cono: el borde superior se traza más corto para que la banda suba en vez de rodar hacia abajo",
+        "fr": "La cage thoracique est un cône : le bord supérieur est tracé plus court pour que la bande remonte au lieu de rouler"
+      }
+    },
+    {
+      "id": "electrode_dia",
+      "type": "slider",
+      "group": "sensing",
+      "default": 34,
+      "min": 18,
+      "max": 60,
+      "step": 1,
+      "label": {
+        "en": "Electrode carrier diameter (mm)",
+        "es": "Diámetro del portaelectrodo (mm)",
+        "fr": "Diamètre du porte-électrode (mm)"
+      },
+      "tooltip": {
+        "en": "The Yantra4D snap-electrode-carrier disc; also the lining's marked window size",
+        "es": "El disco del snap-electrode-carrier de Yantra4D; también el tamaño de ventana marcado en el forro",
+        "fr": "Le disque du snap-electrode-carrier Yantra4D ; aussi la taille de fenêtre marquée sur la doublure"
+      }
+    },
+    {
+      "id": "electrode_pairs",
+      "type": "slider",
+      "group": "sensing",
+      "default": 2,
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": {
+        "en": "Electrode pairs per half",
+        "es": "Pares de electrodos por mitad",
+        "fr": "Paires d'électrodes par moitié"
+      },
+      "tooltip": {
+        "en": "Sensing pairs marched from centre back toward the front on each half-ring",
+        "es": "Pares de sensado que avanzan del centro de espalda hacia el frente en cada media banda",
+        "fr": "Paires de captation progressant du milieu dos vers l'avant sur chaque demi-anneau"
+      }
+    },
+    {
+      "id": "electrode_span",
+      "type": "slider",
+      "group": "sensing",
+      "default": 120,
+      "min": 50,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Pair span (mm)",
+        "es": "Separación del par (mm)",
+        "fr": "Écartement de la paire (mm)"
+      },
+      "tooltip": {
+        "en": "Gap between the two electrodes of a pair; capped at 30% of the girth",
+        "es": "Separación entre los dos electrodos de un par; limitada al 30% del contorno",
+        "fr": "Écart entre les deux électrodes d'une paire ; plafonné à 30 % du tour"
+      }
+    },
+    {
+      "id": "compression",
+      "type": "slider",
+      "group": "construction",
+      "default": 0.12,
+      "min": 0.04,
+      "max": 0.25,
+      "step": 0.01,
+      "label": {
+        "en": "Shell compression",
+        "es": "Compresión del exterior",
+        "fr": "Compression de l'extérieur"
+      },
+      "tooltip": {
+        "en": "Negative ease of the outer ring; this is what holds the electrodes to the skin",
+        "es": "Holgura negativa del aro exterior; es lo que mantiene los electrodos contra la piel",
+        "fr": "Aisance négative de l'anneau extérieur ; c'est ce qui maintient les électrodes contre la peau"
+      }
+    },
+    {
+      "id": "lining_ease",
+      "type": "slider",
+      "group": "construction",
+      "default": 0.04,
+      "min": 0,
+      "max": 0.25,
+      "step": 0.01,
+      "label": {
+        "en": "Lining ease",
+        "es": "Holgura del forro",
+        "fr": "Aisance de la doublure"
+      },
+      "tooltip": {
+        "en": "The gentler inner layer; clamped never to be tighter than the shell",
+        "es": "La capa interior más suave; limitada a nunca ser más ceñida que el exterior",
+        "fr": "La couche intérieure plus douce ; bornée pour ne jamais être plus serrée que l'extérieur"
+      }
+    },
+    {
+      "id": "closure_rows",
+      "type": "slider",
+      "group": "construction",
+      "default": 3,
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "label": {
+        "en": "Closure adjustment rows",
+        "es": "Filas de ajuste del cierre",
+        "fr": "Rangées de réglage de fermeture"
+      },
+      "tooltip": {
+        "en": "Hook-and-eye rows; more rows widen the band's adjustment range",
+        "es": "Filas de corchete; más filas amplían el rango de ajuste de la banda",
+        "fr": "Rangées d'agrafes ; plus de rangées élargissent la plage de réglage"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Narrow — the band is overlocked and topstitched, never pressed open",
+        "es": "Estrecho — la banda va overlock y pespunte, nunca abierta a plancha",
+        "fr": "Étroite — la bande est surjetée et surpiquée, jamais ouverte au fer"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "lining_ease <= compression",
+      "severity": "error",
+      "message": {
+        "en": "The lining must never be cut tighter than the shell it sits inside.",
+        "es": "El forro nunca debe cortarse más ceñido que el exterior en que va.",
+        "fr": "La doublure ne doit jamais être coupée plus serrée que l'extérieur qui la contient."
+      }
+    },
+    {
+      "expression": "band_depth >= electrode_dia + 24",
+      "severity": "warning",
+      "message": {
+        "en": "The band must clear the carrier disc with a seating margin all round.",
+        "es": "La banda debe librar el disco portador con margen de asiento por todo el contorno.",
+        "fr": "La bande doit dégager le disque porteur avec une marge d'assise tout autour."
+      }
+    },
+    {
+      "expression": "electrode_span <= underbust_girth * 0.30",
+      "severity": "warning",
+      "message": {
+        "en": "A pair spanning further than a third of the girth loses its differential signal.",
+        "es": "Un par separado más de un tercio del contorno pierde su señal diferencial.",
+        "fr": "Une paire écartée de plus d'un tiers du tour perd son signal différentiel."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "ecg_two_lead",
+      "label": {
+        "en": "ECG two-lead",
+        "es": "ECG dos derivaciones",
+        "fr": "ECG deux dérivations"
+      },
+      "values": {
+        "electrode_pairs": 1,
+        "electrode_span": 160,
+        "electrode_dia": 34,
+        "band_depth": 90
+      }
+    },
+    {
+      "id": "emg_array",
+      "label": {
+        "en": "EMG array",
+        "es": "Matriz EMG",
+        "fr": "Réseau EMG"
+      },
+      "values": {
+        "electrode_pairs": 4,
+        "electrode_span": 70,
+        "electrode_dia": 22,
+        "band_depth": 120
+      }
+    },
+    {
+      "id": "gentle_hold",
+      "label": {
+        "en": "Gentle hold",
+        "es": "Sujeción suave",
+        "fr": "Maintien doux"
+      },
+      "values": {
+        "compression": 0.06,
+        "lining_ease": 0.02,
+        "closure_rows": 5
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "poliester-elastano-compresion"
+  ],
+  "notion": {
+    "kind": "snap",
+    "subtype": "snap electrode carrier in a lining pocket window",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "snap-electrode-carrier",
+      "linked": true,
+      "params_map": {
+        "disc_dia": "electrode_dia",
+        "disc_t": "electrode_dia * 0.06",
+        "sew_holes": "round(electrode_dia / 4)",
+        "hole_dia": "electrode_dia * 0.05"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "e_textile",
+    "interfaces": [
+      {
+        "id": "electrode_seat",
+        "type": "pocket",
+        "label": {
+          "en": "Electrode carrier window",
+          "es": "Ventana del portaelectrodo",
+          "fr": "Fenêtre du porte-électrode"
+        },
+        "edges": [
+          {
+            "piece": "lining",
+            "edge": "top"
+          }
+        ],
+        "parameters": [
+          "electrode_dia",
+          "electrode_pairs",
+          "electrode_span"
+        ]
+      },
+      {
+        "id": "ring_seam",
+        "type": "custom",
+        "label": {
+          "en": "Shell-to-lining ring seam",
+          "es": "Costura de aro exterior a forro",
+          "fr": "Couture anneau extérieur-doublure"
+        },
+        "edges": [
+          {
+            "piece": "shell",
+            "edge": "bottom"
+          },
+          {
+            "piece": "lining",
+            "edge": "bottom"
+          }
+        ],
+        "parameters": [
+          "underbust_girth",
+          "compression",
+          "lining_ease"
+        ]
+      },
+      {
+        "id": "front_closure",
+        "type": "placket",
+        "label": {
+          "en": "Centre-front closure",
+          "es": "Cierre de centro delantero",
+          "fr": "Fermeture milieu devant"
+        },
+        "edges": [
+          {
+            "piece": "shell",
+            "edge": "cf"
+          },
+          {
+            "piece": "closure",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "closure_rows",
+          "band_depth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Chest-strap sensing is sold as a sealed consumable in three sizes, and it fits badly on most bodies — which is a data-quality problem before it is a comfort problem, because an electrode that slides gives you noise. This band is cut to a measured ribcage, holds the electrodes with a declared compression, and takes standard clinical snap studs through a printed carrier you can replace. It is a garment pattern, not a medical device: it positions electrodes and makes no measurement claim.",
+      "es": "El sensado por banda torácica se vende como consumible sellado en tres tallas, y ajusta mal en la mayoría de los cuerpos — lo cual es un problema de calidad de datos antes que de confort, porque un electrodo que se desliza da ruido. Esta banda se corta a una caja torácica medida, sujeta los electrodos con una compresión declarada y acepta broches clínicos estándar mediante un portador impreso reemplazable. Es un patrón de prenda, no un dispositivo médico: posiciona electrodos y no hace ninguna afirmación de medición.",
+      "fr": "La captation par ceinture thoracique se vend comme un consommable scellé en trois tailles, et elle s'ajuste mal sur la plupart des corps — ce qui est un problème de qualité de données avant d'être un problème de confort, car une électrode qui glisse produit du bruit. Cette bande est coupée sur une cage thoracique mesurée, tient les électrodes avec une compression déclarée et reçoit des boutons-pression cliniques standard via un porteur imprimé remplaçable. C'est un patron de vêtement, pas un dispositif médical : il positionne des électrodes et ne formule aucune revendication de mesure."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

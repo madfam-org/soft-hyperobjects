@@ -1,0 +1,564 @@
+{
+  "project": {
+    "name": "Chima (치마)",
+    "slug": "hanbok-chima",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The chima — the skirt of the Korean hanbok: a very full, high-waisted wrap skirt suspended from a chest band (말기 malgi) and fastened with long ties (끈 kkeun), worn with the short jeogori jacket. Its bell silhouette comes from hanging at the ribcage, not from cutting: the skirt is a pieced rectangle pleated into a short band, and the waist is never engaged. This cartridge treats pleating as the discrete operation it is — an integer pleat count is solved first, and the pleat face, depth and flat panel width are back-solved from it so the pleats tile the band exactly. The piecing count comes from the real usable loom width. The band's anchor button bridges to the Yantra4D `sew-through-button` solid. Ceremonial hanbok (hwarot, dangui, geumbak gold-leaf) is deliberately excluded. Offered with respect for the living tradition.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El chima — la falda del hanbok coreano: una falda envolvente muy amplia y de talle alto, suspendida de una banda pectoral (말기 malgi) y ceñida con lazos largos (끈 kkeun), que se lleva con la chaqueta corta jeogori. Su silueta acampanada nace de colgar desde las costillas, no del corte: la falda es un rectángulo unido por costuras y plisado sobre una banda corta, y la cintura nunca interviene. Este cartucho trata el plisado como la operación discreta que es — primero se resuelve un número entero de pliegues, y a partir de él se despejan la cara del pliegue, su profundidad y el ancho del paño plano, de modo que los pliegues cubran la banda con exactitud. El número de anchos de tela procede del ancho útil real del telar. El botón de anclaje de la banda enlaza con el sólido `sew-through-button` de Yantra4D. El hanbok ceremonial (hwarot, dangui, pan de oro geumbak) queda deliberadamente excluido. Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le chima — la jupe du hanbok coréen : une jupe portefeuille très ample et à taille haute, suspendue à une bande de poitrine (말기 malgi) et fermée par de longs liens (끈 kkeun), portée avec la veste courte jeogori. Sa silhouette en cloche vient de la suspension aux côtes, non de la coupe : la jupe est un rectangle assemblé, plissé sur une bande courte, et la taille n'intervient jamais. Cette cartouche traite le plissage comme l'opération discrète qu'il est — un nombre entier de plis est résolu d'abord, puis la face du pli, sa profondeur et la largeur du panneau à plat en sont déduites, afin que les plis pavent exactement la bande. Le nombre de laizes découle de la largeur utile réelle du métier. Le bouton d'ancrage de la bande se relie au solide `sew-through-button` de Yantra4D. Le hanbok cérémoniel (hwarot, dangui, feuille d'or geumbak) est délibérément exclu. Proposé dans le respect de la tradition vivante.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "chima",
+      "hanbok",
+      "korean",
+      "heritage",
+      "skirt",
+      "wrap",
+      "pleated",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Chima",
+        "es": "Chima completo",
+        "fr": "Chima complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "band",
+        "panel",
+        "tie"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "band",
+      "label": {
+        "en": "Chest band (malgi)",
+        "es": "Banda pectoral (malgi)",
+        "fr": "Bande de poitrine (malgi)"
+      },
+      "default_color": "#c9d6e8",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "panel",
+      "label": {
+        "en": "Skirt width (pok)",
+        "es": "Ancho de falda (pok)",
+        "fr": "Laize de jupe (pok)"
+      },
+      "default_color": "#9db4d4",
+      "cut": {
+        "quantity": 3,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "tie",
+      "label": {
+        "en": "Tie (kkeun)",
+        "es": "Lazo (kkeun)",
+        "fr": "Lien (kkeun)"
+      },
+      "default_color": "#e8dcc9",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "fold_edge": "fold",
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "style",
+      "label": {
+        "en": "Style",
+        "es": "Estilo",
+        "fr": "Style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "band_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 880,
+      "min": 600,
+      "max": 1300,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "underbust_girth"
+      },
+      "label": {
+        "en": "Chest band girth (mm)",
+        "es": "Contorno de banda pectoral (mm)",
+        "fr": "Tour de bande de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Measured above the bust — the chima hangs from the ribcage, never the waist",
+        "es": "Medido por encima del busto — el chima cuelga de las costillas, nunca de la cintura",
+        "fr": "Mesuré au-dessus de la poitrine — le chima pend aux côtes, jamais à la taille"
+      }
+    },
+    {
+      "id": "band_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 120,
+      "min": 70,
+      "max": 220,
+      "step": 5,
+      "label": {
+        "en": "Band depth (mm)",
+        "es": "Alto de la banda (mm)",
+        "fr": "Hauteur de bande (mm)"
+      },
+      "tooltip": {
+        "en": "Finished depth of the malgi",
+        "es": "Alto acabado del malgi",
+        "fr": "Hauteur finie du malgi"
+      }
+    },
+    {
+      "id": "chima_length",
+      "type": "slider",
+      "group": "body",
+      "default": 1180,
+      "min": 700,
+      "max": 1500,
+      "step": 10,
+      "label": {
+        "en": "Chima length (mm)",
+        "es": "Largo del chima (mm)",
+        "fr": "Longueur du chima (mm)"
+      },
+      "tooltip": {
+        "en": "Band top to hem — traditionally floor-grazing",
+        "es": "Del alto de la banda al ruedo — tradicionalmente roza el suelo",
+        "fr": "Du haut de bande à l'ourlet — traditionnellement au ras du sol"
+      }
+    },
+    {
+      "id": "pleat_count",
+      "type": "slider",
+      "group": "style",
+      "default": 28,
+      "min": 8,
+      "max": 60,
+      "step": 1,
+      "label": {
+        "en": "Pleat count",
+        "es": "Número de pliegues",
+        "fr": "Nombre de plis"
+      },
+      "tooltip": {
+        "en": "A whole number — pleating is discrete, and everything else is solved from it",
+        "es": "Un número entero — el plisado es discreto y todo lo demás se despeja de él",
+        "fr": "Un nombre entier — le plissage est discret et tout le reste en découle"
+      }
+    },
+    {
+      "id": "pleat_style",
+      "type": "slider",
+      "group": "style",
+      "default": 1,
+      "min": 1,
+      "max": 2,
+      "step": 1,
+      "label": {
+        "en": "Pleat style (1 knife / 2 box)",
+        "es": "Tipo de pliegue (1 tabla / 2 caja)",
+        "fr": "Type de pli (1 plat / 2 creux)"
+      },
+      "tooltip": {
+        "en": "A box pleat consumes twice the cloth of a knife pleat",
+        "es": "Un pliegue de caja consume el doble de tela que uno de tabla",
+        "fr": "Un pli creux consomme deux fois plus de tissu qu'un pli plat"
+      }
+    },
+    {
+      "id": "wrap_overlap",
+      "type": "slider",
+      "group": "style",
+      "default": 320,
+      "min": 120,
+      "max": 600,
+      "step": 10,
+      "label": {
+        "en": "Wrap overlap (mm)",
+        "es": "Cruce del envolvente (mm)",
+        "fr": "Croisement du portefeuille (mm)"
+      },
+      "tooltip": {
+        "en": "Real cloth at the back — the band and the pleating both carry it",
+        "es": "Tela real en la espalda — la banda y el plisado la sostienen",
+        "fr": "Du tissu réel au dos — la bande et le plissage le portent"
+      }
+    },
+    {
+      "id": "tie_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 70,
+      "min": 40,
+      "max": 130,
+      "step": 5,
+      "label": {
+        "en": "Tie width (mm)",
+        "es": "Ancho del lazo (mm)",
+        "fr": "Largeur du lien (mm)"
+      },
+      "tooltip": {
+        "en": "Finished width of the kkeun",
+        "es": "Ancho acabado del kkeun",
+        "fr": "Largeur finie du kkeun"
+      }
+    },
+    {
+      "id": "tie_extra",
+      "type": "slider",
+      "group": "construction",
+      "default": 900,
+      "min": 400,
+      "max": 1600,
+      "step": 20,
+      "label": {
+        "en": "Tie bow allowance (mm)",
+        "es": "Sobrante para el lazo (mm)",
+        "fr": "Réserve pour le nœud (mm)"
+      },
+      "tooltip": {
+        "en": "Cloth beyond the wrap circuit, for the bow and its hanging tail",
+        "es": "Tela más allá del cruce, para el moño y su caída",
+        "fr": "Tissu au-delà du croisement, pour le nœud et sa retombée"
+      }
+    },
+    {
+      "id": "fabric_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 1120,
+      "min": 700,
+      "max": 1600,
+      "step": 10,
+      "label": {
+        "en": "Usable fabric width (mm)",
+        "es": "Ancho útil de la tela (mm)",
+        "fr": "Largeur utile du tissu (mm)"
+      },
+      "tooltip": {
+        "en": "Real usable width — the piecing count is solved from it",
+        "es": "Ancho útil real — de él se despeja el número de anchos",
+        "fr": "Largeur utile réelle — le nombre de laizes en découle"
+      }
+    },
+    {
+      "id": "button_ligne",
+      "type": "slider",
+      "group": "construction",
+      "default": 20,
+      "min": 12,
+      "max": 36,
+      "step": 1,
+      "label": {
+        "en": "Anchor button (ligne)",
+        "es": "Botón de anclaje (línea)",
+        "fr": "Bouton d'ancrage (ligne)"
+      },
+      "tooltip": {
+        "en": "Drives both the band's button seat and the Yantra4D solid",
+        "es": "Gobierna el asiento del botón en la banda y el sólido de Yantra4D",
+        "fr": "Pilote le siège du bouton sur la bande et le solide Yantra4D"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 6,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Added to every joined edge",
+        "es": "Añadido a cada borde unido",
+        "fr": "Ajoutée à chaque bord assemblé"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 60,
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de ruedo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "A deep hem weights the bell and helps it hang",
+        "es": "Un ruedo profundo pesa la campana y la ayuda a caer",
+        "fr": "Un ourlet profond leste la cloche et l'aide à tomber"
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "chima_length > band_height + 200",
+      "severity": "warning",
+      "message": {
+        "en": "The band must not eat the skirt — leave at least 200 mm of chima below it.",
+        "es": "La banda no debe comerse la falda — deje al menos 200 mm de chima debajo.",
+        "fr": "La bande ne doit pas dévorer la jupe — laissez au moins 200 mm de chima dessous."
+      }
+    },
+    {
+      "expression": "pleat_count >= 12",
+      "severity": "warning",
+      "message": {
+        "en": "Too few pleats and the chima reads as a gathered skirt, not a chima.",
+        "es": "Con muy pocos pliegues el chima parece una falda fruncida, no un chima.",
+        "fr": "Avec trop peu de plis, le chima ressemble à une jupe froncée, pas à un chima."
+      }
+    },
+    {
+      "expression": "wrap_overlap >= 120",
+      "severity": "warning",
+      "message": {
+        "en": "The wrap needs real overlap at the back or it gaps when the wearer moves.",
+        "es": "El envolvente necesita cruce real en la espalda o se abre al moverse.",
+        "fr": "Le portefeuille exige un vrai croisement au dos, sinon il bâille au mouvement."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "everyday",
+      "label": {
+        "en": "Everyday",
+        "es": "Diario",
+        "fr": "Quotidien"
+      },
+      "values": {
+        "chima_length": 1080,
+        "pleat_count": 24,
+        "pleat_style": 1
+      }
+    },
+    {
+      "id": "festival",
+      "label": {
+        "en": "Festival",
+        "es": "De fiesta",
+        "fr": "De fête"
+      },
+      "values": {
+        "chima_length": 1250,
+        "pleat_count": 36,
+        "pleat_style": 2,
+        "wrap_overlap": 400
+      }
+    },
+    {
+      "id": "child",
+      "label": {
+        "en": "Child",
+        "es": "Infantil",
+        "fr": "Enfant"
+      },
+      "values": {
+        "band_girth": 620,
+        "chima_length": 760,
+        "pleat_count": 16,
+        "tie_extra": 500
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "popelina-algodon"
+  ],
+  "notion": {
+    "kind": "button",
+    "subtype": "chima band anchor button",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "hole_count": "2",
+        "hole_spacing": "button_ligne * 0.635 / 3",
+        "hole_dia": "1.6"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "band_seam",
+        "type": "waistband",
+        "geometry_type": "seam",
+        "label": {
+          "en": "Band seam (pleated panel to malgi)",
+          "es": "Costura de banda (paño plisado al malgi)",
+          "fr": "Couture de bande (panneau plissé au malgi)"
+        },
+        "edges": [
+          {
+            "piece": "panel",
+            "edge": "top"
+          },
+          {
+            "piece": "band",
+            "edge": "bottom"
+          }
+        ],
+        "parameters": [
+          "band_girth",
+          "wrap_overlap",
+          "pleat_count",
+          "pleat_style"
+        ]
+      },
+      {
+        "id": "panel_piecing",
+        "type": "side_seam",
+        "geometry_type": "seam",
+        "label": {
+          "en": "Panel piecing seam",
+          "es": "Costura de unión de paños",
+          "fr": "Couture d'assemblage des laizes"
+        },
+        "edges": [
+          {
+            "piece": "panel",
+            "edge": "side_right"
+          },
+          {
+            "piece": "panel",
+            "edge": "side_left"
+          }
+        ],
+        "parameters": [
+          "fabric_width",
+          "chima_length"
+        ]
+      },
+      {
+        "id": "band_closure",
+        "type": "button_stand",
+        "geometry_type": "flange",
+        "label": {
+          "en": "Band closure (anchor button)",
+          "es": "Cierre de banda (botón de anclaje)",
+          "fr": "Fermeture de bande (bouton d'ancrage)"
+        },
+        "edges": [
+          {
+            "piece": "band",
+            "edge": "end_left"
+          }
+        ],
+        "parameters": [
+          "button_ligne",
+          "wrap_overlap"
+        ]
+      },
+      {
+        "id": "tie_anchor",
+        "type": "custom",
+        "geometry_type": "seam",
+        "label": {
+          "en": "Tie anchor (kkeun to band end)",
+          "es": "Anclaje del lazo (kkeun al extremo de la banda)",
+          "fr": "Ancrage du lien (kkeun au bout de bande)"
+        },
+        "edges": [
+          {
+            "piece": "tie",
+            "edge": "band_end"
+          },
+          {
+            "piece": "band",
+            "edge": "end_right"
+          }
+        ],
+        "parameters": [
+          "tie_width",
+          "band_height"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "heritage": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure chima keeps a living Korean garment makeable and repairable by the people who wear it. Because the pleating is solved as an integer count and the piecing from a real loom width, the draft tells a maker exactly how much cloth to buy and exactly where each fold goes — knowledge that is otherwise passed hand to hand and lost when it is not. Surface decoration is left to the maker, and ceremonial dress is left out entirely rather than flattened into a slider.",
+      "es": "Un chima abierto y a la medida mantiene una prenda coreana viva fabricable y reparable por quienes la visten. Como el plisado se resuelve con un número entero de pliegues y la unión de paños a partir de un ancho de telar real, el trazado indica a quien elabora cuánta tela comprar y dónde va cada doblez — un saber que de otro modo pasa de mano en mano y se pierde cuando no. La decoración de superficie queda en manos de quien elabora, y la vestimenta ceremonial se excluye por completo en lugar de aplanarse en un control deslizante.",
+      "fr": "Un chima ouvert et sur mesure garde un vêtement coréen vivant fabricable et réparable par ceux qui le portent. Le plissage étant résolu en nombre entier de plis et l'assemblage à partir d'une largeur de métier réelle, le tracé indique exactement combien de tissu acheter et où placer chaque pli — un savoir qui autrement se transmet de main en main et se perd faute de transmission. Le décor de surface est laissé à la personne qui confectionne, et le vêtement cérémoniel est écarté plutôt qu'aplati en un curseur."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

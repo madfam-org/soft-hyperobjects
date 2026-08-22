@@ -1,0 +1,519 @@
+{
+  "project": {
+    "name": "LED Trim Jacket",
+    "slug": "led-trim-jacket",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A hip-length raglan jacket whose illuminated trim is a drafted seam rather than a strip stuck on afterwards. A separate carrier band is cut for the raglan seams and the hem: it is the piece the Yantra4D `led-channel` extrusion clips into, and it is cut to the measured length of the seams it follows. The raglan is a Bezier, so its length can only be known by measuring what was drawn — the kernel drafts the bodice and sleeve first, measures the raglan curves, and cuts the band to that sum, which is also the length the printed channel is generated at. The sleeve cap is drafted on the same chord as the bodice raglan, so the raglan seam matches by construction.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una chaqueta ranglán a la cadera cuyo ribete luminoso es una costura trazada, no una tira pegada después. Se corta una cinta portadora aparte para las costuras ranglán y el bajo: es la pieza donde encaja la extrusión `led-channel` de Yantra4D, y se corta al largo medido de las costuras que sigue. El ranglán es una Bézier, así que su largo sólo se conoce midiendo lo dibujado — el kernel traza cuerpo y manga primero, mide las curvas ranglán y corta la cinta a esa suma, que es también el largo al que se genera el canal impreso. La copa de la manga se traza sobre la misma cuerda que el ranglán del cuerpo, de modo que la costura ranglán coincide por construcción.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une veste raglan longueur hanche dont la garniture lumineuse est une couture tracée et non un ruban collé après coup. Une bande support distincte est coupée pour les coutures raglan et l'ourlet : c'est la pièce dans laquelle s'encliquette l'extrusion `led-channel` de Yantra4D, et elle est coupée à la longueur mesurée des coutures qu'elle suit. Le raglan est une Bézier, sa longueur ne se connaît donc qu'en mesurant ce qui a été tracé — le noyau trace d'abord le corps et la manche, mesure les courbes raglan, puis coupe la bande à cette somme, qui est aussi la longueur à laquelle le canal imprimé est généré. La tête de manche est tracée sur la même corde que le raglan du corps, de sorte que la couture raglan correspond par construction.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "led-trim-jacket",
+      "jacket",
+      "raglan",
+      "e-textile",
+      "led",
+      "led-channel",
+      "hardware",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full jacket",
+        "es": "Chaqueta completa",
+        "fr": "Veste complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "trim"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Raglan front (LED trim path)",
+        "es": "Delantero ranglán (trazado del ribete LED)",
+        "fr": "Devant raglan (parcours de la garniture LED)"
+      },
+      "default_color": "#2c3644",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Raglan back",
+        "es": "Espalda ranglán",
+        "fr": "Dos raglan"
+      },
+      "default_color": "#333f4f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Raglan sleeve",
+        "es": "Manga ranglán",
+        "fr": "Manche raglan"
+      },
+      "default_color": "#3d4a5c",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "trim",
+      "label": {
+        "en": "LED carrier trim band",
+        "es": "Cinta portadora del ribete LED",
+        "fr": "Bande support de garniture LED"
+      },
+      "default_color": "#7a6a3d",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Size",
+        "es": "Talla",
+        "fr": "Taille"
+      }
+    },
+    {
+      "id": "electronics",
+      "label": {
+        "en": "Lighting",
+        "es": "Iluminación",
+        "fr": "Éclairage"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 1000,
+      "min": 760,
+      "max": 1500,
+      "step": 10,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest; with the ease it sets the quarter-panel width and the raglan chord",
+        "es": "Pecho completo; con la holgura define el ancho de cuarto de panel y la cuerda ranglán",
+        "fr": "Poitrine complète ; avec l'aisance, définit la largeur du quart de panneau et la corde raglan"
+      }
+    },
+    {
+      "id": "jacket_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 660,
+      "min": 480,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Jacket length (mm)",
+        "es": "Largo de chaqueta (mm)",
+        "fr": "Longueur de veste (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to hem",
+        "es": "De la nuca al bajo",
+        "fr": "De la nuque à l'ourlet"
+      }
+    },
+    {
+      "id": "neck_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 180,
+      "min": 130,
+      "max": 280,
+      "step": 5,
+      "label": {
+        "en": "Neck width (mm)",
+        "es": "Ancho de cuello (mm)",
+        "fr": "Largeur d'encolure (mm)"
+      },
+      "tooltip": {
+        "en": "Neck opening; the raglan seam starts at its outer point",
+        "es": "Abertura del cuello; la costura ranglán arranca en su punto exterior",
+        "fr": "Ouverture d'encolure ; la couture raglan part de son point extérieur"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 610,
+      "min": 420,
+      "max": 780,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Cap apex to wrist",
+        "es": "Del vértice de la copa a la muñeca",
+        "fr": "Du sommet de la tête au poignet"
+      }
+    },
+    {
+      "id": "bicep_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 360,
+      "min": 240,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Bicep girth (mm)",
+        "es": "Contorno de bíceps (mm)",
+        "fr": "Tour de biceps (mm)"
+      },
+      "tooltip": {
+        "en": "A bicep wider than the raglan chord flares the sleeve below the underarm rather than distorting the cap",
+        "es": "Un bíceps más ancho que la cuerda ranglán ensancha la manga bajo la sisa en vez de deformar la copa",
+        "fr": "Un biceps plus large que la corde raglan évase la manche sous l'aisselle plutôt que de déformer la tête"
+      }
+    },
+    {
+      "id": "raglan_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 250,
+      "min": 170,
+      "max": 360,
+      "step": 5,
+      "label": {
+        "en": "Raglan depth (mm)",
+        "es": "Profundidad del ranglán (mm)",
+        "fr": "Profondeur du raglan (mm)"
+      },
+      "tooltip": {
+        "en": "Neck point down to the underarm; the vertical half of the raglan chord",
+        "es": "Del punto de cuello a la sisa; la mitad vertical de la cuerda ranglán",
+        "fr": "Du point d'encolure à l'aisselle ; la moitié verticale de la corde raglan"
+      }
+    },
+    {
+      "id": "jacket_ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 140,
+      "min": 60,
+      "max": 320,
+      "step": 10,
+      "label": {
+        "en": "Wearing ease (mm)",
+        "es": "Holgura de uso (mm)",
+        "fr": "Aisance de port (mm)"
+      },
+      "tooltip": {
+        "en": "Added to the chest before quartering; a jacket layers over something",
+        "es": "Se suma al pecho antes de dividir en cuartos; una chaqueta va sobre algo",
+        "fr": "Ajoutée à la poitrine avant division en quarts ; une veste se porte par-dessus"
+      }
+    },
+    {
+      "id": "strip_w",
+      "type": "slider",
+      "group": "electronics",
+      "default": 10,
+      "min": 5,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "LED strip width (mm)",
+        "es": "Ancho de la tira LED (mm)",
+        "fr": "Largeur du ruban LED (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D led-channel profile and the band's marked channel seat",
+        "es": "Define el perfil del led-channel de Yantra4D y el asiento marcado en la cinta",
+        "fr": "Pilote le profil du led-channel Yantra4D et le siège marqué de la bande"
+      }
+    },
+    {
+      "id": "trim_width",
+      "type": "slider",
+      "group": "electronics",
+      "default": 26,
+      "min": 14,
+      "max": 50,
+      "step": 1,
+      "label": {
+        "en": "Trim band width (mm)",
+        "es": "Ancho de la cinta portadora (mm)",
+        "fr": "Largeur de la bande support (mm)"
+      },
+      "tooltip": {
+        "en": "Cut width of the carrier band; floored at the strip width plus a sewing margin",
+        "es": "Ancho de corte de la cinta portadora; mínimo el ancho de la tira más margen de costura",
+        "fr": "Largeur de coupe de la bande support ; plancher à la largeur du ruban plus une marge de couture"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to the raglan, side, and underarm seams",
+        "es": "Aplicado a las costuras ranglán, laterales y de sisa",
+        "fr": "Appliquée aux coutures raglan, latérales et de dessous de bras"
+      },
+      "advanced": true
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 30,
+      "min": 0,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de bajo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Hem and sleeve wrist; deep enough to hide the trim band's turned end",
+        "es": "Bajo y puño de manga; suficiente para ocultar el extremo doblado de la cinta",
+        "fr": "Ourlet et poignet de manche ; assez profond pour cacher l'extrémité repliée de la bande"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "trim_width >= strip_w + 10",
+      "severity": "warning",
+      "message": {
+        "en": "The carrier band must clear the strip plus a sewing margin on both sides.",
+        "es": "La cinta portadora debe librar la tira más un margen de costura a ambos lados.",
+        "fr": "La bande support doit dégager le ruban plus une marge de couture des deux côtés."
+      }
+    },
+    {
+      "expression": "raglan_depth < jacket_length * 0.55",
+      "severity": "warning",
+      "message": {
+        "en": "A raglan that deep leaves no side seam below the underarm.",
+        "es": "Un ranglán tan profundo no deja costado bajo la sisa.",
+        "fr": "Un raglan aussi profond ne laisse pas de couture latérale sous l'aisselle."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "night_commuter",
+      "label": {
+        "en": "Night commuter",
+        "es": "Trayecto nocturno",
+        "fr": "Trajet de nuit"
+      },
+      "values": {
+        "chest_girth": 1000,
+        "jacket_length": 660,
+        "strip_w": 10,
+        "trim_width": 26
+      }
+    },
+    {
+      "id": "stage_wide",
+      "label": {
+        "en": "Stage (wide strip)",
+        "es": "Escenario (tira ancha)",
+        "fr": "Scène (ruban large)"
+      },
+      "values": {
+        "strip_w": 18,
+        "trim_width": 40,
+        "jacket_length": 720
+      }
+    },
+    {
+      "id": "compact",
+      "label": {
+        "en": "Compact",
+        "es": "Compacta",
+        "fr": "Compacte"
+      },
+      "values": {
+        "chest_girth": 840,
+        "jacket_length": 540,
+        "sleeve_length": 500,
+        "bicep_girth": 290
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "popelina-algodon"
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "LED channel carrier band",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "led-channel",
+      "linked": true,
+      "params_map": {
+        "strip_width": "strip_w",
+        "depth": "strip_w * 0.55",
+        "wall": "trim_width * 0.08",
+        "lip": "strip_w * 0.18"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "e_textile",
+    "interfaces": [
+      {
+        "id": "led_carrier",
+        "type": "custom",
+        "label": {
+          "en": "LED channel carrier seat",
+          "es": "Asiento portador del canal LED",
+          "fr": "Siège support du canal LED"
+        },
+        "edges": [
+          {
+            "piece": "trim",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "strip_w",
+          "trim_width"
+        ]
+      },
+      {
+        "id": "raglan_seam",
+        "type": "armscye",
+        "label": {
+          "en": "Raglan seam",
+          "es": "Costura ranglán",
+          "fr": "Couture raglan"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "raglan"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap_front"
+          }
+        ],
+        "parameters": [
+          "raglan_depth",
+          "chest_girth",
+          "neck_width"
+        ]
+      },
+      {
+        "id": "jacket_hem",
+        "type": "hem",
+        "label": {
+          "en": "Hem trim run",
+          "es": "Recorrido del ribete en el bajo",
+          "fr": "Parcours de garniture à l'ourlet"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "jacket_length",
+          "hem_allowance",
+          "jacket_ease"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Being seen at night is a safety problem that retail solves with disposable jackets glued to sealed light strips. Here the light lives in a printed channel on a separate carrier band: the band is a flat rectangle anyone can recut, the channel is an open Yantra4D solid generated to the length this jacket actually measured, and the strip is a commodity. Every part of the illuminated seam is independently replaceable.",
+      "es": "Ser visto de noche es un problema de seguridad que el comercio resuelve con chaquetas desechables pegadas a tiras luminosas selladas. Aquí la luz vive en un canal impreso sobre una cinta portadora aparte: la cinta es un rectángulo plano que cualquiera puede recortar, el canal es un sólido abierto de Yantra4D generado al largo que esta chaqueta realmente midió, y la tira es un consumible. Cada parte de la costura luminosa es reemplazable por separado.",
+      "fr": "Être vu la nuit est un problème de sécurité que le commerce règle avec des vestes jetables collées à des rubans lumineux scellés. Ici la lumière loge dans un canal imprimé sur une bande support distincte : la bande est un rectangle plat que chacun peut recouper, le canal est un solide Yantra4D ouvert généré à la longueur que cette veste a réellement mesurée, et le ruban est un consommable. Chaque partie de la couture lumineuse est remplaçable indépendamment."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

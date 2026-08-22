@@ -1,0 +1,318 @@
+{
+  "project": {
+    "name": "Seated Rain Cape",
+    "slug": "seated-rain-cape",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A rain cape cut for a body that is sitting down. A standing cape falls to a hem level all round; on a wheelchair user that same cape rides up over the thighs, leaves the knees bare in the rain, and pools a long wet tail under the seat where it drags into the wheels. This one inverts the geometry: the front falls over the knees to the footplate, the back stops clear of the seat and the push rims, and a side panel ramps between the two hem radii so the hem sweeps up without a step. The chest strap closes on a Yantra4D `side-release-buckle` — one hand, one click, no overhead motion. A cape is a partial annulus, so the neck radius is bisected until its measured 40-gon arc equals the eased neck girth, and the back's half-angle is taken as the remainder of the sweep so the panel angles close the turn exactly.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una capa de lluvia cortada para un cuerpo sentado. Una capa de pie cae a un bajo nivelado en todo el contorno; sobre una persona usuaria de silla de ruedas esa misma capa se sube sobre los muslos, deja las rodillas a la intemperie y acumula una cola larga y mojada bajo el asiento que se enreda en las ruedas. Esta invierte la geometría: el delantero cae sobre las rodillas hasta el reposapiés, la espalda se detiene libre del asiento y de los aros de empuje, y un panel lateral hace la rampa entre ambos radios de bajo para que el ruedo suba sin escalón. La correa de pecho cierra con una hebilla `side-release-buckle` de Yantra4D — una mano, un clic, sin movimiento sobre la cabeza. Una capa es un anillo parcial, así que el radio de cuello se biseca hasta que su arco medido de 40 lados iguala el contorno de cuello con holgura, y el semiángulo de la espalda se toma como el resto del barrido para que los ángulos cierren la vuelta con exactitud.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une cape de pluie coupée pour un corps assis. Une cape debout tombe sur un ourlet de niveau tout autour ; sur une personne en fauteuil roulant, cette même cape remonte sur les cuisses, laisse les genoux nus sous la pluie et accumule une longue traîne mouillée sous l'assise, qui s'entraîne dans les roues. Celle-ci inverse la géométrie : le devant tombe sur les genoux jusqu'au repose-pied, le dos s'arrête au-dessus de l'assise et des mains courantes, et un panneau de côté fait la rampe entre les deux rayons d'ourlet pour que le bas remonte sans marche. La sangle de poitrine se ferme sur une boucle `side-release-buckle` de Yantra4D — une main, un clic, aucun geste au-dessus de la tête. Une cape est un anneau partiel : le rayon d'encolure est donc bissecté jusqu'à ce que son arc mesuré à 40 côtés égale le tour de cou avec aisance, et le demi-angle du dos est pris comme le reste du balayage afin que les angles bouclent le tour exactement.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "seated-rain-cape",
+      "adaptive",
+      "wheelchair",
+      "seated",
+      "rainwear",
+      "cape",
+      "one-handed",
+      "hardware",
+      "side-release-buckle",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full cape", "es": "Capa completa", "fr": "Cape complète" },
+      "script_file": "main.py",
+      "pieces": ["front", "side", "back", "hood"]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front panel (knee length)",
+        "es": "Panel delantero (a la rodilla)",
+        "fr": "Panneau devant (longueur genou)"
+      },
+      "default_color": "#3c6b62",
+      "cut": { "quantity": 2, "on_fold": false, "mirror": true }
+    },
+    {
+      "id": "side",
+      "label": {
+        "en": "Side panel (hem transition)",
+        "es": "Panel lateral (transición del bajo)",
+        "fr": "Panneau de côté (transition d'ourlet)"
+      },
+      "default_color": "#357a6d",
+      "cut": { "quantity": 2, "on_fold": false, "mirror": true }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back panel (seat clearance)",
+        "es": "Panel trasero (libre del asiento)",
+        "fr": "Panneau dos (dégagement d'assise)"
+      },
+      "default_color": "#2e5d55",
+      "cut": { "quantity": 1, "on_fold": true, "mirror": false }
+    },
+    {
+      "id": "hood",
+      "label": { "en": "Hood half", "es": "Mitad de capucha", "fr": "Moitié de capuche" },
+      "default_color": "#48857a",
+      "cut": { "quantity": 2, "on_fold": false, "mirror": true }
+    }
+  ],
+  "parameter_groups": [
+    { "id": "fit", "label": { "en": "Fit", "es": "Ajuste", "fr": "Ajustement" } },
+    { "id": "adaptive", "label": { "en": "Seated geometry", "es": "Geometría sentada", "fr": "Géométrie assise" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction" } }
+  ],
+  "parameters": [
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 420,
+      "min": 320,
+      "max": 560,
+      "step": 5,
+      "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)", "fr": "Tour de cou (mm)" },
+      "tooltip": {
+        "en": "60 mm of ease is added — a rain cape's neck rides over a coat collar",
+        "es": "Se añaden 60 mm de holgura — el cuello de una capa monta sobre el cuello del abrigo",
+        "fr": "60 mm d'aisance sont ajoutés — l'encolure d'une cape passe par-dessus un col de manteau"
+      },
+      "measurement": { "standard": "iso_8559", "code": "neck_girth" }
+    },
+    {
+      "id": "front_length",
+      "type": "slider",
+      "group": "adaptive",
+      "default": 780,
+      "min": 500,
+      "max": 1000,
+      "step": 10,
+      "label": { "en": "Front length (mm)", "es": "Largo delantero (mm)", "fr": "Longueur devant (mm)" },
+      "tooltip": {
+        "en": "Neck to hem at centre front; long enough to fall over the knees to the footplate",
+        "es": "Del cuello al bajo en el centro delantero; suficiente para caer sobre las rodillas hasta el reposapiés",
+        "fr": "Du cou à l'ourlet au milieu devant ; assez long pour tomber sur les genoux jusqu'au repose-pied"
+      }
+    },
+    {
+      "id": "back_length",
+      "type": "slider",
+      "group": "adaptive",
+      "default": 420,
+      "min": 260,
+      "max": 620,
+      "step": 10,
+      "label": { "en": "Back length (mm)", "es": "Largo trasero (mm)", "fr": "Longueur dos (mm)" },
+      "tooltip": {
+        "en": "Short by design: it must clear the seat and the push rims. Clamped to at least 120 mm under the front",
+        "es": "Corto a propósito: debe librar el asiento y los aros de empuje. Limitado a al menos 120 mm menos que el delantero",
+        "fr": "Court par conception : il doit dégager l'assise et les mains courantes. Limité à au moins 120 mm sous le devant"
+      }
+    },
+    {
+      "id": "sweep_deg",
+      "type": "slider",
+      "group": "fit",
+      "default": 320,
+      "min": 240,
+      "max": 350,
+      "step": 5,
+      "label": { "en": "Cape sweep (degrees)", "es": "Barrido de la capa (grados)", "fr": "Balayage de la cape (degrés)" },
+      "tooltip": {
+        "en": "How much of a full turn the cape wraps; the remainder is the front opening",
+        "es": "Cuánto de una vuelta completa envuelve la capa; el resto es la abertura delantera",
+        "fr": "Quelle part d'un tour complet la cape enveloppe ; le reste est l'ouverture devant"
+      }
+    },
+    {
+      "id": "strap_webbing",
+      "type": "slider",
+      "group": "construction",
+      "default": 25,
+      "min": 16,
+      "max": 50,
+      "step": 1,
+      "label": { "en": "Chest strap webbing (mm)", "es": "Cincha de la correa de pecho (mm)", "fr": "Sangle de poitrine (mm)" },
+      "tooltip": {
+        "en": "Drives the Yantra4D side-release-buckle webbing channel and the anchor tabs",
+        "es": "Define el canal de cincha de la hebilla Yantra4D y las lengüetas de anclaje",
+        "fr": "Pilote le canal de sangle de la boucle Yantra4D et les pattes d'ancrage"
+      }
+    },
+    {
+      "id": "hood_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 340,
+      "min": 260,
+      "max": 420,
+      "step": 10,
+      "label": { "en": "Hood height (mm)", "es": "Alto de la capucha (mm)", "fr": "Hauteur de capuche (mm)" },
+      "tooltip": {
+        "en": "Crown height; the hood's neck edge is solved to the MEASURED neckline regardless",
+        "es": "Alto de la coronilla; el borde de cuello se resuelve al escote MEDIDO en cualquier caso",
+        "fr": "Hauteur de calotte ; le bord d'encolure est résolu à l'encolure MESURÉE dans tous les cas"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 6,
+      "max": 16,
+      "step": 1,
+      "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)" },
+      "tooltip": {
+        "en": "Hem takes 25 mm and the hood face edge 28 mm; seam-seal every radial seam",
+        "es": "El bajo lleva 25 mm y el borde de cara de la capucha 28 mm; selle cada costura radial",
+        "fr": "L'ourlet prend 25 mm et le bord de visage de la capuche 28 mm ; étanchéifiez chaque couture radiale"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "front_length > back_length + 120",
+      "severity": "warning",
+      "message": {
+        "en": "The back must stay well shorter than the front — that is the seated cut.",
+        "es": "La espalda debe quedar bastante más corta que el delantero — ese es el corte sentado.",
+        "fr": "Le dos doit rester nettement plus court que le devant — c'est la coupe assise."
+      }
+    },
+    {
+      "expression": "sweep_deg < 355",
+      "severity": "warning",
+      "message": {
+        "en": "A sweep near a full turn leaves no front opening to get into.",
+        "es": "Un barrido cercano a la vuelta completa no deja abertura delantera por donde entrar.",
+        "fr": "Un balayage proche du tour complet ne laisse aucune ouverture devant pour entrer."
+      }
+    },
+    {
+      "expression": "hood_height < front_length / 2",
+      "severity": "warning",
+      "message": {
+        "en": "A hood taller than half the cape front will not sit down on the shoulders.",
+        "es": "Una capucha más alta que medio delantero no se asienta sobre los hombros.",
+        "fr": "Une capuche plus haute que la moitié du devant ne se pose pas sur les épaules."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "day-chair",
+      "label": { "en": "Daily chair cape", "es": "Capa diaria de silla", "fr": "Cape de fauteuil quotidienne" },
+      "values": { "front_length": 780, "back_length": 420, "sweep_deg": 320, "strap_webbing": 25 }
+    },
+    {
+      "id": "footplate-long",
+      "label": { "en": "Footplate length", "es": "Largo al reposapiés", "fr": "Longueur repose-pied" },
+      "values": { "front_length": 950, "back_length": 380, "sweep_deg": 330 }
+    },
+    {
+      "id": "compact-commute",
+      "label": { "en": "Compact commute", "es": "Trayecto compacto", "fr": "Trajet compact" },
+      "values": { "front_length": 620, "back_length": 300, "sweep_deg": 280, "hood_height": 290 }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["nylon-ripstop-shell"],
+  "notion": {
+    "kind": "buckle",
+    "subtype": "one-handed chest-strap closure",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "side-release-buckle",
+      "linked": true,
+      "params_map": {
+        "webbing_w": "strap_webbing",
+        "webbing_t": "2",
+        "body_t": "seam_allowance"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "chest_strap",
+        "type": "custom",
+        "label": {
+          "en": "Chest-strap anchor",
+          "es": "Anclaje de la correa de pecho",
+          "fr": "Ancrage de sangle de poitrine"
+        },
+        "edges": [{ "piece": "front", "edge": "seam_a" }],
+        "parameters": ["strap_webbing", "seam_allowance"]
+      },
+      {
+        "id": "cape_neckline",
+        "type": "neckline",
+        "label": {
+          "en": "Cape neckline to hood",
+          "es": "Escote de la capa a la capucha",
+          "fr": "Encolure de cape à la capuche"
+        },
+        "edges": [
+          { "piece": "front", "edge": "neck" },
+          { "piece": "side", "edge": "neck" },
+          { "piece": "back", "edge": "neck" },
+          { "piece": "hood", "edge": "hood_neck" }
+        ],
+        "parameters": ["neck_girth", "sweep_deg", "hood_height"]
+      },
+      {
+        "id": "seated_hem",
+        "type": "hem",
+        "label": {
+          "en": "Seated sweep hem",
+          "es": "Bajo de barrido sentado",
+          "fr": "Ourlet de balayage assis"
+        },
+        "edges": [
+          { "piece": "front", "edge": "hem" },
+          { "piece": "side", "edge": "hem" },
+          { "piece": "back", "edge": "hem" }
+        ],
+        "parameters": ["front_length", "back_length", "sweep_deg"]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Rain is a mobility barrier that most rainwear quietly makes worse for seated users: a cape long enough to keep the knees dry is a cape whose back drags into the wheels. Splitting the hem radius solves both at once, and the one-handed buckle means going out in weather does not require another person. The fastening is open hardware, printable and replaceable, so the cape outlives its buckle.",
+      "es": "La lluvia es una barrera de movilidad que la mayoría de la ropa impermeable empeora en silencio para quienes van sentados: una capa lo bastante larga para mantener secas las rodillas es una capa cuya espalda se enreda en las ruedas. Dividir el radio del bajo resuelve ambas cosas a la vez, y la hebilla de una mano significa que salir con mal tiempo no exige otra persona. El cierre es herraje abierto, imprimible y reemplazable, así que la capa sobrevive a su hebilla.",
+      "fr": "La pluie est une barrière à la mobilité que la plupart des vêtements de pluie aggravent discrètement pour les personnes assises : une cape assez longue pour garder les genoux au sec est une cape dont le dos s'entraîne dans les roues. Scinder le rayon d'ourlet résout les deux à la fois, et la boucle à une main fait que sortir par mauvais temps n'exige plus quelqu'un d'autre. La fermeture est une quincaillerie ouverte, imprimable et remplaçable : la cape survit à sa boucle."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

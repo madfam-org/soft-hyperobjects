@@ -1,0 +1,424 @@
+{
+  "project": {
+    "name": "Pocket Hoops",
+    "slug": "pocket-hoops",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "Paired side hoops (small panniers) of the mid-18th century: two separate baskets tied at the hips, joined only by a shared waist tape, giving the period gown its width at the sides while the front and back stay nearly flat. Each hoop is two shaped side panels joined by a depth gusset around the curved outer edge, with horizontal casings carrying stays of graduated length, and the inner face left open as a genuine pocket. The gusset is cut to the MEASURED length of the panel's curved outer edge, so the bag closes exactly.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Tontillos laterales pareados (panniers pequeños) de mediados del siglo XVIII: dos cestos independientes atados a las caderas, unidos sólo por una cinta de cintura compartida, que dan al vestido de época su anchura lateral mientras el frente y la espalda quedan casi planos. Cada tontillo son dos costados conformados unidos por un fuelle de profundidad en el canto exterior curvo, con jaretas horizontales que llevan varillas de longitud graduada, y la cara interior abierta como bolsillo real. El fuelle se corta a la longitud MEDIDA del canto exterior, de modo que la bolsa cierra exactamente.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Paniers de côté appariés (petits paniers) du milieu du XVIIIe siècle : deux corbeilles séparées attachées aux hanches, réunies seulement par un ruban de taille commun, donnant à la robe d'époque sa largeur sur les côtés tandis que le devant et le dos restent presque plats. Chaque panier est fait de deux côtés façonnés réunis par un soufflet de profondeur sur le bord extérieur courbe, avec des coulisses horizontales portant des baleines de longueur graduée, et la face intérieure laissée ouverte en véritable poche. Le soufflet est coupé à la longueur MESURÉE du bord extérieur, pour que le sac ferme exactement.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "pocket-hoops",
+      "panniers",
+      "historical",
+      "costume",
+      "understructure",
+      "18th-century",
+      "hoops",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Drafted from the documented construction tradition of mid-18th-century side hoops: paired gusseted bags on a shared waist tape, graduated horizontal stay casings, an open inner face used as a pocket. Not traced from any single extant garment or published pattern.",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Both hoops",
+        "es": "Ambos tontillos",
+        "fr": "Les deux paniers"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "side_panel",
+        "gusset",
+        "waist_tape"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "side_panel",
+      "label": {
+        "en": "Side panel",
+        "es": "Costado",
+        "fr": "Côté"
+      },
+      "default_color": "#cfc4ae",
+      "cut": {
+        "quantity": 4,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "gusset",
+      "label": {
+        "en": "Outer gusset",
+        "es": "Fuelle exterior",
+        "fr": "Soufflet extérieur"
+      },
+      "default_color": "#bdb096",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "waist_tape",
+      "label": {
+        "en": "Waist tape",
+        "es": "Cinta de cintura",
+        "fr": "Ruban de taille"
+      },
+      "default_color": "#a89a80",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Silhouette",
+        "es": "Silueta",
+        "fr": "Silhouette"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "hoop_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 340,
+      "min": 180,
+      "max": 620,
+      "step": 10,
+      "label": {
+        "en": "Hoop width (mm)",
+        "es": "Ancho del tontillo (mm)",
+        "fr": "Largeur du panier (mm)"
+      },
+      "tooltip": {
+        "en": "How far ONE hoop stands out from the hip; the pair doubles the total width",
+        "es": "Cuánto sobresale UN tontillo desde la cadera; el par duplica el ancho total",
+        "fr": "De combien UN panier dépasse de la hanche ; la paire double la largeur totale"
+      }
+    },
+    {
+      "id": "hoop_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 210,
+      "min": 110,
+      "max": 340,
+      "step": 10,
+      "label": {
+        "en": "Hoop depth (mm)",
+        "es": "Profundidad del tontillo (mm)",
+        "fr": "Profondeur du panier (mm)"
+      },
+      "tooltip": {
+        "en": "Front-to-back thickness of the bag; the gusset width. Keep it modest — deep hoops read as a bell, not as side hoops",
+        "es": "Grosor de delante a atrás; el ancho del fuelle. Manténlo discreto — un tontillo profundo se lee como campana",
+        "fr": "Épaisseur d'avant en arrière ; la largeur du soufflet. Restez modeste — un panier profond se lit comme une cloche"
+      }
+    },
+    {
+      "id": "hoop_drop",
+      "type": "slider",
+      "group": "fit",
+      "default": 380,
+      "min": 240,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Hoop drop (mm)",
+        "es": "Caída del tontillo (mm)",
+        "fr": "Hauteur du panier (mm)"
+      },
+      "tooltip": {
+        "en": "Waist tape down to the widest bottom stay; drives the measured outer run",
+        "es": "De la cinta de cintura a la varilla inferior; define el recorrido exterior medido",
+        "fr": "Du ruban de taille à la baleine inférieure ; pilote le parcours extérieur mesuré"
+      }
+    },
+    {
+      "id": "top_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 150,
+      "min": 90,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Top width (mm)",
+        "es": "Ancho superior (mm)",
+        "fr": "Largeur au sommet (mm)"
+      },
+      "tooltip": {
+        "en": "Width at the waist before the hoop flares; also the tape attachment run",
+        "es": "Ancho en la cintura antes del vuelo; también el tramo de fijación a la cinta",
+        "fr": "Largeur à la taille avant l'évasement ; aussi la zone de fixation au ruban"
+      }
+    },
+    {
+      "id": "stay_count",
+      "type": "slider",
+      "group": "construction",
+      "default": 4,
+      "min": 2,
+      "max": 7,
+      "step": 1,
+      "label": {
+        "en": "Stays per panel",
+        "es": "Varillas por costado",
+        "fr": "Baleines par côté"
+      },
+      "tooltip": {
+        "en": "Horizontal hoop stays; each casing is a different length as the bag widens",
+        "es": "Varillas horizontales; cada jareta es de distinta longitud al ensancharse",
+        "fr": "Baleines horizontales ; chaque coulisse a une longueur différente en s'élargissant"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 700,
+      "min": 500,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "Measured over the stays; sets the shared waist tape length",
+        "es": "Medido sobre el corsé; define el largo de la cinta compartida",
+        "fr": "Mesuré par-dessus le corset ; définit la longueur du ruban commun"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to the bag seams; the top edge carries extra for pleating",
+        "es": "Aplicado a las costuras de la bolsa; el canto superior lleva extra para plisar",
+        "fr": "Appliquée aux coutures du sac ; le bord supérieur porte un extra pour plisser"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "hoop_width > top_width",
+      "severity": "error",
+      "message": {
+        "en": "The hoop must be wider at the bottom than at the waist or it does not flare at all.",
+        "es": "El tontillo debe ser más ancho abajo que en la cintura, o no vuela.",
+        "fr": "Le panier doit être plus large en bas qu'à la taille, sinon il ne s'évase pas."
+      }
+    },
+    {
+      "expression": "hoop_depth < hoop_width",
+      "severity": "warning",
+      "message": {
+        "en": "Depth approaching width turns side hoops into a bell hoop — a different garment.",
+        "es": "Si la profundidad se acerca al ancho, el tontillo se vuelve campana — otra prenda.",
+        "fr": "Une profondeur proche de la largeur transforme les paniers en cloche — un autre vêtement."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "day_hoops",
+      "label": {
+        "en": "Day hoops",
+        "es": "Tontillo de día",
+        "fr": "Paniers de jour"
+      },
+      "values": {
+        "hoop_width": 260,
+        "hoop_depth": 170,
+        "hoop_drop": 340,
+        "stay_count": 3
+      }
+    },
+    {
+      "id": "formal_hoops",
+      "label": {
+        "en": "Formal hoops",
+        "es": "Tontillo de gala",
+        "fr": "Paniers de cérémonie"
+      },
+      "values": {
+        "hoop_width": 420,
+        "hoop_depth": 220,
+        "hoop_drop": 420,
+        "stay_count": 5
+      }
+    },
+    {
+      "id": "court_hoops",
+      "label": {
+        "en": "Court hoops",
+        "es": "Tontillo de corte",
+        "fr": "Paniers de cour"
+      },
+      "values": {
+        "hoop_width": 600,
+        "hoop_depth": 240,
+        "hoop_drop": 480,
+        "stay_count": 7
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "pdf",
+    "json"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "notion": {
+    "kind": "boning",
+    "subtype": "graduated horizontal hoop stays in stitched casings",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "boning-stay",
+      "linked": true,
+      "params_map": {
+        "stay_length": "hoop_width",
+        "stay_width": "8",
+        "stay_t": "2",
+        "channel_wall": "hoop_depth"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "bag_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Outer bag seam (panel to gusset)",
+          "es": "Costura exterior (costado al fuelle)",
+          "fr": "Couture extérieure (côté au soufflet)"
+        },
+        "edges": [
+          {
+            "piece": "side_panel",
+            "edge": "outer"
+          },
+          {
+            "piece": "gusset",
+            "edge": "seam_a"
+          }
+        ],
+        "parameters": [
+          "hoop_width",
+          "hoop_drop",
+          "hoop_depth"
+        ]
+      },
+      {
+        "id": "stay_casings",
+        "type": "custom",
+        "label": {
+          "en": "Graduated stay casings",
+          "es": "Jaretas de varilla graduadas",
+          "fr": "Coulisses de baleine graduées"
+        },
+        "edges": [
+          {
+            "piece": "side_panel",
+            "edge": "inner"
+          }
+        ],
+        "parameters": [
+          "stay_count",
+          "hoop_width"
+        ]
+      },
+      {
+        "id": "tape_attachment",
+        "type": "waistband",
+        "label": {
+          "en": "Waist tape attachment",
+          "es": "Fijación a la cinta de cintura",
+          "fr": "Fixation au ruban de taille"
+        },
+        "edges": [
+          {
+            "piece": "side_panel",
+            "edge": "top"
+          },
+          {
+            "piece": "waist_tape",
+            "edge": "upper"
+          }
+        ],
+        "parameters": [
+          "top_width",
+          "waist_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Understructure is the part of historical dress most often faked, because the correct silhouette is invisible once the gown is on — and getting it wrong makes every layer above it hang wrong. Publishing the hoops parametrically, with each stay's true graduated length reported rather than batched to one size, means a reenactor or a theatre wardrobe can build the right shape for a specific body from cane, whalebone substitute, or an openly printable stay, instead of buying a fixed-size cage.",
+      "es": "La estructura interior es la parte del traje histórico que más se falsea, porque la silueta correcta es invisible una vez puesto el vestido — y equivocarla hace caer mal todas las capas superiores. Publicar el tontillo de forma paramétrica, informando la longitud graduada real de cada varilla en vez de igualarlas, permite a recreadores o a un vestuario teatral construir la forma correcta para un cuerpo concreto con caña, sustituto de ballena o una varilla imprimible abierta, en lugar de comprar una jaula de talla fija.",
+      "fr": "La structure intérieure est la partie du costume historique la plus souvent truquée, car la silhouette correcte est invisible une fois la robe enfilée — et la rater fait mal tomber toutes les couches au-dessus. Publier les paniers de façon paramétrique, en donnant la longueur graduée réelle de chaque baleine plutôt qu'une taille unique, permet à un reconstituteur ou à un atelier de théâtre de construire la bonne forme pour un corps précis à partir de rotin, d'un substitut de baleine ou d'une baleine imprimable ouverte, au lieu d'acheter une cage de taille fixe."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

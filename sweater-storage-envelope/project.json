@@ -1,0 +1,356 @@
+{
+  "project": {
+    "name": "Sweater Storage Envelope",
+    "slug": "sweater-storage-envelope",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The flat folder that keeps knitwear off a hanger. A hung sweater grows shoulder horns and stretches at the yoke; the answer is to store it flat, and this is the envelope that does it. One cruciform body panel folds up into a shallow tray, four trapezoidal corner wedges give the tray its depth, and a shaped flap closes over the top on sew-on snaps. The corner reliefs are cut back by the wedge slope's measured length, so every corner closes without gaping. Natural fibre throughout, with a pocket for a cedar sachet — the moth deterrent that is not a mothball.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La carpeta plana que mantiene el punto fuera de la percha. Un suéter colgado cría cuernos en los hombros y se estira en el canesú; la respuesta es guardarlo plano, y este es el sobre que lo hace. Un panel cruciforme se dobla en una bandeja poco profunda, cuatro cuñas trapezoidales de esquina le dan fondo, y una solapa con forma cierra encima con broches de coser. Los rebajes de esquina se recortan según el largo medido de la cuña, de modo que cada esquina cierra sin abrirse. Fibra natural en todo, con un bolsillo para una bolsita de cedro: el repelente de polilla que no es naftalina.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La chemise plate qui garde la maille hors du cintre. Un pull suspendu développe des cornes aux épaules et se détend à l'empiècement ; la réponse est de le ranger à plat, et voici l'enveloppe qui le fait. Un panneau cruciforme se plie en un plateau peu profond, quatre cales trapézoïdales d'angle lui donnent sa profondeur, et un rabat profilé se ferme par-dessus sur des boutons-pression à coudre. Les dégagements d'angle sont recoupés selon la longueur mesurée de la cale, de sorte que chaque coin se ferme sans bâiller. Fibre naturelle partout, avec une poche pour un sachet de cèdre — le répulsif à mites qui n'est pas de la naphtaline.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "sweater-storage",
+      "care",
+      "storage",
+      "knitwear",
+      "flat-fold",
+      "snap",
+      "hardware",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full envelope",
+        "es": "Sobre completo",
+        "fr": "Enveloppe complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "body",
+        "wall",
+        "flap"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Tray body (cruciform blank)",
+        "es": "Cuerpo de la bandeja (patrón cruciforme)",
+        "fr": "Corps du plateau (gabarit cruciforme)"
+      },
+      "default_color": "#c9bda3",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "wall",
+      "label": {
+        "en": "Corner wall wedge",
+        "es": "Cuña de esquina",
+        "fr": "Cale d'angle"
+      },
+      "default_color": "#b3a68a",
+      "cut": {
+        "quantity": 4,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "flap",
+      "label": {
+        "en": "Closing flap (snap lid)",
+        "es": "Solapa de cierre (tapa de broches)",
+        "fr": "Rabat de fermeture (couvercle à pression)"
+      },
+      "default_color": "#d6cbb4",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Size",
+        "es": "Tamaño",
+        "fr": "Taille"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "folded_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 380,
+      "min": 240,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Folded width (mm)",
+        "es": "Ancho plegado (mm)",
+        "fr": "Largeur pliée (mm)"
+      },
+      "tooltip": {
+        "en": "How wide a folded sweater sits; measure your own fold, not a shop's",
+        "es": "El ancho de un suéter doblado; mide tu propio doblez, no el de una tienda",
+        "fr": "La largeur d'un pull plié ; mesurez votre propre pliage, pas celui d'un magasin"
+      }
+    },
+    {
+      "id": "folded_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 320,
+      "min": 200,
+      "max": 480,
+      "step": 10,
+      "label": {
+        "en": "Folded depth (mm)",
+        "es": "Fondo plegado (mm)",
+        "fr": "Profondeur pliée (mm)"
+      },
+      "tooltip": {
+        "en": "Front to back of the folded stack",
+        "es": "De delante a atrás de la pila doblada",
+        "fr": "De l'avant à l'arrière de la pile pliée"
+      }
+    },
+    {
+      "id": "stack_height",
+      "type": "slider",
+      "group": "fit",
+      "default": 110,
+      "min": 40,
+      "max": 220,
+      "step": 5,
+      "label": {
+        "en": "Stack height (mm)",
+        "es": "Alto de la pila (mm)",
+        "fr": "Hauteur de la pile (mm)"
+      },
+      "tooltip": {
+        "en": "How tall a stack the tray takes; also the wall wedge's height",
+        "es": "La altura de pila que admite la bandeja; también el alto de la cuña",
+        "fr": "La hauteur de pile que le plateau accepte ; aussi la hauteur de la cale"
+      }
+    },
+    {
+      "id": "snap_diameter",
+      "type": "slider",
+      "group": "construction",
+      "default": 15,
+      "min": 8,
+      "max": 25,
+      "step": 1,
+      "label": {
+        "en": "Snap diameter (mm)",
+        "es": "Diámetro del broche (mm)",
+        "fr": "Diamètre de la pression (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D sew-on-snap's sew face and the flap's stud spacing",
+        "es": "Define la cara de costura del sew-on-snap de Yantra4D y la separación en la solapa",
+        "fr": "Pilote la face à coudre du sew-on-snap Yantra4D et l'écartement sur le rabat"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to the wedge seams and the flap hinge",
+        "es": "Aplicado a las costuras de cuña y a la bisagra de la solapa",
+        "fr": "Appliquée aux coutures de cales et à la charnière du rabat"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "stack_height < folded_depth * 0.5",
+      "severity": "warning",
+      "message": {
+        "en": "A tray taller than half its depth topples; split the stack across two envelopes.",
+        "es": "Una bandeja más alta que la mitad de su fondo se vuelca; divide la pila en dos sobres.",
+        "fr": "Un plateau plus haut que la moitié de sa profondeur bascule ; répartissez la pile sur deux enveloppes."
+      }
+    },
+    {
+      "expression": "folded_width >= snap_diameter * 8",
+      "severity": "warning",
+      "message": {
+        "en": "Snaps this large relative to the flap will crowd its edge.",
+        "es": "Broches tan grandes para esta solapa se amontonan en el borde.",
+        "fr": "Des pressions aussi grandes pour ce rabat encombrent son bord."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "single",
+      "label": {
+        "en": "Single sweater",
+        "es": "Un suéter",
+        "fr": "Un seul pull"
+      },
+      "values": {
+        "folded_width": 340,
+        "folded_depth": 280,
+        "stack_height": 60
+      }
+    },
+    {
+      "id": "seasonal-stack",
+      "label": {
+        "en": "Seasonal stack",
+        "es": "Pila de temporada",
+        "fr": "Pile de saison"
+      },
+      "values": {
+        "folded_width": 380,
+        "folded_depth": 320,
+        "stack_height": 140
+      }
+    },
+    {
+      "id": "chunky-knits",
+      "label": {
+        "en": "Chunky knits",
+        "es": "Punto grueso",
+        "fr": "Grosses mailles"
+      },
+      "values": {
+        "folded_width": 480,
+        "folded_depth": 400,
+        "stack_height": 200
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "notion": {
+    "kind": "snap",
+    "subtype": "flap closure sew-on snap",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-on-snap",
+      "linked": true,
+      "params_map": {
+        "snap_dia": "snap_diameter",
+        "sew_holes": "4",
+        "stud_dia": "snap_diameter * 0.4"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "snap_seat",
+        "type": "custom",
+        "label": {
+          "en": "Flap snap seat",
+          "es": "Asiento del broche en la solapa",
+          "fr": "Assise de la pression sur le rabat"
+        },
+        "edges": [
+          {
+            "piece": "flap",
+            "edge": "lip"
+          },
+          {
+            "piece": "body",
+            "edge": "front_wall"
+          }
+        ],
+        "parameters": [
+          "snap_diameter"
+        ]
+      },
+      {
+        "id": "corner_wedge_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Corner wedge seam",
+          "es": "Costura de la cuña de esquina",
+          "fr": "Couture de la cale d'angle"
+        },
+        "edges": [
+          {
+            "piece": "wall",
+            "edge": "slope"
+          },
+          {
+            "piece": "body",
+            "edge": "relief_fr"
+          }
+        ],
+        "parameters": [
+          "stack_height",
+          "folded_depth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Flat storage is the single biggest thing that extends a knit's life, and it costs nothing but a cotton box you can make. This one is breathable natural fibre rather than the sealed plastic tub that traps the moisture wool mould needs, with a cedar pocket instead of naphthalene, and snaps that are an open printable Yantra4D part.",
+      "es": "Guardar en plano es lo que más alarga la vida de una prenda de punto, y no cuesta más que una caja de algodón que puedes hacer tú. Esta es de fibra natural transpirable en vez del contenedor plástico sellado que atrapa la humedad que el moho de la lana necesita, con un bolsillo de cedro en lugar de naftalina, y broches que son una pieza imprimible abierta de Yantra4D.",
+      "fr": "Le rangement à plat est ce qui prolonge le plus la vie d'un tricot, et cela ne coûte qu'une boîte en coton que vous pouvez fabriquer. Celle-ci est en fibre naturelle respirante plutôt que le bac plastique scellé qui retient l'humidité dont la moisissure de la laine a besoin, avec une poche de cèdre au lieu de naphtaline, et des pressions qui sont une pièce Yantra4D ouverte et imprimable."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

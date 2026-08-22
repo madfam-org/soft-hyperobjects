@@ -1,0 +1,613 @@
+{
+  "project": {
+    "name": "Regency Spencer",
+    "slug": "regency-spencer",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The short high-waisted jacket of c. 1800–1825: a coat bodice with the skirts cut off entirely, ending at the Empire waistline directly under the bust so the gown's own waistline continues uninterrupted underneath. Shaping is taken at the side and back seams and by the curve of the underbust edge, never by a modern bust dart, and the sleeve is TWO-PIECE for the period's forward elbow curve. Neither sleeve cap means anything alone — their SUM sets into the armscye, so the cap height is solved by bisection until that sum measures armscye plus ease.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La chaquetilla corta de talle alto de c. 1800–1825: un cuerpo de abrigo con los faldones suprimidos por completo, que termina en el talle Imperio justo bajo el busto para que la línea de cintura del vestido siga sin interrupción debajo. El conformado se toma en las costuras laterales y de espalda y en la curva del canto bajo el busto, nunca con una pinza de busto moderna, y la manga es de DOS PIEZAS para lograr la curva de codo hacia delante de la época. Ninguna copa significa nada por sí sola — su SUMA es la que monta en la sisa, así que la altura de copa se resuelve por bisección hasta que esa suma mide sisa más holgura.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La courte veste à taille haute de c. 1800–1825 : un corsage de manteau dont les basques sont entièrement supprimées, s'arrêtant à la taille Empire juste sous la poitrine pour que la ligne de taille de la robe se poursuive sans rupture dessous. Le façonnage se prend aux coutures de côté et de dos et par la courbe du bord sous-poitrine, jamais par une pince de poitrine moderne, et la manche est en DEUX PIÈCES pour la courbe de coude vers l'avant de l'époque. Aucune tête ne signifie rien seule — c'est leur SOMME qui se monte dans l'emmanchure, aussi la hauteur de tête est-elle résolue par bissection jusqu'à ce que cette somme mesure emmanchure plus aisance.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "regency-spencer",
+      "spencer",
+      "historical",
+      "costume",
+      "regency",
+      "empire-line",
+      "two-piece-sleeve",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Drafted from the documented construction tradition of the Regency spencer: a bodice ending at the high Empire waist, shaping taken at the side and back seams rather than by darts, a two-piece sleeve giving the forward elbow curve, a small standing collar, and a front closed with hooks and eyes. Not traced from any single extant garment or published pattern.",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Complete spencer",
+        "es": "Chaquetilla completa",
+        "fr": "Spencer complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "upper_sleeve",
+        "under_sleeve",
+        "collar"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Spencer front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#6d5b73",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Spencer back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#5d4d63",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "upper_sleeve",
+      "label": {
+        "en": "Upper sleeve",
+        "es": "Manga superior",
+        "fr": "Dessus de manche"
+      },
+      "default_color": "#7d6b83",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "under_sleeve",
+      "label": {
+        "en": "Under sleeve",
+        "es": "Manga inferior",
+        "fr": "Dessous de manche"
+      },
+      "default_color": "#8d7b93",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Standing collar",
+        "es": "Cuello de tira",
+        "fr": "Col montant"
+      },
+      "default_color": "#4e4054",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Body fit",
+        "es": "Ajuste al cuerpo",
+        "fr": "Ajustement au corps"
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Two-piece sleeve",
+        "es": "Manga de dos piezas",
+        "fr": "Manche en deux pièces"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 900,
+      "min": 700,
+      "max": 1400,
+      "step": 10,
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "A spencer is worn OVER a gown, so it takes real ease across the bust",
+        "es": "La chaquetilla se lleva SOBRE un vestido, así que toma holgura real en el busto",
+        "fr": "Un spencer se porte SUR une robe, il prend donc une aisance réelle à la poitrine"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      }
+    },
+    {
+      "id": "underbust_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 760,
+      "min": 600,
+      "max": 1250,
+      "step": 10,
+      "label": {
+        "en": "Underbust girth (mm)",
+        "es": "Contorno bajo busto (mm)",
+        "fr": "Tour sous-poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "The spencer's hem line — the Empire waist, directly under the bust. Clamped below the bust, or the underbust seam has nothing to shape",
+        "es": "La línea del bajo — el talle Imperio, justo bajo el busto. Limitado por debajo del busto, o la costura no conforma nada",
+        "fr": "La ligne d'ourlet — la taille Empire, juste sous la poitrine. Bornée sous la poitrine, sinon la couture ne façonne rien"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "underbust_girth"
+      }
+    },
+    {
+      "id": "back_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 250,
+      "min": 150,
+      "max": 380,
+      "step": 5,
+      "label": {
+        "en": "Nape to high waist (mm)",
+        "es": "De nuca a talle alto (mm)",
+        "fr": "De la nuque à la taille haute (mm)"
+      },
+      "tooltip": {
+        "en": "This is the HIGH waist, not the natural waist. A spencer cut to the natural waist is not a spencer — it is a short jacket, and it fights the gown's Empire line instead of completing it",
+        "es": "Es el talle ALTO, no la cintura natural. Una chaquetilla a la cintura natural no es un spencer — es una chaqueta corta, y pelea con la línea Imperio en vez de completarla",
+        "fr": "C'est la taille HAUTE, non la taille naturelle. Un spencer coupé à la taille naturelle n'est pas un spencer — c'est une veste courte, qui contrarie la ligne Empire au lieu de la compléter"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 122,
+      "min": 90,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombro (mm)",
+        "fr": "Largeur d'épaule (mm)"
+      },
+      "tooltip": {
+        "en": "Neck point out to shoulder point; each panel's shoulder drop is solved from it so both seams match",
+        "es": "Del punto de cuello al de hombro; la caída de cada panel se resuelve para que ambas costuras coincidan",
+        "fr": "Du point d'encolure au point d'épaule ; la pente de chaque panneau en découle pour égaliser les coutures"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 580,
+      "min": 420,
+      "max": 720,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Biceps line down to the wrist; the period sleeve runs long and close",
+        "es": "De la línea del bíceps a la muñeca; la manga de época va larga y ceñida",
+        "fr": "De la ligne du biceps au poignet ; la manche d'époque est longue et près du corps"
+      }
+    },
+    {
+      "id": "under_sleeve_frac",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 0.34,
+      "min": 0.2,
+      "max": 0.45,
+      "step": 0.01,
+      "label": {
+        "en": "Under sleeve share",
+        "es": "Proporción de manga inferior",
+        "fr": "Part du dessous de manche"
+      },
+      "tooltip": {
+        "en": "How much of the sleeve's width the narrower under piece takes. A larger share moves the seams further round toward the outside of the arm, where they become visible",
+        "es": "Cuánto del ancho toma la pieza inferior más estrecha. Una proporción mayor lleva las costuras hacia el exterior del brazo, donde se ven",
+        "fr": "Quelle part de la largeur prend la pièce dessous, plus étroite. Une part plus grande déplace les coutures vers l'extérieur du bras, où elles se voient"
+      }
+    },
+    {
+      "id": "sleeve_ease",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 22,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "label": {
+        "en": "Sleeve cap ease (mm)",
+        "es": "Holgura de copa (mm)",
+        "fr": "Aisance de tête (mm)"
+      },
+      "tooltip": {
+        "en": "Worked into the cap over the shoulder. The SUM of both caps is solved to the armscye plus this — a period sleeve takes a little, and a great deal turns it into a gathered puff",
+        "es": "Se embebe en la copa sobre el hombro. La SUMA de ambas copas se resuelve a la sisa más esto — la manga de época toma poca; mucha la vuelve un bullón fruncido",
+        "fr": "Embue dans la tête sur l'épaule. La SOMME des deux têtes est résolue à l'emmanchure plus ceci — la manche d'époque en prend peu ; beaucoup en fait une bouffante froncée"
+      }
+    },
+    {
+      "id": "wrist_girth",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 165,
+      "min": 130,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Wrist girth (mm)",
+        "es": "Contorno de muñeca (mm)",
+        "fr": "Tour de poignet (mm)"
+      },
+      "tooltip": {
+        "en": "The close end of the sleeve; the taper from biceps to wrist is shared by both sleeve pieces so their seams match",
+        "es": "El extremo ceñido; el afinado del bíceps a la muñeca lo comparten ambas piezas para que sus costuras coincidan",
+        "fr": "L'extrémité ajustée ; l'effilement du biceps au poignet est partagé par les deux pièces pour égaliser leurs coutures"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 34,
+      "min": 15,
+      "max": 70,
+      "step": 1,
+      "label": {
+        "en": "Collar height (mm)",
+        "es": "Alto del cuello (mm)",
+        "fr": "Hauteur du col (mm)"
+      },
+      "tooltip": {
+        "en": "A spencer's collar is SMALL — a tall collar belongs to a later garment",
+        "es": "El cuello del spencer es PEQUEÑO — un cuello alto pertenece a una prenda posterior",
+        "fr": "Le col d'un spencer est PETIT — un col haut appartient à un vêtement plus tardif"
+      }
+    },
+    {
+      "id": "hook_pitch",
+      "type": "slider",
+      "group": "construction",
+      "default": 42,
+      "min": 20,
+      "max": 80,
+      "step": 2,
+      "label": {
+        "en": "Hook pitch (mm)",
+        "es": "Paso de corchetes (mm)",
+        "fr": "Pas des agrafes (mm)"
+      },
+      "tooltip": {
+        "en": "Spacing up the centre front. The period prefers hooks and eyes to visible buttons on a woman's spencer",
+        "es": "Separación en el centro delantero. La época prefiere corchetes a botones visibles en un spencer de mujer",
+        "fr": "Espacement au milieu devant. L'époque préfère les agrafes aux boutons visibles sur un spencer de femme"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 11,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "The centre front and the underbust edge carry deeper allowances than the body seams",
+        "es": "El centro delantero y el canto bajo busto llevan márgenes mayores que las costuras",
+        "fr": "Le milieu devant et le bord sous-poitrine portent des marges plus profondes que les coutures"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "underbust_girth < bust_girth",
+      "severity": "error",
+      "message": {
+        "en": "The underbust must be smaller than the bust, or the underbust seam has nothing to shape.",
+        "es": "El bajo busto debe ser menor que el busto, o la costura no conforma nada.",
+        "fr": "Le sous-poitrine doit être plus petit que la poitrine, sinon la couture ne façonne rien."
+      }
+    },
+    {
+      "expression": "under_sleeve_frac < 0.5",
+      "severity": "error",
+      "message": {
+        "en": "The under sleeve cannot be the larger piece — at half the width the two pieces stop being an upper and an under.",
+        "es": "La manga inferior no puede ser la pieza mayor — a la mitad del ancho dejan de ser superior e inferior.",
+        "fr": "Le dessous ne peut pas être la plus grande pièce — à mi-largeur les deux cessent d'être dessus et dessous."
+      }
+    },
+    {
+      "expression": "back_length < bust_girth",
+      "severity": "warning",
+      "message": {
+        "en": "A back length approaching the bust girth is no longer a high-waisted spencer.",
+        "es": "Un largo de espalda cercano al contorno de busto ya no es un spencer de talle alto.",
+        "fr": "Une longueur de dos proche du tour de poitrine n'est plus un spencer à taille haute."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "day_spencer",
+      "label": {
+        "en": "Day spencer",
+        "es": "Spencer de día",
+        "fr": "Spencer de jour"
+      },
+      "values": {
+        "back_length": 240,
+        "collar_height": 30,
+        "sleeve_ease": 18,
+        "hook_pitch": 40
+      }
+    },
+    {
+      "id": "military_style",
+      "label": {
+        "en": "Military-style spencer",
+        "es": "Spencer de corte militar",
+        "fr": "Spencer d'inspiration militaire"
+      },
+      "values": {
+        "collar_height": 62,
+        "back_length": 265,
+        "hook_pitch": 26,
+        "sleeve_ease": 12
+      }
+    },
+    {
+      "id": "puffed_head",
+      "label": {
+        "en": "Small puffed head",
+        "es": "Copa con bullón pequeño",
+        "fr": "Petite tête bouffante"
+      },
+      "values": {
+        "sleeve_ease": 52,
+        "under_sleeve_frac": 0.3,
+        "collar_height": 26
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "pdf",
+    "json"
+  ],
+  "fabrics": [
+    "lana-peinada-traje"
+  ],
+  "notion": {
+    "kind": "hook",
+    "subtype": "centre-front hooks and eyes, preferred to visible buttons",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "trouser-hook-bar",
+      "linked": true,
+      "params_map": {
+        "hook_width": "10",
+        "plate_len": "hook_pitch * 0.45",
+        "plate_t": "1",
+        "wire_d": "1",
+        "sew_holes": "3"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "two_piece_setting",
+        "type": "armscye",
+        "label": {
+          "en": "Two-piece sleeve set into the measured armscye (checked as a SUM)",
+          "es": "Manga de dos piezas montada en la sisa medida (verificada como SUMA)",
+          "fr": "Manche deux pièces montée dans l'emmanchure mesurée (vérifiée en SOMME)"
+        },
+        "edges": [
+          {
+            "piece": "upper_sleeve",
+            "edge": "cap"
+          },
+          {
+            "piece": "under_sleeve",
+            "edge": "cap"
+          },
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "sleeve_ease",
+          "under_sleeve_frac",
+          "bust_girth",
+          "back_length",
+          "shoulder_width"
+        ]
+      },
+      {
+        "id": "sleeve_long_seams",
+        "type": "side_seam",
+        "label": {
+          "en": "Upper-to-under sleeve seams (one shared profile)",
+          "es": "Costuras entre manga superior e inferior (perfil compartido)",
+          "fr": "Coutures dessus-dessous de manche (profil partagé)"
+        },
+        "edges": [
+          {
+            "piece": "upper_sleeve",
+            "edge": "front_seam"
+          },
+          {
+            "piece": "under_sleeve",
+            "edge": "front_seam"
+          }
+        ],
+        "parameters": [
+          "sleeve_length",
+          "wrist_girth",
+          "under_sleeve_frac"
+        ]
+      },
+      {
+        "id": "underbust_hem",
+        "type": "hem",
+        "label": {
+          "en": "Empire underbust hem",
+          "es": "Bajo Imperio bajo el busto",
+          "fr": "Ourlet Empire sous la poitrine"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "underbust"
+          },
+          {
+            "piece": "back",
+            "edge": "underbust"
+          }
+        ],
+        "parameters": [
+          "underbust_girth",
+          "back_length",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "front_hooks",
+        "type": "placket",
+        "label": {
+          "en": "Centre-front hook closure",
+          "es": "Cierre delantero de corchetes",
+          "fr": "Fermeture devant à agrafes"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "cf"
+          }
+        ],
+        "parameters": [
+          "hook_pitch",
+          "back_length"
+        ]
+      },
+      {
+        "id": "collar_seam",
+        "type": "neckline",
+        "label": {
+          "en": "Standing collar onto the measured neck run",
+          "es": "Cuello de tira sobre el escote medido",
+          "fr": "Col montant sur l'encolure mesurée"
+        },
+        "edges": [
+          {
+            "piece": "collar",
+            "edge": "neck_seam"
+          },
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "collar_height",
+          "shoulder_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The two-piece sleeve is the single technique that most separates a tailored historical garment from a costume, and it is also the one a checker is most likely to get wrong, because neither of its two caps means anything on its own — only their sum sets into the armscye. Encoding it as a solved sum, with both pieces sharing one seam profile so their long edges are equal by construction, makes the technique legible and reproducible rather than a matter of a practised hand. And because a spencer takes very little cloth, it is one of the few tailored period garments a beginner can attempt from a remnant, which is exactly how they were often made.",
+      "es": "La manga de dos piezas es la técnica que más separa una prenda histórica entallada de un disfraz, y también la que un verificador falla con más facilidad, porque ninguna de sus dos copas significa nada por sí sola — sólo su suma monta en la sisa. Codificarla como una suma resuelta, con ambas piezas compartiendo un perfil de costura para que sus cantos largos sean iguales por construcción, vuelve la técnica legible y reproducible en vez de cuestión de mano experta. Y como el spencer consume muy poca tela, es una de las pocas prendas de época entalladas que una principiante puede intentar con un retal, que es justo como se hacían a menudo.",
+      "fr": "La manche en deux pièces est la technique qui distingue le plus un vêtement historique tailleur d'un déguisement, et aussi celle qu'un contrôleur rate le plus volontiers, car aucune de ses deux têtes ne signifie rien seule — seule leur somme se monte dans l'emmanchure. L'encoder comme une somme résolue, les deux pièces partageant un même profil de couture pour que leurs longs bords soient égaux par construction, rend la technique lisible et reproductible au lieu d'une affaire de main exercée. Et comme un spencer consomme très peu de tissu, c'est l'un des rares vêtements d'époque tailleur qu'un débutant peut tenter dans une chute, ce qui est justement ainsi qu'on les faisait souvent."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

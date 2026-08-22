@@ -1,0 +1,507 @@
+{
+  "project": {
+    "name": "Regency Stays",
+    "slug": "regency-stays",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "Long corded stays of the c. 1800–1825 mode, drafted on period construction logic rather than as a costume approximation. The Regency body lifts and lengthens instead of nipping: this draft takes almost no waist suppression and delivers bust and hip fullness entirely through triangular gussets set into slashes — the defining construction of the era — with cording channels rather than dense boning, a straight busk in a centre-front casing, and a spiral-laced back. The gusset slashes are cut to the MEASURED sewn length of the built triangles, so the set-in seam balances exactly.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Corsé acordonado largo de hacia 1800–1825, trazado según la lógica constructiva de época y no como aproximación de disfraz. El cuerpo Regency eleva y alarga en vez de ceñir: este trazo casi no reduce cintura y entrega todo el volumen de busto y cadera mediante cuñas triangulares insertadas en aberturas — la construcción que define la época — con canales de cordón en lugar de ballenado denso, un busto recto en su funda central delantera y una espalda de cordón en espiral. Las aberturas se cortan a la longitud MEDIDA de costura de los triángulos ya construidos, de modo que la cuña encaja exactamente.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Corset cordé long des années 1800–1825 environ, tracé selon la logique de construction d'époque et non comme une approximation de déguisement. Le corps Regency soulève et allonge au lieu de cintrer : ce tracé ne réduit presque pas la taille et donne toute l'ampleur de la poitrine et des hanches par des soufflets triangulaires insérés dans des fentes — la construction qui définit l'époque — avec des canaux de cordon plutôt qu'un baleinage dense, un busc droit dans sa gaine de devant et un dos lacé en spirale. Les fentes sont coupées à la longueur de couture MESURÉE des triangles construits, pour que le soufflet s'insère exactement.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "regency-stays",
+      "historical",
+      "costume",
+      "corsetry",
+      "gusset",
+      "corded",
+      "empire",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Drafted from the documented construction tradition of English and French stays of c. 1800–1825: one-piece gusseted front, corded channels, straight busk casing, spiral-laced back. Not traced from any single extant garment or published pattern.",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full stays",
+        "es": "Corsé completo",
+        "fr": "Corset complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "bust_gusset",
+        "hip_gusset",
+        "back",
+        "strap"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (cut on fold)",
+        "es": "Delantero (corte al doblez)",
+        "fr": "Devant (coupé au pli)"
+      },
+      "default_color": "#d8cbb4",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": false
+      }
+    },
+    {
+      "id": "bust_gusset",
+      "label": {
+        "en": "Bust gusset",
+        "es": "Cuña de busto",
+        "fr": "Soufflet de poitrine"
+      },
+      "default_color": "#c9b696",
+      "cut": {
+        "quantity": 4,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "hip_gusset",
+      "label": {
+        "en": "Hip gusset",
+        "es": "Cuña de cadera",
+        "fr": "Soufflet de hanche"
+      },
+      "default_color": "#bfa886",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (laced)",
+        "es": "Espalda (acordonada)",
+        "fr": "Dos (lacé)"
+      },
+      "default_color": "#cdbfa6",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "strap",
+      "label": {
+        "en": "Shoulder strap",
+        "es": "Tirante de hombro",
+        "fr": "Bretelle d'épaule"
+      },
+      "default_color": "#b3a184",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 920,
+      "min": 700,
+      "max": 1400,
+      "step": 10,
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the bust gussets: all bust fullness comes from them, not from a seam",
+        "es": "Define las cuñas de busto: todo el volumen viene de ellas, no de una costura",
+        "fr": "Pilote les soufflets de poitrine : toute l'ampleur vient d'eux, pas d'une couture"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      }
+    },
+    {
+      "id": "underbust_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 780,
+      "min": 580,
+      "max": 1250,
+      "step": 10,
+      "label": {
+        "en": "Underbust girth (mm)",
+        "es": "Contorno bajo busto (mm)",
+        "fr": "Tour de dessous de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "The Regency waist sits here, just under the bust — this is the base ring",
+        "es": "La cintura Regency va aquí, justo bajo el busto — es el anillo base",
+        "fr": "La taille Regency se place ici, juste sous la poitrine — c'est l'anneau de base"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "underbust_girth"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 980,
+      "min": 720,
+      "max": 1500,
+      "step": 10,
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the hip gussets that release the skirt of the stays over the hip",
+        "es": "Define las cuñas que liberan el faldón del corsé sobre la cadera",
+        "fr": "Pilote les soufflets qui libèrent la basque du corset sur la hanche"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      }
+    },
+    {
+      "id": "stays_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 420,
+      "min": 300,
+      "max": 560,
+      "step": 5,
+      "label": {
+        "en": "Stays length (mm)",
+        "es": "Largo del corsé (mm)",
+        "fr": "Longueur du corset (mm)"
+      },
+      "tooltip": {
+        "en": "Centre-front length; also the busk length driven into the Yantra4D solid",
+        "es": "Largo del centro delantero; también el largo del busto en el sólido Yantra4D",
+        "fr": "Longueur du milieu devant ; aussi la longueur du busc dans le solide Yantra4D"
+      }
+    },
+    {
+      "id": "gusset_rise",
+      "type": "slider",
+      "group": "construction",
+      "default": 120,
+      "min": 70,
+      "max": 190,
+      "step": 5,
+      "label": {
+        "en": "Gusset rise (mm)",
+        "es": "Alto de cuña (mm)",
+        "fr": "Hauteur de soufflet (mm)"
+      },
+      "tooltip": {
+        "en": "Height of the gusset triangle; sets how long each slash must be cut",
+        "es": "Alto del triángulo; define el largo de corte de cada abertura",
+        "fr": "Hauteur du triangle ; définit la longueur de coupe de chaque fente"
+      }
+    },
+    {
+      "id": "lacing_gap",
+      "type": "slider",
+      "group": "construction",
+      "default": 60,
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Lacing gap (mm)",
+        "es": "Separación de cordón (mm)",
+        "fr": "Écart de laçage (mm)"
+      },
+      "tooltip": {
+        "en": "Open gap left between the back edges when laced; subtracted from the draft",
+        "es": "Separación entre los cantos de espalda al cordonar; se resta del trazo",
+        "fr": "Écart laissé entre les bords du dos une fois lacé ; retranché du tracé"
+      },
+      "advanced": true
+    },
+    {
+      "id": "eyelet_pitch",
+      "type": "slider",
+      "group": "construction",
+      "default": 30,
+      "min": 18,
+      "max": 55,
+      "step": 1,
+      "label": {
+        "en": "Eyelet pitch (mm)",
+        "es": "Paso de ojales (mm)",
+        "fr": "Pas des œillets (mm)"
+      },
+      "tooltip": {
+        "en": "Spacing of the back lacing eyelets; drives the Yantra4D eyelet count",
+        "es": "Separación de ojales de espalda; define la cantidad de ojales Yantra4D",
+        "fr": "Espacement des œillets de dos ; pilote le nombre d'œillets Yantra4D"
+      },
+      "advanced": true
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to the side seams and the gusset sides",
+        "es": "Aplicado a las costuras laterales y los lados de las cuñas",
+        "fr": "Appliquée aux coutures latérales et aux côtés des soufflets"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "bust_girth > underbust_girth",
+      "severity": "warning",
+      "message": {
+        "en": "With no bust over the underbust there is nothing for the gussets to release.",
+        "es": "Sin diferencia entre busto y bajo busto, las cuñas no tienen nada que liberar.",
+        "fr": "Sans différence entre poitrine et dessous de poitrine, les soufflets n'ont rien à libérer."
+      }
+    },
+    {
+      "expression": "hip_girth > underbust_girth",
+      "severity": "warning",
+      "message": {
+        "en": "The hip gussets only do work when the hip is wider than the underbust ring.",
+        "es": "Las cuñas de cadera sólo trabajan si la cadera supera el anillo bajo busto.",
+        "fr": "Les soufflets de hanche ne travaillent que si la hanche dépasse l'anneau sous-poitrine."
+      }
+    },
+    {
+      "expression": "stays_length >= gusset_rise * 2",
+      "severity": "warning",
+      "message": {
+        "en": "A gusset taller than half the stays leaves no solid ground to set it into.",
+        "es": "Una cuña mayor que medio corsé no deja tejido firme donde insertarla.",
+        "fr": "Un soufflet plus haut que la moitié du corset ne laisse pas de fond où l'insérer."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "short_stays",
+      "label": {
+        "en": "Short stays (c. 1815)",
+        "es": "Corsé corto (h. 1815)",
+        "fr": "Corset court (v. 1815)"
+      },
+      "values": {
+        "stays_length": 320,
+        "gusset_rise": 100,
+        "lacing_gap": 50
+      }
+    },
+    {
+      "id": "long_stays",
+      "label": {
+        "en": "Long stays (c. 1805)",
+        "es": "Corsé largo (h. 1805)",
+        "fr": "Corset long (v. 1805)"
+      },
+      "values": {
+        "stays_length": 500,
+        "gusset_rise": 150,
+        "lacing_gap": 60
+      }
+    },
+    {
+      "id": "fuller_bust",
+      "label": {
+        "en": "Fuller bust",
+        "es": "Busto amplio",
+        "fr": "Poitrine forte"
+      },
+      "values": {
+        "bust_girth": 1150,
+        "underbust_girth": 900,
+        "hip_girth": 1150,
+        "gusset_rise": 160
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "pdf",
+    "json"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "notion": {
+    "kind": "boning",
+    "subtype": "regency straight busk in a centre-front casing",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "corset-busk",
+      "linked": true,
+      "params_map": {
+        "busk_len": "stays_length",
+        "plate_w": "20",
+        "plate_t": "4",
+        "knobs": "0"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "busk_casing",
+        "type": "placket",
+        "label": {
+          "en": "Centre-front busk casing",
+          "es": "Funda del busto en el centro delantero",
+          "fr": "Gaine du busc au milieu devant"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "cf"
+          }
+        ],
+        "parameters": [
+          "stays_length"
+        ]
+      },
+      {
+        "id": "bust_gusset_slash",
+        "type": "custom",
+        "label": {
+          "en": "Bust gusset set-in seam",
+          "es": "Costura de inserción de la cuña de busto",
+          "fr": "Couture d'insertion du soufflet de poitrine"
+        },
+        "edges": [
+          {
+            "piece": "bust_gusset",
+            "edge": "side_l"
+          },
+          {
+            "piece": "bust_gusset",
+            "edge": "side_r"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "gusset_rise"
+        ]
+      },
+      {
+        "id": "lacing_field",
+        "type": "custom",
+        "label": {
+          "en": "Back lacing eyelet field",
+          "es": "Campo de ojales de la espalda",
+          "fr": "Champ d'œillets du dos"
+        },
+        "edges": [
+          {
+            "piece": "back",
+            "edge": "cb"
+          }
+        ],
+        "parameters": [
+          "eyelet_pitch",
+          "lacing_gap"
+        ]
+      },
+      {
+        "id": "stay_side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Front-to-back side seam",
+          "es": "Costura lateral delantero-espalda",
+          "fr": "Couture latérale devant-dos"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "underbust_girth",
+          "stays_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Historical costuming is where a great deal of hard-won construction knowledge is kept alive, and it is usually locked behind out-of-print pattern books. A parametric Regency stay drafted on real period logic — gussets, cording, a straight busk — lets a reenactor, a museum, or a student fit the garment to an actual body instead of grading a fixed size, and the busk is an open printable Yantra4D solid rather than a part to source from a shrinking supplier list.",
+      "es": "El vestuario histórico conserva mucho conocimiento constructivo ganado con esfuerzo, normalmente encerrado en libros de patrones descatalogados. Un corsé Regency paramétrico trazado con lógica real de época — cuñas, cordón, busto recto — permite a recreadores, museos o estudiantes ajustarlo a un cuerpo real en vez de escalar una talla fija, y el busto es un sólido Yantra4D abierto e imprimible en lugar de una pieza que depende de proveedores cada vez más escasos.",
+      "fr": "Le costume historique conserve beaucoup de savoir-faire durement acquis, généralement enfermé dans des livres de patrons épuisés. Un corset Regency paramétrique tracé sur une logique d'époque réelle — soufflets, cordon, busc droit — permet à un reconstituteur, un musée ou un étudiant de l'ajuster à un corps réel plutôt que de graduer une taille fixe, et le busc est un solide Yantra4D ouvert et imprimable au lieu d'une pièce dépendant de fournisseurs de plus en plus rares."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

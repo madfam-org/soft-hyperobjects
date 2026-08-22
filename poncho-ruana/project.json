@@ -1,0 +1,470 @@
+{
+  "project": {
+    "name": "Ruana",
+    "slug": "poncho-ruana",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The ruana: the open-front wool wrap of the Colombian and Venezuelan Andes. It differs from a poncho in exactly one decisive way, and that difference is the garment — a poncho is a closed rectangle with a neck hole, a ruana is split up the centre front, so it opens like a cape and can be thrown back over a shoulder. Working dress of the cold páramo highlands: heavy fulled wool, a back drafted longer than the fronts to shield the kidneys, and a plain neck slot rather than a scooped neckline. Each front's shoulder is solved as the back's measured shoulder less the half neck slot, so two fronts plus the slot exactly reconstitute the back. Throat toggles bridge to the Yantra4D `toggle` solid. The commons' closed Mexican form is `sarape-poncho`.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La ruana: el abrigo de lana de frente abierto de los Andes colombianos y venezolanos. Se distingue del poncho en un solo rasgo decisivo, y ese rasgo es la prenda — el poncho es un rectángulo cerrado con abertura de cuello; la ruana va partida al centro del frente, de modo que abre como capa y puede echarse sobre el hombro. Ropa de trabajo del páramo frío: lana batanada gruesa, una espalda más larga que los delanteros para cubrir los riñones, y una ranura de cuello lisa en vez de un escote. El hombro de cada delantero se resuelve como el hombro medido de la espalda menos la media ranura, de modo que dos delanteros más la ranura reconstituyen exactamente la espalda. Los toggles del cuello se puentean al sólido `toggle` de Yantra4D. La forma cerrada mexicana del acervo es `sarape-poncho`.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La ruana : le vêtement de laine à devant ouvert des Andes colombiennes et vénézuéliennes. Elle diffère du poncho par un seul trait décisif, et ce trait est le vêtement — un poncho est un rectangle fermé percé d'une encolure, une ruana est fendue au milieu devant, s'ouvre donc comme une cape et peut se rejeter sur l'épaule. Vêtement de travail du páramo froid : laine foulée épaisse, un dos tracé plus long que les devants pour protéger les reins, et une simple fente d'encolure plutôt qu'un décolleté. L'épaule de chaque devant est résolue comme l'épaule mesurée du dos moins la demi-fente, si bien que deux devants plus la fente reconstituent exactement le dos. Les toggles de col font le pont vers le solide `toggle` de Yantra4D. La forme mexicaine fermée du fonds commun est `sarape-poncho`.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "ruana",
+      "colombia",
+      "venezuela",
+      "andes",
+      "heritage",
+      "wrap",
+      "wool",
+      "open-front",
+      "hardware",
+      "toggle",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet, after the Andean ruana of Boyacá and the Venezuelan Andes",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full ruana",
+        "es": "Ruana completa",
+        "fr": "Ruana complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "back",
+        "front",
+        "collar"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "back",
+      "label": {
+        "en": "Back panel (espalda)",
+        "es": "Paño de espalda (espalda)",
+        "fr": "Panneau de dos (espalda)"
+      },
+      "default_color": "#6b5344",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "front",
+      "label": {
+        "en": "Front panel (delantero)",
+        "es": "Paño delantero (delantero)",
+        "fr": "Panneau de devant (delantero)"
+      },
+      "default_color": "#836853",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Neck binding (cuello)",
+        "es": "Vista de cuello (cuello)",
+        "fr": "Parement d'encolure (cuello)"
+      },
+      "default_color": "#4f3d31",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Ajustement"
+      }
+    },
+    {
+      "id": "style",
+      "label": {
+        "en": "Style",
+        "es": "Estilo",
+        "fr": "Style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "body_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 680,
+      "min": 450,
+      "max": 900,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "across_back"
+      },
+      "label": {
+        "en": "Half span (mm)",
+        "es": "Semienvergadura (mm)",
+        "fr": "Demi-envergure (mm)"
+      },
+      "tooltip": {
+        "en": "Centre back to the outer edge; the ruana should cover the upper arm",
+        "es": "Del centro de la espalda al borde; la ruana debe cubrir el brazo",
+        "fr": "Du milieu dos au bord ; la ruana doit couvrir le haut du bras"
+      }
+    },
+    {
+      "id": "ruana_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 900,
+      "min": 600,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Front length (mm)",
+        "es": "Largo delantero (mm)",
+        "fr": "Longueur devant (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to front hem; should clear the legs when walking",
+        "es": "Del hombro al ruedo delantero; debe librar las piernas al andar",
+        "fr": "De l'épaule à l'ourlet devant ; doit dégager les jambes en marchant"
+      }
+    },
+    {
+      "id": "back_drop",
+      "type": "slider",
+      "group": "style",
+      "default": 160,
+      "min": 0,
+      "max": 350,
+      "step": 10,
+      "label": {
+        "en": "Back drop (mm)",
+        "es": "Caída extra de espalda (mm)",
+        "fr": "Rallonge du dos (mm)"
+      },
+      "tooltip": {
+        "en": "Extra length on the back — the working proportion that shields the kidneys",
+        "es": "Largo extra en la espalda — la proporción de trabajo que cubre los riñones",
+        "fr": "Longueur en plus au dos — la proportion de travail qui protège les reins"
+      }
+    },
+    {
+      "id": "neck_slot",
+      "type": "slider",
+      "group": "fit",
+      "default": 240,
+      "min": 160,
+      "max": 340,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck slot width (mm)",
+        "es": "Ancho de la ranura de cuello (mm)",
+        "fr": "Largeur de la fente d'encolure (mm)"
+      },
+      "tooltip": {
+        "en": "The slot cut across the shoulder line; carved from the measured shoulder",
+        "es": "La ranura cortada en la línea de hombro; tallada del hombro medido",
+        "fr": "La fente coupée sur la ligne d'épaule ; taillée dans l'épaule mesurée"
+      }
+    },
+    {
+      "id": "collar_depth",
+      "type": "slider",
+      "group": "style",
+      "default": 90,
+      "min": 0,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Neck stand (mm)",
+        "es": "Alto del cuello (mm)",
+        "fr": "Hauteur du col (mm)"
+      },
+      "tooltip": {
+        "en": "Depth of the binding standing at the neck slot; 0 for a bound edge only",
+        "es": "Alto de la vista que se levanta en la ranura; 0 para solo ribetear",
+        "fr": "Hauteur du parement dressé à la fente ; 0 pour un simple bord bordé"
+      }
+    },
+    {
+      "id": "front_overlap",
+      "type": "slider",
+      "group": "style",
+      "default": 40,
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Front crossing (mm)",
+        "es": "Cruce delantero (mm)",
+        "fr": "Croisement devant (mm)"
+      },
+      "tooltip": {
+        "en": "How far each front reaches past centre so the ruana can be crossed shut",
+        "es": "Cuánto pasa cada delantero del centro para poder cruzar la ruana",
+        "fr": "De combien chaque devant dépasse le milieu pour croiser la ruana"
+      }
+    },
+    {
+      "id": "barrel_len",
+      "type": "slider",
+      "group": "construction",
+      "default": 42,
+      "min": 25,
+      "max": 70,
+      "step": 1,
+      "label": {
+        "en": "Toggle length (mm)",
+        "es": "Largo del toggle (mm)",
+        "fr": "Longueur du toggle (mm)"
+      },
+      "tooltip": {
+        "en": "Toggle barrel; drives the Yantra4D toggle, its seat and the cord loop",
+        "es": "Barril del toggle; define el toggle de Yantra4D, su asiento y la presilla",
+        "fr": "Corps du toggle ; pilote le toggle Yantra4D, son siège et la bride"
+      }
+    },
+    {
+      "id": "cord_dia",
+      "type": "slider",
+      "group": "construction",
+      "default": 5,
+      "min": 3,
+      "max": 9,
+      "step": 0.5,
+      "label": {
+        "en": "Cord diameter (mm)",
+        "es": "Diámetro del cordón (mm)",
+        "fr": "Diamètre du cordon (mm)"
+      },
+      "tooltip": {
+        "en": "Loop cord; drives the Yantra4D toggle's cord channel",
+        "es": "Cordón de la presilla; define el canal del toggle de Yantra4D",
+        "fr": "Cordon de bride ; pilote le canal du toggle Yantra4D"
+      }
+    },
+    {
+      "id": "fringe_depth",
+      "type": "slider",
+      "group": "style",
+      "default": 70,
+      "min": 0,
+      "max": 160,
+      "step": 10,
+      "label": {
+        "en": "Fringe depth (mm)",
+        "es": "Largo del fleco (mm)",
+        "fr": "Longueur de frange (mm)"
+      },
+      "tooltip": {
+        "en": "Warp fringe left at the hems; 0 for a plain finished hem",
+        "es": "Fleco de urdimbre en los ruedos; 0 para un ruedo liso acabado",
+        "fr": "Frange de chaîne laissée aux ourlets ; 0 pour un ourlet fini simple"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 14,
+      "min": 8,
+      "max": 25,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to the shoulder seam and the neck binding; heavy wool wants more",
+        "es": "Aplicado al hombro y a la vista de cuello; la lana gruesa pide más",
+        "fr": "Appliquée à l'épaule et au parement ; la laine épaisse en demande plus"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "neck_slot < body_width * 1.6",
+      "severity": "warning",
+      "message": {
+        "en": "The neck slot must leave a real shoulder to sew on each side.",
+        "es": "La ranura de cuello debe dejar un hombro real que coser a cada lado.",
+        "fr": "La fente d'encolure doit laisser une vraie épaule à coudre de chaque côté."
+      }
+    },
+    {
+      "expression": "back_drop < ruana_length * 0.4",
+      "severity": "warning",
+      "message": {
+        "en": "A back drop this deep reads as a cape, not a ruana.",
+        "es": "Una caída de espalda tan profunda se lee como capa, no como ruana.",
+        "fr": "Une rallonge de dos aussi profonde se lit comme une cape, pas une ruana."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "boyaca",
+      "label": {
+        "en": "Boyacá working",
+        "es": "De trabajo boyacense",
+        "fr": "Travail de Boyacá"
+      },
+      "values": {
+        "ruana_length": 900,
+        "back_drop": 160,
+        "fringe_depth": 70
+      }
+    },
+    {
+      "id": "paramo",
+      "label": {
+        "en": "Páramo long",
+        "es": "Larga de páramo",
+        "fr": "Longue de páramo"
+      },
+      "values": {
+        "ruana_length": 1150,
+        "back_drop": 240,
+        "body_width": 780
+      }
+    },
+    {
+      "id": "town",
+      "label": {
+        "en": "Town short",
+        "es": "Corta de pueblo",
+        "fr": "Courte de ville"
+      },
+      "values": {
+        "ruana_length": 720,
+        "back_drop": 90,
+        "fringe_depth": 0
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "lana-melton-abrigo"
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "ruana throat toggle",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "toggle",
+      "linked": true,
+      "params_map": {
+        "barrel_len": "barrel_len",
+        "barrel_dia": "cord_dia * 2.4",
+        "cord_dia": "cord_dia",
+        "cords": "2"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "throat_toggle",
+        "type": "custom",
+        "label": {
+          "en": "Throat toggle and cord loop",
+          "es": "Toggle y presilla del cuello",
+          "fr": "Toggle et bride de col"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "center_front"
+          }
+        ],
+        "parameters": [
+          "barrel_len",
+          "cord_dia",
+          "collar_depth"
+        ]
+      },
+      {
+        "id": "shoulder_seam",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder seam and neck slot",
+          "es": "Costura de hombro y ranura de cuello",
+          "fr": "Couture d'épaule et fente d'encolure"
+        },
+        "edges": [
+          {
+            "piece": "back",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "front",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "body_width",
+          "neck_slot",
+          "front_overlap"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Three rectangles and one seam: the ruana is close to the cheapest warm outer layer a person can make, and it fits nearly anyone because it is not fitted at all. Woven on a narrow loom in heavy wool it is a genuine cold-weather garment rather than a decorative one, and because nothing is shaped, worn cloth can be cut down and re-hemmed instead of discarded. Keeping the toggle an open printable object means the one non-textile part is replaceable.",
+      "es": "Tres rectángulos y una costura: la ruana es de lo más barato en abrigo que una persona puede hacerse, y le sirve a casi cualquiera precisamente porque no está entallada. Tejida en telar angosto con lana gruesa es una prenda de frío de verdad y no un adorno, y como nada va conformado, la tela gastada puede recortarse y volver a ruedearse en vez de desecharse. Mantener el toggle como objeto imprimible abierto hace reemplazable la única parte no textil.",
+      "fr": "Trois rectangles et une couture : la ruana est à peu près la couche chaude la moins chère qu'on puisse se faire, et elle va à presque tout le monde justement parce qu'elle n'est pas ajustée. Tissée sur un métier étroit en laine épaisse, c'est un vrai vêtement de froid et non un ornement, et comme rien n'est façonné, un tissu usé peut être recoupé et réourlé au lieu d'être jeté. Garder le toggle comme objet imprimable ouvert rend remplaçable la seule pièce non textile."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

@@ -1,0 +1,589 @@
+{
+  "project": {
+    "name": "Elizabethan Doublet",
+    "slug": "elizabethan-doublet",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A man's doublet of the later 16th century drafted on period tailoring logic: close through the body with a high, small armscye, shaping taken at the side and back seams rather than in modern darts, and a centre front that BUTTS and buttons edge to edge rather than lapping. The peascod belly is parametric — bow it forward for the fashionable late-Tudor extreme, or set it to zero for the plainer earlier doublet. The armscye is measured off the built curves and the sleeve cap is then solved by bisection to match it plus a declared ease.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Jubón masculino de finales del siglo XVI trazado con lógica sastreril de época: ceñido al cuerpo con sisa alta y pequeña, el entalle tomado en las costuras laterales y de espalda en vez de pinzas modernas, y un centro delantero que TOPA y abotona canto con canto en lugar de montar. La panza de peascod es paramétrica: ábrela hacia adelante para el extremo de moda tardo-Tudor, o ponla a cero para el jubón anterior más sobrio. La sisa se mide sobre las curvas construidas y la copa de manga se resuelve luego por bisección para igualarla más un holgado declarado.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Pourpoint d'homme de la fin du XVIe siècle tracé selon la logique de coupe d'époque : ajusté au corps avec une emmanchure haute et petite, le cintrage pris aux coutures de côté et de dos plutôt qu'en pinces modernes, et un milieu devant qui SE JOINT bord à bord au lieu de croiser. Le ventre en peascod est paramétrique : bombez-le vers l'avant pour l'extrême à la mode de la fin des Tudor, ou mettez-le à zéro pour le pourpoint antérieur plus sobre. L'emmanchure est mesurée sur les courbes construites, puis la tête de manche est résolue par bissection pour l'égaler plus une aisance déclarée.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "elizabethan-doublet",
+      "doublet",
+      "historical",
+      "costume",
+      "tudor",
+      "peascod",
+      "tailoring",
+      "16th-century",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Drafted from the documented construction tradition of later-16th-century men's doublets: butt-buttoned centre front, high small armscye, shaping at side and back seams, a padded peascod front, set-on waist skirts and a standing collar. Not traced from any single extant garment or published pattern.",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full doublet",
+        "es": "Jubón completo",
+        "fr": "Pourpoint complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "skirt",
+        "collar"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#5b3a3f",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#4e3236",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#66444a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "skirt",
+      "label": {
+        "en": "Waist skirt (base)",
+        "es": "Faldón de cintura",
+        "fr": "Basque de taille"
+      },
+      "default_color": "#704c52",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Standing collar",
+        "es": "Cuello alto",
+        "fr": "Col montant"
+      },
+      "default_color": "#7a565c",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps"
+      }
+    },
+    {
+      "id": "style",
+      "label": {
+        "en": "Period style",
+        "es": "Estilo de época",
+        "fr": "Style d'époque"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 1000,
+      "min": 760,
+      "max": 1400,
+      "step": 10,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Measured over the shirt; only 60 mm total wearing ease is added",
+        "es": "Medido sobre la camisa; sólo se añaden 60 mm de holgura total",
+        "fr": "Mesuré par-dessus la chemise ; seulement 60 mm d'aisance totale ajoutée"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 860,
+      "min": 620,
+      "max": 1350,
+      "step": 10,
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "The doublet waist, where the skirts are set on",
+        "es": "La cintura del jubón, donde se montan los faldones",
+        "fr": "La taille du pourpoint, où les basques sont montées"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      }
+    },
+    {
+      "id": "back_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 430,
+      "min": 330,
+      "max": 540,
+      "step": 5,
+      "label": {
+        "en": "Back length (mm)",
+        "es": "Largo de espalda (mm)",
+        "fr": "Longueur de dos (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to waist; also sets the armscye depth",
+        "es": "De nuca a cintura; también define la profundidad de sisa",
+        "fr": "De la nuque à la taille ; définit aussi la profondeur d'emmanchure"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 145,
+      "min": 100,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombro (mm)",
+        "fr": "Largeur d'épaule (mm)"
+      },
+      "tooltip": {
+        "en": "Neck point to shoulder point; the back shoulder is solved to match the front",
+        "es": "Del cuello al hombro; el hombro trasero se resuelve para igualar al delantero",
+        "fr": "Du cou à l'épaule ; l'épaule dos est résolue pour égaler celle du devant"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 620,
+      "min": 450,
+      "max": 780,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Underarm to wrist; the sleeve tapers as the period sleeve does",
+        "es": "De sisa a muñeca; la manga se afina como la de época",
+        "fr": "De l'aisselle au poignet ; la manche s'effile comme celle d'époque"
+      }
+    },
+    {
+      "id": "peascod_bow",
+      "type": "slider",
+      "group": "style",
+      "default": 38,
+      "min": 0,
+      "max": 90,
+      "step": 2,
+      "label": {
+        "en": "Peascod bow (mm)",
+        "es": "Curva del peascod (mm)",
+        "fr": "Cambrure du peascod (mm)"
+      },
+      "tooltip": {
+        "en": "Forward bow of the padded belly. Zero gives the plainer earlier doublet",
+        "es": "Curva hacia adelante de la panza acolchada. Cero da el jubón anterior sobrio",
+        "fr": "Cambrure avant du ventre rembourré. Zéro donne le pourpoint antérieur sobre"
+      }
+    },
+    {
+      "id": "skirt_depth",
+      "type": "slider",
+      "group": "style",
+      "default": 95,
+      "min": 40,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Skirt depth (mm)",
+        "es": "Alto del faldón (mm)",
+        "fr": "Hauteur de basque (mm)"
+      },
+      "tooltip": {
+        "en": "Depth of the waist tabs set on below the waist seam",
+        "es": "Alto de las lengüetas montadas bajo la costura de cintura",
+        "fr": "Hauteur des languettes montées sous la couture de taille"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "group": "style",
+      "default": 55,
+      "min": 25,
+      "max": 95,
+      "step": 5,
+      "label": {
+        "en": "Collar height (mm)",
+        "es": "Alto del cuello (mm)",
+        "fr": "Hauteur du col (mm)"
+      },
+      "tooltip": {
+        "en": "The standing band that carries the ruff or falling band",
+        "es": "La tira alta que sostiene la gorguera o el cuello caído",
+        "fr": "La bande montante qui porte la fraise ou le col rabattu"
+      }
+    },
+    {
+      "id": "button_pitch",
+      "type": "slider",
+      "group": "construction",
+      "default": 28,
+      "min": 14,
+      "max": 55,
+      "step": 1,
+      "label": {
+        "en": "Button pitch (mm)",
+        "es": "Paso de botones (mm)",
+        "fr": "Pas des boutons (mm)"
+      },
+      "tooltip": {
+        "en": "Centre-front button spacing; drives the Yantra4D button hole spacing",
+        "es": "Separación de botones al centro; define el paso de agujeros Yantra4D",
+        "fr": "Espacement des boutons au milieu devant ; pilote le pas des trous Yantra4D"
+      }
+    },
+    {
+      "id": "sleeve_ease",
+      "type": "slider",
+      "group": "construction",
+      "default": 22,
+      "min": 0,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Sleeve cap ease (mm)",
+        "es": "Holgura de copa (mm)",
+        "fr": "Aisance de tête de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Extra cap length worked in over the armscye; the cap is solved to hit it exactly",
+        "es": "Largo extra de copa sobre la sisa; la copa se resuelve para lograrlo exacto",
+        "fr": "Longueur de tête en plus de l'emmanchure ; la tête est résolue pour l'atteindre"
+      },
+      "advanced": true
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to the body and sleeve seams; the CF edge carries extra",
+        "es": "Aplicado a costuras de cuerpo y manga; el canto delantero lleva extra",
+        "fr": "Appliquée aux coutures de corps et de manche ; le bord devant porte un extra"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "chest_girth > waist_girth",
+      "severity": "warning",
+      "message": {
+        "en": "A doublet with no chest-over-waist has nothing to shape at the side seams.",
+        "es": "Un jubón sin diferencia pecho-cintura no tiene qué entallar en los costados.",
+        "fr": "Un pourpoint sans différence poitrine-taille n'a rien à cintrer aux côtés."
+      }
+    },
+    {
+      "expression": "shoulder_width < chest_girth / 4",
+      "severity": "error",
+      "message": {
+        "en": "The shoulder point must sit inside the quarter-chest or the armhole inverts.",
+        "es": "El hombro debe quedar dentro del cuarto de pecho o la sisa se invierte.",
+        "fr": "L'épaule doit rester dans le quart de poitrine ou l'emmanchure s'inverse."
+      }
+    },
+    {
+      "expression": "back_length > skirt_depth",
+      "severity": "warning",
+      "message": {
+        "en": "Waist tabs deeper than the body read as a skirt, not as period bases.",
+        "es": "Faldones más largos que el cuerpo se leen como falda, no como bases de época.",
+        "fr": "Des basques plus longues que le corps se lisent comme une jupe, pas des bases."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "plain_doublet",
+      "label": {
+        "en": "Plain doublet (c. 1570)",
+        "es": "Jubón sobrio (h. 1570)",
+        "fr": "Pourpoint sobre (v. 1570)"
+      },
+      "values": {
+        "peascod_bow": 0,
+        "skirt_depth": 70,
+        "collar_height": 40,
+        "button_pitch": 32
+      }
+    },
+    {
+      "id": "peascod_court",
+      "label": {
+        "en": "Peascod court doublet (c. 1585)",
+        "es": "Jubón de corte con peascod (h. 1585)",
+        "fr": "Pourpoint de cour à peascod (v. 1585)"
+      },
+      "values": {
+        "peascod_bow": 72,
+        "skirt_depth": 110,
+        "collar_height": 75,
+        "button_pitch": 20
+      }
+    },
+    {
+      "id": "large_frame",
+      "label": {
+        "en": "Large frame",
+        "es": "Complexión amplia",
+        "fr": "Forte carrure"
+      },
+      "values": {
+        "chest_girth": 1240,
+        "waist_girth": 1150,
+        "back_length": 490,
+        "shoulder_width": 180
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "pdf",
+    "json"
+  ],
+  "fabrics": [
+    "lana-peinada-traje"
+  ],
+  "notion": {
+    "kind": "button",
+    "subtype": "butt-buttoned centre front, many small buttons",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "16",
+        "hole_count": "4",
+        "hole_spacing": "button_pitch / 8",
+        "card_count": "round(back_length / button_pitch)"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "button_stand",
+        "type": "button_stand",
+        "label": {
+          "en": "Butt-buttoned centre front",
+          "es": "Centro delantero abotonado a tope",
+          "fr": "Milieu devant boutonné bord à bord"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "cf"
+          }
+        ],
+        "parameters": [
+          "button_pitch",
+          "back_length",
+          "peascod_bow"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Set-in sleeve armscye",
+          "es": "Sisa de manga montada",
+          "fr": "Emmanchure de manche montée"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "back_length",
+          "sleeve_ease"
+        ]
+      },
+      {
+        "id": "doublet_neck",
+        "type": "neckline",
+        "label": {
+          "en": "Standing collar neckline",
+          "es": "Escote de cuello alto",
+          "fr": "Encolure à col montant"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          },
+          {
+            "piece": "collar",
+            "edge": "neck_seam"
+          }
+        ],
+        "parameters": [
+          "shoulder_width",
+          "collar_height"
+        ]
+      },
+      {
+        "id": "waist_set",
+        "type": "waistband",
+        "label": {
+          "en": "Waist skirt set-on seam",
+          "es": "Costura de montaje del faldón",
+          "fr": "Couture de montage de la basque"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "waist"
+          },
+          {
+            "piece": "back",
+            "edge": "waist"
+          },
+          {
+            "piece": "skirt",
+            "edge": "waist_seam"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "skirt_depth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Period tailoring solved fit without the dart, and that knowledge is worth keeping legible: shaping at the seams, a high small armscye that lets the arm rise, and a structure held by a linen interlining rather than by fusible. Publishing the doublet parametrically — with the sleeve cap genuinely solved against the measured armscye rather than approximated — gives reenactors, theatre wardrobes, and tailoring students a draft they can fit to a real body and actually learn from.",
+      "es": "La sastrería de época resolvía el ajuste sin la pinza, y ese conocimiento merece seguir siendo legible: entalle en las costuras, una sisa alta y pequeña que permite levantar el brazo, y una estructura sostenida por entretela de lino y no por termoadhesivo. Publicar el jubón de forma paramétrica —con la copa de manga realmente resuelta contra la sisa medida y no aproximada— da a recreadores, vestuarios teatrales y estudiantes de sastrería un trazo que pueden ajustar a un cuerpo real y del que se aprende.",
+      "fr": "La coupe d'époque résolvait l'ajustement sans la pince, et ce savoir mérite de rester lisible : cintrage aux coutures, une emmanchure haute et petite qui laisse lever le bras, et une structure tenue par une toile de lin plutôt que par du thermocollant. Publier le pourpoint de façon paramétrique — avec la tête de manche véritablement résolue contre l'emmanchure mesurée et non approximée — donne aux reconstituteurs, aux ateliers de théâtre et aux étudiants en coupe un tracé ajustable à un corps réel et dont on apprend."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

@@ -1,0 +1,416 @@
+{
+  "project": {
+    "name": "Cavalier Cloak",
+    "slug": "cavalier-cloak",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The short circular half-cloak of the 17th century, worn slung from one shoulder. A garment of pure geometry: a sector of an annulus whose inner radius is DERIVED from the neck run and the sweep angle by r = neck_run ÷ θ, never picked to look right — the arc is then built at that radius, measured back off the polyline, and the residual reported so the arithmetic is proved rather than trusted. Standing collar solved to the measured neck arc, faced front edges, and one clasp at the throat.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La capa corta circular del siglo XVII, llevada echada sobre un hombro. Una prenda de pura geometría: un sector de corona circular cuyo radio interior se DERIVA del contorno de cuello y del ángulo de barrido mediante r = contorno ÷ θ, nunca elegido a ojo — el arco se construye luego a ese radio, se vuelve a medir sobre la polilínea y se informa el residuo, de modo que la aritmética se demuestra en vez de suponerse. Cuello de tira resuelto contra el arco medido, cantos delanteros forrados y un solo broche a la garganta.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La courte cape circulaire du XVIIe siècle, portée jetée sur une épaule. Un vêtement de pure géométrie : un secteur de couronne dont le rayon intérieur est DÉDUIT du tour d'encolure et de l'angle de balayage par r = encolure ÷ θ, jamais choisi à l'œil — l'arc est ensuite construit à ce rayon, remesuré sur la polyligne, et le résidu rapporté, si bien que l'arithmétique est prouvée plutôt que supposée. Col montant résolu contre l'arc mesuré, bords devant doublés et une seule agrafe à la gorge.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "cavalier-cloak",
+      "cloak",
+      "historical",
+      "costume",
+      "17th-century",
+      "circular-cut",
+      "outerwear",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Drafted from the documented construction tradition of the 17th-century short cloak: a circular cut of less than a full sweep, hanging open at the front, with a standing collar set to the neck arc, faced front edges, and a single clasp at the throat. Not traced from any single extant garment or published pattern.",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Complete cloak",
+        "es": "Capa completa",
+        "fr": "Cape complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "cloak",
+        "collar",
+        "facing"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "cloak",
+      "label": {
+        "en": "Cloak sector",
+        "es": "Sector de la capa",
+        "fr": "Secteur de la cape"
+      },
+      "default_color": "#4a3f52",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Standing collar",
+        "es": "Cuello de tira",
+        "fr": "Col montant"
+      },
+      "default_color": "#3b3243",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": false
+      }
+    },
+    {
+      "id": "facing",
+      "label": {
+        "en": "Front facing",
+        "es": "Vista delantera",
+        "fr": "Parementure devant"
+      },
+      "default_color": "#5a4d63",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "geometry",
+      "label": {
+        "en": "Cloak geometry",
+        "es": "Geometría de la capa",
+        "fr": "Géométrie de la cape"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "geometry",
+      "default": 420,
+      "min": 300,
+      "max": 620,
+      "step": 10,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour d'encolure (mm)"
+      },
+      "tooltip": {
+        "en": "Measured over the doublet collar, not on the bare neck — clearance is added, because a cloak cut to the bare neck strangles the wearer",
+        "es": "Medido sobre el cuello del jubón, no sobre el cuello desnudo — se añade holgura, o la capa ahoga a quien la lleva",
+        "fr": "Mesuré par-dessus le col du pourpoint, non à même le cou — une aisance est ajoutée, sinon la cape étrangle"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      }
+    },
+    {
+      "id": "sweep_deg",
+      "type": "slider",
+      "group": "geometry",
+      "default": 300,
+      "min": 140,
+      "max": 350,
+      "step": 5,
+      "label": {
+        "en": "Sweep (degrees)",
+        "es": "Barrido (grados)",
+        "fr": "Balayage (degrés)"
+      },
+      "tooltip": {
+        "en": "How much of a circle the cloak is. Note the inverse people get wrong by eye: a WIDER sweep gives a SMALLER neck radius and a much longer hem, because the same neck run is spread over more angle",
+        "es": "Cuánto de círculo es la capa. Ojo con el inverso que se falla a ojo: MÁS barrido da MENOS radio de cuello y un bajo mucho más largo, porque el mismo cuello se reparte en más ángulo",
+        "fr": "Quelle part de cercle fait la cape. Attention à l'inverse que l'œil rate : PLUS de balayage donne MOINS de rayon d'encolure et un ourlet bien plus long, la même encolure étant répartie sur plus d'angle"
+      }
+    },
+    {
+      "id": "cloak_length",
+      "type": "slider",
+      "group": "geometry",
+      "default": 760,
+      "min": 380,
+      "max": 1250,
+      "step": 10,
+      "label": {
+        "en": "Cloak length (mm)",
+        "es": "Largo de la capa (mm)",
+        "fr": "Longueur de la cape (mm)"
+      },
+      "tooltip": {
+        "en": "Neck to hem, along the radius. A cavalier cloak is SHORT — hip or upper thigh; a full-length version is a different garment",
+        "es": "Del cuello al bajo, por el radio. La capa de mosquetero es CORTA — a la cadera o al muslo; una larga es otra prenda",
+        "fr": "De l'encolure à l'ourlet, le long du rayon. Une cape cavalier est COURTE — à la hanche ou à la cuisse ; une version longue est un autre vêtement"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 78,
+      "min": 30,
+      "max": 140,
+      "step": 2,
+      "label": {
+        "en": "Collar height (mm)",
+        "es": "Alto del cuello (mm)",
+        "fr": "Hauteur du col (mm)"
+      },
+      "tooltip": {
+        "en": "The standing collar; it also bounds the disc diameter of the bridged throat clasp, which has to sit on the collar",
+        "es": "El cuello de tira; también limita el diámetro del broche enlazado, que debe asentar en el cuello",
+        "fr": "Le col montant ; il borne aussi le diamètre de l'agrafe liée, qui doit se poser sur le col"
+      }
+    },
+    {
+      "id": "facing_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 90,
+      "min": 40,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Facing width (mm)",
+        "es": "Ancho de la vista (mm)",
+        "fr": "Largeur de parementure (mm)"
+      },
+      "tooltip": {
+        "en": "The front edge is on show whenever the cloak is thrown back, so it is faced rather than merely turned",
+        "es": "El canto delantero se ve siempre que la capa se echa atrás, así que se forra en vez de sólo doblarse",
+        "fr": "Le bord devant est visible dès que la cape est rejetée, il est donc doublé et non simplement rentré"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 14,
+      "min": 0,
+      "max": 25,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "The hem allowance is deliberately SHALLOW — a circular edge is cut on every grain at once and a deep turned hem on it will never lie flat",
+        "es": "El margen del bajo es a propósito ESCASO — un canto circular va a todos los hilos a la vez y un dobladillo profundo nunca asienta",
+        "fr": "La marge d'ourlet est volontairement FAIBLE — un bord circulaire est coupé dans tous les droits-fils et un ourlet profond n'y sera jamais plat"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "sweep_deg < 360",
+      "severity": "error",
+      "message": {
+        "en": "A full 360-degree sweep closes the cloak into a cone with no front opening — it could not be put on.",
+        "es": "Un barrido de 360 grados cierra la capa en un cono sin abertura delantera — no se podría poner.",
+        "fr": "Un balayage de 360 degrés ferme la cape en cône sans ouverture devant — impossible à enfiler."
+      }
+    },
+    {
+      "expression": "cloak_length > collar_height",
+      "severity": "error",
+      "message": {
+        "en": "The cloak must be longer than its own collar or there is no cloak below the neck.",
+        "es": "La capa debe ser más larga que su propio cuello, o no queda capa bajo el cuello.",
+        "fr": "La cape doit être plus longue que son propre col, sinon il ne reste rien sous l'encolure."
+      }
+    },
+    {
+      "expression": "facing_width < cloak_length",
+      "severity": "warning",
+      "message": {
+        "en": "A facing approaching the cloak's own length is a full lining, which is a different construction.",
+        "es": "Una vista cercana al largo de la capa es un forro completo, que es otra construcción.",
+        "fr": "Une parementure proche de la longueur de la cape est une doublure entière, une autre construction."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "musketeer_half_cloak",
+      "label": {
+        "en": "Half-cloak, hip length",
+        "es": "Media capa, a la cadera",
+        "fr": "Demi-cape, à la hanche"
+      },
+      "values": {
+        "sweep_deg": 300,
+        "cloak_length": 720,
+        "collar_height": 78
+      }
+    },
+    {
+      "id": "modest_shoulder_cape",
+      "label": {
+        "en": "Modest shoulder cape",
+        "es": "Esclavina discreta",
+        "fr": "Petite pèlerine d'épaule"
+      },
+      "values": {
+        "sweep_deg": 180,
+        "cloak_length": 440,
+        "collar_height": 46,
+        "facing_width": 60
+      }
+    },
+    {
+      "id": "dramatic_full_sweep",
+      "label": {
+        "en": "Dramatic full sweep",
+        "es": "Vuelo dramático",
+        "fr": "Grand balayage"
+      },
+      "values": {
+        "sweep_deg": 345,
+        "cloak_length": 1050,
+        "collar_height": 110,
+        "facing_width": 130
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "pdf",
+    "json"
+  ],
+  "fabrics": [
+    "lana-melton-abrigo"
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "single throat clasp; the cloak is not buttoned",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "magnetic-clasp",
+      "linked": true,
+      "params_map": {
+        "disc_dia": "collar_height * 0.34",
+        "disc_h": "3",
+        "magnet_dia": "10",
+        "magnet_h": "2",
+        "sew_holes": "4"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "neck_arc",
+        "type": "neckline",
+        "label": {
+          "en": "Derived neck arc onto the standing collar",
+          "es": "Arco de cuello derivado sobre el cuello de tira",
+          "fr": "Arc d'encolure déduit sur le col montant"
+        },
+        "edges": [
+          {
+            "piece": "cloak",
+            "edge": "neck"
+          },
+          {
+            "piece": "collar",
+            "edge": "neck_seam"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "sweep_deg",
+          "collar_height"
+        ]
+      },
+      {
+        "id": "front_edges",
+        "type": "placket",
+        "label": {
+          "en": "Faced front opening edges",
+          "es": "Cantos delanteros forrados",
+          "fr": "Bords devant doublés"
+        },
+        "edges": [
+          {
+            "piece": "cloak",
+            "edge": "front_r"
+          },
+          {
+            "piece": "facing",
+            "edge": "front_edge"
+          }
+        ],
+        "parameters": [
+          "cloak_length",
+          "facing_width",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "circular_hem",
+        "type": "hem",
+        "label": {
+          "en": "Circular hem (cut on every grain)",
+          "es": "Bajo circular (a todos los hilos)",
+          "fr": "Ourlet circulaire (tous droits-fils)"
+        },
+        "edges": [
+          {
+            "piece": "cloak",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "sweep_deg",
+          "cloak_length",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The circular cloak is the clearest case in the whole costume family where the garment is decided by one piece of arithmetic and nothing downstream can rescue a wrong answer — the neck radius is not a design choice, it is neck run divided by sweep. Publishing that as a derived, measured, and reported quantity rather than a number picked to look right on the page makes the cut teachable, and makes the trade-off visible: the cartridge reports the hem run and the piece span, so a maker can see before cutting that a dramatic sweep needs a cloth width they may not have, and that the piece will have to be seamed at the centre back.",
+      "es": "La capa circular es el caso más claro de toda la familia de vestuario en que la prenda se decide por una sola operación aritmética y nada posterior puede salvar una respuesta equivocada — el radio del cuello no es una decisión de diseño, es contorno dividido por barrido. Publicarlo como cantidad derivada, medida e informada, en vez de un número elegido a ojo, vuelve enseñable el corte y hace visible el compromiso: el cartucho informa el largo del bajo y la envergadura de la pieza, así que se ve antes de cortar que un barrido amplio exige un ancho de tela que quizá no se tenga, y que habrá que unir la pieza al centro de la espalda.",
+      "fr": "La cape circulaire est le cas le plus net de toute la famille costume où le vêtement se décide par une seule opération arithmétique et où rien en aval ne rattrape une mauvaise réponse — le rayon d'encolure n'est pas un choix de style, c'est l'encolure divisée par le balayage. Le publier comme grandeur déduite, mesurée et rapportée, plutôt qu'un nombre choisi à l'œil, rend la coupe enseignable et rend l'arbitrage visible : la cartouche donne la longueur d'ourlet et l'envergure de la pièce, de sorte qu'on voit avant de couper qu'un grand balayage exige une laize qu'on n'a peut-être pas, et qu'il faudra couturer au milieu du dos."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

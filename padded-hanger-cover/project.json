@@ -1,0 +1,339 @@
+{
+  "project": {
+    "name": "Padded Hanger Cover",
+    "slug": "padded-hanger-cover",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The slip-on padded cover that turns a wire or thin wooden hanger into something a silk blouse can hang on without shoulder dents. Two mirrored shell halves sew around a wadding core, a gathered collar closes at the hook shaft, and a trim bow hides the join. A hanger's shoulder is an arc, not a bar: the shell's inner and outer edges are drafted as two concentric arcs, so the outer edge is genuinely longer than the inner by an amount set by the sweep and the padded thickness. Both arcs are polygonised and measured, and the difference is declared as the seam's ease and partly taken up by a crown dart — which is what makes the cover cup the hanger instead of hanging slack.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La funda acolchada que convierte un gancho de alambre o de madera delgada en algo de lo que una blusa de seda puede colgar sin marcas en el hombro. Dos mitades simétricas se cosen alrededor de un núcleo de guata, un cuello fruncido cierra en el vástago del gancho y un moño de adorno tapa la unión. El hombro de un gancho es un arco, no una barra: los bordes interior y exterior de la mitad se trazan como dos arcos concéntricos, de modo que el exterior es realmente más largo que el interior según el barrido y el grosor del acolchado. Ambos arcos se poligonizan y se miden, y la diferencia se declara como holgura de la costura y se absorbe en parte con una pinza en la corona, que es lo que hace que la funda abrace el gancho en lugar de quedar floja.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La housse matelassée qui transforme un cintre en fil ou en bois mince en un support où un chemisier de soie peut pendre sans marque d'épaule. Deux demi-coques symétriques se cousent autour d'une âme de ouate, un col froncé se ferme sur la tige du crochet, et un nœud décoratif masque la jonction. L'épaule d'un cintre est un arc, non une barre : les bords intérieur et extérieur de la coque sont tracés comme deux arcs concentriques, si bien que l'extérieur est réellement plus long que l'intérieur d'une quantité fixée par le balayage et l'épaisseur du matelassage. Les deux arcs sont polygonisés et mesurés, et l'écart est déclaré comme aisance de couture et repris en partie par une pince au sommet — ce qui fait que la housse épouse le cintre au lieu de pendre lâche.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "padded-hanger-cover",
+      "care",
+      "storage",
+      "wardrobe",
+      "padded",
+      "pattern-only",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full hanger cover",
+        "es": "Funda de gancho completa",
+        "fr": "Housse de cintre complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "shell",
+        "collar",
+        "bow"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "shell",
+      "label": {
+        "en": "Shell half (concentric arcs)",
+        "es": "Mitad de la funda (arcos concéntricos)",
+        "fr": "Demi-coque (arcs concentriques)"
+      },
+      "default_color": "#7a6f84",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Gathered hook collar",
+        "es": "Cuello fruncido del gancho",
+        "fr": "Col froncé du crochet"
+      },
+      "default_color": "#8f8499",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "bow",
+      "label": {
+        "en": "Trim bow strip",
+        "es": "Tira del moño de adorno",
+        "fr": "Bande du nœud décoratif"
+      },
+      "default_color": "#a396ad",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Size",
+        "es": "Tamaño",
+        "fr": "Taille"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "hanger_span",
+      "type": "slider",
+      "group": "fit",
+      "default": 420,
+      "min": 280,
+      "max": 520,
+      "step": 10,
+      "label": {
+        "en": "Hanger span (mm)",
+        "es": "Envergadura del gancho (mm)",
+        "fr": "Envergure du cintre (mm)"
+      },
+      "tooltip": {
+        "en": "Tip to tip, measured straight across — not along the shoulder curve",
+        "es": "De punta a punta, medido en línea recta, no siguiendo la curva del hombro",
+        "fr": "De pointe à pointe, mesuré en ligne droite, non le long de la courbe d'épaule"
+      }
+    },
+    {
+      "id": "shoulder_drop",
+      "type": "slider",
+      "group": "fit",
+      "default": 55,
+      "min": 20,
+      "max": 110,
+      "step": 5,
+      "label": {
+        "en": "Shoulder drop (mm)",
+        "es": "Caída del hombro (mm)",
+        "fr": "Tombé d'épaule (mm)"
+      },
+      "tooltip": {
+        "en": "How far the arms fall from the crown; this sets the arc's sweep",
+        "es": "Cuánto bajan los brazos desde la corona; define el barrido del arco",
+        "fr": "De combien les bras descendent depuis le sommet ; fixe le balayage de l'arc"
+      }
+    },
+    {
+      "id": "pad_thickness",
+      "type": "slider",
+      "group": "construction",
+      "default": 22,
+      "min": 8,
+      "max": 45,
+      "step": 1,
+      "label": {
+        "en": "Padded girth (mm)",
+        "es": "Grosor acolchado (mm)",
+        "fr": "Épaisseur matelassée (mm)"
+      },
+      "tooltip": {
+        "en": "The finished padded radius; it is also what separates the two concentric arcs",
+        "es": "El radio acolchado acabado; es también lo que separa los dos arcos concéntricos",
+        "fr": "Le rayon matelassé fini ; c'est aussi ce qui sépare les deux arcs concentriques"
+      }
+    },
+    {
+      "id": "neck_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 70,
+      "min": 30,
+      "max": 130,
+      "step": 5,
+      "label": {
+        "en": "Collar rise (mm)",
+        "es": "Altura del cuello (mm)",
+        "fr": "Hauteur du col (mm)"
+      },
+      "tooltip": {
+        "en": "How far the gathered collar climbs the hook shaft",
+        "es": "Cuánto sube el cuello fruncido por el vástago del gancho",
+        "fr": "De combien le col froncé remonte la tige du crochet"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam; the collar's gathered top edge is drafted separately",
+        "es": "Aplicado a todas las costuras; el borde fruncido del cuello se traza aparte",
+        "fr": "Appliquée à toutes les coutures ; le bord froncé du col est tracé à part"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "shoulder_drop < hanger_span * 0.4",
+      "severity": "error",
+      "message": {
+        "en": "A drop this deep relative to the span is no longer a hanger arc — the concentric arcs would cross.",
+        "es": "Una caída tan profunda respecto a la envergadura ya no es un arco de gancho: los arcos concéntricos se cruzarían.",
+        "fr": "Un tombé aussi profond par rapport à l'envergure n'est plus un arc de cintre : les arcs concentriques se croiseraient."
+      }
+    },
+    {
+      "expression": "pad_thickness * 4 < hanger_span",
+      "severity": "warning",
+      "message": {
+        "en": "This much padding on this short a hanger produces a bolster rather than a shoulder.",
+        "es": "Tanto acolchado en un gancho tan corto produce un cojín, no un hombro.",
+        "fr": "Autant de matelassage sur un cintre aussi court produit un traversin, pas une épaule."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "child",
+      "label": {
+        "en": "Child hanger",
+        "es": "Gancho infantil",
+        "fr": "Cintre enfant"
+      },
+      "values": {
+        "hanger_span": 300,
+        "shoulder_drop": 38,
+        "pad_thickness": 14
+      }
+    },
+    {
+      "id": "blouse",
+      "label": {
+        "en": "Blouse & knitwear",
+        "es": "Blusa y punto",
+        "fr": "Chemisier et maille"
+      },
+      "values": {
+        "hanger_span": 420,
+        "shoulder_drop": 55,
+        "pad_thickness": 22
+      }
+    },
+    {
+      "id": "coat",
+      "label": {
+        "en": "Coat & tailoring",
+        "es": "Abrigo y sastrería",
+        "fr": "Manteau et tailleur"
+      },
+      "values": {
+        "hanger_span": 500,
+        "shoulder_drop": 80,
+        "pad_thickness": 38
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "popelina-algodon"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "shell_arc_seam",
+        "type": "shoulder",
+        "label": {
+          "en": "Concentric shoulder-arc seam",
+          "es": "Costura del arco de hombro concéntrico",
+          "fr": "Couture de l'arc d'épaule concentrique"
+        },
+        "edges": [
+          {
+            "piece": "shell",
+            "edge": "outer_arc"
+          },
+          {
+            "piece": "shell",
+            "edge": "inner_arc"
+          }
+        ],
+        "parameters": [
+          "hanger_span",
+          "shoulder_drop",
+          "pad_thickness"
+        ]
+      },
+      {
+        "id": "hook_collar_gather",
+        "type": "custom",
+        "label": {
+          "en": "Hook-shaft collar gather",
+          "es": "Frunce del cuello en el vástago",
+          "fr": "Fronce du col sur la tige"
+        },
+        "edges": [
+          {
+            "piece": "collar",
+            "edge": "gather_top"
+          }
+        ],
+        "parameters": [
+          "neck_height",
+          "pad_thickness"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": false
+    },
+    "societal_benefit": {
+      "en": "Shoulder dents are the most common way a good knit is ruined by storage, and the usual answer is buying new hangers. This covers the wire hangers already in the wardrobe, in cotton offcuts and wadding scraps, and keeps them out of the waste stream. No hardware is referenced: a printable hanger body does not yet exist in the pinned Yantra4D commons, so this cartridge stays honestly pattern-only rather than declaring a bridge that would dangle.",
+      "es": "Las marcas de hombro son la forma más común en que el almacenamiento arruina una buena prenda de punto, y la respuesta habitual es comprar ganchos nuevos. Esto recubre los ganchos de alambre que ya están en el armario, con retazos de algodón y guata, y los mantiene fuera de la basura. No se referencia herraje: aún no existe un cuerpo de gancho imprimible en el commons fijado de Yantra4D, así que este cartucho se queda honestamente en solo-patrón en vez de declarar un puente que quedaría colgando.",
+      "fr": "Les marques d'épaule sont la façon la plus courante dont le rangement abîme une belle maille, et la réponse habituelle est d'acheter de nouveaux cintres. Ceci habille les cintres en fil déjà présents dans l'armoire, avec des chutes de coton et de ouate, et les tient hors des déchets. Aucune quincaillerie n'est référencée : un corps de cintre imprimable n'existe pas encore dans le commons Yantra4D épinglé, aussi ce cartouche reste honnêtement patron-seul plutôt que de déclarer un pont qui pendrait dans le vide."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

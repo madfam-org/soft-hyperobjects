@@ -1,0 +1,367 @@
+{
+  "project": {
+    "name": "Garment Bag",
+    "slug": "garment-bag",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The hanging garment bag: a suit or a dress travels on its own hanger inside a shaped sleeve that zips down the centre front. Two mirrored front halves take the zipper between them, a whole back panel closes the other face, a shaped shoulder yoke caps the top and carries the hanger-hook slot, and a depth gusset walks the side and hem so a jacket's shoulders are not crushed flat. The shoulder is drafted as a bowed polyline shared by the yoke and both panels, so the seam matches by measurement rather than by a trigonometric guess. The centre-front zip bridges to the Yantra4D `zipper` solid, whose tape edge is driven by the same bag length.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La funda portatrajes colgante: un traje o un vestido viaja en su propia percha dentro de una funda con forma que cierra por el centro del delantero. Dos mitades delanteras simétricas reciben la cremallera entre ellas, un espalda entera cierra la otra cara, un canesú de hombro con forma remata la parte alta y lleva la ranura del gancho de la percha, y un fuelle de fondo recorre el costado y el bajo para que los hombros de una chaqueta no queden aplastados. El hombro se traza como una polilínea abombada compartida por el canesú y ambos paneles, de modo que la costura coincide por medición y no por un cálculo trigonométrico. La cremallera del centro delantero se puentea al sólido `zipper` de Yantra4D, cuyo borde de cinta se rige por el mismo largo de funda.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La housse à vêtements suspendue : un costume ou une robe voyage sur son propre cintre à l'intérieur d'une gaine profilée qui se ferme par le milieu devant. Deux moitiés de devant symétriques reçoivent la fermeture éclair entre elles, un dos entier ferme l'autre face, un empiècement d'épaule profilé coiffe le haut et porte la fente du crochet de cintre, et un soufflet de profondeur parcourt le côté et l'ourlet pour que les épaules d'une veste ne soient pas écrasées. L'épaule est tracée comme une polyligne bombée partagée par l'empiècement et les deux panneaux, de sorte que la couture correspond par mesure et non par un calcul trigonométrique. La fermeture du milieu devant fait le pont vers le solide `zipper` de Yantra4D, dont le bord de ruban est piloté par la même longueur de housse.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "garment-bag",
+      "care",
+      "storage",
+      "travel",
+      "hanging",
+      "zipper",
+      "hardware",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full garment bag",
+        "es": "Funda portatrajes completa",
+        "fr": "Housse à vêtements complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "yoke",
+        "gusset"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front half (zip edge)",
+        "es": "Mitad delantera (borde de cremallera)",
+        "fr": "Demi-devant (bord de fermeture)"
+      },
+      "default_color": "#4a5f70",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back panel (whole)",
+        "es": "Panel de espalda (entero)",
+        "fr": "Panneau de dos (entier)"
+      },
+      "default_color": "#3b4d5c",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "yoke",
+      "label": {
+        "en": "Shoulder yoke (hook slot)",
+        "es": "Canesú de hombro (ranura del gancho)",
+        "fr": "Empiècement d'épaule (fente du crochet)"
+      },
+      "default_color": "#5c6f7e",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "gusset",
+      "label": {
+        "en": "Side/hem gusset",
+        "es": "Fuelle de costado y bajo",
+        "fr": "Soufflet de côté et d'ourlet"
+      },
+      "default_color": "#6b7a84",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Size",
+        "es": "Tamaño",
+        "fr": "Taille"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bag_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 1400,
+      "min": 600,
+      "max": 1900,
+      "step": 10,
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)"
+      },
+      "tooltip": {
+        "en": "Hook slot to hem; also the length of the centre-front zip",
+        "es": "De la ranura del gancho al bajo; también el largo de la cremallera central",
+        "fr": "De la fente du crochet à l'ourlet ; aussi la longueur de la fermeture centrale"
+      }
+    },
+    {
+      "id": "bag_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 600,
+      "min": 400,
+      "max": 800,
+      "step": 10,
+      "label": {
+        "en": "Width (mm)",
+        "es": "Ancho (mm)",
+        "fr": "Largeur (mm)"
+      },
+      "tooltip": {
+        "en": "Across the widest point, below the shoulder slope",
+        "es": "En el punto más ancho, bajo la caída del hombro",
+        "fr": "Au point le plus large, sous la pente d'épaule"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 190,
+      "min": 100,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Shoulder flat (mm)",
+        "es": "Plano del hombro (mm)",
+        "fr": "Plat d'épaule (mm)"
+      },
+      "tooltip": {
+        "en": "The flat top of the yoke, where the hanger's neck sits",
+        "es": "La parte plana del canesú, donde apoya el cuello de la percha",
+        "fr": "Le plat de l'empiècement, où repose le col du cintre"
+      }
+    },
+    {
+      "id": "bag_depth",
+      "type": "slider",
+      "group": "construction",
+      "default": 100,
+      "min": 40,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Depth / gusset width (mm)",
+        "es": "Fondo / ancho del fuelle (mm)",
+        "fr": "Profondeur / largeur du soufflet (mm)"
+      },
+      "tooltip": {
+        "en": "How much room the jacket's shoulders get; too little and it presses flat",
+        "es": "El espacio para los hombros de la chaqueta; poco fondo la aplasta",
+        "fr": "L'espace laissé aux épaules de la veste ; trop peu l'écrase"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam except the yoke's hook slot",
+        "es": "Aplicado a todas las costuras salvo la ranura del gancho",
+        "fr": "Appliquée à toutes les coutures sauf la fente du crochet"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "bag_width > shoulder_width + 80",
+      "severity": "error",
+      "message": {
+        "en": "The body must be wider than the yoke's flat, or there is no shoulder slope to draft.",
+        "es": "El cuerpo debe ser más ancho que el plano del canesú, o no hay caída de hombro que trazar.",
+        "fr": "Le corps doit être plus large que le plat de l'empiècement, sinon il n'y a pas de pente d'épaule à tracer."
+      }
+    },
+    {
+      "expression": "bag_length >= bag_width * 1.5",
+      "severity": "warning",
+      "message": {
+        "en": "A garment bag shorter than one and a half times its width will not clear a dress hem.",
+        "es": "Una funda más corta que una vez y media su ancho no libra el bajo de un vestido.",
+        "fr": "Une housse plus courte qu'une fois et demie sa largeur ne dégage pas l'ourlet d'une robe."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "suit",
+      "label": {
+        "en": "Suit",
+        "es": "Traje",
+        "fr": "Costume"
+      },
+      "values": {
+        "bag_length": 1150,
+        "bag_width": 580,
+        "bag_depth": 110
+      }
+    },
+    {
+      "id": "dress",
+      "label": {
+        "en": "Dress",
+        "es": "Vestido",
+        "fr": "Robe"
+      },
+      "values": {
+        "bag_length": 1500,
+        "bag_width": 620,
+        "bag_depth": 90
+      }
+    },
+    {
+      "id": "gown",
+      "label": {
+        "en": "Gown",
+        "es": "Vestido de gala",
+        "fr": "Robe de soirée"
+      },
+      "values": {
+        "bag_length": 1850,
+        "bag_width": 780,
+        "bag_depth": 160
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "nylon-ripstop-shell"
+  ],
+  "notion": {
+    "kind": "zipper",
+    "subtype": "centre-front separating zip",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "zipper",
+      "linked": true,
+      "params_map": {
+        "zip_length": "bag_length",
+        "tape_width": "bag_depth / 4"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "zip_tape",
+        "type": "zipper_tape",
+        "label": {
+          "en": "Centre-front zip tape",
+          "es": "Cinta de la cremallera central",
+          "fr": "Ruban de la fermeture centrale"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "centre_front"
+          }
+        ],
+        "parameters": [
+          "bag_length",
+          "bag_depth"
+        ]
+      },
+      {
+        "id": "shoulder_yoke_seam",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder yoke seam",
+          "es": "Costura del canesú de hombro",
+          "fr": "Couture de l'empiècement d'épaule"
+        },
+        "edges": [
+          {
+            "piece": "yoke",
+            "edge": "slope_r"
+          },
+          {
+            "piece": "front",
+            "edge": "top"
+          }
+        ],
+        "parameters": [
+          "bag_width",
+          "shoulder_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A breathable garment bag you can cut to the coat you actually own, in cotton or ripstop rather than the unvented PVC that grows mould on stored wool. The zipper is an open printable Yantra4D object dimensioned to the bag's own length, so a failed slider is a part you replace instead of a bag you throw away.",
+      "es": "Una funda transpirable que puedes cortar al abrigo que realmente tienes, en algodón o ripstop en vez del PVC sin ventilación que cría moho en la lana guardada. La cremallera es un objeto imprimible abierto de Yantra4D dimensionado al propio largo de la funda: un cursor roto es una pieza que se reemplaza, no una funda que se tira.",
+      "fr": "Une housse respirante que vous coupez au manteau que vous possédez vraiment, en coton ou en ripstop plutôt que le PVC non ventilé qui fait moisir la laine entreposée. La fermeture est un objet Yantra4D ouvert et imprimable dimensionné à la longueur de la housse : un curseur cassé est une pièce à remplacer, pas une housse à jeter."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

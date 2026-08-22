@@ -1,0 +1,545 @@
+{
+  "project": {
+    "name": "Leheṅgā (लहंगा)",
+    "slug": "lehenga",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The long, full, gored skirt of northern and western South Asia — also ghāgrā, Gujarati chaniya, Tamil pāvāḍai — worn with a fitted cholī blouse and a draped dupaṭṭā. A leheṅgā is not a gathered rectangle: it is assembled from kalī, tapered gores narrow at the waist and wide at the hem, so the fullness is cut in rather than gathered in. That is why the waist stays flat and fitted while the hem carries several metres of sweep, and why heavy surface work does not collapse the waist. This cartridge solves the skirt as a true conical frustum: the radii come from the two circuits, the slant is the finished length the wearer asked for, and the drafted panel height is back-solved by Pythagoras — so the side edges measure the real slant and the hem levels, where a trapezoid draft would come out too long. The side zip bridges to the Yantra4D `invisible-zipper` solid. Zarī, gōṭā pattī, mirror work and bandhanī are marked as fields and left to the artisans whose crafts they are. Offered with respect for the living tradition.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La falda larga, amplia y de nesgas del norte y el occidente del sur de Asia — también ghāgrā, chaniya en guyaratí, pāvāḍai en tamil — que se lleva con una blusa ajustada cholī y un dupaṭṭā drapeado. Un leheṅgā no es un rectángulo fruncido: se arma con kalī, nesgas estrechas en la cintura y anchas en el ruedo, de modo que la amplitud se corta, no se frunce. Por eso la cintura queda plana y ajustada mientras el ruedo sostiene varios metros de vuelo, y por eso el bordado pesado no hunde la cintura. Este cartucho resuelve la falda como un tronco de cono verdadero: los radios salen de los dos contornos, la generatriz es el largo acabado que se pidió, y la altura trazada del paño se despeja por Pitágoras — así los cantos laterales miden la generatriz real y el ruedo queda a nivel, donde un trazado de trapecio saldría más largo. La cremallera lateral enlaza con el sólido `invisible-zipper` de Yantra4D. El zarī, el gōṭā pattī, el trabajo de espejo y el bandhanī se marcan como campos y se dejan a las artesanas y artesanos cuyos oficios son. Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La jupe longue, ample et à lés du nord et de l'ouest de l'Asie du Sud — aussi ghāgrā, chaniya en goudjarati, pāvāḍai en tamoul — portée avec un corsage ajusté cholī et un dupaṭṭā drapé. Un leheṅgā n'est pas un rectangle froncé : il s'assemble à partir de kalī, des lés étroits à la taille et larges à l'ourlet, si bien que l'ampleur est coupée et non froncée. D'où une taille plate et ajustée alors que l'ourlet porte plusieurs mètres d'envolée, et d'où le fait qu'une broderie lourde n'écrase pas la taille. Cette cartouche résout la jupe en tronc de cône véritable : les rayons découlent des deux circonférences, l'apothème est la longueur finie demandée, et la hauteur tracée du panneau se déduit par Pythagore — les bords latéraux mesurent donc le vrai apothème et l'ourlet est de niveau, là où un tracé en trapèze serait trop long. La fermeture éclair latérale se relie au solide `invisible-zipper` de Yantra4D. Le zarī, le gōṭā pattī, le travail au miroir et le bandhanī sont marqués comme champs et laissés aux artisanes et artisans dont ils sont le métier. Proposé dans le respect de la tradition vivante.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "lehenga",
+      "ghagra",
+      "south-asian",
+      "heritage",
+      "skirt",
+      "gored",
+      "conical",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Skirt",
+        "es": "Falda completa",
+        "fr": "Jupe complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "waistband",
+        "kali",
+        "border"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "waistband",
+      "label": {
+        "en": "Waistband (kamarband)",
+        "es": "Pretina (kamarband)",
+        "fr": "Ceinture (kamarband)"
+      },
+      "default_color": "#8f2f4a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "kali",
+      "label": {
+        "en": "Gore (kalī)",
+        "es": "Nesga (kalī)",
+        "fr": "Lé (kalī)"
+      },
+      "default_color": "#b8455f",
+      "cut": {
+        "quantity": 12,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "border",
+      "label": {
+        "en": "Hem border strip",
+        "es": "Tira de cenefa",
+        "fr": "Bande de bordure"
+      },
+      "default_color": "#d8a33c",
+      "cut": {
+        "quantity": 6,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "style",
+      "label": {
+        "en": "Fullness & Field",
+        "es": "Amplitud y campo",
+        "fr": "Ampleur et champ"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 760,
+      "min": 550,
+      "max": 1300,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "Fitted — a gored skirt sits flat at the waist, with no gathers to absorb error",
+        "es": "Ajustado — una falda de nesgas asienta plana en la cintura, sin frunces que absorban error",
+        "fr": "Ajusté — une jupe à lés repose à plat sur la taille, sans fronces pour absorber l'erreur"
+      }
+    },
+    {
+      "id": "hem_sweep",
+      "type": "slider",
+      "group": "style",
+      "default": 4200,
+      "min": 1500,
+      "max": 9000,
+      "step": 50,
+      "label": {
+        "en": "Hem sweep (mm)",
+        "es": "Vuelo del ruedo (mm)",
+        "fr": "Envolée d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "The full circumference the hem describes — the gore count divides it",
+        "es": "La circunferencia completa del ruedo — el número de nesgas la divide",
+        "fr": "La circonférence complète de l'ourlet — le nombre de lés la divise"
+      }
+    },
+    {
+      "id": "skirt_length",
+      "type": "slider",
+      "group": "body",
+      "default": 1000,
+      "min": 500,
+      "max": 1400,
+      "step": 10,
+      "label": {
+        "en": "Finished length (mm)",
+        "es": "Largo acabado (mm)",
+        "fr": "Longueur finie (mm)"
+      },
+      "tooltip": {
+        "en": "Measured down the skirt's own surface — this is the cone's slant, not the drafted panel height",
+        "es": "Medido sobre la propia superficie de la falda — es la generatriz del cono, no la altura trazada",
+        "fr": "Mesurée sur la surface même de la jupe — c'est l'apothème du cône, pas la hauteur tracée"
+      }
+    },
+    {
+      "id": "gore_count",
+      "type": "slider",
+      "group": "style",
+      "default": 12,
+      "min": 4,
+      "max": 32,
+      "step": 1,
+      "label": {
+        "en": "Gore count (kalī)",
+        "es": "Número de nesgas (kalī)",
+        "fr": "Nombre de lés (kalī)"
+      },
+      "tooltip": {
+        "en": "More gores give a smoother cone and more seams for surface work to follow",
+        "es": "Más nesgas dan un cono más suave y más costuras que el bordado puede seguir",
+        "fr": "Plus de lés donnent un cône plus lisse et plus de coutures que la broderie peut suivre"
+      }
+    },
+    {
+      "id": "band_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 40,
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "label": {
+        "en": "Waistband depth (mm)",
+        "es": "Alto de la pretina (mm)",
+        "fr": "Hauteur de ceinture (mm)"
+      },
+      "tooltip": {
+        "en": "Finished depth of the kamarband",
+        "es": "Alto acabado del kamarband",
+        "fr": "Hauteur finie du kamarband"
+      }
+    },
+    {
+      "id": "border_depth",
+      "type": "slider",
+      "group": "style",
+      "default": 180,
+      "min": 0,
+      "max": 500,
+      "step": 10,
+      "label": {
+        "en": "Border field depth (mm)",
+        "es": "Alto del campo de cenefa (mm)",
+        "fr": "Hauteur du champ de bordure (mm)"
+      },
+      "tooltip": {
+        "en": "The marked field where zarī or gōṭā work goes — set to 0 for a plain hem",
+        "es": "El campo marcado para el zarī o el gōṭā — ponga 0 para un ruedo liso",
+        "fr": "Le champ marqué pour le zarī ou le gōṭā — mettez 0 pour un ourlet uni"
+      }
+    },
+    {
+      "id": "zip_length",
+      "type": "slider",
+      "group": "construction",
+      "default": 220,
+      "min": 120,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Side zip length (mm)",
+        "es": "Largo de la cremallera lateral (mm)",
+        "fr": "Longueur de la fermeture latérale (mm)"
+      },
+      "tooltip": {
+        "en": "Drives both the band's zip seat and the Yantra4D solid's tape edge",
+        "es": "Gobierna el asiento de la cremallera y el borde de cinta del sólido Yantra4D",
+        "fr": "Pilote le siège de la fermeture et le bord de ruban du solide Yantra4D"
+      }
+    },
+    {
+      "id": "tape_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 30,
+      "min": 20,
+      "max": 50,
+      "step": 1,
+      "label": {
+        "en": "Zip tape width (mm)",
+        "es": "Ancho de la cinta de cremallera (mm)",
+        "fr": "Largeur du ruban de fermeture (mm)"
+      },
+      "tooltip": {
+        "en": "Width of the tape the zip is carried on",
+        "es": "Ancho de la cinta que porta la cremallera",
+        "fr": "Largeur du ruban qui porte la fermeture"
+      }
+    },
+    {
+      "id": "fabric_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 1120,
+      "min": 700,
+      "max": 1600,
+      "step": 10,
+      "label": {
+        "en": "Usable fabric width (mm)",
+        "es": "Ancho útil de la tela (mm)",
+        "fr": "Largeur utile du tissu (mm)"
+      },
+      "tooltip": {
+        "en": "Sets how many gores nest across the cloth, tip up and tip down",
+        "es": "Fija cuántas nesgas encajan a lo ancho, con punta arriba y abajo",
+        "fr": "Fixe combien de lés s'imbriquent en largeur, pointe en haut et en bas"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 6,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Added to every joined edge",
+        "es": "Añadido a cada borde unido",
+        "fr": "Ajoutée à chaque bord assemblé"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 45,
+      "min": 15,
+      "max": 100,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de ruedo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "A weighted hem helps a full cone hang and swing",
+        "es": "Un ruedo con peso ayuda a que el cono caiga y se mueva",
+        "fr": "Un ourlet lesté aide un cône ample à tomber et à bouger"
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "hem_sweep > waist_girth * 1.4",
+      "severity": "warning",
+      "message": {
+        "en": "The hem must be meaningfully fuller than the waist, or this is a tube, not a leheṅgā.",
+        "es": "El ruedo debe superar con holgura la cintura, o esto es un tubo, no un leheṅgā.",
+        "fr": "L'ourlet doit être nettement plus ample que la taille, sinon c'est un tube, pas un leheṅgā."
+      }
+    },
+    {
+      "expression": "skirt_length * 6.283 > hem_sweep - waist_girth",
+      "severity": "warning",
+      "message": {
+        "en": "That sweep needs more length than requested — the cone would flatten past a full circle.",
+        "es": "Ese vuelo exige más largo del pedido — el cono se aplanaría más allá de un círculo completo.",
+        "fr": "Cette envolée exige plus de longueur que demandé — le cône s'aplatirait au-delà d'un cercle complet."
+      }
+    },
+    {
+      "expression": "border_depth < skirt_length / 2",
+      "severity": "warning",
+      "message": {
+        "en": "A border deeper than half the skirt stops being a border.",
+        "es": "Una cenefa de más de media falda deja de ser cenefa.",
+        "fr": "Une bordure de plus d'une demi-jupe cesse d'être une bordure."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "everyday-ghagra",
+      "label": {
+        "en": "Everyday ghāgrā",
+        "es": "Ghāgrā diario",
+        "fr": "Ghāgrā quotidien"
+      },
+      "values": {
+        "hem_sweep": 3000,
+        "gore_count": 8,
+        "border_depth": 90,
+        "skirt_length": 950
+      }
+    },
+    {
+      "id": "worked",
+      "label": {
+        "en": "Heavily worked",
+        "es": "Muy bordado",
+        "fr": "Richement brodé"
+      },
+      "values": {
+        "hem_sweep": 6000,
+        "gore_count": 20,
+        "border_depth": 300
+      }
+    },
+    {
+      "id": "plain-hem",
+      "label": {
+        "en": "Plain hem",
+        "es": "Ruedo liso",
+        "fr": "Ourlet uni"
+      },
+      "values": {
+        "border_depth": 0,
+        "gore_count": 10
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "popelina-algodon"
+  ],
+  "notion": {
+    "kind": "zipper",
+    "subtype": "leheṅgā side closure",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "invisible-zipper",
+      "linked": true,
+      "params_map": {
+        "zip_length": "zip_length",
+        "tape_width": "tape_width",
+        "tape_thick": "0.6"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "waist_seam",
+        "type": "waistband",
+        "geometry_type": "seam",
+        "label": {
+          "en": "Waist seam (gore tops to waistband)",
+          "es": "Costura de cintura (nesgas a pretina)",
+          "fr": "Couture de taille (lés à la ceinture)"
+        },
+        "edges": [
+          {
+            "piece": "kali",
+            "edge": "top"
+          },
+          {
+            "piece": "waistband",
+            "edge": "bottom"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "gore_count",
+          "band_height"
+        ]
+      },
+      {
+        "id": "gore_seam",
+        "type": "side_seam",
+        "geometry_type": "seam",
+        "label": {
+          "en": "Gore seam (true slant)",
+          "es": "Costura de nesga (generatriz real)",
+          "fr": "Couture de lé (apothème réel)"
+        },
+        "edges": [
+          {
+            "piece": "kali",
+            "edge": "side_right"
+          },
+          {
+            "piece": "kali",
+            "edge": "side_left"
+          }
+        ],
+        "parameters": [
+          "skirt_length",
+          "hem_sweep",
+          "gore_count"
+        ]
+      },
+      {
+        "id": "side_closure",
+        "type": "zipper_tape",
+        "geometry_type": "flange",
+        "label": {
+          "en": "Side closure (invisible zip)",
+          "es": "Cierre lateral (cremallera invisible)",
+          "fr": "Fermeture latérale (fermeture invisible)"
+        },
+        "edges": [
+          {
+            "piece": "waistband",
+            "edge": "end_left"
+          },
+          {
+            "piece": "kali",
+            "edge": "side_left"
+          }
+        ],
+        "parameters": [
+          "zip_length",
+          "tape_width"
+        ]
+      },
+      {
+        "id": "hem_border",
+        "type": "hem",
+        "geometry_type": "seam",
+        "label": {
+          "en": "Hem border application",
+          "es": "Aplicación de la cenefa",
+          "fr": "Application de la bordure"
+        },
+        "edges": [
+          {
+            "piece": "border",
+            "edge": "top"
+          },
+          {
+            "piece": "kali",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "border_depth",
+          "hem_sweep"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "heritage": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Gored skirts are where amateur drafts most often go wrong: a trapezoid of the requested height produces side edges longer than that height, so the finished skirt is too long and the hem does not level — an error that is invisible on paper and expensive in silk. Solving the true cone puts a correct, made-to-measure leheṅgā within reach of anyone with cloth and a table, at any waist and any height, instead of only at the sizes a shop stocks. The surface crafts that give the garment its meaning stay with the artisans who hold them.",
+      "es": "Las faldas de nesgas son donde más fallan los trazados aficionados: un trapecio de la altura pedida produce cantos laterales más largos que esa altura, así que la falda acabada sale larga y el ruedo no queda a nivel — un error invisible en el papel y caro en la seda. Resolver el cono verdadero pone un leheṅgā correcto y a la medida al alcance de cualquiera con tela y una mesa, en cualquier cintura y cualquier estatura, y no solo en las tallas que surte una tienda. Los oficios de superficie que dan sentido a la prenda permanecen con quienes los sostienen.",
+      "fr": "Les jupes à lés sont le point où les tracés amateurs échouent le plus souvent : un trapèze de la hauteur demandée donne des bords latéraux plus longs que cette hauteur, si bien que la jupe finie est trop longue et que l'ourlet n'est pas de niveau — une erreur invisible sur le papier et coûteuse en soie. Résoudre le vrai cône met un leheṅgā correct et sur mesure à la portée de quiconque dispose de tissu et d'une table, à toute taille et toute stature, et non aux seules tailles qu'une boutique stocke. Les métiers de surface qui donnent son sens au vêtement restent aux mains des artisans qui les détiennent."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

@@ -1,0 +1,355 @@
+{
+  "project": {
+    "name": "Boot Shaper Sleeve",
+    "slug": "boot-shaper-sleeve",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The stiffened sleeve that stands inside a tall boot so the shaft does not crease and collapse at the ankle. A leather boot left slumped for a season learns the fold; this is the removable insert that prevents it. A tapered sleeve wraps into a truncated cone, a batten pocket runs its slant height, and a hook-and-loop tab lets one sleeve fit a range of calves. A boot shaft is a truncated cone, and the flat pattern for a cone is an annular sector — not a trapezoid; the trapezoid is the classic error, and rolled up it gives seam edges that will not lie against each other. This cartridge develops the true cone and then polygonises and measures both arcs, so the top arc really is the calf circumference and the bottom arc really is the ankle. The tab bridges to the Yantra4D `hook-loop-tape` solid, whose sewn face is driven by the same tab width.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La manga rígida que se para dentro de una bota alta para que la caña no se arrugue ni se venza en el tobillo. Una bota de piel dejada caída una temporada aprende el pliegue; este es el inserto removible que lo impide. Una manga cónica se enrolla en un cono truncado, un bolsillo de varilla recorre su altura inclinada, y una lengüeta de velcro permite que una sola manga sirva a varias pantorrillas. La caña de una bota es un cono truncado, y el patrón plano de un cono es un sector anular, no un trapecio; el trapecio es el error clásico, y enrollado da bordes de costura que no se asientan uno contra otro. Este cartucho desarrolla el cono verdadero y luego poligoniza y mide ambos arcos, de modo que el arco superior es realmente el contorno de pantorrilla y el inferior el de tobillo. La lengüeta se puentea al sólido `hook-loop-tape` de Yantra4D, cuya cara cosida se rige por el mismo ancho de lengüeta.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La gaine rigidifiée qui se tient dans une botte haute pour que la tige ne se plisse ni ne s'affaisse à la cheville. Une botte de cuir laissée avachie une saison apprend le pli ; voici l'insert amovible qui l'en empêche. Une gaine conique s'enroule en cône tronqué, une poche à baleine en parcourt la hauteur oblique, et une patte auto-agrippante permet à une seule gaine de convenir à plusieurs mollets. La tige d'une botte est un cône tronqué, et le patron à plat d'un cône est un secteur annulaire — non un trapèze ; le trapèze est l'erreur classique, et une fois enroulé il donne des bords de couture qui ne s'appliquent pas l'un contre l'autre. Ce cartouche développe le vrai cône puis polygonise et mesure les deux arcs, si bien que l'arc supérieur est réellement le tour de mollet et l'inférieur le tour de cheville. La patte fait le pont vers le solide `hook-loop-tape` de Yantra4D, dont la face cousue est pilotée par la même largeur de patte.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "boot-shaper-sleeve",
+      "care",
+      "storage",
+      "footwear",
+      "cone-development",
+      "hook-and-loop",
+      "hardware",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full boot shaper",
+        "es": "Horma de bota completa",
+        "fr": "Embauchoir de botte complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "sleeve",
+        "batten",
+        "tab"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Cone development (annular sector)",
+        "es": "Desarrollo del cono (sector anular)",
+        "fr": "Développement du cône (secteur annulaire)"
+      },
+      "default_color": "#5b6a4f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "batten",
+      "label": {
+        "en": "Stiffener pocket",
+        "es": "Bolsillo de la varilla",
+        "fr": "Poche de la baleine"
+      },
+      "default_color": "#6f7d61",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "tab",
+      "label": {
+        "en": "Hook-and-loop adjustment tab",
+        "es": "Lengüeta de ajuste de velcro",
+        "fr": "Patte de réglage auto-agrippante"
+      },
+      "default_color": "#84906f",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Size",
+        "es": "Tamaño",
+        "fr": "Taille"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "shaft_height",
+      "type": "slider",
+      "group": "fit",
+      "default": 330,
+      "min": 180,
+      "max": 500,
+      "step": 10,
+      "label": {
+        "en": "Shaft height (mm)",
+        "es": "Altura de la caña (mm)",
+        "fr": "Hauteur de tige (mm)"
+      },
+      "tooltip": {
+        "en": "Ankle to boot top; the vertical rise, not the slant height the cone actually uses",
+        "es": "Del tobillo al borde de la bota; la altura vertical, no la inclinada que usa el cono",
+        "fr": "De la cheville au haut de la botte ; la hauteur verticale, non l'oblique du cône"
+      }
+    },
+    {
+      "id": "calf_circ",
+      "type": "slider",
+      "group": "fit",
+      "default": 380,
+      "min": 240,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Calf circumference (mm)",
+        "es": "Contorno de pantorrilla (mm)",
+        "fr": "Tour de mollet (mm)"
+      },
+      "tooltip": {
+        "en": "The boot's opening; becomes the sector's measured outer arc",
+        "es": "La boca de la bota; se convierte en el arco exterior medido del sector",
+        "fr": "L'ouverture de la botte ; devient l'arc extérieur mesuré du secteur"
+      }
+    },
+    {
+      "id": "ankle_circ",
+      "type": "slider",
+      "group": "fit",
+      "default": 260,
+      "min": 180,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Ankle circumference (mm)",
+        "es": "Contorno de tobillo (mm)",
+        "fr": "Tour de cheville (mm)"
+      },
+      "tooltip": {
+        "en": "The narrow end; becomes the sector's measured inner arc",
+        "es": "El extremo estrecho; se convierte en el arco interior medido del sector",
+        "fr": "L'extrémité étroite ; devient l'arc intérieur mesuré du secteur"
+      }
+    },
+    {
+      "id": "tab_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 25,
+      "min": 12,
+      "max": 50,
+      "step": 1,
+      "label": {
+        "en": "Tab width (mm)",
+        "es": "Ancho de la lengüeta (mm)",
+        "fr": "Largeur de la patte (mm)"
+      },
+      "tooltip": {
+        "en": "Also the hook-and-loop strip width — tape and tab are cut to the same face",
+        "es": "También el ancho de la tira de velcro: cinta y lengüeta se cortan a la misma cara",
+        "fr": "Aussi la largeur de la bande auto-agrippante : ruban et patte à la même face"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam; the sector's arcs carry it along the curve",
+        "es": "Aplicado a todas las costuras; los arcos del sector lo llevan a lo largo de la curva",
+        "fr": "Appliquée à toutes les coutures ; les arcs du secteur la portent le long de la courbe"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "calf_circ > ankle_circ + 20",
+      "severity": "error",
+      "message": {
+        "en": "The calf must exceed the ankle by a real margin, or the cone degenerates into a cylinder with no sector to develop.",
+        "es": "La pantorrilla debe superar al tobillo por un margen real, o el cono degenera en un cilindro sin sector que desarrollar.",
+        "fr": "Le mollet doit dépasser la cheville d'une marge réelle, sinon le cône dégénère en cylindre sans secteur à développer."
+      }
+    },
+    {
+      "expression": "shaft_height > tab_width * 4",
+      "severity": "warning",
+      "message": {
+        "en": "A shaft this short next to this wide a tab leaves no clean run of sleeve for the closure to grip.",
+        "es": "Una caña tan corta junto a una lengüeta tan ancha no deja tramo limpio de manga donde agarre el cierre.",
+        "fr": "Une tige aussi courte face à une patte aussi large ne laisse pas de portion nette de gaine où la fermeture puisse mordre."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "ankle-boot",
+      "label": {
+        "en": "Ankle boot",
+        "es": "Botín",
+        "fr": "Bottine"
+      },
+      "values": {
+        "shaft_height": 200,
+        "calf_circ": 300,
+        "ankle_circ": 240
+      }
+    },
+    {
+      "id": "riding",
+      "label": {
+        "en": "Riding boot",
+        "es": "Bota de montar",
+        "fr": "Botte d'équitation"
+      },
+      "values": {
+        "shaft_height": 380,
+        "calf_circ": 400,
+        "ankle_circ": 265
+      }
+    },
+    {
+      "id": "over-knee",
+      "label": {
+        "en": "Over-the-knee",
+        "es": "Bota sobre la rodilla",
+        "fr": "Cuissarde"
+      },
+      "values": {
+        "shaft_height": 480,
+        "calf_circ": 480,
+        "ankle_circ": 270
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "hook-and-loop adjustment closure",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "hook-loop-tape",
+      "linked": true,
+      "params_map": {
+        "strip_width": "tab_width",
+        "strip_length": "calf_circ * 0.25",
+        "sew_margin": "seam_allowance * 0.3"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "closure_tab",
+        "type": "custom",
+        "label": {
+          "en": "Hook-and-loop closure tab",
+          "es": "Lengüeta de cierre de velcro",
+          "fr": "Patte de fermeture auto-agrippante"
+        },
+        "edges": [
+          {
+            "piece": "tab",
+            "edge": "sewn_end"
+          }
+        ],
+        "parameters": [
+          "tab_width",
+          "calf_circ",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "cone_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Cone development seam",
+          "es": "Costura del desarrollo del cono",
+          "fr": "Couture du développement du cône"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "seam_a"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "seam_b"
+          }
+        ],
+        "parameters": [
+          "shaft_height",
+          "calf_circ",
+          "ankle_circ"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Commercial boot shapers are single-size polypropylene tubes that fit one boot and are thrown out with it. Cutting the true cone to a measured calf makes one insert that fits the boots someone actually owns, in canvas offcuts, and keeps a repairable leather boot upright for another decade. The hook-and-loop tape is an open printable Yantra4D object sized to the same tab, so the adjustment is a part you print rather than a sleeve you replace.",
+      "es": "Las hormas comerciales para botas son tubos de polipropileno de talla única que sirven a una bota y se tiran con ella. Cortar el cono verdadero a una pantorrilla medida produce un inserto que sirve a las botas que alguien realmente tiene, con retazos de lona, y mantiene erguida otra década una bota de piel reparable. La cinta de velcro es un objeto imprimible abierto de Yantra4D dimensionado a la misma lengüeta: el ajuste es una pieza que se imprime, no una manga que se reemplaza.",
+      "fr": "Les embauchoirs de botte du commerce sont des tubes en polypropylène de taille unique qui vont à une seule botte et sont jetés avec elle. Développer le vrai cône sur un mollet mesuré donne un insert qui va aux bottes que l'on possède réellement, en chutes de toile, et tient droite une décennie de plus une botte de cuir réparable. Le ruban auto-agrippant est un objet Yantra4D ouvert et imprimable dimensionné à la même patte : le réglage est une pièce à imprimer, pas une gaine à remplacer."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

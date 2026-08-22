@@ -1,0 +1,585 @@
+{
+  "project": {
+    "name": "Cotehardie",
+    "slug": "cotehardie",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The fitted gown of the mid-to-late 14th century: a four-panel body cut in one length from shoulder to hem, with NO waist seam, released into a full skirt by triangular gores inserted into the seams below the hip, and closed by lacing through worked eyelets at the side. The gores are built first and their sewn side MEASURED, so each body panel's slit is cut to exactly that length and the inserted gore balances by construction; the hem sweep is likewise measured off the built polygons rather than assumed.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El vestido entallado de mediados y finales del siglo XIV: un cuerpo de cuatro paños cortado de una sola pieza del hombro al bajo, SIN costura de cintura, que se abre en falda amplia mediante nesgas triangulares insertadas en las costuras bajo la cadera, y se cierra con cordones por ojales trabajados en el costado. Las nesgas se construyen primero y su lado cosido se MIDE, de modo que la abertura de cada paño se corta exactamente a esa longitud y la nesga encaja por construcción; el vuelo del bajo también se mide sobre los polígonos construidos en lugar de suponerse.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La robe ajustée du milieu et de la fin du XIVe siècle : un corps de quatre panneaux coupé d'une seule longueur de l'épaule à l'ourlet, SANS couture de taille, libéré en jupe ample par des gores triangulaires insérés dans les coutures sous la hanche, et fermé par un laçage dans des œillets brodés sur le côté. Les gores sont construits d'abord et leur côté cousu MESURÉ, de sorte que la fente de chaque panneau est coupée exactement à cette longueur et que le gore inséré s'équilibre par construction ; l'ampleur de l'ourlet est de même mesurée sur les polygones construits plutôt que supposée.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "cotehardie",
+      "historical",
+      "costume",
+      "medieval",
+      "14th-century",
+      "gores",
+      "side-lacing",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Drafted from the documented construction tradition of the mid-to-late 14th-century fitted gown: a four-panel body with no waist seam, fullness added by gores set into the seams below the hip, side lacing through worked eyelets, and close forearm-buttoned sleeves. Not traced from any single extant garment or published pattern.",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Complete gown",
+        "es": "Vestido completo",
+        "fr": "Robe complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "side",
+        "gore",
+        "sleeve"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front panel",
+        "es": "Paño delantero",
+        "fr": "Panneau devant"
+      },
+      "default_color": "#8f6f52",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": false
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back panel",
+        "es": "Paño trasero",
+        "fr": "Panneau dos"
+      },
+      "default_color": "#7d6047",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": false
+      }
+    },
+    {
+      "id": "side",
+      "label": {
+        "en": "Side panel (lacing)",
+        "es": "Paño lateral (cordonería)",
+        "fr": "Panneau de côté (laçage)"
+      },
+      "default_color": "#9b7b5c",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "gore",
+      "label": {
+        "en": "Skirt gore",
+        "es": "Nesga de falda",
+        "fr": "Gore de jupe"
+      },
+      "default_color": "#a98a67",
+      "cut": {
+        "quantity": 4,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Close sleeve",
+        "es": "Manga ajustada",
+        "fr": "Manche ajustée"
+      },
+      "default_color": "#6f553f",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Body fit",
+        "es": "Ajuste al cuerpo",
+        "fr": "Ajustement au corps"
+      }
+    },
+    {
+      "id": "silhouette",
+      "label": {
+        "en": "Skirt & silhouette",
+        "es": "Falda y silueta",
+        "fr": "Jupe et silhouette"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 900,
+      "min": 700,
+      "max": 1400,
+      "step": 10,
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Close fit — the cotehardie takes very little ease, because the side lacing does the fitting",
+        "es": "Ajuste ceñido — la cotehardie lleva muy poca holgura, porque el cordón lateral hace el ajuste",
+        "fr": "Ajustement près du corps — la cotehardie prend très peu d'aisance, le laçage latéral faisant l'ajustement"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 740,
+      "min": 560,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "Shaped by the seams themselves — there is no waist seam and no dart anywhere in this garment",
+        "es": "Conformado por las propias costuras — no hay costura de cintura ni pinza alguna en esta prenda",
+        "fr": "Façonné par les coutures elles-mêmes — ni couture de taille ni pince dans ce vêtement"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 980,
+      "min": 760,
+      "max": 1500,
+      "step": 10,
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      },
+      "tooltip": {
+        "en": "The widest the body panels get; below this line the gores take over",
+        "es": "Lo más ancho que llegan los paños; por debajo de esta línea mandan las nesgas",
+        "fr": "La plus grande largeur des panneaux ; sous cette ligne, les gores prennent le relais"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      }
+    },
+    {
+      "id": "waist_drop",
+      "type": "slider",
+      "group": "fit",
+      "default": 380,
+      "min": 280,
+      "max": 520,
+      "step": 5,
+      "label": {
+        "en": "Shoulder to waist (mm)",
+        "es": "Del hombro a la cintura (mm)",
+        "fr": "De l'épaule à la taille (mm)"
+      },
+      "tooltip": {
+        "en": "Sets where the body nips in, and with it the armhole depth",
+        "es": "Define dónde se entalla el cuerpo, y con ello la profundidad de la sisa",
+        "fr": "Définit où le corps se resserre, et avec lui la profondeur d'emmanchure"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 130,
+      "min": 90,
+      "max": 190,
+      "step": 5,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombro (mm)",
+        "fr": "Largeur d'épaule (mm)"
+      },
+      "tooltip": {
+        "en": "Neck point out to shoulder point on one side; each panel's shoulder drop is solved from it so all three seams match",
+        "es": "Del punto de cuello al de hombro en un lado; la caída de cada paño se resuelve a partir de él para que las tres costuras coincidan",
+        "fr": "Du point d'encolure au point d'épaule d'un côté ; la pente de chaque panneau en est déduite pour que les trois coutures s'égalent"
+      }
+    },
+    {
+      "id": "gown_length",
+      "type": "slider",
+      "group": "silhouette",
+      "default": 1350,
+      "min": 900,
+      "max": 1750,
+      "step": 10,
+      "label": {
+        "en": "Gown length (mm)",
+        "es": "Largo del vestido (mm)",
+        "fr": "Longueur de la robe (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to hem in ONE cut length — the body is never divided at the waist",
+        "es": "Del hombro al bajo en UNA sola longitud — el cuerpo nunca se corta en la cintura",
+        "fr": "De l'épaule à l'ourlet en UNE seule longueur — le corps n'est jamais coupé à la taille"
+      }
+    },
+    {
+      "id": "gore_rise",
+      "type": "slider",
+      "group": "silhouette",
+      "default": 620,
+      "min": 250,
+      "max": 1100,
+      "step": 10,
+      "label": {
+        "en": "Gore rise (mm)",
+        "es": "Altura de la nesga (mm)",
+        "fr": "Hauteur du gore (mm)"
+      },
+      "tooltip": {
+        "en": "How far up the seam the gore's apex reaches; clamped so it can never rise above the waist",
+        "es": "Hasta dónde sube el vértice de la nesga por la costura; limitado para que nunca pase de la cintura",
+        "fr": "Jusqu'où remonte la pointe du gore dans la couture ; bridé pour ne jamais dépasser la taille"
+      }
+    },
+    {
+      "id": "gore_flare",
+      "type": "slider",
+      "group": "silhouette",
+      "default": 260,
+      "min": 80,
+      "max": 520,
+      "step": 10,
+      "label": {
+        "en": "Gore flare (mm)",
+        "es": "Vuelo de la nesga (mm)",
+        "fr": "Évasement du gore (mm)"
+      },
+      "tooltip": {
+        "en": "Width each gore adds at the hem; four gores, so the sweep grows four times this",
+        "es": "Ancho que añade cada nesga en el bajo; son cuatro, así que el vuelo crece cuatro veces esto",
+        "fr": "Largeur ajoutée par chaque gore à l'ourlet ; quatre gores, donc l'ampleur croît d'autant"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 600,
+      "min": 420,
+      "max": 740,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Underarm to wrist; the period sleeve runs long and closes over the hand",
+        "es": "De la sisa a la muñeca; la manga de época va larga y cierra sobre la mano",
+        "fr": "De l'emmanchure au poignet ; la manche d'époque est longue et ferme sur la main"
+      }
+    },
+    {
+      "id": "eyelet_pitch",
+      "type": "slider",
+      "group": "construction",
+      "default": 26,
+      "min": 15,
+      "max": 50,
+      "step": 1,
+      "label": {
+        "en": "Eyelet pitch (mm)",
+        "es": "Paso entre ojales (mm)",
+        "fr": "Pas des œillets (mm)"
+      },
+      "tooltip": {
+        "en": "Spacing of the side lacing, and of the forearm buttons; it also caps how wide an eyelet flange can be before neighbours collide",
+        "es": "Separación del cordón lateral y de los botones del antebrazo; también limita el ancho del reborde del ojal antes de que choquen",
+        "fr": "Espacement du laçage latéral et des boutons d'avant-bras ; il borne aussi la largeur de collerette d'œillet avant collision"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "The gore seams carry the skirt's whole weight; the hem carries a deeper turn-up",
+        "es": "Las costuras de las nesgas soportan todo el peso de la falda; el bajo lleva un doblez más profundo",
+        "fr": "Les coutures de gore portent tout le poids de la jupe ; l'ourlet porte un rentré plus profond"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "gore_rise < gown_length - waist_drop",
+      "severity": "error",
+      "message": {
+        "en": "A gore cannot rise above the waist — the body must stay whole where it fits the torso.",
+        "es": "Una nesga no puede subir por encima de la cintura — el cuerpo debe quedar entero donde ajusta el torso.",
+        "fr": "Un gore ne peut pas remonter au-dessus de la taille — le corps doit rester entier là où il ajuste le torse."
+      }
+    },
+    {
+      "expression": "hip_girth > waist_girth",
+      "severity": "warning",
+      "message": {
+        "en": "With the hip no wider than the waist the body panels stop shaping and the gown reads as a tube.",
+        "es": "Si la cadera no supera a la cintura, los paños dejan de conformar y el vestido se lee como un tubo.",
+        "fr": "Si la hanche n'excède pas la taille, les panneaux cessent de façonner et la robe se lit comme un tube."
+      }
+    },
+    {
+      "expression": "shoulder_width > eyelet_pitch",
+      "severity": "warning",
+      "message": {
+        "en": "An eyelet pitch approaching the shoulder width leaves too few lacing holes to close the side.",
+        "es": "Un paso de ojales cercano al ancho de hombro deja muy pocos agujeros para cerrar el costado.",
+        "fr": "Un pas d'œillets proche de la largeur d'épaule laisse trop peu de trous pour fermer le côté."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "working_gown",
+      "label": {
+        "en": "Working gown",
+        "es": "Vestido de faena",
+        "fr": "Robe de travail"
+      },
+      "values": {
+        "gown_length": 1150,
+        "gore_flare": 180,
+        "gore_rise": 480,
+        "sleeve_length": 520
+      }
+    },
+    {
+      "id": "court_cotehardie",
+      "label": {
+        "en": "Court cotehardie",
+        "es": "Cotehardie de corte",
+        "fr": "Cotehardie de cour"
+      },
+      "values": {
+        "gown_length": 1600,
+        "gore_flare": 420,
+        "gore_rise": 820,
+        "sleeve_length": 700
+      }
+    },
+    {
+      "id": "close_fitted",
+      "label": {
+        "en": "Close-fitted",
+        "es": "Muy entallado",
+        "fr": "Très ajusté"
+      },
+      "values": {
+        "bust_girth": 840,
+        "waist_girth": 660,
+        "hip_girth": 920,
+        "eyelet_pitch": 20
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "pdf",
+    "json"
+  ],
+  "fabrics": [
+    "lana-melton-abrigo"
+  ],
+  "notion": {
+    "kind": "eyelet",
+    "subtype": "worked side-lacing eyelets up the side seam",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "garment-eyelet",
+      "linked": true,
+      "params_map": {
+        "inner_dia": "4",
+        "flange_dia": "eyelet_pitch * 0.42",
+        "barrel_h": "seam_allowance * 0.25",
+        "wall": "1",
+        "washer_t": "1"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "side_lacing",
+        "type": "side_seam",
+        "label": {
+          "en": "Side lacing seam",
+          "es": "Costura de cordonería lateral",
+          "fr": "Couture de laçage latéral"
+        },
+        "edges": [
+          {
+            "piece": "side",
+            "edge": "side"
+          },
+          {
+            "piece": "front",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "eyelet_pitch",
+          "waist_girth",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "gore_insertion",
+        "type": "custom",
+        "label": {
+          "en": "Gore set into the seam slit",
+          "es": "Nesga insertada en la abertura de la costura",
+          "fr": "Gore inséré dans la fente de couture"
+        },
+        "edges": [
+          {
+            "piece": "gore",
+            "edge": "side_l"
+          },
+          {
+            "piece": "front",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "gore_rise",
+          "gore_flare",
+          "gown_length"
+        ]
+      },
+      {
+        "id": "shoulder_seams",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder seams (all three solved equal)",
+          "es": "Costuras de hombro (las tres resueltas iguales)",
+          "fr": "Coutures d'épaule (les trois résolues égales)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "side",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "shoulder_width",
+          "bust_girth"
+        ]
+      },
+      {
+        "id": "sleeve_setting",
+        "type": "armscye",
+        "label": {
+          "en": "Sleeve cap into the measured armscye",
+          "es": "Copa de manga en la sisa medida",
+          "fr": "Tête de manche dans l'emmanchure mesurée"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          },
+          {
+            "piece": "front",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "waist_drop",
+          "sleeve_length",
+          "hip_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The gored, waist-seamless body is the medieval answer to a problem modern drafting solves with darts and a waist join, and it is routinely lost when a costume is drafted as a modern bodice sewn to a modern skirt. Publishing it parametrically — with the gore's sewn side measured off the built triangle and the body's slit cut to that measurement — keeps the actual technique legible and fittable to a real body, so a reenactor, a student, or a theatre wardrobe can build the correct garment rather than a silhouette that only looks medieval from a distance.",
+      "es": "El cuerpo con nesgas y sin costura de cintura es la respuesta medieval a un problema que el patronaje moderno resuelve con pinzas y una unión en la cintura, y suele perderse cuando un traje se traza como un corpiño moderno cosido a una falda moderna. Publicarlo de forma paramétrica — midiendo el lado cosido de la nesga sobre el triángulo construido y cortando la abertura del cuerpo a esa medida — mantiene legible la técnica real y ajustable a un cuerpo concreto, de modo que un recreador, un estudiante o un vestuario teatral pueda construir la prenda correcta y no una silueta que sólo parece medieval de lejos.",
+      "fr": "Le corps à gores sans couture de taille est la réponse médiévale à un problème que le patronage moderne règle par des pinces et une jonction à la taille, et elle se perd d'ordinaire quand un costume est tracé comme un corsage moderne cousu à une jupe moderne. Le publier de façon paramétrique — en mesurant le côté cousu du gore sur le triangle construit et en coupant la fente du corps à cette mesure — garde la technique réelle lisible et ajustable à un corps précis, afin qu'un reconstituteur, un étudiant ou un atelier de théâtre bâtisse le vêtement juste plutôt qu'une silhouette qui n'a de médiéval que l'éloignement."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

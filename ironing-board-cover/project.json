@@ -1,0 +1,379 @@
+{
+  "project": {
+    "name": "Ironing Board Cover",
+    "slug": "ironing-board-cover",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The drawstring cover for the one tool every other cartridge in this commons depends on. A cover that is loose scorches and creases what it is pressing; a cover that is drum-tight is what makes a pressed seam stay pressed. The cover is drafted to the board's tapered nose-and-shoulder outline plus a turn-under skirt, a bias-cut casing carries the drawcord round the whole perimeter to a Yantra4D `cord-lock`, and a felt pad softens beneath. The casing runs the cover's outside perimeter — a closed curve of nose arc, two long tapering sides and a square heel, for which there is no formula; the cartridge builds the outline once, measures the full perimeter, and cuts the casing to it. Separately, because the casing wraps a curve, its inner edge travels a shorter path than its outer: that difference is found by measuring an offset copy of the same outline, and is what forces the casing onto the bias rather than the straight grain.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La funda con jareta para la única herramienta de la que dependen todos los demás cartuchos de este commons. Una funda floja chamusca y arruga lo que plancha; una funda tensa como un tambor es lo que hace que una costura planchada se quede planchada. La funda se traza según el contorno ahusado de punta y hombros de la mesa más una falda de vuelta bajo el canto, una jareta cortada al bies lleva el cordón por todo el perímetro hasta un `cord-lock` de Yantra4D, y una almohadilla de fieltro amortigua debajo. La jareta recorre el perímetro exterior de la funda —una curva cerrada de arco de punta, dos largos costados ahusados y un talón recto—, para la cual no hay fórmula; el cartucho construye el contorno una vez, mide el perímetro completo y corta la jareta a esa medida. Aparte, como la jareta envuelve una curva, su borde interior recorre menos camino que el exterior: esa diferencia se obtiene midiendo una copia desplazada del mismo contorno, y es lo que obliga a cortar la jareta al bies y no al hilo.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La housse à coulisse pour le seul outil dont dépendent tous les autres cartouches de ce commons. Une housse lâche roussit et froisse ce qu'elle presse ; une housse tendue comme un tambour est ce qui fait qu'une couture pressée le reste. La housse est tracée d'après le contour fuselé — nez et épaules — de la table, plus une jupe de rabat, une coulisse coupée en biais conduit le cordon sur tout le périmètre jusqu'à un `cord-lock` Yantra4D, et un molleton de feutre amortit dessous. La coulisse parcourt le périmètre extérieur de la housse — une courbe fermée faite d'un arc de nez, de deux longs côtés fuselés et d'un talon droit —, pour laquelle il n'existe aucune formule ; le cartouche construit le contour une fois, mesure le périmètre entier et coupe la coulisse à cette mesure. Par ailleurs, comme la coulisse enveloppe une courbe, son bord intérieur parcourt un chemin plus court que l'extérieur : cet écart est obtenu en mesurant une copie décalée du même contour, et c'est ce qui impose la coupe en biais plutôt qu'en droit-fil.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "ironing-board-cover",
+      "care",
+      "pressing",
+      "household",
+      "drawstring",
+      "bias",
+      "cord-lock",
+      "hardware",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full board cover",
+        "es": "Funda de mesa completa",
+        "fr": "Housse de table complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "cover",
+        "casing",
+        "pad"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "cover",
+      "label": {
+        "en": "Cover (board outline + skirt)",
+        "es": "Funda (contorno de la mesa + falda)",
+        "fr": "Housse (contour de table + jupe)"
+      },
+      "default_color": "#7d6a52",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "casing",
+      "label": {
+        "en": "Bias drawcord casing",
+        "es": "Jareta al bies para el cordón",
+        "fr": "Coulisse en biais pour le cordon"
+      },
+      "default_color": "#94805f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "pad",
+      "label": {
+        "en": "Felt pad (board line only)",
+        "es": "Almohadilla de fieltro (solo línea de mesa)",
+        "fr": "Molleton de feutre (ligne de table seule)"
+      },
+      "default_color": "#a8956f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Board size",
+        "es": "Tamaño de la mesa",
+        "fr": "Taille de la table"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "board_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 1240,
+      "min": 700,
+      "max": 1500,
+      "step": 10,
+      "label": {
+        "en": "Board length (mm)",
+        "es": "Largo de la mesa (mm)",
+        "fr": "Longueur de table (mm)"
+      },
+      "tooltip": {
+        "en": "Nose tip to heel; measure the board itself, not the cover it is wearing",
+        "es": "De la punta al talón; mide la mesa misma, no la funda que trae puesta",
+        "fr": "De la pointe au talon ; mesurez la table elle-même, non la housse qu'elle porte"
+      }
+    },
+    {
+      "id": "board_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 380,
+      "min": 250,
+      "max": 500,
+      "step": 10,
+      "label": {
+        "en": "Board width (mm)",
+        "es": "Ancho de la mesa (mm)",
+        "fr": "Largeur de table (mm)"
+      },
+      "tooltip": {
+        "en": "At the widest point, which is the heel end on almost every board",
+        "es": "En el punto más ancho, que en casi toda mesa es el extremo del talón",
+        "fr": "Au point le plus large, qui est le talon sur presque toutes les tables"
+      }
+    },
+    {
+      "id": "nose_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 130,
+      "min": 60,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Nose width (mm)",
+        "es": "Ancho de la punta (mm)",
+        "fr": "Largeur du nez (mm)"
+      },
+      "tooltip": {
+        "en": "Across the rounded nose; sets the taper of the two long sides",
+        "es": "A lo ancho de la punta redondeada; define el ahusado de los dos costados",
+        "fr": "En travers du nez arrondi ; fixe le fuselage des deux longs côtés"
+      }
+    },
+    {
+      "id": "skirt_depth",
+      "type": "slider",
+      "group": "construction",
+      "default": 90,
+      "min": 40,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Skirt depth (mm)",
+        "es": "Profundidad de la falda (mm)",
+        "fr": "Profondeur de la jupe (mm)"
+      },
+      "tooltip": {
+        "en": "The turn-under below the board edge; too little and the cord cannot pull it taut",
+        "es": "La vuelta bajo el canto; con poca, el cordón no puede tensarla",
+        "fr": "Le rabat sous le bord ; trop peu et le cordon ne peut la tendre"
+      }
+    },
+    {
+      "id": "cord_diameter",
+      "type": "slider",
+      "group": "construction",
+      "default": 5,
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "label": {
+        "en": "Cord diameter (mm)",
+        "es": "Diámetro del cordón (mm)",
+        "fr": "Diamètre du cordon (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the casing's finished channel and the Yantra4D cord-lock's bore",
+        "es": "Define el canal acabado de la jareta y el paso del cord-lock de Yantra4D",
+        "fr": "Fixe le canal fini de la coulisse et le passage du cord-lock Yantra4D"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 0,
+      "max": 25,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam; the casing carries it along the measured perimeter",
+        "es": "Aplicado a todas las costuras; la jareta lo lleva por el perímetro medido",
+        "fr": "Appliquée à toutes les coutures ; la coulisse la porte le long du périmètre mesuré"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "nose_width < board_width",
+      "severity": "error",
+      "message": {
+        "en": "The nose must be narrower than the heel, or the outline is not a board and there is no taper to draft.",
+        "es": "La punta debe ser más estrecha que el talón, o el contorno no es una mesa y no hay ahusado que trazar.",
+        "fr": "Le nez doit être plus étroit que le talon, sinon le contour n'est pas une table et il n'y a pas de fuselage à tracer."
+      }
+    },
+    {
+      "expression": "skirt_depth > cord_diameter * 6",
+      "severity": "warning",
+      "message": {
+        "en": "A skirt this shallow around a cord this thick leaves no fabric between the channel and the raw edge.",
+        "es": "Una falda tan corta con un cordón tan grueso no deja tela entre el canal y el borde vivo.",
+        "fr": "Une jupe aussi courte autour d'un cordon aussi épais ne laisse pas de tissu entre le canal et le bord vif."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "tabletop",
+      "label": {
+        "en": "Tabletop board",
+        "es": "Mesa de sobremesa",
+        "fr": "Table à poser"
+      },
+      "values": {
+        "board_length": 760,
+        "board_width": 300,
+        "nose_width": 110
+      }
+    },
+    {
+      "id": "standard",
+      "label": {
+        "en": "Standard board",
+        "es": "Mesa estándar",
+        "fr": "Table standard"
+      },
+      "values": {
+        "board_length": 1240,
+        "board_width": 380,
+        "nose_width": 130
+      }
+    },
+    {
+      "id": "wide",
+      "label": {
+        "en": "Wide / studio board",
+        "es": "Mesa ancha de taller",
+        "fr": "Table large d'atelier"
+      },
+      "values": {
+        "board_length": 1400,
+        "board_width": 480,
+        "nose_width": 200
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "perimeter drawcord lock",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "cord-lock",
+      "linked": true,
+      "params_map": {
+        "cord_dia": "cord_diameter",
+        "cords": "2",
+        "body_size": "cord_diameter * 4",
+        "wall": "cord_diameter * 0.5"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "cord_casing",
+        "type": "custom",
+        "label": {
+          "en": "Perimeter drawcord casing",
+          "es": "Jareta perimetral del cordón",
+          "fr": "Coulisse périmétrique du cordon"
+        },
+        "edges": [
+          {
+            "piece": "casing",
+            "edge": "fold_top"
+          },
+          {
+            "piece": "casing",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "cord_diameter",
+          "skirt_depth"
+        ]
+      },
+      {
+        "id": "board_perimeter",
+        "type": "hem",
+        "label": {
+          "en": "Measured board perimeter seam",
+          "es": "Costura del perímetro medido de la mesa",
+          "fr": "Couture du périmètre mesuré de la table"
+        },
+        "edges": [
+          {
+            "piece": "cover",
+            "edge": "side_top"
+          },
+          {
+            "piece": "cover",
+            "edge": "side_bottom"
+          }
+        ],
+        "parameters": [
+          "board_length",
+          "board_width",
+          "nose_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Replacement board covers are sold in two or three sizes with a metallised coating that flakes into whatever is being pressed, and a board whose cover no longer fits is usually thrown out whole. A cover cut to a measured board, in plain cotton over a felt pad, is launderable, repairable, and fits the board someone already owns. The cord-lock is an open printable Yantra4D object sized to the cord, so the one part that always breaks first is the one part you can print.",
+      "es": "Las fundas de repuesto se venden en dos o tres tallas con un recubrimiento metalizado que se descascara sobre lo que se plancha, y una mesa cuya funda ya no ajusta suele tirarse entera. Una funda cortada a una mesa medida, en algodón liso sobre una almohadilla de fieltro, es lavable, reparable y ajusta a la mesa que alguien ya tiene. El cord-lock es un objeto imprimible abierto de Yantra4D dimensionado al cordón: la única pieza que siempre se rompe primero es la única que puedes imprimir.",
+      "fr": "Les housses de rechange se vendent en deux ou trois tailles avec un revêtement métallisé qui s'écaille sur ce que l'on repasse, et une table dont la housse ne va plus est le plus souvent jetée entière. Une housse coupée sur une table mesurée, en coton uni sur un molleton de feutre, est lavable, réparable et va à la table que l'on possède déjà. Le cord-lock est un objet Yantra4D ouvert et imprimable dimensionné au cordon : la seule pièce qui casse toujours en premier est la seule que l'on peut imprimer."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

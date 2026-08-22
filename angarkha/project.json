@@ -1,0 +1,657 @@
+{
+  "project": {
+    "name": "Aṅgarkhā (अंगरखा)",
+    "slug": "angarkha",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The tie-fastened overlapping robe of northern South Asia — the name is from Sanskrit aṅga-rakṣaka, \"body-protector\" — worn across Rajasthan, Gujarat, the Punjab and the Deccan. Its signature is an asymmetric chest: the right front crosses over the left and is cut away in a curve, revealing a designed portion of the panel beneath, often in contrasting cloth. The two fronts are therefore different pieces, not a mirrored pair, which is why this draft cannot be built from a symmetric bodice block. Below a fitted chest, triangular kalī gores flare the skirt. This cartridge measures the armscye and the overlap as real curves and solves the sleeve head and the exposed inner field from those measurements; the gore's slant is measured from its own polygon and the body's lower side edge solved to it, so the gore sets in flat. Six cloth ties fasten the garment — there is no hardware. The multi-pointed chakdar court form is deliberately excluded. Offered with respect for the living tradition.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La túnica cruzada y atada del norte del sur de Asia — el nombre viene del sánscrito aṅga-rakṣaka, «protector del cuerpo» — usada en Rajastán, Guyarat, el Punyab y el Decán. Su rasgo distintivo es un pecho asimétrico: el delantero derecho cruza sobre el izquierdo y se recorta en curva, dejando ver una porción deliberada del paño inferior, a menudo en tela de contraste. Los dos delanteros son, por tanto, piezas distintas y no un par simétrico, razón por la cual este trazado no puede partir de un bloque de corpiño simétrico. Bajo un pecho ajustado, nesgas triangulares kalī dan vuelo a la falda. Este cartucho mide la sisa y el cruce como curvas reales y despeja de esas medidas la copa de manga y el campo interior expuesto; la generatriz de la nesga se mide sobre su propio polígono y el canto lateral inferior del cuerpo se resuelve a ella, de modo que la nesga asienta plana. Seis cintas de tela cierran la prenda — no hay herrajes. La forma cortesana chakdar, de múltiples puntas, queda deliberadamente excluida. Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La robe croisée à liens du nord de l'Asie du Sud — le nom vient du sanskrit aṅga-rakṣaka, « protecteur du corps » — portée au Rajasthan, au Gujarat, au Pendjab et dans le Deccan. Sa signature est une poitrine asymétrique : le devant droit croise sur le gauche et se découpe en courbe, révélant une portion voulue du panneau dessous, souvent en tissu contrastant. Les deux devants sont donc des pièces différentes et non une paire symétrique, ce qui interdit de partir d'un bloc de corsage symétrique. Sous une poitrine ajustée, des lés triangulaires kalī donnent de l'ampleur à la jupe. Cette cartouche mesure l'emmanchure et le croisement comme de vraies courbes et en déduit la tête de manche et le champ intérieur exposé ; l'apothème du lé est mesuré sur son propre polygone et le bord latéral inférieur du corps y est résolu, si bien que le lé s'insère à plat. Six liens de tissu ferment le vêtement — aucune quincaillerie. La forme de cour chakdar, à pointes multiples, est délibérément exclue. Proposé dans le respect de la tradition vivante.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "angarkha",
+      "south-asian",
+      "heritage",
+      "robe",
+      "asymmetric",
+      "wrap",
+      "gored",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Robe",
+        "es": "Túnica completa",
+        "fr": "Robe complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "outer_front",
+        "inner_front",
+        "back",
+        "sleeve",
+        "gore",
+        "tie"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "outer_front",
+      "label": {
+        "en": "Outer (right) front",
+        "es": "Delantero exterior (derecho)",
+        "fr": "Devant extérieur (droit)"
+      },
+      "default_color": "#c96f3f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "inner_front",
+      "label": {
+        "en": "Inner (left) front",
+        "es": "Delantero interior (izquierdo)",
+        "fr": "Devant intérieur (gauche)"
+      },
+      "default_color": "#e2a05c",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#c96f3f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "center",
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve (āstīn)",
+        "es": "Manga (āstīn)",
+        "fr": "Manche (āstīn)"
+      },
+      "default_color": "#b85f34",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "fold_edge": "fold",
+        "mirror": true
+      }
+    },
+    {
+      "id": "gore",
+      "label": {
+        "en": "Skirt gore (kalī)",
+        "es": "Nesga de falda (kalī)",
+        "fr": "Lé de jupe (kalī)"
+      },
+      "default_color": "#d4834a",
+      "cut": {
+        "quantity": 4,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "tie",
+      "label": {
+        "en": "Tie (bandhan)",
+        "es": "Cinta (bandhan)",
+        "fr": "Lien (bandhan)"
+      },
+      "default_color": "#8d4a26",
+      "cut": {
+        "quantity": 6,
+        "on_fold": true,
+        "fold_edge": "fold",
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "overlap",
+      "label": {
+        "en": "Overlap & Neck",
+        "es": "Cruce y cuello",
+        "fr": "Croisement et encolure"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 980,
+      "min": 700,
+      "max": 1400,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Body measurement before ease is added",
+        "es": "Medida del cuerpo antes de añadir holgura",
+        "fr": "Mesure du corps avant ajout d'aisance"
+      }
+    },
+    {
+      "id": "chest_ease",
+      "type": "slider",
+      "group": "body",
+      "default": 140,
+      "min": 60,
+      "max": 320,
+      "step": 10,
+      "label": {
+        "en": "Chest ease (mm)",
+        "es": "Holgura de pecho (mm)",
+        "fr": "Aisance de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "The aṅgarkhā is fitted through the chest but never tight",
+        "es": "El aṅgarkhā es ajustado en el pecho pero nunca apretado",
+        "fr": "L'aṅgarkhā est ajusté à la poitrine sans jamais serrer"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "group": "body",
+      "default": 1050,
+      "min": 600,
+      "max": 1500,
+      "step": 10,
+      "label": {
+        "en": "Body length (mm)",
+        "es": "Largo del cuerpo (mm)",
+        "fr": "Longueur du corps (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to hem — hip length for everyday, knee or below for formal",
+        "es": "Del hombro al ruedo — a la cadera para diario, a la rodilla o más para formal",
+        "fr": "De l'épaule à l'ourlet — à la hanche au quotidien, au genou ou plus en habillé"
+      }
+    },
+    {
+      "id": "waist_drop",
+      "type": "slider",
+      "group": "body",
+      "default": 420,
+      "min": 280,
+      "max": 620,
+      "step": 10,
+      "label": {
+        "en": "Waist drop (mm)",
+        "es": "Caída a la cintura (mm)",
+        "fr": "Descente à la taille (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to waist — where the skirt gores begin",
+        "es": "Del hombro a la cintura — donde arrancan las nesgas",
+        "fr": "De l'épaule à la taille — où commencent les lés"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "body",
+      "default": 430,
+      "min": 320,
+      "max": 560,
+      "step": 5,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombros (mm)",
+        "fr": "Largeur d'épaules (mm)"
+      },
+      "tooltip": {
+        "en": "Point to point across the back",
+        "es": "De punta a punta por la espalda",
+        "fr": "D'un point d'épaule à l'autre dans le dos"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "body",
+      "default": 570,
+      "min": 300,
+      "max": 700,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to cuff",
+        "es": "Del hombro al puño",
+        "fr": "De l'épaule au poignet"
+      }
+    },
+    {
+      "id": "cuff_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 250,
+      "min": 180,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Cuff girth (mm)",
+        "es": "Contorno de puño (mm)",
+        "fr": "Tour de poignet (mm)"
+      },
+      "tooltip": {
+        "en": "Sleeve opening at the wrist",
+        "es": "Abertura de la manga en la muñeca",
+        "fr": "Ouverture de la manche au poignet"
+      }
+    },
+    {
+      "id": "overlap_run",
+      "type": "slider",
+      "group": "overlap",
+      "default": 260,
+      "min": 100,
+      "max": 460,
+      "step": 10,
+      "label": {
+        "en": "Overlap run (mm)",
+        "es": "Alcance del cruce (mm)",
+        "fr": "Portée du croisement (mm)"
+      },
+      "tooltip": {
+        "en": "How far the right front crosses over the left",
+        "es": "Cuánto cruza el delantero derecho sobre el izquierdo",
+        "fr": "Jusqu'où le devant droit croise sur le gauche"
+      }
+    },
+    {
+      "id": "overlap_depth",
+      "type": "slider",
+      "group": "overlap",
+      "default": 300,
+      "min": 120,
+      "max": 520,
+      "step": 10,
+      "label": {
+        "en": "Overlap curve depth (mm)",
+        "es": "Profundidad de la curva de cruce (mm)",
+        "fr": "Profondeur de la courbe de croisement (mm)"
+      },
+      "tooltip": {
+        "en": "How deep the cut-away scoops — it sets how much of the inner panel shows",
+        "es": "Cuánto ahonda el recorte — fija cuánto se ve del paño interior",
+        "fr": "Profondeur de l'échancrure — elle fixe la part visible du panneau intérieur"
+      }
+    },
+    {
+      "id": "neck_width",
+      "type": "slider",
+      "group": "overlap",
+      "default": 170,
+      "min": 120,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Neck width (mm)",
+        "es": "Ancho de escote (mm)",
+        "fr": "Largeur d'encolure (mm)"
+      },
+      "tooltip": {
+        "en": "Half-width at the shoulder line",
+        "es": "Semiancho en la línea de hombro",
+        "fr": "Demi-largeur à la ligne d'épaule"
+      }
+    },
+    {
+      "id": "gore_flare",
+      "type": "slider",
+      "group": "construction",
+      "default": 200,
+      "min": 60,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Gore flare (mm)",
+        "es": "Vuelo de la nesga (mm)",
+        "fr": "Évasement du lé (mm)"
+      },
+      "tooltip": {
+        "en": "Half-width of the kalī at the hem — the body's side edge is solved to its slant",
+        "es": "Semiancho de la kalī en el ruedo — el canto lateral del cuerpo se resuelve a su generatriz",
+        "fr": "Demi-largeur du kalī à l'ourlet — le bord du corps est résolu à son apothème"
+      }
+    },
+    {
+      "id": "tie_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 22,
+      "min": 10,
+      "max": 45,
+      "step": 1,
+      "label": {
+        "en": "Tie width (mm)",
+        "es": "Ancho de cinta (mm)",
+        "fr": "Largeur de lien (mm)"
+      },
+      "tooltip": {
+        "en": "Finished width of each bandhan",
+        "es": "Ancho acabado de cada bandhan",
+        "fr": "Largeur finie de chaque bandhan"
+      }
+    },
+    {
+      "id": "tie_length",
+      "type": "slider",
+      "group": "construction",
+      "default": 380,
+      "min": 200,
+      "max": 700,
+      "step": 10,
+      "label": {
+        "en": "Tie length (mm)",
+        "es": "Largo de cinta (mm)",
+        "fr": "Longueur de lien (mm)"
+      },
+      "tooltip": {
+        "en": "Long enough to knot comfortably at the side",
+        "es": "Suficiente para anudar con holgura al costado",
+        "fr": "Assez long pour nouer aisément sur le côté"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 6,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Added to every joined edge",
+        "es": "Añadido a cada borde unido",
+        "fr": "Ajoutée à chaque bord assemblé"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 30,
+      "min": 15,
+      "max": 80,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de ruedo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Added at the hem and the cuffs",
+        "es": "Añadido en el ruedo y los puños",
+        "fr": "Ajoutée à l'ourlet et aux poignets"
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "body_length > waist_drop + 200",
+      "severity": "warning",
+      "message": {
+        "en": "The waist must sit well above the hem or there is no skirt for the gores.",
+        "es": "La cintura debe quedar muy por encima del ruedo o no hay falda para las nesgas.",
+        "fr": "La taille doit se situer bien au-dessus de l'ourlet, sinon les lés n'ont pas de jupe."
+      }
+    },
+    {
+      "expression": "overlap_run < chest_girth / 3",
+      "severity": "warning",
+      "message": {
+        "en": "The overlap cannot cross further than the chest it wraps.",
+        "es": "El cruce no puede rebasar el pecho que envuelve.",
+        "fr": "Le croisement ne peut dépasser la poitrine qu'il enveloppe."
+      }
+    },
+    {
+      "expression": "overlap_depth > neck_width",
+      "severity": "warning",
+      "message": {
+        "en": "Too shallow a curve and the inner panel never shows — the aṅgarkhā's signature is lost.",
+        "es": "Con una curva muy somera el paño interior no se ve — se pierde el sello del aṅgarkhā.",
+        "fr": "Une courbe trop faible et le panneau intérieur ne paraît pas — la signature de l'aṅgarkhā disparaît."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "everyday",
+      "label": {
+        "en": "Everyday",
+        "es": "Diario",
+        "fr": "Quotidien"
+      },
+      "values": {
+        "body_length": 900,
+        "gore_flare": 150,
+        "overlap_depth": 260
+      }
+    },
+    {
+      "id": "formal",
+      "label": {
+        "en": "Formal",
+        "es": "Formal",
+        "fr": "Habillé"
+      },
+      "values": {
+        "body_length": 1250,
+        "gore_flare": 320,
+        "overlap_depth": 380,
+        "overlap_run": 320
+      }
+    },
+    {
+      "id": "short-coat",
+      "label": {
+        "en": "Short coat",
+        "es": "Chaqueta corta",
+        "fr": "Veste courte"
+      },
+      "values": {
+        "body_length": 720,
+        "waist_drop": 400,
+        "gore_flare": 90
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "popelina-algodon"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "geometry_type": "seam",
+        "label": {
+          "en": "Armscye (measured curve to sleeve head)",
+          "es": "Sisa (curva medida a la copa de manga)",
+          "fr": "Emmanchure (courbe mesurée à la tête de manche)"
+        },
+        "edges": [
+          {
+            "piece": "outer_front",
+            "edge": "armscye"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "head"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "chest_ease",
+          "shoulder_width"
+        ]
+      },
+      {
+        "id": "overlap_cross",
+        "type": "placket",
+        "geometry_type": "seam",
+        "label": {
+          "en": "Overlap crossing (outer curve over inner panel)",
+          "es": "Cruce del solapo (curva exterior sobre paño interior)",
+          "fr": "Croisement (courbe extérieure sur panneau intérieur)"
+        },
+        "edges": [
+          {
+            "piece": "outer_front",
+            "edge": "overlap"
+          },
+          {
+            "piece": "inner_front",
+            "edge": "center"
+          }
+        ],
+        "parameters": [
+          "overlap_run",
+          "overlap_depth",
+          "neck_width"
+        ]
+      },
+      {
+        "id": "gore_set",
+        "type": "side_seam",
+        "geometry_type": "seam",
+        "label": {
+          "en": "Gore set-in (measured slant to body side)",
+          "es": "Inserción de nesga (generatriz medida al costado)",
+          "fr": "Insertion de lé (apothème mesuré au côté)"
+        },
+        "edges": [
+          {
+            "piece": "gore",
+            "edge": "slant_front"
+          },
+          {
+            "piece": "outer_front",
+            "edge": "side_lower"
+          }
+        ],
+        "parameters": [
+          "gore_flare",
+          "waist_drop",
+          "body_length"
+        ]
+      },
+      {
+        "id": "tie_anchor",
+        "type": "custom",
+        "geometry_type": "seam",
+        "label": {
+          "en": "Tie anchors (inner and outer pairs)",
+          "es": "Anclajes de cinta (pares interior y exterior)",
+          "fr": "Ancrages de liens (paires intérieure et extérieure)"
+        },
+        "edges": [
+          {
+            "piece": "tie",
+            "edge": "anchor_end"
+          },
+          {
+            "piece": "outer_front",
+            "edge": "side_upper"
+          }
+        ],
+        "parameters": [
+          "tie_width",
+          "tie_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "heritage": true,
+      "hardware_bridge": false
+    },
+    "societal_benefit": {
+      "en": "An asymmetric garment cannot be drafted by mirroring half a pattern, which is exactly why it is the first thing dropped when heritage clothing is industrialised into symmetric blocks — the curve gets straightened, the inner panel stops showing, and what is sold as an aṅgarkhā becomes a wrap top. Keeping a correct, made-to-measure draft open preserves the asymmetry itself: two genuinely different fronts, a measured crossing curve, and a designed exposed field. The surface crafts stay with their own artisans.",
+      "es": "Una prenda asimétrica no puede trazarse reflejando medio patrón, y por eso es lo primero que se pierde cuando la ropa patrimonial se industrializa en bloques simétricos — la curva se endereza, el paño interior deja de verse, y lo que se vende como aṅgarkhā se vuelve una blusa cruzada. Mantener abierto un trazado correcto y a la medida preserva la asimetría misma: dos delanteros realmente distintos, una curva de cruce medida y un campo expuesto deliberado. Los oficios de superficie permanecen con sus artesanas y artesanos.",
+      "fr": "Un vêtement asymétrique ne se trace pas en miroitant un demi-patron, et c'est précisément ce qui disparaît en premier quand l'habit patrimonial est industrialisé en blocs symétriques — la courbe se redresse, le panneau intérieur cesse de paraître, et ce qu'on vend comme aṅgarkhā devient un cache-cœur. Garder ouvert un tracé correct et sur mesure préserve l'asymétrie elle-même : deux devants véritablement différents, une courbe de croisement mesurée et un champ exposé voulu. Les métiers de surface restent à leurs artisans."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

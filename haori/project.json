@@ -1,0 +1,586 @@
+{
+  "project": {
+    "name": "Haori (羽織)",
+    "slug": "haori",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The hip- or thigh-length jacket worn open over a kimono, closed only by a short braided cord (羽織紐 haori-himo) tied between two small cloth loops. It is not a coat and not a short kimono but a distinct garment with its own proportions. Every piece is a rectangle of 反物 (tanmono) bolt cloth used whole, so this draft takes the bolt width as a real parameter and solves the front overlap from it — reporting honestly whether a given bolt closes a given chest at all — rather than cutting shaped panels to a girth. That is why one haori fits a range of bodies. The 前衿 (maeeri) collar folds back to form a shallow lapel, so the collar strip is cut at double its finished width and its length solved from the measured run of both back-neck curves and both front edges. The sleeve attaches along a solved length only: the 振り (furi) opening below it is left unsewn, and drafting the attachment equal to the full sleeve depth — the commonest haori error — would sew it shut. Crested montsuki formal haori is deliberately excluded. Offered with respect for the living tradition.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La chaqueta hasta la cadera o el muslo que se lleva abierta sobre el kimono, cerrada solo por un cordón trenzado corto (羽織紐 haori-himo) atado entre dos presillas de tela. No es un abrigo ni un kimono corto, sino una prenda propia con sus proporciones. Cada pieza es un rectángulo de tela de rollo 反物 (tanmono) usado entero, de modo que este trazado toma el ancho del rollo como parámetro real y despeja de él el cruce delantero — informando con honestidad si un rollo dado alcanza a cerrar un pecho dado — en vez de cortar paños entallados a un contorno. Por eso un mismo haori sirve a cuerpos distintos. El cuello 前衿 (maeeri) se dobla hacia fuera formando una solapa somera, así que la tira de cuello se corta al doble de su ancho acabado y su largo se despeja de la medida de ambas curvas de escote trasero y de ambos cantos delanteros. La manga se une solo a lo largo de un tramo resuelto: la abertura 振り (furi) queda sin coser, y trazar la unión igual a la profundidad total de la manga — el error más común — la cerraría. El haori formal con blasones (montsuki) queda deliberadamente excluido. Ofrecido con respeto por la tradición viva.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La veste à la hanche ou à mi-cuisse portée ouverte sur le kimono, fermée seulement par un court cordon tressé (羽織紐 haori-himo) noué entre deux petites brides de tissu. Ce n'est ni un manteau ni un kimono court, mais un vêtement distinct avec ses propres proportions. Chaque pièce est un rectangle de rouleau 反物 (tanmono) utilisé entier : ce tracé prend donc la largeur du rouleau comme paramètre réel et en déduit le croisement devant — en indiquant honnêtement si un rouleau donné ferme une poitrine donnée — au lieu de découper des panneaux galbés sur un tour de corps. D'où le fait qu'un même haori convienne à des morphologies variées. Le col 前衿 (maeeri) se replie vers l'extérieur en revers peu profond : la bande de col se coupe donc au double de sa largeur finie, et sa longueur découle de la mesure des deux courbes d'encolure dos et des deux bords devant. La manche ne se monte que sur une longueur résolue : l'ouverture 振り (furi) reste non cousue, et tracer le montage égal à la profondeur totale de la manche — l'erreur la plus fréquente — la refermerait. Le haori formel à blasons (montsuki) est délibérément exclu. Proposé dans le respect de la tradition vivante.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "haori",
+      "japanese",
+      "heritage",
+      "jacket",
+      "kimono-family",
+      "tanmono",
+      "straight-cut",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Haori",
+        "es": "Haori completo",
+        "fr": "Haori complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "body",
+        "okumi",
+        "sleeve",
+        "collar",
+        "chi"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body half (migoro)",
+        "es": "Medio cuerpo (migoro)",
+        "fr": "Demi-corps (migoro)"
+      },
+      "default_color": "#3d4a5c",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "fold_edge": "shoulder",
+        "mirror": true
+      }
+    },
+    {
+      "id": "okumi",
+      "label": {
+        "en": "Front panel (okumi)",
+        "es": "Paño delantero (okumi)",
+        "fr": "Panneau devant (okumi)"
+      },
+      "default_color": "#4a5a6e",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve (sode)",
+        "es": "Manga (sode)",
+        "fr": "Manche (sode)"
+      },
+      "default_color": "#35414f",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "fold_edge": "fold",
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Collar (eri)",
+        "es": "Cuello (eri)",
+        "fr": "Col (eri)"
+      },
+      "default_color": "#2b3542",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "chi",
+      "label": {
+        "en": "Cord loop (chi)",
+        "es": "Presilla del cordón (chi)",
+        "fr": "Bride de cordon (chi)"
+      },
+      "default_color": "#5e6b7d",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "fold_edge": "fold",
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "bolt",
+      "label": {
+        "en": "Bolt & Body",
+        "es": "Rollo y cuerpo",
+        "fr": "Rouleau et corps"
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve & Furi",
+        "es": "Manga y furi",
+        "fr": "Manche et furi"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Collar & Construction",
+        "es": "Cuello y construcción",
+        "fr": "Col et construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bolt_width",
+      "type": "slider",
+      "group": "bolt",
+      "default": 375,
+      "min": 300,
+      "max": 700,
+      "step": 5,
+      "label": {
+        "en": "Bolt width (mm)",
+        "es": "Ancho del rollo (mm)",
+        "fr": "Largeur du rouleau (mm)"
+      },
+      "tooltip": {
+        "en": "Traditional tanmono is ~375 mm — this is the unit the whole garment is built from",
+        "es": "El tanmono tradicional mide ~375 mm — es la unidad de la que se construye todo",
+        "fr": "Le tanmono traditionnel fait ~375 mm — c'est l'unité de tout le vêtement"
+      }
+    },
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "bolt",
+      "default": 980,
+      "min": 700,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "The target circuit — the overlap the bolt yields is solved against it, not cut to it",
+        "es": "El contorno objetivo — el cruce que da el rollo se despeja contra él, no se corta a él",
+        "fr": "Le tour visé — le croisement que donne le rouleau en découle, sans y être découpé"
+      }
+    },
+    {
+      "id": "haori_length",
+      "type": "slider",
+      "group": "bolt",
+      "default": 850,
+      "min": 500,
+      "max": 1200,
+      "step": 10,
+      "label": {
+        "en": "Haori length (mm)",
+        "es": "Largo del haori (mm)",
+        "fr": "Longueur du haori (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to hem — hip length is usual, thigh length for a longer cut",
+        "es": "Del hombro al ruedo — a la cadera lo habitual, al muslo para un corte largo",
+        "fr": "De l'épaule à l'ourlet — à la hanche d'ordinaire, à mi-cuisse en coupe longue"
+      }
+    },
+    {
+      "id": "sleeve_depth",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 490,
+      "min": 280,
+      "max": 800,
+      "step": 10,
+      "label": {
+        "en": "Sleeve depth (mm)",
+        "es": "Profundidad de manga (mm)",
+        "fr": "Profondeur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder fold to sleeve hem — only part of this attaches to the body",
+        "es": "Del doblez del hombro al ruedo de la manga — solo parte se une al cuerpo",
+        "fr": "Du pli d'épaule à l'ourlet de manche — une partie seulement se monte au corps"
+      }
+    },
+    {
+      "id": "sleeve_reach",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 340,
+      "min": 200,
+      "max": 520,
+      "step": 10,
+      "label": {
+        "en": "Sleeve reach (mm)",
+        "es": "Alcance de manga (mm)",
+        "fr": "Portée de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to sleeve end — a bolt width, used whole",
+        "es": "Del hombro al extremo de la manga — un ancho de rollo, usado entero",
+        "fr": "De l'épaule au bout de manche — une largeur de rouleau, entière"
+      }
+    },
+    {
+      "id": "furi_open",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 170,
+      "min": 0,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Furi opening (mm)",
+        "es": "Abertura furi (mm)",
+        "fr": "Ouverture furi (mm)"
+      },
+      "tooltip": {
+        "en": "The unsewn gap below the arm — set 0 to close it, but then it is not a haori sleeve",
+        "es": "El hueco sin coser bajo el brazo — ponga 0 para cerrarlo, pero deja de ser manga de haori",
+        "fr": "L'espace non cousu sous le bras — mettez 0 pour le fermer, mais ce n'est plus une manche de haori"
+      }
+    },
+    {
+      "id": "collar_finished",
+      "type": "slider",
+      "group": "construction",
+      "default": 55,
+      "min": 25,
+      "max": 110,
+      "step": 5,
+      "label": {
+        "en": "Collar finished width (mm)",
+        "es": "Ancho acabado del cuello (mm)",
+        "fr": "Largeur finie du col (mm)"
+      },
+      "tooltip": {
+        "en": "The visible maeeri lapel — the strip is cut at double this plus turn-of-cloth",
+        "es": "La solapa maeeri visible — la tira se corta al doble más el grosor de doblez",
+        "fr": "Le revers maeeri visible — la bande se coupe au double plus l'épaisseur de pli"
+      }
+    },
+    {
+      "id": "neck_drop",
+      "type": "slider",
+      "group": "construction",
+      "default": 95,
+      "min": 40,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Back neck drop (mm)",
+        "es": "Caída del escote trasero (mm)",
+        "fr": "Descente d'encolure dos (mm)"
+      },
+      "tooltip": {
+        "en": "How far the back neck scoops — the only curve on the body panel",
+        "es": "Cuánto ahonda el escote trasero — la única curva del paño del cuerpo",
+        "fr": "Profondeur de l'échancrure dos — la seule courbe du panneau de corps"
+      }
+    },
+    {
+      "id": "chi_drop",
+      "type": "slider",
+      "group": "construction",
+      "default": 300,
+      "min": 150,
+      "max": 520,
+      "step": 10,
+      "label": {
+        "en": "Cord loop height (mm)",
+        "es": "Altura de la presilla (mm)",
+        "fr": "Hauteur de la bride (mm)"
+      },
+      "tooltip": {
+        "en": "Where the chi loops sit — measured up from the hem, same on both fronts",
+        "es": "Dónde se sitúan las presillas chi — medido desde el ruedo, igual en ambos delanteros",
+        "fr": "Où se placent les brides chi — mesuré depuis l'ourlet, identique des deux côtés"
+      }
+    },
+    {
+      "id": "turn_of_cloth",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Turn of cloth (mm)",
+        "es": "Grosor de doblez (mm)",
+        "fr": "Épaisseur de pli (mm)"
+      },
+      "tooltip": {
+        "en": "Extra the collar needs because the fold takes up the cloth's own thickness",
+        "es": "Sobrante que el cuello necesita porque el doblez consume el grosor de la tela",
+        "fr": "Supplément nécessaire au col car le pli consomme l'épaisseur du tissu"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 6,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Added to every joined edge",
+        "es": "Añadido a cada borde unido",
+        "fr": "Ajoutée à chaque bord assemblé"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 30,
+      "min": 10,
+      "max": 80,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de ruedo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Added at the hem and the sleeve hems",
+        "es": "Añadido en el ruedo y en los ruedos de manga",
+        "fr": "Ajoutée à l'ourlet et aux ourlets de manche"
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "bolt_width * 3 > chest_girth",
+      "severity": "warning",
+      "message": {
+        "en": "Three bolt widths must exceed the chest, or the fronts cannot meet at all.",
+        "es": "Tres anchos de rollo deben superar el pecho, o los delanteros no llegan a juntarse.",
+        "fr": "Trois largeurs de rouleau doivent dépasser la poitrine, sinon les devants ne se rejoignent pas."
+      }
+    },
+    {
+      "expression": "sleeve_depth > furi_open + 120",
+      "severity": "warning",
+      "message": {
+        "en": "The furi cannot swallow the sleeve — something must still attach to the body.",
+        "es": "El furi no puede consumir la manga — algo debe seguir uniéndose al cuerpo.",
+        "fr": "Le furi ne peut absorber la manche — une part doit rester montée au corps."
+      }
+    },
+    {
+      "expression": "chi_drop < haori_length",
+      "severity": "warning",
+      "message": {
+        "en": "The cord loops must sit on the garment, not above its shoulder.",
+        "es": "Las presillas deben quedar sobre la prenda, no por encima del hombro.",
+        "fr": "Les brides doivent se situer sur le vêtement, non au-dessus de l'épaule."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "standard",
+      "label": {
+        "en": "Standard",
+        "es": "Estándar",
+        "fr": "Standard"
+      },
+      "values": {
+        "haori_length": 850,
+        "sleeve_depth": 490,
+        "furi_open": 170
+      }
+    },
+    {
+      "id": "long",
+      "label": {
+        "en": "Long haori",
+        "es": "Haori largo",
+        "fr": "Haori long"
+      },
+      "values": {
+        "haori_length": 1050,
+        "sleeve_depth": 560,
+        "collar_finished": 65
+      }
+    },
+    {
+      "id": "wide-mill",
+      "label": {
+        "en": "Wide mill cloth",
+        "es": "Tela de telar ancho",
+        "fr": "Tissu de métier large"
+      },
+      "values": {
+        "bolt_width": 560,
+        "chest_girth": 1200
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "sleeve_attach",
+        "type": "armscye",
+        "geometry_type": "seam",
+        "label": {
+          "en": "Sleeve attachment (solved length; furi left open)",
+          "es": "Unión de manga (largo resuelto; furi abierto)",
+          "fr": "Montage de manche (longueur résolue ; furi ouvert)"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "attach"
+          },
+          {
+            "piece": "body",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "sleeve_depth",
+          "furi_open"
+        ]
+      },
+      {
+        "id": "collar_seam",
+        "type": "neckline",
+        "geometry_type": "seam",
+        "label": {
+          "en": "Collar seam (solved from measured neck and front runs)",
+          "es": "Costura de cuello (despejada de escote y cantos medidos)",
+          "fr": "Couture de col (déduite de l'encolure et des bords mesurés)"
+        },
+        "edges": [
+          {
+            "piece": "collar",
+            "edge": "neck_edge"
+          },
+          {
+            "piece": "body",
+            "edge": "back_neck"
+          },
+          {
+            "piece": "okumi",
+            "edge": "front_edge"
+          }
+        ],
+        "parameters": [
+          "collar_finished",
+          "neck_drop",
+          "turn_of_cloth"
+        ]
+      },
+      {
+        "id": "okumi_seam",
+        "type": "side_seam",
+        "geometry_type": "seam",
+        "label": {
+          "en": "Okumi seam (front panel to body)",
+          "es": "Costura del okumi (paño delantero al cuerpo)",
+          "fr": "Couture de l'okumi (panneau devant au corps)"
+        },
+        "edges": [
+          {
+            "piece": "okumi",
+            "edge": "body_edge"
+          },
+          {
+            "piece": "body",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "bolt_width",
+          "chest_girth",
+          "haori_length"
+        ]
+      },
+      {
+        "id": "chi_anchor",
+        "type": "custom",
+        "geometry_type": "seam",
+        "label": {
+          "en": "Cord loop anchor (chi to front panel)",
+          "es": "Anclaje de la presilla (chi al paño delantero)",
+          "fr": "Ancrage de la bride (chi au panneau devant)"
+        },
+        "edges": [
+          {
+            "piece": "chi",
+            "edge": "anchor_end"
+          },
+          {
+            "piece": "okumi",
+            "edge": "front_edge"
+          }
+        ],
+        "parameters": [
+          "chi_drop",
+          "collar_finished"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "heritage": true,
+      "hardware_bridge": false
+    },
+    "societal_benefit": {
+      "en": "Kimono-family garments are built so they can be unpicked, washed flat as bolt lengths, and re-sewn — a repair and resizing logic that pre-dates and outperforms most of what replaced it. An open draft that keeps the bolt as the unit preserves that logic instead of quietly translating the garment into shaped Western panels, and it tells a maker honestly when a given bolt simply will not close a given chest. The crests that carry family identity are left to the families they belong to.",
+      "es": "Las prendas de la familia del kimono se construyen para poder descoserse, lavarse planas como largos de rollo y volverse a coser — una lógica de reparación y reajuste anterior y superior a casi todo lo que la sustituyó. Un trazado abierto que conserva el rollo como unidad preserva esa lógica en vez de traducir la prenda a paños occidentales entallados, y avisa con honestidad cuando un rollo dado sencillamente no cierra un pecho dado. Los blasones que portan la identidad familiar se dejan a las familias a las que pertenecen.",
+      "fr": "Les vêtements de la famille du kimono sont conçus pour être décousus, lavés à plat en longueurs de rouleau, puis recousus — une logique de réparation et de retouche antérieure et supérieure à presque tout ce qui l'a remplacée. Un tracé ouvert qui garde le rouleau comme unité préserve cette logique au lieu de traduire discrètement le vêtement en panneaux occidentaux galbés, et il dit honnêtement quand un rouleau donné ne fermera tout simplement pas une poitrine donnée. Les blasons porteurs de l'identité familiale sont laissés aux familles auxquelles ils appartiennent."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
