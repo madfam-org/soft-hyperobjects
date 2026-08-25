@@ -1,0 +1,512 @@
+{
+  "project": {
+    "name": "Sensor Hem Band",
+    "slug": "sensor-hem-band",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The instrumented hem of a compression garment: a doubled band at the leg or sleeve opening that both grips — so the garment does not ride — and carries a sensor plate with the conductive run that reaches it. A gripping band is cut SHORTER than the opening and stretched onto it, and the obvious formula is `opening × (1 − grip)`. That formula is wrong the moment something rigid lives in the band. The plate cannot stretch: its footprint plus its margins is a DEAD length that contributes in full to the sewn band and nothing at all to the stretch, so the grip must come out of the LIVE remainder only — `band = dead + (opening − dead) × (1 − grip)`. The naive version comes up short by exactly `dead × grip`: 7.0 mm at the defaults, 26.4 mm at a wide plate and a hard grip. On a compression hem that is not a fitting nuisance but a band that will not reach, or one that reaches by stretching cloth across the plate until the plate rocks. The dead island is capped at 55% of the opening, because at the parameter extremes it exceeds the opening entirely and the live remainder goes negative. The conductive run lies in a channel BETWEEN the two layers, never on the face, so nothing abrades it.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La bastilla instrumentada de una prenda de compresión: una banda doble en la boca de pierna o manga que a la vez agarra — para que la prenda no suba — y porta una placa de sensor con el trazo conductivo que la alimenta. Una banda de agarre se corta MÁS CORTA que la abertura y se estira al coserla, y la fórmula obvia es `abertura × (1 − agarre)`. Esa fórmula falla en cuanto algo rígido vive dentro de la banda. La placa no estira: su huella más sus márgenes es una longitud MUERTA que aporta íntegra a la banda cosida y nada al estiramiento, así que el agarre debe salir sólo del remanente VIVO — `banda = muerta + (abertura − muerta) × (1 − agarre)`. La versión ingenua queda corta exactamente por `muerta × agarre`: 7.0 mm en los valores por defecto, 26.4 mm con placa ancha y agarre fuerte. En una bastilla de compresión eso no es una molestia de ajuste sino una banda que no alcanza, o que alcanza estirando la tela sobre la placa hasta que la placa se mece. La isla muerta se limita al 55% de la abertura, porque en los extremos de parámetros supera la abertura entera y el remanente vivo se vuelve negativo. El trazo conductivo va en un canal ENTRE las dos capas, nunca en la cara, así nada lo desgasta.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "L'ourlet instrumenté d'un vêtement de compression : une bande doublée à l'ouverture de jambe ou de manche qui à la fois serre — pour que le vêtement ne remonte pas — et porte une plaque capteur avec le tracé conducteur qui l'alimente. Une bande de serrage se coupe PLUS COURTE que l'ouverture puis s'étire au montage, et la formule évidente est `ouverture × (1 − serrage)`. Cette formule devient fausse dès qu'un élément rigide loge dans la bande. La plaque ne s'étire pas : son empreinte plus ses marges est une longueur MORTE qui contribue en totalité à la bande cousue et pas du tout à l'étirement, si bien que le serrage ne doit sortir que du reste VIVANT — `bande = morte + (ouverture − morte) × (1 − serrage)`. La version naïve est courte d'exactement `morte × serrage` : 7,0 mm aux valeurs par défaut, 26,4 mm avec une plaque large et un serrage fort. Sur un ourlet de compression ce n'est pas une gêne d'ajustement mais une bande qui n'atteint pas, ou qui atteint en étirant le tissu sur la plaque jusqu'à ce que la plaque bascule. L'îlot mort est plafonné à 55% de l'ouverture, car aux extrêmes des paramètres il dépasse l'ouverture entière et le reste vivant devient négatif. Le tracé conducteur repose dans un canal ENTRE les deux couches, jamais en surface, de sorte que rien ne l'abrase.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "sensor-hem-band",
+      "hem-band",
+      "e-textile",
+      "compression",
+      "negative-ease",
+      "conductive-channel",
+      "sensor-mount-plate",
+      "hardware",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full band",
+        "es": "Banda completa",
+        "fr": "Bande complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "band",
+        "facing",
+        "tab"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "band",
+      "label": {
+        "en": "Sensor hem band (solved length)",
+        "es": "Banda sensora de bastilla (largo resuelto)",
+        "fr": "Bande d'ourlet capteur (longueur résolue)"
+      },
+      "default_color": "#2b2f33",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "facing",
+      "label": {
+        "en": "Band facing (channel side)",
+        "es": "Vista de la banda (lado del canal)",
+        "fr": "Parementure de bande (côté canal)"
+      },
+      "default_color": "#3b4148",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "tab",
+      "label": {
+        "en": "Service tab",
+        "es": "Lengüeta de servicio",
+        "fr": "Patte de service"
+      },
+      "default_color": "#4c545d",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "opening",
+      "label": {
+        "en": "Opening & grip",
+        "es": "Abertura y agarre",
+        "fr": "Ouverture et serrage"
+      }
+    },
+    {
+      "id": "sensing",
+      "label": {
+        "en": "Sensing",
+        "es": "Sensado",
+        "fr": "Captation"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "hem_opening",
+      "type": "slider",
+      "group": "opening",
+      "default": 380,
+      "min": 140,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Garment opening girth (mm)",
+        "es": "Contorno de la abertura (mm)",
+        "fr": "Tour de l'ouverture (mm)"
+      },
+      "tooltip": {
+        "en": "The opening the band sews to — a calf, an ankle, a wrist. The band is cut shorter than this, and by how much is solved rather than assumed",
+        "es": "La abertura a la que se cose la banda — pantorrilla, tobillo, muñeca. La banda se corta más corta que esto, y cuánto se resuelve en vez de suponerse",
+        "fr": "L'ouverture sur laquelle la bande se coud — mollet, cheville, poignet. La bande est coupée plus courte que cela, et de combien est résolu plutôt que supposé"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "ankle_girth"
+      }
+    },
+    {
+      "id": "band_depth",
+      "type": "slider",
+      "group": "opening",
+      "default": 60,
+      "min": 25,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Finished band depth (mm)",
+        "es": "Alto acabado de la banda (mm)",
+        "fr": "Hauteur finie de la bande (mm)"
+      },
+      "tooltip": {
+        "en": "Cut at double this (it folds). Floored at the plate depth plus the channel plus 20 mm, so the plate and the channel always fit side by side",
+        "es": "Se corta al doble (se dobla). Con piso en el fondo de la placa más el canal más 20 mm, para que placa y canal siempre quepan lado a lado",
+        "fr": "Coupée au double (elle se plie). Plancher à la profondeur de plaque plus le canal plus 20 mm, pour que plaque et canal tiennent toujours côte à côte"
+      }
+    },
+    {
+      "id": "grip",
+      "type": "slider",
+      "group": "opening",
+      "default": 0.12,
+      "min": 0,
+      "max": 0.3,
+      "step": 0.01,
+      "label": {
+        "en": "Grip (negative ease on the live run)",
+        "es": "Agarre (holgura negativa sobre el tramo vivo)",
+        "fr": "Serrage (aisance négative sur la portion vivante)"
+      },
+      "tooltip": {
+        "en": "Taken out of the LIVE remainder only, never out of the whole opening — the rigid plate's footprint cannot give any of it back",
+        "es": "Se toma sólo del remanente VIVO, nunca de toda la abertura — la huella de la placa rígida no puede devolver nada de él",
+        "fr": "Pris uniquement sur le reste VIVANT, jamais sur toute l'ouverture — l'empreinte de la plaque rigide n'en restitue rien"
+      }
+    },
+    {
+      "id": "plate_w",
+      "type": "slider",
+      "group": "sensing",
+      "default": 34,
+      "min": 12,
+      "max": 120,
+      "step": 2,
+      "label": {
+        "en": "Sensor plate width (mm)",
+        "es": "Ancho de la placa del sensor (mm)",
+        "fr": "Largeur de la plaque capteur (mm)"
+      },
+      "tooltip": {
+        "en": "Round the band. With the margins it forms the dead length — the part of the band that must never be stretched while sewing",
+        "es": "A lo largo de la banda. Con los márgenes forma la longitud muerta — la parte que jamás debe estirarse al coser",
+        "fr": "Le long de la bande. Avec les marges elle forme la longueur morte — la part qui ne doit jamais être étirée au montage"
+      }
+    },
+    {
+      "id": "plate_d",
+      "type": "slider",
+      "group": "sensing",
+      "default": 26,
+      "min": 10,
+      "max": 110,
+      "step": 2,
+      "label": {
+        "en": "Sensor plate depth (mm)",
+        "es": "Fondo de la placa del sensor (mm)",
+        "fr": "Profondeur de la plaque capteur (mm)"
+      },
+      "tooltip": {
+        "en": "Across the band. The finished band depth is floored at this plus the channel plus 20 mm",
+        "es": "A lo ancho de la banda. El alto acabado tiene como piso esto más el canal más 20 mm",
+        "fr": "En travers de la bande. La hauteur finie a pour plancher ceci plus le canal plus 20 mm"
+      }
+    },
+    {
+      "id": "plate_margin",
+      "type": "slider",
+      "group": "sensing",
+      "default": 12,
+      "min": 4,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Dead margin each side of the plate (mm)",
+        "es": "Margen muerto a cada lado de la placa (mm)",
+        "fr": "Marge morte de chaque côté de la plaque (mm)"
+      },
+      "tooltip": {
+        "en": "Cloth that must not stretch either, because stretch right at a rigid edge is what makes the plate rock and the stitching cut",
+        "es": "Tela que tampoco debe estirarse: el estiramiento justo en un canto rígido es lo que mece la placa y corta la puntada",
+        "fr": "Tissu qui ne doit pas s'étirer non plus : l'étirement juste au bord rigide est ce qui fait basculer la plaque et coupe la piqûre"
+      }
+    },
+    {
+      "id": "plate_pos",
+      "type": "slider",
+      "group": "sensing",
+      "default": 0.25,
+      "min": 0.05,
+      "max": 0.95,
+      "step": 0.05,
+      "label": {
+        "en": "Plate position round the band",
+        "es": "Posición de la placa sobre la banda",
+        "fr": "Position de la plaque sur la bande"
+      },
+      "tooltip": {
+        "en": "A fraction of the SOLVED band length, then held clear of both ends so the seat never straddles the band's own join seam",
+        "es": "Fracción del largo RESUELTO de la banda, luego separada de ambos extremos para que el asiento nunca cruce la unión de la banda",
+        "fr": "Fraction de la longueur RÉSOLUE de la bande, puis écartée des deux bouts pour que le siège n'enjambe jamais la couture de jonction"
+      }
+    },
+    {
+      "id": "channel_w",
+      "type": "slider",
+      "group": "construction",
+      "default": 9,
+      "min": 4,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Conductive channel width (mm)",
+        "es": "Ancho del canal conductivo (mm)",
+        "fr": "Largeur du canal conducteur (mm)"
+      },
+      "tooltip": {
+        "en": "Two stitch lines this far apart, between the layers. The run is never on the face, so it is never abraded by a shoe or a drum",
+        "es": "Dos líneas de puntada a esta distancia, entre las capas. El trazo nunca va en la cara, así que no lo desgasta ni un zapato ni un tambor",
+        "fr": "Deux lignes de piqûre à cet écart, entre les couches. Le tracé n'est jamais en surface, donc jamais abrasé par une chaussure ou un tambour"
+      }
+    },
+    {
+      "id": "tab_len",
+      "type": "slider",
+      "group": "construction",
+      "default": 55,
+      "min": 25,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Service tab length (mm)",
+        "es": "Largo de la lengüeta de servicio (mm)",
+        "fr": "Longueur de la patte de service (mm)"
+      },
+      "tooltip": {
+        "en": "Where the run leaves the channel for the garment's own seam allowance, with a strain land so a tug is taken by cloth, not by the conductor",
+        "es": "Donde el trazo deja el canal y entra al margen de costura de la prenda, con una zona de anclaje para que el tirón lo tome la tela y no el conductor",
+        "fr": "Là où le tracé quitte le canal pour la marge de couture du vêtement, avec une zone d'ancrage pour qu'une traction soit prise par le tissu, non par le conducteur"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Narrow — the band is coverstitched, never pressed open; a lockstitch on this seam snaps on the first wear",
+        "es": "Estrecho — la banda va con recubridora, nunca abierta a plancha; una puntada de pespunte aquí truena al primer uso",
+        "fr": "Étroite — la bande est recouverte, jamais ouverte au fer ; un point noué sur cette couture casse au premier port"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "plate_w + 2 * plate_margin <= hem_opening * 0.55",
+      "severity": "warning",
+      "message": {
+        "en": "The rigid dead length must stay a minority of the opening; beyond 55% it is capped, because past the opening itself the live remainder would go negative.",
+        "es": "La longitud muerta rígida debe seguir siendo minoría de la abertura; pasado el 55% se limita, porque más allá de la abertura el remanente vivo sería negativo.",
+        "fr": "La longueur morte rigide doit rester minoritaire dans l'ouverture ; au-delà de 55% elle est plafonnée, car passé l'ouverture le reste vivant deviendrait négatif."
+      }
+    },
+    {
+      "expression": "band_depth >= plate_d + channel_w + 20",
+      "severity": "error",
+      "message": {
+        "en": "The band must hold the plate and the channel side by side with a seating margin.",
+        "es": "La banda debe alojar la placa y el canal lado a lado con margen de asiento.",
+        "fr": "La bande doit loger la plaque et le canal côte à côte avec une marge d'assise."
+      }
+    },
+    {
+      "expression": "channel_w <= plate_d",
+      "severity": "warning",
+      "message": {
+        "en": "A channel wider than the plate it feeds leaves the run slack enough to migrate between the layers.",
+        "es": "Un canal más ancho que la placa que alimenta deja el trazo tan holgado que migra entre las capas.",
+        "fr": "Un canal plus large que la plaque qu'il alimente laisse le tracé assez lâche pour migrer entre les couches."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "calf_gait",
+      "label": {
+        "en": "Calf (gait sensing)",
+        "es": "Pantorrilla (marcha)",
+        "fr": "Mollet (marche)"
+      },
+      "values": {
+        "hem_opening": 380,
+        "band_depth": 60,
+        "grip": 0.12,
+        "plate_w": 34,
+        "plate_d": 26
+      }
+    },
+    {
+      "id": "wrist_tight",
+      "label": {
+        "en": "Wrist (hard grip)",
+        "es": "Muñeca (agarre fuerte)",
+        "fr": "Poignet (serrage fort)"
+      },
+      "values": {
+        "hem_opening": 180,
+        "band_depth": 45,
+        "grip": 0.22,
+        "plate_w": 24,
+        "plate_d": 18,
+        "plate_margin": 8
+      }
+    },
+    {
+      "id": "wide_plate_hard_grip",
+      "label": {
+        "en": "Wide plate, hard grip",
+        "es": "Placa ancha, agarre fuerte",
+        "fr": "Plaque large, serrage fort"
+      },
+      "values": {
+        "hem_opening": 520,
+        "grip": 0.3,
+        "plate_w": 64,
+        "plate_d": 40,
+        "plate_margin": 12
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "poliester-elastano-compresion"
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "sensor mount plate sewn into the dead length of a gripping hem band",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sensor-mount-plate",
+      "linked": true,
+      "params_map": {
+        "base_w": "plate_w",
+        "base_d": "plate_d",
+        "base_thick": "plate_d * 0.09",
+        "corner_r": "plate_d * 0.14",
+        "screw_holes": "4",
+        "screw_dia": "plate_d * 0.10",
+        "screw_inset": "plate_d * 0.15"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "e_textile",
+    "interfaces": [
+      {
+        "id": "hem_attach",
+        "type": "hem",
+        "label": {
+          "en": "Solved-length hem attachment",
+          "es": "Unión de bastilla de largo resuelto",
+          "fr": "Montage d'ourlet à longueur résolue"
+        },
+        "edges": [
+          {
+            "piece": "band",
+            "edge": "attach"
+          },
+          {
+            "piece": "facing",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "hem_opening",
+          "grip",
+          "plate_w",
+          "plate_margin",
+          "band_depth"
+        ]
+      },
+      {
+        "id": "plate_seat",
+        "type": "pocket",
+        "label": {
+          "en": "Sensor plate seat (dead length)",
+          "es": "Asiento de la placa (longitud muerta)",
+          "fr": "Siège de la plaque (longueur morte)"
+        },
+        "edges": [
+          {
+            "piece": "band",
+            "edge": "free"
+          }
+        ],
+        "parameters": [
+          "plate_w",
+          "plate_d",
+          "plate_margin",
+          "plate_pos"
+        ]
+      },
+      {
+        "id": "conductive_channel",
+        "type": "custom",
+        "label": {
+          "en": "Interlayer conductive channel",
+          "es": "Canal conductivo entre capas",
+          "fr": "Canal conducteur entre couches"
+        },
+        "edges": [
+          {
+            "piece": "facing",
+            "edge": "free"
+          },
+          {
+            "piece": "tab",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "channel_w",
+          "tab_len",
+          "plate_pos"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "knit_negative_ease": true,
+      "hardware_bridge": true,
+      "e_textile": true
+    },
+    "societal_benefit": {
+      "en": "Instrumented compression wear — gait bands, swelling monitors, sports telemetry — is usually assembled by gluing or taping a sensor onto a finished garment, and the join fails long before the electronics do. The reason is arithmetic nobody writes down: a gripping band is cut short and stretched on, and stretching cloth across a rigid plate is what tears the stitching and makes the plate rock. Naming the plate's footprint as a dead length, taking the grip out of the live remainder only, and marking on the pattern where the machinist must not stretch turns that from craft knowledge into a cut file. It is a garment pattern, not a medical device: it holds a plate and makes no measurement or clinical claim.",
+      "es": "La ropa de compresión instrumentada — bandas de marcha, monitores de edema, telemetría deportiva — se suele armar pegando o encintando un sensor a una prenda terminada, y la unión falla mucho antes que la electrónica. La razón es una aritmética que nadie escribe: una banda de agarre se corta corta y se estira al coser, y estirar la tela sobre una placa rígida es lo que rompe la puntada y mece la placa. Nombrar la huella de la placa como longitud muerta, sacar el agarre sólo del remanente vivo y marcar en el patrón dónde no debe estirar la persona que cose convierte eso de saber de oficio en un archivo de corte. Es un patrón de prenda, no un dispositivo médico: sostiene una placa y no hace ninguna afirmación de medición ni clínica.",
+      "fr": "Les vêtements de compression instrumentés — bandes de marche, moniteurs d'œdème, télémétrie sportive — sont d'ordinaire assemblés en collant ou scotchant un capteur sur un vêtement fini, et la jonction cède bien avant l'électronique. La raison est une arithmétique que personne n'écrit : une bande de serrage se coupe courte et s'étire au montage, et étirer le tissu sur une plaque rigide est ce qui déchire la piqûre et fait basculer la plaque. Nommer l'empreinte de la plaque comme longueur morte, ne prendre le serrage que sur le reste vivant, et marquer sur le patron où la personne qui coud ne doit pas étirer transforme cela d'un savoir de métier en un fichier de coupe. C'est un patron de vêtement, pas un dispositif médical : il tient une plaque et ne formule aucune revendication de mesure ni clinique."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

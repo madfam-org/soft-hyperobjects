@@ -1,0 +1,649 @@
+{
+  "project": {
+    "name": "Button-Aid Cuff Shirt",
+    "slug": "button-aid-cuff-shirt",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A shirt whose cuffs are drafted for the hand that cannot help. One-handed dressing has a specific, asymmetric problem most adaptive shirts miss: a front placket can be managed slowly, but the cuff of the WORKING arm cannot be buttoned at all, because the only hand that could do it is inside it. The usual answers are to sew the cuff shut — which then has to pass over the hand, so it must be enormous and flaps all day — or to hand the wearer a button hook and hope the cuff cooperates. A hook needs three things an ordinary cuff does not provide, and all three are drafted here: somewhere to pull (a sewn loop tab at the overlap end, past the buttonhole, so the pull is straight); room for its wire loop to enter (the buttonhole is cut `button + 2×hook_wire + 2.5`, not the usual `button + 2`); and a cuff that stays open while worked (a stiffened underlap). The cuff is a TWO-POSITION closure and the pattern owes the maker both: closed at the wrist, and open — flat, while the hook works — wide enough to clear the HAND, because the arm goes in before the cuff can be closed. So the underlap is solved UPWARD from `hand_girth` rather than fixed, growing 45 mm on a large hand and 139 mm at the extreme, with the growth reported rather than discovered at the fitting.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una camisa cuyos puños se trazan para la mano que no puede ayudar. Vestirse con una sola mano tiene un problema específico y asimétrico que la mayoría de las camisas adaptativas no ve: una tapeta delantera se maneja despacio, pero el puño del brazo QUE TRABAJA no se puede abotonar en absoluto, porque la única mano que podría hacerlo está dentro de él. Las respuestas habituales son coser el puño cerrado — que entonces debe pasar sobre la mano, así que ha de ser enorme y aletea todo el día — o dar un abotonador y confiar en que el puño coopere. Un abotonador necesita tres cosas que un puño común no da, y las tres se trazan aquí: de dónde jalar (una presilla cosida en el extremo del traslape, pasando el ojal, para que el jalón sea recto); espacio para que entre su lazo de alambre (el ojal se corta `botón + 2×hook_wire + 2.5`, no el usual `botón + 2`); y un puño que se quede abierto mientras se trabaja (un debajo entretelado). El puño es un cierre de DOS POSICIONES y el patrón le debe ambas a quien lo cose: cerrado en la muñeca, y abierto — plano, mientras opera el abotonador — lo bastante ancho para librar la MANO, porque el brazo entra antes de que el puño pueda cerrarse. Por eso el debajo se resuelve HACIA ARRIBA desde `hand_girth` en vez de fijarse, creciendo 45 mm con una mano grande y 139 mm en el extremo, con el crecimiento reportado y no descubierto en la prueba.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une chemise dont les poignets sont tracés pour la main qui ne peut pas aider. S'habiller d'une seule main pose un problème spécifique et asymétrique que la plupart des chemises adaptatives manquent : une patte de devant se gère lentement, mais le poignet du bras QUI TRAVAILLE ne peut pas être boutonné du tout, car la seule main qui le pourrait est à l'intérieur. Les réponses habituelles sont de coudre le poignet fermé — qui doit alors passer par-dessus la main, donc être énorme et battre toute la journée — ou de tendre un tire-bouton en espérant que le poignet coopère. Un tire-bouton exige trois choses qu'un poignet ordinaire ne donne pas, et les trois sont tracées ici : de quoi tirer (une bride cousue au bout du croisement, au-delà de la boutonnière, pour que la traction soit droite) ; de la place pour que sa boucle de fil entre (la boutonnière est coupée `bouton + 2×hook_wire + 2,5`, non le `bouton + 2` habituel) ; et un poignet qui reste ouvert pendant le travail (un dessous entoilé). Le poignet est une fermeture à DEUX POSITIONS et le patron les doit toutes deux : fermé au poignet, et ouvert — à plat, pendant que le crochet opère — assez large pour dégager la MAIN, car le bras entre avant que le poignet ne puisse se fermer. Le dessous est donc résolu VERS LE HAUT depuis `hand_girth` plutôt que fixé, croissant de 45 mm sur une grande main et de 139 mm à l'extrême, la croissance étant rapportée et non découverte à l'essayage.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "button-aid-cuff-shirt",
+      "shirt",
+      "adaptive",
+      "one-handed-dressing",
+      "cuff",
+      "button-hook",
+      "button-hook-aid",
+      "hardware",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full shirt",
+        "es": "Camisa completa",
+        "fr": "Chemise complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "cuff"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Shirt Front",
+        "es": "Delantero de la camisa",
+        "fr": "Devant de chemise"
+      },
+      "default_color": "#e9edf2",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Shirt Back",
+        "es": "Espalda de la camisa",
+        "fr": "Dos de chemise"
+      },
+      "default_color": "#dbe2ea",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": false
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve (long placket slit)",
+        "es": "Manga (abertura de tapeta larga)",
+        "fr": "Manche (fente de patte longue)"
+      },
+      "default_color": "#ccd6e0",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Button-aid cuff (solved open circuit)",
+        "es": "Puño asistido (circuito abierto resuelto)",
+        "fr": "Poignet assisté (circuit ouvert résolu)"
+      },
+      "default_color": "#b8c5d2",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps"
+      }
+    },
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Cuff & hand passage",
+        "es": "Puño y paso de la mano",
+        "fr": "Poignet et passage de la main"
+      }
+    },
+    {
+      "id": "aid",
+      "label": {
+        "en": "Dressing aid",
+        "es": "Ayuda para vestirse",
+        "fr": "Aide à l'habillage"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 1020,
+      "min": 760,
+      "max": 1500,
+      "step": 10,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "150 mm of ease is added; the body is deliberately ordinary, because a shirt that reads as ordinary is part of the point",
+        "es": "Se añaden 150 mm de holgura; el cuerpo es deliberadamente común, porque una camisa que se lee como común es parte del punto",
+        "fr": "150 mm d'aisance sont ajoutés ; le corps est délibérément ordinaire, car une chemise qui se lit comme ordinaire fait partie du propos"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "shirt_length",
+      "type": "slider",
+      "group": "body",
+      "default": 720,
+      "min": 560,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Shirt length (mm)",
+        "es": "Largo de la camisa (mm)",
+        "fr": "Longueur de chemise (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to hem",
+        "es": "De la nuca al ruedo",
+        "fr": "De la nuque à l'ourlet"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "body",
+      "default": 460,
+      "min": 340,
+      "max": 580,
+      "step": 5,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombros (mm)",
+        "fr": "Largeur d'épaules (mm)"
+      },
+      "tooltip": {
+        "en": "Point to point. The back neck width is solved from the measured front shoulder so the seam matches exactly",
+        "es": "De punta a punta. El ancho del escote trasero se resuelve del hombro delantero medido para que la costura empate exacta",
+        "fr": "De pointe à pointe. La largeur d'encolure dos est résolue depuis l'épaule devant mesurée pour que la couture corresponde exactement"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "across_back"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "body",
+      "default": 620,
+      "min": 200,
+      "max": 700,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder point to cuff seam; the cuff's depth is on top of this",
+        "es": "Del hombro a la costura del puño; el alto del puño va además de esto",
+        "fr": "De l'épaule à la couture de poignet ; la hauteur du poignet s'ajoute à cela"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 400,
+      "min": 300,
+      "max": 520,
+      "step": 5,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the neckline drops and the placket stand",
+        "es": "Define las caídas del escote y el ancho de la tapeta",
+        "fr": "Définit les échancrures d'encolure et la largeur de patte"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      }
+    },
+    {
+      "id": "wrist_girth",
+      "type": "slider",
+      "group": "cuff",
+      "default": 175,
+      "min": 130,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Wrist girth (mm)",
+        "es": "Contorno de muñeca (mm)",
+        "fr": "Tour de poignet (mm)"
+      },
+      "tooltip": {
+        "en": "Where the cuff lives all day — the CLOSED position of a two-position closure",
+        "es": "Donde vive el puño todo el día — la posición CERRADA de un cierre de dos posiciones",
+        "fr": "Où le poignet vit toute la journée — la position FERMÉE d'une fermeture à deux positions"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "wrist_girth"
+      }
+    },
+    {
+      "id": "hand_girth",
+      "type": "slider",
+      "group": "cuff",
+      "default": 215,
+      "min": 150,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Hand girth across the knuckles (mm)",
+        "es": "Contorno de la mano sobre los nudillos (mm)",
+        "fr": "Tour de main aux articulations (mm)"
+      },
+      "tooltip": {
+        "en": "Thumb tucked in. This is the measurement the whole cuff is solved against: the arm goes in before the cuff can be closed, so the OPEN circuit must clear it",
+        "es": "Con el pulgar recogido. Es la medida contra la que se resuelve todo el puño: el brazo entra antes de que el puño pueda cerrarse, así que el circuito ABIERTO debe librarla",
+        "fr": "Pouce rentré. C'est la mesure contre laquelle tout le poignet est résolu : le bras entre avant que le poignet ne puisse se fermer, le circuit OUVERT doit donc la dégager"
+      }
+    },
+    {
+      "id": "wrist_ease",
+      "type": "slider",
+      "group": "cuff",
+      "default": 28,
+      "min": 10,
+      "max": 70,
+      "step": 2,
+      "label": {
+        "en": "Wrist ease (mm)",
+        "es": "Holgura de muñeca (mm)",
+        "fr": "Aisance au poignet (mm)"
+      },
+      "tooltip": {
+        "en": "Generous ease means a smaller solved underlap, because the closed circuit already does some of the hand's work",
+        "es": "Una holgura generosa da un debajo resuelto menor, porque el circuito cerrado ya hace parte del trabajo de la mano",
+        "fr": "Une aisance généreuse donne un dessous résolu plus petit, car le circuit fermé fait déjà une part du travail de la main"
+      }
+    },
+    {
+      "id": "cuff_depth",
+      "type": "slider",
+      "group": "cuff",
+      "default": 68,
+      "min": 40,
+      "max": 120,
+      "step": 2,
+      "label": {
+        "en": "Cuff depth (mm)",
+        "es": "Alto del puño (mm)",
+        "fr": "Hauteur du poignet (mm)"
+      },
+      "tooltip": {
+        "en": "Cut at double this (it folds). Floored at button + half the hook loop + 24 mm, so neither the buttonhole nor the tab lands on an edge",
+        "es": "Se corta al doble (se dobla). Con piso en botón + medio lazo del abotonador + 24 mm, para que ni el ojal ni la presilla caigan en un canto",
+        "fr": "Coupé au double (il se plie). Plancher à bouton + demi-boucle du crochet + 24 mm, pour que ni la boutonnière ni la bride ne tombe sur un bord"
+      }
+    },
+    {
+      "id": "button_dia",
+      "type": "slider",
+      "group": "aid",
+      "default": 15,
+      "min": 10,
+      "max": 26,
+      "step": 1,
+      "label": {
+        "en": "Button diameter (mm)",
+        "es": "Diámetro del botón (mm)",
+        "fr": "Diamètre du bouton (mm)"
+      },
+      "tooltip": {
+        "en": "A larger button is easier for a hook to capture and easier to see; it also widens the placket stand and the overlap",
+        "es": "Un botón más grande es más fácil de capturar por el gancho y de ver; también ensancha la tapeta y el traslape",
+        "fr": "Un bouton plus grand est plus facile à capturer par le crochet et à voir ; il élargit aussi la patte et le croisement"
+      }
+    },
+    {
+      "id": "hook_wire",
+      "type": "slider",
+      "group": "aid",
+      "default": 2.2,
+      "min": 1,
+      "max": 5,
+      "step": 0.1,
+      "label": {
+        "en": "Aid loop wire thickness (mm)",
+        "es": "Grosor del alambre del abotonador (mm)",
+        "fr": "Épaisseur du fil du crochet (mm)"
+      },
+      "tooltip": {
+        "en": "The wire passes on BOTH sides of the shank, so the buttonhole is cut two of these longer than usual — the difference is 4.9 mm at the defaults",
+        "es": "El alambre pasa por AMBOS lados del cuello del botón, así que el ojal se corta dos de estos más largo — la diferencia es 4.9 mm por defecto",
+        "fr": "Le fil passe des DEUX côtés de la tige, la boutonnière est donc coupée deux de ceux-ci plus longue — l'écart est de 4,9 mm par défaut"
+      }
+    },
+    {
+      "id": "hook_loop",
+      "type": "slider",
+      "group": "aid",
+      "default": 22,
+      "min": 10,
+      "max": 45,
+      "step": 1,
+      "label": {
+        "en": "Aid loop diameter (mm)",
+        "es": "Diámetro del lazo del abotonador (mm)",
+        "fr": "Diamètre de la boucle du crochet (mm)"
+      },
+      "tooltip": {
+        "en": "The loop must go round the button and back out. It sets the pull tab's height and floors the cuff depth",
+        "es": "El lazo debe rodear el botón y volver a salir. Define el alto de la presilla y da piso al alto del puño",
+        "fr": "La boucle doit contourner le bouton et ressortir. Elle fixe la hauteur de la bride et donne son plancher à la hauteur du poignet"
+      }
+    },
+    {
+      "id": "loop_tab",
+      "type": "slider",
+      "group": "aid",
+      "default": 26,
+      "min": 12,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Pull tab reach (mm)",
+        "es": "Alcance de la presilla (mm)",
+        "fr": "Portée de la bride (mm)"
+      },
+      "tooltip": {
+        "en": "The hook catches THIS, not the buttonhole it is already occupying. It sits past the buttonhole so the pull drags the hole onto the button in a straight line",
+        "es": "El gancho engancha ESTO, no el ojal que ya está ocupando. Va pasando el ojal para que el jalón lleve el ojal al botón en línea recta",
+        "fr": "Le crochet attrape CECI, non la boutonnière qu'il occupe déjà. Elle se place au-delà de la boutonnière pour que la traction amène le trou sur le bouton en ligne droite"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 6,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Shirt-weight; the cuff's fold edge takes none",
+        "es": "De peso camisero; el canto de doblez del puño no lleva",
+        "fr": "Poids chemise ; le bord de pli du poignet n'en prend pas"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "hand_girth >= wrist_girth + 5",
+      "severity": "warning",
+      "message": {
+        "en": "A hand is never smaller than the wrist it is attached to; entered the other way round the underlap would solve downward and the cuff would button but never be enterable.",
+        "es": "Una mano nunca es menor que la muñeca a la que pertenece; al revés, el debajo se resolvería hacia abajo y el puño abotonaría pero nunca se podría entrar.",
+        "fr": "Une main n'est jamais plus petite que le poignet auquel elle tient ; à l'envers, le dessous se résoudrait vers le bas et le poignet se boutonnerait sans jamais pouvoir être enfilé."
+      }
+    },
+    {
+      "expression": "cuff_depth >= button_dia + hook_loop * 0.5 + 24",
+      "severity": "error",
+      "message": {
+        "en": "The cuff must carry the buttonhole run and the pull tab without either landing on an edge.",
+        "es": "El puño debe llevar el corrido del ojal y la presilla sin que ninguno caiga en un canto.",
+        "fr": "Le poignet doit porter la boutonnière et la bride sans qu'aucune ne tombe sur un bord."
+      }
+    },
+    {
+      "expression": "hook_loop >= button_dia * 0.9",
+      "severity": "warning",
+      "message": {
+        "en": "The aid's loop must pass round the button; a loop smaller than the button cannot capture it.",
+        "es": "El lazo del abotonador debe rodear el botón; un lazo menor que el botón no puede capturarlo.",
+        "fr": "La boucle du crochet doit contourner le bouton ; une boucle plus petite que le bouton ne peut pas le capturer."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "hemiparesis_everyday",
+      "label": {
+        "en": "Everyday (one working hand)",
+        "es": "Diario (una mano funcional)",
+        "fr": "Quotidien (une main valide)"
+      },
+      "values": {
+        "wrist_girth": 175,
+        "hand_girth": 215,
+        "wrist_ease": 28,
+        "button_dia": 15
+      }
+    },
+    {
+      "id": "large_hand_narrow_wrist",
+      "label": {
+        "en": "Large hand, narrow wrist",
+        "es": "Mano grande, muñeca angosta",
+        "fr": "Grande main, poignet fin"
+      },
+      "values": {
+        "wrist_girth": 170,
+        "hand_girth": 290,
+        "wrist_ease": 15,
+        "cuff_depth": 75
+      }
+    },
+    {
+      "id": "big_button_low_dexterity",
+      "label": {
+        "en": "Big button, low dexterity",
+        "es": "Botón grande, poca destreza",
+        "fr": "Gros bouton, faible dextérité"
+      },
+      "values": {
+        "button_dia": 24,
+        "hook_loop": 34,
+        "hook_wire": 3.2,
+        "loop_tab": 42,
+        "cuff_depth": 80
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "popelina-algodon"
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "hand-held button hook the cuff is drafted to accept",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "button-hook-aid",
+      "linked": true,
+      "params_map": {
+        "loop_dia": "hook_loop",
+        "loop_t": "hook_wire",
+        "loop_depth": "button_dia * 0.9",
+        "neck_len": "loop_tab",
+        "grip_len": "loop_tab * 3.5",
+        "grip_w": "hook_loop * 0.9",
+        "grip_t": "hook_wire * 5",
+        "finger_scallops": "3"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "aid_cuff",
+        "type": "cuff",
+        "label": {
+          "en": "Two-position button-aid cuff",
+          "es": "Puño asistido de dos posiciones",
+          "fr": "Poignet assisté à deux positions"
+        },
+        "edges": [
+          {
+            "piece": "cuff",
+            "edge": "attach"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "wrist_girth",
+          "hand_girth",
+          "wrist_ease",
+          "cuff_depth",
+          "button_dia",
+          "hook_wire",
+          "hook_loop",
+          "loop_tab"
+        ]
+      },
+      {
+        "id": "shoulder_seam",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder seam",
+          "es": "Costura de hombro",
+          "fr": "Couture d'épaule"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "back",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "shoulder_width",
+          "neck_girth"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Armscye",
+          "es": "Sisa",
+          "fr": "Emmanchure"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          },
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "shoulder_width",
+          "sleeve_length"
+        ]
+      },
+      {
+        "id": "front_placket",
+        "type": "placket",
+        "label": {
+          "en": "Front placket",
+          "es": "Tapeta delantera",
+          "fr": "Patte de devant"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "placket_fold"
+          }
+        ],
+        "parameters": [
+          "button_dia",
+          "shirt_length",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true,
+      "one_handed_dressing": true
+    },
+    "societal_benefit": {
+      "en": "After a stroke, an amputation, or with a hand in a cast, the shirt cuff is where dressing stops. It is a small, specific, daily defeat: everything else can be managed slowly, and then the cuff of the working arm cannot be closed by the hand that is inside it. The commercial answers are a cuff sewn permanently shut — which has to clear the hand, so it is always too big — or a button hook sold separately, with no shirt drafted to receive it. Drafting the cuff for the hook instead is cheap and it is a pattern, not a product: a loop the hook can catch, a buttonhole cut for its wire, an underlap stiff enough to hold the cuff open, and an open circuit solved against the wearer's own hand rather than a size chart. It preserves what most adaptive clothing gives away — the shirt still looks like a shirt, and it is closed by the wearer.",
+      "es": "Tras un infarto cerebral, una amputación o con la mano enyesada, el puño de la camisa es donde se detiene el vestirse. Es una derrota pequeña, específica y diaria: todo lo demás se maneja despacio, y luego el puño del brazo que funciona no puede cerrarlo la mano que está dentro de él. Las respuestas comerciales son un puño cosido permanentemente — que debe librar la mano, así que siempre queda enorme — o un abotonador vendido aparte, sin ninguna camisa trazada para recibirlo. Trazar el puño para el abotonador es barato y es un patrón, no un producto: una presilla que el gancho pueda enganchar, un ojal cortado para su alambre, un debajo lo bastante rígido para mantener el puño abierto, y un circuito abierto resuelto contra la mano de la persona y no contra una tabla de tallas. Conserva lo que casi toda la ropa adaptativa entrega: la camisa sigue pareciendo una camisa, y la cierra quien la lleva.",
+      "fr": "Après un AVC, une amputation, ou avec une main plâtrée, le poignet de chemise est là où l'habillage s'arrête. C'est une petite défaite quotidienne et précise : tout le reste se gère lentement, puis le poignet du bras valide ne peut pas être fermé par la main qui s'y trouve. Les réponses commerciales sont un poignet cousu définitivement — qui doit dégager la main, donc toujours trop grand — ou un tire-bouton vendu à part, sans aucune chemise tracée pour le recevoir. Tracer le poignet pour le crochet est peu coûteux et c'est un patron, non un produit : une bride que le crochet peut attraper, une boutonnière coupée pour son fil, un dessous assez rigide pour tenir le poignet ouvert, et un circuit ouvert résolu contre la main de la personne plutôt que contre un tableau de tailles. Cela préserve ce que la plupart des vêtements adaptés abandonnent : la chemise ressemble encore à une chemise, et c'est celui qui la porte qui la ferme."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

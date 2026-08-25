@@ -1,0 +1,654 @@
+{
+  "project": {
+    "name": "Changpao (長袍)",
+    "slug": "changpao",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The Chinese men's long robe: straight, ankle-length, with a 立領 stand collar, closed along a curved 大襟 diagonal from the throat across the chest to the right underarm, fastened with knotted cloth frogs (盤扣 pánkòu), and slit at both sides for walking. Ordinary dress across late-Qing and Republican China; still worn, paired with the 馬褂 riding jacket as 長袍馬褂, and the ancestor of the Cantonese 長衫 and the modern 唐裝. Two facts govern the whole draft, and both are Chinese rather than Western. The cloth is narrow and the panel is used WHOLE — so `panel_width` is a real parameter, the body circuit is computed from it plus the dajin's wrap-past, and a loom too narrow to reach round the wearer is reported rather than silently widened. And the sleeve is cut in one with the body (連袖): there is no armscye anywhere, the shoulder runs straight from neck to wrist, and the underarm is a corner braced by a 插角 gusset. The seam that must solve is the dajin: its curve is drafted once, MEASURED, and every dependent length reads that measurement — the panel's matching seat, the collar run, and the frog spacing, which is by ARC LENGTH along the curve. Spacing the frogs by chord bunches them at the shoulder and gaps them at the underarm, which is the visible signature of a robe drafted flat.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La túnica larga masculina china: recta, hasta el tobillo, con cuello alto 立領, cerrada por una diagonal curva 大襟 desde la garganta cruzando el pecho hasta la axila derecha, abrochada con alamares de tela anudada (盤扣 pánkòu) y abierta a los lados para caminar. Vestimenta ordinaria en la China del Qing tardío y republicana; aún se usa, junto con la chaqueta 馬褂 como 長袍馬褂, y es antecesora del 長衫 cantonés y del 唐裝 moderno. Dos hechos gobiernan todo el trazo, y ambos son chinos y no occidentales. La tela es angosta y el paño se usa ENTERO — así que `panel_width` es un parámetro real, el circuito del cuerpo se calcula a partir de él más el cruce del dajin, y un telar demasiado angosto para rodear a quien lo viste se reporta en vez de ensancharse en silencio. Y la manga va cortada en una pieza con el cuerpo (連袖): no hay sisa en ninguna parte, el hombro corre recto del cuello a la muñeca y la axila es una esquina reforzada por un cuadrado 插角. La costura que debe resolverse es el dajin: su curva se traza una vez, se MIDE, y toda longitud dependiente lee esa medida — el asiento del paño, el corrido del cuello y el espaciado de los alamares, que va por LONGITUD DE ARCO sobre la curva. Espaciarlos por cuerda los amontona en el hombro y los abre en la axila, la firma visible de una túnica trazada en plano.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La longue robe masculine chinoise : droite, jusqu'à la cheville, à col montant 立領, fermée par une diagonale courbe 大襟 de la gorge à travers la poitrine jusqu'à l'aisselle droite, agrafée par des brandebourgs de tissu noué (盤扣 pánkòu), et fendue sur les côtés pour marcher. Tenue ordinaire dans la Chine de la fin des Qing et républicaine ; encore portée, avec la veste 馬褂 en 長袍馬褂, et ancêtre du 長衫 cantonais et du 唐裝 moderne. Deux faits gouvernent tout le tracé, et tous deux sont chinois et non occidentaux. Le tissu est étroit et le panneau s'emploie ENTIER — `panel_width` est donc un paramètre réel, le circuit du corps se calcule à partir de lui plus le croisement du dajin, et un métier trop étroit pour faire le tour du porteur est signalé plutôt qu'élargi en silence. Et la manche est coupée d'une pièce avec le corps (連袖) : il n'y a d'emmanchure nulle part, l'épaule court droit du cou au poignet, et l'aisselle est un angle renforcé par un gousset 插角. La couture qui doit se résoudre est le dajin : sa courbe est tracée une fois, MESURÉE, et toute longueur dépendante lit cette mesure — l'assise du panneau, le développé du col et l'espacement des brandebourgs, qui se fait par LONGUEUR D'ARC le long de la courbe. Les espacer à la corde les tasse à l'épaule et les écarte à l'aisselle, signature visible d'une robe tracée à plat.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "changpao",
+      "長袍",
+      "heritage",
+      "chinese",
+      "robe",
+      "dajin",
+      "pankou",
+      "stand-collar",
+      "one-piece-sleeve",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full robe",
+        "es": "Túnica completa",
+        "fr": "Robe complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "body",
+        "front",
+        "dajin",
+        "collar",
+        "underarm"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body half (panel used whole, sleeve cut in one)",
+        "es": "Mitad del cuerpo (paño entero, manga en una pieza)",
+        "fr": "Demi-corps (panneau entier, manche d'une pièce)"
+      },
+      "default_color": "#e8dcc8",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "front",
+      "label": {
+        "en": "Left front panel (under-layer)",
+        "es": "Paño delantero izquierdo (capa inferior)",
+        "fr": "Panneau devant gauche (sous-couche)"
+      },
+      "default_color": "#ded1ba",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "dajin",
+      "label": {
+        "en": "Dajin overlap panel (大襟)",
+        "es": "Paño de cruce dajin (大襟)",
+        "fr": "Panneau de croisement dajin (大襟)"
+      },
+      "default_color": "#d2c3a8",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Stand collar (立領)",
+        "es": "Cuello alto (立領)",
+        "fr": "Col montant (立領)"
+      },
+      "default_color": "#c4b294",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "underarm",
+      "label": {
+        "en": "Underarm gusset (插角)",
+        "es": "Cuadrado de axila (插角)",
+        "fr": "Gousset d'aisselle (插角)"
+      },
+      "default_color": "#b8a685",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "cloth",
+      "label": {
+        "en": "Cloth & body",
+        "es": "Tela y cuerpo",
+        "fr": "Tissu et corps"
+      }
+    },
+    {
+      "id": "dajin",
+      "label": {
+        "en": "Dajin & closure",
+        "es": "Dajin y cierre",
+        "fr": "Dajin et fermeture"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "panel_width",
+      "type": "slider",
+      "group": "cloth",
+      "default": 480,
+      "min": 320,
+      "max": 760,
+      "step": 10,
+      "label": {
+        "en": "Loom panel width (mm)",
+        "es": "Ancho del paño de telar (mm)",
+        "fr": "Largeur du panneau de métier (mm)"
+      },
+      "tooltip": {
+        "en": "The cloth is the unit, not the body. The panel is used WHOLE and the body circuit is computed from it plus the dajin's wrap-past — a loom too narrow to reach round the wearer is reported, not widened",
+        "es": "La tela es la unidad, no el cuerpo. El paño se usa ENTERO y el circuito se calcula de él más el cruce del dajin — un telar demasiado angosto se reporta, no se ensancha",
+        "fr": "Le tissu est l'unité, non le corps. Le panneau s'emploie ENTIER et le circuit se calcule depuis lui plus le croisement du dajin — un métier trop étroit est signalé, non élargi"
+      }
+    },
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "cloth",
+      "default": 1000,
+      "min": 760,
+      "max": 1400,
+      "step": 10,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Checked AGAINST the panel, never used to size it — this is the direction that keeps the robe a panel garment rather than a fitted one",
+        "es": "Se contrasta CONTRA el paño, nunca se usa para dimensionarlo — esta dirección es lo que mantiene la túnica como prenda de paños y no entallada",
+        "fr": "Vérifié CONTRE le panneau, jamais utilisé pour le dimensionner — cette direction garde la robe comme vêtement de panneaux et non ajusté"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "robe_length",
+      "type": "slider",
+      "group": "cloth",
+      "default": 1320,
+      "min": 900,
+      "max": 1600,
+      "step": 10,
+      "label": {
+        "en": "Robe length (mm)",
+        "es": "Largo de la túnica (mm)",
+        "fr": "Longueur de la robe (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to ankle. Manta cruda shrinks 5% in the warp: wash before cutting or the finished robe is 66 mm shorter than drafted",
+        "es": "De la nuca al tobillo. La manta cruda encoge 5% en urdimbre: lávala antes de cortar o la túnica acabada será 66 mm más corta que lo trazado",
+        "fr": "De la nuque à la cheville. La manta crue rétrécit de 5% en chaîne : lavez avant de couper ou la robe finie sera 66 mm plus courte que tracée"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "cloth",
+      "default": 540,
+      "min": 300,
+      "max": 760,
+      "step": 10,
+      "label": {
+        "en": "Sleeve reach beyond the panel (mm)",
+        "es": "Alcance de la manga más allá del paño (mm)",
+        "fr": "Portée de manche au-delà du panneau (mm)"
+      },
+      "tooltip": {
+        "en": "The sleeve is cut in one with the body (連袖), so this is how far the panel runs on past the side — there is no armscye to set anything into",
+        "es": "La manga va cortada en una pieza con el cuerpo (連袖), así que esto es cuánto sigue el paño más allá del costado — no hay sisa donde montar nada",
+        "fr": "La manche est coupée d'une pièce avec le corps (連袖), c'est donc la longueur du panneau au-delà du côté — il n'y a aucune emmanchure où monter quoi que ce soit"
+      }
+    },
+    {
+      "id": "sleeve_opening",
+      "type": "slider",
+      "group": "cloth",
+      "default": 300,
+      "min": 180,
+      "max": 460,
+      "step": 10,
+      "label": {
+        "en": "Cuff opening 袖口 (mm)",
+        "es": "Boca de manga 袖口 (mm)",
+        "fr": "Ouverture de manche 袖口 (mm)"
+      },
+      "tooltip": {
+        "en": "Wide and straight; the changpao sleeve is not tapered to the wrist",
+        "es": "Ancha y recta; la manga del changpao no se estrecha hacia la muñeca",
+        "fr": "Large et droite ; la manche du changpao n'est pas rétrécie au poignet"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "cloth",
+      "default": 400,
+      "min": 320,
+      "max": 520,
+      "step": 5,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "A 立領 stands ON the base of the neck, so the opening is this plus a modest ease — not the Western girth/6 formula, which is drafted for a turndown collar sitting well below",
+        "es": "El 立領 se para SOBRE la base del cuello, así que la abertura es esto más una holgura modesta — no la fórmula occidental contorno/6, trazada para un cuello vuelto que asienta más abajo",
+        "fr": "Un 立領 se dresse SUR la base du cou, l'ouverture vaut donc ceci plus une aisance modeste — non la formule occidentale tour/6, tracée pour un col rabattu assis bien plus bas"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 42,
+      "min": 25,
+      "max": 75,
+      "step": 1,
+      "label": {
+        "en": "Stand collar height (mm)",
+        "es": "Alto del cuello alto (mm)",
+        "fr": "Hauteur du col montant (mm)"
+      },
+      "tooltip": {
+        "en": "Cut at double this plus turn-of-cloth. The stand must hold itself up: an unstiffened 立領 collapses at the throat",
+        "es": "Se corta al doble más el vuelo de tela. El cuello debe sostenerse solo: un 立領 sin entretela se vence en la garganta",
+        "fr": "Coupé au double plus l'embu. Le col doit se tenir seul : un 立領 non entoilé s'affaisse à la gorge"
+      }
+    },
+    {
+      "id": "dajin_drop",
+      "type": "slider",
+      "group": "dajin",
+      "default": 300,
+      "min": 180,
+      "max": 480,
+      "step": 10,
+      "label": {
+        "en": "Dajin drop, neck to underarm (mm)",
+        "es": "Caída del dajin, cuello a axila (mm)",
+        "fr": "Chute du dajin, cou à aisselle (mm)"
+      },
+      "tooltip": {
+        "en": "The vertical run of the 大襟 curve. The deeper it goes the more the curve exceeds its own chord — 3.2 mm at the defaults, 30.3 mm at the extreme",
+        "es": "El recorrido vertical de la curva 大襟. Cuanto más baja, más excede la curva a su propia cuerda — 3.2 mm por defecto, 30.3 mm en el extremo",
+        "fr": "Le parcours vertical de la courbe 大襟. Plus elle descend, plus la courbe excède sa propre corde — 3,2 mm par défaut, 30,3 mm à l'extrême"
+      }
+    },
+    {
+      "id": "dajin_reach",
+      "type": "slider",
+      "group": "dajin",
+      "default": 0.62,
+      "min": 0.35,
+      "max": 0.9,
+      "step": 0.01,
+      "label": {
+        "en": "Dajin reach across the half panel",
+        "es": "Alcance del dajin sobre el medio paño",
+        "fr": "Portée du dajin sur le demi-panneau"
+      },
+      "tooltip": {
+        "en": "Held clear of the neck on one side and the side seam on the other; a narrow panel with a wide neck has no legal band and the reach is reported as clamped",
+        "es": "Se mantiene libre del cuello por un lado y del costado por el otro; un paño angosto con cuello ancho no deja banda legal y el alcance se reporta como limitado",
+        "fr": "Maintenue à l'écart du cou d'un côté et du côté de l'autre ; un panneau étroit avec un cou large ne laisse aucune bande légale et la portée est signalée comme bridée"
+      }
+    },
+    {
+      "id": "frog_count",
+      "type": "slider",
+      "group": "dajin",
+      "default": 5,
+      "min": 3,
+      "max": 9,
+      "step": 1,
+      "label": {
+        "en": "Frog count 盤扣 along the dajin",
+        "es": "Número de alamares 盤扣 sobre el dajin",
+        "fr": "Nombre de brandebourgs 盤扣 le long du dajin"
+      },
+      "tooltip": {
+        "en": "Spaced by ARC LENGTH along the measured curve. By chord they bunch at the shoulder and gap at the underarm — the visible sign of a robe drafted flat",
+        "es": "Espaciados por LONGITUD DE ARCO sobre la curva medida. Por cuerda se amontonan en el hombro y se abren en la axila — la señal visible de una túnica trazada en plano",
+        "fr": "Espacés par LONGUEUR D'ARC le long de la courbe mesurée. À la corde ils se tassent à l'épaule et s'écartent à l'aisselle — le signe visible d'une robe tracée à plat"
+      }
+    },
+    {
+      "id": "frog_width",
+      "type": "slider",
+      "group": "dajin",
+      "default": 56,
+      "min": 30,
+      "max": 110,
+      "step": 2,
+      "label": {
+        "en": "Frog span, knot to loop (mm)",
+        "es": "Vano del alamar, nudo a presilla (mm)",
+        "fr": "Portée du brandebourg, nœud à boucle (mm)"
+      },
+      "tooltip": {
+        "en": "Each knotted pánkòu eats roughly six times its finished span in bias strip; that is in the BOM",
+        "es": "Cada pánkòu anudado consume unas seis veces su vano acabado en tira al bies; está en la lista de materiales",
+        "fr": "Chaque pánkòu noué consomme environ six fois sa portée finie en biais ; c'est dans la nomenclature"
+      }
+    },
+    {
+      "id": "side_slit",
+      "type": "slider",
+      "group": "construction",
+      "default": 380,
+      "min": 0,
+      "max": 700,
+      "step": 10,
+      "label": {
+        "en": "Side slit 開衩 height (mm)",
+        "es": "Alto de la abertura lateral 開衩 (mm)",
+        "fr": "Hauteur de la fente latérale 開衩 (mm)"
+      },
+      "tooltip": {
+        "en": "A walking slit, capped well below the underarm — it is not an open side",
+        "es": "Una abertura para caminar, limitada bien por debajo de la axila — no es un costado abierto",
+        "fr": "Une fente de marche, plafonnée bien sous l'aisselle — ce n'est pas un côté ouvert"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 6,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Generous, because the robe is traditionally hand-sewn so it can be unpicked, washed as flat panels, and re-sewn",
+        "es": "Generoso, porque la túnica se cose a mano tradicionalmente para poder descoserse, lavarse en paños planos y volverse a coser",
+        "fr": "Généreuse, car la robe est traditionnellement cousue main pour pouvoir être décousue, lavée à plat et recousue"
+      },
+      "advanced": true
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 40,
+      "min": 15,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de ruedo (mm)",
+        "fr": "Rentré d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Deep, so the robe can be let down; a long robe is expected to outlast one wearer's height",
+        "es": "Profundo, para poder soltar el ruedo; se espera que una túnica larga sobreviva a la estatura de quien la estrena",
+        "fr": "Profond, pour pouvoir rallonger ; une robe longue est censée survivre à la taille de son premier porteur"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "panel_width * 2 >= chest_girth * 0.9",
+      "severity": "warning",
+      "message": {
+        "en": "The two panels plus the dajin's wrap-past must reach round the wearer with real ease; a narrower loom is reported as panel_sufficient=false rather than silently widened.",
+        "es": "Los dos paños más el cruce del dajin deben rodear al portador con holgura real; un telar más angosto se reporta como panel_sufficient=false en vez de ensancharse en silencio.",
+        "fr": "Les deux panneaux plus le croisement du dajin doivent faire le tour du porteur avec une aisance réelle ; un métier plus étroit est signalé panel_sufficient=false plutôt qu'élargi en silence."
+      }
+    },
+    {
+      "expression": "dajin_drop <= robe_length * 0.4",
+      "severity": "warning",
+      "message": {
+        "en": "The dajin runs from the throat to the underarm, not down the body; a drop approaching half the robe is a different garment.",
+        "es": "El dajin va de la garganta a la axila, no por el cuerpo; una caída cercana a media túnica es otra prenda.",
+        "fr": "Le dajin va de la gorge à l'aisselle, non le long du corps ; une chute approchant la moitié de la robe est un autre vêtement."
+      }
+    },
+    {
+      "expression": "side_slit <= (robe_length - dajin_drop) * 0.62",
+      "severity": "warning",
+      "message": {
+        "en": "The 開衩 is a walking slit; it is capped well below the underarm rather than opening the side.",
+        "es": "El 開衩 es una abertura para caminar; se limita bien por debajo de la axila en vez de abrir el costado.",
+        "fr": "Le 開衩 est une fente de marche ; elle est plafonnée bien sous l'aisselle plutôt que d'ouvrir le côté."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "republican_everyday",
+      "label": {
+        "en": "Republican everyday",
+        "es": "Diario republicano",
+        "fr": "Quotidien républicain"
+      },
+      "values": {
+        "panel_width": 480,
+        "robe_length": 1320,
+        "dajin_drop": 300,
+        "frog_count": 5,
+        "side_slit": 380
+      }
+    },
+    {
+      "id": "narrow_handloom",
+      "label": {
+        "en": "Narrow handloom",
+        "es": "Telar manual angosto",
+        "fr": "Métier à bras étroit"
+      },
+      "values": {
+        "panel_width": 360,
+        "chest_girth": 880,
+        "dajin_reach": 0.7
+      }
+    },
+    {
+      "id": "deep_dajin_formal",
+      "label": {
+        "en": "Deep dajin, formal",
+        "es": "Dajin profundo, formal",
+        "fr": "Dajin profond, formel"
+      },
+      "values": {
+        "dajin_drop": 400,
+        "dajin_reach": 0.78,
+        "frog_count": 7,
+        "collar_height": 55,
+        "robe_length": 1420
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "盤扣 pánkòu — knotted cloth frog closure along the dajin curve",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "frog-closure",
+      "linked": false,
+      "params_map": {
+        "span": "frog_width",
+        "knots": "frog_count"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "dajin_closure",
+        "type": "placket",
+        "label": {
+          "en": "Dajin overlap closure (大襟)",
+          "es": "Cierre de cruce dajin (大襟)",
+          "fr": "Fermeture de croisement dajin (大襟)"
+        },
+        "edges": [
+          {
+            "piece": "dajin",
+            "edge": "dajin"
+          },
+          {
+            "piece": "front",
+            "edge": "cf"
+          }
+        ],
+        "parameters": [
+          "dajin_drop",
+          "dajin_reach",
+          "frog_count",
+          "frog_width"
+        ]
+      },
+      {
+        "id": "stand_collar",
+        "type": "neckline",
+        "label": {
+          "en": "Stand collar neckline (立領)",
+          "es": "Escote del cuello alto (立領)",
+          "fr": "Encolure du col montant (立領)"
+        },
+        "edges": [
+          {
+            "piece": "collar",
+            "edge": "neck_edge"
+          },
+          {
+            "piece": "body",
+            "edge": "neck"
+          },
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "dajin",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "collar_height"
+        ]
+      },
+      {
+        "id": "one_piece_sleeve",
+        "type": "custom",
+        "label": {
+          "en": "One-piece sleeve and gusset (連袖 / 插角)",
+          "es": "Manga en una pieza y cuadrado (連袖 / 插角)",
+          "fr": "Manche d'une pièce et gousset (連袖 / 插角)"
+        },
+        "edges": [
+          {
+            "piece": "body",
+            "edge": "sleeve_under"
+          },
+          {
+            "piece": "front",
+            "edge": "sleeve_under"
+          },
+          {
+            "piece": "underarm",
+            "edge": "body_lower"
+          }
+        ],
+        "parameters": [
+          "panel_width",
+          "sleeve_length",
+          "sleeve_opening",
+          "dajin_drop"
+        ]
+      },
+      {
+        "id": "side_slit",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam and walking slit (開衩)",
+          "es": "Costado y abertura de marcha (開衩)",
+          "fr": "Côté et fente de marche (開衩)"
+        },
+        "edges": [
+          {
+            "piece": "body",
+            "edge": "side"
+          },
+          {
+            "piece": "front",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "side_slit",
+          "robe_length",
+          "hem_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "heritage": true,
+      "hardware_bridge": false,
+      "panel_width_native": true
+    },
+    "societal_benefit": {
+      "en": "The changpao is routinely redrawn from the outside as a costume — a Western block with a diagonal edge and a mandarin collar added on top — and what that loses is the entire logic of the garment: the loom-width panel used whole, the sleeve cut in one, the fit that comes from where straight seams fall rather than from shaping. Publishing a draft that takes panel width as the unit, solves the front overlap from the cloth the maker actually has, and reports honestly when a narrow loom cannot reach round the wearer keeps that logic legible and cuttable. It is offered as a working pattern for people who want to make and wear this robe, with rank badges, clan crests and dragon roundels deliberately out of scope: those are marks that belong to families and offices, not decoration a pattern generator should hand out.",
+      "es": "El changpao se vuelve a dibujar rutinariamente desde afuera como disfraz — un patrón occidental con un canto diagonal y un cuello mandarín encima — y lo que eso pierde es la lógica entera de la prenda: el paño de ancho de telar usado entero, la manga cortada en una pieza, el ajuste que viene de dónde caen las costuras rectas y no de un entallado. Publicar un trazo que toma el ancho del paño como unidad, resuelve el cruce delantero a partir de la tela que realmente hay, y reporta con honestidad cuando un telar angosto no alcanza a rodear al portador mantiene esa lógica legible y cortable. Se ofrece como patrón de trabajo para quien quiera hacer y vestir esta túnica, con insignias de rango, escudos de clan y medallones de dragón deliberadamente fuera de alcance: son marcas que pertenecen a familias y cargos, no adornos que un generador de patrones deba repartir.",
+      "fr": "Le changpao est régulièrement redessiné de l'extérieur comme un costume — un patron occidental avec un bord diagonal et un col mandarin ajoutés par-dessus — et ce qui s'y perd est toute la logique du vêtement : le panneau à la largeur du métier employé entier, la manche coupée d'une pièce, l'ajustement qui vient de l'endroit où tombent les coutures droites plutôt que d'un cintrage. Publier un tracé qui prend la largeur de panneau pour unité, résout le croisement devant à partir du tissu réellement disponible, et signale honnêtement quand un métier étroit ne fait pas le tour du porteur garde cette logique lisible et coupable. Il est offert comme patron de travail à qui veut faire et porter cette robe, insignes de rang, armes de clan et médaillons de dragon étant délibérément hors périmètre : ce sont des marques qui appartiennent à des familles et à des charges, non des ornements qu'un générateur de patrons devrait distribuer."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
