@@ -8,4 +8,4 @@ visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
 > An open, made-to-measure kilt pattern computes the exact flat length, pleat count, and pleat depth for a wearer's own waist and seat, keeping a living heritage garment makeable at home from a single length of cloth — the sett and clan meaning left to the wearer.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

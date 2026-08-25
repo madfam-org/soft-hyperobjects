@@ -18,4 +18,4 @@ Le sarouel à entrejambe bas : un pantalon très ample à entrejambe bas froncé
 > Un sarouel ouvert et sur mesure rend ajustable à la personne un vêtement confortable et très indulgent porté dans de nombreuses cultures, de sorte qu'un pantalon respirant du quotidien reste fabricable et réparable à partir d'un seul tissu fluide.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

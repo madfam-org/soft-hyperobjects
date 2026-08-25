@@ -18,4 +18,4 @@ Le foulard pré-noué (style turban) : une coiffe arrière ajustée froncée sur
 > Un foulard ouvert et sur mesure offre une coiffe pré-nouée qui garde sa forme, ajustée à la personne, de sorte qu'un vêtement de protection et d'expression reste fabricable et réparable dans les tissus qu'elle choisit — lui laissant chaque style de nouage et son sens.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

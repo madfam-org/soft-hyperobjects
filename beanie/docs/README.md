@@ -18,4 +18,4 @@ Le bonnet en maille : un tube extensible qui épouse la tête, cousu dans le dos
 > Un bonnet ouvert et sur mesure est un premier projet que chacun peut finir — un panneau, une couture, un sommet froncé — dimensionné pour maintenir la personne, gardant une casquette chaude du quotidien fabricable et réparable à partir d'une chute de côtes.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

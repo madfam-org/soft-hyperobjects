@@ -60,4 +60,4 @@ Un body de compression mis en forme par des coutures princesse plutôt que par d
 > Les vêtements gainants échouent à deux endroits prévisibles : aux pointes de pinces, où la tension se concentre jusqu'à ce que la couture cède, et à l'étiquette de taille, qui réduit trois mesures indépendantes à une lettre.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

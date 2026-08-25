@@ -18,4 +18,4 @@ Le kebaya est le chemisier ajusté à devant ouvert porté en Indonésie, Malais
 > Un kebaya ouvert et sur mesure calcule un chemisier patrimonial ajusté aux pinces précises selon la morphologie de la personne, gardant un vêtement reconnu dans toute l'Asie du Sud-Est fabricable dans la dentelle et le voile qui lui reviennent — la broderie et les broches qui portent l'identité étant laissées à la personne.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

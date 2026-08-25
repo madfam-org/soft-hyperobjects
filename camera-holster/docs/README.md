@@ -30,4 +30,4 @@ L'étui photo à chargement par le haut : une poche rembourrée assez profonde p
 | `anchor` | 1 | Webbing tab carrying the swivelling snap hook |
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

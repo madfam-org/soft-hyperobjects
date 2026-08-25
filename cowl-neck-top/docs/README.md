@@ -9,4 +9,4 @@ gap, draped knit). Official visualizer and configurator:
 > An open, made-to-measure cowl top gets its drape from the front's own folded facing rather than a separate collar, so a draped neckline becomes a single-fabric, easy-to-cut commons object sized to the wearer.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

@@ -48,4 +48,4 @@ handshake rule correctly requires no edge for this class of hardware.
 ## Provenance
 
 Original draft for Fashion Cabinet; boxed-bag construction precedent from the Fashion
-Cabinet `dopp-kit` cartridge. `LicenseRef-FC1-pending`.
+Cabinet `dopp-kit` cartridge. `CERN-OHL-W-2.0`.

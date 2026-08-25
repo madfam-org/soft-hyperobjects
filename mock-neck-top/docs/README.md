@@ -9,4 +9,4 @@ gap, knit). Official visualizer and configurator:
 > An open, made-to-measure mock-neck top solves the neckband length from the wearer's own neckline so the collar sits clean, turning a knit staple into a repeatable commons object without factory grading.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

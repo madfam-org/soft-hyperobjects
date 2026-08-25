@@ -27,4 +27,4 @@ La trousse à outils à rangée de poches : un panneau plat de toile robuste ave
 | `tie` | 2 | Tie tab carrying the cord |
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

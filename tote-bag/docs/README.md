@@ -23,4 +23,4 @@ Yantra4D buckle slot), `strap_length`, `hem_allowance`.
 attach (no flange), so name + parameter resolution.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

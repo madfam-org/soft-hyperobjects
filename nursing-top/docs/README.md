@@ -8,4 +8,4 @@ maternity). Official visualizer and configurator: [Fashion Cabinet](https://fash
 > An open, made-to-measure nursing top with a double-layer discreet-access front lets a parent feed without undressing, from an open pattern that keeps the maker in control of fabric and fit — nursing wear as a repairable commons object, not a marked-up specialty product.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

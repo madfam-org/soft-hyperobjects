@@ -57,4 +57,4 @@ Un porte-jarretelles mis en forme qui se place entre la taille et la hanche haut
 > Deux défauts rendent les porte-jarretelles bon marché inutilisables, et tous deux sont dimensionnels : une bande droite ne peut se placer entre taille et hanche, et une jarretelle coupée à vue soit n'enfile pas sa pince, soit vrille dans une fente trop large.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

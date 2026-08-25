@@ -61,4 +61,4 @@ Une guêpière courte à six panneaux allant des côtes basses à la hanche haut
 > La réduction de taille est le nombre de la corsetterie qui ne doit jamais être deviné, et les serre-tailles commerciaux le cachent derrière une étiquette. Ici c'est un paramètre énoncé en millimètres, borné par une contrainte de sécurité.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

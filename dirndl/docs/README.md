@@ -8,4 +8,4 @@ visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
 > An open, made-to-measure dirndl pattern keeps a living heritage garment makeable and repairable by the people who wear it — bodice, skirt, and apron drafted to real measurements, with the regional decoration left to the maker rather than dictated or sold back.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

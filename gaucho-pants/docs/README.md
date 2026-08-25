@@ -18,4 +18,4 @@ Le gaucho : un pantalon très large, court, à mi-mollet, coupé si ample et dro
 > Un gaucho ouvert et sur mesure offre l'aisance d'une jupe avec la praticité d'un pantalon, ajusté à la personne, de sorte qu'une coupe confortable et facile à mouvoir reste fabricable et réparable à partir d'une seule longueur de tissu fluide.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

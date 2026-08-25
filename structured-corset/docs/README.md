@@ -18,4 +18,4 @@ Un corset structuré à baleines tracé comme un anneau de panneaux mis en forme
 > Un corset ouvert et sur mesure calcule chaque panneau mis en forme selon la poitrine, la taille et les hanches de la personne et dimensionne le busc imprimable en conséquence, de sorte qu'un vêtement de base ajusté avec précision — historiquement sur mesure et coûteux — devienne un objet commun réparable fait de tissu ferme et de quincaillerie ouverte.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

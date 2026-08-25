@@ -8,4 +8,4 @@ visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
 > An open, made-to-measure thobe pattern keeps a widely-worn modest heritage garment makeable to real measurements — a clean T-body with gored flare drafted from a handful of straight-seamed pieces — with the regional neck, cuff, and placket details left to the maker rather than dictated.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

@@ -18,4 +18,4 @@ Le gilet en maille à col en V : une couche en maille sans manches, coupée-cous
 > Un gilet en maille ouvert et sur mesure met une couche en maille coupée-cousue à la portée de quiconque possède une machine à coudre — sans machine à tricoter — ajusté à la personne et fini par de simples bandes côtelées, gardant un basique de la garde-robe fabricable et réparable.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

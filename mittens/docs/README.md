@@ -18,4 +18,4 @@ Des moufles chaudes : une poche de main arrondie qui réunit les quatre doigts d
 > Une moufle ouverte et sur mesure ajuste une vraie chaleur d'hiver à la main de la personne à partir de chutes chaudes de polaire ou de laine, de sorte qu'un article pour les mains douillet et réparable reste fabricable à la maison plutôt qu'acheté en tailles fixes.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

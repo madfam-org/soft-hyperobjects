@@ -18,4 +18,4 @@ La capelette d'épaules : une cape circulaire (anneau partiel) couvrant les épa
 > Une capelette ouverte et sur mesure calcule une ampleur circulaire nette à partir du tour de cou de la personne, de sorte qu'une gracieuse couche d'épaules — de celles qui exigent d'ordinaire un tracé soigné — devienne un objet commun à une seule couture que chacun peut couper et finir.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

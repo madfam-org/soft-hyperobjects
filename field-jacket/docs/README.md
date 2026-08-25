@@ -18,4 +18,4 @@ La veste de terrain utilitaire style M-65 : une veste carrée à hauteur de hanc
 > Une veste de terrain ouverte et sur mesure offre une couche robuste à quatre poches ajustée à la personne, afin qu'un basique utilitaire résistant devienne un objet commun réparable fait dans un tissu solide plutôt qu'acheté puis jeté.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

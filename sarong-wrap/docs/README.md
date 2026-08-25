@@ -8,4 +8,4 @@ visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
 > One open, made-to-measure pattern covers both the open wrap and the sewn tube worn across many cultures, sizing either to the wearer's own girth — a living everyday garment kept makeable from a single rectangle, with the motifs that carry regional identity left to the maker.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

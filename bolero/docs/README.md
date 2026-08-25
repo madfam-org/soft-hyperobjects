@@ -18,4 +18,4 @@ Le boléro court ouvert (shrug) : une veste très courte à devant ouvert s'arr�
 > Un boléro ouvert et sur mesure ajoute chaleur et couverture à une robe sans manches à partir d'une très petite quantité de tissu et sans fermeture, de sorte qu'une couche polyvalente soit fabricable et réparable par tous et s'accorde avec des vêtements que l'on possède déjà.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

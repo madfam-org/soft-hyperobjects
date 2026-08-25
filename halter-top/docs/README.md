@@ -9,4 +9,4 @@ gap, summer). Official visualizer and configurator:
 > An open, made-to-measure halter sizes the body band to the wearer's own under-bust and ties at the neck with a self-fabric strap, keeping a warm-weather staple makeable and adjustable from a firm woven without proprietary sizing.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

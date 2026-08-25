@@ -66,4 +66,4 @@ Un soutien-gorge d'allaitement à bonnet abattant construit autour de la seule e
 > Un soutien-gorge d'allaitement est un équipement médical vendu comme de la lingerie : il s'actionne d'une main, des dizaines de fois par jour, pendant des mois. Les deux choses qui décident s'il fonctionne ne sont jamais imprimées sur l'étiquette.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

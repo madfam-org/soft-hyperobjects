@@ -164,7 +164,7 @@ facing, sized off `snap_diameter`) and counted in the BOM, but not modelled here
 ## Provenance
 
 Original draft for Fashion Cabinet (Innovaciones MADFAM). No third-party pattern
-lineage. Commons licence: `LicenseRef-FC1-pending`.
+lineage. Commons licence: `CERN-OHL-W-2.0`.
 
 ## Render
 

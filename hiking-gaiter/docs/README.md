@@ -26,4 +26,4 @@ La guêtre pleine hauteur : un manchon tronconique qui enveloppe le haut de la c
 | `strap` | 2 | Instep strap passing under the boot arch |
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

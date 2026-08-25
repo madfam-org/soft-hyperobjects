@@ -23,4 +23,4 @@ top-zip tape and the zipper's `tape_edge` flange share `bag_width`, so
 `verify_hardware_links` enforces name resolution **and** the shared-dimension handshake.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

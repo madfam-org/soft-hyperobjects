@@ -9,4 +9,4 @@ gap, surplice). Official visualizer and configurator:
 > An open, made-to-measure wrap top adjusts to the body at the ties rather than a fixed closure, so one adaptable pattern fits changing and varied bodies — a forgiving everyday staple cut from soft, drapey cloth.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

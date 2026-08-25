@@ -18,4 +18,4 @@ Le manteau cocon : un manteau arrondi qui se bombe VERS L'EXTÉRIEUR à la hanch
 > Un manteau cocon ouvert et sur mesure offre une silhouette d'hiver douce et enveloppante à partir d'une seule couture latérale courbe, ajusté à la personne, de sorte qu'un manteau architectural et douillet reste fabricable et réparable dans une laine douce, quelle que soit la morphologie.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

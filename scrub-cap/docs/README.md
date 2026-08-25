@@ -18,4 +18,4 @@ La charlotte de bloc (à nouer) : une coiffe bombée couvrant les cheveux, avec 
 > Une charlotte de bloc ouverte et sur mesure permet aux personnels de soin et de cuisine de fabriquer leur propre couvre-chef lavable et confortable dans les tissus de leur choix, ajusté à la taille, remplaçant les charlottes jetables par un objet commun réparable.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

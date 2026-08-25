@@ -28,4 +28,4 @@ Un pantalon de pluie sans fond ni entrejambe : deux tubes de jambe imperméables
 | `hanger` | 2 | Webbing waist hanger carrying the side-release buckle |
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

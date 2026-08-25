@@ -28,4 +28,4 @@ La trousse à couteaux du cuisinier et du bushcraft : des canaux de lame rembour
 | `tie` | 2 | Tie tab carrying the cord |
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

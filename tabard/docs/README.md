@@ -18,4 +18,4 @@ Un vêtement de dessus simple : un panneau devant et un panneau dos réunis uniq
 > Un tabard ouvert et sur mesure est le vêtement de dessus le plus simple possible — deux panneaux et une couture — afin qu'une surcouche protectrice ou identifiante soit fabricable par n'importe qui, à n'importe quelle taille, à partir d'une seule laize de tissu robuste avec presque aucune chute.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

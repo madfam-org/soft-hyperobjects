@@ -18,4 +18,4 @@ Des manchettes en maille : des tubes extensibles fuselés portés sur les avant-
 > Une paire de manchettes ouverte et sur mesure est une réalisation de dix minutes qui ajoute de la chaleur là où un haut sans manches s'arrête, ajustée au bras de la personne, gardant une couche utile fabricable et réparable à partir d'une chute de côtes.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

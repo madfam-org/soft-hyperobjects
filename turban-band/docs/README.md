@@ -40,4 +40,4 @@ Re-pointing that flange key at a non-interface parameter is detected as a handsh
 failure.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

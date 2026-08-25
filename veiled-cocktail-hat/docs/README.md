@@ -43,4 +43,4 @@ dimension, not two that happen to agree. Re-pointing that flange key at a non-in
 parameter is detected as a handshake failure.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

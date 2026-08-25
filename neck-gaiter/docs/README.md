@@ -18,4 +18,4 @@ Le tour de cou (buff) : un simple tube extensible porté autour du cou et remont
 > Un tour de cou ouvert et sur mesure est une réalisation de dix minutes qui transforme une bande de maille technique en chaleur et protection soleil/poussière ajustée à la personne, gardant un équipement utile fabricable et réparable plutôt qu'acheté jetable.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

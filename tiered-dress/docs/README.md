@@ -18,4 +18,4 @@ La robe à volants étagés (prairie) : un corsage simple assemblé à une jupe 
 > Une robe à volants étagés ouverte et sur mesure construit le volume à partir de rectangles simples froncés par étapes, de sorte qu'une robe ample et indulgente soit fabricable à partir de coupes droites de tissu léger, presque sans savoir-faire de mise en forme et avec très peu de chutes.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

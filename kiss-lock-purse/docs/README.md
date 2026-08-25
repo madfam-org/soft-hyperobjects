@@ -42,4 +42,4 @@ garment's mouth are the same numbers, enforced by `verify_hardware_links`.
 
 ## Provenance
 
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

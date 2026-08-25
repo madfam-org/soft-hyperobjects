@@ -18,4 +18,4 @@ La robe pull en maille : une robe colonne en maille à manches longues avec un c
 > Une robe pull ouverte et sur mesure met une robe en maille chaude et couvrante à la portée d'un couturier amateur équipé pour l'extensible, ajustée à la personne et finie par de simples bandes côtelées, gardant un basique d'hiver fabricable et réparable.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

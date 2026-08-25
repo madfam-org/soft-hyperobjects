@@ -18,4 +18,4 @@ La jupe à pointes (mouchoir) : des panneaux presque carrés suspendus à un arc
 > Une jupe à pointes ouverte et sur mesure tient son ourlet flottant de simples panneaux carrés et d'un arc de taille résolu, de sorte qu'une jupe aérienne et pleine de mouvement soit fabricable dans un tissu léger avec seulement des coupes droites et une courbe.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

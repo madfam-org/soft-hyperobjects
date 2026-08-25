@@ -30,4 +30,4 @@ Un gilet-harnais porteur : un empiècement d'épaule qui couvre le trapèze et d
 | `webbing` | 4 | Adjuster strap run, turning on itself at the ladder-lock |
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

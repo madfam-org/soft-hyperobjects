@@ -18,4 +18,4 @@ Le gilet de travail/terrain multi-poches : un gilet sans manches à zip frontal 
 > Un gilet utilitaire ouvert et sur mesure transforme un porteur de poches à outils et cargo en un objet commun réparable ajusté à la personne, afin que les travailleurs de terrain et de métier fabriquent et réparent leur propre équipement dans un tissu solide plutôt que d'acheter du matériel de taille fixe.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

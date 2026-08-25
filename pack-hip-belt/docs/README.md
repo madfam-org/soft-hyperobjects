@@ -27,4 +27,4 @@ La ceinture ventrale porteuse d'un sac à dos : deux ailes rembourrées qui épo
 | `webbing` | 2 | Adjuster tail from the buckle through the ladder-lock |
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

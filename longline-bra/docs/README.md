@@ -52,4 +52,4 @@ Un soutien-gorge prolongé sur les côtes en un panneau de taille baleiné — l
 > Les baleines sont l'endroit où le vêtement de base fait maison échoue : achetées en longueurs fixes, recoupées, elles finissent par percer un ourlet ou laisser le panneau se plier. Ce cartouche dérive la longueur de baleine du panneau réellement tracé.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

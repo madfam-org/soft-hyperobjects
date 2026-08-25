@@ -18,4 +18,4 @@ La cagoule en maille : une capuche ajustée couvrant tête et cou avec une ouver
 > Une cagoule ouverte et sur mesure permet à chacun de fabriquer une protection tête-et-cou pour le froid ajustée à sa tête et à son ouverture de visage, gardant un équipement chaud et fonctionnel fabricable et réparable à partir d'une chute de mérinos ou de polaire.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

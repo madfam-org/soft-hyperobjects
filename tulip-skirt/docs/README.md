@@ -18,4 +18,4 @@ La jupe tulipe (pétales) : une jupe courte et arrondie dont le devant est fait 
 > Une jupe tulipe ouverte et sur mesure construit une silhouette douce et arrondie à partir de deux panneaux incurvés qui se chevauchent, ajustés à la personne, de sorte qu'une forme ludique d'ordinaire coupée à l'œil devienne un objet commun reproductible et bien ajusté.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

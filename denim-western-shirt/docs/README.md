@@ -142,7 +142,7 @@ the snap, the placket it runs on, and every drilled snap mark on the cuffs.
 ## Provenance
 
 Original draft for Fashion Cabinet (Innovaciones MADFAM). No third-party pattern
-lineage. Commons licence: `LicenseRef-FC1-pending`.
+lineage. Commons licence: `CERN-OHL-W-2.0`.
 
 ## Render
 

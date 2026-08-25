@@ -16,4 +16,4 @@ and configurator: [Fashion Cabinet](https://fashioncabinet.app).
 the printable case. Enforced in CI by `scripts/qa/verify_hardware_links.py`.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

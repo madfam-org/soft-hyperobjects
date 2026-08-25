@@ -40,4 +40,4 @@ shared-dimension coupling. Re-pointing that flange key at a non-interface parame
 detected as a handshake failure.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

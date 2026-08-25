@@ -18,4 +18,4 @@ La robe fourreau ajustée : une robe près du corps, droite, mise en forme par d
 > Une robe fourreau ouverte et sur mesure calcule la mise en forme poitrine, taille et hanches selon la morphologie de la personne, de sorte qu'une robe ajustée avec précision — d'ordinaire le produit d'un patronnage professionnel — devienne un objet commun reproductible que chacun peut couper à sa taille.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

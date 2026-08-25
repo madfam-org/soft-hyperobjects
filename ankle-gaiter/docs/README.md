@@ -73,4 +73,4 @@ no foot codes, so no foot code is claimed anywhere in FC-300 lane 4.
 `hook_plate_w`, `strap_w`, `seam_allowance`.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

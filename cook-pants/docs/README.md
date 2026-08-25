@@ -18,4 +18,4 @@ Le pantalon de cuisine ample à enfiler : un pantalon large, droit, à taille é
 > Un pantalon de cuisine ouvert et sur mesure ajuste un pantalon de travail durable et confortable aux hanches et au montant de la personne, de sorte qu'un basique des travailleurs postés soit fabricable et réparable à partir d'un tissu lavable plutôt qu'acheté comme stock d'uniforme éphémère.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

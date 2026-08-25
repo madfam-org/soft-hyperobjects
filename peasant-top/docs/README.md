@@ -18,4 +18,4 @@ Le haut paysan (folk) : un chemisier ample froncé sur une encolure élastiquée
 > Un haut paysan ouvert et sur mesure construit un chemisier folklorique doux et ajustable à partir de rectangles froncés, de sorte qu'un vêtement indulgent qui va à de nombreux corps et se porte sur ou hors épaule reste fabricable dans un tissu léger presque sans mise en forme.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

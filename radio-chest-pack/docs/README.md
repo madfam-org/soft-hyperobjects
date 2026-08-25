@@ -30,4 +30,4 @@ La sacoche radio de poitrine : une poche cubée portée haut sur le sternum, là
 | `strap` | 4 | H-harness strap, turning on itself at the ladder-lock |
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

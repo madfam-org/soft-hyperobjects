@@ -59,4 +59,4 @@ Un soutien-gorge balconnet : une seule couture horizontale de bonnet porte toute
 > La forme d'un balconnet vient de l'embu d'une courbe plus longue dans une plus courte, une étape que les patrons commerciaux décrivent seulement par « embuer pour ajuster ». Ici l'excédent est calculé, déclaré sur la couture et vérifié.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

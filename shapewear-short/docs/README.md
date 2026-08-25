@@ -53,4 +53,4 @@ Un short de compression taille haute en powernet, de la taille à mi-cuisse, ave
 > La gaine vend la compression comme une lettre de taille et un adjectif — « maintien ferme » — qui ne dit rien, ne peut être reproduit, et masque la seule décision qui détermine si le vêtement est confortable ou un garrot.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

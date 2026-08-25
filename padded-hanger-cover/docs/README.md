@@ -47,4 +47,4 @@ the wave report's `co-create: garment-hanger` note.
 
 ## Provenance
 
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

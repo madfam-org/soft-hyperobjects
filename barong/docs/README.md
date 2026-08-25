@@ -18,4 +18,4 @@ Le barong tagalog est la chemise formelle brodée des Philippines : une chemise 
 > Un barong ouvert et sur mesure garde un vêtement formel national fabricable à des mesures réelles dans les fibres transparentes qui lui reviennent, de sorte qu'une pièce centrale des cérémonies philippines reste entre les mains de ceux qui la font plutôt que de ceux qui la vendent — la broderie qui porte son identité leur étant laissée.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

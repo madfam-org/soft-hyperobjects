@@ -27,4 +27,4 @@ Le manteau d'un chien de travail : un panneau dorsal façonné, coupé au pli de
 | `chest` | 2, mirrored | Chest strap with a tape zone at the free end |
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

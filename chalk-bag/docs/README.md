@@ -29,4 +29,4 @@ Le sac à magnésie du grimpeur : un cylindre rigide doublé de polaire porté a
 | `cuff` | 1 | Fleece mouth cuff, unrolled on the same run |
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

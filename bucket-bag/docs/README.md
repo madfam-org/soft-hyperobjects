@@ -48,4 +48,4 @@ this bag's `strap_tip` interface — enforced by `verify_hardware_links`.
 ## Provenance
 
 Original draft for Fashion Cabinet; circular-drafting precedent from the Fashion Cabinet
-`bucket-hat` cartridge. `LicenseRef-FC1-pending`.
+`bucket-hat` cartridge. `CERN-OHL-W-2.0`.

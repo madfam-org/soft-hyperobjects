@@ -8,4 +8,4 @@ maternity). Official visualizer and configurator: [Fashion Cabinet](https://fash
 > An open, made-to-measure tee that designs out tags, ridged seams, and a scratchy neck makes everyday clothing wearable for people with tactile sensitivity — including many autistic and sensory-processing-different wearers — from an open pattern anyone can make in any soft fabric.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

@@ -35,4 +35,4 @@ interface and the dimensional-coupling rule does not apply. Name resolution is s
 enforced by `verify_hardware_links`.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

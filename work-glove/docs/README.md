@@ -18,4 +18,4 @@ Un gant de travail protecteur tracé dans le style trank traditionnel : une piè
 > Un gant de travail ouvert et sur mesure ajuste une vraie protection de la main à la main de la personne à partir de chutes solides de cuir ou de toile, de sorte que des gants durables et réparables restent fabricables à la maison plutôt qu'achetés en tailles fixes puis jetés.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

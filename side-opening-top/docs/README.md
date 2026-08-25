@@ -8,4 +8,4 @@ maternity). Official visualizer and configurator: [Fashion Cabinet](https://fash
 > An open, made-to-measure top that opens fully down one side and closes with magnetic clasps removes the overhead reach and fine-motor fastening a conventional top demands — making dressing independent for people with limited mobility, one working arm, or dexterity differences, from an open pattern anyone can adapt.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

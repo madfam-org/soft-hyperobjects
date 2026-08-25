@@ -18,4 +18,4 @@ La jupe cercle complète : coupée en anneau pour que l'ourlet soit un cercle en
 > Une jupe cercle ouverte et sur mesure résout le rayon exact pour le tour de taille de la personne, de sorte qu'une jupe dont l'ajustement dépend entièrement d'une courbe précise devienne un objet commun fiable que chacun peut couper à sa taille.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

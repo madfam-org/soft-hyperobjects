@@ -52,4 +52,4 @@ ISO 8559 as vendored declares no foot landmark codes. Nothing is invented.
 `seam_allowance`.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

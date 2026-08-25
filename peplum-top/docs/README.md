@@ -9,4 +9,4 @@ gap, fitted). Official visualizer and configurator:
 > An open, made-to-measure peplum top computes a true circular flounce whose inner arc matches the wearer's own waist, so a shape that usually needs pattern-drafting skill becomes a repeatable commons object anyone can cut to fit.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

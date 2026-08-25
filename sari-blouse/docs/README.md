@@ -23,4 +23,4 @@ bust/shaping darts + a short set-in sleeve. Shoulder + side seams balance to del
 
 ## Provenance
 
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

@@ -18,4 +18,4 @@ Le pantalon de peintre utilitaire : un pantalon de travail droit et ample portan
 > Un pantalon de peintre ouvert et sur mesure intègre le port d'outils du métier — passant marteau, double genou, poche de cuisse — dans un pantalon robuste ajusté à la personne, afin que les vêtements de travail restent fabricables et réparables plutôt que jetables.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

@@ -18,4 +18,4 @@ Le top col bateau : une encolure large et peu profonde qui court droit d'une ép
 > Un top col bateau ouvert et sur mesure met l'intemporelle ligne bretonne à la portée de tout couturier amateur, ajusté à la personne et fini par de simples bandes, gardant un classique de la garde-robe fabricable et réparable.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

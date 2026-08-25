@@ -18,4 +18,4 @@ La jupe à godets : une jupe ajustée avec des godets triangulaires (inserts év
 > Une jupe à godets ouverte et sur mesure calcule chaque insert évasé pour l'ajuster à la jupe ajustée de la personne, de sorte qu'une ligne sirène spectaculaire — d'ordinaire une technique de couture — devienne un objet commun reproductible que chacun peut couper et poser.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

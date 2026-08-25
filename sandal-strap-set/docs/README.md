@@ -62,4 +62,4 @@ landmark codes at all. Nothing is invented.
 `heel_rise`, `seam_allowance`.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

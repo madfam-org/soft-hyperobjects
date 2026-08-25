@@ -8,4 +8,4 @@ maternity). Official visualizer and configurator: [Fashion Cabinet](https://fash
 > An open, made-to-measure wrap skirt that closes with magnetic clasps instead of ties or buttons makes dressing independent for people with limited fine-motor control or one working hand — no fiddly fastening, from an open pattern anyone can adapt.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

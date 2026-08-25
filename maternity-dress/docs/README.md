@@ -8,4 +8,4 @@ maternity). Official visualizer and configurator: [Fashion Cabinet](https://fash
 > An open, made-to-measure maternity dress whose empire seam and flared skirt grow with the bump lets a parent dress the whole pregnancy from one adaptable pattern, keeping fabric and fit in the maker's hands rather than buying a series of short-lived specialty garments.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

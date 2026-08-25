@@ -18,4 +18,4 @@ L'áo dài est la tenue nationale du Vietnam : une tunique longue et ajustée fe
 > Un áo dài ouvert et sur mesure calcule une tenue nationale très ajustée à panneaux fendus selon la morphologie de la personne — le type d'ajustement qui exige traditionnellement un tailleur — gardant un vêtement central de l'identité vietnamienne fabricable et réparable par ceux qui le portent, les motifs leur étant laissés. Un 200e objet à propos pour un commun bâti pour garder le vêtement entre les mains de ceux qui le font.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

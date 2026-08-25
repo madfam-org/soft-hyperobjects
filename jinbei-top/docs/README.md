@@ -8,4 +8,4 @@ visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
 > An open, made-to-measure jinbei jacket keeps a light, breathable heritage garment makeable from a few straight-seamed rectangles — dressed with simple side ties rather than fastenings — with the sashiko and indigo finishing left to the maker rather than sold back.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

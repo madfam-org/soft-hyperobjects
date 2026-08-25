@@ -34,4 +34,4 @@ Peak positions are carried on the headband as `marking` internals so the marker 
 where the front and rear peaks land.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

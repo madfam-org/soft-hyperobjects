@@ -18,4 +18,4 @@ Le manteau swing : un manteau qui s'évase fortement d'une épaule ajustée vers
 > Un manteau swing ouvert et sur mesure met une silhouette spectaculaire du milieu du siècle à la portée d'un artisan amateur, ajusté à la personne par-dessus les couches, de sorte qu'un manteau d'hiver saisissant soit fabricable et réparable plutôt qu'acheté à prix fort.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

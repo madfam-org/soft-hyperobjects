@@ -69,4 +69,4 @@ so `ankle_girth` is not claimed either. Nothing is invented.
 `button_thickness`, `seam_allowance`.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

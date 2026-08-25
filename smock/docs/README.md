@@ -18,4 +18,4 @@ La blouse d'artiste/d'atelier à enfiler : un vêtement de protection ample avec
 > Une blouse ouverte et sur mesure protège les vêtements et donne de l'aisance pour travailler à partir d'une coupe simple empiècement-corps froncé sans fermeture, afin qu'un artisan, un cuisinier ou un enfant puisse enfiler une protection durable et réparable faite dans n'importe quel tissu lavable.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

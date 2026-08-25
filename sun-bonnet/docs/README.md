@@ -33,4 +33,4 @@ of cotton cord between the two brim layers, which is how a bonnet stays washable
 still holds its shade.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

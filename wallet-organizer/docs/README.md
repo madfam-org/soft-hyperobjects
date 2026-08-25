@@ -50,4 +50,4 @@ stack, marked as four `screw-bore` cross marks inset from the shell corners.
 
 ## Provenance
 
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

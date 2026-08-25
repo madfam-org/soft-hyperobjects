@@ -9,4 +9,4 @@ gap, layering). Official visualizer and configurator:
 > An open, made-to-measure pinafore is a forgiving layering dress with no fitted side seam — held by crossed straps and a waist seam — so it fits a wide range of bodies and grows with a child, makeable from sturdy everyday cloth.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

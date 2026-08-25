@@ -18,4 +18,4 @@ Le top épaules dénudées (bardot) : une large encolure horizontale qui repose 
 > Un top épaules dénudées ouvert et sur mesure est l'un des vêtements les plus faciles à réaliser — deux panneaux et un bord élastique — ajusté à la personne, de sorte qu'un basique d'été soit fabricable et réparable à partir d'un seul tissu doux, quelle que soit la morphologie.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

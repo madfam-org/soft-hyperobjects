@@ -13,4 +13,4 @@ and configurator: [Fashion Cabinet](https://fashioncabinet.app).
 against the pinned snapshot.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

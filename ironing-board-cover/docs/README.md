@@ -51,4 +51,4 @@ cover's own `cord_casing` interface on both sides of the bridge.
 
 ## Provenance
 
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

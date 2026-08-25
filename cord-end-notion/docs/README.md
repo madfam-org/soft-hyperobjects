@@ -62,5 +62,4 @@ the cord the guide measures is the cord the tip grips.
 
 ## Provenance
 
-Original draft for Fashion Cabinet. Commons license **pending the FC1 commons-license
-ruling** (`LicenseRef-FC1-pending`).
+Original draft for Fashion Cabinet. Commons license **CERN-OHL-W-2.0** (ruled FC1, 2026-08-25).

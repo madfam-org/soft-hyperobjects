@@ -51,4 +51,4 @@ Un soutien-gorge à armatures au bonnet en trois pièces : deux sections inféri
 > L'ajustement à armatures est le problème le plus difficile de la lingerie industrielle, et l'industrie le résout en arrondissant les corps à une grille de tailles. Ce cartouche le résout dimensionnellement : le bonnet est calculé à partir du dessous de poitrine et de la poitrine propres à la personne, et la coulisse d'armature du berceau est résolue sur l'arc exact de l'armature imprimable qui y sera enfilée.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

@@ -31,4 +31,4 @@ Three solves make the hat close:
   drafted polygon perimeter equals the intended circumference exactly.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

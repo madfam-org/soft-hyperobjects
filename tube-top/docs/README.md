@@ -18,4 +18,4 @@ Le bustier tube (bandeau) : une bande sans bretelles en tissu extensible autour 
 > Un bustier tube ouvert et sur mesure est le vêtement le plus minimal du commun — un panneau, une couture, deux coulisses élastiques — dimensionné pour maintenir la personne, de sorte que même un débutant puisse produire une pièce portable à partir d'une chute de tissu extensible.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.

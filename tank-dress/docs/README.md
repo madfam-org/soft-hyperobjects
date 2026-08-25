@@ -18,4 +18,4 @@ La robe colonne en maille sans manches : un corps débardeur (larges bretelles, 
 > Une robe débardeur ouverte et sur mesure est la robe en maille la plus simple — deux panneaux, bords bordés, sans fermeture — ajustée à la personne, de sorte qu'un vêtement du quotidien soit fabricable et réparable à partir d'une seule maille douce, quelle que soit la morphologie.
 
 ## Provenance
-Original draft for Fashion Cabinet. `LicenseRef-FC1-pending`.
+Original draft for Fashion Cabinet. `CERN-OHL-W-2.0`.
