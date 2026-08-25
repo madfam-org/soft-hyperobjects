@@ -1,0 +1,588 @@
+{
+  "project": {
+    "name": "Knit Poncho Wrap",
+    "slug": "knit-poncho-wrap",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The contemporary poncho wrap: a heavy knitted or fulled outer layer that is neither the closed woven rectangle nor the open heritage ruana, but the third thing — a wrap with a real drafted neckline, a stand collar solved to it, and a toggle closure that lets it be worn shut like a coat or thrown open like a shawl. The distinction is constructional, not vocabulary: `sarape-poncho` is one rectangle with a head slit and nothing shaped; `poncho-ruana` is split up the centre front with a plain neck slot; this one has a scooped neckline drafted from a measured neck girth, a collar bisected to that neckline, and a toggle band. It is a garment you fasten, which is why it is the one that needs hardware. The shoulder fall, the neck span, the closure run and the toggle count are all derived, and each is floored before geometry is built — a derived dimension that goes negative inverts the piece into valid-looking-but-wrong geometry. Toggles bridge to the Yantra4D toggle solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El poncho envolvente contemporáneo: una capa exterior pesada de punto o batanada que no es el rectángulo cerrado en plano ni la ruana abierta de tradición, sino la tercera cosa — un envolvente con escote trazado de verdad, un cuello alto resuelto contra ese escote y un cierre de alamares que permite llevarlo cerrado como abrigo o abierto como chal. La distinción es de construcción, no de vocabulario: `sarape-poncho` es un rectángulo con abertura de cabeza y nada conformado; `poncho-ruana` va partido al centro del frente con una ranura de cuello lisa; este lleva escote curvo trazado desde un contorno de cuello medido, cuello resuelto por bisección contra ese escote, y tapeta de alamares. Es una prenda que se abrocha, y por eso es la que sí necesita herraje. La caída de hombro, el tramo de cuello, la carrera de cierre y el número de alamares son derivados, y cada uno se acota antes de construir geometría — una dimensión derivada que se vuelve negativa invierte la pieza en geometría que parece válida y no lo es. Los alamares se puentean al sólido `toggle` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le poncho-cape contemporain : une couche extérieure lourde, tricotée ou foulée, qui n'est ni le rectangle tissé fermé ni la ruana ouverte du patrimoine, mais la troisième chose — une cape à encolure réellement tracée, avec un col montant résolu sur cette encolure et une fermeture à brandebourgs qui permet de la porter fermée comme un manteau ou ouverte comme un châle. La distinction est constructive, non lexicale : `sarape-poncho` est un rectangle percé d'une fente de tête, rien n'y est façonné ; `poncho-ruana` est fendue au milieu devant avec une simple fente d'encolure ; celle-ci a une encolure creusée tracée depuis un tour de cou mesuré, un col résolu par bissection sur cette encolure, et une patte à brandebourgs. C'est un vêtement qu'on ferme, d'où sa quincaillerie. La tombée d'épaule, la portée d'encolure, la course de fermeture et le nombre de brandebourgs sont dérivés, et chacun est borné avant toute géométrie — une dimension dérivée devenue négative inverse la pièce en une géométrie qui paraît valide sans l'être. Les brandebourgs font le pont vers le solide `toggle` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "poncho",
+      "wrap",
+      "cape",
+      "knitwear",
+      "outerwear",
+      "melton",
+      "toggle",
+      "hardware",
+      "made-to-measure",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet; the contemporary shaped-neckline poncho wrap, drafted to sit distinct from the commons' `sarape-poncho` (closed rectangle) and `poncho-ruana` (open slit-neck heritage wrap)",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full wrap",
+        "es": "Envolvente completo",
+        "fr": "Cape complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "collar",
+        "toggle_band"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front panel",
+        "es": "Paño delantero",
+        "fr": "Panneau devant"
+      },
+      "default_color": "#4a4f57",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back panel (on fold)",
+        "es": "Paño de espalda (al doblez)",
+        "fr": "Panneau dos (au pli)"
+      },
+      "default_color": "#383c43",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Stand collar (half, on fold)",
+        "es": "Cuello alto (medio, al doblez)",
+        "fr": "Col montant (moitié, au pli)"
+      },
+      "default_color": "#2c3037",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "toggle_band",
+      "label": {
+        "en": "Toggle band",
+        "es": "Tapeta de alamares",
+        "fr": "Patte à brandebourgs"
+      },
+      "default_color": "#5c626b",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Ajustement"
+      }
+    },
+    {
+      "id": "style",
+      "label": {
+        "en": "Style",
+        "es": "Estilo",
+        "fr": "Style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "span_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 620,
+      "min": 420,
+      "max": 850,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "across_back"
+      },
+      "label": {
+        "en": "Half span (mm)",
+        "es": "Semienvergadura (mm)",
+        "fr": "Demi-envergure (mm)"
+      },
+      "tooltip": {
+        "en": "Neck centre to the outer edge; the wrap should cover the upper arm",
+        "es": "Del centro del cuello al borde exterior; debe cubrir el brazo",
+        "fr": "Du centre d'encolure au bord ; la cape doit couvrir le haut du bras"
+      }
+    },
+    {
+      "id": "wrap_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 780,
+      "min": 500,
+      "max": 1150,
+      "step": 10,
+      "label": {
+        "en": "Front length (mm)",
+        "es": "Largo delantero (mm)",
+        "fr": "Longueur devant (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder line to the front hem; also caps how far the closure can run",
+        "es": "De la línea de hombro al ruedo delantero; también limita la carrera del cierre",
+        "fr": "De la ligne d'épaule à l'ourlet devant ; borne aussi la course de fermeture"
+      }
+    },
+    {
+      "id": "back_drop",
+      "type": "slider",
+      "group": "style",
+      "default": 120,
+      "min": 0,
+      "max": 300,
+      "step": 10,
+      "label": {
+        "en": "Back drop (mm)",
+        "es": "Caída extra de espalda (mm)",
+        "fr": "Rallonge du dos (mm)"
+      },
+      "tooltip": {
+        "en": "Extra length on the back; declared as ease on the outer-edge check so the drop is proven",
+        "es": "Largo extra en la espalda; declarado como holgura en el borde exterior para probar la caída",
+        "fr": "Longueur en plus au dos ; déclarée comme aisance sur le bord extérieur"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 400,
+      "min": 300,
+      "max": 520,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the half neck width with outer-layer wearing ease; the neckline is drafted from it, not assumed",
+        "es": "Define el medio ancho de cuello con holgura de capa exterior; el escote se traza de aquí",
+        "fr": "Pilote la demi-largeur d'encolure avec l'aisance d'une couche extérieure"
+      }
+    },
+    {
+      "id": "front_neck_drop",
+      "type": "slider",
+      "group": "style",
+      "default": 95,
+      "min": 30,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Front neck drop (mm)",
+        "es": "Caída del escote delantero (mm)",
+        "fr": "Descente d'encolure devant (mm)"
+      },
+      "tooltip": {
+        "en": "How deep the front scoop cuts below the shoulder line",
+        "es": "Cuánto baja el escote delantero de la línea de hombro",
+        "fr": "De combien l'encolure devant descend sous la ligne d'épaule"
+      }
+    },
+    {
+      "id": "shoulder_slope",
+      "type": "slider",
+      "group": "fit",
+      "default": 70,
+      "min": 0,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Shoulder fall (mm)",
+        "es": "Caída de hombro (mm)",
+        "fr": "Tombée d'épaule (mm)"
+      },
+      "tooltip": {
+        "en": "How far the outer edge falls below the neck; 0 gives a flat rectangle that stands up in a hoop on stiff melton",
+        "es": "Cuánto cae el borde exterior bajo el cuello; 0 da un rectángulo plano que se ahueca en melton rígido",
+        "fr": "De combien le bord extérieur tombe sous l'encolure ; 0 donne un rectangle plat"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "group": "style",
+      "default": 85,
+      "min": 0,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Collar stand (mm)",
+        "es": "Alto del cuello (mm)",
+        "fr": "Hauteur du col (mm)"
+      },
+      "tooltip": {
+        "en": "Finished height of the stand; floored at 25 mm in the draft, because a zero-height collar is not a piece",
+        "es": "Alto acabado del cuello; acotado a 25 mm en el trazo, porque un cuello de alto cero no es una pieza",
+        "fr": "Hauteur finie du col ; bornée à 25 mm, un col de hauteur nulle n'étant pas une pièce"
+      }
+    },
+    {
+      "id": "closure_run",
+      "type": "slider",
+      "group": "construction",
+      "default": 320,
+      "min": 80,
+      "max": 600,
+      "step": 10,
+      "label": {
+        "en": "Closure run (mm)",
+        "es": "Carrera del cierre (mm)",
+        "fr": "Course de fermeture (mm)"
+      },
+      "tooltip": {
+        "en": "How far down the front the toggles run; capped against the front length so the marks can never sit above the neckline",
+        "es": "Cuánto baja el cierre por el frente; limitado contra el largo delantero para que las marcas nunca queden sobre el escote",
+        "fr": "Jusqu'où les brandebourgs descendent ; borné sur la longueur devant"
+      }
+    },
+    {
+      "id": "toggle_pitch",
+      "type": "slider",
+      "group": "construction",
+      "default": 110,
+      "min": 60,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Toggle pitch (mm)",
+        "es": "Paso entre alamares (mm)",
+        "fr": "Pas entre brandebourgs (mm)"
+      },
+      "tooltip": {
+        "en": "Spacing between toggles; the COUNT is derived from the run over this pitch and clamped to 1-8",
+        "es": "Separación entre alamares; el NÚMERO se deriva de la carrera entre este paso y se acota a 1-8",
+        "fr": "Espacement des brandebourgs ; le NOMBRE est dérivé et borné à 1-8"
+      }
+    },
+    {
+      "id": "barrel_len",
+      "type": "slider",
+      "group": "construction",
+      "default": 46,
+      "min": 25,
+      "max": 70,
+      "step": 1,
+      "label": {
+        "en": "Toggle length (mm)",
+        "es": "Largo del alamar (mm)",
+        "fr": "Longueur du brandebourg (mm)"
+      },
+      "tooltip": {
+        "en": "Toggle barrel; drives the Yantra4D toggle, its seat on the band and the cord loop",
+        "es": "Barril del alamar; define el toggle de Yantra4D, su asiento en la tapeta y la presilla",
+        "fr": "Corps du brandebourg ; pilote le toggle Yantra4D, son siège et la bride"
+      }
+    },
+    {
+      "id": "cord_dia",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 3,
+      "max": 9,
+      "step": 0.5,
+      "label": {
+        "en": "Cord diameter (mm)",
+        "es": "Diámetro del cordón (mm)",
+        "fr": "Diamètre du cordon (mm)"
+      },
+      "tooltip": {
+        "en": "Loop cord; drives the Yantra4D toggle's cord channel and the band's marked channels",
+        "es": "Cordón de la presilla; define el canal del toggle de Yantra4D y los canales marcados",
+        "fr": "Cordon de bride ; pilote le canal du toggle Yantra4D"
+      }
+    },
+    {
+      "id": "band_width",
+      "type": "slider",
+      "group": "style",
+      "default": 70,
+      "min": 35,
+      "max": 130,
+      "step": 5,
+      "label": {
+        "en": "Band width (mm)",
+        "es": "Ancho de la tapeta (mm)",
+        "fr": "Largeur de la patte (mm)"
+      },
+      "tooltip": {
+        "en": "Width of the reinforced toggle band; it takes the whole closing load",
+        "es": "Ancho de la tapeta reforzada; carga todo el esfuerzo del cierre",
+        "fr": "Largeur de la patte renforcée ; elle porte toute la charge"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 14,
+      "min": 10,
+      "max": 25,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Heavy fulled wool eats seam room; 12-15 mm is the melton norm",
+        "es": "La lana batanada gruesa se come el margen; 12-15 mm es lo normal en melton",
+        "fr": "La laine foulée épaisse mange la marge ; 12-15 mm est la norme en melton"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "closure_run < wrap_length - front_neck_drop",
+      "severity": "warning",
+      "message": {
+        "en": "The closure cannot run past the front hem; the kernel caps it rather than marking toggles off the panel.",
+        "es": "El cierre no puede pasar del ruedo delantero; el núcleo lo acota en vez de marcar alamares fuera del paño.",
+        "fr": "La fermeture ne peut dépasser l'ourlet devant ; le noyau la borne plutôt que de marquer hors du panneau."
+      }
+    },
+    {
+      "expression": "shoulder_slope < wrap_length - 120",
+      "severity": "warning",
+      "message": {
+        "en": "A shoulder fall this deep leaves no panel below the shoulder line; the kernel caps it.",
+        "es": "Una caída de hombro tan profunda no deja paño bajo la línea de hombro; el núcleo la acota.",
+        "fr": "Une tombée d'épaule aussi forte ne laisse aucun panneau sous l'épaule ; le noyau la borne."
+      }
+    },
+    {
+      "expression": "span_width > neck_girth / 5 + 102",
+      "severity": "warning",
+      "message": {
+        "en": "A wide neck on a narrow wrap leaves no shoulder span; the neck span is floored at 80 mm.",
+        "es": "Un cuello ancho en un envolvente angosto no deja tramo de hombro; el tramo se acota a 80 mm.",
+        "fr": "Une encolure large sur une cape étroite ne laisse aucune portée d'épaule ; bornée à 80 mm."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "coat",
+      "label": {
+        "en": "Worn shut (coat)",
+        "es": "Cerrado (abrigo)",
+        "fr": "Fermée (manteau)"
+      },
+      "values": {
+        "closure_run": 460,
+        "toggle_pitch": 100,
+        "collar_height": 100,
+        "shoulder_slope": 80
+      }
+    },
+    {
+      "id": "shawl",
+      "label": {
+        "en": "Worn open (shawl)",
+        "es": "Abierto (chal)",
+        "fr": "Ouverte (châle)"
+      },
+      "values": {
+        "closure_run": 120,
+        "toggle_pitch": 120,
+        "collar_height": 40,
+        "back_drop": 200
+      }
+    },
+    {
+      "id": "short",
+      "label": {
+        "en": "Short capelet length",
+        "es": "Corto tipo capa",
+        "fr": "Courte façon capeline"
+      },
+      "values": {
+        "wrap_length": 540,
+        "span_width": 500,
+        "back_drop": 40,
+        "closure_run": 200
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "lana-melton-abrigo"
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "poncho wrap toggle closure",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "toggle",
+      "linked": true,
+      "params_map": {
+        "barrel_len": "barrel_len",
+        "barrel_dia": "cord_dia * 2.4",
+        "cord_dia": "cord_dia",
+        "cords": "2"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "toggle_closure",
+        "type": "button_stand",
+        "label": {
+          "en": "Toggle band and cord loops",
+          "es": "Tapeta de alamares y presillas",
+          "fr": "Patte à brandebourgs et brides"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "center_front"
+          },
+          {
+            "piece": "toggle_band",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "barrel_len",
+          "cord_dia",
+          "closure_run",
+          "toggle_pitch",
+          "band_width"
+        ]
+      },
+      {
+        "id": "wrap_neckline",
+        "type": "neckline",
+        "label": {
+          "en": "Neckline and stand collar",
+          "es": "Escote y cuello alto",
+          "fr": "Encolure et col montant"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          },
+          {
+            "piece": "collar",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "front_neck_drop",
+          "collar_height"
+        ]
+      },
+      {
+        "id": "shoulder_seam",
+        "type": "shoulder",
+        "label": {
+          "en": "Sloped shoulder seam",
+          "es": "Costura de hombro inclinada",
+          "fr": "Couture d'épaule inclinée"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "back",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "span_width",
+          "shoulder_slope",
+          "neck_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true,
+      "knit_negative_ease": false
+    },
+    "societal_benefit": {
+      "en": "A wrap fits almost anyone because almost nothing about it is fitted, and this one adds only the two things that turn a draped cloth into a garment a person can work in: a neckline that sits down on the shoulders instead of riding up, and a closure that holds it shut in wind. Cut in fulled wool it is a genuine cold-weather layer that a beginner can finish in an afternoon, its outer edges need no hemming at all, and the only non-textile part is an openly printable toggle — so the one component that normally makes a coat unrepairable is the component you can make yourself.",
+      "es": "Un envolvente le sirve a casi cualquiera porque casi nada en él va entallado, y éste añade sólo las dos cosas que convierten una tela drapeada en una prenda con la que se puede trabajar: un escote que se asienta en los hombros en vez de subirse, y un cierre que lo sostiene contra el viento. Cortado en lana batanada es una capa de frío de verdad que una persona principiante termina en una tarde, sus bordes exteriores no necesitan dobladillo, y la única parte no textil es un alamar abiertamente imprimible — así que el componente que normalmente vuelve irreparable un abrigo es el que puedes fabricar tú.",
+      "fr": "Une cape va à presque tout le monde parce que presque rien n'y est ajusté, et celle-ci n'ajoute que les deux choses qui transforment une étoffe drapée en vêtement de travail : une encolure qui s'assoit sur les épaules au lieu de remonter, et une fermeture qui la tient close dans le vent. Coupée en laine foulée, c'est une vraie couche de froid qu'un débutant termine en un après-midi, ses bords extérieurs n'ont besoin d'aucun ourlet, et la seule pièce non textile est un brandebourg ouvertement imprimable — le composant qui rend d'ordinaire un manteau irréparable est celui que vous pouvez fabriquer vous-même."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

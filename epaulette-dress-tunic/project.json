@@ -1,0 +1,678 @@
+{
+  "project": {
+    "name": "Epaulette Dress Tunic",
+    "slug": "epaulette-dress-tunic",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The ceremonial dress tunic: the high-collared, straight-fronted uniform coat worn by bands, honour guards, cadet corps, ushers and doormen. Its defining feature is not the collar or the front but the SHOULDER BOARD — a rigid epaulette board sits on each shoulder carrying rank or unit insignia, and the tunic is drafted around it. This is the first garment in the commons that MOUNTS the Yantra4D epaulette-board rather than merely bridging it as a finding: shoulder_len, board_wide_w and board_narrow_w size both the printed board and the fabric tab drafted here, and board_button_dia drives both the board's button boss and the drilled retaining mark, so the sleeve of cloth and the board inside it cannot drift apart. The board seat is marked on both shoulders, positioned so the wide end sits at the shoulder point and the narrow end at the neck. The board's length is bounded by the measured shoulder seam, its narrow end by its wide end, and the front button count by the closure run — all derived, all floored before geometry is built, because a derived dimension that goes negative inverts the piece into valid-looking-but-wrong geometry.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La túnica de gala: la casaca de uniforme de cuello alto y frente recto que llevan bandas, guardias de honor, cuerpos de cadetes, acomodadores y porteros. Su rasgo definitorio no es el cuello ni el frente sino la TABLA DE HOMBRO — una charretera rígida se asienta en cada hombro con la insignia de grado o de unidad, y la túnica se traza a su alrededor. Es la primera prenda del acervo que MONTA la tabla de hombro de Yantra4D en vez de sólo puentearla como avío: shoulder_len, board_wide_w y board_narrow_w dimensionan tanto la tabla impresa como la trabilla de tela trazada aquí, y board_button_dia define tanto el bulón de la tabla como la marca de retención taladrada, de modo que la funda de tela y la tabla que va dentro no pueden separarse. El asiento de la tabla se marca en ambos hombros, con el extremo ancho en el punto de hombro y el angosto en el cuello. El largo de la tabla queda acotado por la costura de hombro medida, su extremo angosto por el ancho, y el número de botones del frente por la carrera del cierre — todos derivados, todos acotados antes de construir geometría, porque una dimensión derivada que se vuelve negativa invierte la pieza en geometría que parece válida y no lo es.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La tunique de cérémonie : la vareuse d'uniforme à col montant et devant droit portée par les musiques, gardes d'honneur, corps de cadets, placeurs et portiers. Son trait définitoire n'est ni le col ni le devant mais la PATTE D'ÉPAULE — une planchette rigide se pose sur chaque épaule et porte l'insigne de grade ou d'unité, et la tunique se trace autour d'elle. C'est le premier vêtement du fonds commun qui MONTE la planchette d'épaulette Yantra4D au lieu de simplement la ponter comme mercerie : shoulder_len, board_wide_w et board_narrow_w dimensionnent à la fois la planchette imprimée et la patte de tissu tracée ici, et board_button_dia pilote autant le bossage de bouton de la planchette que le repère de retenue percé, si bien que le fourreau de tissu et la planchette qu'il contient ne peuvent diverger. Le siège de la planchette est marqué sur les deux épaules, extrémité large au point d'épaule et étroite à l'encolure. La longueur de la planchette est bornée par la couture d'épaule mesurée, son extrémité étroite par la large, et le nombre de boutons de devant par la course de fermeture — toutes dérivées, toutes bornées avant toute géométrie.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "dress-tunic",
+      "uniform",
+      "ceremonial",
+      "epaulette",
+      "shoulder-board",
+      "mandarin-collar",
+      "workwear",
+      "hardware",
+      "epaulette-board",
+      "made-to-measure",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet, after the standard ceremonial dress-tunic construction (stand collar, closed straight front, sewn-in shoulder boards buttoned at the neck end)",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full tunic",
+        "es": "Túnica completa",
+        "fr": "Tunique complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "collar",
+        "epaulette_tab"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#2f3d55",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (on fold)",
+        "es": "Espalda (al doblez)",
+        "fr": "Dos (au pli)"
+      },
+      "default_color": "#27344a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#3a4a66",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Stand collar (half, on fold)",
+        "es": "Cuello alto (medio, al doblez)",
+        "fr": "Col montant (moitié, au pli)"
+      },
+      "default_color": "#1e2836",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "epaulette_tab",
+      "label": {
+        "en": "Epaulette tab (over the board)",
+        "es": "Trabilla de charretera (sobre la tabla)",
+        "fr": "Patte d'épaulette (sur la planchette)"
+      },
+      "default_color": "#c8a94e",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Ajustement"
+      }
+    },
+    {
+      "id": "insignia",
+      "label": {
+        "en": "Shoulder board",
+        "es": "Tabla de hombro",
+        "fr": "Patte d'épaule"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 1000,
+      "min": 760,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full body measurement; it also sets the shoulder span the board must fit inside",
+        "es": "Medida de cuerpo completo; también fija el hombro donde la tabla debe caber",
+        "fr": "Mesure de corps entière ; fixe aussi l'épaule où la planchette doit tenir"
+      }
+    },
+    {
+      "id": "tunic_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 760,
+      "min": 560,
+      "max": 1000,
+      "step": 10,
+      "label": {
+        "en": "Tunic length (mm)",
+        "es": "Largo de la túnica (mm)",
+        "fr": "Longueur de la tunique (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to hem; a dress tunic covers the seat",
+        "es": "De la nuca al ruedo; una túnica de gala cubre el asiento",
+        "fr": "De la nuque à l'ourlet ; une tunique de cérémonie couvre le siège"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 400,
+      "min": 300,
+      "max": 520,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "A stand collar sits close; the collar is bisected to the measured neckline it produces",
+        "es": "El cuello alto va ceñido; el cuello se resuelve por bisección contra el escote medido",
+        "fr": "Un col montant est près du cou ; le col est résolu sur l'encolure mesurée"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 620,
+      "min": 420,
+      "max": 760,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Cap apex to the cuff; a dress tunic sleeve reaches the wrist bone exactly",
+        "es": "Del alto de copa al puño; la manga de gala llega justo al hueso de la muñeca",
+        "fr": "Du sommet de tête au poignet ; la manche atteint exactement l'os du poignet"
+      }
+    },
+    {
+      "id": "tunic_ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 110,
+      "min": 70,
+      "max": 220,
+      "step": 5,
+      "label": {
+        "en": "Tunic ease (mm)",
+        "es": "Holgura de la túnica (mm)",
+        "fr": "Aisance de la tunique (mm)"
+      },
+      "tooltip": {
+        "en": "Total ease added to the chest; ceremonial dress is cut close but must allow a marching arm",
+        "es": "Holgura total sumada al pecho; la gala va ceñida pero debe permitir marchar",
+        "fr": "Aisance totale ajoutée ; la tenue de cérémonie est près du corps mais doit permettre la marche"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "group": "fit",
+      "default": 45,
+      "min": 25,
+      "max": 80,
+      "step": 1,
+      "label": {
+        "en": "Collar stand (mm)",
+        "es": "Alto del cuello (mm)",
+        "fr": "Hauteur du col (mm)"
+      },
+      "tooltip": {
+        "en": "Height of the mandarin stand; on a dress tunic this is the piece that holds the posture",
+        "es": "Alto del cuello mao; en una túnica de gala es la pieza que sostiene la postura",
+        "fr": "Hauteur du col mandarin ; c'est la pièce qui tient la posture"
+      }
+    },
+    {
+      "id": "shoulder_len",
+      "type": "slider",
+      "group": "insignia",
+      "default": 140,
+      "min": 60,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Board length (mm)",
+        "es": "Largo de la tabla (mm)",
+        "fr": "Longueur de la planchette (mm)"
+      },
+      "tooltip": {
+        "en": "THE dimension shared with the Yantra4D board. Bounded by the MEASURED shoulder seam — a board longer than the shoulder is clamped, never emitted hanging off the garment.",
+        "es": "LA dimensión compartida con la tabla de Yantra4D. Acotada por la costura de hombro MEDIDA — una tabla más larga que el hombro se acota, nunca se emite colgando de la prenda.",
+        "fr": "LA dimension partagée avec la planchette Yantra4D. Bornée par la couture d'épaule MESURÉE."
+      }
+    },
+    {
+      "id": "board_wide_w",
+      "type": "slider",
+      "group": "insignia",
+      "default": 60,
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Board width at the armhole (mm)",
+        "es": "Ancho de la tabla en la sisa (mm)",
+        "fr": "Largeur de la planchette à l'emmanchure (mm)"
+      },
+      "tooltip": {
+        "en": "The board's wide end, sewn into the shoulder seam; sizes both the printed board and the fabric tab",
+        "es": "El extremo ancho de la tabla, cosido en la costura de hombro; dimensiona tabla impresa y trabilla",
+        "fr": "L'extrémité large, prise dans la couture d'épaule ; dimensionne planchette et patte"
+      }
+    },
+    {
+      "id": "board_narrow_w",
+      "type": "slider",
+      "group": "insignia",
+      "default": 40,
+      "min": 15,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Board width at the neck (mm)",
+        "es": "Ancho de la tabla en el cuello (mm)",
+        "fr": "Largeur de la planchette à l'encolure (mm)"
+      },
+      "tooltip": {
+        "en": "The board's narrow end, where the retaining button goes. Capped at the wide end — a narrow end wider than the wide end is a wedge pointing the wrong way, not a board.",
+        "es": "El extremo angosto, donde va el botón de retención. Acotado al extremo ancho — un extremo angosto más ancho que el ancho es una cuña al revés, no una tabla.",
+        "fr": "L'extrémité étroite, où va le bouton de retenue. Bornée à l'extrémité large."
+      }
+    },
+    {
+      "id": "board_button_dia",
+      "type": "slider",
+      "group": "insignia",
+      "default": 14,
+      "min": 8,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Retaining button (mm)",
+        "es": "Botón de retención (mm)",
+        "fr": "Bouton de retenue (mm)"
+      },
+      "tooltip": {
+        "en": "Drives both the board's own button boss and the drilled retaining mark on the tab and the shoulder",
+        "es": "Define tanto el bulón de la tabla como la marca de retención taladrada en trabilla y hombro",
+        "fr": "Pilote le bossage de la planchette et le repère de retenue percé"
+      }
+    },
+    {
+      "id": "front_buttons_run",
+      "type": "slider",
+      "group": "construction",
+      "default": 560,
+      "min": 150,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Front closure run (mm)",
+        "es": "Carrera del cierre delantero (mm)",
+        "fr": "Course de fermeture devant (mm)"
+      },
+      "tooltip": {
+        "en": "How far down the front the buttons run; capped against the neckline so no mark lands off the panel",
+        "es": "Cuánto baja la botonadura; limitada contra el escote para que ninguna marca caiga fuera del paño",
+        "fr": "Jusqu'où descendent les boutons ; bornée sur l'encolure"
+      }
+    },
+    {
+      "id": "button_pitch",
+      "type": "slider",
+      "group": "construction",
+      "default": 90,
+      "min": 45,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Button pitch (mm)",
+        "es": "Paso entre botones (mm)",
+        "fr": "Pas entre boutons (mm)"
+      },
+      "tooltip": {
+        "en": "Spacing between front buttons; the COUNT is derived from the run over this pitch and clamped to 2-14",
+        "es": "Separación entre botones; el NÚMERO se deriva de la carrera entre este paso y se acota a 2-14",
+        "fr": "Espacement des boutons ; le NOMBRE est dérivé et borné à 2-14"
+      }
+    },
+    {
+      "id": "cap_ease",
+      "type": "slider",
+      "group": "construction",
+      "default": 22,
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Sleeve cap ease (mm)",
+        "es": "Embebido de copa (mm)",
+        "fr": "Embu de tête de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Declared ease worked into the cap; a uniform sleeve carries a clean, lightly eased cap",
+        "es": "Holgura declarada en la copa; la manga de uniforme lleva copa limpia y poco embebida",
+        "fr": "Aisance déclarée dans la tête ; une manche d'uniforme est peu embue"
+      },
+      "advanced": true
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 8,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Also the turn-under on the epaulette tab's three free sides",
+        "es": "También el remetido en los tres cantos libres de la trabilla",
+        "fr": "Également le rentré sur les trois bords libres de la patte"
+      },
+      "advanced": true
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 40,
+      "min": 25,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de ruedo (mm)",
+        "fr": "Rempli d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Body and sleeve hems; a uniform wants weight at the hem so it hangs straight on parade",
+        "es": "Ruedos de cuerpo y manga; un uniforme pide peso abajo para caer recto en formación",
+        "fr": "Ourlets du corps et des manches ; le poids fait tomber droit à la parade"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "board_narrow_w <= board_wide_w",
+      "severity": "warning",
+      "message": {
+        "en": "A shoulder board tapers toward the neck. A narrow end wider than the wide end is a wedge pointing the wrong way; the kernel caps it.",
+        "es": "Una tabla de hombro se afina hacia el cuello. Un extremo angosto más ancho que el ancho es una cuña al revés; el núcleo lo acota.",
+        "fr": "Une patte d'épaule s'effile vers l'encolure. Le noyau borne l'extrémité étroite."
+      }
+    },
+    {
+      "expression": "shoulder_len < chest_girth * 0.25",
+      "severity": "warning",
+      "message": {
+        "en": "The board must lie along the shoulder seam; a board longer than the measured shoulder is clamped rather than emitted hanging off the garment.",
+        "es": "La tabla debe ir a lo largo de la costura de hombro; una tabla más larga que el hombro medido se acota en vez de emitirse colgando.",
+        "fr": "La planchette doit reposer le long de la couture d'épaule ; une planchette trop longue est bornée."
+      }
+    },
+    {
+      "expression": "front_buttons_run < tunic_length",
+      "severity": "warning",
+      "message": {
+        "en": "The closure cannot run past the hem; the kernel caps it rather than marking buttonholes off the panel.",
+        "es": "El cierre no puede pasar del ruedo; el núcleo lo acota en vez de marcar ojales fuera del paño.",
+        "fr": "La fermeture ne peut dépasser l'ourlet ; le noyau la borne."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "band",
+      "label": {
+        "en": "Marching band",
+        "es": "Banda de guerra",
+        "fr": "Musique militaire"
+      },
+      "values": {
+        "shoulder_len": 150,
+        "board_wide_w": 70,
+        "board_narrow_w": 45,
+        "front_buttons_run": 600,
+        "button_pitch": 80
+      }
+    },
+    {
+      "id": "honour_guard",
+      "label": {
+        "en": "Honour guard",
+        "es": "Guardia de honor",
+        "fr": "Garde d'honneur"
+      },
+      "values": {
+        "shoulder_len": 180,
+        "board_wide_w": 85,
+        "board_narrow_w": 50,
+        "collar_height": 60,
+        "tunic_length": 820
+      }
+    },
+    {
+      "id": "usher",
+      "label": {
+        "en": "Usher / doorman",
+        "es": "Acomodador / portero",
+        "fr": "Placeur / portier"
+      },
+      "values": {
+        "shoulder_len": 110,
+        "board_wide_w": 45,
+        "board_narrow_w": 32,
+        "collar_height": 35,
+        "front_buttons_run": 480
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "lana-peinada-traje"
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "ceremonial shoulder board",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "epaulette-board",
+      "linked": true,
+      "params_map": {
+        "board_len": "shoulder_len",
+        "wide_w": "board_wide_w",
+        "narrow_w": "board_narrow_w",
+        "button_dia": "board_button_dia",
+        "plate_t": "2.4",
+        "rim_h": "2.0",
+        "rim_w": "1.6"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "shoulder_board",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder board seat and tab",
+          "es": "Asiento y trabilla de la tabla de hombro",
+          "fr": "Siège et patte de la planchette d'épaule"
+        },
+        "edges": [
+          {
+            "piece": "epaulette_tab",
+            "edge": "shoulder_seam"
+          },
+          {
+            "piece": "front",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "back",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "shoulder_len",
+          "board_wide_w",
+          "board_narrow_w",
+          "board_button_dia",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "stand_collar",
+        "type": "neckline",
+        "label": {
+          "en": "Neckline and mandarin stand",
+          "es": "Escote y cuello mao",
+          "fr": "Encolure et col mandarin"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          },
+          {
+            "piece": "collar",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "collar_height"
+        ]
+      },
+      {
+        "id": "front_closure",
+        "type": "button_stand",
+        "label": {
+          "en": "Front button ladder",
+          "es": "Botonadura delantera",
+          "fr": "Rangée de boutons devant"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "center_front"
+          }
+        ],
+        "parameters": [
+          "front_buttons_run",
+          "button_pitch",
+          "board_button_dia"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Armhole and sleeve cap",
+          "es": "Sisa y copa de manga",
+          "fr": "Emmanchure et tête de manche"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "tunic_ease",
+          "sleeve_length",
+          "cap_ease"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true,
+      "knit_negative_ease": false
+    },
+    "societal_benefit": {
+      "en": "Uniform shoulder boards are a small, rigid, organisation-specific part that is almost never sold separately and almost always the reason a serviceable tunic is retired — the cloth outlasts the board by decades. Making the board an openly printable Yantra4D object, and drafting the tunic to that board's actual dimensions rather than to a supplier's catalogue size, means a school band, a cadet corps or a volunteer honour guard can keep tunics in service, resize them as members change, and replace a cracked board in an afternoon instead of retiring the garment. It also removes a genuine barrier to entry: ceremonial dress is expensive largely because of its findings, not its cloth.",
+      "es": "Las tablas de hombro de uniforme son una pieza pequeña, rígida y específica de cada organización que casi nunca se vende por separado y que casi siempre es la razón por la que se retira una túnica todavía útil — la tela dura décadas más que la tabla. Hacer de la tabla un objeto abiertamente imprimible de Yantra4D, y trazar la túnica a las dimensiones reales de esa tabla y no a una talla de catálogo de proveedor, permite que una banda escolar, un cuerpo de cadetes o una guardia de honor voluntaria mantenga las túnicas en servicio, las redimensione conforme cambian sus integrantes y reemplace una tabla rota en una tarde en vez de retirar la prenda. También quita una barrera de entrada real: la ropa de gala es cara sobre todo por sus avíos, no por su tela.",
+      "fr": "Les pattes d'épaule d'uniforme sont une petite pièce rigide, propre à chaque organisation, presque jamais vendue séparément et presque toujours la raison pour laquelle une tunique encore utilisable est réformée — le tissu survit des décennies à la planchette. Faire de la planchette un objet Yantra4D ouvertement imprimable, et tracer la tunique sur ses dimensions réelles plutôt que sur une taille de catalogue, permet à une musique scolaire, un corps de cadets ou une garde d'honneur bénévole de maintenir les tuniques en service, de les redimensionner quand les membres changent, et de remplacer une planchette fêlée en un après-midi au lieu de réformer le vêtement. Cela lève aussi une vraie barrière à l'entrée : la tenue de cérémonie coûte cher surtout par sa mercerie, non par son tissu."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

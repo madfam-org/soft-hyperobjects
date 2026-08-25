@@ -1,0 +1,691 @@
+{
+  "project": {
+    "name": "Raglan Knit Pullover",
+    "slug": "raglan-knit-pullover",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The raglan sweater: no shoulder seam and no armhole. One straight diagonal per side runs from the underarm to the neckline, and the sleeve carries the shoulder itself. That substitution is the whole architecture, and it is why the raglan is the knitter's shape — a diagonal is a straight decrease line, so it can be worked as full-fashioned shaping rather than cut through a curve. The commons already holds the set-in cut-and-sew knits; this cartridge draws the other knit body architecture and marks the decrease ladder a knitter actually works. Knit ease is SIGNED and defaults negative: the draft is smaller than the measured body and stretches onto it, the opposite convention from every woven block here. Body and sleeve raglans are drafted as congruent right triangles — same rise, same run — so all four raglan seams balance to zero with no declared ease at any parameter combination. Every derived dimension (rise, neck span, run, sleeve head, biceps, ladder ticks) is floored before geometry is built, because a derived dimension that goes negative inverts the piece into valid-looking-but-wrong geometry. No hardware: a pullover raglan has no closure.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El suéter raglán: sin costura de hombro y sin sisa. Una sola diagonal recta por costado va de la axila al escote, y la manga carga el hombro. Esa sustitución es toda la arquitectura, y por eso el raglán es la forma del tejedor — una diagonal es una línea recta de menguados, así que puede trabajarse como menguado de forma en vez de cortarse a través de una curva. El acervo ya tiene los puntos cortados y cosidos de manga montada; este cartucho traza la otra arquitectura de cuerpo en punto y marca la escalera de menguados que el tejedor realmente trabaja. La holgura de punto lleva SIGNO y por defecto es negativa: el trazo es menor que el cuerpo medido y se estira encima, convención opuesta a la de todo bloque en plano de este acervo. Los raglanes del cuerpo y de la manga se trazan como triángulos rectángulos congruentes — mismo alzado, misma carrera — así que las cuatro costuras raglán cuadran en cero sin holgura declarada en cualquier combinación de parámetros. Toda dimensión derivada (alzado, tramo de cuello, carrera, cabeza de manga, bíceps, marcas de la escalera) se acota antes de construir geometría, porque una dimensión derivada que se vuelve negativa invierte la pieza en geometría que parece válida y no lo es. Sin herrajes: un raglán cerrado no lleva cierre.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le pull raglan : ni couture d'épaule ni emmanchure. Une seule diagonale droite par côté monte du dessous de bras à l'encolure, et la manche porte l'épaule elle-même. Cette substitution est toute l'architecture, et c'est pourquoi le raglan est la forme du tricoteur — une diagonale est une ligne de diminutions droite, elle peut donc se travailler en diminutions façonnées au lieu d'être coupée dans une courbe. Le fonds commun tient déjà les tricots coupés-cousus à manche montée ; ce cartouche trace l'autre architecture de corps en tricot et marque l'échelle de diminutions que le tricoteur travaille réellement. L'aisance de tricot est SIGNÉE et négative par défaut : le tracé est plus petit que le corps mesuré et s'étire dessus, convention inverse de tout bloc tissé d'ici. Les raglans du corps et de la manche sont tracés comme des triangles rectangles congruents — même hauteur, même course — si bien que les quatre coutures raglan s'équilibrent à zéro sans aisance déclarée, quelle que soit la combinaison de paramètres. Toute dimension dérivée (hauteur, portée d'encolure, course, tête de manche, biceps, repères de l'échelle) est bornée avant toute géométrie, car une dimension dérivée devenue négative inverse la pièce en une géométrie qui paraît valide sans l'être. Aucune quincaillerie : un raglan fermé n'a pas de fermeture.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "raglan",
+      "sweater",
+      "pullover",
+      "knitwear",
+      "full-fashioned",
+      "negative-ease",
+      "cut-and-sew",
+      "made-to-measure",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet; raglan architecture after the standard sweater-drafting practice (diagonal underarm-to-neck seam, sleeve carries the shoulder)",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full pullover",
+        "es": "Suéter completo",
+        "fr": "Pull complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "neckband",
+        "cuff",
+        "hem_band"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (cut on fold)",
+        "es": "Delantero (corte al doblez)",
+        "fr": "Devant (coupé au pli)"
+      },
+      "default_color": "#7d8a99",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (cut on fold)",
+        "es": "Espalda (corte al doblez)",
+        "fr": "Dos (coupé au pli)"
+      },
+      "default_color": "#63707e",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve (raglan)",
+        "es": "Manga (raglán)",
+        "fr": "Manche (raglan)"
+      },
+      "default_color": "#93a0ad",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "neckband",
+      "label": {
+        "en": "Neckband (rib)",
+        "es": "Cuello (canalé)",
+        "fr": "Encolure (côtes)"
+      },
+      "default_color": "#4d5966",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Cuff (rib)",
+        "es": "Puño (canalé)",
+        "fr": "Poignet (côtes)"
+      },
+      "default_color": "#4d5966",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "hem_band",
+      "label": {
+        "en": "Hem band (rib)",
+        "es": "Cinturilla (canalé)",
+        "fr": "Bande de bas (côtes)"
+      },
+      "default_color": "#4d5966",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Ajustement"
+      }
+    },
+    {
+      "id": "style",
+      "label": {
+        "en": "Style",
+        "es": "Estilo",
+        "fr": "Style"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 980,
+      "min": 650,
+      "max": 1900,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full body measurement; the knit ease is subtracted from it",
+        "es": "Medida de cuerpo completo; la holgura de punto se le resta",
+        "fr": "Mesure de corps entière ; l'aisance de tricot en est retranchée"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 640,
+      "min": 420,
+      "max": 950,
+      "step": 10,
+      "label": {
+        "en": "Body length (mm)",
+        "es": "Largo de cuerpo (mm)",
+        "fr": "Longueur du corps (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to the hem-band seam; the rib band adds below it",
+        "es": "De la nuca a la costura de la cinturilla; el canalé se suma abajo",
+        "fr": "De la nuque à la couture de bande ; les côtes s'ajoutent en dessous"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 390,
+      "min": 300,
+      "max": 520,
+      "step": 5,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the half neck width, and with it the raglan run",
+        "es": "Define el medio ancho de cuello y con él la carrera del raglán",
+        "fr": "Pilote la demi-largeur d'encolure, et avec elle la course du raglan"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 620,
+      "min": 300,
+      "max": 800,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Neck end of the raglan to the cuff seam; the cuff rib adds below",
+        "es": "Del extremo de cuello del raglán al puño; el canalé se suma abajo",
+        "fr": "De l'extrémité col du raglan au poignet ; les côtes s'ajoutent"
+      }
+    },
+    {
+      "id": "knit_ease",
+      "type": "slider",
+      "group": "fit",
+      "default": -60,
+      "min": -160,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Knit ease (mm, signed)",
+        "es": "Holgura de punto (mm, con signo)",
+        "fr": "Aisance de tricot (mm, signée)"
+      },
+      "tooltip": {
+        "en": "NEGATIVE means the draft is smaller than the body and stretches on — the sweater-knit convention",
+        "es": "NEGATIVA significa que el trazo es menor que el cuerpo y se estira encima — la convención del punto",
+        "fr": "NÉGATIVE : le tracé est plus petit que le corps et s'étire dessus — la convention du tricot"
+      }
+    },
+    {
+      "id": "raglan_depth",
+      "type": "slider",
+      "group": "style",
+      "default": 250,
+      "min": 150,
+      "max": 400,
+      "step": 5,
+      "label": {
+        "en": "Raglan depth (mm)",
+        "es": "Profundidad del raglán (mm)",
+        "fr": "Profondeur du raglan (mm)"
+      },
+      "tooltip": {
+        "en": "Underarm below the back-neck level; drives the raglan rise, which is floored so it can never invert",
+        "es": "Axila bajo el nivel de la nuca; define el alzado del raglán, acotado para que nunca se invierta",
+        "fr": "Dessous de bras sous la nuque ; pilote la hauteur du raglan, bornée pour ne jamais s'inverser"
+      }
+    },
+    {
+      "id": "front_neck_drop",
+      "type": "slider",
+      "group": "style",
+      "default": 70,
+      "min": 20,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Front neck drop (mm)",
+        "es": "Caída del escote delantero (mm)",
+        "fr": "Descente d'encolure devant (mm)"
+      },
+      "tooltip": {
+        "en": "How far the front neckline sits below the back; it shortens the front raglan rise",
+        "es": "Cuánto baja el escote delantero respecto de la espalda; acorta el alzado raglán del delantero",
+        "fr": "De combien l'encolure devant descend sous le dos ; raccourcit la hauteur raglan devant"
+      }
+    },
+    {
+      "id": "neck_share",
+      "type": "slider",
+      "group": "style",
+      "default": 0.3,
+      "min": 0.1,
+      "max": 0.55,
+      "step": 0.01,
+      "label": {
+        "en": "Sleeve share of the neckline",
+        "es": "Parte del escote que toma la manga",
+        "fr": "Part de l'encolure prise par la manche"
+      },
+      "tooltip": {
+        "en": "How much of the neck opening the two sleeve heads own; the rest is the raglan run. A real raglan head is a band across the neckline, not a point.",
+        "es": "Cuánto del escote toman las dos cabezas de manga; el resto es la carrera del raglán. Una cabeza raglán real es una banda en el escote, no un punto.",
+        "fr": "Quelle part de l'encolure les deux têtes de manche prennent ; le reste est la course du raglan. Une vraie tête raglan est une bande, pas un point."
+      }
+    },
+    {
+      "id": "fashion_step",
+      "type": "slider",
+      "group": "construction",
+      "default": 9,
+      "min": 4,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Fashioning inset (mm)",
+        "es": "Entrada del menguado (mm)",
+        "fr": "Retrait de façonnage (mm)"
+      },
+      "tooltip": {
+        "en": "How far in from the raglan edge the paired decreases are worked; the full-fashioned mark",
+        "es": "Cuánto adentro del borde raglán se trabajan los menguados pareados; la marca de forma",
+        "fr": "À quelle distance du bord raglan les diminutions appariées sont travaillées"
+      }
+    },
+    {
+      "id": "fashion_rows",
+      "type": "slider",
+      "group": "construction",
+      "default": 24,
+      "min": 8,
+      "max": 60,
+      "step": 1,
+      "label": {
+        "en": "Rows between decreases (mm of rise)",
+        "es": "Vueltas entre menguados (mm de alzado)",
+        "fr": "Rangs entre diminutions (mm de hauteur)"
+      },
+      "tooltip": {
+        "en": "Rise between paired decreases on the ladder; the tick count is clamped so a fine gauge cannot ask for thousands of marks",
+        "es": "Alzado entre menguados pareados; el conteo se acota para que un galga fina no pida miles de marcas",
+        "fr": "Hauteur entre diminutions appariées ; le nombre de repères est borné"
+      },
+      "advanced": true
+    },
+    {
+      "id": "cuff_ratio",
+      "type": "slider",
+      "group": "construction",
+      "default": 0.7,
+      "min": 0.55,
+      "max": 0.95,
+      "step": 0.01,
+      "label": {
+        "en": "Cuff recovery ratio",
+        "es": "Razón de recuperación del puño",
+        "fr": "Ratio de reprise du poignet"
+      },
+      "tooltip": {
+        "en": "Cuff rib length as a fraction of the measured sleeve opening; sweater rib pulls in hard",
+        "es": "Largo del canalé del puño como fracción de la boca de manga medida",
+        "fr": "Longueur des côtes de poignet en fraction de l'ouverture mesurée"
+      }
+    },
+    {
+      "id": "hemband_ratio",
+      "type": "slider",
+      "group": "construction",
+      "default": 0.86,
+      "min": 0.7,
+      "max": 1.0,
+      "step": 0.01,
+      "label": {
+        "en": "Hem band recovery ratio",
+        "es": "Razón de recuperación de la cinturilla",
+        "fr": "Ratio de reprise de la bande de bas"
+      },
+      "tooltip": {
+        "en": "Hem rib length as a fraction of the measured hem circumference",
+        "es": "Largo del canalé de bajo como fracción del contorno de bajo medido",
+        "fr": "Longueur des côtes de bas en fraction du tour de bas mesuré"
+      }
+    },
+    {
+      "id": "neckband_ratio",
+      "type": "slider",
+      "group": "construction",
+      "default": 0.82,
+      "min": 0.7,
+      "max": 1.0,
+      "step": 0.01,
+      "label": {
+        "en": "Neckband recovery ratio",
+        "es": "Razón de recuperación del cuello",
+        "fr": "Ratio de reprise de l'encolure"
+      },
+      "tooltip": {
+        "en": "Neck rib length as a fraction of the measured neck opening; it must still pass over the head",
+        "es": "Largo del canalé de cuello como fracción del escote medido; debe seguir pasando por la cabeza",
+        "fr": "Longueur des côtes d'encolure en fraction de l'ouverture mesurée"
+      }
+    },
+    {
+      "id": "rib_height",
+      "type": "slider",
+      "group": "style",
+      "default": 60,
+      "min": 25,
+      "max": 110,
+      "step": 5,
+      "label": {
+        "en": "Rib depth (mm)",
+        "es": "Alto del canalé (mm)",
+        "fr": "Hauteur des côtes (mm)"
+      },
+      "tooltip": {
+        "en": "Finished depth of the cuffs and the hem band; drafted double and folded",
+        "es": "Alto acabado de puños y cinturilla; se traza doble y se dobla",
+        "fr": "Hauteur finie des poignets et de la bande ; tracée double et pliée"
+      }
+    },
+    {
+      "id": "neckband_width",
+      "type": "slider",
+      "group": "style",
+      "default": 28,
+      "min": 15,
+      "max": 55,
+      "step": 1,
+      "label": {
+        "en": "Neckband depth (mm)",
+        "es": "Alto del cuello (mm)",
+        "fr": "Hauteur d'encolure (mm)"
+      },
+      "tooltip": {
+        "en": "Finished depth of the neck rib; drafted double and folded",
+        "es": "Alto acabado del canalé de cuello; se traza doble y se dobla",
+        "fr": "Hauteur finie des côtes d'encolure ; tracée double et pliée"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 6,
+      "max": 18,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Overlock knit seams want little; 6-8 mm is normal for sweater knit",
+        "es": "Las costuras overlock en punto piden poco; 6-8 mm es lo normal",
+        "fr": "Les coutures surjetées en tricot en demandent peu ; 6-8 mm est normal"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "raglan_depth > front_neck_drop + 90",
+      "severity": "warning",
+      "message": {
+        "en": "The raglan rise is floored at 90 mm; below that the seam stops being a raglan and the draft is clamped rather than drawn as asked.",
+        "es": "El alzado del raglán se acota en 90 mm; por debajo la costura deja de ser raglán y el trazo se acota en vez de dibujarse como se pidió.",
+        "fr": "La hauteur du raglan est bornée à 90 mm ; en dessous la couture cesse d'être un raglan et le tracé est borné plutôt que dessiné tel quel."
+      }
+    },
+    {
+      "expression": "chest_girth + knit_ease > 520",
+      "severity": "warning",
+      "message": {
+        "en": "Negative ease this deep drops the draft below the wearable floor; the kernel clamps the drafted girth to 520 mm.",
+        "es": "Una holgura negativa tan profunda baja el trazo del piso vestible; el núcleo acota el contorno trazado a 520 mm.",
+        "fr": "Une aisance négative aussi forte passe sous le plancher portable ; le noyau borne le tour tracé à 520 mm."
+      }
+    },
+    {
+      "expression": "neckband_ratio * neck_girth < chest_girth * 0.6",
+      "severity": "warning",
+      "message": {
+        "en": "The neck rib must still stretch over the head; a very tight ratio on a wide neckline fights that.",
+        "es": "El canalé del cuello debe seguir pasando por la cabeza; una razón muy ceñida lo dificulta.",
+        "fr": "Les côtes d'encolure doivent encore passer la tête ; un ratio très serré s'y oppose."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic fisherman",
+        "es": "Clásico marinero",
+        "fr": "Classique marin"
+      },
+      "values": {
+        "knit_ease": -60,
+        "raglan_depth": 250,
+        "rib_height": 60
+      }
+    },
+    {
+      "id": "oversized",
+      "label": {
+        "en": "Oversized drop",
+        "es": "Holgado",
+        "fr": "Oversize"
+      },
+      "values": {
+        "knit_ease": 90,
+        "raglan_depth": 330,
+        "body_length": 700,
+        "rib_height": 45
+      }
+    },
+    {
+      "id": "close",
+      "label": {
+        "en": "Close-fitting merino",
+        "es": "Ceñido de merino",
+        "fr": "Près du corps mérinos"
+      },
+      "values": {
+        "knit_ease": -130,
+        "raglan_depth": 200,
+        "cuff_ratio": 0.62,
+        "hemband_ratio": 0.78
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "jersey-algodon"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "raglan_seam",
+        "type": "armscye",
+        "label": {
+          "en": "Raglan seam (replaces shoulder and armhole)",
+          "es": "Costura raglán (sustituye hombro y sisa)",
+          "fr": "Couture raglan (remplace épaule et emmanchure)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "raglan"
+          },
+          {
+            "piece": "back",
+            "edge": "raglan"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "raglan_front"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "raglan_back"
+          }
+        ],
+        "parameters": [
+          "raglan_depth",
+          "front_neck_drop",
+          "neck_share",
+          "chest_girth",
+          "neck_girth"
+        ]
+      },
+      {
+        "id": "neck_rib",
+        "type": "neckline",
+        "label": {
+          "en": "Neckline and rib band",
+          "es": "Escote y canalé de cuello",
+          "fr": "Encolure et bande de côtes"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "neck_share",
+          "neckband_ratio",
+          "neckband_width",
+          "front_neck_drop"
+        ]
+      },
+      {
+        "id": "cuff_rib",
+        "type": "cuff",
+        "label": {
+          "en": "Sleeve opening and cuff rib",
+          "es": "Boca de manga y puño de canalé",
+          "fr": "Ouverture de manche et poignet de côtes"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "sleeve_length",
+          "cuff_ratio",
+          "rib_height"
+        ]
+      },
+      {
+        "id": "hem_rib",
+        "type": "hem",
+        "label": {
+          "en": "Hem and rib band",
+          "es": "Bajo y cinturilla de canalé",
+          "fr": "Bas et bande de côtes"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "body_length",
+          "hemband_ratio",
+          "rib_height",
+          "knit_ease"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "knit_negative_ease": true,
+      "full_fashioned_marking": true,
+      "hardware_bridge": false
+    },
+    "societal_benefit": {
+      "en": "The raglan is the most forgiving sweater architecture there is: no shoulder seam to fit, no armhole curve to match, and a diagonal that a hand or machine knitter can work as a straight decrease. That makes it the shape a beginner can finish and a wide range of bodies can wear from one draft, and it is why it dominates charity and refugee-relief knitting patterns. Marking the full-fashioned ladder rather than only the cut line means the same cartridge serves a knitter and a sewer, so the pattern is not locked to an industrial cutting room.",
+      "es": "El raglán es la arquitectura de suéter más indulgente que existe: sin costura de hombro que ajustar, sin curva de sisa que empatar, y una diagonal que un tejedor a mano o a máquina puede trabajar como menguado recto. Eso lo hace la forma que un principiante sí termina y que una amplia variedad de cuerpos puede llevar desde un solo trazo, y por eso domina los patrones de tejido de beneficencia y de ayuda a personas refugiadas. Marcar la escalera de menguados y no sólo la línea de corte hace que el mismo cartucho sirva a quien teje y a quien cose, así el patrón no queda atado a un taller industrial de corte.",
+      "fr": "Le raglan est l'architecture de pull la plus indulgente qui soit : pas de couture d'épaule à ajuster, pas de courbe d'emmanchure à faire correspondre, et une diagonale qu'un tricoteur à la main ou à la machine peut travailler en diminutions droites. C'est donc la forme qu'un débutant termine vraiment et qu'un large éventail de corps peut porter à partir d'un seul tracé — d'où sa domination dans les modèles de tricot caritatif et d'aide aux réfugiés. Marquer l'échelle de façonnage et non la seule ligne de coupe fait que le même cartouche sert au tricoteur comme au couturier : le patron n'est pas verrouillé sur un atelier de coupe industriel."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
