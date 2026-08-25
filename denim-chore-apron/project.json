@@ -1,0 +1,436 @@
+{
+  "project": {
+    "name": "Denim Chore Apron",
+    "slug": "denim-chore-apron",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The cross-back work apron: no neck strap at all. Two straps run from the bib's top corners, cross between the shoulder blades, and tie to the opposite waist — so the apron's whole weight hangs off the shoulders instead of a loop round the neck, which is the single thing that makes a loaded apron wearable all day. A crossing strap does not run straight down the back: it runs diagonally from one bib corner to the OPPOSITE waist anchor, so its length is solved by Pythagoras from a MEASURED horizontal spread and a MEASURED vertical drop, plus the arc over the shoulder. A strap cut to the vertical drop alone comes out 399 mm short at the default size, which is a strap that cannot be crossed at all. Every point where a load path terminates is RIVETED rather than bar-tacked, because on 12 oz denim the thread abrades before the cloth does — and each of the eight rivets is placed by MEASURING the piece it lands on and stepping in by the cap's own diameter plus clearance, so it is never set through a turned hem (where it holds nothing) nor close enough to an edge to tear out through it. The bib and both pocket dimensions are clamped against the panels they sit on, because an inverted piece is CCW-normalized by the kernel and passes verification looking healthy. Denim-family conventions throughout: 7 mm twin-needle gauge, every outer edge turned rather than seamed. The rivets bridge to the Yantra4D `rivet` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El mandil de trabajo con tirantes cruzados: sin cinta al cuello. Dos tirantes salen de las esquinas superiores de la pechera, se cruzan entre los omóplatos y se atan a la cintura del lado opuesto — así todo el peso del mandil cuelga de los hombros y no de un lazo al cuello, que es lo único que hace llevadero un mandil cargado durante toda la jornada. Un tirante cruzado no baja recto por la espalda: va en diagonal de una esquina de la pechera al anclaje OPUESTO de la cintura, así que su largo se resuelve por Pitágoras a partir de una separación horizontal MEDIDA y una caída vertical MEDIDA, más el arco sobre el hombro. Un tirante cortado solo a la caída vertical queda 399 mm corto en la talla por defecto, o sea un tirante que no se puede cruzar. Cada punto donde termina un camino de carga lleva REMACHE y no presilla, porque en mezclilla de 12 oz el hilo se desgasta antes que la tela — y cada uno de los ocho remaches se coloca MIDIENDO la pieza donde cae y metiéndose el diámetro de su propia cabeza más holgura, para que nunca quede sobre un dobladillo (donde no sujeta nada) ni tan al borde que se desgarre hacia afuera. La pechera y ambas medidas del bolsillo se acotan contra los paneles donde se asientan, porque una pieza invertida el kernel la normaliza a CCW y pasa la verificación como si nada. Convenciones de la familia mezclilla en todo: calibre de 7 mm a doble aguja, y todo canto exterior doblado en lugar de costurado. Los remaches se puentean al sólido `rivet` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le tablier de travail à bretelles croisées : aucun tour de cou. Deux bretelles partent des angles supérieurs de la bavette, se croisent entre les omoplates et se nouent à la taille du côté opposé — tout le poids du tablier pend donc des épaules plutôt que d'une boucle autour du cou, ce qui est la seule chose qui rend un tablier chargé portable toute la journée. Une bretelle croisée ne descend pas droit dans le dos : elle va en diagonale d'un angle de bavette à l'ancrage de taille OPPOSÉ, si bien que sa longueur est résolue par Pythagore à partir d'un écartement horizontal MESURÉ et d'une chute verticale MESURÉE, plus l'arc par-dessus l'épaule. Une bretelle coupée à la seule chute verticale est trop courte de 399 mm à la taille par défaut : une bretelle qu'on ne peut pas croiser. Chaque point où se termine un chemin de charge est RIVETÉ et non arrêté à la barrette, car sur du denim 12 oz le fil s'use avant le tissu — et chacun des huit rivets est placé en MESURANT la pièce où il tombe et en rentrant du diamètre de sa propre tête plus un jeu, afin de n'être jamais posé dans un ourlet rentré (où il ne retient rien) ni assez près d'un bord pour s'y déchirer. La bavette et les deux dimensions de poche sont bornées par les panneaux qui les portent, car une pièce inversée est normalisée en CCW par le noyau et passe la vérification en paraissant saine. Conventions de la famille denim partout : jauge de 7 mm à double aiguille, chaque bord extérieur rentré plutôt que cousu. Les rivets font le pont vers le solide `rivet` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "denim-chore-apron",
+      "denim",
+      "apron",
+      "chore-apron",
+      "cross-back",
+      "workwear",
+      "rivet",
+      "topstitch",
+      "hardware",
+      "fc300",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full apron",
+        "es": "Mandil completo",
+        "fr": "Tablier complet"
+      },
+      "script_file": "main.py",
+      "pieces": ["body", "strap", "pocket"]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Apron body (cut on fold)",
+        "es": "Cuerpo del mandil (corte al doblez)",
+        "fr": "Corps du tablier (coupe au pli)"
+      },
+      "default_color": "#3f5573",
+      "cut": { "quantity": 1, "on_fold": true, "mirror": false }
+    },
+    {
+      "id": "strap",
+      "label": {
+        "en": "Cross-back strap (cut 2)",
+        "es": "Tirante cruzado (cortar 2)",
+        "fr": "Bretelle croisée (couper 2)"
+      },
+      "default_color": "#5e7896",
+      "cut": { "quantity": 2, "on_fold": false, "mirror": false }
+    },
+    {
+      "id": "pocket",
+      "label": {
+        "en": "Divided patch pocket (cut on fold)",
+        "es": "Bolsillo de parche dividido (corte al doblez)",
+        "fr": "Poche plaquée divisée (coupe au pli)"
+      },
+      "default_color": "#7590ae",
+      "cut": { "quantity": 1, "on_fold": true, "mirror": false }
+    }
+  ],
+  "parameter_groups": [
+    { "id": "apron", "label": { "en": "Apron", "es": "Mandil", "fr": "Tablier" } },
+    { "id": "harness", "label": { "en": "Cross-back harness", "es": "Tirantes cruzados", "fr": "Harnais croisé" } },
+    { "id": "pocket", "label": { "en": "Pocket", "es": "Bolsillo", "fr": "Poche" } },
+    {
+      "id": "construction",
+      "label": { "en": "Construction", "es": "Construcción", "fr": "Construction" }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bib_width",
+      "type": "slider",
+      "group": "apron",
+      "default": 300,
+      "min": 180,
+      "max": 460,
+      "step": 10,
+      "label": {
+        "en": "Bib width (mm)",
+        "es": "Ancho de pechera (mm)",
+        "fr": "Largeur de bavette (mm)"
+      },
+      "tooltip": {
+        "en": "Clamped against the skirt below it AND floored on the strap width — the bib has to carry both strap ends plus their turnings",
+        "es": "Acotado contra la falda de abajo Y limitado por el ancho del tirante — la pechera debe cargar ambos extremos más sus dobleces",
+        "fr": "Bornée par la jupe en dessous ET minorée par la largeur de bretelle — la bavette doit porter les deux extrémités plus leurs rentrés"
+      }
+    },
+    {
+      "id": "bib_height",
+      "type": "slider",
+      "group": "apron",
+      "default": 330,
+      "min": 200,
+      "max": 460,
+      "step": 10,
+      "label": {
+        "en": "Bib height, waist to top (mm)",
+        "es": "Alto de pechera, cintura a borde (mm)",
+        "fr": "Hauteur de bavette, taille au bord (mm)"
+      },
+      "tooltip": {
+        "en": "The vertical component of the strap's solved diagonal",
+        "es": "El componente vertical de la diagonal resuelta del tirante",
+        "fr": "La composante verticale de la diagonale résolue de la bretelle"
+      }
+    },
+    {
+      "id": "skirt_width",
+      "type": "slider",
+      "group": "apron",
+      "default": 620,
+      "min": 380,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Width at the waist (mm)",
+        "es": "Ancho en la cintura (mm)",
+        "fr": "Largeur à la taille (mm)"
+      }
+    },
+    {
+      "id": "skirt_length",
+      "type": "slider",
+      "group": "apron",
+      "default": 560,
+      "min": 300,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Length, waist to hem (mm)",
+        "es": "Largo, cintura a bajo (mm)",
+        "fr": "Longueur, taille à l'ourlet (mm)"
+      }
+    },
+    {
+      "id": "back_width",
+      "type": "slider",
+      "group": "harness",
+      "default": 420,
+      "min": 280,
+      "max": 600,
+      "step": 10,
+      "label": {
+        "en": "Across the back, shoulder blades (mm)",
+        "es": "Ancho de espalda, omóplatos (mm)",
+        "fr": "Largeur de dos, omoplates (mm)"
+      },
+      "tooltip": {
+        "en": "The horizontal component of the strap's solved diagonal — the number a naive draft omits entirely",
+        "es": "El componente horizontal de la diagonal resuelta — el número que un trazo ingenuo omite por completo",
+        "fr": "La composante horizontale de la diagonale résolue — le nombre qu'un tracé naïf omet entièrement"
+      },
+      "measurement": { "standard": "iso_8559", "code": "across_back" }
+    },
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "group": "harness",
+      "default": 38,
+      "min": 22,
+      "max": 60,
+      "step": 1,
+      "label": {
+        "en": "Strap finished width (mm)",
+        "es": "Ancho terminado del tirante (mm)",
+        "fr": "Largeur finie de la bretelle (mm)"
+      },
+      "tooltip": {
+        "en": "A loaded apron on a narrow strap rolls the strap into a cord across the shoulder; 38 mm is the working minimum",
+        "es": "Un mandil cargado con tirante angosto lo enrolla como cuerda sobre el hombro; 38 mm es el mínimo de trabajo",
+        "fr": "Un tablier chargé sur une bretelle étroite la roule en corde sur l'épaule ; 38 mm est le minimum de travail"
+      }
+    },
+    {
+      "id": "pocket_width",
+      "type": "slider",
+      "group": "pocket",
+      "default": 400,
+      "min": 200,
+      "max": 760,
+      "step": 10,
+      "label": {
+        "en": "Pocket width (mm)",
+        "es": "Ancho de bolsillo (mm)",
+        "fr": "Largeur de poche (mm)"
+      },
+      "tooltip": {
+        "en": "Clamped against the skirt it sits on; the clamp is reported in metadata",
+        "es": "Acotado contra la falda donde se asienta; el recorte se reporta en metadatos",
+        "fr": "Bornée par la jupe qui la porte ; le bornage est reporté dans les métadonnées"
+      }
+    },
+    {
+      "id": "pocket_height",
+      "type": "slider",
+      "group": "pocket",
+      "default": 220,
+      "min": 120,
+      "max": 360,
+      "step": 10,
+      "label": {
+        "en": "Pocket height (mm)",
+        "es": "Alto de bolsillo (mm)",
+        "fr": "Hauteur de poche (mm)"
+      }
+    },
+    {
+      "id": "rivet_cap",
+      "type": "slider",
+      "group": "construction",
+      "default": 11,
+      "min": 7,
+      "max": 18,
+      "step": 1,
+      "label": {
+        "en": "Rivet cap diameter (mm)",
+        "es": "Diámetro de cabeza del remache (mm)",
+        "fr": "Diamètre de tête du rivet (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D rivet's bearing face AND every rivet's step-in from the edges it lands between — one number sizes it and places it",
+        "es": "Define la cara de apoyo del remache Yantra4D Y la separación de cada remache desde los bordes — un número lo dimensiona y lo coloca",
+        "fr": "Pilote la face d'appui du rivet Yantra4D ET le retrait de chaque rivet depuis les bords — un seul nombre le dimensionne et le place"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 22,
+      "min": 12,
+      "max": 40,
+      "step": 2,
+      "label": {
+        "en": "Turned hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet rentré (mm)"
+      },
+      "tooltip": {
+        "en": "Every outer edge is turned and topstitched — a chore apron has no seams except where the straps and pocket attach",
+        "es": "Todo canto exterior se dobla y pespunta — un mandil no tiene costuras salvo donde se fijan tirantes y bolsillo",
+        "fr": "Chaque bord extérieur est rentré et surpiqué — un tablier n'a de coutures qu'aux fixations des bretelles et de la poche"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 8,
+      "max": 18,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "bib_width < skirt_width",
+      "severity": "warning",
+      "message": {
+        "en": "A bib wider than the waist turns the underarm sweep inside out; the draft clamps it.",
+        "es": "Una pechera más ancha que la cintura invierte la curva bajo el brazo; el trazo la acota.",
+        "fr": "Une bavette plus large que la taille inverse la courbe sous le bras ; le tracé la borne."
+      }
+    },
+    {
+      "expression": "pocket_width < skirt_width",
+      "severity": "warning",
+      "message": {
+        "en": "A pocket wider than the apron folds back on itself; the draft clamps it.",
+        "es": "Un bolsillo más ancho que el mandil se dobla sobre sí mismo; el trazo lo acota.",
+        "fr": "Une poche plus large que le tablier se replie sur elle-même ; le tracé la borne."
+      }
+    },
+    {
+      "expression": "pocket_height < skirt_length",
+      "severity": "warning",
+      "message": {
+        "en": "A pocket taller than the skirt reaches past the hem; the draft clamps it.",
+        "es": "Un bolsillo más alto que la falda pasa del bajo; el trazo lo acota.",
+        "fr": "Une poche plus haute que la jupe dépasse l'ourlet ; le tracé la borne."
+      }
+    },
+    {
+      "expression": "rivet_cap * 3 < strap_width",
+      "severity": "warning",
+      "message": {
+        "en": "A rivet cap this large on a strap this narrow leaves no cloth either side of it.",
+        "es": "Una cabeza de remache así de grande en un tirante angosto no deja tela a los lados.",
+        "fr": "Une tête de rivet si grande sur une bretelle si étroite ne laisse pas de tissu de part et d'autre."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "workshop-full-length",
+      "label": {
+        "en": "Workshop (full length)",
+        "es": "Taller (largo completo)",
+        "fr": "Atelier (pleine longueur)"
+      },
+      "values": { "skirt_length": 700, "skirt_width": 680, "bib_width": 330, "rivet_cap": 13 }
+    },
+    {
+      "id": "kitchen-short",
+      "label": { "en": "Kitchen (short)", "es": "Cocina (corto)", "fr": "Cuisine (court)" },
+      "values": { "skirt_length": 420, "skirt_width": 560, "bib_height": 290, "pocket_height": 180 }
+    },
+    {
+      "id": "narrow-frame",
+      "label": { "en": "Narrow frame", "es": "Complexión delgada", "fr": "Carrure étroite" },
+      "values": { "back_width": 320, "skirt_width": 480, "bib_width": 240, "pocket_width": 300 }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["mezclilla-denim"],
+  "notion": {
+    "kind": "rivet",
+    "subtype": "load-path rivet at bib corners, waist anchors and pocket corners",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "rivet",
+      "linked": true,
+      "params_map": {
+        "cap_dia": "rivet_cap",
+        "cap_h": "rivet_cap * 0.30",
+        "post_dia": "rivet_cap * 0.36",
+        "post_h": "rivet_cap * 0.42",
+        "bore_dia": "rivet_cap * 0.40",
+        "burr_dia": "rivet_cap * 0.72"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "riveted_bib_anchor",
+        "type": "custom",
+        "label": {
+          "en": "Riveted bib-corner strap anchor",
+          "es": "Anclaje remachado en la esquina de la pechera",
+          "fr": "Ancrage riveté à l'angle de la bavette"
+        },
+        "edges": [
+          { "piece": "body", "edge": "bib_top" },
+          { "piece": "strap", "edge": "bib_end" }
+        ],
+        "parameters": ["rivet_cap", "strap_width", "bib_width", "hem_allowance"]
+      },
+      {
+        "id": "cross_back_harness",
+        "type": "custom",
+        "label": {
+          "en": "Cross-back strap harness",
+          "es": "Arnés de tirantes cruzados",
+          "fr": "Harnais de bretelles croisées"
+        },
+        "edges": [
+          { "piece": "strap", "edge": "lower" },
+          { "piece": "body", "edge": "side" }
+        ],
+        "parameters": ["back_width", "bib_height", "strap_width", "bib_width"]
+      },
+      {
+        "id": "riveted_pocket",
+        "type": "pocket",
+        "label": {
+          "en": "Riveted divided patch pocket",
+          "es": "Bolsillo de parche dividido con remaches",
+          "fr": "Poche plaquée divisée rivetée"
+        },
+        "edges": [
+          { "piece": "pocket", "edge": "top" },
+          { "piece": "pocket", "edge": "side" }
+        ],
+        "parameters": ["pocket_width", "pocket_height", "rivet_cap", "skirt_width"]
+      },
+      {
+        "id": "turned_outer_edge",
+        "type": "hem",
+        "label": {
+          "en": "Turned and topstitched outer edge",
+          "es": "Canto exterior doblado y pespuntado",
+          "fr": "Bord extérieur rentré et surpiqué"
+        },
+        "edges": [
+          { "piece": "body", "edge": "hem" },
+          { "piece": "body", "edge": "side" },
+          { "piece": "body", "edge": "underarm" }
+        ],
+        "parameters": ["hem_allowance", "skirt_length", "skirt_width"]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A neck-loop apron transfers the whole weight of a loaded pocket onto the cervical spine, and people who wear one for a full shift — cooks, welders, potters, mechanics, barbers — end the day with the specific ache that comes from it. The cross-back harness is the known fix, it has been known for a century, and it is nonetheless the version sold at a premium as an artisan product while the neck loop stays standard. This pattern is the cross-back version with the geometry actually solved: the strap length is a hypotenuse, not a guess, so the first one made from it crosses and ties. The rivets print at home; the alternative, a bar-tack, is what gives first on 12 oz denim.",
+      "es": "Un mandil de lazo al cuello transfiere todo el peso de un bolsillo cargado a la columna cervical, y quien lo usa una jornada completa — cocineros, soldadores, alfareros, mecánicos, barberos — termina el día con el dolor específico que eso produce. El arnés cruzado es la solución conocida, se conoce desde hace un siglo, y aun así es la versión que se vende con sobreprecio como producto artesanal mientras el lazo al cuello sigue siendo el estándar. Este patrón es la versión cruzada con la geometría de verdad resuelta: el largo del tirante es una hipotenusa, no una suposición, así que el primero que se haga cruza y se ata. Los remaches se imprimen en casa; la alternativa, la presilla, es lo que cede primero en mezclilla de 12 oz.",
+      "fr": "Un tablier à tour de cou transfère tout le poids d'une poche chargée sur la colonne cervicale, et ceux qui en portent un une journée entière — cuisiniers, soudeurs, potiers, mécaniciens, barbiers — finissent la journée avec la douleur particulière que cela provoque. Le harnais croisé est la solution connue, elle l'est depuis un siècle, et c'est pourtant la version vendue avec une prime comme produit artisanal tandis que le tour de cou reste la norme. Ce patron est la version croisée avec la géométrie réellement résolue : la longueur de bretelle est une hypoténuse, pas une supposition, si bien que le premier tablier réalisé se croise et se noue. Les rivets s'impriment chez soi ; l'alternative, la barrette, est ce qui cède en premier sur du denim 12 oz."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}

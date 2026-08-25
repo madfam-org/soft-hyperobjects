@@ -1,0 +1,438 @@
+{
+  "project": {
+    "name": "Baby Kimono Wrap",
+    "slug": "baby-kimono-wrap",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A newborn's first shirt, which never goes over the head. The back is cut in one piece on the fold — the shoulder is not a seam — the two fronts cross over it, and side ties hold the crossing shut. The baby is laid down on the open garment and it is folded closed, so no neck opening is ever pulled past the skull and no arm is ever pushed through a tube. There is no snap, no button and no buckle anywhere: nothing hard sits between an infant's chest and an adult's forearm. A genuine tier-1 garment, drafted as one — but two numbers are solved rather than assumed: the crossover is derived from the quarter chest and then CLAMPED so a front can never come out narrower than its own overlap, and the armhole depth is clamped against the measured body length, because an infant torso is short. The binding is cut to the MEASURED continuous bound run, since on a seamless-shoulder kimono the two wrap edges and the back neck are one pass.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La primera camisita de un recién nacido, que nunca pasa por la cabeza. La espalda se corta de una pieza al doblez — el hombro no es costura —, los dos delanteros la cruzan encima y unas cintas laterales sostienen el cruce. Se acuesta al bebé sobre la prenda abierta y se cierra doblándola, así que ningún escote se jala sobre el cráneo ni ningún brazo se empuja por un tubo. No hay broche, botón ni hebilla en ninguna parte: nada duro queda entre el pecho del bebé y el antebrazo de quien lo carga. Una prenda de nivel 1 auténtica, trazada como tal — pero dos números se resuelven en vez de suponerse: el cruce se deriva del cuarto de pecho y luego se ACOTA para que un delantero nunca resulte más angosto que su propio traslape, y la profundidad de sisa se acota contra el largo medido del cuerpo, porque el torso de un bebé es corto. El vivo se corta al recorrido continuo MEDIDO, porque en un kimono sin costura de hombro los dos cantos cruzados y el escote trasero son una sola pasada.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La première chemise d'un nouveau-né, qui ne passe jamais par la tête. Le dos est coupé d'une pièce au pli — l'épaule n'est pas une couture —, les deux devants le croisent par-dessus et des liens latéraux maintiennent le croisement. On couche le bébé sur le vêtement ouvert et on le referme en le repliant : aucune encolure n'est tirée par-dessus le crâne, aucun bras n'est poussé dans un tube. Ni pression, ni bouton, ni boucle nulle part : rien de dur ne se trouve entre la poitrine du nourrisson et l'avant-bras de l'adulte. Un véritable vêtement de niveau 1, tracé comme tel — mais deux nombres sont résolus plutôt que supposés : le croisement est dérivé du quart de poitrine puis BORNÉ pour qu'un devant ne puisse jamais sortir plus étroit que son propre croisement, et la profondeur d'emmanchure est bornée par la longueur mesurée du corps, car un torse de nourrisson est court. La bordure est coupée au parcours continu MESURÉ, car sur un kimono à épaule sans couture les deux bords croisés et l'encolure dos ne font qu'une seule passe.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "baby-kimono-wrap",
+      "kids_baby",
+      "infant",
+      "newborn",
+      "kimono",
+      "wrap",
+      "side-tie",
+      "seamless-shoulder",
+      "no-hardware",
+      "tier-1",
+      "fc300",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "LicenseRef-FC1-pending",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full kimono wrap",
+        "es": "Batita kimono completa",
+        "fr": "Kimono complet"
+      },
+      "script_file": "main.py",
+      "pieces": ["back", "front", "sleeve", "binding", "tie"]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "back",
+      "label": {
+        "en": "Kimono back (cut on fold)",
+        "es": "Espalda del kimono (corte al doblez)",
+        "fr": "Dos du kimono (coupe au pli)"
+      },
+      "default_color": "#c9a7b7",
+      "cut": { "quantity": 1, "on_fold": true, "mirror": false }
+    },
+    {
+      "id": "front",
+      "label": {
+        "en": "Kimono front (cut 2, mirrored)",
+        "es": "Delantero del kimono (cortar 2, en espejo)",
+        "fr": "Devant du kimono (couper 2, en miroir)"
+      },
+      "default_color": "#dcbccb",
+      "cut": { "quantity": 2, "on_fold": false, "mirror": true }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve (cut 2, mirrored)",
+        "es": "Manga (cortar 2, en espejo)",
+        "fr": "Manche (couper 2, en miroir)"
+      },
+      "default_color": "#b593a3",
+      "cut": { "quantity": 2, "on_fold": false, "mirror": true }
+    },
+    {
+      "id": "binding",
+      "label": {
+        "en": "Edge binding strip",
+        "es": "Tira de vivo",
+        "fr": "Bande de bordure"
+      },
+      "default_color": "#e8d2dc",
+      "cut": { "quantity": 1, "on_fold": false, "mirror": false }
+    },
+    {
+      "id": "tie",
+      "label": {
+        "en": "Side tie (cut 4)",
+        "es": "Cinta lateral (cortar 4)",
+        "fr": "Lien latéral (couper 4)"
+      },
+      "default_color": "#a67f91",
+      "cut": { "quantity": 4, "on_fold": false, "mirror": false }
+    }
+  ],
+  "parameter_groups": [
+    { "id": "body", "label": { "en": "Baby", "es": "Bebé", "fr": "Bébé" } },
+    { "id": "fit", "label": { "en": "Fit", "es": "Ajuste", "fr": "Ajustement" } },
+    {
+      "id": "construction",
+      "label": { "en": "Construction", "es": "Construcción", "fr": "Construction" }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 480,
+      "min": 380,
+      "max": 640,
+      "step": 10,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full infant chest; 480 mm is roughly a 6-month size (bodies/infant-6m)",
+        "es": "Pecho completo del bebé; 480 mm es aproximadamente talla 6 meses (bodies/infant-6m)",
+        "fr": "Poitrine complète du nourrisson ; 480 mm correspond à une taille 6 mois (bodies/infant-6m)"
+      },
+      "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "group": "body",
+      "default": 260,
+      "min": 180,
+      "max": 380,
+      "step": 10,
+      "label": {
+        "en": "Body length, nape to hem (mm)",
+        "es": "Largo del cuerpo, nuca a bajo (mm)",
+        "fr": "Longueur du corps, nuque à l'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "The armhole depth is clamped against this — an infant torso is short",
+        "es": "La profundidad de sisa se acota contra esto — el torso de un bebé es corto",
+        "fr": "La profondeur d'emmanchure est bornée par cette valeur — le torse est court"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 240,
+      "min": 190,
+      "max": 320,
+      "step": 5,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "Only the BACK neck is a scoop; the fronts open completely, so head girth is irrelevant here",
+        "es": "Solo el escote TRASERO es curvo; los delanteros abren por completo, así que el contorno de cabeza no aplica",
+        "fr": "Seule l'encolure DOS est échancrée ; les devants s'ouvrent entièrement, le tour de tête est sans objet"
+      },
+      "measurement": { "standard": "iso_8559", "code": "neck_girth" }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "body",
+      "default": 130,
+      "min": 60,
+      "max": 240,
+      "step": 5,
+      "label": {
+        "en": "Sleeve length, shoulder to cuff (mm)",
+        "es": "Largo de manga, hombro a puño (mm)",
+        "fr": "Longueur de manche, épaule au poignet (mm)"
+      },
+      "tooltip": {
+        "en": "The cuff carries a marked fold-back line for mitten wear in the first weeks",
+        "es": "El puño lleva una línea marcada para doblarse sobre la mano las primeras semanas",
+        "fr": "Le poignet porte une ligne de repli marquée pour couvrir la main les premières semaines"
+      }
+    },
+    {
+      "id": "knit_ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 70,
+      "min": 30,
+      "max": 150,
+      "step": 10,
+      "label": {
+        "en": "Total comfort ease (mm)",
+        "es": "Holgura de comodidad total (mm)",
+        "fr": "Aisance de confort totale (mm)"
+      },
+      "tooltip": {
+        "en": "Added to the chest before quartering; a wrap wants room to cross without pulling",
+        "es": "Se suma al pecho antes de dividir en cuartos; un cruce necesita espacio para no jalar",
+        "fr": "Ajoutée à la poitrine avant division ; un croisement veut de la place sans tirer"
+      }
+    },
+    {
+      "id": "wrap_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 0.42,
+      "min": 0.2,
+      "max": 0.7,
+      "step": 0.02,
+      "label": {
+        "en": "Crossover depth (fraction of ¼ chest)",
+        "es": "Profundidad del cruce (fracción de ¼ de pecho)",
+        "fr": "Profondeur de croisement (fraction du ¼ de poitrine)"
+      },
+      "tooltip": {
+        "en": "A request, not a result: the derived overlap is clamped so a front can never come out narrower than its own crossover",
+        "es": "Una petición, no un resultado: el traslape derivado se acota para que un delantero nunca sea más angosto que su propio cruce",
+        "fr": "Une demande, pas un résultat : le croisement dérivé est borné pour qu'un devant ne soit jamais plus étroit que son propre croisement"
+      }
+    },
+    {
+      "id": "tie_length",
+      "type": "slider",
+      "group": "construction",
+      "default": 260,
+      "min": 150,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Side tie length (mm)",
+        "es": "Largo de cinta lateral (mm)",
+        "fr": "Longueur du lien latéral (mm)"
+      },
+      "tooltip": {
+        "en": "Long enough to knot with one hand, short enough not to reach the neck",
+        "es": "Suficiente para anudar con una mano, no tanto como para alcanzar el cuello",
+        "fr": "Assez long pour nouer d'une main, assez court pour ne pas atteindre le cou"
+      }
+    },
+    {
+      "id": "binding_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 14,
+      "min": 8,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Binding finished width (mm)",
+        "es": "Ancho terminado del vivo (mm)",
+        "fr": "Largeur finie de la bordure (mm)"
+      },
+      "tooltip": {
+        "en": "The strip is cut at twice this and folded lengthwise",
+        "es": "La tira se corta al doble y se dobla a lo largo",
+        "fr": "La bande est coupée au double et pliée dans la longueur"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 7,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "advanced": true
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 15,
+      "min": 0,
+      "max": 30,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Marge d'ourlet (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "wrap_depth <= 0.6",
+      "severity": "warning",
+      "message": {
+        "en": "A crossover past 60% of the quarter chest wraps a newborn's ribs in three layers.",
+        "es": "Un cruce mayor al 60% del cuarto de pecho envuelve las costillas del bebé en tres capas.",
+        "fr": "Un croisement au-delà de 60 % du quart de poitrine enveloppe les côtes du nourrisson en trois épaisseurs."
+      }
+    },
+    {
+      "expression": "body_length > 180",
+      "severity": "warning",
+      "message": {
+        "en": "Below about 180 mm the armhole leaves no side seam to catch the ties in.",
+        "es": "Por debajo de unos 180 mm la sisa no deja costado donde prender las cintas.",
+        "fr": "En dessous de 180 mm environ, l'emmanchure ne laisse aucun côté où prendre les liens."
+      }
+    },
+    {
+      "expression": "tie_length < body_length * 1.6",
+      "severity": "warning",
+      "message": {
+        "en": "Ties longer than about 1.6 × the body reach the baby's neck when knotted.",
+        "es": "Cintas de más de ~1.6 × el largo del cuerpo alcanzan el cuello del bebé al anudarse.",
+        "fr": "Des liens de plus de ~1,6 × la longueur du corps atteignent le cou du bébé une fois noués."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "newborn",
+      "label": { "en": "Newborn", "es": "Recién nacido", "fr": "Nouveau-né" },
+      "values": { "chest_girth": 400, "body_length": 210, "sleeve_length": 95, "neck_girth": 200 }
+    },
+    {
+      "id": "six-months",
+      "label": { "en": "Six months", "es": "Seis meses", "fr": "Six mois" },
+      "values": { "chest_girth": 480, "body_length": 260, "sleeve_length": 130, "neck_girth": 240 }
+    },
+    {
+      "id": "twelve-months-deep-wrap",
+      "label": {
+        "en": "Twelve months (deep wrap)",
+        "es": "Doce meses (cruce amplio)",
+        "fr": "Douze mois (croisement profond)"
+      },
+      "values": { "chest_girth": 560, "body_length": 320, "sleeve_length": 170, "wrap_depth": 0.55 }
+    }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["jersey-algodon"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "wrap_front_edge",
+        "type": "placket",
+        "label": {
+          "en": "Crossing front edge (bound)",
+          "es": "Canto delantero cruzado (con vivo)",
+          "fr": "Bord de devant croisé (bordé)"
+        },
+        "edges": [
+          { "piece": "front", "edge": "wrap_edge" },
+          { "piece": "binding", "edge": "lower" }
+        ],
+        "parameters": ["wrap_depth", "chest_girth", "binding_width", "knit_ease"]
+      },
+      {
+        "id": "kimono_neckline",
+        "type": "neckline",
+        "label": {
+          "en": "Continuous bound neckline",
+          "es": "Escote continuo con vivo",
+          "fr": "Encolure continue bordée"
+        },
+        "edges": [
+          { "piece": "back", "edge": "neck" },
+          { "piece": "binding", "edge": "lower" }
+        ],
+        "parameters": ["neck_girth", "binding_width"]
+      },
+      {
+        "id": "seamless_shoulder",
+        "type": "shoulder",
+        "label": {
+          "en": "Kimono shoulder join",
+          "es": "Unión de hombro tipo kimono",
+          "fr": "Jonction d'épaule kimono"
+        },
+        "edges": [
+          { "piece": "front", "edge": "shoulder" },
+          { "piece": "back", "edge": "shoulder" }
+        ],
+        "parameters": ["neck_girth", "chest_girth"]
+      },
+      {
+        "id": "flat_set_armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Flat-set armscye",
+          "es": "Sisa montada en plano",
+          "fr": "Emmanchure montée à plat"
+        },
+        "edges": [
+          { "piece": "front", "edge": "armhole" },
+          { "piece": "back", "edge": "armhole" },
+          { "piece": "sleeve", "edge": "cap" }
+        ],
+        "parameters": ["chest_girth", "body_length", "knit_ease", "sleeve_length"]
+      },
+      {
+        "id": "side_tie_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam with caught ties",
+          "es": "Costado con cintas prendidas",
+          "fr": "Couture latérale avec liens pris"
+        },
+        "edges": [
+          { "piece": "front", "edge": "side" },
+          { "piece": "back", "edge": "side" },
+          { "piece": "tie", "edge": "end_a" }
+        ],
+        "parameters": ["tie_length", "body_length", "seam_allowance"]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": false
+    },
+    "societal_benefit": {
+      "en": "A newborn cannot hold their own head up, and a garment pulled over that head is the single most common reason a first-time parent is afraid to dress their baby. The commercial answer is a wrap bodysuit that costs several times a plain one because it is sold as a hospital or premature item. This one is four flat pieces of the softest jersey a person can find, with no closure of any kind, so it can be made by someone whose entire sewing experience is a straight stitch — and it can be made from a worn-out adult t-shirt, which is the softest cotton most households already own.",
+      "es": "Un recién nacido no sostiene su propia cabeza, y una prenda jalada sobre esa cabeza es la razón más común por la que un padre primerizo teme vestir a su bebé. La respuesta comercial es un body cruzado que cuesta varias veces uno liso porque se vende como artículo hospitalario o de prematuro. Este son cuatro piezas planas del jersey más suave que se consiga, sin cierre de ningún tipo, así que puede hacerlo alguien cuya experiencia de costura entera sea una puntada recta — y puede hacerse de una playera de adulto ya gastada, que es el algodón más suave que la mayoría de los hogares ya tiene.",
+      "fr": "Un nouveau-né ne tient pas sa tête, et un vêtement passé par-dessus cette tête est la première raison pour laquelle un jeune parent a peur d'habiller son bébé. La réponse commerciale est un body croisé qui coûte plusieurs fois le prix d'un body uni parce qu'il est vendu comme article hospitalier ou pour prématuré. Celui-ci, ce sont quatre pièces plates du jersey le plus doux que l'on trouve, sans aucune fermeture, réalisable par quelqu'un dont toute l'expérience de couture est un point droit — et réalisable à partir d'un tee-shirt d'adulte usé, le coton le plus doux que la plupart des foyers possèdent déjà."
+    },
+    "commons_license": "LicenseRef-FC1-pending"
+  }
+}
