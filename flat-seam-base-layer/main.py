@@ -208,6 +208,7 @@ _BACK_NECK_Y_OFF = NECK_DROP_F - NECK_DROP_B - SHOULDER_SLOPE * 0.10
 _dy = SHOULDER_SLOPE + _BACK_NECK_Y_OFF
 if _SHOULDER_LEN <= abs(_dy):
     _dy = _SHOULDER_LEN * 0.85
+    _BACK_NECK_Y_OFF = _dy - SHOULDER_SLOPE  # the drawn rise must track the flattened run
 # The back's shoulder OUTER point sits further out by SHOULDER_ROT (the seam has
 # rotated forward, so the back panel carries more of the shoulder).
 _BACK_SHOULDER_OUT = HALF_SHOULDER + SHOULDER_ROT

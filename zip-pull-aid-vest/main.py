@@ -221,6 +221,7 @@ _BACK_NECK_Y_OFF = NECK_DROP_F - NECK_DROP_B - SHOULDER_SLOPE * 0.10
 _dy = SHOULDER_SLOPE + _BACK_NECK_Y_OFF
 if _SHOULDER_LEN <= abs(_dy):
     _dy = _SHOULDER_LEN * 0.85
+    _BACK_NECK_Y_OFF = _dy - SHOULDER_SLOPE  # the drawn rise must track the flattened run
 NECK_W_BACK = HALF_SHOULDER - math.sqrt(max(_SHOULDER_LEN ** 2 - _dy ** 2, 1.0))
 BACK_NECK_Y = TOP_Y + _BACK_NECK_Y_OFF
 

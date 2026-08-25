@@ -180,6 +180,7 @@ if _SHOULDER_LEN <= abs(_dy):
     # Degenerate: the vertical run alone exceeds the shoulder length. Flatten the
     # back neck rise until a real horizontal run is left.
     _dy = _SHOULDER_LEN * 0.85
+    _BACK_NECK_Y_OFF = _dy - SHOULDER_SLOPE  # the drawn rise must track the flattened run
 NECK_W_BACK = HALF_SHOULDER - math.sqrt(max(_SHOULDER_LEN ** 2 - _dy ** 2, 1.0))
 BACK_NECK_Y = TOP_Y + _BACK_NECK_Y_OFF
 
