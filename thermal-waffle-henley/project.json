@@ -1,0 +1,533 @@
+{
+  "project": {
+    "name": "Waffle Thermal Henley",
+    "slug": "thermal-waffle-henley",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A long-sleeve waffle-knit thermal with a henley placket: a fitted knit body, set-in long sleeves, a ribbed neckband, and a partial button placket down the centre front closing on a column of Yantra4D `sew-through-button`. The waffle knit is mid-stretch, so the body is cut at a modest negative ease, and the placket length sets how many buttons the column carries — drafted, not guessed. `button_ligne` drives both the drafted button seats and the hardware's sew face. Made to measure to chest/bust, waist, arm length, bicep and neck. FC-500 lane 7 (intimates & loungewear III).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una henley térmica de manga larga en tejido de nido de abeja con tapeta: un cuerpo ajustado de punto, mangas largas montadas, un cuello acanalado y una tapeta parcial al centro del delantero que cierra con una columna de botones `sew-through-button` de Yantra4D. El nido de abeja es de media elasticidad, así el cuerpo se corta con holgura negativa modesta, y el largo de la tapeta define cuántos botones lleva la columna — trazado, no adivinado. button_ligne define tanto los asientos de botón trazados como la cara de cosido del herraje. Hecho a medida a pecho, cintura, largo de brazo, bíceps y cuello. Carril 7 de FC-500 (lencería y ropa de descanso III).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un henley thermique à manches longues en maille nid d'abeille avec patte : un corps ajusté en maille, des manches longues montées, une encolure côtelée et une patte de boutonnage partielle au milieu devant se fermant sur une colonne de boutons `sew-through-button` de Yantra4D. La maille nid d'abeille est semi-extensible, donc le corps est coupé à une aisance négative modeste, et la longueur de la patte fixe le nombre de boutons de la colonne — tracé, non deviné. button_ligne pilote à la fois les assises de bouton tracées et la face de couture de l'accessoire. Fait sur mesure à la poitrine, à la taille, à la longueur de bras, au biceps et au cou. Couloir 7 de FC-500 (lingerie et vêtements d'intérieur III).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "henley",
+      "thermal",
+      "waffle",
+      "knit",
+      "placket",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Henley",
+        "es": "Henley completa",
+        "fr": "Henley complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "back",
+        "front",
+        "sleeve",
+        "placket",
+        "neckband"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#7a6a52",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true
+      }
+    },
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (placket opening)",
+        "es": "Delantero (abertura de tapeta)",
+        "fr": "Devant (ouverture de patte)"
+      },
+      "default_color": "#8a7a62",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Long sleeve",
+        "es": "Manga larga",
+        "fr": "Manche longue"
+      },
+      "default_color": "#6a5a42",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "placket",
+      "label": {
+        "en": "Button placket",
+        "es": "Tapeta de botones",
+        "fr": "Patte de boutonnage"
+      },
+      "default_color": "#9a8a72",
+      "cut": {
+        "quantity": 2
+      }
+    },
+    {
+      "id": "neckband",
+      "label": {
+        "en": "Ribbed neckband",
+        "es": "Cuello acanalado",
+        "fr": "Encolure côtelée"
+      },
+      "default_color": "#5a4a32",
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Ajustement"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_bust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 960,
+      "min": 700,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest/bust girth (mm)",
+        "es": "Contorno de pecho/busto (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "The chest — sets the body width at negative ease",
+        "es": "El pecho — define el ancho del cuerpo con holgura negativa",
+        "fr": "La poitrine — fixe la largeur du corps en aisance négative"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 840,
+      "min": 560,
+      "max": 1400,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "Shapes the body's waist",
+        "es": "Da forma a la cintura del cuerpo",
+        "fr": "Façonne la taille du corps"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "group": "construction",
+      "default": 680,
+      "min": 450,
+      "max": 900,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "back_neck_to_waist"
+      },
+      "label": {
+        "en": "Body length (mm)",
+        "es": "Largo de cuerpo (mm)",
+        "fr": "Longueur du corps (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to hem",
+        "es": "De la nuca al ruedo",
+        "fr": "De la nuque à l'ourlet"
+      }
+    },
+    {
+      "id": "arm_length",
+      "type": "slider",
+      "group": "construction",
+      "default": 600,
+      "min": 400,
+      "max": 750,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "arm_length"
+      },
+      "label": {
+        "en": "Arm length (mm)",
+        "es": "Largo de brazo (mm)",
+        "fr": "Longueur de bras (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to cuff",
+        "es": "Del hombro al puño",
+        "fr": "De l'épaule au poignet"
+      }
+    },
+    {
+      "id": "bicep_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 320,
+      "min": 220,
+      "max": 550,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bicep_girth"
+      },
+      "label": {
+        "en": "Bicep girth (mm)",
+        "es": "Contorno de bíceps (mm)",
+        "fr": "Tour de biceps (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the sleeve width at the cap",
+        "es": "Define el ancho de manga en la copa",
+        "fr": "Fixe la largeur de manche à la tête"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 400,
+      "min": 300,
+      "max": 520,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the neckline and neckband length",
+        "es": "Define el escote y el largo del cuello",
+        "fr": "Fixe l'encolure et la longueur du col"
+      }
+    },
+    {
+      "id": "placket_length",
+      "type": "slider",
+      "group": "construction",
+      "default": 180,
+      "min": 90,
+      "max": 300,
+      "step": 10,
+      "label": {
+        "en": "Placket length (mm)",
+        "es": "Largo de tapeta (mm)",
+        "fr": "Longueur de patte (mm)"
+      },
+      "tooltip": {
+        "en": "How far the placket opening runs down the centre front — sets the button count",
+        "es": "Cuánto baja la abertura de la tapeta al centro — define el número de botones",
+        "fr": "Jusqu'où l'ouverture de la patte descend au milieu — fixe le nombre de boutons"
+      }
+    },
+    {
+      "id": "button_ligne",
+      "type": "slider",
+      "group": "construction",
+      "default": 18,
+      "min": 12,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Button size (ligne)",
+        "es": "Tamaño de botón (línea)",
+        "fr": "Taille du bouton (ligne)"
+      },
+      "tooltip": {
+        "en": "Button size in ligne (1 ligne = 0.635 mm) — drives the seats AND the sew face",
+        "es": "Tamaño en línea (1 línea = 0.635 mm) — define los asientos Y la cara de cosido",
+        "fr": "Taille en ligne (1 ligne = 0,635 mm) — pilote les assises ET la face de couture"
+      }
+    },
+    {
+      "id": "button_pitch",
+      "type": "slider",
+      "group": "construction",
+      "default": 55,
+      "min": 35,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Button pitch (mm)",
+        "es": "Paso de botón (mm)",
+        "fr": "Pas de bouton (mm)"
+      },
+      "tooltip": {
+        "en": "Spacing between buttons down the placket",
+        "es": "Separación entre botones en la tapeta",
+        "fr": "Espacement entre boutons sur la patte"
+      }
+    },
+    {
+      "id": "negative_ease_pct",
+      "type": "slider",
+      "group": "fit",
+      "default": 5,
+      "min": 0,
+      "max": 14,
+      "step": 1,
+      "label": {
+        "en": "Negative ease (%)",
+        "es": "Holgura negativa (%)",
+        "fr": "Aisance négative (%)"
+      },
+      "tooltip": {
+        "en": "A thermal is close-fitting; the waffle knit takes a modest negative ease",
+        "es": "Una térmica es ceñida; el nido de abeja admite holgura negativa modesta",
+        "fr": "Un thermique est près du corps ; la maille nid d'abeille admet une aisance négative modeste"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Knit seams are narrow",
+        "es": "Las costuras de punto son angostas",
+        "fr": "Les coutures en maille sont étroites"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "three_button",
+      "label": {
+        "en": "Three-button placket",
+        "es": "Tapeta de tres botones",
+        "fr": "Patte à trois boutons"
+      },
+      "values": {
+        "placket_length": 180,
+        "button_pitch": 55
+      }
+    },
+    {
+      "id": "long_body",
+      "label": {
+        "en": "Long body",
+        "es": "Cuerpo largo",
+        "fr": "Corps long"
+      },
+      "values": {
+        "body_length": 780
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "chest_bust_girth >= waist_girth",
+      "message": {
+        "en": "Chest girth should be at least the waist girth for this fit.",
+        "es": "El contorno de pecho debe ser al menos el de cintura para este ajuste.",
+        "fr": "Le tour de poitrine doit être au moins le tour de taille pour cette coupe."
+      },
+      "severity": "warning"
+    },
+    {
+      "expression": "body_length > placket_length + 100",
+      "message": {
+        "en": "The body must be long enough to carry the placket with room below it.",
+        "es": "El cuerpo debe ser lo bastante largo para llevar la tapeta con espacio debajo.",
+        "fr": "Le corps doit être assez long pour porter la patte avec de la place dessous."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "button",
+    "subtype": "henley placket button column",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "hole_count": "4",
+        "hole_spacing": "button_ligne * 0.635 / 3"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam (front to back)",
+          "es": "Costura lateral (delante a espalda)",
+          "fr": "Couture latérale (devant à dos)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "chest_bust_girth",
+          "waist_girth",
+          "negative_ease_pct"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Armscye (sleeve to body)",
+          "es": "Sisa (manga a cuerpo)",
+          "fr": "Emmanchure (manche au corps)"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          },
+          {
+            "piece": "front",
+            "edge": "armscye"
+          },
+          {
+            "piece": "back",
+            "edge": "armscye"
+          }
+        ],
+        "parameters": [
+          "bicep_girth",
+          "chest_bust_girth"
+        ]
+      },
+      {
+        "id": "placket",
+        "type": "button_stand",
+        "label": {
+          "en": "Henley button placket",
+          "es": "Tapeta de botones henley",
+          "fr": "Patte de boutonnage henley"
+        },
+        "edges": [
+          {
+            "piece": "placket",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "button_ligne",
+          "placket_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": true,
+      "knit_negative_ease": true,
+      "set_in_sleeve": true
+    },
+    "societal_benefit": {
+      "en": "A thermal henley is a base-layer everyone owns, sold in a size grid that fits the torso or the arm but rarely both, and the placket — the detail that makes it a henley and not a plain crew — is where cheap versions cut the most corners, sewing buttons on at a fixed count regardless of the opening. This cartridge fits the body to a real chest and arm, then derives the button column from the drafted placket rather than the other way round, so the buttons sit where the opening actually is. The buttons themselves are a printable commons part, so a lost one is reprinted rather than mismatched.",
+      "es": "Una henley térmica es una prenda base que todos tienen, vendida en una tabla de tallas que ajusta el torso o el brazo pero rara vez ambos, y la tapeta — el detalle que la hace henley y no cuello redondo — es donde las versiones baratas recortan más, cosiendo botones a un número fijo sin importar la abertura. Este cartucho ajusta el cuerpo a un pecho y brazo reales, luego deriva la columna de botones de la tapeta trazada y no al revés, así los botones caen donde de verdad está la abertura. Los botones son una pieza común imprimible, así que uno perdido se reimprime en vez de quedar disparejo.",
+      "fr": "Un henley thermique est une couche de base que tout le monde possède, vendu dans une grille de tailles qui ajuste le torse ou le bras mais rarement les deux, et la patte — le détail qui en fait un henley et non un ras-du-cou — est là où les versions bon marché rognent le plus, cousant les boutons à un nombre fixe quelle que soit l'ouverture. Ce cartouche ajuste le corps à une poitrine et un bras réels, puis dérive la colonne de boutons de la patte tracée et non l'inverse, si bien que les boutons tombent là où l'ouverture est vraiment. Les boutons sont une pièce commune imprimable, un bouton perdu se réimprime au lieu d'être dépareillé."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

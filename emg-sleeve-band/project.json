@@ -1,0 +1,427 @@
+{
+  "project": {
+    "name": "EMG-Electrode Sleeve Band",
+    "slug": "emg-sleeve-band",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A tapered compression band worn on the forearm or bicep that clamps a pair of EMG electrodes to a muscle belly at a measured spacing and routes their leads to a connector tab. The standalone sibling of the ECG vest: not a whole garment, but the band a therapist or maker slides onto a bare limb so the electrodes do not slide and the signal stays clean. It is a garment pattern, not a medical device — it positions and clamps electrodes and routes leads and makes no clinical claim. The grip is a dead-length solve: the rigid electrode carriers take no stretch, so the negative ease comes out of the live remainder only, and `electrode_dia` drives the carrier disc and the drafted seat by construction. Made to measure to two limb girths. FC-500 lane 8 (e-textile & smart garments III).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una banda de compresión cónica para el antebrazo o el bíceps que sujeta un par de electrodos EMG a un vientre muscular con separación medida y encamina sus cables a una lengüeta conectora. La hermana suelta del chaleco ECG: no una prenda entera, sino la banda que un terapeuta o maker desliza sobre un miembro desnudo para que los electrodos no resbalen y la señal quede limpia. Es un patrón de prenda, no un dispositivo médico — posiciona y sujeta electrodos y encamina cables, sin afirmación clínica. La sujeción es un cálculo de longitud muerta: los portaelectrodos rígidos no se estiran, así la holgura negativa sale sólo del resto vivo, y electrode_dia define el disco y el asiento trazado por construcción. Hecho a medida a dos contornos del miembro. Carril 8 de FC-500 (textil electrónico y prendas inteligentes III).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une bande de compression conique portée sur l'avant-bras ou le biceps qui plaque une paire d'électrodes EMG sur un ventre musculaire à un écartement mesuré et achemine leurs fils vers une patte de connecteur. La sœur autonome du gilet ECG : pas un vêtement entier, mais la bande qu'un thérapeute ou un maker glisse sur un membre nu pour que les électrodes ne glissent pas et que le signal reste propre. C'est un patron de vêtement, non un dispositif médical — il positionne et plaque des électrodes et achemine des fils, sans revendication clinique. Le maintien est un calcul de longueur morte : les plots rigides ne s'étirent pas, donc l'aisance négative sort du seul reste vif, et electrode_dia pilote le disque et l'assise tracée par construction. Fait sur mesure à deux tours du membre. Couloir 8 de FC-500 (textile électronique et vêtements intelligents III).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "e-textile",
+      "emg",
+      "sleeve-band",
+      "compression",
+      "electrode",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Band",
+        "es": "Banda completa",
+        "fr": "Bande complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "band",
+        "tab"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "band",
+      "label": {
+        "en": "Tapered EMG band",
+        "es": "Banda EMG cónica",
+        "fr": "Bande EMG conique"
+      },
+      "default_color": "#4a6a5a",
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "tab",
+      "label": {
+        "en": "Connector tab",
+        "es": "Lengüeta conectora",
+        "fr": "Patte de connecteur"
+      },
+      "default_color": "#5a7a6a",
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Limb Measurements",
+        "es": "Medidas del Miembro",
+        "fr": "Mesures du Membre"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Grip",
+        "es": "Ajuste y Sujeción",
+        "fr": "Ajustement et Maintien"
+      }
+    },
+    {
+      "id": "electrode",
+      "label": {
+        "en": "Electrode Layout",
+        "es": "Disposición de Electrodos",
+        "fr": "Disposition des Électrodes"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "proximal_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 300,
+      "min": 160,
+      "max": 600,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bicep_girth"
+      },
+      "label": {
+        "en": "Proximal girth (mm)",
+        "es": "Contorno proximal (mm)",
+        "fr": "Tour proximal (mm)"
+      },
+      "tooltip": {
+        "en": "The wider end nearer the body",
+        "es": "El extremo más ancho hacia el cuerpo",
+        "fr": "L'extrémité la plus large vers le corps"
+      }
+    },
+    {
+      "id": "distal_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 260,
+      "min": 120,
+      "max": 560,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "wrist_girth"
+      },
+      "label": {
+        "en": "Distal girth (mm)",
+        "es": "Contorno distal (mm)",
+        "fr": "Tour distal (mm)"
+      },
+      "tooltip": {
+        "en": "The narrower end — clamped never to exceed the proximal",
+        "es": "El extremo más angosto — nunca mayor que el proximal",
+        "fr": "L'extrémité la plus étroite — jamais plus grande que le proximal"
+      }
+    },
+    {
+      "id": "band_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 120,
+      "min": 60,
+      "max": 260,
+      "step": 10,
+      "label": {
+        "en": "Band length (mm)",
+        "es": "Largo de banda (mm)",
+        "fr": "Longueur de bande (mm)"
+      },
+      "tooltip": {
+        "en": "Along the limb — must hold both electrodes at their spacing",
+        "es": "A lo largo del miembro — debe alojar ambos electrodos con su separación",
+        "fr": "Le long du membre — doit loger les deux électrodes à leur écartement"
+      }
+    },
+    {
+      "id": "grip",
+      "type": "slider",
+      "group": "fit",
+      "default": 0.14,
+      "min": 0.0,
+      "max": 0.28,
+      "step": 0.01,
+      "label": {
+        "en": "Grip (negative ease on live run)",
+        "es": "Sujeción (holgura negativa sobre el tramo vivo)",
+        "fr": "Maintien (aisance négative sur le tronçon vif)"
+      },
+      "tooltip": {
+        "en": "How much the band pulls in — taken out of the stretchable remainder only",
+        "es": "Cuánto aprieta la banda — sólo del resto estirable",
+        "fr": "Combien la bande resserre — pris sur le seul reste extensible"
+      }
+    },
+    {
+      "id": "electrode_dia",
+      "type": "slider",
+      "group": "electrode",
+      "default": 34,
+      "min": 16,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Electrode diameter (mm)",
+        "es": "Diámetro de electrodo (mm)",
+        "fr": "Diamètre d'électrode (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the carrier disc AND the drafted seat",
+        "es": "Define el disco del portaelectrodo Y el asiento trazado",
+        "fr": "Pilote le disque du plot ET l'assise tracée"
+      }
+    },
+    {
+      "id": "electrode_margin",
+      "type": "slider",
+      "group": "electrode",
+      "default": 12,
+      "min": 4,
+      "max": 26,
+      "step": 2,
+      "label": {
+        "en": "Electrode dead margin (mm)",
+        "es": "Margen muerto de electrodo (mm)",
+        "fr": "Marge morte d'électrode (mm)"
+      },
+      "tooltip": {
+        "en": "Dead cloth each side of the carrier — must not stretch",
+        "es": "Tela muerta a cada lado del portaelectrodo — no debe estirarse",
+        "fr": "Tissu mort de chaque côté du plot — ne doit pas s'étirer"
+      }
+    },
+    {
+      "id": "electrode_span",
+      "type": "slider",
+      "group": "electrode",
+      "default": 60,
+      "min": 30,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Electrode spacing (mm)",
+        "es": "Separación de electrodos (mm)",
+        "fr": "Écartement d'électrodes (mm)"
+      },
+      "tooltip": {
+        "en": "Centre-to-centre spacing along the muscle belly",
+        "es": "Separación centro a centro a lo largo del vientre muscular",
+        "fr": "Écartement centre à centre le long du ventre musculaire"
+      }
+    },
+    {
+      "id": "channel_w",
+      "type": "slider",
+      "group": "electrode",
+      "default": 8,
+      "min": 4,
+      "max": 18,
+      "step": 1,
+      "label": {
+        "en": "Channel width (mm)",
+        "es": "Ancho de canal (mm)",
+        "fr": "Largeur de canal (mm)"
+      },
+      "tooltip": {
+        "en": "The conductive channel between the layers",
+        "es": "El canal conductor entre las capas",
+        "fr": "Le canal conducteur entre les couches"
+      }
+    },
+    {
+      "id": "tab_len",
+      "type": "slider",
+      "group": "electrode",
+      "default": 50,
+      "min": 25,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Connector tab length (mm)",
+        "es": "Largo de lengüeta (mm)",
+        "fr": "Longueur de patte (mm)"
+      },
+      "tooltip": {
+        "en": "Where the leads leave for a snap connector",
+        "es": "Donde salen los cables a un conector",
+        "fr": "Où les fils sortent vers un connecteur"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "fit",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Compression seams are coverstitched",
+        "es": "Las costuras de compresión van con recubridora",
+        "fr": "Les coutures de compression sont recouvertes"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "forearm",
+      "label": {
+        "en": "Forearm",
+        "es": "Antebrazo",
+        "fr": "Avant-bras"
+      },
+      "values": {
+        "proximal_girth": 280,
+        "distal_girth": 200
+      }
+    },
+    {
+      "id": "firm",
+      "label": {
+        "en": "Firm grip",
+        "es": "Sujeción firme",
+        "fr": "Maintien ferme"
+      },
+      "values": {
+        "grip": 0.22
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "proximal_girth >= distal_girth",
+      "message": {
+        "en": "The proximal (body-side) girth must be at least the distal — a limb narrows outward.",
+        "es": "El contorno proximal debe ser al menos el distal — un miembro se angosta hacia afuera.",
+        "fr": "Le tour proximal doit être au moins le distal — un membre s'affine vers l'extérieur."
+      },
+      "severity": "error"
+    },
+    {
+      "expression": "band_length > electrode_dia + 8",
+      "message": {
+        "en": "The band must be long enough to hold an electrode with clearance.",
+        "es": "La banda debe ser lo bastante larga para alojar un electrodo con holgura.",
+        "fr": "La bande doit être assez longue pour loger une électrode avec dégagement."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "snap",
+    "subtype": "EMG electrode carrier pair in a tapered band",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "snap-electrode-carrier",
+      "linked": true,
+      "params_map": {
+        "disc_dia": "electrode_dia",
+        "disc_t": "electrode_dia * 0.06",
+        "sew_holes": "round(electrode_dia / 4)",
+        "hole_dia": "electrode_dia * 0.05"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "electrode_seat",
+        "type": "custom",
+        "label": {
+          "en": "Electrode carrier seats",
+          "es": "Asientos de portaelectrodos",
+          "fr": "Assises de plots d'électrode"
+        },
+        "edges": [
+          {
+            "piece": "band",
+            "edge": "proximal"
+          }
+        ],
+        "parameters": [
+          "electrode_dia",
+          "electrode_span",
+          "electrode_margin"
+        ]
+      },
+      {
+        "id": "grip_ring",
+        "type": "waistband",
+        "label": {
+          "en": "Compression grip ring (tapered)",
+          "es": "Anillo de sujeción (cónico)",
+          "fr": "Anneau de maintien (conique)"
+        },
+        "edges": [
+          {
+            "piece": "band",
+            "edge": "distal"
+          }
+        ],
+        "parameters": [
+          "proximal_girth",
+          "distal_girth",
+          "grip"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true,
+      "e_textile": true,
+      "dead_length_solve": true
+    },
+    "societal_benefit": {
+      "en": "Surface EMG is used everywhere from stroke rehab to prosthetic control to sports science, and the perennial problem is the same: electrodes taped to a moving limb slide, and a sliding electrode gives motion artefact, not muscle signal. The lab answer is expensive strap kits in a couple of sizes; the home answer is tape. A band cut to a real, tapered limb at a solved grip holds two electrodes at a chosen spacing over a chosen muscle, and because the carriers are printable commons parts a clinic or a maker replaces one rather than the kit. Cleaner signal from a repairable band is a real gain for the many low-budget rehab and research settings priced out of the strap kits. It positions and routes; it does not diagnose.",
+      "es": "El EMG de superficie se usa en todo, de la rehabilitación tras un ictus al control de prótesis y la ciencia del deporte, y el problema perenne es el mismo: los electrodos pegados a un miembro en movimiento resbalan, y un electrodo que resbala da artefacto de movimiento, no señal muscular. La respuesta de laboratorio son kits de correa caros en un par de tallas; la de casa es cinta. Una banda cortada a un miembro cónico real con una sujeción calculada mantiene dos electrodos a una separación elegida sobre un músculo elegido, y como los portaelectrodos son piezas comunes imprimibles una clínica o un maker reemplaza uno en vez del kit. Señal más limpia desde una banda reparable es una ganancia real para los muchos entornos de rehabilitación e investigación de bajo presupuesto excluidos de los kits de correa. Posiciona y encamina; no diagnostica.",
+      "fr": "L'EMG de surface s'utilise partout, de la rééducation après AVC au contrôle de prothèses en passant par les sciences du sport, et le problème perpétuel est le même : les électrodes scotchées sur un membre en mouvement glissent, et une électrode qui glisse donne un artefact de mouvement, non un signal musculaire. La réponse de laboratoire, ce sont des kits à sangle chers en deux tailles ; la réponse maison, du ruban adhésif. Une bande coupée sur un membre conique réel à un maintien calculé tient deux électrodes à un écartement choisi sur un muscle choisi, et comme les plots sont des pièces communes imprimables une clinique ou un maker en remplace un plutôt que le kit. Un signal plus propre depuis une bande réparable est un gain réel pour les nombreux contextes de rééducation et de recherche à petit budget exclus des kits à sangle. Il positionne et achemine ; il ne diagnostique pas."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

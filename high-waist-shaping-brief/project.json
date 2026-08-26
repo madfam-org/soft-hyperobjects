@@ -1,0 +1,486 @@
+{
+  "project": {
+    "name": "High-Waist Shaping Brief",
+    "slug": "high-waist-shaping-brief",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A high-waist compression brief (faja calzón): a front control panel and back panel cut at a measured, graduated negative ease — firmer at the waist, gentler at the hip — under a folded high waistband that reaches to or above the natural waist, with a gusset that opens on a Yantra4D `hook-and-eye` so the brief can be worn without full removal. Compression is a number, not a fabric-and-hope guess: each panel is cut to its body girth times (1 − compression), with the waist figure clamped never gentler than the hip's. `gusset_width` drives both the drafted placket and the hook column count. Made to measure to waist and hip girths. FC-500 lane 7 (intimates & loungewear III).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una faja calzón de talle alto: un panel de control frontal y un panel trasero cortados con holgura negativa medida y graduada — más firme en la cintura, más suave en la cadera — bajo una pretina alta doblada que llega a la cintura natural o por encima, con una entrepierna que abre con un broche `hook-and-eye` de Yantra4D para poder usarla sin quitarla del todo. La compresión es un número, no una apuesta de tela: cada panel se corta a su contorno por (1 − compresión), con la cifra de cintura fijada nunca más suave que la de cadera. gusset_width define tanto la tapeta trazada como el número de columnas de broches. Hecho a medida a cintura y cadera. Carril 7 de FC-500 (lencería y ropa de descanso III).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une culotte gainante taille haute (faja calzón) : un panneau de contrôle avant et un panneau arrière coupés à une aisance négative mesurée et graduée — plus ferme à la taille, plus douce à la hanche — sous une ceinture haute repliée qui atteint la taille naturelle ou la dépasse, avec un gousset qui s'ouvre sur une agrafe `hook-and-eye` de Yantra4D pour se porter sans retrait complet. La compression est un nombre, non un pari sur le tissu : chaque panneau est coupé à son tour de corps multiplié par (1 − compression), la valeur de taille étant bornée à ne jamais être plus douce que celle de la hanche. gusset_width pilote à la fois la patte tracée et le nombre de colonnes d'agrafes. Fait sur mesure aux tours de taille et de hanches. Couloir 7 de FC-500 (lingerie et vêtements d'intérieur III).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "shapewear",
+      "high-waist",
+      "brief",
+      "compression",
+      "gusset",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Brief",
+        "es": "Faja completa",
+        "fr": "Culotte complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "gusset",
+        "waistband"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front control panel",
+        "es": "Panel de control frontal",
+        "fr": "Panneau de contrôle avant"
+      },
+      "default_color": "#5e5a6e",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back panel",
+        "es": "Panel trasero",
+        "fr": "Panneau arrière"
+      },
+      "default_color": "#4e4a5e",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true
+      }
+    },
+    {
+      "id": "gusset",
+      "label": {
+        "en": "Gusset (hook-and-eye placket)",
+        "es": "Entrepierna (tapeta con broches)",
+        "fr": "Gousset (patte à agrafes)"
+      },
+      "default_color": "#6e6a7e",
+      "cut": {
+        "quantity": 2
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "High waistband",
+        "es": "Pretina alta",
+        "fr": "Ceinture haute"
+      },
+      "default_color": "#3e3a4e",
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Compression",
+        "es": "Ajuste y Compresión",
+        "fr": "Ajustement et Compression"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 760,
+      "min": 560,
+      "max": 1300,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "The natural waist — the firmest compression level",
+        "es": "La cintura natural — el nivel de mayor compresión",
+        "fr": "La taille naturelle — le niveau de compression le plus ferme"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 980,
+      "min": 720,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      },
+      "tooltip": {
+        "en": "The fullest hip — the gentler compression level",
+        "es": "La cadera más llena — el nivel de compresión más suave",
+        "fr": "La hanche la plus forte — le niveau de compression le plus doux"
+      }
+    },
+    {
+      "id": "rise",
+      "type": "slider",
+      "group": "construction",
+      "default": 340,
+      "min": 220,
+      "max": 460,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "body_rise"
+      },
+      "label": {
+        "en": "Rise (gusset to waist, mm)",
+        "es": "Tiro (entrepierna a cintura, mm)",
+        "fr": "Montant (gousset à taille, mm)"
+      },
+      "tooltip": {
+        "en": "Front rise from the gusset to the waist seam",
+        "es": "Tiro delantero de la entrepierna a la costura de cintura",
+        "fr": "Montant avant du gousset à la couture de taille"
+      }
+    },
+    {
+      "id": "waistband_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 60,
+      "min": 30,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Waistband height (mm)",
+        "es": "Alto de pretina (mm)",
+        "fr": "Hauteur de ceinture (mm)"
+      },
+      "tooltip": {
+        "en": "How high the waistband reaches above the waist seam",
+        "es": "Cuánto sube la pretina sobre la costura de cintura",
+        "fr": "Jusqu'où la ceinture monte au-dessus de la couture de taille"
+      }
+    },
+    {
+      "id": "waist_compression",
+      "type": "slider",
+      "group": "fit",
+      "default": 0.14,
+      "min": 0.04,
+      "max": 0.28,
+      "step": 0.01,
+      "label": {
+        "en": "Waist compression",
+        "es": "Compresión de cintura",
+        "fr": "Compression à la taille"
+      },
+      "tooltip": {
+        "en": "Negative ease at the waist — clamped never gentler than the hip's",
+        "es": "Holgura negativa en la cintura — nunca más suave que la de cadera",
+        "fr": "Aisance négative à la taille — jamais plus douce que celle de la hanche"
+      }
+    },
+    {
+      "id": "hip_compression",
+      "type": "slider",
+      "group": "fit",
+      "default": 0.08,
+      "min": 0.02,
+      "max": 0.22,
+      "step": 0.01,
+      "label": {
+        "en": "Hip compression",
+        "es": "Compresión de cadera",
+        "fr": "Compression à la hanche"
+      },
+      "tooltip": {
+        "en": "Negative ease at the hip — the gentler graduated level",
+        "es": "Holgura negativa en la cadera — el nivel graduado más suave",
+        "fr": "Aisance négative à la hanche — le niveau gradué plus doux"
+      }
+    },
+    {
+      "id": "gusset_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 70,
+      "min": 40,
+      "max": 130,
+      "step": 5,
+      "label": {
+        "en": "Gusset width (mm)",
+        "es": "Ancho de entrepierna (mm)",
+        "fr": "Largeur de gousset (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the placket the hooks sew to AND the hook column count",
+        "es": "Define la tapeta donde se cosen los broches Y el número de columnas",
+        "fr": "Pilote la patte où se cousent les agrafes ET le nombre de colonnes"
+      }
+    },
+    {
+      "id": "hook_pitch",
+      "type": "slider",
+      "group": "construction",
+      "default": 14,
+      "min": 8,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Hook column pitch (mm)",
+        "es": "Paso de columna de broche (mm)",
+        "fr": "Pas de colonne d'agrafe (mm)"
+      },
+      "tooltip": {
+        "en": "Spacing of hook columns — sets the hardware size_mm and column count",
+        "es": "Separación de columnas de broche — define el size_mm y el número de columnas",
+        "fr": "Espacement des colonnes d'agrafes — fixe le size_mm et le nombre de colonnes"
+      }
+    },
+    {
+      "id": "leg_scoop",
+      "type": "slider",
+      "group": "construction",
+      "default": 46,
+      "min": 20,
+      "max": 90,
+      "step": 2,
+      "label": {
+        "en": "Leg-opening scoop (mm)",
+        "es": "Escote de pierna (mm)",
+        "fr": "Échancrure de jambe (mm)"
+      },
+      "tooltip": {
+        "en": "How deeply the leg opening scoops from the gusset to the hip",
+        "es": "Cuánto escota la pierna de la entrepierna a la cadera",
+        "fr": "Profondeur de l'échancrure de jambe du gousset à la hanche"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Knit seams are narrow",
+        "es": "Las costuras de punto son angostas",
+        "fr": "Les coutures en maille sont étroites"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "firm",
+      "label": {
+        "en": "Firm control",
+        "es": "Control firme",
+        "fr": "Contrôle ferme"
+      },
+      "values": {
+        "waist_compression": 0.22,
+        "hip_compression": 0.14
+      }
+    },
+    {
+      "id": "extra_high",
+      "label": {
+        "en": "Extra-high waist",
+        "es": "Talle extra alto",
+        "fr": "Taille extra-haute"
+      },
+      "values": {
+        "waistband_height": 110,
+        "rise": 400
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "hip_girth > waist_girth",
+      "message": {
+        "en": "Hip girth should exceed waist girth for a shaping brief.",
+        "es": "El contorno de cadera debe superar al de cintura en una faja.",
+        "fr": "Le tour de hanches doit dépasser le tour de taille pour une culotte gainante."
+      },
+      "severity": "error"
+    },
+    {
+      "expression": "waist_compression >= hip_compression",
+      "message": {
+        "en": "Graduated compression: the waist must grip at least as firmly as the hip.",
+        "es": "Compresión graduada: la cintura debe apretar al menos tanto como la cadera.",
+        "fr": "Compression graduée : la taille doit serrer au moins autant que la hanche."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "hook",
+    "subtype": "gusset hook-and-eye placket",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "hook-and-eye",
+      "linked": true,
+      "params_map": {
+        "columns": "round(gusset_width / hook_pitch)",
+        "size_mm": "hook_pitch",
+        "rows": "2"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam (front to back)",
+          "es": "Costura lateral (delante a espalda)",
+          "fr": "Couture latérale (devant à dos)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side_seam"
+          },
+          {
+            "piece": "back",
+            "edge": "side_seam"
+          }
+        ],
+        "parameters": [
+          "hip_girth",
+          "hip_compression",
+          "rise"
+        ]
+      },
+      {
+        "id": "waistband_attach",
+        "type": "waistband",
+        "label": {
+          "en": "High waistband attachment",
+          "es": "Unión de pretina alta",
+          "fr": "Montage de la ceinture haute"
+        },
+        "edges": [
+          {
+            "piece": "waistband",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "waist_compression",
+          "waistband_height"
+        ]
+      },
+      {
+        "id": "gusset_closure",
+        "type": "custom",
+        "label": {
+          "en": "Gusset hook-and-eye closure",
+          "es": "Cierre de entrepierna con broches",
+          "fr": "Fermeture de gousset à agrafes"
+        },
+        "edges": [
+          {
+            "piece": "gusset",
+            "edge": "placket_r"
+          },
+          {
+            "piece": "gusset",
+            "edge": "placket_l"
+          }
+        ],
+        "parameters": [
+          "gusset_width",
+          "hook_pitch"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": true,
+      "graduated_compression": true,
+      "knit_negative_ease": true
+    },
+    "societal_benefit": {
+      "en": "Shaping briefs are sold in a handful of sizes with a fixed compression the wearer cannot see or choose, and the gusset — the detail that decides whether the garment can be worn through a normal day — is often just a sewn strip with no way to open it. This cartridge makes both explicit: the squeeze is a graduated, measured negative ease the wearer sets and the panels are cut to, and the gusset closes on a printable hook-and-eye that can be reprinted rather than condemning the garment when it fails. A foundation garment becomes a fitted, repairable object instead of a sized guess.",
+      "es": "Las fajas se venden en pocas tallas con una compresión fija que quien las usa no ve ni elige, y la entrepierna — el detalle que decide si la prenda se puede llevar todo el día — suele ser sólo una tira cosida sin forma de abrirla. Este cartucho vuelve ambas cosas explícitas: el apriete es una holgura negativa graduada y medida que se define y a la que se cortan los paneles, y la entrepierna cierra con un broche imprimible que puede reimprimirse en vez de condenar la prenda al fallar. Una prenda de base se vuelve un objeto ajustado y reparable, no una talla adivinada.",
+      "fr": "Les culottes gainantes se vendent en quelques tailles avec une compression fixe que la personne ne voit ni ne choisit, et le gousset — le détail qui décide si le vêtement se porte toute une journée — n'est souvent qu'une bande cousue sans moyen de l'ouvrir. Ce cartouche rend les deux explicites : le serrage est une aisance négative graduée et mesurée que l'on règle et à laquelle les panneaux sont coupés, et le gousset se ferme sur une agrafe imprimable réimprimable plutôt que de condamner le vêtement à sa panne. Un vêtement de base devient un objet ajusté et réparable, non une taille devinée."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "project": {
+    "name": "Can-Can Ruffle Skirt",
+    "slug": "can-can-ruffle-skirt",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The high-kick can-can skirt: a full gathered skirt on a fitted waistband, faced underneath with tier upon tier of net ruffles (the froufrou) that flash when the hem goes overhead, closing at a Yantra4D `hook-and-eye`. Its engineering is the ruffle stack: each tier is cut to the skirt circumference at its own level times a fullness, so a lower tier is longer than an upper one (the skirt is a cone) and the underside stays a dense wall of white. `closure_rows` drives the hook columns and `waistband_height` the drafted placket. Made to measure to waist and hip girths. FC-500 lane 9 (costume, dance & performance).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La falda de can-can de patada alta: una falda amplia y fruncida sobre una pretina ajustada, forrada por debajo con capa tras capa de olanes de tul (el froufrou) que destellan cuando el ruedo sube por encima, y que cierra con un `hook-and-eye` de Yantra4D. Su ingeniería es la pila de olanes: cada capa se corta a la circunferencia de la falda en su propio nivel por un factor de amplitud, así una capa baja es más larga que una alta (la falda es un cono) y el envés queda como una pared densa de blanco. closure_rows define las columnas de broche y waistband_height la tapeta trazada. Hecho a medida a cintura y cadera. Carril 9 de FC-500 (vestuario, danza y espectáculo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La jupe de french cancan : une jupe ample et froncée sur une ceinture ajustée, doublée dessous de volant sur volant de tulle (le froufrou) qui jaillissent quand l'ourlet passe au-dessus de la tête, fermant par une agrafe `hook-and-eye` de Yantra4D. Son ingénierie est la pile de volants : chaque volant est coupé à la circonférence de la jupe à son propre niveau multipliée par une ampleur, si bien qu'un volant bas est plus long qu'un haut (la jupe est un cône) et le dessous reste un mur dense de blanc. closure_rows pilote les colonnes d'agrafes et waistband_height la patte tracée. Fait sur mesure aux tours de taille et de hanches. Couloir 9 de FC-500 (costume, danse et spectacle).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["can-can", "ruffle-skirt", "cabaret", "costume", "net", "hardware", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [{"source": "Original draft for Fashion Cabinet", "license": "original"}]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {"en": "Full Skirt", "es": "Falda completa", "fr": "Jupe complète"},
+      "script_file": "main.py",
+      "pieces": ["skirt", "ruffle", "waistband"]
+    }
+  ],
+  "pieces": [
+    {"id": "skirt", "label": {"en": "Skirt panel", "es": "Panel de falda", "fr": "Panneau de jupe"}, "default_color": "#e02040", "cut": {"quantity": 1}},
+    {"id": "ruffle", "label": {"en": "Net ruffle tier", "es": "Capa de olán", "fr": "Volant de tulle"}, "default_color": "#f8f0f4", "cut": {"quantity": 1}},
+    {"id": "waistband", "label": {"en": "Waistband", "es": "Pretina", "fr": "Ceinture"}, "default_color": "#c01030", "cut": {"quantity": 1}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body Measurements", "es": "Medidas Corporales", "fr": "Mesures du corps"}},
+    {"id": "skirt", "label": {"en": "Skirt & Ruffles", "es": "Falda y Olanes", "fr": "Jupe et Volants"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction"}}
+  ],
+  "parameters": [
+    {"id": "waist_girth", "type": "slider", "group": "body", "default": 720, "min": 520, "max": 1200, "step": 10, "measurement": {"standard": "iso_8559", "code": "waist_girth"}, "label": {"en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)"}, "tooltip": {"en": "The waistband", "es": "La pretina", "fr": "La ceinture"}},
+    {"id": "hip_girth", "type": "slider", "group": "body", "default": 960, "min": 700, "max": 1500, "step": 10, "measurement": {"standard": "iso_8559", "code": "hip_girth"}, "label": {"en": "Hip girth (mm)", "es": "Contorno de cadera (mm)", "fr": "Tour de hanches (mm)"}, "tooltip": {"en": "Sets the skirt circumference", "es": "Define la circunferencia de la falda", "fr": "Fixe la circonférence de la jupe"}},
+    {"id": "skirt_length", "type": "slider", "group": "skirt", "default": 700, "min": 400, "max": 1100, "step": 10, "label": {"en": "Skirt length (mm)", "es": "Largo de falda (mm)", "fr": "Longueur de jupe (mm)"}, "tooltip": {"en": "Waist to hem", "es": "De la cintura al ruedo", "fr": "De la taille à l'ourlet"}},
+    {"id": "skirt_fullness", "type": "slider", "group": "skirt", "default": 2.6, "min": 1.8, "max": 4.0, "step": 0.1, "label": {"en": "Skirt fullness", "es": "Amplitud de falda", "fr": "Ampleur de jupe"}, "tooltip": {"en": "Skirt gather on the waistband", "es": "Fruncido de falda en la pretina", "fr": "Fronçage de jupe sur la ceinture"}},
+    {"id": "ruffle_fullness", "type": "slider", "group": "skirt", "default": 2.4, "min": 1.6, "max": 4.0, "step": 0.1, "label": {"en": "Ruffle fullness", "es": "Amplitud de olán", "fr": "Ampleur de volant"}, "tooltip": {"en": "How many times each level the ruffle is cut", "es": "Cuántas veces cada nivel se corta el olán", "fr": "Combien de fois chaque niveau le volant est coupé"}},
+    {"id": "ruffle_depth", "type": "slider", "group": "skirt", "default": 130, "min": 60, "max": 240, "step": 10, "label": {"en": "Ruffle depth (mm)", "es": "Profundidad de olán (mm)", "fr": "Profondeur de volant (mm)"}, "tooltip": {"en": "The depth of one ruffle", "es": "La profundidad de un olán", "fr": "La profondeur d'un volant"}},
+    {"id": "tier_count", "type": "slider", "group": "skirt", "default": 4, "min": 2, "max": 10, "step": 1, "label": {"en": "Ruffle tier count", "es": "Número de capas", "fr": "Nombre de volants"}, "tooltip": {"en": "How many ruffle tiers make the froufrou", "es": "Cuántas capas forman el froufrou", "fr": "Combien de volants font le froufrou"}},
+    {"id": "waistband_height", "type": "slider", "group": "construction", "default": 60, "min": 30, "max": 120, "step": 5, "label": {"en": "Waistband height (mm)", "es": "Alto de pretina (mm)", "fr": "Hauteur de ceinture (mm)"}, "tooltip": {"en": "Drives the CB placket height", "es": "Define el alto de la tapeta", "fr": "Pilote la hauteur de patte"}},
+    {"id": "closure_rows", "type": "slider", "group": "construction", "default": 5, "min": 2, "max": 10, "step": 1, "label": {"en": "Hook rows", "es": "Filas de broches", "fr": "Rangs d'agrafes"}, "tooltip": {"en": "Rows of hook-and-eye", "es": "Filas de broches", "fr": "Rangs d'agrafes"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 0, "max": 20, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)"}, "tooltip": {"en": "Firm seams", "es": "Costuras firmes", "fr": "Coutures fermes"}}
+  ],
+  "presets": [
+    {"id": "grand_froufrou", "label": {"en": "Grand froufrou", "es": "Gran froufrou", "fr": "Grand froufrou"}, "values": {"tier_count": 8, "ruffle_fullness": 3.2}},
+    {"id": "short_kick", "label": {"en": "Short kick", "es": "Patada corta", "fr": "Kick court"}, "values": {"skirt_length": 500}}
+  ],
+  "constraints": [
+    {"expression": "hip_girth > waist_girth", "message": {"en": "The hip must exceed the waist.", "es": "La cadera debe superar la cintura.", "fr": "La hanche doit dépasser la taille."}, "severity": "error"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "hook",
+    "subtype": "waistband hook-and-eye",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "hook-and-eye",
+      "linked": true,
+      "params_map": {"columns": "round(closure_rows)", "rows": "2", "size_mm": "waistband_height / 6"}
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "skirt_gather", "type": "waistband", "label": {"en": "Skirt gather onto the waistband", "es": "Fruncido de falda a la pretina", "fr": "Fronçage de jupe sur la ceinture"}, "edges": [{"piece": "skirt", "edge": "waist"}, {"piece": "waistband", "edge": "attach"}], "parameters": ["hip_girth", "skirt_fullness"]},
+      {"id": "ruffle_gather", "type": "hem", "label": {"en": "Ruffle gather onto the hem", "es": "Fruncido del olán al ruedo", "fr": "Fronçage du volant sur l'ourlet"}, "edges": [{"piece": "ruffle", "edge": "gather_edge"}, {"piece": "skirt", "edge": "hem"}], "parameters": ["ruffle_fullness", "tier_count"]},
+      {"id": "wb_closure", "type": "custom", "label": {"en": "Waistband hook closure", "es": "Cierre de broches en pretina", "fr": "Fermeture à agrafes de ceinture"}, "edges": [{"piece": "waistband", "edge": "join_r"}, {"piece": "waistband", "edge": "join_l"}], "parameters": ["closure_rows", "waistband_height"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true,
+      "tiered_ruffle": true,
+      "gathered_skirt": true
+    },
+    "societal_benefit": {
+      "en": "The can-can skirt is a chorus-line staple that every cabaret, revue, burlesque troupe, and amateur theatre reaches for, and it is almost always improvised from a bought skirt with net safety-pinned underneath, which sags on the first kick because the tiers were cut flat instead of to each level. Drafting it as a parametric object with a solved ruffle stack gives a small company a reproducible, fitted, launderable garment for the cost of the net, with the closure a printable commons part. It documents the real engineering of a costume that keeps a whole strand of popular dance visually alive.",
+      "es": "La falda de can-can es un básico de la línea de coristas al que recurre toda revista, cabaret, tropa de burlesque y teatro amateur, y casi siempre se improvisa con una falda comprada y tul prendido con seguros debajo, que se descuelga en la primera patada porque las capas se cortaron planas y no a cada nivel. Trazarla como objeto paramétrico con una pila de olanes calculada da a una compañía pequeña una prenda reproducible, ajustada y lavable por el costo del tul, con el cierre como pieza común imprimible. Documenta la ingeniería real de un vestuario que mantiene viva toda una corriente de danza popular.",
+      "fr": "La jupe de cancan est un incontournable de la ligne de choristes que tout cabaret, revue, troupe de burlesque et théâtre amateur emploie, et elle est presque toujours improvisée à partir d'une jupe achetée avec du tulle épinglé dessous, qui s'affaisse au premier kick car les volants ont été coupés à plat au lieu de chaque niveau. La tracer comme objet paramétrique avec une pile de volants calculée donne à une petite compagnie un vêtement reproductible, ajusté et lavable pour le coût du tulle, avec la fermeture comme pièce commune imprimable. Elle documente l'ingénierie réelle d'un costume qui garde vivant tout un pan de la danse populaire."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

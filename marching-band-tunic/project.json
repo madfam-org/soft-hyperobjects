@@ -1,0 +1,90 @@
+{
+  "project": {
+    "name": "Marching-Band Tunic",
+    "slug": "marching-band-tunic",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The high-collared, structured tunic of the marching band and drum corps: a fitted military coat with a standing collar, a chest of horizontal braid (frogging), and rigid epaulettes (shoulder boards) that hold their shape — the boards are Yantra4D `epaulette-board` solids, and this cartridge drafts the tunic and the seat the board sits on. An epaulette board is a rigid trapezoid on a curved shoulder, so its length is clamped to the drafted shoulder seam and its wide/narrow ends are placed wide at the shoulder point, narrow at the neck (the military convention), so the printed board fits the shoulder it caps. `board_len` drives the board and the drafted seat. Made to measure to chest, waist and lengths. FC-500 lane 9 (costume, dance & performance).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La túnica estructurada de cuello alto de la banda de guerra y el drum corps: un abrigo militar entallado con cuello de tira, un pecho de trencilla horizontal (alamares) y charreteras rígidas (hombreras) que guardan su forma — las hombreras son sólidos `epaulette-board` de Yantra4D, y este cartucho traza la túnica y el asiento donde va la hombrera. Una hombrera es un trapecio rígido sobre un hombro curvo, así su largo se limita a la costura de hombro trazada y sus extremos ancho/angosto se colocan ancho en la punta del hombro, angosto en el cuello (la convención militar), para que la hombrera impresa ajuste al hombro que remata. board_len define la hombrera y el asiento trazado. Hecho a medida a pecho, cintura y largos. Carril 9 de FC-500 (vestuario, danza y espectáculo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La tunique structurée à col haut de la fanfare et du drum corps : une veste militaire ajustée à col officier, une poitrine de galon horizontal (brandebourgs), et des épaulettes rigides (pattes d'épaule) qui gardent leur forme — les pattes sont des solides `epaulette-board` de Yantra4D, et ce cartouche trace la tunique et l'assise où la patte se pose. Une patte d'épaule est un trapèze rigide sur une épaule courbe, donc sa longueur est bornée à la couture d'épaule tracée et ses extrémités large/étroite sont placées large à la pointe de l'épaule, étroite au cou (la convention militaire), pour que la patte imprimée aille à l'épaule qu'elle coiffe. board_len pilote la patte et l'assise tracée. Fait sur mesure à la poitrine, à la taille et aux longueurs. Couloir 9 de FC-500 (costume, danse et spectacle).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["marching-band", "tunic", "military", "costume", "epaulette", "hardware", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [{"source": "Original draft for Fashion Cabinet", "license": "original"}]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full Tunic", "es": "Túnica completa", "fr": "Tunique complète"}, "script_file": "main.py", "pieces": ["tunic_front", "tunic_back", "sleeve", "collar", "epaulette"]}
+  ],
+  "pieces": [
+    {"id": "tunic_front", "label": {"en": "Tunic front (braid)", "es": "Túnica delantera (alamares)", "fr": "Tunique devant (galon)"}, "default_color": "#202860", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "tunic_back", "label": {"en": "Tunic back", "es": "Túnica trasera", "fr": "Tunique dos"}, "default_color": "#181f50", "cut": {"quantity": 1, "on_fold": true}},
+    {"id": "sleeve", "label": {"en": "Sleeve", "es": "Manga", "fr": "Manche"}, "default_color": "#283070", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "collar", "label": {"en": "Standing collar", "es": "Cuello de tira", "fr": "Col officier"}, "default_color": "#c02020", "cut": {"quantity": 1}},
+    {"id": "epaulette", "label": {"en": "Epaulette seat", "es": "Asiento de hombrera", "fr": "Assise d'épaulette"}, "default_color": "#d0a020", "cut": {"quantity": 2, "mirror": true}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body Measurements", "es": "Medidas Corporales", "fr": "Mesures du corps"}},
+    {"id": "military", "label": {"en": "Military Detail", "es": "Detalle Militar", "fr": "Détail Militaire"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction"}}
+  ],
+  "parameters": [
+    {"id": "chest_bust_girth", "type": "slider", "group": "body", "default": 960, "min": 760, "max": 1400, "step": 10, "measurement": {"standard": "iso_8559", "code": "chest_bust_girth"}, "label": {"en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)"}, "tooltip": {"en": "The tunic chest", "es": "El pecho de la túnica", "fr": "La poitrine de la tunique"}},
+    {"id": "waist_girth", "type": "slider", "group": "body", "default": 840, "min": 600, "max": 1300, "step": 10, "measurement": {"standard": "iso_8559", "code": "waist_girth"}, "label": {"en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)"}, "tooltip": {"en": "The fitted waist", "es": "La cintura entallada", "fr": "La taille ajustée"}},
+    {"id": "tunic_length", "type": "slider", "group": "body", "default": 720, "min": 480, "max": 950, "step": 10, "label": {"en": "Tunic length (mm)", "es": "Largo de túnica (mm)", "fr": "Longueur de tunique (mm)"}, "tooltip": {"en": "Shoulder to hem", "es": "Del hombro al ruedo", "fr": "De l'épaule à l'ourlet"}},
+    {"id": "sleeve_length", "type": "slider", "group": "construction", "default": 620, "min": 420, "max": 760, "step": 10, "measurement": {"standard": "iso_8559", "code": "arm_length"}, "label": {"en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)"}, "tooltip": {"en": "Shoulder to cuff", "es": "Del hombro al puño", "fr": "De l'épaule au poignet"}},
+    {"id": "bicep_girth", "type": "slider", "group": "body", "default": 330, "min": 240, "max": 550, "step": 10, "measurement": {"standard": "iso_8559", "code": "bicep_girth"}, "label": {"en": "Bicep girth (mm)", "es": "Contorno de bíceps (mm)", "fr": "Tour de biceps (mm)"}, "tooltip": {"en": "Sets the sleeve width", "es": "Define el ancho de manga", "fr": "Fixe la largeur de manche"}},
+    {"id": "neck_girth", "type": "slider", "group": "body", "default": 400, "min": 320, "max": 520, "step": 10, "measurement": {"standard": "iso_8559", "code": "neck_girth"}, "label": {"en": "Neck girth (mm)", "es": "Contorno de cuello (mm)", "fr": "Tour de cou (mm)"}, "tooltip": {"en": "Sets the standing collar length", "es": "Define el largo del cuello de tira", "fr": "Fixe la longueur du col officier"}},
+    {"id": "collar_height", "type": "slider", "group": "military", "default": 55, "min": 25, "max": 100, "step": 5, "label": {"en": "Collar height (mm)", "es": "Alto de cuello (mm)", "fr": "Hauteur de col (mm)"}, "tooltip": {"en": "The standing collar height", "es": "El alto del cuello de tira", "fr": "La hauteur du col officier"}},
+    {"id": "board_len", "type": "slider", "group": "military", "default": 120, "min": 60, "max": 220, "step": 10, "label": {"en": "Epaulette board length (mm)", "es": "Largo de hombrera (mm)", "fr": "Longueur d'épaulette (mm)"}, "tooltip": {"en": "Drives the board AND the seat — clamped to the shoulder seam", "es": "Define la hombrera Y el asiento — limitada a la costura de hombro", "fr": "Pilote la patte ET l'assise — bornée à la couture d'épaule"}},
+    {"id": "braid_rows", "type": "slider", "group": "military", "default": 6, "min": 3, "max": 12, "step": 1, "label": {"en": "Chest braid rows", "es": "Filas de alamares", "fr": "Rangs de galon"}, "tooltip": {"en": "Rows of horizontal frogging across the chest", "es": "Filas de alamares horizontales en el pecho", "fr": "Rangs de brandebourgs horizontaux sur la poitrine"}},
+    {"id": "ease_pct", "type": "slider", "group": "construction", "default": 6, "min": 0, "max": 14, "step": 1, "label": {"en": "Ease (%)", "es": "Holgura (%)", "fr": "Aisance (%)"}, "tooltip": {"en": "A tunic is fitted but marchable", "es": "Una túnica va entallada pero marchable", "fr": "Une tunique est ajustée mais permet la marche"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 0, "max": 20, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)"}, "tooltip": {"en": "A tailored tunic wants firm seams", "es": "Una túnica de sastre pide costuras firmes", "fr": "Une tunique tailleur demande des coutures fermes"}}
+  ],
+  "presets": [
+    {"id": "dress_uniform", "label": {"en": "Full dress", "es": "Gran gala", "fr": "Grande tenue"}, "values": {"collar_height": 80, "braid_rows": 10, "board_len": 160}},
+    {"id": "field", "label": {"en": "Field uniform", "es": "Uniforme de campo", "fr": "Tenue de campagne"}, "values": {"braid_rows": 4}}
+  ],
+  "constraints": [
+    {"expression": "chest_bust_girth >= waist_girth", "message": {"en": "Chest should be at least the waist.", "es": "El pecho debe ser al menos la cintura.", "fr": "La poitrine doit être au moins la taille."}, "severity": "warning"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "rigid epaulette shoulder board",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "epaulette-board",
+      "linked": true,
+      "params_map": {"board_len": "board_len", "wide_w": "collar_height * 0.9", "narrow_w": "collar_height * 0.54"}
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "epaulette_seat", "type": "shoulder", "label": {"en": "Epaulette shoulder seat", "es": "Asiento de hombrera", "fr": "Assise d'épaulette"}, "edges": [{"piece": "epaulette", "edge": "seat"}, {"piece": "tunic_front", "edge": "shoulder"}], "parameters": ["board_len", "collar_height"]},
+      {"id": "side_seam", "type": "side_seam", "label": {"en": "Side seam", "es": "Costura lateral", "fr": "Couture latérale"}, "edges": [{"piece": "tunic_front", "edge": "side"}, {"piece": "tunic_back", "edge": "side"}], "parameters": ["chest_bust_girth", "waist_girth", "ease_pct"]},
+      {"id": "armscye", "type": "armscye", "label": {"en": "Armscye", "es": "Sisa", "fr": "Emmanchure"}, "edges": [{"piece": "sleeve", "edge": "cap"}, {"piece": "tunic_front", "edge": "armscye"}, {"piece": "tunic_back", "edge": "armscye"}], "parameters": ["bicep_girth"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true,
+      "structured_tailoring": true,
+      "set_in_sleeve": true
+    },
+    "societal_benefit": {
+      "en": "School and community marching bands worldwide wear uniforms that cost hundreds per player and are ordered from a size chart, so a growing teenager wears a coat that fits for one season and a band on a tight budget re-uses ill-fitting hand-downs. The tunic's signature — the rigid epaulettes and the braided chest — is also where a badly made one looks cheap from the stands. Drafting it to a real player with epaulette boards clamped to the actual shoulder, and the boards a printable commons part, gives a band a sharp, fitted, reproducible uniform it can make and mend itself, and keeps a hard-up music programme looking like it belongs on the field.",
+      "es": "Las bandas de guerra escolares y comunitarias del mundo usan uniformes que cuestan cientos por integrante y se piden de una tabla de tallas, así un adolescente en crecimiento usa un abrigo que ajusta una temporada y una banda con presupuesto ajustado reutiliza heredados que no ajustan. La firma de la túnica — las hombreras rígidas y el pecho de alamares — es también donde una mal hecha se ve barata desde las gradas. Trazarla a un integrante real con hombreras limitadas al hombro real, y las hombreras como pieza común imprimible, da a una banda un uniforme nítido, ajustado y reproducible que puede hacer y remendar, y mantiene un programa musical sin recursos con aspecto de pertenecer al campo.",
+      "fr": "Les fanfares scolaires et communautaires du monde entier portent des uniformes qui coûtent des centaines par musicien et se commandent sur une grille de tailles, si bien qu'un adolescent en croissance porte une veste qui va une saison et une fanfare au budget serré réutilise des vêtements hérités mal ajustés. La signature de la tunique — les épaulettes rigides et la poitrine à galon — est aussi là où une mal faite paraît bon marché depuis les gradins. La tracer sur un musicien réel avec des épaulettes bornées à l'épaule réelle, et les pattes comme pièce commune imprimable, donne à une fanfare un uniforme net, ajusté et reproductible qu'elle peut fabriquer et réparer, et garde un programme musical démuni avec l'allure qu'il faut sur le terrain."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

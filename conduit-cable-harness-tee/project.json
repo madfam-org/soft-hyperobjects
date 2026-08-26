@@ -1,0 +1,513 @@
+{
+  "project": {
+    "name": "Cable-Conduit Harness Tee",
+    "slug": "conduit-cable-harness-tee",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A wearable cable harness in the form of a tee: cable bundles run along the seams — the strongest, least-flexing lines of a garment — held off the skin in Yantra4D `seam-conduit-clip` bundles clipped into the seam allowances, converging at a junction pocket. It is the base garment a wearable-electronics maker needs and never has: a tee whose seams are cable races, so an LED costume, a haptic suit, or a sensor rig routes its wiring in the seams instead of safety-pinning it inside. It is a garment pattern, not a wiring loom — it routes and clips cable bundles and contains no cable, connector, or circuit. The clip count on each seam is solved from the seam's measured length and the clip pitch, and `tab_w` drives both the clip and the drafted tab. Made to measure to chest/bust and waist girths. FC-500 lane 8 (e-textile & smart garments III).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un arnés de cable ponible con forma de playera: los haces de cable corren por las costuras — las líneas más fuertes y menos flexibles de una prenda — sostenidos lejos de la piel en haces de `seam-conduit-clip` de Yantra4D prendidos en los márgenes de costura, convergiendo en una bolsa de unión. Es la prenda base que un maker de electrónica ponible necesita y nunca tiene: una playera cuyas costuras son vías de cable, para que un traje LED, un traje háptico o un equipo de sensores encamine su cableado en las costuras y no prendido con seguros por dentro. Es un patrón de prenda, no un mazo de cables — encamina y prende haces y no contiene cable, conector ni circuito. El número de clips por costura se calcula del largo medido y el paso, y tab_w define tanto el clip como la lengüeta trazada. Hecho a medida a pecho y cintura. Carril 8 de FC-500 (textil electrónico y prendas inteligentes III).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un harnais de câble portable en forme de tee-shirt : des faisceaux de câbles courent le long des coutures — les lignes les plus solides et les moins flexibles d'un vêtement — tenus à l'écart de la peau dans des faisceaux `seam-conduit-clip` de Yantra4D clipsés dans les marges de couture, convergeant vers une poche de jonction. C'est le vêtement de base dont un maker d'électronique portable a besoin et n'a jamais : un tee dont les coutures sont des chemins de câbles, pour qu'un costume LED, une combinaison haptique ou un rig de capteurs achemine son câblage dans les coutures au lieu de l'épingler à l'intérieur. C'est un patron de vêtement, non un faisceau électrique — il achemine et clipse des faisceaux et ne contient ni câble, ni connecteur, ni circuit. Le nombre de clips par couture est calculé d'après la longueur mesurée et le pas, et tab_w pilote le clip et la patte tracée. Fait sur mesure aux tours de poitrine et de taille. Couloir 8 de FC-500 (textile électronique et vêtements intelligents III).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "e-textile",
+      "cable-harness",
+      "conduit",
+      "tee",
+      "seam-routing",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Tee",
+        "es": "Playera completa",
+        "fr": "Tee-shirt complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "junction"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (cable races)",
+        "es": "Delantero (vías de cable)",
+        "fr": "Devant (chemins de câbles)"
+      },
+      "default_color": "#3a4a4a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (cable races)",
+        "es": "Espalda (vías de cable)",
+        "fr": "Dos (chemins de câbles)"
+      },
+      "default_color": "#2a3a3a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve (underseam race)",
+        "es": "Manga (vía en costura)",
+        "fr": "Manche (chemin en couture)"
+      },
+      "default_color": "#4a5a5a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "junction",
+      "label": {
+        "en": "Junction pocket",
+        "es": "Bolsa de unión",
+        "fr": "Poche de jonction"
+      },
+      "default_color": "#5a6a6a",
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Ajustement"
+      }
+    },
+    {
+      "id": "conduit",
+      "label": {
+        "en": "Cable Conduit",
+        "es": "Conducto de Cable",
+        "fr": "Conduit de Câble"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_bust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 980,
+      "min": 700,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest/bust girth (mm)",
+        "es": "Contorno de pecho/busto (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the body width",
+        "es": "Define el ancho del cuerpo",
+        "fr": "Fixe la largeur du corps"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 880,
+      "min": 560,
+      "max": 1400,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "Shapes the tee's waist",
+        "es": "Da forma a la cintura",
+        "fr": "Façonne la taille"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 680,
+      "min": 450,
+      "max": 900,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "back_neck_to_waist"
+      },
+      "label": {
+        "en": "Body length (mm)",
+        "es": "Largo de cuerpo (mm)",
+        "fr": "Longueur du corps (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to hem — the length of the side cable race",
+        "es": "De la nuca al ruedo — el largo de la vía lateral",
+        "fr": "De la nuque à l'ourlet — la longueur du chemin latéral"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 220,
+      "min": 120,
+      "max": 500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "arm_length"
+      },
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "The length of the underarm cable race",
+        "es": "El largo de la vía de la axila",
+        "fr": "La longueur du chemin d'aisselle"
+      }
+    },
+    {
+      "id": "bicep_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 340,
+      "min": 220,
+      "max": 550,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bicep_girth"
+      },
+      "label": {
+        "en": "Bicep girth (mm)",
+        "es": "Contorno de bíceps (mm)",
+        "fr": "Tour de biceps (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the sleeve width",
+        "es": "Define el ancho de manga",
+        "fr": "Fixe la largeur de manche"
+      }
+    },
+    {
+      "id": "tab_w",
+      "type": "slider",
+      "group": "conduit",
+      "default": 16,
+      "min": 8,
+      "max": 34,
+      "step": 1,
+      "label": {
+        "en": "Conduit-clip tab width (mm)",
+        "es": "Ancho de lengüeta de clip (mm)",
+        "fr": "Largeur de patte de clip (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the clip AND the drafted tab it sews into",
+        "es": "Define el clip Y la lengüeta trazada donde se cose",
+        "fr": "Pilote le clip ET la patte tracée où il se coud"
+      }
+    },
+    {
+      "id": "clip_pitch",
+      "type": "slider",
+      "group": "conduit",
+      "default": 70,
+      "min": 30,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Clip pitch (mm)",
+        "es": "Paso de clips (mm)",
+        "fr": "Pas de clips (mm)"
+      },
+      "tooltip": {
+        "en": "Spacing of clips along a seam — the clip count is solved from the seam length",
+        "es": "Separación de clips en una costura — el número se calcula del largo de costura",
+        "fr": "Espacement des clips le long d'une couture — le nombre est calculé d'après la longueur"
+      }
+    },
+    {
+      "id": "bundle_dia",
+      "type": "slider",
+      "group": "conduit",
+      "default": 8,
+      "min": 3,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Cable bundle diameter (mm)",
+        "es": "Diámetro del haz de cable (mm)",
+        "fr": "Diamètre du faisceau (mm)"
+      },
+      "tooltip": {
+        "en": "The bundle the clips hold — the seam allowance is floored to hold it",
+        "es": "El haz que sujetan los clips — el margen tiene piso para alojarlo",
+        "fr": "Le faisceau que tiennent les clips — la marge a un plancher pour le loger"
+      }
+    },
+    {
+      "id": "junction_pocket",
+      "type": "slider",
+      "group": "conduit",
+      "default": 110,
+      "min": 70,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Junction pocket size (mm)",
+        "es": "Tamaño de bolsa de unión (mm)",
+        "fr": "Taille de poche de jonction (mm)"
+      },
+      "tooltip": {
+        "en": "Where the bundles converge",
+        "es": "Donde convergen los haces",
+        "fr": "Où les faisceaux convergent"
+      }
+    },
+    {
+      "id": "ease_pct",
+      "type": "slider",
+      "group": "fit",
+      "default": 6,
+      "min": 0,
+      "max": 18,
+      "step": 1,
+      "label": {
+        "en": "Body ease (%)",
+        "es": "Holgura de cuerpo (%)",
+        "fr": "Aisance du corps (%)"
+      },
+      "tooltip": {
+        "en": "A harness tee sits over a base layer with a little positive ease",
+        "es": "Una playera arnés va sobre una capa base con algo de holgura positiva",
+        "fr": "Un tee-harnais se porte sur une couche de base avec un peu d'aisance positive"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "fit",
+      "default": 12,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Floored to hold the clip tab plus the cable bundle",
+        "es": "Con piso para alojar la lengüeta y el haz de cable",
+        "fr": "Avec plancher pour loger la patte et le faisceau"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "dense_clips",
+      "label": {
+        "en": "Dense clips",
+        "es": "Clips densos",
+        "fr": "Clips denses"
+      },
+      "values": {
+        "clip_pitch": 40
+      }
+    },
+    {
+      "id": "thick_bundle",
+      "label": {
+        "en": "Thick bundle",
+        "es": "Haz grueso",
+        "fr": "Faisceau épais"
+      },
+      "values": {
+        "bundle_dia": 18,
+        "tab_w": 26
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "chest_bust_girth >= waist_girth",
+      "message": {
+        "en": "Chest girth should be at least the waist girth for this cut.",
+        "es": "El contorno de pecho debe ser al menos el de cintura para este corte.",
+        "fr": "Le tour de poitrine doit être au moins le tour de taille pour cette coupe."
+      },
+      "severity": "warning"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "in-seam cable conduit clips",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "seam-conduit-clip",
+      "linked": true,
+      "params_map": {
+        "tab_w": "tab_w",
+        "tab_t": "tab_w * 0.2",
+        "bundle_dia": "bundle_dia",
+        "clip_len": "clip_pitch * 0.3",
+        "hole_dia": "2"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "seam_conduit",
+        "type": "custom",
+        "label": {
+          "en": "In-seam cable conduit",
+          "es": "Conducto de cable en costura",
+          "fr": "Conduit de câble en couture"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "underseam_r"
+          }
+        ],
+        "parameters": [
+          "tab_w",
+          "clip_pitch",
+          "bundle_dia"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam (front to back)",
+          "es": "Costura lateral",
+          "fr": "Couture latérale"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "chest_bust_girth",
+          "waist_girth",
+          "body_length"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Armscye",
+          "es": "Sisa",
+          "fr": "Emmanchure"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          },
+          {
+            "piece": "front",
+            "edge": "armscye"
+          },
+          {
+            "piece": "back",
+            "edge": "armscye"
+          }
+        ],
+        "parameters": [
+          "bicep_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": true,
+      "e_textile": true,
+      "seam_routing": true
+    },
+    "societal_benefit": {
+      "en": "Everyone who builds wearable electronics — theatre costumers, disability-tech makers, students, hobbyists — hits the same wall the moment the prototype leaves the bench: the wiring has nowhere to live, so it gets taped, safety-pinned, or hot-glued to the inside of a garment where it snags, shorts, and can never be washed. This tee makes the seam a cable race by design, with printable clips that hold the bundle off the skin and a solved clip count that keeps it tidy at any size. It turns wearable wiring from a per-project improvisation into a repeatable, launderable, repairable base garment — which is exactly the infrastructure the field lacks. It routes and clips; it is not a circuit.",
+      "es": "Todos los que construyen electrónica ponible — vestuaristas de teatro, makers de tecnología para discapacidad, estudiantes, aficionados — chocan con el mismo muro cuando el prototipo sale del banco: el cableado no tiene dónde vivir, así que se pega, se prende con seguros o se pega con silicona al interior de una prenda donde se atora, se corta y nunca se puede lavar. Esta playera hace de la costura una vía de cable por diseño, con clips imprimibles que sostienen el haz lejos de la piel y un número de clips calculado que lo mantiene ordenado a cualquier talla. Convierte el cableado ponible de una improvisación por proyecto en una prenda base repetible, lavable y reparable — justo la infraestructura que le falta al campo. Encamina y prende; no es un circuito.",
+      "fr": "Tous ceux qui construisent de l'électronique portable — costumiers de théâtre, makers de tech pour le handicap, étudiants, amateurs — se heurtent au même mur dès que le prototype quitte l'établi : le câblage n'a nulle part où vivre, alors on le scotche, on l'épingle ou on le colle à l'intérieur d'un vêtement où il accroche, court-circuite et ne se lave jamais. Ce tee fait de la couture un chemin de câble par conception, avec des clips imprimables qui tiennent le faisceau à l'écart de la peau et un nombre de clips calculé qui le garde net à toute taille. Il transforme le câblage portable d'une improvisation par projet en un vêtement de base répétable, lavable et réparable — exactement l'infrastructure qui manque au domaine. Il achemine et clipse ; ce n'est pas un circuit."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

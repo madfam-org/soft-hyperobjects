@@ -1,0 +1,419 @@
+{
+  "project": {
+    "name": "Heated Vest Panel",
+    "slug": "heated-vest-panel",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A vest whose front and back carry heating panels: serpentine channels that route a flexible heating element across the chest and kidneys, housed in a Yantra4D `led-channel` extrusion so the element sits protected rather than loose against the body, fed from a battery/controller pocket at the hem. It is a garment pattern, not an appliance — it routes and houses an element in a channel and contains no heater, battery, or controller. The serpentine pass count is solved from the panel height and the strip pitch, so the element covers the panel with no cold stripes and no bunching, and `strip_w` drives both the drafted channel and the carrier. Made to measure to chest/bust girth. FC-500 lane 8 (e-textile & smart garments III).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un chaleco cuyo frente y espalda llevan paneles calefactables: canales en serpentina que encaminan un elemento calefactor flexible por el pecho y los riñones, alojados en una extrusión `led-channel` de Yantra4D para que el elemento vaya protegido y no suelto contra el cuerpo, alimentados desde una bolsa de batería/controlador en el ruedo. Es un patrón de prenda, no un electrodoméstico — encamina y aloja un elemento en un canal y no contiene calefactor, batería ni controlador. El número de pasadas en serpentina se calcula de la altura del panel y el paso de la tira, así el elemento cubre el panel sin franjas frías ni amontonamiento, y strip_w define tanto el canal trazado como el carril. Hecho a medida al contorno de pecho. Carril 8 de FC-500 (textil electrónico y prendas inteligentes III).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un gilet dont le devant et le dos portent des panneaux chauffants : des canaux en serpentin qui acheminent un élément chauffant souple sur la poitrine et les reins, logés dans une extrusion `led-channel` de Yantra4D pour que l'élément soit protégé plutôt que libre contre le corps, alimentés depuis une poche de batterie/contrôleur à l'ourlet. C'est un patron de vêtement, non un appareil — il achemine et loge un élément dans un canal et ne contient ni chauffage, ni batterie, ni contrôleur. Le nombre de passes en serpentin est calculé à partir de la hauteur du panneau et du pas de la bande, si bien que l'élément couvre le panneau sans bandes froides ni bourrage, et strip_w pilote à la fois le canal tracé et le rail. Fait sur mesure au tour de poitrine. Couloir 8 de FC-500 (textile électronique et vêtements intelligents III).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "e-textile",
+      "heated",
+      "vest",
+      "channel-routing",
+      "serpentine",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Vest",
+        "es": "Chaleco completo",
+        "fr": "Gilet complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "battery_pocket"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front panel (heat channel)",
+        "es": "Panel frontal (canal de calor)",
+        "fr": "Panneau devant (canal de chauffe)"
+      },
+      "default_color": "#6a4a3a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back panel (heat channel)",
+        "es": "Panel trasero (canal de calor)",
+        "fr": "Panneau dos (canal de chauffe)"
+      },
+      "default_color": "#5a3a2a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "battery_pocket",
+      "label": {
+        "en": "Battery/controller pocket",
+        "es": "Bolsa de batería/controlador",
+        "fr": "Poche de batterie/contrôleur"
+      },
+      "default_color": "#7a5a4a",
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "panel",
+      "label": {
+        "en": "Heat Panel",
+        "es": "Panel de Calor",
+        "fr": "Panneau de Chauffe"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_bust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 980,
+      "min": 700,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest/bust girth (mm)",
+        "es": "Contorno de pecho/busto (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "The torso the vest fits over its base layer",
+        "es": "El torso sobre el que va el chaleco",
+        "fr": "Le torse sur lequel le gilet se porte"
+      }
+    },
+    {
+      "id": "vest_length",
+      "type": "slider",
+      "group": "construction",
+      "default": 560,
+      "min": 360,
+      "max": 800,
+      "step": 10,
+      "label": {
+        "en": "Vest length (mm)",
+        "es": "Largo de chaleco (mm)",
+        "fr": "Longueur du gilet (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to hem",
+        "es": "Del hombro al ruedo",
+        "fr": "De l'épaule à l'ourlet"
+      }
+    },
+    {
+      "id": "body_ease",
+      "type": "slider",
+      "group": "body",
+      "default": 80,
+      "min": 20,
+      "max": 260,
+      "step": 10,
+      "label": {
+        "en": "Body ease (mm)",
+        "es": "Holgura de cuerpo (mm)",
+        "fr": "Aisance du corps (mm)"
+      },
+      "tooltip": {
+        "en": "A vest goes over layers — this is total added girth",
+        "es": "Un chaleco va sobre capas — es el contorno total añadido",
+        "fr": "Un gilet se porte sur des couches — c'est le tour total ajouté"
+      }
+    },
+    {
+      "id": "strip_w",
+      "type": "slider",
+      "group": "panel",
+      "default": 12,
+      "min": 6,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Heating strip width (mm)",
+        "es": "Ancho de tira calefactora (mm)",
+        "fr": "Largeur de bande chauffante (mm)"
+      },
+      "tooltip": {
+        "en": "The element the channel houses — drives the channel AND the led-channel carrier",
+        "es": "El elemento que aloja el canal — define el canal Y el carril led-channel",
+        "fr": "L'élément que le canal loge — pilote le canal ET le rail led-channel"
+      }
+    },
+    {
+      "id": "panel_w",
+      "type": "slider",
+      "group": "panel",
+      "default": 200,
+      "min": 90,
+      "max": 340,
+      "step": 10,
+      "label": {
+        "en": "Heat panel width (mm)",
+        "es": "Ancho de panel (mm)",
+        "fr": "Largeur de panneau (mm)"
+      },
+      "tooltip": {
+        "en": "Width of the heated zone — a serpentine leg length",
+        "es": "Ancho de la zona calefactada — largo de una pasada",
+        "fr": "Largeur de la zone chauffée — longueur d'une passe"
+      }
+    },
+    {
+      "id": "panel_h",
+      "type": "slider",
+      "group": "panel",
+      "default": 240,
+      "min": 90,
+      "max": 380,
+      "step": 10,
+      "label": {
+        "en": "Heat panel height (mm)",
+        "es": "Alto de panel (mm)",
+        "fr": "Hauteur de panneau (mm)"
+      },
+      "tooltip": {
+        "en": "Height of the heated zone — sets the serpentine pass count",
+        "es": "Alto de la zona calefactada — define el número de pasadas",
+        "fr": "Hauteur de la zone chauffée — fixe le nombre de passes"
+      }
+    },
+    {
+      "id": "strip_pitch",
+      "type": "slider",
+      "group": "panel",
+      "default": 40,
+      "min": 18,
+      "max": 90,
+      "step": 2,
+      "label": {
+        "en": "Serpentine pitch (mm)",
+        "es": "Paso de serpentina (mm)",
+        "fr": "Pas de serpentin (mm)"
+      },
+      "tooltip": {
+        "en": "Spacing between serpentine passes — floored to clear the strip width",
+        "es": "Separación entre pasadas — con piso para librar el ancho de la tira",
+        "fr": "Espacement entre passes — plancher pour dégager la largeur de la bande"
+      }
+    },
+    {
+      "id": "battery_pocket",
+      "type": "slider",
+      "group": "construction",
+      "default": 100,
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Battery pocket size (mm)",
+        "es": "Tamaño de bolsa de batería (mm)",
+        "fr": "Taille de poche de batterie (mm)"
+      },
+      "tooltip": {
+        "en": "The pocket the battery/controller sits in",
+        "es": "La bolsa donde va la batería/controlador",
+        "fr": "La poche où loge la batterie/contrôleur"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 18,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Softshell seams are topstitched",
+        "es": "Las costuras de softshell van pespunteadas",
+        "fr": "Les coutures softshell sont surpiquées"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "wide_coverage",
+      "label": {
+        "en": "Wide coverage",
+        "es": "Cobertura amplia",
+        "fr": "Large couverture"
+      },
+      "values": {
+        "panel_w": 300,
+        "panel_h": 320
+      }
+    },
+    {
+      "id": "dense_heat",
+      "label": {
+        "en": "Dense routing",
+        "es": "Ruteo denso",
+        "fr": "Routage dense"
+      },
+      "values": {
+        "strip_pitch": 24
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "panel_h >= strip_pitch",
+      "message": {
+        "en": "The panel must be at least one serpentine pass tall.",
+        "es": "El panel debe medir al menos una pasada de alto.",
+        "fr": "Le panneau doit faire au moins une passe de haut."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "heat-element channel carrier (serpentine routing)",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "led-channel",
+      "linked": true,
+      "params_map": {
+        "strip_width": "strip_w",
+        "depth": "strip_w * 0.9",
+        "wall": "strip_w * 0.18",
+        "lip": "strip_w * 0.22"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "heat_channel",
+        "type": "custom",
+        "label": {
+          "en": "Serpentine heat channel",
+          "es": "Canal de calor en serpentina",
+          "fr": "Canal de chauffe en serpentin"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "center"
+          },
+          {
+            "piece": "back",
+            "edge": "center"
+          }
+        ],
+        "parameters": [
+          "strip_w",
+          "panel_w",
+          "panel_h",
+          "strip_pitch"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam (front to back)",
+          "es": "Costura lateral",
+          "fr": "Couture latérale"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "chest_bust_girth",
+          "body_ease",
+          "vest_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true,
+      "e_textile": true,
+      "channel_routing": true
+    },
+    "societal_benefit": {
+      "en": "Heated apparel is sold as a sealed product with the element sewn permanently into a fixed-size shell, so when the cheapest part fails — a kinked heating strip, a dead controller — the whole garment is landfill, and the fit is a size grid that ignores the layers people actually wear it over. This cartridge separates the garment from the electronics: the routing is a channel the element slides into and out of, the channel carrier is a printable commons part, and the pass count is solved so the heat is even. A warm vest for someone with poor circulation or an outdoor worker becomes a repairable, refittable object instead of a disposable gadget. It houses and routes; it is not an appliance.",
+      "es": "La ropa calefactable se vende como producto sellado con el elemento cosido de forma permanente en una carcasa de talla fija, así cuando falla la pieza más barata — una tira doblada, un controlador muerto — toda la prenda va a la basura, y el ajuste es una tabla de tallas que ignora las capas sobre las que se usa. Este cartucho separa la prenda de la electrónica: el ruteo es un canal por donde el elemento entra y sale, el carril es una pieza común imprimible, y el número de pasadas se calcula para que el calor sea parejo. Un chaleco caliente para alguien con mala circulación o un trabajador a la intemperie se vuelve un objeto reparable y reajustable en vez de un aparato desechable. Aloja y encamina; no es un electrodoméstico.",
+      "fr": "Le vêtement chauffant est vendu comme un produit scellé avec l'élément cousu à demeure dans une coque de taille fixe, si bien que quand la pièce la moins chère lâche — une bande pliée, un contrôleur mort — tout le vêtement part à la benne, et l'ajustement est une grille de tailles qui ignore les couches par-dessus lesquelles on le porte. Ce cartouche sépare le vêtement de l'électronique : le routage est un canal où l'élément entre et sort, le rail est une pièce commune imprimable, et le nombre de passes est calculé pour que la chaleur soit uniforme. Un gilet chaud pour quelqu'un à la mauvaise circulation ou un travailleur en extérieur devient un objet réparable et réajustable plutôt qu'un gadget jetable. Il loge et achemine ; ce n'est pas un appareil."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

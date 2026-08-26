@@ -1,0 +1,482 @@
+{
+  "project": {
+    "name": "Sashed Kimono Robe",
+    "slug": "kimono-robe-sash",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A wrap dressing-robe on kimono logic: body and sleeve in one continuous panel so there is no set-in armscye, a self band running unbroken up both fronts and around the back neck, and a self sash that ties at the waist. It closes by wrapping, so it carries no hardware — the honest pure-pattern case the FC-500 plan reserves for wrap robes. The self band is drafted to the measured front-edge and back-neck run and declared against it, so it is never cut short. Made to measure to chest/bust, hip and lengths. FC-500 lane 7 (intimates & loungewear III).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una bata cruzada de kimono: cuerpo y manga en un solo panel continuo, sin sisa montada, una tira de la misma tela que sube sin cortes por ambos delanteros y rodea el escote trasero, y un cinto de la misma tela que anuda a la cintura. Cierra al cruzarse, así que no lleva herrajes — el caso honesto de puro patrón que el plan FC-500 reserva para las batas cruzadas. La tira se traza al recorrido medido del borde delantero y el escote trasero y se declara contra él, así nunca queda corta. Hecha a medida a busto, cadera y largos. Carril 7 de FC-500 (lencería y ropa de descanso III).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un peignoir croisé sur une logique kimono : corps et manche en un seul panneau continu, sans emmanchure montée, une bande de même tissu montant sans coupure sur les deux devants et contournant l'encolure dos, et une ceinture de même tissu nouée à la taille. Il se ferme en croisant, donc sans accessoire — le cas honnête de pur patron que le plan FC-500 réserve aux peignoirs croisés. La bande est tracée sur le parcours mesuré du bord devant et de l'encolure dos et déclarée contre lui, donc jamais coupée trop court. Fait sur mesure à la poitrine, aux hanches et aux longueurs. Couloir 7 de FC-500 (lingerie et vêtements d'intérieur III).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "robe",
+      "kimono",
+      "wrap",
+      "loungewear",
+      "sash",
+      "pattern-only",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Robe",
+        "es": "Bata completa",
+        "fr": "Peignoir complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "back",
+        "front",
+        "band",
+        "sash"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (kimono)",
+        "es": "Espalda (kimono)",
+        "fr": "Dos (kimono)"
+      },
+      "default_color": "#7a5a8e",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true
+      }
+    },
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (kimono)",
+        "es": "Delantero (kimono)",
+        "fr": "Devant (kimono)"
+      },
+      "default_color": "#8a6a9e",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "band",
+      "label": {
+        "en": "Self band (front + back neck)",
+        "es": "Tira (delanteros + escote)",
+        "fr": "Bande (devants + encolure)"
+      },
+      "default_color": "#6a4a7e",
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "sash",
+      "label": {
+        "en": "Waist sash",
+        "es": "Cinto de cintura",
+        "fr": "Ceinture de taille"
+      },
+      "default_color": "#5a3a6e",
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Ajustement"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_bust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 1000,
+      "min": 700,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest/bust girth (mm)",
+        "es": "Contorno de pecho/busto (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "The chest — with the hip, sets the body width",
+        "es": "El pecho — con la cadera define el ancho del cuerpo",
+        "fr": "La poitrine — avec la hanche fixe la largeur du corps"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 1040,
+      "min": 720,
+      "max": 1600,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      },
+      "tooltip": {
+        "en": "The fullest hip — the robe body clears the wider of chest and hip",
+        "es": "La cadera más llena — el cuerpo libra el mayor de pecho y cadera",
+        "fr": "La hanche la plus forte — le corps dégage le plus grand de la poitrine et de la hanche"
+      }
+    },
+    {
+      "id": "robe_length",
+      "type": "slider",
+      "group": "construction",
+      "default": 1150,
+      "min": 700,
+      "max": 1500,
+      "step": 10,
+      "label": {
+        "en": "Robe length (mm)",
+        "es": "Largo de bata (mm)",
+        "fr": "Longueur du peignoir (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to hem",
+        "es": "De la nuca al ruedo",
+        "fr": "De la nuque à l'ourlet"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "construction",
+      "default": 480,
+      "min": 200,
+      "max": 700,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "arm_length"
+      },
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder fold to cuff",
+        "es": "Del hombro al puño",
+        "fr": "Du pli d'épaule au poignet"
+      }
+    },
+    {
+      "id": "sleeve_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 300,
+      "min": 180,
+      "max": 440,
+      "step": 10,
+      "label": {
+        "en": "Sleeve depth (mm)",
+        "es": "Profundidad de manga (mm)",
+        "fr": "Profondeur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Depth of the kimono sleeve at the underarm",
+        "es": "Profundidad de la manga kimono en la axila",
+        "fr": "Profondeur de la manche kimono à l'aisselle"
+      }
+    },
+    {
+      "id": "body_ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 240,
+      "min": 120,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Body ease (mm)",
+        "es": "Holgura de cuerpo (mm)",
+        "fr": "Aisance du corps (mm)"
+      },
+      "tooltip": {
+        "en": "A wrap robe is cut generous — this is total added girth",
+        "es": "Una bata cruzada se corta amplia — es el contorno total añadido",
+        "fr": "Un peignoir croisé se coupe ample — c'est le tour total ajouté"
+      }
+    },
+    {
+      "id": "band_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 90,
+      "min": 50,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Band width (mm)",
+        "es": "Ancho de tira (mm)",
+        "fr": "Largeur de bande (mm)"
+      },
+      "tooltip": {
+        "en": "Finished width of the self band",
+        "es": "Ancho final de la tira",
+        "fr": "Largeur finie de la bande"
+      }
+    },
+    {
+      "id": "sash_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 70,
+      "min": 40,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Sash width (mm)",
+        "es": "Ancho de cinto (mm)",
+        "fr": "Largeur de ceinture (mm)"
+      },
+      "tooltip": {
+        "en": "Finished width of the waist sash",
+        "es": "Ancho final del cinto",
+        "fr": "Largeur finie de la ceinture"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 820,
+      "min": 560,
+      "max": 1400,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the sash length (wrap + bow allowance)",
+        "es": "Define el largo del cinto (vuelta + moño)",
+        "fr": "Fixe la longueur de la ceinture (tour + nœud)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "French seams want a wider allowance",
+        "es": "Las costuras francesas piden más margen",
+        "fr": "Les coutures anglaises demandent une marge plus large"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "short_kimono",
+      "label": {
+        "en": "Short kimono",
+        "es": "Kimono corto",
+        "fr": "Kimono court"
+      },
+      "values": {
+        "robe_length": 800,
+        "sleeve_length": 300
+      }
+    },
+    {
+      "id": "wide_sleeve",
+      "label": {
+        "en": "Wide sleeve",
+        "es": "Manga amplia",
+        "fr": "Manche large"
+      },
+      "values": {
+        "sleeve_width": 420,
+        "body_ease": 340
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "robe_length > sleeve_width + 200",
+      "message": {
+        "en": "The robe must be long enough to clear the sleeve depth with body below it.",
+        "es": "La bata debe ser lo bastante larga para librar la manga con cuerpo debajo.",
+        "fr": "Le peignoir doit être assez long pour dégager la profondeur de manche avec du corps dessous."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "underarm_side",
+        "type": "side_seam",
+        "label": {
+          "en": "Underarm + side seam",
+          "es": "Costura de axila y costado",
+          "fr": "Couture d'aisselle et de côté"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "front",
+            "edge": "sleeve_under"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "sleeve_under"
+          }
+        ],
+        "parameters": [
+          "chest_bust_girth",
+          "hip_girth",
+          "body_ease",
+          "sleeve_width"
+        ]
+      },
+      {
+        "id": "shoulder_fold",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder / sleeve-top fold",
+          "es": "Pliegue de hombro / manga",
+          "fr": "Pli d'épaule / manche"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "sleeve_top"
+          },
+          {
+            "piece": "back",
+            "edge": "sleeve_top"
+          }
+        ],
+        "parameters": [
+          "sleeve_length"
+        ]
+      },
+      {
+        "id": "front_band",
+        "type": "button_stand",
+        "label": {
+          "en": "Self band (front + back neck)",
+          "es": "Tira (delanteros + escote)",
+          "fr": "Bande (devants + encolure)"
+        },
+        "edges": [
+          {
+            "piece": "band",
+            "edge": "attach"
+          },
+          {
+            "piece": "front",
+            "edge": "front_neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "band_width",
+          "robe_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": false,
+      "kimono_construction": true,
+      "self_band": true
+    },
+    "societal_benefit": {
+      "en": "The dressing robe is one of the few garments almost everyone owns and almost nobody has fitted, sold in three lengths that ignore height entirely, so tall people wear robes that end above the knee and short people trip on the hem. A kimono robe is also the most forgiving garment to draft to measure — the cross construction has no armscye to fit — which makes it the ideal object for a first parametric make. This cartridge cuts it to a real height with a self band that is solved to its own edge, so the one robe everyone owns can finally be the length it should be, in a fabric of the maker's choosing, with no hardware to source.",
+      "es": "La bata es una de las pocas prendas que casi todos tienen y casi nadie ajusta, vendida en tres largos que ignoran la estatura, así la gente alta usa batas que terminan sobre la rodilla y la baja tropieza con el ruedo. Una bata kimono es además la prenda más noble para trazar a medida — la construcción en cruz no tiene sisa que ajustar — lo que la vuelve el objeto ideal para un primer patrón paramétrico. Este cartucho la corta a una estatura real con una tira resuelta a su propio borde, así la bata que todos tienen puede por fin tener el largo debido, en la tela elegida, sin herrajes que conseguir.",
+      "fr": "Le peignoir est l'un des rares vêtements que presque tout le monde possède et que presque personne n'a ajusté, vendu en trois longueurs qui ignorent la taille, si bien que les grands portent des peignoirs qui s'arrêtent au-dessus du genou et les petits trébuchent sur l'ourlet. Un peignoir kimono est aussi le vêtement le plus indulgent à tracer sur mesure — la construction en croix n'a pas d'emmanchure à ajuster — ce qui en fait l'objet idéal pour un premier patron paramétrique. Ce cartouche le coupe à une taille réelle avec une bande résolue sur son propre bord, si bien que le peignoir que tout le monde possède peut enfin avoir la longueur qu'il faut, dans le tissu choisi, sans accessoire à trouver."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

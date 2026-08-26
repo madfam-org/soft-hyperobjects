@@ -1,0 +1,525 @@
+{
+  "project": {
+    "name": "Flamenco Bata de Cola",
+    "slug": "flamenco-bata-cola",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The bata de cola: the trained flamenco dress whose skirt sweeps into a long ruffled tail (the cola) that the dancer throws and controls with the legs. A fitted bodice over a gored skirt that grows from a knee-length front hem to a floor-plus train at the back, edged with a cascade of ruffles (volantes), closing at a centre-back Yantra4D `hook-and-eye`. It is always made to measure — the cola's weight and sweep are controlled by the body, so a stock-size bata de cola does not exist. The ruffle is gathered onto the swept hem at a declared fullness, proven as gathered ease, and the gores share equal side seams so they sew together whatever the flare. Made to measure to bust, waist, hip and length. FC-500 lane 9 (costume, dance & performance).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La bata de cola: el vestido flamenco de cola cuya falda barre en una larga cola de olanes que la bailaora lanza y controla con las piernas. Un corpiño ajustado sobre una falda de nesgas que crece de un ruedo delantero a la rodilla a una cola que arrastra atrás, orlada con una cascada de volantes, que cierra al centro de la espalda con un `hook-and-eye` de Yantra4D. Siempre se hace a medida — el peso y el barrido de la cola los controla el cuerpo, así que no existe una bata de cola de talla estándar. El volante se frunce sobre el ruedo en barrido con amplitud declarada, probada como holgura de fruncido, y las nesgas comparten costados iguales para coserse entre sí sea cual sea el vuelo. Hecho a medida a busto, cintura, cadera y largo. Carril 9 de FC-500 (vestuario, danza y espectáculo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La bata de cola : la robe flamenca à traîne dont la jupe balaie en une longue traîne à volants (la cola) que la danseuse lance et contrôle avec les jambes. Un corsage ajusté sur une jupe à lés qui s'allonge d'un ourlet devant au genou à une traîne au sol à l'arrière, bordée d'une cascade de volants, fermant au milieu du dos par une agrafe `hook-and-eye` de Yantra4D. Elle se fait toujours sur mesure — le poids et le balayage de la cola sont contrôlés par le corps, si bien qu'une bata de cola de taille standard n'existe pas. Le volant est froncé sur l'ourlet balayé à une ampleur déclarée, prouvée comme aisance de fronçage, et les lés partagent des côtés égaux pour se coudre entre eux quel que soit l'évasement. Fait sur mesure aux tours de poitrine, de taille, de hanches et à la longueur. Couloir 9 de FC-500 (costume, danse et spectacle).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "flamenco",
+      "bata-de-cola",
+      "trained-dress",
+      "costume",
+      "ruffle",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Dress",
+        "es": "Vestido completo",
+        "fr": "Robe complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "bodice_front",
+        "bodice_back",
+        "gore",
+        "ruffle",
+        "placket"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "bodice_front",
+      "label": {
+        "en": "Bodice front",
+        "es": "Corpiño delantero",
+        "fr": "Corsage devant"
+      },
+      "default_color": "#c0203a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true
+      }
+    },
+    {
+      "id": "bodice_back",
+      "label": {
+        "en": "Bodice back",
+        "es": "Corpiño trasero",
+        "fr": "Corsage dos"
+      },
+      "default_color": "#a0102a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "gore",
+      "label": {
+        "en": "Skirt gore",
+        "es": "Nesga de falda",
+        "fr": "Lé de jupe"
+      },
+      "default_color": "#d0304a",
+      "cut": {
+        "quantity": 6
+      }
+    },
+    {
+      "id": "ruffle",
+      "label": {
+        "en": "Ruffle (volante)",
+        "es": "Volante",
+        "fr": "Volant"
+      },
+      "default_color": "#e0405a",
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "placket",
+      "label": {
+        "en": "CB hook-and-eye placket",
+        "es": "Tapeta de broches (espalda)",
+        "fr": "Patte d'agrafes (dos)"
+      },
+      "default_color": "#900020",
+      "cut": {
+        "quantity": 2
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "skirt",
+      "label": {
+        "en": "Skirt & Tail",
+        "es": "Falda y Cola",
+        "fr": "Jupe et Traîne"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 920,
+      "min": 700,
+      "max": 1400,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      },
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "The bodice bust",
+        "es": "El busto del corpiño",
+        "fr": "La poitrine du corsage"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 720,
+      "min": 560,
+      "max": 1200,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "The waist the gores join at",
+        "es": "La cintura donde se unen las nesgas",
+        "fr": "La taille où les lés se joignent"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 960,
+      "min": 720,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the gore flare",
+        "es": "Define el vuelo de las nesgas",
+        "fr": "Fixe l'évasement des lés"
+      }
+    },
+    {
+      "id": "bodice_length",
+      "type": "slider",
+      "group": "body",
+      "default": 380,
+      "min": 280,
+      "max": 520,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "front_neck_to_waist"
+      },
+      "label": {
+        "en": "Bodice length (mm)",
+        "es": "Largo de corpiño (mm)",
+        "fr": "Longueur de corsage (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to waist — drives the CB placket height",
+        "es": "Del hombro a la cintura — define el alto de la tapeta",
+        "fr": "De l'épaule à la taille — pilote la hauteur de patte"
+      }
+    },
+    {
+      "id": "front_length",
+      "type": "slider",
+      "group": "skirt",
+      "default": 600,
+      "min": 400,
+      "max": 1100,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "outside_leg_length"
+      },
+      "label": {
+        "en": "Front skirt length (mm)",
+        "es": "Largo delantero de falda (mm)",
+        "fr": "Longueur devant de jupe (mm)"
+      },
+      "tooltip": {
+        "en": "Waist to the front hem",
+        "es": "De la cintura al ruedo delantero",
+        "fr": "De la taille à l'ourlet devant"
+      }
+    },
+    {
+      "id": "tail_length",
+      "type": "slider",
+      "group": "skirt",
+      "default": 900,
+      "min": 300,
+      "max": 1600,
+      "step": 20,
+      "label": {
+        "en": "Tail length (cola, mm)",
+        "es": "Largo de cola (mm)",
+        "fr": "Longueur de traîne (cola, mm)"
+      },
+      "tooltip": {
+        "en": "The extra length at the back — the cola the dancer moves",
+        "es": "El largo extra atrás — la cola que mueve la bailaora",
+        "fr": "La longueur supplémentaire à l'arrière — la cola que la danseuse déplace"
+      }
+    },
+    {
+      "id": "gore_count",
+      "type": "slider",
+      "group": "skirt",
+      "default": 6,
+      "min": 4,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Gore count",
+        "es": "Número de nesgas",
+        "fr": "Nombre de lés"
+      },
+      "tooltip": {
+        "en": "How many gores make the skirt sweep",
+        "es": "Cuántas nesgas forman el vuelo",
+        "fr": "Combien de lés font le balayage"
+      }
+    },
+    {
+      "id": "ruffle_fullness",
+      "type": "slider",
+      "group": "skirt",
+      "default": 2.5,
+      "min": 1.6,
+      "max": 4.0,
+      "step": 0.1,
+      "label": {
+        "en": "Ruffle fullness",
+        "es": "Amplitud de volante",
+        "fr": "Ampleur de volant"
+      },
+      "tooltip": {
+        "en": "How many times the swept hem the ruffle is cut",
+        "es": "Cuántas veces el ruedo se corta el volante",
+        "fr": "Combien de fois l'ourlet le volant est coupé"
+      }
+    },
+    {
+      "id": "ruffle_depth",
+      "type": "slider",
+      "group": "skirt",
+      "default": 140,
+      "min": 70,
+      "max": 260,
+      "step": 10,
+      "label": {
+        "en": "Ruffle depth (mm)",
+        "es": "Profundidad de volante (mm)",
+        "fr": "Profondeur de volant (mm)"
+      },
+      "tooltip": {
+        "en": "The depth of one volante",
+        "es": "La profundidad de un volante",
+        "fr": "La profondeur d'un volant"
+      }
+    },
+    {
+      "id": "closure_rows",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 3,
+      "max": 14,
+      "step": 1,
+      "label": {
+        "en": "CB hook rows",
+        "es": "Filas de broches (espalda)",
+        "fr": "Rangs d'agrafes (dos)"
+      },
+      "tooltip": {
+        "en": "Rows of hook-and-eye down the centre back",
+        "es": "Filas de broches al centro de la espalda",
+        "fr": "Rangs d'agrafes au milieu du dos"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "A trained dress wants firm seams",
+        "es": "Un vestido de cola pide costuras firmes",
+        "fr": "Une robe à traîne demande des coutures fermes"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "grand_cola",
+      "label": {
+        "en": "Grand cola",
+        "es": "Gran cola",
+        "fr": "Grande cola"
+      },
+      "values": {
+        "tail_length": 1400,
+        "gore_count": 8,
+        "ruffle_fullness": 3.2
+      }
+    },
+    {
+      "id": "practice",
+      "label": {
+        "en": "Practice bata",
+        "es": "Bata de ensayo",
+        "fr": "Bata d'entraînement"
+      },
+      "values": {
+        "tail_length": 400,
+        "gore_count": 6
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "hip_girth > waist_girth",
+      "message": {
+        "en": "The hip must exceed the waist for the skirt to flare.",
+        "es": "La cadera debe superar la cintura para que la falda vuele.",
+        "fr": "La hanche doit dépasser la taille pour que la jupe s'évase."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "hook",
+    "subtype": "centre-back hook-and-eye",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "hook-and-eye",
+      "linked": true,
+      "params_map": {
+        "columns": "round(closure_rows)",
+        "rows": "2",
+        "size_mm": "bodice_length / 24"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "waist_join",
+        "type": "waistband",
+        "label": {
+          "en": "Skirt-to-bodice waist join",
+          "es": "Unión de falda al corpiño",
+          "fr": "Jonction jupe-corsage à la taille"
+        },
+        "edges": [
+          {
+            "piece": "gore",
+            "edge": "waist"
+          },
+          {
+            "piece": "bodice_front",
+            "edge": "waist"
+          },
+          {
+            "piece": "bodice_back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "gore_count"
+        ]
+      },
+      {
+        "id": "ruffle_gather",
+        "type": "hem",
+        "label": {
+          "en": "Ruffle gather onto the swept hem",
+          "es": "Fruncido del volante al ruedo",
+          "fr": "Fronçage du volant sur l'ourlet"
+        },
+        "edges": [
+          {
+            "piece": "ruffle",
+            "edge": "gather_edge"
+          },
+          {
+            "piece": "gore",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "ruffle_fullness",
+          "tail_length",
+          "hip_girth"
+        ]
+      },
+      {
+        "id": "cb_closure",
+        "type": "custom",
+        "label": {
+          "en": "Centre-back hook closure",
+          "es": "Cierre de broches (espalda)",
+          "fr": "Fermeture à agrafes (dos)"
+        },
+        "edges": [
+          {
+            "piece": "placket",
+            "edge": "attach"
+          },
+          {
+            "piece": "bodice_back",
+            "edge": "center"
+          }
+        ],
+        "parameters": [
+          "closure_rows",
+          "bodice_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true,
+      "gored_skirt": true,
+      "swept_hem": true
+    },
+    "societal_benefit": {
+      "en": "The bata de cola is the single most technique-defining garment in flamenco, and it cannot be bought off a rack: its weight, sweep, and balance are what the dancer moves against, so it must be cut to the body, and a badly made one makes the dance impossible. That puts a real barrier in front of students and small companies, for whom a bespoke bata de cola is a major expense. Encoding its construction — the gored sweep, the swept hem, the volante fullness — as a parametric object lets a school or a costumier draft one to a specific dancer and remake it, keeping a living dance tradition affordable and its endangered making-knowledge documented.",
+      "es": "La bata de cola es la prenda que más define la técnica del flamenco, y no se compra en percha: su peso, barrido y equilibrio son aquello contra lo que la bailaora se mueve, así que debe cortarse al cuerpo, y una mal hecha vuelve imposible el baile. Eso pone una barrera real ante estudiantes y compañías pequeñas, para quienes una bata de cola a medida es un gasto mayor. Codificar su construcción — el vuelo de nesgas, el ruedo en barrido, la amplitud del volante — como objeto paramétrico permite a una escuela o vestuarista trazar una para una bailaora concreta y rehacerla, manteniendo asequible una tradición viva y documentado su saber-hacer en peligro.",
+      "fr": "La bata de cola est le vêtement qui définit le plus la technique du flamenco, et elle ne s'achète pas en rayon : son poids, son balayage et son équilibre sont ce contre quoi la danseuse se meut, elle doit donc être coupée au corps, et une mal faite rend la danse impossible. Cela dresse une barrière réelle devant les étudiants et petites compagnies, pour qui une bata de cola sur mesure est une dépense majeure. Encoder sa construction — le balayage à lés, l'ourlet balayé, l'ampleur du volant — comme objet paramétrique permet à une école ou un costumier d'en tracer une pour une danseuse précise et de la refaire, gardant abordable une tradition vivante et documenté son savoir-faire menacé."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

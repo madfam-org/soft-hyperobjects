@@ -1,0 +1,402 @@
+{
+  "project": {
+    "name": "Platter Tutu",
+    "slug": "ballet-tutu-platter",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The classical platter (pancake) tutu: a short, stiff, near-horizontal disc of gathered net standing straight out from the hip, built on a boned basque hip yoke and closing at a centre-back Yantra4D `hook-and-eye`. The plate is a stack of net tiers of decreasing radius, each gathered onto the basque and held flat by a covered steel hoop near the edge. Each tier's flat length is the basque hem times a fullness ratio, declared against the basque hem with the fullness as gathered ease, so the net's standing power is proven arithmetic rather than a guess. Made to measure to waist and hip girths. FC-500 lane 9 (costume, dance & performance).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El tutú de plato clásico: un disco corto, rígido y casi horizontal de tul fruncido que sale recto de la cadera, montado sobre un canesú de cadera con ballenas y que cierra al centro de la espalda con un `hook-and-eye` de Yantra4D. El plato es una pila de capas de tul de radio decreciente, cada una fruncida al canesú y sostenida plana por un aro de acero forrado cerca del borde. El largo plano de cada capa es el ruedo del canesú por un factor de amplitud, declarado contra el ruedo con la amplitud como holgura de fruncido, así el poder de sostén del tul es aritmética probada y no una adivinanza. Hecho a medida a cintura y cadera. Carril 9 de FC-500 (vestuario, danza y espectáculo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le tutu plateau (pancake) classique : un disque court, rigide et quasi horizontal de tulle froncé sortant droit de la hanche, monté sur un basque de hanche baleiné et fermant au milieu du dos par une agrafe `hook-and-eye` de Yantra4D. Le plateau est une pile de volants de tulle de rayon décroissant, chacun froncé sur le basque et tenu plat par un cerceau d'acier gainé près du bord. La longueur à plat de chaque volant est l'ourlet du basque multiplié par un facteur d'ampleur, déclaré contre l'ourlet avec l'ampleur comme aisance de fronçage, si bien que la tenue du tulle est une arithmétique prouvée et non une supposition. Fait sur mesure aux tours de taille et de hanches. Couloir 9 de FC-500 (costume, danse et spectacle).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "tutu",
+      "ballet",
+      "platter",
+      "costume",
+      "net",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Tutu",
+        "es": "Tutú completo",
+        "fr": "Tutu complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "basque",
+        "tier",
+        "placket"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "basque",
+      "label": {
+        "en": "Boned basque hip yoke",
+        "es": "Canesú de cadera con ballenas",
+        "fr": "Basque de hanche baleiné"
+      },
+      "default_color": "#e8d0e0",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "tier",
+      "label": {
+        "en": "Net tier",
+        "es": "Capa de tul",
+        "fr": "Volant de tulle"
+      },
+      "default_color": "#f0e0ec",
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "placket",
+      "label": {
+        "en": "CB hook-and-eye placket",
+        "es": "Tapeta de broches (espalda)",
+        "fr": "Patte d'agrafes (dos)"
+      },
+      "default_color": "#d8c0d0",
+      "cut": {
+        "quantity": 2
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "plate",
+      "label": {
+        "en": "The Plate",
+        "es": "El Plato",
+        "fr": "Le Plateau"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 700,
+      "min": 520,
+      "max": 1200,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "The top of the basque",
+        "es": "La parte alta del canesú",
+        "fr": "Le haut du basque"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 920,
+      "min": 700,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      },
+      "tooltip": {
+        "en": "The basque hem — the ring the plate gathers onto",
+        "es": "El ruedo del canesú — el anillo donde se frunce el plato",
+        "fr": "L'ourlet du basque — l'anneau où le plateau se fronce"
+      }
+    },
+    {
+      "id": "basque_depth",
+      "type": "slider",
+      "group": "construction",
+      "default": 180,
+      "min": 90,
+      "max": 320,
+      "step": 10,
+      "label": {
+        "en": "Basque depth (mm)",
+        "es": "Alto de canesú (mm)",
+        "fr": "Hauteur de basque (mm)"
+      },
+      "tooltip": {
+        "en": "Waist to the plate line — drives the CB placket height",
+        "es": "De la cintura a la línea del plato — define el alto de la tapeta",
+        "fr": "De la taille à la ligne du plateau — pilote la hauteur de patte"
+      }
+    },
+    {
+      "id": "plate_radius",
+      "type": "slider",
+      "group": "plate",
+      "default": 380,
+      "min": 200,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Plate radius (mm)",
+        "es": "Radio del plato (mm)",
+        "fr": "Rayon du plateau (mm)"
+      },
+      "tooltip": {
+        "en": "Hip to plate edge — the disc that stands out",
+        "es": "De la cadera al borde del plato — el disco que sobresale",
+        "fr": "De la hanche au bord du plateau — le disque qui dépasse"
+      }
+    },
+    {
+      "id": "fullness",
+      "type": "slider",
+      "group": "plate",
+      "default": 3.5,
+      "min": 2.0,
+      "max": 6.0,
+      "step": 0.5,
+      "label": {
+        "en": "Net fullness (gather ratio)",
+        "es": "Amplitud de tul (fruncido)",
+        "fr": "Ampleur du tulle (fronçage)"
+      },
+      "tooltip": {
+        "en": "How many times the basque hem each tier is cut — a platter wants a lot",
+        "es": "Cuántas veces el ruedo se corta cada capa — un plato pide mucho",
+        "fr": "Combien de fois l'ourlet chaque volant est coupé — un plateau en veut beaucoup"
+      }
+    },
+    {
+      "id": "tier_count",
+      "type": "slider",
+      "group": "plate",
+      "default": 3,
+      "min": 1,
+      "max": 8,
+      "step": 1,
+      "label": {
+        "en": "Tier count",
+        "es": "Número de capas",
+        "fr": "Nombre de volants"
+      },
+      "tooltip": {
+        "en": "How many net tiers make the plate",
+        "es": "Cuántas capas de tul forman el plato",
+        "fr": "Combien de volants font le plateau"
+      }
+    },
+    {
+      "id": "closure_rows",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "CB hook rows",
+        "es": "Filas de broches (espalda)",
+        "fr": "Rangs d'agrafes (dos)"
+      },
+      "tooltip": {
+        "en": "Rows of hook-and-eye down the centre back",
+        "es": "Filas de broches al centro de la espalda",
+        "fr": "Rangs d'agrafes au milieu du dos"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "The basque wants a firm allowance",
+        "es": "El canesú pide margen firme",
+        "fr": "Le basque demande une marge ferme"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "grand",
+      "label": {
+        "en": "Grand classical",
+        "es": "Gran clásico",
+        "fr": "Grand classique"
+      },
+      "values": {
+        "plate_radius": 460,
+        "fullness": 5.0,
+        "tier_count": 5
+      }
+    },
+    {
+      "id": "junior",
+      "label": {
+        "en": "Junior plate",
+        "es": "Plato juvenil",
+        "fr": "Plateau junior"
+      },
+      "values": {
+        "plate_radius": 260,
+        "tier_count": 2
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "hip_girth > waist_girth",
+      "message": {
+        "en": "The hip must exceed the waist for the basque to shape.",
+        "es": "La cadera debe superar la cintura para que el canesú tome forma.",
+        "fr": "La hanche doit dépasser la taille pour que le basque prenne forme."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "hook",
+    "subtype": "centre-back basque hook-and-eye",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "hook-and-eye",
+      "linked": true,
+      "params_map": {
+        "columns": "round(closure_rows)",
+        "rows": "2",
+        "size_mm": "basque_depth / 12"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "plate_gather",
+        "type": "waistband",
+        "label": {
+          "en": "Plate gather onto the basque",
+          "es": "Fruncido del plato al canesú",
+          "fr": "Fronçage du plateau sur le basque"
+        },
+        "edges": [
+          {
+            "piece": "tier",
+            "edge": "gather_edge"
+          },
+          {
+            "piece": "basque",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "hip_girth",
+          "fullness",
+          "plate_radius"
+        ]
+      },
+      {
+        "id": "cb_closure",
+        "type": "custom",
+        "label": {
+          "en": "Centre-back hook closure",
+          "es": "Cierre de broches (espalda)",
+          "fr": "Fermeture à agrafes (dos)"
+        },
+        "edges": [
+          {
+            "piece": "placket",
+            "edge": "attach"
+          },
+          {
+            "piece": "basque",
+            "edge": "center_back"
+          }
+        ],
+        "parameters": [
+          "closure_rows",
+          "basque_depth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true,
+      "boning_channels": true,
+      "gathered_net": true
+    },
+    "societal_benefit": {
+      "en": "A classical tutu is one of the most expensive and least reproducible garments a ballet company owns: each is built by hand from tacit workroom knowledge, in a fixed size, and re-fitting one to a new dancer is a days-long job. Encoding the platter's real construction — the boned basque, the tiered net at declared fullness, the hoop channel — as a parametric object lets a company, a school, or a costumier draft the tutu to a specific dancer and reproduce it, with the one hard part (the closure) a printable commons piece. It preserves a body of endangered making-knowledge and lowers the cost of a garment that keeps classical dance visually legible.",
+      "es": "Un tutú clásico es de las prendas más caras y menos reproducibles que posee una compañía de ballet: cada uno se construye a mano desde saber tácito de taller, en talla fija, y reajustar uno a una nueva bailarina es trabajo de días. Codificar la construcción real del plato — el canesú con ballenas, el tul en capas con amplitud declarada, el canal del aro — como objeto paramétrico permite a una compañía, escuela o vestuarista trazar el tutú a una bailarina concreta y reproducirlo, con la única pieza dura (el cierre) como pieza común imprimible. Preserva un cuerpo de saber-hacer en peligro y abarata una prenda que mantiene legible el ballet clásico.",
+      "fr": "Un tutu classique est l'un des vêtements les plus chers et les moins reproductibles que possède une compagnie de ballet : chacun est construit à la main à partir d'un savoir tacite d'atelier, dans une taille fixe, et en réajuster un à une nouvelle danseuse est un travail de plusieurs jours. Encoder la construction réelle du plateau — le basque baleiné, le tulle en volants à ampleur déclarée, le canal du cerceau — comme objet paramétrique permet à une compagnie, une école ou un costumier de tracer le tutu sur une danseuse précise et de le reproduire, avec la seule pièce dure (la fermeture) comme pièce commune imprimable. Il préserve un corpus de savoir-faire menacé et abaisse le coût d'un vêtement qui garde la danse classique visuellement lisible."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

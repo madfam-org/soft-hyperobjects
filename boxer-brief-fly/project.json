@@ -1,0 +1,492 @@
+{
+  "project": {
+    "name": "Fly-Front Boxer Brief",
+    "slug": "boxer-brief-fly",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A knit boxer brief with a real working fly: a front cut in two halves joined by an overlapping placket that closes on a single Yantra4D `sew-through-button`, a shaped pouch, a seat-room back, an inner-leg gusset, and a folded knit waistband. Most knit boxer briefs fake the fly with a stitched-down flap; this one draws the working version — an underlap and an overlap carrying the buttonhole and the button. `button_ligne` drives both the drafted button seat and the hardware's sew face, and `fly_width` is floored so the placket always holds the button with margin. Made to measure to waist, hip and thigh girths. FC-500 lane 7 (intimates & loungewear III).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un bóxer de punto con bragueta funcional: un delantero en dos mitades unidas por una tapeta que traslapa y cierra con un solo botón `sew-through-button` de Yantra4D, una bolsa conformada, una espalda con holgura de asiento, una entrepierna interior y una pretina de punto doblada. La mayoría de los bóxers de punto fingen la bragueta con una solapa cosida; este traza la versión que funciona — un traslape inferior y uno superior que llevan el ojal y el botón. button_ligne define tanto el asiento del botón trazado como la cara de cosido del herraje, y fly_width tiene piso para que la tapeta siempre sostenga el botón con margen. Hecho a medida a cintura, cadera y muslo. Carril 7 de FC-500 (lencería y ropa de descanso III).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un boxer en maille à braguette fonctionnelle : un devant coupé en deux moitiés réunies par une patte qui chevauche et se ferme sur un seul bouton `sew-through-button` de Yantra4D, une poche formée, un dos à aisance d'assise, un gousset d'entrejambe et une ceinture en maille repliée. La plupart des boxers en maille simulent la braguette par un rabat piqué ; celui-ci trace la version qui fonctionne — un dessous et un dessus de patte portant la boutonnière et le bouton. button_ligne pilote à la fois l'assise de bouton tracée et la face de couture de l'accessoire, et fly_width a un plancher pour que la patte tienne toujours le bouton avec marge. Fait sur mesure aux tours de taille, de hanches et de cuisse. Couloir 7 de FC-500 (lingerie et vêtements d'intérieur III).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "boxer-brief",
+      "fly",
+      "knit",
+      "underwear",
+      "gusset",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Boxer Brief",
+        "es": "Bóxer completo",
+        "fr": "Boxer complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "gusset",
+        "fly",
+        "waistband"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (fly half)",
+        "es": "Delantero (mitad de bragueta)",
+        "fr": "Devant (moitié de braguette)"
+      },
+      "default_color": "#4a5a6e",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#3a4a5e",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "gusset",
+      "label": {
+        "en": "Inner-leg gusset",
+        "es": "Entrepierna interior",
+        "fr": "Gousset d'entrejambe"
+      },
+      "default_color": "#5a6a7e",
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "fly",
+      "label": {
+        "en": "Fly placket",
+        "es": "Tapeta de bragueta",
+        "fr": "Patte de braguette"
+      },
+      "default_color": "#6a7a8e",
+      "cut": {
+        "quantity": 2
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "Knit waistband",
+        "es": "Pretina de punto",
+        "fr": "Ceinture en maille"
+      },
+      "default_color": "#2a3a4e",
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Ajustement"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 820,
+      "min": 560,
+      "max": 1300,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "Where the waistband sits",
+        "es": "Donde va la pretina",
+        "fr": "Où la ceinture se place"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 980,
+      "min": 720,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip/seat girth (mm)",
+        "es": "Contorno de cadera/asiento (mm)",
+        "fr": "Tour de hanches/assise (mm)"
+      },
+      "tooltip": {
+        "en": "The seat — sets the panel width at negative ease",
+        "es": "El asiento — define el ancho del panel con holgura negativa",
+        "fr": "L'assise — fixe la largeur du panneau en aisance négative"
+      }
+    },
+    {
+      "id": "thigh_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 560,
+      "min": 380,
+      "max": 850,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "thigh_girth"
+      },
+      "label": {
+        "en": "Thigh girth (mm)",
+        "es": "Contorno de muslo (mm)",
+        "fr": "Tour de cuisse (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the leg-band length and the gusset width",
+        "es": "Define el largo de la banda de pierna y el ancho de entrepierna",
+        "fr": "Fixe la longueur de la bande de jambe et la largeur du gousset"
+      }
+    },
+    {
+      "id": "inseam",
+      "type": "slider",
+      "group": "construction",
+      "default": 180,
+      "min": 60,
+      "max": 320,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "inside_leg_length"
+      },
+      "label": {
+        "en": "Leg length (mm)",
+        "es": "Largo de pierna (mm)",
+        "fr": "Longueur de jambe (mm)"
+      },
+      "tooltip": {
+        "en": "How far the leg reaches below the crotch",
+        "es": "Cuánto baja la pierna bajo la entrepierna",
+        "fr": "Jusqu'où la jambe descend sous l'entrejambe"
+      }
+    },
+    {
+      "id": "rise",
+      "type": "slider",
+      "group": "construction",
+      "default": 300,
+      "min": 220,
+      "max": 420,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "body_rise"
+      },
+      "label": {
+        "en": "Rise (crotch to waist, mm)",
+        "es": "Tiro (entrepierna a cintura, mm)",
+        "fr": "Montant (entrejambe à taille, mm)"
+      },
+      "tooltip": {
+        "en": "Crotch to waist",
+        "es": "De la entrepierna a la cintura",
+        "fr": "De l'entrejambe à la taille"
+      }
+    },
+    {
+      "id": "waistband_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 44,
+      "min": 24,
+      "max": 90,
+      "step": 2,
+      "label": {
+        "en": "Waistband height (mm)",
+        "es": "Alto de pretina (mm)",
+        "fr": "Hauteur de ceinture (mm)"
+      },
+      "tooltip": {
+        "en": "Finished waistband depth",
+        "es": "Profundidad final de la pretina",
+        "fr": "Profondeur finie de la ceinture"
+      }
+    },
+    {
+      "id": "negative_ease_pct",
+      "type": "slider",
+      "group": "fit",
+      "default": 6,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Negative ease (%)",
+        "es": "Holgura negativa (%)",
+        "fr": "Aisance négative (%)"
+      },
+      "tooltip": {
+        "en": "A boxer brief grips lightly — much less than shapewear",
+        "es": "Un bóxer sujeta ligero — mucho menos que una faja",
+        "fr": "Un boxer serre légèrement — bien moins qu'un gainant"
+      }
+    },
+    {
+      "id": "fly_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 42,
+      "min": 28,
+      "max": 70,
+      "step": 2,
+      "label": {
+        "en": "Fly placket width (mm)",
+        "es": "Ancho de tapeta (mm)",
+        "fr": "Largeur de patte (mm)"
+      },
+      "tooltip": {
+        "en": "The placket the button lands on — floored to hold the button with margin",
+        "es": "La tapeta donde cae el botón — con piso para sostenerlo con margen",
+        "fr": "La patte où tombe le bouton — avec plancher pour le tenir avec marge"
+      }
+    },
+    {
+      "id": "button_ligne",
+      "type": "slider",
+      "group": "construction",
+      "default": 24,
+      "min": 14,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Fly button size (ligne)",
+        "es": "Tamaño de botón (línea)",
+        "fr": "Taille du bouton (ligne)"
+      },
+      "tooltip": {
+        "en": "Button size in ligne (1 ligne = 0.635 mm) — drives the seat AND the hardware sew face",
+        "es": "Tamaño en línea (1 línea = 0.635 mm) — define el asiento Y la cara de cosido del herraje",
+        "fr": "Taille en ligne (1 ligne = 0,635 mm) — pilote l'assise ET la face de couture de l'accessoire"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Knit seams are narrow",
+        "es": "Las costuras de punto son angostas",
+        "fr": "Les coutures en maille sont étroites"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "long_leg",
+      "label": {
+        "en": "Long leg",
+        "es": "Pierna larga",
+        "fr": "Jambe longue"
+      },
+      "values": {
+        "inseam": 260
+      }
+    },
+    {
+      "id": "trunk",
+      "label": {
+        "en": "Trunk (short)",
+        "es": "Trunk (corto)",
+        "fr": "Trunk (court)"
+      },
+      "values": {
+        "inseam": 90
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "hip_girth > waist_girth",
+      "message": {
+        "en": "Hip/seat girth should exceed the waist girth.",
+        "es": "El contorno de cadera/asiento debe superar al de cintura.",
+        "fr": "Le tour de hanches/assise doit dépasser le tour de taille."
+      },
+      "severity": "warning"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "button",
+    "subtype": "single fly button on an overlap placket",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "hole_count": "4",
+        "hole_spacing": "button_ligne * 0.635 / 3"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam (front to back)",
+          "es": "Costura lateral (delante a espalda)",
+          "fr": "Couture latérale (devant à dos)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "hip_girth",
+          "negative_ease_pct",
+          "rise"
+        ]
+      },
+      {
+        "id": "waistband_attach",
+        "type": "waistband",
+        "label": {
+          "en": "Waistband attachment",
+          "es": "Unión de pretina",
+          "fr": "Montage de la ceinture"
+        },
+        "edges": [
+          {
+            "piece": "waistband",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "negative_ease_pct",
+          "waistband_height"
+        ]
+      },
+      {
+        "id": "fly_closure",
+        "type": "button_stand",
+        "label": {
+          "en": "Fly button closure",
+          "es": "Cierre de botón de bragueta",
+          "fr": "Fermeture à bouton de braguette"
+        },
+        "edges": [
+          {
+            "piece": "fly",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "button_ligne",
+          "fly_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true,
+      "knit_negative_ease": true,
+      "working_fly": true
+    },
+    "societal_benefit": {
+      "en": "A working fly is a genuine convenience that the knit-underwear market quietly deleted: almost every knit boxer brief sold today has a decorative flap sewn shut, because a real fly costs a placket and a button on a machine tuned for speed. This cartridge restores the function and makes the one part that wears out — the button — a printable commons object instead of a moulded consumable, sized to its placket by construction so it never sits proud or pulls through. The garment stays repairable: a cracked button is reprinted, not a brief thrown away.",
+      "es": "Una bragueta funcional es una comodidad real que el mercado de ropa interior de punto eliminó en silencio: casi todo bóxer de punto que se vende hoy tiene una solapa decorativa cosida, porque una bragueta real cuesta una tapeta y un botón en una máquina afinada para la velocidad. Este cartucho recupera la función y vuelve la pieza que se desgasta — el botón — un objeto común imprimible en vez de un consumible moldeado, dimensionado a su tapeta por construcción para que nunca sobresalga ni se zafe. La prenda sigue reparable: un botón roto se reimprime, no se tira el bóxer.",
+      "fr": "Une braguette fonctionnelle est un vrai confort que le marché de la maille a discrètement supprimé : presque tout boxer en maille vendu aujourd'hui a un rabat décoratif cousu fermé, car une vraie braguette coûte une patte et un bouton sur une machine réglée pour la vitesse. Ce cartouche restaure la fonction et fait de la pièce qui s'use — le bouton — un objet commun imprimable plutôt qu'un consommable moulé, dimensionné à sa patte par construction pour ne jamais dépasser ni s'arracher. Le vêtement reste réparable : un bouton fêlé se réimprime, on ne jette pas le boxer."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

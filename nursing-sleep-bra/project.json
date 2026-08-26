@@ -1,0 +1,426 @@
+{
+  "project": {
+    "name": "Nursing Sleep Bra",
+    "slug": "nursing-sleep-bra",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A wire-free nursing bra cut for sleep: an ultra-soft gathered drop cup on a wide, low-ease comfort band with a front crossover (no back closure), the cup detaching at a Yantra4D `bra-ring-slider` for one-handed feeding in the dark. Distinct from the commons' structured `nursing-bra` — here `band_ease` is positive (a sleep bra does not compress a side-lying ribcage), the cup is a single soft piece gathered onto the band, and it pulls on over the head with no hooks. `strap_width` drives both the drafted clip tab and the slider's strap face. Made to measure to underbust and bust girths. FC-500 lane 7 (intimates & loungewear III).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un brasier de lactancia sin varillas para dormir: una copa suave fruncida con caída sobre una banda ancha de poca holgura con cruce delantero (sin cierre trasero), que se suelta en un anillo-corredera de Yantra4D (`bra-ring-slider`) para amamantar con una sola mano en la oscuridad. Distinto del `nursing-bra` estructurado del común — aquí band_ease es positivo (un brasier de dormir no comprime unas costillas de lado), la copa es una sola pieza suave fruncida a la banda, y se pone por la cabeza sin broches. strap_width define tanto la lengüeta de clip trazada como la cara del tirante de la corredera. Hecho a medida al contorno bajo el busto y al busto. Carril 7 de FC-500 (lencería y ropa de descanso III).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un soutien-gorge d'allaitement sans armatures pour la nuit : un bonnet souple froncé à ouverture par bascule sur une bande large à faible aisance avec un croisé devant (sans fermeture dos), le bonnet se détachant sur un anneau-coulisse Yantra4D (`bra-ring-slider`) pour nourrir d'une main dans le noir. Distinct du `nursing-bra` structuré du commun — ici band_ease est positif (un soutien-gorge de nuit ne comprime pas une cage thoracique couchée sur le côté), le bonnet est une seule pièce souple froncée sur la bande, et il s'enfile par la tête sans agrafe. strap_width pilote à la fois la patte de clip tracée et la face de bretelle de la coulisse. Fait sur mesure aux tours de dessous de poitrine et de poitrine. Couloir 7 de FC-500 (lingerie et vêtements d'intérieur III).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "nursing",
+      "sleep",
+      "wire-free",
+      "drop-cup",
+      "lounge",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Bra",
+        "es": "Brasier completo",
+        "fr": "Soutien-gorge complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "cup",
+        "band"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "cup",
+      "label": {
+        "en": "Soft drop cup",
+        "es": "Copa suave con caída",
+        "fr": "Bonnet souple à bascule"
+      },
+      "default_color": "#b088a0",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "band",
+      "label": {
+        "en": "Wide comfort band (crossover)",
+        "es": "Banda ancha (cruce)",
+        "fr": "Bande large (croisé)"
+      },
+      "default_color": "#8a6a82",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Ajustement"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "underbust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 800,
+      "min": 560,
+      "max": 1200,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "underbust_girth"
+      },
+      "label": {
+        "en": "Underbust girth (mm)",
+        "es": "Contorno bajo busto (mm)",
+        "fr": "Tour de dessous de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "The ribcage — the wide band rests here without squeezing",
+        "es": "La caja torácica — la banda ancha descansa aquí sin apretar",
+        "fr": "La cage thoracique — la bande large repose ici sans serrer"
+      }
+    },
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 1000,
+      "min": 700,
+      "max": 1600,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      },
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Nursing bust runs full — the surplus sets soft cup volume",
+        "es": "El busto de lactancia va lleno — el excedente define el volumen de copa",
+        "fr": "La poitrine d'allaitement est pleine — l'excédent fixe le volume du bonnet"
+      }
+    },
+    {
+      "id": "band_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 70,
+      "min": 40,
+      "max": 130,
+      "step": 5,
+      "label": {
+        "en": "Band height (mm)",
+        "es": "Alto de banda (mm)",
+        "fr": "Hauteur de bande (mm)"
+      },
+      "tooltip": {
+        "en": "A sleep band is wide, to spread the load softly",
+        "es": "Una banda de dormir es ancha, para repartir la carga con suavidad",
+        "fr": "Une bande de nuit est large, pour répartir la charge en douceur"
+      }
+    },
+    {
+      "id": "cup_gather",
+      "type": "slider",
+      "group": "fit",
+      "default": 0.20,
+      "min": 0.06,
+      "max": 0.36,
+      "step": 0.02,
+      "label": {
+        "en": "Cup gather (surplus)",
+        "es": "Fruncido de copa (excedente)",
+        "fr": "Fronçage du bonnet (excédent)"
+      },
+      "tooltip": {
+        "en": "How much longer the cup mouth is than the band seat — the gather is the shaping",
+        "es": "Cuánto más larga es la boca de copa que el asiento — el fruncido es la forma",
+        "fr": "Combien l'ouverture du bonnet dépasse l'assise — le fronçage est la forme"
+      }
+    },
+    {
+      "id": "crossover_frac",
+      "type": "slider",
+      "group": "fit",
+      "default": 0.30,
+      "min": 0.15,
+      "max": 0.45,
+      "step": 0.05,
+      "label": {
+        "en": "Front crossover overlap",
+        "es": "Traslape de cruce delantero",
+        "fr": "Chevauchement du croisé devant"
+      },
+      "tooltip": {
+        "en": "How far the two front sides overlap so it pulls on with no back closure",
+        "es": "Cuánto se traslapan los dos lados para ponerse sin cierre trasero",
+        "fr": "De combien les deux côtés se croisent pour s'enfiler sans fermeture dos"
+      }
+    },
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 18,
+      "min": 10,
+      "max": 32,
+      "step": 1,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de tirante (mm)",
+        "fr": "Largeur de bretelle (mm)"
+      },
+      "tooltip": {
+        "en": "A soft wide strap; drives the clip tab AND the ring-slider it detaches at",
+        "es": "Un tirante ancho suave; define la lengüeta de clip Y la corredera donde se suelta",
+        "fr": "Une bretelle large douce ; pilote la patte de clip ET la coulisse où elle se détache"
+      }
+    },
+    {
+      "id": "band_ease_pct",
+      "type": "slider",
+      "group": "fit",
+      "default": 4,
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Band ease (%) — positive",
+        "es": "Holgura de banda (%) — positiva",
+        "fr": "Aisance de bande (%) — positive"
+      },
+      "tooltip": {
+        "en": "A sleep bra does NOT compress — the ease is positive, unlike a day bra",
+        "es": "Un brasier de dormir NO comprime — la holgura es positiva, no como uno de día",
+        "fr": "Un soutien-gorge de nuit ne comprime PAS — l'aisance est positive, contrairement à un de jour"
+      }
+    },
+    {
+      "id": "cup_span_frac",
+      "type": "slider",
+      "group": "fit",
+      "default": 0.34,
+      "min": 0.26,
+      "max": 0.44,
+      "step": 0.02,
+      "label": {
+        "en": "Cup span share",
+        "es": "Proporción de ancho de copa",
+        "fr": "Part de largeur du bonnet"
+      },
+      "tooltip": {
+        "en": "Cup plan width as a share of the half band",
+        "es": "Ancho de copa como proporción de la media banda",
+        "fr": "Largeur du bonnet en part de la demi-bande"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Soft-knit seams are narrow and flatlocked",
+        "es": "Las costuras de punto suave son angostas y flatlock",
+        "fr": "Les coutures en maille souple sont étroites et surjetées plates"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "extra_soft",
+      "label": {
+        "en": "Extra soft",
+        "es": "Extra suave",
+        "fr": "Extra douce"
+      },
+      "values": {
+        "band_ease_pct": 8,
+        "band_height": 100
+      }
+    },
+    {
+      "id": "deep_crossover",
+      "label": {
+        "en": "Deep crossover",
+        "es": "Cruce profundo",
+        "fr": "Croisé profond"
+      },
+      "values": {
+        "crossover_frac": 0.45
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "bust_girth > underbust_girth",
+      "message": {
+        "en": "Bust girth must exceed underbust girth — the difference is the soft cup volume.",
+        "es": "El contorno de busto debe superar al de bajo busto — la diferencia es el volumen de copa.",
+        "fr": "Le tour de poitrine doit dépasser celui du dessous — la différence est le volume du bonnet."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "nursing drop clip (ring-slider), wire-free",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "bra-ring-slider",
+      "linked": true,
+      "params_map": {
+        "strap_w": "strap_width",
+        "wire_d": "2.4"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "cup_gather_seam",
+        "type": "custom",
+        "label": {
+          "en": "Cup-to-band gather seam",
+          "es": "Costura de fruncido copa-banda",
+          "fr": "Couture de fronçage bonnet-bande"
+        },
+        "edges": [
+          {
+            "piece": "cup",
+            "edge": "mouth"
+          },
+          {
+            "piece": "band",
+            "edge": "cup_seat"
+          }
+        ],
+        "parameters": [
+          "cup_gather",
+          "cup_span_frac",
+          "bust_girth"
+        ]
+      },
+      {
+        "id": "underband",
+        "type": "waistband",
+        "label": {
+          "en": "Wide comfort band (low ease)",
+          "es": "Banda ancha (poca holgura)",
+          "fr": "Bande large (faible aisance)"
+        },
+        "edges": [
+          {
+            "piece": "band",
+            "edge": "lower"
+          }
+        ],
+        "parameters": [
+          "underbust_girth",
+          "band_ease_pct",
+          "band_height"
+        ]
+      },
+      {
+        "id": "drop_clip",
+        "type": "custom",
+        "label": {
+          "en": "Drop-cup ring-slider clip",
+          "es": "Clip de anillo-corredera de caída",
+          "fr": "Clip d'anneau-coulisse à bascule"
+        },
+        "edges": [
+          {
+            "piece": "cup",
+            "edge": "clip_tab"
+          },
+          {
+            "piece": "cup",
+            "edge": "drop_edge"
+          }
+        ],
+        "parameters": [
+          "strap_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true,
+      "elastic_finish": true,
+      "wire_channel": false,
+      "hook_closure": false
+    },
+    "societal_benefit": {
+      "en": "Night feeding is relentless, and the bra worn for it is either a day nursing bra with hooks and clips that press into a side-lying ribcage or nothing at all, which leaks. A dedicated sleep nursing bra is a small kindness the market treats as a niche and grades to three cup letters. This cartridge makes it to a real, changing postpartum body: the band eases positive so it never compresses, the cup is soft and gathered rather than moulded, and the one hard part — the drop clip — is a printable ring-slider that can be replaced rather than condemning the garment. Comfort at 3 a.m. becomes a fitted object, not a size guess.",
+      "es": "Amamantar de noche es implacable, y el brasier que se usa para ello es o uno de día con broches y clips que se clavan en unas costillas de lado, o nada, que gotea. Un brasier de dormir de lactancia dedicado es una pequeña gentileza que el mercado trata como nicho y gradúa a tres letras de copa. Este cartucho lo hace a un cuerpo posparto real y cambiante: la banda holga positivo para no comprimir, la copa es suave y fruncida en vez de moldeada, y la única pieza dura — el clip de caída — es un anillo-corredera imprimible que se reemplaza en vez de condenar la prenda. La comodidad a las 3 a.m. se vuelve un objeto ajustado, no una talla adivinada.",
+      "fr": "Les tétées de nuit sont incessantes, et le soutien-gorge porté pour elles est soit un modèle de jour à agrafes et clips qui s'enfoncent dans une cage thoracique couchée, soit rien, qui fuit. Un soutien-gorge d'allaitement de nuit dédié est une petite attention que le marché traite comme une niche et gradue en trois lettres de bonnet. Ce cartouche le fait sur un corps post-partum réel et changeant : la bande aise positif pour ne jamais comprimer, le bonnet est souple et froncé plutôt que moulé, et la seule pièce dure — le clip de bascule — est un anneau-coulisse imprimable remplaçable plutôt que de condamner le vêtement. Le confort à 3 h du matin devient un objet ajusté, non une taille devinée."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

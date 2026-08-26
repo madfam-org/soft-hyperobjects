@@ -1,0 +1,451 @@
+{
+  "project": {
+    "name": "ECG-Electrode Monitoring Vest",
+    "slug": "ecg-monitoring-vest",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A close-fitting compression vest that holds ECG electrodes at measured positions against the torso and routes their leads, between a shell and a lining, to a single recorder pocket. The garment version of a Holter harness: printable Yantra4D `snap-electrode-carrier` studs replace peel-off gel dots, and the routing lives in stitched channels no wash abrades. It is a garment pattern, not a medical device — it positions electrodes and routes leads and makes no clinical claim. The shell compresses around each carrier's rigid dead length rather than across it (a dead-length solve), so the electrodes stay put; `electrode_dia` drives the carrier disc and the drafted seat by construction. Made to measure to chest/bust girth. FC-500 lane 8 (e-textile & smart garments III).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un chaleco de compresión ceñido que sostiene electrodos ECG en posiciones medidas contra el torso y encamina sus cables, entre una capa exterior y un forro, hasta una sola bolsa de grabador. La versión en prenda de un arnés Holter: portaelectrodos imprimibles `snap-electrode-carrier` de Yantra4D reemplazan los parches de gel desechables, y el ruteo vive en canales cosidos que ningún lavado desgasta. Es un patrón de prenda, no un dispositivo médico — posiciona electrodos y encamina cables, sin hacer afirmación clínica. La capa exterior comprime alrededor de la longitud muerta rígida de cada portaelectrodo y no a través de ella (un cálculo de longitud muerta), así los electrodos no se mueven; electrode_dia define el disco del portaelectrodo y el asiento trazado por construcción. Hecho a medida al contorno de pecho. Carril 8 de FC-500 (textil electrónico y prendas inteligentes III).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un gilet de compression ajusté qui tient des électrodes ECG à des positions mesurées contre le torse et achemine leurs fils, entre une coque et une doublure, vers une unique poche d'enregistreur. La version vêtement d'un harnais Holter : des plots imprimables `snap-electrode-carrier` de Yantra4D remplacent les pastilles de gel jetables, et le routage vit dans des canaux cousus qu'aucun lavage n'abrase. C'est un patron de vêtement, non un dispositif médical — il positionne des électrodes et achemine des fils, sans revendication clinique. La coque comprime autour de la longueur morte rigide de chaque plot plutôt qu'à travers elle (un calcul de longueur morte), si bien que les électrodes ne bougent pas ; electrode_dia pilote le disque du plot et l'assise tracée par construction. Fait sur mesure au tour de poitrine. Couloir 8 de FC-500 (textile électronique et vêtements intelligents III).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "e-textile",
+      "ecg",
+      "monitoring",
+      "vest",
+      "compression",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Vest",
+        "es": "Chaleco completo",
+        "fr": "Gilet complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "shell",
+        "lining",
+        "pocket"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "shell",
+      "label": {
+        "en": "Compression shell",
+        "es": "Capa exterior de compresión",
+        "fr": "Coque de compression"
+      },
+      "default_color": "#3a4a5a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true
+      }
+    },
+    {
+      "id": "lining",
+      "label": {
+        "en": "Electrode-carrier lining",
+        "es": "Forro portaelectrodos",
+        "fr": "Doublure porte-électrodes"
+      },
+      "default_color": "#4a5a6a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true
+      }
+    },
+    {
+      "id": "pocket",
+      "label": {
+        "en": "Recorder pocket",
+        "es": "Bolsa de grabador",
+        "fr": "Poche d'enregistreur"
+      },
+      "default_color": "#5a6a7a",
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit & Compression",
+        "es": "Ajuste y Compresión",
+        "fr": "Ajustement et Compression"
+      }
+    },
+    {
+      "id": "electrode",
+      "label": {
+        "en": "Electrode Layout",
+        "es": "Disposición de Electrodos",
+        "fr": "Disposition des Électrodes"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_bust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 960,
+      "min": 700,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest/bust girth (mm)",
+        "es": "Contorno de pecho/busto (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "The torso the shell compresses to hold the electrodes",
+        "es": "El torso que la capa comprime para sostener los electrodos",
+        "fr": "Le torse que la coque comprime pour tenir les électrodes"
+      }
+    },
+    {
+      "id": "vest_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 420,
+      "min": 200,
+      "max": 700,
+      "step": 10,
+      "label": {
+        "en": "Vest length (mm)",
+        "es": "Largo de chaleco (mm)",
+        "fr": "Longueur du gilet (mm)"
+      },
+      "tooltip": {
+        "en": "Underarm to hem",
+        "es": "De la axila al ruedo",
+        "fr": "De l'aisselle à l'ourlet"
+      }
+    },
+    {
+      "id": "compression",
+      "type": "slider",
+      "group": "fit",
+      "default": 0.12,
+      "min": 0.04,
+      "max": 0.24,
+      "step": 0.01,
+      "label": {
+        "en": "Shell compression",
+        "es": "Compresión de la capa",
+        "fr": "Compression de la coque"
+      },
+      "tooltip": {
+        "en": "Negative ease on the LIVE remainder — the grip that holds electrodes still",
+        "es": "Holgura negativa sobre el resto VIVO — la sujeción que mantiene quietos los electrodos",
+        "fr": "Aisance négative sur le reste VIF — le maintien qui tient les électrodes immobiles"
+      }
+    },
+    {
+      "id": "electrode_count",
+      "type": "slider",
+      "group": "electrode",
+      "default": 6,
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Electrode count",
+        "es": "Número de electrodos",
+        "fr": "Nombre d'électrodes"
+      },
+      "tooltip": {
+        "en": "How many electrode carriers — each is a rigid dead length in the ring",
+        "es": "Cuántos portaelectrodos — cada uno es una longitud muerta rígida en el anillo",
+        "fr": "Combien de plots d'électrode — chacun est une longueur morte rigide dans l'anneau"
+      }
+    },
+    {
+      "id": "electrode_dia",
+      "type": "slider",
+      "group": "electrode",
+      "default": 40,
+      "min": 20,
+      "max": 70,
+      "step": 2,
+      "label": {
+        "en": "Electrode diameter (mm)",
+        "es": "Diámetro de electrodo (mm)",
+        "fr": "Diamètre d'électrode (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the carrier disc AND the drafted seat window",
+        "es": "Define el disco del portaelectrodo Y la ventana de asiento trazada",
+        "fr": "Pilote le disque du plot ET la fenêtre d'assise tracée"
+      }
+    },
+    {
+      "id": "electrode_margin",
+      "type": "slider",
+      "group": "electrode",
+      "default": 14,
+      "min": 6,
+      "max": 30,
+      "step": 2,
+      "label": {
+        "en": "Electrode dead margin (mm)",
+        "es": "Margen muerto de electrodo (mm)",
+        "fr": "Marge morte d'électrode (mm)"
+      },
+      "tooltip": {
+        "en": "Dead cloth each side of the carrier — the part that must not stretch",
+        "es": "Tela muerta a cada lado del portaelectrodo — la que no debe estirarse",
+        "fr": "Tissu mort de chaque côté du plot — la partie qui ne doit pas s'étirer"
+      }
+    },
+    {
+      "id": "channel_w",
+      "type": "slider",
+      "group": "electrode",
+      "default": 9,
+      "min": 4,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Channel width (mm)",
+        "es": "Ancho de canal (mm)",
+        "fr": "Largeur de canal (mm)"
+      },
+      "tooltip": {
+        "en": "The conductive channel between the layers",
+        "es": "El canal conductor entre las capas",
+        "fr": "Le canal conducteur entre les couches"
+      }
+    },
+    {
+      "id": "pocket_w",
+      "type": "slider",
+      "group": "electrode",
+      "default": 90,
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Recorder pocket width (mm)",
+        "es": "Ancho de bolsa de grabador (mm)",
+        "fr": "Largeur de poche d'enregistreur (mm)"
+      },
+      "tooltip": {
+        "en": "Where the traces converge and the recorder clips",
+        "es": "Donde convergen los trazos y se sujeta el grabador",
+        "fr": "Où les traces convergent et l'enregistreur se clipse"
+      }
+    },
+    {
+      "id": "lining_ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 0.04,
+      "min": 0.0,
+      "max": 0.12,
+      "step": 0.01,
+      "label": {
+        "en": "Lining ease",
+        "es": "Holgura de forro",
+        "fr": "Aisance de doublure"
+      },
+      "tooltip": {
+        "en": "The lining is gentler than the shell — clamped never to grip harder",
+        "es": "El forro es más suave que la capa — nunca sujeta más fuerte",
+        "fr": "La doublure est plus douce que la coque — jamais serrée plus fort"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "fit",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Compression seams are coverstitched",
+        "es": "Las costuras de compresión van con recubridora",
+        "fr": "Les coutures de compression sont recouvertes"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "twelve_lead",
+      "label": {
+        "en": "Twelve-electrode",
+        "es": "Doce electrodos",
+        "fr": "Douze électrodes"
+      },
+      "values": {
+        "electrode_count": 10,
+        "compression": 0.16
+      }
+    },
+    {
+      "id": "minimal",
+      "label": {
+        "en": "Minimal (single lead)",
+        "es": "Mínimo (una derivación)",
+        "fr": "Minimal (une dérivation)"
+      },
+      "values": {
+        "electrode_count": 3
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "compression >= lining_ease",
+      "message": {
+        "en": "The lining must never grip harder than the shell, or it pulls electrodes off their marks.",
+        "es": "El forro nunca debe sujetar más que la capa, o desplaza los electrodos.",
+        "fr": "La doublure ne doit jamais serrer plus que la coque, sinon elle déplace les électrodes."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "snap",
+    "subtype": "ECG electrode carrier in a lining window",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "snap-electrode-carrier",
+      "linked": true,
+      "params_map": {
+        "disc_dia": "electrode_dia",
+        "disc_t": "electrode_dia * 0.06",
+        "sew_holes": "round(electrode_dia / 4)",
+        "hole_dia": "electrode_dia * 0.05"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "electrode_seat",
+        "type": "custom",
+        "label": {
+          "en": "Electrode carrier seat",
+          "es": "Asiento de portaelectrodo",
+          "fr": "Assise de plot d'électrode"
+        },
+        "edges": [
+          {
+            "piece": "lining",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "electrode_dia",
+          "electrode_count",
+          "electrode_margin"
+        ]
+      },
+      {
+        "id": "compression_ring",
+        "type": "waistband",
+        "label": {
+          "en": "Compression ring (shell)",
+          "es": "Anillo de compresión (capa)",
+          "fr": "Anneau de compression (coque)"
+        },
+        "edges": [
+          {
+            "piece": "shell",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "chest_bust_girth",
+          "compression",
+          "vest_length"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Armscye",
+          "es": "Sisa",
+          "fr": "Emmanchure"
+        },
+        "edges": [
+          {
+            "piece": "shell",
+            "edge": "armscye"
+          },
+          {
+            "piece": "lining",
+            "edge": "armscye"
+          }
+        ],
+        "parameters": [
+          "vest_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": true,
+      "e_textile": true,
+      "dead_length_solve": true
+    },
+    "societal_benefit": {
+      "en": "Ambulatory cardiac monitoring is done today with adhesive electrodes that itch, peel, and fail within a day or two, and the patients who most need long records — the elderly, people with fragile skin, children who will not leave a dot alone — tolerate them worst. A washable vest that holds reusable electrode carriers at measured positions turns a two-day consumable into a garment, and because the carriers are printable commons parts rather than proprietary sensors, a clinic or a family can replace one rather than discard the whole harness. The pattern makes the fit that keeps the signal clean a measured number, not a taped-on hope. It positions and routes; it does not diagnose.",
+      "es": "El monitoreo cardiaco ambulatorio se hace hoy con electrodos adhesivos que pican, se despegan y fallan en un día o dos, y los pacientes que más necesitan registros largos — los mayores, quienes tienen piel frágil, los niños que no dejan quieto un parche — los toleran peor. Un chaleco lavable que sostiene portaelectrodos reutilizables en posiciones medidas convierte un consumible de dos días en una prenda, y como los portaelectrodos son piezas comunes imprimibles y no sensores propietarios, una clínica o una familia puede reemplazar uno en vez de desechar el arnés entero. El patrón vuelve el ajuste que mantiene limpia la señal un número medido, no una esperanza pegada con cinta. Posiciona y encamina; no diagnostica.",
+      "fr": "Le monitorage cardiaque ambulatoire se fait aujourd'hui avec des électrodes adhésives qui démangent, se décollent et lâchent en un jour ou deux, et les patients qui ont le plus besoin de longs enregistrements — les personnes âgées, à la peau fragile, les enfants qui ne laissent pas une pastille tranquille — les tolèrent le plus mal. Un gilet lavable qui tient des plots d'électrode réutilisables à des positions mesurées transforme un consommable de deux jours en vêtement, et comme les plots sont des pièces communes imprimables et non des capteurs propriétaires, une clinique ou une famille peut en remplacer un plutôt que de jeter tout le harnais. Le patron fait de l'ajustement qui garde le signal propre un nombre mesuré, non un espoir scotché. Il positionne et achemine ; il ne diagnostique pas."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

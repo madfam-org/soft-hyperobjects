@@ -1,0 +1,450 @@
+{
+  "project": {
+    "name": "Wide-Leg Lounge Pant",
+    "slug": "lounge-wide-pant",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A pull-on wide-leg lounge trouser: generous front and back legs, an elastic-casing waistband (no fly, no button), inseam and outseam, and deep patch pockets. It closes with a waist elastic, so it carries no hardware — the honest pure-pattern case the FC-500 plan reserves for pull-on lounge wear. Width is the point: `leg_ease` carries a positive ease down the whole leg and `hem_width` sets the ankle sweep independently, so the leg can be a straight column or a flare. The inseam and outseam are declared front-to-back, so a wide leg can never draft with mismatched seam lengths (the error that twists a wide trouser leg). Made to measure to waist, hip and inseam length. FC-500 lane 7 (intimates & loungewear III).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un pantalón amplio de descanso que se pone sin cierre: piernas delanteras y traseras generosas, una pretina de jareta con elástico (sin bragueta ni botón), entrepierna y costado, y bolsas de parche profundas. Cierra con un elástico en la cintura, así que no lleva herrajes — el caso honesto de puro patrón que el plan FC-500 reserva para la ropa de descanso. La amplitud es el punto: leg_ease lleva holgura positiva por toda la pierna y hem_width fija el vuelo del tobillo por separado, así la pierna puede ser columna recta o acampanada. La entrepierna y el costado se declaran delante-atrás, así una pierna amplia nunca se traza con costuras desiguales (el error que tuerce la pierna). Hecho a medida a cintura, cadera y largo de entrepierna. Carril 7 de FC-500 (lencería y ropa de descanso III).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un pantalon large d'intérieur à enfiler : des jambes avant et arrière généreuses, une ceinture à coulisse élastique (sans braguette ni bouton), entrejambe et côté, et de profondes poches plaquées. Il se ferme par un élastique de taille, donc sans accessoire — le cas honnête de pur patron que le plan FC-500 réserve aux vêtements d'intérieur à enfiler. La largeur est le propos : leg_ease porte une aisance positive sur toute la jambe et hem_width fixe l'ampleur à la cheville indépendamment, si bien que la jambe peut être une colonne droite ou évasée. L'entrejambe et le côté sont déclarés devant-dos, donc une jambe large ne peut jamais se tracer avec des coutures inégales (l'erreur qui vrille la jambe). Fait sur mesure aux tours de taille, de hanches et à la longueur d'entrejambe. Couloir 7 de FC-500 (lingerie et vêtements d'intérieur III).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "trouser",
+      "wide-leg",
+      "lounge",
+      "pull-on",
+      "elastic-waist",
+      "pattern-only",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full Trouser",
+        "es": "Pantalón completo",
+        "fr": "Pantalon complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front_leg",
+        "back_leg",
+        "waistband",
+        "pocket"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front_leg",
+      "label": {
+        "en": "Front leg",
+        "es": "Pierna delantera",
+        "fr": "Jambe devant"
+      },
+      "default_color": "#5a6a5e",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back_leg",
+      "label": {
+        "en": "Back leg",
+        "es": "Pierna trasera",
+        "fr": "Jambe dos"
+      },
+      "default_color": "#4a5a4e",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "Elastic-casing waistband",
+        "es": "Pretina de jareta",
+        "fr": "Ceinture à coulisse"
+      },
+      "default_color": "#3a4a3e",
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "pocket",
+      "label": {
+        "en": "Patch pocket",
+        "es": "Bolsa de parche",
+        "fr": "Poche plaquée"
+      },
+      "default_color": "#6a7a6e",
+      "cut": {
+        "quantity": 2
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body Measurements",
+        "es": "Medidas Corporales",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Ajustement"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 820,
+      "min": 560,
+      "max": 1400,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the elastic length",
+        "es": "Define el largo del elástico",
+        "fr": "Fixe la longueur de l'élastique"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 1000,
+      "min": 720,
+      "max": 1600,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      },
+      "tooltip": {
+        "en": "The seat — the leg clears it plus leg_ease",
+        "es": "El asiento — la pierna lo libra más leg_ease",
+        "fr": "L'assise — la jambe la dégage plus leg_ease"
+      }
+    },
+    {
+      "id": "inseam",
+      "type": "slider",
+      "group": "body",
+      "default": 760,
+      "min": 500,
+      "max": 1000,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "inside_leg_length"
+      },
+      "label": {
+        "en": "Inseam (mm)",
+        "es": "Entrepierna (mm)",
+        "fr": "Entrejambe (mm)"
+      },
+      "tooltip": {
+        "en": "Crotch to hem",
+        "es": "De la entrepierna al ruedo",
+        "fr": "De l'entrejambe à l'ourlet"
+      }
+    },
+    {
+      "id": "rise",
+      "type": "slider",
+      "group": "construction",
+      "default": 300,
+      "min": 220,
+      "max": 420,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "body_rise"
+      },
+      "label": {
+        "en": "Rise (crotch to waist, mm)",
+        "es": "Tiro (entrepierna a cintura, mm)",
+        "fr": "Montant (entrejambe à taille, mm)"
+      },
+      "tooltip": {
+        "en": "A lounge pant sits high and soft",
+        "es": "Un pantalón de descanso va alto y suave",
+        "fr": "Un pantalon d'intérieur se porte haut et souple"
+      }
+    },
+    {
+      "id": "leg_ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 120,
+      "min": 40,
+      "max": 300,
+      "step": 10,
+      "label": {
+        "en": "Leg ease (mm)",
+        "es": "Holgura de pierna (mm)",
+        "fr": "Aisance de jambe (mm)"
+      },
+      "tooltip": {
+        "en": "Positive ease at the hip, carried down the leg — the wide-leg width",
+        "es": "Holgura positiva en la cadera, por toda la pierna — el ancho amplio",
+        "fr": "Aisance positive à la hanche, sur toute la jambe — la largeur ample"
+      }
+    },
+    {
+      "id": "hem_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 260,
+      "min": 140,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Hem sweep (half, mm)",
+        "es": "Vuelo de ruedo (medio, mm)",
+        "fr": "Ampleur d'ourlet (demi, mm)"
+      },
+      "tooltip": {
+        "en": "Half the ankle sweep per panel — sets a straight column or a flare",
+        "es": "Medio vuelo del tobillo por panel — columna recta o campana",
+        "fr": "Demi-ampleur de cheville par panneau — colonne droite ou évasement"
+      }
+    },
+    {
+      "id": "waistband_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 50,
+      "min": 30,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Waistband height (mm)",
+        "es": "Alto de pretina (mm)",
+        "fr": "Hauteur de ceinture (mm)"
+      },
+      "tooltip": {
+        "en": "Finished casing depth",
+        "es": "Profundidad final de la jareta",
+        "fr": "Profondeur finie de la coulisse"
+      }
+    },
+    {
+      "id": "pocket_depth",
+      "type": "slider",
+      "group": "construction",
+      "default": 160,
+      "min": 90,
+      "max": 260,
+      "step": 10,
+      "label": {
+        "en": "Pocket depth (mm)",
+        "es": "Profundidad de bolsa (mm)",
+        "fr": "Profondeur de poche (mm)"
+      },
+      "tooltip": {
+        "en": "Depth of the patch pocket",
+        "es": "Profundidad de la bolsa de parche",
+        "fr": "Profondeur de la poche plaquée"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Flat-fell seams want a wider allowance",
+        "es": "Las costuras rebatidas piden más margen",
+        "fr": "Les coutures rabattues demandent une marge plus large"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "palazzo",
+      "label": {
+        "en": "Palazzo (very wide)",
+        "es": "Palazzo (muy amplio)",
+        "fr": "Palazzo (très large)"
+      },
+      "values": {
+        "hem_width": 380,
+        "leg_ease": 220
+      }
+    },
+    {
+      "id": "straight_column",
+      "label": {
+        "en": "Straight column",
+        "es": "Columna recta",
+        "fr": "Colonne droite"
+      },
+      "values": {
+        "hem_width": 200,
+        "leg_ease": 100
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "hip_girth + leg_ease > waist_girth",
+      "message": {
+        "en": "The eased hip must exceed the waist so the pull-on pant slides over the seat.",
+        "es": "La cadera con holgura debe superar la cintura para que el pantalón pase por el asiento.",
+        "fr": "La hanche avec aisance doit dépasser la taille pour que le pantalon passe sur l'assise."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "inseam",
+        "type": "side_seam",
+        "label": {
+          "en": "Inseam (front to back)",
+          "es": "Entrepierna (delante a espalda)",
+          "fr": "Entrejambe (devant à dos)"
+        },
+        "edges": [
+          {
+            "piece": "front_leg",
+            "edge": "inseam"
+          },
+          {
+            "piece": "back_leg",
+            "edge": "inseam"
+          }
+        ],
+        "parameters": [
+          "inseam",
+          "hip_girth",
+          "leg_ease"
+        ]
+      },
+      {
+        "id": "outseam",
+        "type": "side_seam",
+        "label": {
+          "en": "Outseam (front to back)",
+          "es": "Costado (delante a espalda)",
+          "fr": "Côté (devant à dos)"
+        },
+        "edges": [
+          {
+            "piece": "front_leg",
+            "edge": "outseam"
+          },
+          {
+            "piece": "back_leg",
+            "edge": "outseam"
+          }
+        ],
+        "parameters": [
+          "inseam",
+          "rise",
+          "hip_girth"
+        ]
+      },
+      {
+        "id": "waistband_attach",
+        "type": "waistband",
+        "label": {
+          "en": "Elastic-casing waistband",
+          "es": "Pretina de jareta",
+          "fr": "Ceinture à coulisse"
+        },
+        "edges": [
+          {
+            "piece": "waistband",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "hip_girth",
+          "leg_ease",
+          "waistband_height"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": false,
+      "pull_on": true,
+      "wide_leg": true
+    },
+    "societal_benefit": {
+      "en": "The pull-on wide-leg trouser is the most-worn garment in a lounge or maternity or accessibility wardrobe, and it is sold in a size grid that fixes the leg width and the rise together, so a wearer who needs a high rise gets a narrow leg and vice versa. This cartridge separates them: the rise, the leg ease and the hem sweep are three independent numbers, over a crotch drafted to a real body, with the seams declared front-to-back so the leg never twists. A trouser anyone can pull on becomes a fitted, dignified garment — which matters most exactly for the bodies (post-surgery, pregnant, seated) that the size grid serves worst.",
+      "es": "El pantalón amplio que se pone sin cierre es la prenda más usada en un guardarropa de descanso, de maternidad o de accesibilidad, y se vende en una tabla de tallas que fija juntos el ancho de pierna y el tiro, así quien necesita tiro alto obtiene pierna angosta y viceversa. Este cartucho los separa: el tiro, la holgura de pierna y el vuelo del ruedo son tres números independientes, sobre una entrepierna trazada a un cuerpo real, con las costuras declaradas delante-atrás para que la pierna no se tuerza. Un pantalón que cualquiera puede ponerse se vuelve una prenda ajustada y digna — lo que más importa justo para los cuerpos (posoperatorios, embarazados, sentados) a los que la tabla de tallas sirve peor.",
+      "fr": "Le pantalon large à enfiler est le vêtement le plus porté d'une garde-robe d'intérieur, de maternité ou d'accessibilité, et il est vendu dans une grille de tailles qui fixe ensemble la largeur de jambe et le montant, si bien qu'une personne qui a besoin d'un montant haut obtient une jambe étroite et inversement. Ce cartouche les sépare : le montant, l'aisance de jambe et l'ampleur d'ourlet sont trois nombres indépendants, sur un entrejambe tracé sur un corps réel, avec les coutures déclarées devant-dos pour que la jambe ne vrille pas. Un pantalon que chacun peut enfiler devient un vêtement ajusté et digne — ce qui compte le plus justement pour les corps (post-opératoires, enceints, assis) que la grille de tailles sert le plus mal."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}
