@@ -1,0 +1,360 @@
+{
+  "project": {
+    "name": "Kente wrapper cloth garment",
+    "slug": "kente-wrap",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "Kente is the strip-woven cloth of the Akan (Asante) and Ewe peoples of Ghana and Togo: narrow warp-striped strips woven on a double-heddle loom and sewn edge-to-edge into a large rectangle. The men's wearing cloth is that WHOLE UNCUT rectangle, draped over the left shoulder and wound round the body — it is not tailored. This cartridge honours that: it draws the assembled cloth as its strips and the drape as marked wrapping guides, and it CUTS NOTHING, because cutting kente destroys the strip weave and the meaning woven into it. It solves the strip count from the target width and reports the true assembled width (a whole number of loom strips), and it draws NO kente pattern and names none — the weave is the weaver's. Made to measure to the wearer's height and reach plus the loom strip width. FC-400 lane 10 (heritage).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El kente es la tela de tiras tejidas de los pueblos Akan (Asante) y Ewe de Ghana y Togo: tiras angostas de rayas de urdimbre tejidas en telar de doble lizo y cosidas borde con borde en un gran rectángulo. La tela de vestir de los hombres es ese rectángulo ENTERO SIN CORTAR, drapeado sobre el hombro izquierdo y enrollado al cuerpo — no se sastrea. Este cartucho lo honra: dibuja la tela ensamblada como sus tiras y el drapeado como guías de envoltura marcadas, y NO CORTA NADA, porque cortar el kente destruye el tejido de tiras y el significado tejido en él. Resuelve el número de tiras del ancho objetivo y reporta el ancho real ensamblado (un número entero de tiras de telar), y NO dibuja ningún patrón de kente ni nombra ninguno — el tejido es del tejedor. Hecho a medida a la estatura y envergadura de quien lo viste más el ancho de tira del telar. Carril 10 de FC-400 (patrimonio).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le kente est le tissu tissé en bandes des peuples Akan (Asante) et Ewe du Ghana et du Togo : d'étroites bandes à rayures de chaîne tissées sur un métier à deux lisses et cousues bord à bord en un grand rectangle. Le pagne de cérémonie masculin est ce rectangle ENTIER NON COUPÉ, drapé sur l'épaule gauche et enroulé autour du corps — il n'est pas taillé. Ce cartouche l'honore : il trace le tissu assemblé comme ses bandes et le drapé comme des repères d'enroulement, et il NE COUPE RIEN, car couper le kente détruit le tissage en bandes et le sens qui y est tissé. Il résout le nombre de bandes depuis la largeur visée et indique la vraie largeur assemblée (un nombre entier de bandes de métier), et il ne trace AUCUN motif kente et n'en nomme aucun — le tissage est celui du tisserand. Fait sur mesure à la taille et à l'envergure de la personne plus la largeur de bande du métier. Couloir 10 de FC-400 (patrimoine).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O kente é o tecido tecido em tiras dos povos Akan (Asante) e Ewe de Gana e Togo: tiras estreitas de listras de urdidura tecidas em tear de dois liços e costuradas borda a borda num grande retângulo. O pano de vestir masculino é esse retângulo INTEIRO SEM CORTE, drapeado sobre o ombro esquerdo e enrolado ao corpo — não é alfaiatado. Este cartucho o honra: desenha o tecido montado como suas tiras e o drapeado como guias de enrolamento marcados, e NÃO CORTA NADA, porque cortar o kente destrói o tecido em tiras e o significado nele tecido. Resolve o número de tiras a partir da largura desejada e reporta a largura real montada (um número inteiro de tiras de tear), e NÃO desenha nenhum padrão de kente nem nomeia nenhum — o tecido é do tecelão. Feito sob medida à altura e envergadura de quem veste mais a largura da tira do tear. Corredor 10 do FC-400 (patrimônio).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "kente",
+      "wrapper",
+      "akan",
+      "ewe",
+      "ghana",
+      "strip-woven",
+      "heritage",
+      "uncut"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Cloth + strip",
+        "es": "Tela + tira",
+        "fr": "Tissu + bande",
+        "pt": "Tecido + tira"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "cloth",
+        "strip"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "cloth",
+      "label": {
+        "en": "Assembled cloth (uncut)",
+        "es": "Tela ensamblada (sin cortar)",
+        "fr": "Tissu assemblé (non coupé)",
+        "pt": "Tecido montado (sem corte)"
+      },
+      "default_color": "#d4a017",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    },
+    {
+      "id": "strip",
+      "label": {
+        "en": "Loom strip",
+        "es": "Tira de telar",
+        "fr": "Bande de métier",
+        "pt": "Tira de tear"
+      },
+      "default_color": "#c48a10",
+      "cut": {
+        "quantity": 6,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Wearer",
+        "es": "Portador",
+        "fr": "Porteur",
+        "pt": "Portador"
+      }
+    },
+    {
+      "id": "cloth",
+      "label": {
+        "en": "Cloth & strips",
+        "es": "Tela y tiras",
+        "fr": "Tissu et bandes",
+        "pt": "Tecido e tiras"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "wearer_height",
+      "type": "slider",
+      "group": "body",
+      "default": 1720,
+      "min": 1400,
+      "max": 2100,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "total_height"
+      },
+      "label": {
+        "en": "Wearer height (mm)",
+        "es": "Estatura (mm)",
+        "fr": "Taille du porteur (mm)",
+        "pt": "Altura do portador (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the cloth length so it can wrap",
+        "es": "Define el largo de la tela para que pueda envolver",
+        "fr": "Fixe la longueur du tissu pour qu'il puisse envelopper",
+        "pt": "Define o comprimento do tecido para poder envolver"
+      }
+    },
+    {
+      "id": "wearer_reach",
+      "type": "slider",
+      "group": "body",
+      "default": 1800,
+      "min": 1400,
+      "max": 2200,
+      "step": 10,
+      "label": {
+        "en": "Wearer reach / span (mm)",
+        "es": "Envergadura (mm)",
+        "fr": "Envergure du porteur (mm)",
+        "pt": "Envergadura do portador (mm)"
+      },
+      "tooltip": {
+        "en": "Fingertip-to-fingertip — a reference for the drape",
+        "es": "De punta a punta de dedos — referencia para el drapeado",
+        "fr": "De bout des doigts à bout des doigts — repère pour le drapé",
+        "pt": "De ponta a ponta dos dedos — referência para o drapeado"
+      }
+    },
+    {
+      "id": "cloth_length_factor",
+      "type": "slider",
+      "group": "cloth",
+      "default": 1.4,
+      "min": 1.1,
+      "max": 1.9,
+      "step": 0.05,
+      "label": {
+        "en": "Cloth length factor (× height)",
+        "es": "Factor de largo de tela (× estatura)",
+        "fr": "Facteur de longueur (× taille)",
+        "pt": "Fator de comprimento (× altura)"
+      },
+      "tooltip": {
+        "en": "How many times the height the cloth runs — more wraps more fully",
+        "es": "Cuántas veces la estatura mide la tela — más envuelve más",
+        "fr": "Combien de fois la taille le tissu mesure — plus il enveloppe",
+        "pt": "Quantas vezes a altura o tecido mede — mais envolve mais"
+      }
+    },
+    {
+      "id": "strip_width",
+      "type": "slider",
+      "group": "cloth",
+      "default": 100,
+      "min": 60,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Loom strip width (mm)",
+        "es": "Ancho de tira de telar (mm)",
+        "fr": "Largeur de bande de métier (mm)",
+        "pt": "Largura da tira de tear (mm)"
+      },
+      "tooltip": {
+        "en": "The double-heddle loom's strip width (~100 mm)",
+        "es": "El ancho de tira del telar de doble lizo (~100 mm)",
+        "fr": "La largeur de bande du métier à deux lisses (~100 mm)",
+        "pt": "A largura de tira do tear de dois liços (~100 mm)"
+      }
+    },
+    {
+      "id": "target_cloth_width",
+      "type": "slider",
+      "group": "cloth",
+      "default": 1900,
+      "min": 1200,
+      "max": 2600,
+      "step": 50,
+      "label": {
+        "en": "Target cloth width (mm)",
+        "es": "Ancho de tela objetivo (mm)",
+        "fr": "Largeur de tissu visée (mm)",
+        "pt": "Largura de tecido desejada (mm)"
+      },
+      "tooltip": {
+        "en": "Snaps to a whole number of strips",
+        "es": "Se ajusta a un número entero de tiras",
+        "fr": "S'aligne sur un nombre entier de bandes",
+        "pt": "Ajusta-se a um número inteiro de tiras"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 15,
+      "min": 5,
+      "max": 40,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Rentré d'ourlet (mm)",
+        "pt": "Margem de barra (mm)"
+      },
+      "tooltip": {
+        "en": "The cloth's top and bottom ends are hemmed",
+        "es": "Los extremos superior e inferior de la tela se dobladillan",
+        "fr": "Les extrémités haute et basse du tissu sont ourlées",
+        "pt": "As extremidades superior e inferior do tecido são embainhadas"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "The strip joins are hand-sewn edge-to-edge",
+        "es": "Las uniones de tiras se cosen a mano borde con borde",
+        "fr": "Les jonctions de bandes sont cousues main bord à bord",
+        "pt": "As junções de tiras são costuradas à mão borda a borda"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "full_cloth",
+      "label": {
+        "en": "Full ceremonial cloth",
+        "es": "Tela ceremonial completa",
+        "fr": "Grand pagne cérémoniel",
+        "pt": "Pano cerimonial completo"
+      },
+      "values": {
+        "target_cloth_width": 2300,
+        "cloth_length_factor": 1.7
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "strip_width < target_cloth_width",
+      "message": {
+        "en": "The strip must be narrower than the whole cloth.",
+        "es": "La tira debe ser más angosta que la tela entera.",
+        "fr": "La bande doit être plus étroite que le tissu entier.",
+        "pt": "A tira deve ser mais estreita que o tecido inteiro."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "strip_join",
+        "type": "custom",
+        "label": {
+          "en": "Strip join (edge to edge)",
+          "es": "Unión de tiras (borde a borde)",
+          "fr": "Jonction de bandes (bord à bord)",
+          "pt": "Junção de tiras (borda a borda)"
+        },
+        "edges": [
+          {
+            "piece": "strip",
+            "edge": "join_r"
+          },
+          {
+            "piece": "strip",
+            "edge": "join_l"
+          }
+        ],
+        "parameters": [
+          "strip_width"
+        ]
+      },
+      {
+        "id": "drape",
+        "type": "custom",
+        "label": {
+          "en": "Drape (wrap path, marked)",
+          "es": "Drapeado (ruta de envoltura, marcada)",
+          "fr": "Drapé (parcours d'enroulement, marqué)",
+          "pt": "Drapeado (percurso de enrolamento, marcado)"
+        },
+        "edges": [
+          {
+            "piece": "cloth",
+            "edge": "selvedge_l"
+          }
+        ],
+        "parameters": [
+          "wearer_height",
+          "cloth_length_factor"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": false,
+      "strip_woven": true,
+      "uncut": true
+    },
+    "societal_benefit": {
+      "en": "Kente is one of the most recognised textiles in the world and one of the most casually appropriated — reduced to a print, cut into shapes, its named weaves detached from their meaning. The single most important fact about the wearing cloth is that it is NOT cut: it is a whole rectangle of strip-woven cloth, worn by the drape, and cutting it destroys both the strip weave and the proverbs woven into it. This cartridge encodes exactly that refusal: it draws the cloth whole, solves its width as a real count of loom strips, marks the drape rather than a cut, and deliberately supplies no kente pattern — because the weave is the weaver's and the meaning is the community's. A cartridge that gives the correct cloth dimensions and the drape, and nothing that belongs to the weaver, is the respectful way a commons can hold a living textile tradition.",
+      "es": "El kente es uno de los textiles más reconocidos del mundo y uno de los más apropiados a la ligera — reducido a un estampado, cortado en formas, sus tejidos nombrados separados de su significado. El hecho más importante de la tela de vestir es que NO se corta: es un rectángulo entero de tela de tiras, se lleva por el drapeado, y cortarlo destruye tanto el tejido de tiras como los proverbios tejidos en él. Este cartucho codifica justo esa negativa: dibuja la tela entera, resuelve su ancho como un número real de tiras de telar, marca el drapeado en vez de un corte, y deliberadamente no aporta ningún patrón de kente — porque el tejido es del tejedor y el significado es de la comunidad. Un cartucho que da las dimensiones correctas de la tela y el drapeado, y nada que pertenezca al tejedor, es la manera respetuosa en que un común puede sostener una tradición textil viva.",
+      "fr": "Le kente est l'un des textiles les plus reconnus du monde et l'un des plus légèrement appropriés — réduit à un imprimé, découpé en formes, ses tissages nommés détachés de leur sens. Le fait le plus important à propos du pagne est qu'il n'est PAS coupé : c'est un rectangle entier de tissu tissé en bandes, porté par le drapé, et le couper détruit à la fois le tissage en bandes et les proverbes qui y sont tissés. Ce cartouche inscrit exactement ce refus : il trace le tissu entier, résout sa largeur comme un vrai nombre de bandes de métier, marque le drapé plutôt qu'une coupe, et ne fournit délibérément aucun motif kente — car le tissage est celui du tisserand et le sens celui de la communauté. Un cartouche qui donne les bonnes dimensions du tissu et le drapé, et rien qui appartienne au tisserand, est la façon respectueuse dont un commun peut porter une tradition textile vivante.",
+      "pt": "O kente é um dos têxteis mais reconhecidos do mundo e um dos mais levianamente apropriados — reduzido a uma estampa, cortado em formas, seus tecidos nomeados desligados de seu significado. O fato mais importante sobre o pano de vestir é que ele NÃO é cortado: é um retângulo inteiro de tecido em tiras, usado pelo drapeado, e cortá-lo destrói tanto o tecido em tiras quanto os provérbios nele tecidos. Este cartucho inscreve exatamente essa recusa: desenha o tecido inteiro, resolve sua largura como um número real de tiras de tear, marca o drapeado em vez de um corte, e deliberadamente não fornece nenhum padrão de kente — porque o tecido é do tecelão e o significado é da comunidade. Um cartucho que dá as dimensões corretas do tecido e o drapeado, e nada que pertença ao tecelão, é a maneira respeitosa de um comum sustentar uma tradição têxtil viva."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

@@ -1,0 +1,573 @@
+{
+  "project": {
+    "name": "High-waist control brief",
+    "slug": "high-waist-brief",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A high-waisted control brief in power-mesh: a deep tapered band above the navel, leg OPENINGS (not tubes), a cotton-lined gusset and a higher back rise so it never drags down at the seat. Control is negative ease, and this cartridge refuses to hide it behind a size letter: each zone carries its own explicit compression percentage — waist most, seat less, leg opening least (the leg is the tourniquet zone). Made to measure to waist, high-hip and thigh girths plus body rise. No hardware — a pull-on garment has no closure. FC-400 lane 9 (structured intimates).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una faja braga de talle alto en power-mesh: una banda profunda y entallada por encima del ombligo, ABERTURAS de pierna (no tubos), una entrepierna forrada de algodón y una espalda más alta para que nunca se caiga en el asiento. El control es holgura negativa, y este cartucho se niega a esconderlo tras una letra de talla: cada zona lleva su propio porcentaje explícito de compresión — la cintura más, el asiento menos, la abertura de pierna lo mínimo (la pierna es la zona de torniquete). Hecho a medida a los contornos de cintura, cadera alta y muslo más el tiro. Sin herrajes — una prenda que se pone jalando no tiene cierre. Carril 9 de FC-400 (lencería estructurada).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une culotte gainante taille haute en résille de maintien : une bande profonde et galbée au-dessus du nombril, des OUVERTURES de jambe (non des tubes), un fond doublé de coton et un dos plus haut pour qu'elle ne descende jamais sur le siège. Le gainage est une aisance négative, et ce cartouche refuse de la cacher derrière une lettre de taille : chaque zone porte son propre pourcentage de compression explicite — la taille le plus, le siège moins, l'ouverture de jambe le minimum (la jambe est la zone du garrot). Fait sur mesure aux tours de taille, de hanche haute et de cuisse plus la hauteur du corps. Sans fermeture — un vêtement qui s'enfile n'en a pas. Couloir 9 de FC-400 (lingerie structurée).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma calcinha modeladora de cintura alta em power-mesh: uma faixa profunda e ajustada acima do umbigo, ABERTURAS de perna (não tubos), um fundilho forrado de algodão e um cós traseiro mais alto para nunca descer no assento. A modelagem é folga negativa, e este cartucho se recusa a escondê-la atrás de uma letra de tamanho: cada zona carrega sua própria porcentagem explícita de compressão — a cintura mais, o assento menos, a abertura de perna o mínimo (a perna é a zona do torniquete). Feito sob medida aos contornos de cintura, quadril alto e coxa mais o gancho. Sem ferragens — uma peça que se veste puxando não tem fecho. Corredor 9 do FC-400 (lingerie estruturada).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "brief",
+      "shapewear",
+      "control",
+      "high-waist",
+      "power-mesh",
+      "compression",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full brief",
+        "es": "Braga completa",
+        "fr": "Culotte complète",
+        "pt": "Calcinha completa"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "gusset",
+        "waistband"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front panel",
+        "es": "Panel delantero",
+        "fr": "Panneau devant",
+        "pt": "Painel frontal"
+      },
+      "default_color": "#5e3a4c",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back panel (higher rise)",
+        "es": "Panel trasero (talle más alto)",
+        "fr": "Panneau dos (montée plus haute)",
+        "pt": "Painel traseiro (gancho mais alto)"
+      },
+      "default_color": "#5e3a4c",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "gusset",
+      "label": {
+        "en": "Gusset (cotton-lined)",
+        "es": "Entrepierna (forrada de algodón)",
+        "fr": "Fond (doublé coton)",
+        "pt": "Fundilho (forrado de algodão)"
+      },
+      "default_color": "#8a5a72",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "High control waistband",
+        "es": "Banda de control de talle alto",
+        "fr": "Bande de maintien taille haute",
+        "pt": "Cós de controle de cintura alta"
+      },
+      "default_color": "#6f4459",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps",
+        "pt": "Medidas corporais"
+      }
+    },
+    {
+      "id": "control",
+      "label": {
+        "en": "Compression",
+        "es": "Compresión",
+        "fr": "Compression",
+        "pt": "Compressão"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 760,
+      "min": 520,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)",
+        "pt": "Contorno de cintura (mm)"
+      },
+      "tooltip": {
+        "en": "Natural waist — where the band's upper edge tapers in",
+        "es": "Cintura natural — donde el canto superior de la banda se entalla",
+        "fr": "Taille naturelle — où le bord supérieur de la bande se galbe",
+        "pt": "Cintura natural — onde a borda superior do cós se ajusta"
+      }
+    },
+    {
+      "id": "high_hip_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 990,
+      "min": 620,
+      "max": 1800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "High-hip / seat girth (mm)",
+        "es": "Contorno de cadera alta / asiento (mm)",
+        "fr": "Tour de hanche haute / siège (mm)",
+        "pt": "Contorno de quadril alto / assento (mm)"
+      },
+      "tooltip": {
+        "en": "The fullest seat — the zone that must not be over-compressed",
+        "es": "El asiento más lleno — la zona que no debe sobrecomprimirse",
+        "fr": "Le siège le plus fort — la zone à ne pas surcomprimer",
+        "pt": "O assento mais cheio — a zona que não deve ser sobrecomprimida"
+      }
+    },
+    {
+      "id": "thigh_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 580,
+      "min": 350,
+      "max": 1000,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "thigh_girth"
+      },
+      "label": {
+        "en": "Thigh girth (mm)",
+        "es": "Contorno de muslo (mm)",
+        "fr": "Tour de cuisse (mm)",
+        "pt": "Contorno de coxa (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the leg opening ring — cut with the gentlest ease",
+        "es": "Define el anillo de la abertura de pierna — con la holgura más suave",
+        "fr": "Fixe l'anneau de l'ouverture de jambe — coupé avec l'aisance la plus douce",
+        "pt": "Define o anel da abertura de perna — cortado com a folga mais suave"
+      }
+    },
+    {
+      "id": "body_rise",
+      "type": "slider",
+      "group": "body",
+      "default": 280,
+      "min": 200,
+      "max": 440,
+      "step": 5,
+      "label": {
+        "en": "Body rise (waist to crotch, mm)",
+        "es": "Tiro (cintura a entrepierna, mm)",
+        "fr": "Hauteur du corps (taille à l'entrejambe, mm)",
+        "pt": "Gancho (cintura ao entrepernas, mm)"
+      },
+      "tooltip": {
+        "en": "Seated rise from the waist to the crotch",
+        "es": "Tiro sentado de la cintura a la entrepierna",
+        "fr": "Hauteur assise de la taille à l'entrejambe",
+        "pt": "Gancho sentado da cintura ao entrepernas"
+      }
+    },
+    {
+      "id": "waistband_h",
+      "type": "slider",
+      "group": "construction",
+      "default": 150,
+      "min": 40,
+      "max": 280,
+      "step": 5,
+      "label": {
+        "en": "Waistband depth (mm)",
+        "es": "Profundidad de banda (mm)",
+        "fr": "Profondeur de bande (mm)",
+        "pt": "Profundidade do cós (mm)"
+      },
+      "tooltip": {
+        "en": "How far above the navel the band rises",
+        "es": "Cuánto sube la banda por encima del ombligo",
+        "fr": "Jusqu'où la bande monte au-dessus du nombril",
+        "pt": "Quanto o cós sobe acima do umbigo"
+      }
+    },
+    {
+      "id": "front_drop",
+      "type": "slider",
+      "group": "construction",
+      "default": 40,
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Centre-front dip (mm)",
+        "es": "Caída de centro delantero (mm)",
+        "fr": "Creux du milieu devant (mm)",
+        "pt": "Queda do centro frontal (mm)"
+      },
+      "tooltip": {
+        "en": "How much the front panel dips toward the gusset",
+        "es": "Cuánto baja el panel delantero hacia la entrepierna",
+        "fr": "De combien le panneau devant plonge vers le fond",
+        "pt": "Quanto o painel frontal desce em direção ao fundilho"
+      }
+    },
+    {
+      "id": "waist_compression",
+      "type": "slider",
+      "group": "control",
+      "default": 20,
+      "min": 0,
+      "max": 32,
+      "step": 1,
+      "label": {
+        "en": "Waist compression (%)",
+        "es": "Compresión de cintura (%)",
+        "fr": "Compression de taille (%)",
+        "pt": "Compressão de cintura (%)"
+      },
+      "tooltip": {
+        "en": "Negative ease at the waist — the strongest zone",
+        "es": "Holgura negativa en la cintura — la zona más fuerte",
+        "fr": "Aisance négative à la taille — la zone la plus forte",
+        "pt": "Folga negativa na cintura — a zona mais forte"
+      }
+    },
+    {
+      "id": "seat_compression",
+      "type": "slider",
+      "group": "control",
+      "default": 12,
+      "min": 0,
+      "max": 26,
+      "step": 1,
+      "label": {
+        "en": "Seat compression (%)",
+        "es": "Compresión de asiento (%)",
+        "fr": "Compression du siège (%)",
+        "pt": "Compressão do assento (%)"
+      },
+      "tooltip": {
+        "en": "Less than the waist — over-compressing just displaces volume",
+        "es": "Menos que la cintura — sobrecomprimir solo desplaza volumen",
+        "fr": "Moins que la taille — surcomprimer ne fait que déplacer le volume",
+        "pt": "Menos que a cintura — sobrecomprimir apenas desloca volume"
+      }
+    },
+    {
+      "id": "leg_ease_pct",
+      "type": "slider",
+      "group": "control",
+      "default": 4,
+      "min": -6,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Leg-opening ease (%)",
+        "es": "Holgura de abertura de pierna (%)",
+        "fr": "Aisance de l'ouverture de jambe (%)",
+        "pt": "Folga da abertura de perna (%)"
+      },
+      "tooltip": {
+        "en": "The gentlest of the three — a tight leg opening cuts in",
+        "es": "La más suave de las tres — una abertura de pierna apretada marca",
+        "fr": "La plus douce des trois — une ouverture de jambe serrée marque",
+        "pt": "A mais suave das três — uma abertura de perna apertada marca"
+      }
+    },
+    {
+      "id": "gusset_w",
+      "type": "slider",
+      "group": "construction",
+      "default": 80,
+      "min": 40,
+      "max": 150,
+      "step": 5,
+      "label": {
+        "en": "Gusset width (mm)",
+        "es": "Ancho de entrepierna (mm)",
+        "fr": "Largeur du fond (mm)",
+        "pt": "Largura do fundilho (mm)"
+      },
+      "tooltip": {
+        "en": "The crotch bridge width",
+        "es": "Ancho del puente de entrepierna",
+        "fr": "Largeur du pont d'entrejambe",
+        "pt": "Largura da ponte do entrepernas"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Knit seams are narrow and overlocked",
+        "es": "Las costuras de punto son angostas y remalladas",
+        "fr": "Les coutures en maille sont étroites et surjetées",
+        "pt": "As costuras de malha são estreitas e overlocadas"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "firm",
+      "label": {
+        "en": "Firm control",
+        "es": "Control firme",
+        "fr": "Maintien ferme",
+        "pt": "Controle firme"
+      },
+      "values": {
+        "waist_compression": 26,
+        "seat_compression": 16
+      }
+    },
+    {
+      "id": "light",
+      "label": {
+        "en": "Light shaping",
+        "es": "Modelado ligero",
+        "fr": "Galbe léger",
+        "pt": "Modelagem leve"
+      },
+      "values": {
+        "waist_compression": 10,
+        "seat_compression": 6
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "waistband_h < body_rise",
+      "message": {
+        "en": "The waistband cannot be deeper than the body rise it sits on.",
+        "es": "La banda no puede ser más profunda que el tiro sobre el que se asienta.",
+        "fr": "La bande ne peut être plus profonde que la hauteur du corps qui la porte.",
+        "pt": "O cós não pode ser mais profundo que o gancho sobre o qual se apoia."
+      },
+      "severity": "error"
+    },
+    {
+      "expression": "high_hip_girth > waist_girth",
+      "message": {
+        "en": "The seat should be fuller than the waist for the brief to grip.",
+        "es": "El asiento debe ser más lleno que la cintura para que la braga agarre.",
+        "fr": "Le siège doit être plus fort que la taille pour que la culotte tienne.",
+        "pt": "O assento deve ser mais cheio que a cintura para a calcinha firmar."
+      },
+      "severity": "warning"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "side_seam",
+        "type": "custom",
+        "label": {
+          "en": "Side seam (front to back)",
+          "es": "Costura lateral (delantero a trasero)",
+          "fr": "Couture côté (devant à dos)",
+          "pt": "Costura lateral (frente ao dorso)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side_seam_r"
+          },
+          {
+            "piece": "back",
+            "edge": "side_seam_r"
+          }
+        ],
+        "parameters": [
+          "high_hip_girth",
+          "seat_compression"
+        ]
+      },
+      {
+        "id": "gusset_seam",
+        "type": "custom",
+        "label": {
+          "en": "Gusset bridge (front + back crotch)",
+          "es": "Puente de entrepierna (entrepierna delantera + trasera)",
+          "fr": "Pont du fond (entrejambe devant + dos)",
+          "pt": "Ponte do fundilho (entrepernas frente + dorso)"
+        },
+        "edges": [
+          {
+            "piece": "gusset",
+            "edge": "front_end"
+          },
+          {
+            "piece": "gusset",
+            "edge": "back_end"
+          },
+          {
+            "piece": "front",
+            "edge": "gusset_join"
+          },
+          {
+            "piece": "back",
+            "edge": "gusset_join"
+          }
+        ],
+        "parameters": [
+          "gusset_w"
+        ]
+      },
+      {
+        "id": "waistband",
+        "type": "waistband",
+        "label": {
+          "en": "Control band (primary hold)",
+          "es": "Banda de control (sujeción principal)",
+          "fr": "Bande de maintien (tenue principale)",
+          "pt": "Cós de controle (sustentação principal)"
+        },
+        "edges": [
+          {
+            "piece": "waistband",
+            "edge": "lower"
+          },
+          {
+            "piece": "front",
+            "edge": "waist"
+          },
+          {
+            "piece": "back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "waist_compression",
+          "waistband_h"
+        ]
+      },
+      {
+        "id": "leg_opening",
+        "type": "custom",
+        "label": {
+          "en": "Leg openings (elastic)",
+          "es": "Aberturas de pierna (elástico)",
+          "fr": "Ouvertures de jambe (élastique)",
+          "pt": "Aberturas de perna (elástico)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "leg_opening_r"
+          },
+          {
+            "piece": "back",
+            "edge": "leg_opening_r"
+          }
+        ],
+        "parameters": [
+          "thigh_girth",
+          "leg_ease_pct"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": false,
+      "elastic_finish": true,
+      "compression_zoned": true,
+      "pull_on": true
+    },
+    "societal_benefit": {
+      "en": "Control garments are sold by a size letter and a marketing adjective — \"firm\", \"sculpting\" — that tell a wearer nothing and cannot be reproduced when the garment wears out. This cartridge makes the one thing that matters, negative ease, an explicit auditable number for each zone, computed from the wearer's own waist, seat and thigh. It also encodes the drafting knowledge that keeps a control brief comfortable rather than punishing: the leg opening takes the gentlest ease so it does not roll into a cord that cuts in, and the seat is never over-compressed. A garment that fits and can be re-cut becomes a repairable commons object instead of a disposable one.",
+      "es": "Las prendas de control se venden por una letra de talla y un adjetivo publicitario — \"firme\", \"modelador\" — que no le dicen nada a quien las viste y no pueden reproducirse cuando la prenda se gasta. Este cartucho convierte lo único que importa, la holgura negativa, en un número explícito y auditable para cada zona, calculado desde la propia cintura, asiento y muslo. También codifica el saber de trazado que mantiene una faja braga cómoda en vez de castigadora: la abertura de pierna lleva la holgura más suave para que no se enrolle en un cordón que marca, y el asiento nunca se sobrecomprime. Una prenda que ajusta y puede recortarse se vuelve un objeto común reparable en lugar de desechable.",
+      "fr": "Les vêtements gainants se vendent par une lettre de taille et un adjectif publicitaire — \"ferme\", \"sculptant\" — qui ne disent rien à la personne et ne peuvent être reproduits quand le vêtement s'use. Ce cartouche fait de la seule chose qui compte, l'aisance négative, un nombre explicite et vérifiable pour chaque zone, calculé à partir de la taille, du siège et de la cuisse propres. Il encode aussi le savoir de tracé qui garde une culotte gainante confortable plutôt que punitive : l'ouverture de jambe prend l'aisance la plus douce pour ne pas s'enrouler en cordon qui marque, et le siège n'est jamais surcomprimé. Un vêtement qui va et peut être recoupé devient un objet commun réparable plutôt que jetable.",
+      "pt": "As peças modeladoras são vendidas por uma letra de tamanho e um adjetivo publicitário — \"firme\", \"escultural\" — que nada dizem a quem as veste e não podem ser reproduzidos quando a peça se gasta. Este cartucho torna a única coisa que importa, a folga negativa, um número explícito e auditável para cada zona, calculado a partir da própria cintura, assento e coxa. Também codifica o saber de modelagem que mantém uma calcinha modeladora confortável em vez de punitiva: a abertura de perna leva a folga mais suave para não enrolar num cordão que marca, e o assento nunca é sobrecomprimido. Uma peça que veste bem e pode ser recortada torna-se um objeto comum reparável em vez de descartável."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

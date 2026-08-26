@@ -1,0 +1,535 @@
+{
+  "project": {
+    "name": "Eight-yard kilt",
+    "slug": "kilt-8yard",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The traditional Scottish kilt: a knife-pleated wrap of about eight yards of wool tartan, flat-fronted (two overlapping aprons) with the whole surplus pleated across the back, at the natural waist, closed by leather straps and buckles. This cartridge drafts a real eight-yard kilt around the three facts that make it one: the pleats are set TO THE SETT — each pleat shows one full tartan repeat, so the pleat depth is the sett width and the count is the back width over the pleat face, and the cartridge solves an integer pleat count and reports whether the cloth lands near eight yards; the front is two flat aprons and the back is all pleats, sewn down through the tapered fell; and the closure is straps and buckles, where strap_w drives both the drafted strap and the Yantra4D strap-buckle's webbing slot. Made to measure to waist and hip girths, kilt length and tartan sett. The tartan itself is not drawn — the sett is a size, not a clan pattern. FC-400 lane 10 (heritage).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El kilt escocés tradicional: una prenda envolvente de tablas de cuchillo de unas ocho yardas de tartán de lana, de frente plano (dos mandiles superpuestos) con todo el sobrante plisado en la espalda, a la cintura natural, cerrado por correas y hebillas de cuero. Este cartucho traza un kilt real de ocho yardas en torno a los tres hechos que lo hacen tal: las tablas se ajustan AL SETT — cada tabla muestra un repeticion completo del tartán, así la profundidad de tabla es el ancho del sett y el número es el ancho de la espalda entre la cara de tabla, y el cartucho resuelve un número entero de tablas y reporta si la tela se acerca a ocho yardas; el frente son dos mandiles planos y la espalda es todo tablas, cosidas por el fell entallado; y el cierre son correas y hebillas, donde strap_w define tanto la correa trazada como la ranura de la hebilla strap-buckle de Yantra4D. Hecho a medida a los contornos de cintura y cadera, largo de kilt y sett del tartán. El tartán mismo no se dibuja — el sett es una talla, no un patrón de clan. Carril 10 de FC-400 (patrimonio).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le kilt écossais traditionnel : un vêtement porte-feuille à plis couteau d'environ huit yards de tartan de laine, à devant plat (deux tabliers superposés) avec tout le surplus plissé au dos, à la taille naturelle, fermé par des courroies et boucles de cuir. Ce cartouche trace un vrai kilt de huit yards autour des trois faits qui le définissent : les plis sont réglés SUR LE SETT — chaque pli montre une répétition complète du tartan, donc la profondeur de pli est la largeur du sett et le nombre est la largeur du dos sur la face de pli, et le cartouche résout un nombre entier de plis et indique si le tissu approche huit yards ; le devant est deux tabliers plats et le dos est tout plis, cousus par le fell fuselé ; et la fermeture est courroies et boucles, où strap_w pilote la courroie tracée ET la fente de la boucle strap-buckle Yantra4D. Fait sur mesure aux tours de taille et de hanche, à la longueur de kilt et au sett du tartan. Le tartan lui-même n'est pas tracé — le sett est une taille, non un motif de clan. Couloir 10 de FC-400 (patrimoine).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O kilt escocês tradicional: uma peça envolvente de pregas faca de cerca de oito jardas de tartã de lã, de frente plana (dois aventais sobrepostos) com todo o excedente pregueado nas costas, na cintura natural, fechado por correias e fivelas de couro. Este cartucho modela um kilt real de oito jardas em torno dos três fatos que o definem: as pregas são ajustadas AO SETT — cada prega mostra uma repeticao completa do tartã, então a profundidade da prega é a largura do sett e o número é a largura das costas sobre a face da prega, e o cartucho resolve um número inteiro de pregas e reporta se o tecido se aproxima de oito jardas; a frente são dois aventais planos e as costas são todas pregas, costuradas pelo fell afunilado; e o fecho são correias e fivelas, onde strap_w dirige tanto a correia modelada quanto a fenda da fivela strap-buckle Yantra4D. Feito sob medida aos contornos de cintura e quadril, comprimento de kilt e sett do tartã. O tartã em si não é desenhado — o sett é um tamanho, não um padrão de clã. Corredor 10 do FC-400 (patrimônio).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "kilt",
+      "tartan",
+      "scottish",
+      "pleated",
+      "heritage",
+      "hardware",
+      "strap-buckle",
+      "eight-yard"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full kilt",
+        "es": "Kilt completo",
+        "fr": "Kilt complet",
+        "pt": "Kilt completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "under_apron",
+        "over_apron",
+        "pleated_back",
+        "strap"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "under_apron",
+      "label": {
+        "en": "Under-apron",
+        "es": "Mandil inferior",
+        "fr": "Tablier dessous",
+        "pt": "Avental inferior"
+      },
+      "default_color": "#3a5535",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    },
+    {
+      "id": "over_apron",
+      "label": {
+        "en": "Over-apron (visible front)",
+        "es": "Mandil superior (frente visible)",
+        "fr": "Tablier dessus (devant visible)",
+        "pt": "Avental superior (frente visível)"
+      },
+      "default_color": "#3a5535",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    },
+    {
+      "id": "pleated_back",
+      "label": {
+        "en": "Pleated back (flat cloth)",
+        "es": "Espalda plisada (tela plana)",
+        "fr": "Dos plissé (tissu à plat)",
+        "pt": "Costas pregueadas (tecido plano)"
+      },
+      "default_color": "#2f4a2b",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    },
+    {
+      "id": "strap",
+      "label": {
+        "en": "Waist strap",
+        "es": "Correa de cintura",
+        "fr": "Courroie de taille",
+        "pt": "Correia de cintura"
+      },
+      "default_color": "#5a3a20",
+      "cut": {
+        "quantity": 3,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps",
+        "pt": "Medidas corporais"
+      }
+    },
+    {
+      "id": "pleats",
+      "label": {
+        "en": "Pleats & sett",
+        "es": "Tablas y sett",
+        "fr": "Plis et sett",
+        "pt": "Pregas e sett"
+      }
+    },
+    {
+      "id": "closure",
+      "label": {
+        "en": "Straps & buckles",
+        "es": "Correas y hebillas",
+        "fr": "Courroies et boucles",
+        "pt": "Correias e fivelas"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 920,
+      "min": 650,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)",
+        "pt": "Contorno de cintura (mm)"
+      },
+      "tooltip": {
+        "en": "The kilt sits at the natural waist",
+        "es": "El kilt se asienta en la cintura natural",
+        "fr": "Le kilt se pose à la taille naturelle",
+        "pt": "O kilt se assenta na cintura natural"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 1040,
+      "min": 750,
+      "max": 1650,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanche (mm)",
+        "pt": "Contorno de quadril (mm)"
+      },
+      "tooltip": {
+        "en": "Where the pleats open below the fell",
+        "es": "Donde las tablas se abren bajo el fell",
+        "fr": "Où les plis s'ouvrent sous le fell",
+        "pt": "Onde as pregas abrem abaixo do fell"
+      }
+    },
+    {
+      "id": "kilt_length",
+      "type": "slider",
+      "group": "body",
+      "default": 600,
+      "min": 400,
+      "max": 800,
+      "step": 10,
+      "label": {
+        "en": "Kilt length (mm)",
+        "es": "Largo de kilt (mm)",
+        "fr": "Longueur de kilt (mm)",
+        "pt": "Comprimento de kilt (mm)"
+      },
+      "tooltip": {
+        "en": "Waist to the top of the knee",
+        "es": "De la cintura a la parte alta de la rodilla",
+        "fr": "De la taille au haut du genou",
+        "pt": "Da cintura ao topo do joelho"
+      }
+    },
+    {
+      "id": "fell_depth",
+      "type": "slider",
+      "group": "pleats",
+      "default": 180,
+      "min": 100,
+      "max": 320,
+      "step": 10,
+      "label": {
+        "en": "Fell depth (mm)",
+        "es": "Profundidad de fell (mm)",
+        "fr": "Profondeur de fell (mm)",
+        "pt": "Profundidade de fell (mm)"
+      },
+      "tooltip": {
+        "en": "The sewn-down upper pleat section, tapered waist to hip",
+        "es": "La sección superior cosida de las tablas, entallada de cintura a cadera",
+        "fr": "La partie supérieure cousue des plis, fuselée de la taille à la hanche",
+        "pt": "A parte superior costurada das pregas, afunilada da cintura ao quadril"
+      }
+    },
+    {
+      "id": "sett_width",
+      "type": "slider",
+      "group": "pleats",
+      "default": 150,
+      "min": 80,
+      "max": 260,
+      "step": 10,
+      "label": {
+        "en": "Tartan sett width (mm)",
+        "es": "Ancho de sett del tartán (mm)",
+        "fr": "Largeur de sett du tartan (mm)",
+        "pt": "Largura do sett do tartã (mm)"
+      },
+      "tooltip": {
+        "en": "One full tartan repeat — the pleat depth is set to this",
+        "es": "Un repeticion completo del tartán — la profundidad de tabla se ajusta a esto",
+        "fr": "Une répétition complète du tartan — la profondeur de pli s'y règle",
+        "pt": "Uma repeticao completa do tartã — a profundidade da prega se ajusta a isto"
+      }
+    },
+    {
+      "id": "pleat_face",
+      "type": "slider",
+      "group": "pleats",
+      "default": 20,
+      "min": 10,
+      "max": 45,
+      "step": 2,
+      "label": {
+        "en": "Pleat face width (mm)",
+        "es": "Ancho de cara de tabla (mm)",
+        "fr": "Largeur de face de pli (mm)",
+        "pt": "Largura da face da prega (mm)"
+      },
+      "tooltip": {
+        "en": "The visible width of each pleat — a fraction of the sett",
+        "es": "El ancho visible de cada tabla — una fracción del sett",
+        "fr": "La largeur visible de chaque pli — une fraction du sett",
+        "pt": "A largura visível de cada prega — uma fração do sett"
+      }
+    },
+    {
+      "id": "apron_frac",
+      "type": "slider",
+      "group": "construction",
+      "default": 0.5,
+      "min": 0.35,
+      "max": 0.62,
+      "step": 0.01,
+      "label": {
+        "en": "Apron share of hip",
+        "es": "Proporción de mandil sobre la cadera",
+        "fr": "Part du tablier sur la hanche",
+        "pt": "Proporção do avental sobre o quadril"
+      },
+      "tooltip": {
+        "en": "How much of the hip the flat aprons cover",
+        "es": "Cuánto de la cadera cubren los mandiles planos",
+        "fr": "Quelle part de la hanche les tabliers plats couvrent",
+        "pt": "Quanto do quadril os aventais planos cobrem"
+      }
+    },
+    {
+      "id": "strap_w",
+      "type": "slider",
+      "group": "closure",
+      "default": 30,
+      "min": 18,
+      "max": 50,
+      "step": 2,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de correa (mm)",
+        "fr": "Largeur de courroie (mm)",
+        "pt": "Largura de correia (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the drafted strap AND the buckle's webbing slot",
+        "es": "Define la correa trazada Y la ranura de la hebilla",
+        "fr": "Pilote la courroie tracée ET la fente de la boucle",
+        "pt": "Dirige a correia modelada E a fenda da fivela"
+      }
+    },
+    {
+      "id": "strap_count",
+      "type": "slider",
+      "group": "closure",
+      "default": 3,
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "label": {
+        "en": "Straps & buckles",
+        "es": "Correas y hebillas",
+        "fr": "Courroies et boucles",
+        "pt": "Correias e fivelas"
+      },
+      "tooltip": {
+        "en": "Usually two or three at the waist",
+        "es": "Normalmente dos o tres en la cintura",
+        "fr": "Habituellement deux ou trois à la taille",
+        "pt": "Geralmente duas ou três na cintura"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "The fell pleats are stitched; the aprons hemmed",
+        "es": "Las tablas del fell se cosen; los mandiles se dobladillan",
+        "fr": "Les plis du fell sont cousus ; les tabliers ourlés",
+        "pt": "As pregas do fell são costuradas; os aventais embainhados"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "box_sett",
+      "label": {
+        "en": "Large sett",
+        "es": "Sett grande",
+        "fr": "Grand sett",
+        "pt": "Sett grande"
+      },
+      "values": {
+        "sett_width": 220,
+        "pleat_face": 26
+      }
+    },
+    {
+      "id": "fine_pleats",
+      "label": {
+        "en": "Fine pleats",
+        "es": "Tablas finas",
+        "fr": "Plis fins",
+        "pt": "Pregas finas"
+      },
+      "values": {
+        "pleat_face": 14,
+        "sett_width": 110
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "fell_depth < kilt_length",
+      "message": {
+        "en": "The fell cannot be deeper than the kilt.",
+        "es": "El fell no puede ser más profundo que el kilt.",
+        "fr": "Le fell ne peut être plus profond que le kilt.",
+        "pt": "O fell não pode ser mais fundo que o kilt."
+      },
+      "severity": "error"
+    },
+    {
+      "expression": "pleat_face < sett_width",
+      "message": {
+        "en": "The pleat face is a fraction of the sett; it cannot exceed it.",
+        "es": "La cara de tabla es una fracción del sett; no puede superarlo.",
+        "fr": "La face de pli est une fraction du sett ; elle ne peut le dépasser.",
+        "pt": "A face da prega é uma fração do sett; não pode excedê-lo."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "leather straps through buckles at the waist",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "strap-buckle",
+      "linked": true,
+      "params_map": {
+        "webbing": "strap_w",
+        "web_t": "3.0"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "pleat_join",
+        "type": "custom",
+        "label": {
+          "en": "Pleated back to apron join",
+          "es": "Unión de espalda plisada a mandil",
+          "fr": "Jonction dos plissé au tablier",
+          "pt": "União das costas pregueadas ao avental"
+        },
+        "edges": [
+          {
+            "piece": "pleated_back",
+            "edge": "apron_edge_l"
+          },
+          {
+            "piece": "over_apron",
+            "edge": "pleat_edge"
+          },
+          {
+            "piece": "under_apron",
+            "edge": "fell_edge"
+          }
+        ],
+        "parameters": [
+          "sett_width",
+          "pleat_face"
+        ]
+      },
+      {
+        "id": "waist",
+        "type": "waistband",
+        "label": {
+          "en": "Waist edge",
+          "es": "Borde de cintura",
+          "fr": "Bord de taille",
+          "pt": "Borda de cintura"
+        },
+        "edges": [
+          {
+            "piece": "over_apron",
+            "edge": "waist"
+          },
+          {
+            "piece": "pleated_back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "apron_frac"
+        ]
+      },
+      {
+        "id": "closure",
+        "type": "custom",
+        "label": {
+          "en": "Strap-and-buckle closure",
+          "es": "Cierre de correa y hebilla",
+          "fr": "Fermeture à courroie et boucle",
+          "pt": "Fecho de correia e fivela"
+        },
+        "edges": [
+          {
+            "piece": "strap",
+            "edge": "strap_edge"
+          },
+          {
+            "piece": "over_apron",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "strap_w",
+          "strap_count"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true,
+      "pleated_to_sett": true,
+      "strap_closure": true
+    },
+    "societal_benefit": {
+      "en": "A kilt is one of the most precisely engineered garments in traditional dress, and the thing that makes an eight-yard kilt correct — pleating TO THE SETT so each pleat shows a full tartan repeat — is exactly what a generic pleated-skirt draft cannot do, because it treats fullness as a free ratio rather than a discrete count tied to the cloth's own repeat. This cartridge takes the sett as a real dimension, solves an integer pleat count and the cloth those pleats consume, and reports how close it lands to eight yards, so a maker can pleat to the stripe with confidence. It draws the strap-and-buckle closure to a printable buckle, and it deliberately does NOT draw a tartan — the sett is a size, and the pattern belongs to its clan and its weavers. A kilt drafted to a real body, pleated to a real sett, becomes a made-to-measure, repairable commons object.",
+      "es": "Un kilt es una de las prendas más precisamente diseñadas del vestido tradicional, y lo que hace correcto a un kilt de ocho yardas — plisar AL SETT para que cada tabla muestre un repeticion completo del tartán — es justo lo que un trazado genérico de falda plisada no puede hacer, porque trata la amplitud como una razón libre y no como un número discreto ligado al repeticion de la tela. Este cartucho toma el sett como una dimensión real, resuelve un número entero de tablas y la tela que consumen, y reporta qué tan cerca queda de ocho yardas, para que quien lo hace pueda plisar a la raya con confianza. Traza el cierre de correa y hebilla a una hebilla imprimible, y deliberadamente NO dibuja un tartán — el sett es una talla, y el patrón pertenece a su clan y a sus tejedores. Un kilt trazado a un cuerpo real, plisado a un sett real, se vuelve un objeto común, a medida y reparable.",
+      "fr": "Un kilt est l'un des vêtements les plus précisément conçus du costume traditionnel, et ce qui rend un kilt de huit yards correct — plisser SUR LE SETT pour que chaque pli montre une répétition complète du tartan — est justement ce qu'un tracé générique de jupe plissée ne peut faire, car il traite l'ampleur comme un ratio libre et non comme un nombre discret lié à la répétition du tissu. Ce cartouche prend le sett comme une dimension réelle, résout un nombre entier de plis et le tissu qu'ils consomment, et indique à quel point il approche huit yards, pour qu'un fabricant puisse plisser sur la raie en confiance. Il trace la fermeture à courroie et boucle vers une boucle imprimable, et ne dessine délibérément PAS de tartan — le sett est une taille, et le motif appartient à son clan et à ses tisserands. Un kilt tracé à un corps réel, plissé sur un sett réel, devient un objet commun, sur mesure et réparable.",
+      "pt": "Um kilt é uma das peças mais precisamente projetadas do traje tradicional, e o que torna um kilt de oito jardas correto — pregar AO SETT para que cada prega mostre uma repeticao completa do tartã — é justamente o que um traçado genérico de saia pregueada não consegue, porque trata a amplitude como uma razão livre e não como um número discreto ligado à repeticao do tecido. Este cartucho toma o sett como uma dimensão real, resolve um número inteiro de pregas e o tecido que consomem, e reporta quão perto fica de oito jardas, para quem faz poder pregar à listra com confiança. Desenha o fecho de correia e fivela para uma fivela imprimível, e deliberadamente NÃO desenha um tartã — o sett é um tamanho, e o padrão pertence a seu clã e a seus tecelões. Um kilt modelado a um corpo real, pregueado a um sett real, torna-se um objeto comum, sob medida e reparável."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

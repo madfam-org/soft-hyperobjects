@@ -1,0 +1,538 @@
+{
+  "project": {
+    "name": "Racerback sports bra",
+    "slug": "racerback-sports-bra",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A pull-on compression sports bra in power-mesh: a single front panel, a converged racerback, and a firm wide support band, held up by the band's negative ease rather than by a wire. A sports bra is a compression garment (it limits motion by holding the chest close), not an encapsulation one (which cups each breast), and this cartridge drafts the compression kind honestly: the support IS the band, so its finished ring is solved from the underbust and an explicit grip percentage and printed as a number instead of an adjective; the racerback's yoke is solved from the shoulder so the straps sit inboard and do not slide off in motion; the front compresses evenly with no cups. No hardware — pulled on over the head, straps cut in one. FC-400 lane 9 (active).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un sostén deportivo de compresión que se pone jalando, en power-mesh: un panel delantero único, una espalda nadadora convergente y una banda de soporte ancha y firme, sostenido por la holgura negativa de la banda y no por una varilla. Un sostén deportivo es una prenda de compresión (limita el movimiento acercando el pecho), no de encapsulado (que ahueca cada seno), y este cartucho traza el tipo de compresión con honestidad: el soporte ES la banda, así que su anillo terminado se resuelve del bajo busto y un porcentaje de agarre explícito y se imprime como número en vez de adjetivo; el yugo de la espalda nadadora se resuelve del hombro para que los tirantes queden por dentro y no se resbalen en movimiento; el delantero comprime parejo sin copas. Sin herrajes — se pone por la cabeza, tirantes cortados de una pieza. Carril 9 de FC-400 (activo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une brassière de sport de compression qui s'enfile, en résille de maintien : un unique panneau devant, un dos nageur convergent et une bande de maintien large et ferme, tenue par l'aisance négative de la bande et non par une armature. Une brassière de sport est un vêtement de compression (elle limite le mouvement en tenant la poitrine près du corps), non d'encapsulation (qui coque chaque sein), et ce cartouche trace le type compression honnêtement : le maintien EST la bande, donc son anneau fini est résolu depuis le dessous de poitrine et un pourcentage de serrage explicite et imprimé en nombre plutôt qu'en adjectif ; l'empiècement du dos nageur est résolu depuis l'épaule pour que les bretelles restent à l'intérieur et ne glissent pas en mouvement ; le devant comprime uniformément sans bonnets. Sans fermeture — s'enfile par la tête, bretelles coupées d'un tenant. Couloir 9 de FC-400 (actif).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um top esportivo de compressão que se veste puxando, em power-mesh: um único painel frontal, umas costas nadadoras convergentes e uma faixa de suporte larga e firme, sustentado pela folga negativa da faixa e não por um aro. Um top esportivo é uma peça de compressão (limita o movimento mantendo o peito próximo), não de encapsulamento (que forma taças para cada seio), e este cartucho modela o tipo compressão com honestidade: o suporte É a faixa, então seu anel acabado é resolvido do sob-busto e uma porcentagem de aperto explícita e impresso como número em vez de adjetivo; o encaixe das costas nadadoras é resolvido do ombro para que as alças fiquem por dentro e não escorreguem em movimento; a frente comprime de forma uniforme sem taças. Sem ferragens — veste-se pela cabeça, alças cortadas de uma peça. Corredor 9 do FC-400 (ativo).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "sports-bra",
+      "racerback",
+      "compression",
+      "activewear",
+      "power-mesh",
+      "pull-on",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full sports bra",
+        "es": "Sostén deportivo completo",
+        "fr": "Brassière complète",
+        "pt": "Top completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "band"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front panel",
+        "es": "Panel delantero",
+        "fr": "Panneau devant",
+        "pt": "Painel frontal"
+      },
+      "default_color": "#2e6b6b",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Racerback panel",
+        "es": "Panel de espalda nadadora",
+        "fr": "Panneau dos nageur",
+        "pt": "Painel de costas nadadoras"
+      },
+      "default_color": "#2e6b6b",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    },
+    {
+      "id": "band",
+      "label": {
+        "en": "Support band",
+        "es": "Banda de soporte",
+        "fr": "Bande de maintien",
+        "pt": "Faixa de suporte"
+      },
+      "default_color": "#1f4a4a",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps",
+        "pt": "Medidas corporais"
+      }
+    },
+    {
+      "id": "support",
+      "label": {
+        "en": "Support",
+        "es": "Soporte",
+        "fr": "Maintien",
+        "pt": "Suporte"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 940,
+      "min": 680,
+      "max": 1400,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de peito (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest — sets the front panel width",
+        "es": "Pecho completo — define el ancho del panel delantero",
+        "fr": "Poitrine complète — fixe la largeur du panneau devant",
+        "pt": "Peito completo — define a largura do painel frontal"
+      }
+    },
+    {
+      "id": "underbust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 780,
+      "min": 580,
+      "max": 1250,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "underbust_girth"
+      },
+      "label": {
+        "en": "Underbust girth (mm)",
+        "es": "Contorno bajo busto (mm)",
+        "fr": "Tour de dessous de poitrine (mm)",
+        "pt": "Contorno sob o busto (mm)"
+      },
+      "tooltip": {
+        "en": "The ribcage — the band grips here and carries the load",
+        "es": "Las costillas — la banda agarra aquí y lleva la carga",
+        "fr": "Les côtes — la bande serre ici et porte la charge",
+        "pt": "As costelas — a faixa firma aqui e carrega a carga"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "body",
+      "default": 380,
+      "min": 280,
+      "max": 540,
+      "step": 10,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombros (mm)",
+        "fr": "Largeur d'épaules (mm)",
+        "pt": "Largura de ombros (mm)"
+      },
+      "tooltip": {
+        "en": "Sets where the racer yoke converges — inboard of the shoulders",
+        "es": "Define dónde converge el yugo nadador — por dentro de los hombros",
+        "fr": "Fixe où l'empiècement nageur converge — à l'intérieur des épaules",
+        "pt": "Define onde o encaixe nadador converge — por dentro dos ombros"
+      }
+    },
+    {
+      "id": "front_length",
+      "type": "slider",
+      "group": "construction",
+      "default": 260,
+      "min": 150,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Front length (mm)",
+        "es": "Largo delantero (mm)",
+        "fr": "Longueur devant (mm)",
+        "pt": "Comprimento frontal (mm)"
+      },
+      "tooltip": {
+        "en": "Band top to the neckline base",
+        "es": "De la banda a la base del escote",
+        "fr": "Du haut de bande à la base de l'encolure",
+        "pt": "Do topo da faixa à base do decote"
+      }
+    },
+    {
+      "id": "band_height",
+      "type": "slider",
+      "group": "support",
+      "default": 60,
+      "min": 30,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Support band depth (mm)",
+        "es": "Profundidad de banda de soporte (mm)",
+        "fr": "Profondeur de bande de maintien (mm)",
+        "pt": "Profundidade da faixa de suporte (mm)"
+      },
+      "tooltip": {
+        "en": "A wider band spreads the support load",
+        "es": "Una banda más ancha reparte la carga de soporte",
+        "fr": "Une bande plus large répartit la charge de maintien",
+        "pt": "Uma faixa mais larga distribui a carga de suporte"
+      }
+    },
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "group": "support",
+      "default": 45,
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de tirante (mm)",
+        "fr": "Largeur de bretelle (mm)",
+        "pt": "Largura de alça (mm)"
+      },
+      "tooltip": {
+        "en": "Wide compression straps spread load off the shoulders",
+        "es": "Tirantes anchos de compresión reparten la carga en los hombros",
+        "fr": "Des bretelles larges de compression répartissent la charge sur les épaules",
+        "pt": "Alças largas de compressão distribuem a carga nos ombros"
+      }
+    },
+    {
+      "id": "neck_scoop",
+      "type": "slider",
+      "group": "construction",
+      "default": 90,
+      "min": 30,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Neckline scoop (mm)",
+        "es": "Escote (mm)",
+        "fr": "Décolleté (mm)",
+        "pt": "Decote (mm)"
+      },
+      "tooltip": {
+        "en": "Front neckline drop",
+        "es": "Caída del escote delantero",
+        "fr": "Chute de l'encolure devant",
+        "pt": "Queda do decote frontal"
+      }
+    },
+    {
+      "id": "racer_drop",
+      "type": "slider",
+      "group": "construction",
+      "default": 120,
+      "min": 50,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Racer yoke rise (mm)",
+        "es": "Altura del yugo nadador (mm)",
+        "fr": "Montée de l'empiècement nageur (mm)",
+        "pt": "Subida do encaixe nadador (mm)"
+      },
+      "tooltip": {
+        "en": "How high the racer yoke sits between the shoulder blades",
+        "es": "Qué tan alto queda el yugo nadador entre los omóplatos",
+        "fr": "À quelle hauteur l'empiècement nageur se place entre les omoplates",
+        "pt": "Quão alto o encaixe nadador fica entre as omoplatas"
+      }
+    },
+    {
+      "id": "band_grip_pct",
+      "type": "slider",
+      "group": "support",
+      "default": 14,
+      "min": 4,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Band grip (%)",
+        "es": "Agarre de banda (%)",
+        "fr": "Serrage de bande (%)",
+        "pt": "Aperto da faixa (%)"
+      },
+      "tooltip": {
+        "en": "Band negative ease — this IS the support, expressed as a number",
+        "es": "Holgura negativa de banda — ESTE es el soporte, como número",
+        "fr": "Aisance négative de bande — C'EST le maintien, exprimé en nombre",
+        "pt": "Folga negativa da faixa — ESTE é o suporte, expresso como número"
+      }
+    },
+    {
+      "id": "front_grip_pct",
+      "type": "slider",
+      "group": "support",
+      "default": 8,
+      "min": 0,
+      "max": 18,
+      "step": 1,
+      "label": {
+        "en": "Front compression (%)",
+        "es": "Compresión delantera (%)",
+        "fr": "Compression devant (%)",
+        "pt": "Compressão frontal (%)"
+      },
+      "tooltip": {
+        "en": "Even compression across the front panel",
+        "es": "Compresión pareja en el panel delantero",
+        "fr": "Compression uniforme sur le panneau devant",
+        "pt": "Compressão uniforme no painel frontal"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Knit seams are narrow and coverstitched",
+        "es": "Las costuras de punto son angostas y con puntada de cobertura",
+        "fr": "Les coutures en maille sont étroites et en couture de recouvrement",
+        "pt": "As costuras de malha são estreitas e com ponto de cobertura"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "high_support",
+      "label": {
+        "en": "High support",
+        "es": "Alto soporte",
+        "fr": "Fort maintien",
+        "pt": "Alto suporte"
+      },
+      "values": {
+        "band_grip_pct": 22,
+        "band_height": 90,
+        "front_grip_pct": 14
+      }
+    },
+    {
+      "id": "medium",
+      "label": {
+        "en": "Medium support",
+        "es": "Soporte medio",
+        "fr": "Maintien moyen",
+        "pt": "Suporte médio"
+      },
+      "values": {
+        "band_grip_pct": 12,
+        "front_grip_pct": 6
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "neck_scoop < front_length",
+      "message": {
+        "en": "The neckline scoop cannot cross the whole front panel.",
+        "es": "El escote no puede cruzar todo el panel delantero.",
+        "fr": "Le décolleté ne peut traverser tout le panneau devant.",
+        "pt": "O decote não pode atravessar todo o painel frontal."
+      },
+      "severity": "error"
+    },
+    {
+      "expression": "chest_girth > underbust_girth",
+      "message": {
+        "en": "Chest girth should exceed the underbust for the bra to shape.",
+        "es": "El contorno de pecho debe superar al bajo busto para que el sostén moldee.",
+        "fr": "Le tour de poitrine doit dépasser le dessous pour que la brassière galbe.",
+        "pt": "O contorno de peito deve exceder o sob-busto para o top modelar."
+      },
+      "severity": "warning"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "side_seam",
+        "type": "custom",
+        "label": {
+          "en": "Side seams (front to back)",
+          "es": "Costuras laterales (delantero a trasero)",
+          "fr": "Coutures côté (devant à dos)",
+          "pt": "Costuras laterais (frente ao dorso)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side_seam_r"
+          },
+          {
+            "piece": "back",
+            "edge": "side_seam_r"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "front_grip_pct"
+        ]
+      },
+      {
+        "id": "band_seam",
+        "type": "waistband",
+        "label": {
+          "en": "Support band seam (primary support)",
+          "es": "Costura de banda de soporte (soporte principal)",
+          "fr": "Couture de bande de maintien (maintien principal)",
+          "pt": "Costura da faixa de suporte (suporte principal)"
+        },
+        "edges": [
+          {
+            "piece": "band",
+            "edge": "top"
+          },
+          {
+            "piece": "front",
+            "edge": "band_join"
+          },
+          {
+            "piece": "back",
+            "edge": "band_join"
+          }
+        ],
+        "parameters": [
+          "underbust_girth",
+          "band_grip_pct",
+          "band_height"
+        ]
+      },
+      {
+        "id": "racer",
+        "type": "custom",
+        "label": {
+          "en": "Racerback yoke (keeps straps on)",
+          "es": "Yugo de espalda nadadora (mantiene los tirantes)",
+          "fr": "Empiècement dos nageur (retient les bretelles)",
+          "pt": "Encaixe das costas nadadoras (segura as alças)"
+        },
+        "edges": [
+          {
+            "piece": "back",
+            "edge": "yoke"
+          }
+        ],
+        "parameters": [
+          "shoulder_width",
+          "racer_drop",
+          "strap_width"
+        ]
+      },
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "label": {
+          "en": "Neckline (bound)",
+          "es": "Escote (ribeteado)",
+          "fr": "Encolure (bordée)",
+          "pt": "Decote (debruado)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neckline"
+          }
+        ],
+        "parameters": [
+          "neck_scoop"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": false,
+      "elastic_finish": true,
+      "compression_support": true,
+      "pull_on": true
+    },
+    "societal_benefit": {
+      "en": "A sports bra sold in shops advertises its support as an adjective — \"high impact\", \"medium\" — that tells a wearer nothing reproducible and hides the one variable that matters: how tightly the band grips the ribcage. This cartridge makes that a number, solved from the wearer's own underbust and printed. It also encodes the two pieces of drafting knowledge that make a compression sports bra work in motion: the load is carried by a wide firm band rather than by the straps, and the racerback yoke is placed inboard of the shoulder points so the straps do not slide off during exercise — the failure a straight-strap bra has in sport. A sports bra that fits and holds becomes a made-to-measure, repairable commons object.",
+      "es": "Un sostén deportivo de tienda anuncia su soporte como adjetivo — \"alto impacto\", \"medio\" — que no le dice nada reproducible a quien lo viste y esconde la única variable que importa: qué tan firme agarra la banda en las costillas. Este cartucho lo vuelve un número, resuelto del propio bajo busto e impreso. También codifica los dos saberes de trazado que hacen funcionar a un sostén deportivo de compresión en movimiento: la carga la lleva una banda ancha y firme en vez de los tirantes, y el yugo de espalda nadadora se coloca por dentro de los hombros para que los tirantes no se resbalen durante el ejercicio — la falla de un sostén de tirante recto en el deporte. Un sostén deportivo que ajusta y sostiene se vuelve un objeto común, a medida y reparable.",
+      "fr": "Une brassière de sport du commerce annonce son maintien par un adjectif — \"fort impact\", \"moyen\" — qui ne dit rien de reproductible à la personne et cache la seule variable qui compte : la fermeté avec laquelle la bande serre les côtes. Ce cartouche en fait un nombre, résolu depuis le dessous de poitrine propre et imprimé. Il encode aussi les deux savoirs de tracé qui font fonctionner une brassière de compression en mouvement : la charge est portée par une bande large et ferme plutôt que par les bretelles, et l'empiècement dos nageur est placé à l'intérieur des épaules pour que les bretelles ne glissent pas pendant l'effort — la faille d'une brassière à bretelles droites dans le sport. Une brassière qui va et maintient devient un objet commun, sur mesure et réparable.",
+      "pt": "Um top esportivo de loja anuncia seu suporte como adjetivo — \"alto impacto\", \"médio\" — que nada diz de reproduzível a quem o veste e esconde a única variável que importa: quão firme a faixa firma nas costelas. Este cartucho o torna um número, resolvido do próprio sob-busto e impresso. Também codifica os dois saberes de modelagem que fazem um top de compressão funcionar em movimento: a carga é levada por uma faixa larga e firme em vez das alças, e o encaixe das costas nadadoras é colocado por dentro dos ombros para que as alças não escorreguem durante o exercício — a falha de um top de alça reta no esporte. Um top esportivo que veste bem e sustenta torna-se um objeto comum, sob medida e reparável."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

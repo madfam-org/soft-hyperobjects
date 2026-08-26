@@ -1,0 +1,640 @@
+{
+  "project": {
+    "name": "Structured one-piece swimsuit",
+    "slug": "swimsuit-one-piece",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A STRUCTURED one-piece maillot in swim-lycra: a full-torso swimsuit with a built-in shelf bra and ADJUSTABLE ring-and-slider straps, as distinct from the FC-100 pull-on maillot which has no hardware. The structure is the point of this rank: a swimsuit that actually supports needs an inner shelf bra and straps a wearer can tighten to their own shoulder height, and both are drawn here. The straps run from the back, through a ring at the front bust line, over the shoulder and back through a slider, and strap_w drives both the drafted strap's cut width and the ring/slider channel; the shelf bra is a real lined inner layer solved to the underbust; the high-cut legs are openings on a lined gusset, no inseam. Negative-ease throughout so the lycra grips. Made to measure to bust, underbust, waist and hip girths plus shoulder-to-crotch length. FC-400 lane 9 (active).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un traje de baño entero ESTRUCTURADO en licra de baño: un maillot de torso completo con copa interna incorporada y tirantes ajustables de anillo y ajustador, a diferencia del maillot de FC-100 que se pone jalando y no lleva herrajes. La estructura es la razón de este rango: un traje que de verdad sostiene necesita una copa interna y tirantes que quien lo viste pueda ajustar a su propia altura de hombro, y ambos están trazados aquí. Los tirantes corren de la espalda, por un anillo en la línea de busto delantera, sobre el hombro y de vuelta por un ajustador, y strap_w define tanto el ancho de corte del tirante como el canal del anillo/ajustador; la copa es una capa interna forrada real resuelta al bajo busto; las piernas de corte alto son aberturas sobre una entrepierna forrada, sin tiro interno. Holgura negativa en todo para que la licra agarre. Hecho a medida a los contornos de busto, bajo busto, cintura y cadera más el largo de hombro a entrepierna. Carril 9 de FC-400 (activo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un maillot une pièce STRUCTURÉ en lycra de bain : un maillot torse entier avec bustier intégré et bretelles réglables à anneau et curseur, à la différence du maillot de FC-100 qui s'enfile et n'a pas de quincaillerie. La structure est l'objet de ce rang : un maillot qui soutient vraiment a besoin d'un bustier intérieur et de bretelles que la personne peut régler à sa propre hauteur d'épaule, et les deux sont tracés ici. Les bretelles partent du dos, passent par un anneau à la ligne de poitrine devant, par-dessus l'épaule et repassent par un curseur, et strap_w pilote la largeur de coupe de la bretelle ET le passage de l'anneau/curseur ; le bustier est une vraie couche intérieure doublée résolue au dessous de poitrine ; les jambes échancrées sont des ouvertures sur un fond doublé, sans entrejambe. Aisance négative partout pour que le lycra tienne. Fait sur mesure aux tours de poitrine, de dessous de poitrine, de taille et de hanche plus la longueur épaule-entrejambe. Couloir 9 de FC-400 (actif).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um maiô ESTRUTURADO em lycra de banho: um maiô de torso inteiro com bojo interno embutido e alças reguláveis de anel e ajustador, ao contrário do maiô de FC-100 que se veste puxando e não tem ferragens. A estrutura é o ponto deste posto: um maiô que de fato sustenta precisa de um bojo interno e alças que quem veste possa ajustar à própria altura de ombro, e ambos são desenhados aqui. As alças correm das costas, por um anel na linha do busto frontal, sobre o ombro e de volta por um ajustador, e strap_w dirige tanto a largura de corte da alça quanto o canal do anel/ajustador; o bojo é uma verdadeira camada interna forrada resolvida ao sob-busto; as pernas de corte alto são aberturas sobre um fundilho forrado, sem gancho interno. Folga negativa em tudo para a lycra firmar. Feito sob medida aos contornos de busto, sob o busto, cintura e quadril mais o comprimento ombro-entrepernas. Corredor 9 do FC-400 (ativo).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "swimsuit",
+      "one-piece",
+      "maillot",
+      "shelf-bra",
+      "structured",
+      "swim-lycra",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "one-piece-swimsuit (Fashion Cabinet FC-100 #54) — maillot lineage",
+          "license": "CERN-OHL-W-2.0"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full swimsuit",
+        "es": "Traje completo",
+        "fr": "Maillot complet",
+        "pt": "Maiô completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "shelf",
+        "gusset",
+        "strap"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front panel",
+        "es": "Panel delantero",
+        "fr": "Panneau devant",
+        "pt": "Painel frontal"
+      },
+      "default_color": "#1f6b7a",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back panel",
+        "es": "Panel trasero",
+        "fr": "Panneau dos",
+        "pt": "Painel traseiro"
+      },
+      "default_color": "#1f6b7a",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    },
+    {
+      "id": "shelf",
+      "label": {
+        "en": "Inner shelf bra",
+        "es": "Copa interna",
+        "fr": "Bustier intérieur",
+        "pt": "Bojo interno"
+      },
+      "default_color": "#2e8a9c",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    },
+    {
+      "id": "gusset",
+      "label": {
+        "en": "Gusset (lined)",
+        "es": "Entrepierna (forrada)",
+        "fr": "Fond (doublé)",
+        "pt": "Fundilho (forrado)"
+      },
+      "default_color": "#155560",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "strap",
+      "label": {
+        "en": "Adjustable strap",
+        "es": "Tirante ajustable",
+        "fr": "Bretelle réglable",
+        "pt": "Alça ajustável"
+      },
+      "default_color": "#2e8a9c",
+      "cut": {
+        "quantity": 2,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps",
+        "pt": "Medidas corporais"
+      }
+    },
+    {
+      "id": "structure",
+      "label": {
+        "en": "Structure",
+        "es": "Estructura",
+        "fr": "Structure",
+        "pt": "Estrutura"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 920,
+      "min": 700,
+      "max": 1400,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      },
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de busto (mm)"
+      },
+      "tooltip": {
+        "en": "Full bust — sizes the panel and the shelf top",
+        "es": "Busto completo — dimensiona el panel y la parte alta de la copa",
+        "fr": "Poitrine complète — dimensionne le panneau et le haut du bustier",
+        "pt": "Busto completo — dimensiona o painel e o topo do bojo"
+      }
+    },
+    {
+      "id": "underbust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 780,
+      "min": 600,
+      "max": 1250,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "underbust_girth"
+      },
+      "label": {
+        "en": "Underbust girth (mm)",
+        "es": "Contorno bajo busto (mm)",
+        "fr": "Tour de dessous de poitrine (mm)",
+        "pt": "Contorno sob o busto (mm)"
+      },
+      "tooltip": {
+        "en": "The shelf bra grips here",
+        "es": "La copa agarra aquí",
+        "fr": "Le bustier serre ici",
+        "pt": "O bojo firma aqui"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 740,
+      "min": 560,
+      "max": 1300,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)",
+        "pt": "Contorno de cintura (mm)"
+      },
+      "tooltip": {
+        "en": "Natural waist — reference for the torso shape",
+        "es": "Cintura natural — referencia para la forma del torso",
+        "fr": "Taille naturelle — repère pour la forme du torse",
+        "pt": "Cintura natural — referência para a forma do torso"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 960,
+      "min": 700,
+      "max": 1600,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanche (mm)",
+        "pt": "Contorno de quadril (mm)"
+      },
+      "tooltip": {
+        "en": "Fullest hip — sizes the panel with the bust",
+        "es": "Cadera más llena — dimensiona el panel junto al busto",
+        "fr": "Hanche la plus forte — dimensionne le panneau avec la poitrine",
+        "pt": "Quadril mais cheio — dimensiona o painel com o busto"
+      }
+    },
+    {
+      "id": "shoulder_to_crotch",
+      "type": "slider",
+      "group": "body",
+      "default": 680,
+      "min": 520,
+      "max": 920,
+      "step": 10,
+      "label": {
+        "en": "Shoulder to crotch (mm)",
+        "es": "De hombro a entrepierna (mm)",
+        "fr": "Épaule à entrejambe (mm)",
+        "pt": "Ombro ao entrepernas (mm)"
+      },
+      "tooltip": {
+        "en": "The torso length — adjustable straps let one draft fit a range",
+        "es": "El largo del torso — los tirantes ajustables permiten que un trazado sirva a varios",
+        "fr": "La longueur du torse — les bretelles réglables font qu'un tracé va à plusieurs",
+        "pt": "O comprimento do torso — as alças reguláveis fazem um traçado servir a vários"
+      }
+    },
+    {
+      "id": "shelf_rise",
+      "type": "slider",
+      "group": "structure",
+      "default": 150,
+      "min": 60,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Shelf bra rise (mm)",
+        "es": "Alto de copa interna (mm)",
+        "fr": "Hauteur de bustier (mm)",
+        "pt": "Altura do bojo (mm)"
+      },
+      "tooltip": {
+        "en": "How high the inner shelf bra rises above the underbust",
+        "es": "Qué tan alto sube la copa interna sobre el bajo busto",
+        "fr": "À quelle hauteur le bustier monte au-dessus du dessous de poitrine",
+        "pt": "Quão alto o bojo sobe acima do sob-busto"
+      }
+    },
+    {
+      "id": "leg_height",
+      "type": "slider",
+      "group": "structure",
+      "default": 120,
+      "min": 40,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Leg cut height (mm)",
+        "es": "Altura de corte de pierna (mm)",
+        "fr": "Hauteur d'échancrure (mm)",
+        "pt": "Altura de corte da perna (mm)"
+      },
+      "tooltip": {
+        "en": "How high the leg opening is cut up the hip",
+        "es": "Qué tan alto se corta la abertura de pierna en la cadera",
+        "fr": "À quelle hauteur l'ouverture de jambe est échancrée sur la hanche",
+        "pt": "Quão alto a abertura de perna é cortada no quadril"
+      }
+    },
+    {
+      "id": "strap_w",
+      "type": "slider",
+      "group": "construction",
+      "default": 22,
+      "min": 12,
+      "max": 45,
+      "step": 1,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de tirante (mm)",
+        "fr": "Largeur de bretelle (mm)",
+        "pt": "Largura de alça (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the strap's cut width AND the ring/slider channel",
+        "es": "Define el ancho de corte del tirante Y el canal del anillo/ajustador",
+        "fr": "Pilote la largeur de coupe de la bretelle ET le passage de l'anneau/curseur",
+        "pt": "Dirige a largura de corte da alça E o canal do anel/ajustador"
+      }
+    },
+    {
+      "id": "neck_scoop",
+      "type": "slider",
+      "group": "construction",
+      "default": 110,
+      "min": 40,
+      "max": 240,
+      "step": 5,
+      "label": {
+        "en": "Neckline scoop (mm)",
+        "es": "Escote (mm)",
+        "fr": "Décolleté (mm)",
+        "pt": "Decote (mm)"
+      },
+      "tooltip": {
+        "en": "Front neckline drop (the back is shallower)",
+        "es": "Caída del escote delantero (el trasero es menos profundo)",
+        "fr": "Chute de l'encolure devant (le dos est moins profond)",
+        "pt": "Queda do decote frontal (o traseiro é menos profundo)"
+      }
+    },
+    {
+      "id": "gusset_w",
+      "type": "slider",
+      "group": "construction",
+      "default": 80,
+      "min": 40,
+      "max": 150,
+      "step": 5,
+      "label": {
+        "en": "Gusset width (mm)",
+        "es": "Ancho de entrepierna (mm)",
+        "fr": "Largeur du fond (mm)",
+        "pt": "Largura do fundilho (mm)"
+      },
+      "tooltip": {
+        "en": "The crotch bridge width",
+        "es": "Ancho del puente de entrepierna",
+        "fr": "Largeur du pont d'entrejambe",
+        "pt": "Largura da ponte do entrepernas"
+      }
+    },
+    {
+      "id": "negative_ease_pct",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 4,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Negative ease (%)",
+        "es": "Holgura negativa (%)",
+        "fr": "Aisance négative (%)",
+        "pt": "Folga negativa (%)"
+      },
+      "tooltip": {
+        "en": "The lycra grips by being cut smaller than the body",
+        "es": "La licra agarra al cortarse más pequeña que el cuerpo",
+        "fr": "Le lycra tient en étant coupé plus petit que le corps",
+        "pt": "A lycra firma sendo cortada menor que o corpo"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Swim seams are narrow and flatlocked",
+        "es": "Las costuras de baño son angostas y con flatlock",
+        "fr": "Les coutures de bain sont étroites et en flatlock",
+        "pt": "As costuras de banho são estreitas e com flatlock"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "high_leg",
+      "label": {
+        "en": "High-cut leg",
+        "es": "Pierna de corte alto",
+        "fr": "Jambe très échancrée",
+        "pt": "Perna de corte alto"
+      },
+      "values": {
+        "leg_height": 220,
+        "neck_scoop": 160
+      }
+    },
+    {
+      "id": "full_support",
+      "label": {
+        "en": "Full support shelf",
+        "es": "Copa de soporte pleno",
+        "fr": "Bustier plein maintien",
+        "pt": "Bojo de suporte pleno"
+      },
+      "values": {
+        "shelf_rise": 240,
+        "negative_ease_pct": 14
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "bust_girth > underbust_girth",
+      "message": {
+        "en": "Bust girth must exceed underbust girth for the shelf to shape.",
+        "es": "El contorno de busto debe superar al de bajo busto para que la copa moldee.",
+        "fr": "Le tour de poitrine doit dépasser celui du dessous pour que le bustier galbe.",
+        "pt": "O contorno de busto deve exceder o do sob-busto para o bojo modelar."
+      },
+      "severity": "error"
+    },
+    {
+      "expression": "leg_height < shoulder_to_crotch",
+      "message": {
+        "en": "The leg cut cannot be higher than the torso length.",
+        "es": "El corte de pierna no puede ser más alto que el largo del torso.",
+        "fr": "L'échancrure ne peut être plus haute que la longueur du torse.",
+        "pt": "O corte da perna não pode ser mais alto que o comprimento do torso."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "adjustable swim strap ring and slider",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "bra-ring-slider",
+      "linked": true,
+      "params_map": {
+        "strap_w": "strap_w",
+        "wire_d": "1.8"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "strap_edge",
+        "type": "custom",
+        "label": {
+          "en": "Strap edge (threads the ring and slider)",
+          "es": "Borde de tirante (enhebra el anillo y el ajustador)",
+          "fr": "Bord de bretelle (enfile l'anneau et le curseur)",
+          "pt": "Borda da alça (enfia o anel e o ajustador)"
+        },
+        "edges": [
+          {
+            "piece": "strap",
+            "edge": "strap_edge"
+          }
+        ],
+        "parameters": [
+          "strap_w"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "custom",
+        "label": {
+          "en": "Side seams (front to back)",
+          "es": "Costuras laterales (delantero a trasero)",
+          "fr": "Coutures côté (devant à dos)",
+          "pt": "Costuras laterais (frente ao dorso)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side_seam_r"
+          },
+          {
+            "piece": "back",
+            "edge": "side_seam_r"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "hip_girth",
+          "negative_ease_pct"
+        ]
+      },
+      {
+        "id": "shelf_bra",
+        "type": "waistband",
+        "label": {
+          "en": "Shelf bra underbust (inner support)",
+          "es": "Bajo busto de copa interna (soporte interior)",
+          "fr": "Dessous de bustier (maintien intérieur)",
+          "pt": "Sob-busto do bojo (suporte interno)"
+        },
+        "edges": [
+          {
+            "piece": "shelf",
+            "edge": "underbust"
+          }
+        ],
+        "parameters": [
+          "underbust_girth",
+          "shelf_rise"
+        ]
+      },
+      {
+        "id": "gusset_seam",
+        "type": "custom",
+        "label": {
+          "en": "Gusset bridge",
+          "es": "Puente de entrepierna",
+          "fr": "Pont du fond",
+          "pt": "Ponte do fundilho"
+        },
+        "edges": [
+          {
+            "piece": "gusset",
+            "edge": "front_end"
+          },
+          {
+            "piece": "gusset",
+            "edge": "back_end"
+          },
+          {
+            "piece": "front",
+            "edge": "crotch"
+          },
+          {
+            "piece": "back",
+            "edge": "crotch"
+          }
+        ],
+        "parameters": [
+          "gusset_w"
+        ]
+      },
+      {
+        "id": "leg_opening",
+        "type": "custom",
+        "label": {
+          "en": "Leg openings (high-cut, elastic)",
+          "es": "Aberturas de pierna (corte alto, elástico)",
+          "fr": "Ouvertures de jambe (échancrées, élastique)",
+          "pt": "Aberturas de perna (corte alto, elástico)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "leg_opening_r"
+          },
+          {
+            "piece": "back",
+            "edge": "leg_opening_r"
+          }
+        ],
+        "parameters": [
+          "leg_height",
+          "hip_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true,
+      "elastic_finish": true,
+      "shelf_bra": true,
+      "adjustable_straps": true
+    },
+    "societal_benefit": {
+      "en": "A one-piece swimsuit that actually supports is one of the hardest garments to buy off the rack, because support needs both an inner shelf bra and straps set to the wearer's own shoulder height — and a fixed-size suit gives neither, so it either digs, gapes, or drags the torso down. This cartridge draws the two structures that make a maillot support: a real lined shelf bra sized to the underbust, and adjustable straps coupled to a printable ring and slider so the wearer sets the height and one drafted suit fits a range of torso lengths. Everything is negative-ease so the lycra grips, and the small hardware can be reprinted when it wears in chlorine. A swimsuit that fits and supports becomes a made-to-measure, repairable commons object.",
+      "es": "Un traje de baño entero que de verdad sostiene es una de las prendas más difíciles de comprar de percha, porque el soporte necesita tanto una copa interna como tirantes ajustados a la propia altura de hombro — y un traje de talla fija no da ninguno, así que marca, se abre o arrastra el torso hacia abajo. Este cartucho traza las dos estructuras que hacen que un maillot sostenga: una copa interna forrada real tallada al bajo busto, y tirantes ajustables acoplados a un anillo y ajustador imprimibles para que quien lo viste fije la altura y un trazado sirva a varios largos de torso. Todo es de holgura negativa para que la licra agarre, y los pequeños herrajes pueden reimprimirse cuando se gastan en el cloro. Un traje que ajusta y sostiene se vuelve un objeto común, a medida y reparable.",
+      "fr": "Un maillot une pièce qui soutient vraiment est l'un des vêtements les plus difficiles à acheter tout fait, car le maintien exige à la fois un bustier intérieur et des bretelles réglées à la hauteur d'épaule propre — et un maillot en taille fixe n'offre ni l'un ni l'autre, si bien qu'il marque, bâille ou tire le torse vers le bas. Ce cartouche trace les deux structures qui font qu'un maillot soutient : un vrai bustier doublé taillé au dessous de poitrine, et des bretelles réglables couplées à un anneau et un curseur imprimables pour que la personne fixe la hauteur et qu'un tracé aille à plusieurs longueurs de torse. Tout est en aisance négative pour que le lycra tienne, et la petite quincaillerie peut être réimprimée quand elle s'use dans le chlore. Un maillot qui va et soutient devient un objet commun, sur mesure et réparable.",
+      "pt": "Um maiô que de fato sustenta é uma das peças mais difíceis de comprar prontas, porque o suporte precisa tanto de um bojo interno quanto de alças ajustadas à própria altura de ombro — e um maiô de tamanho fixo não dá nenhum, então marca, abre ou puxa o torso para baixo. Este cartucho desenha as duas estruturas que fazem um maiô sustentar: um verdadeiro bojo forrado talhado ao sob-busto, e alças reguláveis acopladas a um anel e ajustador imprimíveis para quem veste fixar a altura e um traçado servir a vários comprimentos de torso. Tudo é de folga negativa para a lycra firmar, e as pequenas ferragens podem ser reimpressas quando se gastam no cloro. Um maiô que veste bem e sustenta torna-se um objeto comum, sob medida e reparável."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

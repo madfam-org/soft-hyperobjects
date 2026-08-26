@@ -1,0 +1,491 @@
+{
+  "project": {
+    "name": "Soft triangle bralette",
+    "slug": "bralette-soft",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A wireless soft-cup bralette in cotton-modal: two TRUE TRIANGLES of doubled jersey on an elastic underband, held by adjustable ring-and-slider straps. There is no wire and no moulding — the shape is the triangle and the band, and the light support comes only from the band's negative ease. It is the honest opposite of the underwire bra: where that garment solves a wire, this one places a soft triangle and does not pretend to lift. The strap runs through a RING at the cup apex and a SLIDER on the shoulder, and strap_w drives both the drafted strap's cut width and the ring/slider channel, so the webbing threads by construction. Made to measure to underbust and bust girths. FC-400 lane 9 (structured intimates).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un bralette de copa suave sin aro en algodón-modal: dos TRIÁNGULOS VERDADEROS de jersey doblado sobre una banda inferior elástica, sostenidos por tirantes ajustables de anillo y ajustador. No hay aro ni moldeado — la forma es el triángulo y la banda, y el soporte ligero viene solo de la holgura negativa de la banda. Es el opuesto honesto del sostén con varilla: donde esa prenda resuelve una varilla, esta coloca un triángulo suave y no pretende levantar. El tirante corre por un ANILLO en el ápice de la copa y un AJUSTADOR en el hombro, y strap_w define tanto el ancho de corte del tirante como el canal del anillo/ajustador, así la cinta enhebra por construcción. Hecho a medida a los contornos bajo busto y busto. Carril 9 de FC-400 (lencería estructurada).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une bralette à bonnets souples sans armature en coton-modal : deux VRAIS TRIANGLES de jersey doublé sur une bande inférieure élastique, tenus par des bretelles réglables à anneau et curseur. Il n'y a ni armature ni moulage — la forme est le triangle et la bande, et le maintien léger ne vient que de l'aisance négative de la bande. C'est l'opposé honnête du soutien-gorge à armatures : là où celui-ci résout une armature, celui-ci pose un triangle souple et ne prétend pas soulever. La bretelle passe par un ANNEAU à l'apex du bonnet et un CURSEUR à l'épaule, et strap_w pilote la largeur de coupe de la bretelle ET le passage de l'anneau/curseur, de sorte que la sangle s'enfile par construction. Fait sur mesure aux tours de dessous de poitrine et de poitrine. Couloir 9 de FC-400 (lingerie structurée).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um bralete de taça macia sem aro em algodão-modal: dois TRIÂNGULOS VERDADEIROS de jérsei duplo sobre uma faixa inferior elástica, seguros por alças reguláveis de anel e ajustador. Não há aro nem moldagem — a forma é o triângulo e a faixa, e o suporte leve vem só da folga negativa da faixa. É o oposto honesto do sutiã com aro: onde essa peça resolve um aro, esta coloca um triângulo macio e não finge levantar. A alça corre por um ANEL no ápice da taça e um AJUSTADOR no ombro, e strap_w dirige tanto a largura de corte da alça quanto o canal do anel/ajustador, então a fita enfia por construção. Feito sob medida aos contornos sob o busto e busto. Corredor 9 do FC-400 (lingerie estruturada).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "bralette",
+      "triangle",
+      "wireless",
+      "soft-cup",
+      "lingerie",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full bralette",
+        "es": "Bralette completo",
+        "fr": "Bralette complète",
+        "pt": "Bralete completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "cup",
+        "underband",
+        "strap"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "cup",
+      "label": {
+        "en": "Triangle cup",
+        "es": "Copa triángulo",
+        "fr": "Bonnet triangle",
+        "pt": "Taça triângulo"
+      },
+      "default_color": "#b98a9c",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "underband",
+      "label": {
+        "en": "Underband",
+        "es": "Banda inferior",
+        "fr": "Bande inférieure",
+        "pt": "Faixa inferior"
+      },
+      "default_color": "#8a5a72",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "strap",
+      "label": {
+        "en": "Adjustable strap",
+        "es": "Tirante ajustable",
+        "fr": "Bretelle réglable",
+        "pt": "Alça ajustável"
+      },
+      "default_color": "#9c6a82",
+      "cut": {
+        "quantity": 2,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps",
+        "pt": "Medidas corporais"
+      }
+    },
+    {
+      "id": "cup",
+      "label": {
+        "en": "Cup",
+        "es": "Copa",
+        "fr": "Bonnet",
+        "pt": "Taça"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "underbust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 760,
+      "min": 560,
+      "max": 1200,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "underbust_girth"
+      },
+      "label": {
+        "en": "Underbust girth (mm)",
+        "es": "Contorno bajo busto (mm)",
+        "fr": "Tour de dessous de poitrine (mm)",
+        "pt": "Contorno sob o busto (mm)"
+      },
+      "tooltip": {
+        "en": "The band ring — the only support a wireless bralette has",
+        "es": "El anillo de banda — el único soporte de un bralette sin aro",
+        "fr": "L'anneau de bande — le seul maintien d'une bralette sans armature",
+        "pt": "O anel da faixa — o único suporte de um bralete sem aro"
+      }
+    },
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 900,
+      "min": 600,
+      "max": 1400,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      },
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de busto (mm)"
+      },
+      "tooltip": {
+        "en": "Full bust — the surplus sizes the cup triangle",
+        "es": "Busto completo — el excedente dimensiona el triángulo de copa",
+        "fr": "Poitrine complète — l'excédent dimensionne le triangle de bonnet",
+        "pt": "Busto completo — o excedente dimensiona o triângulo da taça"
+      }
+    },
+    {
+      "id": "band_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 22,
+      "min": 10,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Underband depth (mm)",
+        "es": "Profundidad de banda (mm)",
+        "fr": "Profondeur de bande (mm)",
+        "pt": "Profundidade da faixa (mm)"
+      },
+      "tooltip": {
+        "en": "A soft bralette band is narrow",
+        "es": "La banda de un bralette suave es angosta",
+        "fr": "La bande d'une bralette souple est étroite",
+        "pt": "A faixa de um bralete macio é estreita"
+      }
+    },
+    {
+      "id": "cup_spread",
+      "type": "slider",
+      "group": "cup",
+      "default": 150,
+      "min": 90,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Cup spread on band (mm)",
+        "es": "Ancho de copa en banda (mm)",
+        "fr": "Largeur de bonnet sur bande (mm)",
+        "pt": "Largura da taça na faixa (mm)"
+      },
+      "tooltip": {
+        "en": "The triangle's lower-edge width where it sits on the band",
+        "es": "El ancho del canto inferior del triángulo sobre la banda",
+        "fr": "La largeur du bord inférieur du triangle sur la bande",
+        "pt": "A largura da borda inferior do triângulo na faixa"
+      }
+    },
+    {
+      "id": "cup_rise",
+      "type": "slider",
+      "group": "cup",
+      "default": 180,
+      "min": 90,
+      "max": 320,
+      "step": 5,
+      "label": {
+        "en": "Cup rise / triangle height (mm)",
+        "es": "Alto de copa / altura de triángulo (mm)",
+        "fr": "Hauteur de bonnet / du triangle (mm)",
+        "pt": "Altura da taça / do triângulo (mm)"
+      },
+      "tooltip": {
+        "en": "Band to apex — the triangle's height and coverage",
+        "es": "De la banda al ápice — la altura y cobertura del triángulo",
+        "fr": "De la bande à l'apex — la hauteur et la couverture du triangle",
+        "pt": "Da faixa ao ápice — a altura e cobertura do triângulo"
+      }
+    },
+    {
+      "id": "fullness",
+      "type": "slider",
+      "group": "cup",
+      "default": 0.1,
+      "min": 0,
+      "max": 0.4,
+      "step": 0.02,
+      "label": {
+        "en": "Band-edge fullness (gathers)",
+        "es": "Amplitud en el canto de banda (frunces)",
+        "fr": "Ampleur au bord de bande (fronces)",
+        "pt": "Amplitude na borda da faixa (franzidos)"
+      },
+      "tooltip": {
+        "en": "Extra cloth eased onto the band for a little more room",
+        "es": "Tela extra fruncida en la banda para un poco más de espacio",
+        "fr": "Tissu supplémentaire froncé sur la bande pour un peu plus d'aisance",
+        "pt": "Tecido extra franzido na faixa para um pouco mais de espaço"
+      }
+    },
+    {
+      "id": "strap_w",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 6,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de tirante (mm)",
+        "fr": "Largeur de bretelle (mm)",
+        "pt": "Largura de alça (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the strap's cut width AND the ring/slider channel",
+        "es": "Define el ancho de corte del tirante Y el canal del anillo/ajustador",
+        "fr": "Pilote la largeur de coupe de la bretelle ET le passage de l'anneau/curseur",
+        "pt": "Dirige a largura de corte da alça E o canal do anel/ajustador"
+      }
+    },
+    {
+      "id": "negative_ease_pct",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 4,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Band negative ease (%)",
+        "es": "Holgura negativa de banda (%)",
+        "fr": "Aisance négative de bande (%)",
+        "pt": "Folga negativa da faixa (%)"
+      },
+      "tooltip": {
+        "en": "Light — a soft bralette should not squeeze",
+        "es": "Ligera — un bralette suave no debe apretar",
+        "fr": "Légère — une bralette souple ne doit pas serrer",
+        "pt": "Leve — um bralete macio não deve apertar"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Lingerie seams are narrow",
+        "es": "Las costuras de lencería son angostas",
+        "fr": "Les coutures de lingerie sont étroites",
+        "pt": "As costuras de lingerie são estreitas"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "full_coverage",
+      "label": {
+        "en": "Fuller triangle",
+        "es": "Triángulo más amplio",
+        "fr": "Triangle plus couvrant",
+        "pt": "Triângulo mais amplo"
+      },
+      "values": {
+        "cup_rise": 230,
+        "fullness": 0.2
+      }
+    },
+    {
+      "id": "bandeau",
+      "label": {
+        "en": "Low bandeau",
+        "es": "Bandeau bajo",
+        "fr": "Bandeau bas",
+        "pt": "Bandeau baixo"
+      },
+      "values": {
+        "cup_rise": 110,
+        "band_height": 40
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "bust_girth > underbust_girth",
+      "message": {
+        "en": "Bust girth must exceed underbust girth — the surplus sizes the cup.",
+        "es": "El contorno de busto debe superar al de bajo busto — el excedente dimensiona la copa.",
+        "fr": "Le tour de poitrine doit dépasser celui du dessous — l'excédent dimensionne le bonnet.",
+        "pt": "O contorno de busto deve exceder o do sob-busto — o excedente dimensiona a taça."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "adjustable strap ring and slider",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "bra-ring-slider",
+      "linked": true,
+      "params_map": {
+        "strap_w": "strap_w",
+        "wire_d": "1.6"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "strap_edge",
+        "type": "custom",
+        "label": {
+          "en": "Strap edge (threads the ring and slider)",
+          "es": "Borde de tirante (enhebra el anillo y el ajustador)",
+          "fr": "Bord de bretelle (enfile l'anneau et le curseur)",
+          "pt": "Borda da alça (enfia o anel e o ajustador)"
+        },
+        "edges": [
+          {
+            "piece": "strap",
+            "edge": "strap_edge"
+          }
+        ],
+        "parameters": [
+          "strap_w"
+        ]
+      },
+      {
+        "id": "cup_band_seam",
+        "type": "custom",
+        "label": {
+          "en": "Cup-to-band gather seam",
+          "es": "Costura fruncida de copa a banda",
+          "fr": "Couture froncée bonnet-bande",
+          "pt": "Costura franzida taça-faixa"
+        },
+        "edges": [
+          {
+            "piece": "cup",
+            "edge": "lower"
+          },
+          {
+            "piece": "underband",
+            "edge": "cup_edge"
+          }
+        ],
+        "parameters": [
+          "cup_spread",
+          "fullness"
+        ]
+      },
+      {
+        "id": "underband",
+        "type": "waistband",
+        "label": {
+          "en": "Underband elastic (support)",
+          "es": "Elástico de banda (soporte)",
+          "fr": "Élastique de bande (maintien)",
+          "pt": "Elástico da faixa (suporte)"
+        },
+        "edges": [
+          {
+            "piece": "underband",
+            "edge": "lower"
+          }
+        ],
+        "parameters": [
+          "underbust_girth",
+          "negative_ease_pct"
+        ]
+      },
+      {
+        "id": "cup_edges",
+        "type": "neckline",
+        "label": {
+          "en": "Cup edges (elastic)",
+          "es": "Cantos de copa (elástico)",
+          "fr": "Bords de bonnet (élastique)",
+          "pt": "Bordas da taça (elástico)"
+        },
+        "edges": [
+          {
+            "piece": "cup",
+            "edge": "outer"
+          },
+          {
+            "piece": "cup",
+            "edge": "inner"
+          }
+        ],
+        "parameters": [
+          "cup_rise"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true,
+      "elastic_finish": true,
+      "wire_channel": false,
+      "hook_closure": true
+    },
+    "societal_benefit": {
+      "en": "The bralette is the garment a great many people actually wear, and it is exactly the one the industry mystifies least honestly — sold in vague S/M/L when its whole point is that it fits softly and needs no cup sizing. This cartridge draws it as what it is: a true triangle sized from the wearer's own bust surplus on a band sized to the underbust, with the strap coupled to a printable ring and slider so the adjuster threads by construction. It states plainly that a wireless bralette does not lift, which is the honest thing a size letter never says. A bralette that fits and whose small hardware can be reprinted becomes a repairable, beginner-sewable commons object.",
+      "es": "El bralette es la prenda que muchísimas personas realmente usan, y es justo la que la industria mistifica con menos honestidad — vendida en vagas S/M/L cuando su razón de ser es que ajusta suave y no necesita tallaje de copa. Este cartucho lo traza como lo que es: un triángulo verdadero dimensionado del propio excedente de busto sobre una banda tallada al bajo busto, con el tirante acoplado a un anillo y ajustador imprimibles para que el ajustador enhebre por construcción. Declara con claridad que un bralette sin aro no levanta, lo honesto que una letra de talla nunca dice. Un bralette que ajusta y cuyos pequeños herrajes pueden reimprimirse se vuelve un objeto común reparable y cosible por principiantes.",
+      "fr": "La bralette est le vêtement qu'énormément de gens portent réellement, et c'est justement celui que l'industrie mystifie le moins honnêtement — vendu en vagues S/M/L alors que tout son intérêt est qu'il va souplement et ne nécessite pas de taille de bonnet. Ce cartouche le dessine pour ce qu'il est : un vrai triangle dimensionné depuis l'excédent de poitrine propre sur une bande taillée au dessous, la bretelle couplée à un anneau et un curseur imprimables pour que le réglage s'enfile par construction. Il dit clairement qu'une bralette sans armature ne soulève pas, ce qu'une lettre de taille ne dit jamais. Une bralette qui va et dont la petite quincaillerie peut être réimprimée devient un objet commun réparable et cousable par un débutant.",
+      "pt": "O bralete é a peça que muitíssimas pessoas de fato vestem, e é justamente a que a indústria mistifica com menos honestidade — vendida em vagos P/M/G quando toda a sua razão é vestir macio e não precisar de dimensionamento de taça. Este cartucho o desenha pelo que é: um triângulo verdadeiro dimensionado do próprio excedente de busto sobre uma faixa talhada ao sob-busto, com a alça acoplada a um anel e ajustador imprimíveis para o ajustador enfiar por construção. Diz claramente que um bralete sem aro não levanta, o que uma letra de tamanho nunca diz. Um bralete que veste bem e cujas pequenas ferragens podem ser reimpressas torna-se um objeto comum reparável e costurável por iniciantes."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

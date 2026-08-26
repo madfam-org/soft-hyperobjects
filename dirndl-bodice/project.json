@@ -1,0 +1,532 @@
+{
+  "project": {
+    "name": "Dirndl laced bodice (Mieder)",
+    "slug": "dirndl-bodice",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The fitted, lightly-boned upper of the Alpine dirndl (Mieder) — a shaped corselet closed at the centre front by a lace crossed through two columns of metal eyelets, worn over a blouse. This cartridge drafts the bodice around the two facts that make the lacing work rather than merely decorate: the two fronts do NOT meet edge-to-edge but are drafted with a deliberate LACING GAP spanned by the crossed lace, so the fronts are cut narrower than the finished chest and the front width is solved AROUND the gap; and each eyelet is the Yantra4D garment-eyelet, whose eyelet_dia drives both the drafted punch mark and the printed eyelet's inner diameter so lace, hole and eyelet agree. Shaped by princess seams and boned at the front edges so the lacing pulls a smooth line. Made to measure to bust, underbust and waist girths plus bodice length. FC-400 lane 10 (heritage).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El corpiño superior entallado y ligeramente emballenado del dirndl alpino (Mieder) — un corselete conformado cerrado al centro delantero por un cordón cruzado a través de dos columnas de ojales metálicos, sobre una blusa. Este cartucho traza el corpiño en torno a los dos hechos que hacen que el cordón funcione en vez de solo adornar: los dos delanteros NO se juntan borde con borde sino que se trazan con un HUECO DE CORDONES deliberado que el cordón cruzado salva, así los delanteros se cortan más angostos que el pecho terminado y el ancho delantero se resuelve EN TORNO al hueco; y cada ojal es el garment-eyelet de Yantra4D, cuyo eyelet_dia define tanto la marca de perforación trazada como el diámetro interior del ojal impreso, así cordón, agujero y ojal coinciden. Conformado con costuras princesa y emballenado en los bordes delanteros para que el cordón tire una línea limpia. Hecho a medida a los contornos de busto, bajo busto y cintura más el largo del corpiño. Carril 10 de FC-400 (patrimonio).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le corsage supérieur ajusté et légèrement baleiné du dirndl alpin (Mieder) — un corselet galbé fermé au milieu devant par un lacet croisé à travers deux colonnes d'œillets métalliques, porté sur une blouse. Ce cartouche trace le corsage autour des deux faits qui font que le laçage fonctionne au lieu de seulement orner : les deux devants NE se rejoignent PAS bord à bord mais sont tracés avec un ÉCART DE LAÇAGE délibéré que le lacet croisé enjambe, donc les devants sont coupés plus étroits que la poitrine finie et la largeur devant est résolue AUTOUR de l'écart ; et chaque œillet est le garment-eyelet Yantra4D, dont eyelet_dia pilote la marque de perçage tracée ET le diamètre intérieur de l'œillet imprimé, de sorte que lacet, trou et œillet concordent. Galbé par des coutures princesse et baleiné aux bords devant pour que le laçage tire une ligne nette. Fait sur mesure aux tours de poitrine, de dessous de poitrine et de taille plus la longueur de corsage. Couloir 10 de FC-400 (patrimoine).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O corpete superior ajustado e levemente com barbatanas do dirndl alpino (Mieder) — um corselete modelado fechado no centro frontal por um cadarço cruzado por duas colunas de ilhoses metálicos, sobre uma blusa. Este cartucho modela o corpete em torno dos dois fatos que fazem o cadarço funcionar em vez de só enfeitar: as duas frentes NÃO se encontram borda a borda mas são modeladas com um VÃO DE CADARÇO deliberado que o cadarço cruzado transpõe, então as frentes são cortadas mais estreitas que o peito acabado e a largura frontal é resolvida EM TORNO do vão; e cada ilhós é o garment-eyelet Yantra4D, cujo eyelet_dia dirige tanto a marca de perfuração modelada quanto o diâmetro interno do ilhós impresso, então cadarço, furo e ilhós concordam. Modelado por costuras princesa e com barbatanas nas bordas frontais para o cadarço puxar uma linha limpa. Feito sob medida aos contornos de busto, sob o busto e cintura mais o comprimento do corpete. Corredor 10 do FC-400 (patrimônio).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "dirndl",
+      "mieder",
+      "bodice",
+      "laced",
+      "alpine",
+      "heritage",
+      "hardware",
+      "eyelet"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full bodice",
+        "es": "Corpiño completo",
+        "fr": "Corsage complet",
+        "pt": "Corpete completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "side_front",
+        "side_back",
+        "back"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (laced edge)",
+        "es": "Delantero (borde de cordones)",
+        "fr": "Devant (bord de laçage)",
+        "pt": "Frente (borda de cadarço)"
+      },
+      "default_color": "#7a2a3a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "side_front",
+      "label": {
+        "en": "Side front",
+        "es": "Costado delantero",
+        "fr": "Côté devant",
+        "pt": "Lateral frontal"
+      },
+      "default_color": "#7a2a3a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "side_back",
+      "label": {
+        "en": "Side back",
+        "es": "Costado trasero",
+        "fr": "Côté dos",
+        "pt": "Lateral traseira"
+      },
+      "default_color": "#7a2a3a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda",
+        "fr": "Dos",
+        "pt": "Costas"
+      },
+      "default_color": "#6a2331",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps",
+        "pt": "Medidas corporais"
+      }
+    },
+    {
+      "id": "lacing",
+      "label": {
+        "en": "Lacing & eyelets",
+        "es": "Cordones y ojales",
+        "fr": "Laçage et œillets",
+        "pt": "Cadarço e ilhoses"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 920,
+      "min": 700,
+      "max": 1350,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      },
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de busto (mm)"
+      },
+      "tooltip": {
+        "en": "The fronts plus the lacing gap equal this",
+        "es": "Los delanteros más el hueco de cordones igualan esto",
+        "fr": "Les devants plus l'écart de laçage égalent ceci",
+        "pt": "As frentes mais o vão de cadarço igualam isto"
+      }
+    },
+    {
+      "id": "underbust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 780,
+      "min": 600,
+      "max": 1200,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "underbust_girth"
+      },
+      "label": {
+        "en": "Underbust girth (mm)",
+        "es": "Contorno bajo busto (mm)",
+        "fr": "Tour de dessous de poitrine (mm)",
+        "pt": "Contorno sob o busto (mm)"
+      },
+      "tooltip": {
+        "en": "Shapes the bodice through the ribcage",
+        "es": "Da forma al corpiño en las costillas",
+        "fr": "Galbe le corsage à la cage thoracique",
+        "pt": "Modela o corpete na caixa torácica"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 720,
+      "min": 560,
+      "max": 1150,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)",
+        "pt": "Contorno de cintura (mm)"
+      },
+      "tooltip": {
+        "en": "The waist the princess seams nip in to",
+        "es": "La cintura a la que las costuras princesa ciñen",
+        "fr": "La taille où les coutures princesse cintrent",
+        "pt": "A cintura para onde as costuras princesa ajustam"
+      }
+    },
+    {
+      "id": "bodice_length",
+      "type": "slider",
+      "group": "body",
+      "default": 300,
+      "min": 180,
+      "max": 460,
+      "step": 10,
+      "label": {
+        "en": "Bodice length (mm)",
+        "es": "Largo de corpiño (mm)",
+        "fr": "Longueur de corsage (mm)",
+        "pt": "Comprimento do corpete (mm)"
+      },
+      "tooltip": {
+        "en": "Underarm to the waist (side panels)",
+        "es": "De la sisa a la cintura (paneles laterales)",
+        "fr": "Du dessous de bras à la taille (panneaux latéraux)",
+        "pt": "Da axila à cintura (painéis laterais)"
+      }
+    },
+    {
+      "id": "front_length",
+      "type": "slider",
+      "group": "body",
+      "default": 360,
+      "min": 220,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Front length (mm)",
+        "es": "Largo delantero (mm)",
+        "fr": "Longueur devant (mm)",
+        "pt": "Comprimento frontal (mm)"
+      },
+      "tooltip": {
+        "en": "The laced front edge — longer than the side, up over the bust",
+        "es": "El borde delantero de cordones — más largo que el lado, sobre el busto",
+        "fr": "Le bord devant lacé — plus long que le côté, jusque sur la poitrine",
+        "pt": "A borda frontal de cadarço — mais longa que a lateral, até sobre o busto"
+      }
+    },
+    {
+      "id": "lacing_gap",
+      "type": "slider",
+      "group": "lacing",
+      "default": 70,
+      "min": 20,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Lacing gap (mm)",
+        "es": "Hueco de cordones (mm)",
+        "fr": "Écart de laçage (mm)",
+        "pt": "Vão de cadarço (mm)"
+      },
+      "tooltip": {
+        "en": "The gap the crossed lace spans — the fronts are cut narrower by this",
+        "es": "El hueco que salva el cordón cruzado — los delanteros se cortan más angostos por esto",
+        "fr": "L'écart que le lacet croisé enjambe — les devants sont coupés plus étroits d'autant",
+        "pt": "O vão que o cadarço cruzado transpõe — as frentes são cortadas mais estreitas por isto"
+      }
+    },
+    {
+      "id": "eyelet_dia",
+      "type": "slider",
+      "group": "lacing",
+      "default": 5,
+      "min": 3,
+      "max": 10,
+      "step": 0.5,
+      "label": {
+        "en": "Eyelet inner diameter (mm)",
+        "es": "Diámetro interior de ojal (mm)",
+        "fr": "Diamètre intérieur d'œillet (mm)",
+        "pt": "Diâmetro interno do ilhós (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the drafted punch AND the printed eyelet",
+        "es": "Define la perforación trazada Y el ojal impreso",
+        "fr": "Pilote le perçage tracé ET l'œillet imprimé",
+        "pt": "Dirige a perfuração modelada E o ilhós impresso"
+      }
+    },
+    {
+      "id": "eyelet_pitch",
+      "type": "slider",
+      "group": "lacing",
+      "default": 40,
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "label": {
+        "en": "Eyelet pitch (mm)",
+        "es": "Paso de ojales (mm)",
+        "fr": "Pas d'œillets (mm)",
+        "pt": "Passo de ilhoses (mm)"
+      },
+      "tooltip": {
+        "en": "Spacing down the edge — sets the eyelet count",
+        "es": "Espaciado por el borde — define el número de ojales",
+        "fr": "Espacement le long du bord — fixe le nombre d'œillets",
+        "pt": "Espaçamento pela borda — define o número de ilhoses"
+      }
+    },
+    {
+      "id": "neg_ease_pct",
+      "type": "slider",
+      "group": "construction",
+      "default": 4,
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Bodice negative ease (%)",
+        "es": "Holgura negativa de corpiño (%)",
+        "fr": "Aisance négative de corsage (%)",
+        "pt": "Folga negativa do corpete (%)"
+      },
+      "tooltip": {
+        "en": "A laced bodice grips lightly; the lace does the final fit",
+        "es": "Un corpiño de cordones agarra ligero; el cordón hace el ajuste final",
+        "fr": "Un corsage lacé serre légèrement ; le lacet fait l'ajustement final",
+        "pt": "Um corpete de cadarço firma leve; o cadarço faz o ajuste final"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Boned bodice seams are pressed open",
+        "es": "Las costuras del corpiño emballenado se planchan abiertas",
+        "fr": "Les coutures du corsage baleiné sont pressées ouvertes",
+        "pt": "As costuras do corpete com barbatanas são abertas a ferro"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "tight_lace",
+      "label": {
+        "en": "Narrow lacing gap",
+        "es": "Hueco de cordones angosto",
+        "fr": "Écart de laçage étroit",
+        "pt": "Vão de cadarço estreito"
+      },
+      "values": {
+        "lacing_gap": 35,
+        "eyelet_pitch": 30
+      }
+    },
+    {
+      "id": "long_line",
+      "label": {
+        "en": "Long-line bodice",
+        "es": "Corpiño largo",
+        "fr": "Corsage long",
+        "pt": "Corpete longo"
+      },
+      "values": {
+        "bodice_length": 400,
+        "front_length": 460
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "bust_girth > waist_girth",
+      "message": {
+        "en": "The bust should be fuller than the waist for the bodice to shape.",
+        "es": "El busto debe ser más lleno que la cintura para que el corpiño moldee.",
+        "fr": "La poitrine doit être plus forte que la taille pour que le corsage galbe.",
+        "pt": "O busto deve ser mais cheio que a cintura para o corpete modelar."
+      },
+      "severity": "warning"
+    },
+    {
+      "expression": "lacing_gap < bust_girth",
+      "message": {
+        "en": "The lacing gap cannot exceed the bust.",
+        "es": "El hueco de cordones no puede superar el busto.",
+        "fr": "L'écart de laçage ne peut dépasser la poitrine.",
+        "pt": "O vão de cadarço não pode exceder o busto."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "lacing eyelets in two front columns",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "garment-eyelet",
+      "linked": true,
+      "params_map": {
+        "inner_dia": "eyelet_dia",
+        "flange_dia": "eyelet_dia * 2.1",
+        "barrel_h": "3.0"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "lacing_edge",
+        "type": "custom",
+        "label": {
+          "en": "Laced front edge (eyelet column)",
+          "es": "Borde delantero de cordones (columna de ojales)",
+          "fr": "Bord devant lacé (colonne d'œillets)",
+          "pt": "Borda frontal de cadarço (coluna de ilhoses)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "center_front"
+          }
+        ],
+        "parameters": [
+          "lacing_gap",
+          "eyelet_dia",
+          "eyelet_pitch"
+        ]
+      },
+      {
+        "id": "princess_seams",
+        "type": "side_seam",
+        "label": {
+          "en": "Princess/side seams (the shaping)",
+          "es": "Costuras princesa/laterales (el entalle)",
+          "fr": "Coutures princesse/côté (le galbe)",
+          "pt": "Costuras princesa/laterais (o ajuste)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side_seam"
+          },
+          {
+            "piece": "side_front",
+            "edge": "seam_l"
+          },
+          {
+            "piece": "side_back",
+            "edge": "seam_l"
+          },
+          {
+            "piece": "back",
+            "edge": "seam_r"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "waist_girth"
+        ]
+      },
+      {
+        "id": "waist",
+        "type": "waistband",
+        "label": {
+          "en": "Waist edge",
+          "es": "Borde de cintura",
+          "fr": "Bord de taille",
+          "pt": "Borda de cintura"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "waist"
+          },
+          {
+            "piece": "back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true,
+      "boned": true,
+      "laced": true
+    },
+    "societal_benefit": {
+      "en": "A laced bodice is the garment where the fastener and the pattern must be designed together: if the two fronts are drafted to meet and the eyelets punched afterward, there is no gap for the lace and the bodice cannot close. A dirndl bodice is also endlessly reproduced as costume, flattened into a printed panel. This cartridge treats it as the engineered garment it is: the lacing gap is a real dimension, the fronts are cut narrower than the chest around it, the eyelet count is solved from the edge, and each eyelet's inner diameter is one number shared with the printable eyelet so lace, hole and hardware agree. It states its Alpine provenance and its class-historical weight plainly and adds no regional trim. A bodice that laces correctly and fits a real body, with reprintable eyelets, becomes a made-to-measure commons object rather than a costume.",
+      "es": "Un corpiño de cordones es la prenda donde el cierre y el patrón deben diseñarse juntos: si los dos delanteros se trazan para juntarse y los ojales se perforan después, no hay hueco para el cordón y el corpiño no cierra. Un corpiño de dirndl también se reproduce sin fin como disfraz, aplanado en un panel estampado. Este cartucho lo trata como la prenda de ingeniería que es: el hueco de cordones es una dimensión real, los delanteros se cortan más angostos que el pecho en torno a él, el número de ojales se resuelve del borde, y el diámetro interior de cada ojal es un número compartido con el ojal imprimible, así cordón, agujero y herraje coinciden. Declara su procedencia alpina y su peso histórico-de-clase con claridad y no añade adorno regional. Un corpiño que se acordona bien y ajusta a un cuerpo real, con ojales reimprimibles, se vuelve un objeto común a medida, no un disfraz.",
+      "fr": "Un corsage lacé est le vêtement où le fermoir et le patron doivent être conçus ensemble : si les deux devants sont tracés pour se rejoindre et les œillets percés après, il n'y a pas d'écart pour le lacet et le corsage ne ferme pas. Un corsage de dirndl est aussi reproduit sans fin en costume, aplati en un panneau imprimé. Ce cartouche le traite comme le vêtement d'ingénierie qu'il est : l'écart de laçage est une dimension réelle, les devants sont coupés plus étroits que la poitrine autour de lui, le nombre d'œillets est résolu depuis le bord, et le diamètre intérieur de chaque œillet est un nombre partagé avec l'œillet imprimable, de sorte que lacet, trou et quincaillerie concordent. Il déclare sa provenance alpine et son poids historico-social clairement et n'ajoute aucun ornement régional. Un corsage qui se lace correctement et va à un corps réel, aux œillets réimprimables, devient un objet commun sur mesure, non un costume.",
+      "pt": "Um corpete de cadarço é a peça onde o fecho e o molde devem ser projetados juntos: se as duas frentes são modeladas para se encontrar e os ilhoses perfurados depois, não há vão para o cadarço e o corpete não fecha. Um corpete de dirndl também é reproduzido sem fim como fantasia, achatado num painel estampado. Este cartucho o trata como a peça de engenharia que é: o vão de cadarço é uma dimensão real, as frentes são cortadas mais estreitas que o peito em torno dele, o número de ilhoses é resolvido da borda, e o diâmetro interno de cada ilhós é um número compartilhado com o ilhós imprimível, então cadarço, furo e ferragem concordam. Declara sua procedência alpina e seu peso histórico-de-classe com clareza e não acrescenta enfeite regional. Um corpete que se acadarça corretamente e serve a um corpo real, com ilhoses reimprimíveis, torna-se um objeto comum sob medida, não uma fantasia."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

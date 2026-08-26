@@ -1,0 +1,667 @@
+{
+  "project": {
+    "name": "Longline underwire bra",
+    "slug": "longline-underwire-bra",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A three-piece wired cup on a LONGLINE band that reaches to the waist, boned vertically — a deepening of the FC-300 underwire bra with the same dimensional handshake to the printed Yantra4D underwire, extended down into a structural long band. The cup builds projection from stable cloth with two cones at right angles, seated in a cradle whose upper edge is SOLVED to the underwire's own arc: cup_width sets both the wire's chord and the channel's chord, sweep_deg sets both arc angles, so the drafted channel and the printed wire agree by construction. Below the cradle, the long band runs to the natural waist at negative ease and carries vertical boning channels — the longline structure that holds the ribcage and takes support off the shoulders. Made to measure to underbust, bust and waist girths. FC-400 lane 9 (structured intimates).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una copa con varilla en tres piezas sobre una banda LARGA que llega a la cintura, con ballenas verticales — una profundización del sostén con varilla de FC-300 con el mismo apretón de manos dimensional con la varilla impresa de Yantra4D, extendida hacia abajo en una banda larga estructural. La copa construye proyección desde tela estable con dos conos en ángulo recto, asentada en una base cuyo canto superior se RESUELVE al arco propio de la varilla: cup_width define tanto la cuerda de la varilla como la del canal, sweep_deg define ambos ángulos de arco, así el canal trazado y la varilla impresa coinciden por construcción. Bajo la base, la banda larga corre a la cintura natural con holgura negativa y lleva canales de ballena verticales — la estructura larga que sostiene las costillas y quita carga de los hombros. Hecho a medida a los contornos bajo busto, busto y cintura. Carril 9 de FC-400 (lencería estructurada).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un bonnet à armatures en trois pièces sur une bande LONGUELINE qui descend à la taille, baleinée verticalement — un approfondissement du soutien-gorge à armatures de FC-300 avec la même poignée de main dimensionnelle vers l'armature imprimée Yantra4D, prolongée en une longue bande structurelle. Le bonnet construit la projection à partir d'un tissu stable par deux cônes à angle droit, assis dans un berceau dont le bord supérieur est RÉSOLU sur l'arc propre de l'armature : cup_width fixe la corde de l'armature et celle de la coulisse, sweep_deg fixe les deux angles d'arc, de sorte que la coulisse tracée et l'armature imprimée concordent par construction. Sous le berceau, la longue bande descend à la taille naturelle en aisance négative et porte des coulisses de baleines verticales — la structure longueline qui tient la cage thoracique et décharge les épaules. Fait sur mesure aux tours de dessous de poitrine, de poitrine et de taille. Couloir 9 de FC-400 (lingerie structurée).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma taça com aro em três peças sobre uma faixa LONGUETE que desce até a cintura, com barbatanas verticais — um aprofundamento do sutiã com aro de FC-300 com o mesmo aperto de mão dimensional com o aro impresso Yantra4D, estendido para baixo numa faixa longa estrutural. A taça constrói projeção a partir de tecido estável com dois cones em ângulo reto, assentada num berço cuja borda superior é RESOLVIDA ao arco próprio do aro: cup_width define a corda do aro e a do canal, sweep_deg define os dois ângulos de arco, de modo que o canal modelado e o aro impresso concordam por construção. Abaixo do berço, a faixa longa desce até a cintura natural com folga negativa e leva canais de barbatana verticais — a estrutura longuete que segura a caixa torácica e tira carga dos ombros. Feito sob medida aos contornos sob o busto, busto e cintura. Corredor 9 do FC-400 (lingerie estruturada).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "bra",
+      "underwire",
+      "longline",
+      "boned",
+      "lingerie",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "underwire-bra (Fashion Cabinet FC-300 #219) — cup + wire handshake",
+          "license": "CERN-OHL-W-2.0"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full longline bra",
+        "es": "Sostén largo completo",
+        "fr": "Soutien-gorge longueline complet",
+        "pt": "Sutiã longuete completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "cup_lower_inner",
+        "cup_lower_outer",
+        "cup_upper",
+        "cradle",
+        "longline_band",
+        "back"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "cup_lower_inner",
+      "label": {
+        "en": "Cup — lower inner section",
+        "es": "Copa — sección inferior interna",
+        "fr": "Bonnet — section inférieure interne",
+        "pt": "Taça — seção inferior interna"
+      },
+      "default_color": "#8a5a72",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "cup_lower_outer",
+      "label": {
+        "en": "Cup — lower outer section",
+        "es": "Copa — sección inferior externa",
+        "fr": "Bonnet — section inférieure externe",
+        "pt": "Taça — seção inferior externa"
+      },
+      "default_color": "#8a5a72",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "cup_upper",
+      "label": {
+        "en": "Cup — upper section",
+        "es": "Copa — sección superior",
+        "fr": "Bonnet — section supérieure",
+        "pt": "Taça — seção superior"
+      },
+      "default_color": "#9c6a82",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "cradle",
+      "label": {
+        "en": "Cradle (wire channel frame)",
+        "es": "Base (marco del canal de varilla)",
+        "fr": "Berceau (cadre de coulisse d'armature)",
+        "pt": "Berço (moldura do canal do aro)"
+      },
+      "default_color": "#6f4459",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "longline_band",
+      "label": {
+        "en": "Longline band (to the waist, boned)",
+        "es": "Banda larga (a la cintura, con ballenas)",
+        "fr": "Bande longueline (à la taille, baleinée)",
+        "pt": "Faixa longuete (à cintura, com barbatanas)"
+      },
+      "default_color": "#5e3a4c",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back wing",
+        "es": "Ala trasera",
+        "fr": "Aile dos",
+        "pt": "Asa traseira"
+      },
+      "default_color": "#5e3a4c",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps",
+        "pt": "Medidas corporais"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Ajustement",
+        "pt": "Caimento"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "underbust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 760,
+      "min": 560,
+      "max": 1200,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "underbust_girth"
+      },
+      "label": {
+        "en": "Underbust girth (mm)",
+        "es": "Contorno bajo busto (mm)",
+        "fr": "Tour de dessous de poitrine (mm)",
+        "pt": "Contorno sob o busto (mm)"
+      },
+      "tooltip": {
+        "en": "The ribcage under the bust — the band grips here",
+        "es": "La caja torácica bajo el busto — la banda agarra aquí",
+        "fr": "La cage thoracique sous la poitrine — la bande serre ici",
+        "pt": "A caixa torácica sob o busto — a faixa firma aqui"
+      }
+    },
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 940,
+      "min": 640,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      },
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de busto (mm)"
+      },
+      "tooltip": {
+        "en": "Full bust — the surplus over the underbust sets cup volume",
+        "es": "Busto completo — el excedente sobre el bajo busto define el volumen de copa",
+        "fr": "Poitrine complète — l'excédent sur le dessous fixe le volume du bonnet",
+        "pt": "Busto completo — o excedente sobre o sob-busto define o volume da taça"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 700,
+      "min": 500,
+      "max": 1300,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)",
+        "pt": "Contorno de cintura (mm)"
+      },
+      "tooltip": {
+        "en": "The natural waist — the longline band tapers to it",
+        "es": "La cintura natural — la banda larga se entalla hacia ella",
+        "fr": "La taille naturelle — la bande longueline s'y galbe",
+        "pt": "A cintura natural — a faixa longuete afina até ela"
+      }
+    },
+    {
+      "id": "cup_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 130,
+      "min": 90,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Wire chord / cup width (mm)",
+        "es": "Cuerda de varilla / ancho de copa (mm)",
+        "fr": "Corde d'armature / largeur de bonnet (mm)",
+        "pt": "Corda do aro / largura de taça (mm)"
+      },
+      "tooltip": {
+        "en": "Tip-to-tip span of the underwire — drives the printed wire AND the cradle's channel",
+        "es": "Distancia entre puntas de la varilla — define la varilla impresa Y el canal de la base",
+        "fr": "Portée pointe à pointe de l'armature — pilote l'armature imprimée ET la coulisse du berceau",
+        "pt": "Vão ponta a ponta do aro — dirige o aro impresso E o canal do berço"
+      }
+    },
+    {
+      "id": "sweep_deg",
+      "type": "slider",
+      "group": "construction",
+      "default": 210,
+      "min": 150,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Wire sweep (degrees)",
+        "es": "Barrido de varilla (grados)",
+        "fr": "Balayage d'armature (degrés)",
+        "pt": "Varredura do aro (graus)"
+      },
+      "tooltip": {
+        "en": "How far the wire travels around the cup — sets the solved arc run",
+        "es": "Cuánto recorre la varilla alrededor de la copa — define el arco resuelto",
+        "fr": "Jusqu'où l'armature contourne le bonnet — fixe l'arc résolu",
+        "pt": "Quanto o aro percorre ao redor da taça — define o arco resolvido"
+      }
+    },
+    {
+      "id": "cradle_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 26,
+      "min": 14,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Cradle height (mm)",
+        "es": "Alto de base (mm)",
+        "fr": "Hauteur de berceau (mm)",
+        "pt": "Altura do berço (mm)"
+      },
+      "tooltip": {
+        "en": "Band top to the wire line",
+        "es": "De la banda a la línea de varilla",
+        "fr": "Du haut de bande à la ligne d'armature",
+        "pt": "Do topo da faixa à linha do aro"
+      }
+    },
+    {
+      "id": "longline_drop",
+      "type": "slider",
+      "group": "construction",
+      "default": 150,
+      "min": 60,
+      "max": 280,
+      "step": 5,
+      "label": {
+        "en": "Longline drop to waist (mm)",
+        "es": "Caída larga a la cintura (mm)",
+        "fr": "Descente longueline à la taille (mm)",
+        "pt": "Descida longuete à cintura (mm)"
+      },
+      "tooltip": {
+        "en": "How far the long band reaches below the cradle",
+        "es": "Cuánto baja la banda larga por debajo de la base",
+        "fr": "Jusqu'où la longue bande descend sous le berceau",
+        "pt": "Quanto a faixa longa desce abaixo do berço"
+      }
+    },
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 16,
+      "min": 8,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de tirante (mm)",
+        "fr": "Largeur de bretelle (mm)",
+        "pt": "Largura de alça (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the strap tab on cup and wing",
+        "es": "Define la lengüeta del tirante en copa y ala",
+        "fr": "Fixe la patte de bretelle sur bonnet et aile",
+        "pt": "Define a aba de alça na taça e asa"
+      }
+    },
+    {
+      "id": "negative_ease_pct",
+      "type": "slider",
+      "group": "fit",
+      "default": 14,
+      "min": 8,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Band negative ease (%)",
+        "es": "Holgura negativa de banda (%)",
+        "fr": "Aisance négative de bande (%)",
+        "pt": "Folga negativa da faixa (%)"
+      },
+      "tooltip": {
+        "en": "How much shorter than the body the band is cut",
+        "es": "Cuánto más corta que el cuerpo se corta la banda",
+        "fr": "Combien la bande est coupée plus courte que le corps",
+        "pt": "Quanto mais curta que o corpo a faixa é cortada"
+      }
+    },
+    {
+      "id": "upper_cup_frac",
+      "type": "slider",
+      "group": "fit",
+      "default": 0.44,
+      "min": 0.3,
+      "max": 0.6,
+      "step": 0.02,
+      "label": {
+        "en": "Upper section share",
+        "es": "Proporción de sección superior",
+        "fr": "Part de la section supérieure",
+        "pt": "Proporção da seção superior"
+      },
+      "tooltip": {
+        "en": "Higher gives more coverage above the apex",
+        "es": "Más alto da más cobertura sobre el ápice",
+        "fr": "Plus haut donne plus de couverture au-dessus de l'apex",
+        "pt": "Mais alto dá mais cobertura acima do ápice"
+      }
+    },
+    {
+      "id": "bone_count",
+      "type": "slider",
+      "group": "construction",
+      "default": 3,
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "label": {
+        "en": "Boning channels per side",
+        "es": "Canales de ballena por lado",
+        "fr": "Coulisses de baleines par côté",
+        "pt": "Canais de barbatana por lado"
+      },
+      "tooltip": {
+        "en": "Vertical bones in the long band — the longline structure",
+        "es": "Ballenas verticales en la banda larga — la estructura larga",
+        "fr": "Baleines verticales dans la longue bande — la structure longueline",
+        "pt": "Barbatanas verticais na faixa longa — a estrutura longuete"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Lingerie seams are narrow",
+        "es": "Las costuras de lencería son angostas",
+        "fr": "Les coutures de lingerie sont étroites",
+        "pt": "As costuras de lingerie são estreitas"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "full_cup",
+      "label": {
+        "en": "Full cup",
+        "es": "Copa completa",
+        "fr": "Bonnet complet",
+        "pt": "Taça completa"
+      },
+      "values": {
+        "upper_cup_frac": 0.56,
+        "sweep_deg": 230
+      }
+    },
+    {
+      "id": "deep_longline",
+      "label": {
+        "en": "Deep longline",
+        "es": "Larga profunda",
+        "fr": "Longueline profonde",
+        "pt": "Longuete profunda"
+      },
+      "values": {
+        "longline_drop": 240,
+        "bone_count": 5
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "bust_girth > underbust_girth",
+      "message": {
+        "en": "Bust girth must exceed underbust girth — the difference is the cup volume.",
+        "es": "El contorno de busto debe superar al de bajo busto — la diferencia es el volumen de copa.",
+        "fr": "Le tour de poitrine doit dépasser celui du dessous — la différence est le volume du bonnet.",
+        "pt": "O contorno de busto deve exceder o do sob-busto — a diferença é o volume da taça."
+      },
+      "severity": "error"
+    },
+    {
+      "expression": "cup_width * 2 < underbust_girth",
+      "message": {
+        "en": "Two wires must fit inside the underbust girth with room for the back wings.",
+        "es": "Dos varillas deben caber en el contorno bajo busto con espacio para las alas.",
+        "fr": "Deux armatures doivent tenir dans le tour de dessous avec de la place pour les ailes.",
+        "pt": "Dois aros devem caber no contorno sob o busto com espaço para as asas."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "underwire channel + vertical boning channels",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "bra-underwire",
+      "linked": true,
+      "params_map": {
+        "cup_width": "cup_width",
+        "sweep_deg": "sweep_deg",
+        "wire_d": "1.4"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "wire_line",
+        "type": "custom",
+        "label": {
+          "en": "Wire line (channel run, solved to the underwire arc)",
+          "es": "Línea de varilla (recorrido del canal, resuelto al arco de la varilla)",
+          "fr": "Ligne d'armature (parcours de coulisse, résolu sur l'arc de l'armature)",
+          "pt": "Linha do aro (percurso do canal, resolvido ao arco do aro)"
+        },
+        "edges": [
+          {
+            "piece": "cradle",
+            "edge": "wire_line"
+          },
+          {
+            "piece": "cup_lower_inner",
+            "edge": "mouth"
+          },
+          {
+            "piece": "cup_lower_outer",
+            "edge": "mouth"
+          }
+        ],
+        "parameters": [
+          "cup_width",
+          "sweep_deg"
+        ]
+      },
+      {
+        "id": "apex_seam",
+        "type": "custom",
+        "label": {
+          "en": "Apex seam (vertical cone)",
+          "es": "Costura de ápice (cono vertical)",
+          "fr": "Couture d'apex (cône vertical)",
+          "pt": "Costura de ápice (cone vertical)"
+        },
+        "edges": [
+          {
+            "piece": "cup_lower_inner",
+            "edge": "apex_seam"
+          },
+          {
+            "piece": "cup_lower_outer",
+            "edge": "apex_seam"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "underbust_girth",
+          "upper_cup_frac"
+        ]
+      },
+      {
+        "id": "longband",
+        "type": "waistband",
+        "label": {
+          "en": "Longline band to the waist (ribcage support)",
+          "es": "Banda larga a la cintura (soporte de costillas)",
+          "fr": "Bande longueline à la taille (maintien du thorax)",
+          "pt": "Faixa longuete à cintura (suporte da caixa torácica)"
+        },
+        "edges": [
+          {
+            "piece": "longline_band",
+            "edge": "lower"
+          },
+          {
+            "piece": "longline_band",
+            "edge": "top"
+          },
+          {
+            "piece": "cradle",
+            "edge": "bottom"
+          },
+          {
+            "piece": "back",
+            "edge": "bottom"
+          }
+        ],
+        "parameters": [
+          "underbust_girth",
+          "waist_girth",
+          "negative_ease_pct",
+          "longline_drop",
+          "bone_count"
+        ]
+      },
+      {
+        "id": "closure",
+        "type": "custom",
+        "label": {
+          "en": "Long centre-back hook column",
+          "es": "Columna larga de broches al centro de la espalda",
+          "fr": "Colonne d'agrafes longue au milieu dos",
+          "pt": "Coluna longa de colchetes ao centro das costas"
+        },
+        "edges": [
+          {
+            "piece": "back",
+            "edge": "center_back"
+          },
+          {
+            "piece": "longline_band",
+            "edge": "center_back"
+          }
+        ],
+        "parameters": [
+          "longline_drop"
+        ]
+      },
+      {
+        "id": "straps",
+        "type": "custom",
+        "label": {
+          "en": "Adjustable strap tabs",
+          "es": "Lengüetas de tirante ajustable",
+          "fr": "Pattes de bretelles réglables",
+          "pt": "Abas de alça ajustável"
+        },
+        "edges": [
+          {
+            "piece": "cup_upper",
+            "edge": "strap_tab"
+          },
+          {
+            "piece": "back",
+            "edge": "strap_tab"
+          }
+        ],
+        "parameters": [
+          "strap_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true,
+      "elastic_finish": true,
+      "wire_channel": true,
+      "boned": true,
+      "hook_closure": true
+    },
+    "societal_benefit": {
+      "en": "A longline underwire bra is one of the hardest garments in ready-to-wear to fit, because it must solve the underwire problem AND grip a long stretch of ribcage that varies enormously between bodies. The industry rounds both to a size grid. This cartridge solves them dimensionally: the cup and its wire channel are computed from the wearer's own underbust and bust and the channel is solved to the exact arc of the printable wire, and the long band is cut to the wearer's own underbust and waist with an explicit negative ease, boned vertically so it holds. A longline that fits — historically a couture commission — becomes a repairable commons object whose wire, boning and hook column can all be re-supplied when they fail.",
+      "es": "Un sostén largo con varilla es una de las prendas más difíciles de tallar en confección, porque debe resolver el problema de la varilla Y agarrar un tramo largo de costillas que varía enormemente entre cuerpos. La industria redondea ambos a una tabla de tallas. Este cartucho los resuelve dimensionalmente: la copa y su canal de varilla se calculan del propio bajo busto y busto y el canal se resuelve al arco exacto de la varilla imprimible, y la banda larga se corta al propio bajo busto y cintura con una holgura negativa explícita, con ballenas verticales para que sostenga. Una prenda larga que ajusta — históricamente un encargo de alta costura — se vuelve un objeto común reparable cuya varilla, ballenas y columna de broches pueden reponerse cuando fallan.",
+      "fr": "Un soutien-gorge longueline à armatures est l'un des vêtements les plus difficiles à ajuster en prêt-à-porter, car il doit résoudre le problème de l'armature ET épouser une longue portion de cage thoracique qui varie énormément selon les corps. L'industrie arrondit les deux à une grille de tailles. Ce cartouche les résout dimensionnellement : le bonnet et sa coulisse sont calculés depuis le dessous de poitrine et la poitrine propres et la coulisse est résolue sur l'arc exact de l'armature imprimable, et la longue bande est coupée aux tours de dessous et de taille propres avec une aisance négative explicite, baleinée verticalement pour tenir. Une longueline qui va — historiquement une commande de couture — devient un objet commun réparable dont l'armature, les baleines et la colonne d'agrafes peuvent toutes être remplacées.",
+      "pt": "Um sutiã longuete com aro é uma das peças mais difíceis de ajustar no prêt-à-porter, porque deve resolver o problema do aro E abraçar um longo trecho de caixa torácica que varia enormemente entre corpos. A indústria arredonda ambos para uma grade de tamanhos. Este cartucho os resolve dimensionalmente: a taça e seu canal de aro são calculados do próprio sob-busto e busto e o canal é resolvido ao arco exato do aro imprimível, e a faixa longa é cortada ao próprio sob-busto e cintura com uma folga negativa explícita, com barbatanas verticais para sustentar. Uma longuete que veste bem — historicamente uma encomenda de alta-costura — torna-se um objeto comum reparável cujo aro, barbatanas e coluna de colchetes podem ser repostos quando falham."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

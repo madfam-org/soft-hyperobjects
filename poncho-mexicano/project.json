@@ -1,0 +1,394 @@
+{
+  "project": {
+    "name": "Mexican gaban poncho",
+    "slug": "poncho-mexicano",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The Mexican gaban/sarape poncho: a CLOSED rectangle of sarape wool with a central head-slit (bocamanga), worn over the head so it hangs front and back. It differs from the FC-300 ruana in exactly the one decisive way the ruana names: a ruana is OPEN down the front, a poncho is CLOSED — a whole rectangle, slit only for the head. This cartridge draws the closed poncho honestly: it is one rectangle (often two loom half-webs joined at a centre seam, left open across the slit), the head-slit is the ONLY opening and is solved from the head girth so the head passes without swamping the neck, and the size is the drape from the shoulder span and length, with the slit optionally offset for a longer back. The sarape's woven design and its central diamond are the weaver's and are NOT drawn. Made to measure to shoulder span, poncho length and head girth. FC-400 lane 10 (heritage).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El poncho gabán/sarape mexicano: un rectángulo CERRADO de lana de sarape con una abertura central para la cabeza (bocamanga), que se pone por la cabeza y cuelga por delante y por detrás. Difiere de la ruana de FC-300 en exactamente la única forma decisiva que la ruana nombra: una ruana va ABIERTA por el frente, un poncho es CERRADO — un rectángulo entero, con abertura solo para la cabeza. Este cartucho traza el poncho cerrado con honestidad: es un rectángulo (a menudo dos medios lienzos de telar unidos por una costura central, abierta a través de la bocamanga), la abertura para la cabeza es la ÚNICA y se resuelve del contorno de cabeza para que la cabeza pase sin ahogar el cuello, y la talla es el drapeado del ancho de hombros y el largo, con la abertura opcionalmente descentrada para una espalda más larga. El diseño tejido del sarape y su diamante central son del tejedor y NO se dibujan. Hecho a medida al ancho de hombros, largo de poncho y contorno de cabeza. Carril 10 de FC-400 (patrimonio).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le poncho gaban/sarape mexicain : un rectangle FERMÉ de laine de sarape avec une ouverture centrale pour la tête (bocamanga), enfilé par la tête pour tomber devant et derrière. Il diffère de la ruana de FC-300 par exactement la seule chose décisive que la ruana nomme : une ruana est OUVERTE devant, un poncho est FERMÉ — un rectangle entier, fendu seulement pour la tête. Ce cartouche trace le poncho fermé honnêtement : c'est un rectangle (souvent deux demi-lés de métier joints par une couture centrale, laissée ouverte à travers la fente), l'ouverture pour la tête est la SEULE et est résolue depuis le tour de tête pour que la tête passe sans noyer le cou, et la taille est le drapé depuis l'envergure d'épaules et la longueur, la fente pouvant être décentrée pour un dos plus long. Le dessin tissé du sarape et son losange central sont ceux du tisserand et ne sont PAS tracés. Fait sur mesure à l'envergure d'épaules, à la longueur de poncho et au tour de tête. Couloir 10 de FC-400 (patrimoine).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O poncho gabão/sarape mexicano: um retângulo FECHADO de lã de sarape com uma abertura central para a cabeça (bocamanga), vestido pela cabeça para cair na frente e atrás. Difere da ruana de FC-300 em exatamente a única forma decisiva que a ruana nomeia: uma ruana é ABERTA na frente, um poncho é FECHADO — um retângulo inteiro, fendido apenas para a cabeça. Este cartucho desenha o poncho fechado com honestidade: é um retângulo (muitas vezes dois meios-panos de tear unidos por uma costura central, deixada aberta através da fenda), a abertura para a cabeça é a ÚNICA e é resolvida do contorno de cabeça para a cabeça passar sem afogar o pescoço, e o tamanho é o drapeado da envergadura de ombros e do comprimento, com a fenda opcionalmente descentrada para umas costas mais longas. O desenho tecido do sarape e seu losango central são do tecelão e NÃO são desenhados. Feito sob medida à envergadura de ombros, comprimento de poncho e contorno de cabeça. Corredor 10 do FC-400 (patrimônio).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "poncho",
+      "gaban",
+      "sarape",
+      "mexican",
+      "closed",
+      "heritage",
+      "bocamanga",
+      "uncut"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "poncho-ruana (Fashion Cabinet FC-300) — the OPEN-front sibling",
+          "license": "CERN-OHL-W-2.0"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Poncho + webs",
+        "es": "Poncho + lienzos",
+        "fr": "Poncho + lés",
+        "pt": "Poncho + panos"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "poncho",
+        "half_web"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "poncho",
+      "label": {
+        "en": "Poncho (closed rectangle)",
+        "es": "Poncho (rectángulo cerrado)",
+        "fr": "Poncho (rectangle fermé)",
+        "pt": "Poncho (retângulo fechado)"
+      },
+      "default_color": "#a33b28",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    },
+    {
+      "id": "half_web",
+      "label": {
+        "en": "Loom half-web",
+        "es": "Medio lienzo de telar",
+        "fr": "Demi-lé de métier",
+        "pt": "Meio-pano de tear"
+      },
+      "default_color": "#932f20",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Wearer & drape",
+        "es": "Portador y drapeado",
+        "fr": "Porteur et drapé",
+        "pt": "Portador e drapeado"
+      }
+    },
+    {
+      "id": "slit",
+      "label": {
+        "en": "Head-slit (bocamanga)",
+        "es": "Abertura de cabeza (bocamanga)",
+        "fr": "Ouverture de tête (bocamanga)",
+        "pt": "Abertura de cabeça (bocamanga)"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "shoulder_span",
+      "type": "slider",
+      "group": "body",
+      "default": 1300,
+      "min": 900,
+      "max": 1800,
+      "step": 20,
+      "label": {
+        "en": "Shoulder span / width (mm)",
+        "es": "Ancho de hombros / ancho (mm)",
+        "fr": "Envergure d'épaules / largeur (mm)",
+        "pt": "Envergadura de ombros / largura (mm)"
+      },
+      "tooltip": {
+        "en": "How far the poncho drapes out over the arms",
+        "es": "Cuánto drapea el poncho sobre los brazos",
+        "fr": "Jusqu'où le poncho drape sur les bras",
+        "pt": "Quanto o poncho drapeja sobre os braços"
+      }
+    },
+    {
+      "id": "poncho_length",
+      "type": "slider",
+      "group": "body",
+      "default": 1000,
+      "min": 600,
+      "max": 1400,
+      "step": 20,
+      "label": {
+        "en": "Poncho length (mm)",
+        "es": "Largo de poncho (mm)",
+        "fr": "Longueur de poncho (mm)",
+        "pt": "Comprimento de poncho (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to hem, each side",
+        "es": "Del hombro al borde, cada lado",
+        "fr": "De l'épaule à l'ourlet, chaque côté",
+        "pt": "Do ombro à barra, cada lado"
+      }
+    },
+    {
+      "id": "head_girth",
+      "type": "slider",
+      "group": "slit",
+      "default": 580,
+      "min": 480,
+      "max": 680,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "head_girth"
+      },
+      "label": {
+        "en": "Head girth (mm)",
+        "es": "Contorno de cabeza (mm)",
+        "fr": "Tour de tête (mm)",
+        "pt": "Contorno de cabeça (mm)"
+      },
+      "tooltip": {
+        "en": "Sizes the head-slit so the head passes without swamping the neck",
+        "es": "Dimensiona la bocamanga para que la cabeza pase sin ahogar el cuello",
+        "fr": "Dimensionne la fente pour que la tête passe sans noyer le cou",
+        "pt": "Dimensiona a fenda para a cabeça passar sem afogar o pescoço"
+      }
+    },
+    {
+      "id": "slit_offset",
+      "type": "slider",
+      "group": "slit",
+      "default": 0,
+      "min": -150,
+      "max": 150,
+      "step": 10,
+      "label": {
+        "en": "Slit offset (mm)",
+        "es": "Descentrado de abertura (mm)",
+        "fr": "Décalage de fente (mm)",
+        "pt": "Deslocamento da fenda (mm)"
+      },
+      "tooltip": {
+        "en": "Offset the head-slit for a longer back (gaban often hangs longer behind)",
+        "es": "Descentra la bocamanga para una espalda más larga (el gabán suele caer más atrás)",
+        "fr": "Décale la fente pour un dos plus long (le gaban tombe souvent plus long derrière)",
+        "pt": "Desloca a fenda para umas costas mais longas (o gabão costuma cair mais atrás)"
+      }
+    },
+    {
+      "id": "seam_type",
+      "type": "slider",
+      "group": "construction",
+      "default": 1,
+      "min": 0,
+      "max": 1,
+      "step": 1,
+      "label": {
+        "en": "Centre-seamed (1) or whole (0)",
+        "es": "Con costura central (1) o entero (0)",
+        "fr": "Couture centrale (1) ou entier (0)",
+        "pt": "Com costura central (1) ou inteiro (0)"
+      },
+      "tooltip": {
+        "en": "Two loom half-webs joined, or one whole cloth",
+        "es": "Dos medios lienzos unidos, o una tela entera",
+        "fr": "Deux demi-lés joints, ou un tissu entier",
+        "pt": "Dois meios-panos unidos, ou um tecido inteiro"
+      }
+    },
+    {
+      "id": "fringe_depth",
+      "type": "slider",
+      "group": "construction",
+      "default": 60,
+      "min": 0,
+      "max": 160,
+      "step": 10,
+      "label": {
+        "en": "Hem fringe depth (mm)",
+        "es": "Profundidad de fleco (mm)",
+        "fr": "Profondeur de frange (mm)",
+        "pt": "Profundidade de franja (mm)"
+      },
+      "tooltip": {
+        "en": "The fringe at the front and back hems",
+        "es": "El fleco en los bordes delantero y trasero",
+        "fr": "La frange aux ourlets devant et derrière",
+        "pt": "A franja nas barras frontal e traseira"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Only the centre seam is sewn (except across the slit)",
+        "es": "Solo se cose la costura central (salvo a través de la abertura)",
+        "fr": "Seule la couture centrale est cousue (sauf à travers la fente)",
+        "pt": "Apenas a costura central é costurada (exceto através da fenda)"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "long_back",
+      "label": {
+        "en": "Longer back (gaban)",
+        "es": "Espalda más larga (gabán)",
+        "fr": "Dos plus long (gaban)",
+        "pt": "Costas mais longas (gabão)"
+      },
+      "values": {
+        "slit_offset": 120
+      }
+    },
+    {
+      "id": "wide",
+      "label": {
+        "en": "Wide drape",
+        "es": "Drapeado amplio",
+        "fr": "Large drapé",
+        "pt": "Drapeado amplo"
+      },
+      "values": {
+        "shoulder_span": 1600
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "head_girth < shoulder_span",
+      "message": {
+        "en": "The head-slit is far smaller than the poncho width.",
+        "es": "La bocamanga es mucho menor que el ancho del poncho.",
+        "fr": "La fente de tête est bien plus petite que la largeur du poncho.",
+        "pt": "A fenda de cabeça é bem menor que a largura do poncho."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "head_slit",
+        "type": "neckline",
+        "label": {
+          "en": "Head-slit (bocamanga, the only opening)",
+          "es": "Bocamanga (la única abertura)",
+          "fr": "Fente de tête (bocamanga, la seule ouverture)",
+          "pt": "Fenda de cabeça (bocamanga, a única abertura)"
+        },
+        "edges": [
+          {
+            "piece": "half_web",
+            "edge": "centre_seam"
+          }
+        ],
+        "parameters": [
+          "head_girth",
+          "slit_offset"
+        ]
+      },
+      {
+        "id": "centre_seam",
+        "type": "custom",
+        "label": {
+          "en": "Centre seam (sewn except across the slit)",
+          "es": "Costura central (cosida salvo en la abertura)",
+          "fr": "Couture centrale (cousue sauf à la fente)",
+          "pt": "Costura central (costurada exceto na fenda)"
+        },
+        "edges": [
+          {
+            "piece": "half_web",
+            "edge": "centre_seam"
+          }
+        ],
+        "parameters": [
+          "seam_type"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "label": {
+          "en": "Fringed hems (front + back)",
+          "es": "Bordes con fleco (delantero + trasero)",
+          "fr": "Ourlets frangés (devant + dos)",
+          "pt": "Barras com franja (frente + dorso)"
+        },
+        "edges": [
+          {
+            "piece": "poncho",
+            "edge": "hem_front"
+          },
+          {
+            "piece": "poncho",
+            "edge": "hem_back"
+          }
+        ],
+        "parameters": [
+          "fringe_depth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": false,
+      "closed_rectangle": true,
+      "head_slit_only": true
+    },
+    "societal_benefit": {
+      "en": "The poncho is one of the most copied garments in the world, and the copies almost always miss the one fact that distinguishes it from the ruana and from a hooded blanket: it is a CLOSED rectangle, slit only for the head, sized by the drape and not by tailoring. This cartridge encodes exactly that — a whole rectangle whose only opening is a head-slit solved from the wearer's head girth, sized from the shoulder span and length, offset if the wearer wants a longer back. It draws no sarape design and no central diamond, because those carry regional Mexican identity and belong to their weavers, notably the Saltillo and Tlaxcala traditions. A poncho drafted to its own construction logic and to a real body, leaving the weave to the weaver, is the honest form a commons object can take — and it closes the fourth hundred at rank 400.",
+      "es": "El poncho es una de las prendas más copiadas del mundo, y las copias casi siempre pierden el único hecho que lo distingue de la ruana y de una cobija con capucha: es un rectángulo CERRADO, con abertura solo para la cabeza, tallado por el drapeado y no por la sastrería. Este cartucho codifica justo eso — un rectángulo entero cuya única abertura es una bocamanga resuelta del contorno de cabeza, tallada del ancho de hombros y el largo, descentrada si se quiere una espalda más larga. No dibuja diseño de sarape ni diamante central, porque esos llevan identidad regional mexicana y pertenecen a sus tejedores, notablemente las tradiciones de Saltillo y Tlaxcala. Un poncho trazado a su propia lógica de construcción y a un cuerpo real, dejando el tejido al tejedor, es la forma honesta que puede tomar un objeto común — y cierra la cuarta centena en el rango 400.",
+      "fr": "Le poncho est l'un des vêtements les plus copiés du monde, et les copies manquent presque toujours le seul fait qui le distingue de la ruana et d'une couverture à capuche : c'est un rectangle FERMÉ, fendu seulement pour la tête, taillé par le drapé et non par la couture. Ce cartouche inscrit exactement cela — un rectangle entier dont la seule ouverture est une fente de tête résolue depuis le tour de tête, dimensionnée depuis l'envergure d'épaules et la longueur, décalée si l'on veut un dos plus long. Il ne trace aucun dessin de sarape ni de losange central, car ceux-ci portent une identité régionale mexicaine et appartiennent à leurs tisserands, notamment les traditions de Saltillo et de Tlaxcala. Un poncho tracé à sa propre logique de construction et à un corps réel, laissant le tissage au tisserand, est la forme honnête qu'un objet commun peut prendre — et il clôt la quatrième centaine au rang 400.",
+      "pt": "O poncho é uma das peças mais copiadas do mundo, e as cópias quase sempre perdem o único fato que o distingue da ruana e de um cobertor com capuz: é um retângulo FECHADO, fendido apenas para a cabeça, dimensionado pelo drapeado e não pela alfaiataria. Este cartucho inscreve exatamente isso — um retângulo inteiro cuja única abertura é uma bocamanga resolvida do contorno de cabeça, dimensionada da envergadura de ombros e do comprimento, deslocada se quiser umas costas mais longas. Não desenha desenho de sarape nem losango central, porque esses carregam identidade regional mexicana e pertencem a seus tecelões, notavelmente as tradições de Saltillo e Tlaxcala. Um poncho modelado à sua própria lógica de construção e a um corpo real, deixando o tecido ao tecelão, é a forma honesta que um objeto comum pode tomar — e fecha a quarta centena no posto 400."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

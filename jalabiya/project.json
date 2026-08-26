@@ -1,0 +1,600 @@
+{
+  "project": {
+    "name": "Jalabiya (Gulf thobe)",
+    "slug": "jalabiya",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The thobe (thawb) of the Arabian Gulf — a long, ankle-length robe of white cotton poplin, straight and flowing, with long set-in sleeves, a short front placket closed by small buttons and a slim stand collar. It is cut for grace and coolness, not for fit, and this cartridge drafts it around the two facts that make a thobe hang right: the flare is SIDE GODETS, not a shaped side seam — the body panels stay straight and on grain so the robe hangs plumb, and the wide hem sweep is carried by triangular gores whose slant edges equal the side seam (so they set in without easing); and the short placket is closed by a few small buttons, the Yantra4D sew-through-button, whose button_ligne drives both the printed button and the drafted placket spacing. Made to measure to chest girth, robe length, sleeve length, hem sweep and neck girth. FC-400 lane 10 (heritage).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El thobe (thawb) del Golfo Árabe — una túnica larga hasta el tobillo de popelina de algodón blanca, recta y fluida, con mangas largas montadas, una tapeta corta al frente cerrada por botones pequeños y un cuello alto delgado. Se corta para la gracia y el frescor, no para el ajuste, y este cartucho lo traza en torno a los dos hechos que hacen caer bien un thobe: el vuelo son GODETES LATERALES, no una costura lateral entallada — los paneles del cuerpo quedan rectos y al hilo para que la túnica caiga a plomo, y el amplio vuelo del bajo lo llevan cuchillos triangulares cuyas orillas inclinadas igualan la costura lateral (así montan sin fruncir); y la tapeta corta se cierra con unos pocos botones pequeños, el sew-through-button de Yantra4D, cuyo button_ligne define tanto el botón impreso como el espaciado trazado de la tapeta. Hecho a medida al contorno de pecho, largo de túnica, largo de manga, vuelo del bajo y contorno de cuello. Carril 10 de FC-400 (patrimonio).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le thobe (thawb) du Golfe arabe — une longue robe jusqu'à la cheville en popeline de coton blanc, droite et fluide, avec de longues manches montées, une courte patte devant fermée par de petits boutons et un col montant fin. Elle est coupée pour la grâce et la fraîcheur, non pour l'ajustement, et ce cartouche la trace autour des deux faits qui font bien tomber un thobe : l'ampleur vient de GODETS LATÉRAUX, non d'une couture côté galbée — les panneaux du corps restent droits et dans le droit-fil pour que la robe tombe d'aplomb, et l'ampleur du bas est portée par des godets triangulaires dont les bords obliques égalent la couture côté (ils se montent donc sans embu) ; et la courte patte se ferme par quelques petits boutons, le sew-through-button Yantra4D, dont button_ligne pilote le bouton imprimé ET l'espacement tracé de la patte. Fait sur mesure au tour de poitrine, à la longueur de robe, à la longueur de manche, à l'ampleur du bas et au tour de cou. Couloir 10 de FC-400 (patrimoine).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O thobe (thawb) do Golfo Árabe — uma túnica longa até o tornozelo de popeline de algodão branco, reta e fluida, com mangas longas montadas, uma carcela curta na frente fechada por botões pequenos e uma gola alta fina. É cortada para a graça e o frescor, não para o ajuste, e este cartucho a modela em torno dos dois fatos que fazem um thobe cair bem: a evasê são NESGAS LATERAIS, não uma costura lateral ajustada — os painéis do corpo ficam retos e no fio para a túnica cair a prumo, e a ampla evasê da barra é levada por nesgas triangulares cujas bordas inclinadas igualam a costura lateral (montam sem franzir); e a carcela curta fecha com uns poucos botões pequenos, o sew-through-button Yantra4D, cujo button_ligne dirige tanto o botão impresso quanto o espaçamento modelado da carcela. Feito sob medida ao contorno de peito, comprimento de túnica, comprimento de manga, evasê da barra e contorno de pescoço. Corredor 10 do FC-400 (patrimônio).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "thobe",
+      "thawb",
+      "jalabiya",
+      "gulf",
+      "robe",
+      "heritage",
+      "hardware",
+      "godet"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full thobe",
+        "es": "Thobe completo",
+        "fr": "Thobe complet",
+        "pt": "Thobe completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "godet",
+        "sleeve",
+        "collar",
+        "placket"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front",
+        "es": "Delantero",
+        "fr": "Devant",
+        "pt": "Frente"
+      },
+      "default_color": "#f2f0ea",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda",
+        "fr": "Dos",
+        "pt": "Costas"
+      },
+      "default_color": "#f2f0ea",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "godet",
+      "label": {
+        "en": "Side godet",
+        "es": "Godete lateral",
+        "fr": "Godet latéral",
+        "pt": "Nesga lateral"
+      },
+      "default_color": "#e8e5dd",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche",
+        "pt": "Manga"
+      },
+      "default_color": "#e8e5dd",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Stand collar",
+        "es": "Cuello alto",
+        "fr": "Col montant",
+        "pt": "Gola alta"
+      },
+      "default_color": "#ddd9cc",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    },
+    {
+      "id": "placket",
+      "label": {
+        "en": "Front placket",
+        "es": "Tapeta delantera",
+        "fr": "Patte devant",
+        "pt": "Carcela frontal"
+      },
+      "default_color": "#ddd9cc",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps",
+        "pt": "Medidas corporais"
+      }
+    },
+    {
+      "id": "drape",
+      "label": {
+        "en": "Drape & flare",
+        "es": "Caída y vuelo",
+        "fr": "Tombé et ampleur",
+        "pt": "Caimento e evasê"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 1040,
+      "min": 800,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de peito (mm)"
+      },
+      "tooltip": {
+        "en": "The straight body is sized from this with ease",
+        "es": "El cuerpo recto se dimensiona de esto con holgura",
+        "fr": "Le corps droit est dimensionné à partir de ceci avec aisance",
+        "pt": "O corpo reto é dimensionado disto com folga"
+      }
+    },
+    {
+      "id": "robe_length",
+      "type": "slider",
+      "group": "body",
+      "default": 1400,
+      "min": 1000,
+      "max": 1800,
+      "step": 20,
+      "label": {
+        "en": "Robe length (mm)",
+        "es": "Largo de túnica (mm)",
+        "fr": "Longueur de robe (mm)",
+        "pt": "Comprimento de túnica (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to ankle",
+        "es": "De la nuca al tobillo",
+        "fr": "De la nuque à la cheville",
+        "pt": "Da nuca ao tornozelo"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "body",
+      "default": 640,
+      "min": 400,
+      "max": 760,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)",
+        "pt": "Comprimento de manga (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to wrist",
+        "es": "Del hombro a la muñeca",
+        "fr": "De l'épaule au poignet",
+        "pt": "Do ombro ao pulso"
+      }
+    },
+    {
+      "id": "bicep_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 380,
+      "min": 260,
+      "max": 600,
+      "step": 10,
+      "label": {
+        "en": "Bicep girth (mm)",
+        "es": "Contorno de bíceps (mm)",
+        "fr": "Tour de biceps (mm)",
+        "pt": "Contorno de bíceps (mm)"
+      },
+      "tooltip": {
+        "en": "Sizes the sleeve",
+        "es": "Dimensiona la manga",
+        "fr": "Dimensionne la manche",
+        "pt": "Dimensiona a manga"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 420,
+      "min": 340,
+      "max": 520,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)",
+        "pt": "Contorno de pescoço (mm)"
+      },
+      "tooltip": {
+        "en": "Sizes the slim stand collar",
+        "es": "Dimensiona el cuello alto delgado",
+        "fr": "Dimensionne le col montant fin",
+        "pt": "Dimensiona a gola alta fina"
+      }
+    },
+    {
+      "id": "hem_sweep",
+      "type": "slider",
+      "group": "drape",
+      "default": 1900,
+      "min": 1200,
+      "max": 3000,
+      "step": 50,
+      "label": {
+        "en": "Hem sweep (mm)",
+        "es": "Vuelo del bajo (mm)",
+        "fr": "Ampleur du bas (mm)",
+        "pt": "Evasê da barra (mm)"
+      },
+      "tooltip": {
+        "en": "Total hem circumference — the extra over the body is in the godets",
+        "es": "Circunferencia total del bajo — el extra sobre el cuerpo va en los godetes",
+        "fr": "Circonférence totale du bas — le surplus sur le corps est dans les godets",
+        "pt": "Circunferência total da barra — o extra sobre o corpo vai nas nesgas"
+      }
+    },
+    {
+      "id": "placket_length",
+      "type": "slider",
+      "group": "construction",
+      "default": 260,
+      "min": 120,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Placket length (mm)",
+        "es": "Largo de tapeta (mm)",
+        "fr": "Longueur de patte (mm)",
+        "pt": "Comprimento de carcela (mm)"
+      },
+      "tooltip": {
+        "en": "The short neck opening — the thobe is pulled over the head",
+        "es": "La abertura corta de cuello — el thobe se pone por la cabeza",
+        "fr": "La courte ouverture d'encolure — le thobe s'enfile par la tête",
+        "pt": "A abertura curta da gola — o thobe se veste pela cabeça"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 45,
+      "min": 25,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Collar height (mm)",
+        "es": "Alto de cuello (mm)",
+        "fr": "Hauteur de col (mm)",
+        "pt": "Altura da gola (mm)"
+      },
+      "tooltip": {
+        "en": "A slim stand collar",
+        "es": "Un cuello alto delgado",
+        "fr": "Un col montant fin",
+        "pt": "Uma gola alta fina"
+      }
+    },
+    {
+      "id": "button_ligne",
+      "type": "slider",
+      "group": "construction",
+      "default": 15,
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "label": {
+        "en": "Button size (ligne)",
+        "es": "Tamaño de botón (línea)",
+        "fr": "Taille de bouton (ligne)",
+        "pt": "Tamanho de botão (linha)"
+      },
+      "tooltip": {
+        "en": "Drives the printed button AND the placket spacing",
+        "es": "Define el botón impreso Y el espaciado de tapeta",
+        "fr": "Pilote le bouton imprimé ET l'espacement de patte",
+        "pt": "Dirige o botão impresso E o espaçamento da carcela"
+      }
+    },
+    {
+      "id": "ease_pct",
+      "type": "slider",
+      "group": "drape",
+      "default": 22,
+      "min": 10,
+      "max": 35,
+      "step": 1,
+      "label": {
+        "en": "Wearing ease (%)",
+        "es": "Holgura de uso (%)",
+        "fr": "Aisance de port (%)",
+        "pt": "Folga de uso (%)"
+      },
+      "tooltip": {
+        "en": "A thobe is cut easy through the body",
+        "es": "El thobe se corta holgado en el cuerpo",
+        "fr": "Le thobe est coupé ample au corps",
+        "pt": "O thobe é cortado folgado no corpo"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Robe seams are flat-felled",
+        "es": "Las costuras de túnica son ribeteadas planas",
+        "fr": "Les coutures de robe sont rabattues",
+        "pt": "As costuras de túnica são rebatidas"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "wide_sweep",
+      "label": {
+        "en": "Wide sweep",
+        "es": "Vuelo amplio",
+        "fr": "Ample tombé",
+        "pt": "Evasê ampla"
+      },
+      "values": {
+        "hem_sweep": 2400
+      }
+    },
+    {
+      "id": "slim",
+      "label": {
+        "en": "Slim column",
+        "es": "Columna estrecha",
+        "fr": "Colonne étroite",
+        "pt": "Coluna estreita"
+      },
+      "values": {
+        "hem_sweep": 1400,
+        "ease_pct": 14
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "placket_length < robe_length",
+      "message": {
+        "en": "The placket cannot be longer than the robe.",
+        "es": "La tapeta no puede ser más larga que la túnica.",
+        "fr": "La patte ne peut être plus longue que la robe.",
+        "pt": "A carcela não pode ser mais longa que a túnica."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "button",
+    "subtype": "sew-through button on the neck placket",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "hole_count": "4",
+        "hole_spacing": "button_ligne * 0.635 / 3",
+        "hole_dia": "1.6"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "side_godet",
+        "type": "side_seam",
+        "label": {
+          "en": "Side godet seams (the flare)",
+          "es": "Costuras de godete lateral (el vuelo)",
+          "fr": "Coutures de godet latéral (l'ampleur)",
+          "pt": "Costuras de nesga lateral (a evasê)"
+        },
+        "edges": [
+          {
+            "piece": "godet",
+            "edge": "seam_front"
+          },
+          {
+            "piece": "front",
+            "edge": "side_seam"
+          },
+          {
+            "piece": "back",
+            "edge": "side_seam"
+          }
+        ],
+        "parameters": [
+          "hem_sweep"
+        ]
+      },
+      {
+        "id": "armhole",
+        "type": "armscye",
+        "label": {
+          "en": "Armhole / sleeve cap",
+          "es": "Sisa / cabeza de manga",
+          "fr": "Emmanchure / tête de manche",
+          "pt": "Cava / cabeça de manga"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          },
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "bicep_girth"
+        ]
+      },
+      {
+        "id": "collar",
+        "type": "custom",
+        "label": {
+          "en": "Stand collar",
+          "es": "Cuello alto",
+          "fr": "Col montant",
+          "pt": "Gola alta"
+        },
+        "edges": [
+          {
+            "piece": "collar",
+            "edge": "neck_edge"
+          },
+          {
+            "piece": "front",
+            "edge": "neckline"
+          },
+          {
+            "piece": "back",
+            "edge": "neckline"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "collar_height"
+        ]
+      },
+      {
+        "id": "placket",
+        "type": "button_stand",
+        "label": {
+          "en": "Neck placket + buttons",
+          "es": "Tapeta de cuello + botones",
+          "fr": "Patte d'encolure + boutons",
+          "pt": "Carcela de gola + botões"
+        },
+        "edges": [
+          {
+            "piece": "placket",
+            "edge": "inner"
+          },
+          {
+            "piece": "front",
+            "edge": "center"
+          }
+        ],
+        "parameters": [
+          "placket_length",
+          "button_ligne"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true,
+      "godet_flare": true,
+      "button_closure": true
+    },
+    "societal_benefit": {
+      "en": "The thobe is everyday and formal dress for millions across the Arabian Peninsula, and the thing that makes a good one — the way it hangs plumb and flares clean to the ankle — is a construction fact, not a fabric one: the flare must be added as side godets so the body panels stay on grain, or the robe pulls sideways and never drapes right. This cartridge encodes that: it cuts the body straight and solves the godet flare from the target hem sweep, sizing the gores so their slant edges equal the side seam and set in without easing. It couples the placket buttons to the printable button and states its provenance plainly, inventing no regional insignia. A robe drafted to a real body, hanging the way a thobe should, with reprintable buttons, becomes a made-to-measure, repairable commons object.",
+      "es": "El thobe es vestido cotidiano y formal para millones en la Península Arábiga, y lo que hace bueno a uno — cómo cae a plomo y vuela limpio hasta el tobillo — es un hecho de construcción, no de tela: el vuelo debe añadirse como godetes laterales para que los paneles del cuerpo queden al hilo, o la túnica tira de lado y nunca cae bien. Este cartucho lo codifica: corta el cuerpo recto y resuelve el vuelo del godete del vuelo del bajo objetivo, dimensionando los cuchillos para que sus orillas inclinadas igualen la costura lateral y monten sin fruncir. Acopla los botones de la tapeta al botón imprimible y declara su procedencia con claridad, sin inventar insignia regional. Una túnica trazada a un cuerpo real, que cae como debe un thobe, con botones reimprimibles, se vuelve un objeto común, a medida y reparable.",
+      "fr": "Le thobe est un vêtement quotidien et formel pour des millions de personnes dans la péninsule Arabique, et ce qui fait un bon thobe — sa manière de tomber d'aplomb et de s'évaser net jusqu'à la cheville — est un fait de construction, non de tissu : l'ampleur doit être ajoutée en godets latéraux pour que les panneaux du corps restent dans le droit-fil, sinon la robe tire de côté et ne tombe jamais bien. Ce cartouche l'inscrit : il coupe le corps droit et résout l'ampleur du godet depuis l'ampleur du bas visée, dimensionnant les godets pour que leurs bords obliques égalent la couture côté et se montent sans embu. Il couple les boutons de patte au bouton imprimable et déclare sa provenance clairement, sans inventer d'insigne régional. Une robe tracée à un corps réel, tombant comme un thobe doit tomber, aux boutons réimprimables, devient un objet commun, sur mesure et réparable.",
+      "pt": "O thobe é vestimenta cotidiana e formal para milhões na Península Arábica, e o que torna um bom — como cai a prumo e evasê limpo até o tornozelo — é um fato de construção, não de tecido: a evasê deve ser adicionada como nesgas laterais para os painéis do corpo ficarem no fio, ou a túnica puxa de lado e nunca cai bem. Este cartucho o inscreve: corta o corpo reto e resolve a evasê da nesga a partir da evasê da barra desejada, dimensionando as nesgas para suas bordas inclinadas igualarem a costura lateral e montarem sem franzir. Acopla os botões da carcela ao botão imprimível e declara sua procedência com clareza, sem inventar insígnia regional. Uma túnica modelada a um corpo real, caindo como um thobe deve, com botões reimprimíveis, torna-se um objeto comum, sob medida e reparável."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

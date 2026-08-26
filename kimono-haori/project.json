@@ -1,0 +1,649 @@
+{
+  "project": {
+    "name": "Haori (women's lined)",
+    "slug": "kimono-haori",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The haori is the hip- or thigh-length jacket worn OPEN over a kimono, closed only by a short braided cord (haori-himo) tied between two chest loops (chi). Where the FC-300 haori drafts the everyday open haori and treats the lining as bought-by-the-bolt, THIS is the women's lined (awase) haori, and it deepens the FC-300 draft in exactly the direction it left open: it DRAFTS THE LINING (hauro) as a real co-drafted piece cut to the shell's own measured runs, because in a women's haori the lining is the expressive surface. Everything the FC-300 haori encodes is inherited — the bolt is the unit, the front overlap is solved from the bolt width and chest, the furi stays open, and the collar is solved to the measured neck run — and this adds the drafted lining and a rounded (maru) front corner. Made to measure via bolt width and chest. No hardware but the cord. FC-400 lane 10 (heritage).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El haori es la chaqueta a la altura de la cadera o el muslo que se lleva ABIERTA sobre el kimono, cerrada solo por un cordón trenzado (haori-himo) atado entre dos presillas de pecho (chi). Donde el haori de FC-300 traza el haori abierto cotidiano y trata el forro como comprado por rollo, ESTE es el haori forrado femenino (awase), y profundiza el trazado de FC-300 justo en la dirección que dejó abierta: TRAZA EL FORRO (hauro) como una pieza real cortada a los recorridos medidos del exterior, porque en un haori femenino el forro es la superficie expresiva. Todo lo que codifica el haori de FC-300 se hereda — el rollo es la unidad, el cruce delantero se resuelve del ancho de rollo y el pecho, el furi queda abierto, y el cuello se resuelve al recorrido medido del cuello — y esto añade el forro trazado y una esquina delantera redondeada (maru). Hecho a medida vía ancho de rollo y pecho. Sin herrajes salvo el cordón. Carril 10 de FC-400 (patrimonio).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le haori est la veste longueur hanche ou cuisse portée OUVERTE sur le kimono, fermée seulement par un cordon tressé (haori-himo) noué entre deux passants de poitrine (chi). Là où le haori de FC-300 trace le haori ouvert quotidien et traite la doublure comme achetée au rouleau, CELUI-CI est le haori doublé féminin (awase), et il approfondit le tracé de FC-300 dans la direction qu'il avait laissée : il TRACE LA DOUBLURE (hauro) comme une vraie pièce coupée aux parcours mesurés de l'extérieur, car dans un haori féminin la doublure est la surface expressive. Tout ce que le haori de FC-300 encode est hérité — le rouleau est l'unité, le croisement devant est résolu depuis la largeur de rouleau et la poitrine, le furi reste ouvert, et le col est résolu au parcours d'encolure mesuré — et ceci ajoute la doublure tracée et un coin devant arrondi (maru). Fait sur mesure via la largeur de rouleau et la poitrine. Sans quincaillerie sauf le cordon. Couloir 10 de FC-400 (patrimoine).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O haori é a jaqueta na altura do quadril ou da coxa usada ABERTA sobre o quimono, fechada apenas por um cordão trançado (haori-himo) amarrado entre duas presilhas de peito (chi). Onde o haori de FC-300 modela o haori aberto cotidiano e trata o forro como comprado por rolo, ESTE é o haori forrado feminino (awase), e aprofunda o traçado de FC-300 justo na direção que ele deixou aberta: MODELA O FORRO (hauro) como uma peça real cortada aos percursos medidos do exterior, porque num haori feminino o forro é a superfície expressiva. Tudo o que o haori de FC-300 codifica é herdado — o rolo é a unidade, a transpasse frontal é resolvida da largura do rolo e do peito, o furi fica aberto, e a gola é resolvida ao percurso medido da gola — e isto adiciona o forro modelado e um canto frontal arredondado (maru). Feito sob medida via largura do rolo e peito. Sem ferragens exceto o cordão. Corredor 10 do FC-400 (patrimônio).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "haori",
+      "kimono",
+      "japanese",
+      "lined",
+      "awase",
+      "heritage",
+      "commons",
+      "maru"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "haori (Fashion Cabinet FC-300 #286) — everyday open haori sibling",
+          "license": "CERN-OHL-W-2.0"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full lined haori",
+        "es": "Haori forrado completo",
+        "fr": "Haori doublé complet",
+        "pt": "Haori forrado completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "body",
+        "okumi",
+        "sleeve",
+        "collar",
+        "chi",
+        "body_lining",
+        "sleeve_lining"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body half (migoro, maru corner)",
+        "es": "Medio cuerpo (migoro, esquina maru)",
+        "fr": "Demi-corps (migoro, coin maru)",
+        "pt": "Meio-corpo (migoro, canto maru)"
+      },
+      "default_color": "#3b3b4a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "okumi",
+      "label": {
+        "en": "Front panel (okumi)",
+        "es": "Panel delantero (okumi)",
+        "fr": "Panneau devant (okumi)",
+        "pt": "Painel frontal (okumi)"
+      },
+      "default_color": "#3b3b4a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve (sode)",
+        "es": "Manga (sode)",
+        "fr": "Manche (sode)",
+        "pt": "Manga (sode)"
+      },
+      "default_color": "#33333f",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Collar (eri)",
+        "es": "Cuello (eri)",
+        "fr": "Col (eri)",
+        "pt": "Gola (eri)"
+      },
+      "default_color": "#2b2b36",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    },
+    {
+      "id": "chi",
+      "label": {
+        "en": "Cord loop (chi)",
+        "es": "Presilla de cordón (chi)",
+        "fr": "Passant de cordon (chi)",
+        "pt": "Presilha de cordão (chi)"
+      },
+      "default_color": "#2b2b36",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "body_lining",
+      "label": {
+        "en": "Body lining (hauro)",
+        "es": "Forro de cuerpo (hauro)",
+        "fr": "Doublure de corps (hauro)",
+        "pt": "Forro de corpo (hauro)"
+      },
+      "default_color": "#8a3b52",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve_lining",
+      "label": {
+        "en": "Sleeve lining",
+        "es": "Forro de manga",
+        "fr": "Doublure de manche",
+        "pt": "Forro de manga"
+      },
+      "default_color": "#8a3b52",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "bolt",
+      "label": {
+        "en": "Bolt & body",
+        "es": "Rollo y cuerpo",
+        "fr": "Rouleau et corps",
+        "pt": "Rolo e corpo"
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve & furi",
+        "es": "Manga y furi",
+        "fr": "Manche et furi",
+        "pt": "Manga e furi"
+      }
+    },
+    {
+      "id": "lined",
+      "label": {
+        "en": "Lining & finish",
+        "es": "Forro y acabado",
+        "fr": "Doublure et finition",
+        "pt": "Forro e acabamento"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bolt_width",
+      "type": "slider",
+      "group": "bolt",
+      "default": 375,
+      "min": 300,
+      "max": 700,
+      "step": 5,
+      "label": {
+        "en": "Bolt width (tanmono, mm)",
+        "es": "Ancho de rollo (tanmono, mm)",
+        "fr": "Largeur de rouleau (tanmono, mm)",
+        "pt": "Largura do rolo (tanmono, mm)"
+      },
+      "tooltip": {
+        "en": "The bolt is the unit; pieces are rectangles of it used whole",
+        "es": "El rollo es la unidad; las piezas son rectángulos de él usados enteros",
+        "fr": "Le rouleau est l'unité ; les pièces en sont des rectangles entiers",
+        "pt": "O rolo é a unidade; as peças são retângulos dele usados inteiros"
+      }
+    },
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "bolt",
+      "default": 940,
+      "min": 700,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de peito (mm)"
+      },
+      "tooltip": {
+        "en": "The front overlap is SOLVED from the bolt and this",
+        "es": "El cruce delantero se RESUELVE del rollo y esto",
+        "fr": "Le croisement devant est RÉSOLU depuis le rouleau et ceci",
+        "pt": "A transpasse frontal é RESOLVIDA do rolo e disto"
+      }
+    },
+    {
+      "id": "haori_length",
+      "type": "slider",
+      "group": "bolt",
+      "default": 830,
+      "min": 500,
+      "max": 1200,
+      "step": 10,
+      "label": {
+        "en": "Haori length (mm)",
+        "es": "Largo de haori (mm)",
+        "fr": "Longueur de haori (mm)",
+        "pt": "Comprimento de haori (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to hem",
+        "es": "Del hombro al borde",
+        "fr": "De l'épaule à l'ourlet",
+        "pt": "Do ombro à barra"
+      }
+    },
+    {
+      "id": "sleeve_depth",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 500,
+      "min": 280,
+      "max": 800,
+      "step": 10,
+      "label": {
+        "en": "Sleeve depth (mm)",
+        "es": "Profundidad de manga (mm)",
+        "fr": "Profondeur de manche (mm)",
+        "pt": "Profundidade de manga (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to the sleeve hem",
+        "es": "Del hombro al borde de manga",
+        "fr": "De l'épaule à l'ourlet de manche",
+        "pt": "Do ombro à barra da manga"
+      }
+    },
+    {
+      "id": "sleeve_reach",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 340,
+      "min": 200,
+      "max": 520,
+      "step": 10,
+      "label": {
+        "en": "Sleeve reach (mm)",
+        "es": "Alcance de manga (mm)",
+        "fr": "Allonge de manche (mm)",
+        "pt": "Alcance de manga (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to the sleeve end",
+        "es": "Del hombro al extremo de manga",
+        "fr": "De l'épaule au bout de manche",
+        "pt": "Do ombro à ponta da manga"
+      }
+    },
+    {
+      "id": "furi_open",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 220,
+      "min": 0,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Furi opening (mm)",
+        "es": "Abertura furi (mm)",
+        "fr": "Ouverture furi (mm)",
+        "pt": "Abertura furi (mm)"
+      },
+      "tooltip": {
+        "en": "The unsewn opening below the arm — longer on a women's haori",
+        "es": "La abertura sin coser bajo el brazo — más larga en un haori femenino",
+        "fr": "L'ouverture non cousue sous le bras — plus longue sur un haori féminin",
+        "pt": "A abertura não costurada abaixo do braço — mais longa num haori feminino"
+      }
+    },
+    {
+      "id": "collar_finished",
+      "type": "slider",
+      "group": "construction",
+      "default": 55,
+      "min": 25,
+      "max": 110,
+      "step": 5,
+      "label": {
+        "en": "Collar finished width (mm)",
+        "es": "Ancho terminado de cuello (mm)",
+        "fr": "Largeur finie de col (mm)",
+        "pt": "Largura acabada de gola (mm)"
+      },
+      "tooltip": {
+        "en": "The maeeri visible width; cut double for the fold-back",
+        "es": "El ancho visible del maeeri; cortado doble para el doblez",
+        "fr": "La largeur visible du maeeri ; coupé double pour le rabat",
+        "pt": "A largura visível do maeeri; cortado duplo para a dobra"
+      }
+    },
+    {
+      "id": "neck_drop",
+      "type": "slider",
+      "group": "construction",
+      "default": 95,
+      "min": 40,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Back neck drop (mm)",
+        "es": "Caída de cuello trasero (mm)",
+        "fr": "Chute d'encolure dos (mm)",
+        "pt": "Queda de gola traseira (mm)"
+      },
+      "tooltip": {
+        "en": "The back neck scoop",
+        "es": "El escote trasero",
+        "fr": "L'encolure dos",
+        "pt": "O decote traseiro"
+      }
+    },
+    {
+      "id": "chi_drop",
+      "type": "slider",
+      "group": "construction",
+      "default": 300,
+      "min": 150,
+      "max": 520,
+      "step": 10,
+      "label": {
+        "en": "Cord loop height (mm)",
+        "es": "Altura de presilla (mm)",
+        "fr": "Hauteur de passant (mm)",
+        "pt": "Altura da presilha (mm)"
+      },
+      "tooltip": {
+        "en": "Where the chi loops sit on each front",
+        "es": "Dónde se asientan las presillas chi en cada delantero",
+        "fr": "Où les passants chi se placent sur chaque devant",
+        "pt": "Onde as presilhas chi se assentam em cada frente"
+      }
+    },
+    {
+      "id": "maru_radius",
+      "type": "slider",
+      "group": "lined",
+      "default": 40,
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Rounded front corner (maru, mm)",
+        "es": "Esquina delantera redondeada (maru, mm)",
+        "fr": "Coin devant arrondi (maru, mm)",
+        "pt": "Canto frontal arredondado (maru, mm)"
+      },
+      "tooltip": {
+        "en": "The women's haori softens the lower front corner",
+        "es": "El haori femenino suaviza la esquina delantera inferior",
+        "fr": "Le haori féminin adoucit le coin devant inférieur",
+        "pt": "O haori feminino suaviza o canto frontal inferior"
+      }
+    },
+    {
+      "id": "lining_reduction",
+      "type": "slider",
+      "group": "lined",
+      "default": 4,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Lining reduction (mm)",
+        "es": "Reducción de forro (mm)",
+        "fr": "Réduction de doublure (mm)",
+        "pt": "Redução de forro (mm)"
+      },
+      "tooltip": {
+        "en": "How much smaller the lining is cut so it does not peek",
+        "es": "Cuánto más pequeño se corta el forro para que no asome",
+        "fr": "De combien la doublure est coupée plus petite pour ne pas dépasser",
+        "pt": "Quanto menor o forro é cortado para não aparecer"
+      }
+    },
+    {
+      "id": "turn_of_cloth",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Turn of cloth (mm)",
+        "es": "Vuelta de tela (mm)",
+        "fr": "Retour de tissu (mm)",
+        "pt": "Volta de tecido (mm)"
+      },
+      "tooltip": {
+        "en": "The fold-back allowance for the maeeri",
+        "es": "El margen del doblez para el maeeri",
+        "fr": "Le rentré pour le maeeri",
+        "pt": "A margem da dobra para o maeeri"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 6,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Hand-sewn so it can be unpicked and washed flat",
+        "es": "Cosido a mano para poder descoserlo y lavarlo plano",
+        "fr": "Cousu main pour pouvoir le découdre et le laver à plat",
+        "pt": "Costurado à mão para poder descosê-lo e lavá-lo plano"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 30,
+      "min": 10,
+      "max": 80,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Rentré d'ourlet (mm)",
+        "pt": "Margem de barra (mm)"
+      },
+      "tooltip": {
+        "en": "Body and sleeve hems",
+        "es": "Dobladillos de cuerpo y manga",
+        "fr": "Ourlets de corps et de manche",
+        "pt": "Barras de corpo e manga"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "long_furi",
+      "label": {
+        "en": "Long furi (younger women's)",
+        "es": "Furi largo (mujer joven)",
+        "fr": "Furi long (jeune femme)",
+        "pt": "Furi longo (mulher jovem)"
+      },
+      "values": {
+        "furi_open": 320,
+        "sleeve_depth": 620
+      }
+    },
+    {
+      "id": "square_corner",
+      "label": {
+        "en": "Square front corner",
+        "es": "Esquina delantera cuadrada",
+        "fr": "Coin devant carré",
+        "pt": "Canto frontal quadrado"
+      },
+      "values": {
+        "maru_radius": 0
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "furi_open < sleeve_depth",
+      "message": {
+        "en": "The furi opening cannot swallow the whole sleeve depth.",
+        "es": "La abertura furi no puede tragarse toda la profundidad de manga.",
+        "fr": "L'ouverture furi ne peut engloutir toute la profondeur de manche.",
+        "pt": "A abertura furi não pode engolir toda a profundidade da manga."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "furi",
+        "type": "custom",
+        "label": {
+          "en": "Sleeve attachment (furi kept open)",
+          "es": "Fijación de manga (furi abierto)",
+          "fr": "Attache de manche (furi ouvert)",
+          "pt": "Fixação de manga (furi aberto)"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "attach"
+          },
+          {
+            "piece": "body",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "sleeve_depth",
+          "furi_open"
+        ]
+      },
+      {
+        "id": "collar",
+        "type": "custom",
+        "label": {
+          "en": "Collar (maeeri, solved to the neck run)",
+          "es": "Cuello (maeeri, resuelto al recorrido de cuello)",
+          "fr": "Col (maeeri, résolu au parcours d'encolure)",
+          "pt": "Gola (maeeri, resolvida ao percurso da gola)"
+        },
+        "edges": [
+          {
+            "piece": "collar",
+            "edge": "neck_edge"
+          },
+          {
+            "piece": "body",
+            "edge": "back_neck"
+          },
+          {
+            "piece": "okumi",
+            "edge": "front_edge"
+          }
+        ],
+        "parameters": [
+          "collar_finished",
+          "turn_of_cloth"
+        ]
+      },
+      {
+        "id": "lining",
+        "type": "custom",
+        "label": {
+          "en": "Drafted lining (hauro) to the shell",
+          "es": "Forro trazado (hauro) al exterior",
+          "fr": "Doublure tracée (hauro) à l'extérieur",
+          "pt": "Forro modelado (hauro) ao exterior"
+        },
+        "edges": [
+          {
+            "piece": "body_lining",
+            "edge": "side"
+          },
+          {
+            "piece": "body",
+            "edge": "side"
+          },
+          {
+            "piece": "sleeve_lining",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "lining_reduction"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": false,
+      "bolt_unit": true,
+      "drafted_lining": true,
+      "maru_corner": true
+    },
+    "societal_benefit": {
+      "en": "The FC-300 haori got the hardest thing right — keeping the bolt as the unit so the unpick-wash-resew logic survives — but it left the lining as bolt goods, and in a women's haori the lining is the whole point: it is the expressive surface, plain outside and patterned within. This cartridge drafts that lining as a real member of the pattern, cut to the shell's own measured runs so it hangs flat and does not peek, and declares it against the shell so it is verified rather than assumed. It adds the rounded maru front corner of the women's haori, inherits the FC-300 tanmono solve, and repeats that draft's refusal to place a kamon crest. A lined haori whose lining is drafted to the body, hand-sewable and reversible-clean, is a made-to-measure commons object that honours both the garment's construction and its upkeep.",
+      "es": "El haori de FC-300 acertó en lo más difícil — mantener el rollo como unidad para que sobreviva la lógica de descoser-lavar-recoser — pero dejó el forro como género de rollo, y en un haori femenino el forro es todo el sentido: es la superficie expresiva, lisa por fuera y con dibujo por dentro. Este cartucho traza ese forro como un miembro real del patrón, cortado a los recorridos medidos del exterior para que caiga plano y no asome, y lo declara contra el exterior para que se verifique en vez de suponerse. Añade la esquina delantera redondeada maru del haori femenino, hereda el solve tanmono de FC-300, y repite la negativa de ese trazado a colocar un escudo kamon. Un haori forrado cuyo forro se traza al cuerpo, cosible a mano y limpio por ambos lados, es un objeto común a medida que honra tanto la construcción de la prenda como su mantenimiento.",
+      "fr": "Le haori de FC-300 a réussi le plus difficile — garder le rouleau comme unité pour que la logique découdre-laver-recoudre survive — mais il a laissé la doublure comme métrage au rouleau, et dans un haori féminin la doublure est tout l'intérêt : c'est la surface expressive, unie dehors et à motif dedans. Ce cartouche trace cette doublure comme un vrai membre du patron, coupée aux parcours mesurés de l'extérieur pour qu'elle tombe à plat et ne dépasse pas, et la déclare contre l'extérieur pour qu'elle soit vérifiée et non supposée. Il ajoute le coin devant arrondi maru du haori féminin, hérite du solve tanmono de FC-300, et répète le refus de ce tracé de placer un blason kamon. Un haori doublé dont la doublure est tracée au corps, cousable main et propre des deux côtés, est un objet commun sur mesure qui honore à la fois la construction du vêtement et son entretien.",
+      "pt": "O haori de FC-300 acertou no mais difícil — manter o rolo como unidade para a lógica descoser-lavar-recoser sobreviver — mas deixou o forro como metragem de rolo, e num haori feminino o forro é todo o sentido: é a superfície expressiva, lisa por fora e com desenho por dentro. Este cartucho modela esse forro como um membro real do molde, cortado aos percursos medidos do exterior para cair plano e não aparecer, e o declara contra o exterior para ser verificado em vez de suposto. Adiciona o canto frontal arredondado maru do haori feminino, herda o solve tanmono de FC-300, e repete a recusa desse traçado a colocar um brasão kamon. Um haori forrado cujo forro é modelado ao corpo, costurável à mão e limpo dos dois lados, é um objeto comum sob medida que honra tanto a construção da peça quanto sua manutenção."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

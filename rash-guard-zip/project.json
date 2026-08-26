@@ -1,0 +1,559 @@
+{
+  "project": {
+    "name": "Zip-front rash guard",
+    "slug": "rash-guard-zip",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A zip-front long-sleeve rash guard in swim-lycra: the second-skin UV surf top, split down the centre front and closed with a full separating zipper so it can be got on and off wet without dragging over the head. It deepens the FC-100 pull-on rash guard (no hardware) into the zip version surfers and swimmers actually reach for. The zip is SOLVED to the front length: zip_length IS the drafted centre-front run from hem to collar, so the Yantra4D zipper is exactly as long as the opening it closes; zip_length drives both the hardware and the garment's own centre-front interface. Negative-ease everywhere so the lycra grips, except the stabilised zip line (the tape is not stretchy). Flatlock seams for chafe-free wear. Made to measure to chest, waist and hip girths plus back and sleeve lengths. FC-400 lane 9 (active).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una licra con cierre frontal de manga larga en licra de baño: el top UV de segunda piel, abierto al centro delantero y cerrado con un cierre separable completo para poder ponérselo y quitárselo mojado sin jalarlo por la cabeza. Profundiza la licra de FC-100 que se pone jalando (sin herrajes) en la versión con cierre que surfistas y nadadores realmente eligen. El cierre se RESUELVE al largo delantero: zip_length ES el recorrido de centro delantero trazado del borde al cuello, así el cierre de Yantra4D es exactamente tan largo como la abertura que cierra; zip_length define tanto el herraje como la interfaz de centro delantero de la prenda. Holgura negativa en todo para que la licra agarre, salvo la línea de cierre estabilizada (la cinta no estira). Costuras flatlock para uso sin rozaduras. Hecho a medida a los contornos de pecho, cintura y cadera más el largo de espalda y de manga. Carril 9 de FC-400 (activo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un top anti-UV zippé à manches longues en lycra de bain : le top UV seconde peau, fendu au milieu devant et fermé par une fermeture séparable complète pour l'enfiler et l'ôter mouillé sans le passer par la tête. Il approfondit le top anti-UV de FC-100 qui s'enfile (sans quincaillerie) en la version zippée que surfeurs et nageurs choisissent vraiment. La fermeture est RÉSOLUE à la longueur devant : zip_length EST le parcours milieu devant tracé de l'ourlet au col, de sorte que la fermeture Yantra4D est exactement aussi longue que l'ouverture qu'elle ferme ; zip_length pilote la quincaillerie ET l'interface milieu devant du vêtement. Aisance négative partout pour que le lycra tienne, sauf la ligne de fermeture stabilisée (le ruban ne s'étire pas). Coutures flatlock pour un port sans frottement. Fait sur mesure aux tours de poitrine, de taille et de hanche plus les longueurs de dos et de manche. Couloir 9 de FC-400 (actif).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma camiseta de lycra com zíper frontal de manga longa em lycra de banho: o top UV de segunda pele, aberto no centro frontal e fechado com um zíper separável completo para vestir e tirar molhado sem puxar pela cabeça. Aprofunda a camiseta de lycra de FC-100 que se veste puxando (sem ferragens) na versão com zíper que surfistas e nadadores de fato escolhem. O zíper é RESOLVIDO ao comprimento frontal: zip_length É o percurso do centro frontal modelado da barra ao colarinho, então o zíper Yantra4D é exatamente tão longo quanto a abertura que fecha; zip_length dirige tanto a ferragem quanto a interface de centro frontal da peça. Folga negativa em tudo para a lycra firmar, exceto a linha do zíper estabilizada (a fita não estica). Costuras flatlock para uso sem atrito. Feito sob medida aos contornos de peito, cintura e quadril mais os comprimentos de costas e de manga. Corredor 9 do FC-400 (ativo).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "rash-guard",
+      "zip-front",
+      "surf",
+      "uv",
+      "swim-lycra",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "rash-guard (Fashion Cabinet FC-100 #57) — UV top lineage",
+          "license": "CERN-OHL-W-2.0"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full rash guard",
+        "es": "Licra completa",
+        "fr": "Top complet",
+        "pt": "Camiseta completa"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front_left",
+        "front_right",
+        "back",
+        "sleeve",
+        "collar"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front_left",
+      "label": {
+        "en": "Front left (zip edge)",
+        "es": "Delantero izquierdo (borde de cierre)",
+        "fr": "Devant gauche (bord de fermeture)",
+        "pt": "Frente esquerda (borda do zíper)"
+      },
+      "default_color": "#245e6e",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    },
+    {
+      "id": "front_right",
+      "label": {
+        "en": "Front right (zip edge)",
+        "es": "Delantero derecho (borde de cierre)",
+        "fr": "Devant droit (bord de fermeture)",
+        "pt": "Frente direita (borda do zíper)"
+      },
+      "default_color": "#245e6e",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back panel",
+        "es": "Panel trasero",
+        "fr": "Panneau dos",
+        "pt": "Painel traseiro"
+      },
+      "default_color": "#1f5060",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche",
+        "pt": "Manga"
+      },
+      "default_color": "#2e7a8c",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Stand collar",
+        "es": "Cuello alto",
+        "fr": "Col montant",
+        "pt": "Gola alta"
+      },
+      "default_color": "#1f5060",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps",
+        "pt": "Medidas corporais"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 960,
+      "min": 700,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de peito (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest — sizes the panels at negative ease",
+        "es": "Pecho completo — dimensiona los paneles con holgura negativa",
+        "fr": "Poitrine complète — dimensionne les panneaux en aisance négative",
+        "pt": "Peito completo — dimensiona os painéis com folga negativa"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 840,
+      "min": 600,
+      "max": 1400,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)",
+        "pt": "Contorno de cintura (mm)"
+      },
+      "tooltip": {
+        "en": "Natural waist — the shaping reference",
+        "es": "Cintura natural — la referencia de entalle",
+        "fr": "Taille naturelle — le repère de galbe",
+        "pt": "Cintura natural — a referência de modelagem"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 980,
+      "min": 700,
+      "max": 1600,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanche (mm)",
+        "pt": "Contorno de quadril (mm)"
+      },
+      "tooltip": {
+        "en": "Fullest hip — the hem must clear it",
+        "es": "Cadera más llena — el borde debe librarla",
+        "fr": "Hanche la plus forte — l'ourlet doit la dégager",
+        "pt": "Quadril mais cheio — a barra deve liberá-lo"
+      }
+    },
+    {
+      "id": "back_length",
+      "type": "slider",
+      "group": "body",
+      "default": 620,
+      "min": 420,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Back length (mm)",
+        "es": "Largo de espalda (mm)",
+        "fr": "Longueur de dos (mm)",
+        "pt": "Comprimento das costas (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to hem — the zip length is solved from this",
+        "es": "De la nuca al borde — el largo del cierre se resuelve de esto",
+        "fr": "De la nuque à l'ourlet — la longueur de fermeture en découle",
+        "pt": "Da nuca à barra — o comprimento do zíper é resolvido disto"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "body",
+      "default": 560,
+      "min": 300,
+      "max": 780,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)",
+        "pt": "Comprimento de manga (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to wrist",
+        "es": "Del hombro a la muñeca",
+        "fr": "De l'épaule au poignet",
+        "pt": "Do ombro ao pulso"
+      }
+    },
+    {
+      "id": "bicep_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 340,
+      "min": 220,
+      "max": 600,
+      "step": 10,
+      "label": {
+        "en": "Bicep girth (mm)",
+        "es": "Contorno de bíceps (mm)",
+        "fr": "Tour de biceps (mm)",
+        "pt": "Contorno de bíceps (mm)"
+      },
+      "tooltip": {
+        "en": "Sizes the sleeve at negative ease",
+        "es": "Dimensiona la manga con holgura negativa",
+        "fr": "Dimensionne la manche en aisance négative",
+        "pt": "Dimensiona a manga com folga negativa"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 400,
+      "min": 300,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)",
+        "pt": "Contorno de pescoço (mm)"
+      },
+      "tooltip": {
+        "en": "The collar opening — not compressed, for breathing",
+        "es": "La abertura del cuello — sin comprimir, para respirar",
+        "fr": "L'ouverture du col — non comprimée, pour respirer",
+        "pt": "A abertura da gola — não comprimida, para respirar"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 60,
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Collar height (mm)",
+        "es": "Alto de cuello (mm)",
+        "fr": "Hauteur de col (mm)",
+        "pt": "Altura da gola (mm)"
+      },
+      "tooltip": {
+        "en": "The zip continues to the collar top",
+        "es": "El cierre continúa hasta el borde del cuello",
+        "fr": "La fermeture continue jusqu'au haut du col",
+        "pt": "O zíper continua até o topo da gola"
+      }
+    },
+    {
+      "id": "negative_ease_pct",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 4,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Negative ease (%)",
+        "es": "Holgura negativa (%)",
+        "fr": "Aisance négative (%)",
+        "pt": "Folga negativa (%)"
+      },
+      "tooltip": {
+        "en": "The lycra grips by being cut smaller than the body",
+        "es": "La licra agarra al cortarse más pequeña que el cuerpo",
+        "fr": "Le lycra tient en étant coupé plus petit que le corps",
+        "pt": "A lycra firma sendo cortada menor que o corpo"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Swim seams are narrow and flatlocked",
+        "es": "Las costuras de baño son angostas y con flatlock",
+        "fr": "Les coutures de bain sont étroites et en flatlock",
+        "pt": "As costuras de banho são estreitas e com flatlock"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "surf",
+      "label": {
+        "en": "Surf fit",
+        "es": "Ajuste de surf",
+        "fr": "Coupe surf",
+        "pt": "Caimento de surfe"
+      },
+      "values": {
+        "negative_ease_pct": 14,
+        "collar_height": 80
+      }
+    },
+    {
+      "id": "swim",
+      "label": {
+        "en": "Swim fit",
+        "es": "Ajuste de natación",
+        "fr": "Coupe natation",
+        "pt": "Caimento de natação"
+      },
+      "values": {
+        "negative_ease_pct": 8,
+        "collar_height": 40
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "chest_girth > waist_girth",
+      "message": {
+        "en": "Chest girth should exceed waist girth for the body shape.",
+        "es": "El contorno de pecho debe superar al de cintura para la forma del cuerpo.",
+        "fr": "Le tour de poitrine doit dépasser celui de taille pour la forme du corps.",
+        "pt": "O contorno de peito deve exceder o de cintura para a forma do corpo."
+      },
+      "severity": "warning"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "zipper",
+    "subtype": "separating front zipper",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "zipper",
+      "linked": true,
+      "params_map": {
+        "zip_length": "back_length"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "center_front",
+        "type": "custom",
+        "label": {
+          "en": "Centre-front zip line (solved to zip_length)",
+          "es": "Línea de cierre de centro delantero (resuelta a zip_length)",
+          "fr": "Ligne de fermeture milieu devant (résolue sur zip_length)",
+          "pt": "Linha do zíper de centro frontal (resolvida a zip_length)"
+        },
+        "edges": [
+          {
+            "piece": "front_left",
+            "edge": "center_front"
+          },
+          {
+            "piece": "front_right",
+            "edge": "center_front"
+          }
+        ],
+        "parameters": [
+          "back_length",
+          "collar_height"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "custom",
+        "label": {
+          "en": "Side seams (fronts to back)",
+          "es": "Costuras laterales (delanteros a trasero)",
+          "fr": "Coutures côté (devants au dos)",
+          "pt": "Costuras laterais (frentes ao dorso)"
+        },
+        "edges": [
+          {
+            "piece": "front_left",
+            "edge": "side_seam"
+          },
+          {
+            "piece": "back",
+            "edge": "side_seam"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "negative_ease_pct"
+        ]
+      },
+      {
+        "id": "armhole",
+        "type": "armscye",
+        "label": {
+          "en": "Armhole / sleeve cap",
+          "es": "Sisa / cabeza de manga",
+          "fr": "Emmanchure / tête de manche",
+          "pt": "Cava / cabeça de manga"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          },
+          {
+            "piece": "front_left",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "bicep_girth",
+          "back_length"
+        ]
+      },
+      {
+        "id": "collar",
+        "type": "custom",
+        "label": {
+          "en": "Stand collar (zip continues to its top)",
+          "es": "Cuello alto (el cierre continúa a su borde)",
+          "fr": "Col montant (la fermeture continue à son haut)",
+          "pt": "Gola alta (o zíper continua ao seu topo)"
+        },
+        "edges": [
+          {
+            "piece": "collar",
+            "edge": "neck_edge"
+          },
+          {
+            "piece": "front_left",
+            "edge": "neckline"
+          },
+          {
+            "piece": "back",
+            "edge": "neckline"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "collar_height"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": true,
+      "elastic_finish": false,
+      "zipper_bridge": true,
+      "pull_on": false
+    },
+    "societal_benefit": {
+      "en": "A rash guard's job is chafe-free UV protection in and out of the water, and its worst everyday failure is the fight to get a wet one over the head — which is why the zip-front version exists and why cheap ones get the zip wrong, cutting it too short so it gaps at the collar or too long so it buckles the hem. This cartridge removes the guess: the zipper length IS the drafted centre-front run plus the collar, so the printable zipper is exactly as long as the opening it closes, and the negative-ease second skin is stabilised only along the non-stretch zip line while the rest keeps its grip. A UV top that fits, zips cleanly, and whose zipper can be reprinted becomes a made-to-measure, repairable commons object.",
+      "es": "El trabajo de una licra es protección UV sin rozaduras dentro y fuera del agua, y su peor falla cotidiana es la lucha por meter una mojada por la cabeza — por eso existe la versión con cierre frontal y por eso las baratas equivocan el cierre, cortándolo muy corto y dejando hueco en el cuello o muy largo y arrugando el borde. Este cartucho quita la adivinanza: el largo del cierre ES el recorrido de centro delantero trazado más el cuello, así el cierre imprimible es exactamente tan largo como la abertura que cierra, y la segunda piel de holgura negativa se estabiliza solo a lo largo de la línea de cierre sin estiramiento mientras el resto conserva su agarre. Un top UV que ajusta, cierra limpio y cuyo cierre puede reimprimirse se vuelve un objeto común, a medida y reparable.",
+      "fr": "Le rôle d'un top anti-UV est une protection UV sans frottement dans et hors de l'eau, et son pire échec quotidien est la lutte pour en enfiler un mouillé par la tête — d'où la version zippée et d'où les modèles bon marché ratent la fermeture, la coupant trop courte pour qu'elle bâille au col ou trop longue pour qu'elle plisse l'ourlet. Ce cartouche supprime la devinette : la longueur de fermeture EST le parcours milieu devant tracé plus le col, de sorte que la fermeture imprimable est exactement aussi longue que l'ouverture qu'elle ferme, et la seconde peau en aisance négative n'est stabilisée que le long de la ligne de fermeture non extensible tandis que le reste garde sa tenue. Un top UV qui va, se ferme net et dont la fermeture peut être réimprimée devient un objet commun, sur mesure et réparable.",
+      "pt": "A função de uma camiseta de lycra é proteção UV sem atrito dentro e fora da água, e sua pior falha cotidiana é a luta para enfiar uma molhada pela cabeça — por isso existe a versão com zíper frontal e por isso as baratas erram o zíper, cortando-o curto demais deixando vão na gola ou longo demais franzindo a barra. Este cartucho tira o palpite: o comprimento do zíper É o percurso de centro frontal modelado mais a gola, então o zíper imprimível é exatamente tão longo quanto a abertura que fecha, e a segunda pele de folga negativa é estabilizada apenas ao longo da linha do zíper sem elasticidade enquanto o resto mantém sua pega. Um top UV que veste bem, fecha limpo e cujo zíper pode ser reimpresso torna-se um objeto comum, sob medida e reparável."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

@@ -1,0 +1,530 @@
+{
+  "project": {
+    "name": "Clip-down nursing bra",
+    "slug": "nursing-clip-bra",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A wireless clip-down nursing bra in cotton-jersey: a soft cup that drops for feeding by unclipping a ring at the top, hinged at the band so it re-seats, over a stable support sling and a wide soft band. It deepens the FC-300 nursing bra (a drop-cup on a wired cradle) into the softer, wire-free everyday version worn around the clock. Three things are specific to nursing and drawn honestly: the drop is a ONE-HANDED clip at a ring (strap_w drives both the strap's cut width and the ring/slider channel, so it threads by construction, and it must open with the other arm holding a baby); there is NO wire on the milk ducts, because a wire worn constantly can block a duct and cause mastitis — a medical risk, not a comfort preference; and the cup drops on a hinge that keeps it seated, not through a hole. Made to measure to underbust and bust girths. FC-400 lane 9 (structured intimates).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un sostén de lactancia sin aro con broche en algodón-jersey: una copa suave que se baja para amamantar al desabrochar un anillo en la parte superior, con bisagra en la banda para que se reasiente, sobre un sostén de apoyo estable y una banda ancha y suave. Profundiza el sostén de lactancia de FC-300 (copa desplegable sobre base con varilla) en la versión cotidiana más suave y sin aro, usada a toda hora. Tres cosas propias de la lactancia están trazadas con honestidad: el descenso es un broche a UNA MANO en un anillo (strap_w define tanto el ancho de corte del tirante como el canal del anillo/ajustador, así enhebra por construcción, y debe abrirse con el otro brazo sosteniendo al bebé); NO hay aro sobre los conductos de leche, porque un aro usado constantemente puede bloquear un conducto y causar mastitis — un riesgo médico, no un gusto; y la copa baja sobre una bisagra que la mantiene asentada, no por un agujero. Hecho a medida a los contornos bajo busto y busto. Carril 9 de FC-400 (lencería estructurada).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un soutien-gorge d'allaitement sans armature à clips en coton-jersey : un bonnet souple qui s'abaisse pour l'allaitement en déclipsant un anneau en haut, articulé à la bande pour se replacer, sur une élingue de soutien stable et une bande large et douce. Il approfondit le soutien-gorge d'allaitement de FC-300 (bonnet rabattable sur berceau à armature) en la version quotidienne plus douce et sans armature, portée en continu. Trois choses propres à l'allaitement sont tracées honnêtement : l'ouverture est un clip à UNE MAIN sur un anneau (strap_w pilote la largeur de coupe de la bretelle ET le passage de l'anneau/curseur, il s'enfile par construction, et doit s'ouvrir avec l'autre bras tenant un bébé) ; il n'y a PAS d'armature sur les canaux galactophores, car une armature portée en continu peut boucher un canal et causer une mastite — un risque médical, non une préférence ; et le bonnet s'abaisse sur une charnière qui le maintient en place, non par un trou. Fait sur mesure aux tours de dessous de poitrine et de poitrine. Couloir 9 de FC-400 (lingerie structurée).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um sutiã de amamentação sem aro com clipe em algodão-jérsei: uma taça macia que baixa para amamentar ao desprender um anel no topo, articulada à faixa para se reassentar, sobre uma tira de suporte estável e uma faixa larga e macia. Aprofunda o sutiã de amamentação de FC-300 (taça rebatível sobre berço com aro) na versão cotidiana mais macia e sem aro, usada o tempo todo. Três coisas próprias da amamentação são desenhadas com honestidade: a abertura é um clipe de UMA MÃO num anel (strap_w dirige tanto a largura de corte da alça quanto o canal do anel/ajustador, então enfia por construção, e deve abrir com o outro braço segurando um bebê); NÃO há aro sobre os ductos de leite, porque um aro usado constantemente pode bloquear um ducto e causar mastite — um risco médico, não uma preferência; e a taça baixa sobre uma dobradiça que a mantém assentada, não por um buraco. Feito sob medida aos contornos sob o busto e busto. Corredor 9 do FC-400 (lingerie estruturada).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "nursing-bra",
+      "clip-down",
+      "wireless",
+      "maternity",
+      "cotton-jersey",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "nursing-bra (Fashion Cabinet FC-300 #225) — drop-cup lineage",
+          "license": "CERN-OHL-W-2.0"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full nursing bra",
+        "es": "Sostén de lactancia completo",
+        "fr": "Soutien-gorge d'allaitement complet",
+        "pt": "Sutiã de amamentação completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "cup",
+        "sling",
+        "band",
+        "back",
+        "strap"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "cup",
+      "label": {
+        "en": "Drop cup (hinged, clips at apex)",
+        "es": "Copa desplegable (con bisagra, broche en ápice)",
+        "fr": "Bonnet rabattable (articulé, clip à l'apex)",
+        "pt": "Taça rebatível (articulada, clipe no ápice)"
+      },
+      "default_color": "#c8a2b0",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sling",
+      "label": {
+        "en": "Support sling (stays put)",
+        "es": "Sostén de apoyo (permanece)",
+        "fr": "Élingue de soutien (reste en place)",
+        "pt": "Tira de suporte (permanece)"
+      },
+      "default_color": "#b98a9c",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "band",
+      "label": {
+        "en": "Underband",
+        "es": "Banda inferior",
+        "fr": "Bande inférieure",
+        "pt": "Faixa inferior"
+      },
+      "default_color": "#8a5a72",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back wing",
+        "es": "Ala trasera",
+        "fr": "Aile dos",
+        "pt": "Asa traseira"
+      },
+      "default_color": "#8a5a72",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "strap",
+      "label": {
+        "en": "Nursing strap",
+        "es": "Tirante de lactancia",
+        "fr": "Bretelle d'allaitement",
+        "pt": "Alça de amamentação"
+      },
+      "default_color": "#9c6a82",
+      "cut": {
+        "quantity": 2,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps",
+        "pt": "Medidas corporais"
+      }
+    },
+    {
+      "id": "cup",
+      "label": {
+        "en": "Cup & sling",
+        "es": "Copa y sostén",
+        "fr": "Bonnet et élingue",
+        "pt": "Taça e tira"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "underbust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 800,
+      "min": 600,
+      "max": 1250,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "underbust_girth"
+      },
+      "label": {
+        "en": "Underbust girth (mm)",
+        "es": "Contorno bajo busto (mm)",
+        "fr": "Tour de dessous de poitrine (mm)",
+        "pt": "Contorno sob o busto (mm)"
+      },
+      "tooltip": {
+        "en": "The band ring — the support, with the sling; never a wire",
+        "es": "El anillo de banda — el soporte, con el sostén; nunca una varilla",
+        "fr": "L'anneau de bande — le maintien, avec l'élingue ; jamais une armature",
+        "pt": "O anel da faixa — o suporte, com a tira; nunca um aro"
+      }
+    },
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 1000,
+      "min": 700,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      },
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de busto (mm)"
+      },
+      "tooltip": {
+        "en": "Full bust — nursing bust changes, so re-measure often",
+        "es": "Busto completo — el busto de lactancia cambia, re-mide seguido",
+        "fr": "Poitrine complète — la poitrine allaitante change, remesurez souvent",
+        "pt": "Busto completo — o busto de amamentação muda, remeça com frequência"
+      }
+    },
+    {
+      "id": "band_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 40,
+      "min": 20,
+      "max": 90,
+      "step": 2,
+      "label": {
+        "en": "Underband depth (mm)",
+        "es": "Profundidad de banda (mm)",
+        "fr": "Profondeur de bande (mm)",
+        "pt": "Profundidade da faixa (mm)"
+      },
+      "tooltip": {
+        "en": "A wide soft band carries the load without a wire",
+        "es": "Una banda ancha y suave lleva la carga sin varilla",
+        "fr": "Une bande large et douce porte la charge sans armature",
+        "pt": "Uma faixa larga e macia carrega a carga sem aro"
+      }
+    },
+    {
+      "id": "cup_spread",
+      "type": "slider",
+      "group": "cup",
+      "default": 170,
+      "min": 110,
+      "max": 280,
+      "step": 5,
+      "label": {
+        "en": "Cup spread on band (mm)",
+        "es": "Ancho de copa en banda (mm)",
+        "fr": "Largeur de bonnet sur bande (mm)",
+        "pt": "Largura da taça na faixa (mm)"
+      },
+      "tooltip": {
+        "en": "The hinge width where the cup stays attached",
+        "es": "El ancho de la bisagra donde la copa queda unida",
+        "fr": "La largeur de la charnière où le bonnet reste attaché",
+        "pt": "A largura da dobradiça onde a taça fica presa"
+      }
+    },
+    {
+      "id": "cup_rise",
+      "type": "slider",
+      "group": "cup",
+      "default": 200,
+      "min": 110,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Cup rise (mm)",
+        "es": "Alto de copa (mm)",
+        "fr": "Hauteur de bonnet (mm)",
+        "pt": "Altura da taça (mm)"
+      },
+      "tooltip": {
+        "en": "Band to the clip ring apex",
+        "es": "De la banda al ápice del anillo de broche",
+        "fr": "De la bande à l'apex de l'anneau de clip",
+        "pt": "Da faixa ao ápice do anel de clipe"
+      }
+    },
+    {
+      "id": "sling_frac",
+      "type": "slider",
+      "group": "cup",
+      "default": 0.55,
+      "min": 0.3,
+      "max": 0.8,
+      "step": 0.05,
+      "label": {
+        "en": "Sling coverage share",
+        "es": "Proporción de cobertura del sostén",
+        "fr": "Part de couverture de l'élingue",
+        "pt": "Proporção de cobertura da tira"
+      },
+      "tooltip": {
+        "en": "How much of the cup the support sling covers under it",
+        "es": "Cuánto de la copa cubre el sostén de apoyo por debajo",
+        "fr": "Quelle part du bonnet l'élingue couvre en dessous",
+        "pt": "Quanto da taça a tira de suporte cobre por baixo"
+      }
+    },
+    {
+      "id": "strap_w",
+      "type": "slider",
+      "group": "construction",
+      "default": 20,
+      "min": 12,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de tirante (mm)",
+        "fr": "Largeur de bretelle (mm)",
+        "pt": "Largura de alça (mm)"
+      },
+      "tooltip": {
+        "en": "Wide soft straps; drives the clip ring/slider channel",
+        "es": "Tirantes anchos y suaves; define el canal del anillo/ajustador",
+        "fr": "Bretelles larges et douces ; pilote le passage de l'anneau/curseur",
+        "pt": "Alças largas e macias; dirige o canal do anel/ajustador"
+      }
+    },
+    {
+      "id": "negative_ease_pct",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 6,
+      "max": 22,
+      "step": 1,
+      "label": {
+        "en": "Band negative ease (%)",
+        "es": "Holgura negativa de banda (%)",
+        "fr": "Aisance négative de bande (%)",
+        "pt": "Folga negativa da faixa (%)"
+      },
+      "tooltip": {
+        "en": "The band and sling are the support, not a wire",
+        "es": "La banda y el sostén son el soporte, no una varilla",
+        "fr": "La bande et l'élingue sont le maintien, non une armature",
+        "pt": "A faixa e a tira são o suporte, não um aro"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Lingerie seams are narrow",
+        "es": "Las costuras de lencería son angostas",
+        "fr": "Les coutures de lingerie sont étroites",
+        "pt": "As costuras de lingerie são estreitas"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "full_support",
+      "label": {
+        "en": "Fuller support",
+        "es": "Mayor soporte",
+        "fr": "Maintien renforcé",
+        "pt": "Maior suporte"
+      },
+      "values": {
+        "sling_frac": 0.75,
+        "band_height": 60
+      }
+    },
+    {
+      "id": "sleep",
+      "label": {
+        "en": "Soft sleep bra",
+        "es": "Sostén de dormir suave",
+        "fr": "Brassière de nuit douce",
+        "pt": "Sutiã de dormir macio"
+      },
+      "values": {
+        "negative_ease_pct": 8,
+        "band_height": 30
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "bust_girth > underbust_girth",
+      "message": {
+        "en": "Bust girth must exceed underbust girth.",
+        "es": "El contorno de busto debe superar al de bajo busto.",
+        "fr": "Le tour de poitrine doit dépasser celui du dessous.",
+        "pt": "O contorno de busto deve exceder o do sob-busto."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "nursing clip ring and slider (one-handed drop cup)",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "bra-ring-slider",
+      "linked": true,
+      "params_map": {
+        "strap_w": "strap_w",
+        "wire_d": "2.2"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "strap_edge",
+        "type": "custom",
+        "label": {
+          "en": "Strap edge (threads the clip ring and slider)",
+          "es": "Borde de tirante (enhebra el anillo de broche y el ajustador)",
+          "fr": "Bord de bretelle (enfile l'anneau de clip et le curseur)",
+          "pt": "Borda da alça (enfia o anel de clipe e o ajustador)"
+        },
+        "edges": [
+          {
+            "piece": "strap",
+            "edge": "strap_edge"
+          }
+        ],
+        "parameters": [
+          "strap_w"
+        ]
+      },
+      {
+        "id": "cup_hinge",
+        "type": "custom",
+        "label": {
+          "en": "Cup hinge + sling on the band",
+          "es": "Bisagra de copa + sostén en la banda",
+          "fr": "Charnière de bonnet + élingue sur la bande",
+          "pt": "Dobradiça da taça + tira na faixa"
+        },
+        "edges": [
+          {
+            "piece": "cup",
+            "edge": "hinge"
+          },
+          {
+            "piece": "sling",
+            "edge": "lower"
+          },
+          {
+            "piece": "band",
+            "edge": "cup_edge"
+          }
+        ],
+        "parameters": [
+          "cup_spread",
+          "sling_frac"
+        ]
+      },
+      {
+        "id": "underband",
+        "type": "waistband",
+        "label": {
+          "en": "Underband elastic (support, no wire)",
+          "es": "Elástico de banda (soporte, sin varilla)",
+          "fr": "Élastique de bande (maintien, sans armature)",
+          "pt": "Elástico da faixa (suporte, sem aro)"
+        },
+        "edges": [
+          {
+            "piece": "band",
+            "edge": "lower"
+          }
+        ],
+        "parameters": [
+          "underbust_girth",
+          "negative_ease_pct"
+        ]
+      },
+      {
+        "id": "closure",
+        "type": "custom",
+        "label": {
+          "en": "Centre-back hook column",
+          "es": "Columna de broches al centro de la espalda",
+          "fr": "Colonne d'agrafes au milieu dos",
+          "pt": "Coluna de colchetes ao centro das costas"
+        },
+        "edges": [
+          {
+            "piece": "back",
+            "edge": "center_back"
+          },
+          {
+            "piece": "band",
+            "edge": "center_back"
+          }
+        ],
+        "parameters": [
+          "band_height"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true,
+      "elastic_finish": true,
+      "wire_channel": false,
+      "hook_closure": true,
+      "one_handed_clip": true
+    },
+    "societal_benefit": {
+      "en": "A nursing bra is worn around the clock through the hardest months of new parenthood, and two of its details are genuinely medical rather than cosmetic: it must open one-handed while the other arm holds a baby, and it must not press a wire on the milk ducts, because a wire worn constantly can block a duct and cause mastitis. Ready-made nursing bras often get both wrong to hit a price, and they are sized to a grid that ignores how much a nursing body changes week to week. This cartridge draws the clip as a printable ring-slider coupled to the strap so it threads and opens by construction, keeps the cup wireless and supported by a band and sling instead, and sizes everything to the wearer's own current measurements. A nursing bra that fits, opens one-handed, and whose clip can be reprinted becomes a repairable commons object at the moment a family most needs it.",
+      "es": "Un sostén de lactancia se usa a toda hora durante los meses más duros de la crianza reciente, y dos de sus detalles son médicos y no cosméticos: debe abrirse con una mano mientras el otro brazo sostiene al bebé, y no debe presionar una varilla sobre los conductos de leche, porque una varilla usada constantemente puede bloquear un conducto y causar mastitis. Los sostenes de fábrica a menudo fallan en ambos para bajar el precio, y se tallan a una cuadrícula que ignora cuánto cambia un cuerpo lactante semana a semana. Este cartucho traza el broche como un anillo-ajustador imprimible acoplado al tirante para que enhebre y abra por construcción, mantiene la copa sin aro y sostenida por una banda y un sostén, y dimensiona todo a las medidas actuales propias. Un sostén de lactancia que ajusta, abre con una mano y cuyo broche puede reimprimirse se vuelve un objeto común reparable justo cuando una familia más lo necesita.",
+      "fr": "Un soutien-gorge d'allaitement se porte en continu durant les mois les plus durs de la jeune parentalité, et deux de ses détails sont réellement médicaux et non cosmétiques : il doit s'ouvrir d'une main pendant que l'autre bras tient un bébé, et ne doit pas presser une armature sur les canaux galactophores, car une armature portée en continu peut boucher un canal et causer une mastite. Les soutiens du commerce ratent souvent les deux pour tenir un prix, et sont taillés sur une grille qui ignore combien un corps allaitant change de semaine en semaine. Ce cartouche trace le clip comme un anneau-curseur imprimable couplé à la bretelle pour qu'il s'enfile et s'ouvre par construction, garde le bonnet sans armature et soutenu par une bande et une élingue, et dimensionne tout aux mesures actuelles propres. Un soutien d'allaitement qui va, s'ouvre d'une main et dont le clip peut être réimprimé devient un objet commun réparable au moment où une famille en a le plus besoin.",
+      "pt": "Um sutiã de amamentação é usado o tempo todo durante os meses mais difíceis da parentalidade recente, e dois de seus detalhes são realmente médicos e não cosméticos: deve abrir com uma mão enquanto o outro braço segura um bebê, e não deve pressionar um aro sobre os ductos de leite, porque um aro usado constantemente pode bloquear um ducto e causar mastite. Os sutiãs de fábrica muitas vezes erram nos dois para baixar o preço, e são dimensionados por uma grade que ignora quanto um corpo amamentando muda de semana a semana. Este cartucho desenha o clipe como um anel-ajustador imprimível acoplado à alça para enfiar e abrir por construção, mantém a taça sem aro e sustentada por uma faixa e uma tira, e dimensiona tudo às medidas atuais próprias. Um sutiã de amamentação que veste bem, abre com uma mão e cujo clipe pode ser reimpresso torna-se um objeto comum reparável no momento em que uma família mais precisa."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

@@ -1,0 +1,503 @@
+{
+  "project": {
+    "name": "Compression chest binder",
+    "slug": "compression-binder",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A pull-on chest binder in breathable power-mesh: a full-torso tube from the shoulders to the ribcage that flattens the chest by EVEN, DISTRIBUTED compression. This is the intimates cartridge where getting the compression wrong is a safety question, not a fit preference, so the draft is built around the two rules that make a binder safe: compression is spread over a wide floored panel and never concentrated in a narrow band, and the negative ease is capped low — a binder is not shapewear and more is not better. Drafted long so it stays seated and does not roll up into the very concentrated band the design exists to avoid. Made to measure to chest and underbust girths plus bind length. No hardware. FC-400 lane 9 (structured intimates).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una faja compresora de pecho que se pone jalando, en power-mesh transpirable: un tubo de torso completo de los hombros a las costillas que aplana el pecho por compresión PAREJA y DISTRIBUIDA. Es el cartucho de lencería donde equivocar la compresión es una cuestión de seguridad, no de gusto de ajuste, así que el trazado se construye sobre las dos reglas que hacen segura a una faja: la compresión se reparte sobre un panel ancho con piso mínimo y nunca se concentra en una banda angosta, y la holgura negativa se limita bajo — una faja no es fajería moldeadora y más no es mejor. Trazada larga para que quede asentada y no se enrolle en la banda concentrada que el diseño evita. Hecha a medida a los contornos de pecho y bajo busto más el largo de compresión. Sin herrajes. Carril 9 de FC-400 (lencería estructurada).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un bandeau compressif de poitrine qui s'enfile, en résille de maintien respirante : un tube torse entier des épaules aux côtes qui aplatit la poitrine par une compression RÉGULIÈRE et RÉPARTIE. C'est le cartouche de lingerie où se tromper de compression est une question de sécurité, non de préférence d'ajustement, donc le tracé repose sur les deux règles qui rendent un bandeau sûr : la compression se répartit sur un panneau large à largeur plancher et ne se concentre jamais en bande étroite, et l'aisance négative est plafonnée bas — un bandeau n'est pas de la gaine et plus n'est pas mieux. Tracé long pour rester en place et ne pas s'enrouler en la bande concentrée que le dessin évite. Fait sur mesure aux tours de poitrine et de dessous de poitrine plus la longueur de compression. Sans fermeture. Couloir 9 de FC-400 (lingerie structurée).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma faixa compressora de peito que se veste puxando, em power-mesh respirável: um tubo de torso inteiro dos ombros às costelas que achata o peito por compressão UNIFORME e DISTRIBUÍDA. É o cartucho de lingerie onde errar a compressão é uma questão de segurança, não de preferência de caimento, então a modelagem se apoia nas duas regras que tornam uma faixa segura: a compressão se espalha por um painel largo com largura mínima e nunca se concentra numa banda estreita, e a folga negativa é limitada baixa — uma faixa não é modelador e mais não é melhor. Modelada longa para ficar assentada e não enrolar na banda concentrada que o desenho evita. Feita sob medida aos contornos de peito e sob o busto mais o comprimento de compressão. Sem ferragens. Corredor 9 do FC-400 (lingerie estruturada).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "binder",
+      "chest-binder",
+      "compression",
+      "gender-affirming",
+      "power-mesh",
+      "distributed-compression",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full binder",
+        "es": "Faja completa",
+        "fr": "Bandeau complet",
+        "pt": "Faixa completa"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front torso panel",
+        "es": "Panel de torso delantero",
+        "fr": "Panneau torse devant",
+        "pt": "Painel de torso frontal"
+      },
+      "default_color": "#4a4a55",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back torso panel",
+        "es": "Panel de torso trasero",
+        "fr": "Panneau torse dos",
+        "pt": "Painel de torso traseiro"
+      },
+      "default_color": "#4a4a55",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps",
+        "pt": "Medidas corporais"
+      }
+    },
+    {
+      "id": "safety",
+      "label": {
+        "en": "Compression (safety-capped)",
+        "es": "Compresión (con tope de seguridad)",
+        "fr": "Compression (plafonnée pour la sécurité)",
+        "pt": "Compressão (com limite de segurança)"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 960,
+      "min": 700,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de peito (mm)"
+      },
+      "tooltip": {
+        "en": "The fullest chest — the ring the bind flattens",
+        "es": "El pecho más lleno — el anillo que la faja aplana",
+        "fr": "La poitrine la plus forte — l'anneau que le bandeau aplatit",
+        "pt": "O peito mais cheio — o anel que a faixa achata"
+      }
+    },
+    {
+      "id": "underbust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 820,
+      "min": 600,
+      "max": 1350,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "underbust_girth"
+      },
+      "label": {
+        "en": "Underbust girth (mm)",
+        "es": "Contorno bajo busto (mm)",
+        "fr": "Tour de dessous de poitrine (mm)",
+        "pt": "Contorno sob o busto (mm)"
+      },
+      "tooltip": {
+        "en": "The ribcage ring at the hem — cut with the lightest grip",
+        "es": "El anillo de las costillas en el borde — con el agarre más ligero",
+        "fr": "L'anneau des côtes au bord — coupé avec la prise la plus légère",
+        "pt": "O anel das costelas na barra — cortado com a pega mais leve"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "body",
+      "default": 400,
+      "min": 280,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombros (mm)",
+        "fr": "Largeur d'épaules (mm)",
+        "pt": "Largura de ombros (mm)"
+      },
+      "tooltip": {
+        "en": "Across the shoulders — sets the shoulder seam span",
+        "es": "De hombro a hombro — define el tramo de costura de hombro",
+        "fr": "D'épaule à épaule — fixe la portée de la couture d'épaule",
+        "pt": "De ombro a ombro — define o vão da costura de ombro"
+      }
+    },
+    {
+      "id": "bind_length",
+      "type": "slider",
+      "group": "construction",
+      "default": 340,
+      "min": 200,
+      "max": 520,
+      "step": 10,
+      "label": {
+        "en": "Bind length (mm)",
+        "es": "Largo de compresión (mm)",
+        "fr": "Longueur de compression (mm)",
+        "pt": "Comprimento de compressão (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder seam to hem — longer stays seated and does not ride up",
+        "es": "De la costura de hombro al borde — más largo queda asentado y no se sube",
+        "fr": "De la couture d'épaule à l'ourlet — plus long reste en place et ne remonte pas",
+        "pt": "Da costura de ombro à barra — mais longo fica assentado e não sobe"
+      }
+    },
+    {
+      "id": "neck_scoop",
+      "type": "slider",
+      "group": "construction",
+      "default": 70,
+      "min": 20,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Neckline scoop (mm)",
+        "es": "Escote (mm)",
+        "fr": "Décolleté (mm)",
+        "pt": "Decote (mm)"
+      },
+      "tooltip": {
+        "en": "Front neckline drop below the shoulder line",
+        "es": "Caída del escote delantero bajo la línea de hombro",
+        "fr": "Chute de l'encolure devant sous la ligne d'épaule",
+        "pt": "Queda do decote frontal abaixo da linha de ombro"
+      }
+    },
+    {
+      "id": "arm_scoop",
+      "type": "slider",
+      "group": "construction",
+      "default": 150,
+      "min": 80,
+      "max": 280,
+      "step": 5,
+      "label": {
+        "en": "Armhole depth (mm)",
+        "es": "Profundidad de sisa (mm)",
+        "fr": "Profondeur d'emmanchure (mm)",
+        "pt": "Profundidade de cava (mm)"
+      },
+      "tooltip": {
+        "en": "How far the armhole scoops in for arm movement",
+        "es": "Cuánto se recorta la sisa para el movimiento del brazo",
+        "fr": "De combien l'emmanchure se creuse pour le mouvement du bras",
+        "pt": "Quanto a cava se recorta para o movimento do braço"
+      }
+    },
+    {
+      "id": "compression_pct",
+      "type": "slider",
+      "group": "safety",
+      "default": 14,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Compression (%, capped at 20)",
+        "es": "Compresión (%, tope de 20)",
+        "fr": "Compression (%, plafonnée à 20)",
+        "pt": "Compressão (%, limite de 20)"
+      },
+      "tooltip": {
+        "en": "Negative ease — capped low on purpose; a binder is not shapewear",
+        "es": "Holgura negativa — con tope bajo a propósito; una faja no es fajería moldeadora",
+        "fr": "Aisance négative — plafonnée bas à dessein ; un bandeau n'est pas de la gaine",
+        "pt": "Folga negativa — limitada baixa de propósito; uma faixa não é modelador"
+      }
+    },
+    {
+      "id": "min_panel_w",
+      "type": "slider",
+      "group": "safety",
+      "default": 200,
+      "min": 140,
+      "max": 320,
+      "step": 10,
+      "label": {
+        "en": "Minimum panel width (mm)",
+        "es": "Ancho mínimo de panel (mm)",
+        "fr": "Largeur minimale de panneau (mm)",
+        "pt": "Largura mínima de painel (mm)"
+      },
+      "tooltip": {
+        "en": "The floor that keeps compression distributed, never concentrated",
+        "es": "El piso que mantiene la compresión distribuida, nunca concentrada",
+        "fr": "Le plancher qui garde la compression répartie, jamais concentrée",
+        "pt": "O piso que mantém a compressão distribuída, nunca concentrada"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Knit seams are narrow and coverstitched",
+        "es": "Las costuras de punto son angostas y con puntada de cobertura",
+        "fr": "Les coutures en maille sont étroites et en couture de recouvrement",
+        "pt": "As costuras de malha são estreitas e com ponto de cobertura"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "firm",
+      "label": {
+        "en": "Firm bind",
+        "es": "Compresión firme",
+        "fr": "Bandeau ferme",
+        "pt": "Compressão firme"
+      },
+      "values": {
+        "compression_pct": 20,
+        "bind_length": 380
+      }
+    },
+    {
+      "id": "gentle",
+      "label": {
+        "en": "Gentle bind",
+        "es": "Compresión suave",
+        "fr": "Bandeau doux",
+        "pt": "Compressão suave"
+      },
+      "values": {
+        "compression_pct": 8,
+        "min_panel_w": 240
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "compression_pct <= 20",
+      "message": {
+        "en": "Compression is capped at 20% — a binder is not shapewear, and concentrated over-binding restricts breathing.",
+        "es": "La compresión tiene tope de 20% — una faja no es fajería moldeadora, y sobrecomprimir concentrado restringe la respiración.",
+        "fr": "La compression est plafonnée à 20 % — un bandeau n'est pas de la gaine, et un sur-serrage concentré gêne la respiration.",
+        "pt": "A compressão tem limite de 20% — uma faixa não é modelador, e sobrecomprimir concentrado restringe a respiração."
+      },
+      "severity": "error"
+    },
+    {
+      "expression": "arm_scoop < bind_length",
+      "message": {
+        "en": "The armhole cannot be deeper than the bind length.",
+        "es": "La sisa no puede ser más profunda que el largo de compresión.",
+        "fr": "L'emmanchure ne peut être plus profonde que la longueur de compression.",
+        "pt": "A cava não pode ser mais profunda que o comprimento de compressão."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "side_seam",
+        "type": "custom",
+        "label": {
+          "en": "Side seams (front to back)",
+          "es": "Costuras laterales (delantero a trasero)",
+          "fr": "Coutures côté (devant à dos)",
+          "pt": "Costuras laterais (frente ao dorso)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side_seam_r"
+          },
+          {
+            "piece": "back",
+            "edge": "side_seam_r"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "compression_pct"
+        ]
+      },
+      {
+        "id": "shoulder_seam",
+        "type": "custom",
+        "label": {
+          "en": "Shoulder seams",
+          "es": "Costuras de hombro",
+          "fr": "Coutures d'épaule",
+          "pt": "Costuras de ombro"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "shoulder_r"
+          },
+          {
+            "piece": "back",
+            "edge": "shoulder_r"
+          }
+        ],
+        "parameters": [
+          "shoulder_width"
+        ]
+      },
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "label": {
+          "en": "Neckline (bound)",
+          "es": "Escote (ribeteado)",
+          "fr": "Encolure (bordée)",
+          "pt": "Decote (debruado)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neckline"
+          },
+          {
+            "piece": "back",
+            "edge": "neckline"
+          }
+        ],
+        "parameters": [
+          "neck_scoop"
+        ]
+      },
+      {
+        "id": "armhole",
+        "type": "armscye",
+        "label": {
+          "en": "Armholes (bound)",
+          "es": "Sisas (ribeteadas)",
+          "fr": "Emmanchures (bordées)",
+          "pt": "Cavas (debruadas)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole_r"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole_r"
+          }
+        ],
+        "parameters": [
+          "arm_scoop"
+        ]
+      },
+      {
+        "id": "hem",
+        "type": "hem",
+        "label": {
+          "en": "Hem (lightest grip)",
+          "es": "Borde (agarre más ligero)",
+          "fr": "Ourlet (prise la plus légère)",
+          "pt": "Barra (pega mais leve)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "underbust_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": false,
+      "elastic_finish": true,
+      "distributed_compression": true,
+      "pull_on": true
+    },
+    "societal_benefit": {
+      "en": "Chest binding is done by many people for gender affirmation and for sport, and it is done unsafely far too often — with tape, bandages, or a too-small garment, all of which concentrate force on a narrow area, restrict breathing and can crack ribs. The safe alternative is a purpose-made binder that distributes compression over a wide band of breathable cloth, but commercial binders are expensive, sized to a grid, and opaque about how much they compress. This cartridge encodes the safety rules directly into the geometry: the panel width is floored so force is always distributed, the negative ease is capped low and printed as an auditable number, and the garment is drafted long so it stays seated rather than rolling up into the concentrated band that is the hazard. A safer binder becomes a made-to-measure, repairable commons object instead of a costly or improvised one.",
+      "es": "El vendaje de pecho lo hacen muchas personas por afirmación de género y por deporte, y con demasiada frecuencia se hace de forma insegura — con cinta, vendas o una prenda muy pequeña, que concentran la fuerza en un área angosta, restringen la respiración y pueden fracturar costillas. La alternativa segura es una faja hecha para ello que distribuye la compresión sobre una banda ancha de tela transpirable, pero las fajas comerciales son caras, talladas a una cuadrícula y opacas sobre cuánto comprimen. Este cartucho codifica las reglas de seguridad directamente en la geometría: el ancho del panel tiene piso para que la fuerza siempre se distribuya, la holgura negativa se limita bajo y se imprime como número auditable, y la prenda se traza larga para que quede asentada en vez de enrollarse en la banda concentrada que es el peligro. Una faja más segura se vuelve un objeto común, a medida y reparable, en lugar de uno costoso o improvisado.",
+      "fr": "Le bandage de poitrine est pratiqué par beaucoup pour l'affirmation de genre et pour le sport, et bien trop souvent de façon dangereuse — avec du ruban, des bandes ou un vêtement trop petit, qui concentrent la force sur une zone étroite, gênent la respiration et peuvent fracturer des côtes. L'alternative sûre est un bandeau conçu pour cela qui répartit la compression sur une large bande de tissu respirant, mais les bandeaux du commerce sont chers, taillés sur une grille et opaques sur le taux de compression. Ce cartouche inscrit les règles de sécurité directement dans la géométrie : la largeur du panneau a un plancher pour que la force soit toujours répartie, l'aisance négative est plafonnée bas et imprimée comme nombre vérifiable, et le vêtement est tracé long pour rester en place au lieu de s'enrouler en la bande concentrée qui est le danger. Un bandeau plus sûr devient un objet commun, sur mesure et réparable, au lieu d'un objet coûteux ou improvisé.",
+      "pt": "A compressão de peito é feita por muitas pessoas por afirmação de gênero e por esporte, e com demasiada frequência de forma insegura — com fita, ataduras ou uma peça pequena demais, que concentram a força numa área estreita, restringem a respiração e podem fraturar costelas. A alternativa segura é uma faixa feita para isso que distribui a compressão sobre uma banda larga de tecido respirável, mas as faixas comerciais são caras, dimensionadas por grade e opacas sobre quanto comprimem. Este cartucho inscreve as regras de segurança diretamente na geometria: a largura do painel tem piso para que a força seja sempre distribuída, a folga negativa é limitada baixa e impressa como número auditável, e a peça é modelada longa para ficar assentada em vez de enrolar na banda concentrada que é o perigo. Uma faixa mais segura torna-se um objeto comum, sob medida e reparável, em vez de um caro ou improvisado."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

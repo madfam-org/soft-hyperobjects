@@ -1,0 +1,501 @@
+{
+  "project": {
+    "name": "Dashiki",
+    "slug": "dashiki-tunic",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The loose pull-over tunic of West Africa: a wide, straight, unfitted garment worn over the head, cut from a small number of RECTANGULAR panels and defined by the embroidered placket panel around its V-neck and its short kimono-style sleeves cut in one with the body. This cartridge drafts the everyday dashiki around the two facts that make it one: the body is a true rectangle folded at the shoulder with the sleeves continued out in one (a T-shape), so the fit is the loose width rather than shaping; and the placket panel is the embroidery GROUND, drawn as a facing sized to the neckline with NO motif placed — the embroidery is the wearer's or the region's own. Made to measure to chest girth, body length, sleeve reach and neck opening. No hardware. FC-400 lane 10 (heritage).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La túnica holgada de cabeza de África Occidental: una prenda ancha, recta y sin entalle que se pone por la cabeza, cortada de unos pocos paneles RECTANGULARES y definida por el panel bordado alrededor de su escote en V y sus mangas cortas tipo kimono cortadas de una pieza con el cuerpo. Este cartucho traza el dashiki cotidiano en torno a los dos hechos que lo hacen tal: el cuerpo es un rectángulo verdadero doblado en el hombro con las mangas continuadas de una pieza (forma de T), así el ajuste es la holgura del ancho y no el entalle; y el panel del escote es el FONDO del bordado, trazado como vista dimensionada al escote SIN colocar motivo — el bordado es de quien la viste o de la región. Hecho a medida al contorno de pecho, largo de cuerpo, alcance de manga y abertura de cuello. Sin herrajes. Carril 10 de FC-400 (patrimonio).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La tunique ample enfilée par la tête d'Afrique de l'Ouest : un vêtement large, droit et non ajusté porté par-dessus la tête, coupé dans quelques panneaux RECTANGULAIRES et défini par le panneau brodé autour de son encolure en V et ses manches courtes de type kimono coupées d'un tenant avec le corps. Ce cartouche trace le dashiki quotidien autour des deux faits qui le définissent : le corps est un vrai rectangle plié à l'épaule avec les manches continuées d'un tenant (forme de T), donc l'ajustement est l'ampleur de la largeur et non le galbe ; et le panneau d'encolure est le FOND de la broderie, tracé comme parementure dimensionnée à l'encolure SANS motif placé — la broderie est celle de la personne ou de la région. Fait sur mesure au tour de poitrine, à la longueur du corps, à l'allonge de manche et à l'ouverture d'encolure. Sans fermeture. Couloir 10 de FC-400 (patrimoine).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A túnica folgada enfiada pela cabeça da África Ocidental: uma peça larga, reta e sem ajuste vestida pela cabeça, cortada de uns poucos painéis RETANGULARES e definida pelo painel bordado ao redor de seu decote em V e suas mangas curtas tipo quimono cortadas de uma peça com o corpo. Este cartucho modela o dashiki cotidiano em torno dos dois fatos que o definem: o corpo é um retângulo verdadeiro dobrado no ombro com as mangas continuadas de uma peça (forma de T), então o caimento é a folga da largura e não o ajuste; e o painel do decote é o FUNDO do bordado, modelado como vista dimensionada ao decote SEM motivo colocado — o bordado é de quem veste ou da região. Feito sob medida ao contorno de peito, comprimento do corpo, alcance de manga e abertura de gola. Sem ferragens. Corredor 10 do FC-400 (patrimônio).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "dashiki",
+      "tunic",
+      "west-african",
+      "pull-over",
+      "heritage",
+      "cotton-print",
+      "commons",
+      "unfitted"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full dashiki",
+        "es": "Dashiki completo",
+        "fr": "Dashiki complet",
+        "pt": "Dashiki completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "facing",
+        "pocket"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front body + sleeves",
+        "es": "Cuerpo delantero + mangas",
+        "fr": "Corps devant + manches",
+        "pt": "Corpo frontal + mangas"
+      },
+      "default_color": "#c47b2e",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back body + sleeves",
+        "es": "Cuerpo trasero + mangas",
+        "fr": "Corps dos + manches",
+        "pt": "Corpo traseiro + mangas"
+      },
+      "default_color": "#c47b2e",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "facing",
+      "label": {
+        "en": "Neck facing (embroidery ground)",
+        "es": "Vista de cuello (fondo de bordado)",
+        "fr": "Parementure d'encolure (fond de broderie)",
+        "pt": "Vista da gola (fundo do bordado)"
+      },
+      "default_color": "#8a5220",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    },
+    {
+      "id": "pocket",
+      "label": {
+        "en": "Breast pocket (optional)",
+        "es": "Bolsillo de pecho (opcional)",
+        "fr": "Poche poitrine (optionnelle)",
+        "pt": "Bolso no peito (opcional)"
+      },
+      "default_color": "#c47b2e",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps",
+        "pt": "Medidas corporais"
+      }
+    },
+    {
+      "id": "neck",
+      "label": {
+        "en": "Neck & facing",
+        "es": "Cuello y vista",
+        "fr": "Encolure et parementure",
+        "pt": "Gola e vista"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 1040,
+      "min": 800,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de peito (mm)"
+      },
+      "tooltip": {
+        "en": "The fit is the loose width chosen over this",
+        "es": "El ajuste es la holgura del ancho elegida sobre esto",
+        "fr": "L'ajustement est l'ampleur choisie par-dessus ceci",
+        "pt": "O caimento é a folga da largura escolhida sobre isto"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "group": "body",
+      "default": 800,
+      "min": 500,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Body length (mm)",
+        "es": "Largo de cuerpo (mm)",
+        "fr": "Longueur du corps (mm)",
+        "pt": "Comprimento do corpo (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to hem — a dashiki can be tunic or full-length",
+        "es": "Del hombro al borde — el dashiki puede ser túnica o largo completo",
+        "fr": "De l'épaule à l'ourlet — un dashiki peut être tunique ou pleine longueur",
+        "pt": "Do ombro à barra — um dashiki pode ser túnica ou comprido"
+      }
+    },
+    {
+      "id": "sleeve_reach",
+      "type": "slider",
+      "group": "body",
+      "default": 300,
+      "min": 120,
+      "max": 520,
+      "step": 10,
+      "label": {
+        "en": "Sleeve reach (mm)",
+        "es": "Alcance de manga (mm)",
+        "fr": "Allonge de manche (mm)",
+        "pt": "Alcance de manga (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder point to the sleeve hem — the T-drop out from the body",
+        "es": "Del hombro al borde de manga — la salida de la T desde el cuerpo",
+        "fr": "De l'épaule à l'ourlet de manche — la sortie du T depuis le corps",
+        "pt": "Do ombro à barra da manga — a saída do T desde o corpo"
+      }
+    },
+    {
+      "id": "sleeve_depth",
+      "type": "slider",
+      "group": "body",
+      "default": 260,
+      "min": 150,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Sleeve depth (mm)",
+        "es": "Profundidad de manga (mm)",
+        "fr": "Profondeur de manche (mm)",
+        "pt": "Profundidade de manga (mm)"
+      },
+      "tooltip": {
+        "en": "Depth of the T drop (the sleeve opening)",
+        "es": "Profundidad de la caída de la T (la abertura de manga)",
+        "fr": "Profondeur du T (l'ouverture de manche)",
+        "pt": "Profundidade do T (a abertura da manga)"
+      }
+    },
+    {
+      "id": "neck_width",
+      "type": "slider",
+      "group": "neck",
+      "default": 180,
+      "min": 120,
+      "max": 280,
+      "step": 5,
+      "label": {
+        "en": "Neck width (mm)",
+        "es": "Ancho de cuello (mm)",
+        "fr": "Largeur d'encolure (mm)",
+        "pt": "Largura da gola (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder-to-shoulder neck span — must clear the head",
+        "es": "Ancho de cuello de hombro a hombro — debe pasar la cabeza",
+        "fr": "Largeur d'encolure d'épaule à épaule — doit passer la tête",
+        "pt": "Largura da gola de ombro a ombro — deve passar a cabeça"
+      }
+    },
+    {
+      "id": "v_drop",
+      "type": "slider",
+      "group": "neck",
+      "default": 200,
+      "min": 80,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Front V depth (mm)",
+        "es": "Profundidad de V delantero (mm)",
+        "fr": "Profondeur du V devant (mm)",
+        "pt": "Profundidade do V frontal (mm)"
+      },
+      "tooltip": {
+        "en": "How deep the front V-neck falls",
+        "es": "Qué tan profundo cae el escote en V delantero",
+        "fr": "Jusqu'où descend le col en V devant",
+        "pt": "Quão fundo desce o decote em V frontal"
+      }
+    },
+    {
+      "id": "facing_width",
+      "type": "slider",
+      "group": "neck",
+      "default": 70,
+      "min": 30,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Facing / embroidery ground width (mm)",
+        "es": "Ancho de vista / fondo de bordado (mm)",
+        "fr": "Largeur de parementure / fond de broderie (mm)",
+        "pt": "Largura da vista / fundo do bordado (mm)"
+      },
+      "tooltip": {
+        "en": "The width of the embroidery ground around the neck",
+        "es": "El ancho del fondo del bordado alrededor del cuello",
+        "fr": "La largeur du fond de broderie autour de l'encolure",
+        "pt": "A largura do fundo do bordado ao redor da gola"
+      }
+    },
+    {
+      "id": "ease_pct",
+      "type": "slider",
+      "group": "construction",
+      "default": 30,
+      "min": 15,
+      "max": 60,
+      "step": 1,
+      "label": {
+        "en": "Wearing ease (%)",
+        "es": "Holgura de uso (%)",
+        "fr": "Aisance de port (%)",
+        "pt": "Folga de uso (%)"
+      },
+      "tooltip": {
+        "en": "A dashiki is very loose — the ease IS the fit",
+        "es": "Un dashiki es muy holgado — la holgura ES el ajuste",
+        "fr": "Un dashiki est très ample — l'aisance EST l'ajustement",
+        "pt": "Um dashiki é bem folgado — a folga É o caimento"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "The few straight seams are flat-felled",
+        "es": "Las pocas costuras rectas son ribeteadas planas",
+        "fr": "Les quelques coutures droites sont rabattues",
+        "pt": "As poucas costuras retas são rebatidas"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 25,
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Rentré d'ourlet (mm)",
+        "pt": "Margem de barra (mm)"
+      },
+      "tooltip": {
+        "en": "Body and sleeve hems",
+        "es": "Dobladillos de cuerpo y manga",
+        "fr": "Ourlets de corps et de manche",
+        "pt": "Barras de corpo e manga"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "long",
+      "label": {
+        "en": "Full-length",
+        "es": "Largo completo",
+        "fr": "Pleine longueur",
+        "pt": "Comprido"
+      },
+      "values": {
+        "body_length": 1150,
+        "sleeve_reach": 420
+      }
+    },
+    {
+      "id": "wide_v",
+      "label": {
+        "en": "Deep V",
+        "es": "V profundo",
+        "fr": "V profond",
+        "pt": "V profundo"
+      },
+      "values": {
+        "v_drop": 300,
+        "facing_width": 110
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "v_drop < body_length",
+      "message": {
+        "en": "The front V cannot be deeper than the body length.",
+        "es": "El V delantero no puede ser más profundo que el largo del cuerpo.",
+        "fr": "Le V devant ne peut être plus profond que la longueur du corps.",
+        "pt": "O V frontal não pode ser mais fundo que o comprimento do corpo."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "shoulder_sleeve",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder + sleeve-top seam (the T)",
+          "es": "Costura de hombro + parte alta de manga (la T)",
+          "fr": "Couture d'épaule + haut de manche (le T)",
+          "pt": "Costura de ombro + topo da manga (o T)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "shoulder_top"
+          },
+          {
+            "piece": "back",
+            "edge": "shoulder_top"
+          }
+        ],
+        "parameters": [
+          "sleeve_reach"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Underarm + side seam",
+          "es": "Sisa inferior + costura lateral",
+          "fr": "Dessous de bras + couture côté",
+          "pt": "Axila + costura lateral"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side_seam"
+          },
+          {
+            "piece": "back",
+            "edge": "side_seam"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "ease_pct"
+        ]
+      },
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "label": {
+          "en": "V-neck + embroidery-ground facing",
+          "es": "Escote en V + vista de fondo de bordado",
+          "fr": "Col en V + parementure fond de broderie",
+          "pt": "Decote em V + vista fundo do bordado"
+        },
+        "edges": [
+          {
+            "piece": "facing",
+            "edge": "neck_edge"
+          },
+          {
+            "piece": "front",
+            "edge": "neckline"
+          },
+          {
+            "piece": "back",
+            "edge": "neckline"
+          }
+        ],
+        "parameters": [
+          "neck_width",
+          "v_drop",
+          "facing_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": false,
+      "cut_in_one_sleeve": true,
+      "embroidery_ground": true
+    },
+    "societal_benefit": {
+      "en": "The dashiki is worn across West Africa and its diaspora, and its two defining traits are the ones a Western tee-block draft erases: it is cut from rectangles with the sleeves in one, in the wrapper-cloth economy that wastes almost no fabric, and its identity lives in the embroidered neck panel. This cartridge keeps the rectangular T-cut so the garment fits by width and wastes little, and it draws the embroidery panel as a ground while deliberately placing NO motif — because the design belongs to the wearer, the maker, or the region, not to the tool. It sizes to a real body and states its provenance plainly. A garment that respects its own construction logic and leaves its meaningful surface to its community becomes a made-to-measure commons object rather than an appropriation.",
+      "es": "El dashiki se lleva en toda África Occidental y su diáspora, y sus dos rasgos definitorios son los que un trazado de camiseta occidental borra: se corta de rectángulos con las mangas de una pieza, en la economía de tela envolvente que casi no desperdicia, y su identidad vive en el panel bordado del cuello. Este cartucho conserva el corte en T rectangular para que la prenda ajuste por el ancho y desperdicie poco, y traza el panel del bordado como fondo colocando deliberadamente NINGÚN motivo — porque el diseño pertenece a quien la viste, a quien la hace o a la región, no a la herramienta. Se dimensiona a un cuerpo real y declara su procedencia con claridad. Una prenda que respeta su propia lógica de construcción y deja su superficie significativa a su comunidad se vuelve un objeto común a medida, no una apropiación.",
+      "fr": "Le dashiki se porte dans toute l'Afrique de l'Ouest et sa diaspora, et ses deux traits déterminants sont ceux qu'un tracé de t-shirt occidental efface : il est coupé dans des rectangles, manches d'un tenant, dans l'économie de tissu de pagne qui ne gaspille presque rien, et son identité vit dans le panneau brodé de l'encolure. Ce cartouche garde la coupe en T rectangulaire pour que le vêtement aille par la largeur et gaspille peu, et trace le panneau de broderie comme un fond en ne plaçant délibérément AUCUN motif — car le dessin appartient à la personne, au fabricant ou à la région, non à l'outil. Il se dimensionne à un corps réel et déclare sa provenance clairement. Un vêtement qui respecte sa propre logique de construction et laisse sa surface signifiante à sa communauté devient un objet commun sur mesure, non une appropriation.",
+      "pt": "O dashiki é usado por toda a África Ocidental e sua diáspora, e seus dois traços definidores são os que um traçado de camiseta ocidental apaga: é cortado de retângulos com as mangas de uma peça, na economia de tecido de pano que quase nada desperdiça, e sua identidade vive no painel bordado da gola. Este cartucho mantém o corte em T retangular para a peça caber pela largura e desperdiçar pouco, e desenha o painel do bordado como fundo colocando deliberadamente NENHUM motivo — porque o desenho pertence a quem veste, a quem faz ou à região, não à ferramenta. Dimensiona-se a um corpo real e declara sua procedência com clareza. Uma peça que respeita sua própria lógica de construção e deixa sua superfície significativa à sua comunidade torna-se um objeto comum sob medida, não uma apropriação."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

@@ -1,0 +1,572 @@
+{
+  "project": {
+    "name": "Shaping bodysuit (scoop tank)",
+    "slug": "shaping-body-suit",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A scoop-neck tank bodysuit in power-mesh: a front and back panel that run from the shoulders to a hook-and-eye gusset at the crotch, so it cannot ride up out of a skirt or trousers. It deepens the FC-300 princess-seamed shaping bodysuit into the everyday tank-cut version worn as a top, whose whole appeal is a clean smooth line under clothes held down by the crotch closure. The bodysuit stays down because of the gusset, not the fabric: the closure is the Yantra4D hook-and-eye (3 columns x 2 rows) and the gusset is drafted to seat that plate. Compression is light and even — this is a bodysuit worn as a top, not shapewear. There is no inseam; the leg is an opening finished with elastic. Made to measure to bust, waist and hip girths plus shoulder-to-crotch length. FC-400 lane 9 (structured intimates).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un body de tirante de cuello redondo en power-mesh: un panel delantero y uno trasero que corren de los hombros a un broche de entrepierna, para que no se salga de una falda o pantalón. Profundiza el body moldeador de costuras princesa de FC-300 en la versión cotidiana de tirante que se usa como top, cuyo atractivo es una línea limpia y lisa bajo la ropa, sujeta por el cierre de entrepierna. El body se queda abajo por la entrepierna, no por la tela: el cierre es el hook-and-eye de Yantra4D (3 columnas x 2 filas) y la entrepierna se traza para asentar esa placa. La compresión es ligera y pareja — es un body usado como top, no fajería. No hay tiro interno; la pierna es una abertura terminada con elástico. Hecho a medida a los contornos de busto, cintura y cadera más el largo de hombro a entrepierna. Carril 9 de FC-400 (lencería estructurada).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un body débardeur à col rond en résille de maintien : un panneau devant et un dos qui vont des épaules à un fond à agrafes à l'entrejambe, pour qu'il ne remonte pas hors d'une jupe ou d'un pantalon. Il approfondit le body gainant à coutures princesse de FC-300 en la version quotidienne coupe débardeur portée comme un haut, dont tout l'attrait est une ligne nette et lisse sous les vêtements, tenue par la fermeture d'entrejambe. Le body reste en place grâce au fond, non au tissu : la fermeture est le hook-and-eye Yantra4D (3 colonnes x 2 rangs) et le fond est tracé pour asseoir cette plaque. La compression est légère et uniforme — c'est un body porté comme un haut, non de la gaine. Il n'y a pas d'entrejambe ; la jambe est une ouverture finie à l'élastique. Fait sur mesure aux tours de poitrine, de taille et de hanche plus la longueur épaule-entrejambe. Couloir 9 de FC-400 (lingerie structurée).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um body regata de gola redonda em power-mesh: um painel frontal e um traseiro que vão dos ombros a um fundilho com colchetes no entrepernas, para não subir para fora de uma saia ou calça. Aprofunda o body modelador de costuras princesa de FC-300 na versão cotidiana de corte regata usada como top, cujo atrativo é uma linha limpa e lisa sob a roupa, presa pelo fecho de entrepernas. O body fica no lugar por causa do fundilho, não do tecido: o fecho é o hook-and-eye Yantra4D (3 colunas x 2 fileiras) e o fundilho é modelado para assentar essa placa. A compressão é leve e uniforme — é um body usado como top, não modelador. Não há gancho interno; a perna é uma abertura acabada com elástico. Feito sob medida aos contornos de busto, cintura e quadril mais o comprimento ombro-entrepernas. Corredor 9 do FC-400 (lingerie estruturada).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "bodysuit",
+      "tank",
+      "scoop-neck",
+      "power-mesh",
+      "hook-closure",
+      "hardware",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "shaping-bodysuit (Fashion Cabinet FC-300 #226) — gusset closure lineage",
+          "license": "CERN-OHL-W-2.0"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full bodysuit",
+        "es": "Body completo",
+        "fr": "Body complet",
+        "pt": "Body completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "gusset"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front panel",
+        "es": "Panel delantero",
+        "fr": "Panneau devant",
+        "pt": "Painel frontal"
+      },
+      "default_color": "#4a4a55",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back panel",
+        "es": "Panel trasero",
+        "fr": "Panneau dos",
+        "pt": "Painel traseiro"
+      },
+      "default_color": "#4a4a55",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    },
+    {
+      "id": "gusset",
+      "label": {
+        "en": "Gusset (hook-and-eye seat)",
+        "es": "Entrepierna (asiento de broches)",
+        "fr": "Fond (siège d'agrafes)",
+        "pt": "Fundilho (assento de colchetes)"
+      },
+      "default_color": "#6f4459",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps",
+        "pt": "Medidas corporais"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 900,
+      "min": 680,
+      "max": 1400,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      },
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de busto (mm)"
+      },
+      "tooltip": {
+        "en": "Full bust — one of the two rings the panels span",
+        "es": "Busto completo — uno de los dos anillos que abarcan los paneles",
+        "fr": "Poitrine complète — l'un des deux anneaux que couvrent les panneaux",
+        "pt": "Busto completo — um dos dois anéis que os painéis cobrem"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 740,
+      "min": 520,
+      "max": 1300,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)",
+        "pt": "Contorno de cintura (mm)"
+      },
+      "tooltip": {
+        "en": "Natural waist — marked as a reference line",
+        "es": "Cintura natural — marcada como línea de referencia",
+        "fr": "Taille naturelle — marquée comme ligne de repère",
+        "pt": "Cintura natural — marcada como linha de referência"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 960,
+      "min": 680,
+      "max": 1600,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanche (mm)",
+        "pt": "Contorno de quadril (mm)"
+      },
+      "tooltip": {
+        "en": "Fullest hip — sizes the panel with the bust",
+        "es": "Cadera más llena — dimensiona el panel junto al busto",
+        "fr": "Hanche la plus forte — dimensionne le panneau avec la poitrine",
+        "pt": "Quadril mais cheio — dimensiona o painel com o busto"
+      }
+    },
+    {
+      "id": "shoulder_to_crotch",
+      "type": "slider",
+      "group": "body",
+      "default": 660,
+      "min": 480,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Shoulder to crotch (mm)",
+        "es": "De hombro a entrepierna (mm)",
+        "fr": "Épaule à entrejambe (mm)",
+        "pt": "Ombro ao entrepernas (mm)"
+      },
+      "tooltip": {
+        "en": "The torso length — a bodysuit must be right or it drags or bunches",
+        "es": "El largo del torso — un body debe ser exacto o tira o se amontona",
+        "fr": "La longueur du torse — un body doit être juste ou il tire ou fronce",
+        "pt": "O comprimento do torso — um body deve ser exato ou puxa ou amontoa"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 340,
+      "min": 240,
+      "max": 520,
+      "step": 10,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombros (mm)",
+        "fr": "Largeur d'épaules (mm)",
+        "pt": "Largura de ombros (mm)"
+      },
+      "tooltip": {
+        "en": "Sets where the tank straps sit",
+        "es": "Define dónde se asientan los tirantes",
+        "fr": "Fixe où les bretelles se placent",
+        "pt": "Define onde as alças se assentam"
+      }
+    },
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 40,
+      "min": 20,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de tirante (mm)",
+        "fr": "Largeur de bretelle (mm)",
+        "pt": "Largura de alça (mm)"
+      },
+      "tooltip": {
+        "en": "A tank strap, cut in one with the panel",
+        "es": "Un tirante tipo top, cortado de una pieza con el panel",
+        "fr": "Une bretelle débardeur, coupée d'un tenant avec le panneau",
+        "pt": "Uma alça regata, cortada de uma peça com o painel"
+      }
+    },
+    {
+      "id": "neck_scoop",
+      "type": "slider",
+      "group": "construction",
+      "default": 90,
+      "min": 30,
+      "max": 220,
+      "step": 5,
+      "label": {
+        "en": "Neckline scoop (mm)",
+        "es": "Escote (mm)",
+        "fr": "Décolleté (mm)",
+        "pt": "Decote (mm)"
+      },
+      "tooltip": {
+        "en": "Front neckline drop (the back is shallower)",
+        "es": "Caída del escote delantero (el trasero es menos profundo)",
+        "fr": "Chute de l'encolure devant (le dos est moins profond)",
+        "pt": "Queda do decote frontal (o traseiro é menos profundo)"
+      }
+    },
+    {
+      "id": "arm_scoop",
+      "type": "slider",
+      "group": "construction",
+      "default": 200,
+      "min": 100,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Armscye depth (mm)",
+        "es": "Profundidad de sisa (mm)",
+        "fr": "Profondeur d'emmanchure (mm)",
+        "pt": "Profundidade de cava (mm)"
+      },
+      "tooltip": {
+        "en": "How far the armhole scoops down the side",
+        "es": "Cuánto baja la sisa por el costado",
+        "fr": "De combien l'emmanchure descend sur le côté",
+        "pt": "Quanto a cava desce pela lateral"
+      }
+    },
+    {
+      "id": "gusset_w",
+      "type": "slider",
+      "group": "construction",
+      "default": 80,
+      "min": 40,
+      "max": 150,
+      "step": 5,
+      "label": {
+        "en": "Gusset width (mm)",
+        "es": "Ancho de entrepierna (mm)",
+        "fr": "Largeur du fond (mm)",
+        "pt": "Largura do fundilho (mm)"
+      },
+      "tooltip": {
+        "en": "The crotch bridge that seats the hook-and-eye plate",
+        "es": "El puente de entrepierna que asienta la placa de broches",
+        "fr": "Le pont d'entrejambe qui assoit la plaque d'agrafes",
+        "pt": "A ponte do entrepernas que assenta a placa de colchetes"
+      }
+    },
+    {
+      "id": "compression_pct",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 18,
+      "step": 1,
+      "label": {
+        "en": "Compression (%)",
+        "es": "Compresión (%)",
+        "fr": "Compression (%)",
+        "pt": "Compressão (%)"
+      },
+      "tooltip": {
+        "en": "Light and even — a bodysuit worn as a top, not shapewear",
+        "es": "Ligera y pareja — un body usado como top, no fajería",
+        "fr": "Légère et uniforme — un body porté comme un haut, non de la gaine",
+        "pt": "Leve e uniforme — um body usado como top, não modelador"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Knit seams are narrow and coverstitched",
+        "es": "Las costuras de punto son angostas y con puntada de cobertura",
+        "fr": "Les coutures en maille sont étroites et en couture de recouvrement",
+        "pt": "As costuras de malha são estreitas e com ponto de cobertura"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "high_neck",
+      "label": {
+        "en": "Higher neckline",
+        "es": "Escote más alto",
+        "fr": "Encolure plus haute",
+        "pt": "Decote mais alto"
+      },
+      "values": {
+        "neck_scoop": 50,
+        "strap_width": 60
+      }
+    },
+    {
+      "id": "deep_scoop",
+      "label": {
+        "en": "Deep scoop",
+        "es": "Escote profundo",
+        "fr": "Grand décolleté",
+        "pt": "Decote profundo"
+      },
+      "values": {
+        "neck_scoop": 180,
+        "arm_scoop": 260
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "arm_scoop < shoulder_to_crotch",
+      "message": {
+        "en": "The armscye cannot be deeper than the torso length.",
+        "es": "La sisa no puede ser más profunda que el largo del torso.",
+        "fr": "L'emmanchure ne peut être plus profonde que la longueur du torse.",
+        "pt": "A cava não pode ser mais profunda que o comprimento do torso."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "hook",
+    "subtype": "hook-and-eye gusset closure (3 cols x 2 rows)",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "hook-and-eye",
+      "linked": true,
+      "params_map": {
+        "columns": "3",
+        "rows": "2"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "side_seam",
+        "type": "custom",
+        "label": {
+          "en": "Side seams (front to back)",
+          "es": "Costuras laterales (delantero a trasero)",
+          "fr": "Coutures côté (devant à dos)",
+          "pt": "Costuras laterais (frente ao dorso)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side_seam_r"
+          },
+          {
+            "piece": "back",
+            "edge": "side_seam_r"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "hip_girth",
+          "compression_pct"
+        ]
+      },
+      {
+        "id": "shoulder",
+        "type": "custom",
+        "label": {
+          "en": "Shoulder straps",
+          "es": "Tirantes de hombro",
+          "fr": "Bretelles d'épaule",
+          "pt": "Alças de ombro"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "strap_r"
+          },
+          {
+            "piece": "back",
+            "edge": "strap_r"
+          }
+        ],
+        "parameters": [
+          "shoulder_width",
+          "strap_width"
+        ]
+      },
+      {
+        "id": "gusset_closure",
+        "type": "custom",
+        "label": {
+          "en": "Hook-and-eye gusset closure (anti-ride-up)",
+          "es": "Cierre de broches en entrepierna (anti-subida)",
+          "fr": "Fermeture à agrafes au fond (anti-remontée)",
+          "pt": "Fecho de colchetes no fundilho (anti-subida)"
+        },
+        "edges": [
+          {
+            "piece": "gusset",
+            "edge": "front_end"
+          },
+          {
+            "piece": "gusset",
+            "edge": "back_end"
+          },
+          {
+            "piece": "front",
+            "edge": "crotch"
+          },
+          {
+            "piece": "back",
+            "edge": "crotch"
+          }
+        ],
+        "parameters": [
+          "gusset_w"
+        ]
+      },
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "label": {
+          "en": "Neckline (bound)",
+          "es": "Escote (ribeteado)",
+          "fr": "Encolure (bordée)",
+          "pt": "Decote (debruado)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neckline"
+          },
+          {
+            "piece": "back",
+            "edge": "neckline"
+          }
+        ],
+        "parameters": [
+          "neck_scoop"
+        ]
+      },
+      {
+        "id": "leg_opening",
+        "type": "custom",
+        "label": {
+          "en": "Leg openings (elastic)",
+          "es": "Aberturas de pierna (elástico)",
+          "fr": "Ouvertures de jambe (élastique)",
+          "pt": "Aberturas de perna (elástico)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "leg_opening_r"
+          },
+          {
+            "piece": "back",
+            "edge": "leg_opening_r"
+          }
+        ],
+        "parameters": [
+          "hip_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true,
+      "elastic_finish": true,
+      "hook_closure": true,
+      "pull_on": false
+    },
+    "societal_benefit": {
+      "en": "A bodysuit's one advantage over a tucked-in top is that it cannot ride up, and that advantage lives entirely in the crotch closure — the part cheap bodysuits skimp or misplace, so they gape or dig. This cartridge draws the closure honestly: the gusset is sized to seat a printable hook-and-eye plate, and the crotch edges are solved so front and back meet it squarely, so the anti-ride-up mechanism actually works. The torso is made to measure to the wearer's own shoulder-to-crotch length — the measurement a bodysuit most needs and a size grid most rounds — so it neither drags at the shoulders nor bunches at the waist. A bodysuit that fits and whose gusset plate can be reprinted becomes a repairable commons object.",
+      "es": "La única ventaja de un body sobre un top fajado es que no se sube, y esa ventaja vive por completo en el cierre de entrepierna — la parte que los bodies baratos escatiman o colocan mal, y por eso se abren o marcan. Este cartucho traza el cierre con honestidad: la entrepierna se dimensiona para asentar una placa de broches imprimible, y los cantos de entrepierna se resuelven para que delantero y trasero la encuentren a escuadra, así el mecanismo anti-subida de verdad funciona. El torso se hace a medida al propio largo de hombro a entrepierna — la medida que un body más necesita y una tabla de tallas más redondea — así ni tira en los hombros ni se amontona en la cintura. Un body que ajusta y cuya placa de broches puede reimprimirse se vuelve un objeto común reparable.",
+      "fr": "Le seul avantage d'un body sur un haut rentré est qu'il ne remonte pas, et cet avantage tient entièrement à la fermeture d'entrejambe — la partie que les bodys bon marché lésinent ou mal placent, si bien qu'ils bâillent ou marquent. Ce cartouche trace la fermeture honnêtement : le fond est dimensionné pour asseoir une plaque d'agrafes imprimable, et les bords d'entrejambe sont résolus pour que devant et dos la rencontrent d'équerre, de sorte que le mécanisme anti-remontée fonctionne vraiment. Le torse est fait sur mesure à la longueur épaule-entrejambe propre — la mesure dont un body a le plus besoin et qu'une grille arrondit le plus — pour qu'il ne tire pas aux épaules ni ne fronce à la taille. Un body qui va et dont la plaque d'agrafes peut être réimprimée devient un objet commun réparable.",
+      "pt": "A única vantagem de um body sobre um top enfiado é que não sobe, e essa vantagem vive inteiramente no fecho de entrepernas — a parte que os bodies baratos economizam ou colocam mal, e por isso abrem ou marcam. Este cartucho desenha o fecho com honestidade: o fundilho é dimensionado para assentar uma placa de colchetes imprimível, e as bordas do entrepernas são resolvidas para que frente e dorso a encontrem em esquadria, de modo que o mecanismo anti-subida de fato funcione. O torso é feito sob medida ao próprio comprimento ombro-entrepernas — a medida de que um body mais precisa e que uma grade mais arredonda — para não puxar nos ombros nem amontoar na cintura. Um body que veste bem e cuja placa de colchetes pode ser reimpressa torna-se um objeto comum reparável."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

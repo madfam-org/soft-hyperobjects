@@ -1,0 +1,436 @@
+{
+  "project": {
+    "name": "Huipil (three-web blouse)",
+    "slug": "huipil-blouse",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "One of the oldest and most widely worn Indigenous garments of Mexico and Central America: a rectangular tunic assembled from straight-woven webs. Where the FC-300 huipil is a two-web tunic, THIS is the classic THREE-WEB BLOUSE-length huipil of the Maya and other highland peoples — a centre web carrying the neck flanked by two side webs, joined by the decorative join-stitch (randa), hemmed at the hip. The loom web width is real, so the body width is solved as 3 x web_width, not from a chest measurement; the neck is the ONLY cut and everything else is whole webs folded at the shoulder. The randa is marked but no motif is drawn, and no woven design is drawn — the weave and the join-stitch are the weaver's. Made to measure to the loom web width, blouse length and neck opening. FC-400 lane 10 (heritage).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una de las prendas indígenas más antiguas y usadas de México y Centroamérica: una túnica rectangular ensamblada de lienzos tejidos rectos. Donde el huipil de FC-300 es de dos lienzos, ESTE es el clásico huipil de TRES LIENZOS a la altura de blusa de los mayas y otros pueblos del altiplano — un lienzo central que lleva el cuello flanqueado por dos lienzos laterales, unidos por la randa, con dobladillo a la cadera. El ancho del lienzo de telar es real, así que el ancho del cuerpo se resuelve como 3 x web_width, no de una medida de pecho; el cuello es el ÚNICO corte y todo lo demás son lienzos enteros doblados en el hombro. La randa se marca pero no se dibuja motivo, y no se dibuja diseño tejido — el tejido y la randa son del tejedor. Hecho a medida al ancho de lienzo de telar, largo de blusa y abertura de cuello. Carril 10 de FC-400 (patrimonio).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "L'un des plus anciens et des plus portés des vêtements autochtones du Mexique et d'Amérique centrale : une tunique rectangulaire assemblée de lés tissés droits. Là où le huipil de FC-300 est à deux lés, CELUI-CI est le classique huipil à TROIS LÉS de longueur blouse des Mayas et d'autres peuples des hauts plateaux — un lé central portant l'encolure flanqué de deux lés latéraux, joints par la couture décorative (randa), ourlé à la hanche. La largeur de lé du métier est réelle, donc la largeur du corps est résolue à 3 x web_width, non d'une mesure de poitrine ; l'encolure est la SEULE coupe et tout le reste est des lés entiers pliés à l'épaule. La randa est marquée mais aucun motif n'est tracé, et aucun dessin tissé n'est tracé — le tissage et la randa sont ceux du tisserand. Fait sur mesure à la largeur de lé du métier, à la longueur de blouse et à l'ouverture d'encolure. Couloir 10 de FC-400 (patrimoine).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma das mais antigas e usadas peças indígenas do México e da América Central: uma túnica retangular montada de panos tecidos retos. Onde o huipil de FC-300 é de dois panos, ESTE é o clássico huipil de TRÊS PANOS em comprimento de blusa dos maias e outros povos do altiplano — um pano central que leva a gola flanqueado por dois panos laterais, unidos pela costura decorativa (randa), embainhado no quadril. A largura do pano de tear é real, então a largura do corpo é resolvida como 3 x web_width, não de uma medida de peito; a gola é o ÚNICO corte e todo o resto são panos inteiros dobrados no ombro. A randa é marcada mas nenhum motivo é desenhado, e nenhum desenho tecido é desenhado — o tecido e a randa são do tecelão. Feito sob medida à largura do pano de tear, comprimento de blusa e abertura de gola. Corredor 10 do FC-400 (patrimônio).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "huipil",
+      "three-web",
+      "blouse",
+      "maya",
+      "mesoamerican",
+      "randa",
+      "heritage",
+      "uncut"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "huipil (Fashion Cabinet FC-300) — two-web tunic huipil sibling",
+          "license": "CERN-OHL-W-2.0"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full huipil",
+        "es": "Huipil completo",
+        "fr": "Huipil complet",
+        "pt": "Huipil completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "centre_web",
+        "side_web"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "centre_web",
+      "label": {
+        "en": "Centre web (with neck)",
+        "es": "Lienzo central (con cuello)",
+        "fr": "Lé central (avec encolure)",
+        "pt": "Pano central (com gola)"
+      },
+      "default_color": "#e6ddc9",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "side_web",
+      "label": {
+        "en": "Side web (randa-joined)",
+        "es": "Lienzo lateral (unido con randa)",
+        "fr": "Lé latéral (joint par randa)",
+        "pt": "Pano lateral (unido por randa)"
+      },
+      "default_color": "#e6ddc9",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "cloth",
+      "label": {
+        "en": "Webs & body",
+        "es": "Lienzos y cuerpo",
+        "fr": "Lés et corps",
+        "pt": "Panos e corpo"
+      }
+    },
+    {
+      "id": "neck",
+      "label": {
+        "en": "Neck",
+        "es": "Cuello",
+        "fr": "Encolure",
+        "pt": "Gola"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "web_width",
+      "type": "slider",
+      "group": "cloth",
+      "default": 340,
+      "min": 200,
+      "max": 500,
+      "step": 10,
+      "label": {
+        "en": "Loom web width (mm)",
+        "es": "Ancho de lienzo de telar (mm)",
+        "fr": "Largeur de lé du métier (mm)",
+        "pt": "Largura do pano de tear (mm)"
+      },
+      "tooltip": {
+        "en": "The body width is three of these",
+        "es": "El ancho del cuerpo son tres de estos",
+        "fr": "La largeur du corps en fait trois",
+        "pt": "A largura do corpo são três destes"
+      }
+    },
+    {
+      "id": "blouse_length",
+      "type": "slider",
+      "group": "cloth",
+      "default": 560,
+      "min": 360,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Blouse length (mm)",
+        "es": "Largo de blusa (mm)",
+        "fr": "Longueur de blouse (mm)",
+        "pt": "Comprimento de blusa (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder fold to the hip hem",
+        "es": "Del doblez de hombro al dobladillo en la cadera",
+        "fr": "Du pli d'épaule à l'ourlet à la hanche",
+        "pt": "Da dobra do ombro à barra no quadril"
+      }
+    },
+    {
+      "id": "neck_width",
+      "type": "slider",
+      "group": "neck",
+      "default": 220,
+      "min": 120,
+      "max": 320,
+      "step": 5,
+      "label": {
+        "en": "Neck width (mm)",
+        "es": "Ancho de cuello (mm)",
+        "fr": "Largeur d'encolure (mm)",
+        "pt": "Largura da gola (mm)"
+      },
+      "tooltip": {
+        "en": "Boat-neck span — cut into the centre web only",
+        "es": "Ancho del escote barco — cortado solo en el lienzo central",
+        "fr": "Largeur du col bateau — coupée dans le lé central seul",
+        "pt": "Largura do decote barco — cortada apenas no pano central"
+      }
+    },
+    {
+      "id": "neck_drop_front",
+      "type": "slider",
+      "group": "neck",
+      "default": 60,
+      "min": 20,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Front neck drop (mm)",
+        "es": "Caída de cuello delantero (mm)",
+        "fr": "Chute d'encolure devant (mm)",
+        "pt": "Queda de gola frontal (mm)"
+      },
+      "tooltip": {
+        "en": "How far the front neck scoops below the fold",
+        "es": "Cuánto baja el cuello delantero bajo el doblez",
+        "fr": "De combien l'encolure devant plonge sous le pli",
+        "pt": "Quanto a gola frontal desce abaixo da dobra"
+      }
+    },
+    {
+      "id": "neck_drop_back",
+      "type": "slider",
+      "group": "neck",
+      "default": 20,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "label": {
+        "en": "Back neck drop (mm)",
+        "es": "Caída de cuello trasero (mm)",
+        "fr": "Chute d'encolure dos (mm)",
+        "pt": "Queda de gola traseira (mm)"
+      },
+      "tooltip": {
+        "en": "The back neck is shallower",
+        "es": "El cuello trasero es menos profundo",
+        "fr": "L'encolure dos est moins profonde",
+        "pt": "A gola traseira é menos profunda"
+      }
+    },
+    {
+      "id": "sleeve_overhang",
+      "type": "slider",
+      "group": "construction",
+      "default": 120,
+      "min": 0,
+      "max": 300,
+      "step": 10,
+      "label": {
+        "en": "Sleeve overhang (mm)",
+        "es": "Voladizo de manga (mm)",
+        "fr": "Débord de manche (mm)",
+        "pt": "Balanço de manga (mm)"
+      },
+      "tooltip": {
+        "en": "The web past the body — the short cap sleeve, left open above the underarm",
+        "es": "El lienzo más allá del cuerpo — la manga corta, abierta sobre la axila",
+        "fr": "Le lé au-delà du corps — la manche courte, ouverte au-dessus de l'aisselle",
+        "pt": "O pano além do corpo — a manga curta, aberta acima da axila"
+      }
+    },
+    {
+      "id": "randa_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 4,
+      "max": 40,
+      "step": 2,
+      "label": {
+        "en": "Randa band width (mm)",
+        "es": "Ancho de banda de randa (mm)",
+        "fr": "Largeur de bande de randa (mm)",
+        "pt": "Largura da faixa de randa (mm)"
+      },
+      "tooltip": {
+        "en": "The decorative join-stitch band (marked, not drawn as a motif)",
+        "es": "La banda decorativa de la randa (marcada, sin dibujar motivo)",
+        "fr": "La bande décorative de la randa (marquée, sans motif tracé)",
+        "pt": "A faixa decorativa da randa (marcada, sem motivo desenhado)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 20,
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de dobladillo (mm)",
+        "fr": "Rentré d'ourlet (mm)",
+        "pt": "Margem de barra (mm)"
+      },
+      "tooltip": {
+        "en": "The hem at the hip",
+        "es": "El dobladillo en la cadera",
+        "fr": "L'ourlet à la hanche",
+        "pt": "A barra no quadril"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "The side seams below the underarm; the randa is the join above",
+        "es": "Las costuras laterales bajo la axila; la randa es la unión arriba",
+        "fr": "Les coutures côté sous l'aisselle ; la randa est la jonction au-dessus",
+        "pt": "As costuras laterais abaixo da axila; a randa é a união acima"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "tunic",
+      "label": {
+        "en": "Longer (tunic) huipil",
+        "es": "Huipil más largo (túnica)",
+        "fr": "Huipil plus long (tunique)",
+        "pt": "Huipil mais longo (túnica)"
+      },
+      "values": {
+        "blouse_length": 800
+      }
+    },
+    {
+      "id": "wide_neck",
+      "label": {
+        "en": "Wide boat neck",
+        "es": "Escote barco amplio",
+        "fr": "Large col bateau",
+        "pt": "Decote barco amplo"
+      },
+      "values": {
+        "neck_width": 300,
+        "neck_drop_front": 40
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "neck_width < web_width",
+      "message": {
+        "en": "The neck is cut into the centre web and must be narrower than it.",
+        "es": "El cuello se corta en el lienzo central y debe ser más angosto que él.",
+        "fr": "L'encolure est coupée dans le lé central et doit être plus étroite que lui.",
+        "pt": "A gola é cortada no pano central e deve ser mais estreita que ele."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "randa",
+        "type": "custom",
+        "label": {
+          "en": "Randa join (centre web to side webs)",
+          "es": "Unión de randa (lienzo central a laterales)",
+          "fr": "Jonction randa (lé central aux lés latéraux)",
+          "pt": "União randa (pano central aos laterais)"
+        },
+        "edges": [
+          {
+            "piece": "centre_web",
+            "edge": "side_r"
+          },
+          {
+            "piece": "side_web",
+            "edge": "randa_join"
+          }
+        ],
+        "parameters": [
+          "web_width",
+          "randa_width"
+        ]
+      },
+      {
+        "id": "neckline",
+        "type": "neckline",
+        "label": {
+          "en": "Boat neck (cut into the centre web)",
+          "es": "Escote barco (cortado en el lienzo central)",
+          "fr": "Col bateau (coupé dans le lé central)",
+          "pt": "Decote barco (cortado no pano central)"
+        },
+        "edges": [
+          {
+            "piece": "centre_web",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_width",
+          "neck_drop_front"
+        ]
+      },
+      {
+        "id": "shoulder",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder fold + sleeve overhang",
+          "es": "Doblez de hombro + voladizo de manga",
+          "fr": "Pli d'épaule + débord de manche",
+          "pt": "Dobra de ombro + balanço de manga"
+        },
+        "edges": [
+          {
+            "piece": "side_web",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "sleeve_overhang"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": false,
+      "three_web": true,
+      "uncut_body": true
+    },
+    "societal_benefit": {
+      "en": "The huipil is among the oldest continuously worn garments in the Americas, and its construction logic — whole loom webs, joined by the randa, with the neck as the only cut — is exactly what a Western blouse-block draft erases when it cuts a huipil into shaped panels. That erasure also detaches the woven designs and the randa from the communities that own them. This cartridge keeps the three-web construction so the body width is real loom widths and almost nothing is cut, marks the randa without drawing it, and deliberately draws no woven design. It sizes to the loom and the wearer and states plainly that the weave and the join-stitch belong to the weaver. A huipil drafted to its own logic, leaving its meaningful surface to its community, is the respectful form a commons object can take.",
+      "es": "El huipil está entre las prendas más antiguas de uso continuo en América, y su lógica de construcción — lienzos enteros de telar, unidos por la randa, con el cuello como único corte — es justo lo que un trazado occidental de blusa borra al cortar un huipil en paneles conformados. Ese borrado también separa los diseños tejidos y la randa de las comunidades que los poseen. Este cartucho conserva la construcción de tres lienzos para que el ancho del cuerpo sean anchos reales de telar y casi nada se corte, marca la randa sin dibujarla, y deliberadamente no dibuja diseño tejido. Se dimensiona al telar y a quien lo viste y declara con claridad que el tejido y la randa son del tejedor. Un huipil trazado a su propia lógica, dejando su superficie significativa a su comunidad, es la forma respetuosa que puede tomar un objeto común.",
+      "fr": "Le huipil compte parmi les vêtements les plus anciennement portés en continu des Amériques, et sa logique de construction — lés entiers de métier, joints par la randa, avec l'encolure comme seule coupe — est justement ce qu'un tracé occidental de blouse efface en découpant un huipil en panneaux galbés. Cet effacement détache aussi les dessins tissés et la randa des communautés qui les possèdent. Ce cartouche garde la construction à trois lés pour que la largeur du corps soit de vraies largeurs de métier et que presque rien ne soit coupé, marque la randa sans la tracer, et ne trace délibérément aucun dessin tissé. Il se dimensionne au métier et à la personne et déclare clairement que le tissage et la randa appartiennent au tisserand. Un huipil tracé à sa propre logique, laissant sa surface signifiante à sa communauté, est la forme respectueuse qu'un objet commun peut prendre.",
+      "pt": "O huipil está entre as peças mais antigas de uso contínuo nas Américas, e sua lógica de construção — panos inteiros de tear, unidos pela randa, com a gola como único corte — é justamente o que um traçado ocidental de blusa apaga ao cortar um huipil em painéis modelados. Esse apagamento também desliga os desenhos tecidos e a randa das comunidades que os possuem. Este cartucho mantém a construção de três panos para a largura do corpo ser larguras reais de tear e quase nada ser cortado, marca a randa sem desenhá-la, e deliberadamente não desenha desenho tecido. Dimensiona-se ao tear e a quem veste e declara com clareza que o tecido e a randa são do tecelão. Um huipil modelado à sua própria lógica, deixando sua superfície significativa à sua comunidade, é a forma respeitosa que um objeto comum pode tomar."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

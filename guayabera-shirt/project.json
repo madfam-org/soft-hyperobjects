@@ -1,0 +1,601 @@
+{
+  "project": {
+    "name": "Guayabera (de alforzas)",
+    "slug": "guayabera-shirt",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The pleated men's dress shirt of the Caribbean and the Mexican Gulf, worn untucked in light linen or cotton and defined by its two vertical bands of fine pleats (alforzas) down each front and the back, its four patch pockets and its side vents. This cartridge drafts a real guayabera around the two features that make it one: the alforzas are pleats, and pleats eat cloth, so the panel is cut WIDER than the finished chest by the solved pleat take-up (each pleat consumes twice its fold depth), and the four pockets and buttons sit on the alforza grid. The buttons are the Yantra4D sew-through-button; button_ligne drives both the drafted buttonhole spacing and the printed button. Made to measure to chest and waist girths plus shirt and sleeve lengths. FC-400 lane 10 (heritage).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La camisa de vestir masculina de alforzas del Caribe y el Golfo de México, que se lleva por fuera en lino o algodón ligero y se define por sus dos bandas verticales de alforzas por cada delantero y la espalda, sus cuatro bolsillos de parche y sus aberturas laterales. Este cartucho traza una guayabera real en torno a las dos características que la hacen tal: las alforzas son pliegues, y los pliegues comen tela, así que el panel se corta MÁS ANCHO que el pecho terminado por el consumo de pliegue resuelto (cada pliegue consume el doble de su profundidad de doblez), y los cuatro bolsillos y botones se asientan en la retícula de alforzas. Los botones son el sew-through-button de Yantra4D; button_ligne define tanto el espaciado de ojales trazado como el botón impreso. Hecho a medida a los contornos de pecho y cintura más el largo de camisa y de manga. Carril 10 de FC-400 (patrimonio).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La chemise habillée masculine à plis des Caraïbes et du Golfe du Mexique, portée par-dessus le pantalon en lin ou coton léger et définie par ses deux bandes verticales de fins plis (alforzas) sur chaque devant et le dos, ses quatre poches plaquées et ses fentes latérales. Ce cartouche trace une vraie guayabera autour des deux traits qui la définissent : les alforzas sont des plis, et les plis mangent du tissu, donc le panneau est coupé PLUS LARGE que la poitrine finie de la valeur d'embu de plis résolue (chaque pli consomme deux fois sa profondeur de pli), et les quatre poches et boutons se placent sur la trame des alforzas. Les boutons sont le sew-through-button Yantra4D ; button_ligne pilote l'espacement des boutonnières tracé ET le bouton imprimé. Fait sur mesure aux tours de poitrine et de taille plus les longueurs de chemise et de manche. Couloir 10 de FC-400 (patrimoine).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A camisa social masculina de pregas do Caribe e do Golfo do México, usada por fora em linho ou algodão leve e definida por suas duas faixas verticais de pregas finas (alforzas) por cada frente e as costas, seus quatro bolsos chapados e suas aberturas laterais. Este cartucho modela uma guayabera real em torno dos dois traços que a definem: as alforzas são pregas, e pregas comem tecido, então o painel é cortado MAIS LARGO que o peito acabado pelo consumo de prega resolvido (cada prega consome o dobro de sua profundidade de dobra), e os quatro bolsos e botões se assentam na grade das alforzas. Os botões são o sew-through-button Yantra4D; button_ligne dirige tanto o espaçamento de casas modelado quanto o botão impresso. Feito sob medida aos contornos de peito e cintura mais os comprimentos de camisa e de manga. Corredor 10 do FC-400 (patrimônio).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "guayabera",
+      "alforzas",
+      "pleated-shirt",
+      "heritage",
+      "mexican",
+      "caribbean",
+      "hardware",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full guayabera",
+        "es": "Guayabera completa",
+        "fr": "Guayabera complète",
+        "pt": "Guayabera completa"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "collar",
+        "pocket"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (with alforzas)",
+        "es": "Delantero (con alforzas)",
+        "fr": "Devant (avec alforzas)",
+        "pt": "Frente (com alforzas)"
+      },
+      "default_color": "#e8e4d8",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (with alforzas)",
+        "es": "Espalda (con alforzas)",
+        "fr": "Dos (avec alforzas)",
+        "pt": "Costas (com alforzas)"
+      },
+      "default_color": "#e8e4d8",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche",
+        "pt": "Manga"
+      },
+      "default_color": "#ddd9cc",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Collar band",
+        "es": "Banda de cuello",
+        "fr": "Bande de col",
+        "pt": "Banda de gola"
+      },
+      "default_color": "#ddd9cc",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    },
+    {
+      "id": "pocket",
+      "label": {
+        "en": "Patch pocket",
+        "es": "Bolsillo de parche",
+        "fr": "Poche plaquée",
+        "pt": "Bolso chapado"
+      },
+      "default_color": "#e8e4d8",
+      "cut": {
+        "quantity": 4,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps",
+        "pt": "Medidas corporais"
+      }
+    },
+    {
+      "id": "alforzas",
+      "label": {
+        "en": "Alforzas (pleats)",
+        "es": "Alforzas (pliegues)",
+        "fr": "Alforzas (plis)",
+        "pt": "Alforzas (pregas)"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 1040,
+      "min": 800,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de peito (mm)"
+      },
+      "tooltip": {
+        "en": "The finished chest — the pleats sit on cloth cut wider than this",
+        "es": "El pecho terminado — las alforzas van sobre tela cortada más ancha que esto",
+        "fr": "La poitrine finie — les plis reposent sur du tissu coupé plus large",
+        "pt": "O peito acabado — as pregas ficam sobre tecido cortado mais largo"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 980,
+      "min": 700,
+      "max": 1450,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)",
+        "pt": "Contorno de cintura (mm)"
+      },
+      "tooltip": {
+        "en": "A guayabera hangs loose from the chest",
+        "es": "Una guayabera cae holgada desde el pecho",
+        "fr": "Une guayabera tombe ample depuis la poitrine",
+        "pt": "Uma guayabera cai folgada desde o peito"
+      }
+    },
+    {
+      "id": "shirt_length",
+      "type": "slider",
+      "group": "body",
+      "default": 760,
+      "min": 600,
+      "max": 1000,
+      "step": 10,
+      "label": {
+        "en": "Shirt length (mm)",
+        "es": "Largo de camisa (mm)",
+        "fr": "Longueur de chemise (mm)",
+        "pt": "Comprimento da camisa (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to the straight untucked hem",
+        "es": "De la nuca al borde recto que va por fuera",
+        "fr": "De la nuque à l'ourlet droit porté par-dessus",
+        "pt": "Da nuca à barra reta usada por fora"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "body",
+      "default": 620,
+      "min": 200,
+      "max": 720,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)",
+        "pt": "Comprimento de manga (mm)"
+      },
+      "tooltip": {
+        "en": "Short (summer) or long — the guayabera comes both ways",
+        "es": "Corta (verano) o larga — la guayabera existe en ambas",
+        "fr": "Courte (été) ou longue — la guayabera existe des deux façons",
+        "pt": "Curta (verão) ou longa — a guayabera existe das duas formas"
+      }
+    },
+    {
+      "id": "bicep_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 380,
+      "min": 260,
+      "max": 600,
+      "step": 10,
+      "label": {
+        "en": "Bicep girth (mm)",
+        "es": "Contorno de bíceps (mm)",
+        "fr": "Tour de biceps (mm)",
+        "pt": "Contorno de bíceps (mm)"
+      },
+      "tooltip": {
+        "en": "Sizes the sleeve",
+        "es": "Dimensiona la manga",
+        "fr": "Dimensionne la manche",
+        "pt": "Dimensiona a manga"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 420,
+      "min": 340,
+      "max": 520,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      },
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)",
+        "pt": "Contorno de pescoço (mm)"
+      },
+      "tooltip": {
+        "en": "Sizes the collar band",
+        "es": "Dimensiona la banda de cuello",
+        "fr": "Dimensionne la bande de col",
+        "pt": "Dimensiona a banda de gola"
+      }
+    },
+    {
+      "id": "ease_pct",
+      "type": "slider",
+      "group": "construction",
+      "default": 18,
+      "min": 6,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Wearing ease (%)",
+        "es": "Holgura de uso (%)",
+        "fr": "Aisance de port (%)",
+        "pt": "Folga de uso (%)"
+      },
+      "tooltip": {
+        "en": "A guayabera is worn loose",
+        "es": "La guayabera se lleva holgada",
+        "fr": "La guayabera se porte ample",
+        "pt": "A guayabera é usada folgada"
+      }
+    },
+    {
+      "id": "alforza_count",
+      "type": "slider",
+      "group": "alforzas",
+      "default": 7,
+      "min": 3,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Pleats per band",
+        "es": "Alforzas por banda",
+        "fr": "Plis par bande",
+        "pt": "Pregas por faixa"
+      },
+      "tooltip": {
+        "en": "Each front and the back carry two bands of this many pleats",
+        "es": "Cada delantero y la espalda llevan dos bandas de estas alforzas",
+        "fr": "Chaque devant et le dos portent deux bandes de ce nombre de plis",
+        "pt": "Cada frente e as costas levam duas faixas com esta quantidade de pregas"
+      }
+    },
+    {
+      "id": "alforza_depth",
+      "type": "slider",
+      "group": "alforzas",
+      "default": 4,
+      "min": 2,
+      "max": 8,
+      "step": 0.5,
+      "label": {
+        "en": "Pleat fold depth (mm)",
+        "es": "Profundidad de doblez (mm)",
+        "fr": "Profondeur de pli (mm)",
+        "pt": "Profundidade da dobra (mm)"
+      },
+      "tooltip": {
+        "en": "Each pleat consumes twice this depth in cloth",
+        "es": "Cada alforza consume el doble de esta profundidad en tela",
+        "fr": "Chaque pli consomme deux fois cette profondeur en tissu",
+        "pt": "Cada prega consome o dobro desta profundidade em tecido"
+      }
+    },
+    {
+      "id": "button_ligne",
+      "type": "slider",
+      "group": "construction",
+      "default": 18,
+      "min": 14,
+      "max": 26,
+      "step": 1,
+      "label": {
+        "en": "Button size (ligne)",
+        "es": "Tamaño de botón (línea)",
+        "fr": "Taille de bouton (ligne)",
+        "pt": "Tamanho de botão (linha)"
+      },
+      "tooltip": {
+        "en": "Drives the printed button AND the buttonhole spacing",
+        "es": "Define el botón impreso Y el espaciado de ojales",
+        "fr": "Pilote le bouton imprimé ET l'espacement des boutonnières",
+        "pt": "Dirige o botão impresso E o espaçamento das casas"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 70,
+      "min": 40,
+      "max": 110,
+      "step": 5,
+      "label": {
+        "en": "Collar height (mm)",
+        "es": "Alto de cuello (mm)",
+        "fr": "Hauteur de col (mm)",
+        "pt": "Altura da gola (mm)"
+      },
+      "tooltip": {
+        "en": "A spread/camp collar band",
+        "es": "Una banda de cuello abierto/camp",
+        "fr": "Une bande de col ouvert/camp",
+        "pt": "Uma banda de gola aberta/camp"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Shirt seams are flat-felled",
+        "es": "Las costuras de camisa son ribeteadas planas",
+        "fr": "Les coutures de chemise sont rabattues",
+        "pt": "As costuras de camisa são rebatidas"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "short_sleeve",
+      "label": {
+        "en": "Short sleeve",
+        "es": "Manga corta",
+        "fr": "Manche courte",
+        "pt": "Manga curta"
+      },
+      "values": {
+        "sleeve_length": 240
+      }
+    },
+    {
+      "id": "fine_pleats",
+      "label": {
+        "en": "Fine pleats",
+        "es": "Alforzas finas",
+        "fr": "Plis fins",
+        "pt": "Pregas finas"
+      },
+      "values": {
+        "alforza_count": 11,
+        "alforza_depth": 3
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "chest_girth >= waist_girth",
+      "message": {
+        "en": "A guayabera hangs loose from the chest; the chest should not be smaller than the waist.",
+        "es": "La guayabera cae holgada desde el pecho; el pecho no debe ser menor que la cintura.",
+        "fr": "La guayabera tombe ample depuis la poitrine ; la poitrine ne doit pas être plus petite que la taille.",
+        "pt": "A guayabera cai folgada desde o peito; o peito não deve ser menor que a cintura."
+      },
+      "severity": "warning"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "button",
+    "subtype": "sew-through button on placket and pockets",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "hole_count": "4",
+        "hole_spacing": "button_ligne * 0.635 / 3",
+        "hole_dia": "1.8"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seams (with vents)",
+          "es": "Costuras laterales (con aberturas)",
+          "fr": "Coutures côté (avec fentes)",
+          "pt": "Costuras laterais (com aberturas)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side_seam"
+          },
+          {
+            "piece": "back",
+            "edge": "side_seam"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "ease_pct"
+        ]
+      },
+      {
+        "id": "armhole",
+        "type": "armscye",
+        "label": {
+          "en": "Armhole / sleeve cap",
+          "es": "Sisa / cabeza de manga",
+          "fr": "Emmanchure / tête de manche",
+          "pt": "Cava / cabeça de manga"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          },
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "bicep_girth"
+        ]
+      },
+      {
+        "id": "collar",
+        "type": "custom",
+        "label": {
+          "en": "Collar band",
+          "es": "Banda de cuello",
+          "fr": "Bande de col",
+          "pt": "Banda de gola"
+        },
+        "edges": [
+          {
+            "piece": "collar",
+            "edge": "neck_edge"
+          },
+          {
+            "piece": "front",
+            "edge": "neckline"
+          },
+          {
+            "piece": "back",
+            "edge": "neckline"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "collar_height"
+        ]
+      },
+      {
+        "id": "placket",
+        "type": "button_stand",
+        "label": {
+          "en": "Button placket + pocket buttons",
+          "es": "Tapeta de botones + botones de bolsillo",
+          "fr": "Patte de boutonnage + boutons de poche",
+          "pt": "Carcela de botões + botões de bolso"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "center_front"
+          }
+        ],
+        "parameters": [
+          "button_ligne"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": true,
+      "pleated": true,
+      "button_closure": true
+    },
+    "societal_benefit": {
+      "en": "The guayabera is a living regional dress garment, and the one detail that actually defines it — the alforzas, the fine vertical pleat bands — is exactly the detail a naive draft gets wrong, because pleats consume cloth and a panel drafted to the finished chest and then \"pleated\" either runs short or shifts everything on it. This cartridge encodes the pleat take-up as solved arithmetic, so the pleated panel still fits the wearer's chest and the four pockets land on the pleat grid, and it couples the button size to the printable button so the whole placket agrees. It states its cultural provenance plainly and invents no ceremonial motif. A regional garment drafted to a real body, with reprintable buttons, becomes a made-to-measure, repairable commons object instead of a mass-sized approximation.",
+      "es": "La guayabera es una prenda regional viva, y el único detalle que de verdad la define — las alforzas, las finas bandas de pliegues verticales — es justo el que un trazado ingenuo equivoca, porque los pliegues consumen tela y un panel trazado al pecho terminado y luego \"plisado\" se queda corto o desplaza todo lo que lleva encima. Este cartucho codifica el consumo de pliegue como aritmética resuelta, así el panel plisado sigue ajustando al pecho de quien la viste y los cuatro bolsillos caen en la retícula de alforzas, y acopla el tamaño del botón al botón imprimible para que toda la tapeta coincida. Declara su procedencia cultural con claridad y no inventa motivo ceremonial. Una prenda regional trazada a un cuerpo real, con botones reimprimibles, se vuelve un objeto común, a medida y reparable, en vez de una aproximación de talla masiva.",
+      "fr": "La guayabera est un vêtement régional vivant, et le seul détail qui la définit vraiment — les alforzas, les fines bandes de plis verticaux — est justement celui qu'un tracé naïf rate, car les plis consomment du tissu et un panneau tracé à la poitrine finie puis « plissé » manque de tissu ou décale tout ce qu'il porte. Ce cartouche inscrit l'embu de plis en arithmétique résolue, de sorte que le panneau plissé va toujours à la poitrine de la personne et que les quatre poches tombent sur la trame des plis, et il couple la taille du bouton au bouton imprimable pour que toute la patte concorde. Il déclare sa provenance culturelle clairement et n'invente aucun motif cérémoniel. Un vêtement régional tracé à un corps réel, aux boutons réimprimables, devient un objet commun, sur mesure et réparable, plutôt qu'une approximation de taille de masse.",
+      "pt": "A guayabera é uma peça regional viva, e o único detalhe que de fato a define — as alforzas, as finas faixas de pregas verticais — é justamente o que um traçado ingênuo erra, porque pregas consomem tecido e um painel modelado ao peito acabado e depois \"pregueado\" fica curto ou desloca tudo o que carrega. Este cartucho inscreve o consumo de prega como aritmética resolvida, então o painel pregueado ainda serve ao peito de quem veste e os quatro bolsos caem na grade das pregas, e acopla o tamanho do botão ao botão imprimível para toda a carcela concordar. Declara sua procedência cultural com clareza e não inventa motivo cerimonial. Uma peça regional modelada a um corpo real, com botões reimprimíveis, torna-se um objeto comum, sob medida e reparável, em vez de uma aproximação de tamanho de massa."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

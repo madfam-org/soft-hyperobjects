@@ -1,0 +1,614 @@
+{
+  "project": {
+    "name": "Hanbok jeogori jacket (maedeup)",
+    "slug": "jeogori-jacket",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The short upper jacket of the Korean hanbok — cropped at the ribcage, with a deep curved collar band (git) faced in a removable white strip (dongjeong) and wide gently-curved sleeves. Where the FC-300 hanbok-jeogori uses the traditional ribbon ties (goreum), THIS jeogori is the variant fastened with knotted cloth buttons (maedeup-danchu), the Korean decorative knot-and-loop closure worn on some jeogori and magoja — a distinct garment in the same family, and the reason this rank names the frog-closure hardware as a Group-B co-creation. The git's length is the SOLVED run of the neckline it faces, so the curved collar closes flat; the fronts lap right-over-left and close by the maedeup knot rather than tying. Made to measure to chest girth, jacket length and sleeve length. FC-400 lane 10 (heritage).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La chaqueta corta superior del hanbok coreano — cortada a la altura de las costillas, con una banda de cuello curva y profunda (git) forrada en una tira blanca removible (dongjeong) y mangas anchas de curva suave. Donde el hanbok-jeogori de FC-300 usa las cintas tradicionales (goreum), ESTE jeogori es la variante abrochada con botones de nudo de tela (maedeup-danchu), el cierre coreano decorativo de nudo y lazada usado en algunos jeogori y magoja — una prenda distinta de la misma familia, y la razón por la que este rango nombra el frog-closure como co-creación de Grupo B. El largo del git es el recorrido RESUELTO del escote que forra, así el cuello curvo cierra plano; los delanteros cruzan derecha-sobre-izquierda y cierran por el nudo maedeup en vez de atarse. Hecho a medida al contorno de pecho, largo de chaqueta y largo de manga. Carril 10 de FC-400 (patrimonio).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La courte veste supérieure du hanbok coréen — coupée à hauteur des côtes, avec une bande de col profonde et courbe (git) parementée d'une bande blanche amovible (dongjeong) et de larges manches doucement courbes. Là où le hanbok-jeogori de FC-300 utilise les rubans traditionnels (goreum), CE jeogori est la variante fermée par des boutons de nœud en tissu (maedeup-danchu), la fermeture coréenne décorative à nœud et boucle portée sur certains jeogori et magoja — un vêtement distinct de la même famille, et la raison pour laquelle ce rang nomme le frog-closure comme co-création de Groupe B. La longueur du git est le parcours RÉSOLU de l'encolure qu'il pare, de sorte que le col courbe ferme à plat ; les devants croisent droite-sur-gauche et ferment par le nœud maedeup plutôt qu'en nouant. Fait sur mesure au tour de poitrine, à la longueur de veste et de manche. Couloir 10 de FC-400 (patrimoine).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A curta jaqueta superior do hanbok coreano — cortada na altura das costelas, com uma banda de gola curva e profunda (git) forrada numa tira branca removível (dongjeong) e mangas largas de curva suave. Onde o hanbok-jeogori de FC-300 usa as fitas tradicionais (goreum), ESTE jeogori é a variante fechada com botões de nó de tecido (maedeup-danchu), o fecho coreano decorativo de nó e laçada usado em alguns jeogori e magoja — uma peça distinta da mesma família, e a razão de este posto nomear o frog-closure como cocriação de Grupo B. O comprimento do git é o percurso RESOLVIDO do decote que forra, então a gola curva fecha plana; as frentes cruzam direita-sobre-esquerda e fecham pelo nó maedeup em vez de amarrar. Feito sob medida ao contorno de peito, comprimento da jaqueta e da manga. Corredor 10 do FC-400 (patrimônio).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "jeogori",
+      "hanbok",
+      "korean",
+      "maedeup",
+      "heritage",
+      "co-create",
+      "hardware",
+      "jacket"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        },
+        {
+          "source": "hanbok-jeogori (Fashion Cabinet FC-300) — goreum-tie jeogori sibling",
+          "license": "CERN-OHL-W-2.0"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full jeogori",
+        "es": "Jeogori completo",
+        "fr": "Jeogori complet",
+        "pt": "Jeogori completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "back",
+        "front",
+        "sleeve",
+        "git",
+        "dongjeong",
+        "loop_tab"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda",
+        "fr": "Dos",
+        "pt": "Costas"
+      },
+      "default_color": "#c9d6e0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (lapping)",
+        "es": "Delantero (cruzado)",
+        "fr": "Devant (croisé)",
+        "pt": "Frente (transpassada)"
+      },
+      "default_color": "#c9d6e0",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche",
+        "pt": "Manga"
+      },
+      "default_color": "#bccad6",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "git",
+      "label": {
+        "en": "Git (collar band)",
+        "es": "Git (banda de cuello)",
+        "fr": "Git (bande de col)",
+        "pt": "Git (banda de gola)"
+      },
+      "default_color": "#3a4a5a",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    },
+    {
+      "id": "dongjeong",
+      "label": {
+        "en": "Dongjeong (white strip)",
+        "es": "Dongjeong (tira blanca)",
+        "fr": "Dongjeong (bande blanche)",
+        "pt": "Dongjeong (tira branca)"
+      },
+      "default_color": "#f6f6f2",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    },
+    {
+      "id": "loop_tab",
+      "label": {
+        "en": "Maedeup loop tab",
+        "es": "Lengüeta de lazada maedeup",
+        "fr": "Patte de boucle maedeup",
+        "pt": "Aba de laçada maedeup"
+      },
+      "default_color": "#3a4a5a",
+      "cut": {
+        "quantity": 1,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps",
+        "pt": "Medidas corporais"
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Git & dongjeong",
+        "es": "Git y dongjeong",
+        "fr": "Git et dongjeong",
+        "pt": "Git e dongjeong"
+      }
+    },
+    {
+      "id": "closure",
+      "label": {
+        "en": "Maedeup closure",
+        "es": "Cierre maedeup",
+        "fr": "Fermeture maedeup",
+        "pt": "Fecho maedeup"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 920,
+      "min": 700,
+      "max": 1400,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de peito (mm)"
+      },
+      "tooltip": {
+        "en": "The body is sized from this with ease",
+        "es": "El cuerpo se dimensiona de esto con holgura",
+        "fr": "Le corps est dimensionné à partir de ceci avec aisance",
+        "pt": "O corpo é dimensionado disto com folga"
+      }
+    },
+    {
+      "id": "jacket_length",
+      "type": "slider",
+      "group": "body",
+      "default": 240,
+      "min": 160,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Jacket length (mm)",
+        "es": "Largo de chaqueta (mm)",
+        "fr": "Longueur de veste (mm)",
+        "pt": "Comprimento da jaqueta (mm)"
+      },
+      "tooltip": {
+        "en": "A jeogori is SHORT — cropped just below the bust",
+        "es": "Un jeogori es CORTO — cortado justo bajo el busto",
+        "fr": "Un jeogori est COURT — coupé juste sous la poitrine",
+        "pt": "Um jeogori é CURTO — cortado logo abaixo do busto"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "body",
+      "default": 520,
+      "min": 300,
+      "max": 680,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)",
+        "pt": "Comprimento de manga (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to the curved cuff",
+        "es": "Del hombro al puño curvo",
+        "fr": "De l'épaule au poignet courbe",
+        "pt": "Do ombro ao punho curvo"
+      }
+    },
+    {
+      "id": "bicep_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 340,
+      "min": 240,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Bicep girth (mm)",
+        "es": "Contorno de bíceps (mm)",
+        "fr": "Tour de biceps (mm)",
+        "pt": "Contorno de bíceps (mm)"
+      },
+      "tooltip": {
+        "en": "Sizes the wide sleeve",
+        "es": "Dimensiona la manga ancha",
+        "fr": "Dimensionne la manche large",
+        "pt": "Dimensiona a manga larga"
+      }
+    },
+    {
+      "id": "git_width",
+      "type": "slider",
+      "group": "collar",
+      "default": 55,
+      "min": 30,
+      "max": 100,
+      "step": 5,
+      "label": {
+        "en": "Git width (mm)",
+        "es": "Ancho de git (mm)",
+        "fr": "Largeur de git (mm)",
+        "pt": "Largura de git (mm)"
+      },
+      "tooltip": {
+        "en": "The collar band's finished width",
+        "es": "Ancho terminado de la banda de cuello",
+        "fr": "Largeur finie de la bande de col",
+        "pt": "Largura acabada da banda de gola"
+      }
+    },
+    {
+      "id": "dongjeong_width",
+      "type": "slider",
+      "group": "collar",
+      "default": 22,
+      "min": 12,
+      "max": 45,
+      "step": 2,
+      "label": {
+        "en": "Dongjeong width (mm)",
+        "es": "Ancho de dongjeong (mm)",
+        "fr": "Largeur de dongjeong (mm)",
+        "pt": "Largura de dongjeong (mm)"
+      },
+      "tooltip": {
+        "en": "The removable white collar strip",
+        "es": "La tira blanca removible del cuello",
+        "fr": "La bande blanche amovible du col",
+        "pt": "A tira branca removível da gola"
+      }
+    },
+    {
+      "id": "lap_depth",
+      "type": "slider",
+      "group": "construction",
+      "default": 180,
+      "min": 80,
+      "max": 300,
+      "step": 10,
+      "label": {
+        "en": "Lap depth (mm)",
+        "es": "Profundidad de cruce (mm)",
+        "fr": "Profondeur de croisement (mm)",
+        "pt": "Profundidade da transpasse (mm)"
+      },
+      "tooltip": {
+        "en": "How far the fronts cross right-over-left",
+        "es": "Cuánto cruzan los delanteros derecha-sobre-izquierda",
+        "fr": "De combien les devants croisent droite-sur-gauche",
+        "pt": "Quanto as frentes cruzam direita-sobre-esquerda"
+      }
+    },
+    {
+      "id": "closure_span",
+      "type": "slider",
+      "group": "closure",
+      "default": 60,
+      "min": 30,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Closure span (mm)",
+        "es": "Ancho de cierre (mm)",
+        "fr": "Envergure de fermeture (mm)",
+        "pt": "Vão do fecho (mm)"
+      },
+      "tooltip": {
+        "en": "The maedeup knot-and-loop closure width",
+        "es": "Ancho del cierre de nudo y lazada maedeup",
+        "fr": "Largeur de la fermeture à nœud et boucle maedeup",
+        "pt": "Largura do fecho de nó e laçada maedeup"
+      }
+    },
+    {
+      "id": "knot_count",
+      "type": "slider",
+      "group": "closure",
+      "default": 1,
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "label": {
+        "en": "Knot buttons",
+        "es": "Botones de nudo",
+        "fr": "Boutons de nœud",
+        "pt": "Botões de nó"
+      },
+      "tooltip": {
+        "en": "Number of maedeup knot buttons down the lap",
+        "es": "Número de botones de nudo maedeup en el cruce",
+        "fr": "Nombre de boutons de nœud maedeup le long du croisement",
+        "pt": "Número de botões de nó maedeup ao longo da transpasse"
+      }
+    },
+    {
+      "id": "ease_pct",
+      "type": "slider",
+      "group": "construction",
+      "default": 16,
+      "min": 6,
+      "max": 28,
+      "step": 1,
+      "label": {
+        "en": "Wearing ease (%)",
+        "es": "Holgura de uso (%)",
+        "fr": "Aisance de port (%)",
+        "pt": "Folga de uso (%)"
+      },
+      "tooltip": {
+        "en": "A jeogori is cut close but not tight",
+        "es": "Un jeogori se corta ajustado pero no apretado",
+        "fr": "Un jeogori est coupé près du corps sans serrer",
+        "pt": "Um jeogori é cortado justo mas não apertado"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Hanbok seams are hand-finished so it can be unpicked",
+        "es": "Las costuras del hanbok se rematan a mano para poder descoserlo",
+        "fr": "Les coutures du hanbok sont finies à la main pour pouvoir le découdre",
+        "pt": "As costuras do hanbok são acabadas à mão para poder descosê-lo"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "long_jeogori",
+      "label": {
+        "en": "Longer (historical) jeogori",
+        "es": "Jeogori más largo (histórico)",
+        "fr": "Jeogori plus long (historique)",
+        "pt": "Jeogori mais longo (histórico)"
+      },
+      "values": {
+        "jacket_length": 360,
+        "lap_depth": 260
+      }
+    },
+    {
+      "id": "many_knots",
+      "label": {
+        "en": "Multiple knot buttons",
+        "es": "Varios botones de nudo",
+        "fr": "Plusieurs boutons de nœud",
+        "pt": "Vários botões de nó"
+      },
+      "values": {
+        "knot_count": 3
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "lap_depth < jacket_length",
+      "message": {
+        "en": "The lap cannot be deeper than the jacket.",
+        "es": "El cruce no puede ser más profundo que la chaqueta.",
+        "fr": "Le croisement ne peut être plus profond que la veste.",
+        "pt": "A transpasse não pode ser mais funda que a jaqueta."
+      },
+      "severity": "error"
+    },
+    {
+      "expression": "dongjeong_width < git_width",
+      "message": {
+        "en": "The dongjeong sits within the git and must be narrower.",
+        "es": "El dongjeong va dentro del git y debe ser más angosto.",
+        "fr": "Le dongjeong se pose dans le git et doit être plus étroit.",
+        "pt": "O dongjeong fica dentro do git e deve ser mais estreito."
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "매듭단추 maedeup-danchu — knotted cloth-button closure on the lap",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "frog-closure",
+      "linked": false,
+      "params_map": {
+        "span": "closure_span",
+        "knots": "knot_count"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "collar",
+        "type": "custom",
+        "label": {
+          "en": "Git collar band (solved to the collar run)",
+          "es": "Banda de cuello git (resuelta al recorrido del cuello)",
+          "fr": "Bande de col git (résolue sur le parcours d'encolure)",
+          "pt": "Banda de gola git (resolvida ao percurso da gola)"
+        },
+        "edges": [
+          {
+            "piece": "git",
+            "edge": "neck_edge"
+          },
+          {
+            "piece": "front",
+            "edge": "collar_edge"
+          },
+          {
+            "piece": "back",
+            "edge": "neckline"
+          }
+        ],
+        "parameters": [
+          "git_width",
+          "lap_depth"
+        ]
+      },
+      {
+        "id": "closure",
+        "type": "custom",
+        "label": {
+          "en": "Maedeup knot-and-loop closure",
+          "es": "Cierre de nudo y lazada maedeup",
+          "fr": "Fermeture à nœud et boucle maedeup",
+          "pt": "Fecho de nó e laçada maedeup"
+        },
+        "edges": [
+          {
+            "piece": "loop_tab",
+            "edge": "loop_edge"
+          },
+          {
+            "piece": "front",
+            "edge": "center_front"
+          }
+        ],
+        "parameters": [
+          "closure_span",
+          "knot_count"
+        ]
+      },
+      {
+        "id": "armhole",
+        "type": "armscye",
+        "label": {
+          "en": "Armhole / sleeve cap",
+          "es": "Sisa / cabeza de manga",
+          "fr": "Emmanchure / tête de manche",
+          "pt": "Cava / cabeça de manga"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          },
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "bicep_girth"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seams",
+          "es": "Costuras laterales",
+          "fr": "Coutures côté",
+          "pt": "Costuras laterais"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "ease_pct"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true,
+      "curved_collar": true,
+      "knot_closure": true,
+      "co_create": true
+    },
+    "societal_benefit": {
+      "en": "The jeogori is one of the most recognisable garments in the world and one of the easiest to render as a costume caricature — a flat cross-front with a printed collar. What makes it a real jeogori is construction: the git is a deep CURVED collar band whose length must be solved to the neckline or it will not lie flat, the dongjeong is a removable white strip that is washed separately (a genuine upkeep detail), and the closure is a maedeup knot-and-loop, a living Korean craft. This cartridge solves the curved collar to the body, draws the removable dongjeong, and wires the knot closure as a co-created printable while deferring the knotwork itself to the maker. It states its provenance and the difference from the goreum-tie sibling plainly. A jeogori drafted to a real body, with its maker's own maedeup, becomes a made-to-measure commons object rather than a costume.",
+      "es": "El jeogori es una de las prendas más reconocibles del mundo y una de las más fáciles de reducir a caricatura de disfraz — un cruce delantero plano con un cuello estampado. Lo que lo hace un jeogori real es la construcción: el git es una banda de cuello CURVA y profunda cuyo largo debe resolverse al escote o no asienta plano, el dongjeong es una tira blanca removible que se lava aparte (un detalle real de mantenimiento), y el cierre es un nudo y lazada maedeup, artesanía coreana viva. Este cartucho resuelve el cuello curvo al cuerpo, traza el dongjeong removible y conecta el cierre de nudo como imprimible co-creado, dejando el nudo mismo a quien lo hace. Declara su procedencia y la diferencia con el hermano de cintas goreum con claridad. Un jeogori trazado a un cuerpo real, con el maedeup de su propia artesana, se vuelve un objeto común a medida, no un disfraz.",
+      "fr": "Le jeogori est l'un des vêtements les plus reconnaissables du monde et l'un des plus faciles à réduire en caricature de costume — un croisé devant plat au col imprimé. Ce qui en fait un vrai jeogori, c'est la construction : le git est une bande de col profonde et COURBE dont la longueur doit être résolue sur l'encolure sinon elle ne repose pas à plat, le dongjeong est une bande blanche amovible lavée séparément (un vrai détail d'entretien), et la fermeture est un nœud et boucle maedeup, artisanat coréen vivant. Ce cartouche résout le col courbe au corps, trace le dongjeong amovible et câble la fermeture à nœud comme imprimable co-créé en laissant le nœud lui-même au fabricant. Il déclare sa provenance et la différence avec le frère à rubans goreum clairement. Un jeogori tracé à un corps réel, avec le maedeup de sa propre artisane, devient un objet commun sur mesure, non un costume.",
+      "pt": "O jeogori é uma das peças mais reconhecíveis do mundo e uma das mais fáceis de reduzir a caricatura de fantasia — um cruzado frontal plano com uma gola estampada. O que o torna um jeogori real é a construção: o git é uma banda de gola CURVA e profunda cujo comprimento deve ser resolvido ao decote ou não assenta plano, o dongjeong é uma tira branca removível lavada à parte (um verdadeiro detalhe de manutenção), e o fecho é um nó e laçada maedeup, artesanato coreano vivo. Este cartucho resolve a gola curva ao corpo, desenha o dongjeong removível e conecta o fecho de nó como imprimível cocriado, deixando o nó em si a quem faz. Declara sua procedência e a diferença com o irmão de fitas goreum com clareza. Um jeogori modelado a um corpo real, com o maedeup de sua própria artesã, torna-se um objeto comum sob medida, não uma fantasia."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}
