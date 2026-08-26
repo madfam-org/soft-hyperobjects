@@ -1,0 +1,392 @@
+{
+  "project": {
+    "name": "Packable rain shell",
+    "slug": "packable-rain-shell",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A featherweight hooded rain shell that stuffs into its own chest pocket: a dropped-shoulder body, a two-panel hood, and a one-piece sleeve, all in ripstop, with a drawcord hem and a drawcord hood face that cinch on cord-locks against the wind. The cord-lock is the Yantra4D cord-lock solid; its cord channel is bored for the same cord_dia the casings carry. The hood is drafted to the measured neckline so it sets in without straining the seam under a loaded, up hood, and the sleeve cap is bisected against the measured armholes.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un chubasquero con capucha ligerísimo que se guarda en su propio bolsillo de pecho: un cuerpo de hombro caído, una capucha de dos paneles y una manga de una pieza, todo en ripstop, con jareta de cordón en el bajo y en la cara de la capucha que ciñen con topes de cordón contra el viento. El tope es el sólido cord-lock de Yantra4D; su canal está perforado para el mismo cord_dia que llevan las jaretas. La capucha se traza al escote medido para que monte sin forzar la costura con la capucha puesta y cargada, y la copa de la manga se biseca contra las sisas medidas.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un coupe-pluie à capuche ultraléger qui se range dans sa propre poche poitrine : un corps à épaule tombante, une capuche en deux panneaux et une manche d'une pièce, le tout en ripstop, avec un cordon de serrage à l'ourlet et au tour du visage de la capuche qui serrent sur des arrêts de cordon contre le vent. L'arrêt est le solide cord-lock de Yantra4D ; son canal est percé pour le même cord_dia que portent les coulisses. La capuche est tracée à l'encolure mesurée pour se monter sans forcer la couture capuche relevée et chargée, et la tête de manche est bissectée contre les emmanchures mesurées.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um corta-vento com capuz ultraleve que se guarda no próprio bolso do peito: um corpo de ombro caído, um capuz de dois painéis e uma manga de uma peça, tudo em ripstop, com cordão no barrado e no rosto do capuz que apertam em travas de cordão contra o vento. A trava é o sólido cord-lock da Yantra4D; seu canal é furado para o mesmo cord_dia que os cós carregam. O capuz é traçado ao decote medido para montar sem forçar a costura com o capuz levantado e carregado, e a cabeça da manga é bissetada contra as cavas medidas.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "packable-rain-shell",
+      "outerwear",
+      "rainwear",
+      "packable",
+      "hooded",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "notion": {
+    "kind": "custom",
+    "subtype": "drawcord cord-lock",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "cord-lock",
+      "linked": true,
+      "params_map": {
+        "cord_dia": "cord_dia",
+        "cords": "2",
+        "body_size": "max(14.0, cord_dia * 4.0)"
+      }
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full rain shell",
+        "es": "Chubasquero completo",
+        "fr": "Coupe-pluie complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "hood"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Shell front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#5f8a8f",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Shell back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#6f9a9f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "cb_fold",
+        "mirror": false
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#7faaaf",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "hood",
+      "label": {
+        "en": "Hood half",
+        "es": "Media capucha",
+        "fr": "Demi-capuche"
+      },
+      "default_color": "#8fbabf",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Coupe"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 1060,
+      "min": 820,
+      "max": 1520,
+      "step": 20,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest; a shell runs generous over layers",
+        "es": "Contorno de pecho; un chubasquero queda amplio sobre capas",
+        "fr": "Tour de poitrine ; un coupe-pluie reste ample sur épaisseurs"
+      }
+    },
+    {
+      "id": "shell_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 720,
+      "min": 560,
+      "max": 920,
+      "step": 10,
+      "label": {
+        "en": "Shell length (mm)",
+        "es": "Largo del chubasquero (mm)",
+        "fr": "Longueur du coupe-pluie (mm)"
+      },
+      "tooltip": {
+        "en": "Neck to hem",
+        "es": "Del cuello al bajo",
+        "fr": "De l'encolure à l'ourlet"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 470,
+      "min": 360,
+      "max": 600,
+      "step": 10,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombros (mm)",
+        "fr": "Largeur d'épaules (mm)"
+      },
+      "tooltip": {
+        "en": "Point to point across the shoulders",
+        "es": "De punta a punta de hombros",
+        "fr": "De pointe à pointe d'épaules"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 640,
+      "min": 300,
+      "max": 720,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to cuff",
+        "es": "Del hombro al puño",
+        "fr": "De l'épaule au poignet"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 420,
+      "min": 320,
+      "max": 540,
+      "step": 10,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the neckline the hood sets into",
+        "es": "Fija el escote donde monta la capucha",
+        "fr": "Fixe l'encolure où se monte la capuche"
+      }
+    },
+    {
+      "id": "cord_dia",
+      "type": "slider",
+      "group": "construction",
+      "default": 4,
+      "min": 2,
+      "max": 7,
+      "step": 1,
+      "label": {
+        "en": "Drawcord diameter (mm)",
+        "es": "Diámetro del cordón (mm)",
+        "fr": "Diamètre du cordon (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the cord-lock channel and the casing depth",
+        "es": "Controla el canal del tope y la profundidad de la jareta",
+        "fr": "Pilote le canal de l'arrêt et la profondeur de la coulisse"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 6,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam",
+        "es": "Aplicado a todas las costuras",
+        "fr": "Appliquée à toutes les coutures"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "cord_dia < 10",
+      "severity": "warning",
+      "message": {
+        "en": "A cord this thick will not run smoothly through a packable-shell casing.",
+        "es": "Un cordón tan grueso no correrá bien por la jareta de un chubasquero plegable.",
+        "fr": "Un cordon aussi épais ne coulissera pas dans la coulisse d'un coupe-pluie compressible."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "trail",
+      "label": {
+        "en": "Trail shell",
+        "es": "Chubasquero de senderismo",
+        "fr": "Coupe-pluie de rando"
+      },
+      "values": {
+        "chest_girth": 1060,
+        "shell_length": 720,
+        "cord_dia": 4
+      }
+    },
+    {
+      "id": "commuter",
+      "label": {
+        "en": "Commuter shell",
+        "es": "Chubasquero urbano",
+        "fr": "Coupe-pluie urbain"
+      },
+      "values": {
+        "chest_girth": 1140,
+        "shell_length": 760,
+        "cord_dia": 5
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "nylon-ripstop-shell"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "hood_neckline",
+        "type": "custom",
+        "label": {
+          "en": "Hood-to-neckline seam",
+          "es": "Costura capucha-escote",
+          "fr": "Couture capuche-encolure"
+        },
+        "edges": [
+          {
+            "piece": "hood",
+            "edge": "neck_edge"
+          },
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "shoulder_width"
+        ]
+      },
+      {
+        "id": "drawcord_casings",
+        "type": "custom",
+        "label": {
+          "en": "Hem and hood drawcord casings",
+          "es": "Jaretas de bajo y capucha",
+          "fr": "Coulisses ourlet et capuche"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "hood",
+            "edge": "face"
+          }
+        ],
+        "parameters": [
+          "cord_dia",
+          "shell_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A cheap rain jacket is a wardrobe's most disposable item — bought in an airport when a shower catches someone out, worn once, and landfilled because the seams leak. A packable silnylon shell drafted to seam-seal and cinch on printable cord-locks is a coat someone keeps: it stuffs into its own pocket to live in a bag, and the cord-locks are fabricated, not sourced from a plastic-notions bin. It deepens the thin outerwear family with the most-replaced garment in it.",
+      "es": "Una chamarra de lluvia barata es lo más desechable de un armario —comprada en un aeropuerto cuando sorprende un chubasco, usada una vez y tirada porque las costuras filtran—. Un chubasquero de silnylon trazado para sellar costuras y ceñir con topes imprimibles es un abrigo que se conserva: se guarda en su propio bolsillo para vivir en una bolsa, y los topes se fabrican, no se sacan de una caja de plástico. Profundiza la delgada familia de abrigos con la prenda más reemplazada de ella.",
+      "fr": "Un imperméable bon marché est l'article le plus jetable d'une garde-robe — acheté à l'aéroport quand une averse surprend, porté une fois, et jeté parce que les coutures fuient. Un coupe-pluie en silnylon tracé pour étanchéifier les coutures et serrer sur des arrêts imprimables est un manteau qu'on garde : il se range dans sa propre poche pour vivre dans un sac, et les arrêts sont fabriqués, non tirés d'un bac de mercerie plastique. Il approfondit la maigre famille des manteaux avec le vêtement le plus remplacé de celle-ci."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

@@ -1,0 +1,312 @@
+{
+  "project": {
+    "name": "Clip-strap garment carrier",
+    "slug": "garment-clip-strap",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The over-the-shoulder carrier that grips a stack of hangers: a padded webbing strap runs over the shoulder, a folded cradle at the working end holds the printed clip that bites the hanger hooks, and a keeper loop tames the tail. The clip is the Yantra4D garment-clip solid — its sprung jaw grips a bundle of hooks so a dozen garments travel from wardrobe to car on one shoulder. The cradle pocket is derived from the clip's own jaw dimensions, so it can never be cut too small for the clip it holds.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El portaprendas al hombro que sujeta una pila de ganchos: una correa acolchada de cincha pasa por el hombro, una cuna plegada en el extremo de trabajo aloja la pinza impresa que muerde los ganchos, y una trabilla domina el sobrante. La pinza es el sólido garment-clip de Yantra4D —su mordaza con resorte agarra un manojo de ganchos— para que una docena de prendas viajen del armario al coche en un solo hombro. El bolsillo de la cuna se deriva de las dimensiones de la propia mordaza, así que nunca se corta demasiado pequeño para la pinza que aloja.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le porte-vêtement à l'épaule qui saisit une pile de cintres : une sangle rembourrée passe sur l'épaule, un berceau replié à l'extrémité de travail loge la pince imprimée qui mord les crochets, et un passant discipline le surplus. La pince est le solide garment-clip de Yantra4D — sa mâchoire à ressort agrippe un faisceau de crochets — pour qu'une douzaine de vêtements passent de l'armoire à la voiture sur une seule épaule. La poche du berceau est tirée des dimensions de la mâchoire elle-même, si bien qu'elle ne peut jamais être coupée trop petite pour la pince qu'elle loge.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O carregador de ombro que agarra uma pilha de cabides: uma alça acolchoada de fita passa sobre o ombro, um berço dobrado na ponta de trabalho aloja o clipe impresso que morde os ganchos, e uma passadeira domina a sobra. O clipe é o sólido garment-clip da Yantra4D — sua mandíbula com mola agarra um feixe de ganchos — para que uma dúzia de roupas viajem do armário ao carro num só ombro. O bolso do berço deriva das dimensões da própria mandíbula, então nunca é cortado pequeno demais para o clipe que aloja.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "garment-clip-strap",
+      "care",
+      "carry",
+      "travel",
+      "webbing",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "notion": {
+    "kind": "custom",
+    "subtype": "sprung garment clip",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "garment-clip",
+      "linked": true,
+      "params_map": {
+        "jaw_len": "clip_jaw_len",
+        "jaw_w": "clip_jaw_width",
+        "tooth_n": "4"
+      }
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full carrier",
+        "es": "Portaprendas completo",
+        "fr": "Porte-vêtement complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "strap",
+        "cradle",
+        "keeper"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "strap",
+      "label": {
+        "en": "Shoulder strap",
+        "es": "Correa de hombro",
+        "fr": "Sangle d'épaule"
+      },
+      "default_color": "#5f6f7a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "cradle",
+      "label": {
+        "en": "Clip cradle",
+        "es": "Cuna de la pinza",
+        "fr": "Berceau de pince"
+      },
+      "default_color": "#6f7f8a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "keeper",
+      "label": {
+        "en": "Tail keeper loop",
+        "es": "Trabilla del sobrante",
+        "fr": "Passant de surplus"
+      },
+      "default_color": "#7f8f9a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Size",
+        "es": "Tamaño",
+        "fr": "Taille"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "strap_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 900,
+      "min": 600,
+      "max": 1300,
+      "step": 20,
+      "label": {
+        "en": "Strap length (mm)",
+        "es": "Largo de la correa (mm)",
+        "fr": "Longueur de sangle (mm)"
+      },
+      "tooltip": {
+        "en": "Over-the-shoulder run, clip end to tail end",
+        "es": "Recorrido al hombro, del extremo de la pinza al sobrante",
+        "fr": "Parcours à l'épaule, de la pince au surplus"
+      }
+    },
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 50,
+      "min": 25,
+      "max": 75,
+      "step": 5,
+      "label": {
+        "en": "Webbing width (mm)",
+        "es": "Ancho de la cincha (mm)",
+        "fr": "Largeur de sangle (mm)"
+      },
+      "tooltip": {
+        "en": "Width of the webbing; strap, cradle and keeper all share it",
+        "es": "Ancho de la cincha; correa, cuna y trabilla lo comparten",
+        "fr": "Largeur de la sangle ; sangle, berceau et passant la partagent"
+      }
+    },
+    {
+      "id": "clip_jaw_len",
+      "type": "slider",
+      "group": "construction",
+      "default": 70,
+      "min": 40,
+      "max": 110,
+      "step": 5,
+      "label": {
+        "en": "Clip jaw length (mm)",
+        "es": "Largo de mordaza (mm)",
+        "fr": "Longueur de mâchoire (mm)"
+      },
+      "tooltip": {
+        "en": "Printed clip jaw length; also drives the garment-clip solid",
+        "es": "Largo de la mordaza impresa; también controla el sólido garment-clip",
+        "fr": "Longueur de mâchoire imprimée ; pilote aussi le solide garment-clip"
+      }
+    },
+    {
+      "id": "clip_jaw_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 44,
+      "min": 28,
+      "max": 70,
+      "step": 2,
+      "label": {
+        "en": "Clip jaw width (mm)",
+        "es": "Ancho de mordaza (mm)",
+        "fr": "Largeur de mâchoire (mm)"
+      },
+      "tooltip": {
+        "en": "Printed clip jaw width; also drives the garment-clip solid",
+        "es": "Ancho de la mordaza impresa; también controla el sólido garment-clip",
+        "fr": "Largeur de mâchoire imprimée ; pilote aussi le solide garment-clip"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam",
+        "es": "Aplicado a todas las costuras",
+        "fr": "Appliquée à toutes les coutures"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "clip_jaw_len < strap_length * 0.3",
+      "severity": "warning",
+      "message": {
+        "en": "A clip jaw this long relative to the strap leaves too little strap to carry over the shoulder.",
+        "es": "Una mordaza tan larga respecto a la correa deja muy poca correa para llevar al hombro.",
+        "fr": "Une mâchoire aussi longue par rapport à la sangle laisse trop peu de sangle à porter à l'épaule."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "standard",
+      "label": {
+        "en": "Standard carrier",
+        "es": "Portaprendas estándar",
+        "fr": "Porte-vêtement standard"
+      },
+      "values": {
+        "strap_length": 900,
+        "strap_width": 50,
+        "clip_jaw_len": 70
+      }
+    },
+    {
+      "id": "heavy",
+      "label": {
+        "en": "Heavy load (coats)",
+        "es": "Carga pesada (abrigos)",
+        "fr": "Charge lourde (manteaux)"
+      },
+      "values": {
+        "strap_length": 1000,
+        "strap_width": 70,
+        "clip_jaw_len": 95
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "nylon-ripstop-shell"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "clip_cradle_seam",
+        "type": "custom",
+        "label": {
+          "en": "Cradle-to-strap seam",
+          "es": "Costura de cuna a correa",
+          "fr": "Couture berceau-sangle"
+        },
+        "edges": [
+          {
+            "piece": "cradle",
+            "edge": "attach"
+          },
+          {
+            "piece": "strap",
+            "edge": "clip_end"
+          }
+        ],
+        "parameters": [
+          "strap_width",
+          "clip_jaw_len",
+          "clip_jaw_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Carrying a wardrobe by the armful is how hangers tangle and shoulders end up on the floor; the shop answer is a branded carry hook. This holds a printed Yantra4D garment-clip on a strap cut from webbing offcuts, so a whole rail moves in one trip and the hardware is printable, not bought. The clip arrived on the 500-push shelf and this cartridge consumes it.",
+      "es": "Cargar un armario en brazos es como se enredan los ganchos y los hombros acaban en el suelo; la respuesta de tienda es un gancho de acarreo de marca. Esto sostiene una pinza garment-clip impresa de Yantra4D en una correa cortada de retazos de cincha, para que todo un perchero se mueva en un viaje y el herraje sea imprimible, no comprado. La pinza llegó al estante del empuje de 500 y este cartucho la consume.",
+      "fr": "Porter une garde-robe à bout de bras, c'est ainsi que les cintres s'emmêlent et que les épaules finissent par terre ; la réponse en boutique est un crochet de portage de marque. Ceci tient une pince garment-clip imprimée Yantra4D sur une sangle coupée dans des chutes, si bien qu'un portant entier se déplace en un voyage et que la quincaillerie est imprimable, non achetée. La pince est arrivée sur l'étagère du push 500 et ce cartouche la consomme."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

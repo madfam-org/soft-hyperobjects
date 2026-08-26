@@ -1,0 +1,278 @@
+{
+  "project": {
+    "name": "Fabric lint-brush mitt",
+    "slug": "lint-brush-mitt",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A washable mitt of napped velour that wipes lint, pet hair, and dust off a coat with a stroke — the reusable answer to the sticky-tape roller. Two mirrored shell halves close around the hand, a cuff band finishes the wrist, and a hanging tab lets it dry between uses. The mitt is a capsule — a straight palm run capped by a measured semicircle at the fingertips; the two shells are the same outline mirrored, so their seam matches by construction, and the cuff length is the measured wrist opening the shells present.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una manopla lavable de terciopelo con pelo que limpia pelusa, pelo de mascota y polvo de un abrigo de una pasada —la respuesta reutilizable al rodillo de cinta—. Dos mitades simétricas cierran alrededor de la mano, una banda de puño remata la muñeca y una anilla para colgar la deja secar entre usos. La manopla es una cápsula —un tramo recto de palma rematado por un semicírculo medido en las puntas—; las dos mitades son el mismo contorno reflejado, así que su costura coincide por construcción, y el largo del puño es la abertura de muñeca medida que presentan las mitades.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une moufle lavable en velours gratté qui essuie peluches, poils d'animaux et poussière d'un manteau d'un geste — la réponse réutilisable au rouleau adhésif. Deux demi-coques symétriques se ferment autour de la main, un poignet finit le poignet, et une bride de suspension la laisse sécher entre deux usages. La moufle est une capsule — un tronçon de paume droit coiffé d'un demi-cercle mesuré au bout des doigts ; les deux coques sont le même contour miroité, si bien que leur couture concorde par construction, et la longueur du poignet est l'ouverture de poignet mesurée que présentent les coques.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma luva lavável de veludo com pelo que limpa fiapos, pelo de animal e poeira de um casaco num só passe — a resposta reutilizável ao rolo de fita. Duas metades simétricas fecham em torno da mão, uma faixa de punho arremata o pulso, e uma alça de pendurar deixa secar entre usos. A luva é uma cápsula — um trecho reto de palma coroado por um semicírculo medido nas pontas; as duas metades são o mesmo contorno espelhado, então sua costura coincide por construção, e o comprimento do punho é a abertura de pulso medida que as metades apresentam.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "lint-brush-mitt",
+      "care",
+      "cleaning",
+      "reusable",
+      "pattern-only",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full lint mitt",
+        "es": "Manopla completa",
+        "fr": "Moufle complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "shell",
+        "cuff",
+        "tab"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "shell",
+      "label": {
+        "en": "Mitt shell",
+        "es": "Cuerpo de la manopla",
+        "fr": "Coque de moufle"
+      },
+      "default_color": "#8f7f8a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Wrist cuff",
+        "es": "Puño de muñeca",
+        "fr": "Poignet"
+      },
+      "default_color": "#9f8f9a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "tab",
+      "label": {
+        "en": "Hanging tab",
+        "es": "Anilla para colgar",
+        "fr": "Bride de suspension"
+      },
+      "default_color": "#af9faa",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Hand size",
+        "es": "Talla de mano",
+        "fr": "Taille de main"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "hand_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 110,
+      "min": 80,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Hand width (mm)",
+        "es": "Ancho de la mano (mm)",
+        "fr": "Largeur de main (mm)"
+      },
+      "tooltip": {
+        "en": "Across the knuckles; sets the fingertip cap radius",
+        "es": "A lo ancho de los nudillos; fija el radio de la punta",
+        "fr": "En travers des jointures ; fixe le rayon du bout"
+      }
+    },
+    {
+      "id": "mitt_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 220,
+      "min": 160,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Mitt length (mm)",
+        "es": "Largo de la manopla (mm)",
+        "fr": "Longueur de moufle (mm)"
+      },
+      "tooltip": {
+        "en": "Wrist to fingertip",
+        "es": "De la muñeca a la punta",
+        "fr": "Du poignet au bout des doigts"
+      }
+    },
+    {
+      "id": "cuff_depth",
+      "type": "slider",
+      "group": "construction",
+      "default": 55,
+      "min": 30,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Cuff depth (mm)",
+        "es": "Profundidad del puño (mm)",
+        "fr": "Profondeur du poignet (mm)"
+      },
+      "tooltip": {
+        "en": "How deep the wrist band folds",
+        "es": "Cuánto se dobla la banda de muñeca",
+        "fr": "Profondeur de repli du poignet"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam",
+        "es": "Aplicado a todas las costuras",
+        "fr": "Appliquée à toutes les coutures"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "mitt_length > hand_width",
+      "severity": "warning",
+      "message": {
+        "en": "A mitt shorter than it is wide barely covers the palm — the stroke has no reach.",
+        "es": "Una manopla más corta que ancha apenas cubre la palma — la pasada no alcanza.",
+        "fr": "Une moufle plus courte que large couvre à peine la paume — le geste n'a pas de portée."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "standard",
+      "label": {
+        "en": "Standard mitt",
+        "es": "Manopla estándar",
+        "fr": "Moufle standard"
+      },
+      "values": {
+        "hand_width": 110,
+        "mitt_length": 220,
+        "cuff_depth": 55
+      }
+    },
+    {
+      "id": "child",
+      "label": {
+        "en": "Child mitt",
+        "es": "Manopla infantil",
+        "fr": "Moufle enfant"
+      },
+      "values": {
+        "hand_width": 85,
+        "mitt_length": 175,
+        "cuff_depth": 40
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "felpa-algodon"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "shell_side_seam",
+        "type": "custom",
+        "label": {
+          "en": "Mirrored shell side seam",
+          "es": "Costura lateral simétrica",
+          "fr": "Couture latérale miroir"
+        },
+        "edges": [
+          {
+            "piece": "shell",
+            "edge": "side_r"
+          },
+          {
+            "piece": "shell",
+            "edge": "side_l"
+          }
+        ],
+        "parameters": [
+          "hand_width",
+          "mitt_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": false
+    },
+    "societal_benefit": {
+      "en": "The sticky lint roller is one of the purest single-use products in the home — a sheet torn off and binned per pass. A napped velour mitt does the same job, washes clean, and lasts years, cut from a hand's-worth of towelling or velour offcut. Pattern-only: a mitt needs no hardware, and it deepens the thin care_keeping family with the most reused-for-most-waste swap on the shelf.",
+      "es": "El rodillo quitapelusas es uno de los productos de un solo uso más puros del hogar —una hoja arrancada y tirada por pasada—. Una manopla de terciopelo hace el mismo trabajo, se lava y dura años, cortada de un retazo de rizo o terciopelo del tamaño de una mano. Solo-patrón: una manopla no necesita herraje, y profundiza la delgada familia care_keeping con el cambio de mayor reúso frente a mayor desperdicio del estante.",
+      "fr": "Le rouleau anti-peluches est l'un des produits jetables les plus purs de la maison — une feuille arrachée et jetée par passage. Une moufle en velours fait le même travail, se lave et dure des années, coupée dans une chute d'éponge ou de velours de la taille d'une main. Patron-seul : une moufle n'a besoin d'aucune quincaillerie, et elle approfondit la maigre famille care_keeping avec l'échange le plus réutilisé contre le plus de déchets de l'étagère."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

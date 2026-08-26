@@ -1,0 +1,416 @@
+{
+  "project": {
+    "name": "Toggle duffle coat",
+    "slug": "duffle-coat",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The classic duffle: a straight wool-melton coat closed by the signature horn-toggle-and-rope fastenings across the front, with a deep buttoned hood, patch pockets, and set sleeves. The toggle is the Yantra4D toggle solid; its barrel length is driven by the same toggle_len the coat's rope loops are cut for. The toggle stand extends past centre front, mirror-equal on both fronts so the toggles meet their loops when closed, and the toggle pitch is recomputed so the row lands exactly on both end clearances. The deep hood is cut to the measured neckline and the sleeve cap bisected against the measured armholes.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La trenca clásica: un abrigo recto de lana melton cerrado por las trabillas de cuerno y cuerda características al frente, con capucha profunda abotonada, bolsillos de parche y mangas montadas. El toggle es el sólido toggle de Yantra4D; su largo de barril se controla con el mismo toggle_len para el que se cortan las presillas de cuerda. La tapeta de toggles se extiende más allá del centro delantero, simétrica en ambos delanteros para que los toggles encuentren sus presillas al cerrar, y el paso se recalcula para que la fila caiga exacta en ambos márgenes. La capucha profunda se corta al escote medido y la copa de la manga se biseca contra las sisas medidas.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le duffle-coat classique : un manteau droit en laine melton fermé par les brandebourgs à toggles de corne et corde caractéristiques au devant, avec une capuche profonde boutonnée, des poches plaquées et des manches montées. Le toggle est le solide toggle de Yantra4D ; sa longueur de barillet est pilotée par le même toggle_len pour lequel les brides de corde sont coupées. La patte à toggles dépasse le milieu devant, symétrique sur les deux devants pour que les toggles rencontrent leurs brides à la fermeture, et le pas est recalculé pour que la rangée tombe juste sur les deux marges. La capuche profonde est coupée à l'encolure mesurée et la tête de manche bissectée contre les emmanchures mesurées.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O duffle clássico: um casaco reto de lã melton fechado pelas alças de toggle de chifre e corda características na frente, com capuz profundo abotoado, bolsos chapados e mangas montadas. O toggle é o sólido toggle da Yantra4D; seu comprimento de barril é conduzido pelo mesmo toggle_len para o qual as alças de corda são cortadas. A carcela de toggles se estende além do meio da frente, simétrica nas duas frentes para que os toggles encontrem suas alças ao fechar, e o passo é recalculado para que a fileira caia exata nas duas margens. O capuz profundo é cortado ao decote medido e a cabeça da manga bissetada contra as cavas medidas.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "duffle-coat",
+      "outerwear",
+      "coat",
+      "toggle",
+      "hooded",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "notion": {
+    "kind": "custom",
+    "subtype": "horn toggle-and-rope closure",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "toggle",
+      "linked": true,
+      "params_map": {
+        "barrel_len": "toggle_len",
+        "barrel_dia": "toggle_len * 0.26",
+        "cords": "2"
+      }
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full duffle coat",
+        "es": "Trenca completa",
+        "fr": "Duffle-coat complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "hood"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Duffle front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#6a5a44",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Duffle back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#7a6a54",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "cb_fold",
+        "mirror": false
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#8a7a64",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "hood",
+      "label": {
+        "en": "Deep hood half",
+        "es": "Media capucha profunda",
+        "fr": "Demi-capuche profonde"
+      },
+      "default_color": "#9a8a74",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Coupe"
+      }
+    },
+    {
+      "id": "closure",
+      "label": {
+        "en": "Toggles",
+        "es": "Toggles",
+        "fr": "Toggles"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 1060,
+      "min": 840,
+      "max": 1560,
+      "step": 20,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest; a duffle runs generous over a jacket",
+        "es": "Contorno de pecho; una trenca queda amplia sobre una chaqueta",
+        "fr": "Tour de poitrine ; un duffle reste ample sur une veste"
+      }
+    },
+    {
+      "id": "coat_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 860,
+      "min": 680,
+      "max": 1100,
+      "step": 20,
+      "label": {
+        "en": "Coat length (mm)",
+        "es": "Largo del abrigo (mm)",
+        "fr": "Longueur du manteau (mm)"
+      },
+      "tooltip": {
+        "en": "Neck to hem; also sets the toggle closure run",
+        "es": "Del cuello al bajo; también fija el tramo de toggles",
+        "fr": "De l'encolure à l'ourlet ; fixe aussi le tronçon de toggles"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 480,
+      "min": 380,
+      "max": 620,
+      "step": 10,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombros (mm)",
+        "fr": "Largeur d'épaules (mm)"
+      },
+      "tooltip": {
+        "en": "Point to point across the shoulders",
+        "es": "De punta a punta de hombros",
+        "fr": "De pointe à pointe d'épaules"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 650,
+      "min": 360,
+      "max": 720,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to cuff",
+        "es": "Del hombro al puño",
+        "fr": "De l'épaule au poignet"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 430,
+      "min": 340,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the neckline the deep hood is cut to",
+        "es": "Fija el escote al que se corta la capucha profunda",
+        "fr": "Fixe l'encolure à laquelle la capuche profonde est coupée"
+      }
+    },
+    {
+      "id": "toggle_len",
+      "type": "slider",
+      "group": "closure",
+      "default": 70,
+      "min": 40,
+      "max": 100,
+      "step": 5,
+      "label": {
+        "en": "Toggle length (mm)",
+        "es": "Largo del toggle (mm)",
+        "fr": "Longueur du toggle (mm)"
+      },
+      "tooltip": {
+        "en": "Horn toggle barrel length; drives the toggle solid and the rope loops",
+        "es": "Largo del barril de cuerno; controla el sólido toggle y las presillas",
+        "fr": "Longueur du barillet de corne ; pilote le solide toggle et les brides"
+      }
+    },
+    {
+      "id": "toggle_count",
+      "type": "slider",
+      "group": "closure",
+      "default": 4,
+      "min": 3,
+      "max": 6,
+      "step": 1,
+      "label": {
+        "en": "Toggle count",
+        "es": "Número de toggles",
+        "fr": "Nombre de toggles"
+      },
+      "tooltip": {
+        "en": "Front closures; the pitch is solved so the row lands exactly",
+        "es": "Cierres del frente; el paso se resuelve para que la fila caiga exacta",
+        "fr": "Fermetures devant ; le pas est résolu pour que la rangée tombe juste"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 8,
+      "max": 18,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam",
+        "es": "Aplicado a todas las costuras",
+        "fr": "Appliquée à toutes les coutures"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "toggle_count > 2",
+      "severity": "error",
+      "message": {
+        "en": "A duffle needs at least three toggles or the front gapes between them.",
+        "es": "Una trenca necesita al menos tres toggles o el frente se abre entre ellos.",
+        "fr": "Un duffle a besoin d'au moins trois toggles ou le devant bâille entre eux."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic duffle",
+        "es": "Trenca clásica",
+        "fr": "Duffle classique"
+      },
+      "values": {
+        "coat_length": 860,
+        "toggle_count": 4,
+        "toggle_len": 70
+      }
+    },
+    {
+      "id": "monty",
+      "label": {
+        "en": "Long Monty",
+        "es": "Montgomery largo",
+        "fr": "Montgomery long"
+      },
+      "values": {
+        "coat_length": 1000,
+        "toggle_count": 5,
+        "toggle_len": 80
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "lana-melton-abrigo"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "toggle_placket",
+        "type": "custom",
+        "label": {
+          "en": "Toggle-and-rope placket",
+          "es": "Tapeta de toggles",
+          "fr": "Patte à toggles"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "stand_fold"
+          }
+        ],
+        "parameters": [
+          "toggle_len",
+          "toggle_count",
+          "coat_length"
+        ]
+      },
+      {
+        "id": "hood_neckline",
+        "type": "custom",
+        "label": {
+          "en": "Deep-hood-to-neckline seam",
+          "es": "Costura capucha-escote",
+          "fr": "Couture capuche-encolure"
+        },
+        "edges": [
+          {
+            "piece": "hood",
+            "edge": "neck_edge"
+          },
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "shoulder_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The duffle is a coat designed to be mended: the toggles are the only moving parts, and a broken one is replaced without touching the coat. Where a modern parka is scrapped when its zip dies, a duffle drafted in non-fraying melton with printable horn toggles outlives its owner — the classic surplus-store coat handed down for decades, brought into the commons so anyone can cut one and print its fastenings to the size they choose. It deepens the thin outerwear family with the most repairable coat in it.",
+      "es": "La trenca es un abrigo diseñado para remendarse: los toggles son las únicas piezas móviles, y uno roto se reemplaza sin tocar el abrigo. Donde una parka moderna se desecha cuando muere su cremallera, una trenca trazada en melton que no se deshilacha con toggles de cuerno imprimibles sobrevive a su dueño —el clásico abrigo de excedentes heredado por décadas—, traída al commons para que cualquiera corte una e imprima sus cierres al tamaño que elija. Profundiza la delgada familia de abrigos con el más reparable de ellos.",
+      "fr": "Le duffle est un manteau conçu pour être raccommodé : les toggles sont les seules pièces mobiles, et un toggle cassé se remplace sans toucher au manteau. Là où une parka moderne est mise au rebut quand sa fermeture meurt, un duffle tracé en melton non effilochable à toggles de corne imprimables survit à son propriétaire — le classique manteau de surplus transmis pendant des décennies — porté dans le commun pour que quiconque en coupe un et imprime ses fermetures à la taille de son choix. Il approfondit la maigre famille des manteaux avec le plus réparable de tous."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

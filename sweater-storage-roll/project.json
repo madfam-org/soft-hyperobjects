@@ -1,0 +1,298 @@
+{
+  "project": {
+    "name": "Roll-up sweater storage sleeve",
+    "slug": "sweater-storage-roll",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A soft muslin sleeve a folded sweater rolls up inside: lay the sweater on the open mat, fold the two side flaps in, roll from the head end, and cinch the roll with a pair of ties. Breathable and unstructured, so a stored knit gets air and no crease line — the opposite of a vacuum bag that compresses a sweater into permanent folds. Each flap reaches the mat half-width minus half a centre gap so the two folded flaps meet without overlapping down the roll's spine, and the tie length is the finished roll circumference plus a bow tail.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una funda suave de muselina dentro de la cual se enrolla un suéter doblado: coloca el suéter sobre la base abierta, dobla las dos aletas laterales, enrolla desde el cuello y ciñe el rollo con un par de cintas. Transpirable y sin estructura, para que el punto guardado reciba aire y no se marque —lo contrario de una bolsa de vacío que comprime el suéter en pliegues permanentes—. Cada aleta llega a la mitad del ancho menos medio hueco central para que las dos aletas dobladas se encuentren sin superponerse en el lomo del rollo, y el largo de la cinta es la circunferencia del rollo terminado más una cola de moño.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une housse souple en mousseline dans laquelle un pull plié s'enroule : posez le pull sur le tapis ouvert, rabattez les deux ailes latérales, enroulez depuis l'encolure et serrez le rouleau avec deux liens. Respirante et non structurée, pour que la maille rangée respire et ne marque pas — le contraire d'un sac sous vide qui comprime un pull en plis permanents. Chaque aile atteint la demi-largeur moins un demi-jeu central pour que les deux ailes repliées se rejoignent sans se chevaucher sur l'échine du rouleau, et la longueur du lien est la circonférence du rouleau fini plus une queue de nœud.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma capa macia de musselina dentro da qual um suéter dobrado se enrola: coloque o suéter sobre a base aberta, dobre as duas abas laterais, enrole a partir da gola e aperte o rolo com um par de fitas. Respirável e sem estrutura, para que a malha guardada receba ar e não marque — o oposto de um saco a vácuo que comprime o suéter em vincos permanentes. Cada aba alcança a metade da largura menos meio vão central para que as duas abas dobradas se encontrem sem sobrepor na espinha do rolo, e o comprimento da fita é a circunferência do rolo pronto mais uma cauda de laço.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "sweater-storage-roll",
+      "care",
+      "storage",
+      "knitwear",
+      "pattern-only",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full storage sleeve",
+        "es": "Funda completa",
+        "fr": "Housse complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "mat",
+        "flap",
+        "tie"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "mat",
+      "label": {
+        "en": "Roll mat",
+        "es": "Base del rollo",
+        "fr": "Tapis de roulage"
+      },
+      "default_color": "#8f8a7a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "flap",
+      "label": {
+        "en": "Side flap",
+        "es": "Aleta lateral",
+        "fr": "Aile latérale"
+      },
+      "default_color": "#9f9a8a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "tie",
+      "label": {
+        "en": "Cinch tie",
+        "es": "Cinta de cierre",
+        "fr": "Lien de serrage"
+      },
+      "default_color": "#afaa9a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Size",
+        "es": "Tamaño",
+        "fr": "Taille"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "mat_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 440,
+      "min": 300,
+      "max": 620,
+      "step": 10,
+      "label": {
+        "en": "Mat width (mm)",
+        "es": "Ancho de la base (mm)",
+        "fr": "Largeur du tapis (mm)"
+      },
+      "tooltip": {
+        "en": "Across the folded sweater",
+        "es": "A lo ancho del suéter doblado",
+        "fr": "En travers du pull plié"
+      }
+    },
+    {
+      "id": "mat_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 560,
+      "min": 360,
+      "max": 760,
+      "step": 10,
+      "label": {
+        "en": "Mat length (mm)",
+        "es": "Largo de la base (mm)",
+        "fr": "Longueur du tapis (mm)"
+      },
+      "tooltip": {
+        "en": "Head to hem before rolling",
+        "es": "Del cuello al bajo antes de enrollar",
+        "fr": "De l'encolure au bas avant roulage"
+      }
+    },
+    {
+      "id": "roll_diameter",
+      "type": "slider",
+      "group": "construction",
+      "default": 130,
+      "min": 70,
+      "max": 240,
+      "step": 10,
+      "label": {
+        "en": "Roll diameter (mm)",
+        "es": "Diámetro del rollo (mm)",
+        "fr": "Diamètre du rouleau (mm)"
+      },
+      "tooltip": {
+        "en": "Finished roll thickness; sets the tie length",
+        "es": "Grosor del rollo terminado; fija el largo de la cinta",
+        "fr": "Épaisseur du rouleau fini ; fixe la longueur du lien"
+      }
+    },
+    {
+      "id": "tie_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 30,
+      "min": 16,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Tie width (mm)",
+        "es": "Ancho de la cinta (mm)",
+        "fr": "Largeur du lien (mm)"
+      },
+      "tooltip": {
+        "en": "Width of the cinch straps",
+        "es": "Ancho de las cintas de cierre",
+        "fr": "Largeur des liens de serrage"
+      },
+      "advanced": true
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam",
+        "es": "Aplicado a todas las costuras",
+        "fr": "Appliquée à toutes les coutures"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "roll_diameter < mat_length * 0.5",
+      "severity": "warning",
+      "message": {
+        "en": "A roll this thick relative to the mat length leaves too little to wrap around it.",
+        "es": "Un rollo tan grueso respecto al largo de la base deja muy poco para envolverlo.",
+        "fr": "Un rouleau aussi épais par rapport à la longueur du tapis laisse trop peu à enrouler."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "fine-knit",
+      "label": {
+        "en": "Fine knit",
+        "es": "Punto fino",
+        "fr": "Maille fine"
+      },
+      "values": {
+        "mat_width": 400,
+        "mat_length": 500,
+        "roll_diameter": 100
+      }
+    },
+    {
+      "id": "chunky",
+      "label": {
+        "en": "Chunky sweater",
+        "es": "Suéter grueso",
+        "fr": "Pull épais"
+      },
+      "values": {
+        "mat_width": 520,
+        "mat_length": 640,
+        "roll_diameter": 180
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "flap_hinge_seam",
+        "type": "custom",
+        "label": {
+          "en": "Flap-to-mat hinge seam",
+          "es": "Costura de aleta a base",
+          "fr": "Couture aile-tapis"
+        },
+        "edges": [
+          {
+            "piece": "flap",
+            "edge": "hinge"
+          },
+          {
+            "piece": "mat",
+            "edge": "hinge_r"
+          }
+        ],
+        "parameters": [
+          "mat_length",
+          "mat_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": false
+    },
+    "societal_benefit": {
+      "en": "Wool stored in plastic yellows and crushes; a breathable muslin roll is what a museum textile store uses instead, scaled to a drawer. Sewn from unbleached muslin offcuts, it lets a knit rest without a crease line and deters moths with a tucked cedar sachet — no vacuum bag, no mothball fumes. Pattern-only by design: a roll needs no hardware.",
+      "es": "La lana guardada en plástico amarillea y se aplasta; un rollo transpirable de muselina es lo que usa un almacén textil de museo, a escala de cajón. Cosido con retazos de muselina cruda, deja descansar el punto sin marca y aleja las polillas con un sobre de cedro escondido —sin bolsa de vacío, sin vapores de naftalina—. Solo-patrón por diseño: un rollo no necesita herraje.",
+      "fr": "La laine rangée dans le plastique jaunit et s'écrase ; un rouleau respirant en mousseline est ce qu'utilise une réserve textile de musée, à l'échelle d'un tiroir. Cousu dans des chutes de mousseline écrue, il laisse la maille reposer sans pli et repousse les mites avec un sachet de cèdre glissé — sans sac sous vide, sans vapeurs de naphtaline. Patron-seul par conception : un rouleau n'a besoin d'aucune quincaillerie."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

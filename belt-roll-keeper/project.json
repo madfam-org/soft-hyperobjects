@@ -1,0 +1,307 @@
+{
+  "project": {
+    "name": "Roll-up belt keeper",
+    "slug": "belt-roll-keeper",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The travelling belt organiser: a split-leather panel with a row of buckle slots that belts thread through, rolled from the tail and closed by a stud strap, then hung from a printed belt-hanger rack by a reinforced hang tab. The rack is the Yantra4D belt-hanger solid — its hook count is driven by the same slot count this keeper carries, so rack and roll always agree on how many belts. The slot pitch is solved from the measured panel run and the requested count, recomputed so the row lands exactly on both end clearances rather than drifting.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El organizador de cinturones de viaje: un panel de piel descarnada con una fila de ranuras por las que pasan las hebillas, enrollado desde la cola y cerrado por una correa de broche, y colgado de un perchero belt-hanger impreso por una lengüeta reforzada. El perchero es el sólido belt-hanger de Yantra4D —su número de ganchos se controla con el mismo número de ranuras que lleva este enrollador— para que perchero y rollo siempre coincidan en cuántos cinturones. El paso de las ranuras se resuelve del tramo medido del panel y el número pedido, recalculado para que la fila caiga exactamente en ambos márgenes en vez de derivar.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "L'organiseur de ceintures de voyage : un panneau en croûte de cuir avec une rangée de fentes où passent les boucles, enroulé depuis le bas et fermé par une patte à bouton-pression, puis suspendu à un portant belt-hanger imprimé par une patte renforcée. Le portant est le solide belt-hanger de Yantra4D — son nombre de crochets est piloté par le même nombre de fentes que porte ce range-ceintures — pour que portant et rouleau s'accordent toujours sur le nombre de ceintures. Le pas des fentes est résolu à partir du tronçon mesuré du panneau et du nombre demandé, recalculé pour que la rangée tombe exactement sur les deux marges plutôt que de dériver.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O organizador de cintos de viagem: um painel de couro raspa com uma fileira de fendas por onde passam as fivelas, enrolado a partir da cauda e fechado por uma tira de botão, e pendurado num suporte belt-hanger impresso por uma lingueta reforçada. O suporte é o sólido belt-hanger da Yantra4D — seu número de ganchos é conduzido pelo mesmo número de fendas que este porta-cintos carrega — para que suporte e rolo sempre concordem em quantos cintos. O passo das fendas é resolvido a partir do trecho medido do painel e do número pedido, recalculado para que a fileira caia exatamente nas duas margens em vez de derivar.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "belt-roll-keeper",
+      "care",
+      "storage",
+      "accessories",
+      "leather",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "notion": {
+    "kind": "custom",
+    "subtype": "printed belt rack",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "belt-hanger",
+      "linked": true,
+      "params_map": {
+        "hook_count": "belt_count",
+        "strap_w": "slot_width"
+      }
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full belt keeper",
+        "es": "Enrollador completo",
+        "fr": "Range-ceintures complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "panel",
+        "strap",
+        "hang"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "panel",
+      "label": {
+        "en": "Belt roll panel",
+        "es": "Panel del rollo",
+        "fr": "Panneau du rouleau"
+      },
+      "default_color": "#6a5a4a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "strap",
+      "label": {
+        "en": "Stud closure strap",
+        "es": "Correa de broche",
+        "fr": "Patte à bouton-pression"
+      },
+      "default_color": "#7a6a5a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "hang",
+      "label": {
+        "en": "Hang tab",
+        "es": "Lengüeta para colgar",
+        "fr": "Patte de suspension"
+      },
+      "default_color": "#8a7a6a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Size",
+        "es": "Tamaño",
+        "fr": "Taille"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "panel_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 380,
+      "min": 200,
+      "max": 520,
+      "step": 10,
+      "label": {
+        "en": "Panel width (mm)",
+        "es": "Ancho del panel (mm)",
+        "fr": "Largeur du panneau (mm)"
+      },
+      "tooltip": {
+        "en": "Across the belts' width; the slot row runs along it",
+        "es": "A lo ancho de los cinturones; la fila de ranuras va a lo largo",
+        "fr": "En travers des ceintures ; la rangée de fentes la parcourt"
+      }
+    },
+    {
+      "id": "panel_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 260,
+      "min": 160,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Panel length (mm)",
+        "es": "Largo del panel (mm)",
+        "fr": "Longueur du panneau (mm)"
+      },
+      "tooltip": {
+        "en": "Hang head to roll tail",
+        "es": "De la cabeza para colgar a la cola del rollo",
+        "fr": "De la tête de suspension à la queue du rouleau"
+      }
+    },
+    {
+      "id": "belt_count",
+      "type": "slider",
+      "group": "fit",
+      "default": 5,
+      "min": 2,
+      "max": 9,
+      "step": 1,
+      "label": {
+        "en": "Belt slots",
+        "es": "Ranuras de cinturón",
+        "fr": "Fentes de ceinture"
+      },
+      "tooltip": {
+        "en": "Number of buckle slots; drives the belt-hanger hook count",
+        "es": "Número de ranuras; controla el número de ganchos del belt-hanger",
+        "fr": "Nombre de fentes ; pilote le nombre de crochets du belt-hanger"
+      }
+    },
+    {
+      "id": "slot_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 42,
+      "min": 24,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Slot width (mm)",
+        "es": "Ancho de ranura (mm)",
+        "fr": "Largeur de fente (mm)"
+      },
+      "tooltip": {
+        "en": "A buckle's width through the slot; clamped under the slot pitch",
+        "es": "Ancho de una hebilla por la ranura; limitado bajo el paso de ranuras",
+        "fr": "Largeur d'une boucle dans la fente ; bridée sous le pas de fentes"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam",
+        "es": "Aplicado a todas las costuras",
+        "fr": "Appliquée à toutes les coutures"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "slot_width < panel_width / belt_count",
+      "severity": "warning",
+      "message": {
+        "en": "Slots this wide at this belt count would overlap; the slot length is clamped to compensate.",
+        "es": "Ranuras tan anchas con tantos cinturones se solaparían; el largo de ranura se limita para compensar.",
+        "fr": "Des fentes aussi larges à ce nombre de ceintures se chevaucheraient ; la longueur de fente est bridée pour compenser."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "travel",
+      "label": {
+        "en": "Travel roll",
+        "es": "Rollo de viaje",
+        "fr": "Rouleau de voyage"
+      },
+      "values": {
+        "panel_width": 340,
+        "panel_length": 240,
+        "belt_count": 4
+      }
+    },
+    {
+      "id": "wardrobe",
+      "label": {
+        "en": "Wardrobe rack",
+        "es": "Perchero de armario",
+        "fr": "Portant d'armoire"
+      },
+      "values": {
+        "panel_width": 460,
+        "panel_length": 300,
+        "belt_count": 8
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "mezclilla-denim"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "belt_slot_row",
+        "type": "custom",
+        "label": {
+          "en": "Solved belt-slot row",
+          "es": "Fila de ranuras resuelta",
+          "fr": "Rangée de fentes résolue"
+        },
+        "edges": [
+          {
+            "piece": "panel",
+            "edge": "hang_edge"
+          }
+        ],
+        "parameters": [
+          "panel_width",
+          "belt_count",
+          "slot_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Belts coiled in a drawer crack at the fold and lose their keepers; the shop answer is a moulded belt rack of virgin plastic. This rolls them flat on split-leather offcuts or waxed canvas and hangs from a printed Yantra4D belt-hanger, so the rack is fabricated on demand and the roll is scrap leather that would otherwise be binned. The rack arrived on the 500-push shelf and this cartridge consumes it.",
+      "es": "Los cinturones enrollados en un cajón se agrietan en el doblez y pierden sus trabillas; la respuesta de tienda es un perchero moldeado de plástico virgen. Esto los enrolla planos sobre retazos de piel o lona encerada y los cuelga de un belt-hanger impreso de Yantra4D, así que el perchero se fabrica a demanda y el rollo es piel de desecho que si no se tiraría. El perchero llegó al estante del empuje de 500 y este cartucho lo consume.",
+      "fr": "Les ceintures enroulées dans un tiroir se craquellent au pli et perdent leurs passants ; la réponse en boutique est un portant moulé en plastique vierge. Ceci les roule à plat sur des chutes de croûte de cuir ou de toile cirée et les suspend à un belt-hanger imprimé Yantra4D, si bien que le portant est fabriqué à la demande et le rouleau est du cuir de rebut qui aurait été jeté. Le portant est arrivé sur l'étagère du push 500 et ce cartouche le consomme."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

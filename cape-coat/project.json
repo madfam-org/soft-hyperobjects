@@ -1,0 +1,398 @@
+{
+  "project": {
+    "name": "A-line cape coat",
+    "slug": "cape-coat",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A wool-melton cape coat with no set sleeves: the body flares from the shoulder to a wide A-line sweep that drapes over the arms, with vertical arm slits so the hands come through, a stand collar, and a row of toggle-and-loop closures down the front. The toggle is the Yantra4D toggle solid; its barrel length is driven by the same toggle_len the cape's frog loops are cut for. The A-line side seam slants out to a hem offset by hem_flare, and front and back share the flare so the slanted side seams stay equal; the collar is cut to the measured neckline.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un abrigo capa de lana melton sin mangas montadas: el cuerpo se acampana del hombro a un vuelo amplio en línea A que cae sobre los brazos, con aberturas verticales para que salgan las manos, un cuello alto y una fila de trabillas con toggles al frente. El toggle es el sólido toggle de Yantra4D; su largo de barril se controla con el mismo toggle_len para el que se cortan las presillas. La costura lateral en línea A se inclina hacia un bajo desplazado por hem_flare, y delantero y trasero comparten el vuelo para que las costuras inclinadas queden iguales; el cuello se corta al escote medido.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un manteau cape en laine melton sans manches montées : le corps s'évase de l'épaule à un large mouvement en A qui retombe sur les bras, avec des fentes verticales pour passer les mains, un col officier et une rangée de brandebourgs à toggles au devant. Le toggle est le solide toggle de Yantra4D ; sa longueur de barillet est pilotée par le même toggle_len pour lequel les brides de la cape sont coupées. La couture latérale en A s'incline vers un ourlet décalé de hem_flare, et devant et dos partagent l'évasement pour que les coutures inclinées restent égales ; le col est coupé à l'encolure mesurée.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um casaco capa de lã melton sem mangas montadas: o corpo evasa do ombro a um giro amplo em linha A que cai sobre os braços, com aberturas verticais para as mãos saírem, uma gola alta e uma fileira de fechos de toggle e alça na frente. O toggle é o sólido toggle da Yantra4D; seu comprimento de barril é conduzido pelo mesmo toggle_len para o qual as alças da capa são cortadas. A costura lateral em A inclina para uma barra deslocada por hem_flare, e frente e costas compartilham a evasê para que as costuras inclinadas fiquem iguais; a gola é cortada ao decote medido.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "cape-coat",
+      "outerwear",
+      "cape",
+      "coat",
+      "a-line",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "notion": {
+    "kind": "custom",
+    "subtype": "toggle-and-loop closure",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "toggle",
+      "linked": true,
+      "params_map": {
+        "barrel_len": "toggle_len",
+        "barrel_dia": "toggle_len * 0.28",
+        "cords": "2"
+      }
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full cape coat",
+        "es": "Abrigo capa completo",
+        "fr": "Manteau cape complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "collar"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Cape front",
+        "es": "Delantero de la capa",
+        "fr": "Devant de la cape"
+      },
+      "default_color": "#4a4a52",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Cape back",
+        "es": "Espalda de la capa",
+        "fr": "Dos de la cape"
+      },
+      "default_color": "#5a5a62",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "cb_fold",
+        "mirror": false
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Stand collar",
+        "es": "Cuello alto",
+        "fr": "Col officier"
+      },
+      "default_color": "#6a6a72",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Coupe"
+      }
+    },
+    {
+      "id": "closure",
+      "label": {
+        "en": "Toggles",
+        "es": "Toggles",
+        "fr": "Toggles"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 1040,
+      "min": 820,
+      "max": 1520,
+      "step": 20,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest; a cape runs generous over layers",
+        "es": "Contorno de pecho; una capa queda amplia sobre capas",
+        "fr": "Tour de poitrine ; une cape reste ample sur épaisseurs"
+      }
+    },
+    {
+      "id": "cape_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 900,
+      "min": 640,
+      "max": 1200,
+      "step": 20,
+      "label": {
+        "en": "Cape length (mm)",
+        "es": "Largo de la capa (mm)",
+        "fr": "Longueur de la cape (mm)"
+      },
+      "tooltip": {
+        "en": "Neck to hem",
+        "es": "Del cuello al bajo",
+        "fr": "De l'encolure à l'ourlet"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 460,
+      "min": 360,
+      "max": 600,
+      "step": 10,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombros (mm)",
+        "fr": "Largeur d'épaules (mm)"
+      },
+      "tooltip": {
+        "en": "Point to point across the shoulders",
+        "es": "De punta a punta de hombros",
+        "fr": "De pointe à pointe d'épaules"
+      }
+    },
+    {
+      "id": "hem_flare",
+      "type": "slider",
+      "group": "fit",
+      "default": 260,
+      "min": 80,
+      "max": 420,
+      "step": 20,
+      "label": {
+        "en": "Hem flare per side (mm)",
+        "es": "Vuelo del bajo por lado (mm)",
+        "fr": "Évasement d'ourlet par côté (mm)"
+      },
+      "tooltip": {
+        "en": "How far the hem flares past the chest; sets the A-line sweep",
+        "es": "Cuánto se acampana el bajo más allá del pecho; fija el vuelo en A",
+        "fr": "De combien l'ourlet s'évase au-delà de la poitrine ; fixe le mouvement en A"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 420,
+      "min": 320,
+      "max": 540,
+      "step": 10,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the neckline the collar is cut to",
+        "es": "Fija el escote al que se corta el cuello",
+        "fr": "Fixe l'encolure à laquelle le col est coupé"
+      }
+    },
+    {
+      "id": "toggle_len",
+      "type": "slider",
+      "group": "closure",
+      "default": 60,
+      "min": 35,
+      "max": 95,
+      "step": 5,
+      "label": {
+        "en": "Toggle length (mm)",
+        "es": "Largo del toggle (mm)",
+        "fr": "Longueur du toggle (mm)"
+      },
+      "tooltip": {
+        "en": "Toggle barrel length; drives the toggle solid and the frog loops",
+        "es": "Largo del barril; controla el sólido toggle y las presillas",
+        "fr": "Longueur du barillet ; pilote le solide toggle et les brides"
+      }
+    },
+    {
+      "id": "toggle_count",
+      "type": "slider",
+      "group": "closure",
+      "default": 4,
+      "min": 2,
+      "max": 7,
+      "step": 1,
+      "label": {
+        "en": "Toggle count",
+        "es": "Número de toggles",
+        "fr": "Nombre de toggles"
+      },
+      "tooltip": {
+        "en": "Front closures; the pitch is solved so the row lands exactly",
+        "es": "Cierres del frente; el paso se resuelve para que la fila caiga exacta",
+        "fr": "Fermetures devant ; le pas est résolu pour que la rangée tombe juste"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 8,
+      "max": 18,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam",
+        "es": "Aplicado a todas las costuras",
+        "fr": "Appliquée à toutes les coutures"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "hem_flare < chest_girth * 0.5",
+      "severity": "warning",
+      "message": {
+        "en": "A flare this wide relative to the chest makes a circle, not an A-line.",
+        "es": "Un vuelo tan amplio respecto al pecho hace un círculo, no una línea A.",
+        "fr": "Un évasement aussi large par rapport à la poitrine fait un cercle, non un A."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "day",
+      "label": {
+        "en": "Day cape",
+        "es": "Capa de día",
+        "fr": "Cape de jour"
+      },
+      "values": {
+        "cape_length": 880,
+        "hem_flare": 240,
+        "toggle_count": 4
+      }
+    },
+    {
+      "id": "opera",
+      "label": {
+        "en": "Long opera cape",
+        "es": "Capa larga de ópera",
+        "fr": "Cape d'opéra longue"
+      },
+      "values": {
+        "cape_length": 1120,
+        "hem_flare": 360,
+        "toggle_count": 5
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "lana-melton-abrigo"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "toggle_placket",
+        "type": "custom",
+        "label": {
+          "en": "Toggle-and-loop placket",
+          "es": "Tapeta de toggles",
+          "fr": "Patte à toggles"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "centre_front"
+          }
+        ],
+        "parameters": [
+          "toggle_len",
+          "toggle_count",
+          "cape_length"
+        ]
+      },
+      {
+        "id": "aline_side",
+        "type": "custom",
+        "label": {
+          "en": "A-line side seam",
+          "es": "Costura lateral en A",
+          "fr": "Couture latérale en A"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "hem_flare",
+          "cape_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A cape is the most forgiving winter coat there is — it fits a changing body, a pregnancy, a wheelchair, or a plaster cast without a refit, because there is no set sleeve to bind. Drafting it in non-fraying wool melton with a raw sweep and printable toggles makes a coat that a beginner can cut from a single length and a wearer can keep across years and shapes. The toggle is a Yantra4D solid, so the closure is fabricated to the maker's chosen size, not sourced from a notions wall.",
+      "es": "Una capa es el abrigo de invierno más indulgente que hay —se adapta a un cuerpo que cambia, un embarazo, una silla de ruedas o un yeso sin reajuste, porque no hay manga montada que apriete—. Trazarla en lana melton que no se deshilacha, con vuelo en crudo y toggles imprimibles, hace un abrigo que un principiante puede cortar de un solo largo y que se conserva por años y formas. El toggle es un sólido Yantra4D, así que el cierre se fabrica al tamaño elegido, no se saca de una pared de mercería.",
+      "fr": "Une cape est le manteau d'hiver le plus indulgent qui soit — elle habille un corps qui change, une grossesse, un fauteuil roulant ou un plâtre sans retouche, car aucune manche montée ne bride. La tracer en laine melton non effilochable, à mouvement brut et toggles imprimables, donne un manteau qu'un débutant peut couper d'une seule longueur et qu'on garde des années et des formes durant. Le toggle est un solide Yantra4D, si bien que la fermeture est fabriquée à la taille choisie, non tirée d'un mur de mercerie."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

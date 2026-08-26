@@ -1,0 +1,311 @@
+{
+  "project": {
+    "name": "Shaped shoe-tree fabric stuffer",
+    "slug": "shoe-stuffer-bag",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A stuffable fabric shoe tree: a foot-shaped sack that fills with cedar shavings, rolled paper, or silica beads and holds a shoe's toe box open so it does not crease flat in storage. A single upper panel wraps toe to heel, an asymmetric oval sole closes the bottom, and a drawstring heel casing cinches the fill in. The sole is a foot outline — wider at the ball than the heel — drafted as a measured polyline; the upper's lower edge is cut to that measured perimeter, so the two close on one number at any size.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una horma de tela rellenable: un saco con forma de pie que se llena con virutas de cedro, papel enrollado o perlas de sílice y mantiene abierta la puntera del zapato para que no se marque aplastado en el guardado. Un panel superior envuelve de puntera a talón, una suela ovalada asimétrica cierra el fondo y una jareta con cordón en el talón ciñe el relleno. La suela es un contorno de pie —más ancho en la bola que en el talón— trazado como polilínea medida; el borde inferior de la parte superior se corta a ese perímetro medido, de modo que ambos cierran en un solo número a cualquier talla.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un embauchoir en tissu à garnir : un sac en forme de pied qui se remplit de copeaux de cèdre, de papier roulé ou de billes de silice et maintient la boîte à orteils ouverte pour que la chaussure ne s'écrase pas au rangement. Un empeigne enveloppe de l'orteil au talon, une semelle ovale asymétrique ferme le fond, et une coulisse à cordon au talon resserre le garnissage. La semelle est un contour de pied — plus large à l'avant-pied qu'au talon — tracé en polyligne mesurée ; le bord inférieur de l'empeigne est coupé à ce périmètre mesuré, si bien que les deux se ferment sur un seul nombre à toute pointure.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma horma de tecido para encher: um saco em formato de pé que se enche com aparas de cedro, papel enrolado ou pérolas de sílica e mantém a biqueira do sapato aberta para que não vinque achatada no armazenamento. Um painel superior envolve da biqueira ao calcanhar, uma sola oval assimétrica fecha o fundo, e um cós com cordão no calcanhar aperta o enchimento. A sola é um contorno de pé — mais larga na planta que no calcanhar — traçada como polilinha medida; a borda inferior do cabedal é cortada nesse perímetro medido, de modo que ambos fecham num só número em qualquer tamanho.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "shoe-stuffer-bag",
+      "care",
+      "storage",
+      "footwear",
+      "pattern-only",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full shoe stuffer",
+        "es": "Horma completa",
+        "fr": "Embauchoir complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "upper",
+        "sole",
+        "heel"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "upper",
+      "label": {
+        "en": "Foot wrap upper",
+        "es": "Empeine envolvente",
+        "fr": "Empeigne enveloppante"
+      },
+      "default_color": "#8a7f6f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "sole",
+      "label": {
+        "en": "Foot-shaped sole",
+        "es": "Suela con forma de pie",
+        "fr": "Semelle en forme de pied"
+      },
+      "default_color": "#9a8f7f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "heel",
+      "label": {
+        "en": "Heel drawstring casing",
+        "es": "Jareta del talón",
+        "fr": "Coulisse du talon"
+      },
+      "default_color": "#aa9f8f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Foot size",
+        "es": "Talla",
+        "fr": "Pointure"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "foot_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 270,
+      "min": 150,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Foot length (mm)",
+        "es": "Largo del pie (mm)",
+        "fr": "Longueur du pied (mm)"
+      },
+      "tooltip": {
+        "en": "Toe to heel of the shoe the stuffer fills",
+        "es": "De puntera a talón del zapato que se rellena",
+        "fr": "De l'orteil au talon de la chaussure garnie"
+      }
+    },
+    {
+      "id": "ball_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 100,
+      "min": 60,
+      "max": 150,
+      "step": 5,
+      "label": {
+        "en": "Ball width (mm)",
+        "es": "Ancho de la bola (mm)",
+        "fr": "Largeur avant-pied (mm)"
+      },
+      "tooltip": {
+        "en": "Widest point of the foot; the toe end of the oval sole",
+        "es": "Punto más ancho del pie; el extremo de puntera de la suela ovalada",
+        "fr": "Point le plus large du pied ; l'extrémité avant de la semelle"
+      }
+    },
+    {
+      "id": "heel_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 62,
+      "min": 40,
+      "max": 100,
+      "step": 2,
+      "label": {
+        "en": "Heel width (mm)",
+        "es": "Ancho del talón (mm)",
+        "fr": "Largeur du talon (mm)"
+      },
+      "tooltip": {
+        "en": "Heel end of the oval sole; clamped narrower than the ball",
+        "es": "Extremo de talón de la suela; se limita a ser más estrecho que la bola",
+        "fr": "Extrémité talon de la semelle ; bridée plus étroite que l'avant-pied"
+      }
+    },
+    {
+      "id": "form_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 90,
+      "min": 45,
+      "max": 150,
+      "step": 5,
+      "label": {
+        "en": "Form height (mm)",
+        "es": "Altura de la horma (mm)",
+        "fr": "Hauteur du forme (mm)"
+      },
+      "tooltip": {
+        "en": "Instep rise of the stuffed form; the upper's wrap height",
+        "es": "Altura del empeine de la horma rellena; la altura del envolvente",
+        "fr": "Hauteur de cou-de-pied du forme garni ; la hauteur de l'empeigne"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam",
+        "es": "Aplicado a todas las costuras",
+        "fr": "Appliquée à toutes les coutures"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "heel_width < ball_width",
+      "severity": "error",
+      "message": {
+        "en": "The heel must be narrower than the ball, or the outline is not a foot.",
+        "es": "El talón debe ser más estrecho que la bola, o el contorno no es un pie.",
+        "fr": "Le talon doit être plus étroit que l'avant-pied, sinon le contour n'est pas un pied."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "womens",
+      "label": {
+        "en": "Women's shoe",
+        "es": "Zapato de mujer",
+        "fr": "Chaussure femme"
+      },
+      "values": {
+        "foot_length": 245,
+        "ball_width": 90,
+        "heel_width": 55
+      }
+    },
+    {
+      "id": "mens",
+      "label": {
+        "en": "Men's shoe",
+        "es": "Zapato de hombre",
+        "fr": "Chaussure homme"
+      },
+      "values": {
+        "foot_length": 285,
+        "ball_width": 108,
+        "heel_width": 66
+      }
+    },
+    {
+      "id": "boot",
+      "label": {
+        "en": "Boot (tall fill)",
+        "es": "Bota (relleno alto)",
+        "fr": "Botte (garnissage haut)"
+      },
+      "values": {
+        "foot_length": 290,
+        "ball_width": 112,
+        "form_height": 140
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "sole_wrap_seam",
+        "type": "custom",
+        "label": {
+          "en": "Upper-to-sole wrap seam",
+          "es": "Costura de empeine a suela",
+          "fr": "Couture empeigne-semelle"
+        },
+        "edges": [
+          {
+            "piece": "upper",
+            "edge": "sole_edge"
+          },
+          {
+            "piece": "sole",
+            "edge": "cap_toe"
+          }
+        ],
+        "parameters": [
+          "foot_length",
+          "ball_width",
+          "heel_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": false
+    },
+    "societal_benefit": {
+      "en": "A crushed toe box is why good shoes look old before they wear out, and the shop answer is a cedar tree per pair. This sews a stuffable form from drill offcuts and fills it with whatever deodorises or dries — cedar, paper, silica — so a rack of shoes keeps its shape for the cost of scraps. No hardware is referenced: a printable shoe-tree body is a wanted Yantra4D solid but is not in the pinned snapshot, so this cartridge stays honestly pattern-only.",
+      "es": "Una puntera aplastada es la razón por la que los buenos zapatos se ven viejos antes de gastarse, y la respuesta de tienda es una horma de cedro por par. Esto cose una forma rellenable con retazos de dril y la llena con lo que desodorice o seque —cedro, papel, sílice— para que un zapatero conserve su forma por el costo de las sobras. No se referencia herraje: un cuerpo de horma imprimible es un sólido Yantra4D deseado pero no está en el snapshot fijado, así que este cartucho se queda honestamente en solo-patrón.",
+      "fr": "Une boîte à orteils écrasée est la raison pour laquelle de bonnes chaussures paraissent vieilles avant d'être usées, et la réponse en boutique est un embauchoir en cèdre par paire. Ceci coud un forme à garnir dans des chutes de coutil et le remplit de ce qui désodorise ou sèche — cèdre, papier, silice — pour qu'un porte-chaussures garde sa forme pour le prix des restes. Aucune quincaillerie n'est référencée : un corps d'embauchoir imprimable est un solide Yantra4D souhaité mais absent du snapshot épinglé, aussi ce cartouche reste honnêtement patron-seul."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

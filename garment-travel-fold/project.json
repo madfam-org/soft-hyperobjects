@@ -1,0 +1,363 @@
+{
+  "project": {
+    "name": "Fold-flat travel garment folder",
+    "slug": "garment-travel-fold",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The travel folder that keeps a dress shirt crease-free in a case: a soft shell panel with two side wings and a bottom tail that wrap a folded shirt around a rigid insert, closed by a hook-and-loop tab. The insert is the Yantra4D folding-board solid, so every shirt comes out the same rectangle. A wing folds not onto a flat plane but onto one thickened by the folded stack, so its width is the board half-width plus a turn-of-cloth reach derived from the stack height, and every flap is cut to the measured shell edge it attaches to.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El organizador de viaje que mantiene una camisa de vestir sin arrugas en la maleta: un panel base de tela con dos aletas laterales y una aleta inferior que envuelven la camisa doblada alrededor de una plantilla rígida, cerrado por una lengüeta de gancho y bucle. La plantilla es el sólido folding-board de Yantra4D, de modo que cada camisa sale del mismo rectángulo. Una aleta no se pliega sobre un plano liso sino sobre uno engrosado por el paquete doblado, así que su ancho es la mitad del ancho de la tabla más un margen de vuelta de tela derivado de la altura del paquete, y cada aleta se corta al borde medido del panel al que se une.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le range-vêtement de voyage qui garde une chemise sans faux plis dans la valise : un panneau souple avec deux ailes latérales et un rabat inférieur qui enveloppent la chemise pliée autour d'un gabarit rigide, fermé par une patte auto-agrippante. Le gabarit est le solide folding-board de Yantra4D, si bien que chaque chemise sort du même rectangle. Une aile ne se rabat pas sur un plan lisse mais sur un plan épaissi par la pile pliée : sa largeur est la demi-largeur de la planche plus un rentré de couture tiré de la hauteur de pile, et chaque rabat est coupé au bord mesuré du panneau auquel il se coud.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O organizador de viagem que mantém uma camisa social sem vincos na mala: um painel base de tecido com duas abas laterais e uma aba inferior que envolvem a camisa dobrada em torno de um molde rígido, fechado por uma lingueta de velcro. O molde é o sólido folding-board da Yantra4D, de modo que cada camisa sai do mesmo retângulo. Uma aba não se dobra sobre um plano liso, mas sobre um espessado pela pilha dobrada, então sua largura é a metade da largura da placa mais uma sobra de tecido derivada da altura da pilha, e cada aba é cortada na borda medida do painel a que se une.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "garment-travel-fold",
+      "care",
+      "storage",
+      "travel",
+      "packing",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "notion": {
+    "kind": "custom",
+    "subtype": "rigid folding-board insert",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "folding-board",
+      "linked": true,
+      "params_map": {
+        "fold_w": "board_width",
+        "fold_h": "board_length",
+        "panel_t": "3"
+      }
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full travel folder",
+        "es": "Organizador completo",
+        "fr": "Range-vêtement complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "shell",
+        "wing",
+        "tail",
+        "tab"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "shell",
+      "label": {
+        "en": "Shell base panel",
+        "es": "Panel base",
+        "fr": "Panneau de base"
+      },
+      "default_color": "#5f7a6f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "wing",
+      "label": {
+        "en": "Side wing flap",
+        "es": "Aleta lateral",
+        "fr": "Aile latérale"
+      },
+      "default_color": "#6f8a7f",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "tail",
+      "label": {
+        "en": "Bottom tail flap",
+        "es": "Aleta inferior",
+        "fr": "Rabat inférieur"
+      },
+      "default_color": "#7f9a8f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "tab",
+      "label": {
+        "en": "Closure tab",
+        "es": "Lengüeta de cierre",
+        "fr": "Patte de fermeture"
+      },
+      "default_color": "#8faa9f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Size",
+        "es": "Tamaño",
+        "fr": "Taille"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "board_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 260,
+      "min": 180,
+      "max": 360,
+      "step": 10,
+      "label": {
+        "en": "Folded width (mm)",
+        "es": "Ancho doblado (mm)",
+        "fr": "Largeur pliée (mm)"
+      },
+      "tooltip": {
+        "en": "The finished folded-shirt width; also drives the folding-board insert",
+        "es": "El ancho de la camisa doblada; también controla la plantilla folding-board",
+        "fr": "La largeur de chemise pliée finie ; pilote aussi le gabarit folding-board"
+      }
+    },
+    {
+      "id": "board_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 340,
+      "min": 240,
+      "max": 460,
+      "step": 10,
+      "label": {
+        "en": "Folded length (mm)",
+        "es": "Largo doblado (mm)",
+        "fr": "Longueur pliée (mm)"
+      },
+      "tooltip": {
+        "en": "Base seam to top; also drives the folding-board insert length",
+        "es": "Del borde inferior al superior; también fija el largo de la plantilla",
+        "fr": "Du bas au haut ; fixe aussi la longueur du gabarit"
+      }
+    },
+    {
+      "id": "stack_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 45,
+      "min": 15,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Stack thickness (mm)",
+        "es": "Grosor del paquete (mm)",
+        "fr": "Épaisseur de pile (mm)"
+      },
+      "tooltip": {
+        "en": "How thick the folded clothes stack; sets the wings' turn-of-cloth reach",
+        "es": "Cuánto mide el paquete de ropa doblada; fija el alcance de vuelta de las aletas",
+        "fr": "L'épaisseur de la pile de vêtements ; fixe le rentré des ailes"
+      }
+    },
+    {
+      "id": "tab_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 40,
+      "min": 20,
+      "max": 70,
+      "step": 5,
+      "label": {
+        "en": "Closure tab width (mm)",
+        "es": "Ancho de la lengüeta (mm)",
+        "fr": "Largeur de patte (mm)"
+      },
+      "tooltip": {
+        "en": "Width of the hook-and-loop closure strap",
+        "es": "Ancho de la correa de cierre de gancho y bucle",
+        "fr": "Largeur de la sangle auto-agrippante"
+      },
+      "advanced": true
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam",
+        "es": "Aplicado a todas las costuras",
+        "fr": "Appliquée à toutes les coutures"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "stack_height < board_width * 0.5",
+      "severity": "warning",
+      "message": {
+        "en": "A stack this thick relative to the board makes the wings meet past centre and pucker.",
+        "es": "Un paquete tan grueso respecto a la tabla hace que las aletas se crucen y se frunzan.",
+        "fr": "Une pile aussi épaisse par rapport à la planche fait chevaucher les ailes qui froncent."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "shirt",
+      "label": {
+        "en": "Dress shirt",
+        "es": "Camisa de vestir",
+        "fr": "Chemise habillée"
+      },
+      "values": {
+        "board_width": 260,
+        "board_length": 340,
+        "stack_height": 45
+      }
+    },
+    {
+      "id": "compact",
+      "label": {
+        "en": "Carry-on compact",
+        "es": "Compacto de cabina",
+        "fr": "Compact cabine"
+      },
+      "values": {
+        "board_width": 200,
+        "board_length": 280,
+        "stack_height": 30
+      }
+    },
+    {
+      "id": "suit",
+      "label": {
+        "en": "Suit & jacket",
+        "es": "Traje y chaqueta",
+        "fr": "Costume et veste"
+      },
+      "values": {
+        "board_width": 320,
+        "board_length": 440,
+        "stack_height": 75
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "nylon-ripstop-shell"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "board_pocket",
+        "type": "custom",
+        "label": {
+          "en": "Rigid folding-board pocket",
+          "es": "Bolsillo de la plantilla rígida",
+          "fr": "Poche du gabarit rigide"
+        },
+        "edges": [
+          {
+            "piece": "shell",
+            "edge": "attach_r"
+          },
+          {
+            "piece": "shell",
+            "edge": "attach_l"
+          }
+        ],
+        "parameters": [
+          "board_width",
+          "board_length"
+        ]
+      },
+      {
+        "id": "wing_fold_seam",
+        "type": "custom",
+        "label": {
+          "en": "Wing-to-shell fold seam",
+          "es": "Costura de aleta al panel",
+          "fr": "Couture aile-panneau"
+        },
+        "edges": [
+          {
+            "piece": "wing",
+            "edge": "fold"
+          },
+          {
+            "piece": "shell",
+            "edge": "attach_r"
+          }
+        ],
+        "parameters": [
+          "board_length",
+          "stack_height"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A crease-free shirt out of a case means one less iron reached for in a hotel room, and a folder made from ripstop offcuts replaces the disposable tissue and cardboard a laundry wraps a shirt in. The rigid template is the printable Yantra4D folding-board — the hardware arrived on the 500-push shelf and this cartridge consumes it rather than asking a traveller to buy a branded board.",
+      "es": "Una camisa sin arrugas al salir de la maleta significa una plancha menos en la habitación del hotel, y un organizador hecho con retazos de ripstop reemplaza el papel de seda y el cartón desechables con que una tintorería envuelve una camisa. La plantilla rígida es el folding-board imprimible de Yantra4D: el herraje llegó al estante del empuje de 500 y este cartucho lo consume en vez de pedir al viajero que compre una tabla de marca.",
+      "fr": "Une chemise sans plis à la sortie de la valise, c'est un fer de moins dans la chambre d'hôtel, et un range-vêtement fait de chutes de ripstop remplace le papier de soie et le carton jetables dont un pressing enveloppe une chemise. Le gabarit rigide est le folding-board imprimable de Yantra4D : la quincaillerie est arrivée sur l'étagère du push 500 et ce cartouche la consomme au lieu de demander au voyageur d'acheter une planche de marque."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

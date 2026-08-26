@@ -1,0 +1,394 @@
+{
+  "project": {
+    "name": "Quilted button-in liner jacket",
+    "slug": "quilted-liner-jacket",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The warm layer that lives inside a three-in-one coat: a light quilted jacket with its own front buttons, plus a row of loops around the neck and front that button into a host shell so the two travel as one in winter and separate in spring. The front buttons and the button-in loops both use the Yantra4D sew-through-button solid; its sew face is driven by the same button_ligne the placket carries. The button-in loops land at the same solved pitch as the own-front buttons so the liner hangs straight inside the coat, and the quilting channels divide the body evenly rather than leaving a runt channel.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La capa cálida que vive dentro de un abrigo tres en uno: una chaqueta acolchada ligera con sus propios botones delanteros, más una fila de presillas alrededor del cuello y el frente que se abotonan a una cáscara anfitriona para que ambas viajen juntas en invierno y se separen en primavera. Los botones delanteros y las presillas usan el sólido sew-through-button de Yantra4D; su cara de costura se controla con el mismo button_ligne que lleva la tapeta. Las presillas caen en el mismo paso resuelto que los botones delanteros para que el forro cuelgue recto dentro del abrigo, y los canales de acolchado dividen el cuerpo de forma pareja en vez de dejar un canal enano.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La couche chaude qui vit dans un manteau trois-en-un : une veste matelassée légère avec ses propres boutons devant, plus une rangée de brides autour de l'encolure et du devant qui se boutonnent dans une coque hôte pour que les deux voyagent ensemble l'hiver et se séparent au printemps. Les boutons devant et les brides utilisent le solide sew-through-button de Yantra4D ; sa face de couture est pilotée par le même button_ligne que porte la patte. Les brides tombent au même pas résolu que les boutons devant pour que la doublure pende droite dans le manteau, et les alforzas de matelassage divisent le corps régulièrement plutôt que de laisser un canal nain.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A camada quente que vive dentro de um casaco três-em-um: uma jaqueta acolchoada leve com os próprios botões dianteiros, mais uma fileira de alças em volta da gola e da frente que se abotoam numa casca anfitriã para que as duas viajem juntas no inverno e se separem na primavera. Os botões dianteiros e as alças usam o sólido sew-through-button da Yantra4D; sua face de costura é conduzida pelo mesmo button_ligne que a carcela carrega. As alças caem no mesmo passo resolvido que os botões dianteiros para que o forro penda reto dentro do casaco, e os canais de acolchoado dividem o corpo por igual em vez de deixar um canal anão.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "quilted-liner-jacket",
+      "outerwear",
+      "liner",
+      "quilted",
+      "three-in-one",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "notion": {
+    "kind": "button",
+    "subtype": "sew-through button-in placket",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "hole_count": "4",
+        "hole_spacing": "button_ligne * 0.635 / 3",
+        "hole_dia": "1.8"
+      }
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full liner jacket",
+        "es": "Forro completo",
+        "fr": "Doublure complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Liner front",
+        "es": "Delantero del forro",
+        "fr": "Devant de doublure"
+      },
+      "default_color": "#6a6a7a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Liner back",
+        "es": "Espalda del forro",
+        "fr": "Dos de doublure"
+      },
+      "default_color": "#7a7a8a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "cb_fold",
+        "mirror": false
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#8a8a9a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Coupe"
+      }
+    },
+    {
+      "id": "closure",
+      "label": {
+        "en": "Buttons",
+        "es": "Botones",
+        "fr": "Boutons"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 1040,
+      "min": 780,
+      "max": 1500,
+      "step": 20,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest; the liner sits inside a host shell, so a touch trim",
+        "es": "Contorno de pecho; el forro va dentro de una cáscara, así que algo justo",
+        "fr": "Tour de poitrine ; la doublure va dans une coque, donc un peu ajustée"
+      }
+    },
+    {
+      "id": "liner_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 680,
+      "min": 540,
+      "max": 860,
+      "step": 10,
+      "label": {
+        "en": "Liner length (mm)",
+        "es": "Largo del forro (mm)",
+        "fr": "Longueur de doublure (mm)"
+      },
+      "tooltip": {
+        "en": "Neck to hem; match the host shell's inside length",
+        "es": "Del cuello al bajo; iguala el largo interior de la cáscara",
+        "fr": "De l'encolure à l'ourlet ; égale la longueur intérieure de la coque"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 460,
+      "min": 360,
+      "max": 600,
+      "step": 10,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombros (mm)",
+        "fr": "Largeur d'épaules (mm)"
+      },
+      "tooltip": {
+        "en": "Point to point across the shoulders",
+        "es": "De punta a punta de hombros",
+        "fr": "De pointe à pointe d'épaules"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 620,
+      "min": 300,
+      "max": 720,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to cuff",
+        "es": "Del hombro al puño",
+        "fr": "De l'épaule au poignet"
+      }
+    },
+    {
+      "id": "button_ligne",
+      "type": "slider",
+      "group": "closure",
+      "default": 24,
+      "min": 14,
+      "max": 40,
+      "step": 2,
+      "label": {
+        "en": "Button size (ligne)",
+        "es": "Tamaño de botón (línea)",
+        "fr": "Taille de bouton (ligne)"
+      },
+      "tooltip": {
+        "en": "Ligne size; drives the sew-through-button solid and the placket stand",
+        "es": "Tamaño en líneas; controla el sólido sew-through-button y la tapeta",
+        "fr": "Taille en lignes ; pilote le solide sew-through-button et la patte"
+      }
+    },
+    {
+      "id": "button_count",
+      "type": "slider",
+      "group": "closure",
+      "default": 6,
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "label": {
+        "en": "Button count",
+        "es": "Número de botones",
+        "fr": "Nombre de boutons"
+      },
+      "tooltip": {
+        "en": "Own-front buttons; the button-in loops match this count and pitch",
+        "es": "Botones del frente; las presillas igualan este número y paso",
+        "fr": "Boutons devant ; les brides égalent ce nombre et ce pas"
+      }
+    },
+    {
+      "id": "quilt_channel",
+      "type": "slider",
+      "group": "construction",
+      "default": 70,
+      "min": 40,
+      "max": 140,
+      "step": 10,
+      "label": {
+        "en": "Quilting channel (mm)",
+        "es": "Canal de acolchado (mm)",
+        "fr": "Alforza de matelassage (mm)"
+      },
+      "tooltip": {
+        "en": "Target channel width; the count is solved so channels divide the body evenly",
+        "es": "Ancho objetivo; el número se resuelve para dividir el cuerpo de forma pareja",
+        "fr": "Largeur cible ; le nombre est résolu pour diviser le corps régulièrement"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 6,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam",
+        "es": "Aplicado a todas las costuras",
+        "fr": "Appliquée à toutes les coutures"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "button_count > 2",
+      "severity": "error",
+      "message": {
+        "en": "A liner needs at least three button-in points or it swings inside the shell.",
+        "es": "Un forro necesita al menos tres puntos de abotonado o se columpia dentro de la cáscara.",
+        "fr": "Une doublure a besoin d'au moins trois points de boutonnage ou elle balance dans la coque."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "field",
+      "label": {
+        "en": "Field-coat liner",
+        "es": "Forro de parka",
+        "fr": "Doublure de parka"
+      },
+      "values": {
+        "liner_length": 720,
+        "button_count": 7,
+        "button_ligne": 24
+      }
+    },
+    {
+      "id": "short",
+      "label": {
+        "en": "Short jacket liner",
+        "es": "Forro de chaqueta corta",
+        "fr": "Doublure de veste courte"
+      },
+      "values": {
+        "liner_length": 580,
+        "button_count": 5,
+        "button_ligne": 20
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "nylon-ripstop-shell"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "button_placket",
+        "type": "custom",
+        "label": {
+          "en": "Own-front button placket",
+          "es": "Tapeta de botones propia",
+          "fr": "Patte à boutons propre"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "placket_fold"
+          }
+        ],
+        "parameters": [
+          "button_ligne",
+          "button_count",
+          "liner_length"
+        ]
+      },
+      {
+        "id": "button_in_edge",
+        "type": "custom",
+        "label": {
+          "en": "Button-in loop edge",
+          "es": "Borde de presillas",
+          "fr": "Bord des brides"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "button_ligne",
+          "button_count"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A three-in-one coat is really two garments sold at a markup because the liner and shell are proprietary to each other. Drafting the liner to a standard button-in pitch means one warm layer can serve several shells — a wardrobe of one liner and a few outer coats instead of a coat per season. The buttons are printable Yantra4D solids, so the closure that mates liner to shell is fabricated to the pitch the maker chooses, not locked to a brand's spacing.",
+      "es": "Un abrigo tres en uno son en realidad dos prendas vendidas con sobreprecio porque el forro y la cáscara son propietarios entre sí. Trazar el forro a un paso de abotonado estándar significa que una capa cálida puede servir a varias cáscaras —un armario de un forro y varios abrigos exteriores en vez de un abrigo por estación—. Los botones son sólidos Yantra4D imprimibles, así que el cierre que une forro y cáscara se fabrica al paso que elige quien cose, no atado al espaciado de una marca.",
+      "fr": "Un manteau trois-en-un, ce sont en fait deux vêtements vendus avec majoration parce que la doublure et la coque sont propriétaires l'une de l'autre. Tracer la doublure à un pas de boutonnage standard signifie qu'une couche chaude peut servir plusieurs coques — une garde-robe d'une doublure et de quelques manteaux extérieurs plutôt qu'un manteau par saison. Les boutons sont des solides Yantra4D imprimables, si bien que la fermeture qui unit doublure et coque est fabriquée au pas choisi par qui coud, non liée à l'espacement d'une marque."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

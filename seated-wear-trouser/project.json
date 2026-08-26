@@ -1,0 +1,377 @@
+{
+  "project": {
+    "name": "Seated-wear rise-adjusted trouser",
+    "slug": "seated-wear-trouser",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A trouser cut for a body that sits: the back rise is drafted genuinely taller than a standing trouser and the front rise lower, so the waistband stays level when seated instead of gaping at the back and cutting at the front. The seat is fuller, the back has no pockets to sit on, and the side waist closes on hook-and-loop tape so it adjusts one-handed without a button or fly. The tape is the Yantra4D hook-loop-tape solid; its sewn strip length is driven by the same side_adjust run that drives the waistband interface. Front and back share one measured side seam so the leg cannot twist despite the differing rises, and the extra back rise is clamped so it can never invert the waistline above the hem.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un pantalón cortado para un cuerpo sentado: el tiro trasero se traza genuinamente más alto que un pantalón de pie y el delantero más bajo, para que la pretina quede nivelada al sentarse en vez de abrirse atrás y clavarse adelante. El asiento es más amplio, la espalda no tiene bolsillos donde sentarse, y la cintura lateral cierra con velcro para ajustarse con una mano sin botón ni bragueta. La cinta es el sólido hook-loop-tape de Yantra4D; su largo de tira cosida se controla con el mismo tramo side_adjust que controla la interfaz de pretina. Delantero y trasero comparten una costura lateral medida para que la pierna no se retuerza pese a los tiros distintos, y el tiro trasero extra se limita para que nunca invierta la cintura por encima del bajo.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un pantalon coupé pour un corps assis : la montée dos est tracée réellement plus haute qu'un pantalon debout et la montée devant plus basse, pour que la ceinture reste de niveau en position assise au lieu de bâiller au dos et de scier au devant. L'assise est plus ample, le dos n'a pas de poches où s'asseoir, et la taille latérale se ferme par bande auto-agrippante pour un ajustement à une main sans bouton ni braguette. La bande est le solide hook-loop-tape de Yantra4D ; sa longueur de bande cousue est pilotée par le même tronçon side_adjust qui pilote l'interface de ceinture. Devant et dos partagent une couture latérale mesurée pour que la jambe ne vrille pas malgré les montées différentes, et la montée dos supplémentaire est bridée pour ne jamais inverser la taille au-dessus de l'ourlet.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma calça cortada para um corpo sentado: o cós traseiro é traçado genuinamente mais alto que uma calça em pé e o dianteiro mais baixo, para que o cós fique nivelado ao sentar em vez de abrir atrás e cortar na frente. O assento é mais amplo, as costas não têm bolsos para sentar, e a cintura lateral fecha com velcro para ajuste com uma mão sem botão nem braguilha. A fita é o sólido hook-loop-tape da Yantra4D; seu comprimento de tira costurada é conduzido pelo mesmo trecho side_adjust que conduz a interface de cós. Frente e costas compartilham uma costura lateral medida para que a perna não torça apesar dos cós diferentes, e o cós traseiro extra é limitado para nunca inverter a cintura acima da barra.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "seated-wear-trouser",
+      "adaptive",
+      "trouser",
+      "wheelchair",
+      "accessible-dressing",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "notion": {
+    "kind": "custom",
+    "subtype": "hook-loop side-adjust waist",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "hook-loop-tape",
+      "linked": true,
+      "params_map": {
+        "strip_length": "side_adjust",
+        "sew_margin": "seam_allowance"
+      }
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full trouser",
+        "es": "Pantalón completo",
+        "fr": "Pantalon complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "waistband"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Trouser front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#5a6a5f",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Trouser back",
+        "es": "Trasero",
+        "fr": "Dos"
+      },
+      "default_color": "#6a7a6f",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "Hook-loop waistband",
+        "es": "Pretina con velcro",
+        "fr": "Ceinture auto-agrippante"
+      },
+      "default_color": "#7a8a7f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Coupe"
+      }
+    },
+    {
+      "id": "rise",
+      "label": {
+        "en": "Seated rise",
+        "es": "Tiro sentado",
+        "fr": "Montée assise"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 880,
+      "min": 600,
+      "max": 1400,
+      "step": 20,
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "Seated waist measurement",
+        "es": "Contorno de cintura sentado",
+        "fr": "Tour de taille en position assise"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 1060,
+      "min": 760,
+      "max": 1560,
+      "step": 20,
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      },
+      "tooltip": {
+        "en": "Seated hip; fuller than a standing draft",
+        "es": "Cadera sentada; más amplia que un trazo de pie",
+        "fr": "Hanches assises ; plus amples qu'un tracé debout"
+      }
+    },
+    {
+      "id": "outseam",
+      "type": "slider",
+      "group": "fit",
+      "default": 1000,
+      "min": 700,
+      "max": 1200,
+      "step": 10,
+      "label": {
+        "en": "Outseam (mm)",
+        "es": "Largo exterior (mm)",
+        "fr": "Longueur extérieure (mm)"
+      },
+      "tooltip": {
+        "en": "Waist to hem, outside; both panels share it",
+        "es": "De la cintura al bajo por fuera; ambos paneles lo comparten",
+        "fr": "De la taille à l'ourlet, extérieur ; les deux panneaux le partagent"
+      }
+    },
+    {
+      "id": "front_rise",
+      "type": "slider",
+      "group": "rise",
+      "default": 240,
+      "min": 180,
+      "max": 340,
+      "step": 10,
+      "label": {
+        "en": "Front rise (mm)",
+        "es": "Tiro delantero (mm)",
+        "fr": "Montée devant (mm)"
+      },
+      "tooltip": {
+        "en": "Crotch to front waist; kept low so it does not cut when seated",
+        "es": "De la entrepierna a la cintura delantera; bajo para no clavarse al sentarse",
+        "fr": "De l'entrejambe à la taille devant ; basse pour ne pas scier assis"
+      }
+    },
+    {
+      "id": "back_rise_extra",
+      "type": "slider",
+      "group": "rise",
+      "default": 90,
+      "min": 30,
+      "max": 160,
+      "step": 10,
+      "label": {
+        "en": "Extra back rise (mm)",
+        "es": "Tiro trasero extra (mm)",
+        "fr": "Montée dos supplémentaire (mm)"
+      },
+      "tooltip": {
+        "en": "How much taller the back rise is; clamped so it cannot invert the waistline",
+        "es": "Cuánto más alto es el tiro trasero; limitado para no invertir la cintura",
+        "fr": "De combien la montée dos est plus haute ; bridée pour ne pas inverser la taille"
+      }
+    },
+    {
+      "id": "side_adjust",
+      "type": "slider",
+      "group": "construction",
+      "default": 120,
+      "min": 60,
+      "max": 220,
+      "step": 10,
+      "label": {
+        "en": "Side adjust run (mm)",
+        "es": "Tramo de ajuste lateral (mm)",
+        "fr": "Tronçon d'ajustement latéral (mm)"
+      },
+      "tooltip": {
+        "en": "Hook-loop adjust length per side; drives the hook-loop-tape strip",
+        "es": "Largo de ajuste de velcro por lado; controla la tira hook-loop-tape",
+        "fr": "Longueur d'ajustement auto-agrippant par côté ; pilote la bande hook-loop-tape"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 6,
+      "max": 18,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam",
+        "es": "Aplicado a todas las costuras",
+        "fr": "Appliquée à toutes les coutures"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "back_rise_extra < outseam * 0.2",
+      "severity": "warning",
+      "message": {
+        "en": "An extra back rise this large starts to sit above the seat rather than at the waist.",
+        "es": "Un tiro trasero extra tan grande empieza a quedar por encima del asiento en vez de en la cintura.",
+        "fr": "Une montée dos supplémentaire aussi grande commence à passer au-dessus du siège plutôt qu'à la taille."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "chair-user",
+      "label": {
+        "en": "Chair user",
+        "es": "Usuario de silla",
+        "fr": "Usager de fauteuil"
+      },
+      "values": {
+        "front_rise": 220,
+        "back_rise_extra": 110,
+        "side_adjust": 140
+      }
+    },
+    {
+      "id": "recovery",
+      "label": {
+        "en": "Recovery / limited mobility",
+        "es": "Recuperación / movilidad limitada",
+        "fr": "Convalescence / mobilité réduite"
+      },
+      "values": {
+        "front_rise": 240,
+        "back_rise_extra": 70,
+        "side_adjust": 180
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "poliester-elastano-compresion"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "hook_loop_waistband",
+        "type": "custom",
+        "label": {
+          "en": "Hook-loop side-adjust waistband",
+          "es": "Pretina de ajuste lateral con velcro",
+          "fr": "Ceinture à ajustement latéral auto-agrippant"
+        },
+        "edges": [
+          {
+            "piece": "waistband",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "side_adjust",
+          "waist_girth",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "seated_rise_seam",
+        "type": "custom",
+        "label": {
+          "en": "Differential-rise centre seam",
+          "es": "Costura central de tiro diferencial",
+          "fr": "Couture centrale à montée différentielle"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "centre_front"
+          },
+          {
+            "piece": "back",
+            "edge": "centre_back"
+          }
+        ],
+        "parameters": [
+          "front_rise",
+          "back_rise_extra",
+          "outseam"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A standing-drafted trouser worn seated gaps at the back and cuts at the front — the single most common fit complaint for wheelchair users, and the reason many buy trousers a size too large and belt them. This takes the rise difference into the pattern itself, drops the back pockets that press into a seat, and puts the whole waist on hook-and-loop so it fastens one-handed. The tape is a printable Yantra4D solid, so the closure is fabricated, not sourced from a shrinking range of adaptive-wear suppliers.",
+      "es": "Un pantalón trazado de pie usado sentado se abre atrás y se clava adelante —la queja de ajuste más común de los usuarios de silla, y la razón por la que muchos compran una talla de más y se ciñen con cinturón—. Esto lleva la diferencia de tiro al propio patrón, quita los bolsillos traseros que presionan contra el asiento, y pone toda la cintura en velcro para abrocharse con una mano. La cinta es un sólido Yantra4D imprimible, así que el cierre se fabrica, no se busca en una gama menguante de proveedores de ropa adaptada.",
+      "fr": "Un pantalon tracé debout porté assis bâille au dos et scie au devant — la plainte d'ajustement la plus fréquente des usagers de fauteuil, et la raison pour laquelle beaucoup achètent une taille au-dessus et serrent à la ceinture. Ceci intègre la différence de montée au patron lui-même, supprime les poches dos qui pressent contre le siège, et met toute la taille en auto-agrippant pour une fermeture à une main. La bande est un solide Yantra4D imprimable, si bien que la fermeture est fabriquée, non cherchée dans une gamme réduite de fournisseurs de vêtements adaptés."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

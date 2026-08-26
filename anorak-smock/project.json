@@ -1,0 +1,408 @@
+{
+  "project": {
+    "name": "Pullover anorak smock",
+    "slug": "anorak-smock",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A ventile-cotton pullover anorak: no full-length zip, just a short neck placket you pull over the head, a big kangaroo pocket across the front, a two-panel hood, and a drawcord hem cinched on a cord-lock. Cut generous as a smock over a jumper, in the tight-woven cotton that beads rain without a coating. The cord-lock is the Yantra4D cord-lock solid; its channel is bored for the same cord_dia the hem casing carries. The pullover front is cut on the fold so the neck placket is a slit clamped under the chest, and the kangaroo pocket width is derived from the front width so a wide body gets a proportionate pocket.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un anorak tipo smock de algodón ventile: sin cremallera completa, solo una tapeta corta de cuello que se pasa por la cabeza, un gran bolsillo canguro al frente, una capucha de dos paneles y un bajo con cordón ceñido en un tope. Cortado holgado como smock sobre un jersey, en el algodón de tejido tupido que repele la lluvia sin recubrimiento. El tope es el sólido cord-lock de Yantra4D; su canal está perforado para el mismo cord_dia que lleva la jareta del bajo. El delantero se corta al doblez, así que la tapeta de cuello es una abertura limitada bajo el pecho, y el ancho del bolsillo canguro se deriva del ancho del delantero para que un cuerpo amplio tenga un bolsillo proporcionado.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un anorak-blouse en coton ventile : pas de fermeture pleine longueur, juste une courte patte d'encolure qu'on enfile par la tête, une grande poche kangourou au devant, une capuche en deux panneaux et un ourlet à cordon serré sur un arrêt. Coupé ample en blouse sur un pull, dans le coton serré qui perle la pluie sans enduction. L'arrêt est le solide cord-lock de Yantra4D ; son canal est percé pour le même cord_dia que porte la coulisse d'ourlet. Le devant est coupé au pli, si bien que la patte d'encolure est une fente bridée sous la poitrine, et la largeur de la poche kangourou est tirée de la largeur du devant pour qu'un corps large ait une poche proportionnée.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um anoraque tipo blusão de algodão ventile: sem fecho de comprimento total, só uma carcela curta de gola que se veste pela cabeça, um grande bolso canguru na frente, um capuz de dois painéis e uma barra com cordão apertada num trava. Cortado amplo como blusão sobre uma malha, no algodão de trama fechada que repele a chuva sem revestimento. A trava é o sólido cord-lock da Yantra4D; seu canal é furado para o mesmo cord_dia que o cós da barra carrega. A frente é cortada na dobra, então a carcela de gola é uma abertura limitada sob o peito, e a largura do bolso canguru deriva da largura da frente para que um corpo largo tenha um bolso proporcionado.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "anorak-smock",
+      "outerwear",
+      "anorak",
+      "pullover",
+      "hooded",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "notion": {
+    "kind": "custom",
+    "subtype": "hem drawcord cord-lock",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "cord-lock",
+      "linked": true,
+      "params_map": {
+        "cord_dia": "cord_dia",
+        "cords": "2",
+        "body_size": "max(14.0, cord_dia * 4.0)"
+      }
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full anorak",
+        "es": "Anorak completo",
+        "fr": "Anorak complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "hood",
+        "pocket"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Anorak front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#6a7a5f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "cf_fold",
+        "mirror": false
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Anorak back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#7a8a6f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "cb_fold",
+        "mirror": false
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#8a9a7f",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "hood",
+      "label": {
+        "en": "Hood half",
+        "es": "Media capucha",
+        "fr": "Demi-capuche"
+      },
+      "default_color": "#9aaa8f",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "pocket",
+      "label": {
+        "en": "Kangaroo pocket",
+        "es": "Bolsillo canguro",
+        "fr": "Poche kangourou"
+      },
+      "default_color": "#aaba9f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Coupe"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 1080,
+      "min": 840,
+      "max": 1540,
+      "step": 20,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest; a smock runs generous over a jumper",
+        "es": "Contorno de pecho; un smock queda amplio sobre un jersey",
+        "fr": "Tour de poitrine ; une blouse reste ample sur un pull"
+      }
+    },
+    {
+      "id": "smock_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 720,
+      "min": 580,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Smock length (mm)",
+        "es": "Largo del smock (mm)",
+        "fr": "Longueur de la blouse (mm)"
+      },
+      "tooltip": {
+        "en": "Neck to hem",
+        "es": "Del cuello al bajo",
+        "fr": "De l'encolure à l'ourlet"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 470,
+      "min": 380,
+      "max": 620,
+      "step": 10,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombros (mm)",
+        "fr": "Largeur d'épaules (mm)"
+      },
+      "tooltip": {
+        "en": "Point to point across the shoulders",
+        "es": "De punta a punta de hombros",
+        "fr": "De pointe à pointe d'épaules"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 630,
+      "min": 320,
+      "max": 720,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to cuff",
+        "es": "Del hombro al puño",
+        "fr": "De l'épaule au poignet"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 430,
+      "min": 340,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the neckline the hood is cut to and the pull-over placket depth",
+        "es": "Fija el escote de la capucha y la profundidad de la tapeta",
+        "fr": "Fixe l'encolure de la capuche et la profondeur de la patte"
+      }
+    },
+    {
+      "id": "cord_dia",
+      "type": "slider",
+      "group": "construction",
+      "default": 5,
+      "min": 3,
+      "max": 8,
+      "step": 1,
+      "label": {
+        "en": "Drawcord diameter (mm)",
+        "es": "Diámetro del cordón (mm)",
+        "fr": "Diamètre du cordon (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the cord-lock channel and the hem casing depth",
+        "es": "Controla el canal del tope y la profundidad de la jareta",
+        "fr": "Pilote le canal de l'arrêt et la profondeur de la coulisse"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 6,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam",
+        "es": "Aplicado a todas las costuras",
+        "fr": "Appliquée à toutes les coutures"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "neck_girth > 300",
+      "severity": "warning",
+      "message": {
+        "en": "A neck this small will not clear the head on a pull-over placket.",
+        "es": "Un cuello tan pequeño no pasará la cabeza en una tapeta de pull-over.",
+        "fr": "Un cou aussi petit ne passera pas la tête sur une patte à enfiler."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "hill",
+      "label": {
+        "en": "Hillwalking anorak",
+        "es": "Anorak de montaña",
+        "fr": "Anorak de randonnée"
+      },
+      "values": {
+        "chest_girth": 1120,
+        "smock_length": 740,
+        "cord_dia": 5
+      }
+    },
+    {
+      "id": "field",
+      "label": {
+        "en": "Field smock",
+        "es": "Smock de campo",
+        "fr": "Blouse de terrain"
+      },
+      "values": {
+        "chest_girth": 1200,
+        "smock_length": 780,
+        "cord_dia": 6
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "nylon-ripstop-shell"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "hood_neckline",
+        "type": "custom",
+        "label": {
+          "en": "Hood-to-neckline seam",
+          "es": "Costura capucha-escote",
+          "fr": "Couture capuche-encolure"
+        },
+        "edges": [
+          {
+            "piece": "hood",
+            "edge": "neck_edge"
+          },
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "shoulder_width"
+        ]
+      },
+      {
+        "id": "hem_casing",
+        "type": "custom",
+        "label": {
+          "en": "Hem drawcord casing",
+          "es": "Jareta del bajo",
+          "fr": "Coulisse d'ourlet"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "cord_dia",
+          "chest_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The anorak is the original repairable rain layer — no zip to jam, no coating to flake, just tight-woven cotton that swells shut in the rain and can be re-waxed for a lifetime. A pullover cut on the fold has the fewest seams to fail, and a single printable cord-lock at the hem replaces the plastic hardware that usually outlives nothing. It deepens the thin outerwear family with a coat built to be kept and mended, not replaced each season.",
+      "es": "El anorak es la capa de lluvia reparable original —sin cremallera que se atore, sin recubrimiento que se descascare, solo algodón tupido que se cierra al hincharse con la lluvia y puede re-encerarse de por vida—. Un pull-over cortado al doblez tiene las menos costuras que fallar, y un solo tope imprimible en el bajo reemplaza el herraje plástico que no suele durar nada. Profundiza la delgada familia de abrigos con una prenda hecha para conservarse y remendarse, no reemplazarse cada temporada.",
+      "fr": "L'anorak est la couche de pluie réparable d'origine — pas de fermeture qui coince, pas d'enduction qui s'écaille, juste du coton serré qui se ferme en gonflant sous la pluie et se réencaustique à vie. Un enfilable coupé au pli a le moins de coutures à céder, et un seul arrêt imprimable à l'ourlet remplace la quincaillerie plastique qui ne survit généralement à rien. Il approfondit la maigre famille des manteaux avec un vêtement fait pour être gardé et raccommodé, non remplacé chaque saison."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

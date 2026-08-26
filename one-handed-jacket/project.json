@@ -1,0 +1,401 @@
+{
+  "project": {
+    "name": "One-handed-dressing jacket",
+    "slug": "one-handed-jacket",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A softshell jacket a person with the use of one arm can put on and close alone. The aid is drafted in, not just named: the anchor-side sleeve is set into an extra-wide dropped armscye so the weak arm slides in without threading, the working-side front carries a column of magnetic clasps that snap shut with a shove of the palm (no button, no zip pull, no alignment), and a back drop tail lets the wearer flip the jacket over the shoulders in one motion. The clasp is the Yantra4D magnetic-clasp solid; its sew face is driven by the same clasp_dia that drives the garment's clasp-placket interface. One sleeve cap is bisected against the sum of the two measured armscyes so it fits both openings.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una chaqueta de softshell que una persona con el uso de un solo brazo puede ponerse y cerrar sola. La ayuda está trazada, no solo nombrada: la sisa del lado de anclaje es extra ancha y caída para que el brazo débil entre sin enhebrar, el delantero del lado hábil lleva una columna de broches magnéticos que cierran con un empuje de la palma (sin botón, sin tirador, sin alineación), y una cola trasera deja voltear la chaqueta sobre los hombros de un movimiento. El broche es el sólido magnetic-clasp de Yantra4D; su cara de costura se controla con el mismo clasp_dia que controla la interfaz de tapeta. Una copa de manga se biseca contra la suma de las dos sisas medidas para que encaje en ambas aberturas.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une veste softshell qu'une personne n'ayant l'usage que d'un bras peut enfiler et fermer seule. L'aide est tracée, non seulement nommée : l'emmanchure du côté d'ancrage est extra-large et tombante pour que le bras faible entre sans enfiler, le devant du côté valide porte une colonne de fermoirs magnétiques qui claquent d'une poussée de la paume (sans bouton, sans curseur, sans alignement), et une queue dorsale permet de basculer la veste par-dessus les épaules d'un geste. Le fermoir est le solide magnetic-clasp de Yantra4D ; sa face de couture est pilotée par le même clasp_dia qui pilote l'interface de patte. Une tête de manche est bissectée contre la somme des deux emmanchures mesurées pour s'ajuster aux deux ouvertures.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma jaqueta softshell que uma pessoa com o uso de um só braço pode vestir e fechar sozinha. O auxílio é traçado, não só nomeado: a cava do lado de âncora é extra larga e caída para que o braço fraco entre sem enfiar, a frente do lado hábil carrega uma coluna de fechos magnéticos que fecham com um empurrão da palma (sem botão, sem cursor, sem alinhamento), e uma cauda traseira deixa virar a jaqueta sobre os ombros num movimento. O fecho é o sólido magnetic-clasp da Yantra4D; sua face de costura é conduzida pelo mesmo clasp_dia que conduz a interface de carcela. Uma cabeça de manga é bissetada contra a soma das duas cavas medidas para se ajustar às duas aberturas.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "one-handed-jacket",
+      "adaptive",
+      "jacket",
+      "magnetic",
+      "accessible-dressing",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "notion": {
+    "kind": "custom",
+    "subtype": "magnetic-clasp placket",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "magnetic-clasp",
+      "linked": true,
+      "params_map": {
+        "disc_dia": "clasp_dia",
+        "sew_holes": "4"
+      }
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full jacket",
+        "es": "Chaqueta completa",
+        "fr": "Veste complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Jacket front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#4f5a6a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Jacket back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#5f6a7a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "cb_fold",
+        "mirror": false
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#6f7a8a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Coupe"
+      }
+    },
+    {
+      "id": "closure",
+      "label": {
+        "en": "Magnetic closure",
+        "es": "Cierre magnético",
+        "fr": "Fermeture magnétique"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 1100,
+      "min": 820,
+      "max": 1560,
+      "step": 20,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest over clothes; a one-handed jacket runs generous",
+        "es": "Contorno de pecho sobre ropa; una chaqueta de una mano queda generosa",
+        "fr": "Tour de poitrine sur vêtements ; une veste à une main reste ample"
+      }
+    },
+    {
+      "id": "jacket_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 700,
+      "min": 560,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Jacket length (mm)",
+        "es": "Largo de la chaqueta (mm)",
+        "fr": "Longueur de veste (mm)"
+      },
+      "tooltip": {
+        "en": "Neck to hem; also sets the clasp closure run",
+        "es": "Del cuello al bajo; también fija el tramo de broches",
+        "fr": "De l'encolure au bas ; fixe aussi le tronçon de fermoirs"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 480,
+      "min": 360,
+      "max": 620,
+      "step": 10,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombros (mm)",
+        "fr": "Largeur d'épaules (mm)"
+      },
+      "tooltip": {
+        "en": "Point to point across the shoulders",
+        "es": "De punta a punta de hombros",
+        "fr": "De pointe à pointe d'épaules"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 640,
+      "min": 300,
+      "max": 720,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to cuff",
+        "es": "Del hombro al puño",
+        "fr": "De l'épaule au poignet"
+      }
+    },
+    {
+      "id": "clasp_dia",
+      "type": "slider",
+      "group": "closure",
+      "default": 22,
+      "min": 14,
+      "max": 34,
+      "step": 1,
+      "label": {
+        "en": "Clasp diameter (mm)",
+        "es": "Diámetro del broche (mm)",
+        "fr": "Diamètre du fermoir (mm)"
+      },
+      "tooltip": {
+        "en": "Magnetic clasp disc size; drives the clasp's sew face and the placket stand",
+        "es": "Tamaño del disco del broche; controla la cara de costura y la tapeta",
+        "fr": "Taille du disque du fermoir ; pilote la face de couture et la patte"
+      }
+    },
+    {
+      "id": "clasp_pitch",
+      "type": "slider",
+      "group": "closure",
+      "default": 110,
+      "min": 70,
+      "max": 170,
+      "step": 5,
+      "label": {
+        "en": "Clasp pitch (mm)",
+        "es": "Paso de broches (mm)",
+        "fr": "Pas des fermoirs (mm)"
+      },
+      "tooltip": {
+        "en": "Requested spacing; recomputed so the column lands exactly",
+        "es": "Separación pedida; recalculada para que la columna caiga exacta",
+        "fr": "Espacement demandé ; recalculé pour que la colonne tombe juste"
+      }
+    },
+    {
+      "id": "back_drop",
+      "type": "slider",
+      "group": "construction",
+      "default": 70,
+      "min": 20,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Back drop tail (mm)",
+        "es": "Cola trasera (mm)",
+        "fr": "Queue dorsale (mm)"
+      },
+      "tooltip": {
+        "en": "How far the centre back drops below the side hem, for the flip-on motion",
+        "es": "Cuánto baja el centro trasero bajo el bajo lateral, para voltear",
+        "fr": "De combien le centre dos descend sous l'ourlet latéral, pour le geste de bascule"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 6,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam",
+        "es": "Aplicado a todas las costuras",
+        "fr": "Appliquée à toutes les coutures"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "clasp_pitch < jacket_length * 0.3",
+      "severity": "warning",
+      "message": {
+        "en": "A clasp pitch this coarse leaves too few clasps to hold the front closed one-handed.",
+        "es": "Un paso de broches tan amplio deja muy pocos broches para cerrar el frente con una mano.",
+        "fr": "Un pas de fermoirs aussi grossier laisse trop peu de fermoirs pour fermer le devant à une main."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "everyday",
+      "label": {
+        "en": "Everyday jacket",
+        "es": "Chaqueta diaria",
+        "fr": "Veste quotidienne"
+      },
+      "values": {
+        "chest_girth": 1100,
+        "jacket_length": 700,
+        "clasp_pitch": 110
+      }
+    },
+    {
+      "id": "roomy",
+      "label": {
+        "en": "Roomy over layers",
+        "es": "Amplia sobre capas",
+        "fr": "Ample sur épaisseurs"
+      },
+      "values": {
+        "chest_girth": 1320,
+        "jacket_length": 740,
+        "clasp_pitch": 120
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "nylon-ripstop-shell"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "clasp_placket",
+        "type": "custom",
+        "label": {
+          "en": "Magnetic-clasp placket",
+          "es": "Tapeta de broches magnéticos",
+          "fr": "Patte à fermoirs magnétiques"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "placket_fold"
+          }
+        ],
+        "parameters": [
+          "clasp_dia",
+          "clasp_pitch",
+          "jacket_length"
+        ]
+      },
+      {
+        "id": "wide_armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Extra-wide dropped armscye",
+          "es": "Sisa caída extra ancha",
+          "fr": "Emmanchure tombante extra-large"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "shoulder_width",
+          "sleeve_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "After a stroke or an amputation, putting on a jacket is a two-carer task that can pin someone indoors. Threading a weak arm through a normal armscye and aligning a zip one-handed are the two failure points; this widens the armscye so the arm drops in, and puts the front on magnetic clasps that need no alignment — a palm shove closes them. The clasp is a printable Yantra4D solid, so the closure that makes the jacket usable is fabricated on demand, not rationed by an adaptive-wear catalogue.",
+      "es": "Tras un ictus o una amputación, ponerse una chaqueta es una tarea de dos cuidadores que puede dejar a alguien encerrado. Enhebrar el brazo débil por una sisa normal y alinear una cremallera con una mano son los dos puntos de fallo; esto ensancha la sisa para que el brazo caiga dentro, y pone el frente en broches magnéticos que no necesitan alineación —un empuje de la palma los cierra—. El broche es un sólido Yantra4D imprimible, así que el cierre que hace usable la chaqueta se fabrica a demanda, no lo raciona un catálogo de ropa adaptada.",
+      "fr": "Après un AVC ou une amputation, enfiler une veste est une tâche à deux aidants qui peut confiner quelqu'un. Enfiler le bras faible dans une emmanchure normale et aligner une fermeture à une main sont les deux points de rupture ; ceci élargit l'emmanchure pour que le bras tombe dedans, et met le devant sur des fermoirs magnétiques sans alignement — une poussée de la paume les ferme. Le fermoir est un solide Yantra4D imprimable, si bien que la fermeture qui rend la veste utilisable est fabriquée à la demande, non rationnée par un catalogue de vêtements adaptés."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

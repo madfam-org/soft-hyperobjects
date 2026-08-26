@@ -1,0 +1,328 @@
+{
+  "project": {
+    "name": "Padded hanger cover",
+    "slug": "hanger-cover-padded",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A quilted slip-on cover that pads a bare hanger so a knit or silk blouse hangs without shoulder dents. Two mirrored shell halves close around the shoulder and a gathered cuff grips the hook shaft. Drafted to a known hanger body — the Yantra4D garment-hanger solid — so the shell's inner arc is sized to that printed shoulder rather than to a guess. A hanger shoulder is an arc: the shell's inner and outer edges are two concentric arcs sharing one centre, so the outer is genuinely longer than the inner by an amount set by the sweep and the pad girth, measured and declared as the seam's ease.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una funda acolchada que rellena una percha desnuda para que un tejido de punto o una blusa de seda cuelguen sin marcas en el hombro. Dos mitades simétricas cierran alrededor del hombro y un puño fruncido sujeta el vástago del gancho. Trazada sobre un cuerpo de percha conocido —el sólido garment-hanger de Yantra4D— para que el arco interior de la mitad se ajuste a ese hombro impreso y no a una suposición. El hombro de una percha es un arco: los bordes interior y exterior son dos arcos concéntricos con un mismo centro, de modo que el exterior es realmente más largo que el interior según el barrido y el grosor del acolchado, medido y declarado como holgura de la costura.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une housse matelassée qui rembourre un cintre nu pour qu'une maille ou un chemisier de soie pende sans marque d'épaule. Deux demi-coques symétriques se ferment autour de l'épaule et un poignet froncé serre la tige du crochet. Tracée sur un corps de cintre connu — le solide garment-hanger de Yantra4D — de sorte que l'arc intérieur de la coque épouse cette épaule imprimée plutôt qu'une estimation. L'épaule d'un cintre est un arc : les bords intérieur et extérieur sont deux arcs concentriques de même centre, si bien que l'extérieur est réellement plus long que l'intérieur selon le balayage et l'épaisseur du matelassage, mesuré et déclaré comme aisance de couture.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma capa acolchoada que preenche um cabide nu para que uma malha ou blusa de seda pendam sem marcas no ombro. Duas metades simétricas fecham em torno do ombro e um punho franzido segura a haste do gancho. Traçada sobre um corpo de cabide conhecido — o sólido garment-hanger da Yantra4D — de modo que o arco interno da metade se ajusta a esse ombro impresso e não a um chute. O ombro de um cabide é um arco: as bordas interna e externa são dois arcos concêntricos de mesmo centro, então a externa é realmente mais longa que a interna conforme a varredura e a espessura do acolchoado, medido e declarado como folga da costura.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "hanger-cover-padded",
+      "care",
+      "storage",
+      "wardrobe",
+      "padded",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "notion": {
+    "kind": "custom",
+    "subtype": "printed hanger body",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "garment-hanger",
+      "linked": true,
+      "params_map": {
+        "shoulder_w": "hanger_span",
+        "slope": "shoulder_drop"
+      }
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full hanger cover",
+        "es": "Funda completa",
+        "fr": "Housse complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "shell",
+        "cuff"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "shell",
+      "label": {
+        "en": "Padded shell half",
+        "es": "Mitad acolchada",
+        "fr": "Demi-coque matelassée"
+      },
+      "default_color": "#7a6f84",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Hook cuff",
+        "es": "Puño del gancho",
+        "fr": "Poignet du crochet"
+      },
+      "default_color": "#8f8499",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Size",
+        "es": "Tamaño",
+        "fr": "Taille"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "hanger_span",
+      "type": "slider",
+      "group": "fit",
+      "default": 430,
+      "min": 280,
+      "max": 540,
+      "step": 10,
+      "label": {
+        "en": "Hanger span (mm)",
+        "es": "Envergadura de la percha (mm)",
+        "fr": "Envergure du cintre (mm)"
+      },
+      "tooltip": {
+        "en": "Tip to tip, straight across; also drives the garment-hanger shoulder",
+        "es": "De punta a punta en recto; también controla el hombro del garment-hanger",
+        "fr": "De pointe à pointe en droit ; pilote aussi l'épaule du garment-hanger"
+      }
+    },
+    {
+      "id": "shoulder_drop",
+      "type": "slider",
+      "group": "fit",
+      "default": 60,
+      "min": 15,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Shoulder drop (mm)",
+        "es": "Caída del hombro (mm)",
+        "fr": "Tombé d'épaule (mm)"
+      },
+      "tooltip": {
+        "en": "How far the arms fall from the crown; sets the arc's sweep",
+        "es": "Cuánto bajan los brazos desde la corona; define el barrido del arco",
+        "fr": "De combien les bras descendent du sommet ; fixe le balayage de l'arc"
+      }
+    },
+    {
+      "id": "pad_girth",
+      "type": "slider",
+      "group": "construction",
+      "default": 24,
+      "min": 8,
+      "max": 48,
+      "step": 1,
+      "label": {
+        "en": "Padded girth (mm)",
+        "es": "Grosor acolchado (mm)",
+        "fr": "Épaisseur matelassée (mm)"
+      },
+      "tooltip": {
+        "en": "The finished padded radius; also the gap between the two concentric arcs",
+        "es": "El radio acolchado acabado; también la separación entre los arcos concéntricos",
+        "fr": "Le rayon matelassé fini ; aussi l'écart entre les deux arcs concentriques"
+      }
+    },
+    {
+      "id": "cuff_rise",
+      "type": "slider",
+      "group": "construction",
+      "default": 75,
+      "min": 30,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Cuff rise (mm)",
+        "es": "Altura del puño (mm)",
+        "fr": "Hauteur du poignet (mm)"
+      },
+      "tooltip": {
+        "en": "How far the gathered cuff climbs the hook shaft",
+        "es": "Cuánto sube el puño fruncido por el vástago",
+        "fr": "De combien le poignet froncé remonte la tige"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam",
+        "es": "Aplicado a todas las costuras",
+        "fr": "Appliquée à toutes les coutures"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "shoulder_drop < hanger_span * 0.42",
+      "severity": "error",
+      "message": {
+        "en": "A drop this deep relative to the span is no longer a hanger arc — the concentric arcs would invert.",
+        "es": "Una caída tan profunda respecto a la envergadura ya no es un arco de percha: los arcos concéntricos se invertirían.",
+        "fr": "Un tombé aussi profond par rapport à l'envergure n'est plus un arc de cintre : les arcs concentriques s'inverseraient."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "blouse",
+      "label": {
+        "en": "Blouse & knitwear",
+        "es": "Blusa y punto",
+        "fr": "Chemisier et maille"
+      },
+      "values": {
+        "hanger_span": 430,
+        "shoulder_drop": 60,
+        "pad_girth": 24
+      }
+    },
+    {
+      "id": "child",
+      "label": {
+        "en": "Child hanger",
+        "es": "Percha infantil",
+        "fr": "Cintre enfant"
+      },
+      "values": {
+        "hanger_span": 300,
+        "shoulder_drop": 40,
+        "pad_girth": 14
+      }
+    },
+    {
+      "id": "coat",
+      "label": {
+        "en": "Coat & tailoring",
+        "es": "Abrigo y sastrería",
+        "fr": "Manteau et tailleur"
+      },
+      "values": {
+        "hanger_span": 520,
+        "shoulder_drop": 90,
+        "pad_girth": 40
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "shell_arc_seam",
+        "type": "shoulder",
+        "label": {
+          "en": "Concentric shoulder-arc seam",
+          "es": "Costura del arco de hombro concéntrico",
+          "fr": "Couture de l'arc d'épaule concentrique"
+        },
+        "edges": [
+          {
+            "piece": "shell",
+            "edge": "outer_arc"
+          },
+          {
+            "piece": "shell",
+            "edge": "inner_arc"
+          }
+        ],
+        "parameters": [
+          "hanger_span",
+          "shoulder_drop",
+          "pad_girth"
+        ]
+      },
+      {
+        "id": "hook_cuff_gather",
+        "type": "custom",
+        "label": {
+          "en": "Hook-shaft cuff gather",
+          "es": "Frunce del puño en el vástago",
+          "fr": "Fronce du poignet sur la tige"
+        },
+        "edges": [
+          {
+            "piece": "cuff",
+            "edge": "gather_top"
+          }
+        ],
+        "parameters": [
+          "cuff_rise",
+          "pad_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Shoulder dents are the most common way storage ruins a good knit, and the usual answer is buying more hangers. This pads a printed Yantra4D hanger body in quilted cotton offcuts — the hardware arrived on the 500-push shelf — so a whole wardrobe can hang dent-free without a shop-bought padded set.",
+      "es": "Las marcas de hombro son la forma más común en que el almacenamiento arruina una buena prenda de punto, y la respuesta habitual es comprar más perchas. Esto rellena un cuerpo de percha impreso de Yantra4D con retazos de algodón acolchado —el herraje llegó al estante del empuje de 500— para que todo un armario cuelgue sin marcas sin un juego acolchado comprado.",
+      "fr": "Les marques d'épaule sont la façon la plus courante dont le rangement abîme une belle maille, et la réponse habituelle est d'acheter plus de cintres. Ceci rembourre un corps de cintre imprimé Yantra4D avec des chutes de coton matelassé — la quincaillerie est arrivée sur l'étagère du push 500 — pour qu'une garde-robe entière pende sans marque sans jeu matelassé du commerce."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

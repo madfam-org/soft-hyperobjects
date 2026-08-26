@@ -1,0 +1,363 @@
+{
+  "project": {
+    "name": "Post-surgery wrap recovery top",
+    "slug": "wrap-recovery-top",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A crossover wrap top for after breast, shoulder, or cardiac surgery, when raising an arm overhead is impossible or forbidden. It opens completely flat so a carer lays it under the wearer and wraps the two fronts across the body — no overhead dressing — and closes on hook-and-loop tape at the side so pressure over a dressing or drain adjusts without a knot. A low armscye clears a shoulder that cannot lift. The wrap overlap is a measured, deliberate amount: each front is the back half-width plus wrap_overlap, and the hook-loop run is that same overlap, so the closure and the pattern agree.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un top cruzado para después de cirugía de mama, hombro o corazón, cuando levantar un brazo por encima de la cabeza es imposible o está prohibido. Se abre completamente plano para que un cuidador lo coloque bajo la persona y cruce los dos delanteros sobre el cuerpo —sin vestido por la cabeza— y cierra con velcro en el costado para ajustar la presión sobre un apósito o dren sin nudo. Una sisa baja libera un hombro que no puede subir. El cruce es una cantidad medida y deliberada: cada delantero es la mitad de la espalda más wrap_overlap, y el tramo de velcro es ese mismo cruce, así que el cierre y el patrón coinciden.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un haut portefeuille pour l'après-chirurgie du sein, de l'épaule ou cardiaque, quand lever un bras au-dessus de la tête est impossible ou interdit. Il s'ouvre entièrement à plat pour qu'un aidant le glisse sous la personne et croise les deux devants sur le corps — sans habillage par la tête — et se ferme par bande auto-agrippante au côté pour ajuster la pression sur un pansement ou un drain sans nœud. Une emmanchure basse dégage une épaule qui ne peut se lever. Le croisement est une quantité mesurée et voulue : chaque devant est la demi-largeur dos plus wrap_overlap, et le tronçon auto-agrippant est ce même croisement, si bien que la fermeture et le patron s'accordent.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um top transpassado para o pós-cirurgia de mama, ombro ou coração, quando levantar um braço acima da cabeça é impossível ou proibido. Abre completamente plano para que um cuidador o coloque sob a pessoa e cruze as duas frentes sobre o corpo — sem vestir pela cabeça — e fecha com velcro na lateral para ajustar a pressão sobre um curativo ou dreno sem nó. Uma cava baixa libera um ombro que não pode subir. O transpasse é uma quantidade medida e deliberada: cada frente é a metade das costas mais wrap_overlap, e o trecho de velcro é esse mesmo transpasse, então o fecho e o molde concordam.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "wrap-recovery-top",
+      "adaptive",
+      "post-surgery",
+      "wrap",
+      "accessible-dressing",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "notion": {
+    "kind": "custom",
+    "subtype": "hook-loop wrap closure",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "hook-loop-tape",
+      "linked": true,
+      "params_map": {
+        "strip_length": "wrap_overlap",
+        "sew_margin": "seam_allowance"
+      }
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full wrap top",
+        "es": "Top completo",
+        "fr": "Haut complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Wrap front",
+        "es": "Delantero cruzado",
+        "fr": "Devant portefeuille"
+      },
+      "default_color": "#b09aa5",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#c0aab5",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "cb_fold",
+        "mirror": false
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Soft low-cap sleeve",
+        "es": "Manga de copa baja",
+        "fr": "Manche à tête basse"
+      },
+      "default_color": "#d0bac5",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Coupe"
+      }
+    },
+    {
+      "id": "closure",
+      "label": {
+        "en": "Wrap closure",
+        "es": "Cierre cruzado",
+        "fr": "Fermeture portefeuille"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 980,
+      "min": 640,
+      "max": 1440,
+      "step": 20,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest; a recovery top runs loose over a dressing",
+        "es": "Contorno de pecho; un top de recuperación queda holgado sobre un apósito",
+        "fr": "Tour de poitrine ; un haut de convalescence reste ample sur un pansement"
+      }
+    },
+    {
+      "id": "top_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 620,
+      "min": 440,
+      "max": 800,
+      "step": 10,
+      "label": {
+        "en": "Top length (mm)",
+        "es": "Largo del top (mm)",
+        "fr": "Longueur du haut (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to hem",
+        "es": "Del hombro al bajo",
+        "fr": "De l'épaule à l'ourlet"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 420,
+      "min": 300,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombros (mm)",
+        "fr": "Largeur d'épaules (mm)"
+      },
+      "tooltip": {
+        "en": "Point to point across the shoulders",
+        "es": "De punta a punta de hombros",
+        "fr": "De pointe à pointe d'épaules"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 300,
+      "min": 120,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to cuff; a short soft sleeve clears a shoulder that cannot lift",
+        "es": "Del hombro al puño; una manga corta y suave libera un hombro que no sube",
+        "fr": "De l'épaule au poignet ; une manche courte dégage une épaule qui ne se lève pas"
+      }
+    },
+    {
+      "id": "wrap_overlap",
+      "type": "slider",
+      "group": "closure",
+      "default": 140,
+      "min": 60,
+      "max": 260,
+      "step": 10,
+      "label": {
+        "en": "Wrap overlap (mm)",
+        "es": "Cruce (mm)",
+        "fr": "Croisement (mm)"
+      },
+      "tooltip": {
+        "en": "How far the fronts cross; drives the hook-loop strip length",
+        "es": "Cuánto cruzan los delanteros; controla el largo de la tira de velcro",
+        "fr": "De combien les devants se croisent ; pilote la longueur de bande auto-agrippante"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam",
+        "es": "Aplicado a todas las costuras",
+        "fr": "Appliquée à toutes les coutures"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "wrap_overlap < chest_girth * 0.35",
+      "severity": "warning",
+      "message": {
+        "en": "An overlap this wide relative to the chest wraps past the far side seam.",
+        "es": "Un cruce tan ancho respecto al pecho se pasa de la costura del lado opuesto.",
+        "fr": "Un croisement aussi large par rapport à la poitrine dépasse la couture du côté opposé."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "breast",
+      "label": {
+        "en": "Breast surgery",
+        "es": "Cirugía de mama",
+        "fr": "Chirurgie du sein"
+      },
+      "values": {
+        "wrap_overlap": 160,
+        "sleeve_length": 260,
+        "top_length": 620
+      }
+    },
+    {
+      "id": "shoulder",
+      "label": {
+        "en": "Shoulder surgery",
+        "es": "Cirugía de hombro",
+        "fr": "Chirurgie de l'épaule"
+      },
+      "values": {
+        "wrap_overlap": 120,
+        "sleeve_length": 180,
+        "top_length": 640
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "jersey-algodon"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "wrap_closure",
+        "type": "custom",
+        "label": {
+          "en": "Hook-loop wrap closure",
+          "es": "Cierre cruzado con velcro",
+          "fr": "Fermeture portefeuille auto-agrippante"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "centre_wrap"
+          }
+        ],
+        "parameters": [
+          "wrap_overlap",
+          "chest_girth",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "low_armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Low soft armscye",
+          "es": "Sisa baja suave",
+          "fr": "Emmanchure basse souple"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "shoulder_width",
+          "sleeve_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "After breast, shoulder, or cardiac surgery, patients are told not to raise the arm — which rules out every pull-on top exactly when they most need to dress themselves without help. A flat-opening wrap that closes at the side lets a wearer or a carer dress the body without lifting the arm, and adjust the fit over a dressing or drain with hook-and-loop rather than a knot they cannot tie one-handed. The closure is a printable Yantra4D solid, so recovery-wear is fabricable at home instead of bought from a narrow post-surgical range.",
+      "es": "Tras cirugía de mama, hombro o corazón, se indica no levantar el brazo —lo que descarta toda prenda por la cabeza justo cuando más se necesita vestirse sin ayuda—. Un cruzado que se abre plano y cierra al costado permite a la persona o al cuidador vestir el cuerpo sin levantar el brazo, y ajustar sobre un apósito o dren con velcro en vez de un nudo que no se puede atar con una mano. El cierre es un sólido Yantra4D imprimible, así que la ropa de recuperación es fabricable en casa en vez de comprada en una gama posquirúrgica estrecha.",
+      "fr": "Après une chirurgie du sein, de l'épaule ou cardiaque, on interdit de lever le bras — ce qui exclut tout haut à enfiler juste quand on a le plus besoin de s'habiller sans aide. Un portefeuille qui s'ouvre à plat et se ferme au côté permet à la personne ou à l'aidant d'habiller le corps sans lever le bras, et d'ajuster sur un pansement ou un drain par auto-agrippant plutôt qu'un nœud impossible à une main. La fermeture est un solide Yantra4D imprimable, si bien que le vêtement de convalescence est fabricable à la maison plutôt qu'acheté dans une gamme post-chirurgicale étroite."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "project": {
+    "name": "Mesh delicates wash bag",
+    "slug": "delicates-wash-bag",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The zip-top mesh bag that keeps a bra's hooks off a sweater and a sock out of the machine's gasket: two mesh panels box-stitched on three sides, the fourth closed by a zipper whose pull tucks under a small flap so it cannot snag or scratch the drum. The zipper is the Yantra4D zipper solid; its tape edge is driven by the same bag_width that drives the bag's own zip interface — the dimensional handshake the hardware lane enforces. The zip runs the full measured mouth so the corners cannot gape and small items escape.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La bolsa de malla con cremallera que mantiene los ganchos de un sostén lejos de un suéter y un calcetín fuera de la goma de la lavadora: dos paneles de malla pespunteados en tres lados, el cuarto cerrado por una cremallera cuyo tirador se guarda bajo una pequeña solapa para que no se enganche ni raye el tambor. La cremallera es el sólido zipper de Yantra4D; su borde de cinta se controla con el mismo bag_width que controla la interfaz de cremallera de la bolsa —el apretón de manos dimensional que exige la vía de herrajes—. La cremallera recorre toda la boca medida para que las esquinas no se abran y escapen prendas pequeñas.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le filet à fermeture éclair qui garde les agrafes d'un soutien-gorge loin d'un pull et une chaussette hors du joint de la machine : deux panneaux de filet piqués sur trois côtés, le quatrième fermé par une fermeture dont le curseur se glisse sous un petit rabat pour ne pas s'accrocher ni rayer le tambour. La fermeture est le solide zipper de Yantra4D ; son bord de ruban est piloté par le même bag_width qui pilote l'interface de fermeture du filet — la poignée de main dimensionnelle qu'impose la voie quincaillerie. La fermeture parcourt toute l'ouverture mesurée pour que les coins ne bâillent pas et que les petites pièces ne s'échappent pas.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O saco de tela com fecho que mantém os ganchos de um sutiã longe de um suéter e uma meia fora da borracha da máquina: dois painéis de tela pespontados em três lados, o quarto fechado por um fecho cujo cursor se guarda sob uma pequena aba para não prender nem arranhar o tambor. O fecho é o sólido zipper da Yantra4D; sua borda de fita é conduzida pelo mesmo bag_width que conduz a interface de fecho do saco — o aperto de mão dimensional que a via de ferragens exige. O fecho percorre toda a boca medida para que os cantos não abram e peças pequenas não escapem.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "delicates-wash-bag",
+      "care",
+      "laundry",
+      "mesh",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "notion": {
+    "kind": "zipper",
+    "subtype": "top-mouth closed-end zip",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "zipper",
+      "linked": true,
+      "params_map": {
+        "zip_length": "bag_width",
+        "tape_width": "tape_width"
+      }
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full wash bag",
+        "es": "Bolsa completa",
+        "fr": "Filet complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "panel",
+        "flap"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "panel",
+      "label": {
+        "en": "Mesh panel",
+        "es": "Panel de malla",
+        "fr": "Panneau de filet"
+      },
+      "default_color": "#7a8f9a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "flap",
+      "label": {
+        "en": "Pull-tuck flap",
+        "es": "Solapa del tirador",
+        "fr": "Rabat du curseur"
+      },
+      "default_color": "#8a9faa",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Size",
+        "es": "Tamaño",
+        "fr": "Taille"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bag_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 300,
+      "min": 150,
+      "max": 500,
+      "step": 10,
+      "label": {
+        "en": "Bag width / zip length (mm)",
+        "es": "Ancho / largo de cremallera (mm)",
+        "fr": "Largeur / longueur de fermeture (mm)"
+      },
+      "tooltip": {
+        "en": "The mouth width; drives the zipper's zip_length directly",
+        "es": "El ancho de la boca; controla el zip_length de la cremallera directamente",
+        "fr": "La largeur d'ouverture ; pilote directement le zip_length de la fermeture"
+      }
+    },
+    {
+      "id": "bag_height",
+      "type": "slider",
+      "group": "fit",
+      "default": 340,
+      "min": 150,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Bag height (mm)",
+        "es": "Alto de la bolsa (mm)",
+        "fr": "Hauteur du filet (mm)"
+      },
+      "tooltip": {
+        "en": "Mouth to base",
+        "es": "De la boca al fondo",
+        "fr": "De l'ouverture au fond"
+      }
+    },
+    {
+      "id": "tape_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 30,
+      "min": 18,
+      "max": 45,
+      "step": 1,
+      "label": {
+        "en": "Zip tape width (mm)",
+        "es": "Ancho de cinta (mm)",
+        "fr": "Largeur de ruban (mm)"
+      },
+      "tooltip": {
+        "en": "Zipper tape width; drives the zipper solid and the flap height",
+        "es": "Ancho de la cinta; controla el sólido y la altura de la solapa",
+        "fr": "Largeur de ruban ; pilote le solide et la hauteur du rabat"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam",
+        "es": "Aplicado a todas las costuras",
+        "fr": "Appliquée à toutes les coutures"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "bag_width < bag_height * 2.4",
+      "severity": "warning",
+      "message": {
+        "en": "A mouth this wide relative to the height makes a shallow tray, not a bag.",
+        "es": "Una boca tan ancha respecto al alto hace una bandeja, no una bolsa.",
+        "fr": "Une ouverture aussi large par rapport à la hauteur fait un plateau, pas un sac."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "bra",
+      "label": {
+        "en": "Bra bag",
+        "es": "Bolsa de sostenes",
+        "fr": "Filet soutien-gorge"
+      },
+      "values": {
+        "bag_width": 300,
+        "bag_height": 300
+      }
+    },
+    {
+      "id": "socks",
+      "label": {
+        "en": "Sock & small bag",
+        "es": "Calcetines y menudo",
+        "fr": "Chaussettes et menu"
+      },
+      "values": {
+        "bag_width": 220,
+        "bag_height": 260
+      }
+    },
+    {
+      "id": "sweater",
+      "label": {
+        "en": "Sweater bag",
+        "es": "Bolsa de suéter",
+        "fr": "Filet pull"
+      },
+      "values": {
+        "bag_width": 460,
+        "bag_height": 520
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "tricot-nylon-elastano"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "zip_mouth",
+        "type": "zipper_tape",
+        "label": {
+          "en": "Zip-top mouth",
+          "es": "Boca con cremallera",
+          "fr": "Ouverture zippée"
+        },
+        "edges": [
+          {
+            "piece": "panel",
+            "edge": "mouth"
+          }
+        ],
+        "parameters": [
+          "bag_width",
+          "tape_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A snagged sweater or a sock lost to the machine's gasket is a garment killed by laundry, and the shop answer is a throwaway mesh bag that frays in a season. This one is drafted around a printable Yantra4D zip and sewn from fine wash mesh with a solid-bound mouth, so it survives years of hot washes and the zip can be replaced rather than the whole bag binned.",
+      "es": "Un suéter enganchado o un calcetín perdido en la goma de la lavadora es una prenda muerta por el lavado, y la respuesta de tienda es una bolsa de malla desechable que se deshilacha en una temporada. Esta se traza en torno a una cremallera Yantra4D imprimible y se cose de malla fina con boca ribeteada en sólido, así que sobrevive años de lavados calientes y la cremallera se puede reemplazar en vez de tirar toda la bolsa.",
+      "fr": "Un pull accroché ou une chaussette perdue dans le joint de la machine, c'est un vêtement tué par la lessive, et la réponse en boutique est un filet jetable qui s'effiloche en une saison. Celui-ci est tracé autour d'une fermeture Yantra4D imprimable et cousu en filet fin à ouverture bordée de solide, si bien qu'il survit à des années de lavages chauds et que la fermeture se remplace au lieu de jeter tout le filet."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

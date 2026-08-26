@@ -1,0 +1,442 @@
+{
+  "project": {
+    "name": "Magnetic-close dress shirt (adaptive)",
+    "slug": "adaptive-magnetic-shirt",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A proper dress shirt that closes without a pinch: decorative shank buttons sit on the outer placket for looks, and underneath, a column of magnetic button covers snaps the shirt shut with a knuckle nudge. The cover solid is Yantra4D magnetic-button-cover; its snap lip grips a conventional shank button, so a wearer's own shirts can be converted, not only ones cut from this pattern. The magnet pitch is recomputed from whole intervals across the measured closure run so the column lands exactly on both end clearances; the back neck width is solved from the front's measured shoulder, and the sleeve cap is bisected against the measured armholes.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una verdadera camisa de vestir que cierra sin pellizco: botones decorativos de tija van en la tapeta exterior por estética, y debajo, una columna de cubrebotones magnéticos cierra la camisa con un toque de nudillo. El sólido del cubrebotones es el magnetic-button-cover de Yantra4D; su labio a presión agarra un botón de tija convencional, así que se pueden adaptar las propias camisas, no solo las cortadas de este patrón. El paso de los imanes se recalcula por intervalos enteros a lo largo del tramo de cierre medido para que la columna caiga exacta en ambos márgenes; el ancho del cuello trasero se resuelve del hombro delantero medido, y la copa de la manga se biseca contra las sisas medidas.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une vraie chemise habillée qui se ferme sans pincer : des boutons décoratifs à queue ornent la patte extérieure, et dessous, une colonne de cache-boutons magnétiques ferme la chemise d'un coup de jointure. Le solide du cache-bouton est le magnetic-button-cover de Yantra4D ; sa lèvre à pression agrippe un bouton à queue classique, si bien qu'on peut adapter ses propres chemises, pas seulement celles coupées dans ce patron. Le pas des aimants est recalculé par intervalles entiers sur le tronçon de fermeture mesuré pour que la colonne tombe juste sur les deux marges ; la largeur d'encolure dos est résolue depuis l'épaule devant mesurée, et la tête de manche est bissectée contre les emmanchures mesurées.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma verdadeira camisa social que fecha sem beliscão: botões decorativos de pé ficam na carcela externa por estética, e por baixo, uma coluna de capas de botão magnéticas fecha a camisa com um toque de nó do dedo. O sólido da capa é o magnetic-button-cover da Yantra4D; seu lábio de pressão agarra um botão de pé convencional, então as próprias camisas podem ser adaptadas, não só as cortadas deste molde. O passo dos ímãs é recalculado por intervalos inteiros ao longo do trecho de fecho medido para que a coluna caia exata nas duas margens; a largura da gola traseira é resolvida do ombro dianteiro medido, e a cabeça da manga é bissetada contra as cavas medidas.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "adaptive-magnetic-shirt",
+      "adaptive",
+      "shirt",
+      "magnetic",
+      "accessible-dressing",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "notion": {
+    "kind": "button",
+    "subtype": "magnetic button-cover placket",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "magnetic-button-cover",
+      "linked": true,
+      "params_map": {
+        "button_dia": "button_diameter",
+        "button_t": "3",
+        "hole_dia": "seam_allowance / 8",
+        "sew_holes": "4"
+      }
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full shirt",
+        "es": "Camisa completa",
+        "fr": "Chemise complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "collar"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Shirt front",
+        "es": "Delantero",
+        "fr": "Devant"
+      },
+      "default_color": "#8fa0b0",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Shirt back",
+        "es": "Espalda",
+        "fr": "Dos"
+      },
+      "default_color": "#9fb0c0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "cb_fold",
+        "mirror": false
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche"
+      },
+      "default_color": "#afc0d0",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Convertible collar",
+        "es": "Cuello convertible",
+        "fr": "Col convertible"
+      },
+      "default_color": "#bfd0e0",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Coupe"
+      }
+    },
+    {
+      "id": "closure",
+      "label": {
+        "en": "Magnetic closure",
+        "es": "Cierre magnético",
+        "fr": "Fermeture magnétique"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 1040,
+      "min": 760,
+      "max": 1520,
+      "step": 20,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest measurement; a dressing-friendly shirt runs loose",
+        "es": "Contorno completo de pecho; una camisa fácil de vestir queda holgada",
+        "fr": "Tour de poitrine complet ; une chemise facile à enfiler reste ample"
+      }
+    },
+    {
+      "id": "shirt_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 740,
+      "min": 560,
+      "max": 920,
+      "step": 10,
+      "label": {
+        "en": "Shirt length (mm)",
+        "es": "Largo de la camisa (mm)",
+        "fr": "Longueur de chemise (mm)"
+      },
+      "tooltip": {
+        "en": "Neck to hem; also sets the magnet closure run",
+        "es": "Del cuello al bajo; también fija el tramo de cierre magnético",
+        "fr": "De l'encolure au bas ; fixe aussi le tronçon de fermeture"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 470,
+      "min": 340,
+      "max": 600,
+      "step": 10,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombros (mm)",
+        "fr": "Largeur d'épaules (mm)"
+      },
+      "tooltip": {
+        "en": "Point to point across the shoulders",
+        "es": "De punta a punta de hombros",
+        "fr": "De pointe à pointe d'épaules"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 630,
+      "min": 200,
+      "max": 720,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to cuff",
+        "es": "Del hombro al puño",
+        "fr": "De l'épaule au poignet"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 410,
+      "min": 300,
+      "max": 540,
+      "step": 10,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the neckline and collar length",
+        "es": "Fija el escote y el largo del cuello",
+        "fr": "Fixe l'encolure et la longueur du col"
+      }
+    },
+    {
+      "id": "button_diameter",
+      "type": "slider",
+      "group": "closure",
+      "default": 18,
+      "min": 11,
+      "max": 25,
+      "step": 1,
+      "label": {
+        "en": "Button diameter (mm)",
+        "es": "Diámetro del botón (mm)",
+        "fr": "Diamètre du bouton (mm)"
+      },
+      "tooltip": {
+        "en": "Shank button size; drives the magnetic cover's sew ring and the placket stand",
+        "es": "Tamaño del botón de tija; controla el anillo del cubrebotones y la tapeta",
+        "fr": "Taille du bouton à queue ; pilote l'anneau du cache-bouton et la patte"
+      }
+    },
+    {
+      "id": "magnet_pitch",
+      "type": "slider",
+      "group": "closure",
+      "default": 90,
+      "min": 60,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Magnet pitch (mm)",
+        "es": "Paso de imanes (mm)",
+        "fr": "Pas des aimants (mm)"
+      },
+      "tooltip": {
+        "en": "Requested spacing; recomputed so the column lands exactly",
+        "es": "Separación pedida; recalculada para que la columna caiga exacta",
+        "fr": "Espacement demandé ; recalculé pour que la colonne tombe juste"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 6,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam",
+        "es": "Aplicado a todas las costuras",
+        "fr": "Appliquée à toutes les coutures"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "magnet_pitch < shirt_length * 0.35",
+      "severity": "warning",
+      "message": {
+        "en": "A magnet pitch this coarse leaves too few magnets to hold the placket closed.",
+        "es": "Un paso de imanes tan amplio deja muy pocos imanes para cerrar la tapeta.",
+        "fr": "Un pas d'aimants aussi grossier laisse trop peu d'aimants pour fermer la patte."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "office",
+      "label": {
+        "en": "Office shirt",
+        "es": "Camisa de oficina",
+        "fr": "Chemise de bureau"
+      },
+      "values": {
+        "chest_girth": 1040,
+        "shirt_length": 740,
+        "magnet_pitch": 90
+      }
+    },
+    {
+      "id": "roomy",
+      "label": {
+        "en": "Roomy fit",
+        "es": "Corte holgado",
+        "fr": "Coupe ample"
+      },
+      "values": {
+        "chest_girth": 1240,
+        "shirt_length": 780,
+        "magnet_pitch": 100
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "popelina-algodon"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "magnetic_placket",
+        "type": "custom",
+        "label": {
+          "en": "Magnetic button-cover placket",
+          "es": "Tapeta de cubrebotones magnéticos",
+          "fr": "Patte à cache-boutons magnétiques"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "placket_fold"
+          }
+        ],
+        "parameters": [
+          "button_diameter",
+          "magnet_pitch",
+          "shirt_length",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "shirt_neckline",
+        "type": "custom",
+        "label": {
+          "en": "Shirt neckline",
+          "es": "Escote de camisa",
+          "fr": "Encolure de chemise"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "shoulder_width"
+        ]
+      },
+      {
+        "id": "dropped_armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Dropped armscye",
+          "es": "Sisa caída",
+          "fr": "Emmanchure tombante"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "shoulder_width",
+          "sleeve_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Buttons are the single most-cited barrier to independent dressing for anyone with arthritis, tremor, or the use of one hand. A shirt that reads as ordinary but closes with a knuckle nudge lets a wearer dress themselves at their own pace and keep the dignity of a normal wardrobe. The magnetic cover is a printable Yantra4D solid whose snap lip fits a standard shank button, so existing shirts convert with the same hardware — the accessibility is retrofittable, not locked to new garments.",
+      "es": "Los botones son la barrera más citada para vestirse de forma independiente con artritis, temblor o el uso de una sola mano. Una camisa que parece normal pero cierra con un toque de nudillo permite a quien la lleva vestirse a su propio ritmo y conservar la dignidad de un armario común. El cubrebotones magnético es un sólido Yantra4D imprimible cuyo labio a presión encaja en un botón de tija estándar, así que las camisas existentes se adaptan con el mismo herraje: la accesibilidad es retroadaptable, no atada a prendas nuevas.",
+      "fr": "Les boutons sont la barrière la plus citée à l'habillage autonome pour qui a de l'arthrite, un tremblement ou l'usage d'une seule main. Une chemise qui paraît ordinaire mais se ferme d'un coup de jointure permet de s'habiller à son rythme et de garder la dignité d'une garde-robe normale. Le cache-bouton magnétique est un solide Yantra4D imprimable dont la lèvre à pression s'ajuste à un bouton à queue standard, si bien que les chemises existantes s'adaptent avec la même quincaillerie : l'accessibilité est adaptable, non liée aux vêtements neufs."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

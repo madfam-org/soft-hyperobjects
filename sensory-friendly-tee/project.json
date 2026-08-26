@@ -1,0 +1,318 @@
+{
+  "project": {
+    "name": "Sensory-friendly seamless tee",
+    "slug": "sensory-friendly-tee",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A tee drafted to touch the skin as little as possible: the body is cut as one tube with the side seams on the fold, so there is no side seam to rub; the neck is finished with a soft folded band rather than a bound-and-topstitched edge; and there is no back label — the size prints inside the hem. For a wearer with sensory processing differences, a seam or tag against the skin is a whole-day distraction; removing them is the design. The neckband length is the measured sum of the front and back scoops, drafted short to hug flat — a rippled band is exactly the edge this tee cannot have.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una camiseta trazada para tocar la piel lo menos posible: el cuerpo se corta como un tubo con las costuras laterales en el doblez, así no hay costura lateral que roce; el cuello se remata con una banda suave doblada en vez de un borde ribeteado y pespunteado; y no hay etiqueta trasera —la talla se imprime dentro del bajo—. Para quien tiene diferencias de procesamiento sensorial, una costura o etiqueta contra la piel es una distracción de todo el día; quitarlas es el diseño. El largo de la banda del cuello es la suma medida de los escotes delantero y trasero, trazada corta para abrazar plana — una banda ondulada es justo el borde que esta camiseta no puede tener.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un t-shirt tracé pour toucher la peau le moins possible : le corps est coupé en un tube avec les coutures latérales au pli, donc aucune couture latérale ne frotte ; l'encolure est finie par une bande souple pliée plutôt qu'un bord bordé-surpiqué ; et il n'y a pas d'étiquette dos — la taille s'imprime dans l'ourlet. Pour qui a des différences de traitement sensoriel, une couture ou une étiquette contre la peau est une distraction de toute la journée ; les supprimer est le design. La longueur de la bande d'encolure est la somme mesurée des décolletés devant et dos, tracée courte pour épouser à plat — une bande ondulée est justement le bord que ce t-shirt ne peut avoir.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma camiseta traçada para tocar a pele o mínimo possível: o corpo é cortado como um tubo com as costuras laterais na dobra, então não há costura lateral que atrite; a gola é arrematada com uma faixa macia dobrada em vez de uma borda debruada e pespontada; e não há etiqueta traseira — o tamanho é impresso por dentro da barra. Para quem tem diferenças de processamento sensorial, uma costura ou etiqueta contra a pele é uma distração o dia todo; removê-las é o design. O comprimento da faixa da gola é a soma medida dos decotes dianteiro e traseiro, traçada curta para abraçar plana — uma faixa ondulada é justo a borda que esta camiseta não pode ter.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "sensory-friendly-tee",
+      "adaptive",
+      "tee",
+      "seamless",
+      "sensory",
+      "pattern-only",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full tee",
+        "es": "Camiseta completa",
+        "fr": "T-shirt complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "body",
+        "sleeve",
+        "band"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Seamless tube body",
+        "es": "Cuerpo tubular sin costura",
+        "fr": "Corps tubulaire sans couture"
+      },
+      "default_color": "#9a9aa5",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "fold_edge": "cf_fold",
+        "mirror": false
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Soft-set sleeve",
+        "es": "Manga de montaje suave",
+        "fr": "Manche à montage souple"
+      },
+      "default_color": "#aaaab5",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "band",
+      "label": {
+        "en": "Soft neckband",
+        "es": "Banda de cuello suave",
+        "fr": "Bande d'encolure souple"
+      },
+      "default_color": "#babac5",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Coupe"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "fit",
+      "default": 960,
+      "min": 600,
+      "max": 1400,
+      "step": 20,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest; the tube is a quarter cut on the side fold",
+        "es": "Contorno de pecho; el tubo es un cuarto cortado en el doblez lateral",
+        "fr": "Tour de poitrine ; le tube est un quart coupé au pli latéral"
+      }
+    },
+    {
+      "id": "tee_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 660,
+      "min": 440,
+      "max": 840,
+      "step": 10,
+      "label": {
+        "en": "Tee length (mm)",
+        "es": "Largo de la camiseta (mm)",
+        "fr": "Longueur du t-shirt (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to hem",
+        "es": "Del hombro al bajo",
+        "fr": "De l'épaule à l'ourlet"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 420,
+      "min": 300,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombros (mm)",
+        "fr": "Largeur d'épaules (mm)"
+      },
+      "tooltip": {
+        "en": "Point to point; sets the neck-opening width",
+        "es": "De punta a punta; fija el ancho de la abertura del cuello",
+        "fr": "De pointe à pointe ; fixe la largeur d'encolure"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "fit",
+      "default": 220,
+      "min": 100,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to cuff",
+        "es": "Del hombro al puño",
+        "fr": "De l'épaule au poignet"
+      }
+    },
+    {
+      "id": "neck_scoop",
+      "type": "slider",
+      "group": "construction",
+      "default": 70,
+      "min": 30,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Front neck scoop (mm)",
+        "es": "Escote delantero (mm)",
+        "fr": "Décolleté devant (mm)"
+      },
+      "tooltip": {
+        "en": "Front neck depth; clamped above the armhole base so it never crosses it",
+        "es": "Profundidad del escote; limitado sobre la base de la sisa para no cruzarla",
+        "fr": "Profondeur d'encolure ; bridée au-dessus de la base d'emmanchure"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Applied to every seam",
+        "es": "Aplicado a todas las costuras",
+        "fr": "Appliquée à toutes les coutures"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "neck_scoop < tee_length * 0.3",
+      "severity": "warning",
+      "message": {
+        "en": "A neck scoop this deep on this short a tee starts to reach the chest, not the collarbone.",
+        "es": "Un escote tan profundo en una camiseta tan corta empieza a llegar al pecho, no a la clavícula.",
+        "fr": "Un décolleté aussi profond sur un t-shirt aussi court commence à atteindre la poitrine, non la clavicule."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "child",
+      "label": {
+        "en": "Child tee",
+        "es": "Camiseta infantil",
+        "fr": "T-shirt enfant"
+      },
+      "values": {
+        "chest_girth": 680,
+        "tee_length": 480,
+        "shoulder_width": 320
+      }
+    },
+    {
+      "id": "adult",
+      "label": {
+        "en": "Adult tee",
+        "es": "Camiseta adulta",
+        "fr": "T-shirt adulte"
+      },
+      "values": {
+        "chest_girth": 1000,
+        "tee_length": 680,
+        "shoulder_width": 440
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [
+    "jersey-algodon"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "soft_neckband",
+        "type": "custom",
+        "label": {
+          "en": "Measured soft neckband",
+          "es": "Banda de cuello medida",
+          "fr": "Bande d'encolure mesurée"
+        },
+        "edges": [
+          {
+            "piece": "band",
+            "edge": "attach"
+          },
+          {
+            "piece": "body",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "shoulder_width",
+          "neck_scoop"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": false
+    },
+    "societal_benefit": {
+      "en": "For an autistic child or an adult with sensory processing sensitivity, a scratchy tag or a raised side seam can make a shirt unwearable — and the market answer is a small, expensive range of sensory-friendly basics. This puts the construction that makes a tee wearable into an open pattern: a tube body with no side seam, flatlock everywhere, a soft folded neckband, and the size printed inside the hem instead of a woven label. Made from OEKO-TEX modal offcuts, it is a shirt a family can cut at home to a child that keeps outgrowing them.",
+      "es": "Para un niño autista o un adulto con sensibilidad sensorial, una etiqueta que pica o una costura lateral en relieve puede volver imponible una camiseta —y la respuesta del mercado es una gama pequeña y cara de básicos sensoriales—. Esto pone la construcción que hace vestible una camiseta en un patrón abierto: cuerpo tubular sin costura lateral, flatlock en todo, banda de cuello suave doblada, y la talla impresa dentro del bajo en vez de una etiqueta tejida. Hecha con retazos de modal OEKO-TEX, es una camiseta que una familia puede cortar en casa a un niño que no deja de crecer.",
+      "fr": "Pour un enfant autiste ou un adulte à sensibilité sensorielle, une étiquette qui gratte ou une couture latérale en relief peut rendre un t-shirt imposable — et la réponse du marché est une gamme réduite et chère de basiques sensoriels. Ceci met la construction qui rend un t-shirt portable dans un patron ouvert : corps tubulaire sans couture latérale, flatlock partout, bande d'encolure souple pliée, et la taille imprimée dans l'ourlet plutôt qu'une étiquette tissée. Fait de chutes de modal OEKO-TEX, c'est un t-shirt qu'une famille peut couper à la maison pour un enfant qui n'arrête pas de grandir."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}
