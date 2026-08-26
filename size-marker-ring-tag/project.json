@@ -1,0 +1,301 @@
+{
+  "project": {
+    "name": "Size-Marker Ring Tag Set",
+    "slug": "size-marker-ring-tag",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A set of small fabric TAGS that thread onto a printed size-marker ring (the Yantra4D `size-marker-ring` solid) so a rack of made-to-order or hand-me-down garments carries its own soft, legible size label — a stitched fabric tab with a punched hole for the ring, sized so several sit on one ring without crowding. Solved, not guessed: the ring hole is cut to the MEASURED ring rod plus a clearance and stepped in off the tag top by its own hole plus a margin so it never tears out the top edge; the tag is CLAMPED to a legible minimum so a small ring never yields a tag too small to letter; and the corner chamfer is clamped under 40% of the tag so it never crosses the tag centre.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un juego de ETIQUETAS de tela que se ensartan en un anillo marcador de talla impreso (el sólido `size-marker-ring` de Yantra4D) para que un perchero de prendas a medida o heredadas lleve su propia etiqueta de talla suave y legible — una lengüeta de tela cosida con un ojal para el anillo, dimensionada para que varias quepan en un anillo sin apretarse. Resuelto, no adivinado: el ojal se corta al vástago MEDIDO del anillo más una holgura y se mete desde el borde superior por su propio ojal más un margen para que nunca se desgarre el canto; la etiqueta se ACOTA a un mínimo legible para que un anillo chico no dé una etiqueta demasiado pequeña para rotular; y el chaflán de esquina se acota bajo el 40% de la etiqueta para que no cruce el centro.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un jeu d'ÉTIQUETTES en tissu qui s'enfilent sur un anneau marque-tailles imprimé (le solide `size-marker-ring` de Yantra4D) pour qu'un portant de vêtements sur mesure ou de seconde main porte sa propre étiquette de taille souple et lisible — une languette en tissu cousue avec un trou pour l'anneau, dimensionnée pour que plusieurs tiennent sur un anneau sans se serrer. Résolu, non deviné : le trou est coupé à la tige MESURÉE de l'anneau plus un jeu et rentré depuis le bord supérieur de son propre trou plus une marge pour ne jamais arracher le bord ; l'étiquette est BORNÉE à un minimum lisible pour qu'un petit anneau ne donne pas une étiquette trop petite à écrire ; et le chanfrein de coin est borné sous 40 % de l'étiquette pour ne pas croiser le centre.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um jogo de ETIQUETAS de tecido que se enfiam num anel marcador de tamanho impresso (o sólido `size-marker-ring` do Yantra4D) para que um cabideiro de peças sob medida ou herdadas carregue sua própria etiqueta de tamanho macia e legível — uma lingueta de tecido costurada com um furo para o anel, dimensionada para que várias caibam num anel sem apertar. Resolvido, não adivinhado: o furo é cortado à haste MEDIDA do anel mais uma folga e recuado da borda superior pelo próprio furo mais uma margem para nunca rasgar a borda; a etiqueta é LIMITADA a um mínimo legível para que um anel pequeno não dê uma etiqueta pequena demais para escrever; e o chanfro do canto é limitado sob 40% da etiqueta para não cruzar o centro.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "size-marker-ring-tag",
+      "care_keeping",
+      "tag",
+      "size-marker",
+      "label",
+      "size-marker-ring",
+      "ring",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full tag set",
+        "es": "Juego de etiquetas",
+        "fr": "Jeu d'étiquettes",
+        "pt": "Jogo de etiquetas"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "tag"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "tag",
+      "label": {
+        "en": "Size tag (cut per ring)",
+        "es": "Etiqueta (cortar por anillo)",
+        "fr": "Étiquette (couper par anneau)",
+        "pt": "Etiqueta (cortar por anel)"
+      },
+      "default_color": "#b0a8a0",
+      "cut": {
+        "quantity": 6,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "ring",
+      "label": {
+        "en": "Ring",
+        "es": "Anillo",
+        "fr": "Anneau",
+        "pt": "Anel"
+      }
+    },
+    {
+      "id": "tag",
+      "label": {
+        "en": "Tag",
+        "es": "Etiqueta",
+        "fr": "Étiquette",
+        "pt": "Etiqueta"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "tag_count",
+      "type": "slider",
+      "group": "tag",
+      "default": 6,
+      "min": 2,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Number of tags",
+        "es": "Número de etiquetas",
+        "fr": "Nombre d'étiquettes",
+        "pt": "Número de etiquetas"
+      }
+    },
+    {
+      "id": "tag_width",
+      "type": "slider",
+      "group": "tag",
+      "default": 40,
+      "min": 24,
+      "max": 80,
+      "step": 2,
+      "label": {
+        "en": "Tag width (mm)",
+        "es": "Ancho de etiqueta (mm)",
+        "fr": "Largeur d'étiquette (mm)",
+        "pt": "Largura da etiqueta (mm)"
+      }
+    },
+    {
+      "id": "tag_height",
+      "type": "slider",
+      "group": "tag",
+      "default": 55,
+      "min": 30,
+      "max": 100,
+      "step": 5,
+      "label": {
+        "en": "Tag height (mm)",
+        "es": "Alto de etiqueta (mm)",
+        "fr": "Hauteur d'étiquette (mm)",
+        "pt": "Altura da etiqueta (mm)"
+      }
+    },
+    {
+      "id": "ring_rod",
+      "type": "slider",
+      "group": "ring",
+      "default": 4,
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Ring rod diameter (mm)",
+        "es": "Diámetro del vástago (mm)",
+        "fr": "Diamètre de tige (mm)",
+        "pt": "Diâmetro da haste (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D size-marker-ring rod",
+        "es": "Define el vástago del size-marker-ring de Yantra4D",
+        "fr": "Pilote la tige du size-marker-ring Yantra4D",
+        "pt": "Pilota a haste do size-marker-ring do Yantra4D"
+      }
+    },
+    {
+      "id": "hole_clear",
+      "type": "slider",
+      "group": "ring",
+      "default": 3,
+      "min": 1,
+      "max": 8,
+      "step": 1,
+      "label": {
+        "en": "Hole clearance (mm)",
+        "es": "Holgura del ojal (mm)",
+        "fr": "Jeu du trou (mm)",
+        "pt": "Folga do furo (mm)"
+      }
+    },
+    {
+      "id": "corner",
+      "type": "slider",
+      "group": "tag",
+      "default": 8,
+      "min": 2,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Corner chamfer (mm)",
+        "es": "Chaflán de esquina (mm)",
+        "fr": "Chanfrein de coin (mm)",
+        "pt": "Chanfro de canto (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "ring_hole",
+        "type": "custom",
+        "label": {
+          "en": "Ring hole",
+          "es": "Ojal del anillo",
+          "fr": "Trou d'anneau",
+          "pt": "Furo do anel"
+        },
+        "edges": [
+          {
+            "piece": "tag",
+            "edge": "top"
+          }
+        ],
+        "parameters": [
+          "ring_rod",
+          "hole_clear",
+          "tag_height"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A small maker, a swap shop, or a family passing clothes between children loses track of sizes fast, and stick-on labels fall off in the wash. A soft fabric tag on a printed ring hangs at the neck of a hanger and stays legible for years, and printing the ring with its tags means a whole rack can be labelled for the cost of a strip of twill and a print run.",
+      "es": "Un pequeño taller, una tienda de trueque o una familia que pasa ropa entre hijos pierde la pista de las tallas rápido, y las etiquetas adhesivas se caen en el lavado. Una etiqueta de tela en un anillo impreso cuelga del cuello de un gancho y sigue legible por años, e imprimir el anillo con sus etiquetas hace que todo un perchero se etiquete por el costo de una tira de sarga y una impresión.",
+      "fr": "Un petit atelier, une friperie ou une famille qui passe les vêtements entre enfants perd vite le fil des tailles, et les étiquettes autocollantes tombent au lavage. Une étiquette en tissu sur un anneau imprimé pend au col d'un cintre et reste lisible des années, et imprimer l'anneau avec ses étiquettes fait qu'un portant entier s'étiquette pour le prix d'une bande de sergé et d'une impression.",
+      "pt": "Um pequeno ateliê, uma loja de troca ou uma família que passa roupas entre filhos perde a conta dos tamanhos rápido, e etiquetas adesivas caem na lavagem. Uma etiqueta de tecido num anel impresso pendura no pescoço de um cabide e continua legível por anos, e imprimir o anel com suas etiquetas faz um cabideiro inteiro ser etiquetado pelo custo de uma tira de sarja e uma impressão."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "presets": [
+    {
+      "id": "rack",
+      "label": {
+        "en": "Rack set (6)",
+        "es": "Juego de perchero (6)",
+        "fr": "Jeu de portant (6)",
+        "pt": "Jogo de cabideiro (6)"
+      },
+      "values": {
+        "tag_count": 6
+      }
+    },
+    {
+      "id": "shop",
+      "label": {
+        "en": "Shop set (12)",
+        "es": "Juego de tienda (12)",
+        "fr": "Jeu de boutique (12)",
+        "pt": "Jogo de loja (12)"
+      },
+      "values": {
+        "tag_count": 12
+      }
+    }
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "fabric size tags threaded on a marker ring",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "size-marker-ring",
+      "linked": true,
+      "params_map": {
+        "rod_dia": "ring_rod",
+        "ring_w": "hole_clear * 2",
+        "tab_h": "tag_height"
+      }
+    }
+  }
+}

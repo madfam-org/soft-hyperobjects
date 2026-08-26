@@ -1,0 +1,497 @@
+{
+  "project": {
+    "name": "Welt-Pocket Dress Trouser",
+    "slug": "welt-pocket-trouser",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A tailored dress trouser in worsted wool: a shaped FRONT with a slant pocket and a front pleat, a shaped BACK with a bound WELT pocket, a straight WAISTBAND closed at centre front with a hidden trouser hook-and-bar (no visible button), and the WELT strip. Solved, not guessed: the two inseams are BISECTED to equal length so the crease hangs plumb; the waistband is cut to the MEASURED waist plus the hook-bar underlap; and the welt mouth is CLAMPED inside the back panel waist run so an over-wide welt request can never run off the panel and fold the piece into a self-crossing outline. The waist quarter is held under the hip quarter so a big waist cannot invert the side seam. The closure bridges to the Yantra4D `trouser-hook-bar` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un pantalón de vestir a medida en lana peinada: un DELANTERO conformado con bolsillo al sesgo y una pinza delantera, un TRASERO conformado con bolsillo de VIVO, una PRETINA recta cerrada al centro con gancho y barra de pantalón ocultos (sin botón visible), y la tira de VIVO. Resuelto, no adivinado: las dos entrepiernas se BISECAN a igual longitud para que la raya caiga a plomo; la pretina se corta a la cintura MEDIDA más el cruce del gancho; y la boca del vivo se ACOTA dentro del tramo de cintura del trasero para que un vivo muy ancho nunca se salga del panel y pliegue la pieza en un contorno que se cruza. El cuarto de cintura se acota bajo el de cadera para que una cintura grande no invierta el costado. El cierre se puentea al sólido `trouser-hook-bar` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un pantalon de ville sur mesure en laine peignée : un DEVANT façonné à poche biaise et un pli devant, un DOS façonné à poche PASSEPOILÉE, une CEINTURE droite fermée au centre par un crochet-barre de pantalon caché (sans bouton visible), et la bande de PASSEPOIL. Résolu, non deviné : les deux entrejambes sont BISSECTÉS à longueur égale pour que le pli tombe d'aplomb ; la ceinture est coupée à la taille MESURÉE plus le sous-pont du crochet ; et l'ouverture du passepoil est BORNÉE dans le tronçon de taille du dos pour qu'un passepoil trop large ne sorte jamais du panneau et ne replie la pièce en un contour qui se croise. Le quart de taille est borné sous le quart de hanche pour qu'une taille forte n'inverse pas la couture de côté. La fermeture fait le pont vers le solide `trouser-hook-bar` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma calça social sob medida em lã penteada: uma FRENTE modelada com bolso enviesado e uma prega dianteira, umas COSTAS modeladas com bolso EMBUTIDO, um CÓS reto fechado ao centro com gancho e barra de calça ocultos (sem botão visível), e a tira do EMBUTIDO. Resolvido, não adivinhado: as duas entrepernas são BISSECTADAS ao mesmo comprimento para que o vinco caia a prumo; o cós é cortado à cintura MEDIDA mais a sobreposição do gancho; e a boca do embutido é LIMITADA dentro do trecho de cintura das costas para que um embutido muito largo nunca saia do painel e dobre a peça num contorno que se cruza. O quarto de cintura é limitado sob o de quadril para que uma cintura larga não inverta a lateral. O fecho faz a ponte para o sólido `trouser-hook-bar` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "welt-pocket-trouser",
+      "tailoring",
+      "trouser",
+      "dress-trouser",
+      "welt-pocket",
+      "hook-and-bar",
+      "worsted",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full trouser",
+        "es": "Pantalón completo",
+        "fr": "Pantalon complet",
+        "pt": "Calça completa"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front_leg",
+        "back_leg",
+        "waistband",
+        "welt"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front_leg",
+      "label": {
+        "en": "Front leg (cut 2, mirrored)",
+        "es": "Delantero de pierna (cortar 2, espejo)",
+        "fr": "Devant de jambe (couper 2, miroir)",
+        "pt": "Frente da perna (cortar 2, espelhado)"
+      },
+      "default_color": "#3a3f4a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back_leg",
+      "label": {
+        "en": "Back leg (cut 2, mirrored)",
+        "es": "Trasero de pierna (cortar 2, espejo)",
+        "fr": "Dos de jambe (couper 2, miroir)",
+        "pt": "Costas da perna (cortar 2, espelhado)"
+      },
+      "default_color": "#454a55",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "Waistband (cut 1)",
+        "es": "Pretina (cortar 1)",
+        "fr": "Ceinture (couper 1)",
+        "pt": "Cós (cortar 1)"
+      },
+      "default_color": "#505560",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "welt",
+      "label": {
+        "en": "Welt strip (cut 2)",
+        "es": "Tira de vivo (cortar 2)",
+        "fr": "Bande de passepoil (couper 2)",
+        "pt": "Tira de embutido (cortar 2)"
+      },
+      "default_color": "#5b606b",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "block",
+      "label": {
+        "en": "Fit block",
+        "es": "Base de talla",
+        "fr": "Base d'aisance",
+        "pt": "Base de modelagem"
+      }
+    },
+    {
+      "id": "leg",
+      "label": {
+        "en": "Leg",
+        "es": "Pierna",
+        "fr": "Jambe",
+        "pt": "Perna"
+      }
+    },
+    {
+      "id": "detail",
+      "label": {
+        "en": "Details",
+        "es": "Detalles",
+        "fr": "Détails",
+        "pt": "Detalhes"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "block",
+      "default": 840,
+      "min": 600,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)",
+        "pt": "Contorno de cintura (mm)"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "block",
+      "default": 1020,
+      "min": 760,
+      "max": 1500,
+      "step": 10,
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)",
+        "pt": "Contorno de quadril (mm)"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      }
+    },
+    {
+      "id": "inside_leg",
+      "type": "slider",
+      "group": "leg",
+      "default": 800,
+      "min": 600,
+      "max": 950,
+      "step": 10,
+      "label": {
+        "en": "Inside leg (mm)",
+        "es": "Entrepierna (mm)",
+        "fr": "Entrejambe (mm)",
+        "pt": "Entreperna (mm)"
+      }
+    },
+    {
+      "id": "front_rise",
+      "type": "slider",
+      "group": "block",
+      "default": 275,
+      "min": 220,
+      "max": 380,
+      "step": 5,
+      "label": {
+        "en": "Front rise (mm)",
+        "es": "Tiro delantero (mm)",
+        "fr": "Montée devant (mm)",
+        "pt": "Gancho dianteiro (mm)"
+      }
+    },
+    {
+      "id": "hem_width",
+      "type": "slider",
+      "group": "leg",
+      "default": 210,
+      "min": 140,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Hem width, flat (mm)",
+        "es": "Ancho de bajo, plano (mm)",
+        "fr": "Largeur d'ourlet, à plat (mm)",
+        "pt": "Largura da barra, plana (mm)"
+      }
+    },
+    {
+      "id": "knee_width",
+      "type": "slider",
+      "group": "leg",
+      "default": 240,
+      "min": 160,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Knee width, flat (mm)",
+        "es": "Ancho de rodilla, plano (mm)",
+        "fr": "Largeur de genou, à plat (mm)",
+        "pt": "Largura do joelho, plana (mm)"
+      }
+    },
+    {
+      "id": "band_depth",
+      "type": "slider",
+      "group": "detail",
+      "default": 38,
+      "min": 28,
+      "max": 55,
+      "step": 2,
+      "label": {
+        "en": "Waistband depth (mm)",
+        "es": "Alto de pretina (mm)",
+        "fr": "Hauteur de ceinture (mm)",
+        "pt": "Altura do cós (mm)"
+      }
+    },
+    {
+      "id": "welt_width",
+      "type": "slider",
+      "group": "detail",
+      "default": 130,
+      "min": 90,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Back welt pocket mouth (mm)",
+        "es": "Boca del bolsillo de vivo (mm)",
+        "fr": "Ouverture de poche passepoilée (mm)",
+        "pt": "Boca do bolso embutido (mm)"
+      },
+      "tooltip": {
+        "en": "Clamped inside the back panel waist run",
+        "es": "Acotada dentro del tramo de cintura del trasero",
+        "fr": "Bornée dans le tronçon de taille du dos",
+        "pt": "Limitada dentro do trecho de cintura das costas"
+      }
+    },
+    {
+      "id": "hook_plate",
+      "type": "slider",
+      "group": "detail",
+      "default": 55,
+      "min": 35,
+      "max": 80,
+      "step": 5,
+      "label": {
+        "en": "Hook-bar plate length (mm)",
+        "es": "Largo de placa del gancho (mm)",
+        "fr": "Longueur de plaque du crochet (mm)",
+        "pt": "Comprimento da placa do gancho (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D trouser-hook-bar plate",
+        "es": "Define la placa del trouser-hook-bar de Yantra4D",
+        "fr": "Pilote la plaque du trouser-hook-bar Yantra4D",
+        "pt": "Pilota a placa do trouser-hook-bar do Yantra4D"
+      }
+    },
+    {
+      "id": "wear_ease",
+      "type": "slider",
+      "group": "block",
+      "default": 60,
+      "min": 20,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Wearing ease over hip (mm)",
+        "es": "Holgura de uso en cadera (mm)",
+        "fr": "Aisance aux hanches (mm)",
+        "pt": "Folga no quadril (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 8,
+      "max": 18,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "lana-peinada-traje"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "hook_bar_waist",
+        "type": "waistband",
+        "label": {
+          "en": "Hook-bar waistband closure",
+          "es": "Cierre de pretina con gancho",
+          "fr": "Fermeture de ceinture au crochet",
+          "pt": "Fecho de cós com gancho"
+        },
+        "edges": [
+          {
+            "piece": "waistband",
+            "edge": "ext_end"
+          },
+          {
+            "piece": "front_leg",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "hook_plate",
+          "band_depth"
+        ]
+      },
+      {
+        "id": "measured_waistband",
+        "type": "waistband",
+        "label": {
+          "en": "Waistband cut to measured waist",
+          "es": "Pretina a la cintura medida",
+          "fr": "Ceinture à la taille mesurée",
+          "pt": "Cós à cintura medida"
+        },
+        "edges": [
+          {
+            "piece": "waistband",
+            "edge": "lower"
+          },
+          {
+            "piece": "back_leg",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "wear_ease"
+        ]
+      },
+      {
+        "id": "welt_pocket",
+        "type": "pocket",
+        "label": {
+          "en": "Bound welt pocket",
+          "es": "Bolsillo de vivo",
+          "fr": "Poche passepoilée",
+          "pt": "Bolso embutido"
+        },
+        "edges": [
+          {
+            "piece": "welt",
+            "edge": "attach"
+          },
+          {
+            "piece": "back_leg",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "welt_width",
+          "band_depth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A well-cut dress trouser is the hardest ordinary garment to buy off the rack — the rise, the seat and the leg almost never all fit — and a bound welt pocket is treated as bespoke tailoring. Drafted parametrically the inseams balance so the crease hangs straight, the band is cut to the real waist, and the welt is clamped to a width that fits the panel, so a competent home sewist can make a trouser that actually fits and closes on a clean hook-and-bar rather than a gaping button.",
+      "es": "Un pantalón de vestir bien cortado es la prenda ordinaria más difícil de comprar hecha — el tiro, el asiento y la pierna casi nunca ajustan a la vez — y un bolsillo de vivo se trata como sastrería a medida. Trazado paramétrico, las entrepiernas se equilibran para que la raya caiga recta, la pretina se corta a la cintura real, y el vivo se acota a un ancho que cabe en el panel, así quien cose en casa con destreza puede hacer un pantalón que de verdad ajuste y cierre en un gancho limpio y no en un botón que se abre.",
+      "fr": "Un pantalon de ville bien coupé est le vêtement ordinaire le plus difficile à acheter tout fait — la montée, l'assise et la jambe ne vont presque jamais toutes ensemble — et une poche passepoilée passe pour du sur-mesure. Tracé paramétrique, les entrejambes s'équilibrent pour que le pli tombe droit, la ceinture est coupée à la taille réelle, et le passepoil est borné à une largeur qui tient dans le panneau, si bien qu'un couturier amateur compétent peut faire un pantalon qui va vraiment et se ferme sur un crochet net plutôt qu'un bouton qui bâille.",
+      "pt": "Uma calça social bem cortada é a peça ordinária mais difícil de comprar pronta — o gancho, o assento e a perna quase nunca servem juntos — e um bolso embutido é tratado como alfaiataria sob medida. Traçada paramétrica, as entrepernas se equilibram para que o vinco caia reto, o cós é cortado à cintura real, e o embutido é limitado a uma largura que cabe no painel, então quem costura em casa com destreza pode fazer uma calça que realmente serve e fecha num gancho limpo em vez de um botão que abre."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "constraints": [
+    {
+      "expression": "hip_girth > waist_girth",
+      "severity": "warning",
+      "message": {
+        "en": "A hip smaller than the waist inverts the side seam; the draft clamps the waist quarter.",
+        "es": "Una cadera menor que la cintura invierte el costado; el trazo acota el cuarto de cintura.",
+        "fr": "Une hanche plus petite que la taille inverse la couture de côté ; le tracé borne le quart de taille.",
+        "pt": "Um quadril menor que a cintura inverte a lateral; o traçado limita o quarto de cintura."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "slim",
+      "label": {
+        "en": "Slim leg",
+        "es": "Pierna entallada",
+        "fr": "Jambe ajustée",
+        "pt": "Perna justa"
+      },
+      "values": {
+        "hem_width": 170,
+        "knee_width": 200
+      }
+    },
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic straight",
+        "es": "Recto clásico",
+        "fr": "Droit classique",
+        "pt": "Reto clássico"
+      },
+      "values": {
+        "hem_width": 210,
+        "knee_width": 240
+      }
+    }
+  ],
+  "notion": {
+    "kind": "hook",
+    "subtype": "trouser hook-and-bar on the waistband underlap",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "trouser-hook-bar",
+      "linked": true,
+      "params_map": {
+        "plate_len": "hook_plate",
+        "wire_d": "hook_plate * 0.05",
+        "gap": "hook_plate * 0.12"
+      }
+    }
+  }
+}

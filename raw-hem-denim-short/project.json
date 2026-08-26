@@ -1,0 +1,514 @@
+{
+  "project": {
+    "name": "Raw-Hem Denim Short",
+    "slug": "raw-hem-denim-short",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The cut-off denim short with a RAW (unfinished) hem — the leg chopped short and left to fray, no turn-up. Because there is no hem allowance to hide behind, the raw edge is drawn at its FINISHED length and the fray depth is marked as a distress zone, not sewn. A five-pocket block scaled to the short leg. Two things are solved by measurement, not formula: the two inseams are BISECTED to equal length so a short leg does not twist, and the waistband is cut to the MEASURED sum of the panel waist runs plus the fly lap, never a laid-flat girth. Clamps hold the waist quarter under the hip quarter (a big waist cannot invert the side seam), and the thigh opening at the hip quarter so a raw hem set high never folds the leg into the crotch curve. The jeans button bridges to the Yantra4D `jeans-button` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El short de mezclilla cortado con bajo DESHILADO (crudo) — la pierna recortada y dejada a deshilar, sin doblez. Como no hay dobladillo tras el que esconderse, el canto crudo se traza a su longitud TERMINADA y la profundidad de deshilado se marca como zona de desgaste, no se cose. Una base de cinco bolsillos escalada a la pierna corta. Dos cosas se resuelven midiendo, no por fórmula: las dos entrepiernas se BISECAN a igual longitud para que una pierna corta no se tuerza, y la pretina se corta a la suma MEDIDA de los tramos de cintura de los paneles más el cruce de bragueta, nunca a un contorno tendido. Los topes acotan el cuarto de cintura bajo el de cadera (una cintura grande no invierte el costado) y la boca del muslo al cuarto de cadera, para que un bajo crudo alto nunca pliegue la pierna hacia la curva del tiro. El botón de vaquero se puentea al sólido `jeans-button` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le short en jean coupé à ourlet BRUT (non fini) — la jambe raccourcie et laissée à s'effilocher, sans revers. Comme aucun rentré ne cache le bord, le bord brut est tracé à sa longueur FINIE et la profondeur d'effilochage est marquée comme zone d'usure, non cousue. Une base cinq poches mise à l'échelle de la jambe courte. Deux choses sont résolues par la mesure, non par formule : les deux entrejambes sont BISSECTÉS à longueur égale pour qu'une jambe courte ne vrille pas, et la ceinture est coupée à la somme MESURÉE des tronçons de taille plus le recouvrement de braguette, jamais à un tour étalé. Les bornes tiennent le quart de taille sous le quart de hanche (une taille forte n'inverse pas la couture de côté) et l'ouverture de cuisse au quart de hanche, pour qu'un ourlet brut haut ne replie jamais la jambe dans la courbe de fourche. Le bouton de jean fait le pont vers le solide `jeans-button` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O short jeans cortado com barra CRUA (desfiada) — a perna encurtada e deixada a desfiar, sem dobra. Como não há bainha para esconder, a borda crua é traçada no seu comprimento ACABADO e a profundidade de desfiar é marcada como zona de desgaste, não costurada. Uma base de cinco bolsos escalada à perna curta. Duas coisas se resolvem medindo, não por fórmula: as duas entrepernas são BISSECTADAS ao mesmo comprimento para que uma perna curta não torça, e o cós é cortado à soma MEDIDA dos trechos de cintura mais a sobreposição da braguilha, nunca a um contorno estendido. Os limites seguram o quarto de cintura sob o de quadril (uma cintura larga não inverte a lateral) e a boca da coxa no quarto de quadril, para que uma barra crua alta nunca dobre a perna na curva do gancho. O botão de jeans faz a ponte para o sólido `jeans-button` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "raw-hem-denim-short",
+      "denim",
+      "short",
+      "cut-off",
+      "raw-hem",
+      "five-pocket",
+      "jeans-button",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full short",
+        "es": "Short completo",
+        "fr": "Short complet",
+        "pt": "Short completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front_leg",
+        "back_leg",
+        "waistband",
+        "fly",
+        "coin_pocket",
+        "pocket_bag"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front_leg",
+      "label": {
+        "en": "Front leg (cut 2, mirrored)",
+        "es": "Delantero de pierna (cortar 2, espejo)",
+        "fr": "Devant de jambe (couper 2, miroir)",
+        "pt": "Frente da perna (cortar 2, espelhado)"
+      },
+      "default_color": "#3f5573",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back_leg",
+      "label": {
+        "en": "Back leg (cut 2, mirrored)",
+        "es": "Trasero de pierna (cortar 2, espejo)",
+        "fr": "Dos de jambe (couper 2, miroir)",
+        "pt": "Costas da perna (cortar 2, espelhado)"
+      },
+      "default_color": "#4a637f",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "Waistband (cut 1)",
+        "es": "Pretina (cortar 1)",
+        "fr": "Ceinture (couper 1)",
+        "pt": "Cós (cortar 1)"
+      },
+      "default_color": "#5e7896",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "fly",
+      "label": {
+        "en": "Fly shield / facing (cut 2)",
+        "es": "Tapeta de bragueta (cortar 2)",
+        "fr": "Sous-pont de braguette (couper 2)",
+        "pt": "Carcela da braguilha (cortar 2)"
+      },
+      "default_color": "#6f89a6",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "coin_pocket",
+      "label": {
+        "en": "Coin pocket (cut 1)",
+        "es": "Bolsillo del reloj (cortar 1)",
+        "fr": "Gousset (couper 1)",
+        "pt": "Bolso da moeda (cortar 1)"
+      },
+      "default_color": "#7f98b3",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "pocket_bag",
+      "label": {
+        "en": "Front pocket bag (cut 4)",
+        "es": "Fondo de bolsillo (cortar 4)",
+        "fr": "Fond de poche (couper 4)",
+        "pt": "Saco de bolso (cortar 4)"
+      },
+      "default_color": "#90a6bd",
+      "cut": {
+        "quantity": 4,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "block",
+      "label": {
+        "en": "Fit block",
+        "es": "Base de talla",
+        "fr": "Base d'aisance",
+        "pt": "Base de modelagem"
+      }
+    },
+    {
+      "id": "leg",
+      "label": {
+        "en": "Leg",
+        "es": "Pierna",
+        "fr": "Jambe",
+        "pt": "Perna"
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "Waistband",
+        "es": "Pretina",
+        "fr": "Ceinture",
+        "pt": "Cós"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "block",
+      "default": 820,
+      "min": 560,
+      "max": 1200,
+      "step": 10,
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)",
+        "pt": "Contorno de cintura (mm)"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "block",
+      "default": 1000,
+      "min": 720,
+      "max": 1400,
+      "step": 10,
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)",
+        "pt": "Contorno de quadril (mm)"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      }
+    },
+    {
+      "id": "short_length",
+      "type": "slider",
+      "group": "leg",
+      "default": 300,
+      "min": 140,
+      "max": 480,
+      "step": 10,
+      "label": {
+        "en": "Short length, crotch to raw hem (mm)",
+        "es": "Largo, tiro a bajo crudo (mm)",
+        "fr": "Longueur, fourche à ourlet brut (mm)",
+        "pt": "Comprimento, gancho à barra crua (mm)"
+      }
+    },
+    {
+      "id": "front_rise",
+      "type": "slider",
+      "group": "block",
+      "default": 255,
+      "min": 200,
+      "max": 360,
+      "step": 5,
+      "label": {
+        "en": "Front rise (mm)",
+        "es": "Tiro delantero (mm)",
+        "fr": "Montée devant (mm)",
+        "pt": "Gancho dianteiro (mm)"
+      }
+    },
+    {
+      "id": "hem_width",
+      "type": "slider",
+      "group": "leg",
+      "default": 280,
+      "min": 180,
+      "max": 420,
+      "step": 5,
+      "label": {
+        "en": "Thigh opening, flat (mm)",
+        "es": "Boca de muslo, plana (mm)",
+        "fr": "Ouverture de cuisse, à plat (mm)",
+        "pt": "Boca da coxa, plana (mm)"
+      }
+    },
+    {
+      "id": "band_depth",
+      "type": "slider",
+      "group": "waistband",
+      "default": 40,
+      "min": 28,
+      "max": 64,
+      "step": 2,
+      "label": {
+        "en": "Waistband depth (mm)",
+        "es": "Alto de pretina (mm)",
+        "fr": "Hauteur de ceinture (mm)",
+        "pt": "Altura do cós (mm)"
+      }
+    },
+    {
+      "id": "button_head",
+      "type": "slider",
+      "group": "waistband",
+      "default": 17,
+      "min": 11,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Jeans button head (mm)",
+        "es": "Cabeza del botón (mm)",
+        "fr": "Tête du bouton (mm)",
+        "pt": "Cabeça do botão (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D jeans-button head and its step-in",
+        "es": "Define la cabeza del jeans-button y su separación",
+        "fr": "Pilote la tête du jeans-button et son retrait",
+        "pt": "Pilota a cabeça do jeans-button e o recuo"
+      }
+    },
+    {
+      "id": "wear_ease",
+      "type": "slider",
+      "group": "block",
+      "default": 50,
+      "min": 0,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Wearing ease over hip (mm)",
+        "es": "Holgura de uso en cadera (mm)",
+        "fr": "Aisance aux hanches (mm)",
+        "pt": "Folga no quadril (mm)"
+      }
+    },
+    {
+      "id": "fray_depth",
+      "type": "slider",
+      "group": "construction",
+      "default": 14,
+      "min": 4,
+      "max": 30,
+      "step": 2,
+      "label": {
+        "en": "Raw-hem fray depth (mm)",
+        "es": "Profundidad de deshilado (mm)",
+        "fr": "Profondeur d'effilochage (mm)",
+        "pt": "Profundidade de desfiar (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 8,
+      "max": 18,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "mezclilla-denim"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "buttoned_waistband",
+        "type": "button_stand",
+        "label": {
+          "en": "Jeans-button waistband closure",
+          "es": "Cierre de pretina con botón",
+          "fr": "Fermeture de ceinture au bouton",
+          "pt": "Fecho de cós com botão"
+        },
+        "edges": [
+          {
+            "piece": "waistband",
+            "edge": "ext_end"
+          },
+          {
+            "piece": "front_leg",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "button_head",
+          "band_depth",
+          "front_rise"
+        ]
+      },
+      {
+        "id": "measured_waistband",
+        "type": "waistband",
+        "label": {
+          "en": "Waistband cut to measured waist",
+          "es": "Pretina a la cintura medida",
+          "fr": "Ceinture à la taille mesurée",
+          "pt": "Cós à cintura medida"
+        },
+        "edges": [
+          {
+            "piece": "waistband",
+            "edge": "lower"
+          },
+          {
+            "piece": "back_leg",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "band_depth",
+          "wear_ease"
+        ]
+      },
+      {
+        "id": "raw_hemline",
+        "type": "hem",
+        "label": {
+          "en": "Raw (unfinished) hemline",
+          "es": "Bajo crudo (sin acabar)",
+          "fr": "Ourlet brut (non fini)",
+          "pt": "Barra crua (sem acabamento)"
+        },
+        "edges": [
+          {
+            "piece": "front_leg",
+            "edge": "hem"
+          },
+          {
+            "piece": "back_leg",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "short_length",
+          "fray_depth",
+          "hem_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A cut-off short is the first thing most people ever 'make' — and they hack it wrong, chopping through a finished pattern so the legs end up different lengths and the front gapes. Drafted properly it is a five-pocket block that already balances its inseams and cuts its band to the real measured waist, then simply ends the leg at a raw line with the fray marked. It fits, and the raw edge is a choice rather than an accident.",
+      "es": "Un short cortado es lo primero que casi todos 'hacen' — y lo cortan mal, tijereteando un patrón terminado hasta que las piernas quedan de largos distintos y el frente se abre. Trazado bien es una base de cinco bolsillos que ya equilibra sus entrepiernas y corta la pretina a la cintura medida real, y luego termina la pierna en una línea cruda con el deshilado marcado. Ajusta, y el canto crudo es una decisión, no un accidente.",
+      "fr": "Un short coupé est la première chose que presque tout le monde 'fabrique' — et on le coupe mal, taillant dans un patron fini jusqu'à ce que les jambes soient de longueurs différentes et que le devant bâille. Bien tracé, c'est une base cinq poches qui équilibre déjà ses entrejambes et coupe sa ceinture à la taille réellement mesurée, puis termine la jambe sur une ligne brute avec l'effilochage marqué. Il tombe juste, et le bord brut est un choix, non un accident.",
+      "pt": "Um short cortado é a primeira coisa que quase todos 'fazem' — e cortam errado, tesourando um molde acabado até as pernas ficarem de comprimentos diferentes e a frente abrir. Traçado direito é uma base de cinco bolsos que já equilibra suas entrepernas e corta o cós à cintura medida real, depois termina a perna numa linha crua com o desfiar marcado. Veste, e a borda crua é uma escolha, não um acidente."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "constraints": [
+    {
+      "expression": "hip_girth > waist_girth",
+      "severity": "warning",
+      "message": {
+        "en": "A hip smaller than the waist inverts the side seam; the draft clamps the waist quarter.",
+        "es": "Una cadera menor que la cintura invierte el costado; el trazo acota el cuarto de cintura.",
+        "fr": "Une hanche plus petite que la taille inverse la couture de côté ; le tracé borne le quart de taille.",
+        "pt": "Um quadril menor que a cintura inverte a lateral; o traçado limita o quarto de cintura."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic cut-off",
+        "es": "Cortado clásico",
+        "fr": "Coupé classique",
+        "pt": "Cortado clássico"
+      },
+      "values": {
+        "short_length": 280,
+        "hem_width": 300
+      }
+    },
+    {
+      "id": "long-bermuda",
+      "label": {
+        "en": "Long bermuda",
+        "es": "Bermuda larga",
+        "fr": "Bermuda long",
+        "pt": "Bermuda longa"
+      },
+      "values": {
+        "short_length": 440,
+        "hem_width": 320
+      }
+    }
+  ],
+  "notion": {
+    "kind": "button",
+    "subtype": "tack-set jeans button on the waistband extension",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "jeans-button",
+      "linked": true,
+      "params_map": {
+        "head_dia": "button_head",
+        "head_h": "button_head * 0.34",
+        "socket_dia": "button_head * 0.62",
+        "socket_h": "button_head * 0.40",
+        "tack_dia": "button_head * 0.30",
+        "tack_h": "button_head * 0.55"
+      }
+    }
+  }
+}

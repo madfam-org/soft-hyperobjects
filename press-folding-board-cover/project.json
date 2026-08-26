@@ -1,0 +1,321 @@
+{
+  "project": {
+    "name": "Folding-Board Press Cover",
+    "slug": "press-folding-board-cover",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A fitted padded cover for a shirt-folding board (the Yantra4D `folding-board` solid) that turns the rigid board into a padded pressing surface — press a folded shirt right on the board and the cover takes the heat and pads the fold. A TOP panel and a BOTTOM panel wrap the board, joined by a SPINE gusset the thickness of the board, with an elastic corner at each end. Solved, not guessed: the panels are the board face plus a MEASURED wrap; the spine gusset is the board thickness plus the pad; the corner pockets are CLAMPED under a quarter of the panel so a deep corner never crosses the panel centre and folds it; and the pad wall is floored so the cover always has a real pressing loft.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una funda acolchada ajustada para una tabla de doblar camisas (el sólido `folding-board` de Yantra4D) que convierte la tabla rígida en superficie de planchado acolchada — planche una camisa doblada sobre la tabla y la funda toma el calor y acolcha el doblez. Un panel SUPERIOR y uno INFERIOR envuelven la tabla, unidos por un LOMO del grosor de la tabla, con un elástico en cada esquina. Resuelto, no adivinado: los paneles son la cara de la tabla más un envolvente MEDIDO; el lomo es el grosor de la tabla más el acolchado; las esquinas se ACOTAN bajo un cuarto del panel para que una esquina profunda no cruce el centro y lo pliegue; y la pared de acolchado tiene piso para que la funda siempre tenga colchón de planchado real.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une housse matelassée ajustée pour une planche à plier les chemises (le solide `folding-board` de Yantra4D) qui transforme la planche rigide en surface de repassage matelassée — repassez une chemise pliée sur la planche et la housse prend la chaleur et matelasse le pli. Un panneau SUPÉRIEUR et un INFÉRIEUR enveloppent la planche, joints par un DOS de l'épaisseur de la planche, avec un élastique à chaque coin. Résolu, non deviné : les panneaux sont la face de la planche plus un retour MESURÉ ; le dos est l'épaisseur de la planche plus le matelassage ; les coins sont BORNÉS sous un quart du panneau pour qu'un coin profond ne croise le centre et ne le replie ; et la paroi de matelassage a un plancher pour que la housse ait toujours un vrai molleton de repassage.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma capa acolchoada ajustada para uma tábua de dobrar camisas (o sólido `folding-board` do Yantra4D) que transforma a tábua rígida em superfície de passar acolchoada — passe uma camisa dobrada sobre a tábua e a capa toma o calor e acolchoa a dobra. Um painel SUPERIOR e um INFERIOR envolvem a tábua, unidos por uma LOMBADA da espessura da tábua, com um elástico em cada canto. Resolvido, não adivinhado: os painéis são a face da tábua mais um envolvimento MEDIDO; a lombada é a espessura da tábua mais o acolchoado; os cantos são LIMITADOS sob um quarto do painel para que um canto fundo não cruze o centro e o dobre; e a parede de acolchoado tem piso para que a capa sempre tenha colchão de passar real.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "press-folding-board-cover",
+      "care_keeping",
+      "cover",
+      "folding-board",
+      "pressing",
+      "padded",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full cover",
+        "es": "Funda completa",
+        "fr": "Housse complète",
+        "pt": "Capa completa"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "top",
+        "bottom",
+        "spine"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "top",
+      "label": {
+        "en": "Top panel (cut 1)",
+        "es": "Panel superior (cortar 1)",
+        "fr": "Panneau supérieur (couper 1)",
+        "pt": "Painel superior (cortar 1)"
+      },
+      "default_color": "#c0c0b0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "bottom",
+      "label": {
+        "en": "Bottom panel (cut 1)",
+        "es": "Panel inferior (cortar 1)",
+        "fr": "Panneau inférieur (couper 1)",
+        "pt": "Painel inferior (cortar 1)"
+      },
+      "default_color": "#d0d0c0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "spine",
+      "label": {
+        "en": "Spine gusset (cut 1)",
+        "es": "Lomo (cortar 1)",
+        "fr": "Dos (couper 1)",
+        "pt": "Lombada (cortar 1)"
+      },
+      "default_color": "#e0e0d0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "board",
+      "label": {
+        "en": "Board",
+        "es": "Tabla",
+        "fr": "Planche",
+        "pt": "Tábua"
+      }
+    },
+    {
+      "id": "cover",
+      "label": {
+        "en": "Cover",
+        "es": "Funda",
+        "fr": "Housse",
+        "pt": "Capa"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "board_w",
+      "type": "slider",
+      "group": "board",
+      "default": 200,
+      "min": 120,
+      "max": 360,
+      "step": 10,
+      "label": {
+        "en": "Board width (mm)",
+        "es": "Ancho de tabla (mm)",
+        "fr": "Largeur de planche (mm)",
+        "pt": "Largura da tábua (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D folding-board width",
+        "es": "Define el ancho del folding-board de Yantra4D",
+        "fr": "Pilote la largeur du folding-board Yantra4D",
+        "pt": "Pilota a largura do folding-board do Yantra4D"
+      }
+    },
+    {
+      "id": "board_h",
+      "type": "slider",
+      "group": "board",
+      "default": 280,
+      "min": 160,
+      "max": 460,
+      "step": 10,
+      "label": {
+        "en": "Board height (mm)",
+        "es": "Alto de tabla (mm)",
+        "fr": "Hauteur de planche (mm)",
+        "pt": "Altura da tábua (mm)"
+      }
+    },
+    {
+      "id": "board_thick",
+      "type": "slider",
+      "group": "board",
+      "default": 6,
+      "min": 3,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Board thickness (mm)",
+        "es": "Grosor de tabla (mm)",
+        "fr": "Épaisseur de planche (mm)",
+        "pt": "Espessura da tábua (mm)"
+      }
+    },
+    {
+      "id": "pad",
+      "type": "slider",
+      "group": "cover",
+      "default": 8,
+      "min": 3,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Pressing pad loft (mm)",
+        "es": "Colchón de planchado (mm)",
+        "fr": "Molleton de repassage (mm)",
+        "pt": "Colchão de passar (mm)"
+      }
+    },
+    {
+      "id": "wrap",
+      "type": "slider",
+      "group": "cover",
+      "default": 24,
+      "min": 12,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Wrap-around allowance (mm)",
+        "es": "Envolvente (mm)",
+        "fr": "Retour (mm)",
+        "pt": "Envolvimento (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "board_wrap",
+        "type": "custom",
+        "label": {
+          "en": "Board wrap",
+          "es": "Envoltura de tabla",
+          "fr": "Enveloppe de planche",
+          "pt": "Envoltório da tábua"
+        },
+        "edges": [
+          {
+            "piece": "spine",
+            "edge": "attach_a"
+          },
+          {
+            "piece": "top",
+            "edge": "right"
+          }
+        ],
+        "parameters": [
+          "board_w",
+          "board_h",
+          "board_thick"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A folding board makes a stack of shirts uniform, and a padded cover on it doubles it as a small pressing surface, so the fold-and-press step happens on one tool at a table without an ironing board. Cutting the cover to the printed board means it fits exactly, and a linen face over wadding takes a hot iron for years — a small object that makes a retail-neat shirt fold at home.",
+      "es": "Una tabla de doblar uniforma una pila de camisas, y una funda acolchada la vuelve además una pequeña superficie de planchado, así el paso de doblar y planchar sucede en una herramienta sobre la mesa sin tabla de planchar. Cortar la funda a la tabla impresa hace que ajuste exacta, y una cara de lino sobre guata aguanta plancha caliente por años — un objeto pequeño que logra en casa un doblez de camisa de tienda.",
+      "fr": "Une planche à plier uniformise une pile de chemises, et une housse matelassée la double en petite surface de repassage, si bien que l'étape plier-repasser se fait sur un outil à table sans planche à repasser. Couper la housse à la planche imprimée la fait aller exactement, et une face de lin sur ouate tient un fer chaud des années — un petit objet qui fait à la maison un pli de chemise de magasin.",
+      "pt": "Uma tábua de dobrar uniformiza uma pilha de camisas, e uma capa acolchoada a torna também uma pequena superfície de passar, então o passo dobrar-e-passar acontece numa ferramenta à mesa sem tábua de passar. Cortar a capa à tábua impressa a faz servir exata, e uma face de linho sobre manta aguenta ferro quente por anos — um objeto pequeno que faz em casa uma dobra de camisa de loja."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "presets": [
+    {
+      "id": "shirt",
+      "label": {
+        "en": "Shirt board",
+        "es": "Tabla de camisa",
+        "fr": "Planche chemise",
+        "pt": "Tábua de camisa"
+      },
+      "values": {
+        "board_w": 200,
+        "board_h": 280
+      }
+    },
+    {
+      "id": "large",
+      "label": {
+        "en": "Large board",
+        "es": "Tabla grande",
+        "fr": "Grande planche",
+        "pt": "Tábua grande"
+      },
+      "values": {
+        "board_w": 260,
+        "board_h": 360
+      }
+    }
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "padded cover over a folding board",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "folding-board",
+      "linked": true,
+      "params_map": {
+        "fold_w": "board_w",
+        "fold_h": "board_h",
+        "panel_t": "board_thick"
+      }
+    }
+  }
+}

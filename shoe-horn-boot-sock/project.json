@@ -1,0 +1,379 @@
+{
+  "project": {
+    "name": "Shoe-Horn Boot Sock",
+    "slug": "shoe-horn-boot-sock",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A tall knit boot sock with an integrated HEEL HORN: a stiffened fabric channel at the back heel that holds a slim printed shoe-horn (the Yantra4D `shoe-horn`) so the heel slides into a tight boot without crushing the sock's back or bruising the achilles. The sock is a two-panel stretch tube (a LEG panel and a FOOT panel) with the horn CHANNEL sewn up the back heel. Solved, not guessed: the horn channel is cut to the MEASURED shoe-horn length plus a seat and its width to the scoop plus a clearance; negative ease is FLOORED so a tight sock never draws a hairline panel; and the foot and leg panels join at a MEASURED ankle seam so the tube is continuous.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un calcetín de bota alto de punto con CALZADOR de talón integrado: un canal de tela rígido en el talón trasero que sostiene un calzador delgado impreso (el `shoe-horn` de Yantra4D) para que el talón entre en una bota ajustada sin aplastar la parte trasera del calcetín ni lastimar el tendón. El calcetín es un tubo elástico de dos paneles (una PIERNA y un PIE) con el CANAL cosido por el talón trasero. Resuelto, no adivinado: el canal se corta al calzador MEDIDO más un asiento y su ancho al hueco más una holgura; la holgura negativa tiene PISO para que un calcetín ceñido nunca trace un panel filiforme; y el pie y la pierna se unen en una costura de tobillo MEDIDA para que el tubo sea continuo.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une chaussette de botte haute en tricot avec CHAUSSE-PIED de talon intégré : un canal de tissu rigidifié au talon arrière qui tient un chausse-pied fin imprimé (le `shoe-horn` de Yantra4D) pour que le talon entre dans une botte serrée sans écraser l'arrière de la chaussette ni meurtrir le tendon. La chaussette est un tube extensible à deux panneaux (une JAMBE et un PIED) avec le CANAL cousu au talon arrière. Résolu, non deviné : le canal est coupé au chausse-pied MESURÉ plus une assise et sa largeur au creux plus un jeu ; l'aisance négative a un PLANCHER pour qu'une chaussette serrée ne trace jamais un panneau filiforme ; et le pied et la jambe se joignent à une couture de cheville MESURÉE pour que le tube soit continu.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma meia de bota alta de tricô com CALÇADEIRA de calcanhar integrada: um canal de tecido rígido no calcanhar traseiro que segura uma calçadeira fina impressa (o `shoe-horn` do Yantra4D) para que o calcanhar entre numa bota apertada sem esmagar a parte traseira da meia nem machucar o tendão. A meia é um tubo elástico de dois painéis (uma PERNA e um PÉ) com o CANAL costurado pelo calcanhar traseiro. Resolvido, não adivinhado: o canal é cortado à calçadeira MEDIDA mais um assento e sua largura ao vão mais uma folga; a folga negativa tem PISO para que uma meia justa nunca trace um painel filiforme; e o pé e a perna se unem numa costura de tornozelo MEDIDA para que o tubo seja contínuo.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "shoe-horn-boot-sock",
+      "footwear_soft",
+      "sock",
+      "boot-sock",
+      "shoe-horn",
+      "heel-channel",
+      "knit",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full sock",
+        "es": "Calcetín completo",
+        "fr": "Chaussette complète",
+        "pt": "Meia completa"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "leg",
+        "foot",
+        "channel"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "leg",
+      "label": {
+        "en": "Leg panel (cut 2, mirrored)",
+        "es": "Panel de pierna (cortar 2, espejo)",
+        "fr": "Panneau de jambe (couper 2, miroir)",
+        "pt": "Painel de perna (cortar 2, espelhado)"
+      },
+      "default_color": "#7a6a5a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "foot",
+      "label": {
+        "en": "Foot panel (cut 2, mirrored)",
+        "es": "Panel de pie (cortar 2, espejo)",
+        "fr": "Panneau de pied (couper 2, miroir)",
+        "pt": "Painel de pé (cortar 2, espelhado)"
+      },
+      "default_color": "#8a7a6a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "channel",
+      "label": {
+        "en": "Heel horn channel (cut 1)",
+        "es": "Canal de calzador (cortar 1)",
+        "fr": "Canal de chausse-pied (couper 1)",
+        "pt": "Canal de calçadeira (cortar 1)"
+      },
+      "default_color": "#9a8a7a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "leg",
+      "label": {
+        "en": "Leg",
+        "es": "Pierna",
+        "fr": "Jambe",
+        "pt": "Perna"
+      }
+    },
+    {
+      "id": "foot",
+      "label": {
+        "en": "Foot",
+        "es": "Pie",
+        "fr": "Pied",
+        "pt": "Pé"
+      }
+    },
+    {
+      "id": "horn",
+      "label": {
+        "en": "Shoe-horn",
+        "es": "Calzador",
+        "fr": "Chausse-pied",
+        "pt": "Calçadeira"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "calf_girth",
+      "type": "slider",
+      "group": "leg",
+      "default": 360,
+      "min": 240,
+      "max": 520,
+      "step": 10,
+      "label": {
+        "en": "Calf girth (mm)",
+        "es": "Contorno de pantorrilla (mm)",
+        "fr": "Tour de mollet (mm)",
+        "pt": "Contorno de panturrilha (mm)"
+      }
+    },
+    {
+      "id": "ankle_girth",
+      "type": "slider",
+      "group": "leg",
+      "default": 240,
+      "min": 160,
+      "max": 340,
+      "step": 10,
+      "label": {
+        "en": "Ankle girth (mm)",
+        "es": "Contorno de tobillo (mm)",
+        "fr": "Tour de cheville (mm)",
+        "pt": "Contorno de tornozelo (mm)"
+      }
+    },
+    {
+      "id": "foot_length",
+      "type": "slider",
+      "group": "foot",
+      "default": 260,
+      "min": 180,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Foot length (mm)",
+        "es": "Largo del pie (mm)",
+        "fr": "Longueur du pied (mm)",
+        "pt": "Comprimento do pé (mm)"
+      }
+    },
+    {
+      "id": "leg_height",
+      "type": "slider",
+      "group": "leg",
+      "default": 300,
+      "min": 180,
+      "max": 480,
+      "step": 10,
+      "label": {
+        "en": "Leg height (mm)",
+        "es": "Alto de pierna (mm)",
+        "fr": "Hauteur de jambe (mm)",
+        "pt": "Altura de perna (mm)"
+      }
+    },
+    {
+      "id": "horn_length",
+      "type": "slider",
+      "group": "horn",
+      "default": 140,
+      "min": 80,
+      "max": 220,
+      "step": 5,
+      "label": {
+        "en": "Shoe-horn length (mm)",
+        "es": "Largo del calzador (mm)",
+        "fr": "Longueur du chausse-pied (mm)",
+        "pt": "Comprimento da calçadeira (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D shoe-horn length",
+        "es": "Define el largo del shoe-horn de Yantra4D",
+        "fr": "Pilote la longueur du shoe-horn Yantra4D",
+        "pt": "Pilota o comprimento do shoe-horn do Yantra4D"
+      }
+    },
+    {
+      "id": "horn_scoop",
+      "type": "slider",
+      "group": "horn",
+      "default": 45,
+      "min": 25,
+      "max": 80,
+      "step": 2,
+      "label": {
+        "en": "Shoe-horn scoop width (mm)",
+        "es": "Ancho del hueco (mm)",
+        "fr": "Largeur du creux (mm)",
+        "pt": "Largura do vão (mm)"
+      }
+    },
+    {
+      "id": "stretch_factor",
+      "type": "slider",
+      "group": "construction",
+      "default": 0.85,
+      "min": 0.66,
+      "max": 0.98,
+      "step": 0.02,
+      "label": {
+        "en": "Stretch factor (<1 = negative ease)",
+        "es": "Factor de estiramiento (<1 = holgura negativa)",
+        "fr": "Facteur d'étirement (<1 = aisance négative)",
+        "pt": "Fator de estiramento (<1 = folga negativa)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 14,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "horn_channel",
+        "type": "pocket",
+        "label": {
+          "en": "Heel horn channel",
+          "es": "Canal de calzador",
+          "fr": "Canal de chausse-pied",
+          "pt": "Canal de calçadeira"
+        },
+        "edges": [
+          {
+            "piece": "channel",
+            "edge": "top"
+          }
+        ],
+        "parameters": [
+          "horn_length",
+          "horn_scoop"
+        ]
+      },
+      {
+        "id": "ankle_seam",
+        "type": "custom",
+        "label": {
+          "en": "Ankle seam",
+          "es": "Costura de tobillo",
+          "fr": "Couture de cheville",
+          "pt": "Costura de tornozelo"
+        },
+        "edges": [
+          {
+            "piece": "foot",
+            "edge": "ankle"
+          },
+          {
+            "piece": "leg",
+            "edge": "ankle"
+          }
+        ],
+        "parameters": [
+          "ankle_girth",
+          "stretch_factor"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true,
+      "stretch_draft": true
+    },
+    "societal_benefit": {
+      "en": "Getting a heel into a tight riding or work boot is a daily struggle, and a loose shoe-horn is one more thing to lose or drop. Building the horn into a boot sock's heel means the tool is always there when the boot goes on, and cutting the channel to the printed horn means it slides in and stays — a small ergonomic fix that spares the achilles and the sock's back seam for anyone who wears hard boots.",
+      "es": "Meter un talón en una bota ajustada de montar o de trabajo es una lucha diaria, y un calzador suelto es una cosa más que perder o tirar. Integrar el calzador en el talón de un calcetín de bota hace que la herramienta esté siempre ahí al calzar, y cortar el canal al calzador impreso hace que entre y se quede — un pequeño arreglo ergonómico que ahorra el tendón y la costura trasera a quien usa botas duras.",
+      "fr": "Entrer un talon dans une botte serrée d'équitation ou de travail est une lutte quotidienne, et un chausse-pied qui traîne est une chose de plus à perdre. Intégrer le chausse-pied au talon d'une chaussette de botte fait que l'outil est toujours là au chaussage, et couper le canal au chausse-pied imprimé fait qu'il entre et reste — un petit correctif ergonomique qui épargne le tendon et la couture arrière à qui porte des bottes dures.",
+      "pt": "Enfiar um calcanhar numa bota apertada de montaria ou de trabalho é uma luta diária, e uma calçadeira solta é mais uma coisa para perder. Integrar a calçadeira no calcanhar de uma meia de bota faz a ferramenta estar sempre ali ao calçar, e cortar o canal à calçadeira impressa faz que entre e fique — um pequeno ajuste ergonômico que poupa o tendão e a costura traseira de quem usa botas duras."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "presets": [
+    {
+      "id": "riding",
+      "label": {
+        "en": "Riding sock",
+        "es": "Calcetín de montar",
+        "fr": "Chaussette d'équitation",
+        "pt": "Meia de montaria"
+      },
+      "values": {
+        "leg_height": 380
+      }
+    },
+    {
+      "id": "ankle",
+      "label": {
+        "en": "Short boot sock",
+        "es": "Calcetín corto",
+        "fr": "Chaussette courte",
+        "pt": "Meia curta"
+      },
+      "values": {
+        "leg_height": 200
+      }
+    }
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "shoe-horn channel at the heel",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "shoe-horn",
+      "linked": true,
+      "params_map": {
+        "horn_len": "horn_length",
+        "scoop_w": "horn_scoop",
+        "blade_t": "horn_scoop * 0.06"
+      }
+    }
+  }
+}

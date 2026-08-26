@@ -1,0 +1,320 @@
+{
+  "project": {
+    "name": "Point-Turner Tool Sleeve",
+    "slug": "point-turner-sleeve",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A slim padded sleeve that protects a point turner (the flat tool that pushes out a collar point without piercing the seam). A BACK panel and a shorter FRONT panel make an open-top pocket; a FLAP folds over and a TAB holds it shut. Drafted to a KNOWN tool — the Yantra4D `point-turner` solid — so the sleeve is exactly as long as the tool plus the flap, never a loose bag. Solved, not guessed: the sleeve is cut to the MEASURED tool length plus a seat; the FRONT is CLAMPED shorter than the back so the mouth is always open (a front as tall as the back would seal the pocket); and the closure tab is stepped in off the flap end so it lands on cloth, not on the fold.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una funda delgada y acolchada que protege un vuelve-puntas (la herramienta plana que saca la punta del cuello sin perforar la costura). Un panel TRASERO y un DELANTERO más corto forman un bolsillo de boca abierta; una SOLAPA se dobla encima y una LENGÜETA la cierra. Trazada a una herramienta CONOCIDA — el sólido `point-turner` de Yantra4D — para que la funda sea justo del largo de la herramienta más la solapa, nunca una bolsa floja. Resuelto, no adivinado: la funda se corta al largo MEDIDO más un asiento; el DELANTERO se ACOTA más corto que el trasero para que la boca quede siempre abierta (un delantero tan alto como el trasero sellaría el bolsillo); y la lengüeta se mete desde el extremo de la solapa para asentar en tela, no en el doblez.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un étui fin et matelassé qui protège un pousse-pointes (l'outil plat qui sort une pointe de col sans percer la couture). Un panneau DOS et un DEVANT plus court forment une poche à ouverture haute ; un RABAT se replie et une PATTE le ferme. Tracé à un outil CONNU — le solide `point-turner` de Yantra4D — pour que l'étui fasse juste la longueur de l'outil plus le rabat, jamais un sac lâche. Résolu, non deviné : l'étui est coupé à la longueur MESURÉE plus une assise ; le DEVANT est BORNÉ plus court que le dos pour que l'ouverture reste toujours ouverte (un devant aussi haut que le dos scellerait la poche) ; et la patte est rentrée depuis l'extrémité du rabat pour porter sur le tissu, non sur le pli.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um estojo fino e acolchoado que protege um vira-pontas (a ferramenta plana que empurra a ponta do colarinho sem furar a costura). Um painel COSTAS e uma FRENTE mais curta formam um bolso de boca aberta; uma ABA dobra por cima e uma LINGUETA o fecha. Traçado a uma ferramenta CONHECIDA — o sólido `point-turner` do Yantra4D — para que o estojo tenha justo o comprimento da ferramenta mais a aba, nunca uma bolsa frouxa. Resolvido, não adivinhado: o estojo é cortado ao comprimento MEDIDO mais um assento; a FRENTE é LIMITADA mais curta que as costas para que a boca fique sempre aberta (uma frente tão alta quanto as costas selaria o bolso); e a lingueta é recuada da ponta da aba para assentar no tecido, não na dobra.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "point-turner-sleeve",
+      "care_keeping",
+      "sleeve",
+      "tool-case",
+      "sewing-room",
+      "point-turner",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full sleeve",
+        "es": "Funda completa",
+        "fr": "Étui complet",
+        "pt": "Estojo completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "back",
+        "front",
+        "flap"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "back",
+      "label": {
+        "en": "Back with flap (cut 1)",
+        "es": "Trasero con solapa (cortar 1)",
+        "fr": "Dos avec rabat (couper 1)",
+        "pt": "Costas com aba (cortar 1)"
+      },
+      "default_color": "#a8b0a0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "front",
+      "label": {
+        "en": "Front pocket (cut 1)",
+        "es": "Bolsillo delantero (cortar 1)",
+        "fr": "Poche devant (couper 1)",
+        "pt": "Bolso frente (cortar 1)"
+      },
+      "default_color": "#b8c0b0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "flap",
+      "label": {
+        "en": "Flap facing (cut 1)",
+        "es": "Vista de solapa (cortar 1)",
+        "fr": "Parementure de rabat (couper 1)",
+        "pt": "Vista de aba (cortar 1)"
+      },
+      "default_color": "#c8d0c0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "tool",
+      "label": {
+        "en": "Tool",
+        "es": "Herramienta",
+        "fr": "Outil",
+        "pt": "Ferramenta"
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Funda",
+        "fr": "Étui",
+        "pt": "Estojo"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "tool_length",
+      "type": "slider",
+      "group": "tool",
+      "default": 150,
+      "min": 80,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Tool length (mm)",
+        "es": "Largo de herramienta (mm)",
+        "fr": "Longueur d'outil (mm)",
+        "pt": "Comprimento da ferramenta (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D point-turner length",
+        "es": "Define el largo del point-turner de Yantra4D",
+        "fr": "Pilote la longueur du point-turner Yantra4D",
+        "pt": "Pilota o comprimento do point-turner do Yantra4D"
+      }
+    },
+    {
+      "id": "tool_width",
+      "type": "slider",
+      "group": "tool",
+      "default": 40,
+      "min": 20,
+      "max": 90,
+      "step": 2,
+      "label": {
+        "en": "Presser width (mm)",
+        "es": "Ancho del presor (mm)",
+        "fr": "Largeur du presseur (mm)",
+        "pt": "Largura do pressor (mm)"
+      }
+    },
+    {
+      "id": "tool_thick",
+      "type": "slider",
+      "group": "tool",
+      "default": 8,
+      "min": 3,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Tool thickness (mm)",
+        "es": "Espesor (mm)",
+        "fr": "Épaisseur (mm)",
+        "pt": "Espessura (mm)"
+      }
+    },
+    {
+      "id": "seat",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 20,
+      "min": 8,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Seat below tool (mm)",
+        "es": "Asiento bajo la herramienta (mm)",
+        "fr": "Assise sous l'outil (mm)",
+        "pt": "Assento sob a ferramenta (mm)"
+      }
+    },
+    {
+      "id": "flap_fold",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 40,
+      "min": 20,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Flap fold (mm)",
+        "es": "Doblez de solapa (mm)",
+        "fr": "Repli de rabat (mm)",
+        "pt": "Dobra da aba (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 14,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "tool_pocket",
+        "type": "pocket",
+        "label": {
+          "en": "Tool pocket",
+          "es": "Bolsillo de herramienta",
+          "fr": "Poche d'outil",
+          "pt": "Bolso de ferramenta"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "mouth"
+          },
+          {
+            "piece": "back",
+            "edge": "mouth"
+          }
+        ],
+        "parameters": [
+          "tool_length",
+          "tool_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A point turner is a cheap tool that is easy to lose and easy to snap if it rattles around a machine table. A sleeve cut to the exact tool keeps it findable and unbroken, and printing the sleeve pattern from the same file as the tool means the pair travels together — the small discipline that keeps a working sewing room from swallowing its own tools.",
+      "es": "Un vuelve-puntas es una herramienta barata fácil de perder y de romper si anda suelta por la mesa de la máquina. Una funda cortada a la herramienta exacta la mantiene localizable y entera, e imprimir el patrón de la funda del mismo archivo que la herramienta hace que el par viaje junto — la pequeña disciplina que evita que un taller de costura se trague sus propias herramientas.",
+      "fr": "Un pousse-pointes est un outil bon marché facile à perdre et à casser s'il traîne sur la table de la machine. Un étui coupé à l'outil exact le garde repérable et intact, et imprimer le patron de l'étui du même fichier que l'outil fait voyager la paire ensemble — la petite discipline qui empêche un atelier de couture d'avaler ses propres outils.",
+      "pt": "Um vira-pontas é uma ferramenta barata fácil de perder e de quebrar se fica solta na mesa da máquina. Um estojo cortado à ferramenta exata a mantém localizável e inteira, e imprimir o molde do estojo do mesmo arquivo que a ferramenta faz o par viajar junto — a pequena disciplina que impede um ateliê de costura de engolir suas próprias ferramentas."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "presets": [
+    {
+      "id": "standard",
+      "label": {
+        "en": "Standard turner",
+        "es": "Vuelve-puntas estándar",
+        "fr": "Pousse-pointes standard",
+        "pt": "Vira-pontas padrão"
+      },
+      "values": {
+        "tool_length": 150
+      }
+    },
+    {
+      "id": "long",
+      "label": {
+        "en": "Long turner",
+        "es": "Vuelve-puntas largo",
+        "fr": "Pousse-pointes long",
+        "pt": "Vira-pontas longo"
+      },
+      "values": {
+        "tool_length": 200
+      }
+    }
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "padded sleeve holding a point turner",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "point-turner",
+      "linked": true,
+      "params_map": {
+        "tool_len": "tool_length",
+        "presser_w": "tool_width",
+        "tool_t": "tool_thick"
+      }
+    }
+  }
+}

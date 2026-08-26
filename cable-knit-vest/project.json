@@ -1,0 +1,436 @@
+{
+  "project": {
+    "name": "Cable-Knit Vest",
+    "slug": "cable-knit-vest",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A sleeveless pullover vest in a cabled wool knit: a FRONT with a V-neck, a BACK with a higher round neck, joined at the shoulders and sides. The armholes are cut deep and finished with a ribbed band; the neck and hems take ribbed bands too. A cable knit draws IN across its width, so the body carries a modest positive ease that is CLAMPED so it never collapses below the chest quarter. Solved, not guessed: the front and back share one shoulder point and slope so the shoulder seams sew flush; the V-neck depth is CLAMPED above the armhole depth so a deep-V request never crosses the front outline into a self-intersecting neckline the kernel would still close and pass; and the ribbed armhole band is cut to the MEASURED front + back opening. Pull-on: no hardware.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un chaleco cerrado sin mangas en punto de trenzas de lana: un DELANTERO con escote en V, una ESPALDA con escote redondo más alto, unidos en hombros y costados. Las sisas se cortan profundas y se rematan con banda de canalé; el escote y los bajos llevan bandas de canalé también. Un punto de trenzas encoge a lo ancho, así que el cuerpo lleva una holgura positiva modesta que se ACOTA para que nunca baje del cuarto de pecho. Resuelto, no adivinado: el delantero y la espalda comparten un mismo punto y pendiente de hombro para que las costuras de hombro queden a ras; la profundidad del escote en V se ACOTA por encima de la profundidad de sisa para que un escote profundo nunca cruce el contorno delantero en un escote autointersecante que el kernel cerraría igual; y la banda de sisa se corta a la abertura MEDIDA delantera + trasera. Cerrado: sin herrajes.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un gilet sans manches en tricot torsadé de laine : un DEVANT à col en V, un DOS à encolure ronde plus haute, assemblés aux épaules et aux côtés. Les emmanchures sont coupées profondes et finies d'une bande côtelée ; l'encolure et les ourlets prennent aussi des bandes côtelées. Un tricot torsadé se resserre en largeur, donc le corps porte une aisance positive modeste qui est BORNÉE pour ne jamais descendre sous le quart de poitrine. Résolu, non deviné : le devant et le dos partagent un même point et une même pente d'épaule pour que les coutures d'épaule soient affleurantes ; la profondeur du col en V est BORNÉE au-dessus de la profondeur d'emmanchure pour qu'un col profond ne croise jamais le contour devant en une encolure auto-sécante que le noyau fermerait quand même ; et la bande d'emmanchure est coupée à l'ouverture MESURÉE devant + dos. Enfilable : pas d'accessoire.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um colete sem mangas em tricô trançado de lã: uma FRENTE com decote em V, umas COSTAS com decote redondo mais alto, unidos nos ombros e laterais. As caves são cortadas profundas e acabadas com barra canelada; o decote e as barras levam faixas caneladas também. Um tricô trançado encolhe na largura, então o corpo leva uma folga positiva modesta que é LIMITADA para nunca descer do quarto de peito. Resolvido, não adivinhado: a frente e as costas partilham um mesmo ponto e inclinação de ombro para que as costuras de ombro fiquem rentes; a profundidade do decote em V é LIMITADA acima da profundidade da cava para que um decote profundo nunca cruze o contorno frontal num decote autointersecante que o núcleo fecharia mesmo assim; e a faixa da cava é cortada à abertura MEDIDA frente + costas. De vestir: sem ferragens.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "cable-knit-vest",
+      "knitwear",
+      "vest",
+      "cable",
+      "v-neck",
+      "sleeveless",
+      "ribbed-band",
+      "pull-on",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full vest",
+        "es": "Chaleco completo",
+        "fr": "Gilet complet",
+        "pt": "Colete completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "armhole_band"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front panel (cut 1)",
+        "es": "Delantero (cortar 1)",
+        "fr": "Devant (couper 1)",
+        "pt": "Frente (cortar 1)"
+      },
+      "default_color": "#6b5b4a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back panel (cut 1)",
+        "es": "Espalda (cortar 1)",
+        "fr": "Dos (couper 1)",
+        "pt": "Costas (cortar 1)"
+      },
+      "default_color": "#7b6b5a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "armhole_band",
+      "label": {
+        "en": "Ribbed armhole band (cut 2)",
+        "es": "Banda de sisa (cortar 2)",
+        "fr": "Bande d'emmanchure (couper 2)",
+        "pt": "Faixa de cava (cortar 2)"
+      },
+      "default_color": "#8b7b6a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "block",
+      "label": {
+        "en": "Fit block",
+        "es": "Base de talla",
+        "fr": "Base d'aisance",
+        "pt": "Base de modelagem"
+      }
+    },
+    {
+      "id": "neck",
+      "label": {
+        "en": "Neckline",
+        "es": "Escote",
+        "fr": "Encolure",
+        "pt": "Decote"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "block",
+      "default": 1000,
+      "min": 700,
+      "max": 1500,
+      "step": 10,
+      "label": {
+        "en": "Chest/bust girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de peito (mm)"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "group": "block",
+      "default": 620,
+      "min": 440,
+      "max": 800,
+      "step": 10,
+      "label": {
+        "en": "Body length, nape to hem (mm)",
+        "es": "Largo, nuca a bajo (mm)",
+        "fr": "Longueur, nuque à ourlet (mm)",
+        "pt": "Comprimento, nuca à barra (mm)"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "block",
+      "default": 420,
+      "min": 300,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombros (mm)",
+        "fr": "Largeur d'épaules (mm)",
+        "pt": "Largura de ombros (mm)"
+      }
+    },
+    {
+      "id": "armhole_depth",
+      "type": "slider",
+      "group": "block",
+      "default": 250,
+      "min": 180,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Armhole depth (mm)",
+        "es": "Profundidad de sisa (mm)",
+        "fr": "Profondeur d'emmanchure (mm)",
+        "pt": "Profundidade da cava (mm)"
+      }
+    },
+    {
+      "id": "neck_width",
+      "type": "slider",
+      "group": "neck",
+      "default": 180,
+      "min": 120,
+      "max": 280,
+      "step": 5,
+      "label": {
+        "en": "Neck width (mm)",
+        "es": "Ancho de escote (mm)",
+        "fr": "Largeur d'encolure (mm)",
+        "pt": "Largura de decote (mm)"
+      }
+    },
+    {
+      "id": "v_depth",
+      "type": "slider",
+      "group": "neck",
+      "default": 190,
+      "min": 40,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Front V depth (mm)",
+        "es": "Profundidad de la V (mm)",
+        "fr": "Profondeur du V (mm)",
+        "pt": "Profundidade do V (mm)"
+      },
+      "tooltip": {
+        "en": "Clamped above the armhole depth so the V never self-intersects",
+        "es": "Acotada sobre la sisa para que la V no se autointerseque",
+        "fr": "Bornée au-dessus de l'emmanchure pour que le V ne se coupe pas",
+        "pt": "Limitada acima da cava para que o V não se autointersecte"
+      }
+    },
+    {
+      "id": "back_neck_rise",
+      "type": "slider",
+      "group": "neck",
+      "default": 24,
+      "min": 10,
+      "max": 45,
+      "step": 2,
+      "label": {
+        "en": "Back neck rise (mm)",
+        "es": "Subida de escote trasero (mm)",
+        "fr": "Montée d'encolure dos (mm)",
+        "pt": "Subida do decote traseiro (mm)"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "group": "block",
+      "default": 80,
+      "min": 0,
+      "max": 220,
+      "step": 5,
+      "label": {
+        "en": "Wearing ease (mm)",
+        "es": "Holgura de uso (mm)",
+        "fr": "Aisance de port (mm)",
+        "pt": "Folga de uso (mm)"
+      }
+    },
+    {
+      "id": "band_depth",
+      "type": "slider",
+      "group": "construction",
+      "default": 30,
+      "min": 18,
+      "max": 55,
+      "step": 2,
+      "label": {
+        "en": "Ribbed band depth (mm)",
+        "es": "Alto de banda de canalé (mm)",
+        "fr": "Hauteur de bande côtelée (mm)",
+        "pt": "Altura da faixa canelada (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 18,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "shoulder_seam",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder seam",
+          "es": "Costura de hombro",
+          "fr": "Couture d'épaule",
+          "pt": "Costura de ombro"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "back",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "shoulder_width",
+          "neck_width"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seam",
+          "es": "Costura lateral",
+          "fr": "Couture de côté",
+          "pt": "Costura lateral"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "ease",
+          "armhole_depth"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Ribbed armhole",
+          "es": "Sisa de canalé",
+          "fr": "Emmanchure côtelée",
+          "pt": "Cava canelada"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "armhole_band",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "armhole_depth",
+          "band_depth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": false,
+      "stretch_draft": true
+    },
+    "societal_benefit": {
+      "en": "A cable-knit vest is a lifetime garment — worn over a shirt for decades — yet a home knitter usually works it from a written pattern in one size with a V that either gapes or chokes. Drafted parametrically, the V is clamped to a safe depth for the body, the shoulders are guaranteed to match, and the ribbed bands are cut to what the openings actually measure, so the finished vest sits flat at the neck and the armhole does not gap.",
+      "es": "Un chaleco de trenzas es una prenda de por vida — se usa sobre una camisa por décadas — y sin embargo quien teje en casa suele hacerlo de un patrón escrito en una talla con una V que se abre o ahoga. Trazado paramétrico, la V se acota a una profundidad segura para el cuerpo, los hombros quedan garantizados a juego, y las bandas de canalé se cortan a lo que las aberturas miden de verdad, así el chaleco terminado asienta plano en el cuello y la sisa no se abre.",
+      "fr": "Un gilet torsadé est un vêtement de toute une vie — porté sur une chemise pendant des décennies — et pourtant le tricoteur amateur le fait d'un patron écrit en une taille avec un V qui bâille ou étrangle. Tracé paramétrique, le V est borné à une profondeur sûre pour le corps, les épaules sont garanties assorties, et les bandes côtelées sont coupées à ce que les ouvertures mesurent vraiment, si bien que le gilet fini repose à plat au cou et l'emmanchure ne bâille pas.",
+      "pt": "Um colete trançado é uma peça de toda a vida — usado sobre uma camisa por décadas — e ainda assim quem tricota em casa costuma fazê-lo de um molde escrito num tamanho com um V que abre ou aperta. Traçado paramétrico, o V é limitado a uma profundidade segura para o corpo, os ombros ficam garantidos combinando, e as faixas caneladas são cortadas ao que as aberturas realmente medem, então o colete pronto assenta plano no pescoço e a cava não abre."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "constraints": [
+    {
+      "expression": "v_depth < armhole_depth",
+      "severity": "warning",
+      "message": {
+        "en": "The V is clamped above the armhole depth so the neckline never self-intersects.",
+        "es": "La V se acota sobre la sisa para que el escote no se autointerseque.",
+        "fr": "Le V est borné au-dessus de l'emmanchure pour que l'encolure ne se coupe pas.",
+        "pt": "O V é limitado acima da cava para que o decote não se autointersecte."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic",
+        "es": "Clásico",
+        "fr": "Classique",
+        "pt": "Clássico"
+      },
+      "values": {
+        "v_depth": 170
+      }
+    },
+    {
+      "id": "deep-v",
+      "label": {
+        "en": "Deep V",
+        "es": "V profunda",
+        "fr": "V profond",
+        "pt": "V profundo"
+      },
+      "values": {
+        "v_depth": 260,
+        "armhole_depth": 300
+      }
+    }
+  ]
+}

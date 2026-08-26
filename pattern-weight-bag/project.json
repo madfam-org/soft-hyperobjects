@@ -1,0 +1,280 @@
+{
+  "project": {
+    "name": "Pattern-Weight Bag Set",
+    "slug": "pattern-weight-bag",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A set of soft covers that turn Yantra4D `pattern-weight` cores into quiet, non-scratch pattern weights — a printed core dropped into a padded fabric pouch so it holds tissue flat without marking or sliding. Each cover is a TOP disc and a BOTTOM disc joined by a GUSSET band, cut to the core's diameter and height with a turning gap. Solved, not guessed: the disc radius is the core radius plus the wall; the gusset length is the MEASURED (polygonised) disc circumference so the cover neither strains over the core nor bags loose; and the gusset height is CLAMPED to at least the core height plus a seam, never a hairline the kernel would still close.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un juego de fundas suaves que convierten los núcleos `pattern-weight` de Yantra4D en pesas de patrón silenciosas y que no rayan — un núcleo impreso metido en una bolsa acolchada para sujetar el papel plano sin marcarlo ni resbalar. Cada funda es un disco SUPERIOR y uno INFERIOR unidos por una banda GALÓN, cortada al diámetro y alto del núcleo con un hueco de vuelta. Resuelto, no adivinado: el radio del disco es el del núcleo más la pared; el largo del galón es la circunferencia MEDIDA (poligonizada) del disco para que la funda ni fuerce ni haga bolsa; y el alto del galón se ACOTA al menos al alto del núcleo más una costura, nunca un filamento que el kernel cerraría igual.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un jeu de housses souples qui transforment les noyaux `pattern-weight` de Yantra4D en poids à patron silencieux et non griffants — un noyau imprimé glissé dans une pochette matelassée pour maintenir le papier à plat sans le marquer ni glisser. Chaque housse est un disque SUPÉRIEUR et un INFÉRIEUR joints par une bande SOUFFLET, coupée au diamètre et à la hauteur du noyau avec une fente de retournement. Résolu, non deviné : le rayon du disque est celui du noyau plus la paroi ; la longueur du soufflet est la circonférence MESURÉE (polygonisée) du disque pour que la housse ne force ni ne poche ; et la hauteur du soufflet est BORNÉE à au moins la hauteur du noyau plus une couture, jamais un filament que le noyau fermerait quand même.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um jogo de capas macias que transformam os núcleos `pattern-weight` do Yantra4D em pesos de molde silenciosos e que não riscam — um núcleo impresso posto numa bolsa acolchoada para segurar o papel plano sem marcá-lo nem deslizar. Cada capa é um disco SUPERIOR e um INFERIOR unidos por uma banda FOLE, cortada ao diâmetro e altura do núcleo com uma abertura de virar. Resolvido, não adivinhado: o raio do disco é o do núcleo mais a parede; o comprimento do fole é a circunferência MEDIDA (poligonizada) do disco para que a capa nem force nem fique bufante; e a altura do fole é LIMITADA a ao menos a altura do núcleo mais uma costura, nunca um filamento que o núcleo fecharia mesmo assim.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "pattern-weight-bag",
+      "care_keeping",
+      "pattern-weight",
+      "cover",
+      "sewing-room",
+      "non-marking",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full cover",
+        "es": "Funda completa",
+        "fr": "Housse complète",
+        "pt": "Capa completa"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "top",
+        "bottom",
+        "gusset"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "top",
+      "label": {
+        "en": "Top disc (cut 1)",
+        "es": "Disco superior (cortar 1)",
+        "fr": "Disque supérieur (couper 1)",
+        "pt": "Disco superior (cortar 1)"
+      },
+      "default_color": "#c0b0a0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "bottom",
+      "label": {
+        "en": "Bottom disc (cut 1)",
+        "es": "Disco inferior (cortar 1)",
+        "fr": "Disque inférieur (couper 1)",
+        "pt": "Disco inferior (cortar 1)"
+      },
+      "default_color": "#d0c0b0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "gusset",
+      "label": {
+        "en": "Gusset band (cut 1)",
+        "es": "Banda galón (cortar 1)",
+        "fr": "Bande soufflet (couper 1)",
+        "pt": "Banda fole (cortar 1)"
+      },
+      "default_color": "#e0d0c0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "core",
+      "label": {
+        "en": "Weight core",
+        "es": "Núcleo",
+        "fr": "Noyau",
+        "pt": "Núcleo"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "core_dia",
+      "type": "slider",
+      "group": "core",
+      "default": 60,
+      "min": 30,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Core diameter (mm)",
+        "es": "Diámetro del núcleo (mm)",
+        "fr": "Diamètre du noyau (mm)",
+        "pt": "Diâmetro do núcleo (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D pattern-weight diameter",
+        "es": "Define el diámetro del pattern-weight de Yantra4D",
+        "fr": "Pilote le diamètre du pattern-weight Yantra4D",
+        "pt": "Pilota o diâmetro do pattern-weight do Yantra4D"
+      }
+    },
+    {
+      "id": "core_height",
+      "type": "slider",
+      "group": "core",
+      "default": 26,
+      "min": 10,
+      "max": 80,
+      "step": 2,
+      "label": {
+        "en": "Core height (mm)",
+        "es": "Alto del núcleo (mm)",
+        "fr": "Hauteur du noyau (mm)",
+        "pt": "Altura do núcleo (mm)"
+      }
+    },
+    {
+      "id": "wall",
+      "type": "slider",
+      "group": "core",
+      "default": 6,
+      "min": 2,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Fabric wall (mm)",
+        "es": "Pared de tela (mm)",
+        "fr": "Paroi de tissu (mm)",
+        "pt": "Parede de tecido (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 14,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "core_pocket",
+        "type": "custom",
+        "label": {
+          "en": "Weight core pocket",
+          "es": "Bolsa del núcleo",
+          "fr": "Poche du noyau",
+          "pt": "Bolsa do núcleo"
+        },
+        "edges": [
+          {
+            "piece": "gusset",
+            "edge": "lower"
+          }
+        ],
+        "parameters": [
+          "core_dia",
+          "core_height",
+          "wall"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Pattern weights let a cutter trace and cut without pinning, which is faster and kinder to the fabric, but a bare metal weight marks tissue and slides off a slope. A soft cover cut to the printed core makes a silent, grippy weight from a scrap of cloth, and printing the core and its cover from one place means a full graduated set costs almost nothing.",
+      "es": "Las pesas de patrón permiten trazar y cortar sin alfileres, lo cual es más rápido y cuida la tela, pero una pesa de metal desnuda marca el papel y resbala en una pendiente. Una funda cortada al núcleo impreso hace una pesa silenciosa y adherente de un retazo, e imprimir el núcleo y su funda de un solo lugar hace que un juego graduado completo cueste casi nada.",
+      "fr": "Les poids à patron permettent de tracer et couper sans épingles, ce qui est plus rapide et ménage le tissu, mais un poids en métal nu marque le papier et glisse sur une pente. Une housse coupée au noyau imprimé fait un poids silencieux et adhérent d'une chute, et imprimer le noyau et sa housse d'un seul endroit fait qu'un jeu gradué complet coûte presque rien.",
+      "pt": "Os pesos de molde permitem traçar e cortar sem alfinetes, o que é mais rápido e cuida do tecido, mas um peso de metal nu marca o papel e desliza numa inclinação. Uma capa cortada ao núcleo impresso faz um peso silencioso e aderente de um retalho, e imprimir o núcleo e sua capa de um só lugar faz um jogo graduado completo custar quase nada."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "presets": [
+    {
+      "id": "small",
+      "label": {
+        "en": "Small (2 oz)",
+        "es": "Chica (2 oz)",
+        "fr": "Petite (2 oz)",
+        "pt": "Pequena (2 oz)"
+      },
+      "values": {
+        "core_dia": 45,
+        "core_height": 18
+      }
+    },
+    {
+      "id": "large",
+      "label": {
+        "en": "Large (6 oz)",
+        "es": "Grande (6 oz)",
+        "fr": "Grande (6 oz)",
+        "pt": "Grande (6 oz)"
+      },
+      "values": {
+        "core_dia": 80,
+        "core_height": 34
+      }
+    }
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "padded cover holding a pattern-weight core",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "pattern-weight",
+      "linked": true,
+      "params_map": {
+        "weight_dia": "core_dia",
+        "weight_h": "core_height",
+        "stack_clear": "wall"
+      }
+    }
+  }
+}

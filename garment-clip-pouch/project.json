@@ -1,0 +1,324 @@
+{
+  "project": {
+    "name": "Garment-Clip Travel Pouch",
+    "slug": "garment-clip-pouch",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A slim flat pouch that carries a handful of printed garment clips (the Yantra4D `garment-clip` solids — the sprung clips that hold a hem or a stack while sewing) so they travel to a class or a fitting without scattering. A FRONT and a BACK panel make the pouch, a top FLAP folds over, and a divided inner keeps the clips from tangling. Solved, not guessed: the pouch is cut to the clip footprint (clip size x count) plus a margin, floored to hold at least a couple; the FLAP is CLAMPED shorter than the pouch height so the mouth is never sealed shut; and the divider count is derived from the per-row clip count, floored at 1.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un estuche plano y delgado que lleva un puñado de pinzas de ropa impresas (los sólidos `garment-clip` de Yantra4D — las pinzas con resorte que sujetan un dobladillo o una pila al coser) para que viajen a una clase o una prueba sin dispersarse. Un panel DELANTERO y uno TRASERO forman el estuche, una SOLAPA superior se dobla, y un interior dividido evita que las pinzas se enreden. Resuelto, no adivinado: el estuche se corta a la huella de las pinzas (tamaño x conteo) más un margen, con piso para llevar al menos un par; la SOLAPA se ACOTA más corta que el alto para que la boca nunca se selle; y el conteo de divisores se deriva de las pinzas por fila, con piso en 1.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une pochette plate et fine qui porte une poignée de pinces à vêtement imprimées (les solides `garment-clip` de Yantra4D — les pinces à ressort qui tiennent un ourlet ou une pile en cousant) pour qu'elles voyagent en cours ou en essayage sans s'éparpiller. Un panneau DEVANT et un DOS forment la pochette, un RABAT supérieur se replie, et un intérieur divisé empêche les pinces de s'emmêler. Résolu, non deviné : la pochette est coupée à l'empreinte des pinces (taille x nombre) plus une marge, planchée pour en tenir au moins deux ; le RABAT est BORNÉ plus court que la hauteur pour que l'ouverture ne se scelle jamais ; et le nombre de séparateurs est dérivé des pinces par rangée, planché à 1.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma bolsa plana e fina que carrega um punhado de prendedores de roupa impressos (os sólidos `garment-clip` do Yantra4D — os prendedores com mola que seguram uma bainha ou uma pilha ao costurar) para que viajem a uma aula ou uma prova sem se espalhar. Um painel FRENTE e um COSTAS formam a bolsa, uma ABA superior dobra, e um interior dividido evita que os prendedores se enrolem. Resolvido, não adivinhado: a bolsa é cortada à pegada dos prendedores (tamanho x contagem) mais uma margem, com piso para levar ao menos um par; a ABA é LIMITADA mais curta que a altura para que a boca nunca se sele; e a contagem de divisores é derivada dos prendedores por fileira, com piso em 1.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "garment-clip-pouch",
+      "care_keeping",
+      "pouch",
+      "travel",
+      "sewing-room",
+      "garment-clip",
+      "divided",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full pouch",
+        "es": "Estuche completo",
+        "fr": "Pochette complète",
+        "pt": "Bolsa completa"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (cut 1)",
+        "es": "Delantero (cortar 1)",
+        "fr": "Devant (couper 1)",
+        "pt": "Frente (cortar 1)"
+      },
+      "default_color": "#a0b0a8",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back with flap (cut 1)",
+        "es": "Trasero con solapa (cortar 1)",
+        "fr": "Dos avec rabat (couper 1)",
+        "pt": "Costas com aba (cortar 1)"
+      },
+      "default_color": "#b0c0b8",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "clip",
+      "label": {
+        "en": "Clip set",
+        "es": "Juego de pinzas",
+        "fr": "Jeu de pinces",
+        "pt": "Jogo de prendedores"
+      }
+    },
+    {
+      "id": "pouch",
+      "label": {
+        "en": "Pouch",
+        "es": "Estuche",
+        "fr": "Pochette",
+        "pt": "Bolsa"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "clip_count",
+      "type": "slider",
+      "group": "clip",
+      "default": 8,
+      "min": 2,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Number of clips",
+        "es": "Número de pinzas",
+        "fr": "Nombre de pinces",
+        "pt": "Número de prendedores"
+      }
+    },
+    {
+      "id": "clip_length",
+      "type": "slider",
+      "group": "clip",
+      "default": 45,
+      "min": 20,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Clip length (mm)",
+        "es": "Largo de pinza (mm)",
+        "fr": "Longueur de pince (mm)",
+        "pt": "Comprimento do prendedor (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D garment-clip jaw length",
+        "es": "Define el largo de mordaza del garment-clip de Yantra4D",
+        "fr": "Pilote la longueur de mâchoire du garment-clip Yantra4D",
+        "pt": "Pilota o comprimento da mordaça do garment-clip do Yantra4D"
+      }
+    },
+    {
+      "id": "clip_width",
+      "type": "slider",
+      "group": "clip",
+      "default": 12,
+      "min": 6,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Clip width (mm)",
+        "es": "Ancho de pinza (mm)",
+        "fr": "Largeur de pince (mm)",
+        "pt": "Largura do prendedor (mm)"
+      }
+    },
+    {
+      "id": "rows",
+      "type": "slider",
+      "group": "pouch",
+      "default": 2,
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": {
+        "en": "Number of rows",
+        "es": "Número de filas",
+        "fr": "Nombre de rangées",
+        "pt": "Número de fileiras"
+      }
+    },
+    {
+      "id": "flap",
+      "type": "slider",
+      "group": "pouch",
+      "default": 45,
+      "min": 20,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Flap length (mm)",
+        "es": "Largo de solapa (mm)",
+        "fr": "Longueur de rabat (mm)",
+        "pt": "Comprimento da aba (mm)"
+      }
+    },
+    {
+      "id": "margin",
+      "type": "slider",
+      "group": "pouch",
+      "default": 20,
+      "min": 12,
+      "max": 50,
+      "step": 2,
+      "label": {
+        "en": "Pouch margin (mm)",
+        "es": "Margen del estuche (mm)",
+        "fr": "Marge de pochette (mm)",
+        "pt": "Margem da bolsa (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 14,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "clip_bed",
+        "type": "pocket",
+        "label": {
+          "en": "Divided clip bed",
+          "es": "Lecho dividido de pinzas",
+          "fr": "Lit divisé de pinces",
+          "pt": "Leito dividido de prendedores"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "mouth"
+          },
+          {
+            "piece": "back",
+            "edge": "bottom"
+          }
+        ],
+        "parameters": [
+          "clip_count",
+          "clip_length",
+          "clip_width",
+          "rows"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Sewing clips replace pins for anyone who cannot use pins — arthritic hands, quilters, leather and knit work — but loose in a bag they scatter and spring open. A divided pouch cut to the clip set keeps them in a single flat layer, findable and closed, and printing the pouch with the clips means a class kit costs a scrap of cloth and a print run.",
+      "es": "Las pinzas de costura reemplazan alfileres para quien no puede usarlos — manos artríticas, quilters, cuero y punto — pero sueltas en una bolsa se dispersan y se abren. Un estuche dividido cortado al juego las mantiene en una sola capa plana, localizables y cerradas, e imprimir el estuche con las pinzas hace que un kit de clase cueste un retazo y una impresión.",
+      "fr": "Les pinces de couture remplacent les épingles pour qui ne peut les utiliser — mains arthritiques, quilteurs, cuir et tricot — mais en vrac dans un sac elles s'éparpillent et s'ouvrent. Une pochette divisée coupée au jeu les garde en une seule couche plate, repérables et fermées, et imprimer la pochette avec les pinces fait qu'un kit de cours coûte une chute et une impression.",
+      "pt": "Os prendedores de costura substituem alfinetes para quem não pode usá-los — mãos artríticas, quilters, couro e tricô — mas soltos numa bolsa se espalham e abrem. Uma bolsa dividida cortada ao jogo os mantém numa única camada plana, localizáveis e fechados, e imprimir a bolsa com os prendedores faz um kit de aula custar um retalho e uma impressão."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "presets": [
+    {
+      "id": "class-kit",
+      "label": {
+        "en": "Class kit (8)",
+        "es": "Kit de clase (8)",
+        "fr": "Kit de cours (8)",
+        "pt": "Kit de aula (8)"
+      },
+      "values": {
+        "clip_count": 8,
+        "rows": 2
+      }
+    },
+    {
+      "id": "big-set",
+      "label": {
+        "en": "Big set (16)",
+        "es": "Juego grande (16)",
+        "fr": "Grand jeu (16)",
+        "pt": "Jogo grande (16)"
+      },
+      "values": {
+        "clip_count": 16,
+        "rows": 2
+      }
+    }
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "divided pouch holding garment clips",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "garment-clip",
+      "linked": true,
+      "params_map": {
+        "jaw_len": "clip_length",
+        "jaw_w": "clip_width",
+        "jaw_t": "clip_width * 0.3"
+      }
+    }
+  }
+}

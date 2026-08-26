@@ -1,0 +1,434 @@
+{
+  "project": {
+    "name": "Stirrup Knit Legging",
+    "slug": "stirrup-legging-knit",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A pull-on jersey legging with a STIRRUP: the leg runs full length and continues, past the ankle, into a narrow strap that passes under the arch of the foot and rejoins the leg — holding the hem down so it never rides up. Cut in a stretch jersey with NEGATIVE ease (the flat pattern is drawn smaller than the body and the knit stretches to fit), so the draft is a two-panel tube. Two things are solved, not guessed: the two stirrup tongues are drawn to the SAME width so the under-arch strap seam is flush, and the strap length is MEASURED (front tongue + back tongue). Negative ease is CLAMPED — the stretch factor is floored so an over-aggressive stretch can never draw a hairline panel the kernel would CCW-normalize into a healthy-looking sliver. Pull-on: no hardware, a folded waist casing takes elastic.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un legging de punto sin cierre con ESTRIBO: la pierna corre completa y sigue, más allá del tobillo, hacia una tira estrecha que pasa bajo el arco del pie y vuelve a la pierna — sujetando el bajo para que no suba. Cortado en jersey elástico con holgura NEGATIVA (el patrón plano se traza más pequeño que el cuerpo y el punto estira para ajustar), así el trazo es un tubo de dos paneles. Dos cosas se resuelven, no se adivinan: las dos lengüetas de estribo se trazan del MISMO ancho para que la costura bajo el arco quede a ras, y el largo de la tira se MIDE (lengüeta delantera + trasera). La holgura negativa se ACOTA — el factor de estiramiento tiene piso para que un estirado agresivo nunca trace un panel filiforme que el kernel normalizaría a CCW dejándolo sano en apariencia. Sin cierre: no hay herrajes, un jareta de cintura doblada lleva el elástico.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un legging tricot enfilable à SOUS-PIED : la jambe court sur toute la longueur et se prolonge, sous la cheville, en une bride étroite qui passe sous la voûte du pied et rejoint la jambe — retenant l'ourlet pour qu'il ne remonte pas. Coupé dans un jersey extensible à aisance NÉGATIVE (le patron à plat est tracé plus petit que le corps et le tricot s'étire pour aller), le tracé est un tube à deux panneaux. Deux choses sont résolues, non devinées : les deux languettes de sous-pied sont tracées à la MÊME largeur pour que la couture sous la voûte soit affleurante, et la longueur de la bride est MESURÉE (languette devant + dos). L'aisance négative est BORNÉE — le facteur d'étirement a un plancher pour qu'un étirement agressif ne trace jamais un panneau filiforme que le noyau normaliserait en CCW en le laissant sain en apparence. Enfilable : pas d'accessoire, une coulisse de taille repliée reçoit l'élastique.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma legging de malha de vestir com ESTRIBO: a perna corre inteira e continua, além do tornozelo, numa tira estreita que passa sob o arco do pé e volta à perna — segurando a barra para que não suba. Cortada em jérsei elástico com folga NEGATIVA (o molde plano é traçado menor que o corpo e a malha estica para servir), o traçado é um tubo de dois painéis. Duas coisas se resolvem, não se adivinham: as duas linguetas do estribo são traçadas da MESMA largura para que a costura sob o arco fique rente, e o comprimento da tira é MEDIDO (lingueta dianteira + traseira). A folga negativa é LIMITADA — o fator de estiramento tem piso para que um estiramento agressivo nunca trace um painel filiforme que o núcleo normalizaria em CCW deixando-o são na aparência. De vestir: sem ferragens, um cós dobrado recebe o elástico.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "stirrup-legging-knit",
+      "knitwear",
+      "legging",
+      "stirrup",
+      "jersey",
+      "pull-on",
+      "stretch",
+      "negative-ease",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full legging",
+        "es": "Legging completo",
+        "fr": "Legging complet",
+        "pt": "Legging completa"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front panel (cut 2, mirrored)",
+        "es": "Panel delantero (cortar 2, espejo)",
+        "fr": "Panneau devant (couper 2, miroir)",
+        "pt": "Painel dianteiro (cortar 2, espelhado)"
+      },
+      "default_color": "#4a5b6f",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back panel (cut 2, mirrored)",
+        "es": "Panel trasero (cortar 2, espejo)",
+        "fr": "Panneau dos (couper 2, miroir)",
+        "pt": "Painel traseiro (cortar 2, espelhado)"
+      },
+      "default_color": "#5a6b7f",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "block",
+      "label": {
+        "en": "Fit block",
+        "es": "Base de talla",
+        "fr": "Base d'aisance",
+        "pt": "Base de modelagem"
+      }
+    },
+    {
+      "id": "leg",
+      "label": {
+        "en": "Leg",
+        "es": "Pierna",
+        "fr": "Jambe",
+        "pt": "Perna"
+      }
+    },
+    {
+      "id": "stirrup",
+      "label": {
+        "en": "Stirrup",
+        "es": "Estribo",
+        "fr": "Sous-pied",
+        "pt": "Estribo"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "block",
+      "default": 760,
+      "min": 560,
+      "max": 1100,
+      "step": 10,
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)",
+        "pt": "Contorno de cintura (mm)"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "block",
+      "default": 960,
+      "min": 680,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)",
+        "pt": "Contorno de quadril (mm)"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      }
+    },
+    {
+      "id": "ankle_girth",
+      "type": "slider",
+      "group": "leg",
+      "default": 240,
+      "min": 160,
+      "max": 360,
+      "step": 10,
+      "label": {
+        "en": "Ankle girth (mm)",
+        "es": "Contorno de tobillo (mm)",
+        "fr": "Tour de cheville (mm)",
+        "pt": "Contorno de tornozelo (mm)"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "ankle_girth"
+      }
+    },
+    {
+      "id": "inside_leg",
+      "type": "slider",
+      "group": "leg",
+      "default": 780,
+      "min": 560,
+      "max": 920,
+      "step": 10,
+      "label": {
+        "en": "Inside leg (mm)",
+        "es": "Entrepierna (mm)",
+        "fr": "Entrejambe (mm)",
+        "pt": "Entreperna (mm)"
+      }
+    },
+    {
+      "id": "body_rise",
+      "type": "slider",
+      "group": "block",
+      "default": 270,
+      "min": 210,
+      "max": 360,
+      "step": 5,
+      "label": {
+        "en": "Body rise (mm)",
+        "es": "Tiro (mm)",
+        "fr": "Montée (mm)",
+        "pt": "Gancho (mm)"
+      }
+    },
+    {
+      "id": "stretch_factor",
+      "type": "slider",
+      "group": "construction",
+      "default": 0.82,
+      "min": 0.62,
+      "max": 0.98,
+      "step": 0.02,
+      "label": {
+        "en": "Stretch factor (<1 = negative ease)",
+        "es": "Factor de estiramiento (<1 = holgura negativa)",
+        "fr": "Facteur d'étirement (<1 = aisance négative)",
+        "pt": "Fator de estiramento (<1 = folga negativa)"
+      },
+      "tooltip": {
+        "en": "Floored so a panel can never draw to a hairline width",
+        "es": "Con piso para que un panel nunca se trace filiforme",
+        "fr": "Avec plancher pour qu'un panneau ne soit jamais filiforme",
+        "pt": "Com piso para que um painel nunca seja filiforme"
+      }
+    },
+    {
+      "id": "stirrup_width",
+      "type": "slider",
+      "group": "stirrup",
+      "default": 34,
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Under-arch strap width (mm)",
+        "es": "Ancho de tira bajo el arco (mm)",
+        "fr": "Largeur de bride sous la voûte (mm)",
+        "pt": "Largura da tira sob o arco (mm)"
+      }
+    },
+    {
+      "id": "stirrup_drop",
+      "type": "slider",
+      "group": "stirrup",
+      "default": 60,
+      "min": 25,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Stirrup drop below ankle (mm)",
+        "es": "Caída del estribo bajo el tobillo (mm)",
+        "fr": "Chute du sous-pied sous la cheville (mm)",
+        "pt": "Queda do estribo abaixo do tornozelo (mm)"
+      }
+    },
+    {
+      "id": "waist_casing",
+      "type": "slider",
+      "group": "construction",
+      "default": 40,
+      "min": 24,
+      "max": 70,
+      "step": 2,
+      "label": {
+        "en": "Waist elastic casing (mm)",
+        "es": "Jareta de elástico (mm)",
+        "fr": "Coulisse d'élastique (mm)",
+        "pt": "Cós de elástico (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "jersey-algodon"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "under_arch_strap",
+        "type": "hem",
+        "label": {
+          "en": "Under-arch stirrup strap",
+          "es": "Tira de estribo bajo el arco",
+          "fr": "Bride de sous-pied",
+          "pt": "Tira de estribo sob o arco"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "strap_end"
+          },
+          {
+            "piece": "back",
+            "edge": "strap_end"
+          }
+        ],
+        "parameters": [
+          "stirrup_width",
+          "stirrup_drop"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Leg side seam",
+          "es": "Costura lateral",
+          "fr": "Couture de côté",
+          "pt": "Costura lateral"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "inside_leg",
+          "ankle_girth"
+        ]
+      },
+      {
+        "id": "waist_casing_edge",
+        "type": "waistband",
+        "label": {
+          "en": "Elastic waist casing",
+          "es": "Jareta de cintura",
+          "fr": "Coulisse de taille",
+          "pt": "Cós elástico"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "waist"
+          },
+          {
+            "piece": "back",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "waist_casing",
+          "stretch_factor"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": false,
+      "stretch_draft": true
+    },
+    "societal_benefit": {
+      "en": "The stirrup legging solves the one complaint every legging wearer has — the hem riding up the calf — with a strip of the same knit under the arch, and it is trivially cheap to make from a metre of jersey. Drafted with the stretch factor floored, it fits a real range of bodies from one pattern, and the under-arch strap is drawn to a measured length so it neither cuts into the arch nor hangs loose.",
+      "es": "El legging de estribo resuelve la única queja de quien usa leggings — el bajo que sube por la pantorrilla — con una tira del mismo punto bajo el arco, y es baratísimo de hacer con un metro de jersey. Trazado con el factor de estiramiento con piso, ajusta a un rango real de cuerpos desde un solo patrón, y la tira bajo el arco se traza a una longitud medida para que ni corte el arco ni cuelgue floja.",
+      "fr": "Le legging à sous-pied résout la seule plainte de qui porte des leggings — l'ourlet qui remonte le mollet — avec une bande du même tricot sous la voûte, et il est dérisoirement bon marché à faire dans un mètre de jersey. Tracé avec le facteur d'étirement borné, il va à un vrai éventail de corps depuis un seul patron, et la bride sous la voûte est tracée à une longueur mesurée pour qu'elle ne cisaille pas la voûte ni ne pende.",
+      "pt": "A legging com estribo resolve a única queixa de quem usa leggings — a barra que sobe pela panturrilha — com uma tira da mesma malha sob o arco, e é baratíssima de fazer com um metro de jérsei. Traçada com o fator de estiramento com piso, serve a uma faixa real de corpos a partir de um só molde, e a tira sob o arco é traçada a um comprimento medido para que não corte o arco nem fique frouxa."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "constraints": [
+    {
+      "expression": "stretch_factor < 1",
+      "severity": "warning",
+      "message": {
+        "en": "A legging is drafted with negative ease — the pattern is smaller than the body.",
+        "es": "Un legging se traza con holgura negativa — el patrón es menor que el cuerpo.",
+        "fr": "Un legging se trace en aisance négative — le patron est plus petit que le corps.",
+        "pt": "Uma legging é traçada com folga negativa — o molde é menor que o corpo."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "everyday",
+      "label": {
+        "en": "Everyday",
+        "es": "Diario",
+        "fr": "Quotidien",
+        "pt": "Diário"
+      },
+      "values": {
+        "stretch_factor": 0.84
+      }
+    },
+    {
+      "id": "compression",
+      "label": {
+        "en": "Compression",
+        "es": "Compresión",
+        "fr": "Compression",
+        "pt": "Compressão"
+      },
+      "values": {
+        "stretch_factor": 0.72
+      }
+    }
+  ]
+}

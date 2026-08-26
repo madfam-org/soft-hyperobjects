@@ -1,0 +1,308 @@
+{
+  "project": {
+    "name": "Belt-Hanger Loop Organizer",
+    "slug": "belt-hanger-loop-organizer",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A hanging fabric strip that turns a printed belt-hanger spine (the Yantra4D `belt-hanger` solid) into a soft, non-scratch belt keeper — a SPINE panel that sleeves over the printed hanger bar and a row of fabric LOOPS that each cradle a belt so the buckles do not knock or scratch. Solved, not guessed: the loop count equals the hanger hook count and the loops are spaced down the spine at the MEASURED spine length over the count, so a loop sits at each hook; each loop length is CLAMPED to clear a belt width plus a turn (never a hairline a belt cannot pass); and the spine sleeve is floored to sleeve on.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una tira de tela colgante que convierte un espinazo de gancho de cinturones impreso (el sólido `belt-hanger` de Yantra4D) en un guarda-cinturones suave y que no raya — un panel ESPINAZO que se enfunda en la barra impresa y una fila de PRESILLAS de tela que acunan cada cinturón para que las hebillas no golpeen ni rayen. Resuelto, no adivinado: el número de presillas iguala el de ganchos y se espacian a lo largo del espinazo a la longitud MEDIDA sobre el conteo, para que una presilla caiga en cada gancho; el largo de cada presilla se ACOTA para dar paso a un ancho de cinturón más una vuelta; y el espinazo tiene piso para enfundarse.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une bande de tissu suspendue qui transforme une épine de range-ceintures imprimée (le solide `belt-hanger` de Yantra4D) en gardien de ceintures souple et non griffant — un panneau ÉPINE qui s'enfile sur la barre imprimée et une rangée de PASSANTS en tissu qui berce chaque ceinture pour que les boucles ne cognent ni ne griffent. Résolu, non deviné : le nombre de passants égale celui des crochets et ils s'espacent le long de l'épine à la longueur MESURÉE sur le nombre, pour qu'un passant tombe à chaque crochet ; la longueur de chaque passant est BORNÉE pour laisser passer une largeur de ceinture plus un retour ; et l'épine a un plancher pour s'enfiler.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma tira de tecido pendente que transforma uma espinha de cabide de cintos impressa (o sólido `belt-hanger` do Yantra4D) num guardião de cintos macio e que não risca — um painel ESPINHA que se enfia na barra impressa e uma fileira de ALÇAS de tecido que embalam cada cinto para que as fivelas não batam nem risquem. Resolvido, não adivinhado: o número de alças iguala o de ganchos e elas se espaçam ao longo da espinha ao comprimento MEDIDO sobre a contagem, para que uma alça caia em cada gancho; o comprimento de cada alça é LIMITADO para dar passagem a uma largura de cinto mais uma volta; e a espinha tem piso para enfiar.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "belt-hanger-loop-organizer",
+      "care_keeping",
+      "organizer",
+      "belt",
+      "hanger",
+      "belt-hanger",
+      "loops",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full organizer",
+        "es": "Organizador completo",
+        "fr": "Range complet",
+        "pt": "Organizador completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "spine",
+        "loop"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "spine",
+      "label": {
+        "en": "Spine sleeve (cut 1)",
+        "es": "Espinazo (cortar 1)",
+        "fr": "Épine (couper 1)",
+        "pt": "Espinha (cortar 1)"
+      },
+      "default_color": "#9a8a70",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "loop",
+      "label": {
+        "en": "Belt loop (cut per hook)",
+        "es": "Presilla (cortar por gancho)",
+        "fr": "Passant (couper par crochet)",
+        "pt": "Alça (cortar por gancho)"
+      },
+      "default_color": "#aa9a80",
+      "cut": {
+        "quantity": 6,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "hanger",
+      "label": {
+        "en": "Hanger",
+        "es": "Gancho",
+        "fr": "Cintre",
+        "pt": "Cabide"
+      }
+    },
+    {
+      "id": "loop",
+      "label": {
+        "en": "Loops",
+        "es": "Presillas",
+        "fr": "Passants",
+        "pt": "Alças"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "hook_count",
+      "type": "slider",
+      "group": "hanger",
+      "default": 6,
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Hook count",
+        "es": "Número de ganchos",
+        "fr": "Nombre de crochets",
+        "pt": "Número de ganchos"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D belt-hanger hook count",
+        "es": "Define el número de ganchos del belt-hanger de Yantra4D",
+        "fr": "Pilote le nombre de crochets du belt-hanger Yantra4D",
+        "pt": "Pilota o número de ganchos do belt-hanger do Yantra4D"
+      }
+    },
+    {
+      "id": "belt_width",
+      "type": "slider",
+      "group": "loop",
+      "default": 40,
+      "min": 15,
+      "max": 70,
+      "step": 5,
+      "label": {
+        "en": "Belt width (mm)",
+        "es": "Ancho de cinturón (mm)",
+        "fr": "Largeur de ceinture (mm)",
+        "pt": "Largura de cinto (mm)"
+      }
+    },
+    {
+      "id": "hanger_length",
+      "type": "slider",
+      "group": "hanger",
+      "default": 300,
+      "min": 160,
+      "max": 520,
+      "step": 10,
+      "label": {
+        "en": "Hanger spine length (mm)",
+        "es": "Largo del espinazo (mm)",
+        "fr": "Longueur d'épine (mm)",
+        "pt": "Comprimento da espinha (mm)"
+      }
+    },
+    {
+      "id": "bar_width",
+      "type": "slider",
+      "group": "hanger",
+      "default": 30,
+      "min": 12,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Hanger bar width (mm)",
+        "es": "Ancho de barra (mm)",
+        "fr": "Largeur de barre (mm)",
+        "pt": "Largura da barra (mm)"
+      }
+    },
+    {
+      "id": "loop_reach",
+      "type": "slider",
+      "group": "loop",
+      "default": 50,
+      "min": 25,
+      "max": 100,
+      "step": 5,
+      "label": {
+        "en": "Loop reach (mm)",
+        "es": "Alcance de presilla (mm)",
+        "fr": "Portée de passant (mm)",
+        "pt": "Alcance da alça (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 14,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "loop_row",
+        "type": "custom",
+        "label": {
+          "en": "Belt loop row",
+          "es": "Fila de presillas",
+          "fr": "Rangée de passants",
+          "pt": "Fileira de alças"
+        },
+        "edges": [
+          {
+            "piece": "loop",
+            "edge": "attach"
+          },
+          {
+            "piece": "spine",
+            "edge": "top"
+          }
+        ],
+        "parameters": [
+          "hook_count",
+          "belt_width",
+          "hanger_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Belts stored on a metal rack knock their buckles and scratch each other, and a belt drawer is a tangle. A soft loop organizer sleeved over a printed hanger cradles each belt separately so the leather and the buckles survive, and matching the loops to the hanger's hooks means the whole keeper — hanger and loops — comes from one file for the cost of a strip of twill.",
+      "es": "Los cinturones en un perchero de metal golpean sus hebillas y se rayan, y un cajón de cinturones es un enredo. Un organizador de presillas enfundado en un gancho impreso acuna cada cinturón por separado para que el cuero y las hebillas sobrevivan, y hacer coincidir las presillas con los ganchos hace que todo el guarda — gancho y presillas — salga de un archivo por el costo de una tira de sarga.",
+      "fr": "Les ceintures rangées sur un support en métal cognent leurs boucles et se griffent, et un tiroir à ceintures est un enchevêtrement. Un range à passants enfilé sur un cintre imprimé berce chaque ceinture séparément pour que le cuir et les boucles survivent, et accorder les passants aux crochets fait que tout le gardien — cintre et passants — vient d'un fichier pour le prix d'une bande de sergé.",
+      "pt": "Cintos guardados num suporte de metal batem suas fivelas e se riscam, e uma gaveta de cintos é um emaranhado. Um organizador de alças enfiado num cabide impresso embala cada cinto separadamente para que o couro e as fivelas sobrevivam, e casar as alças com os ganchos faz todo o guardião — cabide e alças — vir de um arquivo pelo custo de uma tira de sarja."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "presets": [
+    {
+      "id": "compact",
+      "label": {
+        "en": "Compact (4 belts)",
+        "es": "Compacto (4 cinturones)",
+        "fr": "Compact (4 ceintures)",
+        "pt": "Compacto (4 cintos)"
+      },
+      "values": {
+        "hook_count": 4,
+        "hanger_length": 240
+      }
+    },
+    {
+      "id": "full",
+      "label": {
+        "en": "Full (8 belts)",
+        "es": "Completo (8 cinturones)",
+        "fr": "Complet (8 ceintures)",
+        "pt": "Completo (8 cintos)"
+      },
+      "values": {
+        "hook_count": 8,
+        "hanger_length": 400
+      }
+    }
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "loop organizer over a belt hanger spine",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "belt-hanger",
+      "linked": true,
+      "params_map": {
+        "hook_count": "hook_count",
+        "strap_w": "belt_width",
+        "hook_reach": "loop_reach"
+      }
+    }
+  }
+}

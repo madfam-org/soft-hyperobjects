@@ -1,0 +1,319 @@
+{
+  "project": {
+    "name": "Toe-Post Sandal Strap Set",
+    "slug": "toe-post-sandal-strap",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The strap set for a toe-post sandal (the leather flip-flop / huarache toe-post): a Y-shaped TOE POST that passes between the big and second toe and splits into two INSTEP straps, and a back HEEL strap — all riveted through the sole. Sized from PLAIN parameters — ISO 8559 declares no foot landmark codes, so none is invented. Solved, not guessed: the instep straps are half the MEASURED instep girth plus a rivet lap each and the heel strap is the back-of-heel run plus laps; each rivet is stepped in off the strap end by its own cap plus a margin so it seats on leather and grips; and the toe-post split is CLAMPED so the Y never crosses itself. The rivets bridge to a Yantra4D `rivet`.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El juego de correas de una sandalia de dedo (el toe-post de cuero / huarache): un TIRO EN Y que pasa entre el dedo gordo y el segundo y se divide en dos correas de EMPEINE, y una correa de TALÓN trasera — todas remachadas al piso. Dimensionado con parámetros PLANOS — ISO 8559 no declara códigos de pie, así que no se inventa ninguno. Resuelto, no adivinado: las correas de empeine son la mitad del contorno de empeine MEDIDO más un cruce de remache cada una y la de talón es el contorno trasero más cruces; cada remache se mete desde el extremo por su propia cabeza más un margen para asentar en cuero; y la división del tiro se ACOTA para que la Y no se cruce. Los remaches se puentean a un `rivet` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le jeu de brides d'une sandale à orteil (le toe-post en cuir / huarache) : une ENTRE-DOIGT en Y qui passe entre le gros et le second orteil et se divise en deux brides de COU-DE-PIED, et une bride de TALON arrière — toutes rivetées à travers la semelle. Dimensionné à partir de paramètres SIMPLES — ISO 8559 ne déclare aucun code de pied, donc aucun n'est inventé. Résolu, non deviné : les brides de cou-de-pied sont la moitié du tour de cou-de-pied MESURÉ plus un recouvrement de rivet chacune et la bride de talon est le tour arrière plus recouvrements ; chaque rivet est rentré depuis le bout de sa propre tête plus une marge pour porter sur le cuir ; et la division de l'entre-doigt est BORNÉE pour que le Y ne se croise pas. Les rivets font le pont vers un `rivet` Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O jogo de tiras de uma sandália de dedo (o toe-post de couro / huarache): um ENTRE-DEDO em Y que passa entre o dedão e o segundo e se divide em duas tiras de PEITO, e uma tira de CALCANHAR traseira — todas rebitadas através da sola. Dimensionado a partir de parâmetros SIMPLES — a ISO 8559 não declara códigos de pé, então nenhum é inventado. Resolvido, não adivinhado: as tiras de peito são a metade do contorno de peito MEDIDO mais uma sobreposição de rebite cada uma e a de calcanhar é o contorno traseiro mais sobreposições; cada rebite é recuado da ponta pela própria cabeça mais uma margem para assentar no couro; e a divisão do entre-dedo é LIMITADA para que o Y não se cruze. Os rebites fazem a ponte para um `rivet` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "toe-post-sandal-strap",
+      "footwear_soft",
+      "sandal",
+      "toe-post",
+      "huarache",
+      "strap",
+      "rivet",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full strap set",
+        "es": "Juego de correas",
+        "fr": "Jeu de brides",
+        "pt": "Jogo de tiras"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "toe_post",
+        "heel"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "toe_post",
+      "label": {
+        "en": "Toe post + instep straps (cut 1)",
+        "es": "Tiro + correas de empeine (cortar 1)",
+        "fr": "Entre-doigt + brides cou-de-pied (couper 1)",
+        "pt": "Entre-dedo + tiras de peito (cortar 1)"
+      },
+      "default_color": "#8a5a3a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "heel",
+      "label": {
+        "en": "Heel strap (cut 1)",
+        "es": "Correa de talón (cortar 1)",
+        "fr": "Bride de talon (couper 1)",
+        "pt": "Tira de calcanhar (cortar 1)"
+      },
+      "default_color": "#9a6a4a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "foot",
+      "label": {
+        "en": "Foot",
+        "es": "Pie",
+        "fr": "Pied",
+        "pt": "Pé"
+      }
+    },
+    {
+      "id": "strap",
+      "label": {
+        "en": "Straps",
+        "es": "Correas",
+        "fr": "Brides",
+        "pt": "Tiras"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "foot_length",
+      "type": "slider",
+      "group": "foot",
+      "default": 260,
+      "min": 150,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Foot length (mm)",
+        "es": "Largo del pie (mm)",
+        "fr": "Longueur du pied (mm)",
+        "pt": "Comprimento do pé (mm)"
+      }
+    },
+    {
+      "id": "foot_width",
+      "type": "slider",
+      "group": "foot",
+      "default": 95,
+      "min": 60,
+      "max": 150,
+      "step": 5,
+      "label": {
+        "en": "Foot width (mm)",
+        "es": "Ancho del pie (mm)",
+        "fr": "Largeur du pied (mm)",
+        "pt": "Largura do pé (mm)"
+      }
+    },
+    {
+      "id": "instep_girth",
+      "type": "slider",
+      "group": "foot",
+      "default": 240,
+      "min": 150,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Instep girth (mm)",
+        "es": "Contorno de empeine (mm)",
+        "fr": "Tour de cou-de-pied (mm)",
+        "pt": "Contorno do peito (mm)"
+      }
+    },
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "group": "strap",
+      "default": 22,
+      "min": 12,
+      "max": 45,
+      "step": 1,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de correa (mm)",
+        "fr": "Largeur de bride (mm)",
+        "pt": "Largura da tira (mm)"
+      }
+    },
+    {
+      "id": "rivet_cap",
+      "type": "slider",
+      "group": "strap",
+      "default": 9,
+      "min": 5,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Rivet cap diameter (mm)",
+        "es": "Diámetro de cabeza (mm)",
+        "fr": "Diamètre de tête (mm)",
+        "pt": "Diâmetro da cabeça (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D rivet cap height and burr",
+        "es": "Define la cabeza y arandela del rivet de Yantra4D",
+        "fr": "Pilote la tête et la rondelle du rivet Yantra4D",
+        "pt": "Pilota a cabeça e a arruela do rivet do Yantra4D"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "instep_strap",
+        "type": "custom",
+        "label": {
+          "en": "Instep strap run",
+          "es": "Correa de empeine",
+          "fr": "Bride de cou-de-pied",
+          "pt": "Tira de peito"
+        },
+        "edges": [
+          {
+            "piece": "toe_post",
+            "edge": "arm_r_top"
+          }
+        ],
+        "parameters": [
+          "instep_girth",
+          "strap_width"
+        ]
+      },
+      {
+        "id": "heel_strap",
+        "type": "custom",
+        "label": {
+          "en": "Heel strap run",
+          "es": "Correa de talón",
+          "fr": "Bride de talon",
+          "pt": "Tira de calcanhar"
+        },
+        "edges": [
+          {
+            "piece": "heel",
+            "edge": "top"
+          }
+        ],
+        "parameters": [
+          "foot_width",
+          "strap_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The riveted toe-post sandal is one of the oldest and most-repaired shoes in the world — a huarache is re-strapped for decades on the same sole. Cutting the strap set to the measured foot and riveting through the sole means a maker gets a sandal that fits and that any part can be replaced on, and the rivets that hold it print from the same file as the straps, so the whole shoe comes from one place.",
+      "es": "La sandalia de dedo remachada es de los zapatos más antiguos y reparados del mundo — un huarache se re-corretea por décadas sobre el mismo piso. Cortar el juego a la medida del pie y remachar por el piso hace que se obtenga una sandalia que ajusta y a la que cualquier parte se cambia, y los remaches que la sujetan se imprimen del mismo archivo que las correas, así todo el zapato sale de un solo lugar.",
+      "fr": "La sandale à orteil rivetée est l'une des chaussures les plus anciennes et les plus réparées au monde — un huarache est re-bridé pendant des décennies sur la même semelle. Couper le jeu à la mesure du pied et riveter à travers la semelle fait qu'on obtient une sandale qui va et dont toute pièce se remplace, et les rivets qui la tiennent s'impriment du même fichier que les brides, si bien que toute la chaussure vient d'un seul endroit.",
+      "pt": "A sandália de dedo rebitada é um dos sapatos mais antigos e reparados do mundo — um huarache é re-amarrado por décadas sobre a mesma sola. Cortar o jogo à medida do pé e rebitar através da sola faz obter uma sandália que serve e na qual qualquer parte se troca, e os rebites que a seguram imprimem do mesmo arquivo que as tiras, então o sapato todo vem de um só lugar."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "presets": [
+    {
+      "id": "flip-flop",
+      "label": {
+        "en": "Flip-flop (no heel)",
+        "es": "Chancla (sin talón)",
+        "fr": "Tong (sans talon)",
+        "pt": "Chinelo (sem calcanhar)"
+      },
+      "values": {
+        "strap_width": 26
+      }
+    },
+    {
+      "id": "huarache",
+      "label": {
+        "en": "Huarache (heel strap)",
+        "es": "Huarache (con talón)",
+        "fr": "Huarache (avec talon)",
+        "pt": "Huarache (com calcanhar)"
+      },
+      "values": {
+        "strap_width": 18
+      }
+    }
+  ],
+  "notion": {
+    "kind": "rivet",
+    "subtype": "tubular rivet through the strap ends and sole",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "rivet",
+      "linked": true,
+      "params_map": {
+        "cap_h": "rivet_cap * 0.42",
+        "bore_dia": "rivet_cap * 0.30",
+        "burr_dia": "rivet_cap * 0.80"
+      }
+    }
+  }
+}

@@ -1,0 +1,363 @@
+{
+  "project": {
+    "name": "Lattice-Drape Printed Skirt",
+    "slug": "lattice-drape-skirt",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A made-to-measure skirt built from a printed TPU PLEAT PANEL — a printed accordion of vertical pleats that springs the skirt into a permanent sculptural drape (the pleats are printed IN, not pressed, so they never fall out). Fashion Cabinet owns the fashion: an A-line skirt panel (cut on the fold, front and back) sized from the waist and hip, and the pleat FIELD (pleat count) DERIVED from the panel width and the pitch so the accordion exactly fills the skirt. Solved, not guessed: the pleat count is derived and floored at 2 (a single pleat is not an accordion); the hip half is never below the waist half and the hem half never below the hip half so the A-line never inverts into an hourglass the kernel would CCW-normalize; and the pleat depth is CLAMPED under the pitch so the folds never cross. The panel is Yantra4D territory (tpu-pleat-panel).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una falda a medida construida con un PANEL DE PLIEGUES de TPU impreso — un acordeón impreso de pliegues verticales que da a la falda un drapeado escultórico permanente (los pliegues se imprimen, no se planchan, así que nunca se caen). Fashion Cabinet posee la moda: un panel de falda en A (cortado al hilo doblado, delante y detrás) dimensionado por cintura y cadera, y el CAMPO de pliegues (conteo) DERIVADO del ancho del panel y el paso para que el acordeón llene exactamente la falda. Resuelto, no adivinado: el conteo de pliegues se deriva y tiene piso en 2 (un solo pliegue no es acordeón); la media cadera nunca baja de la media cintura y el medio bajo nunca de la media cadera para que la línea A nunca se invierta en reloj de arena que el kernel normalizaría a CCW; y la profundidad de pliegue se ACOTA bajo el paso para que los dobleces no se crucen. El panel es territorio de Yantra4D (tpu-pleat-panel).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une jupe sur mesure construite à partir d'un PANNEAU PLISSÉ TPU imprimé — un accordéon imprimé de plis verticaux qui donne à la jupe un drapé sculptural permanent (les plis sont imprimés, non repassés, donc ils ne tombent jamais). Fashion Cabinet possède la mode : un panneau de jupe en A (coupé au pli, devant et dos) dimensionné par la taille et les hanches, et le CHAMP de plis (nombre) DÉRIVÉ de la largeur du panneau et du pas pour que l'accordéon remplisse exactement la jupe. Résolu, non deviné : le nombre de plis est dérivé et planché à 2 (un seul pli n'est pas un accordéon) ; la demi-hanche n'est jamais sous la demi-taille et le demi-ourlet jamais sous la demi-hanche pour que la ligne A ne s'inverse jamais en sablier que le noyau normaliserait en CCW ; et la profondeur de pli est BORNÉE sous le pas pour que les plis ne se croisent pas. Le panneau est territoire Yantra4D (tpu-pleat-panel).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma saia sob medida construída a partir de um PAINEL DE PREGAS de TPU impresso — um acordeão impresso de pregas verticais que dá à saia um caimento escultórico permanente (as pregas são impressas, não passadas, então nunca caem). A Fashion Cabinet possui a moda: um painel de saia em A (cortado no fio dobrado, frente e costas) dimensionado pela cintura e quadril, e o CAMPO de pregas (contagem) DERIVADO da largura do painel e do passo para que o acordeão preencha exatamente a saia. Resolvido, não adivinhado: a contagem de pregas é derivada e com piso em 2 (uma só prega não é acordeão); a meia-quadril nunca fica abaixo da meia-cintura e a meia-barra nunca abaixo da meia-quadril para que a linha A nunca se inverta em ampulheta que o núcleo normalizaria em CCW; e a profundidade de prega é LIMITADA sob o passo para que as dobras não se cruzem. O painel é território do Yantra4D (tpu-pleat-panel).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "lattice-drape-skirt",
+      "am_fashion",
+      "skirt",
+      "tpu-pleat",
+      "printed-textile",
+      "accordion-pleat",
+      "drape",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full skirt",
+        "es": "Falda completa",
+        "fr": "Jupe complète",
+        "pt": "Saia completa"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "panel"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "panel",
+      "label": {
+        "en": "Skirt panel (front + back, cut on fold, 2)",
+        "es": "Panel de falda (delante + detrás, al hilo doblado, 2)",
+        "fr": "Panneau de jupe (devant + dos, au pli, 2)",
+        "pt": "Painel de saia (frente + costas, no fio dobrado, 2)"
+      },
+      "default_color": "#7a6b8a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "block",
+      "label": {
+        "en": "Fit block",
+        "es": "Base de talla",
+        "fr": "Base d'aisance",
+        "pt": "Base de modelagem"
+      }
+    },
+    {
+      "id": "pleat",
+      "label": {
+        "en": "Pleat panel",
+        "es": "Panel de pliegues",
+        "fr": "Panneau plissé",
+        "pt": "Painel de pregas"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "block",
+      "default": 780,
+      "min": 560,
+      "max": 1400,
+      "step": 10,
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)",
+        "pt": "Contorno de cintura (mm)"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "block",
+      "default": 980,
+      "min": 600,
+      "max": 1600,
+      "step": 10,
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)",
+        "pt": "Contorno de quadril (mm)"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      }
+    },
+    {
+      "id": "skirt_length",
+      "type": "slider",
+      "group": "block",
+      "default": 560,
+      "min": 300,
+      "max": 1100,
+      "step": 10,
+      "label": {
+        "en": "Skirt length (mm)",
+        "es": "Largo de falda (mm)",
+        "fr": "Longueur de jupe (mm)",
+        "pt": "Comprimento de saia (mm)"
+      }
+    },
+    {
+      "id": "hem_flare",
+      "type": "slider",
+      "group": "block",
+      "default": 160,
+      "min": 0,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Hem flare, each side (mm)",
+        "es": "Vuelo de bajo, cada lado (mm)",
+        "fr": "Évasement d'ourlet, chaque côté (mm)",
+        "pt": "Evasê da barra, cada lado (mm)"
+      }
+    },
+    {
+      "id": "pleat_pitch",
+      "type": "slider",
+      "group": "pleat",
+      "default": 30,
+      "min": 10,
+      "max": 80,
+      "step": 2,
+      "label": {
+        "en": "Pleat pitch (mm)",
+        "es": "Paso de pliegue (mm)",
+        "fr": "Pas de pli (mm)",
+        "pt": "Passo da prega (mm)"
+      }
+    },
+    {
+      "id": "pleat_depth",
+      "type": "slider",
+      "group": "pleat",
+      "default": 18,
+      "min": 4,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Pleat fold depth (mm)",
+        "es": "Profundidad de pliegue (mm)",
+        "fr": "Profondeur de pli (mm)",
+        "pt": "Profundidade de prega (mm)"
+      },
+      "tooltip": {
+        "en": "Clamped under the pitch so the folds never cross",
+        "es": "Acotada bajo el paso para que los dobleces no se crucen",
+        "fr": "Bornée sous le pas pour que les plis ne se croisent",
+        "pt": "Limitada sob o passo para que as dobras não se cruzem"
+      }
+    },
+    {
+      "id": "wall",
+      "type": "slider",
+      "group": "pleat",
+      "default": 1.4,
+      "min": 0.6,
+      "max": 4.0,
+      "step": 0.2,
+      "label": {
+        "en": "Printed wall thickness (mm)",
+        "es": "Espesor de pared impresa (mm)",
+        "fr": "Épaisseur de paroi imprimée (mm)",
+        "pt": "Espessura de parede impressa (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 0,
+      "max": 25,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "tpu-panel-impreso"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "am_fashion",
+    "interfaces": [
+      {
+        "id": "pleat_field",
+        "type": "custom",
+        "label": {
+          "en": "Printed pleat field",
+          "es": "Campo de pliegues impreso",
+          "fr": "Champ de plis imprimé",
+          "pt": "Campo de pregas impresso"
+        },
+        "edges": [
+          {
+            "piece": "panel",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "hip_girth",
+          "hem_flare",
+          "pleat_pitch",
+          "wall"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Skirt side seam",
+          "es": "Costura lateral",
+          "fr": "Couture de côté",
+          "pt": "Costura lateral"
+        },
+        "edges": [
+          {
+            "piece": "panel",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "skirt_length",
+          "hip_girth",
+          "hem_flare"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": true,
+      "printed_textile": true
+    },
+    "societal_benefit": {
+      "en": "A pressed pleat is a maintenance burden — it drops out in the wash and has to be re-set — while a printed accordion pleat holds its drape for the life of the garment. Deriving the pleat count from the panel means the skirt prints to fit any waist and hip from one file, and the A-line clamps guarantee the silhouette never inverts, so a maker gets a sculptural, permanently pleated skirt that a pressed one can only imitate for one wear.",
+      "es": "Un pliegue planchado es una carga de mantenimiento — se cae al lavar y hay que rehacerlo — mientras que un pliegue de acordeón impreso mantiene su drapeado toda la vida de la prenda. Derivar el conteo de pliegues del panel hace que la falda se imprima a medida de cualquier cintura y cadera desde un archivo, y los topes de la línea A garantizan que la silueta nunca se invierta, así el fabricante obtiene una falda escultórica y plisada de forma permanente que una planchada solo puede imitar por un uso.",
+      "fr": "Un pli repassé est une charge d'entretien — il tombe au lavage et doit être refait — tandis qu'un pli accordéon imprimé garde son drapé pour la vie du vêtement. Dériver le nombre de plis du panneau fait que la jupe s'imprime sur mesure pour toute taille et hanche depuis un fichier, et les bornes de la ligne A garantissent que la silhouette ne s'inverse jamais, si bien que le fabricant obtient une jupe sculpturale et plissée de façon permanente qu'une repassée ne peut imiter qu'un temps.",
+      "pt": "Uma prega passada é um ônus de manutenção — cai na lavagem e tem de ser refeita — enquanto uma prega acordeão impressa mantém seu caimento pela vida da peça. Derivar a contagem de pregas do painel faz a saia imprimir sob medida para qualquer cintura e quadril a partir de um arquivo, e os limites da linha A garantem que a silhueta nunca se inverta, então quem faz obtém uma saia escultórica e plissada de forma permanente que uma passada só imita por um uso."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "constraints": [
+    {
+      "expression": "hip_girth >= waist_girth",
+      "severity": "warning",
+      "message": {
+        "en": "The hip half is clamped never below the waist half so the A-line never inverts.",
+        "es": "La media cadera se acota nunca bajo la media cintura para que la línea A no se invierta.",
+        "fr": "La demi-hanche est bornée jamais sous la demi-taille pour que la ligne A ne s'inverse pas.",
+        "pt": "A meia-quadril é limitada nunca abaixo da meia-cintura para que a linha A não se inverta."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "fine-pleat",
+      "label": {
+        "en": "Fine pleats",
+        "es": "Pliegues finos",
+        "fr": "Plis fins",
+        "pt": "Pregas finas"
+      },
+      "values": {
+        "pleat_pitch": 18,
+        "pleat_depth": 10
+      }
+    },
+    {
+      "id": "bold-pleat",
+      "label": {
+        "en": "Bold pleats",
+        "es": "Pliegues amplios",
+        "fr": "Plis larges",
+        "pt": "Pregas largas"
+      },
+      "values": {
+        "pleat_pitch": 50,
+        "pleat_depth": 22
+      }
+    }
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "printed TPU accordion pleat panel",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "tpu-pleat-panel",
+      "linked": true,
+      "params_map": {
+        "pleats": "round((hip_girth / 4 + hem_flare) / pleat_pitch)",
+        "pleat_pitch": "pleat_pitch",
+        "panel_width": "hip_girth / 4 + hem_flare",
+        "wall": "wall"
+      }
+    }
+  }
+}

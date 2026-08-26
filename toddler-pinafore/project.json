@@ -1,0 +1,481 @@
+{
+  "project": {
+    "name": "Toddler Pinafore Dress",
+    "slug": "toddler-pinafore",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The pinafore (pichi): a sleeveless bib BODICE over a gathered SKIRT, the shoulder STRAPS crossing at the back and buttoning to the bodice back so the dress grows with the child — two button rows let the straps drop as she gets taller. A bodice FRONT, a bodice BACK, two STRAPS and a gathered SKIRT. Solved, not guessed: the skirt gathers to the MEASURED bodice waist (its fullness declared as the seam's ease against the real waist edge); the strap button rows are stepped in off the bodice back's top edge so a growth adjustment never lands a button on the turned edge; and the bib top is CLAMPED under the chest quarter so a small-body request never draws a bib wider than the chest, folding the piece. The strap buttons bridge to the Yantra4D `sew-through-button` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El pichi: un CUERPO de peto sin mangas sobre una FALDA fruncida, los TIRANTES cruzando atrás y abotonando al cuerpo trasero para que el vestido crezca con la niña — dos filas de botones dejan bajar los tirantes según crece. Un CUERPO delantero, un CUERPO trasero, dos TIRANTES y una FALDA fruncida. Resuelto, no adivinado: la falda frunce a la cintura MEDIDA del cuerpo (su vuelo declarado como sobra de costura contra el canto real); las filas de botones se meten desde el canto superior del cuerpo trasero para que un ajuste de crecimiento nunca ponga un botón en el canto doblado; y el peto se ACOTA bajo el cuarto de pecho para que un cuerpo pequeño nunca trace un peto más ancho que el pecho, plegando la pieza. Los botones se puentean al sólido `sew-through-button` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La robe chasuble : un CORPS bavette sans manches sur une JUPE froncée, les BRETELLES croisant au dos et se boutonnant au corps dos pour que la robe grandisse avec l'enfant — deux rangées de boutons laissent descendre les bretelles à mesure qu'elle grandit. Un CORPS devant, un CORPS dos, deux BRETELLES et une JUPE froncée. Résolu, non deviné : la jupe fronce à la taille MESURÉE du corps (son ampleur déclarée comme embu de couture contre le bord réel) ; les rangées de boutons sont rentrées depuis le bord supérieur du corps dos pour qu'un ajustement de croissance ne pose jamais un bouton sur le bord replié ; et la bavette est BORNÉE sous le quart de poitrine pour qu'un petit corps ne trace jamais une bavette plus large que la poitrine, repliant la pièce. Les boutons font le pont vers le solide `sew-through-button` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O vestido avental: um CORPO de peito sem mangas sobre uma SAIA franzida, as ALÇAS cruzando atrás e abotoando ao corpo traseiro para que o vestido cresça com a criança — duas fileiras de botões deixam as alças descerem à medida que ela cresce. Um CORPO frente, um CORPO costas, duas ALÇAS e uma SAIA franzida. Resolvido, não adivinhado: a saia franze à cintura MEDIDA do corpo (sua amplitude declarada como embebido de costura contra a borda real); as fileiras de botões são recuadas da borda superior do corpo traseiro para que um ajuste de crescimento nunca ponha um botão na borda dobrada; e o peito é LIMITADO sob o quarto de peito para que um corpo pequeno nunca trace um peito mais largo que o peito, dobrando a peça. Os botões fazem a ponte para o sólido `sew-through-button` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "toddler-pinafore",
+      "kids_baby",
+      "pinafore",
+      "pichi",
+      "dress",
+      "gathered-skirt",
+      "cross-back",
+      "sew-through-button",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full pinafore",
+        "es": "Pichi completo",
+        "fr": "Robe complète",
+        "pt": "Avental completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "bodice_front",
+        "bodice_back",
+        "strap",
+        "skirt"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "bodice_front",
+      "label": {
+        "en": "Bodice front / bib (cut 1)",
+        "es": "Cuerpo delantero / peto (cortar 1)",
+        "fr": "Corps devant / bavette (couper 1)",
+        "pt": "Corpo frente / peito (cortar 1)"
+      },
+      "default_color": "#c26a72",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "bodice_back",
+      "label": {
+        "en": "Bodice back (cut 1)",
+        "es": "Cuerpo trasero (cortar 1)",
+        "fr": "Corps dos (couper 1)",
+        "pt": "Corpo costas (cortar 1)"
+      },
+      "default_color": "#cc7a82",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "strap",
+      "label": {
+        "en": "Shoulder strap (cut 2)",
+        "es": "Tirante (cortar 2)",
+        "fr": "Bretelle (couper 2)",
+        "pt": "Alça (cortar 2)"
+      },
+      "default_color": "#d68a92",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "skirt",
+      "label": {
+        "en": "Gathered skirt (cut 1)",
+        "es": "Falda fruncida (cortar 1)",
+        "fr": "Jupe froncée (couper 1)",
+        "pt": "Saia franzida (cortar 1)"
+      },
+      "default_color": "#e09aa2",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "block",
+      "label": {
+        "en": "Fit block",
+        "es": "Base de talla",
+        "fr": "Base d'aisance",
+        "pt": "Base de modelagem"
+      }
+    },
+    {
+      "id": "skirt",
+      "label": {
+        "en": "Skirt",
+        "es": "Falda",
+        "fr": "Jupe",
+        "pt": "Saia"
+      }
+    },
+    {
+      "id": "detail",
+      "label": {
+        "en": "Details",
+        "es": "Detalles",
+        "fr": "Détails",
+        "pt": "Detalhes"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "block",
+      "default": 560,
+      "min": 420,
+      "max": 720,
+      "step": 10,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de peito (mm)"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "block",
+      "default": 540,
+      "min": 400,
+      "max": 700,
+      "step": 10,
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)",
+        "pt": "Contorno de cintura (mm)"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      }
+    },
+    {
+      "id": "bib_height",
+      "type": "slider",
+      "group": "block",
+      "default": 150,
+      "min": 90,
+      "max": 240,
+      "step": 5,
+      "label": {
+        "en": "Bib height (mm)",
+        "es": "Alto del peto (mm)",
+        "fr": "Hauteur de bavette (mm)",
+        "pt": "Altura do peito (mm)"
+      }
+    },
+    {
+      "id": "skirt_length",
+      "type": "slider",
+      "group": "skirt",
+      "default": 320,
+      "min": 180,
+      "max": 520,
+      "step": 10,
+      "label": {
+        "en": "Skirt length (mm)",
+        "es": "Largo de falda (mm)",
+        "fr": "Longueur de jupe (mm)",
+        "pt": "Comprimento de saia (mm)"
+      }
+    },
+    {
+      "id": "bib_width",
+      "type": "slider",
+      "group": "block",
+      "default": 170,
+      "min": 100,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Bib top width (mm)",
+        "es": "Ancho superior del peto (mm)",
+        "fr": "Largeur haut de bavette (mm)",
+        "pt": "Largura do topo do peito (mm)"
+      },
+      "tooltip": {
+        "en": "Clamped under the chest quarter so it never gapes",
+        "es": "Acotado bajo el cuarto de pecho para que no se abra",
+        "fr": "Borné sous le quart de poitrine pour ne pas bâiller",
+        "pt": "Limitado sob o quarto de peito para não abrir"
+      }
+    },
+    {
+      "id": "strap_length",
+      "type": "slider",
+      "group": "detail",
+      "default": 260,
+      "min": 150,
+      "max": 380,
+      "step": 10,
+      "label": {
+        "en": "Strap length (mm)",
+        "es": "Largo de tirante (mm)",
+        "fr": "Longueur de bretelle (mm)",
+        "pt": "Comprimento de alça (mm)"
+      }
+    },
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "group": "detail",
+      "default": 34,
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de tirante (mm)",
+        "fr": "Largeur de bretelle (mm)",
+        "pt": "Largura de alça (mm)"
+      }
+    },
+    {
+      "id": "gather_ratio",
+      "type": "slider",
+      "group": "skirt",
+      "default": 1.8,
+      "min": 1.2,
+      "max": 2.6,
+      "step": 0.1,
+      "label": {
+        "en": "Skirt gather ratio",
+        "es": "Vuelo de la falda",
+        "fr": "Ampleur de la jupe",
+        "pt": "Amplitude da saia"
+      }
+    },
+    {
+      "id": "button_ligne",
+      "type": "slider",
+      "group": "detail",
+      "default": 24,
+      "min": 16,
+      "max": 34,
+      "step": 1,
+      "label": {
+        "en": "Button size (ligne)",
+        "es": "Talla de botón (línea)",
+        "fr": "Taille de bouton (ligne)",
+        "pt": "Tamanho de botão (ligne)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D sew-through-button",
+        "es": "Define el sew-through-button de Yantra4D",
+        "fr": "Pilote le sew-through-button Yantra4D",
+        "pt": "Pilota o sew-through-button do Yantra4D"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "popelina-algodon"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "gathered_waist",
+        "type": "waistband",
+        "label": {
+          "en": "Gathered skirt to bodice waist",
+          "es": "Falda fruncida a la cintura del cuerpo",
+          "fr": "Jupe froncée à la taille du corps",
+          "pt": "Saia franzida à cintura do corpo"
+        },
+        "edges": [
+          {
+            "piece": "skirt",
+            "edge": "waist"
+          },
+          {
+            "piece": "bodice_front",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "gather_ratio"
+        ]
+      },
+      {
+        "id": "strap_button",
+        "type": "button_stand",
+        "label": {
+          "en": "Strap growth buttons",
+          "es": "Botones de crecimiento del tirante",
+          "fr": "Boutons de croissance de bretelle",
+          "pt": "Botões de crescimento da alça"
+        },
+        "edges": [
+          {
+            "piece": "strap",
+            "edge": "end"
+          },
+          {
+            "piece": "bodice_back",
+            "edge": "top"
+          }
+        ],
+        "parameters": [
+          "button_ligne",
+          "strap_length"
+        ]
+      },
+      {
+        "id": "bib_top",
+        "type": "neckline",
+        "label": {
+          "en": "Bib top edge",
+          "es": "Canto superior del peto",
+          "fr": "Bord haut de bavette",
+          "pt": "Borda superior do peito"
+        },
+        "edges": [
+          {
+            "piece": "bodice_front",
+            "edge": "top"
+          }
+        ],
+        "parameters": [
+          "bib_width",
+          "bib_height"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A cross-back pinafore with two button rows is the classic 'grow-with-me' children's dress — it fits for two seasons instead of one because the straps drop as the child gets taller. Drafting it so the skirt gathers to the real bodice waist and the button rows always land on cloth means a home sewist gets a dress that fits now and next year, cut from a metre of cotton, with the buttons printed rather than bought.",
+      "es": "Un pichi de espalda cruzada con dos filas de botones es el clásico vestido infantil 'que crece contigo' — sirve dos temporadas en vez de una porque los tirantes bajan según crece la niña. Trazarlo para que la falda frunza a la cintura real y las filas de botones caigan siempre en tela hace que quien cose en casa obtenga un vestido que ajuste ahora y el año que viene, cortado de un metro de algodón, con los botones impresos y no comprados.",
+      "fr": "Une robe chasuble à dos croisé avec deux rangées de boutons est la robe d'enfant 'évolutive' classique — elle va deux saisons au lieu d'une parce que les bretelles descendent à mesure que l'enfant grandit. La tracer pour que la jupe fronce à la taille réelle et que les rangées de boutons tombent toujours sur le tissu fait qu'un couturier amateur obtient une robe qui va maintenant et l'an prochain, coupée dans un mètre de coton, avec les boutons imprimés et non achetés.",
+      "pt": "Um vestido avental de costas cruzadas com duas fileiras de botões é o clássico vestido infantil 'que cresce com você' — serve duas estações em vez de uma porque as alças descem à medida que a criança cresce. Traçá-lo para que a saia franza à cintura real e as fileiras de botões caiam sempre no tecido faz quem costura em casa obter um vestido que serve agora e no ano que vem, cortado de um metro de algodão, com os botões impressos e não comprados."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "constraints": [
+    {
+      "expression": "bib_width < chest_girth / 2",
+      "severity": "warning",
+      "message": {
+        "en": "The bib is clamped under the chest quarter so it never gapes wider than the chest.",
+        "es": "El peto se acota bajo el cuarto de pecho para que no se abra más que el pecho.",
+        "fr": "La bavette est bornée sous le quart de poitrine pour ne pas bâiller.",
+        "pt": "O peito é limitado sob o quarto de peito para não abrir mais que o peito."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "size-2",
+      "label": {
+        "en": "2 years",
+        "es": "2 años",
+        "fr": "2 ans",
+        "pt": "2 anos"
+      },
+      "values": {
+        "chest_girth": 520,
+        "waist_girth": 500,
+        "skirt_length": 280
+      }
+    },
+    {
+      "id": "size-4",
+      "label": {
+        "en": "4 years",
+        "es": "4 años",
+        "fr": "4 ans",
+        "pt": "4 anos"
+      },
+      "values": {
+        "chest_girth": 580,
+        "waist_girth": 560,
+        "skirt_length": 360
+      }
+    }
+  ],
+  "notion": {
+    "kind": "button",
+    "subtype": "sew-through button on the strap growth rows",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "thickness": "button_ligne * 0.10",
+        "dish_depth": "button_ligne * 0.04",
+        "card_count": "4"
+      }
+    }
+  }
+}

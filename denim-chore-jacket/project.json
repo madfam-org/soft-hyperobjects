@@ -1,0 +1,507 @@
+{
+  "project": {
+    "name": "Denim Chore Jacket",
+    "slug": "denim-chore-jacket",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The boxy denim work jacket (chore coat / bleu de travail): a straight FRONT with a button placket and patch pockets, a straight BACK, a set-in two-fall SLEEVE and a band COLLAR. Denim conventions throughout: 7 mm twin-needle gold topstitch, felled seams, every hard good a Yantra4D reference. Solved, not guessed: the sleeve cap is a SOLVED bow whose length equals the measured front + back armhole so it sets in without easing a mismatch; the band collar is cut to the MEASURED neckline, never a laid-flat guess; and every derived dimension — the placket extension, the pocket size, the rivet insets — is floored or clamped so a big-ease or small-body request can never draw a negative-width piece the kernel would CCW-normalize into a healthy-looking sliver. The pocket-corner rivets bridge to the Yantra4D `rivet` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La chamarra de trabajo de mezclilla (chore coat / bleu de travail): un DELANTERO recto con tapeta de botones y bolsillos de parche, una ESPALDA recta, una MANGA montada de dos caídas y un CUELLO de banda. Convenciones de mezclilla: pespunte doble a 7 mm en oro, costuras rebatidas, cada herraje una referencia a Yantra4D. Resuelto, no adivinado: la copa de manga es un arco RESUELTO cuya longitud iguala la sisa medida delantera + trasera para montarse sin sobra; el cuello de banda se corta a la línea de escote MEDIDA, nunca a una estimación plana; y cada dimensión derivada — la extensión de tapeta, el tamaño de bolsillo, la separación del remache — tiene piso o tope para que una holgura grande o un cuerpo pequeño nunca trace una pieza de ancho negativo que el kernel normalizaría a CCW dejándola sana en apariencia. Los remaches de esquina de bolsillo se puentean al sólido `rivet` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La veste de travail en jean (chore coat / bleu de travail) : un DEVANT droit à patte de boutonnage et poches plaquées, un DOS droit, une MANCHE montée à deux tombants et un COL en bande. Conventions denim partout : surpiqûre double 7 mm dorée, coutures rabattues, chaque accessoire une référence Yantra4D. Résolu, non deviné : la tête de manche est un arc RÉSOLU dont la longueur égale l'emmanchure mesurée devant + dos pour se monter sans embu ; le col en bande est coupé à la ligne d'encolure MESURÉE, jamais à une estimation à plat ; et chaque dimension dérivée — l'extension de patte, la taille de poche, le retrait du rivet — a un plancher ou une borne pour qu'une grande aisance ou un petit corps ne trace jamais une pièce de largeur négative que le noyau normaliserait en CCW en la laissant saine en apparence. Les rivets de coin de poche font le pont vers le solide `rivet` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A jaqueta de trabalho jeans (chore coat / bleu de travail): uma FRENTE reta com carcela de botões e bolsos chapados, umas COSTAS retas, uma MANGA montada de duas quedas e uma GOLA de faixa. Convenções de denim: pesponto duplo a 7 mm dourado, costuras rebatidas, cada ferragem uma referência ao Yantra4D. Resolvido, não adivinhado: a cabeça da manga é um arco RESOLVIDO cujo comprimento iguala a cava medida frente + costas para montar sem embebido; a gola de faixa é cortada à linha do decote MEDIDA, nunca a uma estimativa plana; e cada dimensão derivada — a extensão da carcela, o tamanho do bolso, o recuo do rebite — tem piso ou limite para que uma folga grande ou um corpo pequeno nunca trace uma peça de largura negativa que o núcleo normalizaria em CCW deixando-a sã na aparência. Os rebites de canto de bolso fazem a ponte para o sólido `rivet` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "denim-chore-jacket",
+      "denim",
+      "jacket",
+      "chore-coat",
+      "workwear",
+      "rivet",
+      "topstitch",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full jacket",
+        "es": "Chamarra completa",
+        "fr": "Veste complète",
+        "pt": "Jaqueta completa"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "collar",
+        "patch_pocket"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (cut 2, mirrored)",
+        "es": "Delantero (cortar 2, espejo)",
+        "fr": "Devant (couper 2, miroir)",
+        "pt": "Frente (cortar 2, espelhado)"
+      },
+      "default_color": "#40566f",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (cut 1)",
+        "es": "Espalda (cortar 1)",
+        "fr": "Dos (couper 1)",
+        "pt": "Costas (cortar 1)"
+      },
+      "default_color": "#4c627b",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve (cut 2, mirrored)",
+        "es": "Manga (cortar 2, espejo)",
+        "fr": "Manche (couper 2, miroir)",
+        "pt": "Manga (cortar 2, espelhado)"
+      },
+      "default_color": "#5a7089",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Band collar (cut 1)",
+        "es": "Cuello de banda (cortar 1)",
+        "fr": "Col en bande (couper 1)",
+        "pt": "Gola de faixa (cortar 1)"
+      },
+      "default_color": "#687e97",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "patch_pocket",
+      "label": {
+        "en": "Patch pocket (cut 2)",
+        "es": "Bolsillo de parche (cortar 2)",
+        "fr": "Poche plaquée (couper 2)",
+        "pt": "Bolso chapado (cortar 2)"
+      },
+      "default_color": "#768ca5",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "block",
+      "label": {
+        "en": "Fit block",
+        "es": "Base de talla",
+        "fr": "Base d'aisance",
+        "pt": "Base de modelagem"
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche",
+        "pt": "Manga"
+      }
+    },
+    {
+      "id": "detail",
+      "label": {
+        "en": "Details",
+        "es": "Detalles",
+        "fr": "Détails",
+        "pt": "Detalhes"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "block",
+      "default": 1040,
+      "min": 760,
+      "max": 1500,
+      "step": 10,
+      "label": {
+        "en": "Chest/bust girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de peito (mm)"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "group": "block",
+      "default": 660,
+      "min": 500,
+      "max": 820,
+      "step": 10,
+      "label": {
+        "en": "Body length, nape to hem (mm)",
+        "es": "Largo, nuca a bajo (mm)",
+        "fr": "Longueur, nuque à ourlet (mm)",
+        "pt": "Comprimento, nuca à barra (mm)"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "block",
+      "default": 460,
+      "min": 340,
+      "max": 580,
+      "step": 10,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombros (mm)",
+        "fr": "Largeur d'épaules (mm)",
+        "pt": "Largura de ombros (mm)"
+      }
+    },
+    {
+      "id": "armhole_depth",
+      "type": "slider",
+      "group": "block",
+      "default": 260,
+      "min": 200,
+      "max": 360,
+      "step": 5,
+      "label": {
+        "en": "Armhole depth (mm)",
+        "es": "Profundidad de sisa (mm)",
+        "fr": "Profondeur d'emmanchure (mm)",
+        "pt": "Profundidade da cava (mm)"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 620,
+      "min": 440,
+      "max": 720,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)",
+        "pt": "Comprimento de manga (mm)"
+      }
+    },
+    {
+      "id": "neck_width",
+      "type": "slider",
+      "group": "block",
+      "default": 200,
+      "min": 140,
+      "max": 280,
+      "step": 5,
+      "label": {
+        "en": "Neck width (mm)",
+        "es": "Ancho de escote (mm)",
+        "fr": "Largeur d'encolure (mm)",
+        "pt": "Largura de decote (mm)"
+      }
+    },
+    {
+      "id": "back_neck_rise",
+      "type": "slider",
+      "group": "block",
+      "default": 22,
+      "min": 10,
+      "max": 45,
+      "step": 2,
+      "label": {
+        "en": "Back neck rise (mm)",
+        "es": "Subida de escote trasero (mm)",
+        "fr": "Montée d'encolure dos (mm)",
+        "pt": "Subida do decote traseiro (mm)"
+      }
+    },
+    {
+      "id": "placket_width",
+      "type": "slider",
+      "group": "detail",
+      "default": 35,
+      "min": 20,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Placket extension (mm)",
+        "es": "Extensión de tapeta (mm)",
+        "fr": "Extension de patte (mm)",
+        "pt": "Extensão da carcela (mm)"
+      }
+    },
+    {
+      "id": "rivet_cap",
+      "type": "slider",
+      "group": "detail",
+      "default": 9,
+      "min": 5,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Rivet cap diameter (mm)",
+        "es": "Diámetro de cabeza del remache (mm)",
+        "fr": "Diamètre de tête de rivet (mm)",
+        "pt": "Diâmetro da cabeça do rebite (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D rivet cap height and burr",
+        "es": "Define la altura de cabeza y arandela del rivet de Yantra4D",
+        "fr": "Pilote la hauteur de tête et la rondelle du rivet Yantra4D",
+        "pt": "Pilota a altura da cabeça e a arruela do rivet do Yantra4D"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "group": "block",
+      "default": 160,
+      "min": 40,
+      "max": 320,
+      "step": 10,
+      "label": {
+        "en": "Wearing ease (mm)",
+        "es": "Holgura de uso (mm)",
+        "fr": "Aisance de port (mm)",
+        "pt": "Folga de uso (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 8,
+      "max": 18,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "mezclilla-denim"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "shoulder_seam",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder seam",
+          "es": "Costura de hombro",
+          "fr": "Couture d'épaule",
+          "pt": "Costura de ombro"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "back",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "shoulder_width",
+          "neck_width"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Set-in sleeve",
+          "es": "Manga montada",
+          "fr": "Manche montée",
+          "pt": "Manga montada"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
+        ],
+        "parameters": [
+          "armhole_depth",
+          "sleeve_length"
+        ]
+      },
+      {
+        "id": "band_collar",
+        "type": "neckline",
+        "label": {
+          "en": "Band collar to measured neckline",
+          "es": "Cuello de banda a escote medido",
+          "fr": "Col en bande à l'encolure mesurée",
+          "pt": "Gola de faixa ao decote medido"
+        },
+        "edges": [
+          {
+            "piece": "collar",
+            "edge": "lower"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_width",
+          "placket_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The chore jacket is the original piece of durable, repairable workwear — worn to threads, patched, handed down — and it is trivially simple in silhouette but usually sold as a fixed-size garment. Drafting it parametrically with a solved sleeve cap and a measured collar means a home sewist gets a jacket that fits their shoulders and sets its sleeve smoothly, and the rivets that make it last are printed and set, not sourced from a factory.",
+      "es": "La chamarra de trabajo es la prenda original duradera y reparable — usada hasta deshilarse, parchada, heredada — y es de silueta trivialmente simple pero suele venderse en talla fija. Trazarla paramétrica con una copa de manga resuelta y un cuello medido hace que quien cose en casa obtenga una chamarra que ajuste sus hombros y monte su manga sin frunce, y los remaches que la hacen durar se imprimen y se colocan, no se compran de fábrica.",
+      "fr": "La veste de travail est la pièce originale de vêtement de travail durable et réparable — portée jusqu'à la corde, rapiécée, transmise — et de silhouette trivialement simple mais souvent vendue en taille fixe. La tracer paramétrique avec une tête de manche résolue et un col mesuré fait que le couturier amateur obtient une veste qui va à ses épaules et monte sa manche sans fronce, et les rivets qui la font durer sont imprimés et posés, non achetés en usine.",
+      "pt": "A jaqueta de trabalho é a peça original de roupa de trabalho durável e reparável — usada até esfiapar, remendada, herdada — e de silhueta trivialmente simples mas geralmente vendida em tamanho fixo. Traçá-la paramétrica com uma cabeça de manga resolvida e uma gola medida faz quem costura em casa obter uma jaqueta que serve nos ombros e monta a manga sem franzir, e os rebites que a fazem durar são impressos e postos, não comprados de fábrica."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "constraints": [
+    {
+      "expression": "shoulder_width < chest_girth / 2",
+      "severity": "warning",
+      "message": {
+        "en": "The shoulder is clamped inside the body quarter so the armhole never folds.",
+        "es": "El hombro se acota dentro del cuarto de cuerpo para que la sisa no se pliegue.",
+        "fr": "L'épaule est bornée dans le quart de corps pour que l'emmanchure ne se replie pas.",
+        "pt": "O ombro é limitado dentro do quarto de corpo para que a cava não dobre."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic-chore",
+      "label": {
+        "en": "Classic chore",
+        "es": "Trabajo clásico",
+        "fr": "Chore classique",
+        "pt": "Chore clássico"
+      },
+      "values": {
+        "ease": 160,
+        "body_length": 660
+      }
+    },
+    {
+      "id": "cropped",
+      "label": {
+        "en": "Cropped",
+        "es": "Corto",
+        "fr": "Court",
+        "pt": "Curto"
+      },
+      "values": {
+        "body_length": 540,
+        "ease": 140
+      }
+    }
+  ],
+  "notion": {
+    "kind": "rivet",
+    "subtype": "tubular rivet at the patch-pocket corners",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "rivet",
+      "linked": true,
+      "params_map": {
+        "cap_h": "rivet_cap * 0.42",
+        "bore_dia": "rivet_cap * 0.30",
+        "burr_dia": "rivet_cap * 0.80"
+      }
+    }
+  }
+}

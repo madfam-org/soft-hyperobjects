@@ -1,0 +1,345 @@
+{
+  "project": {
+    "name": "Chukka Boot Soft Upper",
+    "slug": "chukka-boot-upper",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The chukka: an ankle boot upper with a VAMP over the toes and instep and two QUARTERS that wrap the ankle and carry two or three lace pairs on open-throat facings. The quarters rise higher than a shoe to cover the ankle bone; the whole lower edge (the lasting edge) stitches down to the sole. Sized from PLAIN parameters — ISO 8559 declares no foot landmark codes, so none is invented. Both lasting edges are SOLVED (bisected-bulge arcs) to a PROPORTIONATE BOW over the piece's own chord, not a share of the whole sole perimeter, which degenerates into a sliver at the extreme; the quarter facing seam is drafted to the vamp throat so the declared seam balances; and the ankle rise is CLAMPED under a sane multiple of the quarter half-width so the topline never folds through the lasting edge. The lace hooks bridge to a Yantra4D `lacing-hook`.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El chukka: un corte de bota de tobillo con una PALA sobre los dedos y el empeine y dos CUARTOS que envuelven el tobillo con dos o tres pares de agujetas en cortes de garganta abierta. Los cuartos suben más que un zapato para cubrir el tobillo; todo el canto inferior (el canto de montado) se cose al piso. Dimensionado con parámetros PLANOS — ISO 8559 no declara códigos de pie, así que no se inventa ninguno. Ambos cantos de montado se RESUELVEN (arcos de bisección) a un ARQUEO PROPORCIONAL sobre su propia cuerda, no una fracción del perímetro del piso, que degenera en filamento en el extremo; el canto de garganta del cuarto se traza a la garganta de la pala para que la costura declarada cuadre; y la altura del tobillo se ACOTA bajo un múltiplo sano de la mitad del cuarto para que la línea superior no se pliegue por el canto de montado. Los ganchos se puentean a un `lacing-hook` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le chukka : une tige de boot de cheville avec une CLAQUE sur les orteils et le cou-de-pied et deux QUARTIERS qui enveloppent la cheville avec deux ou trois paires de lacets sur des facings à gorge ouverte. Les quartiers montent plus haut qu'une chaussure pour couvrir la malléole ; tout le bord inférieur (le bord de montage) se coud à la semelle. Dimensionné à partir de paramètres SIMPLES — ISO 8559 ne déclare aucun code de pied, donc aucun n'est inventé. Les deux bords de montage sont RÉSOLUS (arcs par bissection) en un CINTRE PROPORTIONNEL sur leur propre corde, non une fraction du périmètre de semelle, qui dégénère en éclat à l'extrême ; le bord de facing du quartier est tracé à la gorge de la claque pour que la couture déclarée corresponde ; et la hauteur de cheville est BORNÉE sous un multiple sain de la demi-largeur du quartier pour que la ligne haute ne se replie par le bord de montage. Les crochets font le pont vers un `lacing-hook` Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A chukka: um cabedal de bota de tornozelo com uma GÁSPEA sobre os dedos e o peito do pé e dois QUARTOS que envolvem o tornozelo com dois ou três pares de cadarços em facings de gola aberta. Os quartos sobem mais que um sapato para cobrir o tornozelo; toda a borda inferior (a borda de montagem) costura-se à sola. Dimensionado a partir de parâmetros SIMPLES — a ISO 8559 não declara códigos de pé, então nenhum é inventado. Ambas as bordas de montagem são RESOLVIDAS (arcos por bisseção) a um ARQUEAMENTO PROPORCIONAL sobre a própria corda, não uma fração do perímetro da sola, que degenera em lasca no extremo; a borda de facing do quarto é traçada à gola da gáspea para que a costura declarada bata; e a altura do tornozelo é LIMITADA sob um múltiplo sadio da meia-largura do quarto para que a linha superior não dobre pela borda de montagem. Os ganchos fazem a ponte para um `lacing-hook` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "chukka-boot-upper",
+      "footwear_soft",
+      "boot",
+      "chukka",
+      "ankle-boot",
+      "vamp",
+      "quarter",
+      "lacing-hook",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full upper",
+        "es": "Corte completo",
+        "fr": "Tige complète",
+        "pt": "Cabedal completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "vamp",
+        "quarter"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "vamp",
+      "label": {
+        "en": "Vamp (toe + instep)",
+        "es": "Pala (dedos + empeine)",
+        "fr": "Claque (orteils + cou-de-pied)",
+        "pt": "Gáspea (dedos + peito)"
+      },
+      "default_color": "#8a6a4a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "quarter",
+      "label": {
+        "en": "Quarter (cut 2, mirrored)",
+        "es": "Cuarto (cortar 2, espejo)",
+        "fr": "Quartier (couper 2, miroir)",
+        "pt": "Quarto (cortar 2, espelhado)"
+      },
+      "default_color": "#9a7a5a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "foot",
+      "label": {
+        "en": "Foot",
+        "es": "Pie",
+        "fr": "Pied",
+        "pt": "Pé"
+      }
+    },
+    {
+      "id": "upper",
+      "label": {
+        "en": "Upper",
+        "es": "Corte",
+        "fr": "Tige",
+        "pt": "Cabedal"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "foot_length",
+      "type": "slider",
+      "group": "foot",
+      "default": 260,
+      "min": 150,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Foot length (mm)",
+        "es": "Largo del pie (mm)",
+        "fr": "Longueur du pied (mm)",
+        "pt": "Comprimento do pé (mm)"
+      }
+    },
+    {
+      "id": "foot_girth",
+      "type": "slider",
+      "group": "foot",
+      "default": 240,
+      "min": 150,
+      "max": 330,
+      "step": 5,
+      "label": {
+        "en": "Foot girth (mm)",
+        "es": "Contorno del pie (mm)",
+        "fr": "Tour du pied (mm)",
+        "pt": "Contorno do pé (mm)"
+      }
+    },
+    {
+      "id": "vamp_depth",
+      "type": "slider",
+      "group": "upper",
+      "default": 120,
+      "min": 70,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Vamp depth (mm)",
+        "es": "Profundidad de pala (mm)",
+        "fr": "Profondeur de claque (mm)",
+        "pt": "Profundidade da gáspea (mm)"
+      }
+    },
+    {
+      "id": "ankle_height",
+      "type": "slider",
+      "group": "upper",
+      "default": 130,
+      "min": 80,
+      "max": 220,
+      "step": 5,
+      "label": {
+        "en": "Ankle rise (mm)",
+        "es": "Altura de tobillo (mm)",
+        "fr": "Montée de cheville (mm)",
+        "pt": "Altura de tornozelo (mm)"
+      },
+      "tooltip": {
+        "en": "Clamped under 4x the quarter half-width",
+        "es": "Acotada bajo 4x la mitad del cuarto",
+        "fr": "Bornée sous 4x la demi-largeur du quartier",
+        "pt": "Limitada sob 4x a meia-largura do quarto"
+      }
+    },
+    {
+      "id": "lace_pairs",
+      "type": "slider",
+      "group": "upper",
+      "default": 3,
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "label": {
+        "en": "Lace pairs",
+        "es": "Pares de agujetas",
+        "fr": "Paires de lacets",
+        "pt": "Pares de cadarços"
+      }
+    },
+    {
+      "id": "lace_dia",
+      "type": "slider",
+      "group": "upper",
+      "default": 4,
+      "min": 2.5,
+      "max": 8,
+      "step": 0.5,
+      "label": {
+        "en": "Lace diameter (mm)",
+        "es": "Diámetro de agujeta (mm)",
+        "fr": "Diamètre de lacet (mm)",
+        "pt": "Diâmetro de cadarço (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "throat_seam",
+        "type": "custom",
+        "label": {
+          "en": "Throat seam",
+          "es": "Costura de garganta",
+          "fr": "Couture de gorge",
+          "pt": "Costura de gola"
+        },
+        "edges": [
+          {
+            "piece": "vamp",
+            "edge": "throat_r"
+          },
+          {
+            "piece": "quarter",
+            "edge": "facing"
+          }
+        ],
+        "parameters": [
+          "vamp_depth",
+          "foot_girth"
+        ]
+      },
+      {
+        "id": "lasting_edge",
+        "type": "hem",
+        "label": {
+          "en": "Lasting edge to sole",
+          "es": "Canto de montado",
+          "fr": "Bord de montage",
+          "pt": "Borda de montagem"
+        },
+        "edges": [
+          {
+            "piece": "vamp",
+            "edge": "lasting"
+          },
+          {
+            "piece": "quarter",
+            "edge": "lasting"
+          }
+        ],
+        "parameters": [
+          "foot_length",
+          "foot_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The chukka is the most makeable real boot — two quarters, a vamp, two seams and a lasting edge — but a badly drafted one gaps at the ankle or the throat seam does not close. Solving the lasting edges as proportionate bows and matching the facing to the throat means a home cordwainer gets an upper that lasts cleanly onto a sole and closes flat, and the lace hooks print from the same file as the boot.",
+      "es": "El chukka es la bota real más fácil de hacer — dos cuartos, una pala, dos costuras y un canto de montado — pero uno mal trazado se abre en el tobillo o la costura de garganta no cierra. Resolver los cantos de montado como arqueos proporcionales y cuadrar el corte con la garganta hace que un zapatero casero obtenga un corte que monta limpio sobre un piso y cierra plano, y los ganchos se imprimen del mismo archivo que la bota.",
+      "fr": "Le chukka est le vrai boot le plus faisable — deux quartiers, une claque, deux coutures et un bord de montage — mais mal tracé il bâille à la cheville ou la couture de gorge ne ferme pas. Résoudre les bords de montage en cintres proportionnels et accorder le facing à la gorge fait qu'un cordonnier amateur obtient une tige qui se monte proprement sur une semelle et ferme à plat, et les crochets s'impriment du même fichier que le boot.",
+      "pt": "A chukka é a bota real mais fácil de fazer — dois quartos, uma gáspea, duas costuras e uma borda de montagem — mas mal traçada abre no tornozelo ou a costura de gola não fecha. Resolver as bordas de montagem como arqueamentos proporcionais e casar o facing com a gola faz um sapateiro caseiro obter um cabedal que monta limpo sobre uma sola e fecha plano, e os ganchos imprimem do mesmo arquivo que a bota."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "presets": [
+    {
+      "id": "low-chukka",
+      "label": {
+        "en": "Low chukka",
+        "es": "Chukka baja",
+        "fr": "Chukka bas",
+        "pt": "Chukka baixa"
+      },
+      "values": {
+        "ankle_height": 110,
+        "lace_pairs": 2
+      }
+    },
+    {
+      "id": "high-desert",
+      "label": {
+        "en": "Desert boot",
+        "es": "Bota desierto",
+        "fr": "Desert boot",
+        "pt": "Bota deserto"
+      },
+      "values": {
+        "ankle_height": 150,
+        "lace_pairs": 3
+      }
+    }
+  ],
+  "notion": {
+    "kind": "hook",
+    "subtype": "lacing hooks on the open-throat facing",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "lacing-hook",
+      "linked": true,
+      "params_map": {
+        "hook_count": "lace_pairs",
+        "pitch": "ankle_height / (lace_pairs + 1)",
+        "cord_dia": "lace_dia"
+      }
+    }
+  }
+}

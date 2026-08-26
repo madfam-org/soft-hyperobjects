@@ -1,0 +1,302 @@
+{
+  "project": {
+    "name": "Padded Garment-Hanger Cover",
+    "slug": "garment-hanger-cover",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A quilted slip-on cover that pads a bare hanger so a knit or a silk blouse hangs without shoulder dents. Two mirrored SHELL halves close around the shoulder and a gathered CUFF grips the hook shaft. Drafted to a KNOWN hanger — the Yantra4D `garment-hanger` solid — so the shell's inner arc is sized to that hanger's printed shoulder. The seam that must solve: the shell's inner edge (against the bar) and outer edge (the padded face) are two CONCENTRIC arcs SHARING ONE CENTRE — not per-radius centres, which collapse to a zero-area lens on a shallow drop. Both are polygonised and MEASURED and the excess is declared as the seam ease; the sagitta relation R=(c²+s²)/2s solves the shoulder radius, and the drop is CLAMPED so a deep drop never folds the concentric arcs through one another.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una funda acolchada que se calza en un gancho desnudo para que un tejido o una blusa de seda cuelgue sin marcas de hombro. Dos MEDIAS CARCASAS en espejo cierran sobre el hombro y un PUÑO fruncido agarra el vástago del gancho. Trazada a un gancho CONOCIDO — el sólido `garment-hanger` de Yantra4D — para que el arco interno se dimensione al hombro impreso. La costura que debe resolver: el canto interno (contra la barra) y el externo (la cara acolchada) son dos arcos CONCÉNTRICOS que COMPARTEN UN CENTRO — no centros por radio, que colapsan a una lente de área cero en caída baja. Ambos se poligonizan y MIDEN y el exceso se declara como sobra de costura; la relación de sagita R=(c²+s²)/2s resuelve el radio del hombro, y la caída se ACOTA para que una caída profunda no pliegue los arcos concéntricos entre sí.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une housse matelassée à enfiler qui rembourre un cintre nu pour qu'un tricot ou un chemisier de soie pende sans marques d'épaule. Deux DEMI-COQUES miroir se ferment sur l'épaule et une MANCHETTE froncée serre la tige du crochet. Tracée à un cintre CONNU — le solide `garment-hanger` de Yantra4D — pour que l'arc interne soit dimensionné à l'épaule imprimée. La couture qui doit se résoudre : le bord interne (contre la barre) et l'externe (la face matelassée) sont deux arcs CONCENTRIQUES PARTAGEANT UN CENTRE — non des centres par rayon, qui s'effondrent en une lentille d'aire nulle sur une faible chute. Les deux sont polygonisés et MESURÉS et l'excédent est déclaré comme embu ; la relation de flèche R=(c²+s²)/2s résout le rayon de l'épaule, et la chute est BORNÉE pour qu'une chute profonde ne replie les arcs concentriques l'un dans l'autre.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma capa acolchoada de vestir que enche um cabide nu para que um tricô ou uma blusa de seda pendure sem marcas de ombro. Duas MEIAS-CASCAS espelhadas fecham sobre o ombro e um PUNHO franzido agarra a haste do gancho. Traçada a um cabide CONHECIDO — o sólido `garment-hanger` do Yantra4D — para que o arco interno seja dimensionado ao ombro impresso. A costura que deve resolver: a borda interna (contra a barra) e a externa (a face acolchoada) são dois arcos CONCÊNTRICOS que PARTILHAM UM CENTRO — não centros por raio, que colapsam numa lente de área zero numa queda rasa. Ambos são poligonizados e MEDIDOS e o excesso é declarado como embebido; a relação da flecha R=(c²+s²)/2s resolve o raio do ombro, e a queda é LIMITADA para que uma queda funda não dobre os arcos concêntricos um no outro.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "garment-hanger-cover",
+      "care_keeping",
+      "hanger-cover",
+      "padded",
+      "quilted",
+      "garment-hanger",
+      "concentric-arc",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full cover",
+        "es": "Funda completa",
+        "fr": "Housse complète",
+        "pt": "Capa completa"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "shell",
+        "cuff"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "shell",
+      "label": {
+        "en": "Padded shell half (cut 2, mirrored)",
+        "es": "Media carcasa (cortar 2, espejo)",
+        "fr": "Demi-coque (couper 2, miroir)",
+        "pt": "Meia-casca (cortar 2, espelhado)"
+      },
+      "default_color": "#c8bcd0",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Hook cuff (cut 1)",
+        "es": "Puño del gancho (cortar 1)",
+        "fr": "Manchette du crochet (couper 1)",
+        "pt": "Punho do gancho (cortar 1)"
+      },
+      "default_color": "#d8ccdf",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "hanger",
+      "label": {
+        "en": "Hanger",
+        "es": "Gancho",
+        "fr": "Cintre",
+        "pt": "Cabide"
+      }
+    },
+    {
+      "id": "cover",
+      "label": {
+        "en": "Cover",
+        "es": "Funda",
+        "fr": "Housse",
+        "pt": "Capa"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "hanger_span",
+      "type": "slider",
+      "group": "hanger",
+      "default": 430,
+      "min": 280,
+      "max": 540,
+      "step": 10,
+      "label": {
+        "en": "Hanger span, tip to tip (mm)",
+        "es": "Ancho del gancho (mm)",
+        "fr": "Envergure du cintre (mm)",
+        "pt": "Vão do cabide (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D garment-hanger shoulder",
+        "es": "Define el hombro del garment-hanger de Yantra4D",
+        "fr": "Pilote l'épaule du garment-hanger Yantra4D",
+        "pt": "Pilota o ombro do garment-hanger do Yantra4D"
+      }
+    },
+    {
+      "id": "shoulder_drop",
+      "type": "slider",
+      "group": "hanger",
+      "default": 60,
+      "min": 15,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Shoulder drop (mm)",
+        "es": "Caída del hombro (mm)",
+        "fr": "Chute d'épaule (mm)",
+        "pt": "Queda do ombro (mm)"
+      }
+    },
+    {
+      "id": "pad_girth",
+      "type": "slider",
+      "group": "cover",
+      "default": 24,
+      "min": 8,
+      "max": 48,
+      "step": 2,
+      "label": {
+        "en": "Pad girth (mm)",
+        "es": "Grosor del acolchado (mm)",
+        "fr": "Rembourrage (mm)",
+        "pt": "Grossura do acolchado (mm)"
+      }
+    },
+    {
+      "id": "cuff_rise",
+      "type": "slider",
+      "group": "cover",
+      "default": 75,
+      "min": 30,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Cuff rise up the hook (mm)",
+        "es": "Subida del puño (mm)",
+        "fr": "Montée de la manchette (mm)",
+        "pt": "Subida do punho (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "shoulder_arc",
+        "type": "shoulder",
+        "label": {
+          "en": "Padded shoulder arc",
+          "es": "Arco de hombro acolchado",
+          "fr": "Arc d'épaule matelassé",
+          "pt": "Arco de ombro acolchoado"
+        },
+        "edges": [
+          {
+            "piece": "shell",
+            "edge": "inner_arc"
+          }
+        ],
+        "parameters": [
+          "hanger_span",
+          "shoulder_drop",
+          "pad_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A wire or thin plastic hanger dents the shoulders of knits and silks over time, and padded hangers are sold at a steep markup. A quilted cover cut to the printed hanger shoulder pads any hanger a household already owns, so a wardrobe of good clothes hangs without shoulder bumps for the cost of a scrap of quilting cotton.",
+      "es": "Un gancho de alambre o de plástico fino marca los hombros de tejidos y sedas con el tiempo, y los ganchos acolchados se venden con gran sobreprecio. Una funda acolchada cortada al hombro impreso acolcha cualquier gancho que ya se tenga, así un armario de buena ropa cuelga sin marcas por el costo de un retazo de algodón de acolchar.",
+      "fr": "Un cintre en fil ou en plastique fin marque les épaules des tricots et des soies avec le temps, et les cintres rembourrés se vendent avec une forte marge. Une housse matelassée coupée à l'épaule imprimée rembourre tout cintre déjà possédé, si bien qu'une garde-robe de beaux vêtements pend sans marques pour le prix d'une chute de coton de quilting.",
+      "pt": "Um cabide de arame ou plástico fino marca os ombros de tricôs e sedas com o tempo, e cabides acolchoados são vendidos com grande ágio. Uma capa acolchoada cortada ao ombro impresso enche qualquer cabide já possuído, então um guarda-roupa de boas roupas pendura sem marcas pelo custo de um retalho de algodão de quilting."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "constraints": [
+    {
+      "expression": "shoulder_drop < hanger_span / 2",
+      "severity": "warning",
+      "message": {
+        "en": "The drop is clamped under the half-span so the concentric arcs never invert.",
+        "es": "La caída se acota bajo la media envergadura para que los arcos concéntricos no se inviertan.",
+        "fr": "La chute est bornée sous la demi-envergure pour que les arcs concentriques ne s'inversent pas.",
+        "pt": "A queda é limitada sob o meio-vão para que os arcos concêntricos não se invertam."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "shirt",
+      "label": {
+        "en": "Shirt hanger",
+        "es": "Gancho de camisa",
+        "fr": "Cintre chemise",
+        "pt": "Cabide de camisa"
+      },
+      "values": {
+        "hanger_span": 430,
+        "shoulder_drop": 55
+      }
+    },
+    {
+      "id": "coat",
+      "label": {
+        "en": "Coat hanger",
+        "es": "Gancho de abrigo",
+        "fr": "Cintre manteau",
+        "pt": "Cabide de casaco"
+      },
+      "values": {
+        "hanger_span": 490,
+        "shoulder_drop": 80,
+        "pad_girth": 34
+      }
+    }
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "padded slip cover over a garment hanger",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "garment-hanger",
+      "linked": true,
+      "params_map": {
+        "shoulder_w": "hanger_span",
+        "bar_drop": "shoulder_drop",
+        "shoulder_t": "pad_girth"
+      }
+    }
+  }
+}

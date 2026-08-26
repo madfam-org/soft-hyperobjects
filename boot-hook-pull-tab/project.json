@@ -1,0 +1,300 @@
+{
+  "project": {
+    "name": "Boot-Hook Pull Tab",
+    "slug": "boot-hook-pull-tab",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The finger loop sewn at the back top of a tall boot that a boot-hook (the Yantra4D `boot-hook-puller`) catches to pull the boot on. A folded leather TAB with a reinforced HOLE that the hook's blade passes through, and a stitched ATTACH end that beds into the boot back seam. Sized to the hook blade so the tool always passes cleanly. Solved, not guessed: the hole is cut to the MEASURED hook blade plus a clearance and stepped in off the loop end by its own width plus a margin so it never tears out the fold; the tab length clears the hook reach so the loop stands proud, floored to a real loop; and the tab width is CLAMPED to at least the hole plus the reinforcement.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El asa que se cose en el borde trasero superior de una bota alta y que un gancho de bota (el `boot-hook-puller` de Yantra4D) engancha para calzar la bota. Una LENGÜETA de cuero doblada con un OJAL reforzado por el que pasa la hoja del gancho, y un extremo de UNIÓN cosido que se aloja en la costura trasera. A la medida de la hoja para que la herramienta pase limpia. Resuelto, no adivinado: el ojal se corta a la hoja MEDIDA más una holgura y se mete desde el extremo del asa por su propio ancho más un margen para que no se desgarre; el largo de la lengüeta libra el alcance del gancho para que el asa quede prominente, con piso para un asa real; y el ancho se ACOTA al menos al ojal más el refuerzo.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La boucle de doigt cousue en haut du dos d'une botte haute qu'un tire-botte (le `boot-hook-puller` de Yantra4D) accroche pour enfiler la botte. Une PATTE de cuir repliée avec un TROU renforcé par lequel passe la lame du crochet, et un bout d'ATTACHE cousu qui se loge dans la couture dos. Dimensionnée à la lame pour que l'outil passe proprement. Résolu, non deviné : le trou est coupé à la lame MESURÉE plus un jeu et rentré depuis le bout de la boucle de sa propre largeur plus une marge pour ne pas s'arracher ; la longueur de la patte dégage la portée du crochet pour que la boucle ressorte, planchée à une vraie boucle ; et la largeur est BORNÉE à au moins le trou plus le renfort.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A alça de dedo costurada no topo traseiro de uma bota alta que um gancho de bota (o `boot-hook-puller` do Yantra4D) engancha para calçar a bota. Uma LINGUETA de couro dobrada com um FURO reforçado pelo qual passa a lâmina do gancho, e uma ponta de FIXAÇÃO costurada que se aloja na costura traseira. Dimensionada à lâmina para que a ferramenta passe limpa. Resolvido, não adivinhado: o furo é cortado à lâmina MEDIDA mais uma folga e recuado da ponta da alça pela própria largura mais uma margem para não rasgar; o comprimento da lingueta libera o alcance do gancho para que a alça fique saliente, com piso para uma alça real; e a largura é LIMITADA a ao menos o furo mais o reforço.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "boot-hook-pull-tab",
+      "footwear_soft",
+      "pull-tab",
+      "boot-loop",
+      "boot-hook",
+      "boot-hook-puller",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full tab",
+        "es": "Lengüeta completa",
+        "fr": "Patte complète",
+        "pt": "Lingueta completa"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "tab",
+        "facing"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "tab",
+      "label": {
+        "en": "Pull tab (cut 1, folded)",
+        "es": "Lengüeta (cortar 1, doblada)",
+        "fr": "Patte (couper 1, pliée)",
+        "pt": "Lingueta (cortar 1, dobrada)"
+      },
+      "default_color": "#6a4a2a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "facing",
+      "label": {
+        "en": "Hole facing (cut 1)",
+        "es": "Refuerzo del ojal (cortar 1)",
+        "fr": "Parementure de trou (couper 1)",
+        "pt": "Reforço do furo (cortar 1)"
+      },
+      "default_color": "#7a5a3a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "hook",
+      "label": {
+        "en": "Hook",
+        "es": "Gancho",
+        "fr": "Crochet",
+        "pt": "Gancho"
+      }
+    },
+    {
+      "id": "tab",
+      "label": {
+        "en": "Tab",
+        "es": "Lengüeta",
+        "fr": "Patte",
+        "pt": "Lingueta"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "blade_width",
+      "type": "slider",
+      "group": "hook",
+      "default": 16,
+      "min": 8,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Hook blade width (mm)",
+        "es": "Ancho de hoja (mm)",
+        "fr": "Largeur de lame (mm)",
+        "pt": "Largura da lâmina (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D boot-hook-puller blade",
+        "es": "Define la hoja del boot-hook-puller de Yantra4D",
+        "fr": "Pilote la lame du boot-hook-puller Yantra4D",
+        "pt": "Pilota a lâmina do boot-hook-puller do Yantra4D"
+      }
+    },
+    {
+      "id": "blade_thick",
+      "type": "slider",
+      "group": "hook",
+      "default": 5,
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Hook blade thickness (mm)",
+        "es": "Espesor de hoja (mm)",
+        "fr": "Épaisseur de lame (mm)",
+        "pt": "Espessura da lâmina (mm)"
+      }
+    },
+    {
+      "id": "hook_reach",
+      "type": "slider",
+      "group": "hook",
+      "default": 60,
+      "min": 30,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Hook reach (mm)",
+        "es": "Alcance del gancho (mm)",
+        "fr": "Portée du crochet (mm)",
+        "pt": "Alcance do gancho (mm)"
+      }
+    },
+    {
+      "id": "tab_width",
+      "type": "slider",
+      "group": "tab",
+      "default": 34,
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Tab width (mm)",
+        "es": "Ancho de lengüeta (mm)",
+        "fr": "Largeur de patte (mm)",
+        "pt": "Largura da lingueta (mm)"
+      }
+    },
+    {
+      "id": "hole_clear",
+      "type": "slider",
+      "group": "tab",
+      "default": 4,
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Hole clearance (mm)",
+        "es": "Holgura del ojal (mm)",
+        "fr": "Jeu du trou (mm)",
+        "pt": "Folga do furo (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "hook_loop",
+        "type": "custom",
+        "label": {
+          "en": "Hook loop hole",
+          "es": "Ojal de gancho",
+          "fr": "Trou de crochet",
+          "pt": "Furo do gancho"
+        },
+        "edges": [
+          {
+            "piece": "tab",
+            "edge": "loop_end"
+          }
+        ],
+        "parameters": [
+          "blade_width",
+          "blade_thick",
+          "hook_reach"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Tall boots are hard to pull on, and the loop that a boot-hook catches is often a flimsy afterthought that tears off. A tab cut to the exact hook blade, reinforced and stitched into the back seam, lets an older or less mobile person pull a boot on with a hook instead of a struggle — and it prints from the same file as the hook, so the pair works together the first time.",
+      "es": "Las botas altas cuestan de calzar, y el asa que engancha el gancho suele ser un añadido endeble que se arranca. Una lengüeta cortada a la hoja exacta, reforzada y cosida en la costura trasera, deja que una persona mayor o con menos movilidad calce la bota con un gancho en vez de una lucha — y se imprime del mismo archivo que el gancho, así el par funciona junto a la primera.",
+      "fr": "Les bottes hautes sont dures à enfiler, et la boucle que le tire-botte accroche est souvent un ajout fragile qui s'arrache. Une patte coupée à la lame exacte, renforcée et cousue dans la couture dos, permet à une personne âgée ou moins mobile d'enfiler une botte avec un crochet plutôt qu'une lutte — et elle s'imprime du même fichier que le crochet, si bien que la paire fonctionne ensemble du premier coup.",
+      "pt": "Botas altas são difíceis de calçar, e a alça que o gancho engata costuma ser um acréscimo frágil que se arranca. Uma lingueta cortada à lâmina exata, reforçada e costurada na costura traseira, deixa uma pessoa mais velha ou com menos mobilidade calçar a bota com um gancho em vez de uma luta — e imprime do mesmo arquivo que o gancho, então o par funciona junto de primeira."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "presets": [
+    {
+      "id": "riding-boot",
+      "label": {
+        "en": "Riding boot",
+        "es": "Bota de montar",
+        "fr": "Botte d'équitation",
+        "pt": "Bota de montaria"
+      },
+      "values": {
+        "hook_reach": 70
+      }
+    },
+    {
+      "id": "work-boot",
+      "label": {
+        "en": "Work boot",
+        "es": "Bota de trabajo",
+        "fr": "Botte de travail",
+        "pt": "Bota de trabalho"
+      },
+      "values": {
+        "hook_reach": 50,
+        "tab_width": 40
+      }
+    }
+  ],
+  "notion": {
+    "kind": "hook",
+    "subtype": "boot-hook loop tab",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "boot-hook-puller",
+      "linked": true,
+      "params_map": {
+        "blade_w": "blade_width",
+        "blade_t": "blade_thick",
+        "hook_r": "hook_reach * 0.1"
+      }
+    }
+  }
+}

@@ -1,0 +1,454 @@
+{
+  "project": {
+    "name": "Kimono-Wrap Baby Bodysuit",
+    "slug": "baby-kimono-bodysuit",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The newborn bodysuit that wraps like a kimono — the left front crosses over the right and fastens with sew-on snaps down the side, so it goes on WITHOUT pulling anything over a newborn's head (the reason side-snap kimono bodies exist). A right FRONT and an overlapping left FRONT, a BACK, short kimono SLEEVES cut in one with the body, and a snap crotch gusset. Solved, not guessed: the wrap overlap is a real, CLAMPED extension (added cloth, not stolen) so it can neither vanish — nothing to snap — nor pass the centre and gape; the shoulder and side seams are drafted equal so the kimono shoulder sews flush; and each snap is stepped in off the finished wrap edge so it seats on cloth. The snaps bridge to the Yantra4D `sew-on-snap` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El body de recién nacido que cruza como kimono — el delantero izquierdo cruza sobre el derecho y cierra con broches de coser al costado, para que se ponga SIN pasar nada por la cabeza (la razón de ser de los bodies de broche lateral). Un DELANTERO derecho y un DELANTERO izquierdo que solapa, una ESPALDA, MANGAS de kimono cortadas de una pieza con el cuerpo y una entrepierna de broche. Resuelto, no adivinado: el solape del cruce es una extensión real ACOTADA (tela añadida, no robada) para que no desaparezca — nada que abrochar — ni pase del centro y se abra; los hombros y costados se trazan iguales para que el hombro kimono cosa a ras; y cada broche se mete desde el canto terminado del cruce para asentar en tela. Los broches se puentean al sólido `sew-on-snap` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le body de nouveau-né qui se croise comme un kimono — le devant gauche croise sur le droit et se ferme par des pressions à coudre sur le côté, pour l'enfiler SANS rien passer par-dessus la tête (la raison d'être des bodies à pression latérale). Un DEVANT droit et un DEVANT gauche qui chevauche, un DOS, des MANCHES kimono coupées d'une pièce avec le corps et un entrejambe à pression. Résolu, non deviné : le chevauchement du croisement est une vraie extension BORNÉE (tissu ajouté, non volé) pour qu'il ne disparaisse pas — rien à presser — ni ne passe le centre en bâillant ; les épaules et les côtés sont tracés égaux pour que l'épaule kimono soit affleurante ; et chaque pression est rentrée depuis le bord fini du croisement pour porter sur le tissu. Les pressions font le pont vers le solide `sew-on-snap` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O body de recém-nascido que cruza como quimono — a frente esquerda cruza sobre a direita e fecha com botões de pressão de costurar na lateral, para vestir SEM passar nada pela cabeça (a razão de ser dos bodies de pressão lateral). Uma FRENTE direita e uma FRENTE esquerda que sobrepõe, umas COSTAS, MANGAS quimono cortadas em uma peça com o corpo e uma entreperna de pressão. Resolvido, não adivinhado: a sobreposição do cruzamento é uma extensão real LIMITADA (tecido adicionado, não roubado) para que não desapareça — nada a apertar — nem passe do centro e abra; os ombros e laterais são traçados iguais para que o ombro quimono costure rente; e cada pressão é recuada da borda acabada do cruzamento para assentar no tecido. As pressões fazem a ponte para o sólido `sew-on-snap` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "baby-kimono-bodysuit",
+      "kids_baby",
+      "bodysuit",
+      "kimono-wrap",
+      "newborn",
+      "side-snap",
+      "sew-on-snap",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full bodysuit",
+        "es": "Body completo",
+        "fr": "Body complet",
+        "pt": "Body completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front_right",
+        "front_left",
+        "back",
+        "gusset"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front_right",
+      "label": {
+        "en": "Right front (cut 1)",
+        "es": "Delantero derecho (cortar 1)",
+        "fr": "Devant droit (couper 1)",
+        "pt": "Frente direita (cortar 1)"
+      },
+      "default_color": "#e8d0c8",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "front_left",
+      "label": {
+        "en": "Left front, overlap (cut 1)",
+        "es": "Delantero izquierdo, solape (cortar 1)",
+        "fr": "Devant gauche, chevauchement (couper 1)",
+        "pt": "Frente esquerda, sobreposição (cortar 1)"
+      },
+      "default_color": "#f0dad2",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (cut 1)",
+        "es": "Espalda (cortar 1)",
+        "fr": "Dos (couper 1)",
+        "pt": "Costas (cortar 1)"
+      },
+      "default_color": "#f5e2da",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "gusset",
+      "label": {
+        "en": "Snap crotch gusset (cut 1)",
+        "es": "Entrepierna de broche (cortar 1)",
+        "fr": "Entrejambe à pression (couper 1)",
+        "pt": "Entreperna de pressão (cortar 1)"
+      },
+      "default_color": "#fae9e1",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "block",
+      "label": {
+        "en": "Fit block",
+        "es": "Base de talla",
+        "fr": "Base d'aisance",
+        "pt": "Base de modelagem"
+      }
+    },
+    {
+      "id": "wrap",
+      "label": {
+        "en": "Wrap",
+        "es": "Cruce",
+        "fr": "Croisement",
+        "pt": "Cruzamento"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "block",
+      "default": 480,
+      "min": 360,
+      "max": 620,
+      "step": 10,
+      "label": {
+        "en": "Baby chest girth (mm)",
+        "es": "Contorno de pecho del bebé (mm)",
+        "fr": "Tour de poitrine bébé (mm)",
+        "pt": "Contorno de peito do bebê (mm)"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "group": "block",
+      "default": 340,
+      "min": 240,
+      "max": 460,
+      "step": 10,
+      "label": {
+        "en": "Body length, shoulder to crotch (mm)",
+        "es": "Largo, hombro a entrepierna (mm)",
+        "fr": "Longueur, épaule à entrejambe (mm)",
+        "pt": "Comprimento, ombro à entreperna (mm)"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "block",
+      "default": 200,
+      "min": 140,
+      "max": 280,
+      "step": 5,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombros (mm)",
+        "fr": "Largeur d'épaules (mm)",
+        "pt": "Largura de ombros (mm)"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "block",
+      "default": 120,
+      "min": 60,
+      "max": 220,
+      "step": 5,
+      "label": {
+        "en": "Kimono sleeve length (mm)",
+        "es": "Largo de manga kimono (mm)",
+        "fr": "Longueur de manche kimono (mm)",
+        "pt": "Comprimento de manga quimono (mm)"
+      }
+    },
+    {
+      "id": "neck_width",
+      "type": "slider",
+      "group": "block",
+      "default": 110,
+      "min": 80,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Neck width (mm)",
+        "es": "Ancho de escote (mm)",
+        "fr": "Largeur d'encolure (mm)",
+        "pt": "Largura de decote (mm)"
+      }
+    },
+    {
+      "id": "overlap",
+      "type": "slider",
+      "group": "wrap",
+      "default": 70,
+      "min": 30,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Kimono wrap overlap (mm)",
+        "es": "Solape del cruce (mm)",
+        "fr": "Chevauchement du croisement (mm)",
+        "pt": "Sobreposição do cruzamento (mm)"
+      },
+      "tooltip": {
+        "en": "Clamped so it neither vanishes nor passes the centre",
+        "es": "Acotado para que ni desaparezca ni pase del centro",
+        "fr": "Borné pour qu'il ne disparaisse ni ne passe le centre",
+        "pt": "Limitado para que não desapareça nem passe do centro"
+      }
+    },
+    {
+      "id": "snap_disc",
+      "type": "slider",
+      "group": "wrap",
+      "default": 10,
+      "min": 6,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Snap disc diameter (mm)",
+        "es": "Diámetro del disco del broche (mm)",
+        "fr": "Diamètre du disque de pression (mm)",
+        "pt": "Diâmetro do disco de pressão (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D sew-on-snap disc and stud",
+        "es": "Define el disco y macho del sew-on-snap de Yantra4D",
+        "fr": "Pilote le disque et le tenon du sew-on-snap Yantra4D",
+        "pt": "Pilota o disco e o macho do sew-on-snap do Yantra4D"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "group": "block",
+      "default": 80,
+      "min": 20,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Wearing ease (mm)",
+        "es": "Holgura de uso (mm)",
+        "fr": "Aisance de port (mm)",
+        "pt": "Folga de uso (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 14,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "jersey-algodon"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "kimono_shoulder",
+        "type": "shoulder",
+        "label": {
+          "en": "Kimono shoulder seam",
+          "es": "Costura de hombro kimono",
+          "fr": "Couture d'épaule kimono",
+          "pt": "Costura de ombro quimono"
+        },
+        "edges": [
+          {
+            "piece": "front_right",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "back",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "shoulder_width",
+          "neck_width"
+        ]
+      },
+      {
+        "id": "wrap_placket",
+        "type": "placket",
+        "label": {
+          "en": "Side-snap wrap",
+          "es": "Cruce de broche lateral",
+          "fr": "Croisement à pression latérale",
+          "pt": "Cruzamento de pressão lateral"
+        },
+        "edges": [
+          {
+            "piece": "front_left",
+            "edge": "cf"
+          },
+          {
+            "piece": "front_right",
+            "edge": "cf"
+          }
+        ],
+        "parameters": [
+          "overlap",
+          "snap_disc"
+        ]
+      },
+      {
+        "id": "crotch_snap",
+        "type": "custom",
+        "label": {
+          "en": "Snap crotch gusset",
+          "es": "Entrepierna de broche",
+          "fr": "Entrejambe à pression",
+          "pt": "Entreperna de pressão"
+        },
+        "edges": [
+          {
+            "piece": "gusset",
+            "edge": "front_edge"
+          },
+          {
+            "piece": "back",
+            "edge": "crotch"
+          }
+        ],
+        "parameters": [
+          "snap_disc"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true,
+      "stretch_draft": true
+    },
+    "societal_benefit": {
+      "en": "A side-snap kimono body is the safest first garment for a newborn — nothing is pulled over the soft-spot skull, and a diaper change opens the crotch snaps rather than undressing the baby. Yet parents pay a premium for it. Drafted parametrically with a clamped wrap so it always closes flat and snaps that print at home, it is a garment a family can make in an afternoon and grade up as the baby grows.",
+      "es": "Un body kimono de broche lateral es la primera prenda más segura para un recién nacido — nada se pasa por el cráneo con fontanela, y un cambio de pañal abre los broches de la entrepierna en vez de desvestir al bebé. Y aun así los padres pagan un sobreprecio. Trazado paramétrico con un cruce acotado que siempre cierra plano y broches que se imprimen en casa, es una prenda que una familia hace en una tarde y escala según crece el bebé.",
+      "fr": "Un body kimono à pression latérale est le vêtement le plus sûr pour un nouveau-né — rien ne passe par-dessus le crâne à fontanelle, et un change ouvre les pressions de l'entrejambe plutôt que de déshabiller le bébé. Et pourtant les parents le paient cher. Tracé paramétrique avec un croisement borné qui ferme toujours à plat et des pressions imprimées à la maison, c'est un vêtement qu'une famille fait en un après-midi et gradue à mesure que le bébé grandit.",
+      "pt": "Um body quimono de pressão lateral é a primeira peça mais segura para um recém-nascido — nada passa pelo crânio com moleira, e uma troca de fralda abre as pressões da entreperna em vez de despir o bebê. E ainda assim os pais pagam um ágio. Traçado paramétrico com um cruzamento limitado que sempre fecha plano e pressões que se imprimem em casa, é uma peça que uma família faz numa tarde e gradua à medida que o bebê cresce."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "constraints": [
+    {
+      "expression": "overlap < chest_girth / 4",
+      "severity": "warning",
+      "message": {
+        "en": "The wrap overlap is clamped under the body quarter so it never passes the centre.",
+        "es": "El solape se acota bajo el cuarto de cuerpo para que no pase del centro.",
+        "fr": "Le chevauchement est borné sous le quart de corps pour ne pas passer le centre.",
+        "pt": "A sobreposição é limitada sob o quarto de corpo para não passar do centro."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "newborn",
+      "label": {
+        "en": "Newborn",
+        "es": "Recién nacido",
+        "fr": "Nouveau-né",
+        "pt": "Recém-nascido"
+      },
+      "values": {
+        "chest_girth": 420,
+        "body_length": 300
+      }
+    },
+    {
+      "id": "three-month",
+      "label": {
+        "en": "3 months",
+        "es": "3 meses",
+        "fr": "3 mois",
+        "pt": "3 meses"
+      },
+      "values": {
+        "chest_girth": 500,
+        "body_length": 360
+      }
+    }
+  ],
+  "notion": {
+    "kind": "snap",
+    "subtype": "sew-on snap on the side wrap and crotch gusset",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-on-snap",
+      "linked": true,
+      "params_map": {
+        "disc_t": "snap_disc * 0.14",
+        "stud_dia": "snap_disc * 0.42",
+        "engage_clear": "snap_disc * 0.08"
+      }
+    }
+  }
+}

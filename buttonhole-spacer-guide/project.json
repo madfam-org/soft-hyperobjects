@@ -1,0 +1,322 @@
+{
+  "project": {
+    "name": "Buttonhole-Spacer Guide Roll",
+    "slug": "buttonhole-spacer-guide",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A roll-up guide that stores the Yantra4D `buttonhole-spacer` rail (the sliding tool that marks even buttonhole spacing) AND carries its own printed measuring scale, so the rail and the guide it needs live together. A BODY panel with a long rail POCKET, a scale line at the rail pitch, and a TIE. Solved, not guessed: the rail pocket is cut to the MEASURED rail plus a seat (declared to the body length); the scale tick count is DERIVED from the rail length over the pitch, floored at 2 so a coarse pitch never yields a single tick; and the pocket width is CLAMPED inside the body so it never runs off the panel edge.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una guía enrollable que guarda el riel `buttonhole-spacer` de Yantra4D (la herramienta deslizante que marca el espaciado uniforme de ojales) Y lleva su propia escala impresa, para que el riel y la guía que necesita vivan juntos. Un panel CUERPO con un BOLSILLO largo para el riel, una línea de escala al paso del riel, y una CINTA. Resuelto, no adivinado: el bolsillo del riel se corta al riel MEDIDO más un asiento (declarado al largo del cuerpo); el conteo de marcas se DERIVA del largo del riel sobre el paso, con piso en 2 para que un paso grueso nunca dé una sola marca; y el ancho del bolsillo se ACOTA dentro del cuerpo para que no se salga del canto.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un guide à enrouler qui range le rail `buttonhole-spacer` de Yantra4D (l'outil coulissant qui marque un espacement régulier de boutonnières) ET porte sa propre échelle imprimée, pour que le rail et le guide qu'il faut vivent ensemble. Un panneau CORPS avec une longue POCHE à rail, une ligne d'échelle au pas du rail, et un LIEN. Résolu, non deviné : la poche à rail est coupée au rail MESURÉ plus une assise (déclarée à la longueur du corps) ; le nombre de graduations est DÉRIVÉ de la longueur du rail sur le pas, planché à 2 pour qu'un pas grossier ne donne pas une seule graduation ; et la largeur de la poche est BORNÉE dans le corps pour ne pas sortir du bord.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um guia enrolável que guarda o trilho `buttonhole-spacer` do Yantra4D (a ferramenta deslizante que marca o espaçamento uniforme de casas de botão) E carrega sua própria escala impressa, para que o trilho e o guia de que precisa vivam juntos. Um painel CORPO com um BOLSO longo para o trilho, uma linha de escala no passo do trilho, e uma FITA. Resolvido, não adivinhado: o bolso do trilho é cortado ao trilho MEDIDO mais um assento (declarado ao comprimento do corpo); a contagem de marcas é DERIVADA do comprimento do trilho sobre o passo, com piso em 2 para que um passo grosso nunca dê uma só marca; e a largura do bolso é LIMITADA dentro do corpo para não sair da borda.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "buttonhole-spacer-guide",
+      "care_keeping",
+      "guide",
+      "roll-up",
+      "sewing-room",
+      "buttonhole-spacer",
+      "measuring-scale",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full guide",
+        "es": "Guía completa",
+        "fr": "Guide complet",
+        "pt": "Guia completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "body",
+        "pocket",
+        "tie"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Guide body (cut 1)",
+        "es": "Cuerpo (cortar 1)",
+        "fr": "Corps (couper 1)",
+        "pt": "Corpo (cortar 1)"
+      },
+      "default_color": "#a8a0b0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "pocket",
+      "label": {
+        "en": "Rail pocket (cut 1)",
+        "es": "Bolsillo del riel (cortar 1)",
+        "fr": "Poche à rail (couper 1)",
+        "pt": "Bolso do trilho (cortar 1)"
+      },
+      "default_color": "#b8b0c0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "tie",
+      "label": {
+        "en": "Wrap tie (cut 1)",
+        "es": "Cinta (cortar 1)",
+        "fr": "Lien (couper 1)",
+        "pt": "Fita (cortar 1)"
+      },
+      "default_color": "#c8c0d0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "rail",
+      "label": {
+        "en": "Rail tool",
+        "es": "Herramienta de riel",
+        "fr": "Outil rail",
+        "pt": "Ferramenta trilho"
+      }
+    },
+    {
+      "id": "guide",
+      "label": {
+        "en": "Guide",
+        "es": "Guía",
+        "fr": "Guide",
+        "pt": "Guia"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "rail_length",
+      "type": "slider",
+      "group": "rail",
+      "default": 240,
+      "min": 120,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Rail length (mm)",
+        "es": "Largo del riel (mm)",
+        "fr": "Longueur du rail (mm)",
+        "pt": "Comprimento do trilho (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D buttonhole-spacer rail length",
+        "es": "Define el largo del riel buttonhole-spacer de Yantra4D",
+        "fr": "Pilote la longueur du rail buttonhole-spacer Yantra4D",
+        "pt": "Pilota o comprimento do trilho buttonhole-spacer do Yantra4D"
+      }
+    },
+    {
+      "id": "rail_width",
+      "type": "slider",
+      "group": "rail",
+      "default": 24,
+      "min": 12,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Rail width (mm)",
+        "es": "Ancho del riel (mm)",
+        "fr": "Largeur du rail (mm)",
+        "pt": "Largura do trilho (mm)"
+      }
+    },
+    {
+      "id": "rail_pitch",
+      "type": "slider",
+      "group": "rail",
+      "default": 20,
+      "min": 8,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Buttonhole pitch (mm)",
+        "es": "Paso de ojal (mm)",
+        "fr": "Pas de boutonnière (mm)",
+        "pt": "Passo de casa (mm)"
+      }
+    },
+    {
+      "id": "seat",
+      "type": "slider",
+      "group": "guide",
+      "default": 20,
+      "min": 8,
+      "max": 50,
+      "step": 2,
+      "label": {
+        "en": "Seat below rail (mm)",
+        "es": "Asiento bajo el riel (mm)",
+        "fr": "Assise sous le rail (mm)",
+        "pt": "Assento sob o trilho (mm)"
+      }
+    },
+    {
+      "id": "margin",
+      "type": "slider",
+      "group": "guide",
+      "default": 28,
+      "min": 15,
+      "max": 50,
+      "step": 2,
+      "label": {
+        "en": "Body margin (mm)",
+        "es": "Margen del cuerpo (mm)",
+        "fr": "Marge du corps (mm)",
+        "pt": "Margem do corpo (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "rail_pocket",
+        "type": "pocket",
+        "label": {
+          "en": "Rail pocket",
+          "es": "Bolsillo del riel",
+          "fr": "Poche à rail",
+          "pt": "Bolso do trilho"
+        },
+        "edges": [
+          {
+            "piece": "pocket",
+            "edge": "left"
+          },
+          {
+            "piece": "body",
+            "edge": "left"
+          }
+        ],
+        "parameters": [
+          "rail_length",
+          "rail_width",
+          "rail_pitch"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Even buttonhole spacing is one of the fiddliest steps in shirtmaking, and the rail that does it lives loose and its measuring scale lives in the sewist's head. A roll that stores the rail and prints the scale beside it keeps the whole spacing operation in one object, so a maker marks buttonholes right the first time and never hunts for the tool.",
+      "es": "El espaciado uniforme de ojales es de los pasos más engorrosos al hacer camisas, y el riel que lo hace anda suelto y su escala vive en la cabeza de quien cose. Un rollo que guarda el riel e imprime la escala a su lado mantiene toda la operación de espaciado en un objeto, así se marcan los ojales bien a la primera y no se busca la herramienta.",
+      "fr": "L'espacement régulier des boutonnières est l'une des étapes les plus délicates en chemiserie, et le rail qui le fait traîne et son échelle vit dans la tête du couturier. Un rouleau qui range le rail et imprime l'échelle à côté garde toute l'opération d'espacement en un objet, si bien qu'on marque les boutonnières juste du premier coup et qu'on ne cherche pas l'outil.",
+      "pt": "O espaçamento uniforme de casas é um dos passos mais chatos ao fazer camisas, e o trilho que o faz fica solto e sua escala vive na cabeça de quem costura. Um rolo que guarda o trilho e imprime a escala ao lado mantém toda a operação de espaçamento num objeto, então se marca as casas certo de primeira e não se procura a ferramenta."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "presets": [
+    {
+      "id": "shirt",
+      "label": {
+        "en": "Shirt (20 mm pitch)",
+        "es": "Camisa (paso 20 mm)",
+        "fr": "Chemise (pas 20 mm)",
+        "pt": "Camisa (passo 20 mm)"
+      },
+      "values": {
+        "rail_pitch": 20
+      }
+    },
+    {
+      "id": "coat",
+      "label": {
+        "en": "Coat (40 mm pitch)",
+        "es": "Abrigo (paso 40 mm)",
+        "fr": "Manteau (pas 40 mm)",
+        "pt": "Casaco (passo 40 mm)"
+      },
+      "values": {
+        "rail_pitch": 40
+      }
+    }
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "roll-up guide holding a buttonhole-spacer rail",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "buttonhole-spacer",
+      "linked": true,
+      "params_map": {
+        "rail_len": "rail_length",
+        "rail_w": "rail_width",
+        "pitch": "rail_pitch"
+      }
+    }
+  }
+}

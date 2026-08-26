@@ -1,0 +1,398 @@
+{
+  "project": {
+    "name": "Knit Balaclava Hood",
+    "slug": "knit-balaclava-hood",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A close-fitting knit balaclava: a hood that covers the head and neck with a FACE OPENING. Drafted as two mirrored SIDE panels (each wrapping from the face over the ear to the centre back) and a CENTRE GORE crown-to-nape that gives the crown its round; face and neck openings take ribbed bands. Cut in a stretch wool knit with negative ease so it grips. Solved, not guessed: the gore's long edges are SOLVED so each measures the side panel's crown edge and the gore sews in flush; the face opening height is CLAMPED under the head-arc so an over-tall request never eats past the crown and collapses the side panel into a self-crossing outline; and the stretch factor is FLOORED so a tight fit never draws a hairline gore the kernel would CCW-normalize into a healthy sliver. Pull-on: no hardware.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un pasamontañas de punto ceñido: una capucha que cubre cabeza y cuello con una ABERTURA FACIAL. Trazado como dos paneles LATERALES en espejo (cada uno envolviendo de la cara sobre la oreja al centro atrás) y un CANESÚ CENTRAL de coronilla a nuca que da la redondez; las aberturas facial y de cuello llevan bandas de canalé. Cortado en punto de lana elástico con holgura negativa para que agarre. Resuelto, no adivinado: los cantos largos del canesú se RESUELVEN para que cada uno mida el canto de coronilla del lateral y el canesú entre a ras; la altura de la abertura facial se ACOTA bajo el arco de cabeza para que una petición muy alta nunca coma más allá de la coronilla y colapse el lateral en un contorno que se cruza; y el factor de estiramiento tiene PISO para que un ajuste ceñido nunca trace un canesú filiforme que el kernel normalizaría a CCW. Sin cierre: sin herrajes.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une cagoule tricotée ajustée : une capuche couvrant la tête et le cou avec une OUVERTURE FACIALE. Tracée en deux panneaux LATÉRAUX miroir (chacun enveloppant du visage par-dessus l'oreille au centre dos) et un SOUFFLET CENTRAL calotte-à-nuque donnant l'arrondi ; les ouvertures faciale et de cou prennent des bandes côtelées. Coupée dans un tricot de laine extensible à aisance négative pour qu'elle serre. Résolu, non deviné : les bords longs du soufflet sont RÉSOLUS pour que chacun mesure le bord de calotte du latéral et que le soufflet s'assemble affleurant ; la hauteur de l'ouverture faciale est BORNÉE sous l'arc de tête pour qu'une demande trop haute ne dépasse jamais la calotte et n'effondre le latéral en un contour qui se croise ; et le facteur d'étirement a un plancher pour qu'un ajustement serré ne trace jamais un soufflet filiforme que le noyau normaliserait en CCW. Enfilable : pas d'accessoire.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma balaclava de tricô justa: um capuz que cobre cabeça e pescoço com uma ABERTURA FACIAL. Traçada como dois painéis LATERAIS espelhados (cada um envolvendo do rosto sobre a orelha ao centro das costas) e um GOMO CENTRAL coroa-à-nuca que dá o arredondado; as aberturas facial e de pescoço levam faixas caneladas. Cortada em tricô de lã elástico com folga negativa para agarrar. Resolvido, não adivinhado: as bordas longas do gomo são RESOLVIDAS para que cada uma meça a borda da coroa do lateral e o gomo entre rente; a altura da abertura facial é LIMITADA sob o arco da cabeça para que um pedido muito alto nunca coma além da coroa e colapse o lateral num contorno que se cruza; e o fator de estiramento tem PISO para que um ajuste justo nunca trace um gomo filiforme que o núcleo normalizaria em CCW. De vestir: sem ferragens.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "knit-balaclava-hood",
+      "knitwear",
+      "balaclava",
+      "hood",
+      "face-opening",
+      "ribbed-band",
+      "pull-on",
+      "stretch",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full balaclava",
+        "es": "Pasamontañas completo",
+        "fr": "Cagoule complète",
+        "pt": "Balaclava completa"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "side",
+        "gore",
+        "face_band"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "side",
+      "label": {
+        "en": "Side panel (cut 2, mirrored)",
+        "es": "Panel lateral (cortar 2, espejo)",
+        "fr": "Panneau latéral (couper 2, miroir)",
+        "pt": "Painel lateral (cortar 2, espelhado)"
+      },
+      "default_color": "#4a4a55",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "gore",
+      "label": {
+        "en": "Centre gore (cut 1)",
+        "es": "Canesú central (cortar 1)",
+        "fr": "Soufflet central (couper 1)",
+        "pt": "Gomo central (cortar 1)"
+      },
+      "default_color": "#5a5a65",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "face_band",
+      "label": {
+        "en": "Ribbed face band (cut 1)",
+        "es": "Banda facial (cortar 1)",
+        "fr": "Bande faciale (couper 1)",
+        "pt": "Faixa facial (cortar 1)"
+      },
+      "default_color": "#6a6a75",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "head",
+      "label": {
+        "en": "Head block",
+        "es": "Base de cabeza",
+        "fr": "Base de tête",
+        "pt": "Base de cabeça"
+      }
+    },
+    {
+      "id": "face",
+      "label": {
+        "en": "Face opening",
+        "es": "Abertura facial",
+        "fr": "Ouverture faciale",
+        "pt": "Abertura facial"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "head_girth",
+      "type": "slider",
+      "group": "head",
+      "default": 570,
+      "min": 460,
+      "max": 680,
+      "step": 10,
+      "label": {
+        "en": "Head girth (mm)",
+        "es": "Contorno de cabeza (mm)",
+        "fr": "Tour de tête (mm)",
+        "pt": "Contorno de cabeça (mm)"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "head_girth"
+      }
+    },
+    {
+      "id": "head_height",
+      "type": "slider",
+      "group": "head",
+      "default": 230,
+      "min": 170,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Head height, crown to jaw (mm)",
+        "es": "Alto de cabeza (mm)",
+        "fr": "Hauteur de tête (mm)",
+        "pt": "Altura da cabeça (mm)"
+      }
+    },
+    {
+      "id": "neck_depth",
+      "type": "slider",
+      "group": "head",
+      "default": 180,
+      "min": 90,
+      "max": 280,
+      "step": 5,
+      "label": {
+        "en": "Neck depth below jaw (mm)",
+        "es": "Profundidad de cuello (mm)",
+        "fr": "Profondeur de cou (mm)",
+        "pt": "Profundidade de pescoço (mm)"
+      }
+    },
+    {
+      "id": "face_width",
+      "type": "slider",
+      "group": "face",
+      "default": 130,
+      "min": 90,
+      "max": 190,
+      "step": 5,
+      "label": {
+        "en": "Face opening width (mm)",
+        "es": "Ancho de abertura facial (mm)",
+        "fr": "Largeur d'ouverture faciale (mm)",
+        "pt": "Largura da abertura facial (mm)"
+      }
+    },
+    {
+      "id": "face_height",
+      "type": "slider",
+      "group": "face",
+      "default": 150,
+      "min": 90,
+      "max": 220,
+      "step": 5,
+      "label": {
+        "en": "Face opening height (mm)",
+        "es": "Alto de abertura facial (mm)",
+        "fr": "Hauteur d'ouverture faciale (mm)",
+        "pt": "Altura da abertura facial (mm)"
+      },
+      "tooltip": {
+        "en": "Clamped under the head-arc so it never eats past the crown",
+        "es": "Acotada bajo el arco para que no coma más allá de la coronilla",
+        "fr": "Bornée sous l'arc pour ne pas dépasser la calotte",
+        "pt": "Limitada sob o arco para não passar da coroa"
+      }
+    },
+    {
+      "id": "stretch_factor",
+      "type": "slider",
+      "group": "construction",
+      "default": 0.86,
+      "min": 0.66,
+      "max": 0.98,
+      "step": 0.02,
+      "label": {
+        "en": "Stretch factor (<1 = negative ease)",
+        "es": "Factor de estiramiento (<1 = holgura negativa)",
+        "fr": "Facteur d'étirement (<1 = aisance négative)",
+        "pt": "Fator de estiramento (<1 = folga negativa)"
+      }
+    },
+    {
+      "id": "band_depth",
+      "type": "slider",
+      "group": "construction",
+      "default": 26,
+      "min": 16,
+      "max": 45,
+      "step": 2,
+      "label": {
+        "en": "Ribbed band depth (mm)",
+        "es": "Alto de banda (mm)",
+        "fr": "Hauteur de bande (mm)",
+        "pt": "Altura da faixa (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "crown_gore",
+        "type": "custom",
+        "label": {
+          "en": "Crown gore seam",
+          "es": "Costura del canesú",
+          "fr": "Couture du soufflet",
+          "pt": "Costura do gomo"
+        },
+        "edges": [
+          {
+            "piece": "side",
+            "edge": "crown"
+          },
+          {
+            "piece": "gore",
+            "edge": "side_a"
+          }
+        ],
+        "parameters": [
+          "head_height",
+          "head_girth"
+        ]
+      },
+      {
+        "id": "centre_back",
+        "type": "side_seam",
+        "label": {
+          "en": "Centre-back seam",
+          "es": "Costura central trasera",
+          "fr": "Couture centre dos",
+          "pt": "Costura central das costas"
+        },
+        "edges": [
+          {
+            "piece": "side",
+            "edge": "cb"
+          }
+        ],
+        "parameters": [
+          "neck_depth"
+        ]
+      },
+      {
+        "id": "face_opening",
+        "type": "neckline",
+        "label": {
+          "en": "Ribbed face opening",
+          "es": "Abertura facial de canalé",
+          "fr": "Ouverture faciale côtelée",
+          "pt": "Abertura facial canelada"
+        },
+        "edges": [
+          {
+            "piece": "side",
+            "edge": "face"
+          },
+          {
+            "piece": "face_band",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "face_width",
+          "face_height",
+          "band_depth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": false,
+      "stretch_draft": true
+    },
+    "societal_benefit": {
+      "en": "A balaclava is worn by cyclists, welders, cold-weather workers and kids on the school run, and a badly drafted one either gapes at the face or binds at the crown. Drafting it as two side panels plus a solved crown gore means the gore always fits the head without a pucker, and clamping the face opening under the head-arc means the eyes and mouth land where they should on any head size from one pattern.",
+      "es": "Un pasamontañas lo usan ciclistas, soldadores, trabajadores de frío y niños camino a la escuela, y uno mal trazado se abre en la cara o aprieta en la coronilla. Trazarlo como dos laterales más un canesú de coronilla resuelto hace que el canesú siempre ajuste sin frunce, y acotar la abertura facial bajo el arco hace que ojos y boca caigan donde deben en cualquier talla de cabeza desde un solo patrón.",
+      "fr": "Une cagoule est portée par les cyclistes, les soudeurs, les travailleurs du froid et les enfants sur le chemin de l'école, et une mal tracée bâille au visage ou serre à la calotte. La tracer en deux latéraux plus un soufflet de calotte résolu fait que le soufflet va toujours sans fronce, et borner l'ouverture faciale sous l'arc fait que les yeux et la bouche tombent où il faut sur toute taille de tête depuis un seul patron.",
+      "pt": "Uma balaclava é usada por ciclistas, soldadores, trabalhadores do frio e crianças a caminho da escola, e uma mal traçada abre no rosto ou aperta na coroa. Traçá-la como dois laterais mais um gomo de coroa resolvido faz o gomo sempre servir sem franzir, e limitar a abertura facial sob o arco faz olhos e boca caírem onde devem em qualquer tamanho de cabeça a partir de um só molde."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "constraints": [
+    {
+      "expression": "face_height < head_height",
+      "severity": "warning",
+      "message": {
+        "en": "The face opening is clamped under the head-arc so it never eats past the crown.",
+        "es": "La abertura facial se acota bajo el arco para que no coma más allá de la coronilla.",
+        "fr": "L'ouverture faciale est bornée sous l'arc pour ne pas dépasser la calotte.",
+        "pt": "A abertura facial é limitada sob o arco para não passar da coroa."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "full-face",
+      "label": {
+        "en": "Full-face (small opening)",
+        "es": "Cara cubierta (abertura pequeña)",
+        "fr": "Visage couvert (petite ouverture)",
+        "pt": "Rosto coberto (abertura pequena)"
+      },
+      "values": {
+        "face_width": 110,
+        "face_height": 120
+      }
+    },
+    {
+      "id": "open-face",
+      "label": {
+        "en": "Open-face",
+        "es": "Cara abierta",
+        "fr": "Visage ouvert",
+        "pt": "Rosto aberto"
+      },
+      "values": {
+        "face_width": 170,
+        "face_height": 190
+      }
+    }
+  ]
+}

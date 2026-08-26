@@ -1,0 +1,321 @@
+{
+  "project": {
+    "name": "Bias-Tape Maker Caddy",
+    "slug": "bias-tape-holder-caddy",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A roll-up fabric caddy that holds a graduated set of bias-tape makers (the little funnels that fold a bias strip as you press it). A BODY panel with a row of POCKETS sized to the tool set, and a TIE that wraps the roll closed. Drafted to a KNOWN tool — the Yantra4D `bias-tape-maker` solid — so the pocket widths track the actual tool throat, not a guess. Solved, not guessed: each pocket width is the tool throat plus a clearance and the row width is their sum (declared as the pocket-attach seam ease); the pocket depth is CLAMPED under the body height so a deep pocket never runs past the fold and inverts the flap; and the tie is floored to wrap the rolled caddy at least once plus a bow.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un organizador de tela enrollable que sostiene un juego graduado de dobladilladores de sesgo (los embudos que doblan la tira al bies al plancharla). Un panel CUERPO con una fila de BOLSILLOS a la medida del juego, y una CINTA que envuelve el rollo cerrado. Trazado a una herramienta CONOCIDA — el sólido `bias-tape-maker` de Yantra4D — para que los anchos de bolsillo sigan la garganta real, no una suposición. Resuelto, no adivinado: cada ancho de bolsillo es la garganta más una holgura y el ancho de fila es su suma (declarada como sobra de la costura de unión); la profundidad de bolsillo se ACOTA bajo el alto del cuerpo para que un bolsillo profundo nunca pase del doblez e invierta la solapa; y la cinta tiene piso para envolver el rollo al menos una vez más un lazo.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un rangement en tissu à enrouler qui contient un jeu gradué de biaiseurs (les petits entonnoirs qui plient la bande de biais au repassage). Un panneau CORPS avec une rangée de POCHES dimensionnée au jeu d'outils, et un LIEN qui enroule le rouleau fermé. Tracé à un outil CONNU — le solide `bias-tape-maker` de Yantra4D — pour que les largeurs de poche suivent la gorge réelle, non une supposition. Résolu, non deviné : chaque largeur de poche est la gorge plus un jeu et la largeur de rangée en est la somme (déclarée comme embu de la couture d'attache) ; la profondeur de poche est BORNÉE sous la hauteur du corps pour qu'une poche profonde ne dépasse le pli et n'inverse le rabat ; et le lien a un plancher pour enrouler le rouleau au moins une fois plus un nœud.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um organizador de tecido enrolável que segura um jogo graduado de dobradores de viés (os funis que dobram a tira em viés ao passar). Um painel CORPO com uma fileira de BOLSOS dimensionada ao jogo, e uma FITA que envolve o rolo fechado. Traçado a uma ferramenta CONHECIDA — o sólido `bias-tape-maker` do Yantra4D — para que as larguras de bolso sigam a garganta real, não um palpite. Resolvido, não adivinhado: cada largura de bolso é a garganta mais uma folga e a largura da fileira é a soma (declarada como embebido da costura de fixação); a profundidade de bolso é LIMITADA sob a altura do corpo para que um bolso fundo nunca passe da dobra e inverta a aba; e a fita tem piso para envolver o rolo ao menos uma vez mais um laço.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "bias-tape-holder-caddy",
+      "care_keeping",
+      "caddy",
+      "roll-up",
+      "sewing-room",
+      "bias-tape-maker",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full caddy",
+        "es": "Organizador completo",
+        "fr": "Rangement complet",
+        "pt": "Organizador completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "body",
+        "pocket",
+        "tie"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Caddy body (cut 1)",
+        "es": "Cuerpo (cortar 1)",
+        "fr": "Corps (couper 1)",
+        "pt": "Corpo (cortar 1)"
+      },
+      "default_color": "#b8a582",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "pocket",
+      "label": {
+        "en": "Pocket strip (cut 1)",
+        "es": "Tira de bolsillos (cortar 1)",
+        "fr": "Bande de poches (couper 1)",
+        "pt": "Tira de bolsos (cortar 1)"
+      },
+      "default_color": "#c8b592",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "tie",
+      "label": {
+        "en": "Wrap tie (cut 1)",
+        "es": "Cinta (cortar 1)",
+        "fr": "Lien (couper 1)",
+        "pt": "Fita (cortar 1)"
+      },
+      "default_color": "#d8c5a2",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "tool",
+      "label": {
+        "en": "Tool set",
+        "es": "Juego de herramientas",
+        "fr": "Jeu d'outils",
+        "pt": "Jogo de ferramentas"
+      }
+    },
+    {
+      "id": "caddy",
+      "label": {
+        "en": "Caddy",
+        "es": "Organizador",
+        "fr": "Rangement",
+        "pt": "Organizador"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "tool_count",
+      "type": "slider",
+      "group": "tool",
+      "default": 5,
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "label": {
+        "en": "Number of tools",
+        "es": "Número de herramientas",
+        "fr": "Nombre d'outils",
+        "pt": "Número de ferramentas"
+      }
+    },
+    {
+      "id": "tool_width",
+      "type": "slider",
+      "group": "tool",
+      "default": 40,
+      "min": 18,
+      "max": 80,
+      "step": 2,
+      "label": {
+        "en": "Widest tool throat (mm)",
+        "es": "Garganta más ancha (mm)",
+        "fr": "Gorge la plus large (mm)",
+        "pt": "Garganta mais larga (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D bias-tape-maker throat",
+        "es": "Define la garganta del bias-tape-maker de Yantra4D",
+        "fr": "Pilote la gorge du bias-tape-maker Yantra4D",
+        "pt": "Pilota a garganta do bias-tape-maker do Yantra4D"
+      }
+    },
+    {
+      "id": "tool_length",
+      "type": "slider",
+      "group": "tool",
+      "default": 95,
+      "min": 50,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Tool length (mm)",
+        "es": "Largo de herramienta (mm)",
+        "fr": "Longueur d'outil (mm)",
+        "pt": "Comprimento da ferramenta (mm)"
+      }
+    },
+    {
+      "id": "pocket_clear",
+      "type": "slider",
+      "group": "caddy",
+      "default": 10,
+      "min": 4,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Pocket clearance (mm)",
+        "es": "Holgura de bolsillo (mm)",
+        "fr": "Jeu de poche (mm)",
+        "pt": "Folga de bolso (mm)"
+      }
+    },
+    {
+      "id": "body_margin",
+      "type": "slider",
+      "group": "caddy",
+      "default": 30,
+      "min": 15,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Body margin (mm)",
+        "es": "Margen del cuerpo (mm)",
+        "fr": "Marge du corps (mm)",
+        "pt": "Margem do corpo (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "pocket_row",
+        "type": "pocket",
+        "label": {
+          "en": "Tool pocket row",
+          "es": "Fila de bolsillos",
+          "fr": "Rangée de poches",
+          "pt": "Fileira de bolsos"
+        },
+        "edges": [
+          {
+            "piece": "pocket",
+            "edge": "attach"
+          },
+          {
+            "piece": "body",
+            "edge": "top"
+          }
+        ],
+        "parameters": [
+          "tool_count",
+          "tool_width",
+          "pocket_clear"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Sewing-room tools live loose in a drawer and get lost or bent; a roll-up caddy sized to the exact tool set keeps a graduated collection in order and travels to a class flat. Drafting the pockets to the printed tool means the caddy fits the tools a maker actually owns, printed from the same file that makes the tools, so the whole set — funnels and their keeper — comes from one place.",
+      "es": "Las herramientas de costura viven sueltas en un cajón y se pierden o se doblan; un organizador enrollable a la medida exacta del juego mantiene una colección graduada en orden y viaja plano a una clase. Trazar los bolsillos a la herramienta impresa hace que el organizador ajuste a las herramientas que de verdad se tienen, impreso del mismo archivo que hace las herramientas, así todo el juego — embudos y su guarda — sale de un solo lugar.",
+      "fr": "Les outils de couture traînent en vrac dans un tiroir et se perdent ou se tordent ; un rangement à enrouler dimensionné au jeu exact garde une collection graduée en ordre et voyage à plat en cours. Tracer les poches à l'outil imprimé fait que le rangement va aux outils réellement possédés, imprimé du même fichier que les outils, si bien que tout le jeu — entonnoirs et leur gardien — vient d'un seul endroit.",
+      "pt": "As ferramentas de costura ficam soltas numa gaveta e se perdem ou entortam; um organizador enrolável dimensionado ao jogo exato mantém uma coleção graduada em ordem e viaja plano a uma aula. Traçar os bolsos à ferramenta impressa faz o organizador servir às ferramentas que realmente se tem, impresso do mesmo arquivo que faz as ferramentas, então o jogo todo — funis e seu guardião — vem de um só lugar."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "presets": [
+    {
+      "id": "starter",
+      "label": {
+        "en": "Starter set (4)",
+        "es": "Juego inicial (4)",
+        "fr": "Jeu débutant (4)",
+        "pt": "Jogo inicial (4)"
+      },
+      "values": {
+        "tool_count": 4
+      }
+    },
+    {
+      "id": "full",
+      "label": {
+        "en": "Full set (6)",
+        "es": "Juego completo (6)",
+        "fr": "Jeu complet (6)",
+        "pt": "Jogo completo (6)"
+      },
+      "values": {
+        "tool_count": 6
+      }
+    }
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "roll-up caddy holding a bias-tape-maker set",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "bias-tape-maker",
+      "linked": true,
+      "params_map": {
+        "tape_width": "tool_width * 0.5",
+        "tool_len": "tool_length",
+        "throat_len": "tool_length * 0.4"
+      }
+    }
+  }
+}

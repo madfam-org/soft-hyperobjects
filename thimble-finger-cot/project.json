@@ -1,0 +1,291 @@
+{
+  "project": {
+    "name": "Quilter's Thimble Cot",
+    "slug": "thimble-finger-cot",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A padded fabric finger cot that wears OVER a quilter's thimble (or in place of a metal one) — a soft tapered sleeve for the pushing finger, quilted at the tip where the needle bears, so a hand-quilter can work a long session without a bruised fingertip. Drafted to a KNOWN thimble — the Yantra4D `thimble` solid — so the cot's girth and length track the finger the thimble already fits. Solved, not guessed: the flat SIDE panel is a trapezoid whose base and tip edges are the MEASURED base and tip circumferences, so rolled it is a true cone; the tip CAP disc radius is the tip circumference over 2*pi so the cone closes exactly; and the taper is CLAMPED so the tip is smaller than the base but never a hairline the kernel would fold to a point.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un dedal de tela acolchado que se lleva SOBRE un dedal de acolchado (o en lugar de uno de metal) — una funda cónica y suave para el dedo que empuja, acolchada en la punta donde carga la aguja, para que quien acolcha a mano trabaje una sesión larga sin machacarse la yema. Trazado a un dedal CONOCIDO — el sólido `thimble` de Yantra4D — para que el contorno y largo sigan el dedo que el dedal ya calza. Resuelto, no adivinado: el panel LATERAL plano es un trapecio cuyos cantos base y punta son las circunferencias MEDIDAS, así enrollado es un cono verdadero; el radio del disco de PUNTA es la circunferencia de punta sobre 2*pi para que el cono cierre exacto; y el ahusado se ACOTA para que la punta sea menor que la base pero nunca un filamento que el kernel doblaría en pico.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un doigtier en tissu matelassé qui se porte SUR un doigtier de quilting (ou à la place d'un métallique) — un fourreau souple et conique pour le doigt qui pousse, matelassé à la pointe où l'aiguille appuie, pour qu'un quilteur à la main travaille longtemps sans bout de doigt meurtri. Tracé à un doigtier CONNU — le solide `thimble` de Yantra4D — pour que la circonférence et la longueur suivent le doigt que le doigtier chausse déjà. Résolu, non deviné : le panneau LATÉRAL plat est un trapèze dont les bords base et pointe sont les circonférences MESURÉES, si bien qu'enroulé c'est un vrai cône ; le rayon du disque de POINTE est la circonférence de pointe sur 2*pi pour que le cône ferme exactement ; et l'effilement est BORNÉ pour que la pointe soit plus petite que la base mais jamais un filament que le noyau replierait en pointe.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma dedeira de tecido acolchoada que se usa SOBRE uma dedeira de quilting (ou no lugar de uma de metal) — uma manga macia e cônica para o dedo que empurra, acolchoada na ponta onde a agulha apoia, para que quem faz quilting à mão trabalhe uma sessão longa sem machucar a ponta do dedo. Traçada a uma dedeira CONHECIDA — o sólido `thimble` do Yantra4D — para que a circunferência e o comprimento sigam o dedo que a dedeira já calça. Resolvido, não adivinhado: o painel LATERAL plano é um trapézio cujas bordas base e ponta são as circunferências MEDIDAS, então enrolado é um cone verdadeiro; o raio do disco de PONTA é a circunferência de ponta sobre 2*pi para que o cone feche exato; e o afunilamento é LIMITADO para que a ponta seja menor que a base mas nunca um filamento que o núcleo dobraria em bico.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "thimble-finger-cot",
+      "care_keeping",
+      "thimble",
+      "finger-cot",
+      "quilting",
+      "tapered-tube",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full cot",
+        "es": "Dedal completo",
+        "fr": "Doigtier complet",
+        "pt": "Dedeira completa"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "side",
+        "cap"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "side",
+      "label": {
+        "en": "Side panel (cut 1)",
+        "es": "Panel lateral (cortar 1)",
+        "fr": "Panneau latéral (couper 1)",
+        "pt": "Painel lateral (cortar 1)"
+      },
+      "default_color": "#c8b8a0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "cap",
+      "label": {
+        "en": "Tip cap (cut 1)",
+        "es": "Tapa de punta (cortar 1)",
+        "fr": "Bout de pointe (couper 1)",
+        "pt": "Tampa de ponta (cortar 1)"
+      },
+      "default_color": "#d8c8b0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "finger",
+      "label": {
+        "en": "Finger",
+        "es": "Dedo",
+        "fr": "Doigt",
+        "pt": "Dedo"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "finger_girth",
+      "type": "slider",
+      "group": "finger",
+      "default": 62,
+      "min": 40,
+      "max": 90,
+      "step": 2,
+      "label": {
+        "en": "Finger base girth (mm)",
+        "es": "Contorno de base del dedo (mm)",
+        "fr": "Tour de base du doigt (mm)",
+        "pt": "Contorno de base do dedo (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D thimble finger girth",
+        "es": "Define el contorno del thimble de Yantra4D",
+        "fr": "Pilote la circonférence du thimble Yantra4D",
+        "pt": "Pilota a circunferência do thimble do Yantra4D"
+      }
+    },
+    {
+      "id": "tip_girth",
+      "type": "slider",
+      "group": "finger",
+      "default": 46,
+      "min": 28,
+      "max": 80,
+      "step": 2,
+      "label": {
+        "en": "Fingertip girth (mm)",
+        "es": "Contorno de punta (mm)",
+        "fr": "Tour de bout (mm)",
+        "pt": "Contorno de ponta (mm)"
+      }
+    },
+    {
+      "id": "cot_length",
+      "type": "slider",
+      "group": "finger",
+      "default": 55,
+      "min": 30,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Cot length (mm)",
+        "es": "Largo del dedal (mm)",
+        "fr": "Longueur du doigtier (mm)",
+        "pt": "Comprimento da dedeira (mm)"
+      }
+    },
+    {
+      "id": "wall",
+      "type": "slider",
+      "group": "construction",
+      "default": 3,
+      "min": 1,
+      "max": 8,
+      "step": 1,
+      "label": {
+        "en": "Padded wall (mm)",
+        "es": "Pared acolchada (mm)",
+        "fr": "Paroi matelassée (mm)",
+        "pt": "Parede acolchoada (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 0,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "manta-cruda"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "finger_tube",
+        "type": "cuff",
+        "label": {
+          "en": "Tapered finger tube",
+          "es": "Tubo cónico del dedo",
+          "fr": "Tube conique du doigt",
+          "pt": "Tubo cônico do dedo"
+        },
+        "edges": [
+          {
+            "piece": "side",
+            "edge": "base"
+          }
+        ],
+        "parameters": [
+          "finger_girth",
+          "tip_girth",
+          "cot_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Hand-quilters and hand-sewists ruin their fingertips over a long project, and a metal thimble that does not fit is worse than none — it slips and the needle finds the skin anyway. A soft cot cut to the exact finger, worn over the printed thimble, spreads the needle's push across a padded tip, so the maker's hand lasts the quilt. Cut from a scrap and printed with its own thimble, it costs almost nothing.",
+      "es": "Quien acolcha o cose a mano se arruina las yemas en un proyecto largo, y un dedal de metal que no calza es peor que nada — resbala y la aguja encuentra la piel igual. Un dedal blando cortado al dedo exacto, sobre el thimble impreso, reparte el empuje de la aguja en una punta acolchada, así la mano dura todo el edredón. Cortado de un retazo e impreso con su propio dedal, cuesta casi nada.",
+      "fr": "Les quilteurs et couseurs à la main s'abîment le bout des doigts sur un long projet, et un doigtier en métal qui ne va pas est pire que rien — il glisse et l'aiguille trouve la peau quand même. Un doigtier souple coupé au doigt exact, porté sur le thimble imprimé, répartit la poussée de l'aiguille sur une pointe matelassée, si bien que la main tient tout le quilt. Coupé d'une chute et imprimé avec son propre doigtier, il coûte presque rien.",
+      "pt": "Quem faz quilting ou costura à mão arruína as pontas dos dedos num projeto longo, e uma dedeira de metal que não serve é pior que nada — escorrega e a agulha encontra a pele mesmo assim. Uma dedeira macia cortada ao dedo exato, sobre a thimble impressa, espalha o empurrão da agulha por uma ponta acolchoada, então a mão dura o edredom todo. Cortada de um retalho e impressa com sua própria dedeira, custa quase nada."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "constraints": [
+    {
+      "expression": "tip_girth < finger_girth",
+      "severity": "warning",
+      "message": {
+        "en": "The tip is clamped smaller than the base so the cone tapers correctly.",
+        "es": "La punta se acota menor que la base para que el cono se estreche bien.",
+        "fr": "La pointe est bornée plus petite que la base pour que le cône s'effile.",
+        "pt": "A ponta é limitada menor que a base para que o cone afunile."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "slim",
+      "label": {
+        "en": "Slim finger",
+        "es": "Dedo delgado",
+        "fr": "Doigt fin",
+        "pt": "Dedo fino"
+      },
+      "values": {
+        "finger_girth": 52,
+        "tip_girth": 40
+      }
+    },
+    {
+      "id": "broad",
+      "label": {
+        "en": "Broad finger",
+        "es": "Dedo ancho",
+        "fr": "Doigt large",
+        "pt": "Dedo largo"
+      },
+      "values": {
+        "finger_girth": 74,
+        "tip_girth": 56
+      }
+    }
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "fabric finger cot worn over a thimble",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "thimble",
+      "linked": true,
+      "params_map": {
+        "finger_girth": "finger_girth",
+        "thimble_h": "cot_length",
+        "wall_t": "wall"
+      }
+    }
+  }
+}

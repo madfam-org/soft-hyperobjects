@@ -1,0 +1,341 @@
+{
+  "project": {
+    "name": "Driving-Moccasin Upper",
+    "slug": "moccasin-driver-upper",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The driving moccasin: a soft one-piece WRAP that cups the sole and rises around the foot, gathered to a raised centre-front PLUG seam (the hand-sewn moccasin apron), with a lace pair through the throat. The sole wrap runs up the sides and is hand-lasted, so the moccasin has the soft, seamless underfoot of a true mocc; rubber driving-pebbles are marked underfoot. Sized from PLAIN parameters — ISO 8559 declares no foot landmark codes, so none is invented. The wrap's lasting edge is a SOLVED bow over its own chord (proportionate, never a share of the whole sole perimeter, which degenerates); the plug seam is drafted to the wrap's gathered throat so the apron sews in as a real gather (declared as ease); and the throat rise is CLAMPED so the wrap never folds through the lasting edge. The throat eyelets bridge to a Yantra4D `garment-eyelet`.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El mocasín de conducción: un ENVOLVENTE suave de una pieza que ahueca el piso y sube alrededor del pie, fruncido a una costura de APRÓN central elevada (el cosido a mano del mocasín), con un par de agujetas por la garganta. El envolvente sube por los lados y se monta a mano, así el mocasín tiene el bajo suave y sin costura de uno de verdad; los tacos de goma se marcan bajo el pie. Dimensionado con parámetros PLANOS — ISO 8559 no declara códigos de pie, así que no se inventa ninguno. El canto de montado del envolvente es un arco RESUELTO sobre su cuerda (proporcional, nunca fracción del perímetro del piso, que degenera); la costura del aprón se traza a la garganta fruncida para que entre como fruncido real (declarado como sobra); y la altura de garganta se ACOTA para que el envolvente no se pliegue por el canto de montado. Los ojales se puentean a un `garment-eyelet` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le mocassin de conduite : un ENROULEMENT souple d'une pièce qui coquille la semelle et remonte autour du pied, froncé à une couture de TABLIER central surélevée (la couture main du mocassin), avec une paire de lacets par la gorge. L'enroulement remonte sur les côtés et se monte à la main, si bien que le mocassin a le dessous souple et sans couture d'un vrai ; des picots de gomme sont marqués sous le pied. Dimensionné à partir de paramètres SIMPLES — ISO 8559 ne déclare aucun code de pied, donc aucun n'est inventé. Le bord de montage de l'enroulement est un arc RÉSOLU sur sa corde (proportionnel, jamais une fraction du périmètre de semelle, qui dégénère) ; la couture du tablier est tracée à la gorge froncée pour qu'il entre en vrai fronçage (déclaré comme embu) ; et la hauteur de gorge est BORNÉE pour que l'enroulement ne se replie pas par le bord de montage. Les œillets font le pont vers un `garment-eyelet` Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O mocassim de direção: um ENVOLTÓRIO macio de uma peça que envolve a sola e sobe ao redor do pé, franzido a uma costura de AVENTAL central elevada (a costura à mão do mocassim), com um par de cadarços pela gola. O envoltório sobe pelas laterais e é montado à mão, então o mocassim tem o piso macio e sem costura de um verdadeiro; pinos de borracha são marcados sob o pé. Dimensionado a partir de parâmetros SIMPLES — a ISO 8559 não declara códigos de pé, então nenhum é inventado. A borda de montagem do envoltório é um arco RESOLVIDO sobre a corda (proporcional, nunca fração do perímetro da sola, que degenera); a costura do avental é traçada à gola franzida para que entre como franzido real (declarado como embebido); e a altura da gola é LIMITADA para que o envoltório não dobre pela borda de montagem. Os ilhoses fazem a ponte para um `garment-eyelet` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "moccasin-driver-upper",
+      "footwear_soft",
+      "moccasin",
+      "driving-moc",
+      "wrap",
+      "apron-plug",
+      "garment-eyelet",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full upper",
+        "es": "Corte completo",
+        "fr": "Tige complète",
+        "pt": "Cabedal completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "wrap",
+        "plug"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "wrap",
+      "label": {
+        "en": "Sole wrap (cut 2, mirrored)",
+        "es": "Envolvente (cortar 2, espejo)",
+        "fr": "Enroulement (couper 2, miroir)",
+        "pt": "Envoltório (cortar 2, espelhado)"
+      },
+      "default_color": "#7a5a3a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "plug",
+      "label": {
+        "en": "Raised plug / apron (cut 1)",
+        "es": "Aprón elevado (cortar 1)",
+        "fr": "Tablier surélevé (couper 1)",
+        "pt": "Avental elevado (cortar 1)"
+      },
+      "default_color": "#8a6a4a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "foot",
+      "label": {
+        "en": "Foot",
+        "es": "Pie",
+        "fr": "Pied",
+        "pt": "Pé"
+      }
+    },
+    {
+      "id": "upper",
+      "label": {
+        "en": "Upper",
+        "es": "Corte",
+        "fr": "Tige",
+        "pt": "Cabedal"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "foot_length",
+      "type": "slider",
+      "group": "foot",
+      "default": 260,
+      "min": 150,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Foot length (mm)",
+        "es": "Largo del pie (mm)",
+        "fr": "Longueur du pied (mm)",
+        "pt": "Comprimento do pé (mm)"
+      }
+    },
+    {
+      "id": "foot_girth",
+      "type": "slider",
+      "group": "foot",
+      "default": 240,
+      "min": 150,
+      "max": 330,
+      "step": 5,
+      "label": {
+        "en": "Foot girth (mm)",
+        "es": "Contorno del pie (mm)",
+        "fr": "Tour du pied (mm)",
+        "pt": "Contorno do pé (mm)"
+      }
+    },
+    {
+      "id": "wrap_rise",
+      "type": "slider",
+      "group": "upper",
+      "default": 95,
+      "min": 60,
+      "max": 170,
+      "step": 5,
+      "label": {
+        "en": "Wrap rise (mm)",
+        "es": "Altura de envolvente (mm)",
+        "fr": "Montée d'enroulement (mm)",
+        "pt": "Altura de envoltório (mm)"
+      },
+      "tooltip": {
+        "en": "Clamped under 4x the wrap half-width",
+        "es": "Acotada bajo 4x la mitad del envolvente",
+        "fr": "Bornée sous 4x la demi-largeur",
+        "pt": "Limitada sob 4x a meia-largura"
+      }
+    },
+    {
+      "id": "plug_length",
+      "type": "slider",
+      "group": "upper",
+      "default": 130,
+      "min": 70,
+      "max": 220,
+      "step": 5,
+      "label": {
+        "en": "Plug length (mm)",
+        "es": "Largo del aprón (mm)",
+        "fr": "Longueur du tablier (mm)",
+        "pt": "Comprimento do avental (mm)"
+      }
+    },
+    {
+      "id": "gather_ratio",
+      "type": "slider",
+      "group": "upper",
+      "default": 1.4,
+      "min": 1.1,
+      "max": 2.0,
+      "step": 0.1,
+      "label": {
+        "en": "Apron gather ratio",
+        "es": "Vuelo del aprón",
+        "fr": "Ampleur du tablier",
+        "pt": "Amplitude do avental"
+      }
+    },
+    {
+      "id": "eyelet_dia",
+      "type": "slider",
+      "group": "upper",
+      "default": 4,
+      "min": 3,
+      "max": 10,
+      "step": 0.5,
+      "label": {
+        "en": "Eyelet diameter (mm)",
+        "es": "Diámetro de ojal (mm)",
+        "fr": "Diamètre d'œillet (mm)",
+        "pt": "Diâmetro de ilhós (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "apron_seam",
+        "type": "custom",
+        "label": {
+          "en": "Apron plug seam",
+          "es": "Costura del aprón",
+          "fr": "Couture du tablier",
+          "pt": "Costura do avental"
+        },
+        "edges": [
+          {
+            "piece": "wrap",
+            "edge": "throat"
+          },
+          {
+            "piece": "plug",
+            "edge": "side_a"
+          }
+        ],
+        "parameters": [
+          "foot_girth",
+          "plug_length",
+          "gather_ratio"
+        ]
+      },
+      {
+        "id": "lasting_edge",
+        "type": "hem",
+        "label": {
+          "en": "Hand-lasted edge",
+          "es": "Canto montado a mano",
+          "fr": "Bord monté main",
+          "pt": "Borda montada à mão"
+        },
+        "edges": [
+          {
+            "piece": "wrap",
+            "edge": "lasting"
+          }
+        ],
+        "parameters": [
+          "foot_length",
+          "foot_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A true moccasin — the sole wrapping up and the apron hand-sewn — is one of the oldest shoe constructions and one of the softest to wear, but it is hard to draft because the apron must gather onto the wrap without puckering. Solving the plug to the gathered throat means a home maker gets an apron that sews in cleanly, and hand-lasting a single wrap means the shoe has no hard underfoot seam — a genuinely comfortable shoe from a hide and a printed eyelet.",
+      "es": "Un mocasín de verdad — el piso envolviendo hacia arriba y el aprón cosido a mano — es de las construcciones de zapato más antiguas y de las más suaves de usar, pero es difícil de trazar porque el aprón debe fruncir sobre el envolvente sin arrugarse. Resolver el aprón a la garganta fruncida hace que quien cose en casa obtenga un aprón que entra limpio, y montar a mano un solo envolvente hace que el zapato no tenga costura dura bajo el pie — un zapato de verdad cómodo de una piel y un ojal impreso.",
+      "fr": "Un vrai mocassin — la semelle qui remonte et le tablier cousu main — est l'une des plus anciennes constructions de chaussure et l'une des plus souples à porter, mais dur à tracer car le tablier doit froncer sur l'enroulement sans faire de plis. Résoudre le tablier à la gorge froncée fait qu'un fabricant amateur obtient un tablier qui entre proprement, et monter à la main un seul enroulement fait que la chaussure n'a pas de couture dure sous le pied — une chaussure vraiment confortable d'une peau et d'un œillet imprimé.",
+      "pt": "Um mocassim de verdade — a sola envolvendo para cima e o avental costurado à mão — é uma das construções de sapato mais antigas e das mais macias de usar, mas difícil de traçar porque o avental deve franzir sobre o envoltório sem enrugar. Resolver o avental à gola franzida faz quem costura em casa obter um avental que entra limpo, e montar à mão um único envoltório faz o sapato não ter costura dura sob o pé — um sapato genuinamente confortável de um couro e um ilhós impresso."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "presets": [
+    {
+      "id": "classic-driver",
+      "label": {
+        "en": "Classic driver",
+        "es": "Conductor clásico",
+        "fr": "Conduite classique",
+        "pt": "Direção clássico"
+      },
+      "values": {
+        "wrap_rise": 90,
+        "gather_ratio": 1.4
+      }
+    },
+    {
+      "id": "deep-vamp",
+      "label": {
+        "en": "Deep vamp",
+        "es": "Pala profunda",
+        "fr": "Claque profonde",
+        "pt": "Gáspea funda"
+      },
+      "values": {
+        "wrap_rise": 120,
+        "gather_ratio": 1.6
+      }
+    }
+  ],
+  "notion": {
+    "kind": "eyelet",
+    "subtype": "garment eyelet at the moccasin throat",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "garment-eyelet",
+      "linked": true,
+      "params_map": {
+        "inner_dia": "eyelet_dia",
+        "barrel_h": "max(3, seam_allowance)",
+        "wall": "eyelet_dia * 0.2"
+      }
+    }
+  }
+}

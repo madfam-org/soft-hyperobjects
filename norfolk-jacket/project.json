@@ -1,0 +1,522 @@
+{
+  "project": {
+    "name": "Norfolk Jacket",
+    "slug": "norfolk-jacket",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The Norfolk: a belted country tweed jacket with vertical BOX PLEATS front and back (they give room to raise a shotgun or a fishing rod) and a self-fabric BELT through side loops. A shaped FRONT with a button stand, a BACK, a set-in SLEEVE, a notch COLLAR and the BELT. Solved, not guessed: the sleeve cap is a SOLVED bow whose length equals the measured front + back armhole so it sets in without easing a mismatch; the collar is cut to the MEASURED neckline; and the box-pleat take-up is CLAMPED under the panel half-width and ADDED to the panel width, not stolen from it, so a deep pleat can never consume the panel and fold it into a self-crossing outline the kernel would still close. The front buttons bridge to the Yantra4D `shank-button-solid` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La Norfolk: una chaqueta de tweed de campo con cinturón y PLIEGUES DE CAJA verticales delante y detrás (dan holgura para levantar una escopeta o una caña) y un CINTURÓN de la misma tela por presillas laterales. Un DELANTERO conformado con cartera de botones, una ESPALDA, una MANGA montada, un CUELLO de solapa y el CINTURÓN. Resuelto, no adivinado: la copa de manga es un arco RESUELTO cuya longitud iguala la sisa medida delantera + trasera para montarse sin sobra; el cuello se corta al escote MEDIDO; y el fondo del pliegue de caja se ACOTA bajo la mitad del panel y se AÑADE al ancho, no se roba de él, para que un pliegue profundo nunca consuma el panel y lo pliegue en un contorno que se cruza y el kernel cerraría igual. Los botones delanteros se puentean al sólido `shank-button-solid` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La Norfolk : une veste de tweed de campagne à ceinture avec des PLIS CREUX verticaux devant et dos (ils donnent de l'aisance pour épauler un fusil ou une canne) et une CEINTURE en même tissu par passants latéraux. Un DEVANT façonné à sous-patte de boutonnage, un DOS, une MANCHE montée, un COL cranté et la CEINTURE. Résolu, non deviné : la tête de manche est un arc RÉSOLU dont la longueur égale l'emmanchure mesurée devant + dos pour se monter sans embu ; le col est coupé à l'encolure MESURÉE ; et l'embu du pli creux est BORNÉ sous la demi-largeur du panneau et AJOUTÉ à la largeur, non volé, pour qu'un pli profond ne consomme jamais le panneau et ne le replie en un contour qui se croise que le noyau fermerait quand même. Les boutons devant font le pont vers le solide `shank-button-solid` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A Norfolk: uma jaqueta de tweed de campo com cinto e PREGAS MACHO verticais à frente e atrás (dão folga para erguer uma espingarda ou uma vara) e um CINTO do mesmo tecido por passadores laterais. Uma FRENTE modelada com carcela de botões, umas COSTAS, uma MANGA montada, uma GOLA de lapela e o CINTO. Resolvido, não adivinhado: a cabeça da manga é um arco RESOLVIDO cujo comprimento iguala a cava medida frente + costas para montar sem embebido; a gola é cortada ao decote MEDIDO; e o embebido da prega macho é LIMITADO sob a meia-largura do painel e ADICIONADO à largura, não roubado dela, para que uma prega funda nunca consuma o painel e o dobre num contorno que se cruza que o núcleo fecharia mesmo assim. Os botões da frente fazem a ponte para o sólido `shank-button-solid` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "norfolk-jacket",
+      "tailoring",
+      "jacket",
+      "norfolk",
+      "box-pleat",
+      "belted",
+      "tweed",
+      "shank-button",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full jacket",
+        "es": "Chaqueta completa",
+        "fr": "Veste complète",
+        "pt": "Casaco completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "collar",
+        "belt"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (cut 2, mirrored)",
+        "es": "Delantero (cortar 2, espejo)",
+        "fr": "Devant (couper 2, miroir)",
+        "pt": "Frente (cortar 2, espelhado)"
+      },
+      "default_color": "#5a5240",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (cut 1)",
+        "es": "Espalda (cortar 1)",
+        "fr": "Dos (couper 1)",
+        "pt": "Costas (cortar 1)"
+      },
+      "default_color": "#655d4b",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve (cut 2, mirrored)",
+        "es": "Manga (cortar 2, espejo)",
+        "fr": "Manche (couper 2, miroir)",
+        "pt": "Manga (cortar 2, espelhado)"
+      },
+      "default_color": "#706852",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Notch collar (cut 1)",
+        "es": "Cuello de solapa (cortar 1)",
+        "fr": "Col cranté (couper 1)",
+        "pt": "Gola de lapela (cortar 1)"
+      },
+      "default_color": "#7b7359",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "belt",
+      "label": {
+        "en": "Self belt (cut 1)",
+        "es": "Cinturón (cortar 1)",
+        "fr": "Ceinture (couper 1)",
+        "pt": "Cinto (cortar 1)"
+      },
+      "default_color": "#867e60",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "block",
+      "label": {
+        "en": "Fit block",
+        "es": "Base de talla",
+        "fr": "Base d'aisance",
+        "pt": "Base de modelagem"
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve",
+        "es": "Manga",
+        "fr": "Manche",
+        "pt": "Manga"
+      }
+    },
+    {
+      "id": "detail",
+      "label": {
+        "en": "Details",
+        "es": "Detalles",
+        "fr": "Détails",
+        "pt": "Detalhes"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "block",
+      "default": 1020,
+      "min": 760,
+      "max": 1500,
+      "step": 10,
+      "label": {
+        "en": "Chest/bust girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de peito (mm)"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "group": "block",
+      "default": 720,
+      "min": 560,
+      "max": 860,
+      "step": 10,
+      "label": {
+        "en": "Body length, nape to hem (mm)",
+        "es": "Largo, nuca a bajo (mm)",
+        "fr": "Longueur, nuque à ourlet (mm)",
+        "pt": "Comprimento, nuca à barra (mm)"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "block",
+      "default": 460,
+      "min": 340,
+      "max": 580,
+      "step": 10,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombros (mm)",
+        "fr": "Largeur d'épaules (mm)",
+        "pt": "Largura de ombros (mm)"
+      }
+    },
+    {
+      "id": "armhole_depth",
+      "type": "slider",
+      "group": "block",
+      "default": 260,
+      "min": 200,
+      "max": 360,
+      "step": 5,
+      "label": {
+        "en": "Armhole depth (mm)",
+        "es": "Profundidad de sisa (mm)",
+        "fr": "Profondeur d'emmanchure (mm)",
+        "pt": "Profundidade da cava (mm)"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 630,
+      "min": 440,
+      "max": 720,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)",
+        "pt": "Comprimento de manga (mm)"
+      }
+    },
+    {
+      "id": "neck_width",
+      "type": "slider",
+      "group": "block",
+      "default": 190,
+      "min": 140,
+      "max": 280,
+      "step": 5,
+      "label": {
+        "en": "Neck width (mm)",
+        "es": "Ancho de escote (mm)",
+        "fr": "Largeur d'encolure (mm)",
+        "pt": "Largura de decote (mm)"
+      }
+    },
+    {
+      "id": "back_neck_rise",
+      "type": "slider",
+      "group": "block",
+      "default": 22,
+      "min": 10,
+      "max": 45,
+      "step": 2,
+      "label": {
+        "en": "Back neck rise (mm)",
+        "es": "Subida de escote trasero (mm)",
+        "fr": "Montée d'encolure dos (mm)",
+        "pt": "Subida do decote traseiro (mm)"
+      }
+    },
+    {
+      "id": "pleat_depth",
+      "type": "slider",
+      "group": "detail",
+      "default": 40,
+      "min": 15,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Box-pleat take-up (mm)",
+        "es": "Fondo del pliegue de caja (mm)",
+        "fr": "Embu du pli creux (mm)",
+        "pt": "Embebido da prega macho (mm)"
+      },
+      "tooltip": {
+        "en": "Clamped under the panel half-width and added to the width",
+        "es": "Acotado bajo la mitad del panel y añadido al ancho",
+        "fr": "Borné sous la demi-largeur et ajouté à la largeur",
+        "pt": "Limitado sob a meia-largura e adicionado à largura"
+      }
+    },
+    {
+      "id": "belt_width",
+      "type": "slider",
+      "group": "detail",
+      "default": 50,
+      "min": 30,
+      "max": 80,
+      "step": 5,
+      "label": {
+        "en": "Belt width (mm)",
+        "es": "Ancho de cinturón (mm)",
+        "fr": "Largeur de ceinture (mm)",
+        "pt": "Largura de cinto (mm)"
+      }
+    },
+    {
+      "id": "button_dia",
+      "type": "slider",
+      "group": "detail",
+      "default": 22,
+      "min": 14,
+      "max": 34,
+      "step": 1,
+      "label": {
+        "en": "Shank button diameter (mm)",
+        "es": "Diámetro de botón (mm)",
+        "fr": "Diamètre de bouton (mm)",
+        "pt": "Diâmetro de botão (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D shank-button diameter",
+        "es": "Define el diámetro del shank-button de Yantra4D",
+        "fr": "Pilote le diamètre du shank-button Yantra4D",
+        "pt": "Pilota o diâmetro do shank-button do Yantra4D"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "group": "block",
+      "default": 140,
+      "min": 40,
+      "max": 320,
+      "step": 10,
+      "label": {
+        "en": "Wearing ease (mm)",
+        "es": "Holgura de uso (mm)",
+        "fr": "Aisance de port (mm)",
+        "pt": "Folga de uso (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 8,
+      "max": 18,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "lana-peinada-traje"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "shoulder_seam",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder seam",
+          "es": "Costura de hombro",
+          "fr": "Couture d'épaule",
+          "pt": "Costura de ombro"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "shoulder"
+          },
+          {
+            "piece": "back",
+            "edge": "shoulder"
+          }
+        ],
+        "parameters": [
+          "shoulder_width",
+          "neck_width"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Set-in sleeve",
+          "es": "Manga montada",
+          "fr": "Manche montée",
+          "pt": "Manga montada"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
+        ],
+        "parameters": [
+          "armhole_depth",
+          "sleeve_length"
+        ]
+      },
+      {
+        "id": "button_stand",
+        "type": "button_stand",
+        "label": {
+          "en": "Front button stand",
+          "es": "Cartera de botones",
+          "fr": "Sous-patte de boutonnage",
+          "pt": "Carcela de botões"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "cf"
+          }
+        ],
+        "parameters": [
+          "button_dia"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The Norfolk was invented so a country gentleman could move — the box pleats open across the back when the arms lift — and it remains one of the few tailored jackets designed around motion rather than stillness. Drafted parametrically, the pleats add exactly the reach room the wearer sets without ever compromising the panel, the sleeve is guaranteed to set in, and the self-belt cuts from the same cloth, so a maker gets a genuinely functional field jacket rather than a costume version of one.",
+      "es": "La Norfolk se inventó para que un caballero de campo pudiera moverse — los pliegues de caja se abren en la espalda al levantar los brazos — y sigue siendo de las pocas chaquetas de sastre pensadas en torno al movimiento y no a la quietud. Trazada paramétrica, los pliegues añaden justo la holgura de alcance que el usuario fija sin comprometer nunca el panel, la manga queda garantizada a montar, y el cinturón se corta de la misma tela, así el fabricante obtiene una chaqueta de campo de verdad funcional y no una versión disfraz.",
+      "fr": "La Norfolk fut inventée pour qu'un gentleman de campagne puisse bouger — les plis creux s'ouvrent dans le dos quand les bras se lèvent — et elle reste l'une des rares vestes tailleur pensées autour du mouvement plutôt que de l'immobilité. Tracée paramétrique, les plis ajoutent exactement l'aisance de mouvement que le porteur règle sans jamais compromettre le panneau, la manche est garantie de se monter, et la ceinture se coupe du même tissu, si bien que le fabricant obtient une vraie veste de terrain fonctionnelle et non une version costume.",
+      "pt": "A Norfolk foi inventada para que um cavalheiro do campo pudesse se mover — as pregas macho abrem nas costas quando os braços se erguem — e continua sendo uma das poucas jaquetas de alfaiataria pensadas em torno do movimento e não da quietude. Traçada paramétrica, as pregas adicionam exatamente a folga de alcance que quem veste define sem nunca comprometer o painel, a manga fica garantida a montar, e o cinto se corta do mesmo tecido, então quem faz obtém uma jaqueta de campo genuinamente funcional e não uma versão fantasia."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "constraints": [
+    {
+      "expression": "pleat_depth < chest_girth / 4",
+      "severity": "warning",
+      "message": {
+        "en": "The box pleat is clamped under the panel half-width so it never folds the panel.",
+        "es": "El pliegue se acota bajo la mitad del panel para que no lo pliegue.",
+        "fr": "Le pli est borné sous la demi-largeur du panneau pour ne pas le replier.",
+        "pt": "A prega é limitada sob a meia-largura do painel para não o dobrar."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "shooting",
+      "label": {
+        "en": "Shooting (deep pleats)",
+        "es": "Caza (pliegues profundos)",
+        "fr": "Chasse (plis profonds)",
+        "pt": "Caça (pregas fundas)"
+      },
+      "values": {
+        "pleat_depth": 60
+      }
+    },
+    {
+      "id": "town",
+      "label": {
+        "en": "Town (shallow pleats)",
+        "es": "Ciudad (pliegues suaves)",
+        "fr": "Ville (plis peu profonds)",
+        "pt": "Cidade (pregas rasas)"
+      },
+      "values": {
+        "pleat_depth": 25
+      }
+    }
+  ],
+  "notion": {
+    "kind": "button",
+    "subtype": "shank button on the front stand",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "shank-button-solid",
+      "linked": true,
+      "params_map": {
+        "diameter_mm": "button_dia",
+        "thickness": "button_dia * 0.28",
+        "rim": "button_dia * 0.10"
+      }
+    }
+  }
+}

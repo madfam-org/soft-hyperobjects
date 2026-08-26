@@ -1,0 +1,411 @@
+{
+  "project": {
+    "name": "Zip-Pull-Assist Bootie",
+    "slug": "zip-pull-assist-bootie",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "An adaptive neoprene bootie with a long side ZIP and a printed pull-assist LEVER (the Yantra4D `zipper-pull-assist`) clipped to the zip pull — a big finger-loop lever that lets a person with limited grip or reach close the zip one-handed. A soft neoprene VAMP + QUARTER wrap the foot; a ZIP GUARD backs the side zip; and a LEVER TAB carries the printed assist. Sized from PLAIN parameters — ISO 8559 declares no foot landmark codes, so none is invented. The vamp lasting edge is a SOLVED bow over its own chord (proportionate, never a share of the whole sole perimeter, which degenerates); the zip length is the MEASURED quarter side so it runs the full opening; the lever tab is cut to the printed assist body plus a clearance; and the ankle rise is CLAMPED so the quarter never folds through the lasting edge.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un botín de neopreno adaptativo con un CIERRE lateral largo y una PALANCA de asistencia impresa (el `zipper-pull-assist` de Yantra4D) prendida al deslizador — una palanca de asa grande que deja a una persona con poca fuerza o alcance cerrar el cierre con una mano. Una PALA + CUARTO de neopreno suave envuelven el pie; un TAPACIERRE respalda el cierre lateral; y una LENGÜETA lleva la asistencia impresa. Dimensionado con parámetros PLANOS — ISO 8559 no declara códigos de pie, así que no se inventa ninguno. El canto de montado de la pala es un arco RESUELTO sobre su cuerda (proporcional, nunca fracción del perímetro del piso, que degenera); el largo del cierre es el lado MEDIDO del cuarto para que corra toda la abertura; la lengüeta se corta al cuerpo de la asistencia impresa más una holgura; y la altura del tobillo se ACOTA para que el cuarto no se pliegue por el canto de montado.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un bottillon en néoprène adaptatif avec une longue FERMETURE latérale et un LEVIER d'assistance imprimé (le `zipper-pull-assist` de Yantra4D) clipsé au curseur — un grand levier à boucle qui permet à une personne à préhension ou portée limitée de fermer la fermeture d'une main. Une CLAQUE + QUARTIER en néoprène souple enveloppent le pied ; un RABAT-ZIP double la fermeture latérale ; et une PATTE porte l'assistance imprimée. Dimensionné à partir de paramètres SIMPLES — ISO 8559 ne déclare aucun code de pied, donc aucun n'est inventé. Le bord de montage de la claque est un arc RÉSOLU sur sa corde (proportionnel, jamais une fraction du périmètre de semelle, qui dégénère) ; la longueur de la fermeture est le côté MESURÉ du quartier pour qu'elle court toute l'ouverture ; la patte est coupée au corps de l'assistance imprimée plus un jeu ; et la hauteur de cheville est BORNÉE pour que le quartier ne se replie pas par le bord de montage.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma bota de neoprene adaptativa com um ZÍPER lateral longo e uma ALAVANCA de assistência impressa (o `zipper-pull-assist` do Yantra4D) presa ao cursor — uma alavanca de alça grande que deixa uma pessoa com pouca preensão ou alcance fechar o zíper com uma mão. Uma GÁSPEA + QUARTO de neoprene macio envolvem o pé; uma PROTEÇÃO respalda o zíper lateral; e uma LINGUETA carrega a assistência impressa. Dimensionado a partir de parâmetros SIMPLES — a ISO 8559 não declara códigos de pé, então nenhum é inventado. A borda de montagem da gáspea é um arco RESOLVIDO sobre a corda (proporcional, nunca fração do perímetro da sola, que degenera); o comprimento do zíper é o lado MEDIDO do quarto para que corra toda a abertura; a lingueta é cortada ao corpo da assistência impressa mais uma folga; e a altura do tornozelo é LIMITADA para que o quarto não dobre pela borda de montagem.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "zip-pull-assist-bootie",
+      "footwear_soft",
+      "bootie",
+      "adaptive",
+      "side-zip",
+      "pull-assist",
+      "zipper-pull-assist",
+      "neoprene",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full bootie",
+        "es": "Botín completo",
+        "fr": "Bottillon complet",
+        "pt": "Bota completa"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "vamp",
+        "quarter",
+        "guard",
+        "lever"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "vamp",
+      "label": {
+        "en": "Vamp (toe + instep)",
+        "es": "Pala (dedos + empeine)",
+        "fr": "Claque (orteils + cou-de-pied)",
+        "pt": "Gáspea (dedos + peito)"
+      },
+      "default_color": "#404850",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "quarter",
+      "label": {
+        "en": "Quarter (cut 2, mirrored)",
+        "es": "Cuarto (cortar 2, espejo)",
+        "fr": "Quartier (couper 2, miroir)",
+        "pt": "Quarto (cortar 2, espelhado)"
+      },
+      "default_color": "#505860",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "guard",
+      "label": {
+        "en": "Zip guard (cut 1)",
+        "es": "Tapacierre (cortar 1)",
+        "fr": "Rabat-zip (couper 1)",
+        "pt": "Proteção do zíper (cortar 1)"
+      },
+      "default_color": "#606870",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "lever",
+      "label": {
+        "en": "Pull-assist lever tab (cut 1)",
+        "es": "Lengüeta de palanca (cortar 1)",
+        "fr": "Patte de levier (couper 1)",
+        "pt": "Lingueta de alavanca (cortar 1)"
+      },
+      "default_color": "#707880",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "foot",
+      "label": {
+        "en": "Foot",
+        "es": "Pie",
+        "fr": "Pied",
+        "pt": "Pé"
+      }
+    },
+    {
+      "id": "bootie",
+      "label": {
+        "en": "Bootie",
+        "es": "Botín",
+        "fr": "Bottillon",
+        "pt": "Bota"
+      }
+    },
+    {
+      "id": "assist",
+      "label": {
+        "en": "Pull assist",
+        "es": "Asistencia",
+        "fr": "Assistance",
+        "pt": "Assistência"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "foot_length",
+      "type": "slider",
+      "group": "foot",
+      "default": 260,
+      "min": 150,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Foot length (mm)",
+        "es": "Largo del pie (mm)",
+        "fr": "Longueur du pied (mm)",
+        "pt": "Comprimento do pé (mm)"
+      }
+    },
+    {
+      "id": "foot_girth",
+      "type": "slider",
+      "group": "foot",
+      "default": 240,
+      "min": 150,
+      "max": 330,
+      "step": 5,
+      "label": {
+        "en": "Foot girth (mm)",
+        "es": "Contorno del pie (mm)",
+        "fr": "Tour du pied (mm)",
+        "pt": "Contorno do pé (mm)"
+      }
+    },
+    {
+      "id": "vamp_depth",
+      "type": "slider",
+      "group": "bootie",
+      "default": 110,
+      "min": 70,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Vamp depth (mm)",
+        "es": "Profundidad de pala (mm)",
+        "fr": "Profondeur de claque (mm)",
+        "pt": "Profundidade da gáspea (mm)"
+      }
+    },
+    {
+      "id": "ankle_height",
+      "type": "slider",
+      "group": "bootie",
+      "default": 120,
+      "min": 70,
+      "max": 220,
+      "step": 5,
+      "label": {
+        "en": "Ankle rise (mm)",
+        "es": "Altura de tobillo (mm)",
+        "fr": "Montée de cheville (mm)",
+        "pt": "Altura de tornozelo (mm)"
+      },
+      "tooltip": {
+        "en": "Clamped under 4x the quarter half-width",
+        "es": "Acotada bajo 4x la mitad del cuarto",
+        "fr": "Bornée sous 4x la demi-largeur",
+        "pt": "Limitada sob 4x a meia-largura"
+      }
+    },
+    {
+      "id": "assist_body",
+      "type": "slider",
+      "group": "assist",
+      "default": 40,
+      "min": 20,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Pull-assist body (mm)",
+        "es": "Cuerpo de asistencia (mm)",
+        "fr": "Corps d'assistance (mm)",
+        "pt": "Corpo de assistência (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D zipper-pull-assist body",
+        "es": "Define el cuerpo del zipper-pull-assist de Yantra4D",
+        "fr": "Pilote le corps du zipper-pull-assist Yantra4D",
+        "pt": "Pilota o corpo do zipper-pull-assist do Yantra4D"
+      }
+    },
+    {
+      "id": "lever_len",
+      "type": "slider",
+      "group": "assist",
+      "default": 60,
+      "min": 30,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Finger lever length (mm)",
+        "es": "Largo de palanca (mm)",
+        "fr": "Longueur de levier (mm)",
+        "pt": "Comprimento da alavanca (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "side_zip",
+        "type": "zipper_tape",
+        "label": {
+          "en": "Side zip opening",
+          "es": "Abertura de cierre lateral",
+          "fr": "Ouverture de fermeture latérale",
+          "pt": "Abertura de zíper lateral"
+        },
+        "edges": [
+          {
+            "piece": "quarter",
+            "edge": "zip_edge"
+          },
+          {
+            "piece": "guard",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "ankle_height",
+          "vamp_depth"
+        ]
+      },
+      {
+        "id": "assist_seat",
+        "type": "custom",
+        "label": {
+          "en": "Pull-assist seat",
+          "es": "Asiento de asistencia",
+          "fr": "Logement d'assistance",
+          "pt": "Encaixe de assistência"
+        },
+        "edges": [
+          {
+            "piece": "lever",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "assist_body",
+          "lever_len"
+        ]
+      },
+      {
+        "id": "lasting_edge",
+        "type": "hem",
+        "label": {
+          "en": "Lasting edge to sole",
+          "es": "Canto de montado",
+          "fr": "Bord de montage",
+          "pt": "Borda de montagem"
+        },
+        "edges": [
+          {
+            "piece": "vamp",
+            "edge": "lasting"
+          },
+          {
+            "piece": "quarter",
+            "edge": "lasting"
+          }
+        ],
+        "parameters": [
+          "foot_length",
+          "foot_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Getting a shoe on is a daily barrier for people with arthritis, tremor, or one working hand, and adaptive footwear is scarce and expensive. A soft bootie with a full side zip and a big printed finger lever turns closing a shoe into a one-handed pull, and printing the lever with the bootie means the assist is sized to the zip it drives — genuine independence from a hide of neoprene and a print run.",
+      "es": "Ponerse un zapato es una barrera diaria para personas con artritis, temblor o una sola mano hábil, y el calzado adaptativo es escaso y caro. Un botín suave con cierre lateral completo y una gran palanca de dedo impresa vuelve el cierre un tirón de una mano, e imprimir la palanca con el botín hace que la asistencia se ajuste al cierre que mueve — independencia de verdad de una pieza de neopreno y una impresión.",
+      "fr": "Enfiler une chaussure est une barrière quotidienne pour les personnes arthritiques, tremblantes ou à une seule main valide, et la chaussure adaptative est rare et chère. Un bottillon souple à fermeture latérale complète et un grand levier de doigt imprimé transforme la fermeture en une traction d'une main, et imprimer le levier avec le bottillon fait que l'assistance est dimensionnée à la fermeture qu'elle actionne — une vraie autonomie d'une peau de néoprène et d'une impression.",
+      "pt": "Calçar um sapato é uma barreira diária para pessoas com artrite, tremor ou uma só mão hábil, e o calçado adaptativo é escasso e caro. Uma bota macia com zíper lateral completo e uma grande alavanca de dedo impressa transforma o fechar num puxão de uma mão, e imprimir a alavanca com a bota faz a assistência ser dimensionada ao zíper que aciona — autonomia genuína de uma peça de neoprene e uma impressão."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "presets": [
+    {
+      "id": "low-grip",
+      "label": {
+        "en": "Low-grip lever",
+        "es": "Palanca de bajo agarre",
+        "fr": "Levier faible préhension",
+        "pt": "Alavanca de baixa preensão"
+      },
+      "values": {
+        "lever_len": 90,
+        "assist_body": 55
+      }
+    },
+    {
+      "id": "standard",
+      "label": {
+        "en": "Standard",
+        "es": "Estándar",
+        "fr": "Standard",
+        "pt": "Padrão"
+      },
+      "values": {
+        "lever_len": 60
+      }
+    }
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "printed zipper pull-assist lever on the side zip",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "zipper-pull-assist",
+      "linked": true,
+      "params_map": {
+        "body_l": "assist_body",
+        "lever_len": "lever_len",
+        "lever_w": "assist_body * 0.4"
+      }
+    }
+  }
+}

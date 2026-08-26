@@ -1,0 +1,486 @@
+{
+  "project": {
+    "name": "AM Printed-Panel Tee",
+    "slug": "printed-panel-tee",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A T-shirt whose front carries a printed TPU LATTICE PANEL — an open tile-and-bridge lattice (rigid across the tile, flexing at the bridges) set as a structured window into an otherwise soft jersey tee. Fashion Cabinet owns the fashion: the tee block (front, back, sleeve) and the lattice FIELD (rows x cols) DERIVED from the front window so the tiling exactly fills it. Solved, not guessed: the field cols/rows are derived from the window and the tile+gap pitch, floored at 1 so a large tile against a small window never yields a zero count; the sleeve cap is a SOLVED bow to the measured armhole; and the lattice window is CLAMPED inside the front panel so an over-large window never runs off the edge and folds the piece. The lattice is Yantra4D territory (notion.hardware_ref -> tpu-lattice-panel).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una camiseta cuyo delantero lleva un PANEL DE RETÍCULA de TPU impreso — una retícula abierta de teselas y puentes (rígida en la tesela, flexible en los puentes) puesta como ventana estructurada en una playera de jersey por lo demás blanda. Fashion Cabinet posee la moda: la base de playera (delantero, espalda, manga) y el CAMPO de retícula (filas x columnas) DERIVADO de la ventana delantera para que el teselado la llene exactamente. Resuelto, no adivinado: las filas/columnas del campo se derivan de la ventana y el paso tesela+separación, con piso en 1 para que una tesela grande contra una ventana chica nunca dé conteo cero; la copa de manga es un arco RESUELTO a la sisa medida; y la ventana de retícula se ACOTA dentro del panel delantero para que una ventana muy grande nunca se salga del canto y pliegue la pieza. La retícula es territorio de Yantra4D (notion.hardware_ref -> tpu-lattice-panel).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un T-shirt dont le devant porte un PANNEAU EN RÉSILLE TPU imprimé — une résille ouverte de tuiles et de ponts (rigide sur la tuile, souple aux ponts) posée comme une fenêtre structurée dans un tee en jersey par ailleurs souple. Fashion Cabinet possède la mode : la base tee (devant, dos, manche) et le CHAMP de résille (rangées x colonnes) DÉRIVÉ de la fenêtre devant pour que le pavage la remplisse exactement. Résolu, non deviné : les rangées/colonnes du champ sont dérivées de la fenêtre et du pas tuile+espace, planchées à 1 pour qu'une grande tuile contre une petite fenêtre ne donne jamais un compte nul ; la tête de manche est un arc RÉSOLU à l'emmanchure mesurée ; et la fenêtre en résille est BORNÉE dans le panneau devant pour qu'une fenêtre trop grande ne sorte jamais du bord et ne replie la pièce. La résille est territoire Yantra4D (notion.hardware_ref -> tpu-lattice-panel).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma camiseta cuja frente carrega um PAINEL DE TRELIÇA de TPU impresso — uma treliça aberta de ladrilhos e pontes (rígida no ladrilho, flexível nas pontes) posta como janela estruturada numa camiseta de jérsei por outro lado macia. A Fashion Cabinet possui a moda: a base de camiseta (frente, costas, manga) e o CAMPO de treliça (linhas x colunas) DERIVADO da janela frontal para que o ladrilhamento a preencha exatamente. Resolvido, não adivinhado: as linhas/colunas do campo são derivadas da janela e do passo ladrilho+vão, com piso em 1 para que um ladrilho grande contra uma janela pequena nunca dê contagem zero; a cabeça da manga é um arco RESOLVIDO à cava medida; e a janela de treliça é LIMITADA dentro do painel frontal para que uma janela grande demais nunca saia da borda e dobre a peça. A treliça é território do Yantra4D (notion.hardware_ref -> tpu-lattice-panel).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "printed-panel-tee",
+      "am_fashion",
+      "tee",
+      "tpu-lattice",
+      "printed-textile",
+      "structured-panel",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full tee",
+        "es": "Playera completa",
+        "fr": "Tee complet",
+        "pt": "Camiseta completa"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front with lattice window (cut 1)",
+        "es": "Delantero con ventana de retícula (cortar 1)",
+        "fr": "Devant avec fenêtre en résille (couper 1)",
+        "pt": "Frente com janela de treliça (cortar 1)"
+      },
+      "default_color": "#5b6b78",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (cut 1)",
+        "es": "Espalda (cortar 1)",
+        "fr": "Dos (couper 1)",
+        "pt": "Costas (cortar 1)"
+      },
+      "default_color": "#6b7b88",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve (cut 2, mirrored)",
+        "es": "Manga (cortar 2, espejo)",
+        "fr": "Manche (couper 2, miroir)",
+        "pt": "Manga (cortar 2, espelhado)"
+      },
+      "default_color": "#7b8b98",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "block",
+      "label": {
+        "en": "Fit block",
+        "es": "Base de talla",
+        "fr": "Base d'aisance",
+        "pt": "Base de modelagem"
+      }
+    },
+    {
+      "id": "panel",
+      "label": {
+        "en": "Lattice panel",
+        "es": "Panel de retícula",
+        "fr": "Panneau en résille",
+        "pt": "Painel de treliça"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "block",
+      "default": 980,
+      "min": 700,
+      "max": 1500,
+      "step": 10,
+      "label": {
+        "en": "Chest/bust girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de peito (mm)"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "group": "block",
+      "default": 680,
+      "min": 480,
+      "max": 860,
+      "step": 10,
+      "label": {
+        "en": "Body length (mm)",
+        "es": "Largo del cuerpo (mm)",
+        "fr": "Longueur du corps (mm)",
+        "pt": "Comprimento do corpo (mm)"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "block",
+      "default": 440,
+      "min": 320,
+      "max": 580,
+      "step": 10,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombros (mm)",
+        "fr": "Largeur d'épaules (mm)",
+        "pt": "Largura de ombros (mm)"
+      }
+    },
+    {
+      "id": "armhole_depth",
+      "type": "slider",
+      "group": "block",
+      "default": 240,
+      "min": 180,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Armhole depth (mm)",
+        "es": "Profundidad de sisa (mm)",
+        "fr": "Profondeur d'emmanchure (mm)",
+        "pt": "Profundidade da cava (mm)"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "block",
+      "default": 220,
+      "min": 120,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)",
+        "pt": "Comprimento de manga (mm)"
+      }
+    },
+    {
+      "id": "neck_width",
+      "type": "slider",
+      "group": "block",
+      "default": 180,
+      "min": 140,
+      "max": 280,
+      "step": 5,
+      "label": {
+        "en": "Neck width (mm)",
+        "es": "Ancho de escote (mm)",
+        "fr": "Largeur d'encolure (mm)",
+        "pt": "Largura de decote (mm)"
+      }
+    },
+    {
+      "id": "panel_width",
+      "type": "slider",
+      "group": "panel",
+      "default": 240,
+      "min": 80,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Lattice window width (mm)",
+        "es": "Ancho de ventana (mm)",
+        "fr": "Largeur de fenêtre (mm)",
+        "pt": "Largura da janela (mm)"
+      },
+      "tooltip": {
+        "en": "Clamped inside the front panel",
+        "es": "Acotada dentro del panel delantero",
+        "fr": "Bornée dans le panneau devant",
+        "pt": "Limitada dentro do painel frontal"
+      }
+    },
+    {
+      "id": "panel_height",
+      "type": "slider",
+      "group": "panel",
+      "default": 300,
+      "min": 80,
+      "max": 500,
+      "step": 10,
+      "label": {
+        "en": "Lattice window height (mm)",
+        "es": "Alto de ventana (mm)",
+        "fr": "Hauteur de fenêtre (mm)",
+        "pt": "Altura da janela (mm)"
+      },
+      "tooltip": {
+        "en": "Clamped inside the front panel",
+        "es": "Acotada dentro del panel delantero",
+        "fr": "Bornée dans le panneau devant",
+        "pt": "Limitada dentro do painel frontal"
+      }
+    },
+    {
+      "id": "tile_size",
+      "type": "slider",
+      "group": "panel",
+      "default": 24,
+      "min": 10,
+      "max": 60,
+      "step": 2,
+      "label": {
+        "en": "Lattice tile size (mm)",
+        "es": "Tamaño de tesela (mm)",
+        "fr": "Taille de tuile (mm)",
+        "pt": "Tamanho de ladrilho (mm)"
+      }
+    },
+    {
+      "id": "tile_gap",
+      "type": "slider",
+      "group": "panel",
+      "default": 8,
+      "min": 2,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Lattice bridge gap (mm)",
+        "es": "Separación de puente (mm)",
+        "fr": "Espace de pont (mm)",
+        "pt": "Vão da ponte (mm)"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "group": "block",
+      "default": 120,
+      "min": 40,
+      "max": 300,
+      "step": 10,
+      "label": {
+        "en": "Wearing ease (mm)",
+        "es": "Holgura de uso (mm)",
+        "fr": "Aisance de port (mm)",
+        "pt": "Folga de uso (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "tpu-panel-impreso"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "am_fashion",
+    "interfaces": [
+      {
+        "id": "lattice_panel",
+        "type": "custom",
+        "label": {
+          "en": "Printed lattice window",
+          "es": "Ventana de retícula impresa",
+          "fr": "Fenêtre en résille imprimée",
+          "pt": "Janela de treliça impressa"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "panel_width",
+          "panel_height",
+          "tile_size",
+          "tile_gap"
+        ]
+      },
+      {
+        "id": "shoulder_seam",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder seam",
+          "es": "Costura de hombro",
+          "fr": "Couture d'épaule",
+          "pt": "Costura de ombro"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "shoulder_r"
+          },
+          {
+            "piece": "back",
+            "edge": "shoulder_r"
+          }
+        ],
+        "parameters": [
+          "shoulder_width",
+          "neck_width"
+        ]
+      },
+      {
+        "id": "armscye",
+        "type": "armscye",
+        "label": {
+          "en": "Set-in sleeve",
+          "es": "Manga montada",
+          "fr": "Manche montée",
+          "pt": "Manga montada"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole_r"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole_r"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          }
+        ],
+        "parameters": [
+          "armhole_depth",
+          "sleeve_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true,
+      "printed_textile": true
+    },
+    "societal_benefit": {
+      "en": "A printed lattice panel does something a woven textile cannot — it is rigid where you want structure and flexes only at the bridges you print — so a garment can carry ventilation, armour or shape exactly where it is needed. Deriving the tile field from the window means the panel prints to fit any body's tee front from one file, and binding it into a jersey base means the wearer gets the structure without the whole garment being a rigid shell.",
+      "es": "Un panel de retícula impreso hace algo que un tejido no puede — es rígido donde quieres estructura y flexiona solo en los puentes que imprimes — así una prenda lleva ventilación, protección o forma justo donde hace falta. Derivar el campo de teselas de la ventana hace que el panel se imprima a medida de cualquier delantero desde un archivo, y unirlo a una base de jersey da al usuario la estructura sin que toda la prenda sea una coraza rígida.",
+      "fr": "Un panneau en résille imprimé fait ce qu'un textile tissé ne peut pas — il est rigide où l'on veut de la structure et ne fléchit qu'aux ponts imprimés — de sorte qu'un vêtement porte ventilation, protection ou forme exactement où il le faut. Dériver le champ de tuiles de la fenêtre fait que le panneau s'imprime sur mesure pour tout devant depuis un fichier, et le monter sur une base jersey donne au porteur la structure sans que tout le vêtement soit une coque rigide.",
+      "pt": "Um painel de treliça impresso faz algo que um têxtil tecido não pode — é rígido onde se quer estrutura e flexiona só nas pontes impressas — então uma peça carrega ventilação, proteção ou forma exatamente onde é preciso. Derivar o campo de ladrilhos da janela faz o painel imprimir sob medida para qualquer frente a partir de um arquivo, e montá-lo numa base de jérsei dá a quem veste a estrutura sem que toda a peça seja uma casca rígida."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "constraints": [
+    {
+      "expression": "tile_size > tile_gap",
+      "severity": "warning",
+      "message": {
+        "en": "The lattice tile should be larger than the flexing bridge gap.",
+        "es": "La tesela debe ser mayor que el puente que flexiona.",
+        "fr": "La tuile doit être plus grande que le pont qui fléchit.",
+        "pt": "O ladrilho deve ser maior que a ponte que flexiona."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "fine-lattice",
+      "label": {
+        "en": "Fine lattice",
+        "es": "Retícula fina",
+        "fr": "Résille fine",
+        "pt": "Treliça fina"
+      },
+      "values": {
+        "tile_size": 16,
+        "tile_gap": 5
+      }
+    },
+    {
+      "id": "bold-lattice",
+      "label": {
+        "en": "Bold lattice",
+        "es": "Retícula gruesa",
+        "fr": "Résille large",
+        "pt": "Treliça larga"
+      },
+      "values": {
+        "tile_size": 40,
+        "tile_gap": 14
+      }
+    }
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "printed TPU lattice window on the tee front",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "tpu-lattice-panel",
+      "linked": true,
+      "params_map": {
+        "tile": "tile_size",
+        "gap": "tile_gap",
+        "cols": "round(panel_width / (tile_size + tile_gap))",
+        "rows": "round(panel_height / (tile_size + tile_gap))"
+      }
+    }
+  }
+}

@@ -1,0 +1,322 @@
+{
+  "project": {
+    "name": "Espadrille Upper Wrap",
+    "slug": "espadrille-upper-wrap",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The espadrille: a soft canvas slip-on whose VAMP covers the toes and instep and whose HEEL sling wraps the back of the foot, both stitched to a jute sole. This version adds the ankle-wrap tie — a lace threaded through a pair of eyelets at the vamp throat that crosses the instep and ties at the ankle. Sized from PLAIN parameters — ISO 8559 declares no foot landmark codes, so none is invented. Both lasting edges are SOLVED (bisected-bulge arcs) to a PROPORTIONATE BOW over the piece's own chord, not a share of the whole sole perimeter (which degenerates to a sliver); the heel sling's top is drafted to the vamp side so the side seams sew flush; and the eyelet pair is stepped in off the throat edge so it never tears out the finished edge. The eyelets bridge to a Yantra4D `garment-eyelet`.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El espadrín: un slip-on de lona suave cuya PALA cubre dedos y empeine y cuyo TALÓN envuelve la parte trasera del pie, ambos cosidos a un piso de yute. Esta versión añade el atado al tobillo — una cinta pasada por un par de ojales en la garganta de la pala que cruza el empeine y ata en el tobillo. Dimensionado con parámetros PLANOS — ISO 8559 no declara códigos de pie, así que no se inventa ninguno. Ambos cantos de montado se RESUELVEN (arcos de bisección) a un ARQUEO PROPORCIONAL sobre su propia cuerda, no una fracción del perímetro del piso (que degenera en filamento); el talón se traza al lado de la pala para que los costados cuadren; y el par de ojales se mete desde el canto de la garganta para que no se desgarre. Los ojales se puentean a un `garment-eyelet` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "L'espadrille : un slip-on en toile souple dont la CLAQUE couvre les orteils et le cou-de-pied et dont le TALON enveloppe l'arrière du pied, tous deux cousus à une semelle de jute. Cette version ajoute le laçage à la cheville — un lacet passé dans une paire d'œillets à la gorge de la claque qui croise le cou-de-pied et se noue à la cheville. Dimensionné à partir de paramètres SIMPLES — ISO 8559 ne déclare aucun code de pied, donc aucun n'est inventé. Les deux bords de montage sont RÉSOLUS (arcs par bissection) en un CINTRE PROPORTIONNEL sur leur propre corde, non une fraction du périmètre de semelle (qui dégénère en éclat) ; le talon est tracé au côté de la claque pour que les côtés correspondent ; et la paire d'œillets est rentrée depuis le bord de gorge pour ne pas s'arracher. Les œillets font le pont vers un `garment-eyelet` Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A alpargata: um slip-on de lona macia cuja GÁSPEA cobre os dedos e o peito do pé e cujo CALCANHAR envolve a parte traseira do pé, ambos costurados a uma sola de juta. Esta versão adiciona a amarração no tornozelo — um cadarço passado por um par de ilhoses na gola da gáspea que cruza o peito e amarra no tornozelo. Dimensionado a partir de parâmetros SIMPLES — a ISO 8559 não declara códigos de pé, então nenhum é inventado. Ambas as bordas de montagem são RESOLVIDAS (arcos por bisseção) a um ARQUEAMENTO PROPORCIONAL sobre a própria corda, não uma fração do perímetro da sola (que degenera em lasca); o calcanhar é traçado ao lado da gáspea para que as laterais batam; e o par de ilhoses é recuado da borda da gola para não rasgar. Os ilhoses fazem a ponte para um `garment-eyelet` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "espadrille-upper-wrap",
+      "footwear_soft",
+      "espadrille",
+      "slip-on",
+      "vamp",
+      "heel-sling",
+      "ankle-wrap",
+      "garment-eyelet",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full upper",
+        "es": "Corte completo",
+        "fr": "Tige complète",
+        "pt": "Cabedal completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "vamp",
+        "heel"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "vamp",
+      "label": {
+        "en": "Vamp (toe + instep)",
+        "es": "Pala (dedos + empeine)",
+        "fr": "Claque (orteils + cou-de-pied)",
+        "pt": "Gáspea (dedos + peito)"
+      },
+      "default_color": "#c8b088",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "heel",
+      "label": {
+        "en": "Heel sling (cut 1)",
+        "es": "Talón (cortar 1)",
+        "fr": "Talon (couper 1)",
+        "pt": "Calcanhar (cortar 1)"
+      },
+      "default_color": "#d8c098",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "foot",
+      "label": {
+        "en": "Foot",
+        "es": "Pie",
+        "fr": "Pied",
+        "pt": "Pé"
+      }
+    },
+    {
+      "id": "upper",
+      "label": {
+        "en": "Upper",
+        "es": "Corte",
+        "fr": "Tige",
+        "pt": "Cabedal"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "foot_length",
+      "type": "slider",
+      "group": "foot",
+      "default": 260,
+      "min": 150,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Foot length (mm)",
+        "es": "Largo del pie (mm)",
+        "fr": "Longueur du pied (mm)",
+        "pt": "Comprimento do pé (mm)"
+      }
+    },
+    {
+      "id": "foot_girth",
+      "type": "slider",
+      "group": "foot",
+      "default": 240,
+      "min": 150,
+      "max": 330,
+      "step": 5,
+      "label": {
+        "en": "Foot girth (mm)",
+        "es": "Contorno del pie (mm)",
+        "fr": "Tour du pied (mm)",
+        "pt": "Contorno do pé (mm)"
+      }
+    },
+    {
+      "id": "vamp_depth",
+      "type": "slider",
+      "group": "upper",
+      "default": 110,
+      "min": 60,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Vamp depth (mm)",
+        "es": "Profundidad de pala (mm)",
+        "fr": "Profondeur de claque (mm)",
+        "pt": "Profundidade da gáspea (mm)"
+      }
+    },
+    {
+      "id": "heel_height",
+      "type": "slider",
+      "group": "upper",
+      "default": 70,
+      "min": 40,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Heel sling height (mm)",
+        "es": "Altura de talón (mm)",
+        "fr": "Hauteur de talon (mm)",
+        "pt": "Altura de calcanhar (mm)"
+      }
+    },
+    {
+      "id": "eyelet_dia",
+      "type": "slider",
+      "group": "upper",
+      "default": 5,
+      "min": 3,
+      "max": 12,
+      "step": 0.5,
+      "label": {
+        "en": "Eyelet diameter (mm)",
+        "es": "Diámetro de ojal (mm)",
+        "fr": "Diamètre d'œillet (mm)",
+        "pt": "Diâmetro de ilhós (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Vamp-to-heel side seam",
+          "es": "Costura lateral pala-talón",
+          "fr": "Couture claque-talon",
+          "pt": "Costura lateral gáspea-calcanhar"
+        },
+        "edges": [
+          {
+            "piece": "vamp",
+            "edge": "side_r"
+          },
+          {
+            "piece": "heel",
+            "edge": "side_r"
+          }
+        ],
+        "parameters": [
+          "foot_girth",
+          "vamp_depth"
+        ]
+      },
+      {
+        "id": "lasting_edge",
+        "type": "hem",
+        "label": {
+          "en": "Lasting edge to jute sole",
+          "es": "Canto de montado al piso de yute",
+          "fr": "Bord de montage à la semelle de jute",
+          "pt": "Borda de montagem à sola de juta"
+        },
+        "edges": [
+          {
+            "piece": "vamp",
+            "edge": "lasting"
+          },
+          {
+            "piece": "heel",
+            "edge": "lasting"
+          }
+        ],
+        "parameters": [
+          "foot_length",
+          "foot_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The espadrille is the simplest real shoe a person can make — canvas and a rope sole — and it is a whole cottage industry in the western Mediterranean and the Andes. Drafting the upper so the lasting edge stitches cleanly to the jute and the ankle tie threads a printed eyelet means a maker anywhere gets a shoe that fits and holds, from a scrap of canvas and a sole they can weave or buy.",
+      "es": "El espadrín es el zapato real más simple que alguien puede hacer — lona y un piso de cuerda — y es toda una industria artesanal en el Mediterráneo occidental y los Andes. Trazar el corte para que el canto de montado se cosa limpio al yute y el atado enhebre un ojal impreso hace que un fabricante en cualquier parte obtenga un zapato que ajusta y sujeta, de un retazo de lona y un piso que teje o compra.",
+      "fr": "L'espadrille est la chaussure la plus simple qu'on puisse faire — toile et semelle de corde — et c'est toute une industrie artisanale en Méditerranée occidentale et dans les Andes. Tracer la tige pour que le bord de montage se couse proprement au jute et que le laçage enfile un œillet imprimé fait qu'un fabricant partout obtient une chaussure qui va et tient, d'une chute de toile et d'une semelle qu'il tisse ou achète.",
+      "pt": "A alpargata é o sapato mais simples que alguém pode fazer — lona e uma sola de corda — e é toda uma indústria artesanal no Mediterrâneo ocidental e nos Andes. Traçar o cabedal para que a borda de montagem costure limpo à juta e a amarração enfie um ilhós impresso faz um fabricante em qualquer lugar obter um sapato que serve e segura, de um retalho de lona e uma sola que tece ou compra."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "presets": [
+    {
+      "id": "classic-slip",
+      "label": {
+        "en": "Classic slip-on",
+        "es": "Slip-on clásico",
+        "fr": "Slip-on classique",
+        "pt": "Slip-on clássico"
+      },
+      "values": {
+        "heel_height": 60
+      }
+    },
+    {
+      "id": "ankle-tie",
+      "label": {
+        "en": "Ankle-tie",
+        "es": "Atado al tobillo",
+        "fr": "Laçage cheville",
+        "pt": "Amarração no tornozelo"
+      },
+      "values": {
+        "heel_height": 90
+      }
+    }
+  ],
+  "notion": {
+    "kind": "eyelet",
+    "subtype": "garment eyelet at the vamp-throat ankle tie",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "garment-eyelet",
+      "linked": true,
+      "params_map": {
+        "inner_dia": "eyelet_dia",
+        "barrel_h": "max(3, seam_allowance)",
+        "wall": "eyelet_dia * 0.2"
+      }
+    }
+  }
+}

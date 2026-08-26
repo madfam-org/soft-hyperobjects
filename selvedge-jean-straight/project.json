@@ -1,0 +1,582 @@
+{
+  "project": {
+    "name": "Selvedge Straight-Leg Jean",
+    "slug": "selvedge-jean-straight",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The five-pocket STRAIGHT-LEG jean cut for SELVEDGE denim — the outseam left on the loom's finished edge and felled with the tell-tale line of white. That makes the outseam the one edge of the whole garment drafted flat and straight: a selvedge edge cannot be curved without cutting off the very finish that makes it selvedge. The leg runs a true straight from a clamped knee to a clamped hem — the half-knee is held at least the half-hem, so the silhouette is never a boot-cut in disguise. Two things are solved by measurement, not formula. The two inseams are BISECTED to equal length, because a straight jean has no drape to hide a twist and an unequal inseam ripples the felled outseam. And the waistband is cut to the MEASURED sum of the four panel waist runs plus the fly lap, never to a laid-flat girth. The waist quarter is clamped under the hip quarter so a big waist cannot invert the side seam, geometry the kernel would CCW-normalize into a healthy-looking piece. The jeans button bridges to the Yantra4D `jeans-button` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El vaquero RECTO de cinco bolsillos cortado para mezclilla de ORILLO — la costura lateral se deja en el orillo del telar y se rebate con la delatora línea blanca. Eso convierte el lateral en el único canto de toda la prenda trazado plano y recto: un orillo no se puede curvar sin cortar justo el acabado que lo hace orillo. La pierna corre recta desde una rodilla acotada hasta un bajo acotado — el medio-rodilla se mantiene al menos igual al medio-bajo, para que la silueta nunca sea un acampanado disimulado. Dos cosas se resuelven midiendo, no por fórmula. Las dos entrepiernas se BISECAN a igual longitud, porque un vaquero recto no tiene caída que oculte una torsión y una entrepierna desigual ondula el lateral rebatido. Y la pretina se corta a la suma MEDIDA de los cuatro tramos de cintura de los paneles más el cruce de bragueta, nunca a un contorno tendido en plano. El cuarto de cintura se acota bajo el cuarto de cadera para que una cintura grande no invierta el costado, geometría que el kernel normalizaría a CCW dejándola sana en apariencia. El botón de vaquero se puentea al sólido `jeans-button` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le jean DROIT cinq poches coupé pour le denim à LISIÈRE — la couture latérale laissée sur le bord fini du métier et rabattue avec le trait blanc révélateur. Cela fait de la couture latérale le seul bord de tout le vêtement tracé plat et droit : une lisière ne se courbe pas sans couper la finition même qui en fait une lisière. La jambe file droit d'un genou borné à un ourlet borné — le demi-genou est tenu au moins égal au demi-ourlet, pour que la silhouette ne soit jamais un boot-cut déguisé. Deux choses sont résolues par la mesure, non par formule. Les deux entrejambes sont BISSECTÉS à longueur égale, car un jean droit n'a pas de tombant pour masquer une torsion et un entrejambe inégal ondule la couture rabattue. Et la ceinture est coupée à la somme MESURÉE des quatre tronçons de taille des panneaux plus le recouvrement de braguette, jamais à un tour de taille étalé à plat. Le quart de taille est borné sous le quart de hanche pour qu'une taille forte n'inverse pas la couture de côté, géométrie que le noyau normaliserait en CCW en la laissant saine en apparence. Le bouton de jean fait le pont vers le solide `jeans-button` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A calça jeans RETA de cinco bolsos cortada para o denim com OURELA — a costura lateral deixada na borda acabada do tear e pespontada rebatida com a reveladora linha branca. Isso faz da costura lateral a única borda de toda a peça traçada plana e reta: uma ourela não se curva sem cortar justamente o acabamento que a faz ourela. A perna corre reta de um joelho limitado a uma barra limitada — o meio-joelho é mantido ao menos igual ao meio-barra, para que a silhueta nunca seja um boot-cut disfarçado. Duas coisas se resolvem medindo, não por fórmula. As duas entrepernas são BISSECTADAS ao mesmo comprimento, porque uma calça reta não tem caimento que esconda uma torção e uma entreperna desigual ondula a lateral rebatida. E o cós é cortado à soma MEDIDA dos quatro trechos de cintura dos painéis mais a sobreposição da braguilha, nunca a um contorno estendido plano. O quarto de cintura é limitado sob o quarto de quadril para que uma cintura larga não inverta a lateral, geometria que o núcleo normalizaria em CCW deixando-a sã na aparência. O botão de jeans faz a ponte para o sólido `jeans-button` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "selvedge-jean-straight",
+      "denim",
+      "jean",
+      "selvedge",
+      "five-pocket",
+      "straight-leg",
+      "jeans-button",
+      "topstitch",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full jean",
+        "es": "Vaquero completo",
+        "fr": "Jean complet",
+        "pt": "Calça completa"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front_leg",
+        "back_leg",
+        "waistband",
+        "fly",
+        "coin_pocket",
+        "pocket_bag"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front_leg",
+      "label": {
+        "en": "Front leg (cut 2, mirrored)",
+        "es": "Delantero de pierna (cortar 2, espejo)",
+        "fr": "Devant de jambe (couper 2, miroir)",
+        "pt": "Frente da perna (cortar 2, espelhado)"
+      },
+      "default_color": "#3f5573",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back_leg",
+      "label": {
+        "en": "Back leg (cut 2, mirrored)",
+        "es": "Trasero de pierna (cortar 2, espejo)",
+        "fr": "Dos de jambe (couper 2, miroir)",
+        "pt": "Costas da perna (cortar 2, espelhado)"
+      },
+      "default_color": "#4a637f",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "Waistband (cut 1)",
+        "es": "Pretina (cortar 1)",
+        "fr": "Ceinture (couper 1)",
+        "pt": "Cós (cortar 1)"
+      },
+      "default_color": "#5e7896",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "fly",
+      "label": {
+        "en": "Fly shield / facing (cut 2)",
+        "es": "Tapeta de bragueta (cortar 2)",
+        "fr": "Sous-pont de braguette (couper 2)",
+        "pt": "Carcela da braguilha (cortar 2)"
+      },
+      "default_color": "#6f89a6",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "coin_pocket",
+      "label": {
+        "en": "Coin pocket (cut 1)",
+        "es": "Bolsillo del reloj (cortar 1)",
+        "fr": "Gousset (couper 1)",
+        "pt": "Bolso da moeda (cortar 1)"
+      },
+      "default_color": "#7f98b3",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "pocket_bag",
+      "label": {
+        "en": "Front pocket bag (cut 4)",
+        "es": "Fondo de bolsillo delantero (cortar 4)",
+        "fr": "Fond de poche devant (couper 4)",
+        "pt": "Saco de bolso dianteiro (cortar 4)"
+      },
+      "default_color": "#90a6bd",
+      "cut": {
+        "quantity": 4,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "block",
+      "label": {
+        "en": "Fit block",
+        "es": "Base de talla",
+        "fr": "Base d'aisance",
+        "pt": "Base de modelagem"
+      }
+    },
+    {
+      "id": "leg",
+      "label": {
+        "en": "Leg",
+        "es": "Pierna",
+        "fr": "Jambe",
+        "pt": "Perna"
+      }
+    },
+    {
+      "id": "waistband",
+      "label": {
+        "en": "Waistband",
+        "es": "Pretina",
+        "fr": "Ceinture",
+        "pt": "Cós"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "block",
+      "default": 820,
+      "min": 560,
+      "max": 1200,
+      "step": 10,
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)",
+        "pt": "Contorno de cintura (mm)"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "block",
+      "default": 1000,
+      "min": 720,
+      "max": 1400,
+      "step": 10,
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)",
+        "pt": "Contorno de quadril (mm)"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      }
+    },
+    {
+      "id": "inside_leg",
+      "type": "slider",
+      "group": "leg",
+      "default": 810,
+      "min": 560,
+      "max": 950,
+      "step": 10,
+      "label": {
+        "en": "Inside leg, crotch to hem (mm)",
+        "es": "Entrepierna, tiro a bajo (mm)",
+        "fr": "Entrejambe, fourche à ourlet (mm)",
+        "pt": "Entreperna, gancho à barra (mm)"
+      }
+    },
+    {
+      "id": "front_rise",
+      "type": "slider",
+      "group": "block",
+      "default": 260,
+      "min": 200,
+      "max": 360,
+      "step": 5,
+      "label": {
+        "en": "Front rise (mm)",
+        "es": "Tiro delantero (mm)",
+        "fr": "Montée devant (mm)",
+        "pt": "Gancho dianteiro (mm)"
+      },
+      "tooltip": {
+        "en": "The back rise is derived deeper — the jean fork; both forks are clamped positive",
+        "es": "El tiro trasero se deriva más profundo — la horquilla del vaquero; ambas se acotan positivas",
+        "fr": "La montée dos est dérivée plus profonde — la fourche du jean ; les deux sont bornées positives",
+        "pt": "O gancho traseiro é derivado mais profundo — a forquilha do jeans; ambas limitadas positivas"
+      }
+    },
+    {
+      "id": "hem_width",
+      "type": "slider",
+      "group": "leg",
+      "default": 190,
+      "min": 140,
+      "max": 320,
+      "step": 5,
+      "label": {
+        "en": "Hem width, flat (mm)",
+        "es": "Ancho de bajo, plano (mm)",
+        "fr": "Largeur d'ourlet, à plat (mm)",
+        "pt": "Largura da barra, plana (mm)"
+      }
+    },
+    {
+      "id": "knee_width",
+      "type": "slider",
+      "group": "leg",
+      "default": 210,
+      "min": 150,
+      "max": 360,
+      "step": 5,
+      "label": {
+        "en": "Knee width, flat (mm)",
+        "es": "Ancho de rodilla, plano (mm)",
+        "fr": "Largeur de genou, à plat (mm)",
+        "pt": "Largura do joelho, plana (mm)"
+      },
+      "tooltip": {
+        "en": "Clamped to at least the hem width — a straight leg is never narrower at the knee than the hem",
+        "es": "Acotado al menos al ancho de bajo — una pierna recta nunca es más angosta en la rodilla que en el bajo",
+        "fr": "Borné au moins à la largeur d'ourlet — une jambe droite n'est jamais plus étroite au genou qu'à l'ourlet",
+        "pt": "Limitado ao menos à largura da barra — uma perna reta nunca é mais estreita no joelho que na barra"
+      }
+    },
+    {
+      "id": "band_depth",
+      "type": "slider",
+      "group": "waistband",
+      "default": 40,
+      "min": 28,
+      "max": 64,
+      "step": 2,
+      "label": {
+        "en": "Waistband depth (mm)",
+        "es": "Alto de pretina (mm)",
+        "fr": "Hauteur de ceinture (mm)",
+        "pt": "Altura do cós (mm)"
+      }
+    },
+    {
+      "id": "button_head",
+      "type": "slider",
+      "group": "waistband",
+      "default": 17,
+      "min": 11,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Jeans button head (mm)",
+        "es": "Cabeza del botón de vaquero (mm)",
+        "fr": "Tête du bouton de jean (mm)",
+        "pt": "Cabeça do botão de jeans (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D jeans-button head AND its step-in from the band's finished end",
+        "es": "Define la cabeza del jeans-button de Yantra4D Y su separación del extremo terminado de la pretina",
+        "fr": "Pilote la tête du jeans-button Yantra4D ET son retrait depuis l'extrémité finie de la ceinture",
+        "pt": "Pilota a cabeça do jeans-button do Yantra4D E o recuo da ponta acabada do cós"
+      }
+    },
+    {
+      "id": "wear_ease",
+      "type": "slider",
+      "group": "block",
+      "default": 40,
+      "min": 0,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Wearing ease over hip (mm)",
+        "es": "Holgura de uso en cadera (mm)",
+        "fr": "Aisance de port aux hanches (mm)",
+        "pt": "Folga de uso no quadril (mm)"
+      }
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 32,
+      "min": 18,
+      "max": 55,
+      "step": 2,
+      "label": {
+        "en": "Hem turn-up (mm)",
+        "es": "Dobladillo de bajo (mm)",
+        "fr": "Revers d'ourlet (mm)",
+        "pt": "Bainha da barra (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 8,
+      "max": 18,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "hip_girth > waist_girth",
+      "severity": "warning",
+      "message": {
+        "en": "A hip smaller than the waist inverts the side seam; the draft clamps the waist quarter.",
+        "es": "Una cadera menor que la cintura invierte el costado; el trazo acota el cuarto de cintura.",
+        "fr": "Une hanche plus petite que la taille inverse la couture de côté ; le tracé borne le quart de taille.",
+        "pt": "Um quadril menor que a cintura inverte a lateral; o traçado limita o quarto de cintura."
+      }
+    },
+    {
+      "expression": "knee_width >= hem_width",
+      "severity": "warning",
+      "message": {
+        "en": "A straight jean runs the knee no narrower than the hem; the draft clamps it.",
+        "es": "Un vaquero recto no lleva la rodilla más angosta que el bajo; el trazo lo acota.",
+        "fr": "Un jean droit ne fait pas le genou plus étroit que l'ourlet ; le tracé le borne.",
+        "pt": "Uma calça reta não faz o joelho mais estreito que a barra; o traçado o limita."
+      }
+    },
+    {
+      "expression": "button_head * 2 < inside_leg",
+      "severity": "warning",
+      "message": {
+        "en": "The button head must be small against the garment it fastens.",
+        "es": "La cabeza del botón debe ser pequeña frente a la prenda que cierra.",
+        "fr": "La tête du bouton doit rester petite face au vêtement qu'elle ferme.",
+        "pt": "A cabeça do botão deve ser pequena ante a peça que fecha."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "slim-32",
+      "label": {
+        "en": "Slim (32 waist)",
+        "es": "Entallado (cintura 32)",
+        "fr": "Ajusté (taille 32)",
+        "pt": "Justo (cintura 32)"
+      },
+      "values": {
+        "waist_girth": 800,
+        "hip_girth": 960,
+        "hem_width": 170,
+        "knee_width": 190
+      }
+    },
+    {
+      "id": "classic-straight",
+      "label": {
+        "en": "Classic straight",
+        "es": "Recto clásico",
+        "fr": "Droit classique",
+        "pt": "Reto clássico"
+      },
+      "values": {
+        "waist_girth": 860,
+        "hip_girth": 1040,
+        "hem_width": 200,
+        "knee_width": 220
+      }
+    },
+    {
+      "id": "relaxed",
+      "label": {
+        "en": "Relaxed",
+        "es": "Holgado",
+        "fr": "Ample",
+        "pt": "Folgado"
+      },
+      "values": {
+        "waist_girth": 960,
+        "hip_girth": 1180,
+        "hem_width": 230,
+        "knee_width": 270,
+        "wear_ease": 80
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [
+    "mezclilla-denim"
+  ],
+  "notion": {
+    "kind": "button",
+    "subtype": "tack-set jeans button on the waistband extension",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "jeans-button",
+      "linked": true,
+      "params_map": {
+        "head_dia": "button_head",
+        "head_h": "button_head * 0.34",
+        "socket_dia": "button_head * 0.62",
+        "socket_h": "button_head * 0.40",
+        "tack_dia": "button_head * 0.30",
+        "tack_h": "button_head * 0.55"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "buttoned_waistband",
+        "type": "button_stand",
+        "label": {
+          "en": "Jeans-button waistband closure",
+          "es": "Cierre de pretina con botón de vaquero",
+          "fr": "Fermeture de ceinture au bouton de jean",
+          "pt": "Fecho de cós com botão de jeans"
+        },
+        "edges": [
+          {
+            "piece": "waistband",
+            "edge": "ext_end"
+          },
+          {
+            "piece": "front_leg",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "button_head",
+          "band_depth",
+          "front_rise"
+        ]
+      },
+      {
+        "id": "selvedge_outseam",
+        "type": "side_seam",
+        "label": {
+          "en": "Felled selvedge outseam",
+          "es": "Costura lateral rebatida sobre orillo",
+          "fr": "Couture latérale rabattue sur lisière",
+          "pt": "Costura lateral rebatida na ourela"
+        },
+        "edges": [
+          {
+            "piece": "front_leg",
+            "edge": "side"
+          },
+          {
+            "piece": "back_leg",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "inside_leg",
+          "front_rise",
+          "hem_width"
+        ]
+      },
+      {
+        "id": "measured_waistband",
+        "type": "waistband",
+        "label": {
+          "en": "Waistband cut to measured waist",
+          "es": "Pretina cortada a la cintura medida",
+          "fr": "Ceinture coupée à la taille mesurée",
+          "pt": "Cós cortado à cintura medida"
+        },
+        "edges": [
+          {
+            "piece": "waistband",
+            "edge": "lower"
+          },
+          {
+            "piece": "back_leg",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "band_depth",
+          "wear_ease"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Selvedge denim is sold at a premium precisely because the outseam has to be cut and sewn straight — the finished edge is the feature — and that discipline is treated as artisan mystique. It is geometry, and it is here: the one edge that must stay straight is drafted straight, the leg is held truly straight from a clamped knee to a clamped hem, the two inseams are balanced to zero so the felled outseam does not ripple, and the waistband is cut to the waist the panels actually measure. The jeans button prints and taps in at home. A jean drafted this way fits and hangs on the first pair.",
+      "es": "La mezclilla de orillo se vende con sobreprecio justamente porque el lateral hay que cortarlo y coserlo recto — el canto terminado es el rasgo — y esa disciplina se trata como misterio artesanal. Es geometría, y está aquí: el único canto que debe quedar recto se traza recto, la pierna se mantiene realmente recta de una rodilla acotada a un bajo acotado, las dos entrepiernas se equilibran a cero para que el lateral rebatido no ondule, y la pretina se corta a la cintura que los paneles miden de verdad. El botón de vaquero se imprime y se remacha en casa. Un vaquero trazado así ajusta y cae en el primer par.",
+      "fr": "Le denim à lisière se vend avec une prime justement parce que la couture latérale doit être coupée et cousue droite — le bord fini est la caractéristique — et cette discipline est traitée comme un mystère d'artisan. C'est de la géométrie, et elle est ici : le seul bord qui doit rester droit est tracé droit, la jambe est tenue vraiment droite d'un genou borné à un ourlet borné, les deux entrejambes sont équilibrés à zéro pour que la couture rabattue n'ondule pas, et la ceinture est coupée à la taille que les panneaux mesurent réellement. Le bouton de jean s'imprime et se rive chez soi. Un jean tracé ainsi tombe juste dès la première paire.",
+      "pt": "O denim com ourela é vendido com ágio justamente porque a costura lateral tem de ser cortada e costurada reta — a borda acabada é o traço — e essa disciplina é tratada como mística artesanal. É geometria, e está aqui: a única borda que deve ficar reta é traçada reta, a perna é mantida realmente reta de um joelho limitado a uma barra limitada, as duas entrepernas são equilibradas a zero para que a lateral rebatida não ondule, e o cós é cortado à cintura que os painéis realmente medem. O botão de jeans imprime e rebita em casa. Uma calça traçada assim veste e cai no primeiro par."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

@@ -1,0 +1,380 @@
+{
+  "project": {
+    "name": "Heel-Tip-Blank Slipper",
+    "slug": "heel-tip-slipper",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A felted-wool house slipper with a hard-wearing HEEL: a soft VAMP over the toes, a felt SOLE, and a HEEL COUNTER that seats a printed heel-tip blank (the Yantra4D `heel-tip-blank`) so the one part of a slipper that wears through — the heel — is a replaceable hard tip rather than felt worn to the floor. Sized from PLAIN parameters — ISO 8559 declares no foot landmark codes, so none is invented. The vamp lasting edge is a SOLVED bow over its own chord (proportionate, never a share of the whole sole perimeter, which degenerates); the tip pocket is cut to the MEASURED tip blank plus a clearance; and the pocket depth is CLAMPED under the counter height so it never runs through the topline. The vamp and counter are both lasted independently to the sole.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una pantufla de fieltro de lana con TALÓN resistente: una PALA suave sobre los dedos, un PISO de fieltro y un CONTRAFUERTE que aloja una tapa de tacón impresa (el `heel-tip-blank` de Yantra4D) para que la única parte de la pantufla que se gasta — el talón — sea una tapa dura reemplazable y no fieltro gastado al suelo. Dimensionado con parámetros PLANOS — ISO 8559 no declara códigos de pie, así que no se inventa ninguno. El canto de montado de la pala es un arco RESUELTO sobre su cuerda (proporcional, nunca fracción del perímetro del piso, que degenera); el hueco de la tapa se corta a la tapa MEDIDA más una holgura; y su profundidad se ACOTA bajo la altura del contrafuerte para que no atraviese la línea superior. La pala y el contrafuerte se montan por separado al piso.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un chausson en feutre de laine à TALON résistant : une CLAQUE souple sur les orteils, une SEMELLE en feutre, et un CONTREFORT qui loge un bonbout imprimé (le `heel-tip-blank` de Yantra4D) pour que la seule partie du chausson qui s'use — le talon — soit un embout dur remplaçable plutôt que du feutre usé jusqu'au sol. Dimensionné à partir de paramètres SIMPLES — ISO 8559 ne déclare aucun code de pied, donc aucun n'est inventé. Le bord de montage de la claque est un arc RÉSOLU sur sa corde (proportionnel, jamais une fraction du périmètre de semelle, qui dégénère) ; la niche du bonbout est coupée au bonbout MESURÉ plus un jeu ; et sa profondeur est BORNÉE sous la hauteur du contrefort pour ne pas traverser la ligne haute. La claque et le contrefort se montent séparément à la semelle.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um chinelo de feltro de lã com CALCANHAR resistente: uma GÁSPEA macia sobre os dedos, uma SOLA de feltro, e um CONTRAFORTE que aloja um salto reforçado impresso (o `heel-tip-blank` do Yantra4D) para que a única parte do chinelo que se desgasta — o calcanhar — seja um salto duro substituível e não feltro gasto até o chão. Dimensionado a partir de parâmetros SIMPLES — a ISO 8559 não declara códigos de pé, então nenhum é inventado. A borda de montagem da gáspea é um arco RESOLVIDO sobre a corda (proporcional, nunca fração do perímetro da sola, que degenera); o encaixe do salto é cortado ao salto MEDIDO mais uma folga; e sua profundidade é LIMITADA sob a altura do contraforte para não atravessar a linha superior. A gáspea e o contraforte montam-se separadamente à sola.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "heel-tip-slipper",
+      "footwear_soft",
+      "slipper",
+      "felt",
+      "heel-counter",
+      "heel-tip-blank",
+      "hardware",
+      "fc500",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full slipper",
+        "es": "Pantufla completa",
+        "fr": "Chausson complet",
+        "pt": "Chinelo completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "vamp",
+        "sole",
+        "counter"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "vamp",
+      "label": {
+        "en": "Vamp (toe + instep)",
+        "es": "Pala (dedos + empeine)",
+        "fr": "Claque (orteils + cou-de-pied)",
+        "pt": "Gáspea (dedos + peito)"
+      },
+      "default_color": "#8a8a70",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "sole",
+      "label": {
+        "en": "Sole (cut 2)",
+        "es": "Piso (cortar 2)",
+        "fr": "Semelle (couper 2)",
+        "pt": "Sola (cortar 2)"
+      },
+      "default_color": "#9a9a80",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "counter",
+      "label": {
+        "en": "Heel counter (cut 1)",
+        "es": "Contrafuerte (cortar 1)",
+        "fr": "Contrefort (couper 1)",
+        "pt": "Contraforte (cortar 1)"
+      },
+      "default_color": "#aaaa90",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "foot",
+      "label": {
+        "en": "Foot",
+        "es": "Pie",
+        "fr": "Pied",
+        "pt": "Pé"
+      }
+    },
+    {
+      "id": "slipper",
+      "label": {
+        "en": "Slipper",
+        "es": "Pantufla",
+        "fr": "Chausson",
+        "pt": "Chinelo"
+      }
+    },
+    {
+      "id": "heel",
+      "label": {
+        "en": "Heel tip",
+        "es": "Tapa de tacón",
+        "fr": "Bonbout",
+        "pt": "Salto"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "foot_length",
+      "type": "slider",
+      "group": "foot",
+      "default": 260,
+      "min": 150,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Foot length (mm)",
+        "es": "Largo del pie (mm)",
+        "fr": "Longueur du pied (mm)",
+        "pt": "Comprimento do pé (mm)"
+      }
+    },
+    {
+      "id": "foot_girth",
+      "type": "slider",
+      "group": "foot",
+      "default": 240,
+      "min": 150,
+      "max": 330,
+      "step": 5,
+      "label": {
+        "en": "Foot girth (mm)",
+        "es": "Contorno del pie (mm)",
+        "fr": "Tour du pied (mm)",
+        "pt": "Contorno do pé (mm)"
+      }
+    },
+    {
+      "id": "vamp_depth",
+      "type": "slider",
+      "group": "slipper",
+      "default": 105,
+      "min": 60,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Vamp depth (mm)",
+        "es": "Profundidad de pala (mm)",
+        "fr": "Profondeur de claque (mm)",
+        "pt": "Profundidade da gáspea (mm)"
+      }
+    },
+    {
+      "id": "counter_height",
+      "type": "slider",
+      "group": "slipper",
+      "default": 70,
+      "min": 45,
+      "max": 150,
+      "step": 5,
+      "label": {
+        "en": "Heel counter height (mm)",
+        "es": "Altura de contrafuerte (mm)",
+        "fr": "Hauteur de contrefort (mm)",
+        "pt": "Altura de contraforte (mm)"
+      }
+    },
+    {
+      "id": "tip_width",
+      "type": "slider",
+      "group": "heel",
+      "default": 55,
+      "min": 30,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Heel-tip width (mm)",
+        "es": "Ancho de tapa (mm)",
+        "fr": "Largeur de bonbout (mm)",
+        "pt": "Largura do salto (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the Yantra4D heel-tip-blank width",
+        "es": "Define el ancho del heel-tip-blank de Yantra4D",
+        "fr": "Pilote la largeur du heel-tip-blank Yantra4D",
+        "pt": "Pilota a largura do heel-tip-blank do Yantra4D"
+      }
+    },
+    {
+      "id": "tip_length",
+      "type": "slider",
+      "group": "heel",
+      "default": 60,
+      "min": 30,
+      "max": 100,
+      "step": 5,
+      "label": {
+        "en": "Heel-tip length (mm)",
+        "es": "Largo de tapa (mm)",
+        "fr": "Longueur de bonbout (mm)",
+        "pt": "Comprimento do salto (mm)"
+      }
+    },
+    {
+      "id": "tip_clear",
+      "type": "slider",
+      "group": "heel",
+      "default": 3,
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "label": {
+        "en": "Tip pocket clearance (mm)",
+        "es": "Holgura del hueco (mm)",
+        "fr": "Jeu de niche (mm)",
+        "pt": "Folga do encaixe (mm)"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "advanced": true
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "tip_seat",
+        "type": "custom",
+        "label": {
+          "en": "Heel-tip seat",
+          "es": "Asiento de tapa",
+          "fr": "Logement de bonbout",
+          "pt": "Encaixe de salto"
+        },
+        "edges": [
+          {
+            "piece": "counter",
+            "edge": "lasting"
+          }
+        ],
+        "parameters": [
+          "tip_width",
+          "tip_length",
+          "counter_height"
+        ]
+      },
+      {
+        "id": "lasting_edge",
+        "type": "hem",
+        "label": {
+          "en": "Lasting edge to sole",
+          "es": "Canto de montado",
+          "fr": "Bord de montage",
+          "pt": "Borda de montagem"
+        },
+        "edges": [
+          {
+            "piece": "vamp",
+            "edge": "lasting"
+          },
+          {
+            "piece": "counter",
+            "edge": "lasting"
+          }
+        ],
+        "parameters": [
+          "foot_length",
+          "foot_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Felt slippers are warm and quiet and easy to make, but they wear through at the heel in a season and get thrown out. Seating a replaceable printed heel tip in the counter means the felt wears against the tip, not the floor, so the slipper lasts for years and the one worn part swaps out — a small change that turns a disposable slipper into a repairable one.",
+      "es": "Las pantuflas de fieltro son cálidas, silenciosas y fáciles de hacer, pero se gastan en el talón en una temporada y se tiran. Alojar una tapa de tacón impresa reemplazable en el contrafuerte hace que el fieltro roce la tapa y no el suelo, así la pantufla dura años y la única parte gastada se cambia — un pequeño cambio que vuelve reparable una pantufla desechable.",
+      "fr": "Les chaussons en feutre sont chauds, silencieux et faciles à faire, mais ils s'usent au talon en une saison et finissent à la poubelle. Loger un bonbout imprimé remplaçable dans le contrefort fait que le feutre s'use contre l'embout, non le sol, si bien que le chausson dure des années et que la seule partie usée se remplace — un petit changement qui rend réparable un chausson jetable.",
+      "pt": "Chinelos de feltro são quentes, silenciosos e fáceis de fazer, mas se gastam no calcanhar numa estação e são jogados fora. Alojar um salto impresso substituível no contraforte faz o feltro roçar o salto, não o chão, então o chinelo dura anos e a única parte gasta se troca — uma pequena mudança que torna reparável um chinelo descartável."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  },
+  "presets": [
+    {
+      "id": "low-slipper",
+      "label": {
+        "en": "Low slipper",
+        "es": "Pantufla baja",
+        "fr": "Chausson bas",
+        "pt": "Chinelo baixo"
+      },
+      "values": {
+        "counter_height": 55,
+        "vamp_depth": 95
+      }
+    },
+    {
+      "id": "bootie",
+      "label": {
+        "en": "Bootie slipper",
+        "es": "Pantufla bota",
+        "fr": "Chausson bottillon",
+        "pt": "Chinelo bota"
+      },
+      "values": {
+        "counter_height": 120,
+        "vamp_depth": 130
+      }
+    }
+  ],
+  "notion": {
+    "kind": "custom",
+    "subtype": "replaceable heel-tip blank in the counter",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "heel-tip-blank",
+      "linked": true,
+      "params_map": {
+        "tip_w": "tip_width",
+        "tip_l": "tip_length",
+        "tip_h": "counter_height * 0.15"
+      }
+    }
+  }
+}
