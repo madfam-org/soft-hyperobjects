@@ -1,0 +1,591 @@
+{
+  "project": {
+    "name": "Argyle Knit Vest",
+    "slug": "knit-vest-argyle",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A sleeveless V-neck pullover vest in the classic argyle intarsia — the diamond lattice marked on the front so the pattern carries the colourwork. A shaped-armhole vest: front and back on the fold, a curved armhole finished with a binding rather than a sleeve, ribbed V-neck, armholes and hem. Negative-ease knit drafting. FC-400 Lane 4, knitwear. No closure.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un chaleco sin mangas de cuello en pico en el clásico argyle de intarsia — la retícula de rombos marcada en el delantero para que el patrón lleve la labor de color. Chaleco de sisa conformada: delantero y espalda al doblez, sisa curva rematada con vivo en lugar de manga, cuello en pico, sisas y bajo en canalé. Trazado de punto con holgura negativa. FC-400 carril 4, punto. Sin cierre.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un débardeur sans manches à col V dans le classique argyle en intarsia — le réseau de losanges marqué sur le devant pour que le patron porte le jacquard. Un débardeur à emmanchure façonnée : devant et dos au pli, une emmanchure courbe finie par un biais plutôt qu'une manche, col V, emmanchures et bas en côtes. Tracé de maille à aisance négative. FC-400 voie 4, maille. Sans fermeture.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um colete sem mangas de gola V no clássico argyle em intársia — a retícula de losangos marcada na frente para que o molde carregue o jacquard. Um colete de cava modelada: frente e costas na dobra, uma cava curva rematada com viés em vez de manga, gola V, cavas e barra em canelado. Traçado de tricô com folga negativa. FC-400 pista 4, tricô. Sem fecho.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "knitwear",
+      "vest",
+      "argyle",
+      "intarsia",
+      "sleeveless"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full pattern",
+        "es": "Patrón completo",
+        "fr": "Patron complet",
+        "pt": "Molde completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "vneck_band",
+        "armhole_band",
+        "hem_band"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (V-neck argyle)",
+        "es": "Delantero (pico argyle)",
+        "fr": "Devant (col V argyle)",
+        "pt": "Frente (gola V argyle)"
+      },
+      "default_color": "#8a7b57",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (crew back)",
+        "es": "Espalda (cuello redondo)",
+        "fr": "Dos (encolure ras)",
+        "pt": "Costas (gola careca)"
+      },
+      "default_color": "#736748",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "vneck_band",
+      "label": {
+        "en": "V-neck band (rib)",
+        "es": "Cuello en pico (canalé)",
+        "fr": "Bande col V (côtes)",
+        "pt": "Gola V (canelado)"
+      },
+      "default_color": "#4a4436",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "armhole_band",
+      "label": {
+        "en": "Armhole band (rib)",
+        "es": "Vivo de sisa (canalé)",
+        "fr": "Bande d'emmanchure (côtes)",
+        "pt": "Viés de cava (canelado)"
+      },
+      "default_color": "#4a4436",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "hem_band",
+      "label": {
+        "en": "Hem Band (rib)",
+        "es": "Cenefa (canalé)",
+        "fr": "Bande de bas (côtes)",
+        "pt": "Barra (canelado)"
+      },
+      "default_color": "#4a4436",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps",
+        "pt": "Corpo"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Coupe",
+        "pt": "Caimento"
+      }
+    },
+    {
+      "id": "style",
+      "label": {
+        "en": "Style",
+        "es": "Estilo",
+        "fr": "Style",
+        "pt": "Estilo"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 960,
+      "min": 700,
+      "max": 1900,
+      "step": 10,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de peito (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest circumference.",
+        "es": "Circunferencia completa del pecho.",
+        "fr": "Circonférence complète de la poitrine.",
+        "pt": "Circunferência total do peito."
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "group": "body",
+      "default": 600,
+      "min": 420,
+      "max": 840,
+      "step": 10,
+      "label": {
+        "en": "Body length (mm)",
+        "es": "Largo del cuerpo (mm)",
+        "fr": "Longueur du corps (mm)",
+        "pt": "Comprimento do corpo (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to hem seam.",
+        "es": "De la nuca a la costura del bajo.",
+        "fr": "De la nuque à la couture du bas.",
+        "pt": "Da nuca à costura da barra."
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 400,
+      "min": 300,
+      "max": 540,
+      "step": 10,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)",
+        "pt": "Contorno de pescoço (mm)"
+      },
+      "tooltip": {
+        "en": "Base of the neck.",
+        "es": "Base del cuello.",
+        "fr": "Base du cou.",
+        "pt": "Base do pescoço."
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "body",
+      "default": 420,
+      "min": 300,
+      "max": 620,
+      "step": 10,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombros (mm)",
+        "fr": "Largeur d'épaules (mm)",
+        "pt": "Largura dos ombros (mm)"
+      },
+      "tooltip": {
+        "en": "Across the back shoulders.",
+        "es": "De hombro a hombro por la espalda.",
+        "fr": "D'épaule à épaule dans le dos.",
+        "pt": "De ombro a ombro nas costas."
+      }
+    },
+    {
+      "id": "knit_ease",
+      "type": "slider",
+      "group": "fit",
+      "default": -30,
+      "min": -140,
+      "max": 120,
+      "step": 10,
+      "label": {
+        "en": "Knit ease (mm, signed)",
+        "es": "Holgura de punto (mm, con signo)",
+        "fr": "Aisance maille (mm, signée)",
+        "pt": "Folga de tricô (mm, com sinal)"
+      },
+      "tooltip": {
+        "en": "Signed; negative = draft smaller than body, stretches on.",
+        "es": "Con signo; negativa = trazo menor que el cuerpo, se estira.",
+        "fr": "Signée ; négative = tracé plus petit que le corps, s'étire.",
+        "pt": "Com sinal; negativa = traçado menor que o corpo, estica."
+      }
+    },
+    {
+      "id": "armhole_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 230,
+      "min": 160,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Armhole depth (mm)",
+        "es": "Profundidad de sisa (mm)",
+        "fr": "Profondeur d'emmanchure (mm)",
+        "pt": "Profundidade de cava (mm)"
+      },
+      "tooltip": {
+        "en": "Drop-shoulder armhole depth.",
+        "es": "Profundidad de la sisa de hombro caído.",
+        "fr": "Profondeur de l'emmanchure tombante.",
+        "pt": "Profundidade da cava de ombro caído."
+      }
+    },
+    {
+      "id": "armhole_scoop",
+      "type": "slider",
+      "group": "fit",
+      "default": 55,
+      "min": 20,
+      "max": 110,
+      "step": 5,
+      "label": {
+        "en": "Armhole scoop (mm)",
+        "es": "Entrada de sisa (mm)",
+        "fr": "Creux d'emmanchure (mm)",
+        "pt": "Recorte da cava (mm)"
+      },
+      "tooltip": {
+        "en": "How far the armhole cuts in.",
+        "es": "Cuánto entra la sisa.",
+        "fr": "Profondeur du creux d'emmanchure.",
+        "pt": "Quanto a cava recorta."
+      }
+    },
+    {
+      "id": "vneck_depth",
+      "type": "slider",
+      "group": "style",
+      "default": 200,
+      "min": 80,
+      "max": 320,
+      "step": 5,
+      "label": {
+        "en": "V-neck depth (mm)",
+        "es": "Profundidad del pico (mm)",
+        "fr": "Profondeur du col V (mm)",
+        "pt": "Profundidade da gola V (mm)"
+      },
+      "tooltip": {
+        "en": "How low the V point sits.",
+        "es": "Cuán bajo cae el pico.",
+        "fr": "Hauteur de la pointe du V.",
+        "pt": "Quão baixo fica a ponta do V."
+      }
+    },
+    {
+      "id": "shoulder_slope",
+      "type": "slider",
+      "group": "style",
+      "default": 20,
+      "min": 5,
+      "max": 50,
+      "step": 1,
+      "label": {
+        "en": "Shoulder slope (mm)",
+        "es": "Caída de hombro (mm)",
+        "fr": "Pente d'épaule (mm)",
+        "pt": "Queda de ombro (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder-point drop.",
+        "es": "Caída del punto de hombro.",
+        "fr": "Chute du point d'épaule.",
+        "pt": "Queda do ponto de ombro."
+      }
+    },
+    {
+      "id": "diamond_rows",
+      "type": "slider",
+      "group": "style",
+      "default": 4,
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "label": {
+        "en": "Argyle rows",
+        "es": "Filas de rombos",
+        "fr": "Rangées de losanges",
+        "pt": "Fileiras de losangos"
+      },
+      "tooltip": {
+        "en": "Diamond rows on the front.",
+        "es": "Filas de rombos en el delantero.",
+        "fr": "Rangées de losanges sur le devant.",
+        "pt": "Fileiras de losangos na frente."
+      }
+    },
+    {
+      "id": "diamond_cols",
+      "type": "slider",
+      "group": "style",
+      "default": 3,
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "label": {
+        "en": "Argyle columns",
+        "es": "Columnas de rombos",
+        "fr": "Colonnes de losanges",
+        "pt": "Colunas de losangos"
+      },
+      "tooltip": {
+        "en": "Diamond columns on the front.",
+        "es": "Columnas de rombos en el delantero.",
+        "fr": "Colonnes de losanges sur le devant.",
+        "pt": "Colunas de losangos na frente."
+      }
+    },
+    {
+      "id": "band_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 26,
+      "min": 15,
+      "max": 50,
+      "step": 1,
+      "label": {
+        "en": "Band width (mm)",
+        "es": "Ancho de vivo (mm)",
+        "fr": "Largeur de bande (mm)",
+        "pt": "Largura do viés (mm)"
+      },
+      "tooltip": {
+        "en": "V-neck and armhole band depth.",
+        "es": "Profundidad del cuello y las sisas.",
+        "fr": "Profondeur des bandes col et emmanchure.",
+        "pt": "Profundidade da gola e das cavas."
+      }
+    },
+    {
+      "id": "hemband_ratio",
+      "type": "slider",
+      "group": "construction",
+      "default": 0.9,
+      "min": 0.72,
+      "max": 1.0,
+      "step": 0.01,
+      "label": {
+        "en": "Hem pull-in",
+        "es": "Ceñido de cenefa",
+        "fr": "Serrage du bas",
+        "pt": "Aperto da barra"
+      },
+      "tooltip": {
+        "en": "Hem band length vs body opening.",
+        "es": "Largo de cenefa frente a la boca del cuerpo.",
+        "fr": "Longueur de bande vs l'ouverture.",
+        "pt": "Comprimento da barra vs a boca do corpo."
+      }
+    },
+    {
+      "id": "rib_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 55,
+      "min": 25,
+      "max": 110,
+      "step": 5,
+      "label": {
+        "en": "Rib height (mm)",
+        "es": "Alto del canalé (mm)",
+        "fr": "Hauteur des côtes (mm)",
+        "pt": "Altura do canelado (mm)"
+      },
+      "tooltip": {
+        "en": "Cuff and hem band depth.",
+        "es": "Profundidad de puños y cenefa.",
+        "fr": "Profondeur des poignets et de la bande.",
+        "pt": "Profundidade dos punhos e barra."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 9,
+      "min": 6,
+      "max": 18,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Added around sewn edges.",
+        "es": "Añadido alrededor de los cantos cosidos.",
+        "fr": "Ajoutée autour des bords cousus.",
+        "pt": "Adicionada em volta dos cantos costurados."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "prep",
+      "label": {
+        "en": "Preppy classic",
+        "es": "Clásico preppy",
+        "fr": "Classique preppy",
+        "pt": "Clássico preppy"
+      },
+      "values": {
+        "knit_ease": -30,
+        "vneck_depth": 200,
+        "diamond_rows": 4
+      }
+    },
+    {
+      "id": "deep-v",
+      "label": {
+        "en": "Deep V",
+        "es": "Pico profundo",
+        "fr": "V profond",
+        "pt": "V profundo"
+      },
+      "values": {
+        "vneck_depth": 300,
+        "diamond_rows": 6,
+        "diamond_cols": 4
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "commons_license": "CERN-OHL-W-2.0",
+    "interfaces": [
+      {
+        "id": "vneck",
+        "type": "custom",
+        "label": {
+          "en": "V-neckline (band)",
+          "es": "Escote en pico (vivo)",
+          "fr": "Encolure V (bande)",
+          "pt": "Decote V (viés)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "vneck_depth",
+          "band_width",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "armholes",
+        "type": "custom",
+        "label": {
+          "en": "Armholes (binding)",
+          "es": "Sisas (vivo)",
+          "fr": "Emmanchures (biais)",
+          "pt": "Cavas (viés)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "armhole_depth",
+          "armhole_scoop",
+          "shoulder_width",
+          "band_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "printed_textile": false,
+      "negative_ease_knit": true
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure argyle vest keeps an intarsia heritage as a gradable pattern — the diamond lattice marked so a knitter charts the colourwork, the fit solved rather than sized off a chart.",
+      "es": "Un chaleco argyle abierto y a medida mantiene una herencia de intarsia como patrón graduable — la retícula de rombos marcada para trazar la labor, el ajuste resuelto y no tomado de una tabla.",
+      "fr": "Un débardeur argyle ouvert et sur mesure garde un héritage d'intarsia comme patron gradable — le réseau de losanges marqué pour charter le jacquard, le tombé résolu plutôt que pris sur un tableau.",
+      "pt": "Um colete argyle aberto e sob medida mantém uma herança de intársia como molde graduável — a retícula de losangos marcada para cartografar o jacquard, o caimento resolvido e não tirado de uma tabela."
+    }
+  }
+}

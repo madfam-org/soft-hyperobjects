@@ -1,0 +1,413 @@
+{
+  "project": {
+    "name": "Eight-Panel Newsboy Cap",
+    "slug": "newsboy-cap",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The gavroche/newsboy: a full, soft eight-panel crown gathered to a covered button at the apex, with a short stiff peak at the front. Drafted as one crown panel (cut 8) — a curved wedge whose base arc is a precise eighth of the head ring — plus a headband and a peak. The apex button bridges to a Yantra4D sew-through-button. FC-400 Lane 6, millinery.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La gorra gavroche o newsboy: una copa amplia y blanda de ocho paneles fruncida a un botón forrado en el vértice, con una visera corta y rígida al frente. Trazada como un solo panel de copa (corte 8) — una cuña curva cuyo arco de base es un octavo exacto del aro de cabeza — más una banda y una visera. El botón del vértice se puentea a un sew-through-button de Yantra4D. FC-400 carril 6, sombrerería.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La casquette gavroche : une calotte ample et souple à huit pans froncée sur un bouton recouvert au sommet, avec une courte visière rigide devant. Tracée en un seul pan de calotte (coupé ×8) — un fuseau courbe dont l'arc de base est un huitième précis de l'anneau de tête — plus un bandeau et une visière. Le bouton du sommet se relie à un sew-through-button Yantra4D. FC-400 voie 6, chapellerie.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A boina jornaleiro (gavroche): uma copa ampla e macia de oito gomos franzida a um botão forrado no ápice, com uma pala curta e rígida na frente. Traçada como um único gomo de copa (corte 8) — uma cunha curva cujo arco de base é um oitavo exato do anel de cabeça — mais uma carneira e uma pala. O botão do ápice faz ponte com um sew-through-button da Yantra4D. FC-400 pista 6, chapelaria.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "millinery",
+      "newsboy",
+      "gavroche",
+      "cap",
+      "eight-panel",
+      "buttons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full pattern",
+        "es": "Patrón completo",
+        "fr": "Patron complet",
+        "pt": "Molde completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "panel",
+        "band",
+        "peak"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "panel",
+      "label": {
+        "en": "Crown panel (×8)",
+        "es": "Panel de copa (×8)",
+        "fr": "Pan de calotte (×8)",
+        "pt": "Gomo de copa (×8)"
+      },
+      "default_color": "#6a6152",
+      "cut": {
+        "quantity": 8,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "band",
+      "label": {
+        "en": "Headband",
+        "es": "Banda de cabeza",
+        "fr": "Bandeau",
+        "pt": "Carneira"
+      },
+      "default_color": "#565042",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "peak",
+      "label": {
+        "en": "Peak (self + lining)",
+        "es": "Visera (forro + vista)",
+        "fr": "Visière (dessus + doublure)",
+        "pt": "Pala (forro + vista)"
+      },
+      "default_color": "#453f34",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps",
+        "pt": "Corpo"
+      }
+    },
+    {
+      "id": "style",
+      "label": {
+        "en": "Style",
+        "es": "Estilo",
+        "fr": "Style",
+        "pt": "Estilo"
+      }
+    },
+    {
+      "id": "hardware",
+      "label": {
+        "en": "Hardware",
+        "es": "Herrajes",
+        "fr": "Quincaillerie",
+        "pt": "Ferragens"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "head_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 570,
+      "min": 480,
+      "max": 640,
+      "step": 5,
+      "label": {
+        "en": "Head girth (mm)",
+        "es": "Contorno de cabeza (mm)",
+        "fr": "Tour de tête (mm)",
+        "pt": "Contorno de cabeça (mm)"
+      },
+      "tooltip": {
+        "en": "Around the head at the band.",
+        "es": "Alrededor de la cabeza en la banda.",
+        "fr": "Autour de la tête au bandeau.",
+        "pt": "Ao redor da cabeça na carneira."
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "group": "body",
+      "default": 12,
+      "min": 0,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Head ease (mm)",
+        "es": "Holgura de cabeza (mm)",
+        "fr": "Aisance de tête (mm)",
+        "pt": "Folga de cabeça (mm)"
+      },
+      "tooltip": {
+        "en": "Added to the head opening.",
+        "es": "Añadida a la abertura de cabeza.",
+        "fr": "Ajoutée à l'ouverture de tête.",
+        "pt": "Adicionada à abertura da cabeça."
+      }
+    },
+    {
+      "id": "crown_rise",
+      "type": "slider",
+      "group": "style",
+      "default": 150,
+      "min": 80,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Crown rise (mm)",
+        "es": "Alto de copa (mm)",
+        "fr": "Hauteur de calotte (mm)",
+        "pt": "Altura de copa (mm)"
+      },
+      "tooltip": {
+        "en": "Base ring to apex.",
+        "es": "Del aro base al vértice.",
+        "fr": "De l'anneau à l'apex.",
+        "pt": "Do anel ao ápice."
+      }
+    },
+    {
+      "id": "fullness",
+      "type": "slider",
+      "group": "style",
+      "default": 30,
+      "min": 0,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Panel fullness (mm)",
+        "es": "Vuelo del panel (mm)",
+        "fr": "Ampleur du pan (mm)",
+        "pt": "Amplitude do gomo (mm)"
+      },
+      "tooltip": {
+        "en": "Outward bulge of each panel.",
+        "es": "Curvatura hacia afuera de cada panel.",
+        "fr": "Galbe extérieur de chaque pan.",
+        "pt": "Curvatura externa de cada gomo."
+      }
+    },
+    {
+      "id": "band_height",
+      "type": "slider",
+      "group": "style",
+      "default": 45,
+      "min": 25,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Band height (mm)",
+        "es": "Alto de la banda (mm)",
+        "fr": "Hauteur du bandeau (mm)",
+        "pt": "Altura da carneira (mm)"
+      },
+      "tooltip": {
+        "en": "Headband depth.",
+        "es": "Profundidad de la banda.",
+        "fr": "Profondeur du bandeau.",
+        "pt": "Profundidade da carneira."
+      }
+    },
+    {
+      "id": "peak_depth",
+      "type": "slider",
+      "group": "style",
+      "default": 60,
+      "min": 25,
+      "max": 110,
+      "step": 5,
+      "label": {
+        "en": "Peak depth (mm)",
+        "es": "Largo de la visera (mm)",
+        "fr": "Profondeur de visière (mm)",
+        "pt": "Profundidade da pala (mm)"
+      },
+      "tooltip": {
+        "en": "How far the peak sticks out.",
+        "es": "Cuánto sobresale la visera.",
+        "fr": "Avancée de la visière.",
+        "pt": "Quanto a pala avança."
+      }
+    },
+    {
+      "id": "button_ligne",
+      "type": "slider",
+      "group": "hardware",
+      "default": 24,
+      "min": 14,
+      "max": 54,
+      "step": 1,
+      "label": {
+        "en": "Apex button size (ligne)",
+        "es": "Tamaño del botón del vértice (línea)",
+        "fr": "Taille du bouton du sommet (ligne)",
+        "pt": "Tamanho do botão do ápice (ligne)"
+      },
+      "tooltip": {
+        "en": "Covered apex button size; drives the sew-through button.",
+        "es": "Tamaño del botón forrado del vértice; define el botón de dos agujeros.",
+        "fr": "Taille du bouton recouvert ; détermine le bouton à trous.",
+        "pt": "Tamanho do botão forrado; define o botão de furos."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Added around sewn edges.",
+        "es": "Añadido alrededor de los cantos cosidos.",
+        "fr": "Ajoutée autour des bords cousus.",
+        "pt": "Adicionada em volta dos cantos costurados."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic gavroche",
+        "es": "Gavroche clásica",
+        "fr": "Gavroche classique",
+        "pt": "Gavroche clássica"
+      },
+      "values": {
+        "crown_rise": 150,
+        "fullness": 30,
+        "peak_depth": 60
+      }
+    },
+    {
+      "id": "baker-boy",
+      "label": {
+        "en": "Full baker-boy",
+        "es": "Baker-boy amplia",
+        "fr": "Baker-boy ample",
+        "pt": "Baker-boy ampla"
+      },
+      "values": {
+        "crown_rise": 200,
+        "fullness": 70
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "commons_license": "CERN-OHL-W-2.0",
+    "interfaces": [
+      {
+        "id": "head_opening",
+        "type": "custom",
+        "label": {
+          "en": "Head opening (band)",
+          "es": "Abertura de cabeza (banda)",
+          "fr": "Ouverture de tête (bandeau)",
+          "pt": "Abertura da cabeça (carneira)"
+        },
+        "edges": [
+          {
+            "piece": "band",
+            "edge": "bottom"
+          }
+        ],
+        "parameters": [
+          "head_girth",
+          "ease",
+          "band_height"
+        ]
+      },
+      {
+        "id": "apex_button",
+        "type": "custom",
+        "label": {
+          "en": "Apex button",
+          "es": "Botón del vértice",
+          "fr": "Bouton du sommet",
+          "pt": "Botão do ápice"
+        },
+        "edges": [
+          {
+            "piece": "panel",
+            "edge": "seam_r"
+          }
+        ],
+        "parameters": [
+          "button_ligne",
+          "crown_rise"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "printed_textile": false
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure newsboy gives a maker a soft eight-panel cap whose crown tiles exactly — eight identical wedges sized to the head — with the covered apex button printable through the Yantra4D bridge.",
+      "es": "Una gavroche abierta y a medida ofrece una gorra blanda de ocho paneles cuya copa encaja exactamente — ocho cuñas idénticas ajustadas a la cabeza — con el botón forrado del vértice imprimible por el puente de Yantra4D.",
+      "fr": "Une gavroche ouverte et sur mesure offre une casquette souple à huit pans dont la calotte se pave exactement — huit fuseaux identiques ajustés à la tête — avec le bouton recouvert du sommet imprimable via le pont Yantra4D.",
+      "pt": "Uma gavroche aberta e sob medida oferece uma boina macia de oito gomos cuja copa encaixa exatamente — oito cunhas idênticas ajustadas à cabeça — com o botão forrado do ápice imprimível pela ponte Yantra4D."
+    }
+  },
+  "notion": {
+    "kind": "button",
+    "subtype": "newsboy apex sew-through button",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "thickness": "max(3, seam_allowance)"
+      }
+    }
+  }
+}

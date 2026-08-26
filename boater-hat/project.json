@@ -1,0 +1,319 @@
+{
+  "project": {
+    "name": "Straw Boater Hat",
+    "slug": "boater-hat",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The straw boater: a stiff flat-top cylindrical crown and a stiff flat wide brim, the summer-regatta hat. Three pieces — a flat circular tip the same size as the head ring (a true cylinder), a straight side-crown band, and a flat annular brim — each ring solved on the corrected polygon radius. Sizing clips into a Yantra4D hat-size-reducer. FC-400 Lane 6, millinery.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El canotier de paja: una copa cilíndrica de tapa plana rígida y un ala plana ancha rígida, el sombrero de regata veraniega. Tres piezas — un plato circular plano del mismo tamaño que el aro de cabeza (un cilindro verdadero), una banda de copa recta y un ala anular plana — con cada aro resuelto sobre el radio poligonal corregido. La talla se ajusta con un hat-size-reducer de Yantra4D. FC-400 carril 6, sombrerería.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le canotier de paille : une calotte cylindrique à dessus plat rigide et un bord plat large rigide, le chapeau des régates d'été. Trois pièces — un plateau circulaire plat de la taille de l'anneau de tête (un vrai cylindre), une bande de calotte droite et un bord annulaire plat — chaque anneau résolu sur le rayon polygonal corrigé. La taille se règle avec un hat-size-reducer Yantra4D. FC-400 voie 6, chapellerie.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O chapéu palhinha: uma copa cilíndrica de topo plano rígida e uma aba plana larga rígida, o chapéu das regatas de verão. Três peças — um plateau circular plano do tamanho do anel de cabeça (um cilindro verdadeiro), uma banda de copa reta e uma aba anular plana — cada anel resolvido sobre o raio poligonal corrigido. O tamanho ajusta-se com um hat-size-reducer da Yantra4D. FC-400 pista 6, chapelaria.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "millinery",
+      "boater",
+      "straw",
+      "hat",
+      "brim"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full pattern",
+        "es": "Patrón completo",
+        "fr": "Patron complet",
+        "pt": "Molde completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "tip",
+        "band",
+        "brim"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "tip",
+      "label": {
+        "en": "Tip (flat crown top)",
+        "es": "Plato (tapa plana)",
+        "fr": "Plateau (dessus plat)",
+        "pt": "Plateau (topo plano)"
+      },
+      "default_color": "#d8c48a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "band",
+      "label": {
+        "en": "Side crown band",
+        "es": "Banda de copa",
+        "fr": "Bande de calotte",
+        "pt": "Banda de copa"
+      },
+      "default_color": "#cbb679",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "brim",
+      "label": {
+        "en": "Brim (flat annulus)",
+        "es": "Ala plana (corona)",
+        "fr": "Bord plat (couronne)",
+        "pt": "Aba plana (coroa)"
+      },
+      "default_color": "#c0aa6b",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps",
+        "pt": "Corpo"
+      }
+    },
+    {
+      "id": "style",
+      "label": {
+        "en": "Style",
+        "es": "Estilo",
+        "fr": "Style",
+        "pt": "Estilo"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "head_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 570,
+      "min": 480,
+      "max": 640,
+      "step": 5,
+      "label": {
+        "en": "Head girth (mm)",
+        "es": "Contorno de cabeza (mm)",
+        "fr": "Tour de tête (mm)",
+        "pt": "Contorno de cabeça (mm)"
+      },
+      "tooltip": {
+        "en": "Around the head at the band.",
+        "es": "Alrededor de la cabeza en la banda.",
+        "fr": "Autour de la tête au bandeau.",
+        "pt": "Ao redor da cabeça na carneira."
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "group": "body",
+      "default": 8,
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Head ease (mm)",
+        "es": "Holgura de cabeza (mm)",
+        "fr": "Aisance de tête (mm)",
+        "pt": "Folga de cabeça (mm)"
+      },
+      "tooltip": {
+        "en": "Added to the head opening.",
+        "es": "Añadida a la abertura de cabeza.",
+        "fr": "Ajoutée à l'ouverture de tête.",
+        "pt": "Adicionada à abertura da cabeça."
+      }
+    },
+    {
+      "id": "crown_height",
+      "type": "slider",
+      "group": "style",
+      "default": 90,
+      "min": 40,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Crown height (mm)",
+        "es": "Alto de copa (mm)",
+        "fr": "Hauteur de calotte (mm)",
+        "pt": "Altura de copa (mm)"
+      },
+      "tooltip": {
+        "en": "Cylinder crown height.",
+        "es": "Alto de la copa cilíndrica.",
+        "fr": "Hauteur de la calotte cylindrique.",
+        "pt": "Altura da copa cilíndrica."
+      }
+    },
+    {
+      "id": "brim_width",
+      "type": "slider",
+      "group": "style",
+      "default": 70,
+      "min": 30,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Brim width (mm)",
+        "es": "Ancho del ala (mm)",
+        "fr": "Largeur du bord (mm)",
+        "pt": "Largura da aba (mm)"
+      },
+      "tooltip": {
+        "en": "Flat brim radial width.",
+        "es": "Ancho radial del ala plana.",
+        "fr": "Largeur radiale du bord plat.",
+        "pt": "Largura radial da aba plana."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Added around sewn edges.",
+        "es": "Añadido alrededor de los cantos cosidos.",
+        "fr": "Ajoutée autour des bords cousus.",
+        "pt": "Adicionada em volta dos cantos costurados."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic boater",
+        "es": "Canotier clásico",
+        "fr": "Canotier classique",
+        "pt": "Palhinha clássico"
+      },
+      "values": {
+        "crown_height": 90,
+        "brim_width": 70
+      }
+    },
+    {
+      "id": "wide",
+      "label": {
+        "en": "Wide brim",
+        "es": "Ala ancha",
+        "fr": "Bord large",
+        "pt": "Aba larga"
+      },
+      "values": {
+        "brim_width": 130
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "commons_license": "CERN-OHL-W-2.0",
+    "interfaces": [
+      {
+        "id": "head_opening",
+        "type": "custom",
+        "label": {
+          "en": "Head opening (crown band)",
+          "es": "Abertura de cabeza (banda de copa)",
+          "fr": "Ouverture de tête (bande de calotte)",
+          "pt": "Abertura da cabeça (banda de copa)"
+        },
+        "edges": [
+          {
+            "piece": "band",
+            "edge": "bottom"
+          }
+        ],
+        "parameters": [
+          "head_girth",
+          "ease",
+          "crown_height",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "printed_textile": false
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure boater brings a summer classic back as a straw pattern sized to the head — a true cylinder solved so the crown seams balance, the size adjustment a printable Yantra4D part.",
+      "es": "Un canotier abierto y a medida trae de vuelta un clásico veraniego como patrón de paja ajustado a la cabeza — un cilindro verdadero resuelto para que las costuras de la copa cuadren, el ajuste de talla una pieza imprimible de Yantra4D.",
+      "fr": "Un canotier ouvert et sur mesure ramène un classique estival en patron de paille ajusté à la tête — un vrai cylindre résolu pour que les coutures de la calotte s'équilibrent, le réglage de taille une pièce imprimable Yantra4D.",
+      "pt": "Um palhinha aberto e sob medida traz de volta um clássico de verão como molde de palha ajustado à cabeça — um cilindro verdadeiro resolvido para que as costuras da copa equilibrem, o ajuste de tamanho uma peça imprimível da Yantra4D."
+    }
+  },
+  "notion": {
+    "kind": "custom",
+    "subtype": "boater crown size reducer",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "hat-size-reducer",
+      "linked": true,
+      "params_map": {
+        "head_circ": "head_girth + ease",
+        "strip_length": "head_girth + ease"
+      }
+    }
+  }
+}

@@ -1,0 +1,327 @@
+{
+  "project": {
+    "name": "Printed Structural Mesh Overlay",
+    "slug": "printed-mesh-overlay",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A structural mesh overlay — a printed TPU lattice sheet laid over a base garment to add a sculptural, semi-rigid second skin that catches light and holds a silhouette while the base cloth moves underneath. The lattice mesh is Yantra4D territory (notion.hardware_ref → tpu-lattice-panel); Fashion Cabinet owns the overlay panel (sized to the body region it covers) and the mesh field derived from it. FC-400 Lane 5, AM-fashion.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una sobrecapa de malla estructural — una lámina de celosía impresa en TPU puesta sobre una prenda base para añadir una segunda piel escultórica y semirrígida que atrapa la luz y sostiene una silueta mientras la tela base se mueve debajo. La malla de celosía es territorio de Yantra4D (notion.hardware_ref → tpu-lattice-panel); Fashion Cabinet posee el panel de la sobrecapa (dimensionado a la región del cuerpo que cubre) y el campo de malla derivado de él. FC-400 carril 5, moda aditiva.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une surcouche en résille structurée — une feuille de treillis imprimée en TPU posée sur un vêtement de base pour ajouter une seconde peau sculpturale et semi-rigide qui accroche la lumière et tient une silhouette tandis que le tissu de base bouge dessous. La résille relève de Yantra4D (notion.hardware_ref → tpu-lattice-panel) ; Fashion Cabinet possède le panneau de surcouche (dimensionné à la région du corps qu'il couvre) et le champ de résille qui en dérive. FC-400 voie 5, mode additive.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma sobreposição de tela estrutural — uma folha de treliça impressa em TPU posta sobre uma peça base para adicionar uma segunda pele escultórica e semirrígida que captura a luz e sustenta uma silhueta enquanto o tecido base se move por baixo. A tela de treliça é território da Yantra4D (notion.hardware_ref → tpu-lattice-panel); a Fashion Cabinet possui o painel da sobreposição (dimensionado à região do corpo que cobre) e o campo de tela derivado dele. FC-400 pista 5, moda aditiva.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "am_fashion",
+      "printed-textile",
+      "tpu",
+      "lattice",
+      "mesh",
+      "overlay"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full pattern",
+        "es": "Patrón completo",
+        "fr": "Patron complet",
+        "pt": "Molde completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "placement-guide"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Mesh overlay guide",
+        "es": "Guía de sobrecapa de malla",
+        "fr": "Guide de surcouche en résille",
+        "pt": "Guia de sobreposição de tela"
+      },
+      "default_color": "#898e93",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "panel",
+      "label": {
+        "en": "Panel",
+        "es": "Panel",
+        "fr": "Panneau",
+        "pt": "Painel"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "cover_width",
+      "type": "slider",
+      "group": "panel",
+      "default": 420,
+      "min": 150,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Cover width (mm)",
+        "es": "Ancho cubierto (mm)",
+        "fr": "Largeur couverte (mm)",
+        "pt": "Largura coberta (mm)"
+      },
+      "tooltip": {
+        "en": "Width of the covered region.",
+        "es": "Ancho de la región cubierta.",
+        "fr": "Largeur de la région couverte.",
+        "pt": "Largura da região coberta."
+      }
+    },
+    {
+      "id": "cover_height",
+      "type": "slider",
+      "group": "panel",
+      "default": 560,
+      "min": 150,
+      "max": 1100,
+      "step": 10,
+      "label": {
+        "en": "Cover height (mm)",
+        "es": "Alto cubierto (mm)",
+        "fr": "Hauteur couverte (mm)",
+        "pt": "Altura coberta (mm)"
+      },
+      "tooltip": {
+        "en": "Height of the covered region.",
+        "es": "Alto de la región cubierta.",
+        "fr": "Hauteur de la région couverte.",
+        "pt": "Altura da região coberta."
+      }
+    },
+    {
+      "id": "corner_radius",
+      "type": "slider",
+      "group": "panel",
+      "default": 60,
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Corner radius (mm)",
+        "es": "Radio de esquina (mm)",
+        "fr": "Rayon d'angle (mm)",
+        "pt": "Raio de canto (mm)"
+      },
+      "tooltip": {
+        "en": "Rounded overlay corners.",
+        "es": "Esquinas redondeadas de la sobrecapa.",
+        "fr": "Angles arrondis de la surcouche.",
+        "pt": "Cantos arredondados da sobreposição."
+      }
+    },
+    {
+      "id": "tile_size",
+      "type": "slider",
+      "group": "panel",
+      "default": 30,
+      "min": 10,
+      "max": 80,
+      "step": 1,
+      "label": {
+        "en": "Tile size (mm)",
+        "es": "Tamaño de tesela (mm)",
+        "fr": "Taille de tuile (mm)",
+        "pt": "Tamanho do ladrilho (mm)"
+      },
+      "tooltip": {
+        "en": "One mesh tile.",
+        "es": "Una tesela de malla.",
+        "fr": "Une tuile de résille.",
+        "pt": "Um ladrilho de tela."
+      }
+    },
+    {
+      "id": "tile_gap",
+      "type": "slider",
+      "group": "panel",
+      "default": 10,
+      "min": 2,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Bridge gap (mm)",
+        "es": "Separación de puentes (mm)",
+        "fr": "Écart des ponts (mm)",
+        "pt": "Folga das pontes (mm)"
+      },
+      "tooltip": {
+        "en": "Gap bridged between tiles.",
+        "es": "Separación entre teselas.",
+        "fr": "Écart pontant entre tuiles.",
+        "pt": "Folga entre ladrilhos."
+      }
+    },
+    {
+      "id": "wall",
+      "type": "slider",
+      "group": "panel",
+      "default": 1.2,
+      "min": 0.6,
+      "max": 4.0,
+      "step": 0.1,
+      "label": {
+        "en": "Wall thickness (mm)",
+        "es": "Grosor de pared (mm)",
+        "fr": "Épaisseur de paroi (mm)",
+        "pt": "Espessura de parede (mm)"
+      },
+      "tooltip": {
+        "en": "Printed wall thickness of the TPU solid.",
+        "es": "Grosor impreso de la pared del sólido TPU.",
+        "fr": "Épaisseur imprimée de la paroi du solide TPU.",
+        "pt": "Espessura impressa da parede do sólido TPU."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Added around sewn edges.",
+        "es": "Añadido alrededor de los cantos cosidos.",
+        "fr": "Ajoutée autour des bords cousus.",
+        "pt": "Adicionada em volta dos cantos costurados."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "bodice-overlay",
+      "label": {
+        "en": "Bodice overlay",
+        "es": "Sobrecapa de corpiño",
+        "fr": "Surcouche de corsage",
+        "pt": "Sobreposição de corpete"
+      },
+      "values": {
+        "cover_width": 420,
+        "cover_height": 400
+      }
+    },
+    {
+      "id": "full-panel",
+      "label": {
+        "en": "Full panel",
+        "es": "Panel completo",
+        "fr": "Panneau entier",
+        "pt": "Painel completo"
+      },
+      "values": {
+        "cover_width": 700,
+        "cover_height": 900,
+        "tile_size": 40
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "commons_license": "CERN-OHL-W-2.0",
+    "interfaces": [
+      {
+        "id": "panel_edge",
+        "type": "side_seam",
+        "label": {
+          "en": "Sewable overlay edge",
+          "es": "Canto cosible de la sobrecapa",
+          "fr": "Bord à coudre de la surcouche",
+          "pt": "Canto costurável da sobreposição"
+        },
+        "edges": [
+          {
+            "piece": "placement-guide",
+            "edge": "guide"
+          }
+        ],
+        "parameters": [
+          "cover_width",
+          "cover_height",
+          "tile_size",
+          "tile_gap",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "printed_textile": true,
+      "am_fashion": true
+    },
+    "societal_benefit": {
+      "en": "A printable mesh overlay adds a sculptural second skin to any garment as an open, made-to-measure part sized to the body region it covers — the structural field printed rather than moulded, closing the loop from a fabric card to a printable solid.",
+      "es": "Una sobrecapa de malla imprimible añade una segunda piel escultórica a cualquier prenda como pieza abierta y a medida ajustada a la región del cuerpo que cubre — el campo estructural impreso en vez de moldeado, cerrando el círculo de una ficha de tela a un sólido imprimible.",
+      "fr": "Une surcouche en résille imprimable ajoute une seconde peau sculpturale à tout vêtement comme pièce ouverte et sur mesure dimensionnée à la région du corps qu'elle couvre — le champ structurel imprimé plutôt que moulé, bouclant la boucle d'une fiche de tissu à un solide imprimable.",
+      "pt": "Uma sobreposição de tela imprimível adiciona uma segunda pele escultórica a qualquer peça como parte aberta e sob medida dimensionada à região do corpo que cobre — o campo estrutural impresso em vez de moldado, fechando o ciclo de uma ficha de tecido a um sólido imprimível."
+    }
+  },
+  "notion": {
+    "kind": "custom",
+    "subtype": "printed structural mesh overlay",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "tpu-lattice-panel",
+      "linked": true,
+      "params_map": {
+        "tile": "tile_size",
+        "gap": "tile_gap",
+        "cols": "round(cover_width / (tile_size + tile_gap))",
+        "rows": "round(cover_height / (tile_size + tile_gap))"
+      }
+    }
+  }
+}

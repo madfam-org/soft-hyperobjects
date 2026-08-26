@@ -1,0 +1,433 @@
+{
+  "project": {
+    "name": "Chelsea Boot Upper",
+    "slug": "chelsea-boot-upper",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The Chelsea boot: an ankle boot with no laces — a vamp over the foot, two quarters up the ankle, and an elastic side gusset each side that lets the boot pull on and grip, with a back pull tab. The gusset tension element is a Yantra4D side-release-buckle (co-create — the wearable buckle exists in the yantra4d 500 catalog; this is its first Fashion Cabinet boot use). Lasting arcs are proportionate bows over each chord so no piece slivers at the extremes. Sized from plain foot parameters — ISO 8559 has no foot codes. FC-400 Lane 6, footwear.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La bota Chelsea: una bota de tobillo sin cordones — una pala sobre el pie, dos cuartos hasta el tobillo y un fuelle elástico a cada lado que deja meter la bota y la sujeta, con una tira trasera de tiro. El elemento de tensión del fuelle es un side-release-buckle de Yantra4D (co-creación — la hebilla vestible existe en el catálogo yantra4d 500; este es su primer uso en bota de Fashion Cabinet). Los arcos de montado son curvas proporcionales sobre cada cuerda, así ninguna pieza se adelgaza en los extremos. Dimensionado por parámetros simples del pie — ISO 8559 no tiene códigos del pie. FC-400 carril 6, calzado.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La boots Chelsea : une boots à la cheville sans lacets — un empeigne sur le pied, deux quartiers jusqu'à la cheville et un soufflet élastique de chaque côté qui permet d'enfiler la boots et la maintient, avec une tirette arrière. L'élément de tension du soufflet est un side-release-buckle Yantra4D (co-création — la boucle portable existe dans le catalogue yantra4d 500 ; c'est sa première utilisation en boots Fashion Cabinet). Les arcs de montage sont des galbes proportionnels sur chaque corde, aucune pièce ne s'amincit aux extrêmes. Dimensionné d'après des paramètres de pied simples — l'ISO 8559 n'a aucun code de pied. FC-400 voie 6, chaussure.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A bota Chelsea: uma bota de tornozelo sem atacadores — um vamp sobre o pé, dois quartos até o tornozelo e um fole elástico de cada lado que permite calçar a bota e a segura, com uma tira traseira de puxar. O elemento de tensão do fole é um side-release-buckle da Yantra4D (co-criação — a fivela vestível existe no catálogo yantra4d 500; este é seu primeiro uso em bota da Fashion Cabinet). Os arcos de montagem são curvas proporcionais sobre cada corda, então nenhuma peça afina nos extremos. Dimensionado por parâmetros simples do pé — a ISO 8559 não tem códigos de pé. FC-400 pista 6, calçado.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "footwear",
+      "chelsea",
+      "boot",
+      "upper",
+      "leather",
+      "elastic-gusset"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full pattern",
+        "es": "Patrón completo",
+        "fr": "Patron complet",
+        "pt": "Molde completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "vamp",
+        "quarter",
+        "gusset",
+        "tab"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "vamp",
+      "label": {
+        "en": "Vamp (toe + instep)",
+        "es": "Pala (dedos + empeine)",
+        "fr": "Empeigne (orteils + cou-de-pied)",
+        "pt": "Vamp (dedos + peito do pé)"
+      },
+      "default_color": "#4a3d34",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "quarter",
+      "label": {
+        "en": "Quarter (ankle wrap)",
+        "es": "Cuarto (tobillo)",
+        "fr": "Quartier (cheville)",
+        "pt": "Quarto (tornozelo)"
+      },
+      "default_color": "#3d322b",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "gusset",
+      "label": {
+        "en": "Elastic side gusset",
+        "es": "Fuelle elástico",
+        "fr": "Soufflet élastique",
+        "pt": "Fole elástico"
+      },
+      "default_color": "#2c2521",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "tab",
+      "label": {
+        "en": "Back pull tab",
+        "es": "Tira de tiro",
+        "fr": "Tirette arrière",
+        "pt": "Tira de puxar"
+      },
+      "default_color": "#3d322b",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps",
+        "pt": "Corpo"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Coupe",
+        "pt": "Caimento"
+      }
+    },
+    {
+      "id": "hardware",
+      "label": {
+        "en": "Hardware",
+        "es": "Herrajes",
+        "fr": "Quincaillerie",
+        "pt": "Ferragens"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "foot_length",
+      "type": "slider",
+      "group": "body",
+      "default": 260,
+      "min": 150,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Foot length (mm)",
+        "es": "Largo del pie (mm)",
+        "fr": "Longueur du pied (mm)",
+        "pt": "Comprimento do pé (mm)"
+      },
+      "tooltip": {
+        "en": "Heel to longest toe. Plain param — ISO 8559 has no foot code.",
+        "es": "Del talón al dedo más largo. Parámetro simple — ISO 8559 no tiene código del pie.",
+        "fr": "Du talon à l'orteil le plus long. Paramètre simple — l'ISO 8559 n'a aucun code de pied.",
+        "pt": "Do calcanhar ao dedo mais longo. Parâmetro simples — a ISO 8559 não tem código de pé."
+      }
+    },
+    {
+      "id": "foot_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 245,
+      "min": 150,
+      "max": 330,
+      "step": 5,
+      "label": {
+        "en": "Ball girth (mm)",
+        "es": "Contorno de la planta (mm)",
+        "fr": "Carrure de la plante (mm)",
+        "pt": "Contorno da planta (mm)"
+      },
+      "tooltip": {
+        "en": "Around the widest part of the foot.",
+        "es": "Alrededor de la parte más ancha del pie.",
+        "fr": "Autour de la partie la plus large du pied.",
+        "pt": "Ao redor da parte mais larga do pé."
+      }
+    },
+    {
+      "id": "boot_height",
+      "type": "slider",
+      "group": "body",
+      "default": 150,
+      "min": 90,
+      "max": 320,
+      "step": 5,
+      "label": {
+        "en": "Boot height (mm)",
+        "es": "Alto de la bota (mm)",
+        "fr": "Hauteur de boots (mm)",
+        "pt": "Altura da bota (mm)"
+      },
+      "tooltip": {
+        "en": "Sole to top of the ankle.",
+        "es": "De la suela a la caña del tobillo.",
+        "fr": "De la semelle au haut de la cheville.",
+        "pt": "Da sola ao alto do tornozelo."
+      }
+    },
+    {
+      "id": "vamp_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 120,
+      "min": 60,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Vamp depth (mm)",
+        "es": "Profundidad de la pala (mm)",
+        "fr": "Profondeur d'empeigne (mm)",
+        "pt": "Profundidade do vamp (mm)"
+      },
+      "tooltip": {
+        "en": "How far back the vamp reaches.",
+        "es": "Cuánto retrocede la pala.",
+        "fr": "Recul de l'empeigne.",
+        "pt": "Quanto o vamp recua."
+      }
+    },
+    {
+      "id": "gusset_width",
+      "type": "slider",
+      "group": "hardware",
+      "default": 45,
+      "min": 20,
+      "max": 110,
+      "step": 5,
+      "label": {
+        "en": "Gusset width (mm)",
+        "es": "Ancho del fuelle (mm)",
+        "fr": "Largeur du soufflet (mm)",
+        "pt": "Largura do fole (mm)"
+      },
+      "tooltip": {
+        "en": "Elastic side panel width.",
+        "es": "Ancho del panel elástico.",
+        "fr": "Largeur du panneau élastique.",
+        "pt": "Largura do painel elástico."
+      }
+    },
+    {
+      "id": "gusset_height",
+      "type": "slider",
+      "group": "hardware",
+      "default": 100,
+      "min": 50,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Gusset height (mm)",
+        "es": "Alto del fuelle (mm)",
+        "fr": "Hauteur du soufflet (mm)",
+        "pt": "Altura do fole (mm)"
+      },
+      "tooltip": {
+        "en": "Elastic side panel height.",
+        "es": "Alto del panel elástico.",
+        "fr": "Hauteur du panneau élastique.",
+        "pt": "Altura do painel elástico."
+      }
+    },
+    {
+      "id": "webbing_w",
+      "type": "slider",
+      "group": "hardware",
+      "default": 25,
+      "min": 15,
+      "max": 50,
+      "step": 1,
+      "label": {
+        "en": "Buckle webbing width (mm)",
+        "es": "Ancho de cincha de hebilla (mm)",
+        "fr": "Largeur de sangle de boucle (mm)",
+        "pt": "Largura de fita da fivela (mm)"
+      },
+      "tooltip": {
+        "en": "Width of the buckle webbing; drives the side-release buckle.",
+        "es": "Ancho de la cincha de la hebilla; define el side-release-buckle.",
+        "fr": "Largeur de la sangle de la boucle ; détermine le side-release-buckle.",
+        "pt": "Largura da fita da fivela; define o side-release-buckle."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Added around sewn edges.",
+        "es": "Añadido alrededor de los cantos cosidos.",
+        "fr": "Ajoutée autour des bords cousus.",
+        "pt": "Adicionada em volta dos cantos costurados."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic Chelsea",
+        "es": "Chelsea clásica",
+        "fr": "Chelsea classique",
+        "pt": "Chelsea clássica"
+      },
+      "values": {
+        "boot_height": 150,
+        "gusset_width": 45
+      }
+    },
+    {
+      "id": "tall",
+      "label": {
+        "en": "Tall shaft",
+        "es": "Caña alta",
+        "fr": "Tige haute",
+        "pt": "Cano alto"
+      },
+      "values": {
+        "boot_height": 240,
+        "gusset_height": 170
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "commons_license": "CERN-OHL-W-2.0",
+    "interfaces": [
+      {
+        "id": "lasting_edge",
+        "type": "hem",
+        "label": {
+          "en": "Lasting edge (sole stitch-down)",
+          "es": "Borde de montado (cosido a la suela)",
+          "fr": "Bord de montage (couture semelle)",
+          "pt": "Canto de montagem (costura à sola)"
+        },
+        "edges": [
+          {
+            "piece": "vamp",
+            "edge": "lasting"
+          },
+          {
+            "piece": "quarter",
+            "edge": "lasting"
+          }
+        ],
+        "parameters": [
+          "foot_length",
+          "vamp_depth",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "gusset_tension",
+        "type": "custom",
+        "label": {
+          "en": "Gusset tension (buckle)",
+          "es": "Tensión del fuelle (hebilla)",
+          "fr": "Tension du soufflet (boucle)",
+          "pt": "Tensão do fole (fivela)"
+        },
+        "edges": [
+          {
+            "piece": "gusset",
+            "edge": "attach"
+          }
+        ],
+        "parameters": [
+          "gusset_width",
+          "gusset_height",
+          "webbing_w"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "printed_textile": false
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure Chelsea boot puts a lace-free, resoleable boot pattern in anyone's hands — the pull-on gusset tensioned by a printable Yantra4D buckle, a repair-and-remake alternative to disposable footwear.",
+      "es": "Una bota Chelsea abierta y a medida pone un patrón de bota sin cordones y resoleable en manos de cualquiera — el fuelle de calce tensado por una hebilla imprimible de Yantra4D, una alternativa de reparar y rehacer al calzado desechable.",
+      "fr": "Une boots Chelsea ouverte et sur mesure met un patron de boots sans lacets et ressemelable à la portée de tous — le soufflet d'enfilage tendu par une boucle imprimable Yantra4D, une alternative de réparation à la chaussure jetable.",
+      "pt": "Uma bota Chelsea aberta e sob medida põe um molde de bota sem atacadores e resoleável nas mãos de qualquer um — o fole de calce tensionado por uma fivela imprimível da Yantra4D, uma alternativa de reparar e refazer ao calçado descartável."
+    }
+  },
+  "notion": {
+    "kind": "buckle",
+    "subtype": "chelsea gusset tension buckle (co-create)",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "side-release-buckle",
+      "linked": true,
+      "params_map": {
+        "webbing_w": "webbing_w",
+        "wall_t": "max(2, seam_allowance)"
+      }
+    }
+  }
+}

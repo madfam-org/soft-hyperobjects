@@ -1,0 +1,583 @@
+{
+  "project": {
+    "name": "Fair Isle Yoke Sweater",
+    "slug": "fair-isle-yoke",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The circular-yoke sweater: front, back and both sleeves join one ROUND YOKE — an annular field worked in the round from the neckline to the underarm, with no shoulder or armhole seam. That field is where the stranded Fair Isle colourwork lives. Drafted as a half-annulus yoke on the fold plus straight body and sleeve tubes; the yoke's outer ring is the exact sum of the four tube tops. Negative-ease knit drafting. FC-400 Lane 4, knitwear. No closure.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El suéter de canesú circular: delantero, espalda y ambas mangas se unen a un CANESÚ REDONDO — un campo anular tejido en redondo del escote a la sisa, sin costura de hombro ni de sisa. En ese campo vive la jacquard estranda Fair Isle. Trazado como canesú de media corona al doblez más tubos rectos de cuerpo y manga; el aro exterior del canesú es la suma exacta de las cuatro bocas. Holgura de punto negativa. FC-400 carril 4, punto. Sin cierre.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le pull à empiècement circulaire : devant, dos et les deux manches rejoignent un seul EMPIÈCEMENT ROND — un champ annulaire tricoté en rond de l'encolure à l'emmanchure, sans couture d'épaule ni d'emmanchure. C'est là que vit le jacquard à fils tendus Fair Isle. Tracé en demi-couronne au pli plus des tubes droits de corps et de manche ; l'anneau extérieur est la somme exacte des quatre bords. Aisance de maille négative. FC-400 voie 4, maille. Sans fermeture.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O suéter de manga raglã circular: frente, costas e ambas as mangas unem-se a um ÚNICO CANESÚ REDONDO — um campo anelar tricotado em redondo do decote à cava, sem costura de ombro ou de cava. É nesse campo que vive o jacquard de fios Fair Isle. Traçado como canesú de meia coroa na dobra mais tubos retos de corpo e manga; o anel externo é a soma exata das quatro bocas. Folga de tricô negativa. FC-400 pista 4, tricô. Sem fecho.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "knitwear",
+      "sweater",
+      "fair-isle",
+      "yoke",
+      "colourwork",
+      "heritage"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full pattern",
+        "es": "Patrón completo",
+        "fr": "Patron complet",
+        "pt": "Molde completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "yoke",
+        "body",
+        "sleeve",
+        "neckband",
+        "cuff",
+        "hem_band"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "yoke",
+      "label": {
+        "en": "Yoke (Fair Isle annulus)",
+        "es": "Canesú (corona Fair Isle)",
+        "fr": "Empiècement (couronne Fair Isle)",
+        "pt": "Canesú (coroa Fair Isle)"
+      },
+      "default_color": "#8a6d55",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "body",
+      "label": {
+        "en": "Body tube (cut on fold)",
+        "es": "Tubo del cuerpo (al doblez)",
+        "fr": "Tube du corps (au pli)",
+        "pt": "Tubo do corpo (na dobra)"
+      },
+      "default_color": "#75694f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve tube",
+        "es": "Tubo de manga",
+        "fr": "Tube de manche",
+        "pt": "Tubo de manga"
+      },
+      "default_color": "#9a8d78",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "neckband",
+      "label": {
+        "en": "Neckband (rib)",
+        "es": "Cuello (canalé)",
+        "fr": "Encolure (côtes)",
+        "pt": "Gola (canelado)"
+      },
+      "default_color": "#5f5540",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Cuff (rib)",
+        "es": "Puño (canalé)",
+        "fr": "Poignet (côtes)",
+        "pt": "Punho (canelado)"
+      },
+      "default_color": "#5f5540",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "hem_band",
+      "label": {
+        "en": "Hem Band (rib)",
+        "es": "Cenefa (canalé)",
+        "fr": "Bande de bas (côtes)",
+        "pt": "Barra (canelado)"
+      },
+      "default_color": "#5f5540",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps",
+        "pt": "Corpo"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Coupe",
+        "pt": "Caimento"
+      }
+    },
+    {
+      "id": "style",
+      "label": {
+        "en": "Style",
+        "es": "Estilo",
+        "fr": "Style",
+        "pt": "Estilo"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 1000,
+      "min": 700,
+      "max": 1900,
+      "step": 10,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de peito (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest circumference.",
+        "es": "Circunferencia completa del pecho.",
+        "fr": "Circonférence complète de la poitrine.",
+        "pt": "Circunferência total do peito."
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "group": "body",
+      "default": 420,
+      "min": 240,
+      "max": 700,
+      "step": 10,
+      "label": {
+        "en": "Body length (mm)",
+        "es": "Largo del cuerpo (mm)",
+        "fr": "Longueur du corps (mm)",
+        "pt": "Comprimento do corpo (mm)"
+      },
+      "tooltip": {
+        "en": "Underarm to hem-band seam.",
+        "es": "De la sisa a la costura de la cenefa.",
+        "fr": "De l'emmanchure à la couture de la bande.",
+        "pt": "Da cava à costura da barra."
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 400,
+      "min": 300,
+      "max": 540,
+      "step": 10,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)",
+        "pt": "Contorno de pescoço (mm)"
+      },
+      "tooltip": {
+        "en": "Base of the neck.",
+        "es": "Base del cuello.",
+        "fr": "Base du cou.",
+        "pt": "Base do pescoço."
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "body",
+      "default": 460,
+      "min": 200,
+      "max": 650,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)",
+        "pt": "Comprimento de manga (mm)"
+      },
+      "tooltip": {
+        "en": "Underarm to cuff seam.",
+        "es": "De la sisa a la costura del puño.",
+        "fr": "De l'emmanchure à la couture du poignet.",
+        "pt": "Da cava à costura do punho."
+      }
+    },
+    {
+      "id": "knit_ease",
+      "type": "slider",
+      "group": "fit",
+      "default": -30,
+      "min": -140,
+      "max": 160,
+      "step": 10,
+      "label": {
+        "en": "Knit ease (mm, signed)",
+        "es": "Holgura de punto (mm, con signo)",
+        "fr": "Aisance maille (mm, signée)",
+        "pt": "Folga de tricô (mm, com sinal)"
+      },
+      "tooltip": {
+        "en": "Signed; negative = draft smaller than body, stretches on.",
+        "es": "Con signo; negativa = trazo menor que el cuerpo, se estira.",
+        "fr": "Signée ; négative = tracé plus petit que le corps, s'étire.",
+        "pt": "Com sinal; negativa = traçado menor que o corpo, estica."
+      }
+    },
+    {
+      "id": "yoke_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 230,
+      "min": 150,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Yoke depth (mm)",
+        "es": "Profundidad del canesú (mm)",
+        "fr": "Profondeur d'empiècement (mm)",
+        "pt": "Profundidade do canesú (mm)"
+      },
+      "tooltip": {
+        "en": "Neckline to underarm round.",
+        "es": "Del escote a la vuelta de sisa.",
+        "fr": "De l'encolure au tour d'emmanchure.",
+        "pt": "Do decote à volta da cava."
+      }
+    },
+    {
+      "id": "sleeve_frac",
+      "type": "slider",
+      "group": "style",
+      "default": 0.3,
+      "min": 0.18,
+      "max": 0.42,
+      "step": 0.01,
+      "label": {
+        "en": "Sleeve tube share",
+        "es": "Proporción del tubo de manga",
+        "fr": "Part du tube de manche",
+        "pt": "Proporção do tubo de manga"
+      },
+      "tooltip": {
+        "en": "Each sleeve top as a share of the body girth.",
+        "es": "Cada boca de manga como fracción del contorno del cuerpo.",
+        "fr": "Chaque bord de manche en part du tour de corps.",
+        "pt": "Cada boca de manga como fração do contorno do corpo."
+      }
+    },
+    {
+      "id": "pattern_bands",
+      "type": "slider",
+      "group": "style",
+      "default": 5,
+      "min": 2,
+      "max": 9,
+      "step": 1,
+      "label": {
+        "en": "Fair Isle bands",
+        "es": "Bandas Fair Isle",
+        "fr": "Bandes Fair Isle",
+        "pt": "Faixas Fair Isle"
+      },
+      "tooltip": {
+        "en": "Colourwork bands marked in the yoke.",
+        "es": "Bandas de jacquard marcadas en el canesú.",
+        "fr": "Bandes de jacquard marquées dans l'empiècement.",
+        "pt": "Faixas de jacquard marcadas no canesú."
+      }
+    },
+    {
+      "id": "cuff_ratio",
+      "type": "slider",
+      "group": "construction",
+      "default": 0.62,
+      "min": 0.5,
+      "max": 0.95,
+      "step": 0.01,
+      "label": {
+        "en": "Cuff pull-in",
+        "es": "Ceñido del puño",
+        "fr": "Serrage du poignet",
+        "pt": "Aperto do punho"
+      },
+      "tooltip": {
+        "en": "Cuff length vs sleeve opening.",
+        "es": "Largo del puño frente a la boca de manga.",
+        "fr": "Longueur du poignet vs l'ouverture.",
+        "pt": "Comprimento do punho vs a boca da manga."
+      }
+    },
+    {
+      "id": "hemband_ratio",
+      "type": "slider",
+      "group": "construction",
+      "default": 0.9,
+      "min": 0.72,
+      "max": 1.0,
+      "step": 0.01,
+      "label": {
+        "en": "Hem pull-in",
+        "es": "Ceñido de cenefa",
+        "fr": "Serrage du bas",
+        "pt": "Aperto da barra"
+      },
+      "tooltip": {
+        "en": "Hem band length vs body opening.",
+        "es": "Largo de la cenefa frente a la boca.",
+        "fr": "Longueur de la bande vs l'ouverture.",
+        "pt": "Comprimento da barra vs a boca."
+      }
+    },
+    {
+      "id": "neckband_ratio",
+      "type": "slider",
+      "group": "construction",
+      "default": 0.9,
+      "min": 0.72,
+      "max": 1.0,
+      "step": 0.01,
+      "label": {
+        "en": "Neck pull-in",
+        "es": "Ceñido del cuello",
+        "fr": "Serrage de l'encolure",
+        "pt": "Aperto da gola"
+      },
+      "tooltip": {
+        "en": "Neckband length vs neck opening.",
+        "es": "Largo del cuello frente a la abertura.",
+        "fr": "Longueur de l'encolure vs l'ouverture.",
+        "pt": "Comprimento da gola vs a abertura."
+      }
+    },
+    {
+      "id": "rib_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 60,
+      "min": 30,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Rib height (mm)",
+        "es": "Alto del canalé (mm)",
+        "fr": "Hauteur des côtes (mm)",
+        "pt": "Altura do canelado (mm)"
+      },
+      "tooltip": {
+        "en": "Cuff and hem band depth.",
+        "es": "Profundidad de puños y cenefa.",
+        "fr": "Profondeur des poignets et de la bande.",
+        "pt": "Profundidade dos punhos e barra."
+      }
+    },
+    {
+      "id": "neckband_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 24,
+      "min": 15,
+      "max": 55,
+      "step": 1,
+      "label": {
+        "en": "Neckband width (mm)",
+        "es": "Ancho del cuello (mm)",
+        "fr": "Largeur de l'encolure (mm)",
+        "pt": "Largura da gola (mm)"
+      },
+      "tooltip": {
+        "en": "Finished neckband depth.",
+        "es": "Profundidad acabada del cuello.",
+        "fr": "Profondeur finie de l'encolure.",
+        "pt": "Profundidade acabada da gola."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 9,
+      "min": 6,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Added around sewn edges.",
+        "es": "Añadido alrededor de los cantos cosidos.",
+        "fr": "Ajoutée autour des bords cousus.",
+        "pt": "Adicionada em volta dos cantos costurados."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic yoke",
+        "es": "Canesú clásico",
+        "fr": "Empiècement classique",
+        "pt": "Canesú clássico"
+      },
+      "values": {
+        "knit_ease": -30,
+        "yoke_depth": 230,
+        "pattern_bands": 5
+      }
+    },
+    {
+      "id": "deep-yoke",
+      "label": {
+        "en": "Deep colourwork yoke",
+        "es": "Canesú profundo",
+        "fr": "Empiècement profond",
+        "pt": "Canesú profundo"
+      },
+      "values": {
+        "yoke_depth": 320,
+        "pattern_bands": 8
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "commons_license": "CERN-OHL-W-2.0",
+    "interfaces": [
+      {
+        "id": "underarm_ring",
+        "type": "custom",
+        "label": {
+          "en": "Underarm ring (yoke ↔ tubes)",
+          "es": "Aro de sisa (canesú ↔ tubos)",
+          "fr": "Anneau d'emmanchure (empiècement ↔ tubes)",
+          "pt": "Anel de cava (canesú ↔ tubos)"
+        },
+        "edges": [
+          {
+            "piece": "yoke",
+            "edge": "outer"
+          },
+          {
+            "piece": "body",
+            "edge": "top"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "top"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "knit_ease",
+          "sleeve_frac"
+        ]
+      },
+      {
+        "id": "neck_opening",
+        "type": "custom",
+        "label": {
+          "en": "Neck opening (yoke inner)",
+          "es": "Abertura de cuello (canesú interior)",
+          "fr": "Ouverture d'encolure (empiècement intérieur)",
+          "pt": "Abertura da gola (canesú interno)"
+        },
+        "edges": [
+          {
+            "piece": "yoke",
+            "edge": "inner"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "neckband_ratio"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "printed_textile": false,
+      "negative_ease_knit": true
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure Fair Isle yoke keeps a Shetland heritage technique alive as a gradable pattern, with the colourwork field drafted as one continuous round anyone can chart their own motifs into.",
+      "es": "Un canesú Fair Isle abierto y a medida mantiene viva una técnica patrimonial de Shetland como patrón graduable, con el campo de jacquard trazado como una vuelta continua donde cada quien puede cartografiar sus motivos.",
+      "fr": "Un empiècement Fair Isle ouvert et sur mesure garde vivante une technique patrimoniale des Shetland comme patron gradable, le champ de jacquard tracé en un tour continu où chacun peut porter ses motifs.",
+      "pt": "Um canesú Fair Isle aberto e sob medida mantém viva uma técnica patrimonial de Shetland como molde graduável, com o campo de jacquard traçado como uma volta contínua onde cada um pode cartografar seus motivos."
+    }
+  }
+}

@@ -1,0 +1,366 @@
+{
+  "project": {
+    "name": "Printed Scale-Mail Bodice",
+    "slug": "scale-mail-bodice",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A made-to-measure bodice whose whole face is a printed TPU scale-mail field — independently articulating scales that protect and move. The scale field is Yantra4D territory (notion.hardware_ref → tpu-scale-mail); Fashion Cabinet owns the fashion: the bodice panel sized from the bust girth and bodice length, and the scale field (rows × cols) derived from the panel so the print exactly fills the sewn shape. One material — Bambu TPU 95A — is both a Fashion Cabinet fabric and a Yantra4D solid. FC-400 Lane 5, AM-fashion.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un corpiño a medida cuya cara entera es un campo impreso de cota de escamas en TPU — escamas que articulan de forma independiente, que protegen y se mueven. El campo de escamas es territorio de Yantra4D (notion.hardware_ref → tpu-scale-mail); Fashion Cabinet posee la moda: el panel del corpiño dimensionado por el contorno de busto y el largo, y el campo de escamas (filas × columnas) derivado del panel para que la impresión llene exactamente la forma cosida. Un material — Bambu TPU 95A — es a la vez tela de Fashion Cabinet y sólido de Yantra4D. FC-400 carril 5, moda aditiva.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un corsage sur mesure dont toute la face est un champ imprimé de cotte d'écailles en TPU — des écailles s'articulant indépendamment, qui protègent et bougent. Le champ d'écailles relève de Yantra4D (notion.hardware_ref → tpu-scale-mail) ; Fashion Cabinet possède la mode : le panneau de corsage dimensionné d'après le tour de poitrine et la longueur, et le champ d'écailles (rangs × colonnes) dérivé du panneau pour que l'impression remplisse exactement la forme cousue. Un matériau — Bambu TPU 95A — est à la fois un tissu Fashion Cabinet et un solide Yantra4D. FC-400 voie 5, mode additive.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um corpete sob medida cuja face inteira é um campo impresso de cota de escamas em TPU — escamas que articulam de forma independente, que protegem e se movem. O campo de escamas é território da Yantra4D (notion.hardware_ref → tpu-scale-mail); a Fashion Cabinet possui a moda: o painel do corpete dimensionado pelo contorno de busto e comprimento, e o campo de escamas (fileiras × colunas) derivado do painel para que a impressão preencha exatamente a forma costurada. Um material — Bambu TPU 95A — é ao mesmo tempo tecido da Fashion Cabinet e sólido da Yantra4D. FC-400 pista 5, moda aditiva.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "am_fashion",
+      "printed-textile",
+      "tpu",
+      "scale-mail",
+      "bodice",
+      "armor"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full pattern",
+        "es": "Patrón completo",
+        "fr": "Patron complet",
+        "pt": "Molde completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "placement-guide"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Scale-mail bodice guide",
+        "es": "Guía de corpiño de escamas",
+        "fr": "Guide de corsage à écailles",
+        "pt": "Guia de corpete de escamas"
+      },
+      "default_color": "#7f8f86",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps",
+        "pt": "Corpo"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Coupe",
+        "pt": "Caimento"
+      }
+    },
+    {
+      "id": "panel",
+      "label": {
+        "en": "Panel",
+        "es": "Panel",
+        "fr": "Panneau",
+        "pt": "Painel"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 900,
+      "min": 600,
+      "max": 1500,
+      "step": 10,
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de busto (mm)"
+      },
+      "tooltip": {
+        "en": "Full bust circumference.",
+        "es": "Circunferencia completa del busto.",
+        "fr": "Circonférence complète de la poitrine.",
+        "pt": "Circunferência total do busto."
+      }
+    },
+    {
+      "id": "bodice_length",
+      "type": "slider",
+      "group": "body",
+      "default": 380,
+      "min": 240,
+      "max": 600,
+      "step": 10,
+      "label": {
+        "en": "Bodice length (mm)",
+        "es": "Largo del corpiño (mm)",
+        "fr": "Longueur du corsage (mm)",
+        "pt": "Comprimento do corpete (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to waist.",
+        "es": "Del hombro a la cintura.",
+        "fr": "De l'épaule à la taille.",
+        "pt": "Do ombro à cintura."
+      }
+    },
+    {
+      "id": "neck_scoop",
+      "type": "slider",
+      "group": "fit",
+      "default": 90,
+      "min": 30,
+      "max": 240,
+      "step": 5,
+      "label": {
+        "en": "Neck scoop (mm)",
+        "es": "Escote (mm)",
+        "fr": "Creux d'encolure (mm)",
+        "pt": "Recorte do decote (mm)"
+      },
+      "tooltip": {
+        "en": "Neckline scoop depth.",
+        "es": "Profundidad del escote.",
+        "fr": "Profondeur de l'encolure.",
+        "pt": "Profundidade do decote."
+      }
+    },
+    {
+      "id": "armhole_scoop",
+      "type": "slider",
+      "group": "fit",
+      "default": 120,
+      "min": 40,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Armhole scoop (mm)",
+        "es": "Sisa (mm)",
+        "fr": "Creux d'emmanchure (mm)",
+        "pt": "Recorte da cava (mm)"
+      },
+      "tooltip": {
+        "en": "Armhole scoop depth.",
+        "es": "Profundidad de la sisa.",
+        "fr": "Profondeur de l'emmanchure.",
+        "pt": "Profundidade da cava."
+      }
+    },
+    {
+      "id": "scale_size",
+      "type": "slider",
+      "group": "panel",
+      "default": 22,
+      "min": 8,
+      "max": 60,
+      "step": 1,
+      "label": {
+        "en": "Scale size (mm)",
+        "es": "Tamaño de escama (mm)",
+        "fr": "Taille d'écaille (mm)",
+        "pt": "Tamanho de escama (mm)"
+      },
+      "tooltip": {
+        "en": "Width of one printed scale.",
+        "es": "Ancho de una escama impresa.",
+        "fr": "Largeur d'une écaille imprimée.",
+        "pt": "Largura de uma escama impressa."
+      }
+    },
+    {
+      "id": "overlap",
+      "type": "slider",
+      "group": "panel",
+      "default": 0.45,
+      "min": 0.0,
+      "max": 0.7,
+      "step": 0.05,
+      "label": {
+        "en": "Scale overlap",
+        "es": "Solape de escamas",
+        "fr": "Recouvrement d'écailles",
+        "pt": "Sobreposição de escamas"
+      },
+      "tooltip": {
+        "en": "How far each row overlaps the next.",
+        "es": "Cuánto solapa cada fila a la siguiente.",
+        "fr": "Recouvrement de chaque rangée sur la suivante.",
+        "pt": "Quanto cada fileira sobrepõe a próxima."
+      }
+    },
+    {
+      "id": "wall",
+      "type": "slider",
+      "group": "panel",
+      "default": 1.2,
+      "min": 0.6,
+      "max": 4.0,
+      "step": 0.1,
+      "label": {
+        "en": "Wall thickness (mm)",
+        "es": "Grosor de pared (mm)",
+        "fr": "Épaisseur de paroi (mm)",
+        "pt": "Espessura de parede (mm)"
+      },
+      "tooltip": {
+        "en": "Printed wall thickness of the TPU solid.",
+        "es": "Grosor impreso de la pared del sólido TPU.",
+        "fr": "Épaisseur imprimée de la paroi du solide TPU.",
+        "pt": "Espessura impressa da parede do sólido TPU."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 25,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Added around sewn edges.",
+        "es": "Añadido alrededor de los cantos cosidos.",
+        "fr": "Ajoutée autour des bords cousus.",
+        "pt": "Adicionada em volta dos cantos costurados."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "dragon",
+      "label": {
+        "en": "Dragon guard",
+        "es": "Peto de dragón",
+        "fr": "Plastron dragon",
+        "pt": "Plastrão de dragão"
+      },
+      "values": {
+        "scale_size": 22,
+        "overlap": 0.45
+      }
+    },
+    {
+      "id": "fine",
+      "label": {
+        "en": "Fine scales",
+        "es": "Escamas finas",
+        "fr": "Écailles fines",
+        "pt": "Escamas finas"
+      },
+      "values": {
+        "scale_size": 12,
+        "overlap": 0.6
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "commons_license": "CERN-OHL-W-2.0",
+    "interfaces": [
+      {
+        "id": "panel_edge",
+        "type": "side_seam",
+        "label": {
+          "en": "Sewable bodice edge",
+          "es": "Canto cosible del corpiño",
+          "fr": "Bord à coudre du corsage",
+          "pt": "Canto costurável do corpete"
+        },
+        "edges": [
+          {
+            "piece": "placement-guide",
+            "edge": "guide"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "bodice_length",
+          "scale_size",
+          "overlap",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "printed_textile": true,
+      "am_fashion": true
+    },
+    "societal_benefit": {
+      "en": "A printable scale-mail bodice turns dragon-scale armor and expressive scalework — historically painstaking hand assembly — into an open, made-to-measure pattern, closing the loop from a Fashion Cabinet fabric card to a Yantra4D printable solid.",
+      "es": "Un corpiño de escamas imprimible convierte la armadura de escamas de dragón y la escamería expresiva — históricamente un ensamble manual laborioso — en un patrón abierto y a medida, cerrando el círculo de una ficha de tela de Fashion Cabinet a un sólido imprimible de Yantra4D.",
+      "fr": "Un corsage à écailles imprimable transforme l'armure d'écailles de dragon et l'écaillage expressif — historiquement un assemblage manuel laborieux — en un patron ouvert et sur mesure, bouclant la boucle d'une fiche de tissu Fashion Cabinet à un solide imprimable Yantra4D.",
+      "pt": "Um corpete de escamas imprimível transforma a armadura de escamas de dragão e a escamaria expressiva — historicamente uma montagem manual trabalhosa — em um molde aberto e sob medida, fechando o ciclo de uma ficha de tecido Fashion Cabinet a um sólido imprimível Yantra4D."
+    }
+  },
+  "notion": {
+    "kind": "custom",
+    "subtype": "printed scale-mail bodice",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "tpu-scale-mail",
+      "linked": true,
+      "params_map": {
+        "scale_w": "scale_size",
+        "scale_h": "scale_size * 1.3",
+        "overlap": "overlap",
+        "cols": "round(bust_girth / 4 / scale_size)",
+        "rows": "round(bodice_length / (scale_size * 1.3 * (1 - overlap)))"
+      }
+    }
+  }
+}

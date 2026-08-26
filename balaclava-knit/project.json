@@ -1,0 +1,397 @@
+{
+  "project": {
+    "name": "Knit Balaclava Hood",
+    "slug": "balaclava-knit",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A close-fitting knit hood covering the head and neck with an opening for the face. Two mirrored side halves joined by a crown-and-back seam, a ribbed face-opening edge and a neck tube that tucks under the collar. Worked in a stretchy rib or fine jersey — the draft is smaller than the head and stretches on (signed negative knit ease). FC-400 Lane 4, knitwear. No closure.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un pasamontañas de punto ajustado que cubre cabeza y cuello con una abertura para la cara. Dos mitades laterales simétricas unidas por una costura de copa y espalda, un canto de abertura facial en canalé y un tubo de cuello que se remete bajo el cuello de la prenda. Tejido en canalé elástico o jersey fino — el trazo es menor que la cabeza y se estira al ponerse (holgura de punto negativa con signo). FC-400 carril 4, punto. Sin cierre.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une cagoule en maille ajustée couvrant la tête et le cou avec une ouverture pour le visage. Deux moitiés latérales symétriques réunies par une couture de calotte et de dos, un bord d'ouverture de visage en côtes et un tube de cou qui se glisse sous le col. Tricotée en côtes élastiques ou jersey fin — le tracé est plus petit que la tête et s'étire à l'enfilage (aisance de maille négative signée). FC-400 voie 4, maille. Sans fermeture.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma balaclava de tricô ajustada cobrindo cabeça e pescoço com uma abertura para o rosto. Duas metades laterais espelhadas unidas por uma costura de copa e costas, um canto de abertura facial em canelado e um tubo de pescoço que se enfia sob a gola. Tricotada em canelado elástico ou jérsei fino — o traçado é menor que a cabeça e estica ao vestir (folga de tricô negativa com sinal). FC-400 pista 4, tricô. Sem fecho.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "knitwear",
+      "balaclava",
+      "hood",
+      "headwear",
+      "stretch"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full pattern",
+        "es": "Patrón completo",
+        "fr": "Patron complet",
+        "pt": "Molde completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "hood",
+        "face_band"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "hood",
+      "label": {
+        "en": "Hood half",
+        "es": "Mitad de capucha",
+        "fr": "Moitié de cagoule",
+        "pt": "Metade de capuz"
+      },
+      "default_color": "#4d5560",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "face_band",
+      "label": {
+        "en": "Face-opening band (rib)",
+        "es": "Vivo de abertura facial (canalé)",
+        "fr": "Bande d'ouverture visage (côtes)",
+        "pt": "Viés de abertura facial (canelado)"
+      },
+      "default_color": "#2f353d",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps",
+        "pt": "Corpo"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Coupe",
+        "pt": "Caimento"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "head_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 570,
+      "min": 460,
+      "max": 680,
+      "step": 5,
+      "label": {
+        "en": "Head girth (mm)",
+        "es": "Contorno de cabeza (mm)",
+        "fr": "Tour de tête (mm)",
+        "pt": "Contorno de cabeça (mm)"
+      },
+      "tooltip": {
+        "en": "Around the head at the hatband.",
+        "es": "Alrededor de la cabeza a la altura de la banda.",
+        "fr": "Autour de la tête à la hauteur du bandeau.",
+        "pt": "Ao redor da cabeça na altura da carneira."
+      }
+    },
+    {
+      "id": "head_height",
+      "type": "slider",
+      "group": "body",
+      "default": 250,
+      "min": 180,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Head height (mm)",
+        "es": "Alto de cabeza (mm)",
+        "fr": "Hauteur de tête (mm)",
+        "pt": "Altura da cabeça (mm)"
+      },
+      "tooltip": {
+        "en": "Chin to crown.",
+        "es": "Del mentón a la coronilla.",
+        "fr": "Du menton au sommet.",
+        "pt": "Do queixo ao topo."
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 380,
+      "min": 280,
+      "max": 520,
+      "step": 10,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)",
+        "pt": "Contorno de pescoço (mm)"
+      },
+      "tooltip": {
+        "en": "Base of the neck.",
+        "es": "Base del cuello.",
+        "fr": "Base du cou.",
+        "pt": "Base do pescoço."
+      }
+    },
+    {
+      "id": "neck_tube",
+      "type": "slider",
+      "group": "body",
+      "default": 150,
+      "min": 60,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Neck tube (mm)",
+        "es": "Tubo de cuello (mm)",
+        "fr": "Tube de cou (mm)",
+        "pt": "Tubo de pescoço (mm)"
+      },
+      "tooltip": {
+        "en": "How far the neck tube extends.",
+        "es": "Cuánto se extiende el tubo de cuello.",
+        "fr": "Longueur du tube de cou.",
+        "pt": "Extensão do tubo de pescoço."
+      }
+    },
+    {
+      "id": "face_width",
+      "type": "slider",
+      "group": "fit",
+      "default": 130,
+      "min": 70,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Face opening half-width (mm)",
+        "es": "Semiancho de abertura facial (mm)",
+        "fr": "Demi-largeur d'ouverture visage (mm)",
+        "pt": "Meia-largura da abertura facial (mm)"
+      },
+      "tooltip": {
+        "en": "Half-width of the face opening.",
+        "es": "Semiancho de la abertura de la cara.",
+        "fr": "Demi-largeur de l'ouverture du visage.",
+        "pt": "Meia-largura da abertura do rosto."
+      }
+    },
+    {
+      "id": "face_height",
+      "type": "slider",
+      "group": "fit",
+      "default": 170,
+      "min": 90,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Face opening height (mm)",
+        "es": "Alto de abertura facial (mm)",
+        "fr": "Hauteur d'ouverture visage (mm)",
+        "pt": "Altura da abertura facial (mm)"
+      },
+      "tooltip": {
+        "en": "Height of the face opening.",
+        "es": "Alto de la abertura de la cara.",
+        "fr": "Hauteur de l'ouverture du visage.",
+        "pt": "Altura da abertura do rosto."
+      }
+    },
+    {
+      "id": "knit_ease",
+      "type": "slider",
+      "group": "fit",
+      "default": -50,
+      "min": -140,
+      "max": 40,
+      "step": 10,
+      "label": {
+        "en": "Knit ease (mm, signed)",
+        "es": "Holgura de punto (mm, con signo)",
+        "fr": "Aisance maille (mm, signée)",
+        "pt": "Folga de tricô (mm, com sinal)"
+      },
+      "tooltip": {
+        "en": "Signed; negative = draft smaller than body, stretches on.",
+        "es": "Con signo; negativa = trazo menor que el cuerpo, se estira.",
+        "fr": "Signée ; négative = tracé plus petit que le corps, s'étire.",
+        "pt": "Com sinal; negativa = traçado menor que o corpo, estica."
+      }
+    },
+    {
+      "id": "band_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 26,
+      "min": 15,
+      "max": 50,
+      "step": 1,
+      "label": {
+        "en": "Face band width (mm)",
+        "es": "Ancho del vivo facial (mm)",
+        "fr": "Largeur de la bande visage (mm)",
+        "pt": "Largura do viés facial (mm)"
+      },
+      "tooltip": {
+        "en": "Face-opening band depth.",
+        "es": "Profundidad del vivo facial.",
+        "fr": "Profondeur de la bande visage.",
+        "pt": "Profundidade do viés facial."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 5,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Added around sewn edges.",
+        "es": "Añadido alrededor de los cantos cosidos.",
+        "fr": "Ajoutée autour des bords cousus.",
+        "pt": "Adicionada em volta dos cantos costurados."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "snug",
+      "label": {
+        "en": "Snug fit",
+        "es": "Ajuste ceñido",
+        "fr": "Ajusté",
+        "pt": "Justo"
+      },
+      "values": {
+        "knit_ease": -50,
+        "face_width": 120,
+        "face_height": 160
+      }
+    },
+    {
+      "id": "open-face",
+      "label": {
+        "en": "Open face",
+        "es": "Cara abierta",
+        "fr": "Visage ouvert",
+        "pt": "Rosto aberto"
+      },
+      "values": {
+        "face_width": 180,
+        "face_height": 230
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "commons_license": "CERN-OHL-W-2.0",
+    "interfaces": [
+      {
+        "id": "face_opening",
+        "type": "custom",
+        "label": {
+          "en": "Face opening (band)",
+          "es": "Abertura facial (vivo)",
+          "fr": "Ouverture visage (bande)",
+          "pt": "Abertura facial (viés)"
+        },
+        "edges": [
+          {
+            "piece": "hood",
+            "edge": "face"
+          }
+        ],
+        "parameters": [
+          "face_width",
+          "face_height",
+          "band_width"
+        ]
+      },
+      {
+        "id": "neck_hem",
+        "type": "hem",
+        "label": {
+          "en": "Neck-tube hem",
+          "es": "Bajo del tubo de cuello",
+          "fr": "Bas du tube de cou",
+          "pt": "Barra do tubo de pescoço"
+        },
+        "edges": [
+          {
+            "piece": "hood",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "neck_tube",
+          "knit_ease"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "printed_textile": false,
+      "negative_ease_knit": true
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure balaclava lets anyone size cold-weather head protection to their own head and face opening — the profile solved so it fits rather than gaps.",
+      "es": "Un pasamontañas abierto y a medida permite dimensionar la protección de cabeza para el frío a la propia cabeza y abertura facial — el perfil resuelto para que ajuste y no quede holgado.",
+      "fr": "Une cagoule ouverte et sur mesure permet de dimensionner la protection tête par grand froid à sa propre tête et ouverture de visage — le profil résolu pour qu'il épouse plutôt qu'il bâille.",
+      "pt": "Uma balaclava aberta e sob medida permite dimensionar a proteção de cabeça para o frio à própria cabeça e abertura facial — o perfil resolvido para ajustar e não sobrar."
+    }
+  }
+}

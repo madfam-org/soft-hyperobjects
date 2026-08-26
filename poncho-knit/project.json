@@ -1,0 +1,338 @@
+{
+  "project": {
+    "name": "Knit Ruana Poncho",
+    "slug": "poncho-knit",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The ruana: an open-front poncho, a soft-knit rectangle split up the centre front so it falls as two panels off the shoulders, shaped at the neckline so it sits rather than slides. The simplest wrap architecture — two mirrored rectangular panels joined at the centre back, open down the front, optionally fringed at the hem. FC-400 Lane 4, knitwear. No closure.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La ruana: un poncho de frente abierto, un rectángulo de punto suave partido por el centro del delantero para que caiga en dos paños desde los hombros, conformado en el escote para que asiente y no resbale. La arquitectura de envolvente más simple — dos paños rectangulares simétricos unidos por el centro de la espalda, abiertos por delante, con fleco opcional en el bajo. FC-400 carril 4, punto. Sin cierre.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La ruana : un poncho ouvert sur le devant, un rectangle en maille souple fendu au milieu du devant pour retomber en deux pans depuis les épaules, façonné à l'encolure pour tenir plutôt que glisser. L'architecture d'enveloppe la plus simple — deux pans rectangulaires symétriques réunis au milieu du dos, ouverts sur le devant, à franges optionnelles au bas. FC-400 voie 4, maille. Sans fermeture.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A ruana: um poncho de frente aberta, um retângulo de tricô macio partido no centro da frente para cair em dois panos a partir dos ombros, modelado no decote para assentar e não escorregar. A arquitetura de envolvente mais simples — dois panos retangulares espelhados unidos no centro das costas, abertos na frente, com franja opcional na barra. FC-400 pista 4, tricô. Sem fecho.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "knitwear",
+      "poncho",
+      "ruana",
+      "wrap",
+      "open-front"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full pattern",
+        "es": "Patrón completo",
+        "fr": "Patron complet",
+        "pt": "Molde completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "panel"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "panel",
+      "label": {
+        "en": "Ruana panel",
+        "es": "Paño de ruana",
+        "fr": "Pan de ruana",
+        "pt": "Pano de ruana"
+      },
+      "default_color": "#8a7a63",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps",
+        "pt": "Corpo"
+      }
+    },
+    {
+      "id": "style",
+      "label": {
+        "en": "Style",
+        "es": "Estilo",
+        "fr": "Style",
+        "pt": "Estilo"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "panel_width",
+      "type": "slider",
+      "group": "body",
+      "default": 520,
+      "min": 300,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Panel width (mm)",
+        "es": "Ancho del paño (mm)",
+        "fr": "Largeur du pan (mm)",
+        "pt": "Largura do pano (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to front edge, each panel.",
+        "es": "Del hombro al canto delantero, cada paño.",
+        "fr": "De l'épaule au bord devant, chaque pan.",
+        "pt": "Do ombro ao canto frontal, cada pano."
+      }
+    },
+    {
+      "id": "panel_length",
+      "type": "slider",
+      "group": "body",
+      "default": 900,
+      "min": 500,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Panel length (mm)",
+        "es": "Largo del paño (mm)",
+        "fr": "Longueur du pan (mm)",
+        "pt": "Comprimento do pano (mm)"
+      },
+      "tooltip": {
+        "en": "Neck to hem.",
+        "es": "Del cuello al bajo.",
+        "fr": "De l'encolure au bas.",
+        "pt": "Do pescoço à barra."
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 400,
+      "min": 300,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)",
+        "pt": "Contorno de pescoço (mm)"
+      },
+      "tooltip": {
+        "en": "Base of the neck.",
+        "es": "Base del cuello.",
+        "fr": "Base du cou.",
+        "pt": "Base do pescoço."
+      }
+    },
+    {
+      "id": "neck_scoop",
+      "type": "slider",
+      "group": "style",
+      "default": 90,
+      "min": 20,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Neck scoop (mm)",
+        "es": "Escote (mm)",
+        "fr": "Creux d'encolure (mm)",
+        "pt": "Recorte do decote (mm)"
+      },
+      "tooltip": {
+        "en": "How far the neckline scoops toward the front.",
+        "es": "Cuánto baja el escote hacia el frente.",
+        "fr": "Profondeur de l'encolure vers le devant.",
+        "pt": "Quanto o decote desce para a frente."
+      }
+    },
+    {
+      "id": "shoulder_run",
+      "type": "slider",
+      "group": "style",
+      "default": 140,
+      "min": 60,
+      "max": 320,
+      "step": 5,
+      "label": {
+        "en": "Shoulder run (mm)",
+        "es": "Tramo de hombro (mm)",
+        "fr": "Portée d'épaule (mm)",
+        "pt": "Trecho de ombro (mm)"
+      },
+      "tooltip": {
+        "en": "Shaped top run at the shoulder.",
+        "es": "Tramo conformado en el hombro.",
+        "fr": "Portée façonnée à l'épaule.",
+        "pt": "Trecho modelado no ombro."
+      }
+    },
+    {
+      "id": "fringe_depth",
+      "type": "slider",
+      "group": "style",
+      "default": 60,
+      "min": 0,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Fringe depth (mm)",
+        "es": "Largo del fleco (mm)",
+        "fr": "Profondeur de frange (mm)",
+        "pt": "Profundidade da franja (mm)"
+      },
+      "tooltip": {
+        "en": "Marked fringe zone at the hem (0 = none).",
+        "es": "Zona de fleco en el bajo (0 = sin).",
+        "fr": "Zone de frange au bas (0 = aucune).",
+        "pt": "Zona de franja na barra (0 = nenhuma)."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 6,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Added around sewn edges.",
+        "es": "Añadido alrededor de los cantos cosidos.",
+        "fr": "Ajoutée autour des bords cousus.",
+        "pt": "Adicionada em volta dos cantos costurados."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic ruana",
+        "es": "Ruana clásica",
+        "fr": "Ruana classique",
+        "pt": "Ruana clássica"
+      },
+      "values": {
+        "panel_width": 520,
+        "panel_length": 900,
+        "fringe_depth": 60
+      }
+    },
+    {
+      "id": "long",
+      "label": {
+        "en": "Long wrap",
+        "es": "Envolvente largo",
+        "fr": "Enveloppe longue",
+        "pt": "Envolvente longo"
+      },
+      "values": {
+        "panel_length": 1200,
+        "neck_scoop": 140
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "commons_license": "CERN-OHL-W-2.0",
+    "interfaces": [
+      {
+        "id": "front_opening",
+        "type": "custom",
+        "label": {
+          "en": "Front opening",
+          "es": "Abertura delantera",
+          "fr": "Ouverture devant",
+          "pt": "Abertura frontal"
+        },
+        "edges": [
+          {
+            "piece": "panel",
+            "edge": "front"
+          }
+        ],
+        "parameters": [
+          "panel_length",
+          "neck_scoop"
+        ]
+      },
+      {
+        "id": "neckline",
+        "type": "custom",
+        "label": {
+          "en": "Neckline",
+          "es": "Escote",
+          "fr": "Encolure",
+          "pt": "Decote"
+        },
+        "edges": [
+          {
+            "piece": "panel",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "neck_scoop",
+          "shoulder_run"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "printed_textile": false,
+      "negative_ease_knit": false
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure ruana — an Andean heritage wrap — as two rectangles and one seam: the most accessible garment in the commons for a first knitter or a leftover-yarn project.",
+      "es": "Una ruana abierta y a medida — envolvente de herencia andina — en dos rectángulos y una costura: la prenda más accesible del repertorio para quien teje por primera vez o aprovecha restos de hilo.",
+      "fr": "Une ruana ouverte et sur mesure — enveloppe du patrimoine andin — en deux rectangles et une couture : le vêtement le plus accessible du fonds pour un premier tricot ou un projet de restes.",
+      "pt": "Uma ruana aberta e sob medida — envolvente do patrimônio andino — em dois retângulos e uma costura: a peça mais acessível do acervo para quem tricota pela primeira vez ou aproveita sobras de fio."
+    }
+  }
+}

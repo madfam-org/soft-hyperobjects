@@ -1,0 +1,318 @@
+{
+  "project": {
+    "name": "Espadrille Upper",
+    "slug": "espadrille-shoe-upper",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The closed espadrille (the classic flat slip-on): a single vamp over the toes and instep and a heel counter round the back, joined at two side seams and stitched down to a jute sole along the lasting edge. The plain closed alpargata — no eyelets, no hardware. Lasting arcs are proportionate bows over each piece's chord so nothing slivers at the extremes; the counter's side seams are drafted to the vamp's so both declared seams balance. Sized from plain foot parameters — ISO 8559 has no foot codes. FC-400 Lane 6, footwear.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La alpargata cerrada (el clásico plano sin cordones): una pala sobre los dedos y el empeine y un talón que envuelve la parte trasera, unidos por dos costuras laterales y cosidos a una suela de yute por el borde de montado. La alpargata cerrada simple — sin ojales, sin herrajes. Los arcos de montado son curvas proporcionales sobre la cuerda de cada pieza, así nada se adelgaza en los extremos; las costuras laterales del talón se trazan a las de la pala para que ambas costuras cuadren. Dimensionado por parámetros simples del pie — ISO 8559 no tiene códigos del pie. FC-400 carril 6, calzado.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "L'espadrille fermée (le classique plat à enfiler) : un empeigne sur les orteils et le cou-de-pied et un contrefort enveloppant l'arrière, réunis par deux coutures latérales et cousus à une semelle de jute le long du bord de montage. L'espadrille fermée simple — sans œillets, sans quincaillerie. Les arcs de montage sont des galbes proportionnels sur la corde de chaque pièce, rien ne s'amincit aux extrêmes ; les coutures latérales du contrefort sont tracées à celles de l'empeigne pour que les deux coutures s'équilibrent. Dimensionné d'après des paramètres de pied simples — l'ISO 8559 n'a aucun code de pied. FC-400 voie 6, chaussure.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A alpargata fechada (o clássico plano de calçar): um vamp sobre os dedos e o peito do pé e um contraforte ao redor da traseira, unidos por duas costuras laterais e costurados a uma sola de juta pelo canto de montagem. A alpargata fechada simples — sem ilhoses, sem ferragens. Os arcos de montagem são curvas proporcionais sobre a corda de cada peça, então nada afina nos extremos; as costuras laterais do contraforte são traçadas às do vamp para que ambas as costuras equilibrem. Dimensionado por parâmetros simples do pé — a ISO 8559 não tem códigos de pé. FC-400 pista 6, calçado.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "footwear",
+      "espadrille",
+      "alpargata",
+      "upper",
+      "canvas",
+      "slip-on"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full pattern",
+        "es": "Patrón completo",
+        "fr": "Patron complet",
+        "pt": "Molde completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "vamp",
+        "heel_counter"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "vamp",
+      "label": {
+        "en": "Vamp (toe + instep)",
+        "es": "Pala (dedos + empeine)",
+        "fr": "Empeigne (orteils + cou-de-pied)",
+        "pt": "Vamp (dedos + peito do pé)"
+      },
+      "default_color": "#c9bfa8",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "heel_counter",
+      "label": {
+        "en": "Heel counter",
+        "es": "Talón",
+        "fr": "Contrefort",
+        "pt": "Contraforte"
+      },
+      "default_color": "#b8ad95",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps",
+        "pt": "Corpo"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Coupe",
+        "pt": "Caimento"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "foot_length",
+      "type": "slider",
+      "group": "body",
+      "default": 255,
+      "min": 150,
+      "max": 330,
+      "step": 5,
+      "label": {
+        "en": "Foot length (mm)",
+        "es": "Largo del pie (mm)",
+        "fr": "Longueur du pied (mm)",
+        "pt": "Comprimento do pé (mm)"
+      },
+      "tooltip": {
+        "en": "Heel to longest toe. Plain param — ISO 8559 has no foot code.",
+        "es": "Del talón al dedo más largo. Parámetro simple — ISO 8559 no tiene código del pie.",
+        "fr": "Du talon à l'orteil le plus long. Paramètre simple — l'ISO 8559 n'a aucun code de pied.",
+        "pt": "Do calcanhar ao dedo mais longo. Parâmetro simples — a ISO 8559 não tem código de pé."
+      }
+    },
+    {
+      "id": "foot_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 235,
+      "min": 150,
+      "max": 320,
+      "step": 5,
+      "label": {
+        "en": "Ball girth (mm)",
+        "es": "Contorno de la planta (mm)",
+        "fr": "Carrure de la plante (mm)",
+        "pt": "Contorno da planta (mm)"
+      },
+      "tooltip": {
+        "en": "Around the widest part of the foot.",
+        "es": "Alrededor de la parte más ancha del pie.",
+        "fr": "Autour de la partie la plus large du pied.",
+        "pt": "Ao redor da parte mais larga do pé."
+      }
+    },
+    {
+      "id": "vamp_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 100,
+      "min": 50,
+      "max": 170,
+      "step": 5,
+      "label": {
+        "en": "Vamp depth (mm)",
+        "es": "Profundidad de la pala (mm)",
+        "fr": "Profondeur d'empeigne (mm)",
+        "pt": "Profundidade do vamp (mm)"
+      },
+      "tooltip": {
+        "en": "How far back the vamp reaches.",
+        "es": "Cuánto retrocede la pala.",
+        "fr": "Recul de l'empeigne.",
+        "pt": "Quanto o vamp recua."
+      }
+    },
+    {
+      "id": "counter_height",
+      "type": "slider",
+      "group": "fit",
+      "default": 68,
+      "min": 35,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Counter height (mm)",
+        "es": "Alto del talón (mm)",
+        "fr": "Hauteur de contrefort (mm)",
+        "pt": "Altura do contraforte (mm)"
+      },
+      "tooltip": {
+        "en": "Heel wrap height.",
+        "es": "Alto del envolvente del talón.",
+        "fr": "Hauteur de l'enveloppe du talon.",
+        "pt": "Altura do envolvimento do calcanhar."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Added around sewn edges.",
+        "es": "Añadido alrededor de los cantos cosidos.",
+        "fr": "Ajoutée autour des bords cousus.",
+        "pt": "Adicionada em volta dos cantos costurados."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic slip-on",
+        "es": "Sin cordones clásico",
+        "fr": "Slip-on classique",
+        "pt": "De calçar clássico"
+      },
+      "values": {
+        "vamp_depth": 100,
+        "counter_height": 68
+      }
+    },
+    {
+      "id": "high-vamp",
+      "label": {
+        "en": "High vamp",
+        "es": "Pala alta",
+        "fr": "Empeigne haute",
+        "pt": "Vamp alto"
+      },
+      "values": {
+        "vamp_depth": 150
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "commons_license": "CERN-OHL-W-2.0",
+    "interfaces": [
+      {
+        "id": "lasting_edge",
+        "type": "hem",
+        "label": {
+          "en": "Lasting edge (sole stitch-down)",
+          "es": "Borde de montado (cosido a la suela)",
+          "fr": "Bord de montage (couture semelle)",
+          "pt": "Canto de montagem (costura à sola)"
+        },
+        "edges": [
+          {
+            "piece": "vamp",
+            "edge": "lasting"
+          },
+          {
+            "piece": "heel_counter",
+            "edge": "lasting"
+          }
+        ],
+        "parameters": [
+          "foot_length",
+          "vamp_depth",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "topline",
+        "type": "custom",
+        "label": {
+          "en": "Topline (foot opening)",
+          "es": "Línea superior (entrada del pie)",
+          "fr": "Ligne d'entrée (ouverture du pied)",
+          "pt": "Linha superior (entrada do pé)"
+        },
+        "edges": [
+          {
+            "piece": "vamp",
+            "edge": "topline"
+          },
+          {
+            "piece": "heel_counter",
+            "edge": "topline"
+          }
+        ],
+        "parameters": [
+          "foot_girth",
+          "counter_height"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "printed_textile": false
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure espadrille is a two-piece canvas slip-on anyone can cut and stitch to a jute sole — the most accessible footwear pattern in the commons, a living craft made shareable.",
+      "es": "Una alpargata abierta y a medida es un calzado de lona de dos piezas que cualquiera puede cortar y coser a una suela de yute — el patrón de calzado más accesible del repertorio, un oficio vivo hecho compartible.",
+      "fr": "Une espadrille ouverte et sur mesure est une chaussure en toile en deux pièces que chacun peut couper et coudre à une semelle de jute — le patron de chaussure le plus accessible du fonds, un artisanat vivant rendu partageable.",
+      "pt": "Uma alpargata aberta e sob medida é um calçado de lona de duas peças que qualquer um pode cortar e costurar a uma sola de juta — o molde de calçado mais acessível do acervo, um ofício vivo tornado compartilhável."
+    }
+  }
+}

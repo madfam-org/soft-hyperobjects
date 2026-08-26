@@ -1,0 +1,635 @@
+{
+  "project": {
+    "name": "Shawl-Collar Cardigan",
+    "slug": "cardigan-shawl-collar",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A drop-shoulder knit cardigan whose feature is a continuous shawl collar: one collar-and-lapel that rolls from the back neck down both fronts to the placket hem, with no shoulder-break seam. Cut open (two mirrored fronts, not on the fold), with a button band up each front and a shawl collar drafted as a strip whose sewn edge equals the full neckline run. Buttons bridge to the Yantra4D shank-button-solid. Signed knit ease, positive default (worn over layers). FC-400 Lane 4, knitwear.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un cárdigan de punto de hombro caído cuya seña es un cuello chal continuo: un cuello-solapa que rueda de la nuca por ambos delanteros hasta el bajo de la tapeta, sin costura en el quiebre del hombro. Cortado abierto (dos delanteros simétricos, no al doblez), con cartera de botones en cada delantero y un cuello chal trazado como tira cuyo canto cosido iguala el contorno completo del escote. Los botones se puentean al shank-button-solid de Yantra4D. Holgura de punto con signo, positiva por defecto (se lleva sobre otras capas). FC-400 carril 4, punto.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un cardigan en maille à épaule tombante dont la signature est un col châle continu : un col-revers qui roule de la nuque le long des deux devants jusqu'au bas de la patte, sans couture à la cassure d'épaule. Coupé ouvert (deux devants symétriques, non au pli), avec une patte de boutonnage à chaque devant et un col châle tracé en bande dont le bord cousu égale tout le tour d'encolure. Les boutons se relient au shank-button-solid de Yantra4D. Aisance de maille signée, positive par défaut (porté sur d'autres couches). FC-400 voie 4, maille.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um cardigã de tricô de ombro caído cuja marca é uma gola xale contínua: uma gola-lapela que rola da nuca por ambas as frentes até a barra da carcela, sem costura na quebra do ombro. Cortado aberto (duas frentes espelhadas, não na dobra), com carcela de botões em cada frente e uma gola xale traçada como tira cujo canto costurado iguala todo o contorno do decote. Os botões fazem ponte com o shank-button-solid da Yantra4D. Folga de tricô com sinal, positiva por padrão (usado sobre outras camadas). FC-400 pista 4, tricô.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "knitwear",
+      "cardigan",
+      "shawl-collar",
+      "buttons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full pattern",
+        "es": "Patrón completo",
+        "fr": "Patron complet",
+        "pt": "Molde completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "collar",
+        "cuff",
+        "hem_band"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (with button band)",
+        "es": "Delantero (con cartera)",
+        "fr": "Devant (avec patte)",
+        "pt": "Frente (com carcela)"
+      },
+      "default_color": "#8090a0",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (cut on fold)",
+        "es": "Espalda (corte al doblez)",
+        "fr": "Dos (coupé au pli)",
+        "pt": "Costas (corte na dobra)"
+      },
+      "default_color": "#63707e",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve (drop-shoulder)",
+        "es": "Manga (hombro caído)",
+        "fr": "Manche (épaule tombante)",
+        "pt": "Manga (ombro caído)"
+      },
+      "default_color": "#93a0ad",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Shawl collar",
+        "es": "Cuello chal",
+        "fr": "Col châle",
+        "pt": "Gola xale"
+      },
+      "default_color": "#4d5966",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Cuff (rib)",
+        "es": "Puño (canalé)",
+        "fr": "Poignet (côtes)",
+        "pt": "Punho (canelado)"
+      },
+      "default_color": "#3d4753",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "hem_band",
+      "label": {
+        "en": "Hem Band (rib)",
+        "es": "Cenefa (canalé)",
+        "fr": "Bande de bas (côtes)",
+        "pt": "Barra (canelado)"
+      },
+      "default_color": "#3d4753",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps",
+        "pt": "Corpo"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Coupe",
+        "pt": "Caimento"
+      }
+    },
+    {
+      "id": "style",
+      "label": {
+        "en": "Style",
+        "es": "Estilo",
+        "fr": "Style",
+        "pt": "Estilo"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 1000,
+      "min": 700,
+      "max": 1900,
+      "step": 10,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de peito (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest circumference.",
+        "es": "Circunferencia completa del pecho.",
+        "fr": "Circonférence complète de la poitrine.",
+        "pt": "Circunferência total do peito."
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "group": "body",
+      "default": 640,
+      "min": 440,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Body length (mm)",
+        "es": "Largo del cuerpo (mm)",
+        "fr": "Longueur du corps (mm)",
+        "pt": "Comprimento do corpo (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to hem-band seam.",
+        "es": "De la nuca a la costura de la cenefa.",
+        "fr": "De la nuque à la couture de la bande.",
+        "pt": "Da nuca à costura da barra."
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 400,
+      "min": 300,
+      "max": 540,
+      "step": 10,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)",
+        "pt": "Contorno de pescoço (mm)"
+      },
+      "tooltip": {
+        "en": "Base of the neck.",
+        "es": "Base del cuello.",
+        "fr": "Base du cou.",
+        "pt": "Base do pescoço."
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "body",
+      "default": 600,
+      "min": 320,
+      "max": 780,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)",
+        "pt": "Comprimento de manga (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to cuff seam.",
+        "es": "Del hombro a la costura del puño.",
+        "fr": "De l'épaule à la couture du poignet.",
+        "pt": "Do ombro à costura do punho."
+      }
+    },
+    {
+      "id": "knit_ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 40,
+      "min": -100,
+      "max": 220,
+      "step": 10,
+      "label": {
+        "en": "Knit ease (mm, signed)",
+        "es": "Holgura de punto (mm, con signo)",
+        "fr": "Aisance maille (mm, signée)",
+        "pt": "Folga de tricô (mm, com sinal)"
+      },
+      "tooltip": {
+        "en": "Signed; positive here — a cardigan is worn over layers.",
+        "es": "Con signo; positiva aquí — un cárdigan se lleva sobre capas.",
+        "fr": "Signée ; positive ici — un cardigan se porte sur des couches.",
+        "pt": "Com sinal; positiva aqui — um cardigã é usado sobre camadas."
+      }
+    },
+    {
+      "id": "armhole_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 250,
+      "min": 170,
+      "max": 380,
+      "step": 5,
+      "label": {
+        "en": "Armhole depth (mm)",
+        "es": "Profundidad de sisa (mm)",
+        "fr": "Profondeur d'emmanchure (mm)",
+        "pt": "Profundidade de cava (mm)"
+      },
+      "tooltip": {
+        "en": "Drop-shoulder armhole depth.",
+        "es": "Profundidad de la sisa de hombro caído.",
+        "fr": "Profondeur de l'emmanchure tombante.",
+        "pt": "Profundidade da cava de ombro caído."
+      }
+    },
+    {
+      "id": "front_neck_drop",
+      "type": "slider",
+      "group": "style",
+      "default": 120,
+      "min": 60,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Front neck drop (mm)",
+        "es": "Escote delantero (mm)",
+        "fr": "Encolure devant (mm)",
+        "pt": "Decote frontal (mm)"
+      },
+      "tooltip": {
+        "en": "How low the collar break sits.",
+        "es": "Cuán bajo cae el quiebre del cuello.",
+        "fr": "Hauteur de la cassure du col.",
+        "pt": "Quão baixo fica a quebra da gola."
+      }
+    },
+    {
+      "id": "shoulder_slope",
+      "type": "slider",
+      "group": "style",
+      "default": 22,
+      "min": 5,
+      "max": 55,
+      "step": 1,
+      "label": {
+        "en": "Shoulder slope (mm)",
+        "es": "Caída de hombro (mm)",
+        "fr": "Pente d'épaule (mm)",
+        "pt": "Queda de ombro (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder-point drop.",
+        "es": "Caída del punto de hombro.",
+        "fr": "Chute du point d'épaule.",
+        "pt": "Queda do ponto de ombro."
+      }
+    },
+    {
+      "id": "band_width",
+      "type": "slider",
+      "group": "style",
+      "default": 32,
+      "min": 18,
+      "max": 60,
+      "step": 1,
+      "label": {
+        "en": "Button band width (mm)",
+        "es": "Ancho de cartera (mm)",
+        "fr": "Largeur de patte (mm)",
+        "pt": "Largura da carcela (mm)"
+      },
+      "tooltip": {
+        "en": "Width of each front band.",
+        "es": "Ancho de cada cartera.",
+        "fr": "Largeur de chaque patte.",
+        "pt": "Largura de cada carcela."
+      }
+    },
+    {
+      "id": "collar_width",
+      "type": "slider",
+      "group": "style",
+      "default": 90,
+      "min": 50,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Shawl collar width (mm)",
+        "es": "Ancho del cuello chal (mm)",
+        "fr": "Largeur du col châle (mm)",
+        "pt": "Largura da gola xale (mm)"
+      },
+      "tooltip": {
+        "en": "Finished collar width at back.",
+        "es": "Ancho acabado del cuello en la espalda.",
+        "fr": "Largeur finie du col au dos.",
+        "pt": "Largura acabada da gola nas costas."
+      }
+    },
+    {
+      "id": "button_count",
+      "type": "slider",
+      "group": "hardware",
+      "default": 6,
+      "min": 3,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Button count",
+        "es": "Número de botones",
+        "fr": "Nombre de boutons",
+        "pt": "Número de botões"
+      },
+      "tooltip": {
+        "en": "Buttons up the front.",
+        "es": "Botones en el delantero.",
+        "fr": "Boutons sur le devant.",
+        "pt": "Botões na frente."
+      }
+    },
+    {
+      "id": "button_dia",
+      "type": "slider",
+      "group": "hardware",
+      "default": 18,
+      "min": 9,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Button diameter (mm)",
+        "es": "Diámetro de botón (mm)",
+        "fr": "Diamètre de bouton (mm)",
+        "pt": "Diâmetro de botão (mm)"
+      },
+      "tooltip": {
+        "en": "Drives the buttonhole slit and the shank-button size.",
+        "es": "Define el ojal y el tamaño del botón de pie.",
+        "fr": "Détermine la boutonnière et la taille du bouton à queue.",
+        "pt": "Define a casa e o tamanho do botão de pé."
+      }
+    },
+    {
+      "id": "cuff_ratio",
+      "type": "slider",
+      "group": "construction",
+      "default": 0.72,
+      "min": 0.5,
+      "max": 0.95,
+      "step": 0.01,
+      "label": {
+        "en": "Cuff pull-in",
+        "es": "Ceñido del puño",
+        "fr": "Serrage du poignet",
+        "pt": "Aperto do punho"
+      },
+      "tooltip": {
+        "en": "Cuff length vs sleeve opening.",
+        "es": "Largo del puño frente a la boca.",
+        "fr": "Longueur du poignet vs l'ouverture.",
+        "pt": "Comprimento do punho vs a boca."
+      }
+    },
+    {
+      "id": "hemband_ratio",
+      "type": "slider",
+      "group": "construction",
+      "default": 0.92,
+      "min": 0.72,
+      "max": 1.0,
+      "step": 0.01,
+      "label": {
+        "en": "Hem pull-in",
+        "es": "Ceñido de cenefa",
+        "fr": "Serrage du bas",
+        "pt": "Aperto da barra"
+      },
+      "tooltip": {
+        "en": "Hem band length vs body opening.",
+        "es": "Largo de cenefa frente a la boca.",
+        "fr": "Longueur de bande vs l'ouverture.",
+        "pt": "Comprimento da barra vs a boca."
+      }
+    },
+    {
+      "id": "rib_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 60,
+      "min": 30,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Rib height (mm)",
+        "es": "Alto del canalé (mm)",
+        "fr": "Hauteur des côtes (mm)",
+        "pt": "Altura do canelado (mm)"
+      },
+      "tooltip": {
+        "en": "Cuff and hem band depth.",
+        "es": "Profundidad de puños y cenefa.",
+        "fr": "Profondeur des poignets et de la bande.",
+        "pt": "Profundidade dos punhos e barra."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 6,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Added around sewn edges.",
+        "es": "Añadido alrededor de los cantos cosidos.",
+        "fr": "Ajoutée autour des bords cousus.",
+        "pt": "Adicionada em volta dos cantos costurados."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic shawl",
+        "es": "Chal clásico",
+        "fr": "Châle classique",
+        "pt": "Xale clássico"
+      },
+      "values": {
+        "knit_ease": 40,
+        "collar_width": 90,
+        "button_count": 6
+      }
+    },
+    {
+      "id": "chunky",
+      "label": {
+        "en": "Chunky wrap",
+        "es": "Envolvente grueso",
+        "fr": "Enveloppant épais",
+        "pt": "Envolvente grosso"
+      },
+      "values": {
+        "knit_ease": 140,
+        "collar_width": 140,
+        "band_width": 48
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "commons_license": "CERN-OHL-W-2.0",
+    "interfaces": [
+      {
+        "id": "neck_line",
+        "type": "custom",
+        "label": {
+          "en": "Neckline (collar roll)",
+          "es": "Escote (rodado del cuello)",
+          "fr": "Encolure (roulé du col)",
+          "pt": "Decote (rolo da gola)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "front_neck_drop",
+          "collar_width",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "front_placket",
+        "type": "custom",
+        "label": {
+          "en": "Front placket (button band)",
+          "es": "Tapeta delantera (cartera)",
+          "fr": "Patte devant (boutonnage)",
+          "pt": "Carcela frontal (botões)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "front_edge"
+          }
+        ],
+        "parameters": [
+          "band_width",
+          "button_count",
+          "button_dia"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "printed_textile": false,
+      "negative_ease_knit": true
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure shawl-collar cardigan gives home knitters a graded soft-tailored pattern with the button hardware openly specified — the shank button printable through the Yantra4D bridge rather than sourced from a factory.",
+      "es": "Un cárdigan de cuello chal abierto y a medida ofrece a quien teje en casa un patrón de sastrería blanda graduable con el herraje especificado abiertamente — el botón de pie imprimible por el puente de Yantra4D en vez de comprado a fábrica.",
+      "fr": "Un cardigan à col châle ouvert et sur mesure offre aux tricoteurs un patron de flou gradable avec la quincaillerie ouvertement spécifiée — le bouton à queue imprimable via le pont Yantra4D plutôt qu'acheté en usine.",
+      "pt": "Um cardigã de gola xale aberto e sob medida dá a quem tricota em casa um molde de alfaiataria macia graduável com a ferragem abertamente especificada — o botão de pé imprimível pela ponte Yantra4D em vez de comprado de fábrica."
+    }
+  },
+  "notion": {
+    "kind": "button",
+    "subtype": "shawl-collar cardigan shank button",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "shank-button-solid",
+      "linked": true,
+      "params_map": {
+        "diameter_mm": "button_dia",
+        "thickness": "max(3, seam_allowance)"
+      }
+    }
+  }
+}

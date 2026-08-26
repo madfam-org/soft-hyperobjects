@@ -1,0 +1,313 @@
+{
+  "project": {
+    "name": "Articulated Hinge-Collar Capelet",
+    "slug": "hinge-collar-capelet",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A short shoulder cape that stands on an articulated printed TPU hinge collar — a living-hinge band at the neck that folds crisply where a sewn collar would only crease, so the capelet stands up and turns down on a real hinge. The hinge collar is Yantra4D territory (notion.hardware_ref → tpu-hinge-collar); Fashion Cabinet owns the cape drafted as a half-annulus and the collar length derived from the neckline. FC-400 Lane 5, AM-fashion.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una esclavina corta que se sostiene sobre un cuello articulado impreso en TPU — una banda de bisagra viva en el cuello que pliega con nitidez donde un cuello cosido sólo se arrugaría, para que la esclavina se levante y se doble sobre una bisagra real. El cuello articulado es territorio de Yantra4D (notion.hardware_ref → tpu-hinge-collar); Fashion Cabinet posee la capa trazada como media corona y el largo del cuello derivado del escote. FC-400 carril 5, moda aditiva.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un capelet court qui tient sur un col articulé imprimé en TPU — une bande à charnière vivante à l'encolure qui plie net là où un col cousu ne ferait que se froisser, pour que le capelet se dresse et se rabatte sur une vraie charnière. Le col articulé relève de Yantra4D (notion.hardware_ref → tpu-hinge-collar) ; Fashion Cabinet possède la cape tracée en demi-couronne et la longueur de col dérivée de l'encolure. FC-400 voie 5, mode additive.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma capa curta que se apoia sobre uma gola articulada impressa em TPU — uma banda de dobradiça viva no pescoço que dobra com nitidez onde uma gola costurada apenas amassaria, para que a capa se levante e se dobre sobre uma dobradiça real. A gola articulada é território da Yantra4D (notion.hardware_ref → tpu-hinge-collar); a Fashion Cabinet possui a capa traçada como meia coroa e o comprimento da gola derivado do decote. FC-400 pista 5, moda aditiva.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "am_fashion",
+      "printed-textile",
+      "tpu",
+      "hinge",
+      "collar",
+      "capelet",
+      "cape"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full pattern",
+        "es": "Patrón completo",
+        "fr": "Patron complet",
+        "pt": "Molde completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "cape"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "cape",
+      "label": {
+        "en": "Capelet (half-annulus)",
+        "es": "Esclavina (media corona)",
+        "fr": "Capelet (demi-couronne)",
+        "pt": "Capa (meia coroa)"
+      },
+      "default_color": "#7d8a86",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps",
+        "pt": "Corpo"
+      }
+    },
+    {
+      "id": "panel",
+      "label": {
+        "en": "Panel",
+        "es": "Panel",
+        "fr": "Panneau",
+        "pt": "Painel"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 400,
+      "min": 300,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)",
+        "pt": "Contorno de pescoço (mm)"
+      },
+      "tooltip": {
+        "en": "Base of the neck.",
+        "es": "Base del cuello.",
+        "fr": "Base du cou.",
+        "pt": "Base do pescoço."
+      }
+    },
+    {
+      "id": "collar_ease",
+      "type": "slider",
+      "group": "body",
+      "default": 40,
+      "min": 0,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Collar ease (mm)",
+        "es": "Holgura de cuello (mm)",
+        "fr": "Aisance de col (mm)",
+        "pt": "Folga de gola (mm)"
+      },
+      "tooltip": {
+        "en": "Added to the neck opening.",
+        "es": "Añadida a la abertura del cuello.",
+        "fr": "Ajoutée à l'ouverture d'encolure.",
+        "pt": "Adicionada à abertura da gola."
+      }
+    },
+    {
+      "id": "cape_length",
+      "type": "slider",
+      "group": "body",
+      "default": 320,
+      "min": 150,
+      "max": 700,
+      "step": 10,
+      "label": {
+        "en": "Cape length (mm)",
+        "es": "Largo de la capa (mm)",
+        "fr": "Longueur de cape (mm)",
+        "pt": "Comprimento da capa (mm)"
+      },
+      "tooltip": {
+        "en": "Neck ring to hem (radial).",
+        "es": "Del aro de cuello al bajo (radial).",
+        "fr": "De l'anneau d'encolure au bas (radial).",
+        "pt": "Do anel do pescoço à barra (radial)."
+      }
+    },
+    {
+      "id": "band_h",
+      "type": "slider",
+      "group": "panel",
+      "default": 60,
+      "min": 25,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Hinge collar height (mm)",
+        "es": "Alto del cuello articulado (mm)",
+        "fr": "Hauteur du col articulé (mm)",
+        "pt": "Altura da gola articulada (mm)"
+      },
+      "tooltip": {
+        "en": "Printed collar band height.",
+        "es": "Alto de la banda del cuello impreso.",
+        "fr": "Hauteur de la bande de col imprimée.",
+        "pt": "Altura da banda da gola impressa."
+      }
+    },
+    {
+      "id": "wall",
+      "type": "slider",
+      "group": "panel",
+      "default": 1.2,
+      "min": 0.6,
+      "max": 4.0,
+      "step": 0.1,
+      "label": {
+        "en": "Wall thickness (mm)",
+        "es": "Grosor de pared (mm)",
+        "fr": "Épaisseur de paroi (mm)",
+        "pt": "Espessura de parede (mm)"
+      },
+      "tooltip": {
+        "en": "Printed wall thickness of the TPU solid.",
+        "es": "Grosor impreso de la pared del sólido TPU.",
+        "fr": "Épaisseur imprimée de la paroi du solide TPU.",
+        "pt": "Espessura impressa da parede do sólido TPU."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 25,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Added around sewn edges.",
+        "es": "Añadido alrededor de los cantos cosidos.",
+        "fr": "Ajoutée autour des bords cousus.",
+        "pt": "Adicionada em volta dos cantos costurados."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "standing",
+      "label": {
+        "en": "High standing collar",
+        "es": "Cuello alto",
+        "fr": "Col haut dressé",
+        "pt": "Gola alta em pé"
+      },
+      "values": {
+        "band_h": 120,
+        "cape_length": 260
+      }
+    },
+    {
+      "id": "long",
+      "label": {
+        "en": "Long cape",
+        "es": "Capa larga",
+        "fr": "Cape longue",
+        "pt": "Capa longa"
+      },
+      "values": {
+        "cape_length": 520
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "commons_license": "CERN-OHL-W-2.0",
+    "interfaces": [
+      {
+        "id": "neck_seam",
+        "type": "custom",
+        "label": {
+          "en": "Neck seam (collar)",
+          "es": "Costura del cuello",
+          "fr": "Couture d'encolure",
+          "pt": "Costura da gola"
+        },
+        "edges": [
+          {
+            "piece": "cape",
+            "edge": "guide"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "collar_ease",
+          "band_h",
+          "wall",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "printed_textile": true,
+      "am_fashion": true
+    },
+    "societal_benefit": {
+      "en": "A printable hinge collar gives a capelet a crisp, articulated stand no sewn collar can hold — an open, made-to-measure part that folds on a real hinge, closing the loop from a fabric card to a printable solid.",
+      "es": "Un cuello articulado imprimible da a una esclavina un pie nítido y articulado que ningún cuello cosido puede sostener — una pieza abierta y a medida que pliega sobre una bisagra real, cerrando el círculo de una ficha de tela a un sólido imprimible.",
+      "fr": "Un col à charnière imprimable donne à un capelet un maintien net et articulé qu'aucun col cousu ne peut tenir — une pièce ouverte et sur mesure qui plie sur une vraie charnière, bouclant la boucle d'une fiche de tissu à un solide imprimable.",
+      "pt": "Uma gola de dobradiça imprimível dá a uma capa um pé nítido e articulado que nenhuma gola costurada consegue sustentar — uma peça aberta e sob medida que dobra sobre uma dobradiça real, fechando o ciclo de uma ficha de tecido a um sólido imprimível."
+    }
+  },
+  "notion": {
+    "kind": "custom",
+    "subtype": "printed hinge collar capelet",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "tpu-hinge-collar",
+      "linked": true,
+      "params_map": {
+        "collar_len": "neck_girth + collar_ease",
+        "band_h": "band_h",
+        "wall": "wall"
+      }
+    }
+  }
+}

@@ -1,0 +1,341 @@
+{
+  "project": {
+    "name": "Cloche Hat",
+    "slug": "cloche-hat",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The 1920s cloche: a deep bell crown that hugs the head down to the brow, with a small downturned brim. Drafted in three pieces — a circular tip, a side-crown band that gives the bell its depth, and an annular brim — each ring solved on the corrected polygon radius so perimeters equal circumferences. Sizing clips into a Yantra4D hat-size-reducer. FC-400 Lane 6, millinery.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El cloché de los años veinte: una copa profunda en campana que abraza la cabeza hasta la frente, con una pequeña ala hacia abajo. Trazado en tres piezas — un plato circular, una banda de copa lateral que da la profundidad de la campana y un ala anular — con cada aro resuelto sobre el radio poligonal corregido para que los perímetros igualen las circunferencias. La talla se ajusta con un hat-size-reducer de Yantra4D. FC-400 carril 6, sombrerería.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La cloche des années vingt : une calotte profonde en cloche qui épouse la tête jusqu'au front, avec un petit bord rabattu. Tracée en trois pièces — un plateau circulaire, une bande de calotte latérale qui donne la profondeur de la cloche et un bord annulaire — chaque anneau résolu sur le rayon polygonal corrigé pour que les périmètres égalent les circonférences. La taille se règle avec un hat-size-reducer Yantra4D. FC-400 voie 6, chapellerie.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A cloche dos anos vinte: uma copa profunda em sino que abraça a cabeça até a testa, com uma pequena aba virada para baixo. Traçada em três peças — um plateau circular, uma banda de copa lateral que dá a profundidade do sino e uma aba anular — cada anel resolvido sobre o raio poligonal corrigido para que os perímetros igualem as circunferências. O tamanho ajusta-se com um hat-size-reducer da Yantra4D. FC-400 pista 6, chapelaria.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "millinery",
+      "cloche",
+      "hat",
+      "felt",
+      "brim"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full pattern",
+        "es": "Patrón completo",
+        "fr": "Patron complet",
+        "pt": "Molde completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "tip",
+        "band",
+        "brim"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "tip",
+      "label": {
+        "en": "Tip (crown top)",
+        "es": "Plato (copa superior)",
+        "fr": "Plateau (dessus)",
+        "pt": "Plateau (topo)"
+      },
+      "default_color": "#6a5f4e",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "band",
+      "label": {
+        "en": "Side crown band",
+        "es": "Banda de copa",
+        "fr": "Bande de calotte",
+        "pt": "Banda de copa"
+      },
+      "default_color": "#5a5040",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "brim",
+      "label": {
+        "en": "Brim (annulus)",
+        "es": "Ala (corona)",
+        "fr": "Bord (couronne)",
+        "pt": "Aba (coroa)"
+      },
+      "default_color": "#494032",
+      "cut": {
+        "quantity": 2,
+        "on_fold": true,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps",
+        "pt": "Corpo"
+      }
+    },
+    {
+      "id": "style",
+      "label": {
+        "en": "Style",
+        "es": "Estilo",
+        "fr": "Style",
+        "pt": "Estilo"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "head_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 570,
+      "min": 480,
+      "max": 640,
+      "step": 5,
+      "label": {
+        "en": "Head girth (mm)",
+        "es": "Contorno de cabeza (mm)",
+        "fr": "Tour de tête (mm)",
+        "pt": "Contorno de cabeça (mm)"
+      },
+      "tooltip": {
+        "en": "Around the head at the band.",
+        "es": "Alrededor de la cabeza en la banda.",
+        "fr": "Autour de la tête au bandeau.",
+        "pt": "Ao redor da cabeça na carneira."
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "group": "body",
+      "default": 8,
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Head ease (mm)",
+        "es": "Holgura de cabeza (mm)",
+        "fr": "Aisance de tête (mm)",
+        "pt": "Folga de cabeça (mm)"
+      },
+      "tooltip": {
+        "en": "Added to the head opening.",
+        "es": "Añadida a la abertura de cabeza.",
+        "fr": "Ajoutée à l'ouverture de tête.",
+        "pt": "Adicionada à abertura da cabeça."
+      }
+    },
+    {
+      "id": "crown_depth",
+      "type": "slider",
+      "group": "style",
+      "default": 150,
+      "min": 60,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Crown depth (mm)",
+        "es": "Profundidad de copa (mm)",
+        "fr": "Profondeur de calotte (mm)",
+        "pt": "Profundidade de copa (mm)"
+      },
+      "tooltip": {
+        "en": "How deep the bell sits.",
+        "es": "Cuán profunda es la campana.",
+        "fr": "Profondeur de la cloche.",
+        "pt": "Profundidade do sino."
+      }
+    },
+    {
+      "id": "tip_dome",
+      "type": "slider",
+      "group": "style",
+      "default": 30,
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Tip dome (mm)",
+        "es": "Domo del plato (mm)",
+        "fr": "Dôme du plateau (mm)",
+        "pt": "Domo do plateau (mm)"
+      },
+      "tooltip": {
+        "en": "How much the tip is smaller than the head.",
+        "es": "Cuánto es el plato menor que la cabeza.",
+        "fr": "Rétrécissement du plateau vs la tête.",
+        "pt": "Quanto o plateau é menor que a cabeça."
+      }
+    },
+    {
+      "id": "brim_width",
+      "type": "slider",
+      "group": "style",
+      "default": 55,
+      "min": 15,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Brim width (mm)",
+        "es": "Ancho del ala (mm)",
+        "fr": "Largeur du bord (mm)",
+        "pt": "Largura da aba (mm)"
+      },
+      "tooltip": {
+        "en": "Radial brim width.",
+        "es": "Ancho radial del ala.",
+        "fr": "Largeur radiale du bord.",
+        "pt": "Largura radial da aba."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Added around sewn edges.",
+        "es": "Añadido alrededor de los cantos cosidos.",
+        "fr": "Ajoutée autour des bords cousus.",
+        "pt": "Adicionada em volta dos cantos costurados."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic cloche",
+        "es": "Cloché clásico",
+        "fr": "Cloche classique",
+        "pt": "Cloche clássica"
+      },
+      "values": {
+        "crown_depth": 150,
+        "brim_width": 55
+      }
+    },
+    {
+      "id": "deep",
+      "label": {
+        "en": "Deep bell",
+        "es": "Campana profunda",
+        "fr": "Cloche profonde",
+        "pt": "Sino profundo"
+      },
+      "values": {
+        "crown_depth": 220,
+        "brim_width": 40
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "commons_license": "CERN-OHL-W-2.0",
+    "interfaces": [
+      {
+        "id": "head_opening",
+        "type": "custom",
+        "label": {
+          "en": "Head opening (crown band)",
+          "es": "Abertura de cabeza (banda de copa)",
+          "fr": "Ouverture de tête (bande de calotte)",
+          "pt": "Abertura da cabeça (banda de copa)"
+        },
+        "edges": [
+          {
+            "piece": "band",
+            "edge": "bottom"
+          }
+        ],
+        "parameters": [
+          "head_girth",
+          "ease",
+          "crown_depth",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "printed_textile": false
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure cloche brings a heritage silhouette back as a blockable felt pattern sized to the head — the size adjustment a printable Yantra4D part rather than a factory-fit sweatband.",
+      "es": "Un cloché abierto y a medida trae de vuelta una silueta patrimonial como patrón de fieltro blocable ajustado a la cabeza — el ajuste de talla una pieza imprimible de Yantra4D en vez de una badana de fábrica.",
+      "fr": "Une cloche ouverte et sur mesure ramène une silhouette patrimoniale en patron de feutre formable ajusté à la tête — le réglage de taille une pièce imprimable Yantra4D plutôt qu'un cuir de coiffe d'usine.",
+      "pt": "Uma cloche aberta e sob medida traz de volta uma silhueta patrimonial como molde de feltro moldável ajustado à cabeça — o ajuste de tamanho uma peça imprimível da Yantra4D em vez de uma carneira de fábrica."
+    }
+  },
+  "notion": {
+    "kind": "custom",
+    "subtype": "cloche crown size reducer",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "hat-size-reducer",
+      "linked": true,
+      "params_map": {
+        "head_circ": "head_girth + ease",
+        "strip_length": "head_girth + ease"
+      }
+    }
+  }
+}

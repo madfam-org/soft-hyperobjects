@@ -1,0 +1,409 @@
+{
+  "project": {
+    "name": "Printed Lattice Corset",
+    "slug": "lattice-corset",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A corset built from printed TPU lattice panels — an open tile-and-bridge lattice rigid enough to shape the waist yet flexing at the bridges to breathe, printed instead of boned. The lattice is Yantra4D territory (notion.hardware_ref → tpu-lattice-panel); Fashion Cabinet owns the hourglass panel and the lattice field derived from it. FC-400 Lane 5, AM-fashion.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un corsé construido con paneles impresos de celosía en TPU — una celosía abierta de teselas y puentes, lo bastante rígida para moldear la cintura y flexible en los puentes para respirar, impresa en vez de ballenada. La celosía es territorio de Yantra4D (notion.hardware_ref → tpu-lattice-panel); Fashion Cabinet posee el panel de reloj de arena y el campo de celosía derivado de él. FC-400 carril 5, moda aditiva.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un corset construit en panneaux ajourés imprimés en TPU — un treillis ouvert de tuiles et de ponts, assez rigide pour modeler la taille et flexible aux ponts pour respirer, imprimé plutôt que baleiné. Le treillis relève de Yantra4D (notion.hardware_ref → tpu-lattice-panel) ; Fashion Cabinet possède le panneau en sablier et le champ de treillis qui en dérive. FC-400 voie 5, mode additive.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um espartilho construído com painéis vazados impressos em TPU — uma treliça aberta de ladrilhos e pontes, rígida o bastante para modelar a cintura e flexível nas pontes para respirar, impressa em vez de barbatanada. A treliça é território da Yantra4D (notion.hardware_ref → tpu-lattice-panel); a Fashion Cabinet possui o painel ampulheta e o campo de treliça derivado dele. FC-400 pista 5, moda aditiva.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "am_fashion",
+      "printed-textile",
+      "tpu",
+      "lattice",
+      "corset"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full pattern",
+        "es": "Patrón completo",
+        "fr": "Patron complet",
+        "pt": "Molde completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "placement-guide"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Lattice corset guide",
+        "es": "Guía de corsé de celosía",
+        "fr": "Guide de corset ajouré",
+        "pt": "Guia de espartilho vazado"
+      },
+      "default_color": "#857f77",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps",
+        "pt": "Corpo"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Coupe",
+        "pt": "Caimento"
+      }
+    },
+    {
+      "id": "panel",
+      "label": {
+        "en": "Panel",
+        "es": "Panel",
+        "fr": "Panneau",
+        "pt": "Painel"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 900,
+      "min": 600,
+      "max": 1500,
+      "step": 10,
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de busto (mm)"
+      },
+      "tooltip": {
+        "en": "Full bust circumference.",
+        "es": "Circunferencia completa del busto.",
+        "fr": "Circonférence complète de la poitrine.",
+        "pt": "Circunferência total do busto."
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 720,
+      "min": 500,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)",
+        "pt": "Contorno de cintura (mm)"
+      },
+      "tooltip": {
+        "en": "Full waist circumference.",
+        "es": "Circunferencia completa de la cintura.",
+        "fr": "Circonférence complète de la taille.",
+        "pt": "Circunferência total da cintura."
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 960,
+      "min": 600,
+      "max": 1500,
+      "step": 10,
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)",
+        "pt": "Contorno de quadril (mm)"
+      },
+      "tooltip": {
+        "en": "Full hip circumference.",
+        "es": "Circunferencia completa de la cadera.",
+        "fr": "Circonférence complète des hanches.",
+        "pt": "Circunferência total do quadril."
+      }
+    },
+    {
+      "id": "torso_length",
+      "type": "slider",
+      "group": "body",
+      "default": 340,
+      "min": 180,
+      "max": 520,
+      "step": 5,
+      "label": {
+        "en": "Torso length (mm)",
+        "es": "Largo del torso (mm)",
+        "fr": "Longueur du torse (mm)",
+        "pt": "Comprimento do torso (mm)"
+      },
+      "tooltip": {
+        "en": "Under-bust to hip.",
+        "es": "Del bajo busto a la cadera.",
+        "fr": "Du dessous de poitrine à la hanche.",
+        "pt": "Do sob-busto ao quadril."
+      }
+    },
+    {
+      "id": "waist_position",
+      "type": "slider",
+      "group": "fit",
+      "default": 0.5,
+      "min": 0.25,
+      "max": 0.75,
+      "step": 0.05,
+      "label": {
+        "en": "Waist position",
+        "es": "Posición de cintura",
+        "fr": "Position de taille",
+        "pt": "Posição da cintura"
+      },
+      "tooltip": {
+        "en": "Waist level as a fraction of length.",
+        "es": "Nivel de cintura como fracción del largo.",
+        "fr": "Niveau de taille en fraction de la longueur.",
+        "pt": "Nível da cintura como fração do comprimento."
+      }
+    },
+    {
+      "id": "cinch",
+      "type": "slider",
+      "group": "fit",
+      "default": 60,
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Waist cinch (mm)",
+        "es": "Ceñido de cintura (mm)",
+        "fr": "Serrage de taille (mm)",
+        "pt": "Aperto de cintura (mm)"
+      },
+      "tooltip": {
+        "en": "Extra waist reduction.",
+        "es": "Reducción extra de la cintura.",
+        "fr": "Réduction supplémentaire de taille.",
+        "pt": "Redução extra da cintura."
+      }
+    },
+    {
+      "id": "tile_size",
+      "type": "slider",
+      "group": "panel",
+      "default": 22,
+      "min": 10,
+      "max": 70,
+      "step": 1,
+      "label": {
+        "en": "Tile size (mm)",
+        "es": "Tamaño de tesela (mm)",
+        "fr": "Taille de tuile (mm)",
+        "pt": "Tamanho do ladrilho (mm)"
+      },
+      "tooltip": {
+        "en": "One lattice tile.",
+        "es": "Una tesela de celosía.",
+        "fr": "Une tuile du treillis.",
+        "pt": "Um ladrilho da treliça."
+      }
+    },
+    {
+      "id": "tile_gap",
+      "type": "slider",
+      "group": "panel",
+      "default": 7,
+      "min": 2,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Bridge gap (mm)",
+        "es": "Separación de puentes (mm)",
+        "fr": "Écart des ponts (mm)",
+        "pt": "Folga das pontes (mm)"
+      },
+      "tooltip": {
+        "en": "Gap bridged between tiles.",
+        "es": "Separación entre teselas.",
+        "fr": "Écart pontant entre tuiles.",
+        "pt": "Folga entre ladrilhos."
+      }
+    },
+    {
+      "id": "wall",
+      "type": "slider",
+      "group": "panel",
+      "default": 1.6,
+      "min": 0.6,
+      "max": 4.0,
+      "step": 0.1,
+      "label": {
+        "en": "Wall thickness (mm)",
+        "es": "Grosor de pared (mm)",
+        "fr": "Épaisseur de paroi (mm)",
+        "pt": "Espessura de parede (mm)"
+      },
+      "tooltip": {
+        "en": "Printed wall thickness of the TPU solid.",
+        "es": "Grosor impreso de la pared del sólido TPU.",
+        "fr": "Épaisseur imprimée de la paroi du solide TPU.",
+        "pt": "Espessura impressa da parede do sólido TPU."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 0,
+      "max": 25,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Added around sewn edges.",
+        "es": "Añadido alrededor de los cantos cosidos.",
+        "fr": "Ajoutée autour des bords cousus.",
+        "pt": "Adicionada em volta dos cantos costurados."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "cinched",
+      "label": {
+        "en": "Waist cincher",
+        "es": "Ceñidor de cintura",
+        "fr": "Cintreur de taille",
+        "pt": "Cinta de cintura"
+      },
+      "values": {
+        "cinch": 120,
+        "tile_size": 20
+      }
+    },
+    {
+      "id": "open",
+      "label": {
+        "en": "Open lattice",
+        "es": "Celosía abierta",
+        "fr": "Treillis ouvert",
+        "pt": "Treliça aberta"
+      },
+      "values": {
+        "tile_size": 34,
+        "tile_gap": 12
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "commons_license": "CERN-OHL-W-2.0",
+    "interfaces": [
+      {
+        "id": "panel_edge",
+        "type": "side_seam",
+        "label": {
+          "en": "Sewable corset edge",
+          "es": "Canto cosible del corsé",
+          "fr": "Bord à coudre du corset",
+          "pt": "Canto costurável do espartilho"
+        },
+        "edges": [
+          {
+            "piece": "placement-guide",
+            "edge": "guide"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "waist_girth",
+          "hip_girth",
+          "cinch",
+          "torso_length",
+          "tile_size",
+          "tile_gap",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "printed_textile": true,
+      "am_fashion": true
+    },
+    "societal_benefit": {
+      "en": "A printable lattice corset shapes the waist without whalebone or steel — an open, made-to-measure part rigid where it must be and breathing at the bridges, closing the loop from a fabric card to a printable solid.",
+      "es": "Un corsé de celosía imprimible moldea la cintura sin ballena ni acero — una pieza abierta y a medida rígida donde debe y que respira en los puentes, cerrando el círculo de una ficha de tela a un sólido imprimible.",
+      "fr": "Un corset ajouré imprimable modèle la taille sans baleine ni acier — une pièce ouverte et sur mesure rigide où il le faut et respirant aux ponts, bouclant la boucle d'une fiche de tissu à un solide imprimable.",
+      "pt": "Um espartilho vazado imprimível modela a cintura sem barbatana ou aço — uma peça aberta e sob medida rígida onde precisa e que respira nas pontes, fechando o ciclo de uma ficha de tecido a um sólido imprimível."
+    }
+  },
+  "notion": {
+    "kind": "custom",
+    "subtype": "printed lattice corset",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "tpu-lattice-panel",
+      "linked": true,
+      "params_map": {
+        "tile": "tile_size",
+        "gap": "tile_gap",
+        "cols": "round((bust_girth / 4 + (waist_girth / 4 - cinch / 2) + hip_girth / 4) / 3 / (tile_size + tile_gap))",
+        "rows": "round(torso_length / (tile_size + tile_gap))"
+      }
+    }
+  }
+}

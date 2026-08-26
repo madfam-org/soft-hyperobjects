@@ -1,0 +1,332 @@
+{
+  "project": {
+    "name": "Printed Flexure-Cuff Glove",
+    "slug": "flexure-cuff-glove",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A glove whose wrist is a printed TPU flexure cuff — a slotted living-hinge band that flexes with the wrist and springs back, printed rather than elasticated. The flexure cuff is Yantra4D territory (notion.hardware_ref → tpu-flexure-cuff); Fashion Cabinet owns the glove-back panel and the cuff circumference derived from the wrist girth so the printed cuff matches the sewn opening. FC-400 Lane 5, AM-fashion.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un guante cuyo puño es un puño flexible impreso en TPU — una banda de bisagra viva ranurada que flexiona con la muñeca y recupera, impresa en vez de elastizada. El puño flexible es territorio de Yantra4D (notion.hardware_ref → tpu-flexure-cuff); Fashion Cabinet posee el panel del dorso del guante y el contorno del puño derivado del contorno de muñeca para que el puño impreso iguale la abertura cosida. FC-400 carril 5, moda aditiva.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un gant dont le poignet est un poignet flexible imprimé en TPU — une bande à charnière vivante fendue qui fléchit avec le poignet et revient, imprimée plutôt qu'élastiquée. Le poignet flexible relève de Yantra4D (notion.hardware_ref → tpu-flexure-cuff) ; Fashion Cabinet possède le panneau de dos de gant et la circonférence du poignet dérivée du tour de poignet pour que le poignet imprimé corresponde à l'ouverture cousue. FC-400 voie 5, mode additive.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma luva cujo punho é um punho flexível impresso em TPU — uma banda de dobradiça viva ranhurada que flexiona com o pulso e retorna, impressa em vez de elastizada. O punho flexível é território da Yantra4D (notion.hardware_ref → tpu-flexure-cuff); a Fashion Cabinet possui o painel do dorso da luva e o contorno do punho derivado do contorno de pulso para que o punho impresso iguale a abertura costurada. FC-400 pista 5, moda aditiva.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "am_fashion",
+      "printed-textile",
+      "tpu",
+      "flexure",
+      "cuff",
+      "glove"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full pattern",
+        "es": "Patrón completo",
+        "fr": "Patron complet",
+        "pt": "Molde completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "placement-guide"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Flexure-cuff glove guide",
+        "es": "Guía de guante de puño flexible",
+        "fr": "Guide de gant à poignet flexible",
+        "pt": "Guia de luva de punho flexível"
+      },
+      "default_color": "#83898f",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps",
+        "pt": "Corpo"
+      }
+    },
+    {
+      "id": "panel",
+      "label": {
+        "en": "Panel",
+        "es": "Panel",
+        "fr": "Panneau",
+        "pt": "Painel"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "hand_length",
+      "type": "slider",
+      "group": "body",
+      "default": 190,
+      "min": 120,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Hand length (mm)",
+        "es": "Largo de mano (mm)",
+        "fr": "Longueur de main (mm)",
+        "pt": "Comprimento da mão (mm)"
+      },
+      "tooltip": {
+        "en": "Wrist to fingertip.",
+        "es": "De la muñeca a la punta del dedo.",
+        "fr": "Du poignet au bout du doigt.",
+        "pt": "Do pulso à ponta do dedo."
+      }
+    },
+    {
+      "id": "hand_width",
+      "type": "slider",
+      "group": "body",
+      "default": 100,
+      "min": 70,
+      "max": 150,
+      "step": 5,
+      "label": {
+        "en": "Hand width (mm)",
+        "es": "Ancho de mano (mm)",
+        "fr": "Largeur de main (mm)",
+        "pt": "Largura da mão (mm)"
+      },
+      "tooltip": {
+        "en": "Across the knuckles.",
+        "es": "A través de los nudillos.",
+        "fr": "À travers les jointures.",
+        "pt": "Através dos nós dos dedos."
+      }
+    },
+    {
+      "id": "wrist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 170,
+      "min": 120,
+      "max": 240,
+      "step": 5,
+      "label": {
+        "en": "Wrist girth (mm)",
+        "es": "Contorno de muñeca (mm)",
+        "fr": "Tour de poignet (mm)",
+        "pt": "Contorno de pulso (mm)"
+      },
+      "tooltip": {
+        "en": "Around the wrist.",
+        "es": "Alrededor de la muñeca.",
+        "fr": "Autour du poignet.",
+        "pt": "Ao redor do pulso."
+      }
+    },
+    {
+      "id": "cuff_ease",
+      "type": "slider",
+      "group": "fit",
+      "default": 20,
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "label": {
+        "en": "Cuff ease (mm)",
+        "es": "Holgura del puño (mm)",
+        "fr": "Aisance du poignet (mm)",
+        "pt": "Folga do punho (mm)"
+      },
+      "tooltip": {
+        "en": "Added to the wrist opening.",
+        "es": "Añadida a la abertura de la muñeca.",
+        "fr": "Ajoutée à l'ouverture du poignet.",
+        "pt": "Adicionada à abertura do pulso."
+      }
+    },
+    {
+      "id": "cuff_height",
+      "type": "slider",
+      "group": "panel",
+      "default": 70,
+      "min": 30,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Cuff height (mm)",
+        "es": "Alto del puño (mm)",
+        "fr": "Hauteur du poignet (mm)",
+        "pt": "Altura do punho (mm)"
+      },
+      "tooltip": {
+        "en": "Printed cuff height.",
+        "es": "Alto del puño impreso.",
+        "fr": "Hauteur du poignet imprimé.",
+        "pt": "Altura do punho impresso."
+      }
+    },
+    {
+      "id": "wall",
+      "type": "slider",
+      "group": "panel",
+      "default": 1.0,
+      "min": 0.5,
+      "max": 3.0,
+      "step": 0.1,
+      "label": {
+        "en": "Wall thickness (mm)",
+        "es": "Grosor de pared (mm)",
+        "fr": "Épaisseur de paroi (mm)",
+        "pt": "Espessura de parede (mm)"
+      },
+      "tooltip": {
+        "en": "Printed wall thickness of the TPU solid.",
+        "es": "Grosor impreso de la pared del sólido TPU.",
+        "fr": "Épaisseur imprimée de la paroi du solide TPU.",
+        "pt": "Espessura impressa da parede do sólido TPU."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Added around sewn edges.",
+        "es": "Añadido alrededor de los cantos cosidos.",
+        "fr": "Ajoutée autour des bords cousus.",
+        "pt": "Adicionada em volta dos cantos costurados."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "gauntlet",
+      "label": {
+        "en": "Long gauntlet",
+        "es": "Manopla larga",
+        "fr": "Long crispin",
+        "pt": "Manopla longa"
+      },
+      "values": {
+        "cuff_height": 150
+      }
+    },
+    {
+      "id": "snug",
+      "label": {
+        "en": "Snug cuff",
+        "es": "Puño ceñido",
+        "fr": "Poignet ajusté",
+        "pt": "Punho justo"
+      },
+      "values": {
+        "cuff_ease": 0
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "commons_license": "CERN-OHL-W-2.0",
+    "interfaces": [
+      {
+        "id": "wrist_seam",
+        "type": "cuff",
+        "label": {
+          "en": "Wrist seam (cuff)",
+          "es": "Costura de muñeca (puño)",
+          "fr": "Couture de poignet",
+          "pt": "Costura de pulso (punho)"
+        },
+        "edges": [
+          {
+            "piece": "placement-guide",
+            "edge": "guide"
+          }
+        ],
+        "parameters": [
+          "wrist_girth",
+          "cuff_ease",
+          "cuff_height",
+          "wall",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "printed_textile": true,
+      "am_fashion": true
+    },
+    "societal_benefit": {
+      "en": "A printable flexure cuff gives a glove a wrist that flexes and recovers without elastic — an open, made-to-measure part sized to the wearer's wrist, closing the loop from a fabric card to a printable solid.",
+      "es": "Un puño flexible imprimible da a un guante una muñeca que flexiona y recupera sin elástico — una pieza abierta y a medida ajustada a la muñeca de quien lo lleva, cerrando el círculo de una ficha de tela a un sólido imprimible.",
+      "fr": "Un poignet flexible imprimable donne à un gant un poignet qui fléchit et revient sans élastique — une pièce ouverte et sur mesure ajustée au poignet du porteur, bouclant la boucle d'une fiche de tissu à un solide imprimable.",
+      "pt": "Um punho flexível imprimível dá a uma luva um pulso que flexiona e retorna sem elástico — uma peça aberta e sob medida ajustada ao pulso de quem a usa, fechando o ciclo de uma ficha de tecido a um sólido imprimível."
+    }
+  },
+  "notion": {
+    "kind": "custom",
+    "subtype": "printed flexure cuff glove",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "tpu-flexure-cuff",
+      "linked": true,
+      "params_map": {
+        "cuff_circum": "wrist_girth + cuff_ease",
+        "cuff_height": "cuff_height",
+        "wall": "wall"
+      }
+    }
+  }
+}

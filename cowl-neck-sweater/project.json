@@ -1,0 +1,584 @@
+{
+  "project": {
+    "name": "Cowl-Neck Sweater",
+    "slug": "cowl-neck-sweater",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A drop-shoulder pullover whose feature is a deep draped cowl: a wide, soft tube much longer than the neckline it sews to, falling in folds at the front. The cowl is drafted as a trapezoid whose lower (sewn) edge equals the neckline run exactly and whose flared top folds into the drape. Signed negative knit ease. FC-400 Lane 4, knitwear. No closure.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un suéter de hombro caído cuya seña es un amplio cuello vuelto drapeado: un tubo suave mucho más largo que el escote al que se cose, que cae en pliegues al frente. El cuello se traza como trapecio cuyo canto inferior (cosido) iguala exactamente el contorno del escote y cuyo remate acampanado se pliega en el drapeado. Holgura de punto negativa con signo. FC-400 carril 4, punto. Sin cierre.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un pull à épaule tombante dont la signature est un large col bénitier drapé : un tube souple bien plus long que l'encolure sur laquelle il se coud, retombant en plis sur le devant. Le col est tracé en trapèze dont le bord inférieur (cousu) égale exactement le tour d'encolure et dont le haut évasé se plie dans le drapé. Aisance de maille négative signée. FC-400 voie 4, maille. Sans fermeture.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um suéter de ombro caído cuja marca é uma gola boba drapeada e profunda: um tubo macio bem mais longo que o decote onde é costurado, caindo em pregas na frente. A gola é traçada como trapézio cujo canto inferior (costurado) iguala exatamente o contorno do decote e cujo topo evasê se dobra no drapeado. Folga de tricô negativa com sinal. FC-400 pista 4, tricô. Sem fecho.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "knitwear",
+      "sweater",
+      "cowl",
+      "drape"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full pattern",
+        "es": "Patrón completo",
+        "fr": "Patron complet",
+        "pt": "Molde completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "cowl",
+        "cuff",
+        "hem_band"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (cut on fold)",
+        "es": "Delantero (al doblez)",
+        "fr": "Devant (au pli)",
+        "pt": "Frente (na dobra)"
+      },
+      "default_color": "#7d8a99",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (cut on fold)",
+        "es": "Espalda (al doblez)",
+        "fr": "Dos (au pli)",
+        "pt": "Costas (na dobra)"
+      },
+      "default_color": "#63707e",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve (drop-shoulder)",
+        "es": "Manga (hombro caído)",
+        "fr": "Manche (épaule tombante)",
+        "pt": "Manga (ombro caído)"
+      },
+      "default_color": "#93a0ad",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "cowl",
+      "label": {
+        "en": "Cowl collar",
+        "es": "Cuello vuelto amplio",
+        "fr": "Col bénitier",
+        "pt": "Gola boba"
+      },
+      "default_color": "#8593a2",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Cuff (rib)",
+        "es": "Puño (canalé)",
+        "fr": "Poignet (côtes)",
+        "pt": "Punho (canelado)"
+      },
+      "default_color": "#3d4753",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "hem_band",
+      "label": {
+        "en": "Hem Band (rib)",
+        "es": "Cenefa (canalé)",
+        "fr": "Bande de bas (côtes)",
+        "pt": "Barra (canelado)"
+      },
+      "default_color": "#3d4753",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps",
+        "pt": "Corpo"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Coupe",
+        "pt": "Caimento"
+      }
+    },
+    {
+      "id": "style",
+      "label": {
+        "en": "Style",
+        "es": "Estilo",
+        "fr": "Style",
+        "pt": "Estilo"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 980,
+      "min": 700,
+      "max": 1900,
+      "step": 10,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de peito (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest circumference.",
+        "es": "Circunferencia completa del pecho.",
+        "fr": "Circonférence complète de la poitrine.",
+        "pt": "Circunferência total do peito."
+      }
+    },
+    {
+      "id": "body_length",
+      "type": "slider",
+      "group": "body",
+      "default": 640,
+      "min": 440,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Body length (mm)",
+        "es": "Largo del cuerpo (mm)",
+        "fr": "Longueur du corps (mm)",
+        "pt": "Comprimento do corpo (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to hem seam.",
+        "es": "De la nuca a la costura del bajo.",
+        "fr": "De la nuque à la couture du bas.",
+        "pt": "Da nuca à costura da barra."
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 400,
+      "min": 300,
+      "max": 540,
+      "step": 10,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)",
+        "pt": "Contorno de pescoço (mm)"
+      },
+      "tooltip": {
+        "en": "Base of the neck.",
+        "es": "Base del cuello.",
+        "fr": "Base du cou.",
+        "pt": "Base do pescoço."
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "body",
+      "default": 600,
+      "min": 320,
+      "max": 780,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)",
+        "pt": "Comprimento de manga (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to cuff seam.",
+        "es": "Del hombro a la costura del puño.",
+        "fr": "De l'épaule à la couture du poignet.",
+        "pt": "Do ombro à costura do punho."
+      }
+    },
+    {
+      "id": "knit_ease",
+      "type": "slider",
+      "group": "fit",
+      "default": -20,
+      "min": -140,
+      "max": 160,
+      "step": 10,
+      "label": {
+        "en": "Knit ease (mm, signed)",
+        "es": "Holgura de punto (mm, con signo)",
+        "fr": "Aisance maille (mm, signée)",
+        "pt": "Folga de tricô (mm, com sinal)"
+      },
+      "tooltip": {
+        "en": "Signed; negative = draft smaller than body, stretches on.",
+        "es": "Con signo; negativa = trazo menor que el cuerpo, se estira.",
+        "fr": "Signée ; négative = tracé plus petit que le corps, s'étire.",
+        "pt": "Com sinal; negativa = traçado menor que o corpo, estica."
+      }
+    },
+    {
+      "id": "armhole_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 250,
+      "min": 170,
+      "max": 380,
+      "step": 5,
+      "label": {
+        "en": "Armhole depth (mm)",
+        "es": "Profundidad de sisa (mm)",
+        "fr": "Profondeur d'emmanchure (mm)",
+        "pt": "Profundidade de cava (mm)"
+      },
+      "tooltip": {
+        "en": "Drop-shoulder armhole depth.",
+        "es": "Profundidad de la sisa de hombro caído.",
+        "fr": "Profondeur de l'emmanchure tombante.",
+        "pt": "Profundidade da cava de ombro caído."
+      }
+    },
+    {
+      "id": "front_neck_drop",
+      "type": "slider",
+      "group": "style",
+      "default": 60,
+      "min": 30,
+      "max": 170,
+      "step": 5,
+      "label": {
+        "en": "Front neck drop (mm)",
+        "es": "Escote delantero (mm)",
+        "fr": "Encolure devant (mm)",
+        "pt": "Decote frontal (mm)"
+      },
+      "tooltip": {
+        "en": "How far the front neckline scoops.",
+        "es": "Cuánto baja el escote delantero.",
+        "fr": "Profondeur de l'encolure devant.",
+        "pt": "Quanto o decote frontal desce."
+      }
+    },
+    {
+      "id": "shoulder_slope",
+      "type": "slider",
+      "group": "style",
+      "default": 22,
+      "min": 5,
+      "max": 55,
+      "step": 1,
+      "label": {
+        "en": "Shoulder slope (mm)",
+        "es": "Caída de hombro (mm)",
+        "fr": "Pente d'épaule (mm)",
+        "pt": "Queda de ombro (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder-point drop.",
+        "es": "Caída del punto de hombro.",
+        "fr": "Chute du point d'épaule.",
+        "pt": "Queda do ponto de ombro."
+      }
+    },
+    {
+      "id": "cowl_drop",
+      "type": "slider",
+      "group": "style",
+      "default": 220,
+      "min": 90,
+      "max": 400,
+      "step": 5,
+      "label": {
+        "en": "Cowl drop (mm)",
+        "es": "Caída del cuello (mm)",
+        "fr": "Retombée du col (mm)",
+        "pt": "Queda da gola (mm)"
+      },
+      "tooltip": {
+        "en": "How deep the cowl falls.",
+        "es": "Cuán profundo cae el cuello.",
+        "fr": "Profondeur de la retombée.",
+        "pt": "Profundidade da queda da gola."
+      }
+    },
+    {
+      "id": "cowl_flare",
+      "type": "slider",
+      "group": "style",
+      "default": 1.6,
+      "min": 1.0,
+      "max": 3.0,
+      "step": 0.1,
+      "label": {
+        "en": "Cowl flare",
+        "es": "Vuelo del cuello",
+        "fr": "Ampleur du col",
+        "pt": "Amplitude da gola"
+      },
+      "tooltip": {
+        "en": "Top width as a multiple of the neckline.",
+        "es": "Ancho superior como múltiplo del escote.",
+        "fr": "Largeur haute en multiple de l'encolure.",
+        "pt": "Largura superior como múltiplo do decote."
+      }
+    },
+    {
+      "id": "cuff_ratio",
+      "type": "slider",
+      "group": "construction",
+      "default": 0.66,
+      "min": 0.5,
+      "max": 0.95,
+      "step": 0.01,
+      "label": {
+        "en": "Cuff pull-in",
+        "es": "Ceñido del puño",
+        "fr": "Serrage du poignet",
+        "pt": "Aperto do punho"
+      },
+      "tooltip": {
+        "en": "Cuff length vs sleeve opening.",
+        "es": "Largo del puño frente a la boca de manga.",
+        "fr": "Longueur du poignet vs l'ouverture.",
+        "pt": "Comprimento do punho vs a boca da manga."
+      }
+    },
+    {
+      "id": "hemband_ratio",
+      "type": "slider",
+      "group": "construction",
+      "default": 0.9,
+      "min": 0.72,
+      "max": 1.0,
+      "step": 0.01,
+      "label": {
+        "en": "Hem pull-in",
+        "es": "Ceñido de cenefa",
+        "fr": "Serrage du bas",
+        "pt": "Aperto da barra"
+      },
+      "tooltip": {
+        "en": "Hem band length vs body opening.",
+        "es": "Largo de cenefa frente a la boca del cuerpo.",
+        "fr": "Longueur de bande vs l'ouverture.",
+        "pt": "Comprimento da barra vs a boca do corpo."
+      }
+    },
+    {
+      "id": "rib_height",
+      "type": "slider",
+      "group": "construction",
+      "default": 60,
+      "min": 30,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Rib height (mm)",
+        "es": "Alto del canalé (mm)",
+        "fr": "Hauteur des côtes (mm)",
+        "pt": "Altura do canelado (mm)"
+      },
+      "tooltip": {
+        "en": "Cuff and hem band depth.",
+        "es": "Profundidad de puños y cenefa.",
+        "fr": "Profondeur des poignets et de la bande.",
+        "pt": "Profundidade dos punhos e barra."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 6,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Added around sewn edges.",
+        "es": "Añadido alrededor de los cantos cosidos.",
+        "fr": "Ajoutée autour des bords cousus.",
+        "pt": "Adicionada em volta dos cantos costurados."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "soft",
+      "label": {
+        "en": "Soft drape",
+        "es": "Drapeado suave",
+        "fr": "Drapé souple",
+        "pt": "Drapeado macio"
+      },
+      "values": {
+        "knit_ease": -20,
+        "cowl_drop": 220,
+        "cowl_flare": 1.6
+      }
+    },
+    {
+      "id": "dramatic",
+      "label": {
+        "en": "Dramatic cowl",
+        "es": "Cuello dramático",
+        "fr": "Col spectaculaire",
+        "pt": "Gola dramática"
+      },
+      "values": {
+        "cowl_drop": 360,
+        "cowl_flare": 2.6
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "commons_license": "CERN-OHL-W-2.0",
+    "interfaces": [
+      {
+        "id": "neck_line",
+        "type": "custom",
+        "label": {
+          "en": "Neckline (cowl seam)",
+          "es": "Escote (costura del cuello)",
+          "fr": "Encolure (couture du col)",
+          "pt": "Decote (costura da gola)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "front_neck_drop",
+          "cowl_drop",
+          "cowl_flare",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "hem_opening",
+        "type": "hem",
+        "label": {
+          "en": "Hem opening",
+          "es": "Boca del cuerpo",
+          "fr": "Ouverture du bas",
+          "pt": "Boca do corpo"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "hem"
+          },
+          {
+            "piece": "back",
+            "edge": "hem"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "knit_ease",
+          "hemband_ratio"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "printed_textile": false,
+      "negative_ease_knit": true
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure cowl sweater lets anyone grade a draped knit to their own body — the cowl's fullness a single dial, the fall solved rather than guessed.",
+      "es": "Un suéter de cuello vuelto abierto y a medida permite graduar un punto drapeado al propio cuerpo — el vuelo del cuello en un solo control, la caída resuelta y no adivinada.",
+      "fr": "Un pull à col bénitier ouvert et sur mesure permet de grader une maille drapée à son corps — l'ampleur du col en un seul réglage, la retombée résolue et non devinée.",
+      "pt": "Um suéter de gola boba aberto e sob medida permite graduar um tricô drapeado ao próprio corpo — a amplitude da gola em um único controle, a queda resolvida e não adivinhada."
+    }
+  }
+}

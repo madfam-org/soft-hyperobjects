@@ -1,0 +1,384 @@
+{
+  "project": {
+    "name": "Derby Shoe Upper",
+    "slug": "derby-shoe-upper",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The Derby (open-lacing) shoe upper: a vamp over the toes and instep, and two quarters whose eyelet facings sit over the vamp — the open throat that distinguishes a Derby from an Oxford. The quarters meet at a centre-back seam; the lasting edge is stitched down to the sole. Lasting edges and the facing seam are solved so the declared seams balance; the eyelets bridge to a Yantra4D garment-eyelet. Sized from plain foot parameters — ISO 8559 has no foot codes. FC-400 Lane 6, footwear.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El corte de zapato Derby (de cordones abiertos): una pala sobre los dedos y el empeine, y dos cuartos cuyas caretas con ojales van sobre la pala — la garganta abierta que distingue al Derby del Oxford. Los cuartos se unen por una costura trasera central; el borde de montado se cose a la suela. Los bordes de montado y la costura de la careta se resuelven para que las costuras cuadren; los ojales se puentean a un garment-eyelet de Yantra4D. Dimensionado por parámetros simples del pie — ISO 8559 no tiene códigos del pie. FC-400 carril 6, calzado.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La tige de derby (à laçage ouvert) : un empeigne sur les orteils et le cou-de-pied, et deux quartiers dont les claques à œillets passent sur l'empeigne — la gorge ouverte qui distingue le derby du richelieu. Les quartiers se réunissent par une couture arrière centrale ; le bord de montage se coud à la semelle. Les bords de montage et la couture de claque sont résolus pour que les coutures s'équilibrent ; les œillets se relient à un garment-eyelet Yantra4D. Dimensionné d'après des paramètres de pied simples — l'ISO 8559 n'a aucun code de pied. FC-400 voie 6, chaussure.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O cabedal de sapato Derby (de atacadores abertos): um vamp sobre os dedos e o peito do pé, e dois quartos cujas gáspeas com ilhoses passam sobre o vamp — a garganta aberta que distingue o Derby do Oxford. Os quartos unem-se por uma costura traseira central; o canto de montagem é costurado à sola. Os cantos de montagem e a costura da gáspea são resolvidos para que as costuras equilibrem; os ilhoses fazem ponte com um garment-eyelet da Yantra4D. Dimensionado por parâmetros simples do pé — a ISO 8559 não tem códigos de pé. FC-400 pista 6, calçado.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "footwear",
+      "derby",
+      "shoe",
+      "upper",
+      "leather",
+      "eyelets"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full pattern",
+        "es": "Patrón completo",
+        "fr": "Patron complet",
+        "pt": "Molde completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "vamp",
+        "quarter"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "vamp",
+      "label": {
+        "en": "Vamp (toe + instep)",
+        "es": "Pala (dedos + empeine)",
+        "fr": "Empeigne (orteils + cou-de-pied)",
+        "pt": "Vamp (dedos + peito do pé)"
+      },
+      "default_color": "#5a4636",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "quarter",
+      "label": {
+        "en": "Quarter (side + back, eyelet facing)",
+        "es": "Cuarto (lado + talón, careta)",
+        "fr": "Quartier (côté + talon, claque)",
+        "pt": "Quarto (lado + calcanhar, gáspea)"
+      },
+      "default_color": "#4a3a2c",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps",
+        "pt": "Corpo"
+      }
+    },
+    {
+      "id": "fit",
+      "label": {
+        "en": "Fit",
+        "es": "Ajuste",
+        "fr": "Coupe",
+        "pt": "Caimento"
+      }
+    },
+    {
+      "id": "hardware",
+      "label": {
+        "en": "Hardware",
+        "es": "Herrajes",
+        "fr": "Quincaillerie",
+        "pt": "Ferragens"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "foot_length",
+      "type": "slider",
+      "group": "body",
+      "default": 260,
+      "min": 150,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Foot length (mm)",
+        "es": "Largo del pie (mm)",
+        "fr": "Longueur du pied (mm)",
+        "pt": "Comprimento do pé (mm)"
+      },
+      "tooltip": {
+        "en": "Heel to longest toe. A plain sized parameter — ISO 8559 has no foot code.",
+        "es": "Del talón al dedo más largo. Parámetro simple — ISO 8559 no tiene código del pie.",
+        "fr": "Du talon à l'orteil le plus long. Paramètre simple — l'ISO 8559 n'a aucun code de pied.",
+        "pt": "Do calcanhar ao dedo mais longo. Parâmetro simples — a ISO 8559 não tem código de pé."
+      }
+    },
+    {
+      "id": "foot_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 240,
+      "min": 150,
+      "max": 330,
+      "step": 5,
+      "label": {
+        "en": "Ball girth (mm)",
+        "es": "Contorno de la planta (mm)",
+        "fr": "Carrure de la plante (mm)",
+        "pt": "Contorno da planta (mm)"
+      },
+      "tooltip": {
+        "en": "Around the widest part of the foot.",
+        "es": "Alrededor de la parte más ancha del pie.",
+        "fr": "Autour de la partie la plus large du pied.",
+        "pt": "Ao redor da parte mais larga do pé."
+      }
+    },
+    {
+      "id": "vamp_depth",
+      "type": "slider",
+      "group": "fit",
+      "default": 110,
+      "min": 60,
+      "max": 190,
+      "step": 5,
+      "label": {
+        "en": "Vamp depth (mm)",
+        "es": "Profundidad de la pala (mm)",
+        "fr": "Profondeur d'empeigne (mm)",
+        "pt": "Profundidade do vamp (mm)"
+      },
+      "tooltip": {
+        "en": "How far back the vamp reaches.",
+        "es": "Cuánto retrocede la pala.",
+        "fr": "Recul de l'empeigne.",
+        "pt": "Quanto o vamp recua."
+      }
+    },
+    {
+      "id": "quarter_height",
+      "type": "slider",
+      "group": "fit",
+      "default": 70,
+      "min": 40,
+      "max": 150,
+      "step": 5,
+      "label": {
+        "en": "Quarter height (mm)",
+        "es": "Alto del cuarto (mm)",
+        "fr": "Hauteur de quartier (mm)",
+        "pt": "Altura do quarto (mm)"
+      },
+      "tooltip": {
+        "en": "Side-and-back wrap height.",
+        "es": "Alto del envolvente lado-talón.",
+        "fr": "Hauteur du quartier côté-talon.",
+        "pt": "Altura do quarto lado-calcanhar."
+      }
+    },
+    {
+      "id": "eyelet_pairs",
+      "type": "slider",
+      "group": "hardware",
+      "default": 5,
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "label": {
+        "en": "Eyelet pairs",
+        "es": "Pares de ojales",
+        "fr": "Paires d'œillets",
+        "pt": "Pares de ilhoses"
+      },
+      "tooltip": {
+        "en": "Lace eyelet pairs per side.",
+        "es": "Pares de ojales por lado.",
+        "fr": "Paires d'œillets par côté.",
+        "pt": "Pares de ilhoses por lado."
+      }
+    },
+    {
+      "id": "eyelet_dia",
+      "type": "slider",
+      "group": "hardware",
+      "default": 4,
+      "min": 2.5,
+      "max": 10,
+      "step": 0.5,
+      "label": {
+        "en": "Eyelet diameter (mm)",
+        "es": "Diámetro del ojal (mm)",
+        "fr": "Diamètre d'œillet (mm)",
+        "pt": "Diâmetro do ilhó (mm)"
+      },
+      "tooltip": {
+        "en": "Finished lace-hole diameter.",
+        "es": "Diámetro acabado del ojal.",
+        "fr": "Diamètre fini du trou de lacet.",
+        "pt": "Diâmetro acabado do furo do atacador."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Added around sewn edges.",
+        "es": "Añadido alrededor de los cantos cosidos.",
+        "fr": "Ajoutée autour des bords cousus.",
+        "pt": "Adicionada em volta dos cantos costurados."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "classic",
+      "label": {
+        "en": "Classic Derby",
+        "es": "Derby clásico",
+        "fr": "Derby classique",
+        "pt": "Derby clássico"
+      },
+      "values": {
+        "eyelet_pairs": 5,
+        "vamp_depth": 110
+      }
+    },
+    {
+      "id": "high",
+      "label": {
+        "en": "High-cut",
+        "es": "Corte alto",
+        "fr": "Coupe haute",
+        "pt": "Corte alto"
+      },
+      "values": {
+        "quarter_height": 130,
+        "eyelet_pairs": 7
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "commons_license": "CERN-OHL-W-2.0",
+    "interfaces": [
+      {
+        "id": "lasting_edge",
+        "type": "hem",
+        "label": {
+          "en": "Lasting edge (sole stitch-down)",
+          "es": "Borde de montado (cosido a la suela)",
+          "fr": "Bord de montage (couture semelle)",
+          "pt": "Canto de montagem (costura à sola)"
+        },
+        "edges": [
+          {
+            "piece": "vamp",
+            "edge": "lasting"
+          },
+          {
+            "piece": "quarter",
+            "edge": "lasting"
+          }
+        ],
+        "parameters": [
+          "foot_length",
+          "vamp_depth",
+          "seam_allowance"
+        ]
+      },
+      {
+        "id": "throat",
+        "type": "custom",
+        "label": {
+          "en": "Throat (open lacing)",
+          "es": "Garganta (cordones abiertos)",
+          "fr": "Gorge (laçage ouvert)",
+          "pt": "Garganta (atacadores abertos)"
+        },
+        "edges": [
+          {
+            "piece": "vamp",
+            "edge": "throat"
+          },
+          {
+            "piece": "quarter",
+            "edge": "facing"
+          }
+        ],
+        "parameters": [
+          "foot_girth",
+          "quarter_height",
+          "eyelet_pairs"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "printed_textile": false
+    },
+    "societal_benefit": {
+      "en": "An open, made-to-measure Derby upper puts a resoleable leather shoe pattern in anyone's hands — the lasting edges solved to the sole, the eyelets a printable Yantra4D part, a repair-and-remake alternative to disposable footwear.",
+      "es": "Un corte de Derby abierto y a medida pone un patrón de zapato de cuero resoleable en manos de cualquiera — los bordes de montado resueltos a la suela, los ojales una pieza imprimible de Yantra4D, una alternativa de reparar y rehacer al calzado desechable.",
+      "fr": "Une tige de derby ouverte et sur mesure met un patron de chaussure en cuir ressemelable à la portée de tous — les bords de montage résolus à la semelle, les œillets une pièce imprimable Yantra4D, une alternative de réparation à la chaussure jetable.",
+      "pt": "Um cabedal de Derby aberto e sob medida põe um molde de sapato de couro resoleável nas mãos de qualquer um — os cantos de montagem resolvidos à sola, os ilhoses uma peça imprimível da Yantra4D, uma alternativa de reparar e refazer ao calçado descartável."
+    }
+  },
+  "notion": {
+    "kind": "eyelet",
+    "subtype": "derby lacing eyelet",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "garment-eyelet",
+      "linked": true,
+      "params_map": {
+        "inner_dia": "eyelet_dia",
+        "barrel_h": "max(3, seam_allowance)"
+      }
+    }
+  }
+}

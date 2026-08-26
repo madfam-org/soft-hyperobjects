@@ -1,0 +1,312 @@
+{
+  "project": {
+    "name": "Flexure-Spine Fashion Harness",
+    "slug": "flexure-spine-harness",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A body harness whose back is a printed TPU flexure band running down the spine — a slotted living-hinge strip that curves with the back and springs back, so the harness holds its architectural line and still bends. The flexure band is Yantra4D territory (notion.hardware_ref → tpu-flexure-cuff, used as a straight spine band); Fashion Cabinet owns the strap panel and the spine band length derived from the back length. FC-400 Lane 5, AM-fashion.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un arnés de cuerpo cuya espalda es una banda flexible impresa en TPU que recorre la columna — una tira de bisagra viva ranurada que se curva con la espalda y recupera, para que el arnés sostenga su línea arquitectónica y aun así flexione. La banda flexible es territorio de Yantra4D (notion.hardware_ref → tpu-flexure-cuff, usada como banda recta de columna); Fashion Cabinet posee el panel de tiras y el largo de la banda derivado del largo de espalda. FC-400 carril 5, moda aditiva.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un harnais de corps dont le dos est une bande flexible imprimée en TPU descendant la colonne — une lanière à charnière vivante fendue qui se courbe avec le dos et revient, pour que le harnais garde sa ligne architecturale tout en pliant. La bande flexible relève de Yantra4D (notion.hardware_ref → tpu-flexure-cuff, utilisée en bande dorsale droite) ; Fashion Cabinet possède le panneau de sangles et la longueur de bande dérivée de la longueur de dos. FC-400 voie 5, mode additive.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um arnês de corpo cujas costas são uma banda flexível impressa em TPU descendo a coluna — uma tira de dobradiça viva ranhurada que se curva com as costas e retorna, para que o arnês sustente sua linha arquitetônica e ainda dobre. A banda flexível é território da Yantra4D (notion.hardware_ref → tpu-flexure-cuff, usada como banda reta de coluna); a Fashion Cabinet possui o painel de tiras e o comprimento da banda derivado do comprimento das costas. FC-400 pista 5, moda aditiva.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "am_fashion",
+      "printed-textile",
+      "tpu",
+      "flexure",
+      "harness",
+      "spine"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full pattern",
+        "es": "Patrón completo",
+        "fr": "Patron complet",
+        "pt": "Molde completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "placement-guide"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "placement-guide",
+      "label": {
+        "en": "Flexure-spine harness guide",
+        "es": "Guía de arnés de columna flexible",
+        "fr": "Guide de harnais dorsal flexible",
+        "pt": "Guia de arnês de coluna flexível"
+      },
+      "default_color": "#7a8086",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps",
+        "pt": "Corpo"
+      }
+    },
+    {
+      "id": "panel",
+      "label": {
+        "en": "Panel",
+        "es": "Panel",
+        "fr": "Panneau",
+        "pt": "Painel"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "body",
+      "default": 380,
+      "min": 240,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Shoulder width (mm)",
+        "es": "Ancho de hombros (mm)",
+        "fr": "Largeur d'épaules (mm)",
+        "pt": "Largura dos ombros (mm)"
+      },
+      "tooltip": {
+        "en": "Across the shoulders.",
+        "es": "De hombro a hombro.",
+        "fr": "D'épaule à épaule.",
+        "pt": "De ombro a ombro."
+      }
+    },
+    {
+      "id": "back_length",
+      "type": "slider",
+      "group": "body",
+      "default": 420,
+      "min": 220,
+      "max": 640,
+      "step": 10,
+      "label": {
+        "en": "Back length (mm)",
+        "es": "Largo de espalda (mm)",
+        "fr": "Longueur de dos (mm)",
+        "pt": "Comprimento das costas (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to waist.",
+        "es": "De la nuca a la cintura.",
+        "fr": "De la nuque à la taille.",
+        "pt": "Da nuca à cintura."
+      }
+    },
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "group": "panel",
+      "default": 45,
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de tira (mm)",
+        "fr": "Largeur de sangle (mm)",
+        "pt": "Largura da tira (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder strap width.",
+        "es": "Ancho de la tira del hombro.",
+        "fr": "Largeur de la sangle d'épaule.",
+        "pt": "Largura da tira do ombro."
+      }
+    },
+    {
+      "id": "spine_width",
+      "type": "slider",
+      "group": "panel",
+      "default": 60,
+      "min": 25,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Spine band width (mm)",
+        "es": "Ancho de banda de columna (mm)",
+        "fr": "Largeur de bande dorsale (mm)",
+        "pt": "Largura da banda de coluna (mm)"
+      },
+      "tooltip": {
+        "en": "Printed spine band width.",
+        "es": "Ancho de la banda de columna impresa.",
+        "fr": "Largeur de la bande dorsale imprimée.",
+        "pt": "Largura da banda de coluna impressa."
+      }
+    },
+    {
+      "id": "wall",
+      "type": "slider",
+      "group": "panel",
+      "default": 1.4,
+      "min": 0.6,
+      "max": 4.0,
+      "step": 0.1,
+      "label": {
+        "en": "Wall thickness (mm)",
+        "es": "Grosor de pared (mm)",
+        "fr": "Épaisseur de paroi (mm)",
+        "pt": "Espessura de parede (mm)"
+      },
+      "tooltip": {
+        "en": "Printed wall thickness of the TPU solid.",
+        "es": "Grosor impreso de la pared del sólido TPU.",
+        "fr": "Épaisseur imprimée de la paroi du solide TPU.",
+        "pt": "Espessura impressa da parede do sólido TPU."
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Added around sewn edges.",
+        "es": "Añadido alrededor de los cantos cosidos.",
+        "fr": "Ajoutée autour des bords cousus.",
+        "pt": "Adicionada em volta dos cantos costurados."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "architectural",
+      "label": {
+        "en": "Architectural line",
+        "es": "Línea arquitectónica",
+        "fr": "Ligne architecturale",
+        "pt": "Linha arquitetônica"
+      },
+      "values": {
+        "spine_width": 90,
+        "strap_width": 55
+      }
+    },
+    {
+      "id": "minimal",
+      "label": {
+        "en": "Minimal",
+        "es": "Mínimo",
+        "fr": "Minimal",
+        "pt": "Mínimo"
+      },
+      "values": {
+        "spine_width": 40,
+        "strap_width": 28
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "commons_license": "CERN-OHL-W-2.0",
+    "interfaces": [
+      {
+        "id": "spine_seam",
+        "type": "custom",
+        "label": {
+          "en": "Spine seam (band channel)",
+          "es": "Costura de columna (canal de banda)",
+          "fr": "Couture dorsale (canal de bande)",
+          "pt": "Costura de coluna (canal da banda)"
+        },
+        "edges": [
+          {
+            "piece": "placement-guide",
+            "edge": "guide"
+          }
+        ],
+        "parameters": [
+          "back_length",
+          "spine_width",
+          "wall",
+          "seam_allowance"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "printed_textile": true,
+      "am_fashion": true
+    },
+    "societal_benefit": {
+      "en": "A printable flexure spine gives a fashion harness a back that holds its line and still bends with the body — an open, made-to-measure part that curves and returns, closing the loop from a fabric card to a printable solid.",
+      "es": "Una columna flexible imprimible da a un arnés de moda una espalda que sostiene su línea y aun así flexiona con el cuerpo — una pieza abierta y a medida que se curva y recupera, cerrando el círculo de una ficha de tela a un sólido imprimible.",
+      "fr": "Une colonne flexible imprimable donne à un harnais de mode un dos qui garde sa ligne tout en pliant avec le corps — une pièce ouverte et sur mesure qui se courbe et revient, bouclant la boucle d'une fiche de tissu à un solide imprimable.",
+      "pt": "Uma coluna flexível imprimível dá a um arnês de moda umas costas que sustentam sua linha e ainda dobram com o corpo — uma peça aberta e sob medida que se curva e retorna, fechando o ciclo de uma ficha de tecido a um sólido imprimível."
+    }
+  },
+  "notion": {
+    "kind": "custom",
+    "subtype": "printed flexure spine harness",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "tpu-flexure-cuff",
+      "linked": true,
+      "params_map": {
+        "cuff_circum": "back_length",
+        "cuff_height": "spine_width",
+        "wall": "wall"
+      }
+    }
+  }
+}
