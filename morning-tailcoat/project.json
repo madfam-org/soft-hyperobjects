@@ -1,0 +1,112 @@
+{
+  "project": {
+    "name": "Morning Coat (cutaway)",
+    "slug": "morning-tailcoat",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "Formal daywear, the descendant of the riding coat: below the single fastening button the centre-front edge sweeps away in a continuous cutaway curve to the side seam, and the coat continues behind as long tails. The cutaway curve IS the garment — it is not a hem variant, it changes which edges exist and where the button sits relative to the sweep. Three things are solved by measurement, not formula. The cutaway is a Bezier whose span — horizontal run and vertical drop — is derived from the button break and the side, and BOTH are floored, because at parameter extremes the derived span goes to zero or negative, and a negative span does not fail: it inverts the front into geometry the kernel's CCW normalization launders into a valid-looking outline. The tails are a separate skirt on their own grain, drafted to the MEASURED back waist so the waist seam closes. And the single button sits at the measured break, the peak lapel facing is derived from the measured lapel, and the two-piece sleeve's cap is eased to the measured armscye. Tailoring conventions throughout: edge-stitch, a waist-seamed tail, a two-piece sleeve. The buttons bridge to the Yantra4D `sew-through-button` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Ropa formal de día, descendiente del abrigo de montar: bajo el único botón de cierre el canto delantero se aparta en una curva de recorte continua hasta el costado, y el abrigo sigue por detrás como faldones largos. La curva de recorte ES la prenda — no es una variante de bajo, cambia qué cantos existen y dónde queda el botón respecto al barrido. Tres cosas se resuelven midiendo, no por fórmula. El recorte es un Bézier cuyo tramo — recorrido horizontal y caída vertical — se deriva del quiebre del botón y el costado, y AMBOS tienen piso, porque en los extremos el tramo derivado se va a cero o negativo, y un tramo negativo no falla: invierte el delantero en geometría que la normalización CCW del kernel lava en un contorno válido en apariencia. Los faldones son una falda aparte en su propio hilo, trazada a la cintura trasera MEDIDA para que la costura de cintura cierre. Y el único botón va en el quiebre medido, la vista de la solapa de pico se deriva de la solapa medida, y la copa de la manga de dos piezas se embebe a la sisa medida. Convenciones de sastrería en todo: pespunte de canto, faldón con costura de cintura, manga de dos piezas. Los botones se puentean al sólido `sew-through-button` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Tenue de jour formelle, descendante de la redingote d'équitation : sous l'unique bouton de fermeture le bord milieu devant s'échappe en une courbe de découpe continue jusqu'à la couture de côté, et l'habit continue derrière en longues basques. La courbe de découpe EST le vêtement — ce n'est pas une variante d'ourlet, elle change quels bords existent et où le bouton se situe par rapport au balayage. Trois choses sont résolues par la mesure, non par formule. La découpe est un Bézier dont la portée — parcours horizontal et chute verticale — est dérivée du cran du bouton et du côté, et les DEUX ont un plancher, car aux extrêmes la portée dérivée va à zéro ou au négatif, et une portée négative n'échoue pas : elle inverse le devant en géométrie que la normalisation CCW du noyau blanchit en un contour valide en apparence. Les basques sont une jupe à part sur leur propre droit-fil, tracée à la taille dos MESURÉE pour que la couture de taille ferme. Et l'unique bouton est au cran mesuré, la parementure du revers pointu est dérivée du revers mesuré, et la tête de la manche deux pièces est embue sur l'emmanchure mesurée. Conventions de tailleur partout : surpiqûre de bord, basque à couture de taille, manche deux pièces. Les boutons font le pont vers le solide `sew-through-button` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Traje formal de dia, descendente da casaca de montaria: abaixo do único botão de fecho a borda dianteira central se afasta numa curva de recorte contínua até a lateral, e o casaco continua atrás como abas longas. A curva de recorte É a peça — não é uma variante de bainha, muda quais bordas existem e onde o botão fica em relação ao varrimento. Três coisas se resolvem medindo, não por fórmula. O recorte é um Bézier cujo vão — percurso horizontal e queda vertical — é derivado do rolo do botão e da lateral, e AMBOS têm piso, porque nos extremos o vão derivado vai a zero ou negativo, e um vão negativo não falha: inverte a frente em geometria que a normalização CCW do núcleo lava num contorno válido na aparência. As abas são uma saia à parte no próprio fio, traçada à cintura traseira MEDIDA para que a costura de cintura feche. E o único botão fica no rolo medido, a vista da lapela bico é derivada da lapela medida, e a cabeça da manga de duas peças é embebida à cava medida. Convenções de alfaiataria em tudo: pesponto de borda, aba com costura de cintura, manga de duas peças. Os botões fazem a ponte para o sólido `sew-through-button` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["morning-tailcoat", "tailoring", "morning-coat", "cutaway", "chaque",
+      "jaquette", "formal", "button", "hardware", "fc400", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full morning coat", "es": "Chaqué completo", "fr": "Jaquette complète", "pt": "Fraque completo" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "tail", "upper_sleeve", "under_sleeve", "collar"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front (cut 2, mirrored)", "es": "Delantero (cortar 2, espejo)", "fr": "Devant (couper 2, miroir)", "pt": "Frente (cortar 2, espelhado)" }, "default_color": "#3f4046", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "back", "label": { "en": "Back (cut 2, mirrored)", "es": "Espalda (cortar 2, espejo)", "fr": "Dos (couper 2, miroir)", "pt": "Costas (cortar 2, espelhado)" }, "default_color": "#47484f", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "tail", "label": { "en": "Tail (cut 2, mirrored)", "es": "Faldón (cortar 2, espejo)", "fr": "Basque (couper 2, miroir)", "pt": "Aba (cortar 2, espelhado)" }, "default_color": "#4f5058", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "upper_sleeve", "label": { "en": "Upper sleeve (cut 2, mirrored)", "es": "Manga superior (cortar 2, espejo)", "fr": "Dessus de manche (couper 2, miroir)", "pt": "Manga superior (cortar 2, espelhado)" }, "default_color": "#575861", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "under_sleeve", "label": { "en": "Under sleeve (cut 2, mirrored)", "es": "Manga inferior (cortar 2, espejo)", "fr": "Dessous de manche (couper 2, miroir)", "pt": "Manga inferior (cortar 2, espelhado)" }, "default_color": "#60616b", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "collar", "label": { "en": "Collar (cut 2, on fold)", "es": "Cuello (cortar 2, al doblez)", "fr": "Col (couper 2, au pli)", "pt": "Gola (cortar 2, na dobra)" }, "default_color": "#696a74", "cut": { "quantity": 2, "on_fold": true, "mirror": false } }
+  ],
+  "parameter_groups": [
+    { "id": "body", "label": { "en": "Bodice", "es": "Cuerpo", "fr": "Buste", "pt": "Corpete" } },
+    { "id": "cutaway", "label": { "en": "Cutaway & tails", "es": "Recorte y faldones", "fr": "Découpe et basques", "pt": "Recorte e abas" } },
+    { "id": "closure", "label": { "en": "Button & lapel", "es": "Botón y solapa", "fr": "Bouton et revers", "pt": "Botão e lapela" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "group": "body", "default": 1020, "min": 820, "max": 1400, "step": 10, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)" }, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" } },
+    { "id": "waist_girth", "type": "slider", "group": "body", "default": 880, "min": 640, "max": 1300, "step": 10, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)", "pt": "Contorno de cintura (mm)" }, "measurement": { "standard": "iso_8559", "code": "waist_girth" } },
+    { "id": "back_width", "type": "slider", "group": "body", "default": 460, "min": 360, "max": 540, "step": 5, "label": { "en": "Across-back width (mm)", "es": "Ancho de espalda (mm)", "fr": "Carrure dos (mm)", "pt": "Largura das costas (mm)" }, "measurement": { "standard": "iso_8559", "code": "across_back" } },
+    { "id": "back_length", "type": "slider", "group": "body", "default": 440, "min": 360, "max": 520, "step": 5, "label": { "en": "Nape to waist (mm)", "es": "Nuca a cintura (mm)", "fr": "Nuque à taille (mm)", "pt": "Nuca à cintura (mm)" } },
+    { "id": "neck_width", "type": "slider", "group": "body", "default": 170, "min": 140, "max": 220, "step": 5, "label": { "en": "Base-neck width (mm)", "es": "Ancho de base de cuello (mm)", "fr": "Largeur d'encolure (mm)", "pt": "Largura da base do pescoço (mm)" } },
+    { "id": "tail_length", "type": "slider", "group": "cutaway", "default": 400, "min": 280, "max": 600, "step": 10, "label": { "en": "Tail length, waist to hem (mm)", "es": "Largo de faldón, cintura a bajo (mm)", "fr": "Longueur de basque, taille à ourlet (mm)", "pt": "Comprimento da aba, cintura à barra (mm)" } },
+    { "id": "cutaway_sweep", "type": "slider", "group": "cutaway", "default": 220, "min": 80, "max": 400, "step": 10, "label": { "en": "Cutaway sweep run (mm)", "es": "Recorrido del recorte (mm)", "fr": "Parcours de la découpe (mm)", "pt": "Percurso do recorte (mm)" }, "tooltip": { "en": "The horizontal run of the sweep; floored so the cutaway can never invert", "es": "El recorrido horizontal del barrido; con piso para que el recorte no se invierta", "fr": "Le parcours horizontal du balayage ; plancher pour que la découpe ne s'inverse pas", "pt": "O percurso horizontal do varrimento; com piso para que o recorte não se inverta" } },
+    { "id": "button_rise", "type": "slider", "group": "closure", "default": 40, "min": 0, "max": 120, "step": 5, "label": { "en": "Button rise above waist (mm)", "es": "Alza del botón sobre cintura (mm)", "fr": "Hauteur du bouton sur taille (mm)", "pt": "Altura do botão sobre cintura (mm)" } },
+    { "id": "button_ligne", "type": "slider", "group": "closure", "default": 34, "min": 28, "max": 46, "step": 1, "label": { "en": "Button size (ligne)", "es": "Tamaño de botón (línea)", "fr": "Taille de bouton (ligne)", "pt": "Tamanho do botão (ligne)" }, "tooltip": { "en": "Drives the Yantra4D sew-through-button face AND the buttonhole length", "es": "Define la cara del sew-through-button Y el largo del ojal", "fr": "Pilote la face du sew-through-button ET la longueur de boutonnière", "pt": "Pilota a face do sew-through-button E o comprimento da casa" } },
+    { "id": "lapel_width", "type": "slider", "group": "closure", "default": 95, "min": 60, "max": 140, "step": 5, "label": { "en": "Peak lapel width (mm)", "es": "Ancho de solapa de pico (mm)", "fr": "Largeur de revers pointu (mm)", "pt": "Largura da lapela bico (mm)" } },
+    { "id": "coat_ease", "type": "slider", "group": "body", "default": 110, "min": 60, "max": 220, "step": 10, "label": { "en": "Coat ease over chest (mm)", "es": "Holgura de saco en pecho (mm)", "fr": "Aisance de veste poitrine (mm)", "pt": "Folga do casaco no peito (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "group": "construction", "default": 40, "min": 28, "max": 60, "step": 2, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)", "fr": "Marge d'ourlet (mm)", "pt": "Margem de bainha (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 8, "max": 18, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" }, "advanced": true }
+  ],
+  "constraints": [
+    { "expression": "chest_girth > waist_girth", "severity": "warning", "message": { "en": "A waist wider than the chest inverts the bodice; check the measure.", "es": "Una cintura mayor que el pecho invierte el cuerpo; revisa la medida.", "fr": "Une taille plus large que la poitrine inverse le buste ; vérifiez la mesure.", "pt": "Uma cintura maior que o peito inverte o corpete; verifique a medida." } },
+    { "expression": "cutaway_sweep < waist_girth", "severity": "warning", "message": { "en": "A sweep wider than the waist inverts the cutaway; the draft floors it.", "es": "Un barrido mayor que la cintura invierte el recorte; el trazo lo acota.", "fr": "Un balayage plus large que la taille inverse la découpe ; le tracé le borne.", "pt": "Um varrimento maior que a cintura inverte o recorte; o traçado o limita." } }
+  ],
+  "presets": [
+    { "id": "ascot-morning", "label": { "en": "Ascot morning", "es": "Chaqué de Ascot", "fr": "Jaquette d'Ascot", "pt": "Fraque de Ascot" }, "values": { "cutaway_sweep": 220, "tail_length": 420, "button_rise": 40 } },
+    { "id": "deep-cutaway", "label": { "en": "Deep cutaway", "es": "Recorte profundo", "fr": "Découpe profonde", "pt": "Recorte profundo" }, "values": { "cutaway_sweep": 320, "button_rise": 80 } },
+    { "id": "short-tail", "label": { "en": "Short tail", "es": "Faldón corto", "fr": "Basque courte", "pt": "Aba curta" }, "values": { "tail_length": 300, "cutaway_sweep": 180 } }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["lana-peinada-traje"],
+  "notion": {
+    "kind": "button",
+    "subtype": "single fastening and cuff sew-through buttons",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "thickness": "button_ligne * 0.10",
+        "hole_count": "4",
+        "hole_dia": "button_ligne * 0.05",
+        "hole_spacing": "button_ligne * 0.16",
+        "dish_depth": "button_ligne * 0.03"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "cutaway_front", "type": "custom", "label": { "en": "Cutaway sweep front", "es": "Delantero de recorte", "fr": "Devant à découpe", "pt": "Frente de recorte" }, "edges": [ { "piece": "front", "edge": "cutaway" } ], "parameters": ["cutaway_sweep", "button_rise"] },
+      { "id": "waist_seam_tail", "type": "waistband", "label": { "en": "Back-to-tail waist seam", "es": "Costura de cintura espalda-faldón", "fr": "Couture de taille dos-basque", "pt": "Costura de cintura costas-aba" }, "edges": [ { "piece": "back", "edge": "waist" }, { "piece": "tail", "edge": "waist" } ], "parameters": ["waist_girth", "tail_length"] },
+      { "id": "fastening_button", "type": "button_stand", "label": { "en": "Single fastening button at the break", "es": "Botón de cierre único en el quiebre", "fr": "Bouton de fermeture unique au cran", "pt": "Botão de fecho único no rolo" }, "edges": [ { "piece": "front", "edge": "lapel" } ], "parameters": ["button_ligne", "button_rise"] }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "tailoring": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The morning coat is the last living formal daycoat and one of the very few garments whose defining feature is a single curve — the cutaway sweep from the button to the tails. It is also the feature most home and costume drafts get wrong, because the sweep is sketched by eye and, pushed to a small size or a deep cutaway, quietly inverts into a crossed front that still renders and passes verification. This pattern solves the sweep over a floored span so it can never invert, hangs the tails as a separate waist-seamed skirt on their own grain, and sets the single button at the break. It puts a historically and ceremonially important garment — worn at weddings, at Ascot, at investitures — into the commons with its one hard curve actually solved.",
+      "es": "El chaqué es el último abrigo formal de día que sigue vivo y de las poquísimas prendas cuyo rasgo distintivo es una sola curva — el recorte del botón a los faldones. Es también el rasgo que más fallan los trazos caseros y de vestuario, porque el barrido se dibuja a ojo y, llevado a talla chica o recorte profundo, se invierte en silencio en un delantero cruzado que aun así renderiza y pasa la verificación. Este patrón resuelve el barrido sobre un tramo con piso para que no se invierta, cuelga los faldones como falda aparte con costura de cintura en su hilo, y pone el único botón en el quiebre. Pone una prenda histórica y ceremonialmente importante — de bodas, de Ascot, de investiduras — en el commons con su única curva difícil de verdad resuelta.",
+      "fr": "La jaquette est le dernier habit de jour formel encore vivant et l'un des très rares vêtements dont la caractéristique est une seule courbe — la découpe du bouton aux basques. C'est aussi la caractéristique que ratent le plus les tracés amateurs et de costume, car le balayage est dessiné à l'œil et, poussé à une petite taille ou une découpe profonde, s'inverse en silence en un devant croisé qui pourtant se trace et passe la vérification. Ce patron résout le balayage sur une portée à plancher pour qu'il ne s'inverse pas, suspend les basques en jupe à part à couture de taille sur leur droit-fil, et place l'unique bouton au cran. Il met un vêtement historiquement et cérémoniellement important — de mariage, d'Ascot, d'investiture — dans le commun avec sa seule courbe difficile réellement résolue.",
+      "pt": "O fraque é o último casaco formal de dia ainda vivo e uma das pouquíssimas peças cujo traço característico é uma única curva — o recorte do botão às abas. É também o traço que mais os traçados caseiros e de figurino erram, porque o varrimento é desenhado a olho e, levado a um tamanho pequeno ou recorte profundo, se inverte em silêncio numa frente cruzada que ainda assim traça e passa a verificação. Este molde resolve o varrimento sobre um vão com piso para que não se inverta, pendura as abas como saia à parte com costura de cintura no próprio fio, e coloca o único botão no rolo. Põe uma peça histórica e cerimonialmente importante — de casamentos, de Ascot, de investiduras — no comum com sua única curva difícil de fato resolvida."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "project": {
+    "name": "Denim Chore Coat",
+    "slug": "denim-chore-coat",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The workwear chore coat (bleu de travail): a boxy, square-shouldered jacket in 12 oz denim, three patch pockets, a button placket, and a two-piece collar band. It is drafted the way workwear is drafted — for range of movement over fit — with a dropped shoulder and a straight, generous body. Three things are solved by measurement, not formula. The button run is fitted to whole intervals across the MEASURED placket between two end clearances and the pitch recomputed, so the bottom button never lands in the hem turn where its buttonhole would cut through the fold. The sleeve cap is drafted so its seam exceeds the MEASURED armscye by a small worked-in ease — deliberately low, because denim eases badly — and the ease is reported so a cap drafted independently of the armscye cannot ripple or refuse to close. And the patch pockets are clamped against the front they sit on, because a pocket wider than the panel folds over the placket and the kernel CCW-normalizes it into a healthy-looking outline. Denim conventions throughout: 7 mm twin-needle gold topstitch, felled seams, every hard good a Yantra4D reference. The buttons bridge to the Yantra4D `sew-through-button` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La chaqueta de faena (bleu de travail): una chaqueta cuadrada y de hombro caído en mezclilla de 12 oz, tres bolsillos de parche, una tapeta de botones y un cuello de dos piezas. Se traza como se traza la ropa de trabajo — para movilidad antes que ajuste — con hombro caído y cuerpo recto y holgado. Tres cosas se resuelven midiendo, no por fórmula. La hilera de botones se ajusta a intervalos enteros sobre la tapeta MEDIDA entre dos holguras de extremo y el paso se recalcula, para que el botón inferior nunca caiga en el dobladillo donde su ojal cortaría el doblez. La copa de la manga se traza para que su costura supere la sisa MEDIDA en una pequeña holgura embebida — deliberadamente baja, porque la mezclilla embebe mal — y la holgura se reporta, de modo que una copa trazada aparte de la sisa no puede ondular ni negarse a cerrar. Y los bolsillos de parche se acotan contra el delantero donde se asientan, porque un bolsillo más ancho que el panel se dobla sobre la tapeta y el kernel lo normaliza a CCW dejándolo sano en apariencia. Convenciones de mezclilla en todo: pespunte doble a 7 mm en oro, costuras rebatidas, cada herraje una referencia a Yantra4D. Los botones se puentean al sólido `sew-through-button` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La veste de travail (bleu de travail) : une veste carrée à épaule tombante en denim 12 oz, trois poches plaquées, une patte de boutonnage et un col en deux pièces. Elle est tracée comme se trace le vêtement de travail — pour l'amplitude avant l'ajustement — épaule tombante et corps droit et généreux. Trois choses sont résolues par la mesure, non par formule. La file de boutons est ajustée en intervalles entiers sur la patte MESURÉE entre deux jeux d'extrémité et le pas recalculé, pour que le bouton du bas ne tombe jamais dans l'ourlet où sa boutonnière couperait le rentré. La tête de manche est tracée pour que sa couture dépasse l'emmanchure MESURÉE d'une petite embu — délibérément faible, car le denim s'embue mal — et l'embu est reporté, de sorte qu'une tête tracée à part de l'emmanchure ne peut ni goder ni refuser de fermer. Et les poches plaquées sont bornées par le devant qui les porte, car une poche plus large que le panneau se replie sur la patte et le noyau la normalise en CCW en la laissant saine. Conventions denim partout : surpiqûre double 7 mm dorée, coutures rabattues, chaque accessoire une référence Yantra4D. Les boutons font le pont vers le solide `sew-through-button` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A jaqueta de trabalho (bleu de travail): uma jaqueta quadrada de ombro caído em denim de 12 oz, três bolsos chapados, uma carcela de botões e uma gola de duas peças. É traçada como se traça a roupa de trabalho — para amplitude antes do ajuste — ombro caído e corpo reto e folgado. Três coisas se resolvem medindo, não por fórmula. A fileira de botões é ajustada a intervalos inteiros sobre a carcela MEDIDA entre duas folgas de extremidade e o passo recalculado, para que o botão de baixo nunca caia na bainha onde a casa cortaria a dobra. A cabeça da manga é traçada para que sua costura exceda a cava MEDIDA por uma pequena embebição — deliberadamente baixa, porque o denim embebe mal — e a embebição é reportada, de modo que uma cabeça traçada à parte da cava não possa ondular nem recusar-se a fechar. E os bolsos chapados são limitados contra a frente onde se assentam, porque um bolso mais largo que o painel se dobra sobre a carcela e o núcleo o normaliza em CCW deixando-o são. Convenções de denim em tudo: pesponto duplo a 7 mm dourado, costuras rebatidas, cada ferragem uma referência ao Yantra4D. Os botões fazem a ponte para o sólido `sew-through-button` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["denim-chore-coat", "denim", "workwear", "chore-coat", "bleu-de-travail",
+      "button", "topstitch", "hardware", "fc400", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full chore coat", "es": "Chaqueta de faena completa", "fr": "Veste de travail complète", "pt": "Jaqueta de trabalho completa" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "sleeve", "collar", "pocket"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front (cut 2, mirrored)", "es": "Delantero (cortar 2, espejo)", "fr": "Devant (couper 2, miroir)", "pt": "Frente (cortar 2, espelhado)" }, "default_color": "#3f5573", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "back", "label": { "en": "Back (cut on fold)", "es": "Espalda (corte al doblez)", "fr": "Dos (coupe au pli)", "pt": "Costas (corte na dobra)" }, "default_color": "#4a637f", "cut": { "quantity": 1, "on_fold": true, "mirror": false } },
+    { "id": "sleeve", "label": { "en": "Sleeve (cut 2, mirrored)", "es": "Manga (cortar 2, espejo)", "fr": "Manche (couper 2, miroir)", "pt": "Manga (cortar 2, espelhado)" }, "default_color": "#5e7896", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "collar", "label": { "en": "Collar band (cut 2, on fold)", "es": "Cuello (cortar 2, al doblez)", "fr": "Col (couper 2, au pli)", "pt": "Gola (cortar 2, na dobra)" }, "default_color": "#6f89a6", "cut": { "quantity": 2, "on_fold": true, "mirror": false } },
+    { "id": "pocket", "label": { "en": "Patch pocket (cut 3)", "es": "Bolsillo de parche (cortar 3)", "fr": "Poche plaquée (couper 3)", "pt": "Bolso chapado (cortar 3)" }, "default_color": "#7f98b3", "cut": { "quantity": 3, "on_fold": false, "mirror": false } }
+  ],
+  "parameter_groups": [
+    { "id": "body", "label": { "en": "Body", "es": "Cuerpo", "fr": "Corps", "pt": "Corpo" } },
+    { "id": "sleeve", "label": { "en": "Sleeve", "es": "Manga", "fr": "Manche", "pt": "Manga" } },
+    { "id": "closure", "label": { "en": "Closure & pockets", "es": "Cierre y bolsillos", "fr": "Fermeture et poches", "pt": "Fecho e bolsos" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "group": "body", "default": 1040, "min": 820, "max": 1500, "step": 10, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)" }, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" } },
+    { "id": "back_width", "type": "slider", "group": "body", "default": 460, "min": 360, "max": 560, "step": 5, "label": { "en": "Across-back width (mm)", "es": "Ancho de espalda (mm)", "fr": "Carrure dos (mm)", "pt": "Largura das costas (mm)" }, "measurement": { "standard": "iso_8559", "code": "across_back" } },
+    { "id": "body_length", "type": "slider", "group": "body", "default": 720, "min": 560, "max": 920, "step": 10, "label": { "en": "Body length, neck to hem (mm)", "es": "Largo, cuello a bajo (mm)", "fr": "Longueur, encolure à ourlet (mm)", "pt": "Comprimento, gola à barra (mm)" } },
+    { "id": "neck_width", "type": "slider", "group": "body", "default": 180, "min": 140, "max": 240, "step": 5, "label": { "en": "Base-neck width (mm)", "es": "Ancho de base de cuello (mm)", "fr": "Largeur d'encolure (mm)", "pt": "Largura da base do pescoço (mm)" } },
+    { "id": "shoulder_slope", "type": "slider", "group": "body", "default": 45, "min": 25, "max": 70, "step": 2, "label": { "en": "Shoulder drop (mm)", "es": "Caída de hombro (mm)", "fr": "Tombant d'épaule (mm)", "pt": "Queda do ombro (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "group": "sleeve", "default": 640, "min": 480, "max": 760, "step": 10, "label": { "en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)", "pt": "Comprimento da manga (mm)" } },
+    { "id": "button_count", "type": "slider", "group": "closure", "default": 5, "min": 3, "max": 8, "step": 1, "label": { "en": "Placket buttons", "es": "Botones de tapeta", "fr": "Boutons de patte", "pt": "Botões da carcela" }, "tooltip": { "en": "Fitted to whole intervals across the MEASURED placket; the bottom button never lands in the hem", "es": "Ajustados a intervalos enteros sobre la tapeta MEDIDA; el inferior nunca cae en el dobladillo", "fr": "Ajustés en intervalles entiers sur la patte MESURÉE ; le bas ne tombe jamais dans l'ourlet", "pt": "Ajustados a intervalos inteiros sobre a carcela MEDIDA; o de baixo nunca cai na bainha" } },
+    { "id": "button_ligne", "type": "slider", "group": "closure", "default": 30, "min": 20, "max": 45, "step": 1, "label": { "en": "Button size (ligne)", "es": "Tamaño de botón (línea)", "fr": "Taille de bouton (ligne)", "pt": "Tamanho do botão (ligne)" }, "tooltip": { "en": "Drives the Yantra4D sew-through-button face AND the buttonhole length", "es": "Define la cara del sew-through-button de Yantra4D Y el largo del ojal", "fr": "Pilote la face du sew-through-button Yantra4D ET la longueur de boutonnière", "pt": "Pilota a face do sew-through-button do Yantra4D E o comprimento da casa" } },
+    { "id": "pocket_width", "type": "slider", "group": "closure", "default": 200, "min": 120, "max": 320, "step": 5, "label": { "en": "Patch pocket width (mm)", "es": "Ancho de bolsillo de parche (mm)", "fr": "Largeur de poche plaquée (mm)", "pt": "Largura do bolso chapado (mm)" } },
+    { "id": "wear_ease", "type": "slider", "group": "body", "default": 200, "min": 100, "max": 320, "step": 10, "label": { "en": "Wearing ease over chest (mm)", "es": "Holgura de uso en pecho (mm)", "fr": "Aisance de port poitrine (mm)", "pt": "Folga de uso no peito (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "group": "construction", "default": 30, "min": 18, "max": 45, "step": 2, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)", "fr": "Marge d'ourlet (mm)", "pt": "Margem de bainha (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 8, "max": 18, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" }, "advanced": true }
+  ],
+  "constraints": [
+    { "expression": "back_width > neck_width", "severity": "warning", "message": { "en": "A neck wider than the back inverts the shoulder; the draft clamps the shoulder run.", "es": "Un cuello más ancho que la espalda invierte el hombro; el trazo acota el hombro.", "fr": "Une encolure plus large que le dos inverse l'épaule ; le tracé borne l'épaule.", "pt": "Um pescoço mais largo que as costas inverte o ombro; o traçado limita o ombro." } },
+    { "expression": "pocket_width * 2 < chest_girth", "severity": "warning", "message": { "en": "A pocket that wide folds over the placket; the draft clamps it.", "es": "Un bolsillo así se dobla sobre la tapeta; el trazo lo acota.", "fr": "Une poche si large se replie sur la patte ; le tracé la borne.", "pt": "Um bolso tão largo se dobra sobre a carcela; o traçado o limita." } }
+  ],
+  "presets": [
+    { "id": "classic-chore", "label": { "en": "Classic chore", "es": "Faena clásica", "fr": "Travail classique", "pt": "Trabalho clássico" }, "values": { "chest_girth": 1060, "body_length": 730, "button_count": 5 } },
+    { "id": "cropped", "label": { "en": "Cropped", "es": "Corto", "fr": "Court", "pt": "Curto" }, "values": { "body_length": 600, "button_count": 4 } },
+    { "id": "long-shop-coat", "label": { "en": "Long shop coat", "es": "Bata larga de taller", "fr": "Blouse d'atelier longue", "pt": "Jaleco longo de oficina" }, "values": { "body_length": 900, "button_count": 7, "wear_ease": 260 } }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["mezclilla-denim"],
+  "notion": {
+    "kind": "button",
+    "subtype": "sew-through button placket and pocket flaps",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "thickness": "button_ligne * 0.10",
+        "hole_count": "4",
+        "hole_dia": "button_ligne * 0.05",
+        "hole_spacing": "button_ligne * 0.16",
+        "dish_depth": "button_ligne * 0.03"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "button_placket", "type": "button_stand", "label": { "en": "Solved button placket", "es": "Tapeta de botones resuelta", "fr": "Patte de boutonnage résolue", "pt": "Carcela de botões resolvida" }, "edges": [ { "piece": "front", "edge": "cf" } ], "parameters": ["button_count", "button_ligne", "body_length"] },
+      { "id": "eased_sleeve_cap", "type": "armscye", "label": { "en": "Cap eased to the measured armscye", "es": "Copa embebida a la sisa medida", "fr": "Tête embue sur l'emmanchure mesurée", "pt": "Cabeça embebida à cava medida" }, "edges": [ { "piece": "sleeve", "edge": "cap_r" }, { "piece": "front", "edge": "armscye" }, { "piece": "back", "edge": "armscye" } ], "parameters": ["chest_girth", "wear_ease"] },
+      { "id": "collar_band", "type": "neckline", "label": { "en": "Collar band on the measured neck", "es": "Cuello sobre el escote medido", "fr": "Col sur l'encolure mesurée", "pt": "Gola sobre o decote medido" }, "edges": [ { "piece": "collar", "edge": "neck_edge" }, { "piece": "back", "edge": "neck" } ], "parameters": ["neck_width"] }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The chore coat is the plainest jacket workwear makes and one of the most copied garments in fashion, sold at every price from a market stall to a luxury house — and the version you buy is almost always drafted with the buttons at a round-number pitch that drifts, a sleeve cap that ripples because it was drawn independently of the armscye, and pockets sized by eye. This pattern fixes all three by measurement: the buttons land where the placket actually is, the cap is eased to the armscye it sets into, and the pockets are clamped to the front. It is the honest version of a garment whose whole appeal is honesty.",
+      "es": "La chaqueta de faena es la chaqueta más sencilla que hace la ropa de trabajo y una de las más copiadas de la moda, vendida a todo precio del puesto de mercado a la casa de lujo — y la versión que compras casi siempre trae los botones a un paso redondo que se desfasa, una copa que ondula por haberse dibujado aparte de la sisa, y bolsillos medidos a ojo. Este patrón corrige los tres midiendo: los botones caen donde está la tapeta, la copa se embebe a la sisa donde entra, y los bolsillos se acotan al delantero. Es la versión honesta de una prenda cuyo atractivo es la honestidad.",
+      "fr": "La veste de travail est la veste la plus simple du vêtement de travail et l'une des plus copiées de la mode, vendue à tous les prix du stand de marché à la maison de luxe — et la version qu'on achète est presque toujours tracée avec les boutons à un pas rond qui dérive, une tête de manche qui gode faute d'avoir été dessinée avec l'emmanchure, et des poches dimensionnées à l'œil. Ce patron corrige les trois par la mesure : les boutons tombent là où est la patte, la tête est embue sur l'emmanchure où elle entre, et les poches sont bornées au devant. C'est la version honnête d'un vêtement dont tout l'attrait est l'honnêteté.",
+      "pt": "A jaqueta de trabalho é a jaqueta mais simples da roupa de trabalho e uma das mais copiadas da moda, vendida a todo preço da barraca de feira à casa de luxo — e a versão que se compra quase sempre traz os botões a um passo redondo que desloca, uma cabeça de manga que ondula por ter sido desenhada à parte da cava, e bolsos medidos a olho. Este molde corrige os três medindo: os botões caem onde está a carcela, a cabeça é embebida à cava onde entra, e os bolsos são limitados à frente. É a versão honesta de uma peça cujo apelo é a honestidade."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

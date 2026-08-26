@@ -1,0 +1,110 @@
+{
+  "project": {
+    "name": "Nehru Collar Jacket",
+    "slug": "nehru-jacket",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The Nehru jacket: a single-breasted straight-front jacket with a stand (mandarin) collar that closes to the throat, no lapel, a clean button run down the centre front, and a two-piece sleeve. The signature is the stand collar that meets edge-to-edge at the centre front — it does not overlap — so the collar length and the front-edge length are one relationship: the two collar ends must meet exactly where the two front edges meet. Three things are solved by measurement, not formula. The stand collar is bisected to the MEASURED neckline (both front necks plus the back neck), so its two ends meet exactly at the centre front where the fronts meet — a collar cut to a guessed length gaps at the throat or overlaps and buckles. The button run is solved across the measured centre front, whole intervals recomputed so the top button clears the collar seam and the bottom clears the hem. And the waist dart is clamped so it cannot fold the panel through itself while the two-piece sleeve's vertical seams close by construction and its cap is eased to the measured armscye. Tailoring conventions throughout: fine edge-stitch, a firm stand collar, shank buttons. The buttons bridge to the Yantra4D `shank-button-solid` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La chaqueta Nehru: una chaqueta recta de un solo pecho con cuello alto (mao) que cierra a la garganta, sin solapa, una hilera limpia de botones al centro y una manga de dos piezas. La firma es el cuello alto que se encuentra canto con canto al centro delantero — no cruza — así que el largo del cuello y el del canto delantero son una relación: los dos extremos del cuello deben encontrarse justo donde se encuentran los cantos. Tres cosas se resuelven midiendo, no por fórmula. El cuello alto se biseca al escote MEDIDO (ambos escotes delanteros más el trasero), así sus dos extremos se encuentran justo al centro donde se encuentran los delanteros — un cuello cortado a un largo supuesto abre en la garganta o cruza y se abolla. La hilera de botones se resuelve sobre el centro medido, intervalos enteros recalculados para que el superior libre la costura del cuello y el inferior el bajo. Y la pinza de cintura se acota para que no doble el panel mientras la manga de dos piezas con costuras verticales cierra por construcción y su copa se embebe a la sisa medida. Convenciones de sastrería en todo: pespunte fino, cuello alto firme, botones de tija. Los botones se puentean al sólido `shank-button-solid` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La veste Nehru : une veste droite à simple boutonnage avec un col montant (mandarin) fermant à la gorge, sans revers, une file de boutons nette au milieu devant et une manche deux pièces. La signature est le col montant qui se rejoint bord à bord au milieu devant — il ne croise pas — si bien que la longueur du col et celle du bord devant sont une relation : les deux extrémités du col doivent se rejoindre exactement là où se rejoignent les bords. Trois choses sont résolues par la mesure, non par formule. Le col montant est bissecté à l'encolure MESURÉE (les deux encolures devant plus le dos), de sorte que ses deux extrémités se rejoignent juste au milieu où se rejoignent les devants — un col coupé à une longueur devinée bâille à la gorge ou croise et gondole. La file de boutons est résolue sur le milieu mesuré, intervalles entiers recalculés pour que le haut dégage la couture du col et le bas l'ourlet. Et la pince de taille est bornée pour ne pas replier le panneau tandis que la manche deux pièces à coutures verticales ferme par construction et sa tête est embue sur l'emmanchure mesurée. Conventions de tailleur partout : surpiqûre fine, col montant ferme, boutons à tige. Les boutons font le pont vers le solide `shank-button-solid` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A jaqueta Nehru: uma jaqueta reta de abotoamento simples com uma gola alta (mandarim) que fecha na garganta, sem lapela, uma fileira limpa de botões no centro e uma manga de duas peças. A assinatura é a gola alta que se encontra borda a borda no centro dianteiro — não transpassa — de modo que o comprimento da gola e o da borda dianteira são uma relação: as duas pontas da gola devem se encontrar exatamente onde se encontram as bordas. Três coisas se resolvem medindo, não por fórmula. A gola alta é bissectada ao decote MEDIDO (os dois decotes dianteiros mais o traseiro), de modo que suas duas pontas se encontram justo no centro onde se encontram as frentes — uma gola cortada a um comprimento adivinhado abre na garganta ou transpassa e enruga. A fileira de botões é resolvida sobre o centro medido, intervalos inteiros recalculados para que o de cima libere a costura da gola e o de baixo a bainha. E a pence de cintura é limitada para não dobrar o painel enquanto a manga de duas peças com costuras verticais fecha por construção e sua cabeça é embebida à cava medida. Convenções de alfaiataria em tudo: pesponto fino, gola alta firme, botões de pé. Os botões fazem a ponte para o sólido `shank-button-solid` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["nehru-jacket", "tailoring", "nehru", "mandarin-collar", "stand-collar",
+      "bandhgala", "shank-button", "hardware", "fc400", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full jacket", "es": "Chaqueta completa", "fr": "Veste complète", "pt": "Jaqueta completa" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "upper_sleeve", "under_sleeve", "collar"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front (cut 2, mirrored)", "es": "Delantero (cortar 2, espejo)", "fr": "Devant (couper 2, miroir)", "pt": "Frente (cortar 2, espelhado)" }, "default_color": "#40352c", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "back", "label": { "en": "Back (cut on fold)", "es": "Espalda (corte al doblez)", "fr": "Dos (coupe au pli)", "pt": "Costas (corte na dobra)" }, "default_color": "#4a3e33", "cut": { "quantity": 1, "on_fold": true, "mirror": false } },
+    { "id": "upper_sleeve", "label": { "en": "Upper sleeve (cut 2, mirrored)", "es": "Manga superior (cortar 2, espejo)", "fr": "Dessus de manche (couper 2, miroir)", "pt": "Manga superior (cortar 2, espelhado)" }, "default_color": "#554739", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "under_sleeve", "label": { "en": "Under sleeve (cut 2, mirrored)", "es": "Manga inferior (cortar 2, espejo)", "fr": "Dessous de manche (couper 2, miroir)", "pt": "Manga inferior (cortar 2, espelhado)" }, "default_color": "#5f5040", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "collar", "label": { "en": "Stand collar (cut 2, on fold)", "es": "Cuello alto (cortar 2, al doblez)", "fr": "Col montant (couper 2, au pli)", "pt": "Gola alta (cortar 2, na dobra)" }, "default_color": "#6a5947", "cut": { "quantity": 2, "on_fold": true, "mirror": false } }
+  ],
+  "parameter_groups": [
+    { "id": "body", "label": { "en": "Body", "es": "Cuerpo", "fr": "Corps", "pt": "Corpo" } },
+    { "id": "collar", "label": { "en": "Collar & sleeve", "es": "Cuello y manga", "fr": "Col et manche", "pt": "Gola e manga" } },
+    { "id": "closure", "label": { "en": "Buttons", "es": "Botones", "fr": "Boutons", "pt": "Botões" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "group": "body", "default": 1020, "min": 820, "max": 1400, "step": 10, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)" }, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" } },
+    { "id": "waist_girth", "type": "slider", "group": "body", "default": 900, "min": 640, "max": 1300, "step": 10, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)", "pt": "Contorno de cintura (mm)" }, "measurement": { "standard": "iso_8559", "code": "waist_girth" } },
+    { "id": "back_width", "type": "slider", "group": "body", "default": 460, "min": 360, "max": 540, "step": 5, "label": { "en": "Across-back width (mm)", "es": "Ancho de espalda (mm)", "fr": "Carrure dos (mm)", "pt": "Largura das costas (mm)" }, "measurement": { "standard": "iso_8559", "code": "across_back" } },
+    { "id": "jacket_length", "type": "slider", "group": "body", "default": 740, "min": 600, "max": 900, "step": 10, "label": { "en": "Jacket length (mm)", "es": "Largo de chaqueta (mm)", "fr": "Longueur de veste (mm)", "pt": "Comprimento da jaqueta (mm)" } },
+    { "id": "back_length", "type": "slider", "group": "body", "default": 440, "min": 360, "max": 520, "step": 5, "label": { "en": "Nape to waist (mm)", "es": "Nuca a cintura (mm)", "fr": "Nuque à taille (mm)", "pt": "Nuca à cintura (mm)" } },
+    { "id": "neck_width", "type": "slider", "group": "collar", "default": 175, "min": 140, "max": 220, "step": 5, "label": { "en": "Base-neck width (mm)", "es": "Ancho de base de cuello (mm)", "fr": "Largeur d'encolure (mm)", "pt": "Largura da base do pescoço (mm)" } },
+    { "id": "collar_stand", "type": "slider", "group": "collar", "default": 50, "min": 30, "max": 75, "step": 2, "label": { "en": "Collar stand height (mm)", "es": "Alto de cuello (mm)", "fr": "Hauteur de col (mm)", "pt": "Altura da gola (mm)" }, "tooltip": { "en": "Tall enough to stand at the throat; bisected to the measured neckline", "es": "Alto para sostenerse en la garganta; bisecado al escote medido", "fr": "Assez haut pour tenir à la gorge ; bissecté à l'encolure mesurée", "pt": "Alto para ficar na garganta; bissectado ao decote medido" } },
+    { "id": "sleeve_length", "type": "slider", "group": "collar", "default": 620, "min": 520, "max": 720, "step": 10, "label": { "en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)", "pt": "Comprimento da manga (mm)" } },
+    { "id": "button_count", "type": "slider", "group": "closure", "default": 5, "min": 3, "max": 8, "step": 1, "label": { "en": "Front buttons", "es": "Botones delanteros", "fr": "Boutons devant", "pt": "Botões dianteiros" }, "tooltip": { "en": "Solved across the measured centre front; clear of the collar and the hem", "es": "Resueltos sobre el centro medido; libres del cuello y el bajo", "fr": "Résolus sur le milieu mesuré ; dégagent le col et l'ourlet", "pt": "Resolvidos sobre o centro medido; livres da gola e da bainha" } },
+    { "id": "button_dia", "type": "slider", "group": "closure", "default": 20, "min": 12, "max": 28, "step": 1, "label": { "en": "Button diameter (mm)", "es": "Diámetro de botón (mm)", "fr": "Diamètre de bouton (mm)", "pt": "Diâmetro do botão (mm)" }, "tooltip": { "en": "Drives the Yantra4D shank-button-solid diameter", "es": "Define el diámetro del shank-button-solid de Yantra4D", "fr": "Pilote le diamètre du shank-button-solid Yantra4D", "pt": "Pilota o diâmetro do shank-button-solid do Yantra4D" } },
+    { "id": "coat_ease", "type": "slider", "group": "body", "default": 110, "min": 60, "max": 200, "step": 10, "label": { "en": "Coat ease over chest (mm)", "es": "Holgura de saco en pecho (mm)", "fr": "Aisance de veste poitrine (mm)", "pt": "Folga do casaco no peito (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "group": "construction", "default": 35, "min": 20, "max": 50, "step": 2, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)", "fr": "Marge d'ourlet (mm)", "pt": "Margem de bainha (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 8, "max": 18, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" }, "advanced": true }
+  ],
+  "constraints": [
+    { "expression": "chest_girth > waist_girth", "severity": "warning", "message": { "en": "A waist wider than the chest inverts the suppression; the dart is clamped.", "es": "Una cintura mayor que el pecho invierte el entalle; la pinza se acota.", "fr": "Une taille plus large que la poitrine inverse le cintrage ; la pince est bornée.", "pt": "Uma cintura maior que o peito inverte o ajuste; a pence é limitada." } },
+    { "expression": "collar_stand < neck_width", "severity": "warning", "message": { "en": "A collar taller than the neck is wide will not roll; keep it under the neck width.", "es": "Un cuello más alto que el ancho de cuello no dobla; manténlo bajo ese ancho.", "fr": "Un col plus haut que la largeur d'encolure ne roule pas ; gardez-le sous cette largeur.", "pt": "Uma gola mais alta que a largura do pescoço não rola; mantenha-a sob essa largura." } }
+  ],
+  "presets": [
+    { "id": "classic-nehru", "label": { "en": "Classic Nehru", "es": "Nehru clásico", "fr": "Nehru classique", "pt": "Nehru clássico" }, "values": { "collar_stand": 50, "button_count": 5 } },
+    { "id": "bandhgala", "label": { "en": "Bandhgala (tall collar)", "es": "Bandhgala (cuello alto)", "fr": "Bandhgala (col haut)", "pt": "Bandhgala (gola alta)" }, "values": { "collar_stand": 70, "button_count": 6, "jacket_length": 780 } },
+    { "id": "short-mao", "label": { "en": "Short mandarin", "es": "Mao corto", "fr": "Mandarin court", "pt": "Mandarim curto" }, "values": { "jacket_length": 640, "button_count": 4, "collar_stand": 40 } }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["lana-peinada-traje"],
+  "notion": {
+    "kind": "button",
+    "subtype": "centre-front shank buttons under a stand collar",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "shank-button-solid",
+      "linked": true,
+      "params_map": {
+        "diameter_mm": "button_dia",
+        "thickness": "button_dia * 0.28",
+        "holes": "2",
+        "hole_dia": "button_dia * 0.08",
+        "rim": "button_dia * 0.06"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "stand_collar", "type": "neckline", "label": { "en": "Stand collar meeting at CF", "es": "Cuello alto que se encuentra al centro", "fr": "Col montant se rejoignant au milieu", "pt": "Gola alta que se encontra no centro" }, "edges": [ { "piece": "collar", "edge": "neck_edge" }, { "piece": "front", "edge": "neck" }, { "piece": "back", "edge": "neck" } ], "parameters": ["neck_width", "collar_stand"] },
+      { "id": "button_run", "type": "button_stand", "label": { "en": "Solved centre-front button run", "es": "Hilera de botones central resuelta", "fr": "File de boutons milieu résolue", "pt": "Fileira de botões central resolvida" }, "edges": [ { "piece": "front", "edge": "cf" } ], "parameters": ["button_count", "button_dia", "jacket_length"] },
+      { "id": "two_piece_sleeve", "type": "armscye", "label": { "en": "Two-piece sleeve to the measured armscye", "es": "Manga de dos piezas a la sisa medida", "fr": "Manche deux pièces sur l'emmanchure mesurée", "pt": "Manga de duas peças à cava medida" }, "edges": [ { "piece": "upper_sleeve", "edge": "cap" }, { "piece": "front", "edge": "armscye" }, { "piece": "back", "edge": "armscye" } ], "parameters": ["chest_girth", "coat_ease"] }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "tailoring": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A stand-collar jacket lives or dies on the collar, because it closes edge-to-edge at the throat and has nowhere to hide an error: a collar a few millimetres too long overlaps and buckles, a few too short gaps and shows the shirt. Every home draft of a Nehru or bandhgala gets this wrong at least once. This pattern bisects the collar to the measured neckline so its ends always meet the front edges exactly, solves the buttons clear of the collar seam and hem, and is a fully tailored two-piece-sleeve jacket. It puts a garment central to South Asian formalwear — usually drafted only in bespoke workrooms — into the commons with the collar geometry actually solved.",
+      "es": "Una chaqueta de cuello alto vive o muere por el cuello, porque cierra canto con canto a la garganta y no tiene dónde esconder un error: un cuello unos milímetros largo cruza y se abolla, unos corto abre y muestra la camisa. Todo trazo casero de un Nehru o bandhgala lo falla al menos una vez. Este patrón biseca el cuello al escote medido para que sus extremos siempre encuentren los cantos delanteros, resuelve los botones libres de la costura del cuello y el bajo, y es una chaqueta totalmente sastreada de manga de dos piezas. Pone una prenda central de la ropa formal del sur de Asia — normalmente trazada solo en talleres a medida — en el commons con la geometría del cuello de verdad resuelta.",
+      "fr": "Une veste à col montant vit ou meurt par le col, car il ferme bord à bord à la gorge et n'a nulle part où cacher une erreur : un col trop long de quelques millimètres croise et gondole, trop court bâille et montre la chemise. Tout tracé amateur d'un Nehru ou bandhgala le rate au moins une fois. Ce patron bissecte le col à l'encolure mesurée pour que ses extrémités rejoignent toujours les bords devant, résout les boutons à l'écart de la couture du col et de l'ourlet, et c'est une veste entièrement tailleur à manche deux pièces. Il met un vêtement central du formel sud-asiatique — d'ordinaire tracé seulement en atelier sur mesure — dans le commun avec la géométrie du col réellement résolue.",
+      "pt": "Uma jaqueta de gola alta vive ou morre pela gola, porque fecha borda a borda na garganta e não tem onde esconder um erro: uma gola alguns milímetros comprida transpassa e enruga, alguns curta abre e mostra a camisa. Todo traçado caseiro de um Nehru ou bandhgala erra ao menos uma vez. Este molde bissecta a gola ao decote medido para que suas pontas sempre encontrem as bordas dianteiras, resolve os botões livres da costura da gola e da bainha, e é uma jaqueta totalmente alfaiatada de manga de duas peças. Põe uma peça central da roupa formal sul-asiática — geralmente traçada só em ateliês sob medida — no comum com a geometria da gola de fato resolvida."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

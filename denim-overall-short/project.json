@@ -1,0 +1,108 @@
+{
+  "project": {
+    "name": "Denim Short Overall (Shortall)",
+    "slug": "denim-overall-short",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The adult shortall: a bib front, a back with two crossing straps that fasten with sliding overall buckles, side-button openings at the waist, and short legs cut off above the knee. The whole load hangs off the shoulders through the straps, so the strap length is the number that has to be right. Three things are solved by measurement, not formula. The strap is cut to a MEASURED path — bib height plus back rise plus a shoulder arc — with the overall buckle's travel centred on it, so a wearer never runs out of adjustment and the bib neither strangles nor sags. The side opening is taken out of the side seam and its buttons solved across the measured opening, so the last button lands on cloth and not on the leg hem. And the bib is clamped against the front waist it sews to, because a bib wider than its own seam pleats itself shut and the kernel CCW-normalizes it into a healthy-looking outline. Denim conventions throughout: 7 mm twin-needle gold topstitch, every hard good a Yantra4D reference. The buckles bridge to the Yantra4D `overall-buckle` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El peto corto para adulto: una pechera delantera, una espalda con dos tirantes cruzados que cierran con hebillas de peto deslizantes, aberturas de botón al costado en la cintura y piernas cortas por encima de la rodilla. Toda la carga cuelga de los hombros por los tirantes, así que el largo del tirante es el número que debe estar bien. Tres cosas se resuelven midiendo, no por fórmula. El tirante se corta a un recorrido MEDIDO — alto de pechera más tiro trasero más un arco de hombro — con el ajuste de la hebilla centrado en él, para que quien lo usa no se quede sin ajuste y la pechera ni ahorque ni cuelgue. La abertura lateral se saca del costado y sus botones se resuelven sobre la abertura medida, para que el último caiga en tela y no en el bajo. Y la pechera se acota contra la cintura delantera donde se cose, porque una pechera más ancha que su costura se pliega sola y el kernel la normaliza a CCW dejándola sana en apariencia. Convenciones de mezclilla en todo: pespunte doble a 7 mm en oro, cada herraje una referencia a Yantra4D. Las hebillas se puentean al sólido `overall-buckle` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La salopette-short adulte : une bavette devant, un dos à deux bretelles croisées fermées par des boucles de salopette coulissantes, des ouvertures boutonnées au côté à la taille et des jambes courtes au-dessus du genou. Toute la charge pend des épaules par les bretelles, la longueur de bretelle est donc le nombre qui doit être juste. Trois choses sont résolues par la mesure, non par formule. La bretelle est coupée à un parcours MESURÉ — hauteur de bavette plus montée dos plus un arc d'épaule — avec le débattement de la boucle centré dessus, de sorte que le porteur ne manque jamais de réglage et que la bavette n'étrangle ni ne pend. L'ouverture de côté est prise dans la couture latérale et ses boutons résolus sur l'ouverture mesurée, pour que le dernier tombe sur le tissu et non sur l'ourlet. Et la bavette est bornée par la taille devant où elle se coud, car une bavette plus large que sa couture se replie et le noyau la normalise en CCW en la laissant saine. Conventions denim partout : surpiqûre double 7 mm dorée, chaque accessoire une référence Yantra4D. Les boucles font le pont vers le solide `overall-buckle` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A jardineira curta adulta: um peito na frente, umas costas com duas alças cruzadas que fecham com fivelas de jardineira deslizantes, aberturas de botão na lateral na cintura e pernas curtas acima do joelho. Toda a carga pende dos ombros pelas alças, então o comprimento da alça é o número que tem de estar certo. Três coisas se resolvem medindo, não por fórmula. A alça é cortada a um percurso MEDIDO — altura do peito mais gancho traseiro mais um arco de ombro — com o curso da fivela centrado nela, de modo que quem veste nunca fica sem ajuste e o peito nem estrangula nem cai. A abertura lateral é tirada da costura lateral e seus botões resolvidos sobre a abertura medida, para que o último caia no tecido e não na bainha. E o peito é limitado contra a cintura dianteira onde é costurado, porque um peito mais largo que a própria costura se dobra e o núcleo o normaliza em CCW deixando-o são. Convenções de denim em tudo: pesponto duplo a 7 mm dourado, cada ferragem uma referência ao Yantra4D. As fivelas fazem a ponte para o sólido `overall-buckle` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["denim-overall-short", "denim", "shortall", "overall", "bib",
+      "overall-buckle", "topstitch", "hardware", "fc400", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full shortall", "es": "Peto corto completo", "fr": "Salopette-short complète", "pt": "Jardineira curta completa" },
+      "script_file": "main.py",
+      "pieces": ["front_leg", "back_leg", "bib", "strap"]
+    }
+  ],
+  "pieces": [
+    { "id": "front_leg", "label": { "en": "Front leg (cut 2, mirrored)", "es": "Delantero de pierna (cortar 2, espejo)", "fr": "Devant de jambe (couper 2, miroir)", "pt": "Frente da perna (cortar 2, espelhado)" }, "default_color": "#3f5573", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "back_leg", "label": { "en": "Back leg (cut 2, mirrored)", "es": "Trasero de pierna (cortar 2, espejo)", "fr": "Dos de jambe (couper 2, miroir)", "pt": "Costas da perna (cortar 2, espelhado)" }, "default_color": "#4a637f", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "bib", "label": { "en": "Bib (cut on fold)", "es": "Pechera (corte al doblez)", "fr": "Bavette (coupe au pli)", "pt": "Peito (corte na dobra)" }, "default_color": "#5e7896", "cut": { "quantity": 1, "on_fold": true, "mirror": false } },
+    { "id": "strap", "label": { "en": "Crossing strap (cut 2)", "es": "Tirante cruzado (cortar 2)", "fr": "Bretelle croisée (couper 2)", "pt": "Alça cruzada (cortar 2)" }, "default_color": "#6f89a6", "cut": { "quantity": 2, "on_fold": false, "mirror": false } }
+  ],
+  "parameter_groups": [
+    { "id": "block", "label": { "en": "Fit block", "es": "Base de talla", "fr": "Base d'aisance", "pt": "Base de modelagem" } },
+    { "id": "bib", "label": { "en": "Bib & straps", "es": "Pechera y tirantes", "fr": "Bavette et bretelles", "pt": "Peito e alças" } },
+    { "id": "closure", "label": { "en": "Side closure", "es": "Cierre lateral", "fr": "Fermeture latérale", "pt": "Fecho lateral" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
+  ],
+  "parameters": [
+    { "id": "hip_girth", "type": "slider", "group": "block", "default": 1020, "min": 720, "max": 1400, "step": 10, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)", "fr": "Tour de hanches (mm)", "pt": "Contorno de quadril (mm)" }, "measurement": { "standard": "iso_8559", "code": "hip_girth" } },
+    { "id": "waist_girth", "type": "slider", "group": "block", "default": 840, "min": 560, "max": 1200, "step": 10, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)", "pt": "Contorno de cintura (mm)" }, "measurement": { "standard": "iso_8559", "code": "waist_girth" } },
+    { "id": "short_length", "type": "slider", "group": "block", "default": 330, "min": 180, "max": 520, "step": 10, "label": { "en": "Short length, crotch to hem (mm)", "es": "Largo corto, tiro a bajo (mm)", "fr": "Longueur short, fourche à ourlet (mm)", "pt": "Comprimento curto, gancho à barra (mm)" } },
+    { "id": "back_rise", "type": "slider", "group": "block", "default": 320, "min": 240, "max": 420, "step": 5, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)", "fr": "Montée dos (mm)", "pt": "Gancho traseiro (mm)" } },
+    { "id": "bib_height", "type": "slider", "group": "bib", "default": 300, "min": 200, "max": 420, "step": 10, "label": { "en": "Bib height (mm)", "es": "Alto de pechera (mm)", "fr": "Hauteur de bavette (mm)", "pt": "Altura do peito (mm)" } },
+    { "id": "bib_width", "type": "slider", "group": "bib", "default": 300, "min": 200, "max": 460, "step": 10, "label": { "en": "Bib top width (mm)", "es": "Ancho de pechera (mm)", "fr": "Largeur de bavette (mm)", "pt": "Largura do peito (mm)" }, "tooltip": { "en": "Clamped against the front waist it sews to — a wider bib pleats itself shut", "es": "Acotado contra la cintura delantera donde se cose — una más ancha se pliega sola", "fr": "Bornée par la taille devant où elle se coud — plus large elle se replie", "pt": "Limitado contra a cintura dianteira onde é costurado — mais largo se dobra" } },
+    { "id": "strap_width", "type": "slider", "group": "bib", "default": 38, "min": 24, "max": 60, "step": 1, "label": { "en": "Strap finished width (mm)", "es": "Ancho terminado del tirante (mm)", "fr": "Largeur finie de bretelle (mm)", "pt": "Largura acabada da alça (mm)" } },
+    { "id": "hem_width", "type": "slider", "group": "block", "default": 300, "min": 220, "max": 480, "step": 10, "label": { "en": "Short hem width, flat (mm)", "es": "Ancho de bajo, plano (mm)", "fr": "Largeur d'ourlet, à plat (mm)", "pt": "Largura da barra, plana (mm)" } },
+    { "id": "side_buttons", "type": "slider", "group": "closure", "default": 3, "min": 1, "max": 6, "step": 1, "label": { "en": "Side-opening buttons (per side)", "es": "Botones de abertura lateral (por lado)", "fr": "Boutons d'ouverture latérale (par côté)", "pt": "Botões de abertura lateral (por lado)" }, "tooltip": { "en": "Solved across the measured opening; the last button lands on cloth", "es": "Resueltos sobre la abertura medida; el último cae en tela", "fr": "Résolus sur l'ouverture mesurée ; le dernier tombe sur le tissu", "pt": "Resolvidos sobre a abertura medida; o último cai no tecido" } },
+    { "id": "button_head", "type": "slider", "group": "closure", "default": 17, "min": 11, "max": 24, "step": 1, "label": { "en": "Buckle catch button (mm)", "es": "Botón de enganche de hebilla (mm)", "fr": "Bouton d'accroche de boucle (mm)", "pt": "Botão de encaixe da fivela (mm)" } },
+    { "id": "wear_ease", "type": "slider", "group": "block", "default": 100, "min": 40, "max": 220, "step": 10, "label": { "en": "Wearing ease (mm)", "es": "Holgura de uso (mm)", "fr": "Aisance de port (mm)", "pt": "Folga de uso (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "group": "construction", "default": 32, "min": 18, "max": 50, "step": 2, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)", "fr": "Marge d'ourlet (mm)", "pt": "Margem de bainha (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 8, "max": 18, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" }, "advanced": true }
+  ],
+  "constraints": [
+    { "expression": "hip_girth > waist_girth", "severity": "warning", "message": { "en": "A hip smaller than the waist inverts the side seam; the draft clamps the waist quarter.", "es": "Una cadera menor que la cintura invierte el costado; el trazo acota el cuarto de cintura.", "fr": "Une hanche plus petite que la taille inverse la couture de côté ; le tracé borne le quart de taille.", "pt": "Um quadril menor que a cintura inverte a lateral; o traçado limita o quarto de cintura." } },
+    { "expression": "bib_width < waist_girth", "severity": "warning", "message": { "en": "A bib wider than the waist it sews to pleats itself shut; the draft clamps it.", "es": "Una pechera más ancha que la cintura se pliega sola; el trazo la acota.", "fr": "Une bavette plus large que la taille où elle se coud se replie ; le tracé la borne.", "pt": "Um peito mais largo que a cintura onde é costurado se dobra; o traçado o limita." } }
+  ],
+  "presets": [
+    { "id": "classic-shortall", "label": { "en": "Classic shortall", "es": "Peto corto clásico", "fr": "Salopette-short classique", "pt": "Jardineira curta clássica" }, "values": { "short_length": 330, "bib_height": 300, "side_buttons": 3 } },
+    { "id": "gardener", "label": { "en": "Gardener (roomy)", "es": "Jardinero (holgado)", "fr": "Jardinier (ample)", "pt": "Jardineiro (folgado)" }, "values": { "wear_ease": 180, "hem_width": 400, "short_length": 380 } },
+    { "id": "short-short", "label": { "en": "Short short", "es": "Muy corto", "fr": "Très court", "pt": "Bem curto" }, "values": { "short_length": 210, "bib_height": 260 } }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["mezclilla-denim"],
+  "notion": {
+    "kind": "buckle",
+    "subtype": "sliding overall buckle on crossing back straps",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "overall-buckle",
+      "linked": true,
+      "params_map": {
+        "strap_w": "strap_width",
+        "frame_h": "strap_width * 0.5",
+        "wire_t": "strap_width * 0.10",
+        "depth": "strap_width * 0.30",
+        "button_dia": "button_head"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "bib_strap_buckle", "type": "custom", "label": { "en": "Overall-buckle bib closure", "es": "Cierre de pechera con hebilla de peto", "fr": "Fermeture de bavette à boucle de salopette", "pt": "Fecho de peito com fivela de jardineira" }, "edges": [ { "piece": "strap", "edge": "buckle_end" }, { "piece": "bib", "edge": "bib_top" } ], "parameters": ["strap_width", "button_head", "bib_height", "back_rise"] },
+      { "id": "side_button_opening", "type": "placket", "label": { "en": "Buttoned side opening", "es": "Abertura lateral de botones", "fr": "Ouverture latérale boutonnée", "pt": "Abertura lateral de botões" }, "edges": [ { "piece": "front_leg", "edge": "side" }, { "piece": "back_leg", "edge": "side" } ], "parameters": ["side_buttons", "waist_girth"] },
+      { "id": "bib_to_waist", "type": "waistband", "label": { "en": "Bib joined to the measured waist", "es": "Pechera unida a la cintura medida", "fr": "Bavette jointe à la taille mesurée", "pt": "Peito unido à cintura medida" }, "edges": [ { "piece": "bib", "edge": "bib_bottom" }, { "piece": "front_leg", "edge": "waist" } ], "parameters": ["bib_width", "waist_girth"] }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A shortall is the garment where a badly-drafted strap shows immediately: too long and the bib sags off the chest, too short and it drags on the shoulders, and the buckle is there precisely to absorb the difference — but only if the strap is cut to the range the buckle can reach. This pattern derives the strap from the wearer's own bib height and back rise and centres the buckle's travel on it, so it fits the first person who puts it on. The buckle prints at home; the side opening is solved so its buttons land on cloth. It is the practical version of a garment usually sold as a fashion object with the fit an afterthought.",
+      "es": "Un peto corto es la prenda donde un tirante mal trazado se nota al instante: muy largo y la pechera cuelga del pecho, muy corto y tira de los hombros, y la hebilla está justo para absorber la diferencia — pero solo si el tirante se corta al rango que la hebilla alcanza. Este patrón deriva el tirante del alto de pechera y el tiro trasero de quien lo usa y centra el ajuste de la hebilla en él, así que ajusta a la primera persona que se lo pone. La hebilla se imprime en casa; la abertura lateral se resuelve para que sus botones caigan en tela. Es la versión práctica de una prenda que suele venderse como objeto de moda con el ajuste de última.",
+      "fr": "Une salopette-short est le vêtement où une bretelle mal tracée se voit aussitôt : trop longue et la bavette pend de la poitrine, trop courte et elle tire sur les épaules, et la boucle est là justement pour absorber la différence — mais seulement si la bretelle est coupée à la plage que la boucle atteint. Ce patron dérive la bretelle de la hauteur de bavette et de la montée dos du porteur et centre le débattement de la boucle dessus, de sorte qu'elle tombe juste sur la première personne qui l'enfile. La boucle s'imprime chez soi ; l'ouverture de côté est résolue pour que ses boutons tombent sur le tissu. C'est la version pratique d'un vêtement d'ordinaire vendu comme objet de mode, l'ajustement en dernier.",
+      "pt": "Uma jardineira curta é a peça onde uma alça mal traçada aparece na hora: comprida demais e o peito cai do tórax, curta demais e puxa os ombros, e a fivela está justamente para absorver a diferença — mas só se a alça for cortada ao alcance que a fivela atinge. Este molde deriva a alça da altura do peito e do gancho traseiro de quem veste e centra o curso da fivela nela, de modo que veste na primeira pessoa que a coloca. A fivela imprime em casa; a abertura lateral é resolvida para que seus botões caiam no tecido. É a versão prática de uma peça geralmente vendida como objeto de moda com o caimento por último."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "project": {
+    "name": "Peak-Lapel Dinner Jacket (Tuxedo)",
+    "slug": "peak-lapel-tuxedo",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The dinner jacket: a single-button front closing at the waist, a satin-faced peak lapel that rolls to a low break, jetted (besom) pockets, and a two-piece sleeve. The formality lives in the lapel roll — the break sits low, the lapel is faced in satin, and the single link button sits exactly at the waist so the jacket closes at one point and falls open below it. Three things are solved by measurement, not formula. The satin lapel facing is DERIVED from the measured lapel run plus a facing width, so it always covers the roll rather than falling short (showing cloth) or overhanging the buttonhole — a facing drawn to a guessed shape does one or the other. The single button sits at the measured waist so the jacket breaks correctly, and the jetted pocket welts are clamped against the front so a welt wider than the panel cannot invert it, because the kernel would CCW-normalize such a welt into a healthy-looking piece. And the collar and sleeve are taken off the measured gorge and armscye, the two-piece sleeve's vertical seams closing by construction. Tailoring conventions throughout: fine edge-stitch, a canvassed pad-stitched satin lapel, covered link buttons. The buttons bridge to the Yantra4D `shank-button-solid` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El esmoquin: un frente de un botón que cierra en la cintura, una solapa de pico forrada en satén que quiebra bajo, bolsillos de vivo (besom) y una manga de dos piezas. La formalidad vive en el quiebre de la solapa — el quiebre va bajo, la solapa se forra en satén, y el único botón de gemelo va justo en la cintura para que la chaqueta cierre en un punto y caiga abierta debajo. Tres cosas se resuelven midiendo, no por fórmula. El forro de satén de la solapa se DERIVA del recorrido medido de la solapa más un ancho de vista, así siempre cubre el quiebre en vez de quedarse corto (mostrando tela) o sobresalir del ojal — un forro dibujado a una forma supuesta hace una u otra cosa. El único botón va en la cintura medida para que la chaqueta quiebre bien, y los vivos del bolsillo se acotan contra el delantero para que un vivo más ancho que el panel no lo invierta, porque el kernel lo normalizaría a CCW dejándolo sano. Y el cuello y la manga se toman de la gorja y la sisa medidas, la manga de dos piezas con costuras verticales que cierran por construcción. Convenciones de sastrería en todo: pespunte fino, solapa de satén entretelada y pespunteada a mano, botones forrados. Los botones se puentean al sólido `shank-button-solid` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le smoking : un devant à un bouton fermant à la taille, un revers pointu doublé de satin qui casse bas, des poches passepoilées (besom) et une manche deux pièces. La formalité vit dans le cran du revers — le cran est bas, le revers est doublé de satin, et l'unique bouton de manchette est exactement à la taille pour que la veste ferme en un point et tombe ouverte en dessous. Trois choses sont résolues par la mesure, non par formule. La doublure satin du revers est DÉRIVÉE du parcours mesuré du revers plus une largeur de parementure, de sorte qu'elle couvre toujours le cran au lieu d'être trop courte (montrant le tissu) ou de dépasser la boutonnière — une doublure dessinée à une forme devinée fait l'un ou l'autre. L'unique bouton est à la taille mesurée pour que la veste casse juste, et les passepoils sont bornés par le devant pour qu'un passepoil plus large que le panneau ne l'inverse pas, car le noyau le normaliserait en CCW en le laissant sain. Et le col et la manche sont pris sur le gorge et l'emmanchure mesurés, la manche deux pièces à coutures verticales fermant par construction. Conventions de tailleur partout : surpiqûre fine, revers satin entoilé et bâti main, boutons recouverts. Les boutons font le pont vers le solide `shank-button-solid` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O smoking: uma frente de um botão fechando na cintura, uma lapela bico forrada em cetim que rola baixo, bolsos embutidos (besom) e uma manga de duas peças. A formalidade vive no rolo da lapela — o rolo fica baixo, a lapela é forrada em cetim, e o único botão de punho fica exatamente na cintura para que o paletó feche num ponto e caia aberto abaixo. Três coisas se resolvem medindo, não por fórmula. O forro de cetim da lapela é DERIVADO do percurso medido da lapela mais uma largura de vista, de modo que sempre cobre o rolo em vez de ficar curto (mostrando tecido) ou sobrar sobre a casa — um forro desenhado a uma forma adivinhada faz uma coisa ou outra. O único botão fica na cintura medida para que o paletó role certo, e os embutidos do bolso são limitados contra a frente para que um embutido mais largo que o painel não o inverta, porque o núcleo o normalizaria em CCW deixando-o são. E a gola e a manga são tiradas do gorja e da cava medidos, a manga de duas peças com costuras verticais fechando por construção. Convenções de alfaiataria em tudo: pesponto fino, lapela de cetim entretelada e alinhavada à mão, botões forrados. Os botões fazem a ponte para o sólido `shank-button-solid` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["peak-lapel-tuxedo", "tailoring", "tuxedo", "dinner-jacket", "formal",
+      "peak-lapel", "satin", "shank-button", "hardware", "fc400", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full dinner jacket", "es": "Esmoquin completo", "fr": "Smoking complet", "pt": "Smoking completo" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "upper_sleeve", "under_sleeve", "collar", "lapel_facing"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front (cut 2, mirrored)", "es": "Delantero (cortar 2, espejo)", "fr": "Devant (couper 2, miroir)", "pt": "Frente (cortar 2, espelhado)" }, "default_color": "#1c1e24", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "back", "label": { "en": "Back (cut 2, mirrored)", "es": "Espalda (cortar 2, espejo)", "fr": "Dos (couper 2, miroir)", "pt": "Costas (cortar 2, espelhado)" }, "default_color": "#23262e", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "upper_sleeve", "label": { "en": "Upper sleeve (cut 2, mirrored)", "es": "Manga superior (cortar 2, espejo)", "fr": "Dessus de manche (couper 2, miroir)", "pt": "Manga superior (cortar 2, espelhado)" }, "default_color": "#2b2f38", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "under_sleeve", "label": { "en": "Under sleeve (cut 2, mirrored)", "es": "Manga inferior (cortar 2, espejo)", "fr": "Dessous de manche (couper 2, miroir)", "pt": "Manga inferior (cortar 2, espelhado)" }, "default_color": "#343943", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "collar", "label": { "en": "Collar (cut 2, on fold)", "es": "Cuello (cortar 2, al doblez)", "fr": "Col (couper 2, au pli)", "pt": "Gola (cortar 2, na dobra)" }, "default_color": "#3d434f", "cut": { "quantity": 2, "on_fold": true, "mirror": false } },
+    { "id": "lapel_facing", "label": { "en": "Satin lapel facing (cut 2, mirrored)", "es": "Vista de satén de solapa (cortar 2, espejo)", "fr": "Parementure satin de revers (couper 2, miroir)", "pt": "Vista de cetim da lapela (cortar 2, espelhado)" }, "default_color": "#12131a", "cut": { "quantity": 2, "on_fold": false, "mirror": true } }
+  ],
+  "parameter_groups": [
+    { "id": "body", "label": { "en": "Body", "es": "Cuerpo", "fr": "Corps", "pt": "Corpo" } },
+    { "id": "lapel", "label": { "en": "Lapel & facing", "es": "Solapa y vista", "fr": "Revers et parementure", "pt": "Lapela e vista" } },
+    { "id": "detail", "label": { "en": "Buttons & pockets", "es": "Botones y bolsillos", "fr": "Boutons et poches", "pt": "Botões e bolsos" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "group": "body", "default": 1020, "min": 820, "max": 1400, "step": 10, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)" }, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" } },
+    { "id": "waist_girth", "type": "slider", "group": "body", "default": 880, "min": 640, "max": 1280, "step": 10, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)", "pt": "Contorno de cintura (mm)" }, "measurement": { "standard": "iso_8559", "code": "waist_girth" } },
+    { "id": "back_width", "type": "slider", "group": "body", "default": 460, "min": 360, "max": 540, "step": 5, "label": { "en": "Across-back width (mm)", "es": "Ancho de espalda (mm)", "fr": "Carrure dos (mm)", "pt": "Largura das costas (mm)" }, "measurement": { "standard": "iso_8559", "code": "across_back" } },
+    { "id": "back_length", "type": "slider", "group": "body", "default": 440, "min": 360, "max": 520, "step": 5, "label": { "en": "Nape to waist (mm)", "es": "Nuca a cintura (mm)", "fr": "Nuque à taille (mm)", "pt": "Nuca à cintura (mm)" } },
+    { "id": "jacket_length", "type": "slider", "group": "body", "default": 760, "min": 600, "max": 920, "step": 10, "label": { "en": "Jacket length (mm)", "es": "Largo de chaqueta (mm)", "fr": "Longueur de veste (mm)", "pt": "Comprimento do paletó (mm)" } },
+    { "id": "neck_width", "type": "slider", "group": "body", "default": 170, "min": 140, "max": 220, "step": 5, "label": { "en": "Base-neck width (mm)", "es": "Ancho de base de cuello (mm)", "fr": "Largeur d'encolure (mm)", "pt": "Largura da base do pescoço (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "group": "body", "default": 640, "min": 520, "max": 720, "step": 10, "label": { "en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)", "pt": "Comprimento da manga (mm)" } },
+    { "id": "lapel_width", "type": "slider", "group": "lapel", "default": 100, "min": 70, "max": 150, "step": 5, "label": { "en": "Peak lapel width (mm)", "es": "Ancho de solapa de pico (mm)", "fr": "Largeur de revers pointu (mm)", "pt": "Largura da lapela bico (mm)" } },
+    { "id": "break_drop", "type": "slider", "group": "lapel", "default": 40, "min": 0, "max": 120, "step": 5, "label": { "en": "Roll break drop (mm)", "es": "Caída del quiebre (mm)", "fr": "Chute du cran (mm)", "pt": "Queda do rolo (mm)" }, "tooltip": { "en": "How low the lapel breaks below the button — a low break is the dinner-jacket look", "es": "Cuánto baja el quiebre bajo el botón — un quiebre bajo es el aire de esmoquin", "fr": "À quel point le cran casse bas sous le bouton — un cran bas fait le smoking", "pt": "Quão baixo o rolo quebra abaixo do botão — um rolo baixo é o ar de smoking" } },
+    { "id": "facing_width", "type": "slider", "group": "lapel", "default": 90, "min": 60, "max": 140, "step": 5, "label": { "en": "Satin facing width (mm)", "es": "Ancho de vista de satén (mm)", "fr": "Largeur de parementure satin (mm)", "pt": "Largura da vista de cetim (mm)" }, "tooltip": { "en": "Derived to cover the whole measured lapel run — never falls short of the roll", "es": "Derivada para cubrir todo el recorrido de la solapa — nunca se queda corta", "fr": "Dérivée pour couvrir tout le parcours du revers — jamais trop courte", "pt": "Derivada para cobrir todo o percurso da lapela — nunca fica curta" } },
+    { "id": "button_dia", "type": "slider", "group": "detail", "default": 24, "min": 16, "max": 34, "step": 1, "label": { "en": "Covered button diameter (mm)", "es": "Diámetro de botón forrado (mm)", "fr": "Diamètre de bouton recouvert (mm)", "pt": "Diâmetro do botão forrado (mm)" }, "tooltip": { "en": "Drives the Yantra4D shank-button-solid boss diameter", "es": "Define el diámetro del shank-button-solid de Yantra4D", "fr": "Pilote le diamètre du shank-button-solid Yantra4D", "pt": "Pilota o diâmetro do shank-button-solid do Yantra4D" } },
+    { "id": "welt_length", "type": "slider", "group": "detail", "default": 160, "min": 100, "max": 240, "step": 5, "label": { "en": "Jetted welt length (mm)", "es": "Largo de vivo (mm)", "fr": "Longueur de passepoil (mm)", "pt": "Comprimento do embutido (mm)" } },
+    { "id": "coat_ease", "type": "slider", "group": "body", "default": 110, "min": 60, "max": 200, "step": 10, "label": { "en": "Coat ease over chest (mm)", "es": "Holgura de saco en pecho (mm)", "fr": "Aisance de veste poitrine (mm)", "pt": "Folga do paletó no peito (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "group": "construction", "default": 40, "min": 25, "max": 55, "step": 2, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)", "fr": "Marge d'ourlet (mm)", "pt": "Margem de bainha (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 8, "max": 18, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" }, "advanced": true }
+  ],
+  "constraints": [
+    { "expression": "chest_girth > waist_girth", "severity": "warning", "message": { "en": "A waist wider than the chest inverts the suppression; the dart is clamped.", "es": "Una cintura mayor que el pecho invierte el entalle; la pinza se acota.", "fr": "Une taille plus large que la poitrine inverse le cintrage ; la pince est bornée.", "pt": "Uma cintura maior que o peito inverte o ajuste; a pence é limitada." } },
+    { "expression": "welt_length * 2 < chest_girth", "severity": "warning", "message": { "en": "A welt that long inverts the front panel; the draft clamps it.", "es": "Un vivo así invierte el delantero; el trazo lo acota.", "fr": "Un passepoil si long inverse le devant ; le tracé le borne.", "pt": "Um embutido tão longo inverte a frente; o traçado o limita." } }
+  ],
+  "presets": [
+    { "id": "midnight-classic", "label": { "en": "Midnight classic", "es": "Clásico medianoche", "fr": "Minuit classique", "pt": "Meia-noite clássico" }, "values": { "lapel_width": 100, "break_drop": 40, "button_dia": 24 } },
+    { "id": "low-break-drape", "label": { "en": "Low-break drape", "es": "Quiebre bajo holgado", "fr": "Cran bas ample", "pt": "Rolo baixo folgado" }, "values": { "break_drop": 90, "lapel_width": 120, "coat_ease": 160 } },
+    { "id": "slim-shawl-adjacent", "label": { "en": "Slim", "es": "Entallado", "fr": "Ajusté", "pt": "Justo" }, "values": { "chest_girth": 960, "waist_girth": 820, "coat_ease": 80 } }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["lana-peinada-traje"],
+  "notion": {
+    "kind": "button",
+    "subtype": "covered link and cuff shank buttons",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "shank-button-solid",
+      "linked": true,
+      "params_map": {
+        "diameter_mm": "button_dia",
+        "thickness": "button_dia * 0.28",
+        "holes": "2",
+        "hole_dia": "button_dia * 0.08",
+        "rim": "button_dia * 0.06"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "satin_lapel", "type": "custom", "label": { "en": "Satin peak lapel and facing", "es": "Solapa de pico de satén y vista", "fr": "Revers pointu satin et parementure", "pt": "Lapela bico de cetim e vista" }, "edges": [ { "piece": "lapel_facing", "edge": "outer" }, { "piece": "front", "edge": "lapel" } ], "parameters": ["lapel_width", "facing_width", "break_drop"] },
+      { "id": "waist_button", "type": "button_stand", "label": { "en": "Single link button at the waist", "es": "Botón de gemelo único en la cintura", "fr": "Bouton de manchette unique à la taille", "pt": "Botão de punho único na cintura" }, "edges": [ { "piece": "front", "edge": "front_edge" } ], "parameters": ["button_dia", "back_length"] },
+      { "id": "two_piece_sleeve", "type": "armscye", "label": { "en": "Two-piece sleeve to the measured armscye", "es": "Manga de dos piezas a la sisa medida", "fr": "Manche deux pièces sur l'emmanchure mesurée", "pt": "Manga de duas peças à cava medida" }, "edges": [ { "piece": "upper_sleeve", "edge": "cap" }, { "piece": "front", "edge": "armscye" }, { "piece": "back", "edge": "armscye" } ], "parameters": ["chest_girth", "coat_ease"] }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "tailoring": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A dinner jacket is the garment most people rent because a bad one is unforgivable at the events it is worn to — and the thing a rental or a cheap copy gets wrong is the lapel facing, which either falls short of the roll and shows wool where satin should be, or overhangs and buckles. This pattern derives the satin facing from the lapel it actually covers, so it always meets the roll, places the single button where the jacket breaks, and clamps the jetted welts. It is a fully canvassed dinner jacket a competent tailor can cut once and keep for decades — the opposite of the rent-and-return economy, and the drafting knowledge that makes it possible put in the commons.",
+      "es": "El esmoquin es la prenda que la mayoría alquila porque uno malo es imperdonable en los eventos donde se usa — y lo que un alquiler o una copia barata falla es el forro de la solapa, que o se queda corto del quiebre y muestra lana donde debe haber satén, o sobresale y se abolla. Este patrón deriva el forro de satén de la solapa que de verdad cubre, así siempre llega al quiebre, pone el único botón donde la chaqueta quiebra, y acota los vivos. Es un esmoquin totalmente entretelado que un sastre competente corta una vez y conserva décadas — lo contrario de la economía de alquilar y devolver, con el conocimiento de trazo que lo hace posible puesto en el commons.",
+      "fr": "Le smoking est le vêtement que la plupart des gens louent car un mauvais est impardonnable aux événements où on le porte — et ce qu'une location ou une copie bon marché rate est la parementure du revers, qui soit reste en deçà du cran et montre de la laine là où le satin devrait être, soit dépasse et gondole. Ce patron dérive la parementure satin du revers qu'elle couvre réellement, de sorte qu'elle rejoint toujours le cran, place l'unique bouton là où la veste casse, et borne les passepoils. C'est un smoking entièrement entoilé qu'un tailleur compétent coupe une fois et garde des décennies — l'inverse de l'économie de la location, avec le savoir de tracé qui le rend possible mis dans le commun.",
+      "pt": "O smoking é a peça que a maioria aluga porque um ruim é imperdoável nos eventos onde é usado — e o que um aluguel ou uma cópia barata erra é o forro da lapela, que ou fica curto do rolo e mostra lã onde deveria haver cetim, ou sobra e enruga. Este molde deriva o forro de cetim da lapela que de fato cobre, de modo que sempre alcança o rolo, coloca o único botão onde o paletó rola, e limita os embutidos. É um smoking totalmente entretelado que um alfaiate competente corta uma vez e guarda décadas — o oposto da economia de alugar e devolver, com o conhecimento de traçado que o torna possível posto no comum."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "project": {
+    "name": "Welder's Cotton Duck Jacket",
+    "slug": "welder-jacket",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The welder's jacket in heavy cotton duck: a stand collar that closes right to the throat, a storm flap covering the button placket so no spark reaches the gap, and generous set-in sleeves cut for reach. The garment's job is to keep molten spatter off skin, so the two things that matter most are that the flap actually COVERS the placket and that there are no exposed gaps at the throat. Three things are solved by measurement, not formula. The storm flap width is the button stand plus a spark overlap on EACH side, clamped so it can never come out narrower than the placket gap it covers — a flap narrower than its gap is worse than none, and a naive draft tying flap width to a fraction of the chest produces exactly that at a small size. The button run is fitted to whole intervals across the MEASURED placket so the top button sits under the collar and the bottom clears the hem. And the sleeve cap is eased to the MEASURED armscye by a low worked-in ease, reported, because duck eases badly and a cap drawn independently of the armscye ripples or refuses to close. Cotton throughout (it chars rather than melts), cotton topstitch thread, felled seams, every hard good a Yantra4D reference. The buttons bridge to the Yantra4D `sew-through-button` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La chaqueta de soldador en loneta pesada de algodón: un cuello alto que cierra hasta la garganta, una tapeta cortavientos que cubre la botonadura para que ninguna chispa llegue al hueco, y mangas montadas amplias para el alcance. El trabajo de la prenda es mantener la salpicadura fundida lejos de la piel, así que lo que más importa es que la tapeta de verdad CUBRA la botonadura y que no haya huecos expuestos en la garganta. Tres cosas se resuelven midiendo, no por fórmula. El ancho de la tapeta cortavientos es el batiente del botón más una holgura de chispa a CADA lado, acotado para que nunca salga más angosta que el hueco que cubre — una tapeta más angosta que su hueco es peor que ninguna, y un trazo ingenuo que ata el ancho a una fracción del pecho produce justo eso en talla chica. La hilera de botones se ajusta a intervalos enteros sobre la botonadura MEDIDA para que el superior quede bajo el cuello y el inferior libre del bajo. Y la copa de la manga se embebe a la sisa MEDIDA con poca holgura embebida, reportada, porque la loneta embebe mal y una copa dibujada aparte de la sisa ondula o no cierra. Algodón en todo (carboniza en vez de fundir), hilo de pespunte de algodón, costuras rebatidas, cada herraje una referencia a Yantra4D. Los botones se puentean al sólido `sew-through-button` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La veste de soudeur en toile de coton lourde : un col montant qui ferme jusqu'à la gorge, une patte anti-vent couvrant le boutonnage pour qu'aucune étincelle n'atteigne l'interstice, et des manches montées amples pour l'amplitude. Le rôle du vêtement est de tenir les projections en fusion loin de la peau, donc ce qui compte le plus est que la patte COUVRE réellement le boutonnage et qu'il n'y ait pas d'interstices exposés à la gorge. Trois choses sont résolues par la mesure, non par formule. La largeur de la patte anti-vent est la sous-patte de bouton plus un recouvrement anti-étincelle de CHAQUE côté, bornée pour qu'elle ne soit jamais plus étroite que l'interstice qu'elle couvre — une patte plus étroite que son interstice est pire que rien, et un tracé naïf liant la largeur à une fraction de la poitrine produit exactement cela en petite taille. La file de boutons est ajustée en intervalles entiers sur le boutonnage MESURÉ pour que le bouton du haut soit sous le col et celui du bas dégage l'ourlet. Et la tête de manche est embue sur l'emmanchure MESURÉE d'un faible embu, reporté, car la toile s'embue mal et une tête dessinée à part de l'emmanchure gode ou refuse de fermer. Coton partout (il carbonise au lieu de fondre), fil de surpiqûre coton, coutures rabattues, chaque accessoire une référence Yantra4D. Les boutons font le pont vers le solide `sew-through-button` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A jaqueta de soldador em brim pesado de algodão: uma gola alta que fecha até a garganta, uma carcela corta-vento cobrindo o botoamento para que nenhuma faísca alcance a fresta, e mangas montadas generosas para o alcance. O trabalho da peça é manter o respingo fundido longe da pele, então o que mais importa é que a carcela realmente CUBRA o botoamento e que não haja frestas expostas na garganta. Três coisas se resolvem medindo, não por fórmula. A largura da carcela corta-vento é a sobre-carcela do botão mais uma sobreposição corta-faísca de CADA lado, limitada para que nunca saia mais estreita que a fresta que cobre — uma carcela mais estreita que sua fresta é pior que nenhuma, e um traçado ingênuo que amarra a largura a uma fração do peito produz exatamente isso num tamanho pequeno. A fileira de botões é ajustada a intervalos inteiros sobre o botoamento MEDIDO para que o de cima fique sob a gola e o de baixo livre da bainha. E a cabeça da manga é embebida à cava MEDIDA por uma baixa embebição, reportada, porque o brim embebe mal e uma cabeça desenhada à parte da cava ondula ou recusa fechar. Algodão em tudo (carboniza em vez de derreter), linha de pesponto de algodão, costuras rebatidas, cada ferragem uma referência ao Yantra4D. Os botões fazem a ponte para o sólido `sew-through-button` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["welder-jacket", "workwear", "duck-canvas", "welding", "storm-flap",
+      "stand-collar", "button", "hardware", "fc400", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full jacket", "es": "Chaqueta completa", "fr": "Veste complète", "pt": "Jaqueta completa" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "sleeve", "collar", "storm_flap"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front (cut 2, mirrored)", "es": "Delantero (cortar 2, espejo)", "fr": "Devant (couper 2, miroir)", "pt": "Frente (cortar 2, espelhado)" }, "default_color": "#8a7d5a", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "back", "label": { "en": "Back (cut on fold)", "es": "Espalda (corte al doblez)", "fr": "Dos (coupe au pli)", "pt": "Costas (corte na dobra)" }, "default_color": "#9b8e6b", "cut": { "quantity": 1, "on_fold": true, "mirror": false } },
+    { "id": "sleeve", "label": { "en": "Sleeve (cut 2, mirrored)", "es": "Manga (cortar 2, espejo)", "fr": "Manche (couper 2, miroir)", "pt": "Manga (cortar 2, espelhado)" }, "default_color": "#a99c79", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "collar", "label": { "en": "Stand collar (cut 2, on fold)", "es": "Cuello alto (cortar 2, al doblez)", "fr": "Col montant (couper 2, au pli)", "pt": "Gola alta (cortar 2, na dobra)" }, "default_color": "#b8ab88", "cut": { "quantity": 2, "on_fold": true, "mirror": false } },
+    { "id": "storm_flap", "label": { "en": "Spark storm flap (cut 1)", "es": "Tapeta cortavientos (cortar 1)", "fr": "Patte anti-vent (couper 1)", "pt": "Carcela corta-vento (cortar 1)" }, "default_color": "#c7ba97", "cut": { "quantity": 1, "on_fold": false, "mirror": false } }
+  ],
+  "parameter_groups": [
+    { "id": "body", "label": { "en": "Body", "es": "Cuerpo", "fr": "Corps", "pt": "Corpo" } },
+    { "id": "sleeve", "label": { "en": "Sleeve & collar", "es": "Manga y cuello", "fr": "Manche et col", "pt": "Manga e gola" } },
+    { "id": "protection", "label": { "en": "Closure & spark flap", "es": "Cierre y tapeta", "fr": "Fermeture et patte", "pt": "Fecho e carcela" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "group": "body", "default": 1080, "min": 880, "max": 1500, "step": 10, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)" }, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" } },
+    { "id": "back_width", "type": "slider", "group": "body", "default": 470, "min": 380, "max": 560, "step": 5, "label": { "en": "Across-back width (mm)", "es": "Ancho de espalda (mm)", "fr": "Carrure dos (mm)", "pt": "Largura das costas (mm)" }, "measurement": { "standard": "iso_8559", "code": "across_back" } },
+    { "id": "body_length", "type": "slider", "group": "body", "default": 700, "min": 560, "max": 860, "step": 10, "label": { "en": "Body length (mm)", "es": "Largo de cuerpo (mm)", "fr": "Longueur de corps (mm)", "pt": "Comprimento do corpo (mm)" } },
+    { "id": "neck_width", "type": "slider", "group": "body", "default": 180, "min": 150, "max": 240, "step": 5, "label": { "en": "Base-neck width (mm)", "es": "Ancho de base de cuello (mm)", "fr": "Largeur d'encolure (mm)", "pt": "Largura da base do pescoço (mm)" } },
+    { "id": "shoulder_slope", "type": "slider", "group": "body", "default": 45, "min": 25, "max": 70, "step": 2, "label": { "en": "Shoulder drop (mm)", "es": "Caída de hombro (mm)", "fr": "Tombant d'épaule (mm)", "pt": "Queda do ombro (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "group": "sleeve", "default": 660, "min": 520, "max": 780, "step": 10, "label": { "en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)", "pt": "Comprimento da manga (mm)" } },
+    { "id": "collar_stand", "type": "slider", "group": "sleeve", "default": 60, "min": 40, "max": 90, "step": 2, "label": { "en": "Collar stand height (mm)", "es": "Alto de cuello (mm)", "fr": "Hauteur de col (mm)", "pt": "Altura da gola (mm)" }, "tooltip": { "en": "Tall enough to close to the throat — no exposed gap for spatter", "es": "Alto para cerrar a la garganta — sin hueco expuesto para la salpicadura", "fr": "Assez haut pour fermer à la gorge — pas d'interstice pour les projections", "pt": "Alto para fechar na garganta — sem fresta para o respingo" } },
+    { "id": "button_count", "type": "slider", "group": "protection", "default": 5, "min": 4, "max": 8, "step": 1, "label": { "en": "Placket buttons", "es": "Botones de tapeta", "fr": "Boutons de patte", "pt": "Botões da carcela" } },
+    { "id": "button_ligne", "type": "slider", "group": "protection", "default": 32, "min": 24, "max": 45, "step": 1, "label": { "en": "Button size (ligne)", "es": "Tamaño de botón (línea)", "fr": "Taille de bouton (ligne)", "pt": "Tamanho do botão (ligne)" }, "tooltip": { "en": "Drives the Yantra4D sew-through-button face AND the buttonhole length", "es": "Define la cara del sew-through-button Y el largo del ojal", "fr": "Pilote la face du sew-through-button ET la longueur de boutonnière", "pt": "Pilota a face do sew-through-button E o comprimento da casa" } },
+    { "id": "flap_overlap", "type": "slider", "group": "protection", "default": 40, "min": 20, "max": 70, "step": 2, "label": { "en": "Spark flap overlap, each side (mm)", "es": "Solape de tapeta, cada lado (mm)", "fr": "Recouvrement de patte, chaque côté (mm)", "pt": "Sobreposição da carcela, cada lado (mm)" }, "tooltip": { "en": "The flap covers the placket gap plus this overlap on each side; clamped never narrower than the gap", "es": "La tapeta cubre el hueco más este solape a cada lado; acotada nunca más angosta que el hueco", "fr": "La patte couvre l'interstice plus ce recouvrement de chaque côté ; bornée jamais plus étroite que l'interstice", "pt": "A carcela cobre a fresta mais esta sobreposição de cada lado; limitada nunca mais estreita que a fresta" } },
+    { "id": "wear_ease", "type": "slider", "group": "body", "default": 220, "min": 120, "max": 340, "step": 10, "label": { "en": "Wearing ease over chest (mm)", "es": "Holgura de uso en pecho (mm)", "fr": "Aisance poitrine (mm)", "pt": "Folga no peito (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "group": "construction", "default": 30, "min": 18, "max": 45, "step": 2, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)", "fr": "Marge d'ourlet (mm)", "pt": "Margem de bainha (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 8, "max": 18, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" }, "advanced": true }
+  ],
+  "constraints": [
+    { "expression": "back_width > neck_width", "severity": "warning", "message": { "en": "A neck wider than the back inverts the shoulder; the draft clamps the shoulder run.", "es": "Un cuello más ancho que la espalda invierte el hombro; el trazo acota el hombro.", "fr": "Une encolure plus large que le dos inverse l'épaule ; le tracé borne l'épaule.", "pt": "Um pescoço mais largo que as costas inverte o ombro; o traçado limita o ombro." } },
+    { "expression": "flap_overlap > seam_allowance", "severity": "warning", "message": { "en": "The spark overlap must exceed the seam allowance or the flap does not cover.", "es": "El solape de chispa debe superar el margen o la tapeta no cubre.", "fr": "Le recouvrement doit dépasser la marge sinon la patte ne couvre pas.", "pt": "A sobreposição deve exceder a margem ou a carcela não cobre." } }
+  ],
+  "presets": [
+    { "id": "shop-welder", "label": { "en": "Shop welder", "es": "Soldador de taller", "fr": "Soudeur d'atelier", "pt": "Soldador de oficina" }, "values": { "collar_stand": 65, "flap_overlap": 45, "button_count": 5 } },
+    { "id": "heavy-fab", "label": { "en": "Heavy fabrication", "es": "Fabricación pesada", "fr": "Fabrication lourde", "pt": "Fabricação pesada" }, "values": { "wear_ease": 300, "collar_stand": 80, "flap_overlap": 60 } },
+    { "id": "cropped-torch", "label": { "en": "Cropped torch jacket", "es": "Chaqueta corta de soplete", "fr": "Veste chalumeau courte", "pt": "Jaqueta curta de maçarico" }, "values": { "body_length": 600, "button_count": 4 } }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["manta-cruda"],
+  "notion": {
+    "kind": "button",
+    "subtype": "sew-through button placket under a spark storm flap",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "thickness": "button_ligne * 0.10",
+        "hole_count": "4",
+        "hole_dia": "button_ligne * 0.05",
+        "hole_spacing": "button_ligne * 0.16",
+        "dish_depth": "button_ligne * 0.03"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "button_placket", "type": "button_stand", "label": { "en": "Solved button placket", "es": "Botonadura resuelta", "fr": "Patte de boutonnage résolue", "pt": "Carcela de botões resolvida" }, "edges": [ { "piece": "front", "edge": "cf" } ], "parameters": ["button_count", "button_ligne", "body_length"] },
+      { "id": "spark_flap", "type": "placket", "label": { "en": "Placket-covering storm flap", "es": "Tapeta cortavientos que cubre la botonadura", "fr": "Patte anti-vent couvrant le boutonnage", "pt": "Carcela corta-vento que cobre o botoamento" }, "edges": [ { "piece": "storm_flap", "edge": "attach" }, { "piece": "front", "edge": "cf" } ], "parameters": ["flap_overlap", "button_ligne"] },
+      { "id": "eased_sleeve_cap", "type": "armscye", "label": { "en": "Cap eased to the measured armscye", "es": "Copa embebida a la sisa medida", "fr": "Tête embue sur l'emmanchure mesurée", "pt": "Cabeça embebida à cava medida" }, "edges": [ { "piece": "sleeve", "edge": "cap_r" }, { "piece": "front", "edge": "armscye" }, { "piece": "back", "edge": "armscye" } ], "parameters": ["chest_girth", "wear_ease"] }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A welder's jacket is safety equipment, and the one place it fails is the closure: a placket whose thread is exposed to spatter, or a flap so narrow it leaves a burning line down the front. Off-the-shelf jackets get this wrong at the small sizes, because the flap is drafted as a fraction of the chest and shrinks below the gap it is supposed to cover. This pattern derives the flap from the actual placket gap and clamps it so it always overlaps — the protective feature can never silently disappear at a small size. It is drafted in cotton duck, which chars instead of melting, and the buttons print at home. Safety by construction, not by luck.",
+      "es": "La chaqueta de soldador es equipo de seguridad, y donde falla es el cierre: una botonadura con el hilo expuesto a la salpicadura, o una tapeta tan angosta que deja una línea ardiente al frente. Las chaquetas de fábrica lo hacen mal en tallas chicas, porque la tapeta se traza como fracción del pecho y se encoge por debajo del hueco que debe cubrir. Este patrón deriva la tapeta del hueco real de la botonadura y la acota para que siempre solape — la protección nunca desaparece en silencio en una talla chica. Se traza en loneta de algodón, que carboniza en vez de fundir, y los botones se imprimen en casa. Seguridad por construcción, no por suerte.",
+      "fr": "La veste de soudeur est un équipement de sécurité, et le seul endroit où elle échoue est la fermeture : un boutonnage dont le fil est exposé aux projections, ou une patte si étroite qu'elle laisse une ligne brûlante sur le devant. Les vestes du commerce se trompent aux petites tailles, car la patte est tracée en fraction de la poitrine et rétrécit sous l'interstice qu'elle doit couvrir. Ce patron dérive la patte de l'interstice réel du boutonnage et la borne pour qu'elle recouvre toujours — la protection ne disparaît jamais en silence à une petite taille. Il est tracé en toile de coton, qui carbonise au lieu de fondre, et les boutons s'impriment chez soi. La sécurité par construction, pas par chance.",
+      "pt": "A jaqueta de soldador é equipamento de segurança, e o único lugar onde falha é o fecho: um botoamento com a linha exposta ao respingo, ou uma carcela tão estreita que deixa uma linha ardente na frente. As jaquetas de prateleira erram nos tamanhos pequenos, porque a carcela é traçada como fração do peito e encolhe abaixo da fresta que deve cobrir. Este molde deriva a carcela da fresta real do botoamento e a limita para que sempre sobreponha — a proteção nunca desaparece em silêncio num tamanho pequeno. É traçado em brim de algodão, que carboniza em vez de derreter, e os botões imprimem em casa. Segurança por construção, não por sorte."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

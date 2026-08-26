@@ -1,0 +1,114 @@
+{
+  "project": {
+    "name": "Safari-Suit Bush Jacket",
+    "slug": "safari-suit-jacket",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The safari (bush) jacket: a belted single-breasted jacket in cotton twill, four patch bellows pockets with box pleats, a self-fabric belt through belt loops, a camp collar, and shoulder epaulettes. The signature is the self belt through loops, and the number that has to be right is the belt length against the belted waist plus a buckle tail — a belt cut to the waist girth meets end-to-end and cannot be buckled at all. Three things are solved by measurement, not formula. The belt is cut to the MEASURED waist girth plus a buckle tail plus the wrap round the bar, and the belt-loop pitch is solved across the measured waist so the loops sit evenly and the last lands on the panel. The four bellows pockets are clamped against the panels, because a pocket wider than the front folds the panel over and the kernel CCW-normalizes the inversion into a healthy-looking piece. And the front buttons are pitched across the measured front above the belt line while the two-piece sleeve's cap is eased to the armscye. Tailoring/utility conventions throughout: edge-stitch, box-pleat bellows pockets, a self belt. The buttons bridge to the Yantra4D `sew-through-button` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La chaqueta de safari: una chaqueta con cinturón de un solo pecho en sarga de algodón, cuatro bolsillos de fuelle con pliegue de caja, un cinturón de la misma tela por trabillas, un cuello camisero y charreteras. La firma es el cinturón propio por trabillas, y el número que debe estar bien es el largo del cinturón contra la cintura ceñida más una cola de hebilla — un cinturón cortado al contorno se encuentra extremo con extremo y no se puede abrochar. Tres cosas se resuelven midiendo, no por fórmula. El cinturón se corta al contorno de cintura MEDIDO más una cola de hebilla más la vuelta a la barra, y el paso de las trabillas se resuelve sobre la cintura medida para que queden parejas y la última caiga en el panel. Los cuatro bolsillos de fuelle se acotan contra los paneles, porque un bolsillo más ancho que el delantero lo dobla y el kernel normaliza la inversión a CCW dejándola sana. Y los botones delanteros se distribuyen sobre el delantero medido sobre la línea del cinturón mientras la copa de la manga de dos piezas se embebe a la sisa. Convenciones de sastrería/utilidad en todo: pespunte de canto, bolsillos de fuelle con pliegue de caja, cinturón propio. Los botones se puentean al sólido `sew-through-button` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La veste saharienne : une veste ceinturée à simple boutonnage en sergé de coton, quatre poches soufflet à pli creux, une ceinture en tissu assorti dans des passants, un col ouvert et des épaulettes. La signature est la ceinture assortie dans les passants, et le nombre qui doit être juste est la longueur de ceinture face à la taille ceinturée plus une queue de boucle — une ceinture coupée au tour se rejoint bout à bout et ne se boucle pas. Trois choses sont résolues par la mesure, non par formule. La ceinture est coupée au tour de taille MESURÉ plus une queue de boucle plus le tour de barre, et le pas des passants est résolu sur la taille mesurée pour qu'ils soient réguliers et que le dernier tombe sur le panneau. Les quatre poches soufflet sont bornées par les panneaux, car une poche plus large que le devant le replie et le noyau normalise l'inversion en CCW en la laissant saine. Et les boutons devant sont répartis sur le devant mesuré au-dessus de la ligne de ceinture tandis que la tête de la manche deux pièces est embue sur l'emmanchure. Conventions de tailleur/utilité partout : surpiqûre de bord, poches soufflet à pli creux, ceinture assortie. Les boutons font le pont vers le solide `sew-through-button` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A jaqueta safári: uma jaqueta com cinto de abotoamento simples em sarja de algodão, quatro bolsos de fole com prega macho, um cinto do mesmo tecido por passadores, uma gola esporte e dragonas. A assinatura é o cinto próprio por passadores, e o número que tem de estar certo é o comprimento do cinto ante a cintura cingida mais uma cauda de fivela — um cinto cortado ao contorno se encontra ponta a ponta e não afivela. Três coisas se resolvem medindo, não por fórmula. O cinto é cortado ao contorno de cintura MEDIDO mais uma cauda de fivela mais a volta na barra, e o passo dos passadores é resolvido sobre a cintura medida para que fiquem uniformes e o último caia no painel. Os quatro bolsos de fole são limitados contra os painéis, porque um bolso mais largo que a frente a dobra e o núcleo normaliza a inversão em CCW deixando-a sã. E os botões dianteiros são distribuídos sobre a frente medida acima da linha do cinto enquanto a cabeça da manga de duas peças é embebida à cava. Convenções de alfaiataria/utilidade em tudo: pesponto de borda, bolsos de fole com prega macho, cinto próprio. Os botões fazem a ponte para o sólido `sew-through-button` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["safari-suit-jacket", "tailoring", "safari", "bush-jacket", "belted",
+      "bellows-pocket", "camp-collar", "button", "hardware", "fc400", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full bush jacket", "es": "Chaqueta de safari completa", "fr": "Veste saharienne complète", "pt": "Jaqueta safári completa" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "sleeve", "collar", "belt", "pocket"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front (cut 2, mirrored)", "es": "Delantero (cortar 2, espejo)", "fr": "Devant (couper 2, miroir)", "pt": "Frente (cortar 2, espelhado)" }, "default_color": "#b9a878", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "back", "label": { "en": "Back (cut on fold)", "es": "Espalda (corte al doblez)", "fr": "Dos (coupe au pli)", "pt": "Costas (corte na dobra)" }, "default_color": "#c3b284", "cut": { "quantity": 1, "on_fold": true, "mirror": false } },
+    { "id": "sleeve", "label": { "en": "Sleeve (cut 2, mirrored)", "es": "Manga (cortar 2, espejo)", "fr": "Manche (couper 2, miroir)", "pt": "Manga (cortar 2, espelhado)" }, "default_color": "#cdbc90", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "collar", "label": { "en": "Camp collar (cut 2, on fold)", "es": "Cuello camisero (cortar 2, al doblez)", "fr": "Col ouvert (couper 2, au pli)", "pt": "Gola esporte (cortar 2, na dobra)" }, "default_color": "#d7c69c", "cut": { "quantity": 2, "on_fold": true, "mirror": false } },
+    { "id": "belt", "label": { "en": "Self belt (cut 1)", "es": "Cinturón propio (cortar 1)", "fr": "Ceinture assortie (couper 1)", "pt": "Cinto próprio (cortar 1)" }, "default_color": "#af9e6e", "cut": { "quantity": 1, "on_fold": false, "mirror": false } },
+    { "id": "pocket", "label": { "en": "Bellows pocket (cut 4)", "es": "Bolsillo de fuelle (cortar 4)", "fr": "Poche soufflet (couper 4)", "pt": "Bolso de fole (cortar 4)" }, "default_color": "#e1d0a6", "cut": { "quantity": 4, "on_fold": false, "mirror": false } }
+  ],
+  "parameter_groups": [
+    { "id": "body", "label": { "en": "Body", "es": "Cuerpo", "fr": "Corps", "pt": "Corpo" } },
+    { "id": "belt", "label": { "en": "Belt & pockets", "es": "Cinturón y bolsillos", "fr": "Ceinture et poches", "pt": "Cinto e bolsos" } },
+    { "id": "closure", "label": { "en": "Buttons", "es": "Botones", "fr": "Boutons", "pt": "Botões" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "group": "body", "default": 1040, "min": 860, "max": 1500, "step": 10, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)" }, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" } },
+    { "id": "waist_girth", "type": "slider", "group": "body", "default": 940, "min": 700, "max": 1400, "step": 10, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)", "pt": "Contorno de cintura (mm)" }, "measurement": { "standard": "iso_8559", "code": "waist_girth" } },
+    { "id": "back_width", "type": "slider", "group": "body", "default": 465, "min": 380, "max": 560, "step": 5, "label": { "en": "Across-back width (mm)", "es": "Ancho de espalda (mm)", "fr": "Carrure dos (mm)", "pt": "Largura das costas (mm)" }, "measurement": { "standard": "iso_8559", "code": "across_back" } },
+    { "id": "jacket_length", "type": "slider", "group": "body", "default": 760, "min": 620, "max": 900, "step": 10, "label": { "en": "Jacket length (mm)", "es": "Largo de chaqueta (mm)", "fr": "Longueur de veste (mm)", "pt": "Comprimento da jaqueta (mm)" } },
+    { "id": "back_length", "type": "slider", "group": "body", "default": 440, "min": 360, "max": 520, "step": 5, "label": { "en": "Nape to belt (mm)", "es": "Nuca a cinturón (mm)", "fr": "Nuque à ceinture (mm)", "pt": "Nuca ao cinto (mm)" } },
+    { "id": "neck_width", "type": "slider", "group": "body", "default": 175, "min": 140, "max": 240, "step": 5, "label": { "en": "Base-neck width (mm)", "es": "Ancho de base de cuello (mm)", "fr": "Largeur d'encolure (mm)", "pt": "Largura da base do pescoço (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "group": "body", "default": 640, "min": 520, "max": 760, "step": 10, "label": { "en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)", "pt": "Comprimento da manga (mm)" } },
+    { "id": "pocket_width", "type": "slider", "group": "belt", "default": 190, "min": 120, "max": 300, "step": 5, "label": { "en": "Bellows pocket width (mm)", "es": "Ancho de bolsillo de fuelle (mm)", "fr": "Largeur de poche soufflet (mm)", "pt": "Largura do bolso de fole (mm)" }, "tooltip": { "en": "Clamped against the front — a wider pocket folds the panel over", "es": "Acotado contra el delantero — uno más ancho dobla el panel", "fr": "Borné par le devant — plus large il replie le panneau", "pt": "Limitado contra a frente — mais largo dobra o painel" } },
+    { "id": "belt_width", "type": "slider", "group": "belt", "default": 45, "min": 28, "max": 70, "step": 2, "label": { "en": "Belt width (mm)", "es": "Ancho de cinturón (mm)", "fr": "Largeur de ceinture (mm)", "pt": "Largura do cinto (mm)" } },
+    { "id": "belt_loops", "type": "slider", "group": "belt", "default": 5, "min": 3, "max": 8, "step": 1, "label": { "en": "Belt loops", "es": "Trabillas", "fr": "Passants", "pt": "Passadores" }, "tooltip": { "en": "Pitched across the measured waist so the loops sit evenly", "es": "Distribuidas sobre la cintura medida para que queden parejas", "fr": "Réparties sur la taille mesurée pour être régulières", "pt": "Distribuídos sobre a cintura medida para ficarem uniformes" } },
+    { "id": "button_count", "type": "slider", "group": "closure", "default": 4, "min": 3, "max": 7, "step": 1, "label": { "en": "Front buttons", "es": "Botones delanteros", "fr": "Boutons devant", "pt": "Botões dianteiros" } },
+    { "id": "button_ligne", "type": "slider", "group": "closure", "default": 30, "min": 22, "max": 42, "step": 1, "label": { "en": "Button size (ligne)", "es": "Tamaño de botón (línea)", "fr": "Taille de bouton (ligne)", "pt": "Tamanho do botão (ligne)" }, "tooltip": { "en": "Drives the Yantra4D sew-through-button face AND the buttonhole length", "es": "Define la cara del sew-through-button Y el largo del ojal", "fr": "Pilote la face du sew-through-button ET la longueur de boutonnière", "pt": "Pilota a face do sew-through-button E o comprimento da casa" } },
+    { "id": "coat_ease", "type": "slider", "group": "body", "default": 180, "min": 100, "max": 320, "step": 10, "label": { "en": "Coat ease over chest (mm)", "es": "Holgura de saco en pecho (mm)", "fr": "Aisance de veste poitrine (mm)", "pt": "Folga do casaco no peito (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "group": "construction", "default": 35, "min": 20, "max": 50, "step": 2, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)", "fr": "Marge d'ourlet (mm)", "pt": "Margem de bainha (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 8, "max": 18, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" }, "advanced": true }
+  ],
+  "constraints": [
+    { "expression": "chest_girth > waist_girth", "severity": "warning", "message": { "en": "A waist wider than the chest is unusual for a belted jacket; check the measure.", "es": "Una cintura mayor que el pecho es raro en chaqueta con cinturón; revisa la medida.", "fr": "Une taille plus large que la poitrine est inhabituel pour une veste ceinturée ; vérifiez la mesure.", "pt": "Uma cintura maior que o peito é incomum numa jaqueta com cinto; verifique a medida." } },
+    { "expression": "pocket_width * 2 < chest_girth", "severity": "warning", "message": { "en": "A bellows pocket that wide folds the front over; the draft clamps it.", "es": "Un bolsillo así dobla el delantero; el trazo lo acota.", "fr": "Une poche si large replie le devant ; le tracé la borne.", "pt": "Um bolso tão largo dobra a frente; o traçado o limita." } }
+  ],
+  "presets": [
+    { "id": "classic-safari", "label": { "en": "Classic safari", "es": "Safari clásico", "fr": "Saharienne classique", "pt": "Safári clássico" }, "values": { "button_count": 4, "belt_loops": 5 } },
+    { "id": "bush-long", "label": { "en": "Long bush coat", "es": "Chaqueta de monte larga", "fr": "Veste de brousse longue", "pt": "Casaco de mato longo" }, "values": { "jacket_length": 880, "button_count": 6, "coat_ease": 240 } },
+    { "id": "trim-safari", "label": { "en": "Trim safari", "es": "Safari entallado", "fr": "Saharienne ajustée", "pt": "Safári justo" }, "values": { "chest_girth": 960, "coat_ease": 120, "belt_width": 35 } }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["popelina-algodon"],
+  "notion": {
+    "kind": "button",
+    "subtype": "single-breasted sew-through buttons",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "thickness": "button_ligne * 0.10",
+        "hole_count": "4",
+        "hole_dia": "button_ligne * 0.05",
+        "hole_spacing": "button_ligne * 0.16",
+        "dish_depth": "button_ligne * 0.03"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "self_belt", "type": "custom", "label": { "en": "Self belt through loops", "es": "Cinturón propio por trabillas", "fr": "Ceinture assortie dans les passants", "pt": "Cinto próprio por passadores" }, "edges": [ { "piece": "belt", "edge": "buckle_end" }, { "piece": "front", "edge": "side" } ], "parameters": ["waist_girth", "belt_width", "belt_loops"] },
+      { "id": "button_run", "type": "button_stand", "label": { "en": "Solved front button run", "es": "Hilera de botones delantera resuelta", "fr": "File de boutons devant résolue", "pt": "Fileira de botões dianteira resolvida" }, "edges": [ { "piece": "front", "edge": "cf" } ], "parameters": ["button_count", "button_ligne", "jacket_length"] },
+      { "id": "bellows_pockets", "type": "pocket", "label": { "en": "Clamped bellows pockets", "es": "Bolsillos de fuelle acotados", "fr": "Poches soufflet bornées", "pt": "Bolsos de fole limitados" }, "edges": [ { "piece": "pocket", "edge": "mouth" }, { "piece": "front", "edge": "side" } ], "parameters": ["pocket_width", "chest_girth"] }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "tailoring": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The safari jacket is one of the most forgiving tailored garments to fit, because the belt takes up the waist — but only if the belt is actually cut to reach a buckle. Home and even ready-to-wear versions routinely cut the self belt to the waist measurement and leave no tail, so it meets end-to-end and cannot fasten. This pattern cuts the belt to the measured waist plus a real tail, solves the loop spacing, and clamps the four bellows pockets to the panels. It is a practical, hard-wearing cotton jacket that fits a range of bodies from one draft — the belt doing the adjusting it was always meant to.",
+      "es": "La chaqueta de safari es de las prendas sastreadas más indulgentes de ajustar, porque el cinturón recoge la cintura — pero solo si el cinturón se corta de verdad para alcanzar una hebilla. Las versiones caseras e incluso de confección suelen cortar el cinturón propio a la medida de cintura sin dejar cola, así que se encuentra extremo con extremo y no cierra. Este patrón corta el cinturón a la cintura medida más una cola real, resuelve el paso de las trabillas, y acota los cuatro bolsillos de fuelle a los paneles. Es una chaqueta práctica y resistente de algodón que ajusta a un rango de cuerpos desde un solo trazo — el cinturón haciendo el ajuste para el que siempre estuvo.",
+      "fr": "La veste saharienne est l'un des vêtements tailleur les plus indulgents à ajuster, car la ceinture reprend la taille — mais seulement si la ceinture est réellement coupée pour atteindre une boucle. Les versions amateur et même de prêt-à-porter coupent souvent la ceinture assortie à la mesure de taille sans laisser de queue, si bien qu'elle se rejoint bout à bout et ne ferme pas. Ce patron coupe la ceinture à la taille mesurée plus une vraie queue, résout le pas des passants, et borne les quatre poches soufflet aux panneaux. C'est une veste pratique et résistante en coton qui va à une gamme de corps depuis un seul tracé — la ceinture faisant le réglage pour lequel elle a toujours été prévue.",
+      "pt": "A jaqueta safári é uma das peças alfaiatadas mais indulgentes de ajustar, porque o cinto recolhe a cintura — mas só se o cinto for realmente cortado para alcançar uma fivela. As versões caseiras e mesmo de pronta-entrega costumam cortar o cinto próprio à medida da cintura sem deixar cauda, de modo que se encontra ponta a ponta e não fecha. Este molde corta o cinto à cintura medida mais uma cauda real, resolve o passo dos passadores, e limita os quatro bolsos de fole aos painéis. É uma jaqueta prática e resistente de algodão que serve a uma gama de corpos a partir de um só traçado — o cinto fazendo o ajuste para o qual sempre foi previsto."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

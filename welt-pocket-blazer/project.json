@@ -1,0 +1,114 @@
+{
+  "project": {
+    "name": "Jetted-Pocket Unstructured Blazer",
+    "slug": "welt-pocket-blazer",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The unstructured blazer: a soft, canvas-free single-breasted jacket in a linen-wool blend, notch lapels, three jetted (besom) pockets with no flaps, and a two-piece sleeve. Because it is unstructured — no chest canvas, no shoulder pad — the geometry has to do the work the canvas usually does: the pockets and the button run must be solved off the panel exactly, because there is no interior scaffolding to disguise a misplaced one. Three things are solved by measurement, not formula. All three jetted welts (breast plus two hip) are clamped against the panel, because a welt longer than the panel it sits on folds the panel over and the kernel CCW-normalizes the inversion into a healthy-looking piece. The button run is pitched across the measured front and the notch lapel facing is DERIVED from the measured lapel so it always covers the roll — a facing drawn to a guessed shape falls short (showing cloth) or overhangs the buttonhole. And the waist dart, which does all the shaping without canvas, is clamped so a large suppression cannot fold the panel, while the two-piece sleeve's vertical seams close by construction and its cap is eased low to the measured armscye. Tailoring conventions throughout: fine edge-stitch, a soft unlined/half-lined body, a two-piece sleeve. The buttons bridge to the Yantra4D `sew-through-button` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El blazer desestructurado: una chaqueta suave sin entretela, de un solo pecho, en mezcla de lino y lana, solapas de muesca, tres bolsillos de vivo sin tapa y una manga de dos piezas. Como es desestructurado — sin entretela de pecho, sin hombrera — la geometría hace el trabajo que suele hacer la entretela: los bolsillos y la hilera de botones deben resolverse sobre el panel con exactitud, porque no hay estructura interior que disimule un mal sitio. Tres cosas se resuelven midiendo, no por fórmula. Los tres vivos (pecho más dos de cadera) se acotan contra el panel, porque un vivo más largo que el panel lo dobla y el kernel normaliza la inversión a CCW dejándola sana. La hilera de botones se distribuye sobre el delantero medido y la vista de la solapa de muesca se DERIVA de la solapa medida para que siempre cubra el quiebre — una vista a una forma supuesta se queda corta (mostrando tela) o sobresale del ojal. Y la pinza de cintura, que hace todo el entalle sin entretela, se acota para que un entalle grande no doble el panel, mientras la manga de dos piezas con costuras verticales cierra por construcción y su copa se embebe poco a la sisa medida. Convenciones de sastrería en todo: pespunte fino, cuerpo suave sin forro o medio forrado, manga de dos piezas. Los botones se puentean al sólido `sew-through-button` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le blazer déstructuré : une veste souple sans entoilage, à simple boutonnage, en mélange lin-laine, revers cranté, trois poches passepoilées sans rabat et une manche deux pièces. Comme il est déstructuré — sans toile de poitrine, sans épaulette — la géométrie fait le travail que fait d'ordinaire la toile : les poches et la file de boutons doivent être résolues sur le panneau avec exactitude, car aucun échafaudage intérieur ne masque un mauvais emplacement. Trois choses sont résolues par la mesure, non par formule. Les trois passepoils (poitrine plus deux hanche) sont bornés par le panneau, car un passepoil plus long que le panneau le replie et le noyau normalise l'inversion en CCW en la laissant saine. La file de boutons est répartie sur le devant mesuré et la parementure du revers cranté est DÉRIVÉE du revers mesuré pour qu'elle couvre toujours le cran — une parementure à une forme devinée reste trop courte (montrant le tissu) ou dépasse la boutonnière. Et la pince de taille, qui fait tout le cintrage sans toile, est bornée pour qu'un fort cintrage ne replie pas le panneau, tandis que la manche deux pièces à coutures verticales ferme par construction et sa tête est peu embue sur l'emmanchure mesurée. Conventions de tailleur partout : surpiqûre fine, corps souple non doublé ou demi-doublé, manche deux pièces. Les boutons font le pont vers le solide `sew-through-button` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O blazer desestruturado: uma jaqueta macia sem entretela, de abotoamento simples, em mescla de linho e lã, lapelas de entalhe, três bolsos embutidos sem aba e uma manga de duas peças. Como é desestruturado — sem entretela de peito, sem ombreira — a geometria faz o trabalho que a entretela costuma fazer: os bolsos e a fileira de botões devem ser resolvidos sobre o painel com exatidão, porque não há estrutura interna que disfarce um lugar errado. Três coisas se resolvem medindo, não por fórmula. Os três embutidos (peito mais dois de quadril) são limitados contra o painel, porque um embutido mais longo que o painel o dobra e o núcleo normaliza a inversão em CCW deixando-a sã. A fileira de botões é distribuída sobre a frente medida e a vista da lapela de entalhe é DERIVADA da lapela medida para que sempre cubra o rolo — uma vista a uma forma adivinhada fica curta (mostrando tecido) ou sobra sobre a casa. E a pence de cintura, que faz todo o ajuste sem entretela, é limitada para que um ajuste grande não dobre o painel, enquanto a manga de duas peças com costuras verticais fecha por construção e sua cabeça é pouco embebida à cava medida. Convenções de alfaiataria em tudo: pesponto fino, corpo macio sem forro ou meio-forrado, manga de duas peças. Os botões fazem a ponte para o sólido `sew-through-button` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["welt-pocket-blazer", "tailoring", "blazer", "unstructured",
+      "notch-lapel", "jetted-pocket", "linen-wool", "button", "hardware", "fc400", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full blazer", "es": "Blazer completo", "fr": "Blazer complet", "pt": "Blazer completo" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "upper_sleeve", "under_sleeve", "collar", "lapel_facing"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front (cut 2, mirrored)", "es": "Delantero (cortar 2, espejo)", "fr": "Devant (couper 2, miroir)", "pt": "Frente (cortar 2, espelhado)" }, "default_color": "#6b6a5a", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "back", "label": { "en": "Back (cut 2, mirrored)", "es": "Espalda (cortar 2, espejo)", "fr": "Dos (couper 2, miroir)", "pt": "Costas (cortar 2, espelhado)" }, "default_color": "#767563", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "upper_sleeve", "label": { "en": "Upper sleeve (cut 2, mirrored)", "es": "Manga superior (cortar 2, espejo)", "fr": "Dessus de manche (couper 2, miroir)", "pt": "Manga superior (cortar 2, espelhado)" }, "default_color": "#82806c", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "under_sleeve", "label": { "en": "Under sleeve (cut 2, mirrored)", "es": "Manga inferior (cortar 2, espejo)", "fr": "Dessous de manche (couper 2, miroir)", "pt": "Manga inferior (cortar 2, espelhado)" }, "default_color": "#8e8c76", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "collar", "label": { "en": "Collar (cut 2, on fold)", "es": "Cuello (cortar 2, al doblez)", "fr": "Col (couper 2, au pli)", "pt": "Gola (cortar 2, na dobra)" }, "default_color": "#9a9880", "cut": { "quantity": 2, "on_fold": true, "mirror": false } },
+    { "id": "lapel_facing", "label": { "en": "Notch lapel facing (cut 2, mirrored)", "es": "Vista de solapa de muesca (cortar 2, espejo)", "fr": "Parementure de revers cranté (couper 2, miroir)", "pt": "Vista da lapela de entalhe (cortar 2, espelhado)" }, "default_color": "#615f52", "cut": { "quantity": 2, "on_fold": false, "mirror": true } }
+  ],
+  "parameter_groups": [
+    { "id": "body", "label": { "en": "Body", "es": "Cuerpo", "fr": "Corps", "pt": "Corpo" } },
+    { "id": "lapel", "label": { "en": "Lapel & facing", "es": "Solapa y vista", "fr": "Revers et parementure", "pt": "Lapela e vista" } },
+    { "id": "detail", "label": { "en": "Buttons & pockets", "es": "Botones y bolsillos", "fr": "Boutons et poches", "pt": "Botões e bolsos" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "group": "body", "default": 1020, "min": 820, "max": 1400, "step": 10, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)" }, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" } },
+    { "id": "waist_girth", "type": "slider", "group": "body", "default": 900, "min": 640, "max": 1300, "step": 10, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)", "pt": "Contorno de cintura (mm)" }, "measurement": { "standard": "iso_8559", "code": "waist_girth" } },
+    { "id": "back_width", "type": "slider", "group": "body", "default": 460, "min": 360, "max": 540, "step": 5, "label": { "en": "Across-back width (mm)", "es": "Ancho de espalda (mm)", "fr": "Carrure dos (mm)", "pt": "Largura das costas (mm)" }, "measurement": { "standard": "iso_8559", "code": "across_back" } },
+    { "id": "back_length", "type": "slider", "group": "body", "default": 440, "min": 360, "max": 520, "step": 5, "label": { "en": "Nape to waist (mm)", "es": "Nuca a cintura (mm)", "fr": "Nuque à taille (mm)", "pt": "Nuca à cintura (mm)" } },
+    { "id": "jacket_length", "type": "slider", "group": "body", "default": 730, "min": 600, "max": 900, "step": 10, "label": { "en": "Jacket length (mm)", "es": "Largo de chaqueta (mm)", "fr": "Longueur de veste (mm)", "pt": "Comprimento do blazer (mm)" } },
+    { "id": "neck_width", "type": "slider", "group": "body", "default": 170, "min": 140, "max": 220, "step": 5, "label": { "en": "Base-neck width (mm)", "es": "Ancho de base de cuello (mm)", "fr": "Largeur d'encolure (mm)", "pt": "Largura da base do pescoço (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "group": "body", "default": 630, "min": 520, "max": 720, "step": 10, "label": { "en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)", "pt": "Comprimento da manga (mm)" } },
+    { "id": "lapel_width", "type": "slider", "group": "lapel", "default": 85, "min": 60, "max": 130, "step": 5, "label": { "en": "Notch lapel width (mm)", "es": "Ancho de solapa de muesca (mm)", "fr": "Largeur de revers cranté (mm)", "pt": "Largura da lapela de entalhe (mm)" } },
+    { "id": "facing_width", "type": "slider", "group": "lapel", "default": 80, "min": 55, "max": 130, "step": 5, "label": { "en": "Lapel facing width (mm)", "es": "Ancho de vista de solapa (mm)", "fr": "Largeur de parementure (mm)", "pt": "Largura da vista da lapela (mm)" }, "tooltip": { "en": "Derived to cover the whole measured lapel run — never falls short of the roll", "es": "Derivada para cubrir todo el recorrido de la solapa — nunca se queda corta", "fr": "Dérivée pour couvrir tout le parcours du revers — jamais trop courte", "pt": "Derivada para cobrir todo o percurso da lapela — nunca fica curta" } },
+    { "id": "button_count", "type": "slider", "group": "detail", "default": 3, "min": 1, "max": 4, "step": 1, "label": { "en": "Front buttons", "es": "Botones delanteros", "fr": "Boutons devant", "pt": "Botões dianteiros" } },
+    { "id": "button_ligne", "type": "slider", "group": "detail", "default": 34, "min": 24, "max": 46, "step": 1, "label": { "en": "Button size (ligne)", "es": "Tamaño de botón (línea)", "fr": "Taille de bouton (ligne)", "pt": "Tamanho do botão (ligne)" }, "tooltip": { "en": "Drives the Yantra4D sew-through-button face AND the buttonhole length", "es": "Define la cara del sew-through-button Y el largo del ojal", "fr": "Pilote la face du sew-through-button ET la longueur de boutonnière", "pt": "Pilota a face do sew-through-button E o comprimento da casa" } },
+    { "id": "welt_length", "type": "slider", "group": "detail", "default": 150, "min": 90, "max": 240, "step": 5, "label": { "en": "Hip welt length (mm)", "es": "Largo de vivo de cadera (mm)", "fr": "Longueur de passepoil hanche (mm)", "pt": "Comprimento do embutido de quadril (mm)" } },
+    { "id": "coat_ease", "type": "slider", "group": "body", "default": 120, "min": 60, "max": 220, "step": 10, "label": { "en": "Coat ease over chest (mm)", "es": "Holgura de saco en pecho (mm)", "fr": "Aisance de veste poitrine (mm)", "pt": "Folga do casaco no peito (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "group": "construction", "default": 38, "min": 25, "max": 55, "step": 2, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)", "fr": "Marge d'ourlet (mm)", "pt": "Margem de bainha (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 8, "max": 18, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" }, "advanced": true }
+  ],
+  "constraints": [
+    { "expression": "chest_girth > waist_girth", "severity": "warning", "message": { "en": "A waist wider than the chest inverts the suppression; the dart is clamped.", "es": "Una cintura mayor que el pecho invierte el entalle; la pinza se acota.", "fr": "Une taille plus large que la poitrine inverse le cintrage ; la pince est bornée.", "pt": "Uma cintura maior que o peito inverte o ajuste; a pence é limitada." } },
+    { "expression": "welt_length * 2 < chest_girth", "severity": "warning", "message": { "en": "A welt that long inverts the front panel; the draft clamps it.", "es": "Un vivo así invierte el delantero; el trazo lo acota.", "fr": "Un passepoil si long inverse le devant ; le tracé le borne.", "pt": "Um embutido tão longo inverte a frente; o traçado o limita." } }
+  ],
+  "presets": [
+    { "id": "soft-3-roll-2", "label": { "en": "Soft 3-roll-2", "es": "Suave 3-quiebre-2", "fr": "Souple 3-roulé-2", "pt": "Macio 3-rolo-2" }, "values": { "button_count": 3, "lapel_width": 85 } },
+    { "id": "summer-1-button", "label": { "en": "Summer (1-button)", "es": "Verano (1 botón)", "fr": "Été (1 bouton)", "pt": "Verão (1 botão)" }, "values": { "button_count": 1, "coat_ease": 90, "jacket_length": 700 } },
+    { "id": "roomy-2-button", "label": { "en": "Roomy 2-button", "es": "Holgado 2 botones", "fr": "Ample 2 boutons", "pt": "Folgado 2 botões" }, "values": { "button_count": 2, "coat_ease": 200, "lapel_width": 110 } }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["lana-peinada-traje"],
+  "notion": {
+    "kind": "button",
+    "subtype": "single-breasted sew-through buttons",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "thickness": "button_ligne * 0.10",
+        "hole_count": "4",
+        "hole_dia": "button_ligne * 0.05",
+        "hole_spacing": "button_ligne * 0.16",
+        "dish_depth": "button_ligne * 0.03"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "notch_lapel", "type": "custom", "label": { "en": "Notch lapel and facing", "es": "Solapa de muesca y vista", "fr": "Revers cranté et parementure", "pt": "Lapela de entalhe e vista" }, "edges": [ { "piece": "lapel_facing", "edge": "outer" }, { "piece": "front", "edge": "lapel" } ], "parameters": ["lapel_width", "facing_width"] },
+      { "id": "button_run", "type": "button_stand", "label": { "en": "Solved front button run", "es": "Hilera de botones delantera resuelta", "fr": "File de boutons devant résolue", "pt": "Fileira de botões dianteira resolvida" }, "edges": [ { "piece": "front", "edge": "front_edge" } ], "parameters": ["button_count", "button_ligne", "jacket_length"] },
+      { "id": "jetted_pockets", "type": "pocket", "label": { "en": "Clamped jetted pockets", "es": "Bolsillos de vivo acotados", "fr": "Poches passepoilées bornées", "pt": "Bolsos embutidos limitados" }, "edges": [ { "piece": "front", "edge": "side" } ], "parameters": ["welt_length", "chest_girth"] }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "tailoring": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The unstructured blazer is the most accessible tailored jacket to make at home — no canvas, no pad-stitching, no interior architecture — which is exactly why it is the one where a misplaced pocket or a short lapel facing shows most, because there is nothing inside to hide it. This pattern clamps all three jetted welts to the panel, derives the lapel facing from the lapel so it always covers the roll, and solves the buttons across the measured front. It is a soft, breathable linen-wool jacket a confident home sewer can genuinely finish — the entry point to real tailoring, put in the commons with the traps already closed.",
+      "es": "El blazer desestructurado es la chaqueta sastre más accesible de hacer en casa — sin entretela, sin pespunte a mano, sin arquitectura interior — y por eso mismo es donde más se nota un bolsillo mal puesto o una vista de solapa corta, porque no hay nada dentro que lo esconda. Este patrón acota los tres vivos al panel, deriva la vista de la solapa para que siempre cubra el quiebre, y resuelve los botones sobre el delantero medido. Es una chaqueta suave y transpirable de lino y lana que quien cose en casa con confianza puede terminar de verdad — la puerta de entrada a la sastrería real, puesta en el commons con las trampas ya cerradas.",
+      "fr": "Le blazer déstructuré est la veste tailleur la plus accessible à faire chez soi — sans toile, sans bâti main, sans architecture intérieure — et c'est justement là qu'une poche mal placée ou une parementure de revers trop courte se voit le plus, car rien à l'intérieur ne la cache. Ce patron borne les trois passepoils au panneau, dérive la parementure du revers pour qu'elle couvre toujours le cran, et résout les boutons sur le devant mesuré. C'est une veste souple et respirante en lin-laine qu'un couturier amateur assuré peut réellement terminer — la porte d'entrée du vrai tailleur, mise dans le commun avec les pièges déjà fermés.",
+      "pt": "O blazer desestruturado é a jaqueta alfaiate mais acessível de fazer em casa — sem entretela, sem alinhavo à mão, sem arquitetura interna — e é justamente onde um bolso mal colocado ou uma vista de lapela curta mais aparece, porque não há nada dentro que a esconda. Este molde limita os três embutidos ao painel, deriva a vista da lapela para que sempre cubra o rolo, e resolve os botões sobre a frente medida. É uma jaqueta macia e respirável de linho e lã que quem costura em casa com confiança pode realmente terminar — a porta de entrada da alfaiataria real, posta no comum com as armadilhas já fechadas."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "project": {
+    "name": "Denim Bib Work Apron",
+    "slug": "bib-work-apron",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The adjustable bib apron: one body panel cut on the fold, a neck strap that threads a D-ring so its length adjusts, and two waist ties. The whole point of the D-ring is adjustment, and the whole point of this draft is that the strap is cut to the range the D-ring can actually take up — not to a guessed length that leaves the ring stuck at one end of its travel. Three things are solved by measurement, not formula. The neck strap is cut to the nominal drop plus a MEASURED adjustment range plus the webbing that threads the ring, so it actually adjusts instead of being a stitched loop in disguise. The waist ties are cut to the measured half-waist plus a wrap allowance plus a bow tail, so they reach round the back and tie in front — a tie cut to the half-waist only meets at the back and cannot be tied. And the pocket and bib are clamped against the body they sit on, because a piece wider than the apron folds back on itself and the kernel CCW-normalizes it into a healthy-looking outline. Denim/workwear conventions throughout: 7 mm twin-needle gold topstitch, every outer edge turned, every hard good a Yantra4D reference. The D-ring bridges to the Yantra4D `d-ring` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El mandil de peto ajustable: un panel de cuerpo cortado al doblez, una cinta al cuello que pasa por una anilla D para ajustar su largo, y dos cintas a la cintura. Todo el sentido de la anilla D es el ajuste, y todo el sentido de este trazo es que la cinta se corte al rango que la anilla puede recoger de verdad — no a un largo supuesto que deja la anilla atascada en un extremo. Tres cosas se resuelven midiendo, no por fórmula. La cinta al cuello se corta a la caída nominal más un rango de ajuste MEDIDO más el ancho de cinta que pasa por la anilla, así ajusta de verdad y no es un lazo cosido disfrazado. Las cintas a la cintura se cortan a la media cintura MEDIDA más una holgura de vuelta más una cola de moño, así llegan alrededor y se atan al frente — una cinta cortada solo a la media cintura se encuentra en la espalda y no se puede atar. Y el bolsillo y la pechera se acotan contra el cuerpo donde se asientan, porque una pieza más ancha que el mandil se dobla sobre sí y el kernel la normaliza a CCW dejándola sana en apariencia. Convenciones de mezclilla/trabajo en todo: pespunte doble a 7 mm en oro, cada canto exterior doblado, cada herraje una referencia a Yantra4D. La anilla D se puentea al sólido `d-ring` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le tablier à bavette réglable : un panneau de corps coupé au pli, un tour de cou qui passe dans un anneau en D pour régler sa longueur, et deux cordons de taille. Tout l'intérêt de l'anneau en D est le réglage, et tout l'intérêt de ce tracé est que le cordon soit coupé à la plage que l'anneau peut réellement reprendre — non à une longueur devinée qui laisse l'anneau bloqué à une extrémité. Trois choses sont résolues par la mesure, non par formule. Le tour de cou est coupé à la chute nominale plus une plage de réglage MESURÉE plus la sangle qui passe l'anneau, de sorte qu'il se règle vraiment au lieu d'être une boucle cousue déguisée. Les cordons de taille sont coupés à la demi-taille MESURÉE plus un tour supplémentaire plus une queue de nœud, de sorte qu'ils font le tour du dos et se nouent devant — un cordon coupé à la seule demi-taille se rejoint dans le dos et ne se noue pas. Et la poche et la bavette sont bornées par le corps qui les porte, car une pièce plus large que le tablier se replie et le noyau la normalise en CCW en la laissant saine. Conventions denim/travail partout : surpiqûre double 7 mm dorée, chaque bord extérieur rentré, chaque accessoire une référence Yantra4D. L'anneau en D fait le pont vers le solide `d-ring` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O avental de peito ajustável: um painel de corpo cortado na dobra, uma tira de pescoço que passa por uma argola em D para ajustar seu comprimento, e dois cordões de cintura. Todo o sentido da argola em D é o ajuste, e todo o sentido deste traçado é que a tira seja cortada ao alcance que a argola realmente recolhe — não a um comprimento adivinhado que deixa a argola presa numa ponta. Três coisas se resolvem medindo, não por fórmula. A tira de pescoço é cortada à queda nominal mais um alcance de ajuste MEDIDO mais a fita que passa a argola, de modo que ajusta de verdade em vez de ser um laço costurado disfarçado. Os cordões de cintura são cortados à meia-cintura MEDIDA mais uma folga de volta mais uma cauda de laço, de modo que dão a volta pelas costas e amarram na frente — um cordão cortado só à meia-cintura se encontra nas costas e não amarra. E o bolso e o peito são limitados contra o corpo onde se assentam, porque uma peça mais larga que o avental se dobra sobre si e o núcleo a normaliza em CCW deixando-a sã. Convenções de denim/trabalho em tudo: pesponto duplo a 7 mm dourado, cada borda externa dobrada, cada ferragem uma referência ao Yantra4D. A argola em D faz a ponte para o sólido `d-ring` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": ["bib-work-apron", "workwear", "apron", "bib-apron", "d-ring",
+      "adjustable", "topstitch", "hardware", "fc400", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full apron", "es": "Mandil completo", "fr": "Tablier complet", "pt": "Avental completo" },
+      "script_file": "main.py",
+      "pieces": ["body", "neck_strap", "waist_tie", "pocket"]
+    }
+  ],
+  "pieces": [
+    { "id": "body", "label": { "en": "Apron body (cut on fold)", "es": "Cuerpo del mandil (corte al doblez)", "fr": "Corps du tablier (coupe au pli)", "pt": "Corpo do avental (corte na dobra)" }, "default_color": "#3f5573", "cut": { "quantity": 1, "on_fold": true, "mirror": false } },
+    { "id": "neck_strap", "label": { "en": "D-ring neck strap (cut 1)", "es": "Cinta al cuello con anilla D (cortar 1)", "fr": "Tour de cou à anneau D (couper 1)", "pt": "Tira de pescoço com argola D (cortar 1)" }, "default_color": "#5e7896", "cut": { "quantity": 1, "on_fold": false, "mirror": false } },
+    { "id": "waist_tie", "label": { "en": "Waist tie (cut 2)", "es": "Cinta a la cintura (cortar 2)", "fr": "Cordon de taille (couper 2)", "pt": "Cordão de cintura (cortar 2)" }, "default_color": "#6f89a6", "cut": { "quantity": 2, "on_fold": false, "mirror": false } },
+    { "id": "pocket", "label": { "en": "Divided patch pocket (cut on fold)", "es": "Bolsillo de parche dividido (corte al doblez)", "fr": "Poche plaquée divisée (coupe au pli)", "pt": "Bolso chapado dividido (corte na dobra)" }, "default_color": "#7590ae", "cut": { "quantity": 1, "on_fold": true, "mirror": false } }
+  ],
+  "parameter_groups": [
+    { "id": "apron", "label": { "en": "Apron", "es": "Mandil", "fr": "Tablier", "pt": "Avental" } },
+    { "id": "straps", "label": { "en": "Straps & ties", "es": "Cintas", "fr": "Sangles et cordons", "pt": "Tiras e cordões" } },
+    { "id": "pocket", "label": { "en": "Pocket", "es": "Bolsillo", "fr": "Poche", "pt": "Bolso" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
+  ],
+  "parameters": [
+    { "id": "bib_width", "type": "slider", "group": "apron", "default": 300, "min": 180, "max": 460, "step": 10, "label": { "en": "Bib width (mm)", "es": "Ancho de pechera (mm)", "fr": "Largeur de bavette (mm)", "pt": "Largura do peito (mm)" } },
+    { "id": "bib_height", "type": "slider", "group": "apron", "default": 320, "min": 200, "max": 460, "step": 10, "label": { "en": "Bib height (mm)", "es": "Alto de pechera (mm)", "fr": "Hauteur de bavette (mm)", "pt": "Altura do peito (mm)" } },
+    { "id": "skirt_width", "type": "slider", "group": "apron", "default": 640, "min": 380, "max": 900, "step": 10, "label": { "en": "Width at the waist (mm)", "es": "Ancho en la cintura (mm)", "fr": "Largeur à la taille (mm)", "pt": "Largura na cintura (mm)" } },
+    { "id": "skirt_length", "type": "slider", "group": "apron", "default": 580, "min": 300, "max": 900, "step": 10, "label": { "en": "Length, waist to hem (mm)", "es": "Largo, cintura a bajo (mm)", "fr": "Longueur, taille à ourlet (mm)", "pt": "Comprimento, cintura à barra (mm)" } },
+    { "id": "neck_drop", "type": "slider", "group": "straps", "default": 640, "min": 420, "max": 820, "step": 10, "label": { "en": "Neck strap drop (mm)", "es": "Caída de cinta al cuello (mm)", "fr": "Chute du tour de cou (mm)", "pt": "Queda da tira de pescoço (mm)" }, "tooltip": { "en": "The strap is cut to this PLUS a measured adjustment range so the D-ring actually adjusts", "es": "La cinta se corta a esto MÁS un rango de ajuste medido para que la anilla ajuste", "fr": "Le cordon est coupé à cela PLUS une plage de réglage mesurée pour que l'anneau règle", "pt": "A tira é cortada a isto MAIS um alcance de ajuste medido para que a argola ajuste" } },
+    { "id": "half_waist", "type": "slider", "group": "straps", "default": 440, "min": 300, "max": 700, "step": 10, "label": { "en": "Half-waist for ties (mm)", "es": "Media cintura para cintas (mm)", "fr": "Demi-taille pour cordons (mm)", "pt": "Meia-cintura para cordões (mm)" }, "tooltip": { "en": "Ties are cut to this plus a wrap allowance plus a bow tail so they reach round and tie", "es": "Las cintas se cortan a esto más vuelta más cola de moño para llegar y atar", "fr": "Les cordons sont coupés à cela plus un tour et une queue de nœud pour faire le tour et nouer", "pt": "Os cordões são cortados a isto mais volta e cauda de laço para dar a volta e amarrar" } },
+    { "id": "strap_width", "type": "slider", "group": "straps", "default": 34, "min": 22, "max": 55, "step": 1, "label": { "en": "Strap/tie width (mm)", "es": "Ancho de cinta (mm)", "fr": "Largeur de sangle (mm)", "pt": "Largura da tira (mm)" } },
+    { "id": "dring_webbing", "type": "slider", "group": "straps", "default": 34, "min": 20, "max": 50, "step": 1, "label": { "en": "D-ring webbing width (mm)", "es": "Ancho de cinta de anilla D (mm)", "fr": "Largeur de sangle d'anneau D (mm)", "pt": "Largura da fita da argola D (mm)" }, "tooltip": { "en": "Drives the Yantra4D d-ring bar AND the threaded strap width", "es": "Define la barra del d-ring de Yantra4D Y el ancho de cinta enhebrada", "fr": "Pilote la barre du d-ring Yantra4D ET la largeur de sangle enfilée", "pt": "Pilota a barra do d-ring do Yantra4D E a largura da fita enfiada" } },
+    { "id": "pocket_width", "type": "slider", "group": "pocket", "default": 400, "min": 200, "max": 760, "step": 10, "label": { "en": "Pocket width (mm)", "es": "Ancho de bolsillo (mm)", "fr": "Largeur de poche (mm)", "pt": "Largura do bolso (mm)" } },
+    { "id": "pocket_height", "type": "slider", "group": "pocket", "default": 220, "min": 120, "max": 360, "step": 10, "label": { "en": "Pocket height (mm)", "es": "Alto de bolsillo (mm)", "fr": "Hauteur de poche (mm)", "pt": "Altura do bolso (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "group": "construction", "default": 22, "min": 12, "max": 40, "step": 2, "label": { "en": "Turned hem allowance (mm)", "es": "Margen de dobladillo (mm)", "fr": "Marge d'ourlet rentré (mm)", "pt": "Margem de bainha (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 8, "max": 18, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" }, "advanced": true }
+  ],
+  "constraints": [
+    { "expression": "bib_width < skirt_width", "severity": "warning", "message": { "en": "A bib wider than the waist turns the underarm sweep inside out; the draft clamps it.", "es": "Una pechera más ancha que la cintura invierte la curva bajo el brazo; el trazo la acota.", "fr": "Une bavette plus large que la taille inverse la courbe sous le bras ; le tracé la borne.", "pt": "Um peito mais largo que a cintura inverte a curva sob o braço; o traçado o limita." } },
+    { "expression": "pocket_width < skirt_width", "severity": "warning", "message": { "en": "A pocket wider than the apron folds back on itself; the draft clamps it.", "es": "Un bolsillo más ancho que el mandil se dobla sobre sí; el trazo lo acota.", "fr": "Une poche plus large que le tablier se replie ; le tracé la borne.", "pt": "Um bolso mais largo que o avental se dobra sobre si; o traçado o limita." } }
+  ],
+  "presets": [
+    { "id": "workshop", "label": { "en": "Workshop (full length)", "es": "Taller (largo completo)", "fr": "Atelier (pleine longueur)", "pt": "Oficina (comprimento total)" }, "values": { "skirt_length": 700, "skirt_width": 680, "bib_width": 330 } },
+    { "id": "kitchen", "label": { "en": "Kitchen (short)", "es": "Cocina (corto)", "fr": "Cuisine (court)", "pt": "Cozinha (curto)" }, "values": { "skirt_length": 420, "skirt_width": 560, "bib_height": 290 } },
+    { "id": "narrow-frame", "label": { "en": "Narrow frame", "es": "Complexión delgada", "fr": "Carrure étroite", "pt": "Compleição estreita" }, "values": { "skirt_width": 480, "bib_width": 240, "half_waist": 360 } }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["mezclilla-denim"],
+  "notion": {
+    "kind": "buckle",
+    "subtype": "D-ring adjuster on the neck strap",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "d-ring",
+      "linked": true,
+      "params_map": {
+        "webbing": "dring_webbing",
+        "bow_depth": "dring_webbing * 0.7",
+        "wire_t": "dring_webbing * 0.14",
+        "wire_h": "dring_webbing * 0.5"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "dring_neck_adjuster", "type": "custom", "label": { "en": "D-ring neck strap adjuster", "es": "Ajustador de cuello con anilla D", "fr": "Réglage de cou à anneau D", "pt": "Ajuste de pescoço com argola D" }, "edges": [ { "piece": "neck_strap", "edge": "ring_end" }, { "piece": "body", "edge": "bib_top" } ], "parameters": ["dring_webbing", "neck_drop", "strap_width"] },
+      { "id": "waist_ties", "type": "custom", "label": { "en": "Wrap-and-tie waist ties", "es": "Cintas de vuelta y lazo", "fr": "Cordons de taille à nouer", "pt": "Cordões de amarrar na cintura" }, "edges": [ { "piece": "waist_tie", "edge": "fix_end" }, { "piece": "body", "edge": "side" } ], "parameters": ["half_waist", "strap_width"] },
+      { "id": "divided_pocket", "type": "pocket", "label": { "en": "Divided patch pocket", "es": "Bolsillo de parche dividido", "fr": "Poche plaquée divisée", "pt": "Bolso chapado dividido" }, "edges": [ { "piece": "pocket", "edge": "top" }, { "piece": "body", "edge": "cf_fold" } ], "parameters": ["pocket_width", "pocket_height", "skirt_width"] }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A bib apron is the most-made garment in any workshop and the one most often bought with a neck strap that does not adjust — a stitched loop that either chokes or falls off the shoulder — because the D-ring version is treated as an upgrade rather than the default. Here it is the default, and the strap is cut to the range the ring can actually take up, so it fits every neck. The ties are cut to wrap and tie rather than to meet uselessly at the back, and the pocket is clamped to the body. The D-ring prints and threads at home. It is a garment that everyone who works with their hands owns, drafted so the first one made fits and adjusts.",
+      "es": "Un mandil de peto es la prenda más hecha en cualquier taller y la que más se compra con una cinta al cuello que no ajusta — un lazo cosido que ahorca o se cae del hombro — porque la versión con anilla D se trata como mejora y no como estándar. Aquí es el estándar, y la cinta se corta al rango que la anilla puede recoger, así que ajusta a cualquier cuello. Las cintas se cortan para dar la vuelta y atar en lugar de encontrarse inútilmente en la espalda, y el bolsillo se acota al cuerpo. La anilla D se imprime y se enhebra en casa. Es una prenda que tiene cualquiera que trabaje con las manos, trazada para que la primera ajuste y ajuste bien.",
+      "fr": "Un tablier à bavette est le vêtement le plus confectionné dans tout atelier et le plus souvent acheté avec un tour de cou qui ne se règle pas — une boucle cousue qui étrangle ou tombe de l'épaule — car la version à anneau D est traitée comme une option et non comme le défaut. Ici c'est le défaut, et le cordon est coupé à la plage que l'anneau peut reprendre, de sorte qu'il tombe juste sur tout cou. Les cordons sont coupés pour faire le tour et nouer plutôt que se rejoindre inutilement dans le dos, et la poche est bornée au corps. L'anneau en D s'imprime et s'enfile chez soi. C'est un vêtement que possède quiconque travaille de ses mains, tracé pour que le premier réalisé tombe juste et se règle.",
+      "pt": "Um avental de peito é a peça mais confeccionada em qualquer oficina e a mais comprada com uma tira de pescoço que não ajusta — um laço costurado que estrangula ou cai do ombro — porque a versão com argola em D é tratada como upgrade e não como padrão. Aqui é o padrão, e a tira é cortada ao alcance que a argola recolhe, de modo que veste em qualquer pescoço. Os cordões são cortados para dar a volta e amarrar em vez de se encontrar inutilmente nas costas, e o bolso é limitado ao corpo. A argola em D imprime e se enfia em casa. É uma peça que qualquer um que trabalha com as mãos possui, traçada para que a primeira feita vista e ajuste."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

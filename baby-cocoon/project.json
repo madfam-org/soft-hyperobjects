@@ -1,0 +1,101 @@
+{
+  "project": {
+    "name": "Baby Swaddle Cocoon",
+    "slug": "baby-cocoon",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A swaddle cocoon (sleep sack) for a newborn: a tapered jersey tube closed round the body, with shoulder snaps that open the top so the baby is laid in and the cocoon snapped over the shoulders rather than pulled over the head. Drafted from INFANT measurements (bodies/infant-6m). The safety rule is that a cocoon must be loose enough at the HIP for the legs to move — a swaddle that pins the legs risks hip dysplasia — and snug at the CHEST so the baby cannot slip down inside it. Two things are solved by measurement. The cocoon tapers from a snug chest to a DELIBERATELY looser hip (measured hip plus legroom), never the other way, and the legroom is floored so the hip circumference can never come out smaller than the chest — a taper that inverts the tube is CCW-normalized by the kernel into a valid-looking piece. And the shoulder snap diameter drives both the drafted shoulder overlap AND the Yantra4D sew-on-snap's snap_dia, so the printed snap matches the sewn edge and the same number flows to the garment's sewn edge and the hardware's sewn flange. Breathable single jersey, seams turned inward, shoulder-open. The snaps bridge to the Yantra4D `sew-on-snap` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un saco de arrullo para recién nacido: un tubo de jersey ahusado y cerrado alrededor del cuerpo, con broches al hombro que abren la parte alta para acostar al bebé y cerrar el saco sobre los hombros en vez de pasarlo por la cabeza. Trazado con medidas INFANTILES (bodies/infant-6m). La regla de seguridad es que el saco debe ir holgado en la CADERA para que las piernas se muevan — un arrullo que fija las piernas arriesga displasia de cadera — y ceñido en el PECHO para que el bebé no se deslice adentro. Dos cosas se resuelven midiendo. El saco se ahúsa de un pecho ceñido a una cadera DELIBERADAMENTE más holgada (cadera medida más espacio de piernas), nunca al revés, y ese espacio se acota para que el contorno de cadera no salga menor que el pecho — un ahusado que invierte el tubo el kernel lo normaliza a CCW en una pieza sana. Y el diámetro del broche define tanto el solape del hombro trazado COMO el snap_dia del sew-on-snap de Yantra4D, así el broche impreso coincide con el canto cosido y el mismo número fluye al canto de la prenda y al ala cosida del herraje. Jersey transpirable, costuras hacia dentro, apertura al hombro. Los broches se puentean al sólido `sew-on-snap` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un cocon d'emmaillotage pour nouveau-né : un tube en jersey fuselé fermé autour du corps, avec des pressions aux épaules qui ouvrent le haut pour coucher le bébé et fermer le cocon sur les épaules plutôt que le passer par la tête. Tracé sur des mesures de NOURRISSON (bodies/infant-6m). La règle de sécurité est que le cocon doit être assez lâche à la HANCHE pour que les jambes bougent — un emmaillotage qui bloque les jambes risque une dysplasie de hanche — et ajusté à la POITRINE pour que le bébé ne glisse pas à l'intérieur. Deux choses sont résolues par la mesure. Le cocon se fusèle d'une poitrine ajustée à une hanche DÉLIBÉRÉMENT plus lâche (hanche mesurée plus jeu de jambes), jamais l'inverse, et ce jeu est borné pour que le tour de hanche ne sorte jamais plus petit que la poitrine — un fuselage qui inverse le tube est normalisé en CCW par le noyau en pièce saine. Et le diamètre de pression pilote le recouvrement d'épaule tracé ET le snap_dia du sew-on-snap Yantra4D, de sorte que la pression imprimée s'accorde au bord cousu et que le même nombre passe au bord du vêtement et à l'aile cousue de l'accessoire. Jersey respirant, coutures rentrées, ouverture aux épaules. Les pressions font le pont vers le solide `sew-on-snap` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um casulo de enrolar para recém-nascido: um tubo de jérsei afunilado fechado ao redor do corpo, com botões de pressão nos ombros que abrem o topo para deitar o bebê e fechar o casulo sobre os ombros em vez de passar pela cabeça. Traçado com medidas de LACTENTE (bodies/infant-6m). A regra de segurança é que o casulo deve ser folgado no QUADRIL para as pernas se moverem — um enrolar que prende as pernas arrisca displasia do quadril — e ajustado no PEITO para o bebê não escorregar dentro. Duas coisas se resolvem medindo. O casulo afunila de um peito ajustado a um quadril DELIBERADAMENTE mais folgado (quadril medido mais espaço de pernas), nunca o contrário, e esse espaço é limitado para que o contorno de quadril nunca saia menor que o peito — um afunilamento que inverte o tubo é normalizado em CCW pelo núcleo numa peça sã. E o diâmetro da pressão pilota a sobreposição de ombro traçada E o snap_dia do sew-on-snap do Yantra4D, de modo que a pressão impressa combine com a borda costurada e o mesmo número flua para a borda da peça e para a aba costurada da ferragem. Jérsei respirável, costuras para dentro, abertura nos ombros. Os botões fazem a ponte para o sólido `sew-on-snap` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": ["baby-cocoon", "kids_baby", "swaddle", "sleep-sack", "cocoon",
+      "sew-on-snap", "hip-safe", "infant-proportion", "hardware", "fc400", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full cocoon", "es": "Saco completo", "fr": "Cocon complet", "pt": "Casulo completo" },
+      "script_file": "main.py",
+      "pieces": ["body", "shoulder"]
+    }
+  ],
+  "pieces": [
+    { "id": "body", "label": { "en": "Cocoon body (cut 2, on fold)", "es": "Cuerpo del saco (cortar 2, al doblez)", "fr": "Corps du cocon (couper 2, au pli)", "pt": "Corpo do casulo (cortar 2, na dobra)" }, "default_color": "#cfe0e6", "cut": { "quantity": 2, "on_fold": true, "mirror": false } },
+    { "id": "shoulder", "label": { "en": "Shoulder snap tab (cut 4)", "es": "Trabilla de broche de hombro (cortar 4)", "fr": "Patte à pression d'épaule (couper 4)", "pt": "Aba de pressão de ombro (cortar 4)" }, "default_color": "#bcd2da", "cut": { "quantity": 4, "on_fold": false, "mirror": false } }
+  ],
+  "parameter_groups": [
+    { "id": "infant", "label": { "en": "Infant measurements", "es": "Medidas del bebé", "fr": "Mesures du nourrisson", "pt": "Medidas do lactente" } },
+    { "id": "safety", "label": { "en": "Fit & safety", "es": "Ajuste y seguridad", "fr": "Ajustement et sécurité", "pt": "Ajuste e segurança" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "group": "infant", "default": 440, "min": 360, "max": 560, "step": 10, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)" }, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" } },
+    { "id": "hip_girth", "type": "slider", "group": "infant", "default": 480, "min": 380, "max": 620, "step": 10, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)", "fr": "Tour de hanches (mm)", "pt": "Contorno de quadril (mm)" }, "measurement": { "standard": "iso_8559", "code": "hip_girth" } },
+    { "id": "cocoon_length", "type": "slider", "group": "infant", "default": 480, "min": 340, "max": 680, "step": 10, "label": { "en": "Cocoon length (mm)", "es": "Largo del saco (mm)", "fr": "Longueur du cocon (mm)", "pt": "Comprimento do casulo (mm)" } },
+    { "id": "neck_width", "type": "slider", "group": "infant", "default": 130, "min": 100, "max": 200, "step": 5, "label": { "en": "Neck opening width (mm)", "es": "Ancho de escote (mm)", "fr": "Largeur d'encolure (mm)", "pt": "Largura do decote (mm)" } },
+    { "id": "leg_room", "type": "slider", "group": "safety", "default": 120, "min": 40, "max": 260, "step": 10, "label": { "en": "Hip legroom, added (mm)", "es": "Espacio de piernas, añadido (mm)", "fr": "Jeu de jambes, ajouté (mm)", "pt": "Espaço de pernas, adicionado (mm)" }, "tooltip": { "en": "Added at the hip; floored so the hip can never be smaller than the chest (hip-dysplasia safe)", "es": "Añadido en la cadera; con piso para que la cadera no sea menor que el pecho (seguro de cadera)", "fr": "Ajouté à la hanche ; plancher pour que la hanche ne soit jamais plus petite que la poitrine", "pt": "Adicionado no quadril; com piso para que o quadril nunca seja menor que o peito" } },
+    { "id": "snap_diameter", "type": "slider", "group": "safety", "default": 12, "min": 9, "max": 18, "step": 1, "label": { "en": "Shoulder snap diameter (mm)", "es": "Diámetro de broche de hombro (mm)", "fr": "Diamètre de pression d'épaule (mm)", "pt": "Diâmetro da pressão de ombro (mm)" }, "tooltip": { "en": "Drives the Yantra4D sew-on-snap snap_dia AND the drafted shoulder overlap — one number to both", "es": "Define el snap_dia del sew-on-snap de Yantra4D Y el solape del hombro — un número a ambos", "fr": "Pilote le snap_dia du sew-on-snap Yantra4D ET le recouvrement d'épaule — un nombre aux deux", "pt": "Pilota o snap_dia do sew-on-snap do Yantra4D E a sobreposição de ombro — um número a ambos" } },
+    { "id": "knit_stretch", "type": "slider", "group": "infant", "default": 0.10, "min": 0.0, "max": 0.20, "step": 0.01, "label": { "en": "Chest negative ease (fraction)", "es": "Ease negativa de pecho (fracción)", "fr": "Aisance négative poitrine (fraction)", "pt": "Folga negativa do peito (fração)" } },
+    { "id": "hem_allowance", "type": "slider", "group": "construction", "default": 20, "min": 12, "max": 35, "step": 2, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)", "fr": "Marge d'ourlet (mm)", "pt": "Margem de bainha (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "group": "construction", "default": 8, "min": 6, "max": 14, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" }, "advanced": true }
+  ],
+  "constraints": [
+    { "expression": "hip_girth < chest_girth", "severity": "warning", "message": { "en": "The hip is floored looser than the chest for leg freedom; the draft enforces it.", "es": "La cadera se acota más holgada que el pecho para las piernas; el trazo lo obliga.", "fr": "La hanche est bornée plus lâche que la poitrine pour les jambes ; le tracé l'impose.", "pt": "O quadril é limitado mais folgado que o peito para as pernas; o traçado o impõe." } }
+  ],
+  "presets": [
+    { "id": "newborn", "label": { "en": "Newborn", "es": "Recién nacido", "fr": "Nouveau-né", "pt": "Recém-nascido" }, "values": { "chest_girth": 400, "hip_girth": 430, "cocoon_length": 420, "leg_room": 120 } },
+    { "id": "three-months", "label": { "en": "3 months", "es": "3 meses", "fr": "3 mois", "pt": "3 meses" }, "values": { "chest_girth": 440, "hip_girth": 480, "cocoon_length": 480, "leg_room": 140 } },
+    { "id": "six-months-legroom", "label": { "en": "6 months (extra legroom)", "es": "6 meses (más espacio)", "fr": "6 mois (plus de jeu)", "pt": "6 meses (mais espaço)" }, "values": { "chest_girth": 480, "hip_girth": 540, "cocoon_length": 560, "leg_room": 200 } }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["jersey-algodon"],
+  "notion": {
+    "kind": "snap",
+    "subtype": "shoulder-opening sew-on snaps",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-on-snap",
+      "linked": true,
+      "params_map": {
+        "snap_dia": "snap_diameter",
+        "disc_t": "snap_diameter * 0.12",
+        "stud_dia": "snap_diameter * 0.4",
+        "engage_clear": "snap_diameter * 0.05",
+        "sew_holes": "4",
+        "hole_dia": "snap_diameter * 0.08"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "shoulder_snap", "type": "placket", "label": { "en": "Shoulder-opening snap closure", "es": "Cierre de broche al hombro", "fr": "Fermeture à pression d'épaule", "pt": "Fecho de pressão no ombro" }, "edges": [ { "piece": "shoulder", "edge": "attach" }, { "piece": "body", "edge": "shoulder" } ], "parameters": ["snap_diameter", "neck_width"] },
+      { "id": "hip_safe_taper", "type": "hem", "label": { "en": "Hip-safe loose taper", "es": "Ahusado holgado seguro de cadera", "fr": "Fuselage lâche sûr pour la hanche", "pt": "Afunilamento folgado seguro para o quadril" }, "edges": [ { "piece": "body", "edge": "hem" }, { "piece": "body", "edge": "side" } ], "parameters": ["hip_girth", "leg_room", "chest_girth"] }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true,
+      "knit_negative_ease": true
+    },
+    "societal_benefit": {
+      "en": "A swaddle cocoon is a garment where the fit is a safety question, not a style one: too tight at the hips and it holds the legs straight, which is now understood to raise the risk of hip dysplasia; too loose at the chest and the baby slides down inside it, a suffocation risk. Commercial sacks address this with size charts; this pattern addresses it in the geometry, flooring the hip looser than the chest so the legs always have room and keeping the chest snug. The shoulder-open snap means the baby is laid in rather than pulled over the head, and the snap is dimensionally bridged so the printed part matches the sewn overlap. It is a safe, breathable, printable sleep sack drafted to the baby's own measurements.",
+      "es": "Un saco de arrullo es una prenda donde el ajuste es cuestión de seguridad, no de estilo: muy apretado en las caderas mantiene las piernas rectas, lo que hoy se sabe que aumenta el riesgo de displasia de cadera; muy holgado en el pecho y el bebé se desliza adentro, riesgo de asfixia. Los sacos comerciales lo resuelven con tablas de tallas; este patrón lo resuelve en la geometría, acotando la cadera más holgada que el pecho para que las piernas siempre tengan espacio y manteniendo el pecho ceñido. La apertura al hombro significa acostar al bebé en vez de pasarlo por la cabeza, y el broche se puentea dimensionalmente para que la pieza impresa coincida con el solape cosido. Es un saco de dormir seguro, transpirable e imprimible, trazado a las medidas del propio bebé.",
+      "fr": "Un cocon d'emmaillotage est un vêtement où l'ajustement est une question de sécurité, non de style : trop serré aux hanches il tient les jambes droites, ce qui augmente le risque de dysplasie de hanche ; trop lâche à la poitrine le bébé glisse à l'intérieur, risque d'étouffement. Les sacs du commerce y répondent par des tableaux de tailles ; ce patron y répond dans la géométrie, en bornant la hanche plus lâche que la poitrine pour que les jambes aient toujours de la place et en gardant la poitrine ajustée. L'ouverture aux épaules signifie qu'on couche le bébé plutôt que de le passer par la tête, et la pression est pontée dimensionnellement pour que la pièce imprimée s'accorde au recouvrement cousu. C'est une gigoteuse sûre, respirante et imprimable, tracée aux mesures du bébé.",
+      "pt": "Um casulo de enrolar é uma peça onde o ajuste é questão de segurança, não de estilo: apertado demais nos quadris mantém as pernas retas, o que hoje se sabe aumentar o risco de displasia do quadril; folgado demais no peito e o bebê escorrega dentro, risco de asfixia. Os sacos comerciais resolvem com tabelas de tamanho; este molde resolve na geometria, limitando o quadril mais folgado que o peito para as pernas sempre terem espaço e mantendo o peito ajustado. A abertura no ombro significa deitar o bebê em vez de passar pela cabeça, e o botão é ponteado dimensionalmente para que a peça impressa combine com a sobreposição costurada. É um saco de dormir seguro, respirável e imprimível, traçado às medidas do próprio bebê."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

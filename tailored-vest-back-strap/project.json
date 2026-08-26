@@ -1,0 +1,109 @@
+{
+  "project": {
+    "name": "Cinch-Back Tailoring Vest",
+    "slug": "tailored-vest-back-strap",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The cinch-back waistcoat: a tailored vest whose back is split at the centre and drawn together by a strap running through a buckle, so the wearer nips the waist to fit. The signature is the back strap and buckle, and the number that has to be right is the strap's cut length against its adjustment range — a strap cut to the nominal back width runs out of buckle before it can cinch, and one cut too long leaves a tail flapping past the buckle. Three things are solved by measurement, not formula. The back strap is cut to the MEASURED back gap plus the buckle's travel plus the wrap round the bar, so the vest can cinch and let out — a strap cut to the gap alone cannot tighten. The front button run is pitched across the measured front above the point, so the traditionally-undone bottom button sits on cloth. And the point drop is floored so it cannot invert above the waist while the welts are clamped against the front, because an inverted piece is CCW-normalized by the kernel into a healthy-looking outline. Tailoring conventions throughout: fine edge-stitch, a lining back, the buckle a Yantra4D reference. The buckle bridges to the Yantra4D `strap-buckle` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El chaleco de hebilla trasera: un chaleco sastre cuya espalda se parte al centro y se junta con una cinta que pasa por una hebilla, para que quien lo usa entalle la cintura a medida. La firma es la cinta y la hebilla traseras, y el número que debe estar bien es el largo de la cinta contra su rango de ajuste — una cinta cortada al ancho de espalda nominal se queda sin hebilla antes de entallar, y una cortada larga deja cola colgando. Tres cosas se resuelven midiendo, no por fórmula. La cinta trasera se corta al hueco de espalda MEDIDO más el ajuste de la hebilla más la vuelta a la barra, así el chaleco entalla y suelta — una cinta cortada al hueco solo no aprieta. La hilera de botones delantera se distribuye sobre el delantero medido sobre la punta, así el inferior desabrochado cae en tela. Y la caída de punta tiene piso para que no se invierta sobre la cintura mientras los vivos se acotan contra el delantero, porque una pieza invertida el kernel la normaliza a CCW dejándola sana. Convenciones de sastrería en todo: pespunte fino, espalda de forro, la hebilla una referencia a Yantra4D. La hebilla se puentea al sólido `strap-buckle` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le gilet à martingale dorsale : un gilet tailleur dont le dos est fendu au milieu et resserré par une sangle passant dans une boucle, pour que le porteur cintre la taille à sa mesure. La signature est la sangle et la boucle dorsales, et le nombre qui doit être juste est la longueur de sangle face à sa plage de réglage — une sangle coupée à la largeur de dos nominale manque de boucle avant de cintrer, et une coupée trop longue laisse une queue pendante. Trois choses sont résolues par la mesure, non par formule. La sangle dorsale est coupée à l'écart de dos MESURÉ plus le débattement de la boucle plus le tour de barre, de sorte que le gilet cintre et desserre — une sangle coupée au seul écart ne serre pas. La file de boutons devant est répartie sur le devant mesuré au-dessus de la pointe, de sorte que le bas défait tombe sur le tissu. Et la chute de pointe a un plancher pour ne pas s'inverser au-dessus de la taille tandis que les passepoils sont bornés par le devant, car une pièce inversée est normalisée en CCW par le noyau en paraissant saine. Conventions de tailleur partout : surpiqûre fine, dos en doublure, la boucle une référence Yantra4D. La boucle fait le pont vers le solide `strap-buckle` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O colete de fivela nas costas: um colete alfaiate cujas costas são divididas no centro e unidas por uma tira passando por uma fivela, para que quem veste ajuste a cintura à medida. A assinatura é a tira e a fivela nas costas, e o número que tem de estar certo é o comprimento da tira ante seu alcance de ajuste — uma tira cortada à largura de costas nominal fica sem fivela antes de ajustar, e uma cortada longa deixa cauda pendurada. Três coisas se resolvem medindo, não por fórmula. A tira das costas é cortada ao vão de costas MEDIDO mais o curso da fivela mais a volta na barra, de modo que o colete ajusta e solta — uma tira cortada só ao vão não aperta. A fileira de botões dianteira é distribuída sobre a frente medida acima do bico, de modo que o de baixo desabotoado cai no tecido. E a queda do bico tem piso para não se inverter acima da cintura enquanto os embutidos são limitados contra a frente, porque uma peça invertida é normalizada em CCW pelo núcleo parecendo sã. Convenções de alfaiataria em tudo: pesponto fino, costas de forro, a fivela uma referência ao Yantra4D. A fivela faz a ponte para o sólido `strap-buckle` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["tailored-vest-back-strap", "tailoring", "waistcoat", "vest",
+      "cinch-back", "strap-buckle", "adjustable", "hardware", "fc400", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full vest", "es": "Chaleco completo", "fr": "Gilet complet", "pt": "Colete completo" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "strap", "welt"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front (cut 2, mirrored)", "es": "Delantero (cortar 2, espejo)", "fr": "Devant (couper 2, miroir)", "pt": "Frente (cortar 2, espelhado)" }, "default_color": "#3a3f30", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "back", "label": { "en": "Back half (cut 2, mirrored)", "es": "Media espalda (cortar 2, espejo)", "fr": "Demi-dos (couper 2, miroir)", "pt": "Meia-costas (cortar 2, espelhado)" }, "default_color": "#484d3c", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "strap", "label": { "en": "Cinch strap (cut 2)", "es": "Cinta de entalle (cortar 2)", "fr": "Sangle de cintrage (couper 2)", "pt": "Tira de ajuste (cortar 2)" }, "default_color": "#565b48", "cut": { "quantity": 2, "on_fold": false, "mirror": false } },
+    { "id": "welt", "label": { "en": "Welt (cut 4)", "es": "Vivo (cortar 4)", "fr": "Passepoil (couper 4)", "pt": "Embutido (cortar 4)" }, "default_color": "#636850", "cut": { "quantity": 4, "on_fold": false, "mirror": false } }
+  ],
+  "parameter_groups": [
+    { "id": "body", "label": { "en": "Body", "es": "Cuerpo", "fr": "Corps", "pt": "Corpo" } },
+    { "id": "back", "label": { "en": "Cinch back", "es": "Espalda de entalle", "fr": "Dos à martingale", "pt": "Costas de ajuste" } },
+    { "id": "closure", "label": { "en": "Buttons & pockets", "es": "Botones y bolsillos", "fr": "Boutons et poches", "pt": "Botões e bolsos" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "group": "body", "default": 1020, "min": 820, "max": 1400, "step": 10, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)" }, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" } },
+    { "id": "waist_girth", "type": "slider", "group": "body", "default": 880, "min": 640, "max": 1300, "step": 10, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)", "pt": "Contorno de cintura (mm)" }, "measurement": { "standard": "iso_8559", "code": "waist_girth" } },
+    { "id": "front_length", "type": "slider", "group": "body", "default": 560, "min": 440, "max": 700, "step": 10, "label": { "en": "Front length, shoulder to point (mm)", "es": "Largo delantero, hombro a punta (mm)", "fr": "Longueur devant, épaule à pointe (mm)", "pt": "Comprimento dianteiro, ombro ao bico (mm)" } },
+    { "id": "neck_width", "type": "slider", "group": "body", "default": 170, "min": 140, "max": 220, "step": 5, "label": { "en": "Base-neck width (mm)", "es": "Ancho de base de cuello (mm)", "fr": "Largeur d'encolure (mm)", "pt": "Largura da base do pescoço (mm)" } },
+    { "id": "shoulder_slope", "type": "slider", "group": "body", "default": 45, "min": 25, "max": 70, "step": 2, "label": { "en": "Shoulder drop (mm)", "es": "Caída de hombro (mm)", "fr": "Tombant d'épaule (mm)", "pt": "Queda do ombro (mm)" } },
+    { "id": "back_gap", "type": "slider", "group": "back", "default": 120, "min": 60, "max": 240, "step": 10, "label": { "en": "Back gap the strap spans (mm)", "es": "Hueco de espalda que cruza la cinta (mm)", "fr": "Écart de dos que couvre la sangle (mm)", "pt": "Vão das costas que a tira cobre (mm)" }, "tooltip": { "en": "The strap is cut to this plus the buckle's travel plus the wrap — never the gap alone", "es": "La cinta se corta a esto más el ajuste más la vuelta — nunca al hueco solo", "fr": "La sangle est coupée à cela plus le débattement plus le tour — jamais au seul écart", "pt": "A tira é cortada a isto mais o curso mais a volta — nunca só ao vão" } },
+    { "id": "strap_width", "type": "slider", "group": "back", "default": 34, "min": 22, "max": 55, "step": 1, "label": { "en": "Cinch strap width (mm)", "es": "Ancho de cinta (mm)", "fr": "Largeur de sangle (mm)", "pt": "Largura da tira (mm)" }, "tooltip": { "en": "Drives the Yantra4D strap-buckle webbing AND the strap it grips", "es": "Define la cinta del strap-buckle de Yantra4D Y la cinta que agarra", "fr": "Pilote la sangle du strap-buckle Yantra4D ET la sangle qu'elle serre", "pt": "Pilota a fita do strap-buckle do Yantra4D E a tira que agarra" } },
+    { "id": "button_count", "type": "slider", "group": "closure", "default": 5, "min": 3, "max": 8, "step": 1, "label": { "en": "Front buttons", "es": "Botones delanteros", "fr": "Boutons devant", "pt": "Botões dianteiros" } },
+    { "id": "button_ligne", "type": "slider", "group": "closure", "default": 24, "min": 18, "max": 34, "step": 1, "label": { "en": "Button size (ligne)", "es": "Tamaño de botón (línea)", "fr": "Taille de bouton (ligne)", "pt": "Tamanho do botão (ligne)" } },
+    { "id": "point_drop", "type": "slider", "group": "closure", "default": 60, "min": 0, "max": 140, "step": 5, "label": { "en": "Point drop below waist (mm)", "es": "Caída de punta bajo cintura (mm)", "fr": "Chute de pointe sous taille (mm)", "pt": "Queda do bico abaixo da cintura (mm)" }, "tooltip": { "en": "Floored so the point can never invert above the waist", "es": "Con piso para que la punta nunca se invierta sobre la cintura", "fr": "Plancher posé pour que la pointe ne s'inverse jamais au-dessus de la taille", "pt": "Com piso para que o bico nunca se inverta acima da cintura" } },
+    { "id": "welt_length", "type": "slider", "group": "closure", "default": 110, "min": 70, "max": 200, "step": 5, "label": { "en": "Welt pocket length (mm)", "es": "Largo de bolsillo de vivo (mm)", "fr": "Longueur de poche passepoilée (mm)", "pt": "Comprimento do bolso embutido (mm)" } },
+    { "id": "vest_ease", "type": "slider", "group": "body", "default": 60, "min": 20, "max": 140, "step": 5, "label": { "en": "Ease over chest (mm)", "es": "Holgura en pecho (mm)", "fr": "Aisance poitrine (mm)", "pt": "Folga no peito (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "group": "construction", "default": 20, "min": 12, "max": 35, "step": 2, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)", "fr": "Marge d'ourlet (mm)", "pt": "Margem de bainha (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 8, "max": 18, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" }, "advanced": true }
+  ],
+  "constraints": [
+    { "expression": "chest_girth > waist_girth", "severity": "warning", "message": { "en": "A waist wider than the chest inverts the suppression; the dart is clamped.", "es": "Una cintura mayor que el pecho invierte el entalle; la pinza se acota.", "fr": "Une taille plus large que la poitrine inverse le cintrage ; la pince est bornée.", "pt": "Uma cintura maior que o peito inverte o ajuste; a pence é limitada." } },
+    { "expression": "back_gap < waist_girth", "severity": "warning", "message": { "en": "A back gap wider than the waist leaves no back panel; the draft clamps it.", "es": "Un hueco mayor que la cintura no deja espalda; el trazo lo acota.", "fr": "Un écart plus large que la taille ne laisse pas de dos ; le tracé le borne.", "pt": "Um vão maior que a cintura não deixa costas; o traçado o limita." } }
+  ],
+  "presets": [
+    { "id": "classic-cinch", "label": { "en": "Classic cinch", "es": "Entalle clásico", "fr": "Cintrage classique", "pt": "Ajuste clássico" }, "values": { "back_gap": 120, "button_count": 5 } },
+    { "id": "wide-adjust", "label": { "en": "Wide adjust", "es": "Ajuste amplio", "fr": "Réglage large", "pt": "Ajuste amplo" }, "values": { "back_gap": 200, "strap_width": 45 } },
+    { "id": "low-point-6", "label": { "en": "Low-point (6-button)", "es": "Punta baja (6 botones)", "fr": "Pointe basse (6 boutons)", "pt": "Bico baixo (6 botões)" }, "values": { "button_count": 6, "point_drop": 90 } }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["lana-peinada-traje"],
+  "notion": {
+    "kind": "buckle",
+    "subtype": "back cinch strap buckle",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "strap-buckle",
+      "linked": true,
+      "params_map": {
+        "webbing": "strap_width",
+        "web_t": "strap_width * 0.08",
+        "snap_clear": "strap_width * 0.06",
+        "wall": "strap_width * 0.1"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "cinch_buckle", "type": "custom", "label": { "en": "Back cinch strap buckle", "es": "Hebilla de cinta de entalle trasero", "fr": "Boucle de martingale dorsale", "pt": "Fivela de tira de ajuste nas costas" }, "edges": [ { "piece": "strap", "edge": "buckle_end" }, { "piece": "back", "edge": "cb_edge" } ], "parameters": ["strap_width", "back_gap"] },
+      { "id": "front_button_run", "type": "button_stand", "label": { "en": "Solved front button run", "es": "Hilera de botones delantera resuelta", "fr": "File de boutons devant résolue", "pt": "Fileira de botões dianteira resolvida" }, "edges": [ { "piece": "front", "edge": "front_edge" } ], "parameters": ["button_count", "button_ligne", "point_drop"] },
+      { "id": "welt_pockets", "type": "pocket", "label": { "en": "Clamped welt pockets", "es": "Bolsillos de vivo acotados", "fr": "Poches passepoilées bornées", "pt": "Bolsos embutidos limitados" }, "edges": [ { "piece": "welt", "edge": "top" }, { "piece": "front", "edge": "side" } ], "parameters": ["welt_length", "chest_girth"] }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "tailoring": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A cinch-back vest is the one waistcoat that fits a range of bodies from a single pattern, because the buckle takes up the waist — but only if the strap is cut to reach the buckle's range. Home patterns cut the strap to the back width and leave no travel, so the vest fits exactly one waist and no other. This pattern cuts the strap to the measured gap plus the buckle's travel, so the same cut adjusts across a real range, and solves the front buttons above the point. It is the adjustable, tailored vest — a genuinely size-inclusive garment from one draft — with the buckle printing at home.",
+      "es": "Un chaleco de hebilla trasera es el único que ajusta a un rango de cuerpos desde un solo patrón, porque la hebilla recoge la cintura — pero solo si la cinta llega al rango de la hebilla. Los patrones caseros cortan la cinta al ancho de espalda y no dejan recorrido, así que el chaleco ajusta a una sola cintura. Este patrón corta la cinta al hueco medido más el ajuste de la hebilla, así el mismo corte ajusta en un rango real, y resuelve los botones sobre la punta. Es el chaleco sastre ajustable — una prenda de verdad inclusiva en tallas desde un solo trazo — con la hebilla imprimible en casa.",
+      "fr": "Un gilet à martingale est le seul gilet qui va à une gamme de corps depuis un seul patron, car la boucle reprend la taille — mais seulement si la sangle atteint la plage de la boucle. Les patrons amateurs coupent la sangle à la largeur de dos et ne laissent pas de débattement, si bien que le gilet ne va qu'à une seule taille. Ce patron coupe la sangle à l'écart mesuré plus le débattement de la boucle, de sorte que la même coupe se règle sur une gamme réelle, et résout les boutons au-dessus de la pointe. C'est le gilet tailleur réglable — un vêtement vraiment inclusif en tailles depuis un seul tracé — la boucle s'imprimant chez soi.",
+      "pt": "Um colete de fivela nas costas é o único colete que serve a uma gama de corpos a partir de um só molde, porque a fivela recolhe a cintura — mas só se a tira alcança o alcance da fivela. Moldes caseiros cortam a tira à largura de costas e não deixam curso, de modo que o colete serve a uma só cintura. Este molde corta a tira ao vão medido mais o curso da fivela, de modo que o mesmo corte ajusta numa gama real, e resolve os botões acima do bico. É o colete alfaiate ajustável — uma peça de fato inclusiva em tamanhos a partir de um só traçado — com a fivela imprimível em casa."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

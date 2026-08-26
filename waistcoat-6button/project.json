@@ -1,0 +1,108 @@
+{
+  "project": {
+    "name": "Six-Button Tailored Waistcoat",
+    "slug": "waistcoat-6button",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The tailored waistcoat: a six-button front with a pointed hem, welted pockets, a waist dart, a lining back, and a back cinch buckle. The signature is the six-button run down to the pointed hem, and the number that has to be right is the button pitch — the bottom button is worn undone by tradition, so it must sit ABOVE the point where the two front edges diverge, or it lands on open air. Three things are solved by measurement, not formula. The six buttons are pitched across the MEASURED run from the top button below the gorge to the last button above the divergence, and the pitch recomputed across whole intervals, so the undone bottom button sits on cloth. The front point and its divergence are derived from a measured point drop, floored so at the extremes the point cannot invert above the waist — a negative drop the kernel would CCW-normalize into a valid-looking crossed hem. And the welt pockets are clamped against the front, because a welt wider than the panel folds it over and the kernel launders the inversion into a healthy-looking piece. Tailoring conventions throughout: fine edge-stitch, a lining back, a back cinch. The buttons bridge to the Yantra4D `sew-through-button` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El chaleco de sastre: un frente de seis botones con bajo en punta, bolsillos de vivo, una pinza de cintura, una espalda de forro y una hebilla trasera. La firma es la hilera de seis botones hasta el bajo en punta, y el número que debe estar bien es el paso — el botón inferior se lleva desabrochado por tradición, así que debe quedar ARRIBA del punto donde los dos cantos delanteros divergen, o cae al aire. Tres cosas se resuelven midiendo, no por fórmula. Los seis botones se distribuyen sobre el recorrido MEDIDO del botón superior bajo la gorja al último sobre la divergencia, y el paso se recalcula en intervalos enteros, así el inferior desabrochado cae en tela. La punta delantera y su divergencia se derivan de una caída de punta medida, con piso para que en los extremos la punta no se invierta sobre la cintura — una caída negativa que el kernel normalizaría a CCW en un bajo cruzado válido en apariencia. Y los bolsillos de vivo se acotan contra el delantero, porque un vivo más ancho que el panel lo dobla y el kernel lava la inversión en una pieza sana. Convenciones de sastrería en todo: pespunte fino, espalda de forro, hebilla trasera. Los botones se puentean al sólido `sew-through-button` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le gilet de tailleur : un devant six boutons à pointe, des poches passepoilées, une pince de taille, un dos en doublure et une martingale dorsale. La signature est la file de six boutons jusqu'à la pointe, et le nombre qui doit être juste est le pas — le bouton du bas se porte défait par tradition, il doit donc être AU-DESSUS du point où les deux bords devant divergent, ou il tombe dans le vide. Trois choses sont résolues par la mesure, non par formule. Les six boutons sont répartis sur le parcours MESURÉ du bouton haut sous le gorge au dernier au-dessus de la divergence, et le pas recalculé en intervalles entiers, de sorte que le bas défait tombe sur le tissu. La pointe devant et sa divergence sont dérivées d'une chute de pointe mesurée, plancher posé pour qu'aux extrêmes la pointe ne s'inverse pas au-dessus de la taille — une chute négative que le noyau normaliserait en CCW en un bord croisé valide en apparence. Et les poches passepoilées sont bornées par le devant, car un passepoil plus large que le panneau le replie et le noyau blanchit l'inversion en pièce saine. Conventions de tailleur partout : surpiqûre fine, dos en doublure, martingale. Les boutons font le pont vers le solide `sew-through-button` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O colete de alfaiataria: uma frente de seis botões com bico, bolsos embutidos, uma pence de cintura, umas costas de forro e uma fivela nas costas. A assinatura é a fileira de seis botões até o bico, e o número que tem de estar certo é o passo — o botão de baixo se usa desabotoado por tradição, então deve ficar ACIMA do ponto onde as duas bordas dianteiras divergem, ou cai no ar. Três coisas se resolvem medindo, não por fórmula. Os seis botões são distribuídos sobre o percurso MEDIDO do botão de cima sob o gorja ao último acima da divergência, e o passo recalculado em intervalos inteiros, de modo que o de baixo desabotoado cai no tecido. O bico dianteiro e sua divergência são derivados de uma queda de bico medida, com piso para que nos extremos o bico não se inverta acima da cintura — uma queda negativa que o núcleo normalizaria em CCW num bico cruzado válido na aparência. E os bolsos embutidos são limitados contra a frente, porque um embutido mais largo que o painel o dobra e o núcleo lava a inversão numa peça sã. Convenções de alfaiataria em tudo: pesponto fino, costas de forro, fivela nas costas. Os botões fazem a ponte para o sólido `sew-through-button` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["waistcoat-6button", "tailoring", "waistcoat", "vest", "six-button",
+      "pointed-hem", "welt-pocket", "button", "hardware", "fc400", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full waistcoat", "es": "Chaleco completo", "fr": "Gilet complet", "pt": "Colete completo" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "welt"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front (cut 2, mirrored)", "es": "Delantero (cortar 2, espejo)", "fr": "Devant (couper 2, miroir)", "pt": "Frente (cortar 2, espelhado)" }, "default_color": "#3a3f30", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "back", "label": { "en": "Back (cut 2, mirrored)", "es": "Espalda (cortar 2, espejo)", "fr": "Dos (couper 2, miroir)", "pt": "Costas (cortar 2, espelhado)" }, "default_color": "#484d3c", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "welt", "label": { "en": "Welt (cut 4)", "es": "Vivo (cortar 4)", "fr": "Passepoil (couper 4)", "pt": "Embutido (cortar 4)" }, "default_color": "#565b48", "cut": { "quantity": 4, "on_fold": false, "mirror": false } }
+  ],
+  "parameter_groups": [
+    { "id": "body", "label": { "en": "Body", "es": "Cuerpo", "fr": "Corps", "pt": "Corpo" } },
+    { "id": "front", "label": { "en": "Front & hem", "es": "Delantero y bajo", "fr": "Devant et ourlet", "pt": "Frente e bainha" } },
+    { "id": "closure", "label": { "en": "Buttons & pockets", "es": "Botones y bolsillos", "fr": "Boutons et poches", "pt": "Botões e bolsos" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "group": "body", "default": 1020, "min": 820, "max": 1400, "step": 10, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)" }, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" } },
+    { "id": "waist_girth", "type": "slider", "group": "body", "default": 880, "min": 640, "max": 1300, "step": 10, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)", "pt": "Contorno de cintura (mm)" }, "measurement": { "standard": "iso_8559", "code": "waist_girth" } },
+    { "id": "front_length", "type": "slider", "group": "front", "default": 560, "min": 440, "max": 700, "step": 10, "label": { "en": "Front length, shoulder to point (mm)", "es": "Largo delantero, hombro a punta (mm)", "fr": "Longueur devant, épaule à pointe (mm)", "pt": "Comprimento dianteiro, ombro ao bico (mm)" } },
+    { "id": "neck_width", "type": "slider", "group": "body", "default": 170, "min": 140, "max": 220, "step": 5, "label": { "en": "Base-neck width (mm)", "es": "Ancho de base de cuello (mm)", "fr": "Largeur d'encolure (mm)", "pt": "Largura da base do pescoço (mm)" } },
+    { "id": "shoulder_slope", "type": "slider", "group": "body", "default": 45, "min": 25, "max": 70, "step": 2, "label": { "en": "Shoulder drop (mm)", "es": "Caída de hombro (mm)", "fr": "Tombant d'épaule (mm)", "pt": "Queda do ombro (mm)" } },
+    { "id": "button_count", "type": "slider", "group": "closure", "default": 6, "min": 3, "max": 8, "step": 1, "label": { "en": "Front buttons", "es": "Botones delanteros", "fr": "Boutons devant", "pt": "Botões dianteiros" }, "tooltip": { "en": "Pitched across the measured run; the undone bottom button always sits above the point", "es": "Distribuidos sobre el recorrido medido; el inferior desabrochado queda sobre la punta", "fr": "Répartis sur le parcours mesuré ; le bas défait reste au-dessus de la pointe", "pt": "Distribuídos sobre o percurso medido; o de baixo desabotoado fica acima do bico" } },
+    { "id": "button_ligne", "type": "slider", "group": "closure", "default": 24, "min": 18, "max": 34, "step": 1, "label": { "en": "Button size (ligne)", "es": "Tamaño de botón (línea)", "fr": "Taille de bouton (ligne)", "pt": "Tamanho do botão (ligne)" }, "tooltip": { "en": "Drives the Yantra4D sew-through-button face AND the buttonhole length", "es": "Define la cara del sew-through-button Y el largo del ojal", "fr": "Pilote la face du sew-through-button ET la longueur de boutonnière", "pt": "Pilota a face do sew-through-button E o comprimento da casa" } },
+    { "id": "point_drop", "type": "slider", "group": "front", "default": 60, "min": 0, "max": 140, "step": 5, "label": { "en": "Point drop below waist (mm)", "es": "Caída de punta bajo cintura (mm)", "fr": "Chute de pointe sous taille (mm)", "pt": "Queda do bico abaixo da cintura (mm)" }, "tooltip": { "en": "Floored so the point can never invert above the waist", "es": "Con piso para que la punta nunca se invierta sobre la cintura", "fr": "Plancher posé pour que la pointe ne s'inverse jamais au-dessus de la taille", "pt": "Com piso para que o bico nunca se inverta acima da cintura" } },
+    { "id": "welt_length", "type": "slider", "group": "closure", "default": 110, "min": 70, "max": 200, "step": 5, "label": { "en": "Welt pocket length (mm)", "es": "Largo de bolsillo de vivo (mm)", "fr": "Longueur de poche passepoilée (mm)", "pt": "Comprimento do bolso embutido (mm)" } },
+    { "id": "vest_ease", "type": "slider", "group": "body", "default": 60, "min": 20, "max": 140, "step": 5, "label": { "en": "Ease over chest (mm)", "es": "Holgura en pecho (mm)", "fr": "Aisance poitrine (mm)", "pt": "Folga no peito (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "group": "construction", "default": 20, "min": 12, "max": 35, "step": 2, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)", "fr": "Marge d'ourlet (mm)", "pt": "Margem de bainha (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 8, "max": 18, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" }, "advanced": true }
+  ],
+  "constraints": [
+    { "expression": "chest_girth > waist_girth", "severity": "warning", "message": { "en": "A waist wider than the chest inverts the suppression; the dart is clamped.", "es": "Una cintura mayor que el pecho invierte el entalle; la pinza se acota.", "fr": "Une taille plus large que la poitrine inverse le cintrage ; la pince est bornée.", "pt": "Uma cintura maior que o peito inverte o ajuste; a pence é limitada." } },
+    { "expression": "point_drop < front_length", "severity": "warning", "message": { "en": "A point drop that deep inverts the hem; the draft floors it.", "es": "Una caída de punta tan honda invierte el bajo; el trazo la limita.", "fr": "Une chute de pointe si profonde inverse l'ourlet ; le tracé la plafonne.", "pt": "Uma queda de bico tão profunda inverte a bainha; o traçado a limita." } }
+  ],
+  "presets": [
+    { "id": "morning-6", "label": { "en": "Morning (6-button)", "es": "Mañana (6 botones)", "fr": "Jour (6 boutons)", "pt": "Dia (6 botões)" }, "values": { "button_count": 6, "point_drop": 60 } },
+    { "id": "single-point-5", "label": { "en": "Single-point (5-button)", "es": "Punta simple (5 botones)", "fr": "Pointe simple (5 boutons)", "pt": "Bico simples (5 botões)" }, "values": { "button_count": 5, "point_drop": 90 } },
+    { "id": "straight-hem-4", "label": { "en": "Low straight (4-button)", "es": "Bajo recto (4 botones)", "fr": "Bas droit (4 boutons)", "pt": "Barra reta (4 botões)" }, "values": { "button_count": 4, "point_drop": 20 } }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["lana-peinada-traje"],
+  "notion": {
+    "kind": "button",
+    "subtype": "six-button waistcoat front closure",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "thickness": "button_ligne * 0.10",
+        "hole_count": "4",
+        "hole_dia": "button_ligne * 0.05",
+        "hole_spacing": "button_ligne * 0.16",
+        "dish_depth": "button_ligne * 0.03"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "six_button_run", "type": "button_stand", "label": { "en": "Solved six-button run", "es": "Hilera de seis botones resuelta", "fr": "File de six boutons résolue", "pt": "Fileira de seis botões resolvida" }, "edges": [ { "piece": "front", "edge": "front_edge" } ], "parameters": ["button_count", "button_ligne", "front_length", "point_drop"] },
+      { "id": "welt_pockets", "type": "pocket", "label": { "en": "Clamped welt pockets", "es": "Bolsillos de vivo acotados", "fr": "Poches passepoilées bornées", "pt": "Bolsos embutidos limitados" }, "edges": [ { "piece": "welt", "edge": "top" }, { "piece": "front", "edge": "side" } ], "parameters": ["welt_length", "chest_girth"] },
+      { "id": "cinch_back", "type": "waistband", "label": { "en": "Back cinch waist", "es": "Cintura de hebilla trasera", "fr": "Taille à martingale dorsale", "pt": "Cintura de fivela nas costas" }, "edges": [ { "piece": "back", "edge": "side" }, { "piece": "front", "edge": "side" } ], "parameters": ["waist_girth", "vest_ease"] }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "tailoring": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A waistcoat looks simple and is the tailoring garment where the small errors show most, because it is worn open at the bottom button — so if the button run is drifted, the undone button sits on the open point instead of on cloth, and the whole front reads as wrong even to someone who could not say why. This pattern pitches the buttons across the measured run so the bottom one always lands above the divergence, floors the point so it never inverts, and clamps the welts. It is a fully tailored, welt-pocketed waistcoat with the drafting logic that usually only lives in a cutter's head, put where anyone can use it.",
+      "es": "Un chaleco parece simple y es la prenda de sastrería donde más se notan los errores pequeños, porque se lleva abierto en el botón inferior — si la hilera está desfasada, el botón desabrochado cae sobre la punta abierta y no sobre tela, y todo el delantero se lee mal aunque quien lo vea no sepa por qué. Este patrón distribuye los botones sobre el recorrido medido para que el inferior caiga siempre sobre la divergencia, pone piso a la punta para que nunca se invierta, y acota los vivos. Es un chaleco totalmente sastreado con bolsillos de vivo y la lógica de trazo que suele vivir solo en la cabeza de un cortador, puesta donde cualquiera puede usarla.",
+      "fr": "Un gilet paraît simple et est le vêtement de tailleur où les petites erreurs se voient le plus, car il se porte ouvert au bouton du bas — si la file dérive, le bouton défait tombe sur la pointe ouverte au lieu du tissu, et tout le devant paraît faux même à qui ne saurait dire pourquoi. Ce patron répartit les boutons sur le parcours mesuré pour que le bas tombe toujours au-dessus de la divergence, plafonne la pointe pour qu'elle ne s'inverse jamais, et borne les passepoils. C'est un gilet entièrement tailleur à poches passepoilées avec la logique de tracé qui d'ordinaire ne vit que dans la tête d'un coupeur, mise là où chacun peut s'en servir.",
+      "pt": "Um colete parece simples e é a peça de alfaiataria onde os pequenos erros mais aparecem, porque se usa aberto no botão de baixo — se a fileira desloca, o botão desabotoado cai sobre o bico aberto em vez do tecido, e toda a frente lê como errada mesmo para quem não saberia dizer porquê. Este molde distribui os botões sobre o percurso medido para que o de baixo caia sempre acima da divergência, põe piso no bico para que nunca se inverta, e limita os embutidos. É um colete totalmente alfaiatado com bolsos embutidos e a lógica de traçado que costuma viver só na cabeça de um cortador, posta onde qualquer um pode usar."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

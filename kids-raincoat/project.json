@@ -1,0 +1,106 @@
+{
+  "project": {
+    "name": "Children's Hooded Raincoat",
+    "slug": "kids-raincoat",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A hooded raincoat for a child in PU-coated nylon: a full body with a snap-fastened storm-flap front, an attached hood, raglan sleeves, and every seam sealed. Drafted from CHILD measurements (bodies/child-6y). Two things matter for a rain garment — a hood that actually fits the head, and a storm flap that covers the snaps so water does not track down the closure. Two things are solved by measurement. The hood is drafted to the MEASURED head girth and length, not scaled from the neckline, so it clears the head and sits at the brow — a hood scaled from the neck (the common shortcut) is far too small for a child's large head; the hood face opening is floored on the head girth. And the storm flap width is the snap stand plus an overlap on EACH side, clamped so it can never come out narrower than the gap it covers, because a flap narrower than its gap lets water track down the snaps and a naive draft tying flap width to a fraction of the chest produces exactly that at a small size. Taped seams, a soft hood drawcord (no cord-lock at a young child's neck — a safety choice), reflective trim. The snaps bridge to the Yantra4D `snap-fit` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un impermeable con capucha para niño en nylon con recubrimiento de PU: cuerpo completo con frente de tapeta cortavientos abrochada, capucha integrada, mangas raglán y todas las costuras selladas. Trazado con medidas INFANTILES (bodies/child-6y). Dos cosas importan en una prenda de lluvia — una capucha que de verdad quede a la cabeza, y una tapeta que cubra los broches para que el agua no baje por el cierre. Dos cosas se resuelven midiendo. La capucha se traza al contorno y largo de cabeza MEDIDOS, no escalada del escote, así libra la cabeza y se asienta en la frente — una capucha escalada del cuello (el atajo común) es demasiado chica para la cabeza grande de un niño; la abertura de cara se acota al contorno de cabeza. Y el ancho de la tapeta es el batiente del broche más un solape a CADA lado, acotado para que nunca salga más angosta que el hueco que cubre, porque una tapeta más angosta deja bajar el agua por los broches y un trazo ingenuo que ata el ancho a una fracción del pecho produce justo eso en talla chica. Costuras selladas, cordón suave en la capucha (sin tope en el cuello de un niño — decisión de seguridad), ribete reflectante. Los broches se puentean al sólido `snap-fit` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un ciré à capuche pour enfant en nylon enduit PU : un corps complet à devant à patte anti-vent à pressions, une capuche attachée, des manches raglan et toutes les coutures étanchées. Tracé sur des mesures d'ENFANT (bodies/child-6y). Deux choses comptent pour un vêtement de pluie — une capuche qui va vraiment à la tête, et une patte qui couvre les pressions pour que l'eau ne descende pas le long de la fermeture. Deux choses sont résolues par la mesure. La capuche est tracée au tour et à la longueur de tête MESURÉS, non mise à l'échelle depuis l'encolure, de sorte qu'elle dégage la tête et se pose au front — une capuche mise à l'échelle depuis le cou (le raccourci courant) est bien trop petite pour la grande tête d'un enfant ; l'ouverture de visage est bornée au tour de tête. Et la largeur de la patte est la sous-patte de pression plus un recouvrement de CHAQUE côté, bornée pour qu'elle ne soit jamais plus étroite que l'interstice qu'elle couvre, car une patte plus étroite laisse l'eau descendre les pressions et un tracé naïf liant la largeur à une fraction de la poitrine produit exactement cela en petite taille. Coutures étanchées, cordon souple de capuche (pas d'arrêt de cordon au cou d'un jeune enfant — un choix de sécurité), passepoil réfléchissant. Les pressions font le pont vers le solide `snap-fit` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma capa de chuva com capuz para criança em náilon revestido de PU: um corpo completo com frente de carcela corta-vento abotoada, um capuz integrado, mangas raglan e todas as costuras seladas. Traçada com medidas INFANTIS (bodies/child-6y). Duas coisas importam numa peça de chuva — um capuz que realmente sirva na cabeça, e uma carcela que cubra os botões para que a água não desça pelo fecho. Duas coisas se resolvem medindo. O capuz é traçado ao contorno e comprimento de cabeça MEDIDOS, não escalado do decote, de modo que libera a cabeça e assenta na testa — um capuz escalado do pescoço (o atalho comum) é pequeno demais para a cabeça grande de uma criança; a abertura do rosto é limitada ao contorno de cabeça. E a largura da carcela é a sobre-carcela da pressão mais uma sobreposição de CADA lado, limitada para que nunca saia mais estreita que a fresta que cobre, porque uma carcela mais estreita deixa a água descer pelos botões e um traçado ingênuo que amarra a largura a uma fração do peito produz exatamente isso num tamanho pequeno. Costuras seladas, cordão macio do capuz (sem trava no pescoço de uma criança pequena — uma escolha de segurança), viés refletivo. Os botões fazem a ponte para o sólido `snap-fit` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["kids-raincoat", "kids_baby", "raincoat", "hooded", "waterproof",
+      "snap-fit", "storm-flap", "child-proportion", "hardware", "fc400", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full raincoat", "es": "Impermeable completo", "fr": "Ciré complet", "pt": "Capa de chuva completa" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "sleeve", "hood", "storm_flap"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front (cut 2, mirrored)", "es": "Delantero (cortar 2, espejo)", "fr": "Devant (couper 2, miroir)", "pt": "Frente (cortar 2, espelhado)" }, "default_color": "#e2b13a", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "back", "label": { "en": "Back (cut on fold)", "es": "Espalda (corte al doblez)", "fr": "Dos (coupe au pli)", "pt": "Costas (corte na dobra)" }, "default_color": "#ecbb44", "cut": { "quantity": 1, "on_fold": true, "mirror": false } },
+    { "id": "sleeve", "label": { "en": "Raglan sleeve (cut 2, mirrored)", "es": "Manga raglán (cortar 2, espejo)", "fr": "Manche raglan (couper 2, miroir)", "pt": "Manga raglan (cortar 2, espelhado)" }, "default_color": "#f2c452", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "hood", "label": { "en": "Hood (cut 2, mirrored)", "es": "Capucha (cortar 2, espejo)", "fr": "Capuche (couper 2, miroir)", "pt": "Capuz (cortar 2, espelhado)" }, "default_color": "#f7cd63", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "storm_flap", "label": { "en": "Snap storm flap (cut 1)", "es": "Tapeta cortavientos (cortar 1)", "fr": "Patte anti-vent (couper 1)", "pt": "Carcela corta-vento (cortar 1)" }, "default_color": "#fbd873", "cut": { "quantity": 1, "on_fold": false, "mirror": false } }
+  ],
+  "parameter_groups": [
+    { "id": "child", "label": { "en": "Child measurements", "es": "Medidas del niño", "fr": "Mesures de l'enfant", "pt": "Medidas da criança" } },
+    { "id": "hood", "label": { "en": "Hood", "es": "Capucha", "fr": "Capuche", "pt": "Capuz" } },
+    { "id": "closure", "label": { "en": "Snaps & flap", "es": "Broches y tapeta", "fr": "Pressions et patte", "pt": "Pressões e carcela" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "group": "child", "default": 640, "min": 520, "max": 820, "step": 10, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)" }, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" } },
+    { "id": "head_girth", "type": "slider", "group": "hood", "default": 500, "min": 420, "max": 580, "step": 10, "label": { "en": "Head girth (mm)", "es": "Contorno de cabeza (mm)", "fr": "Tour de tête (mm)", "pt": "Contorno de cabeça (mm)" }, "tooltip": { "en": "The hood is floored on this — a child's head is large relative to the body", "es": "La capucha se acota a esto — la cabeza de un niño es grande frente al cuerpo", "fr": "La capuche est bornée à cela — la tête d'un enfant est grande par rapport au corps", "pt": "O capuz é limitado a isto — a cabeça de uma criança é grande em relação ao corpo" } },
+    { "id": "head_length", "type": "slider", "group": "hood", "default": 230, "min": 180, "max": 300, "step": 5, "label": { "en": "Head length, crown to nape (mm)", "es": "Largo de cabeza (mm)", "fr": "Longueur de tête (mm)", "pt": "Comprimento da cabeça (mm)" } },
+    { "id": "body_length", "type": "slider", "group": "child", "default": 420, "min": 300, "max": 620, "step": 10, "label": { "en": "Body length (mm)", "es": "Largo de cuerpo (mm)", "fr": "Longueur de corps (mm)", "pt": "Comprimento do corpo (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "group": "child", "default": 340, "min": 240, "max": 480, "step": 10, "label": { "en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)", "pt": "Comprimento da manga (mm)" } },
+    { "id": "neck_width", "type": "slider", "group": "child", "default": 130, "min": 100, "max": 190, "step": 5, "label": { "en": "Base-neck width (mm)", "es": "Ancho de base de cuello (mm)", "fr": "Largeur d'encolure (mm)", "pt": "Largura da base do pescoço (mm)" } },
+    { "id": "front_snaps", "type": "slider", "group": "closure", "default": 5, "min": 3, "max": 8, "step": 1, "label": { "en": "Front snaps", "es": "Broches delanteros", "fr": "Pressions devant", "pt": "Pressões dianteiras" }, "tooltip": { "en": "Solved across the measured placket; covered by the storm flap", "es": "Resueltos sobre la tapeta medida; cubiertos por la tapeta cortavientos", "fr": "Résolus sur la patte mesurée ; couverts par la patte anti-vent", "pt": "Resolvidos sobre a carcela medida; cobertos pela carcela corta-vento" } },
+    { "id": "snap_dia", "type": "slider", "group": "closure", "default": 13, "min": 10, "max": 20, "step": 1, "label": { "en": "Snap diameter (mm)", "es": "Diámetro de broche (mm)", "fr": "Diamètre de pression (mm)", "pt": "Diâmetro da pressão (mm)" }, "tooltip": { "en": "Drives the Yantra4D snap-fit socket AND the snap column spacing", "es": "Define el receptáculo del snap-fit de Yantra4D Y el espaciado de la columna", "fr": "Pilote le réceptacle du snap-fit Yantra4D ET l'espacement de la colonne", "pt": "Pilota o receptáculo do snap-fit do Yantra4D E o espaçamento da coluna" } },
+    { "id": "flap_overlap", "type": "slider", "group": "closure", "default": 28, "min": 16, "max": 50, "step": 2, "label": { "en": "Flap overlap, each side (mm)", "es": "Solape de tapeta, cada lado (mm)", "fr": "Recouvrement de patte, chaque côté (mm)", "pt": "Sobreposição da carcela, cada lado (mm)" }, "tooltip": { "en": "The flap covers the snap gap plus this overlap; clamped never narrower than the gap", "es": "La tapeta cubre el hueco más este solape; acotada nunca más angosta que el hueco", "fr": "La patte couvre l'interstice plus ce recouvrement ; bornée jamais plus étroite que l'interstice", "pt": "A carcela cobre a fresta mais esta sobreposição; limitada nunca mais estreita que a fresta" } },
+    { "id": "wear_ease", "type": "slider", "group": "child", "default": 160, "min": 80, "max": 300, "step": 10, "label": { "en": "Wearing ease over rain clothes (mm)", "es": "Holgura sobre ropa de lluvia (mm)", "fr": "Aisance sur vêtements de pluie (mm)", "pt": "Folga sobre roupa de chuva (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "group": "construction", "default": 25, "min": 15, "max": 40, "step": 2, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)", "fr": "Marge d'ourlet (mm)", "pt": "Margem de bainha (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 8, "max": 18, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" }, "advanced": true }
+  ],
+  "constraints": [
+    { "expression": "head_girth < chest_girth", "severity": "warning", "message": { "en": "The hood is floored on the head girth so it always clears the head.", "es": "La capucha se acota al contorno de cabeza para que siempre libre la cabeza.", "fr": "La capuche est bornée au tour de tête pour toujours dégager la tête.", "pt": "O capuz é limitado ao contorno de cabeça para sempre liberar a cabeça." } },
+    { "expression": "flap_overlap > seam_allowance", "severity": "warning", "message": { "en": "The overlap must exceed the seam allowance or the flap does not cover.", "es": "El solape debe superar el margen o la tapeta no cubre.", "fr": "Le recouvrement doit dépasser la marge sinon la patte ne couvre pas.", "pt": "A sobreposição deve exceder a margem ou a carcela não cobre." } }
+  ],
+  "presets": [
+    { "id": "puddle-3y", "label": { "en": "Puddle (3 years)", "es": "Charcos (3 años)", "fr": "Flaques (3 ans)", "pt": "Poças (3 anos)" }, "values": { "chest_girth": 580, "head_girth": 480, "body_length": 380 } },
+    { "id": "long-mac", "label": { "en": "Long mac", "es": "Impermeable largo", "fr": "Ciré long", "pt": "Capa longa" }, "values": { "body_length": 560, "front_snaps": 7 } },
+    { "id": "over-layers", "label": { "en": "Over layers", "es": "Sobre capas", "fr": "Par-dessus", "pt": "Sobre camadas" }, "values": { "wear_ease": 260, "chest_girth": 700 } }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["nylon-ripstop-shell"],
+  "notion": {
+    "kind": "snap",
+    "subtype": "front snap-fit fasteners under a storm flap",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "snap-fit",
+      "linked": true,
+      "params_map": {
+        "bore_dia": "snap_dia",
+        "beam_width": "snap_dia * 0.5",
+        "wall": "snap_dia * 0.15"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "head_hood", "type": "neckline", "label": { "en": "Hood drafted to the measured head", "es": "Capucha trazada a la cabeza medida", "fr": "Capuche tracée à la tête mesurée", "pt": "Capuz traçado à cabeça medida" }, "edges": [ { "piece": "hood", "edge": "neck_edge" }, { "piece": "front", "edge": "neck" } ], "parameters": ["head_girth", "head_length", "neck_width"] },
+      { "id": "snap_storm_flap", "type": "placket", "label": { "en": "Snap column under a covering storm flap", "es": "Columna de broches bajo tapeta cortavientos", "fr": "Colonne de pressions sous patte couvrante", "pt": "Coluna de pressões sob carcela cobridora" }, "edges": [ { "piece": "storm_flap", "edge": "attach" }, { "piece": "front", "edge": "cf" } ], "parameters": ["front_snaps", "snap_dia", "flap_overlap"] },
+      { "id": "raglan_seam", "type": "armscye", "label": { "en": "Raglan seam to the measured body", "es": "Costura raglán al cuerpo medido", "fr": "Couture raglan au corps mesuré", "pt": "Costura raglan ao corpo medido" }, "edges": [ { "piece": "sleeve", "edge": "raglan_l" }, { "piece": "front", "edge": "raglan" }, { "piece": "back", "edge": "raglan" } ], "parameters": ["chest_girth", "wear_ease"] }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A child's raincoat has two jobs — keep the rain off and go on and off a wriggling toddler — and both fail in the same places on a badly-drafted one: a hood scaled off the neckline that will not clear the head, and a storm flap sized off the chest that shrinks below the snap gap at the small sizes and lets water track down the front. This pattern floors the hood on the measured head and the flap on the actual snap gap, solves the snaps across the placket, and specifies taped seams and a soft neck cord instead of a choking cord-lock. It is a properly waterproof, properly fitting, safe raincoat a parent can make from coated nylon at home — the kind of garment usually only available ready-made and rarely drafted right.",
+      "es": "El impermeable de un niño tiene dos trabajos — dejar fuera la lluvia y entrar y salir de un niño que se retuerce — y ambos fallan en los mismos sitios en uno mal trazado: una capucha escalada del escote que no libra la cabeza, y una tapeta dimensionada del pecho que se encoge por debajo del hueco de broches en tallas chicas y deja bajar el agua. Este patrón acota la capucha a la cabeza medida y la tapeta al hueco real de broches, resuelve los broches sobre la tapeta, y especifica costuras selladas y un cordón suave al cuello en vez de un tope que ahogue. Es un impermeable de verdad, que ajusta y es seguro, que un padre hace en casa de nylon recubierto — el tipo de prenda que suele venir solo confeccionada y rara vez trazada bien.",
+      "fr": "Le ciré d'un enfant a deux fonctions — tenir la pluie dehors et s'enfiler et se retirer sur un tout-petit qui gigote — et les deux échouent aux mêmes endroits sur un ciré mal tracé : une capuche mise à l'échelle depuis l'encolure qui ne dégage pas la tête, et une patte dimensionnée depuis la poitrine qui rétrécit sous l'interstice de pressions aux petites tailles et laisse l'eau descendre. Ce patron borne la capuche à la tête mesurée et la patte à l'interstice réel de pressions, résout les pressions sur la patte, et spécifie des coutures étanchées et un cordon souple au cou plutôt qu'un arrêt qui étrangle. C'est un ciré réellement imperméable, réellement ajusté et sûr, qu'un parent fait chez soi en nylon enduit — le genre de vêtement d'ordinaire seulement tout fait et rarement bien tracé.",
+      "pt": "A capa de chuva de uma criança tem duas funções — manter a chuva fora e vestir e tirar de uma criança que se contorce — e ambas falham nos mesmos lugares numa mal traçada: um capuz escalado do decote que não libera a cabeça, e uma carcela dimensionada do peito que encolhe abaixo da fresta de pressões nos tamanhos pequenos e deixa a água descer. Este molde limita o capuz à cabeça medida e a carcela à fresta real de pressões, resolve as pressões sobre a carcela, e especifica costuras seladas e um cordão macio no pescoço em vez de uma trava que estrangule. É uma capa de chuva de verdade impermeável, que veste e é segura, que um pai faz em casa de náilon revestido — o tipo de peça geralmente só pronta e raramente bem traçada."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

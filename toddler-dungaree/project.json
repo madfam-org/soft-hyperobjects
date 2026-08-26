@@ -1,0 +1,103 @@
+{
+  "project": {
+    "name": "Toddler Dungaree",
+    "slug": "toddler-dungaree",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A bib-front dungaree for a toddler: a bib, two crossing back straps on sliding overall buckles, and full-length legs — drafted from CHILD measurements directly, not a shrunk adult. The toddler-specific proportions are stated in the geometry: the waist is NOT smaller than the hip (a toddler has no waist indentation to draft to, and a shaped waist will not pass over the hips), the rise is a larger fraction of the leg because a nappy or full seat occupies it (the back fork is the deeper one), and the bib is sized off the chest and clamped against the waist it sews to. Two things are solved by measurement. The strap runs bib corner over the shoulder to the opposite back waist; that path is DERIVED from the measured bib height and back rise plus a shoulder arc, with the buckle's travel centred on it, so a growing child does not run out of adjustment in one season — the entire reason the buckle is there. And the bib is clamped against the front waist, because a bib wider than its own seam pleats itself shut and the kernel CCW-normalizes it into a healthy-looking outline. The buckles bridge to the Yantra4D `overall-buckle` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un peto con pechera para niño pequeño: pechera, dos tirantes cruzados a la espalda con hebillas corredizas y piernas completas — trazado con medidas INFANTILES directas, no un adulto reducido. Las proporciones del niño están en la geometría: la cintura NO es más angosta que la cadera (un niño pequeño no tiene cintura que trazar, y una cintura entallada no pasa las caderas), el tiro es una fracción mayor de la pierna porque un pañal o asiento lleno lo ocupa (la horquilla trasera es la más profunda), y la pechera se dimensiona del pecho y se acota contra la cintura donde se cose. Dos cosas se resuelven midiendo. El tirante va de la esquina de la pechera sobre el hombro a la cintura trasera opuesta; ese recorrido se DERIVA del alto de pechera y el tiro trasero medidos más un arco de hombro, con el juego de la hebilla centrado, así un niño que crece no se queda sin ajuste en una temporada — la razón entera de la hebilla. Y la pechera se acota contra la cintura delantera, porque una pechera más ancha que su costura se pliega sola y el kernel la normaliza a CCW dejándola sana. Las hebillas se puentean al sólido `overall-buckle` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une salopette à bavette pour tout-petit : une bavette, deux bretelles croisées au dos sur boucles de salopette coulissantes et des jambes complètes — tracée sur des mesures d'ENFANT directes, non un adulte réduit. Les proportions du tout-petit sont dans la géométrie : la taille n'est PAS plus petite que la hanche (un tout-petit n'a pas de taille à tracer, et une taille cintrée ne passe pas les hanches), la montée est une plus grande fraction de la jambe car une couche ou un siège plein l'occupe (la fourche dos est la plus profonde), et la bavette est dimensionnée sur la poitrine et bornée par la taille où elle se coud. Deux choses sont résolues par la mesure. La bretelle va de l'angle de bavette par-dessus l'épaule à la taille dos opposée ; ce parcours est DÉRIVÉ de la hauteur de bavette et de la montée dos mesurées plus un arc d'épaule, le débattement de la boucle centré dessus, de sorte qu'un enfant qui grandit ne manque pas de réglage en une saison — toute la raison de la boucle. Et la bavette est bornée par la taille devant, car une bavette plus large que sa couture se replie et le noyau la normalise en CCW en la laissant saine. Les boucles font le pont vers le solide `overall-buckle` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma jardineira com peito para criança pequena: um peito, duas alças cruzadas nas costas com fivelas de jardineira deslizantes e pernas inteiras — traçada com medidas INFANTIS diretas, não um adulto reduzido. As proporções da criança estão na geometria: a cintura NÃO é menor que o quadril (uma criança pequena não tem cintura para traçar, e uma cintura ajustada não passa pelos quadris), o gancho é uma fração maior da perna porque uma fralda ou assento cheio o ocupa (a forquilha traseira é a mais profunda), e o peito é dimensionado a partir do peito e limitado contra a cintura onde é costurado. Duas coisas se resolvem medindo. A alça vai da ponta do peito por cima do ombro à cintura traseira oposta; esse percurso é DERIVADO da altura do peito e do gancho traseiro medidos mais um arco de ombro, com o curso da fivela centrado, de modo que uma criança que cresce não fica sem ajuste numa estação — a razão inteira da fivela. E o peito é limitado contra a cintura dianteira, porque um peito mais largo que a própria costura se dobra e o núcleo o normaliza em CCW deixando-o são. As fivelas fazem a ponte para o sólido `overall-buckle` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["toddler-dungaree", "kids_baby", "dungaree", "overall", "toddler",
+      "bib", "overall-buckle", "child-proportion", "hardware", "fc400", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full dungaree", "es": "Peto completo", "fr": "Salopette complète", "pt": "Jardineira completa" },
+      "script_file": "main.py",
+      "pieces": ["front_leg", "back_leg", "bib", "strap"]
+    }
+  ],
+  "pieces": [
+    { "id": "front_leg", "label": { "en": "Front leg (cut 2, mirrored)", "es": "Delantero de pierna (cortar 2, espejo)", "fr": "Devant de jambe (couper 2, miroir)", "pt": "Frente da perna (cortar 2, espelhado)" }, "default_color": "#7d6a4f", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "back_leg", "label": { "en": "Back leg (cut 2, mirrored)", "es": "Trasero de pierna (cortar 2, espejo)", "fr": "Dos de jambe (couper 2, miroir)", "pt": "Costas da perna (cortar 2, espelhado)" }, "default_color": "#8a7659", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "bib", "label": { "en": "Bib (cut on fold)", "es": "Pechera (corte al doblez)", "fr": "Bavette (coupe au pli)", "pt": "Peito (corte na dobra)" }, "default_color": "#978264", "cut": { "quantity": 1, "on_fold": true, "mirror": false } },
+    { "id": "strap", "label": { "en": "Crossing strap (cut 2)", "es": "Tirante cruzado (cortar 2)", "fr": "Bretelle croisée (couper 2)", "pt": "Alça cruzada (cortar 2)" }, "default_color": "#a48e6f", "cut": { "quantity": 2, "on_fold": false, "mirror": false } }
+  ],
+  "parameter_groups": [
+    { "id": "child", "label": { "en": "Child measurements", "es": "Medidas del niño", "fr": "Mesures de l'enfant", "pt": "Medidas da criança" } },
+    { "id": "bib", "label": { "en": "Bib & straps", "es": "Pechera y tirantes", "fr": "Bavette et bretelles", "pt": "Peito e alças" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "group": "child", "default": 560, "min": 440, "max": 700, "step": 10, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)" }, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" } },
+    { "id": "hip_girth", "type": "slider", "group": "child", "default": 600, "min": 460, "max": 760, "step": 10, "label": { "en": "Hip girth, over nappy (mm)", "es": "Contorno de cadera, sobre pañal (mm)", "fr": "Tour de hanches, sur couche (mm)", "pt": "Contorno de quadril, sobre fralda (mm)" }, "measurement": { "standard": "iso_8559", "code": "hip_girth" } },
+    { "id": "inside_leg", "type": "slider", "group": "child", "default": 340, "min": 200, "max": 520, "step": 10, "label": { "en": "Inside leg (mm)", "es": "Entrepierna (mm)", "fr": "Entrejambe (mm)", "pt": "Entreperna (mm)" } },
+    { "id": "back_rise", "type": "slider", "group": "child", "default": 230, "min": 160, "max": 320, "step": 5, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)", "fr": "Montée dos (mm)", "pt": "Gancho traseiro (mm)" } },
+    { "id": "bib_height", "type": "slider", "group": "bib", "default": 170, "min": 100, "max": 250, "step": 10, "label": { "en": "Bib height (mm)", "es": "Alto de pechera (mm)", "fr": "Hauteur de bavette (mm)", "pt": "Altura do peito (mm)" } },
+    { "id": "bib_width", "type": "slider", "group": "bib", "default": 200, "min": 140, "max": 320, "step": 10, "label": { "en": "Bib top width (mm)", "es": "Ancho de pechera (mm)", "fr": "Largeur de bavette (mm)", "pt": "Largura do peito (mm)" }, "tooltip": { "en": "Clamped against the front waist it sews to — a wider bib pleats itself shut", "es": "Acotado contra la cintura delantera — una más ancha se pliega sola", "fr": "Bornée par la taille devant — plus large elle se replie", "pt": "Limitado contra a cintura dianteira — mais largo se dobra" } },
+    { "id": "strap_width", "type": "slider", "group": "bib", "default": 28, "min": 18, "max": 42, "step": 1, "label": { "en": "Strap finished width (mm)", "es": "Ancho terminado del tirante (mm)", "fr": "Largeur finie de bretelle (mm)", "pt": "Largura acabada da alça (mm)" } },
+    { "id": "hem_width", "type": "slider", "group": "child", "default": 170, "min": 120, "max": 260, "step": 10, "label": { "en": "Leg opening, flat (mm)", "es": "Bajo de pierna, plano (mm)", "fr": "Ouverture de jambe, à plat (mm)", "pt": "Abertura da perna, plana (mm)" } },
+    { "id": "wear_ease", "type": "slider", "group": "child", "default": 80, "min": 40, "max": 160, "step": 10, "label": { "en": "Wearing ease (mm)", "es": "Holgura de uso (mm)", "fr": "Aisance de port (mm)", "pt": "Folga de uso (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "group": "construction", "default": 28, "min": 15, "max": 45, "step": 2, "label": { "en": "Hem turn-up (mm)", "es": "Vuelta de bajo (mm)", "fr": "Revers d'ourlet (mm)", "pt": "Bainha da barra (mm)" }, "tooltip": { "en": "Deep on purpose — let down as the child grows", "es": "Profundo a propósito — se suelta según crece el niño", "fr": "Profond exprès — à descendre à mesure que l'enfant grandit", "pt": "Profundo de propósito — soltar conforme a criança cresce" } },
+    { "id": "seam_allowance", "type": "slider", "group": "construction", "default": 10, "min": 8, "max": 16, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" }, "advanced": true }
+  ],
+  "constraints": [
+    { "expression": "bib_width < hip_girth", "severity": "warning", "message": { "en": "A bib wider than the waist pleats itself shut; the draft clamps it.", "es": "Una pechera más ancha que la cintura se pliega sola; el trazo la acota.", "fr": "Une bavette plus large que la taille se replie ; le tracé la borne.", "pt": "Um peito mais largo que a cintura se dobra; o traçado o limita." } }
+  ],
+  "presets": [
+    { "id": "eighteen-months", "label": { "en": "18 months", "es": "18 meses", "fr": "18 mois", "pt": "18 meses" }, "values": { "chest_girth": 500, "hip_girth": 540, "inside_leg": 240, "back_rise": 200 } },
+    { "id": "two-years", "label": { "en": "2 years", "es": "2 años", "fr": "2 ans", "pt": "2 anos" }, "values": { "chest_girth": 540, "hip_girth": 580, "inside_leg": 300, "back_rise": 220 } },
+    { "id": "three-years", "label": { "en": "3 years", "es": "3 años", "fr": "3 ans", "pt": "3 anos" }, "values": { "chest_girth": 580, "hip_girth": 620, "inside_leg": 380, "back_rise": 250 } }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["popelina-algodon"],
+  "notion": {
+    "kind": "buckle",
+    "subtype": "sliding overall buckle on crossing straps",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "overall-buckle",
+      "linked": true,
+      "params_map": {
+        "strap_w": "strap_width",
+        "frame_h": "strap_width * 0.5",
+        "wire_t": "strap_width * 0.10",
+        "depth": "strap_width * 0.30",
+        "button_dia": "strap_width * 0.45"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "bib_strap_buckle", "type": "custom", "label": { "en": "Overall-buckle bib closure", "es": "Cierre de pechera con hebilla", "fr": "Fermeture de bavette à boucle", "pt": "Fecho de peito com fivela" }, "edges": [ { "piece": "strap", "edge": "buckle_end" }, { "piece": "bib", "edge": "bib_top" } ], "parameters": ["strap_width", "bib_height", "back_rise"] },
+      { "id": "bib_to_waist", "type": "waistband", "label": { "en": "Bib joined to the measured waist", "es": "Pechera unida a la cintura medida", "fr": "Bavette jointe à la taille mesurée", "pt": "Peito unido à cintura medida" }, "edges": [ { "piece": "bib", "edge": "bib_bottom" }, { "piece": "front_leg", "edge": "waist" } ], "parameters": ["bib_width", "hip_girth"] }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Toddler dungarees are among the most bought and quickest outgrown garments a family owns, and the buckle straps are what make one last more than a season — if the strap is cut to reach the buckle's adjustment. Most children's patterns cut the strap to a fixed length and the buckle runs out within months. This pattern derives the strap from the child's own bib and rise and centres the buckle's travel on it, drafts the whole garment from child proportions rather than a shrunk adult (no waist indentation, a rise that carries a nappy), and lets the hem down as the child grows. The buckles print at home. It is a genuinely growing, home-makeable garment for the age where clothes are outgrown fastest.",
+      "es": "El peto de niño pequeño está entre las prendas que más se compran y más rápido se le quedan chicas a una familia, y los tirantes con hebilla son lo que hace que uno dure más de una temporada — si el tirante alcanza el ajuste de la hebilla. La mayoría de los patrones infantiles corta el tirante a un largo fijo y la hebilla se agota en meses. Este patrón deriva el tirante de la pechera y el tiro del propio niño y centra el juego de la hebilla en él, traza toda la prenda con proporciones infantiles y no un adulto reducido (sin cintura, con un tiro que aloja un pañal), y suelta el bajo según crece el niño. Las hebillas se imprimen en casa. Es una prenda que de verdad crece y se hace en casa, para la edad en que la ropa se queda chica más rápido.",
+      "fr": "La salopette de tout-petit est parmi les vêtements les plus achetés et les plus vite trop petits d'une famille, et les bretelles à boucle sont ce qui fait qu'une salopette dure plus d'une saison — si la bretelle atteint le réglage de la boucle. La plupart des patrons enfants coupent la bretelle à une longueur fixe et la boucle est à bout en quelques mois. Ce patron dérive la bretelle de la bavette et de la montée de l'enfant et centre le débattement de la boucle dessus, trace tout le vêtement en proportions enfantines et non un adulte réduit (pas de taille, une montée qui porte une couche), et descend l'ourlet à mesure que l'enfant grandit. Les boucles s'impriment chez soi. C'est un vêtement qui grandit vraiment et se fait à la maison, pour l'âge où les habits deviennent trop petits le plus vite.",
+      "pt": "A jardineira de criança pequena está entre as peças mais compradas e mais rápido pequenas de uma família, e as alças com fivela são o que faz uma durar mais de uma estação — se a alça alcança o ajuste da fivela. A maioria dos moldes infantis corta a alça a um comprimento fixo e a fivela se esgota em meses. Este molde deriva a alça do peito e do gancho da própria criança e centra o curso da fivela nela, traça toda a peça em proporções infantis e não um adulto reduzido (sem cintura, com um gancho que carrega uma fralda), e solta a bainha conforme a criança cresce. As fivelas imprimem em casa. É uma peça que de fato cresce e se faz em casa, para a idade em que as roupas ficam pequenas mais rápido."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

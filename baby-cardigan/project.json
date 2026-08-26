@@ -1,0 +1,106 @@
+{
+  "project": {
+    "name": "Baby Knit Cardigan",
+    "slug": "baby-cardigan",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A soft merino-jersey cardigan for a baby: a raglan-sleeve body with a button band down the front, drafted from INFANT measurements (bodies/infant-6m), not a shrunk adult. A baby's head is enormous relative to its body, so the neck opening is the number that has to be right: it must clear the head, because a baby cannot help you get a cardigan on. Two things are solved by measurement. The finished neckline is drafted so its opening clears the MEASURED head girth (less the knit's stretch) — a baby's head does not compress, and a neckline cut to an adult proportion of the chest is far too small to pass it. And the button band is solved across the measured front, whole intervals recomputed so no button lands in the neck rib or the hem; the buttons are on the LEFT (dresser's side), small and flush so they do not press on a baby lying down. Knit negative ease skims the body girth while lengths stay true; the raglan seams are drafted to the measured body raglans so they close. The buttons bridge to the Yantra4D `sew-through-button` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un cárdigan de punto merino suave para bebé: cuerpo de manga raglán con tapeta de botones al frente, trazado con medidas INFANTILES (bodies/infant-6m), no un adulto reducido. La cabeza de un bebé es enorme frente a su cuerpo, así que el escote es el número que debe estar bien: tiene que pasar la cabeza, porque un bebé no ayuda a ponerse el cárdigan. Dos cosas se resuelven midiendo. El escote terminado se traza para que su abertura pase el contorno de cabeza MEDIDO (menos el estiramiento del punto) — la cabeza de un bebé no se comprime, y un escote a una proporción adulta del pecho es demasiado chico para pasarla. Y la tapeta se resuelve sobre el delantero medido, intervalos enteros recalculados para que ningún botón caiga en el rib del cuello ni en el bajo; los botones van a la IZQUIERDA (lado de quien viste), chicos y planos para que no presionen a un bebé acostado. La ease negativa del punto ciñe el contorno mientras los largos quedan fieles; las costuras raglán se trazan a los raglán del cuerpo medidos para que cierren. Los botones se puentean al sólido `sew-through-button` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un cardigan en maille mérinos douce pour bébé : un corps à manches raglan avec une patte de boutonnage devant, tracé sur des mesures de NOURRISSON (bodies/infant-6m), non un adulte réduit. La tête d'un bébé est énorme par rapport à son corps, donc l'encolure est le nombre qui doit être juste : elle doit passer la tête, car un bébé n'aide pas à enfiler le cardigan. Deux choses sont résolues par la mesure. L'encolure finie est tracée pour que son ouverture passe le tour de tête MESURÉ (moins l'étirement de la maille) — la tête d'un bébé ne se comprime pas, et une encolure à une proportion adulte de la poitrine est bien trop petite pour la passer. Et la patte est résolue sur le devant mesuré, intervalles entiers recalculés pour qu'aucun bouton ne tombe dans le bord-côte du col ni dans l'ourlet ; les boutons sont à GAUCHE (côté de qui habille), petits et plats pour ne pas presser un bébé couché. L'aisance négative de maille épouse le tour tandis que les longueurs restent vraies ; les coutures raglan sont tracées aux raglans du corps mesurés pour qu'elles ferment. Les boutons font le pont vers le solide `sew-through-button` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um cardigã de tricô merino macio para bebê: um corpo de manga raglan com carcela de botões na frente, traçado com medidas de LACTENTE (bodies/infant-6m), não um adulto reduzido. A cabeça de um bebê é enorme em relação ao corpo, então o decote é o número que tem de estar certo: tem de passar a cabeça, porque um bebê não ajuda a vestir o cardigã. Duas coisas se resolvem medindo. O decote acabado é traçado para que sua abertura passe o contorno de cabeça MEDIDO (menos o estiramento da malha) — a cabeça de um bebê não comprime, e um decote a uma proporção adulta do peito é pequeno demais para passá-la. E a carcela é resolvida sobre a frente medida, intervalos inteiros recalculados para que nenhum botão caia no ribana da gola nem na bainha; os botões ficam à ESQUERDA (lado de quem veste), pequenos e planos para não pressionar um bebê deitado. A folga negativa da malha ajusta o contorno enquanto os comprimentos ficam fiéis; as costuras raglan são traçadas aos raglans do corpo medidos para que fechem. Os botões fazem a ponte para o sólido `sew-through-button` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["baby-cardigan", "kids_baby", "cardigan", "baby", "raglan", "merino",
+      "button", "infant-proportion", "hardware", "fc400", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full cardigan", "es": "Cárdigan completo", "fr": "Cardigan complet", "pt": "Cardigã completo" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "sleeve", "band"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front (cut 2, mirrored)", "es": "Delantero (cortar 2, espejo)", "fr": "Devant (couper 2, miroir)", "pt": "Frente (cortar 2, espelhado)" }, "default_color": "#d8c9a8", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "back", "label": { "en": "Back (cut on fold)", "es": "Espalda (corte al doblez)", "fr": "Dos (coupe au pli)", "pt": "Costas (corte na dobra)" }, "default_color": "#e0d2b3", "cut": { "quantity": 1, "on_fold": true, "mirror": false } },
+    { "id": "sleeve", "label": { "en": "Raglan sleeve (cut 2, mirrored)", "es": "Manga raglán (cortar 2, espejo)", "fr": "Manche raglan (couper 2, miroir)", "pt": "Manga raglan (cortar 2, espelhado)" }, "default_color": "#e8dbbe", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "band", "label": { "en": "Button band (cut 2)", "es": "Tapeta de botones (cortar 2)", "fr": "Patte de boutonnage (couper 2)", "pt": "Carcela de botões (cortar 2)" }, "default_color": "#efe4c9", "cut": { "quantity": 2, "on_fold": false, "mirror": false } }
+  ],
+  "parameter_groups": [
+    { "id": "infant", "label": { "en": "Infant measurements", "es": "Medidas del bebé", "fr": "Mesures du nourrisson", "pt": "Medidas do lactente" } },
+    { "id": "closure", "label": { "en": "Band & buttons", "es": "Tapeta y botones", "fr": "Patte et boutons", "pt": "Carcela e botões" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "group": "infant", "default": 480, "min": 400, "max": 620, "step": 10, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)" }, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" } },
+    { "id": "head_girth", "type": "slider", "group": "infant", "default": 440, "min": 360, "max": 520, "step": 5, "label": { "en": "Head girth (mm)", "es": "Contorno de cabeza (mm)", "fr": "Tour de tête (mm)", "pt": "Contorno de cabeça (mm)" }, "tooltip": { "en": "The neckline is floored on this — a baby's head does not compress and must pass", "es": "El escote se acota a esto — la cabeza de un bebé no se comprime y debe pasar", "fr": "L'encolure est bornée à cela — la tête d'un bébé ne se comprime pas et doit passer", "pt": "O decote é limitado a isto — a cabeça de um bebê não comprime e deve passar" } },
+    { "id": "body_length", "type": "slider", "group": "infant", "default": 260, "min": 180, "max": 360, "step": 10, "label": { "en": "Body length, nape to hem (mm)", "es": "Largo, nuca a bajo (mm)", "fr": "Longueur, nuque à ourlet (mm)", "pt": "Comprimento, nuca à barra (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "group": "infant", "default": 190, "min": 120, "max": 300, "step": 10, "label": { "en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)", "pt": "Comprimento da manga (mm)" } },
+    { "id": "neck_width", "type": "slider", "group": "infant", "default": 110, "min": 90, "max": 160, "step": 5, "label": { "en": "Base-neck width (mm)", "es": "Ancho de base de cuello (mm)", "fr": "Largeur d'encolure (mm)", "pt": "Largura da base do pescoço (mm)" } },
+    { "id": "button_count", "type": "slider", "group": "closure", "default": 4, "min": 2, "max": 7, "step": 1, "label": { "en": "Buttons", "es": "Botones", "fr": "Boutons", "pt": "Botões" }, "tooltip": { "en": "Solved across the measured front; none lands in the neck rib or the hem", "es": "Resueltos sobre el delantero medido; ninguno cae en el rib del cuello ni el bajo", "fr": "Résolus sur le devant mesuré ; aucun ne tombe dans le côte du col ni l'ourlet", "pt": "Resolvidos sobre a frente medida; nenhum cai no ribana da gola nem na bainha" } },
+    { "id": "button_ligne", "type": "slider", "group": "closure", "default": 18, "min": 14, "max": 26, "step": 1, "label": { "en": "Button size (ligne)", "es": "Tamaño de botón (línea)", "fr": "Taille de bouton (ligne)", "pt": "Tamanho do botão (ligne)" }, "tooltip": { "en": "Drives the Yantra4D sew-through-button face AND the buttonhole length", "es": "Define la cara del sew-through-button Y el largo del ojal", "fr": "Pilote la face du sew-through-button ET la longueur de boutonnière", "pt": "Pilota a face do sew-through-button E o comprimento da casa" } },
+    { "id": "band_width", "type": "slider", "group": "closure", "default": 22, "min": 15, "max": 40, "step": 1, "label": { "en": "Button band width (mm)", "es": "Ancho de tapeta (mm)", "fr": "Largeur de patte (mm)", "pt": "Largura da carcela (mm)" } },
+    { "id": "knit_stretch", "type": "slider", "group": "infant", "default": 0.08, "min": 0.0, "max": 0.20, "step": 0.01, "label": { "en": "Negative ease (fraction)", "es": "Ease negativa (fracción)", "fr": "Aisance négative (fraction)", "pt": "Folga negativa (fração)" } },
+    { "id": "hem_allowance", "type": "slider", "group": "construction", "default": 20, "min": 12, "max": 35, "step": 2, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)", "fr": "Marge d'ourlet (mm)", "pt": "Margem de bainha (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "group": "construction", "default": 8, "min": 6, "max": 14, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" }, "advanced": true }
+  ],
+  "constraints": [
+    { "expression": "head_girth < chest_girth", "severity": "warning", "message": { "en": "The neckline is floored on the head girth so the head always passes.", "es": "El escote se acota al contorno de cabeza para que siempre pase.", "fr": "L'encolure est bornée au tour de tête pour qu'elle passe toujours.", "pt": "O decote é limitado ao contorno de cabeça para que sempre passe." } }
+  ],
+  "presets": [
+    { "id": "newborn", "label": { "en": "Newborn", "es": "Recién nacido", "fr": "Nouveau-né", "pt": "Recém-nascido" }, "values": { "chest_girth": 420, "head_girth": 370, "body_length": 200, "sleeve_length": 140 } },
+    { "id": "six-months", "label": { "en": "6 months", "es": "6 meses", "fr": "6 mois", "pt": "6 meses" }, "values": { "chest_girth": 480, "head_girth": 440, "body_length": 260, "sleeve_length": 190 } },
+    { "id": "twelve-months", "label": { "en": "12 months", "es": "12 meses", "fr": "12 mois", "pt": "12 meses" }, "values": { "chest_girth": 520, "head_girth": 470, "body_length": 300, "sleeve_length": 230 } }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["jersey-algodon"],
+  "notion": {
+    "kind": "button",
+    "subtype": "small flush sew-through buttons on a baby cardigan band",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "thickness": "button_ligne * 0.09",
+        "hole_count": "2",
+        "hole_dia": "button_ligne * 0.06",
+        "hole_spacing": "button_ligne * 0.18",
+        "dish_depth": "button_ligne * 0.02"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "head_clearing_neck", "type": "neckline", "label": { "en": "Neckline that clears the head", "es": "Escote que pasa la cabeza", "fr": "Encolure qui passe la tête", "pt": "Decote que passa a cabeça" }, "edges": [ { "piece": "front", "edge": "neck" }, { "piece": "back", "edge": "neck" } ], "parameters": ["head_girth", "neck_width", "knit_stretch"] },
+      { "id": "button_band", "type": "button_stand", "label": { "en": "Solved button band", "es": "Tapeta de botones resuelta", "fr": "Patte de boutonnage résolue", "pt": "Carcela de botões resolvida" }, "edges": [ { "piece": "band", "edge": "attach" }, { "piece": "front", "edge": "cf" } ], "parameters": ["button_count", "button_ligne", "body_length"] },
+      { "id": "raglan_seam", "type": "armscye", "label": { "en": "Raglan seam to the measured body", "es": "Costura raglán al cuerpo medido", "fr": "Couture raglan au corps mesuré", "pt": "Costura raglan ao corpo medido" }, "edges": [ { "piece": "sleeve", "edge": "raglan_l" }, { "piece": "front", "edge": "raglan" }, { "piece": "back", "edge": "raglan" } ], "parameters": ["chest_girth", "knit_stretch"] }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true,
+      "knit_negative_ease": true
+    },
+    "societal_benefit": {
+      "en": "A baby cardigan looks trivial and hides the single most common home-sewing failure for infant clothes: a neckline drafted as a fraction of the chest, which comes out far too small for a baby's disproportionately large head, so the finished garment cannot be put on. This pattern floors the neckline on the measured head girth so it always passes, solves the buttons off the front so none sits where it presses a baby lying down, and drafts the raglan seams to the body so they close. It is a soft, washable, real cardigan a new parent can make that actually goes on and off a wriggling baby — the difference between a keepsake and a garment worn every day.",
+      "es": "Un cárdigan de bebé parece trivial y esconde el fallo más común al coser ropa infantil en casa: un escote trazado como fracción del pecho, que sale demasiado chico para la cabeza desproporcionadamente grande de un bebé, así que la prenda terminada no se puede poner. Este patrón acota el escote al contorno de cabeza medido para que siempre pase, resuelve los botones sobre el delantero para que ninguno quede donde presiona a un bebé acostado, y traza las costuras raglán al cuerpo para que cierren. Es un cárdigan de verdad, suave y lavable, que un padre primerizo puede hacer y que de verdad entra y sale de un bebé que se retuerce — la diferencia entre un recuerdo y una prenda de diario.",
+      "fr": "Un cardigan de bébé paraît trivial et cache l'échec le plus courant de la couture maison pour vêtements de nourrisson : une encolure tracée en fraction de la poitrine, bien trop petite pour la tête disproportionnée d'un bébé, si bien que le vêtement fini ne peut être enfilé. Ce patron borne l'encolure au tour de tête mesuré pour qu'elle passe toujours, résout les boutons sur le devant pour qu'aucun ne soit là où il presse un bébé couché, et trace les coutures raglan au corps pour qu'elles ferment. C'est un vrai cardigan doux et lavable qu'un jeune parent peut faire et qui s'enfile et se retire vraiment sur un bébé qui gigote — la différence entre un souvenir et un vêtement de tous les jours.",
+      "pt": "Um cardigã de bebê parece trivial e esconde a falha mais comum da costura caseira de roupa infantil: um decote traçado como fração do peito, que sai pequeno demais para a cabeça desproporcionalmente grande de um bebê, de modo que a peça acabada não veste. Este molde limita o decote ao contorno de cabeça medido para que sempre passe, resolve os botões sobre a frente para que nenhum fique onde pressiona um bebê deitado, e traça as costuras raglan ao corpo para que fechem. É um cardigã de verdade, macio e lavável, que um pai de primeira viagem pode fazer e que de fato entra e sai de um bebê que se contorce — a diferença entre uma lembrança e uma peça do dia a dia."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

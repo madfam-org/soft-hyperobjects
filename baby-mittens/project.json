@@ -1,0 +1,83 @@
+{
+  "project": {
+    "name": "Baby Scratch Mittens",
+    "slug": "baby-mittens",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "Thumbless scratch mittens for a newborn: a rounded mitten in soft cotton interlock with an elastic cuff, worn to stop a baby scratching its own face. No hard goods — this is a pattern-only garment, its only closure a soft elastic in a turned cuff. It is the smallest garment in the catalog, and at that size the thing that goes wrong is the cuff. Two things are solved by measurement. The cuff opening is drafted to pass the HAND — the palm width plus ease — not just the wrist, because a cuff to the wrist alone will not pass the hand and the mitten cannot be put on. And the mitten tip radius is floored against the mitten width, because at the smallest sizes a tip larger than the width inverts the curve into geometry the kernel CCW-normalizes into a valid-looking piece. Cotton interlock is chosen because it sheds no loose fibre a baby could pull into its mouth; every seam turns inward so no allowance touches the skin.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Manoplas antiarañazos sin pulgar para recién nacido: una manopla redondeada en interlock de algodón suave con puño elástico, para que el bebé no se arañe la cara. Sin herrajes — es una prenda de solo patrón, con un elástico suave en puño doblado como único cierre. Es la prenda más pequeña del catálogo, y a ese tamaño lo que falla es el puño. Dos cosas se resuelven midiendo. La abertura del puño se traza para que pase la MANO — el ancho de palma más holgura — no solo la muñeca, porque un puño a la muñeca no pasa la mano y la manopla no se puede poner. Y el radio de la punta se acota contra el ancho de la manopla, porque a los tamaños más chicos una punta mayor que el ancho invierte la curva en geometría que el kernel normaliza a CCW en una pieza sana. Se elige interlock porque no suelta fibra que el bebé pueda llevarse a la boca; toda costura se voltea hacia dentro para que ningún margen toque la piel.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Moufles anti-griffures sans pouce pour nouveau-né : une moufle arrondie en interlock de coton doux avec un poignet élastique, portée pour empêcher le bébé de se griffer le visage. Aucun accessoire — c'est un vêtement patron-seul, sa seule fermeture un élastique doux dans un poignet rentré. C'est le plus petit vêtement du catalogue, et à cette taille ce qui rate est le poignet. Deux choses sont résolues par la mesure. L'ouverture du poignet est tracée pour laisser passer la MAIN — la largeur de paume plus aisance — non le seul poignet, car un poignet à la seule taille du poignet ne passe pas la main et la moufle ne peut être enfilée. Et le rayon de bout est borné par la largeur de la moufle, car aux plus petites tailles un bout plus grand que la largeur inverse la courbe en géométrie que le noyau normalise en CCW en pièce saine. L'interlock est choisi car il ne perd aucune fibre que le bébé pourrait porter à sa bouche ; chaque couture se rentre pour qu'aucune marge ne touche la peau.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Luvas antiarranhões sem polegar para recém-nascido: uma luva arredondada em interlock de algodão macio com punho elástico, usada para impedir o bebê de arranhar o próprio rosto. Sem ferragens — é uma peça só de molde, com um elástico macio num punho dobrado como único fecho. É a menor peça do catálogo, e nesse tamanho o que falha é o punho. Duas coisas se resolvem medindo. A abertura do punho é traçada para passar a MÃO — a largura da palma mais folga — não só o pulso, porque um punho ao pulso não passa a mão e a luva não veste. E o raio da ponta é limitado contra a largura da luva, porque nos menores tamanhos uma ponta maior que a largura inverte a curva em geometria que o núcleo normaliza em CCW numa peça sã. O interlock é escolhido porque não solta fibra que o bebê possa levar à boca; cada costura se vira para dentro para que nenhuma margem toque a pele.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": ["baby-mittens", "kids_baby", "mittens", "newborn", "scratch-mittens",
+      "thumbless", "pattern-only", "safety", "fc400", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full mittens", "es": "Manoplas completas", "fr": "Moufles complètes", "pt": "Luvas completas" },
+      "script_file": "main.py",
+      "pieces": ["mitten", "cuff"]
+    }
+  ],
+  "pieces": [
+    { "id": "mitten", "label": { "en": "Mitten (cut 4)", "es": "Manopla (cortar 4)", "fr": "Moufle (couper 4)", "pt": "Luva (cortar 4)" }, "default_color": "#f0d9e2", "cut": { "quantity": 4, "on_fold": false, "mirror": false } },
+    { "id": "cuff", "label": { "en": "Elastic cuff (cut 2)", "es": "Puño elástico (cortar 2)", "fr": "Poignet élastique (couper 2)", "pt": "Punho elástico (cortar 2)" }, "default_color": "#e6c3d0", "cut": { "quantity": 2, "on_fold": false, "mirror": false } }
+  ],
+  "parameter_groups": [
+    { "id": "hand", "label": { "en": "Hand measurements", "es": "Medidas de la mano", "fr": "Mesures de la main", "pt": "Medidas da mão" } },
+    { "id": "cuff", "label": { "en": "Cuff & tip", "es": "Puño y punta", "fr": "Poignet et bout", "pt": "Punho e ponta" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
+  ],
+  "parameters": [
+    { "id": "palm_width", "type": "slider", "group": "hand", "default": 55, "min": 38, "max": 90, "step": 2, "label": { "en": "Palm width, flat (mm)", "es": "Ancho de palma, plano (mm)", "fr": "Largeur de paume, à plat (mm)", "pt": "Largura da palma, plana (mm)" } },
+    { "id": "hand_length", "type": "slider", "group": "hand", "default": 70, "min": 45, "max": 120, "step": 2, "label": { "en": "Hand length, wrist to tip (mm)", "es": "Largo de mano, muñeca a punta (mm)", "fr": "Longueur de main, poignet à bout (mm)", "pt": "Comprimento da mão, pulso à ponta (mm)" } },
+    { "id": "wrist_girth", "type": "slider", "group": "hand", "default": 90, "min": 60, "max": 140, "step": 5, "label": { "en": "Wrist girth (mm)", "es": "Contorno de muñeca (mm)", "fr": "Tour de poignet (mm)", "pt": "Contorno do pulso (mm)" } },
+    { "id": "cuff_depth", "type": "slider", "group": "cuff", "default": 28, "min": 15, "max": 45, "step": 2, "label": { "en": "Cuff depth (mm)", "es": "Alto de puño (mm)", "fr": "Hauteur de poignet (mm)", "pt": "Altura do punho (mm)" } },
+    { "id": "tip_radius", "type": "slider", "group": "cuff", "default": 26, "min": 10, "max": 50, "step": 2, "label": { "en": "Tip radius (mm)", "es": "Radio de punta (mm)", "fr": "Rayon de bout (mm)", "pt": "Raio da ponta (mm)" }, "tooltip": { "en": "Floored against the mitten width so it cannot invert the curve at small sizes", "es": "Acotado contra el ancho para que no invierta la curva en tallas chicas", "fr": "Borné par la largeur pour ne pas inverser la courbe aux petites tailles", "pt": "Limitado contra a largura para não inverter a curva em tamanhos pequenos" } },
+    { "id": "cuff_ease", "type": "slider", "group": "cuff", "default": 14, "min": 4, "max": 30, "step": 2, "label": { "en": "Cuff pass-the-hand ease (mm)", "es": "Holgura para pasar la mano (mm)", "fr": "Aisance pour passer la main (mm)", "pt": "Folga para passar a mão (mm)" }, "tooltip": { "en": "The cuff opening is drafted to the palm plus this ease so the hand passes", "es": "La abertura se traza a la palma más esta holgura para que pase la mano", "fr": "L'ouverture est tracée à la paume plus cette aisance pour laisser passer la main", "pt": "A abertura é traçada à palma mais esta folga para a mão passar" } },
+    { "id": "seam_allowance", "type": "slider", "group": "construction", "default": 6, "min": 4, "max": 12, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" }, "advanced": true }
+  ],
+  "constraints": [
+    { "expression": "palm_width < wrist_girth", "severity": "warning", "message": { "en": "A palm wider than the wrist girth is unusual; check the measures.", "es": "Una palma más ancha que la muñeca es rara; revisa las medidas.", "fr": "Une paume plus large que le tour de poignet est inhabituelle ; vérifiez les mesures.", "pt": "Uma palma mais larga que o pulso é incomum; verifique as medidas." } },
+    { "expression": "tip_radius < palm_width", "severity": "warning", "message": { "en": "A tip radius wider than the palm inverts the curve; the draft floors it.", "es": "Un radio de punta mayor que la palma invierte la curva; el trazo lo acota.", "fr": "Un rayon de bout plus large que la paume inverse la courbe ; le tracé le borne.", "pt": "Um raio de ponta maior que a palma inverte a curva; o traçado o limita." } }
+  ],
+  "presets": [
+    { "id": "newborn", "label": { "en": "Newborn", "es": "Recién nacido", "fr": "Nouveau-né", "pt": "Recém-nascido" }, "values": { "palm_width": 48, "hand_length": 58, "wrist_girth": 80 } },
+    { "id": "three-months", "label": { "en": "3 months", "es": "3 meses", "fr": "3 mois", "pt": "3 meses" }, "values": { "palm_width": 55, "hand_length": 70, "wrist_girth": 90 } },
+    { "id": "six-months", "label": { "en": "6 months", "es": "6 meses", "fr": "6 mois", "pt": "6 meses" }, "values": { "palm_width": 62, "hand_length": 80, "wrist_girth": 100 } }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["poliester-elastano-compresion"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "pass_the_hand_cuff", "type": "cuff", "label": { "en": "Cuff drafted to pass the hand", "es": "Puño trazado para pasar la mano", "fr": "Poignet tracé pour passer la main", "pt": "Punho traçado para passar a mão" }, "edges": [ { "piece": "cuff", "edge": "lower" }, { "piece": "mitten", "edge": "cuff_edge" } ], "parameters": ["palm_width", "cuff_ease", "wrist_girth"] },
+      { "id": "floored_tip", "type": "custom", "label": { "en": "Floored round tip", "es": "Punta redonda acotada", "fr": "Bout arrondi borné", "pt": "Ponta arredondada limitada" }, "edges": [ { "piece": "mitten", "edge": "tip" } ], "parameters": ["tip_radius", "palm_width"] }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": false,
+      "knit_negative_ease": true
+    },
+    "societal_benefit": {
+      "en": "Scratch mittens are the first thing many parents make or buy for a newborn, and the smallest garment anyone sews — and at that size the single failure is a cuff that will not pass the hand, so the mitten cannot be put on at all, or one so tight it marks the wrist. This pattern drafts the cuff to pass the hand and floors the tip so the curve holds at the smallest size, and specifies a fibre that sheds nothing a baby could swallow with seams turned away from the skin. It is a genuinely safe, genuinely tiny garment a new parent can cut from a scrap and finish in an evening — the smallest useful thing in the commons, drafted with the same care as the largest.",
+      "es": "Las manoplas antiarañazos son de lo primero que muchos padres hacen o compran para un recién nacido, y la prenda más pequeña que alguien cose — y a ese tamaño el único fallo es un puño que no pasa la mano, así que la manopla no se puede poner, o uno tan apretado que marca la muñeca. Este patrón traza el puño para pasar la mano y acota la punta para que la curva aguante al tamaño más chico, y especifica una fibra que no suelta nada que un bebé pueda tragar, con las costuras hacia fuera de la piel. Es una prenda de verdad segura y de verdad diminuta que un padre primerizo corta de un retazo y termina en una tarde — la cosa útil más pequeña del commons, trazada con el mismo cuidado que la más grande.",
+      "fr": "Les moufles anti-griffures sont l'une des premières choses que beaucoup de parents font ou achètent pour un nouveau-né, et le plus petit vêtement que quiconque coud — et à cette taille l'unique échec est un poignet qui ne passe pas la main, si bien que la moufle ne peut être enfilée, ou un poignet si serré qu'il marque le poignet. Ce patron trace le poignet pour passer la main et borne le bout pour que la courbe tienne à la plus petite taille, et spécifie une fibre qui ne perd rien qu'un bébé pourrait avaler, coutures écartées de la peau. C'est un vêtement vraiment sûr et vraiment minuscule qu'un jeune parent coupe dans une chute et termine en une soirée — la plus petite chose utile du commun, tracée avec le même soin que la plus grande.",
+      "pt": "As luvas antiarranhões são das primeiras coisas que muitos pais fazem ou compram para um recém-nascido, e a menor peça que alguém costura — e nesse tamanho a única falha é um punho que não passa a mão, de modo que a luva não veste, ou um tão apertado que marca o pulso. Este molde traça o punho para passar a mão e limita a ponta para que a curva aguente no menor tamanho, e especifica uma fibra que não solta nada que um bebê possa engolir, com as costuras viradas para longe da pele. É uma peça de fato segura e de fato minúscula que um pai de primeira viagem corta de um retalho e termina numa noite — a menor coisa útil do comum, traçada com o mesmo cuidado que a maior."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

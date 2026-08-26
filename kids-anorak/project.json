@@ -1,0 +1,108 @@
+{
+  "project": {
+    "name": "Children's Anorak",
+    "slug": "kids-anorak",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A pullover anorak for a child in ripstop nylon: a half-zip front, a kangaroo pouch pocket, an attached hood, and a drawcord hem gathered on a cord-lock. It goes over the head — a half-zip, not a full front — which is the number that has to be right: the neck-plus-half-zip opening must clear the child's HEAD, or the anorak cannot be pulled on. Two things are solved by measurement. A pullover has no full front, so the head passes through the neckline PLUS the half-zip; the zip is FLOORED so that combined opening is at least the MEASURED head girth — a half-zip cut to a fashion length leaves an opening too small for the head. And the hem drawcord is cut to the MEASURED hem circumference plus the tail the cord-lock needs to grip and the child needs to pull, so the anorak actually cinches; the cord-lock's cord_dia drives the channel width so the cord runs free. The kangaroo pouch is clamped against the front. Windproof, packable ripstop; bar-tacked stress points. The cord-lock bridges to the Yantra4D `cord-lock` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un anorak de meter por la cabeza para niño en nylon ripstop: medio cierre delantero, bolsillo canguro, capucha integrada y bajo con cordón fruncido en un tope. Se mete por la cabeza — medio cierre, no frente completo — que es el número que debe estar bien: la abertura de cuello más medio cierre debe librar la CABEZA del niño, o el anorak no se puede poner. Dos cosas se resuelven midiendo. Un anorak cerrado no tiene frente completo, así que la cabeza pasa por el escote MÁS el medio cierre; el cierre se ACOTA para que esa abertura combinada sea al menos el contorno de cabeza MEDIDO — un medio cierre de largo de moda deja una abertura demasiado chica. Y el cordón del bajo se corta al contorno de bajo MEDIDO más la cola que el tope necesita agarrar y el niño necesita jalar, así el anorak de verdad frunce; el cord_dia del tope define el ancho de la jareta para que el cordón corra libre. El bolsillo canguro se acota contra el delantero. Ripstop cortavientos y empacable; puntos de esfuerzo con presilla. El tope se puentea al sólido `cord-lock` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un anorak à enfiler pour enfant en nylon ripstop : un demi-zip devant, une poche kangourou, une capuche attachée et un ourlet à cordon froncé sur un arrêt de cordon. Il s'enfile par la tête — un demi-zip, non un devant complet — ce qui est le nombre qui doit être juste : l'ouverture encolure-plus-demi-zip doit dégager la TÊTE de l'enfant, ou l'anorak ne peut être enfilé. Deux choses sont résolues par la mesure. Un anorak fermé n'a pas de devant complet, donc la tête passe par l'encolure PLUS le demi-zip ; le zip est BORNÉ pour que cette ouverture combinée soit au moins le tour de tête MESURÉ — un demi-zip à longueur de mode laisse une ouverture trop petite. Et le cordon d'ourlet est coupé au tour d'ourlet MESURÉ plus la queue que l'arrêt doit saisir et l'enfant tirer, de sorte que l'anorak se resserre vraiment ; le cord_dia de l'arrêt pilote la largeur de coulisse pour que le cordon coure libre. La poche kangourou est bornée par le devant. Ripstop coupe-vent et compressible ; points de contrainte barrés. L'arrêt de cordon fait le pont vers le solide `cord-lock` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um anoraque de vestir pela cabeça para criança em náilon ripstop: um meio-zíper na frente, um bolso canguru, um capuz integrado e uma bainha com cordão franzido num trava-cordão. Veste-se pela cabeça — um meio-zíper, não uma frente inteira — que é o número que tem de estar certo: a abertura pescoço-mais-meio-zíper deve liberar a CABEÇA da criança, ou o anoraque não veste. Duas coisas se resolvem medindo. Um anoraque fechado não tem frente inteira, então a cabeça passa pelo decote MAIS o meio-zíper; o zíper é LIMITADO para que essa abertura combinada seja ao menos o contorno de cabeça MEDIDO — um meio-zíper a comprimento de moda deixa uma abertura pequena demais. E o cordão da bainha é cortado ao contorno de bainha MEDIDO mais a cauda que o trava-cordão precisa segurar e a criança precisa puxar, de modo que o anoraque de fato franze; o cord_dia do trava-cordão pilota a largura da bainha para que o cordão corra livre. O bolso canguru é limitado contra a frente. Ripstop corta-vento e compactável; pontos de esforço travados. O trava-cordão faz a ponte para o sólido `cord-lock` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["kids-anorak", "kids_baby", "anorak", "pullover", "half-zip",
+      "cord-lock", "kangaroo-pocket", "child-proportion", "hardware", "fc400", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full anorak", "es": "Anorak completo", "fr": "Anorak complet", "pt": "Anoraque completo" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "sleeve", "hood", "pocket"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front (cut 2, mirrored)", "es": "Delantero (cortar 2, espejo)", "fr": "Devant (couper 2, miroir)", "pt": "Frente (cortar 2, espelhado)" }, "default_color": "#4a8f7a", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "back", "label": { "en": "Back (cut on fold)", "es": "Espalda (corte al doblez)", "fr": "Dos (coupe au pli)", "pt": "Costas (corte na dobra)" }, "default_color": "#569b86", "cut": { "quantity": 1, "on_fold": true, "mirror": false } },
+    { "id": "sleeve", "label": { "en": "Raglan sleeve (cut 2, mirrored)", "es": "Manga raglán (cortar 2, espejo)", "fr": "Manche raglan (couper 2, miroir)", "pt": "Manga raglan (cortar 2, espelhado)" }, "default_color": "#62a792", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "hood", "label": { "en": "Hood (cut 2, mirrored)", "es": "Capucha (cortar 2, espejo)", "fr": "Capuche (couper 2, miroir)", "pt": "Capuz (cortar 2, espelhado)" }, "default_color": "#6eb39e", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "pocket", "label": { "en": "Kangaroo pouch (cut 1)", "es": "Bolsillo canguro (cortar 1)", "fr": "Poche kangourou (couper 1)", "pt": "Bolso canguru (cortar 1)" }, "default_color": "#7abfaa", "cut": { "quantity": 1, "on_fold": false, "mirror": false } }
+  ],
+  "parameter_groups": [
+    { "id": "child", "label": { "en": "Child measurements", "es": "Medidas del niño", "fr": "Mesures de l'enfant", "pt": "Medidas da criança" } },
+    { "id": "hood", "label": { "en": "Hood & head clearance", "es": "Capucha y paso de cabeza", "fr": "Capuche et passage de tête", "pt": "Capuz e passagem de cabeça" } },
+    { "id": "closure", "label": { "en": "Zip, cord & pocket", "es": "Cierre, cordón y bolsillo", "fr": "Zip, cordon et poche", "pt": "Zíper, cordão e bolso" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "group": "child", "default": 640, "min": 520, "max": 820, "step": 10, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)" }, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" } },
+    { "id": "head_girth", "type": "slider", "group": "hood", "default": 500, "min": 420, "max": 580, "step": 10, "label": { "en": "Head girth (mm)", "es": "Contorno de cabeza (mm)", "fr": "Tour de tête (mm)", "pt": "Contorno de cabeça (mm)" }, "tooltip": { "en": "The half-zip is floored so the neck-plus-zip opening clears this", "es": "El medio cierre se acota para que la abertura cuello+cierre libre esto", "fr": "Le demi-zip est borné pour que l'ouverture col+zip dégage cela", "pt": "O meio-zíper é limitado para que a abertura pescoço+zíper libere isto" } },
+    { "id": "head_length", "type": "slider", "group": "hood", "default": 230, "min": 180, "max": 300, "step": 5, "label": { "en": "Head length (mm)", "es": "Largo de cabeza (mm)", "fr": "Longueur de tête (mm)", "pt": "Comprimento da cabeça (mm)" } },
+    { "id": "body_length", "type": "slider", "group": "child", "default": 400, "min": 300, "max": 600, "step": 10, "label": { "en": "Body length (mm)", "es": "Largo de cuerpo (mm)", "fr": "Longueur de corps (mm)", "pt": "Comprimento do corpo (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "group": "child", "default": 350, "min": 240, "max": 480, "step": 10, "label": { "en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)", "pt": "Comprimento da manga (mm)" } },
+    { "id": "neck_width", "type": "slider", "group": "child", "default": 135, "min": 100, "max": 190, "step": 5, "label": { "en": "Base-neck width (mm)", "es": "Ancho de base de cuello (mm)", "fr": "Largeur d'encolure (mm)", "pt": "Largura da base do pescoço (mm)" } },
+    { "id": "half_zip", "type": "slider", "group": "closure", "default": 180, "min": 100, "max": 300, "step": 10, "label": { "en": "Half-zip length (mm)", "es": "Largo de medio cierre (mm)", "fr": "Longueur de demi-zip (mm)", "pt": "Comprimento do meio-zíper (mm)" }, "tooltip": { "en": "Floored so the neck-plus-zip opening always clears the head", "es": "Acotado para que la abertura cuello+cierre siempre libre la cabeza", "fr": "Borné pour que l'ouverture col+zip dégage toujours la tête", "pt": "Limitado para que a abertura pescoço+zíper sempre libere a cabeça" } },
+    { "id": "cord_dia", "type": "slider", "group": "closure", "default": 4, "min": 3, "max": 7, "step": 1, "label": { "en": "Drawcord diameter (mm)", "es": "Diámetro de cordón (mm)", "fr": "Diamètre de cordon (mm)", "pt": "Diâmetro do cordão (mm)" }, "tooltip": { "en": "Drives the Yantra4D cord-lock cord_dia AND the drawcord channel width", "es": "Define el cord_dia del cord-lock de Yantra4D Y el ancho de la jareta", "fr": "Pilote le cord_dia du cord-lock Yantra4D ET la largeur de coulisse", "pt": "Pilota o cord_dia do cord-lock do Yantra4D E a largura da bainha" } },
+    { "id": "pocket_width", "type": "slider", "group": "closure", "default": 240, "min": 140, "max": 360, "step": 10, "label": { "en": "Kangaroo pouch width (mm)", "es": "Ancho de bolsillo canguro (mm)", "fr": "Largeur de poche kangourou (mm)", "pt": "Largura do bolso canguru (mm)" } },
+    { "id": "wear_ease", "type": "slider", "group": "child", "default": 180, "min": 80, "max": 320, "step": 10, "label": { "en": "Wearing ease (mm)", "es": "Holgura de uso (mm)", "fr": "Aisance de port (mm)", "pt": "Folga de uso (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "group": "construction", "default": 28, "min": 18, "max": 45, "step": 2, "label": { "en": "Hem drawcord channel (mm)", "es": "Jareta de cordón (mm)", "fr": "Coulisse de cordon (mm)", "pt": "Bainha do cordão (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 8, "max": 18, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" }, "advanced": true }
+  ],
+  "constraints": [
+    { "expression": "half_zip < body_length", "severity": "warning", "message": { "en": "A half-zip longer than the body is a full zip; keep it under the body length.", "es": "Un medio cierre más largo que el cuerpo es un cierre completo; manténlo bajo el largo.", "fr": "Un demi-zip plus long que le corps est un zip entier ; gardez-le sous la longueur.", "pt": "Um meio-zíper mais longo que o corpo é um zíper inteiro; mantenha sob o comprimento." } },
+    { "expression": "head_girth < chest_girth", "severity": "warning", "message": { "en": "The zip is floored so the head opening always clears the head.", "es": "El cierre se acota para que la abertura siempre libre la cabeza.", "fr": "Le zip est borné pour que l'ouverture dégage toujours la tête.", "pt": "O zíper é limitado para que a abertura sempre libere a cabeça." } }
+  ],
+  "presets": [
+    { "id": "trail-3y", "label": { "en": "Trail (3 years)", "es": "Sendero (3 años)", "fr": "Sentier (3 ans)", "pt": "Trilha (3 anos)" }, "values": { "chest_girth": 580, "head_girth": 480, "body_length": 360 } },
+    { "id": "packable", "label": { "en": "Packable travel", "es": "Empacable de viaje", "fr": "Voyage compressible", "pt": "Compactável de viagem" }, "values": { "wear_ease": 220, "half_zip": 220 } },
+    { "id": "long-6y", "label": { "en": "Long (6 years)", "es": "Largo (6 años)", "fr": "Long (6 ans)", "pt": "Longo (6 anos)" }, "values": { "chest_girth": 700, "body_length": 520 } }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["nylon-ripstop-shell"],
+  "notion": {
+    "kind": "custom",
+    "subtype": "hem-drawcord cord-lock",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "cord-lock",
+      "linked": true,
+      "params_map": {
+        "lock_style": "1",
+        "cord_dia": "cord_dia",
+        "cords": "1",
+        "body_size": "cord_dia * 4.0",
+        "wall": "cord_dia * 0.5"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "hem_drawcord", "type": "hem", "label": { "en": "Hem drawcord on a cord-lock", "es": "Cordón de bajo en tope", "fr": "Cordon d'ourlet sur arrêt", "pt": "Cordão de bainha em trava-cordão" }, "edges": [ { "piece": "front", "edge": "hem" }, { "piece": "back", "edge": "hem" } ], "parameters": ["cord_dia", "chest_girth"] },
+      { "id": "pullover_head_clearance", "type": "neckline", "label": { "en": "Half-zip head-clearing opening", "es": "Abertura de paso de cabeza con medio cierre", "fr": "Ouverture de passage de tête à demi-zip", "pt": "Abertura de passagem de cabeça com meio-zíper" }, "edges": [ { "piece": "front", "edge": "cf" }, { "piece": "front", "edge": "neck" } ], "parameters": ["half_zip", "head_girth", "neck_width"] },
+      { "id": "kangaroo_pocket", "type": "pocket", "label": { "en": "Clamped kangaroo pouch", "es": "Bolsillo canguro acotado", "fr": "Poche kangourou bornée", "pt": "Bolso canguru limitado" }, "edges": [ { "piece": "pocket", "edge": "top" }, { "piece": "front", "edge": "hem" } ], "parameters": ["pocket_width", "chest_girth"] }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A pullover anorak is a favourite children's shape because it has no full-length zip to break or trap fingers — but that is exactly why it can trap the child: if the neck-plus-half-zip opening is not big enough, the anorak jams over the head, which is frightening for a small child and dangerous if it covers the face. Most pullover patterns set the zip to a look, not a measurement. This pattern floors the zip so the combined opening always clears the measured head, cuts the hem drawcord to actually cinch on its cord-lock, and clamps the pouch. It is a light, packable, genuinely safe pullover a parent can make — the head-clearance calculation that ready-made pullovers get wrong at small sizes done explicitly.",
+      "es": "El anorak de meter por la cabeza es una forma favorita de la ropa infantil porque no tiene cierre completo que se rompa o atrape dedos — pero justo por eso puede atrapar al niño: si la abertura de cuello más medio cierre no es bastante grande, el anorak se atasca sobre la cabeza, lo que asusta a un niño pequeño y es peligroso si le cubre la cara. La mayoría de los patrones ponen el cierre por estética, no por medida. Este patrón acota el cierre para que la abertura combinada siempre libre la cabeza medida, corta el cordón del bajo para que de verdad frunza en su tope, y acota el bolsillo. Es un anorak ligero, empacable y de verdad seguro que un padre puede hacer — el cálculo de paso de cabeza que los prêt-à-porter fallan en tallas chicas, hecho explícito.",
+      "fr": "L'anorak à enfiler est une forme préférée des vêtements d'enfant car il n'a pas de zip intégral qui casse ou pince les doigts — mais c'est justement pourquoi il peut piéger l'enfant : si l'ouverture col-plus-demi-zip n'est pas assez grande, l'anorak coince sur la tête, effrayant pour un petit enfant et dangereux s'il couvre le visage. La plupart des patrons règlent le zip à l'allure, non à la mesure. Ce patron borne le zip pour que l'ouverture combinée dégage toujours la tête mesurée, coupe le cordon d'ourlet pour vraiment se resserrer sur son arrêt, et borne la poche. C'est un anorak léger, compressible et vraiment sûr qu'un parent peut faire — le calcul de passage de tête que le prêt-à-porter rate aux petites tailles, rendu explicite.",
+      "pt": "O anoraque de vestir pela cabeça é uma forma favorita da roupa infantil porque não tem zíper inteiro que quebre ou prenda dedos — mas é justamente por isso que pode prender a criança: se a abertura pescoço-mais-meio-zíper não for grande o bastante, o anoraque trava sobre a cabeça, o que assusta uma criança pequena e é perigoso se cobrir o rosto. A maioria dos moldes ajusta o zíper pela estética, não pela medida. Este molde limita o zíper para que a abertura combinada sempre libere a cabeça medida, corta o cordão da bainha para de fato franzir no trava-cordão, e limita o bolso. É um anoraque leve, compactável e de fato seguro que um pai pode fazer — o cálculo de passagem de cabeça que o pronto-a-vestir erra em tamanhos pequenos, feito explícito."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

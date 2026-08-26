@@ -1,0 +1,111 @@
+{
+  "project": {
+    "name": "Mechanic's Shop Coverall",
+    "slug": "shop-coverall",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The one-piece shop coverall: a bodice joined to a trouser at the waist, a full centre-front two-way zipper from throat to crotch, set-in sleeves, and a stack of chest and thigh pockets. A coverall is stepped into and zipped, so the zipper length is the number the whole garment turns on — a zip cut short of the crotch cannot be stepped into, and a two-way zip is what lets the wearer vent the crotch when kneeling. Three things are solved by measurement, not formula. The zipper is specified to the nearest STANDARD tape length AT OR ABOVE the measured throat-to-crotch run, never below, and the chosen length and its overage are reported. The bodice and trouser waists are both drafted to the same measured waist quarter so the join closes at delta zero, and the declared seam catches any redraft that breaks it. And the sleeve cap is eased to the measured armscye while the chest pocket is clamped against the bodice, because an inverted pocket is CCW-normalized by the kernel into a healthy-looking piece. Workwear conventions throughout: 7 mm topstitch, felled seams, hard goods via Yantra4D. The zipper bridges to the Yantra4D `zipper` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El overol de taller de una pieza: un cuerpo unido a un pantalón en la cintura, un cierre central de dos vías de la garganta al tiro, mangas montadas y una hilera de bolsillos de pecho y muslo. Un overol se pisa y se cierra, así que el largo del cierre es el número del que depende toda la prenda — un cierre corto del tiro no se puede pisar, y uno de dos vías es lo que deja ventilar el tiro al arrodillarse. Tres cosas se resuelven midiendo, no por fórmula. El cierre se especifica al largo de cinta ESTÁNDAR igual o mayor que el recorrido medido de garganta a tiro, nunca menor, y el largo elegido y su exceso se reportan. Los cuerpos de torso y pantalón se trazan al mismo cuarto de cintura medido para que la unión cierre a cero, y la costura declarada atrapa cualquier retrazado que lo rompa. Y la copa de la manga se embebe a la sisa medida mientras el bolsillo de pecho se acota contra el torso, porque un bolsillo invertido el kernel lo normaliza a CCW dejándolo sano. Convenciones de trabajo en todo: pespunte a 7 mm, costuras rebatidas, herrajes vía Yantra4D. El cierre se puentea al sólido `zipper` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La combinaison d'atelier une pièce : un buste joint à un pantalon à la taille, une fermeture centrale à deux sens de la gorge à la fourche, des manches montées et une série de poches poitrine et cuisse. Une combinaison s'enfile en marchant dedans et se ferme, donc la longueur de fermeture est le nombre dont dépend tout le vêtement — une fermeture coupée court de la fourche ne s'enfile pas, et une fermeture à deux sens permet d'aérer la fourche à genoux. Trois choses sont résolues par la mesure, non par formule. La fermeture est spécifiée à la longueur de ruban STANDARD égale ou supérieure au parcours mesuré gorge-à-fourche, jamais inférieure, et la longueur choisie et son surplus sont reportés. Les tailles du buste et du pantalon sont tracées au même quart de taille mesuré pour que la jonction ferme à zéro, et la couture déclarée rattrape tout retracé qui la casse. Et la tête de manche est embue sur l'emmanchure mesurée tandis que la poche poitrine est bornée par le buste, car une poche inversée est normalisée en CCW par le noyau en paraissant saine. Conventions de travail partout : surpiqûre 7 mm, coutures rabattues, accessoires via Yantra4D. La fermeture fait le pont vers le solide `zipper` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O macacão de oficina de uma peça: um corpete unido a uma calça na cintura, um zíper central de duas vias da garganta ao gancho, mangas montadas e uma fileira de bolsos de peito e coxa. Um macacão se veste entrando nele e se fecha, então o comprimento do zíper é o número do qual depende toda a peça — um zíper curto do gancho não se veste, e um de duas vias é o que deixa ventilar o gancho ao ajoelhar. Três coisas se resolvem medindo, não por fórmula. O zíper é especificado ao comprimento de fita PADRÃO igual ou maior que o percurso medido garganta-a-gancho, nunca menor, e o comprimento escolhido e seu excesso são reportados. As cinturas do corpete e da calça são traçadas ao mesmo quarto de cintura medido para que a junção feche a zero, e a costura declarada pega qualquer retraçado que a quebre. E a cabeça da manga é embebida à cava medida enquanto o bolso de peito é limitado contra o corpete, porque um bolso invertido é normalizado em CCW pelo núcleo parecendo são. Convenções de trabalho em tudo: pesponto a 7 mm, costuras rebatidas, ferragens via Yantra4D. O zíper faz a ponte para o sólido `zipper` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["shop-coverall", "workwear", "coverall", "jumpsuit", "mechanic",
+      "zipper", "two-way", "hardware", "fc400", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full coverall", "es": "Overol completo", "fr": "Combinaison complète", "pt": "Macacão completo" },
+      "script_file": "main.py",
+      "pieces": ["bodice_front", "bodice_back", "leg_front", "leg_back", "sleeve", "collar", "pocket"]
+    }
+  ],
+  "pieces": [
+    { "id": "bodice_front", "label": { "en": "Bodice front (cut 2, mirrored)", "es": "Torso delantero (cortar 2, espejo)", "fr": "Buste devant (couper 2, miroir)", "pt": "Corpete frente (cortar 2, espelhado)" }, "default_color": "#4d5b6a", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "bodice_back", "label": { "en": "Bodice back (cut on fold)", "es": "Torso espalda (corte al doblez)", "fr": "Buste dos (coupe au pli)", "pt": "Corpete costas (corte na dobra)" }, "default_color": "#586675", "cut": { "quantity": 1, "on_fold": true, "mirror": false } },
+    { "id": "leg_front", "label": { "en": "Trouser front (cut 2, mirrored)", "es": "Pantalón delantero (cortar 2, espejo)", "fr": "Pantalon devant (couper 2, miroir)", "pt": "Calça frente (cortar 2, espelhado)" }, "default_color": "#647081", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "leg_back", "label": { "en": "Trouser back (cut 2, mirrored)", "es": "Pantalón trasero (cortar 2, espejo)", "fr": "Pantalon dos (couper 2, miroir)", "pt": "Calça costas (cortar 2, espelhado)" }, "default_color": "#707c8d", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "sleeve", "label": { "en": "Sleeve (cut 2, mirrored)", "es": "Manga (cortar 2, espejo)", "fr": "Manche (couper 2, miroir)", "pt": "Manga (cortar 2, espelhado)" }, "default_color": "#7c8899", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "collar", "label": { "en": "Collar (cut 2, on fold)", "es": "Cuello (cortar 2, al doblez)", "fr": "Col (couper 2, au pli)", "pt": "Gola (cortar 2, na dobra)" }, "default_color": "#8894a5", "cut": { "quantity": 2, "on_fold": true, "mirror": false } },
+    { "id": "pocket", "label": { "en": "Patch pocket (cut 3)", "es": "Bolsillo de parche (cortar 3)", "fr": "Poche plaquée (couper 3)", "pt": "Bolso chapado (cortar 3)" }, "default_color": "#94a0b1", "cut": { "quantity": 3, "on_fold": false, "mirror": false } }
+  ],
+  "parameter_groups": [
+    { "id": "body", "label": { "en": "Body", "es": "Cuerpo", "fr": "Corps", "pt": "Corpo" } },
+    { "id": "lower", "label": { "en": "Trouser", "es": "Pantalón", "fr": "Pantalon", "pt": "Calça" } },
+    { "id": "closure", "label": { "en": "Zipper & sleeve", "es": "Cierre y manga", "fr": "Fermeture et manche", "pt": "Zíper e manga" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "group": "body", "default": 1060, "min": 860, "max": 1500, "step": 10, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)" }, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" } },
+    { "id": "waist_girth", "type": "slider", "group": "body", "default": 940, "min": 700, "max": 1400, "step": 10, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)", "pt": "Contorno de cintura (mm)" }, "measurement": { "standard": "iso_8559", "code": "waist_girth" } },
+    { "id": "hip_girth", "type": "slider", "group": "lower", "default": 1080, "min": 760, "max": 1440, "step": 10, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)", "fr": "Tour de hanches (mm)", "pt": "Contorno de quadril (mm)" }, "measurement": { "standard": "iso_8559", "code": "hip_girth" } },
+    { "id": "back_width", "type": "slider", "group": "body", "default": 470, "min": 380, "max": 560, "step": 5, "label": { "en": "Across-back width (mm)", "es": "Ancho de espalda (mm)", "fr": "Carrure dos (mm)", "pt": "Largura das costas (mm)" }, "measurement": { "standard": "iso_8559", "code": "across_back" } },
+    { "id": "back_length", "type": "slider", "group": "body", "default": 440, "min": 360, "max": 540, "step": 5, "label": { "en": "Nape to waist (mm)", "es": "Nuca a cintura (mm)", "fr": "Nuque à taille (mm)", "pt": "Nuca à cintura (mm)" } },
+    { "id": "inside_leg", "type": "slider", "group": "lower", "default": 780, "min": 560, "max": 950, "step": 10, "label": { "en": "Inside leg (mm)", "es": "Entrepierna (mm)", "fr": "Entrejambe (mm)", "pt": "Entreperna (mm)" } },
+    { "id": "front_rise", "type": "slider", "group": "lower", "default": 300, "min": 220, "max": 380, "step": 5, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)", "fr": "Montée devant (mm)", "pt": "Gancho dianteiro (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "group": "closure", "default": 640, "min": 520, "max": 780, "step": 10, "label": { "en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)", "pt": "Comprimento da manga (mm)" } },
+    { "id": "hem_width", "type": "slider", "group": "lower", "default": 250, "min": 180, "max": 360, "step": 5, "label": { "en": "Leg hem width (mm)", "es": "Ancho de bajo de pierna (mm)", "fr": "Largeur d'ourlet de jambe (mm)", "pt": "Largura da barra da perna (mm)" } },
+    { "id": "zip_chain", "type": "slider", "group": "closure", "default": 8, "min": 5, "max": 10, "step": 1, "label": { "en": "Zipper chain size (#)", "es": "Tamaño de cadena del cierre (#)", "fr": "Taille de maille (#)", "pt": "Tamanho da corrente do zíper (#)" }, "tooltip": { "en": "Drives the Yantra4D zipper teeth; the tape length is solved from the measured CF run", "es": "Define los dientes del zipper de Yantra4D; el largo se resuelve del recorrido CF medido", "fr": "Pilote les dents du zipper Yantra4D ; la longueur est résolue du parcours CF mesuré", "pt": "Pilota os dentes do zipper do Yantra4D; o comprimento é resolvido do percurso CF medido" } },
+    { "id": "wear_ease", "type": "slider", "group": "body", "default": 240, "min": 140, "max": 360, "step": 10, "label": { "en": "Wearing ease over chest (mm)", "es": "Holgura de uso en pecho (mm)", "fr": "Aisance poitrine (mm)", "pt": "Folga no peito (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "group": "construction", "default": 32, "min": 18, "max": 45, "step": 2, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)", "fr": "Marge d'ourlet (mm)", "pt": "Margem de bainha (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 8, "max": 18, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" }, "advanced": true }
+  ],
+  "constraints": [
+    { "expression": "chest_girth > waist_girth", "severity": "warning", "message": { "en": "A waist wider than the chest inverts the bodice side; the draft clamps the waist quarter.", "es": "Una cintura mayor que el pecho invierte el costado del torso; el trazo acota el cuarto.", "fr": "Une taille plus large que la poitrine inverse le côté du buste ; le tracé borne le quart.", "pt": "Uma cintura maior que o peito inverte a lateral do corpete; o traçado limita o quarto." } },
+    { "expression": "hip_girth > waist_girth", "severity": "warning", "message": { "en": "A hip smaller than the waist inverts the trouser side; the draft clamps it.", "es": "Una cadera menor que la cintura invierte el costado del pantalón; el trazo lo acota.", "fr": "Une hanche plus petite que la taille inverse le côté du pantalon ; le tracé le borne.", "pt": "Um quadril menor que a cintura inverte a lateral da calça; o traçado o limita." } }
+  ],
+  "presets": [
+    { "id": "shop-standard", "label": { "en": "Shop standard", "es": "Taller estándar", "fr": "Atelier standard", "pt": "Oficina padrão" }, "values": { "zip_chain": 8, "wear_ease": 240 } },
+    { "id": "insulated-roomy", "label": { "en": "Insulated (roomy)", "es": "Aislado (holgado)", "fr": "Isolé (ample)", "pt": "Isolado (folgado)" }, "values": { "wear_ease": 340, "zip_chain": 10 } },
+    { "id": "trim-fit", "label": { "en": "Trim fit", "es": "Ajuste ceñido", "fr": "Coupe ajustée", "pt": "Corte justo" }, "values": { "chest_girth": 980, "waist_girth": 860, "wear_ease": 160 } }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["popelina-algodon"],
+  "notion": {
+    "kind": "zipper",
+    "subtype": "two-way separating centre-front zipper",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "zipper",
+      "linked": true,
+      "params_map": {
+        "zip_length": "front_rise + back_length",
+        "chain_size": "zip_chain",
+        "tape_width": "zip_chain * 3.2",
+        "tape_thick": "zip_chain * 0.15",
+        "gap": "zip_chain * 0.5"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "cf_zipper", "type": "zipper_tape", "label": { "en": "Throat-to-crotch two-way zipper", "es": "Cierre de dos vías garganta-tiro", "fr": "Fermeture deux sens gorge-fourche", "pt": "Zíper de duas vias garganta-gancho" }, "edges": [ { "piece": "bodice_front", "edge": "cf" }, { "piece": "leg_front", "edge": "crotch" } ], "parameters": ["zip_chain", "front_rise", "back_length"] },
+      { "id": "waist_join", "type": "waistband", "label": { "en": "Bodice-to-trouser waist join", "es": "Unión de cintura torso-pantalón", "fr": "Jonction de taille buste-pantalon", "pt": "Junção de cintura corpete-calça" }, "edges": [ { "piece": "bodice_front", "edge": "waist" }, { "piece": "leg_front", "edge": "waist" } ], "parameters": ["waist_girth", "wear_ease"] },
+      { "id": "eased_sleeve_cap", "type": "armscye", "label": { "en": "Cap eased to the measured armscye", "es": "Copa embebida a la sisa medida", "fr": "Tête embue sur l'emmanchure mesurée", "pt": "Cabeça embebida à cava medida" }, "edges": [ { "piece": "sleeve", "edge": "cap_r" }, { "piece": "bodice_front", "edge": "armscye" }, { "piece": "bodice_back", "edge": "armscye" } ], "parameters": ["chest_girth", "wear_ease"] }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A coverall is the single most-worn garment in every workshop, garage, and hangar, and the one thing that ruins it is a zipper that does not reach — too short to step into, or a one-way zip that cannot vent when the wearer kneels. This pattern measures the actual throat-to-crotch run and specifies a standard two-way zip at or above it, so the wearer can always get in and always vent. The bodice and trouser waists close at zero because both come off the same measured waist, the sleeve is eased to the armscye, and it prints and sews at home. A garment worn by millions of working people, drafted so the first one made zips shut and steps into.",
+      "es": "Un overol es la prenda más usada en todo taller, cochera y hangar, y lo único que lo arruina es un cierre que no alcanza — corto para pisarlo, o de una vía que no ventila al arrodillarse. Este patrón mide el recorrido real de garganta a tiro y especifica un cierre estándar de dos vías igual o mayor, así siempre se entra y siempre se ventila. Los cuerpos de torso y pantalón cierran a cero porque ambos salen de la misma cintura medida, la manga se embebe a la sisa, y se imprime y se cose en casa. Una prenda que visten millones de trabajadores, trazada para que la primera cierre y se pise.",
+      "fr": "Une combinaison est le vêtement le plus porté dans tout atelier, garage et hangar, et la seule chose qui la ruine est une fermeture qui n'atteint pas — trop courte pour l'enfiler, ou à un sens qui n'aère pas à genoux. Ce patron mesure le parcours réel gorge-à-fourche et spécifie une fermeture standard à deux sens égale ou supérieure, de sorte qu'on entre toujours et qu'on aère toujours. Les tailles du buste et du pantalon ferment à zéro car les deux viennent de la même taille mesurée, la manche est embue sur l'emmanchure, et cela s'imprime et se coud chez soi. Un vêtement porté par des millions de travailleurs, tracé pour que le premier ferme et s'enfile.",
+      "pt": "Um macacão é a peça mais usada em toda oficina, garagem e hangar, e a única coisa que o arruína é um zíper que não alcança — curto para entrar, ou de uma via que não ventila ao ajoelhar. Este molde mede o percurso real garganta-a-gancho e especifica um zíper padrão de duas vias igual ou maior, de modo que sempre se entra e sempre se ventila. As cinturas do corpete e da calça fecham a zero porque ambas vêm da mesma cintura medida, a manga é embebida à cava, e imprime e costura em casa. Uma peça usada por milhões de trabalhadores, traçada para que a primeira feche e se vista."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

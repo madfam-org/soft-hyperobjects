@@ -1,0 +1,84 @@
+{
+  "project": {
+    "name": "Toddler Footed Legging",
+    "slug": "toddler-legging",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A footed stretch legging for a toddler: one wrap-around leg piece per side with an attached foot, drafted for a stretch knit with NEGATIVE ease so it grips without a hard waistband. No hard goods — this is a pattern-only garment, its only closure a soft elastic in a turned waist casing. Drafted from child measurements, not a shrunk adult: the rise carries a nappy and the waist is not smaller than the hip. Two things are solved by measurement. The knit negative ease is applied to GIRTHS only (hip, ankle) — the legging is cut smaller around so it grips, but TRUE to length (rise, inside leg) so it is not short and does not pull the foot off; a legging cut smaller in every direction is short in the body. And the foot's opening is drafted to the MEASURED ankle (less its own negative ease) so the foot seam closes rather than gapping or gathering. Sew on a stretch stitch or overlock — a straight stitch pops when the legging stretches on.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un mallón con pie para niño pequeño: una pieza de pierna envolvente por lado con pie integrado, trazado para punto elástico con ease NEGATIVA para que ajuste sin pretina rígida. Sin herrajes — es una prenda de solo patrón, con un elástico suave en jareta doblada como único cierre. Trazado con medidas infantiles, no un adulto reducido: el tiro aloja un pañal y la cintura no es más angosta que la cadera. Dos cosas se resuelven midiendo. La ease negativa del punto se aplica solo a los CONTORNOS (cadera, tobillo) — el mallón se corta más chico alrededor para que ajuste, pero FIEL de largo (tiro, entrepierna) para que no quede corto ni jale el pie; un mallón cortado más chico en toda dirección queda corto de cuerpo. Y la abertura del pie se traza al tobillo MEDIDO (menos su propia ease negativa) para que la costura del pie cierre y no abra ni frunza. Se cose con puntada elástica u overlock — una puntada recta salta cuando el mallón se estira al ponerse.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un legging à pieds pour tout-petit : une pièce de jambe enveloppante par côté avec un pied intégré, tracé pour maille extensible avec une aisance NÉGATIVE pour qu'il tienne sans ceinture rigide. Aucun accessoire — c'est un vêtement patron-seul, sa seule fermeture un élastique doux dans une coulisse de taille rentrée. Tracé sur des mesures d'enfant, non un adulte réduit : la montée porte une couche et la taille n'est pas plus petite que la hanche. Deux choses sont résolues par la mesure. L'aisance négative de maille s'applique aux seuls TOURS (hanche, cheville) — le legging est coupé plus petit autour pour tenir, mais VRAI en longueur (montée, entrejambe) pour ne pas être court ni tirer le pied ; un legging coupé plus petit partout est court de corps. Et l'ouverture du pied est tracée à la cheville MESURÉE (moins sa propre aisance négative) pour que la couture du pied ferme sans bâiller ni froncer. Se coud au point extensible ou surjet — un point droit saute quand le legging s'étire à l'enfilage.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma legging com pé para criança pequena: uma peça de perna envolvente por lado com pé integrado, traçada para malha elástica com folga NEGATIVA para que agarre sem cós rígido. Sem ferragens — é uma peça só de molde, com um elástico macio numa bainha dobrada como único fecho. Traçada com medidas infantis, não um adulto reduzido: o gancho carrega uma fralda e a cintura não é menor que o quadril. Duas coisas se resolvem medindo. A folga negativa da malha se aplica só aos CONTORNOS (quadril, tornozelo) — a legging é cortada menor em volta para agarrar, mas FIEL de comprimento (gancho, entreperna) para não ficar curta nem puxar o pé; uma legging cortada menor em toda direção fica curta de corpo. E a abertura do pé é traçada ao tornozelo MEDIDO (menos sua própria folga negativa) para que a costura do pé feche sem abrir nem franzir. Costure com ponto elástico ou overlock — um ponto reto estoura quando a legging estica ao vestir.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": ["toddler-legging", "kids_baby", "legging", "footed", "stretch-knit",
+      "negative-ease", "pattern-only", "child-proportion", "fc400", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full legging", "es": "Mallón completo", "fr": "Legging complet", "pt": "Legging completa" },
+      "script_file": "main.py",
+      "pieces": ["leg", "foot"]
+    }
+  ],
+  "pieces": [
+    { "id": "leg", "label": { "en": "Leg (cut 2, mirrored)", "es": "Pierna (cortar 2, espejo)", "fr": "Jambe (couper 2, miroir)", "pt": "Perna (cortar 2, espelhado)" }, "default_color": "#c85a7a", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "foot", "label": { "en": "Foot (cut 2, mirrored)", "es": "Pie (cortar 2, espejo)", "fr": "Pied (couper 2, miroir)", "pt": "Pé (cortar 2, espelhado)" }, "default_color": "#d46e8a", "cut": { "quantity": 2, "on_fold": false, "mirror": true } }
+  ],
+  "parameter_groups": [
+    { "id": "child", "label": { "en": "Child measurements", "es": "Medidas del niño", "fr": "Mesures de l'enfant", "pt": "Medidas da criança" } },
+    { "id": "knit", "label": { "en": "Knit & fit", "es": "Punto y ajuste", "fr": "Maille et ajustement", "pt": "Malha e ajuste" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
+  ],
+  "parameters": [
+    { "id": "hip_girth", "type": "slider", "group": "child", "default": 580, "min": 440, "max": 760, "step": 10, "label": { "en": "Hip girth, over nappy (mm)", "es": "Contorno de cadera, sobre pañal (mm)", "fr": "Tour de hanches, sur couche (mm)", "pt": "Contorno de quadril, sobre fralda (mm)" }, "measurement": { "standard": "iso_8559", "code": "hip_girth" } },
+    { "id": "inside_leg", "type": "slider", "group": "child", "default": 330, "min": 180, "max": 520, "step": 10, "label": { "en": "Inside leg (mm)", "es": "Entrepierna (mm)", "fr": "Entrejambe (mm)", "pt": "Entreperna (mm)" } },
+    { "id": "back_rise", "type": "slider", "group": "child", "default": 220, "min": 150, "max": 320, "step": 5, "label": { "en": "Back rise (mm)", "es": "Tiro trasero (mm)", "fr": "Montée dos (mm)", "pt": "Gancho traseiro (mm)" } },
+    { "id": "ankle_girth", "type": "slider", "group": "child", "default": 160, "min": 110, "max": 240, "step": 5, "label": { "en": "Ankle girth (mm)", "es": "Contorno de tobillo (mm)", "fr": "Tour de cheville (mm)", "pt": "Contorno de tornozelo (mm)" } },
+    { "id": "foot_length", "type": "slider", "group": "child", "default": 130, "min": 90, "max": 200, "step": 5, "label": { "en": "Foot length (mm)", "es": "Largo de pie (mm)", "fr": "Longueur de pied (mm)", "pt": "Comprimento do pé (mm)" } },
+    { "id": "knit_stretch", "type": "slider", "group": "knit", "default": 0.14, "min": 0.05, "max": 0.30, "step": 0.01, "label": { "en": "Negative ease (fraction)", "es": "Ease negativa (fracción)", "fr": "Aisance négative (fraction)", "pt": "Folga negativa (fração)" }, "tooltip": { "en": "Applied to girths only — never to lengths, or the legging is short in the body", "es": "Solo a los contornos — nunca al largo, o el mallón queda corto de cuerpo", "fr": "Aux tours seulement — jamais aux longueurs, sinon le legging est court de corps", "pt": "Só aos contornos — nunca aos comprimentos, ou a legging fica curta de corpo" } },
+    { "id": "waist_casing", "type": "slider", "group": "knit", "default": 30, "min": 18, "max": 50, "step": 2, "label": { "en": "Waist casing depth (mm)", "es": "Alto de jareta de cintura (mm)", "fr": "Profondeur de coulisse (mm)", "pt": "Profundidade da bainha do cós (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "group": "construction", "default": 8, "min": 6, "max": 14, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" }, "advanced": true }
+  ],
+  "constraints": [
+    { "expression": "knit_stretch < 1", "severity": "warning", "message": { "en": "Negative ease is a fraction under 1; a value near 1 leaves nothing to cut.", "es": "La ease negativa es una fracción menor que 1; cerca de 1 no deja nada que cortar.", "fr": "L'aisance négative est une fraction sous 1 ; près de 1 il ne reste rien à couper.", "pt": "A folga negativa é uma fração abaixo de 1; perto de 1 não sobra nada para cortar." } },
+    { "expression": "ankle_girth < hip_girth", "severity": "warning", "message": { "en": "An ankle wider than the hip is unusual; check the measures.", "es": "Un tobillo mayor que la cadera es raro; revisa las medidas.", "fr": "Une cheville plus large que la hanche est inhabituelle ; vérifiez les mesures.", "pt": "Um tornozelo maior que o quadril é incomum; verifique as medidas." } }
+  ],
+  "presets": [
+    { "id": "twelve-months", "label": { "en": "12 months", "es": "12 meses", "fr": "12 mois", "pt": "12 meses" }, "values": { "hip_girth": 500, "inside_leg": 220, "ankle_girth": 130, "foot_length": 110 } },
+    { "id": "two-years", "label": { "en": "2 years", "es": "2 años", "fr": "2 ans", "pt": "2 anos" }, "values": { "hip_girth": 560, "inside_leg": 300, "ankle_girth": 150, "foot_length": 130 } },
+    { "id": "firm-grip", "label": { "en": "Firm grip", "es": "Ajuste firme", "fr": "Maintien ferme", "pt": "Ajuste firme" }, "values": { "knit_stretch": 0.22 } }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["poliester-elastano-compresion"],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "foot_ankle_join", "type": "cuff", "label": { "en": "Foot joined to the measured ankle", "es": "Pie unido al tobillo medido", "fr": "Pied joint à la cheville mesurée", "pt": "Pé unido ao tornozelo medido" }, "edges": [ { "piece": "leg", "edge": "ankle" }, { "piece": "foot", "edge": "opening" } ], "parameters": ["ankle_girth", "knit_stretch"] },
+      { "id": "elastic_waist", "type": "waistband", "label": { "en": "Soft elastic waist casing", "es": "Jareta de elástico suave", "fr": "Coulisse élastique douce", "pt": "Bainha de elástico macio" }, "edges": [ { "piece": "leg", "edge": "waist" } ], "parameters": ["waist_casing", "hip_girth"] }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": false,
+      "knit_negative_ease": true
+    },
+    "societal_benefit": {
+      "en": "A footed legging is one of the first garments a baby lives in day and night, and the one home sewers most often get wrong by applying stretch negative ease to every dimension — so the legging grips beautifully around but rides up short in the body and pulls the foot off the heel. This pattern applies the negative ease to the girths only and keeps the lengths true, and reconciles the foot to the measured ankle so it closes clean. There are no hard goods — just a soft elastic casing — so it is fully wash-and-wear for a baby, printable and sewable at home on a domestic machine with a stretch stitch. A daily-wear basic, drafted so it fits the length as well as the grip.",
+      "es": "Un mallón con pie es de las primeras prendas en que un bebé vive día y noche, y la que más falla quien cose en casa al aplicar la ease negativa del elástico a toda dimensión — así el mallón ajusta precioso alrededor pero se sube corto de cuerpo y jala el pie del talón. Este patrón aplica la ease negativa solo a los contornos y mantiene los largos fieles, y concilia el pie con el tobillo medido para que cierre limpio. No hay herrajes — solo jareta de elástico suave — así que es totalmente de lavar y usar para un bebé, imprimible y cosible en casa en máquina doméstica con puntada elástica. Un básico de diario, trazado para que ajuste tanto de largo como de agarre.",
+      "fr": "Un legging à pieds est l'un des premiers vêtements où un bébé vit jour et nuit, et celui que les couturiers amateurs ratent le plus en appliquant l'aisance négative extensible à toute dimension — le legging tient magnifiquement autour mais remonte court de corps et tire le pied du talon. Ce patron applique l'aisance négative aux seuls tours et garde les longueurs vraies, et réconcilie le pied à la cheville mesurée pour qu'il ferme net. Aucun accessoire — juste une coulisse élastique douce — il est donc totalement lavable-portable pour un bébé, imprimable et cousable chez soi sur machine domestique au point extensible. Un basique de tous les jours, tracé pour tomber juste en longueur autant qu'en maintien.",
+      "pt": "Uma legging com pé é uma das primeiras peças em que um bebê vive dia e noite, e a que quem costura em casa mais erra ao aplicar a folga negativa elástica a toda dimensão — a legging agarra lindamente em volta mas sobe curta de corpo e puxa o pé do calcanhar. Este molde aplica a folga negativa só aos contornos e mantém os comprimentos fiéis, e concilia o pé ao tornozelo medido para que feche limpo. Não há ferragens — só uma bainha de elástico macio — então é totalmente de lavar e usar para um bebê, imprimível e costurável em casa em máquina doméstica com ponto elástico. Um básico do dia a dia, traçado para vestir tanto de comprimento quanto de aderência."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

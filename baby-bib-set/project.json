@@ -1,0 +1,99 @@
+{
+  "project": {
+    "name": "Bandana Feeding Bib",
+    "slug": "baby-bib-set",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A bandana-style feeding bib for a baby: a rounded triangle worn like a kerchief over the chest, backed with terry towelling to catch drool, closing at the neck on a two-position snap so one bib fits a growing neck. The number that has to be right is the neck band against the two snap positions — a band with one snap position outgrows the baby in weeks. Two things are solved by measurement. The band spans the MEASURED neck girth plus the snap overlap, and TWO snap studs are placed — a tight and a loose setting a growth step apart — solved so neither lands off the band. And the bandana drop is floored above the band so it always covers the chest and clamped below a maximum so it cannot trail in the food — a drop larger than the piece inverts it, geometry the kernel CCW-normalizes into a valid-looking piece. Terry backing, a printed cotton face, bound edges. The snaps bridge to the Yantra4D `sew-on-snap` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un babero tipo bandana para bebé: un triángulo redondeado que se lleva como pañuelo sobre el pecho, forrado de felpa para atrapar la baba, que cierra al cuello con broche de dos posiciones para que un babero sirva a un cuello que crece. El número que debe estar bien es la banda del cuello contra las dos posiciones del broche — una banda con una sola posición se queda chica en semanas. Dos cosas se resuelven midiendo. La banda abarca el contorno de cuello MEDIDO más el solape del broche, y se colocan DOS machos de broche — un ajuste apretado y uno flojo separados por un paso de crecimiento — resueltos para que ninguno caiga fuera de la banda. Y la caída de la bandana se acota por encima de la banda para que siempre cubra el pecho y por debajo de un máximo para que no arrastre en la comida — una caída mayor que la pieza la invierte, geometría que el kernel normaliza a CCW en una pieza sana. Forro de felpa, cara de algodón estampado, cantos ribeteados. Los broches se puentean al sólido `sew-on-snap` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un bavoir bandana pour bébé : un triangle arrondi porté comme un foulard sur la poitrine, doublé d'éponge pour capter la bave, se fermant au cou par une pression à deux positions pour qu'un bavoir aille à un cou qui grandit. Le nombre qui doit être juste est la bande de cou face aux deux positions de pression — une bande à une seule position devient trop petite en quelques semaines. Deux choses sont résolues par la mesure. La bande couvre le tour de cou MESURÉ plus le recouvrement de pression, et DEUX studs de pression sont placés — un réglage serré et un lâche à un pas de croissance — résolus pour qu'aucun ne tombe hors de la bande. Et la chute du bandana est bornée au-dessus de la bande pour qu'elle couvre toujours la poitrine et sous un maximum pour ne pas traîner dans la nourriture — une chute plus grande que la pièce l'inverse, géométrie que le noyau normalise en CCW en pièce saine. Doublure éponge, endroit en coton imprimé, bords gansés. Les pressions font le pont vers le solide `sew-on-snap` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um babador tipo bandana para bebê: um triângulo arredondado usado como lenço sobre o peito, forrado com atoalhado para pegar a baba, fechando no pescoço com uma pressão de duas posições para que um babador sirva a um pescoço que cresce. O número que tem de estar certo é a faixa do pescoço ante as duas posições da pressão — uma faixa com uma só posição fica pequena em semanas. Duas coisas se resolvem medindo. A faixa cobre o contorno de pescoço MEDIDO mais a sobreposição da pressão, e DOIS machos de pressão são colocados — um ajuste apertado e um folgado a um passo de crescimento — resolvidos para que nenhum caia fora da faixa. E a queda da bandana é limitada acima da faixa para que sempre cubra o peito e abaixo de um máximo para que não arraste na comida — uma queda maior que a peça a inverte, geometria que o núcleo normaliza em CCW numa peça sã. Forro atoalhado, frente de algodão estampado, bordas debruadas. Os botões fazem a ponte para o sólido `sew-on-snap` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": ["baby-bib-set", "kids_baby", "bib", "bandana-bib", "feeding-bib",
+      "sew-on-snap", "terry", "grows-with-baby", "hardware", "fc400", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full bib", "es": "Babero completo", "fr": "Bavoir complet", "pt": "Babador completo" },
+      "script_file": "main.py",
+      "pieces": ["bandana", "band"]
+    }
+  ],
+  "pieces": [
+    { "id": "bandana", "label": { "en": "Bandana (cut 2: face + terry)", "es": "Bandana (cortar 2: cara + felpa)", "fr": "Bandana (couper 2 : endroit + éponge)", "pt": "Bandana (cortar 2: frente + atoalhado)" }, "default_color": "#e9c9c1", "cut": { "quantity": 2, "on_fold": false, "mirror": false } },
+    { "id": "band", "label": { "en": "Neck band (cut 2)", "es": "Banda de cuello (cortar 2)", "fr": "Bande de cou (couper 2)", "pt": "Faixa de pescoço (cortar 2)" }, "default_color": "#ddb6ac", "cut": { "quantity": 2, "on_fold": false, "mirror": false } }
+  ],
+  "parameter_groups": [
+    { "id": "baby", "label": { "en": "Baby measurements", "es": "Medidas del bebé", "fr": "Mesures du bébé", "pt": "Medidas do bebê" } },
+    { "id": "bandana", "label": { "en": "Bandana shape", "es": "Forma de bandana", "fr": "Forme du bandana", "pt": "Forma da bandana" } },
+    { "id": "snap", "label": { "en": "Snap closure", "es": "Cierre de broche", "fr": "Fermeture à pression", "pt": "Fecho de pressão" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
+  ],
+  "parameters": [
+    { "id": "neck_girth", "type": "slider", "group": "baby", "default": 240, "min": 180, "max": 340, "step": 10, "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)", "fr": "Tour de cou (mm)", "pt": "Contorno do pescoço (mm)" }, "measurement": { "standard": "iso_8559", "code": "neck_girth" } },
+    { "id": "bandana_width", "type": "slider", "group": "bandana", "default": 260, "min": 180, "max": 360, "step": 10, "label": { "en": "Bandana width, across top (mm)", "es": "Ancho de bandana (mm)", "fr": "Largeur de bandana (mm)", "pt": "Largura da bandana (mm)" } },
+    { "id": "bandana_drop", "type": "slider", "group": "bandana", "default": 180, "min": 100, "max": 300, "step": 10, "label": { "en": "Bandana point drop (mm)", "es": "Caída de la bandana (mm)", "fr": "Chute du bandana (mm)", "pt": "Queda da bandana (mm)" }, "tooltip": { "en": "Floored above the band so it covers, clamped below a max so it does not trail in the food", "es": "Acotada sobre la banda para cubrir, y bajo un máximo para no arrastrar en la comida", "fr": "Bornée au-dessus de la bande pour couvrir, sous un max pour ne pas traîner", "pt": "Limitada acima da faixa para cobrir, abaixo de um máximo para não arrastar" } },
+    { "id": "band_width", "type": "slider", "group": "snap", "default": 32, "min": 22, "max": 55, "step": 2, "label": { "en": "Neck band width (mm)", "es": "Ancho de banda (mm)", "fr": "Largeur de bande (mm)", "pt": "Largura da faixa (mm)" } },
+    { "id": "snap_diameter", "type": "slider", "group": "snap", "default": 11, "min": 9, "max": 16, "step": 1, "label": { "en": "Snap diameter (mm)", "es": "Diámetro de broche (mm)", "fr": "Diamètre de pression (mm)", "pt": "Diâmetro da pressão (mm)" }, "tooltip": { "en": "Drives the Yantra4D sew-on-snap snap_dia AND the band overlap — one number to both", "es": "Define el snap_dia del sew-on-snap de Yantra4D Y el solape de la banda — un número a ambos", "fr": "Pilote le snap_dia du sew-on-snap Yantra4D ET le recouvrement de bande — un nombre aux deux", "pt": "Pilota o snap_dia do sew-on-snap do Yantra4D E a sobreposição da faixa — um número a ambos" } },
+    { "id": "snap_step", "type": "slider", "group": "snap", "default": 20, "min": 10, "max": 40, "step": 2, "label": { "en": "Growth step between snaps (mm)", "es": "Paso de crecimiento entre broches (mm)", "fr": "Pas de croissance entre pressions (mm)", "pt": "Passo de crescimento entre pressões (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "group": "construction", "default": 8, "min": 6, "max": 14, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" }, "advanced": true }
+  ],
+  "constraints": [
+    { "expression": "bandana_drop < bandana_width", "severity": "warning", "message": { "en": "A drop deeper than the bib is wide trails in the food; the draft clamps it.", "es": "Una caída más honda que el ancho arrastra en la comida; el trazo la acota.", "fr": "Une chute plus profonde que la largeur traîne dans la nourriture ; le tracé la borne.", "pt": "Uma queda mais profunda que a largura arrasta na comida; o traçado a limita." } }
+  ],
+  "presets": [
+    { "id": "newborn-drool", "label": { "en": "Newborn drool", "es": "Baba de recién nacido", "fr": "Bave de nouveau-né", "pt": "Baba de recém-nascido" }, "values": { "neck_girth": 200, "bandana_width": 220, "bandana_drop": 150 } },
+    { "id": "teething", "label": { "en": "Teething (big catch)", "es": "Dentición (gran atrape)", "fr": "Dents (grand rattrapage)", "pt": "Dentição (grande captação)" }, "values": { "bandana_width": 300, "bandana_drop": 220, "snap_step": 30 } },
+    { "id": "toddler", "label": { "en": "Toddler", "es": "Niño pequeño", "fr": "Tout-petit", "pt": "Criança pequena" }, "values": { "neck_girth": 300, "bandana_width": 320 } }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["felpa-algodon"],
+  "notion": {
+    "kind": "snap",
+    "subtype": "two-position neck snap",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-on-snap",
+      "linked": true,
+      "params_map": {
+        "snap_dia": "snap_diameter",
+        "disc_t": "snap_diameter * 0.12",
+        "stud_dia": "snap_diameter * 0.4",
+        "engage_clear": "snap_diameter * 0.05",
+        "sew_holes": "4",
+        "hole_dia": "snap_diameter * 0.08"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "two_position_snap", "type": "custom", "label": { "en": "Two-position growth snap", "es": "Broche de dos posiciones para crecer", "fr": "Pression à deux positions pour grandir", "pt": "Pressão de duas posições para crescer" }, "edges": [ { "piece": "band", "edge": "snap_end" }, { "piece": "band", "edge": "stud_end" } ], "parameters": ["snap_diameter", "neck_girth", "snap_step"] },
+      { "id": "clamped_bandana", "type": "hem", "label": { "en": "Clamped bandana drop", "es": "Caída de bandana acotada", "fr": "Chute de bandana bornée", "pt": "Queda de bandana limitada" }, "edges": [ { "piece": "bandana", "edge": "side_r" }, { "piece": "bandana", "edge": "side_l" } ], "parameters": ["bandana_drop", "bandana_width"] }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Feeding bibs are consumed by the dozen and are the archetypal quick scrap-fabric project — but the one thing that decides whether a bib lasts is the neck closure, and a bib made with a single snap position fits for a few weeks and then chokes or falls off. This pattern gives the band two solved snap positions a growth step apart, so one bib spans months, clamps the drop so it covers the chest without trailing in the food, and backs the whole thing in terry to actually absorb. The snaps print at home and are dimensionally bridged so the printed part matches the sewn band. It is the humblest garment in the catalog, drafted so it grows with the baby instead of being thrown away.",
+      "es": "Los baberos se consumen por docenas y son el proyecto arquetípico de retazos rápidos — pero lo único que decide si un babero dura es el cierre del cuello, y uno con una sola posición de broche sirve unas semanas y luego ahoga o se cae. Este patrón da a la banda dos posiciones resueltas separadas por un paso de crecimiento, así un babero abarca meses, acota la caída para que cubra el pecho sin arrastrar en la comida, y forra todo en felpa para absorber de verdad. Los broches se imprimen en casa y se puentean dimensionalmente para que la pieza impresa coincida con la banda cosida. Es la prenda más humilde del catálogo, trazada para crecer con el bebé en vez de tirarse.",
+      "fr": "Les bavoirs se consomment par douzaines et sont le projet archétypal de chutes rapides — mais la seule chose qui décide si un bavoir dure est la fermeture au cou, et un bavoir à une seule position de pression va quelques semaines puis étrangle ou tombe. Ce patron donne à la bande deux positions résolues à un pas de croissance, si bien qu'un bavoir couvre des mois, borne la chute pour couvrir la poitrine sans traîner dans la nourriture, et double le tout en éponge pour vraiment absorber. Les pressions s'impriment chez soi et sont pontées dimensionnellement pour que la pièce imprimée s'accorde à la bande cousue. C'est le vêtement le plus humble du catalogue, tracé pour grandir avec le bébé au lieu d'être jeté.",
+      "pt": "Os babadores são consumidos às dúzias e são o projeto arquetípico de retalhos rápidos — mas a única coisa que decide se um babador dura é o fecho do pescoço, e um com uma só posição de pressão serve por semanas e depois estrangula ou cai. Este molde dá à faixa duas posições resolvidas a um passo de crescimento, de modo que um babador cobre meses, limita a queda para cobrir o peito sem arrastar na comida, e forra tudo em atoalhado para absorver de verdade. Os botões imprimem em casa e são ponteados dimensionalmente para que a peça impressa combine com a faixa costurada. É a peça mais humilde do catálogo, traçada para crescer com o bebê em vez de ser jogada fora."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

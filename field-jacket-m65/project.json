@@ -1,0 +1,109 @@
+{
+  "project": {
+    "name": "Field Jacket (M-65 pattern)",
+    "slug": "field-jacket-m65",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The M-65 field jacket: a snap-over-zip front, four bellows cargo pockets with snap-down flaps, epaulettes, a stand collar with a concealed hood, and a drawcord waist. The garment's signature is the row of snaps down the storm flap and on the pocket flaps, and the number that has to be right is the snap PITCH — a drifted snap column leaves the last snap in the hem or off the flap edge. Three things are solved by measurement, not formula. The front snap run is fitted to whole intervals across the MEASURED storm flap between two end clearances and the pitch recomputed, so the top snap sits under the collar and the bottom clears the hem drawcord. The pocket flap snaps are placed by MEASURING each flap and stepping in from both ends, never at a fixed offset that walks off a narrow flap or bunches on a wide one. And the bellows cargo pockets are clamped against the front they sit on, because a pocket wider than the panel folds over the placket and the kernel CCW-normalizes it into a healthy-looking outline. Military/workwear conventions throughout: 6 mm topstitch (denser than denim), felled seams, hard goods via Yantra4D. The snaps bridge to the Yantra4D `snap-fit` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La chaqueta de campaña M-65: un frente de broches sobre cierre, cuatro bolsillos de fuelle con tapas de broche, charreteras, un cuello alto con capucha oculta y una jareta en la cintura. La firma de la prenda es la hilera de broches por la tapeta cortavientos y en las tapas de los bolsillos, y el número que debe estar bien es el PASO de los broches — una columna desfasada deja el último broche en el bajo o fuera del borde de la tapa. Tres cosas se resuelven midiendo, no por fórmula. La hilera de broches del frente se ajusta a intervalos enteros sobre la tapeta MEDIDA entre dos holguras y el paso se recalcula, para que el broche superior quede bajo el cuello y el inferior libre de la jareta del bajo. Los broches de la tapa del bolsillo se colocan MIDIENDO cada tapa y metiéndose desde ambos extremos, nunca a un offset fijo que se sale de una tapa angosta o se amontona en una ancha. Y los bolsillos de fuelle se acotan contra el delantero donde se asientan, porque un bolsillo más ancho que el panel se dobla sobre la tapeta y el kernel lo normaliza a CCW dejándolo sano. Convenciones militares/de trabajo en todo: pespunte a 6 mm (más denso que la mezclilla), costuras rebatidas, herrajes vía Yantra4D. Los broches se puentean al sólido `snap-fit` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La veste de campagne M-65 : un devant à boutons-pression sur fermeture, quatre poches soufflet à rabats à pression, des épaulettes, un col montant à capuche cachée et une taille à cordon. La signature du vêtement est la rangée de pressions le long de la patte anti-vent et sur les rabats de poche, et le nombre qui doit être juste est le PAS des pressions — une colonne qui dérive laisse la dernière pression dans l'ourlet ou hors du bord du rabat. Trois choses sont résolues par la mesure, non par formule. La file de pressions du devant est ajustée en intervalles entiers sur la patte MESURÉE entre deux jeux et le pas recalculé, pour que la pression du haut soit sous le col et celle du bas dégage le cordon d'ourlet. Les pressions de rabat sont placées en MESURANT chaque rabat et en rentrant des deux bouts, jamais à un décalage fixe qui sort d'un rabat étroit ou s'entasse sur un large. Et les poches soufflet sont bornées par le devant qui les porte, car une poche plus large que le panneau se replie sur la patte et le noyau la normalise en CCW en la laissant saine. Conventions militaires/travail partout : surpiqûre 6 mm (plus dense que le denim), coutures rabattues, accessoires via Yantra4D. Les pressions font le pont vers le solide `snap-fit` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A jaqueta de campo M-65: uma frente de botões de pressão sobre zíper, quatro bolsos de fole com abas de pressão, dragonas, uma gola alta com capuz oculto e uma cintura com cordão. A assinatura da peça é a fileira de pressões pela carcela corta-vento e nas abas dos bolsos, e o número que tem de estar certo é o PASSO das pressões — uma coluna que desloca deixa a última pressão na bainha ou fora da borda da aba. Três coisas se resolvem medindo, não por fórmula. A fileira de pressões da frente é ajustada a intervalos inteiros sobre a carcela MEDIDA entre duas folgas e o passo recalculado, para que a de cima fique sob a gola e a de baixo livre do cordão da bainha. As pressões da aba do bolso são colocadas MEDINDO cada aba e recuando de ambas as pontas, nunca a um deslocamento fixo que sai de uma aba estreita ou se amontoa numa larga. E os bolsos de fole são limitados contra a frente onde se assentam, porque um bolso mais largo que o painel se dobra sobre a carcela e o núcleo o normaliza em CCW deixando-o são. Convenções militares/de trabalho em tudo: pesponto a 6 mm (mais denso que o denim), costuras rebatidas, ferragens via Yantra4D. As pressões fazem a ponte para o sólido `snap-fit` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["field-jacket-m65", "workwear", "m65", "field-jacket", "military",
+      "snap-fit", "cargo-pocket", "hardware", "fc400", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full field jacket", "es": "Chaqueta de campaña completa", "fr": "Veste de campagne complète", "pt": "Jaqueta de campo completa" },
+      "script_file": "main.py",
+      "pieces": ["front", "back", "sleeve", "collar", "storm_flap", "pocket"]
+    }
+  ],
+  "pieces": [
+    { "id": "front", "label": { "en": "Front (cut 2, mirrored)", "es": "Delantero (cortar 2, espejo)", "fr": "Devant (couper 2, miroir)", "pt": "Frente (cortar 2, espelhado)" }, "default_color": "#5a5f45", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "back", "label": { "en": "Back (cut on fold)", "es": "Espalda (corte al doblez)", "fr": "Dos (coupe au pli)", "pt": "Costas (corte na dobra)" }, "default_color": "#666b50", "cut": { "quantity": 1, "on_fold": true, "mirror": false } },
+    { "id": "sleeve", "label": { "en": "Sleeve (cut 2, mirrored)", "es": "Manga (cortar 2, espejo)", "fr": "Manche (couper 2, miroir)", "pt": "Manga (cortar 2, espelhado)" }, "default_color": "#72775a", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "collar", "label": { "en": "Stand collar with hood zip (cut 2, on fold)", "es": "Cuello alto con cierre de capucha (cortar 2, al doblez)", "fr": "Col montant à fermeture de capuche (couper 2, au pli)", "pt": "Gola alta com zíper de capuz (cortar 2, na dobra)" }, "default_color": "#7e8365", "cut": { "quantity": 2, "on_fold": true, "mirror": false } },
+    { "id": "storm_flap", "label": { "en": "Snap storm flap (cut 1)", "es": "Tapeta de broches (cortar 1)", "fr": "Patte à pressions (couper 1)", "pt": "Carcela de pressões (cortar 1)" }, "default_color": "#8a8f70", "cut": { "quantity": 1, "on_fold": false, "mirror": false } },
+    { "id": "pocket", "label": { "en": "Bellows cargo pocket + flap (cut 4)", "es": "Bolsillo de fuelle con tapa (cortar 4)", "fr": "Poche soufflet à rabat (couper 4)", "pt": "Bolso de fole com aba (cortar 4)" }, "default_color": "#969b7c", "cut": { "quantity": 4, "on_fold": false, "mirror": false } }
+  ],
+  "parameter_groups": [
+    { "id": "body", "label": { "en": "Body", "es": "Cuerpo", "fr": "Corps", "pt": "Corpo" } },
+    { "id": "sleeve", "label": { "en": "Sleeve & collar", "es": "Manga y cuello", "fr": "Manche et col", "pt": "Manga e gola" } },
+    { "id": "closure", "label": { "en": "Snaps & pockets", "es": "Broches y bolsillos", "fr": "Pressions et poches", "pt": "Pressões e bolsos" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
+  ],
+  "parameters": [
+    { "id": "chest_girth", "type": "slider", "group": "body", "default": 1080, "min": 880, "max": 1500, "step": 10, "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)" }, "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" } },
+    { "id": "back_width", "type": "slider", "group": "body", "default": 470, "min": 380, "max": 560, "step": 5, "label": { "en": "Across-back width (mm)", "es": "Ancho de espalda (mm)", "fr": "Carrure dos (mm)", "pt": "Largura das costas (mm)" }, "measurement": { "standard": "iso_8559", "code": "across_back" } },
+    { "id": "body_length", "type": "slider", "group": "body", "default": 720, "min": 560, "max": 860, "step": 10, "label": { "en": "Body length (mm)", "es": "Largo de cuerpo (mm)", "fr": "Longueur de corps (mm)", "pt": "Comprimento do corpo (mm)" } },
+    { "id": "neck_width", "type": "slider", "group": "body", "default": 180, "min": 150, "max": 240, "step": 5, "label": { "en": "Base-neck width (mm)", "es": "Ancho de base de cuello (mm)", "fr": "Largeur d'encolure (mm)", "pt": "Largura da base do pescoço (mm)" } },
+    { "id": "shoulder_slope", "type": "slider", "group": "body", "default": 45, "min": 25, "max": 70, "step": 2, "label": { "en": "Shoulder drop (mm)", "es": "Caída de hombro (mm)", "fr": "Tombant d'épaule (mm)", "pt": "Queda do ombro (mm)" } },
+    { "id": "sleeve_length", "type": "slider", "group": "sleeve", "default": 660, "min": 520, "max": 780, "step": 10, "label": { "en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)", "pt": "Comprimento da manga (mm)" } },
+    { "id": "collar_stand", "type": "slider", "group": "sleeve", "default": 65, "min": 45, "max": 95, "step": 2, "label": { "en": "Collar stand height (mm)", "es": "Alto de cuello (mm)", "fr": "Hauteur de col (mm)", "pt": "Altura da gola (mm)" }, "tooltip": { "en": "Tall enough to hide the roll-away hood zip", "es": "Alto para ocultar el cierre de la capucha", "fr": "Assez haut pour cacher la fermeture de capuche", "pt": "Alto para ocultar o zíper do capuz" } },
+    { "id": "front_snaps", "type": "slider", "group": "closure", "default": 6, "min": 4, "max": 9, "step": 1, "label": { "en": "Storm-flap snaps", "es": "Broches de tapeta", "fr": "Pressions de patte", "pt": "Pressões da carcela" }, "tooltip": { "en": "Solved across the measured flap; the last snap never lands in the hem drawcord", "es": "Resueltos sobre la tapeta medida; el último nunca cae en la jareta", "fr": "Résolus sur la patte mesurée ; la dernière ne tombe jamais dans le cordon", "pt": "Resolvidos sobre a carcela medida; a última nunca cai no cordão" } },
+    { "id": "snap_dia", "type": "slider", "group": "closure", "default": 15, "min": 11, "max": 22, "step": 1, "label": { "en": "Snap outer diameter (mm)", "es": "Diámetro exterior del broche (mm)", "fr": "Diamètre extérieur de pression (mm)", "pt": "Diâmetro externo da pressão (mm)" }, "tooltip": { "en": "Drives the Yantra4D snap-fit socket AND the whole snap column's spacing", "es": "Define el receptáculo del snap-fit de Yantra4D Y el espaciado de la columna", "fr": "Pilote le réceptacle du snap-fit Yantra4D ET l'espacement de la colonne", "pt": "Pilota o receptáculo do snap-fit do Yantra4D E o espaçamento da coluna" } },
+    { "id": "pocket_width", "type": "slider", "group": "closure", "default": 200, "min": 130, "max": 320, "step": 5, "label": { "en": "Cargo pocket width (mm)", "es": "Ancho de bolsillo de fuelle (mm)", "fr": "Largeur de poche soufflet (mm)", "pt": "Largura do bolso de fole (mm)" } },
+    { "id": "pocket_bellows", "type": "slider", "group": "closure", "default": 25, "min": 10, "max": 45, "step": 1, "label": { "en": "Bellows depth (mm)", "es": "Profundidad de fuelle (mm)", "fr": "Profondeur de soufflet (mm)", "pt": "Profundidade do fole (mm)" } },
+    { "id": "wear_ease", "type": "slider", "group": "body", "default": 220, "min": 120, "max": 340, "step": 10, "label": { "en": "Wearing ease over chest (mm)", "es": "Holgura de uso en pecho (mm)", "fr": "Aisance poitrine (mm)", "pt": "Folga no peito (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "group": "construction", "default": 30, "min": 18, "max": 45, "step": 2, "label": { "en": "Hem allowance (mm)", "es": "Margen de dobladillo (mm)", "fr": "Marge d'ourlet (mm)", "pt": "Margem de bainha (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 8, "max": 18, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" }, "advanced": true }
+  ],
+  "constraints": [
+    { "expression": "back_width > neck_width", "severity": "warning", "message": { "en": "A neck wider than the back inverts the shoulder; the draft clamps the shoulder run.", "es": "Un cuello más ancho que la espalda invierte el hombro; el trazo lo acota.", "fr": "Une encolure plus large que le dos inverse l'épaule ; le tracé la borne.", "pt": "Um pescoço mais largo que as costas inverte o ombro; o traçado o limita." } },
+    { "expression": "pocket_width * 2 < chest_girth", "severity": "warning", "message": { "en": "A cargo pocket that wide folds over the placket; the draft clamps it.", "es": "Un bolsillo así se dobla sobre la tapeta; el trazo lo acota.", "fr": "Une poche si large se replie sur la patte ; le tracé la borne.", "pt": "Um bolso tão largo se dobra sobre a carcela; o traçado o limita." } }
+  ],
+  "presets": [
+    { "id": "og-107", "label": { "en": "OG-107 field", "es": "Campaña OG-107", "fr": "Campagne OG-107", "pt": "Campo OG-107" }, "values": { "front_snaps": 6, "snap_dia": 15, "collar_stand": 65 } },
+    { "id": "cold-weather", "label": { "en": "Cold-weather (liner room)", "es": "Clima frío (con forro)", "fr": "Grand froid (doublure)", "pt": "Clima frio (com forro)" }, "values": { "wear_ease": 340, "collar_stand": 80, "front_snaps": 7 } },
+    { "id": "trim-field", "label": { "en": "Trim field", "es": "Campaña entallada", "fr": "Campagne ajustée", "pt": "Campo justo" }, "values": { "chest_girth": 980, "wear_ease": 150, "front_snaps": 5 } }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["popelina-algodon"],
+  "notion": {
+    "kind": "snap",
+    "subtype": "snap-fit fasteners on the storm flap and pocket flaps",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "snap-fit",
+      "linked": true,
+      "params_map": {
+        "bore_dia": "snap_dia",
+        "beam_width": "snap_dia * 0.5",
+        "wall": "snap_dia * 0.15"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "snap_storm_flap", "type": "placket", "label": { "en": "Solved snap storm flap", "es": "Tapeta de broches resuelta", "fr": "Patte à pressions résolue", "pt": "Carcela de pressões resolvida" }, "edges": [ { "piece": "storm_flap", "edge": "attach" }, { "piece": "front", "edge": "cf" } ], "parameters": ["front_snaps", "snap_dia", "body_length"] },
+      { "id": "cargo_pocket_flap", "type": "pocket", "label": { "en": "Measured pocket-flap snaps", "es": "Broches de tapa medidos", "fr": "Pressions de rabat mesurées", "pt": "Pressões de aba medidas" }, "edges": [ { "piece": "pocket", "edge": "flap_top" }, { "piece": "front", "edge": "hem" } ], "parameters": ["pocket_width", "snap_dia"] },
+      { "id": "eased_sleeve_cap", "type": "armscye", "label": { "en": "Cap eased to the measured armscye", "es": "Copa embebida a la sisa medida", "fr": "Tête embue sur l'emmanchure mesurée", "pt": "Cabeça embebida à cava medida" }, "edges": [ { "piece": "sleeve", "edge": "cap_r" }, { "piece": "front", "edge": "armscye" }, { "piece": "back", "edge": "armscye" } ], "parameters": ["chest_girth", "wear_ease"] }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The M-65 is one of the most-copied jackets in the world, worn far outside the army it was designed for, and every civilian copy carries the same tell: snaps set at a round-number pitch that drifts off the flap, and cargo pockets sized by eye that pucker the front. This pattern solves the snap column across the actual flap and places the pocket-flap snaps by measuring each flap, so every snap lands where it holds. The cargo pockets are clamped to the front so they never fold over the placket. The snap-fit fasteners print and set at home. A garment that has outlived its origin, drafted so the copy finally fits as well as the original was meant to.",
+      "es": "La M-65 es una de las chaquetas más copiadas del mundo, usada mucho más allá del ejército para el que se diseñó, y cada copia civil trae el mismo delator: broches a un paso redondo que se desfasa de la tapa, y bolsillos de fuelle medidos a ojo que fruncen el delantero. Este patrón resuelve la columna de broches sobre la tapa real y coloca los broches de la tapa midiendo cada una, así cada broche cae donde sujeta. Los bolsillos de fuelle se acotan al delantero para que nunca se doblen sobre la tapeta. Los broches snap-fit se imprimen y se colocan en casa. Una prenda que ha sobrevivido a su origen, trazada para que la copia por fin ajuste tan bien como se pensó el original.",
+      "fr": "La M-65 est l'une des vestes les plus copiées au monde, portée bien au-delà de l'armée pour laquelle elle fut conçue, et chaque copie civile porte le même défaut : des pressions à un pas rond qui dérive du rabat, et des poches soufflet dimensionnées à l'œil qui froncent le devant. Ce patron résout la colonne de pressions sur le rabat réel et place les pressions de rabat en mesurant chacun, de sorte que chaque pression tombe là où elle tient. Les poches soufflet sont bornées au devant pour ne jamais se replier sur la patte. Les pressions snap-fit s'impriment et se posent chez soi. Un vêtement qui a survécu à son origine, tracé pour que la copie tombe enfin aussi juste que l'original le voulait.",
+      "pt": "A M-65 é uma das jaquetas mais copiadas do mundo, usada muito além do exército para o qual foi projetada, e cada cópia civil traz o mesmo sinal: pressões a um passo redondo que desloca da aba, e bolsos de fole medidos a olho que franzem a frente. Este molde resolve a coluna de pressões sobre a aba real e coloca as pressões da aba medindo cada uma, de modo que cada pressão caia onde segura. Os bolsos de fole são limitados à frente para nunca se dobrarem sobre a carcela. As pressões snap-fit imprimem e se colocam em casa. Uma peça que sobreviveu à sua origem, traçada para que a cópia finalmente vista tão bem quanto o original pretendia."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

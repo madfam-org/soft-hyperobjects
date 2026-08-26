@@ -1,0 +1,112 @@
+{
+  "project": {
+    "name": "Carpenter Jean with Tool Loops",
+    "slug": "carpenter-jean",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The utility jean: a straight leg carrying a hammer loop down one side, a rule pocket on the thigh, and a stack of narrow tool loops. The whole garment is a set of load paths and every one terminates at a RIVET rather than a bar-tack — on 12 oz denim a bar-tack abrades before the cloth does, and a hammer swinging in a loop is exactly the cyclic load that finds a bar-tack first. Three things are solved by measurement, not formula. The hammer loop is cut to a MEASURED swing — twice the tool clearance plus the strap run round the bar-tack — not a fixed strip, so it clears the head with room to drop the handle through. The tool loops are pitched across a MEASURED backing panel with whole gaps recomputed, so the last loop lands on the panel and not off its edge. And the rule pocket and the loop panel are both clamped against the leg they sit on, because a piece wider than its panel folds back on itself and the kernel CCW-normalizes it into a healthy-looking outline. Denim conventions throughout: 7 mm twin-needle gold topstitch, every edge felled or turned, every hard good a Yantra4D reference. The rivets bridge to the Yantra4D `rivet` solid.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El vaquero de trabajo: una pierna recta con una trabilla de martillo a un costado, un bolsillo de regla en el muslo y una hilera de trabillas angostas para herramienta. Toda la prenda es un conjunto de caminos de carga y cada uno termina en un REMACHE y no en una presilla — en mezclilla de 12 oz la presilla se desgasta antes que la tela, y un martillo colgando en su trabilla es justo la carga cíclica que primero encuentra la presilla. Tres cosas se resuelven midiendo, no por fórmula. La trabilla de martillo se corta a un vaivén MEDIDO — dos veces la holgura de herramienta más el recorrido del tirante alrededor de la presilla — y no a una tira fija, para que libre la cabeza con espacio para meter el mango. Las trabillas se distribuyen sobre un panel de soporte MEDIDO con los huecos enteros recalculados, para que la última trabilla caiga en el panel y no fuera del borde. Y el bolsillo de regla y el panel de trabillas se acotan contra la pierna donde se asientan, porque una pieza más ancha que su panel se dobla sobre sí y el kernel la normaliza a CCW dejándola sana en apariencia. Convenciones de mezclilla en todo: pespunte doble a 7 mm en oro, cada canto rebatido o doblado, cada herraje una referencia a Yantra4D. Los remaches se puentean al sólido `rivet` de Yantra4D.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le jean utilitaire : une jambe droite portant un passant à marteau sur un côté, une poche à réglet sur la cuisse et une série de passants d'outils étroits. Tout le vêtement est un ensemble de chemins de charge et chacun se termine par un RIVET plutôt qu'une barrette — sur du denim 12 oz une barrette s'use avant le tissu, et un marteau qui se balance dans son passant est exactement la charge cyclique qui trouve d'abord la barrette. Trois choses sont résolues par la mesure, non par formule. Le passant à marteau est coupé à un débattement MESURÉ — deux fois le jeu de l'outil plus le parcours de la sangle autour de la barrette — et non à une bande fixe, pour qu'il dégage la tête avec de quoi glisser le manche. Les passants sont répartis sur un panneau support MESURÉ avec les intervalles entiers recalculés, pour que le dernier passant tombe sur le panneau et non hors du bord. Et la poche à réglet et le panneau de passants sont tous deux bornés par la jambe qui les porte, car une pièce plus large que son panneau se replie et le noyau la normalise en CCW en la laissant saine. Conventions denim partout : surpiqûre double 7 mm dorée, chaque bord rabattu ou rentré, chaque accessoire une référence Yantra4D. Les rivets font le pont vers le solide `rivet` de Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A calça utilitária: uma perna reta com um passador de martelo em um lado, um bolso de régua na coxa e uma fileira de passadores de ferramenta estreitos. Toda a peça é um conjunto de caminhos de carga e cada um termina num REBITE em vez de um trava-costura — no denim de 12 oz um trava-costura se desgasta antes do tecido, e um martelo balançando no passador é exatamente a carga cíclica que primeiro encontra o trava-costura. Três coisas se resolvem medindo, não por fórmula. O passador de martelo é cortado a um vaivém MEDIDO — duas vezes a folga da ferramenta mais o percurso da alça em volta do trava-costura — e não a uma tira fixa, para liberar a cabeça com espaço para enfiar o cabo. Os passadores são distribuídos sobre um painel de apoio MEDIDO com os intervalos inteiros recalculados, para que o último passador caia no painel e não fora da borda. E o bolso de régua e o painel de passadores são ambos limitados contra a perna onde se assentam, porque uma peça mais larga que seu painel se dobra sobre si e o núcleo a normaliza em CCW deixando-a sã na aparência. Convenções de denim em tudo: pesponto duplo a 7 mm dourado, cada borda rebatida ou dobrada, cada ferragem uma referência ao Yantra4D. Os rebites fazem a ponte para o sólido `rivet` do Yantra4D.\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["carpenter-jean", "denim", "workwear", "utility", "hammer-loop",
+      "tool-loops", "rivet", "topstitch", "hardware", "fc400", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        { "source": "Original draft for Fashion Cabinet", "license": "original" }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": { "en": "Full carpenter jean", "es": "Vaquero de carpintero completo", "fr": "Jean de charpentier complet", "pt": "Calça de carpinteiro completa" },
+      "script_file": "main.py",
+      "pieces": ["front_leg", "back_leg", "waistband", "hammer_loop", "loop_panel", "rule_pocket"]
+    }
+  ],
+  "pieces": [
+    { "id": "front_leg", "label": { "en": "Front leg (cut 2, mirrored)", "es": "Delantero de pierna (cortar 2, espejo)", "fr": "Devant de jambe (couper 2, miroir)", "pt": "Frente da perna (cortar 2, espelhado)" }, "default_color": "#3f5573", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "back_leg", "label": { "en": "Back leg (cut 2, mirrored)", "es": "Trasero de pierna (cortar 2, espejo)", "fr": "Dos de jambe (couper 2, miroir)", "pt": "Costas da perna (cortar 2, espelhado)" }, "default_color": "#4a637f", "cut": { "quantity": 2, "on_fold": false, "mirror": true } },
+    { "id": "waistband", "label": { "en": "Waistband (cut 1)", "es": "Pretina (cortar 1)", "fr": "Ceinture (couper 1)", "pt": "Cós (cortar 1)" }, "default_color": "#5e7896", "cut": { "quantity": 1, "on_fold": false, "mirror": false } },
+    { "id": "hammer_loop", "label": { "en": "Hammer loop (cut 1)", "es": "Trabilla de martillo (cortar 1)", "fr": "Passant à marteau (couper 1)", "pt": "Passador de martelo (cortar 1)" }, "default_color": "#6f89a6", "cut": { "quantity": 1, "on_fold": false, "mirror": false } },
+    { "id": "loop_panel", "label": { "en": "Tool-loop panel (cut 1)", "es": "Panel de trabillas (cortar 1)", "fr": "Panneau de passants (couper 1)", "pt": "Painel de passadores (cortar 1)" }, "default_color": "#7f98b3", "cut": { "quantity": 1, "on_fold": false, "mirror": false } },
+    { "id": "rule_pocket", "label": { "en": "Rule pocket (cut 1)", "es": "Bolsillo de regla (cortar 1)", "fr": "Poche à réglet (couper 1)", "pt": "Bolso de régua (cortar 1)" }, "default_color": "#90a6bd", "cut": { "quantity": 1, "on_fold": false, "mirror": false } }
+  ],
+  "parameter_groups": [
+    { "id": "block", "label": { "en": "Fit block", "es": "Base de talla", "fr": "Base d'aisance", "pt": "Base de modelagem" } },
+    { "id": "leg", "label": { "en": "Leg", "es": "Pierna", "fr": "Jambe", "pt": "Perna" } },
+    { "id": "tools", "label": { "en": "Tool carriers", "es": "Portaherramientas", "fr": "Porte-outils", "pt": "Porta-ferramentas" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
+  ],
+  "parameters": [
+    { "id": "waist_girth", "type": "slider", "group": "block", "default": 860, "min": 560, "max": 1200, "step": 10, "label": { "en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)", "pt": "Contorno de cintura (mm)" }, "measurement": { "standard": "iso_8559", "code": "waist_girth" } },
+    { "id": "hip_girth", "type": "slider", "group": "block", "default": 1040, "min": 720, "max": 1400, "step": 10, "label": { "en": "Hip girth (mm)", "es": "Contorno de cadera (mm)", "fr": "Tour de hanches (mm)", "pt": "Contorno de quadril (mm)" }, "measurement": { "standard": "iso_8559", "code": "hip_girth" } },
+    { "id": "inside_leg", "type": "slider", "group": "leg", "default": 800, "min": 560, "max": 950, "step": 10, "label": { "en": "Inside leg (mm)", "es": "Entrepierna (mm)", "fr": "Entrejambe (mm)", "pt": "Entreperna (mm)" } },
+    { "id": "front_rise", "type": "slider", "group": "block", "default": 270, "min": 200, "max": 360, "step": 5, "label": { "en": "Front rise (mm)", "es": "Tiro delantero (mm)", "fr": "Montée devant (mm)", "pt": "Gancho dianteiro (mm)" } },
+    { "id": "hem_width", "type": "slider", "group": "leg", "default": 220, "min": 160, "max": 340, "step": 5, "label": { "en": "Hem width, flat (mm)", "es": "Ancho de bajo, plano (mm)", "fr": "Largeur d'ourlet (mm)", "pt": "Largura da barra (mm)" } },
+    { "id": "band_depth", "type": "slider", "group": "block", "default": 42, "min": 28, "max": 64, "step": 2, "label": { "en": "Waistband depth (mm)", "es": "Alto de pretina (mm)", "fr": "Hauteur de ceinture (mm)", "pt": "Altura do cós (mm)" } },
+    { "id": "tool_clearance", "type": "slider", "group": "tools", "default": 40, "min": 20, "max": 70, "step": 2, "label": { "en": "Hammer-head clearance (mm)", "es": "Holgura de cabeza de martillo (mm)", "fr": "Jeu de tête de marteau (mm)", "pt": "Folga da cabeça do martelo (mm)" }, "tooltip": { "en": "The hammer loop is cut to twice this plus the strap run — a MEASURED swing, not a fixed strip", "es": "La trabilla se corta a dos veces esto más el tirante — un vaivén MEDIDO, no una tira fija", "fr": "Le passant est coupé à deux fois cela plus la sangle — un débattement MESURÉ, non une bande fixe", "pt": "O passador é cortado a duas vezes isto mais a alça — um vaivém MEDIDO, não uma tira fixa" } },
+    { "id": "loop_count", "type": "slider", "group": "tools", "default": 5, "min": 2, "max": 9, "step": 1, "label": { "en": "Tool loops", "es": "Trabillas de herramienta", "fr": "Passants d'outils", "pt": "Passadores de ferramenta" }, "tooltip": { "en": "Fitted to whole gaps across the MEASURED panel; the last loop always lands on the panel", "es": "Ajustadas a huecos enteros sobre el panel MEDIDO; la última siempre cae en el panel", "fr": "Ajustés en intervalles entiers sur le panneau MESURÉ ; le dernier tombe toujours sur le panneau", "pt": "Ajustados em intervalos inteiros sobre o painel MEDIDO; o último sempre cai no painel" } },
+    { "id": "loop_width", "type": "slider", "group": "tools", "default": 26, "min": 16, "max": 48, "step": 1, "label": { "en": "Tool-loop width (mm)", "es": "Ancho de trabilla (mm)", "fr": "Largeur de passant (mm)", "pt": "Largura do passador (mm)" } },
+    { "id": "rivet_cap", "type": "slider", "group": "construction", "default": 11, "min": 7, "max": 18, "step": 1, "label": { "en": "Rivet cap diameter (mm)", "es": "Diámetro de cabeza del remache (mm)", "fr": "Diamètre de tête du rivet (mm)", "pt": "Diâmetro da cabeça do rebite (mm)" }, "tooltip": { "en": "Drives the Yantra4D rivet's bearing face AND every rivet's step-in from the edges", "es": "Define la cara del remache Yantra4D Y su separación desde los bordes", "fr": "Pilote la face du rivet Yantra4D ET son retrait depuis les bords", "pt": "Pilota a face do rebite Yantra4D E o recuo desde as bordas" } },
+    { "id": "wear_ease", "type": "slider", "group": "block", "default": 60, "min": 0, "max": 160, "step": 5, "label": { "en": "Wearing ease (mm)", "es": "Holgura de uso (mm)", "fr": "Aisance de port (mm)", "pt": "Folga de uso (mm)" } },
+    { "id": "hem_allowance", "type": "slider", "group": "construction", "default": 32, "min": 18, "max": 55, "step": 2, "label": { "en": "Hem turn-up (mm)", "es": "Dobladillo (mm)", "fr": "Revers d'ourlet (mm)", "pt": "Bainha (mm)" } },
+    { "id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 8, "max": 18, "step": 1, "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" }, "advanced": true }
+  ],
+  "constraints": [
+    { "expression": "hip_girth > waist_girth", "severity": "warning", "message": { "en": "A hip smaller than the waist inverts the side seam; the draft clamps the waist quarter.", "es": "Una cadera menor que la cintura invierte el costado; el trazo acota el cuarto de cintura.", "fr": "Une hanche plus petite que la taille inverse la couture de côté ; le tracé borne le quart de taille.", "pt": "Um quadril menor que a cintura inverte a lateral; o traçado limita o quarto de cintura." } },
+    { "expression": "loop_count * loop_width < hip_girth", "severity": "warning", "message": { "en": "That many loops that wide will not fit the panel; the draft clamps the panel width.", "es": "Tantas trabillas así de anchas no caben en el panel; el trazo acota el ancho del panel.", "fr": "Autant de passants si larges ne tiennent pas sur le panneau ; le tracé borne sa largeur.", "pt": "Tantos passadores tão largos não cabem no painel; o traçado limita a largura do painel." } },
+    { "expression": "rivet_cap * 2 < tool_clearance", "severity": "warning", "message": { "en": "A rivet cap this large on a loop this small leaves no cloth to hold it.", "es": "Una cabeza así de grande en una trabilla tan chica no deja tela que la sujete.", "fr": "Une tête si grande sur un passant si petit ne laisse pas de tissu pour la retenir.", "pt": "Uma cabeça tão grande num passador tão pequeno não deixa tecido para segurá-la." } }
+  ],
+  "presets": [
+    { "id": "framing", "label": { "en": "Framing (loaded)", "es": "Estructura (cargado)", "fr": "Charpente (chargé)", "pt": "Estrutura (carregado)" }, "values": { "loop_count": 7, "tool_clearance": 55, "rivet_cap": 13, "wear_ease": 90 } },
+    { "id": "finish-work", "label": { "en": "Finish work (light)", "es": "Acabados (ligero)", "fr": "Finition (léger)", "pt": "Acabamento (leve)" }, "values": { "loop_count": 3, "tool_clearance": 30, "hem_width": 200 } },
+    { "id": "slim-utility", "label": { "en": "Slim utility", "es": "Utilitario entallado", "fr": "Utilitaire ajusté", "pt": "Utilitário justo" }, "values": { "waist_girth": 800, "hip_girth": 980, "hem_width": 190 } }
+  ],
+  "export_formats": ["svg", "dxf", "json", "pdf"],
+  "fabrics": ["mezclilla-denim"],
+  "notion": {
+    "kind": "rivet",
+    "subtype": "load-path rivet at hammer loop, rule pocket and pocket corners",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "rivet",
+      "linked": true,
+      "params_map": {
+        "cap_dia": "rivet_cap",
+        "cap_h": "rivet_cap * 0.30",
+        "post_dia": "rivet_cap * 0.36",
+        "post_h": "rivet_cap * 0.42",
+        "bore_dia": "rivet_cap * 0.40",
+        "burr_dia": "rivet_cap * 0.72"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      { "id": "riveted_hammer_loop", "type": "custom", "label": { "en": "Riveted hammer loop", "es": "Trabilla de martillo remachada", "fr": "Passant à marteau riveté", "pt": "Passador de martelo rebitado" }, "edges": [ { "piece": "hammer_loop", "edge": "end_a" }, { "piece": "front_leg", "edge": "side" } ], "parameters": ["tool_clearance", "rivet_cap"] },
+      { "id": "tool_loop_panel", "type": "custom", "label": { "en": "Tool-loop backing panel", "es": "Panel de trabillas", "fr": "Panneau de passants", "pt": "Painel de passadores" }, "edges": [ { "piece": "loop_panel", "edge": "top" }, { "piece": "front_leg", "edge": "side" } ], "parameters": ["loop_count", "loop_width", "hip_girth"] },
+      { "id": "riveted_rule_pocket", "type": "pocket", "label": { "en": "Riveted rule pocket", "es": "Bolsillo de regla remachado", "fr": "Poche à réglet rivetée", "pt": "Bolso de régua rebitado" }, "edges": [ { "piece": "rule_pocket", "edge": "mouth" }, { "piece": "front_leg", "edge": "side" } ], "parameters": ["rivet_cap", "waist_girth"] }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A carpenter jean is judged on whether its hammer loop and tool loops survive a working life, and the failure is always the same: a bar-tack abrades and lets go, usually with a hammer swinging in it. This pattern moves every load-path termination onto a rivet, and — the part patterns usually skip — sizes and places the loop from the tool it carries rather than as a fixed strip, and pitches the tool loops so the last one lands on the panel instead of off its edge. The rivets print and set at home. What is sold as heavy-duty workwear at a heavy-duty price is geometry plus a hard good, and both are here.",
+      "es": "Un vaquero de carpintero se juzga por si su trabilla de martillo y sus trabillas de herramienta sobreviven una vida de trabajo, y el fallo es siempre el mismo: una presilla se desgasta y suelta, casi siempre con un martillo colgando. Este patrón lleva cada terminación de carga a un remache y — lo que los patrones suelen saltarse — dimensiona y coloca la trabilla desde la herramienta que carga y no como tira fija, y distribuye las trabillas para que la última caiga en el panel y no fuera del borde. Los remaches se imprimen y se colocan en casa. Lo que se vende como ropa de trabajo reforzada a precio reforzado es geometría más un herraje, y ambos están aquí.",
+      "fr": "Un jean de charpentier se juge à la survie de son passant à marteau et de ses passants d'outils sur une vie de travail, et la panne est toujours la même : une barrette s'use et lâche, souvent avec un marteau qui s'y balance. Ce patron porte chaque terminaison de charge sur un rivet et — ce que les patrons sautent d'ordinaire — dimensionne et place le passant depuis l'outil qu'il porte plutôt qu'en bande fixe, et répartit les passants pour que le dernier tombe sur le panneau et non hors du bord. Les rivets s'impriment et se posent chez soi. Ce qui se vend comme vêtement de travail renforcé à prix renforcé est de la géométrie plus un accessoire, et les deux sont ici.",
+      "pt": "Uma calça de carpinteiro é julgada pela sobrevivência do passador de martelo e dos passadores de ferramenta ao longo de uma vida de trabalho, e a falha é sempre a mesma: um trava-costura se desgasta e solta, quase sempre com um martelo balançando. Este molde leva cada terminação de carga a um rebite e — o que os moldes costumam pular — dimensiona e posiciona o passador a partir da ferramenta que carrega e não como tira fixa, e distribui os passadores para que o último caia no painel e não fora da borda. Os rebites imprimem e se colocam em casa. O que se vende como roupa de trabalho reforçada a preço reforçado é geometria mais uma ferragem, e ambos estão aqui."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}
