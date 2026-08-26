@@ -1,0 +1,91 @@
+{
+  "project": {
+    "name": "Triathlon compression suit",
+    "slug": "compression-tri-suit",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A one-piece sleeveless tri-suit in compression lycra: swim, bike and run in one garment, cut at negative ease so it compresses the muscle and does not billow in the water, split down the centre front and closed with a short invisible zipper at the chest so it can be got on and off over the shoulders. Short legs to mid-thigh, a racer back, a rear pocket panel. Two things solved: the centre-front zip runs the drafted zip_length from the chest to the collar, that number driving both the Yantra4D invisible-zipper zip_length AND the garment's center-front interface, clamped under the torso length so it never exceeds the front; and every panel is cut at negative ease with the front and back legs sharing ONE crotch point so the leg cannot twist. FC-500 lane 6 (active).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un traje de triatlón de una pieza sin mangas en licra de compresión: nadar, pedalear y correr en una sola prenda, cortado con holgura negativa para que comprima el músculo y no se infle en el agua, abierto al centro delantero y cerrado con un cierre invisible corto en el pecho para ponérselo y quitárselo por los hombros. Piernas cortas a medio muslo, espalda nadadora, panel de bolsillo trasero. Dos cosas resueltas: el cierre delantero recorre el zip_length trazado del pecho al cuello, número que define tanto el zip_length del invisible-zipper de Yantra4D COMO la interfaz de centro delantero de la prenda, limitado bajo el largo del torso para que no exceda el frente; y cada panel se corta con holgura negativa con las piernas delantera y trasera compartiendo UN punto de entrepierna para que la pierna no se tuerza. Carril 6 de FC-500 (activo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une combinaison de triathlon une pièce sans manches en lycra de compression : nager, pédaler et courir en un seul vêtement, coupée en aisance négative pour comprimer le muscle et ne pas gonfler dans l'eau, fendue au milieu devant et fermée par une courte fermeture invisible à la poitrine pour l'enfiler et l'ôter par les épaules. Jambes courtes à mi-cuisse, dos nageur, panneau de poche arrière. Deux choses résolues : la fermeture devant parcourt le zip_length tracé de la poitrine au col, nombre qui pilote à la fois le zip_length de l'invisible-zipper Yantra4D ET l'interface milieu devant du vêtement, bridé sous la longueur du torse pour ne pas dépasser le devant ; et chaque panneau est coupé en aisance négative, les jambes devant et dos partageant UN point d'entrejambe pour que la jambe ne vrille pas. Couloir 6 de FC-500 (actif).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um macaquinho de triatlo de uma peça sem mangas em lycra de compressão: nadar, pedalar e correr numa só peça, cortado em folga negativa para comprimir o músculo e não inflar na água, aberto no centro frontal e fechado com um zíper invisível curto no peito para vestir e tirar pelos ombros. Pernas curtas até meia coxa, costas nadador, painel de bolso traseiro. Duas coisas resolvidas: o zíper frontal percorre o zip_length modelado do peito ao colarinho, número que dirige tanto o zip_length do invisible-zipper de Yantra4D QUANTO a interface de centro frontal da peça, limitado sob o comprimento do torso para não exceder a frente; e cada painel é cortado em folga negativa com as pernas frente e costas compartilhando UM ponto de gancho para a perna não torcer. Corredor 6 do FC-500 (ativo).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["active", "triathlon", "compression", "one-piece", "lycra", "invisible-zipper", "hardware", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full suit", "es": "Traje completo", "fr": "Combinaison complète", "pt": "Macaquinho completo"}, "script_file": "main.py", "pieces": ["front", "back", "leg"]}
+  ],
+  "pieces": [
+    {"id": "front", "label": {"en": "Front torso (zip)", "es": "Torso delantero (cierre)", "fr": "Torse devant (fermeture)", "pt": "Torso dianteiro (zíper)"}, "default_color": "#1f6f7a", "cut": {"quantity": 1, "mirror": false}},
+    {"id": "back", "label": {"en": "Back torso (racer)", "es": "Torso trasero (nadadora)", "fr": "Torse dos (nageur)", "pt": "Torso traseiro (nadador)"}, "default_color": "#18606a", "cut": {"quantity": 1, "mirror": false}},
+    {"id": "leg", "label": {"en": "Short leg", "es": "Pierna corta", "fr": "Jambe courte", "pt": "Perna curta"}, "default_color": "#237e8a", "cut": {"quantity": 2, "mirror": true}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "chest_girth", "type": "slider", "group": "body", "default": 960, "min": 720, "max": 1400, "step": 10, "measurement": {"standard": "iso_8559", "code": "chest_bust_girth"}, "label": {"en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)"}, "tooltip": {"en": "Full chest — the panels at negative ease", "es": "Pecho completo — los paneles con holgura negativa", "fr": "Poitrine complète — les panneaux en aisance négative", "pt": "Peito completo — os painéis com folga negativa"}},
+    {"id": "waist_girth", "type": "slider", "group": "body", "default": 820, "min": 600, "max": 1300, "step": 10, "measurement": {"standard": "iso_8559", "code": "waist_girth"}, "label": {"en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)", "pt": "Contorno de cintura (mm)"}, "tooltip": {"en": "Natural waist — the shaping reference", "es": "Cintura natural — la referencia de entalle", "fr": "Taille naturelle — le repère de galbe", "pt": "Cintura natural — a referência de modelagem"}},
+    {"id": "hip_girth", "type": "slider", "group": "body", "default": 980, "min": 720, "max": 1500, "step": 10, "measurement": {"standard": "iso_8559", "code": "hip_girth"}, "label": {"en": "Hip girth (mm)", "es": "Contorno de cadera (mm)", "fr": "Tour de hanche (mm)", "pt": "Contorno de quadril (mm)"}, "tooltip": {"en": "Fullest hip — the leg tops derive from it", "es": "Cadera más llena — las piernas derivan de ella", "fr": "Hanche la plus forte — les jambes en dérivent", "pt": "Quadril mais cheio — as pernas derivam dele"}},
+    {"id": "torso_length", "type": "slider", "group": "body", "default": 640, "min": 480, "max": 820, "step": 10, "label": {"en": "Torso length (mm)", "es": "Largo de torso (mm)", "fr": "Longueur de torse (mm)", "pt": "Comprimento de torso (mm)"}, "tooltip": {"en": "Shoulder to crotch — the zip is clamped under this", "es": "Del hombro a la entrepierna — el cierre se limita bajo esto", "fr": "De l'épaule à l'entrejambe — la fermeture est bridée sous ceci", "pt": "Do ombro ao gancho — o zíper é limitado sob isto"}},
+    {"id": "thigh_length", "type": "slider", "group": "body", "default": 220, "min": 120, "max": 380, "step": 10, "label": {"en": "Thigh length (mm)", "es": "Largo de muslo (mm)", "fr": "Longueur de cuisse (mm)", "pt": "Comprimento de coxa (mm)"}, "tooltip": {"en": "Crotch to mid-thigh hem", "es": "De la entrepierna al bajo de medio muslo", "fr": "De l'entrejambe à l'ourlet mi-cuisse", "pt": "Do gancho à barra de meia coxa"}},
+    {"id": "thigh_girth", "type": "slider", "group": "body", "default": 560, "min": 360, "max": 800, "step": 10, "measurement": {"standard": "iso_8559", "code": "thigh_girth"}, "label": {"en": "Thigh girth (mm)", "es": "Contorno de muslo (mm)", "fr": "Tour de cuisse (mm)", "pt": "Contorno de coxa (mm)"}, "tooltip": {"en": "Sizes the short leg at negative ease", "es": "Dimensiona la pierna corta con holgura negativa", "fr": "Dimensionne la jambe courte en aisance négative", "pt": "Dimensiona a perna curta com folga negativa"}},
+    {"id": "zip_length", "type": "slider", "group": "construction", "default": 260, "min": 120, "max": 400, "step": 10, "label": {"en": "Zip length (mm)", "es": "Largo de cierre (mm)", "fr": "Longueur de fermeture (mm)", "pt": "Comprimento de zíper (mm)"}, "tooltip": {"en": "The chest zip opening — solved to the hardware and the CF interface", "es": "La abertura del cierre de pecho — resuelta al herraje y la interfaz de CD", "fr": "L'ouverture de la fermeture poitrine — résolue à la quincaillerie et l'interface MD", "pt": "A abertura do zíper de peito — resolvida à ferragem e à interface de CF"}},
+    {"id": "negative_ease_pct", "type": "slider", "group": "construction", "default": 12, "min": 4, "max": 22, "step": 1, "label": {"en": "Negative ease (%)", "es": "Holgura negativa (%)", "fr": "Aisance négative (%)", "pt": "Folga negativa (%)"}, "tooltip": {"en": "The lycra compresses by being cut smaller than the body", "es": "La licra comprime al cortarse más pequeña que el cuerpo", "fr": "Le lycra comprime en étant coupé plus petit que le corps", "pt": "A lycra comprime sendo cortada menor que o corpo"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 8, "min": 4, "max": 12, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Narrow flatlocked swim seams", "es": "Costuras de baño angostas con flatlock", "fr": "Coutures de bain étroites en flatlock", "pt": "Costuras de banho estreitas com flatlock"}}
+  ],
+  "presets": [
+    {"id": "sprint", "label": {"en": "Sprint", "es": "Sprint", "fr": "Sprint", "pt": "Sprint"}, "values": {"negative_ease_pct": 16, "zip_length": 220}},
+    {"id": "ironman", "label": {"en": "Long-course", "es": "Larga distancia", "fr": "Longue distance", "pt": "Longa distância"}, "values": {"negative_ease_pct": 10, "thigh_length": 280}}
+  ],
+  "constraints": [
+    {"expression": "chest_girth > waist_girth", "message": {"en": "Chest girth should exceed waist girth for the body shape.", "es": "El contorno de pecho debe superar al de cintura.", "fr": "Le tour de poitrine doit dépasser celui de taille.", "pt": "O contorno de peito deve exceder o de cintura."}, "severity": "warning"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "zipper",
+    "subtype": "chest invisible zipper",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "invisible-zipper",
+      "linked": true,
+      "params_map": {
+        "zip_length": "zip_length",
+        "tape_width": "5"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "center_front", "type": "zipper_tape", "label": {"en": "Centre-front zip (solved to zip_length)", "es": "Cierre de centro delantero (resuelto a zip_length)", "fr": "Fermeture milieu devant (résolue sur zip_length)", "pt": "Zíper de centro frontal (resolvido a zip_length)"}, "edges": [{"piece": "front", "edge": "shoulder"}], "parameters": ["zip_length", "torso_length"]},
+      {"id": "side_seam", "type": "side_seam", "label": {"en": "Side seams (front to back)", "es": "Costuras laterales (delante a trasero)", "fr": "Coutures côté (devant au dos)", "pt": "Costuras laterais (frente ao dorso)"}, "edges": [{"piece": "front", "edge": "side_r"}, {"piece": "back", "edge": "side_r"}], "parameters": ["chest_girth", "negative_ease_pct"]},
+      {"id": "crotch_join", "type": "custom", "label": {"en": "Crotch join (legs, one shared point)", "es": "Unión de entrepierna (piernas, punto compartido)", "fr": "Jonction d'entrejambe (jambes, point partagé)", "pt": "Junção de gancho (pernas, ponto compartilhado)"}, "edges": [{"piece": "leg", "edge": "top"}, {"piece": "front", "edge": "crotch"}], "parameters": ["hip_girth", "thigh_girth"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true,
+      "zipper_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A tri-suit has to do three sports' jobs at once — compress and slip through water, stay put on the bike, and not chafe over a run — and its two failure points are the seams and the zip. Cutting the whole suit at negative ease and flatlocking every seam solves the chafe; solving the chest zip to the drafted opening, and clamping it under the torso so no size runs it past the front, solves the closure that a wet athlete has to work one-handed. Bridging that zip to a printable, replaceable solid, and sharing one crotch so the leg cannot twist, makes an endurance garment that is made to measure and repairable — the opposite of a sealed race suit replaced whole when its zip fails.",
+      "es": "Un traje de triatlón debe hacer el trabajo de tres deportes a la vez — comprimir y deslizarse en el agua, quedarse en su sitio en la bici y no rozar al correr — y sus dos puntos de falla son las costuras y el cierre. Cortar todo el traje con holgura negativa y hacer flatlock en cada costura resuelve la rozadura; resolver el cierre de pecho a la abertura trazada y limitarlo bajo el torso para que ninguna talla lo pase del frente resuelve el cierre que un atleta mojado debe manejar a una mano. Puentear ese cierre a un sólido imprimible y reemplazable, y compartir una entrepierna para que la pierna no se tuerza, hace una prenda de resistencia a medida y reparable — lo opuesto a un traje de carrera sellado que se reemplaza entero cuando falla su cierre.",
+      "fr": "Une combinaison de triathlon doit faire le travail de trois sports à la fois — comprimer et glisser dans l'eau, tenir en place sur le vélo et ne pas frotter à la course — et ses deux points de défaillance sont les coutures et la fermeture. Couper toute la combinaison en aisance négative et flatlocker chaque couture règle le frottement ; résoudre la fermeture poitrine à l'ouverture tracée et la brider sous le torse pour qu'aucune taille ne la fasse dépasser le devant règle la fermeture qu'un athlète mouillé doit manœuvrer d'une main. Relier cette fermeture à un solide imprimable et remplaçable, et partager un entrejambe pour que la jambe ne vrille pas, fait un vêtement d'endurance sur mesure et réparable — le contraire d'une combinaison de course scellée remplacée entière quand sa fermeture cède.",
+      "pt": "Um macaquinho de triatlo tem de fazer o trabalho de três esportes ao mesmo tempo — comprimir e deslizar na água, ficar no lugar na bicicleta e não atritar na corrida — e seus dois pontos de falha são as costuras e o zíper. Cortar todo o macaquinho em folga negativa e fazer flatlock em cada costura resolve o atrito; resolver o zíper de peito à abertura modelada e limitá-lo sob o torso para que nenhum tamanho o passe da frente resolve o fecho que um atleta molhado precisa operar com uma mão. Ligar esse zíper a um sólido imprimível e substituível, e compartilhar um gancho para a perna não torcer, faz uma peça de resistência sob medida e reparável — o oposto de um traje de corrida selado substituído inteiro quando seu zíper falha."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

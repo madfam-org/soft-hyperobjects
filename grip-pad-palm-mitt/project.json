@@ -1,0 +1,86 @@
+{
+  "project": {
+    "name": "Grip-pad palm mitt",
+    "slug": "grip-pad-palm-mitt",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A fingerless palm mitt for a weak or painful grip: a neoprene palm band that leaves the fingers free but backs the palm with a compliant ribbed gripper pad, so a rail, a walker handle or a cup pressed into the palm does not slip. The mitt is the soft body drafted here; the ribbed pad is the Yantra4D soft-gripper-pad solid, held in a palmar pocket, never modelled here. The pocket is SOLVED to the pad footprint: pad_length and pad_width ARE the drafted pocket, so the printed pad drops in exactly; pad_length drives both the hardware and the garment's own pad-pocket interface. A band, not a glove: the thumb slot depth is clamped under the band height so it can never split the band. FC-500 lane 4 (adaptive / soft-exo).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una manopla palmar sin dedos para un agarre débil o doloroso: una banda de neopreno que deja los dedos libres pero respalda la palma con una almohadilla de agarre acostillada y flexible, para que un pasamanos, el mango de un andador o una taza contra la palma no resbale. La manopla es el cuerpo suave trazado aquí; la almohadilla acostillada es el sólido soft-gripper-pad de Yantra4D, alojada en un bolsillo palmar, nunca modelada aquí. El bolsillo se RESUELVE a la huella de la almohadilla: pad_length y pad_width SON el bolsillo trazado, así la almohadilla impresa entra exacta; pad_length define tanto el herraje como la interfaz de bolsillo de almohadilla de la prenda. Una banda, no un guante: la profundidad de la ranura del pulgar se limita bajo el alto de la banda para que no la parta. Carril 4 de FC-500 (adaptativo / soft-exo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une mitaine palmaire sans doigts pour une préhension faible ou douloureuse : une bande en néoprène qui laisse les doigts libres mais double la paume d'un coussinet antidérapant nervuré et souple, pour qu'une rampe, une poignée de déambulateur ou une tasse pressée dans la paume ne glisse pas. La mitaine est le corps souple tracé ici ; le coussinet nervuré est le solide soft-gripper-pad de Yantra4D, logé dans une poche palmaire, jamais modélisé ici. La poche est RÉSOLUE à l'empreinte du coussinet : pad_length et pad_width SONT la poche tracée, de sorte que le coussinet imprimé s'y insère exactement ; pad_length pilote la quincaillerie ET l'interface de poche de coussinet du vêtement. Une bande, pas un gant : la profondeur de la fente de pouce est bridée sous la hauteur de la bande pour qu'elle ne la fende pas. Couloir 4 de FC-500 (adaptatif / soft-exo).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma mitene palmar sem dedos para uma preensão fraca ou dolorosa: uma banda de neoprene que deixa os dedos livres mas reforça a palma com uma almofada de preensão nervurada e flexível, para que um corrimão, uma alça de andador ou uma xícara pressionada na palma não escorregue. A mitene é o corpo macio modelado aqui; a almofada nervurada é o sólido soft-gripper-pad de Yantra4D, alojada num bolso palmar, nunca modelada aqui. O bolso é RESOLVIDO à pegada da almofada: pad_length e pad_width SÃO o bolso modelado, então a almofada impressa entra exata; pad_length dirige tanto a ferragem quanto a interface de bolso de almofada da peça. Uma banda, não uma luva: a profundidade da fenda do polegar é limitada sob a altura da banda para não a partir. Corredor 4 do FC-500 (adaptativo / soft-exo).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["adaptive", "soft-exo", "grip-aid", "gripper-pad", "neoprene", "hardware", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full mitt", "es": "Manopla completa", "fr": "Mitaine complète", "pt": "Mitene completa"}, "script_file": "main.py", "pieces": ["band", "tab"]}
+  ],
+  "pieces": [
+    {"id": "band", "label": {"en": "Palm band (pad pocket + thumb slot)", "es": "Banda palmar (bolsillo + ranura de pulgar)", "fr": "Bande palmaire (poche + fente de pouce)", "pt": "Banda palmar (bolso + fenda de polegar)"}, "default_color": "#37464f", "cut": {"quantity": 1, "mirror": false}},
+    {"id": "tab", "label": {"en": "Closure tab", "es": "Lengüeta de cierre", "fr": "Patte de fermeture", "pt": "Lingueta de fechamento"}, "default_color": "#2c3942", "cut": {"quantity": 1, "mirror": false}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "palm_girth", "type": "slider", "group": "body", "default": 215, "min": 150, "max": 290, "step": 5, "measurement": {"standard": "iso_8559", "code": "wrist_girth"}, "label": {"en": "Palm girth (mm)", "es": "Contorno de palma (mm)", "fr": "Tour de paume (mm)", "pt": "Contorno de palma (mm)"}, "tooltip": {"en": "Around the palm — the band wraps this at negative ease", "es": "Alrededor de la palma — la banda la envuelve con holgura negativa", "fr": "Autour de la paume — la bande l'enveloppe en aisance négative", "pt": "Ao redor da palma — a banda a envolve com folga negativa"}},
+    {"id": "band_height", "type": "slider", "group": "body", "default": 95, "min": 60, "max": 150, "step": 5, "label": {"en": "Band height (mm)", "es": "Alto de banda (mm)", "fr": "Hauteur de bande (mm)", "pt": "Altura da banda (mm)"}, "tooltip": {"en": "Wrist to knuckles — how far up the palm the band rises", "es": "De muñeca a nudillos — cuánto sube la banda", "fr": "Du poignet aux articulations — jusqu'où la bande monte", "pt": "Do pulso aos nós — quanto a banda sobe"}},
+    {"id": "pad_length", "type": "slider", "group": "construction", "default": 70, "min": 40, "max": 110, "step": 5, "label": {"en": "Pad length (mm)", "es": "Largo de almohadilla (mm)", "fr": "Longueur de coussinet (mm)", "pt": "Comprimento de almofada (mm)"}, "tooltip": {"en": "Pad footprint length — the pocket is solved to this", "es": "Largo de huella de la almohadilla — el bolsillo se resuelve de esto", "fr": "Longueur d'empreinte du coussinet — la poche en découle", "pt": "Comprimento de pegada da almofada — o bolso é resolvido disto"}},
+    {"id": "pad_width", "type": "slider", "group": "construction", "default": 45, "min": 25, "max": 90, "step": 5, "label": {"en": "Pad width (mm)", "es": "Ancho de almohadilla (mm)", "fr": "Largeur de coussinet (mm)", "pt": "Largura de almofada (mm)"}, "tooltip": {"en": "Pad footprint width", "es": "Ancho de huella de la almohadilla", "fr": "Largeur d'empreinte du coussinet", "pt": "Largura de pegada da almofada"}},
+    {"id": "thumb_slot", "type": "slider", "group": "construction", "default": 40, "min": 20, "max": 70, "step": 5, "label": {"en": "Thumb slot depth (mm)", "es": "Profundidad de ranura de pulgar (mm)", "fr": "Profondeur de fente de pouce (mm)", "pt": "Profundidade de fenda de polegar (mm)"}, "tooltip": {"en": "Clamped under half the band height so it can never split the band", "es": "Limitada bajo medio alto de banda para que no la parta", "fr": "Bridée sous la moitié de la hauteur pour ne pas fendre la bande", "pt": "Limitada sob metade da altura para não partir a banda"}},
+    {"id": "negative_ease_pct", "type": "slider", "group": "construction", "default": 5, "min": 2, "max": 12, "step": 1, "label": {"en": "Negative ease (%)", "es": "Holgura negativa (%)", "fr": "Aisance négative (%)", "pt": "Folga negativa (%)"}, "tooltip": {"en": "The band grips by being cut smaller than the palm", "es": "La banda agarra al cortarse más pequeña que la palma", "fr": "La bande tient en étant coupée plus petite que la paume", "pt": "A banda firma sendo cortada menor que a palma"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 6, "min": 2, "max": 12, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Narrow flatlocked band seams", "es": "Costuras de banda angostas con flatlock", "fr": "Coutures de bande étroites en flatlock", "pt": "Costuras de banda estreitas com flatlock"}}
+  ],
+  "presets": [
+    {"id": "walker_grip", "label": {"en": "Walker handle", "es": "Mango de andador", "fr": "Poignée de déambulateur", "pt": "Alça de andador"}, "values": {"pad_length": 85, "pad_width": 55}},
+    {"id": "cup_grip", "label": {"en": "Cup / mug", "es": "Taza", "fr": "Tasse", "pt": "Xícara"}, "values": {"pad_length": 60, "pad_width": 40}}
+  ],
+  "constraints": [
+    {"expression": "pad_length < band_height", "message": {"en": "Pad length must fit inside the band height.", "es": "El largo de la almohadilla debe caber en el alto de la banda.", "fr": "La longueur du coussinet doit tenir dans la hauteur de la bande.", "pt": "O comprimento da almofada deve caber na altura da banda."}, "severity": "warning"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "gripper pad pocket",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "soft-gripper-pad",
+      "linked": true,
+      "params_map": {
+        "pad_len": "pad_length",
+        "pad_w": "pad_width"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "pad_pocket", "type": "pocket", "label": {"en": "Palmar pad pocket (solved to pad_length x pad_width)", "es": "Bolsillo palmar de almohadilla (resuelto a pad_length x pad_width)", "fr": "Poche palmaire de coussinet (résolue sur pad_length x pad_width)", "pt": "Bolso palmar de almofada (resolvido a pad_length x pad_width)"}, "edges": [{"piece": "band", "edge": "knuckle"}], "parameters": ["pad_length", "pad_width"]},
+      {"id": "wrist_closure", "type": "placket", "label": {"en": "Wrist closure (band to tab)", "es": "Cierre de muñeca (banda a lengüeta)", "fr": "Fermeture de poignet (bande à patte)", "pt": "Fechamento de pulso (banda a lingueta)"}, "edges": [{"piece": "tab", "edge": "attach"}, {"piece": "band", "edge": "end_a"}], "parameters": ["palm_girth", "band_height"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A weak or painful grip does not need fingers replaced — it needs friction, a palm that does not let a rail or a mug slip while the hand does what it still can. A fingerless grip mitt gives exactly that: it keeps the fingers free for feel and dexterity and adds a compliant ribbed pad where the palm meets the object. Making the pad the printable, replaceable part means the grip texture can be re-chosen for a cane, a walker or a cup, and the pocket is solved to the pad so the printed part drops in. A grip aid that is made to measure, closes one-handed, and whose pad can be reprinted becomes a repairable commons object rather than a bulky moulded glove.",
+      "es": "Un agarre débil o doloroso no necesita reemplazar dedos — necesita fricción, una palma que no deje resbalar un pasamanos o una taza mientras la mano hace lo que aún puede. Una manopla de agarre sin dedos da justo eso: mantiene los dedos libres para el tacto y la destreza y añade una almohadilla acostillada flexible donde la palma toca el objeto. Hacer de la almohadilla la parte imprimible y reemplazable permite reelegir la textura para un bastón, un andador o una taza, y el bolsillo se resuelve a la almohadilla para que la parte impresa entre. Una ayuda de agarre a medida, que cierra a una mano y cuya almohadilla puede reimprimirse, se vuelve un objeto común reparable en vez de un guante moldeado voluminoso.",
+      "fr": "Une préhension faible ou douloureuse n'a pas besoin de doigts remplacés — elle a besoin de friction, d'une paume qui ne laisse pas glisser une rampe ou une tasse pendant que la main fait ce qu'elle peut encore. Une mitaine de préhension sans doigts donne exactement cela : elle laisse les doigts libres pour le toucher et la dextérité et ajoute un coussinet nervuré souple là où la paume rencontre l'objet. Faire du coussinet la pièce imprimable et remplaçable permet de rechoisir la texture pour une canne, un déambulateur ou une tasse, et la poche est résolue au coussinet pour que la pièce imprimée s'insère. Une aide à la préhension sur mesure, qui se ferme d'une main et dont le coussinet peut être réimprimé, devient un objet commun réparable plutôt qu'un gant moulé encombrant.",
+      "pt": "Uma preensão fraca ou dolorosa não precisa de dedos substituídos — precisa de atrito, uma palma que não deixe um corrimão ou uma xícara escorregar enquanto a mão faz o que ainda pode. Uma mitene de preensão sem dedos dá exatamente isso: mantém os dedos livres para o tato e a destreza e adiciona uma almofada nervurada flexível onde a palma encontra o objeto. Fazer da almofada a peça imprimível e substituível permite reescolher a textura para uma bengala, um andador ou uma xícara, e o bolso é resolvido à almofada para a peça impressa entrar. Um auxílio de preensão sob medida, que fecha com uma mão e cuja almofada pode ser reimpressa, torna-se um objeto comum reparável em vez de uma luva moldada volumosa."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

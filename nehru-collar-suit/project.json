@@ -1,0 +1,92 @@
+{
+  "project": {
+    "name": "Nehru-collar suit jacket",
+    "slug": "nehru-collar-suit",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A single-breasted suit jacket with a Nehru collar — a short, standing band collar that meets edge to edge at the centre front instead of a notched or peaked lapel. The absence of a lapel changes the front: it runs straight to the neck with no roll line, buttoned to the throat. Hip-length, set-in sleeve, no lapel. Two things solved: the stand collar length is the measured neckline run (two fronts + back) so it closes, and its height is clamped under a comfort limit that would bind the throat; and the shank buttons run the straight centre-front, their disc the drafted button_dia that drives the garment's button-stand interface. FC-500 lane 5 (tailoring, T3).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un saco sencillo con cuello Nehru — un cuello de banda alto y corto que se junta borde con borde en el centro delantero en vez de una solapa de muesca o pico. La ausencia de solapa cambia el frente: sube recto al cuello sin línea de quiebre, abotonado hasta la garganta. Largo a la cadera, manga montada, sin solapa. Dos cosas resueltas: el largo del cuello de banda es el recorrido de escote medido (dos delanteros + espalda) para que cierre, y su altura se limita bajo un tope de comodidad que apretaría la garganta; y los botones de tija recorren el centro delantero recto, con su disco el button_dia trazado que define la interfaz de portada de la prenda. Carril 5 de FC-500 (sastrería, T3).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une veste de costume simple à col Nehru — un col montant court qui se rejoint bord à bord au milieu devant au lieu d'un revers cranté ou à pointe. L'absence de revers change le devant : il monte droit au cou sans ligne de cassure, boutonné jusqu'à la gorge. Longueur hanche, manche montée, sans revers. Deux choses résolues : la longueur du col montant est le parcours d'encolure mesuré (deux devants + dos) pour qu'il ferme, et sa hauteur est bridée sous une limite de confort qui serrerait la gorge ; et les boutons à tige parcourent le milieu devant droit, leur disque étant le button_dia tracé qui pilote l'interface de patte du vêtement. Couloir 5 de FC-500 (tailleur, T3).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um paletó simples com gola Nehru — uma gola de banda alta e curta que se encontra borda a borda no centro frontal em vez de uma lapela de entalhe ou bico. A ausência de lapela muda a frente: sobe reta ao pescoço sem linha de quebra, abotoada até a garganta. Comprimento no quadril, manga montada, sem lapela. Duas coisas resolvidas: o comprimento da gola de banda é o percurso do decote medido (duas frentes + costas) para fechar, e sua altura é limitada sob um limite de conforto que apertaria a garganta; e os botões de pé percorrem o centro frontal reto, com seu disco o button_dia modelado que dirige a interface de portada da peça. Corredor 5 do FC-500 (alfaiataria, T3).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["tailoring", "nehru-collar", "suit-jacket", "mandarin-collar", "shank-button", "hardware", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full jacket", "es": "Saco completo", "fr": "Veste complète", "pt": "Paletó completo"}, "script_file": "main.py", "pieces": ["front", "back", "sleeve", "collar"]}
+  ],
+  "pieces": [
+    {"id": "front", "label": {"en": "Front (straight CF)", "es": "Delantero (CD recto)", "fr": "Devant (MD droit)", "pt": "Frente (CF reto)"}, "default_color": "#2c3038", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "back", "label": {"en": "Back (cut 1 on fold)", "es": "Espalda (corte 1 al pliegue)", "fr": "Dos (coupé 1 au pli)", "pt": "Costas (corte 1 na dobra)"}, "default_color": "#262a31", "cut": {"quantity": 1, "on_fold": true, "mirror": true}},
+    {"id": "sleeve", "label": {"en": "Sleeve", "es": "Manga", "fr": "Manche", "pt": "Manga"}, "default_color": "#30343c", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "collar", "label": {"en": "Nehru stand collar", "es": "Cuello Nehru", "fr": "Col Nehru", "pt": "Gola Nehru"}, "default_color": "#22262c", "cut": {"quantity": 1, "mirror": false}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "chest_girth", "type": "slider", "group": "body", "default": 1020, "min": 820, "max": 1400, "step": 10, "measurement": {"standard": "iso_8559", "code": "chest_bust_girth"}, "label": {"en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)"}, "tooltip": {"en": "Full chest — the body block at coat ease", "es": "Pecho completo — el bloque con holgura", "fr": "Poitrine complète — le bloc avec aisance", "pt": "Peito completo — o bloco com folga"}},
+    {"id": "jacket_length", "type": "slider", "group": "body", "default": 740, "min": 600, "max": 900, "step": 10, "label": {"en": "Jacket length (mm)", "es": "Largo de saco (mm)", "fr": "Longueur de veste (mm)", "pt": "Comprimento do paletó (mm)"}, "tooltip": {"en": "Nape to hem", "es": "De la nuca al bajo", "fr": "De la nuque à l'ourlet", "pt": "Da nuca à barra"}},
+    {"id": "sleeve_length", "type": "slider", "group": "body", "default": 630, "min": 520, "max": 720, "step": 10, "measurement": {"standard": "iso_8559", "code": "arm_length"}, "label": {"en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)", "pt": "Comprimento de manga (mm)"}, "tooltip": {"en": "Shoulder to wrist", "es": "Del hombro a la muñeca", "fr": "De l'épaule au poignet", "pt": "Do ombro ao pulso"}},
+    {"id": "bicep_girth", "type": "slider", "group": "body", "default": 350, "min": 260, "max": 520, "step": 10, "measurement": {"standard": "iso_8559", "code": "bicep_girth"}, "label": {"en": "Bicep girth (mm)", "es": "Contorno de bíceps (mm)", "fr": "Tour de biceps (mm)", "pt": "Contorno de bíceps (mm)"}, "tooltip": {"en": "Sizes the sleeve", "es": "Dimensiona la manga", "fr": "Dimensionne la manche", "pt": "Dimensiona a manga"}},
+    {"id": "neck_girth", "type": "slider", "group": "body", "default": 400, "min": 320, "max": 520, "step": 10, "measurement": {"standard": "iso_8559", "code": "neck_girth"}, "label": {"en": "Neck girth (mm)", "es": "Contorno de cuello (mm)", "fr": "Tour de cou (mm)", "pt": "Contorno de pescoço (mm)"}, "tooltip": {"en": "The stand collar closes here", "es": "El cuello de banda cierra aquí", "fr": "Le col montant ferme ici", "pt": "A gola de banda fecha aqui"}},
+    {"id": "collar_height", "type": "slider", "group": "construction", "default": 45, "min": 25, "max": 80, "step": 5, "label": {"en": "Collar height (mm)", "es": "Alto de cuello (mm)", "fr": "Hauteur de col (mm)", "pt": "Altura da gola (mm)"}, "tooltip": {"en": "The Nehru stand height — clamped so it never binds the throat", "es": "El alto de la banda Nehru — limitado para que no apriete la garganta", "fr": "La hauteur du col Nehru — bridée pour ne pas serrer la gorge", "pt": "A altura da banda Nehru — limitada para não apertar a garganta"}},
+    {"id": "button_dia", "type": "slider", "group": "construction", "default": 20, "min": 15, "max": 30, "step": 1, "label": {"en": "Button diameter (mm)", "es": "Diámetro de botón (mm)", "fr": "Diamètre de bouton (mm)", "pt": "Diâmetro de botão (mm)"}, "tooltip": {"en": "The shank button disc — drives the hardware and the button-stand interface", "es": "El disco del botón de tija — define el herraje y la interfaz de portada", "fr": "Le disque du bouton à tige — pilote la quincaillerie et l'interface de patte", "pt": "O disco do botão de pé — dirige a ferragem e a interface de portada"}},
+    {"id": "coat_ease", "type": "slider", "group": "construction", "default": 110, "min": 60, "max": 220, "step": 10, "label": {"en": "Coat ease (mm)", "es": "Holgura de saco (mm)", "fr": "Aisance de veste (mm)", "pt": "Folga de paletó (mm)"}, "tooltip": {"en": "Wearing ease over the shirt", "es": "Holgura de uso sobre la camisa", "fr": "Aisance de port sur la chemise", "pt": "Folga de uso sobre a camisa"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 8, "max": 18, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Tailoring seam allowances", "es": "Márgenes de costura de sastrería", "fr": "Marges de couture tailleur", "pt": "Margens de costura de alfaiataria"}}
+  ],
+  "presets": [
+    {"id": "day", "label": {"en": "Day suit", "es": "Traje de día", "fr": "Costume de jour", "pt": "Terno de dia"}, "values": {"collar_height": 40, "jacket_length": 720}},
+    {"id": "sherwani_short", "label": {"en": "Short sherwani", "es": "Sherwani corto", "fr": "Sherwani court", "pt": "Sherwani curto"}, "values": {"jacket_length": 840, "collar_height": 55}}
+  ],
+  "constraints": [
+    {"expression": "chest_girth > 0", "message": {"en": "Chest girth must be positive.", "es": "El contorno de pecho debe ser positivo.", "fr": "Le tour de poitrine doit être positif.", "pt": "O contorno de peito deve ser positivo."}, "severity": "warning"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "button",
+    "subtype": "front shank buttons",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "shank-button-solid",
+      "linked": true,
+      "params_map": {
+        "diameter_mm": "button_dia",
+        "thickness": "max(3, seam_allowance)"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "button_stand", "type": "button_stand", "label": {"en": "Button stand (straight CF)", "es": "Portada (CD recto)", "fr": "Patte (MD droit)", "pt": "Portada (CF reto)"}, "edges": [{"piece": "front", "edge": "center_front"}], "parameters": ["button_dia", "jacket_length"]},
+      {"id": "stand_collar", "type": "neckline", "label": {"en": "Nehru stand collar", "es": "Cuello Nehru", "fr": "Col Nehru", "pt": "Gola Nehru"}, "edges": [{"piece": "collar", "edge": "neck_edge"}, {"piece": "back", "edge": "neckline"}], "parameters": ["neck_girth", "collar_height"]},
+      {"id": "armhole", "type": "armscye", "label": {"en": "Armhole / sleeve cap", "es": "Sisa / cabeza de manga", "fr": "Emmanchure / tête de manche", "pt": "Cava / cabeça de manga"}, "edges": [{"piece": "sleeve", "edge": "cap"}, {"piece": "front", "edge": "armhole"}, {"piece": "back", "edge": "armhole"}], "parameters": ["bicep_girth", "jacket_length"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "tailoring": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The Nehru collar is one of the few globally recognised alternatives to the Western lapel, and building it into a parametric commons matters precisely because most tailoring systems assume a notched lapel and force the mandarin collar into an afterthought. Drafting the front without a roll line, solving the stand collar to the measured neck so it closes cleanly, and clamping its height so no size binds the throat gives the collar the same rigour as a peaked lapel. Bridging the buttons to a printable, replaceable solid completes a made-to-measure jacket in a non-Western formal register, drafted with the care usually reserved for the lounge suit.",
+      "es": "El cuello Nehru es una de las pocas alternativas reconocidas globalmente a la solapa occidental, y llevarlo a un común paramétrico importa justo porque la mayoría de los sistemas de sastrería asumen una solapa de muesca y relegan el cuello mao a un añadido. Trazar el frente sin línea de quiebre, resolver el cuello de banda al cuello medido para que cierre limpio y limitar su altura para que ninguna talla apriete la garganta le da al cuello el mismo rigor que una solapa de pico. Puentear los botones a un sólido imprimible y reemplazable completa un saco a medida en un registro formal no occidental, trazado con el cuidado que suele reservarse al traje de calle.",
+      "fr": "Le col Nehru est l'une des rares alternatives mondialement reconnues au revers occidental, et l'intégrer à un commun paramétrique importe précisément parce que la plupart des systèmes de tailleur supposent un revers cranté et reléguent le col mao à un ajout. Tracer le devant sans ligne de cassure, résoudre le col montant au cou mesuré pour qu'il ferme net et brider sa hauteur pour qu'aucune taille ne serre la gorge donne au col la même rigueur qu'un revers cranté. Relier les boutons à un solide imprimable et remplaçable achève une veste sur mesure dans un registre formel non occidental, tracée avec le soin d'ordinaire réservé au costume de ville.",
+      "pt": "A gola Nehru é uma das poucas alternativas globalmente reconhecidas à lapela ocidental, e integrá-la a um comum paramétrico importa justamente porque a maioria dos sistemas de alfaiataria assume uma lapela de entalhe e relega a gola mandarim a um acréscimo. Modelar a frente sem linha de quebra, resolver a gola de banda ao pescoço medido para fechar limpo e limitar sua altura para nenhum tamanho apertar a garganta dá à gola o mesmo rigor de uma lapela de bico. Ligar os botões a um sólido imprimível e substituível completa um paletó sob medida num registro formal não ocidental, modelado com o cuidado geralmente reservado ao terno urbano."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

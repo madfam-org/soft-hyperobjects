@@ -1,0 +1,86 @@
+{
+  "project": {
+    "name": "Bellows-actuated elbow sleeve",
+    "slug": "bellows-elbow-sleeve",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "An elbow sleeve that flexes and extends an arm that cannot bend on its own: a printed TPU sleeve spanning the upper arm and forearm, carrying a bellows actuator along the inner crook so inflating it flexes the elbow and venting it lets the arm straighten. The sleeve is the soft body drafted here; the bellows is the Yantra4D bellows-actuator solid, never modelled here. The channel is SOLVED to the crook run: bellows_run IS the drafted crook channel, so the printed bellows is exactly as long as the channel that holds it; bellows_run drives both the hardware and the garment's own bellows-channel interface. Two tapered tubes share ONE elbow girth so the sleeve is continuous at the elbow. FC-500 lane 4 (adaptive / soft-exo).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una codera que flexiona y extiende un brazo que no puede doblarse solo: una manga de TPU impresa que abarca brazo y antebrazo, con un actuador de fuelle a lo largo del pliegue interno para que inflarlo flexione el codo y ventilarlo deje estirar el brazo. La manga es el cuerpo suave trazado aquí; el fuelle es el sólido bellows-actuator de Yantra4D, nunca modelado aquí. El canal se RESUELVE al recorrido del pliegue: bellows_run ES el canal trazado del pliegue, así el fuelle impreso es exactamente tan largo como el canal que lo aloja; bellows_run define tanto el herraje como la interfaz de canal de fuelle de la prenda. Dos tubos cónicos comparten UN contorno de codo para que la manga sea continua en el codo. Carril 4 de FC-500 (adaptativo / soft-exo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un manchon de coude qui fléchit et étend un bras qui ne peut se plier seul : un manchon en TPU imprimé couvrant le bras et l'avant-bras, portant un actionneur à soufflet le long du pli interne pour que le gonfler fléchisse le coude et le purger laisse tendre le bras. Le manchon est le corps souple tracé ici ; le soufflet est le solide bellows-actuator de Yantra4D, jamais modélisé ici. Le canal est RÉSOLU au parcours du pli : bellows_run EST le canal tracé du pli, de sorte que le soufflet imprimé est exactement aussi long que le canal qui l'accueille ; bellows_run pilote la quincaillerie ET l'interface de canal de soufflet du vêtement. Deux tubes coniques partagent UN tour de coude pour que le manchon soit continu au coude. Couloir 4 de FC-500 (adaptatif / soft-exo).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma cotoveleira que flexiona e estende um braço que não dobra sozinho: uma manga de TPU impressa cobrindo braço e antebraço, com um atuador de fole ao longo da dobra interna para que inflá-lo flexione o cotovelo e esvaziá-lo deixe esticar o braço. A manga é o corpo macio modelado aqui; o fole é o sólido bellows-actuator de Yantra4D, nunca modelado aqui. O canal é RESOLVIDO ao percurso da dobra: bellows_run É o canal modelado da dobra, então o fole impresso é exatamente tão longo quanto o canal que o abriga; bellows_run dirige tanto a ferragem quanto a interface de canal de fole da peça. Dois tubos cônicos compartilham UM contorno de cotovelo para a manga ser contínua no cotovelo. Corredor 4 do FC-500 (adaptativo / soft-exo).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["adaptive", "soft-exo", "elbow", "bellows", "exosuit", "tpu", "hardware", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full sleeve", "es": "Manga completa", "fr": "Manchon complet", "pt": "Manga completa"}, "script_file": "main.py", "pieces": ["upper", "fore", "cuff"]}
+  ],
+  "pieces": [
+    {"id": "upper", "label": {"en": "Upper-arm section (bellows channel)", "es": "Sección de brazo (canal de fuelle)", "fr": "Section de bras (canal de soufflet)", "pt": "Seção de braço (canal de fole)"}, "default_color": "#3a4652", "cut": {"quantity": 1, "mirror": false}},
+    {"id": "fore", "label": {"en": "Forearm section (bellows channel)", "es": "Sección de antebrazo (canal de fuelle)", "fr": "Section d'avant-bras (canal de soufflet)", "pt": "Seção de antebraço (canal de fole)"}, "default_color": "#44515e", "cut": {"quantity": 1, "mirror": false}},
+    {"id": "cuff", "label": {"en": "Wrist cuff", "es": "Puño de muñeca", "fr": "Poignet", "pt": "Punho"}, "default_color": "#2e3a45", "cut": {"quantity": 1, "mirror": false}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "upper_girth", "type": "slider", "group": "body", "default": 300, "min": 220, "max": 440, "step": 5, "measurement": {"standard": "iso_8559", "code": "bicep_girth"}, "label": {"en": "Upper-arm girth (mm)", "es": "Contorno de brazo (mm)", "fr": "Tour de bras (mm)", "pt": "Contorno de braço (mm)"}, "tooltip": {"en": "Around the upper arm — the top of the sleeve", "es": "Alrededor del brazo — la parte alta de la manga", "fr": "Autour du bras — le haut du manchon", "pt": "Ao redor do braço — o topo da manga"}},
+    {"id": "elbow_girth", "type": "slider", "group": "body", "default": 270, "min": 200, "max": 400, "step": 5, "measurement": {"standard": "iso_8559", "code": "bicep_girth"}, "label": {"en": "Elbow girth (mm)", "es": "Contorno de codo (mm)", "fr": "Tour de coude (mm)", "pt": "Contorno de cotovelo (mm)"}, "tooltip": {"en": "The shared join girth of the two sections", "es": "El contorno de unión compartido de las dos secciones", "fr": "Le tour de jonction partagé des deux sections", "pt": "O contorno de junção compartilhado das duas seções"}},
+    {"id": "wrist_girth", "type": "slider", "group": "body", "default": 180, "min": 140, "max": 260, "step": 5, "measurement": {"standard": "iso_8559", "code": "wrist_girth"}, "label": {"en": "Wrist girth (mm)", "es": "Contorno de muñeca (mm)", "fr": "Tour de poignet (mm)", "pt": "Contorno de punho (mm)"}, "tooltip": {"en": "The cuff opening", "es": "La abertura del puño", "fr": "L'ouverture du poignet", "pt": "A abertura do punho"}},
+    {"id": "sleeve_length", "type": "slider", "group": "body", "default": 420, "min": 300, "max": 560, "step": 10, "label": {"en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manchon (mm)", "pt": "Comprimento de manga (mm)"}, "tooltip": {"en": "Upper-arm anchor to wrist", "es": "Del anclaje del brazo a la muñeca", "fr": "De l'ancrage du bras au poignet", "pt": "Da ancoragem do braço ao punho"}},
+    {"id": "bellows_run", "type": "slider", "group": "construction", "default": 180, "min": 90, "max": 300, "step": 5, "label": {"en": "Bellows run (mm)", "es": "Recorrido de fuelle (mm)", "fr": "Parcours de soufflet (mm)", "pt": "Percurso de fole (mm)"}, "tooltip": {"en": "The crook channel run — the bellows is solved to this", "es": "El recorrido del canal del pliegue — el fuelle se resuelve de esto", "fr": "Le parcours du canal du pli — le soufflet en découle", "pt": "O percurso do canal da dobra — o fole é resolvido disto"}},
+    {"id": "negative_ease_pct", "type": "slider", "group": "construction", "default": 5, "min": 2, "max": 12, "step": 1, "label": {"en": "Negative ease (%)", "es": "Holgura negativa (%)", "fr": "Aisance négative (%)", "pt": "Folga negativa (%)"}, "tooltip": {"en": "The sleeve grips by being cut smaller than the arm", "es": "La manga agarra al cortarse más pequeña que el brazo", "fr": "Le manchon tient en étant coupé plus petit que le bras", "pt": "A manga firma sendo cortada menor que o braço"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 8, "min": 4, "max": 14, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Sealed sleeve seams", "es": "Costuras de manga selladas", "fr": "Coutures de manchon scellées", "pt": "Costuras de manga seladas"}}
+  ],
+  "presets": [
+    {"id": "flex_assist", "label": {"en": "Flexion assist", "es": "Asistencia de flexión", "fr": "Assistance de flexion", "pt": "Assistência de flexão"}, "values": {"bellows_run": 220, "negative_ease_pct": 6}},
+    {"id": "gentle", "label": {"en": "Gentle", "es": "Suave", "fr": "Douce", "pt": "Suave"}, "values": {"bellows_run": 140, "negative_ease_pct": 4}}
+  ],
+  "constraints": [
+    {"expression": "wrist_girth < elbow_girth", "message": {"en": "Wrist girth should be smaller than elbow girth.", "es": "El contorno de muñeca debe ser menor que el de codo.", "fr": "Le tour de poignet doit être inférieur au tour de coude.", "pt": "O contorno de punho deve ser menor que o de cotovelo."}, "severity": "warning"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "bellows actuator channel",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "bellows-actuator",
+      "linked": true,
+      "params_map": {
+        "outer_dia": "elbow_girth"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "bellows_channel", "type": "custom", "label": {"en": "Crook bellows channel (solved to bellows_run)", "es": "Canal de fuelle del pliegue (resuelto a bellows_run)", "fr": "Canal de soufflet du pli (résolu sur bellows_run)", "pt": "Canal de fole da dobra (resolvido a bellows_run)"}, "edges": [{"piece": "upper", "edge": "bottom"}, {"piece": "fore", "edge": "top"}], "parameters": ["bellows_run", "sleeve_length"]},
+      {"id": "elbow_join", "type": "custom", "label": {"en": "Elbow join (upper to forearm, shared girth)", "es": "Unión de codo (brazo a antebrazo, contorno compartido)", "fr": "Jonction de coude (bras à avant-bras, tour partagé)", "pt": "Junção de cotovelo (braço a antebraço, contorno compartilhado)"}, "edges": [{"piece": "upper", "edge": "bottom"}, {"piece": "fore", "edge": "top"}], "parameters": ["elbow_girth", "negative_ease_pct"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "An arm that cannot bend loses the reach that brings a cup to the mouth or a hand to the face, and rigid powered braces are heavy, loud and one-size. A soft bellows in the crook flexes the elbow gently and silently, and lets it fall back to straight when vented — motion that follows the arm rather than forcing it. Making the bellows the printable, replaceable part means the assist can be re-tuned to the person's strength, and the channel is solved to the crook so the printed bellows fits the sleeve and the sleeve fits the arm. A soft-exo sleeve that is made to measure and repairable becomes a commons object rather than a sealed exosuit joint.",
+      "es": "Un brazo que no puede doblarse pierde el alcance que lleva una taza a la boca o una mano a la cara, y las férulas motorizadas rígidas son pesadas, ruidosas y de talla única. Un fuelle suave en el pliegue flexiona el codo con suavidad y silencio, y lo deja volver a estirarse al ventilarlo — movimiento que sigue al brazo en vez de forzarlo. Hacer del fuelle la parte imprimible y reemplazable permite reafinar el apoyo a la fuerza de la persona, y el canal se resuelve al pliegue para que el fuelle impreso ajuste a la manga y la manga al brazo. Una manga soft-exo a medida y reparable se vuelve un objeto común en vez de una articulación de exotraje sellada.",
+      "fr": "Un bras qui ne peut se plier perd la portée qui amène une tasse à la bouche ou une main au visage, et les attelles motorisées rigides sont lourdes, bruyantes et à taille unique. Un soufflet souple dans le pli fléchit le coude en douceur et en silence, et le laisse retomber tendu à la purge — un mouvement qui suit le bras plutôt que de le forcer. Faire du soufflet la pièce imprimable et remplaçable permet de réaccorder l'assistance à la force de la personne, et le canal est résolu au pli pour que le soufflet imprimé aille au manchon et le manchon au bras. Un manchon soft-exo sur mesure et réparable devient un objet commun plutôt qu'une articulation d'exosquelette scellée.",
+      "pt": "Um braço que não dobra perde o alcance que leva uma xícara à boca ou uma mão ao rosto, e as talas motorizadas rígidas são pesadas, barulhentas e de tamanho único. Um fole macio na dobra flexiona o cotovelo com suavidade e silêncio, e o deixa voltar esticado ao esvaziar — movimento que segue o braço em vez de forçá-lo. Fazer do fole a peça imprimível e substituível permite reafinar o apoio à força da pessoa, e o canal é resolvido à dobra para que o fole impresso sirva à manga e a manga ao braço. Uma manga soft-exo sob medida e reparável torna-se um objeto comum em vez de uma articulação de exotraje selada."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

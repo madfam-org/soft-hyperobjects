@@ -1,0 +1,92 @@
+{
+  "project": {
+    "name": "Braid-side formal trouser",
+    "slug": "formal-tailcoat-trouser",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The dress trouser of evening and morning wear: a plain-front trouser with a galloon braid down the outside seam — one row of silk braid for morning dress, two for white-tie — no belt loops, no turn-ups, closing at the waist on a trouser hook and bar. The braid is the defining feature, drafted as a marking down the outside seam; the hook-bar is the closure. Two things solved: the front and back share one measured SIDE_LEN so the braided outside seam matches, the rise difference taken at the centre seams over ONE shared crotch point so the inseams are identical and the leg cannot twist; and the trouser hook and bar closes the waistband, its hook width the drafted hook_width that drives the garment's waistband-closure interface AND the Yantra4D trouser-hook-bar sew plate. FC-500 lane 5 (tailoring, T3).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El pantalón de vestir de noche y de día: un pantalón de frente liso con galón de seda por la costura exterior — una hilera para media etiqueta, dos para etiqueta blanca — sin trabillas, sin vuelta, que cierra en la cintura con gancho y barra. El galón es el rasgo definitorio, trazado como marca por la costura exterior; el gancho-barra es el cierre. Dos cosas resueltas: el delantero y el trasero comparten un SIDE_LEN medido para que la costura exterior con galón coincida, con la diferencia de tiro tomada en las costuras centrales sobre UN punto de entrepierna compartido para que las entrepiernas sean idénticas y la pierna no se tuerza; y el gancho y barra cierra la pretina, con su ancho el hook_width trazado que define la interfaz de cierre de pretina Y la placa de cosido del trouser-hook-bar de Yantra4D. Carril 5 de FC-500 (sastrería, T3).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le pantalon habillé du soir et du jour : un pantalon à devant plat avec un galon de soie le long de la couture extérieure — un rang pour la tenue de jour, deux pour la cravate blanche — sans passants, sans revers, fermé à la taille par un crochet et une barre. Le galon est le trait déterminant, tracé comme marquage le long de la couture extérieure ; le crochet-barre est la fermeture. Deux choses résolues : le devant et le dos partagent un SIDE_LEN mesuré pour que la couture extérieure galonnée corresponde, la différence de montée prise aux coutures centrales sur UN point d'entrejambe partagé pour que les entrejambes soient identiques et que la jambe ne vrille pas ; et le crochet et la barre ferment la ceinture, sa largeur de crochet étant le hook_width tracé qui pilote l'interface de fermeture de ceinture ET la plaque de couture du trouser-hook-bar de Yantra4D. Couloir 5 de FC-500 (tailleur, T3).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A calça social da noite e do dia: uma calça de frente lisa com galão de seda pela costura externa — uma fileira para traje de dia, duas para gravata branca — sem passantes, sem bainha dobrada, fechando na cintura com gancho e barra. O galão é o traço definidor, modelado como marcação pela costura externa; o gancho-barra é o fecho. Duas coisas resolvidas: a frente e as costas compartilham um SIDE_LEN medido para a costura externa com galão coincidir, com a diferença de gancho tomada nas costuras centrais sobre UM ponto de gancho compartilhado para os ganchos serem idênticos e a perna não torcer; e o gancho e barra fecham o cós, com sua largura o hook_width modelado que dirige a interface de fechamento de cós E a placa de costura do trouser-hook-bar de Yantra4D. Corredor 5 do FC-500 (alfaiataria, T3).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["tailoring", "dress-trouser", "galloon", "braid", "formalwear", "trouser-hook-bar", "hardware", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full trouser", "es": "Pantalón completo", "fr": "Pantalon complet", "pt": "Calça completa"}, "script_file": "main.py", "pieces": ["front", "back", "waistband"]}
+  ],
+  "pieces": [
+    {"id": "front", "label": {"en": "Front (braid outseam)", "es": "Delantero (galón exterior)", "fr": "Devant (galon extérieur)", "pt": "Frente (galão externo)"}, "default_color": "#232329", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "back", "label": {"en": "Back (raised rise)", "es": "Trasero (tiro alto)", "fr": "Dos (montée haute)", "pt": "Costas (gancho alto)"}, "default_color": "#1f1f25", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "waistband", "label": {"en": "Waistband (hook and bar)", "es": "Pretina (gancho y barra)", "fr": "Ceinture (crochet et barre)", "pt": "Cós (gancho e barra)"}, "default_color": "#26262c", "cut": {"quantity": 1, "mirror": false}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "waist_girth", "type": "slider", "group": "body", "default": 860, "min": 600, "max": 1400, "step": 10, "measurement": {"standard": "iso_8559", "code": "waist_girth"}, "label": {"en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)", "pt": "Contorno de cintura (mm)"}, "tooltip": {"en": "Natural waist — the hook and bar close here", "es": "Cintura natural — el gancho y barra cierran aquí", "fr": "Taille naturelle — le crochet et la barre ferment ici", "pt": "Cintura natural — o gancho e barra fecham aqui"}},
+    {"id": "hip_girth", "type": "slider", "group": "body", "default": 1020, "min": 760, "max": 1560, "step": 10, "measurement": {"standard": "iso_8559", "code": "hip_girth"}, "label": {"en": "Hip girth (mm)", "es": "Contorno de cadera (mm)", "fr": "Tour de hanche (mm)", "pt": "Contorno de quadril (mm)"}, "tooltip": {"en": "Fullest hip — the seat must clear it", "es": "Cadera más llena — el asiento debe librarla", "fr": "Hanche la plus forte — le siège doit la dégager", "pt": "Quadril mais cheio — o assento deve liberá-lo"}},
+    {"id": "outseam", "type": "slider", "group": "body", "default": 1080, "min": 900, "max": 1260, "step": 10, "label": {"en": "Outseam (mm)", "es": "Largo exterior (mm)", "fr": "Longueur extérieure (mm)", "pt": "Comprimento externo (mm)"}, "tooltip": {"en": "Side waist to hem — the braid runs this", "es": "De la cintura lateral al bajo — el galón lo recorre", "fr": "De la taille côté à l'ourlet — le galon le parcourt", "pt": "Da cintura lateral à barra — o galão o percorre"}},
+    {"id": "front_rise", "type": "slider", "group": "body", "default": 280, "min": 220, "max": 360, "step": 5, "label": {"en": "Front rise (mm)", "es": "Tiro delantero (mm)", "fr": "Montée devant (mm)", "pt": "Gancho dianteiro (mm)"}, "tooltip": {"en": "High-waisted for evening dress", "es": "De talle alto para traje de noche", "fr": "Taille haute pour la tenue de soirée", "pt": "Cintura alta para traje de noite"}},
+    {"id": "back_rise_extra", "type": "slider", "group": "body", "default": 40, "min": 10, "max": 120, "step": 5, "label": {"en": "Extra back rise (mm)", "es": "Tiro trasero extra (mm)", "fr": "Montée dos supplémentaire (mm)", "pt": "Gancho traseiro extra (mm)"}, "tooltip": {"en": "Clamped under the leg so the waist can't invert", "es": "Limitado bajo la pierna para que la cintura no se invierta", "fr": "Bridée sous la jambe pour que la taille ne s'inverse pas", "pt": "Limitado sob a perna para a cintura não inverter"}},
+    {"id": "hem_width", "type": "slider", "group": "construction", "default": 210, "min": 150, "max": 300, "step": 10, "label": {"en": "Hem width (mm)", "es": "Ancho de bajo (mm)", "fr": "Largeur d'ourlet (mm)", "pt": "Largura de barra (mm)"}, "tooltip": {"en": "The finished trouser hem width", "es": "El ancho terminado del bajo", "fr": "La largeur d'ourlet finie", "pt": "A largura de barra final"}},
+    {"id": "braid_width", "type": "slider", "group": "construction", "default": 25, "min": 8, "max": 50, "step": 2, "label": {"en": "Braid width (mm)", "es": "Ancho de galón (mm)", "fr": "Largeur de galon (mm)", "pt": "Largura de galão (mm)"}, "tooltip": {"en": "The galloon braid width down the outside seam", "es": "El ancho del galón por la costura exterior", "fr": "La largeur du galon le long de la couture extérieure", "pt": "A largura do galão pela costura externa"}},
+    {"id": "hook_width", "type": "slider", "group": "construction", "default": 32, "min": 20, "max": 50, "step": 2, "label": {"en": "Hook width (mm)", "es": "Ancho de gancho (mm)", "fr": "Largeur de crochet (mm)", "pt": "Largura de gancho (mm)"}, "tooltip": {"en": "The trouser hook width — drives the hardware and the waistband-closure interface", "es": "El ancho del gancho — define el herraje y la interfaz de cierre de pretina", "fr": "La largeur du crochet — pilote la quincaillerie et l'interface de fermeture de ceinture", "pt": "A largura do gancho — dirige a ferragem e a interface de fechamento de cós"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 8, "max": 18, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Tailoring seam allowances", "es": "Márgenes de costura de sastrería", "fr": "Marges de couture tailleur", "pt": "Margens de costura de alfaiataria"}}
+  ],
+  "presets": [
+    {"id": "morning", "label": {"en": "Morning (single braid)", "es": "De día (un galón)", "fr": "De jour (un galon)", "pt": "De dia (um galão)"}, "values": {"braid_width": 18, "front_rise": 300}},
+    {"id": "white_tie", "label": {"en": "White-tie (double braid)", "es": "Etiqueta blanca (doble galón)", "fr": "Cravate blanche (double galon)", "pt": "Gravata branca (galão duplo)"}, "values": {"braid_width": 30, "front_rise": 320}}
+  ],
+  "constraints": [
+    {"expression": "hip_girth > waist_girth", "message": {"en": "Hip girth should exceed waist girth.", "es": "El contorno de cadera debe superar al de cintura.", "fr": "Le tour de hanche doit dépasser celui de taille.", "pt": "O contorno de quadril deve exceder o de cintura."}, "severity": "warning"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "hook",
+    "subtype": "waistband trouser hook and bar",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "trouser-hook-bar",
+      "linked": true,
+      "params_map": {
+        "hook_width": "hook_width",
+        "plate_t": "3",
+        "sew_holes": "4"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "waistband_closure", "type": "waistband", "label": {"en": "Waistband closure (hook and bar)", "es": "Cierre de pretina (gancho y barra)", "fr": "Fermeture de ceinture (crochet et barre)", "pt": "Fechamento de cós (gancho e barra)"}, "edges": [{"piece": "waistband", "edge": "attach"}], "parameters": ["hook_width", "waist_girth"]},
+      {"id": "braid_outseam", "type": "side_seam", "label": {"en": "Braided outside seam", "es": "Costura exterior con galón", "fr": "Couture extérieure galonnée", "pt": "Costura externa com galão"}, "edges": [{"piece": "front", "edge": "side"}, {"piece": "back", "edge": "side"}], "parameters": ["braid_width", "outseam"]},
+      {"id": "rise_seam", "type": "custom", "label": {"en": "Rise seams (front lower, back higher)", "es": "Costuras de tiro (delante bajo, atrás alto)", "fr": "Coutures de montée (devant bas, dos haut)", "pt": "Costuras de gancho (frente baixa, costas altas)"}, "edges": [{"piece": "front", "edge": "centre_front"}, {"piece": "back", "edge": "centre_back"}], "parameters": ["front_rise", "back_rise_extra"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "tailoring": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The braid-side trouser is the lower half of formal dress, and its correctness is all in the outside seam: the braid must run a seam that closes true, or it wanders and the whole leg reads wrong. Sharing one measured side length between front and back so the braided seam matches, and one shared crotch so the inseams are identical and the leg cannot twist, gives the braid a true line at any size. No belt loops means the waist relies entirely on the hook and bar, so bridging that closure to a printable, replaceable solid — the single most-lost trouser fastening — makes the formal trouser a made-to-measure commons object that can be maintained rather than rebuilt when the hook fails.",
+      "es": "El pantalón con galón es la mitad inferior del traje de etiqueta, y su corrección está toda en la costura exterior: el galón debe recorrer una costura que cierre bien, o se desvía y toda la pierna se ve mal. Compartir un largo lateral medido entre delantero y trasero para que la costura con galón coincida, y un punto de entrepierna compartido para que las entrepiernas sean idénticas y la pierna no se tuerza, le da al galón una línea verdadera en cualquier talla. Sin trabillas, la cintura depende del gancho y barra, así que puentear ese cierre a un sólido imprimible y reemplazable — el cierre de pantalón que más se pierde — vuelve al pantalón formal un objeto común a medida que se mantiene en vez de rehacerse cuando falla el gancho.",
+      "fr": "Le pantalon galonné est la moitié inférieure de la tenue de soirée, et sa justesse tient tout entière à la couture extérieure : le galon doit suivre une couture qui ferme juste, sinon il divague et toute la jambe tombe mal. Partager une longueur côté mesurée entre devant et dos pour que la couture galonnée corresponde, et un point d'entrejambe partagé pour que les entrejambes soient identiques et que la jambe ne vrille pas, donne au galon une ligne juste à toute taille. Sans passants, la taille repose entièrement sur le crochet et la barre, donc relier cette fermeture à un solide imprimable et remplaçable — la fermeture de pantalon la plus souvent perdue — fait du pantalon habillé un objet commun sur mesure qui s'entretient plutôt que de se refaire quand le crochet cède.",
+      "pt": "A calça com galão é a metade inferior do traje de gala, e sua correção está toda na costura externa: o galão deve percorrer uma costura que feche certa, ou ele vagueia e toda a perna fica errada. Compartilhar um comprimento lateral medido entre frente e costas para a costura com galão coincidir, e um ponto de gancho compartilhado para os ganchos serem idênticos e a perna não torcer, dá ao galão uma linha verdadeira em qualquer tamanho. Sem passantes, a cintura depende do gancho e barra, então ligar esse fecho a um sólido imprimível e substituível — o fecho de calça mais perdido — torna a calça formal um objeto comum sob medida que se mantém em vez de se refazer quando o gancho falha."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "project": {
+    "name": "Packable running windbreaker",
+    "slug": "windbreaker-packable",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A featherweight ripstop running windbreaker that packs into its own chest pocket: a full-zip shell with a drawcord hem and hood, cut with positive ease so it layers over a running top, and so light it stuffs into a pocket the size of a fist. The drawcords cinch on cord-locks at the hem and hood so the wind does not get under it on a descent. Two things solved: the hem drawcord channel runs the full hem and its cord runs the hem plus a cord-lock tail, the cord-lock a Yantra4D solid whose cord diameter is driven by the garment's drawcord parameter — the hem-cinch interface; and the shell is cut with positive ease to layer, the packable pocket clamped under the front so the whole jacket can invert into it. FC-500 lane 6 (active).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un rompevientos de correr ultraligero en ripstop que se guarda en su propio bolsillo de pecho: un shell con cierre completo, dobladillo y capucha con cordón, cortado con holgura positiva para ponerse sobre un top de correr, y tan ligero que se mete en un bolsillo del tamaño de un puño. Los cordones ajustan con cord-locks en el bajo y la capucha para que el viento no se meta por debajo en una bajada. Dos cosas resueltas: el canal del cordón del bajo recorre todo el bajo y su cordón recorre el bajo más una cola de cord-lock, siendo el cord-lock un sólido de Yantra4D cuyo diámetro de cordón define el parámetro de cordón de la prenda — la interfaz de ajuste del bajo; y el shell se corta con holgura positiva para capas, con el bolsillo empacable limitado bajo el frente para que toda la chaqueta se invierta en él. Carril 6 de FC-500 (activo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un coupe-vent de course ultraléger en ripstop qui se plie dans sa propre poche poitrine : une coque à fermeture complète, ourlet et capuche à cordon, coupée en aisance positive pour se porter sur un haut de course, et si légère qu'elle se range dans une poche de la taille d'un poing. Les cordons se cinchent sur des cord-locks à l'ourlet et à la capuche pour que le vent ne passe pas dessous en descente. Deux choses résolues : le canal de cordon d'ourlet parcourt tout l'ourlet et son cordon parcourt l'ourlet plus une queue de cord-lock, le cord-lock étant un solide Yantra4D dont le diamètre de cordon est piloté par le paramètre de cordon du vêtement — l'interface de serrage d'ourlet ; et la coque est coupée en aisance positive pour se superposer, la poche pliable bridée sous le devant pour que toute la veste s'y retourne. Couloir 6 de FC-500 (actif).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um corta-vento de corrida ultraleve em ripstop que se dobra no próprio bolso de peito: uma casca com zíper completo, barra e capuz com cordão, cortada em folga positiva para vestir sobre um top de corrida, e tão leve que cabe num bolso do tamanho de um punho. Os cordões ajustam em cord-locks na barra e no capuz para o vento não entrar por baixo numa descida. Duas coisas resolvidas: o canal do cordão da barra percorre toda a barra e seu cordão percorre a barra mais uma cauda de cord-lock, sendo o cord-lock um sólido de Yantra4D cujo diâmetro de cordão é dirigido pelo parâmetro de cordão da peça — a interface de ajuste da barra; e a casca é cortada em folga positiva para sobrepor, com o bolso dobrável limitado sob a frente para toda a jaqueta inverter nele. Corredor 6 do FC-500 (ativo).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["active", "running", "windbreaker", "packable", "ripstop", "shell", "cord-lock", "hardware", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full windbreaker", "es": "Rompevientos completo", "fr": "Coupe-vent complet", "pt": "Corta-vento completo"}, "script_file": "main.py", "pieces": ["front", "back", "sleeve", "hood"]}
+  ],
+  "pieces": [
+    {"id": "front", "label": {"en": "Front (zip + pack pocket)", "es": "Frente (cierre + bolsillo)", "fr": "Devant (fermeture + poche)", "pt": "Frente (zíper + bolso)"}, "default_color": "#d0e030", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "back", "label": {"en": "Back (cut 1 on fold)", "es": "Espalda (corte 1 al pliegue)", "fr": "Dos (coupé 1 au pli)", "pt": "Costas (corte 1 na dobra)"}, "default_color": "#c2d229", "cut": {"quantity": 1, "on_fold": true, "mirror": true}},
+    {"id": "sleeve", "label": {"en": "Sleeve", "es": "Manga", "fr": "Manche", "pt": "Manga"}, "default_color": "#d8e840", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "hood", "label": {"en": "Hood (drawcord)", "es": "Capucha (cordón)", "fr": "Capuche (cordon)", "pt": "Capuz (cordão)"}, "default_color": "#c2d229", "cut": {"quantity": 2, "mirror": true}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "chest_girth", "type": "slider", "group": "body", "default": 1000, "min": 760, "max": 1500, "step": 10, "measurement": {"standard": "iso_8559", "code": "chest_bust_girth"}, "label": {"en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)"}, "tooltip": {"en": "Full chest — the shell at positive ease to layer", "es": "Pecho completo — el shell con holgura positiva para capas", "fr": "Poitrine complète — la coque en aisance positive pour se superposer", "pt": "Peito completo — a casca com folga positiva para sobrepor"}},
+    {"id": "back_length", "type": "slider", "group": "body", "default": 680, "min": 520, "max": 860, "step": 10, "label": {"en": "Back length (mm)", "es": "Largo de espalda (mm)", "fr": "Longueur de dos (mm)", "pt": "Comprimento das costas (mm)"}, "tooltip": {"en": "Nape to hem", "es": "De la nuca al borde", "fr": "De la nuque à l'ourlet", "pt": "Da nuca à barra"}},
+    {"id": "sleeve_length", "type": "slider", "group": "body", "default": 620, "min": 420, "max": 720, "step": 10, "measurement": {"standard": "iso_8559", "code": "arm_length"}, "label": {"en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)", "pt": "Comprimento de manga (mm)"}, "tooltip": {"en": "Shoulder to wrist", "es": "Del hombro a la muñeca", "fr": "De l'épaule au poignet", "pt": "Do ombro ao pulso"}},
+    {"id": "bicep_girth", "type": "slider", "group": "body", "default": 360, "min": 260, "max": 560, "step": 10, "measurement": {"standard": "iso_8559", "code": "bicep_girth"}, "label": {"en": "Bicep girth (mm)", "es": "Contorno de bíceps (mm)", "fr": "Tour de biceps (mm)", "pt": "Contorno de bíceps (mm)"}, "tooltip": {"en": "Sizes the sleeve", "es": "Dimensiona la manga", "fr": "Dimensionne la manche", "pt": "Dimensiona a manga"}},
+    {"id": "neck_girth", "type": "slider", "group": "body", "default": 400, "min": 320, "max": 560, "step": 10, "measurement": {"standard": "iso_8559", "code": "neck_girth"}, "label": {"en": "Neck girth (mm)", "es": "Contorno de cuello (mm)", "fr": "Tour de cou (mm)", "pt": "Contorno de pescoço (mm)"}, "tooltip": {"en": "The hood sets into the measured neckline", "es": "La capucha se monta en el escote medido", "fr": "La capuche se monte sur l'encolure mesurée", "pt": "O capuz se monta no decote medido"}},
+    {"id": "hood_height", "type": "slider", "group": "construction", "default": 320, "min": 220, "max": 440, "step": 10, "label": {"en": "Hood height (mm)", "es": "Alto de capucha (mm)", "fr": "Hauteur de capuche (mm)", "pt": "Altura de capuz (mm)"}, "tooltip": {"en": "How tall the hood rises", "es": "Cuánto sube la capucha", "fr": "Jusqu'où la capuche monte", "pt": "Quanto o capuz sobe"}},
+    {"id": "drawcord_dia", "type": "slider", "group": "construction", "default": 4, "min": 2, "max": 8, "step": 1, "label": {"en": "Drawcord diameter (mm)", "es": "Diámetro de cordón (mm)", "fr": "Diamètre de cordon (mm)", "pt": "Diâmetro de cordão (mm)"}, "tooltip": {"en": "The hem/hood drawcord diameter — drives the hardware and the hem-cinch interface", "es": "El diámetro del cordón — define el herraje y la interfaz de ajuste del bajo", "fr": "Le diamètre du cordon — pilote la quincaillerie et l'interface de serrage d'ourlet", "pt": "O diâmetro do cordão — dirige a ferragem e a interface de ajuste da barra"}},
+    {"id": "shell_ease", "type": "slider", "group": "construction", "default": 180, "min": 80, "max": 320, "step": 10, "label": {"en": "Shell ease (mm)", "es": "Holgura de shell (mm)", "fr": "Aisance de coque (mm)", "pt": "Folga da casca (mm)"}, "tooltip": {"en": "Positive ease to layer over a running top", "es": "Holgura positiva para ponerse sobre un top de correr", "fr": "Aisance positive pour se porter sur un haut de course", "pt": "Folga positiva para vestir sobre um top de corrida"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 8, "min": 6, "max": 14, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Narrow bound or flat-fell seams so the shell packs small", "es": "Costuras angostas para que el shell se guarde pequeño", "fr": "Coutures étroites pour que la coque se plie petit", "pt": "Costuras estreitas para a casca dobrar pequena"}}
+  ],
+  "presets": [
+    {"id": "race", "label": {"en": "Race (minimal)", "es": "Competición (mínimo)", "fr": "Course (minimal)", "pt": "Competição (mínimo)"}, "values": {"shell_ease": 120, "hood_height": 280}},
+    {"id": "mountain", "label": {"en": "Mountain (covered)", "es": "Montaña (cubierto)", "fr": "Montagne (couvert)", "pt": "Montanha (coberto)"}, "values": {"shell_ease": 240, "hood_height": 380}}
+  ],
+  "constraints": [
+    {"expression": "chest_girth > 0", "message": {"en": "Chest girth must be positive.", "es": "El contorno de pecho debe ser positivo.", "fr": "Le tour de poitrine doit être positif.", "pt": "O contorno de peito deve ser positivo."}, "severity": "warning"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "hem and hood cord-lock drawcords",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "cord-lock",
+      "linked": true,
+      "params_map": {
+        "cord_dia": "drawcord_dia",
+        "cords": "2"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "hem_cinch", "type": "hem", "label": {"en": "Hem drawcord cinch (cord-lock)", "es": "Ajuste de cordón del bajo (cord-lock)", "fr": "Serrage cordon d'ourlet (cord-lock)", "pt": "Ajuste de cordão da barra (cord-lock)"}, "edges": [{"piece": "front", "edge": "hem"}, {"piece": "back", "edge": "hem"}], "parameters": ["drawcord_dia", "chest_girth"]},
+      {"id": "hood_cinch", "type": "custom", "label": {"en": "Hood drawcord cinch (cord-lock)", "es": "Ajuste de cordón de capucha (cord-lock)", "fr": "Serrage cordon de capuche (cord-lock)", "pt": "Ajuste de cordão de capuz (cord-lock)"}, "edges": [{"piece": "hood", "edge": "front_edge"}], "parameters": ["drawcord_dia", "hood_height"]},
+      {"id": "armhole", "type": "armscye", "label": {"en": "Armhole / sleeve cap", "es": "Sisa / cabeza de manga", "fr": "Emmanchure / tête de manche", "pt": "Cava / cabeça de manga"}, "edges": [{"piece": "sleeve", "edge": "cap"}, {"piece": "front", "edge": "armhole"}, {"piece": "back", "edge": "armhole"}], "parameters": ["bicep_girth", "back_length"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A packable windbreaker is a runner's insurance against weather that turns mid-run, and its whole value depends on two things being right: it has to seal — cinch at hem and hood so wind does not balloon it — and it has to disappear when not needed, packing to fist size in a chest pocket. Solving the drawcord to a printable cord-lock, and the shell to a positive ease that layers without flapping, makes a genuinely useful shell that fits a real body rather than a rack size. Bridging the cord-locks — the parts that crack in the cold and strand a cinch open — to a printable, replaceable solid means the jacket can be repaired at the trailhead, extending the life of a garment made to be carried for years.",
+      "es": "Un rompevientos empacable es el seguro del corredor contra un clima que cambia a media carrera, y todo su valor depende de dos cosas bien hechas: debe sellar — ajustar en bajo y capucha para que el viento no lo infle — y debe desaparecer cuando no se usa, guardándose del tamaño de un puño en un bolsillo de pecho. Resolver el cordón a un cord-lock imprimible, y el shell a una holgura positiva que ponga capas sin ondear, hace un shell realmente útil que ajusta a un cuerpo real y no a una talla de percha. Puentear los cord-locks — las piezas que se rompen con el frío y dejan un ajuste abierto — a un sólido imprimible y reemplazable permite reparar la chaqueta en el inicio del sendero, extendiendo la vida de una prenda hecha para llevarse por años.",
+      "fr": "Un coupe-vent pliable est l'assurance du coureur contre un temps qui change en pleine course, et toute sa valeur dépend de deux choses bien faites : il doit sceller — se cincher à l'ourlet et à la capuche pour que le vent ne le gonfle pas — et il doit disparaître quand il n'est pas utile, se pliant à la taille d'un poing dans une poche poitrine. Résoudre le cordon à un cord-lock imprimable, et la coque à une aisance positive qui se superpose sans battre, fait une coque vraiment utile qui va à un corps réel et non à une taille de portant. Relier les cord-locks — les pièces qui craquent au froid et laissent un serrage ouvert — à un solide imprimable et remplaçable permet de réparer la veste au départ du sentier, prolongeant la vie d'un vêtement fait pour être porté des années.",
+      "pt": "Um corta-vento dobrável é o seguro do corredor contra um tempo que muda em plena corrida, e todo o seu valor depende de duas coisas bem feitas: ele precisa vedar — ajustar na barra e no capuz para o vento não inflá-lo — e precisa desaparecer quando não é útil, dobrando ao tamanho de um punho num bolso de peito. Resolver o cordão a um cord-lock imprimível, e a casca a uma folga positiva que sobrepõe sem balançar, faz uma casca realmente útil que serve a um corpo real e não a um tamanho de cabide. Ligar os cord-locks — as peças que racham no frio e deixam um ajuste aberto — a um sólido imprimível e substituível permite reparar a jaqueta no início da trilha, estendendo a vida de uma peça feita para ser carregada por anos."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

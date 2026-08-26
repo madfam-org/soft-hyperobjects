@@ -1,0 +1,88 @@
+{
+  "project": {
+    "name": "Soft-finger dressing mitt",
+    "slug": "soft-finger-mitt",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A dressing mitt for a hand with limited grip: a neoprene mitt (all four fingers in one pocket, thumb separate) whose palmar side carries a single soft-finger actuator that curls to pinch a zip-pull, a button hook or a sock edge against the palm. The mitt is the soft body drafted here; the soft-finger actuator is the Yantra4D soft-finger solid, never modelled here. The pocket is SOLVED to the finger length: finger_len IS the drafted palm-to-tip run, so the printed curling finger is exactly as long as the pocket that holds it; finger_len drives both the hardware and the garment's own actuator-pocket interface. A rounded mitt, never a degenerate point: the mitt-top dome depth is clamped so the top can never collapse. FC-500 lane 4 (adaptive / soft-exo).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una manopla de vestir para una mano con agarre limitado: una manopla de neopreno (cuatro dedos en un bolsillo, pulgar aparte) cuyo lado palmar lleva un actuador soft-finger que se enrosca para pinzar un tirador de cierre, un abotonador o el borde de un calcetín contra la palma. La manopla es el cuerpo suave trazado aquí; el actuador soft-finger es el sólido soft-finger de Yantra4D, nunca modelado aquí. El bolsillo se RESUELVE al largo del dedo: finger_len ES el recorrido trazado de la palma a la punta, así el dedo enroscable impreso es exactamente tan largo como el bolsillo que lo aloja; finger_len define tanto el herraje como la interfaz de bolsillo de actuador de la prenda. Una manopla redondeada, nunca un punto degenerado: la profundidad de la cúpula superior se limita para que no colapse. Carril 4 de FC-500 (adaptativo / soft-exo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une moufle d'habillage pour une main à préhension limitée : une moufle en néoprène (quatre doigts dans une poche, pouce à part) dont le côté palmaire porte un actionneur soft-finger qui s'enroule pour pincer une tirette, un boutonnier ou le bord d'une chaussette contre la paume. La moufle est le corps souple tracé ici ; l'actionneur soft-finger est le solide soft-finger de Yantra4D, jamais modélisé ici. La poche est RÉSOLUE à la longueur du doigt : finger_len EST le parcours tracé de la paume au bout, de sorte que le doigt enroulant imprimé est exactement aussi long que la poche qui l'accueille ; finger_len pilote la quincaillerie ET l'interface de poche d'actionneur du vêtement. Une moufle arrondie, jamais un point dégénéré : la profondeur du dôme supérieur est bridée pour qu'il ne s'effondre pas. Couloir 4 de FC-500 (adaptatif / soft-exo).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma luva de vestir para uma mão com preensão limitada: uma luva de neoprene (quatro dedos num bolso, polegar à parte) cujo lado palmar carrega um atuador soft-finger que se enrola para pinçar um puxador de zíper, um abotoador ou a borda de uma meia contra a palma. A luva é o corpo macio modelado aqui; o atuador soft-finger é o sólido soft-finger de Yantra4D, nunca modelado aqui. O bolso é RESOLVIDO ao comprimento do dedo: finger_len É o percurso modelado da palma à ponta, então o dedo enrolável impresso é exatamente tão longo quanto o bolso que o abriga; finger_len dirige tanto a ferragem quanto a interface de bolso de atuador da peça. Uma luva arredondada, nunca um ponto degenerado: a profundidade do domo superior é limitada para não colapsar. Corredor 4 do FC-500 (adaptativo / soft-exo).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["adaptive", "soft-exo", "dressing-aid", "soft-finger", "neoprene", "hardware", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full mitt", "es": "Manopla completa", "fr": "Moufle complète", "pt": "Luva completa"}, "script_file": "main.py", "pieces": ["palm", "back", "thumb", "cuff"]}
+  ],
+  "pieces": [
+    {"id": "palm", "label": {"en": "Palm (actuator pocket)", "es": "Palma (bolsillo de actuador)", "fr": "Paume (poche d'actionneur)", "pt": "Palma (bolso de atuador)"}, "default_color": "#33424f", "cut": {"quantity": 1, "mirror": false}},
+    {"id": "back", "label": {"en": "Back", "es": "Dorso", "fr": "Dos", "pt": "Dorso"}, "default_color": "#3c4d5c", "cut": {"quantity": 1, "mirror": false}},
+    {"id": "thumb", "label": {"en": "Thumb pocket", "es": "Bolsillo de pulgar", "fr": "Poche de pouce", "pt": "Bolso de polegar"}, "default_color": "#2b3742", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "cuff", "label": {"en": "Wrist cuff", "es": "Puño de muñeca", "fr": "Poignet", "pt": "Punho"}, "default_color": "#22303d", "cut": {"quantity": 1, "mirror": false}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "hand_length", "type": "slider", "group": "body", "default": 195, "min": 140, "max": 240, "step": 5, "measurement": {"standard": "iso_8559", "code": "arm_length"}, "label": {"en": "Hand length (mm)", "es": "Largo de mano (mm)", "fr": "Longueur de main (mm)", "pt": "Comprimento de mão (mm)"}, "tooltip": {"en": "Wrist crease to fingertip", "es": "Del pliegue de muñeca a la punta", "fr": "Du pli du poignet au bout du doigt", "pt": "Da dobra do pulso à ponta"}},
+    {"id": "palm_girth", "type": "slider", "group": "body", "default": 215, "min": 150, "max": 290, "step": 5, "measurement": {"standard": "iso_8559", "code": "wrist_girth"}, "label": {"en": "Palm girth (mm)", "es": "Contorno de palma (mm)", "fr": "Tour de paume (mm)", "pt": "Contorno de palma (mm)"}, "tooltip": {"en": "Around the palm at the knuckles — sized at negative ease", "es": "Alrededor de la palma en los nudillos — con holgura negativa", "fr": "Autour de la paume aux articulations — en aisance négative", "pt": "Ao redor da palma nos nós — com folga negativa"}},
+    {"id": "finger_len", "type": "slider", "group": "body", "default": 85, "min": 50, "max": 115, "step": 5, "label": {"en": "Finger length (mm)", "es": "Largo de dedo (mm)", "fr": "Longueur de doigt (mm)", "pt": "Comprimento de dedo (mm)"}, "tooltip": {"en": "Palm base to fingertip — the soft-finger is solved to this", "es": "De la base de la palma a la punta — el soft-finger se resuelve de esto", "fr": "De la base de la paume au bout — le soft-finger en découle", "pt": "Da base da palma à ponta — o soft-finger é resolvido disto"}},
+    {"id": "wrist_girth", "type": "slider", "group": "body", "default": 175, "min": 130, "max": 240, "step": 5, "measurement": {"standard": "iso_8559", "code": "wrist_girth"}, "label": {"en": "Wrist girth (mm)", "es": "Contorno de muñeca (mm)", "fr": "Tour de poignet (mm)", "pt": "Contorno de punho (mm)"}, "tooltip": {"en": "The cuff opening", "es": "La abertura del puño", "fr": "L'ouverture du poignet", "pt": "A abertura do punho"}},
+    {"id": "cuff_height", "type": "slider", "group": "construction", "default": 65, "min": 30, "max": 130, "step": 5, "label": {"en": "Cuff height (mm)", "es": "Alto del puño (mm)", "fr": "Hauteur du poignet (mm)", "pt": "Altura do punho (mm)"}, "tooltip": {"en": "How far up the wrist the cuff rises", "es": "Cuánto sube el puño por la muñeca", "fr": "Jusqu'où le poignet monte", "pt": "Quanto o punho sobe no pulso"}},
+    {"id": "negative_ease_pct", "type": "slider", "group": "construction", "default": 5, "min": 2, "max": 12, "step": 1, "label": {"en": "Negative ease (%)", "es": "Holgura negativa (%)", "fr": "Aisance négative (%)", "pt": "Folga negativa (%)"}, "tooltip": {"en": "The mitt grips by being cut smaller than the hand", "es": "La manopla agarra al cortarse más pequeña que la mano", "fr": "La moufle tient en étant coupée plus petite que la main", "pt": "A luva firma sendo cortada menor que a mão"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 6, "min": 2, "max": 12, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Narrow flatlocked mitt seams", "es": "Costuras de manopla angostas con flatlock", "fr": "Coutures de moufle étroites en flatlock", "pt": "Costuras de luva estreitas com flatlock"}}
+  ],
+  "presets": [
+    {"id": "right_hand", "label": {"en": "Right hand", "es": "Mano derecha", "fr": "Main droite", "pt": "Mão direita"}, "values": {"negative_ease_pct": 5}},
+    {"id": "firm_pinch", "label": {"en": "Firm pinch", "es": "Pinza firme", "fr": "Pince ferme", "pt": "Pinça firme"}, "values": {"finger_len": 100, "negative_ease_pct": 8}}
+  ],
+  "constraints": [
+    {"expression": "finger_len < hand_length", "message": {"en": "Finger length must be shorter than the whole hand length.", "es": "El largo de dedo debe ser menor que el largo total de la mano.", "fr": "La longueur de doigt doit être inférieure à la longueur de la main.", "pt": "O comprimento de dedo deve ser menor que o comprimento da mão."}, "severity": "error"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "soft-finger actuator pocket",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "soft-finger",
+      "linked": true,
+      "params_map": {
+        "finger_len": "finger_len"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "actuator_pocket", "type": "custom", "label": {"en": "Palmar actuator pocket (solved to finger_len)", "es": "Bolsillo palmar de actuador (resuelto a finger_len)", "fr": "Poche palmaire d'actionneur (résolue sur finger_len)", "pt": "Bolso palmar de atuador (resolvido a finger_len)"}, "edges": [{"piece": "palm", "edge": "top"}], "parameters": ["finger_len", "hand_length"]},
+      {"id": "mitt_side", "type": "side_seam", "label": {"en": "Mitt side seams (palm to back)", "es": "Costuras laterales (palma a dorso)", "fr": "Coutures côté (paume au dos)", "pt": "Costuras laterais (palma ao dorso)"}, "edges": [{"piece": "palm", "edge": "side_thumb"}, {"piece": "back", "edge": "side_thumb"}], "parameters": ["palm_girth", "negative_ease_pct"]},
+      {"id": "wrist_cuff", "type": "cuff", "label": {"en": "Wrist cuff", "es": "Puño de muñeca", "fr": "Poignet", "pt": "Punho"}, "edges": [{"piece": "cuff", "edge": "attach"}, {"piece": "palm", "edge": "wrist"}], "parameters": ["wrist_girth", "cuff_height"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Dressing is the first task independence is measured by, and it is built on a pinch a limited hand may not have — the grip that pulls a zip, works a button, or catches a sock heel. A dressing mitt gives that pinch back by carrying one soft-finger actuator that curls an object against the palm, and making the actuator the printable, replaceable part means it can be re-fitted and re-tuned as the hand changes. The pocket is solved to the finger, so the printed actuator fits the mitt and the mitt fits the hand — a soft, made-to-measure, repairable dressing aid rather than a sealed device or a carer's hands.",
+      "es": "Vestirse es la primera tarea con que se mide la independencia, y se apoya en una pinza que una mano limitada puede no tener — el agarre que sube un cierre, maneja un botón o atrapa el talón de un calcetín. Una manopla de vestir devuelve esa pinza al llevar un actuador soft-finger que enrosca un objeto contra la palma, y hacer del actuador la parte imprimible y reemplazable permite reajustarlo y reafinarlo conforme cambia la mano. El bolsillo se resuelve al dedo, así el actuador impreso ajusta a la manopla y la manopla a la mano — una ayuda de vestir suave, a medida y reparable en vez de un dispositivo sellado o las manos de un cuidador.",
+      "fr": "S'habiller est la première tâche à l'aune de laquelle se mesure l'autonomie, et elle repose sur une pince qu'une main limitée peut ne pas avoir — la prise qui remonte une fermeture, actionne un bouton ou attrape le talon d'une chaussette. Une moufle d'habillage rend cette pince en portant un actionneur soft-finger qui enroule un objet contre la paume, et faire de l'actionneur la pièce imprimable et remplaçable permet de le réajuster et de le réaccorder à mesure que la main change. La poche est résolue au doigt, de sorte que l'actionneur imprimé va à la moufle et la moufle à la main — une aide à l'habillage souple, sur mesure et réparable plutôt qu'un dispositif scellé ou les mains d'un aidant.",
+      "pt": "Vestir-se é a primeira tarefa pela qual a independência se mede, e apoia-se numa pinça que uma mão limitada pode não ter — a preensão que sobe um zíper, opera um botão ou pega o calcanhar de uma meia. Uma luva de vestir devolve essa pinça ao carregar um atuador soft-finger que enrola um objeto contra a palma, e fazer do atuador a peça imprimível e substituível permite reajustá-lo e reafiná-lo conforme a mão muda. O bolso é resolvido ao dedo, então o atuador impresso serve à luva e a luva à mão — um auxílio de vestir macio, sob medida e reparável em vez de um dispositivo selado ou as mãos de um cuidador."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

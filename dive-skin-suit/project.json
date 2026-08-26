@@ -1,0 +1,93 @@
+{
+  "project": {
+    "name": "Dive-skin swim suit",
+    "slug": "dive-skin-suit",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A full-coverage dive skin in thin swim-lycra: a one-piece long-sleeve, long-leg skin worn under a wetsuit for warmth and easy donning, or alone in warm water against sun, sting and abrasion. Cut at negative ease as a true second skin, split down the centre back and closed with a long invisible zipper so it can be got on over the shoulders and hips. Two things solved: the centre-back zip runs the drafted nape-to-seat length, that IS the Yantra4D invisible-zipper zip_length so the zip is exactly as long as the opening, and zip_length drives both the hardware AND the garment's center-back interface, clamped under the torso so it never overruns; and every panel is cut at negative ease, the leg fronts and backs sharing ONE crotch and the sleeve caps solving to the armscye ring. FC-500 lane 6 (active).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un traje de piel de buceo de cobertura completa en licra de baño fina: una piel de una pieza de manga y pierna largas usada bajo el traje de neopreno para calor y fácil colocación, o sola en agua cálida contra sol, picadura y abrasión. Cortado con holgura negativa como segunda piel real, abierto al centro de la espalda y cerrado con un cierre invisible largo para ponérselo por hombros y caderas. Dos cosas resueltas: el cierre de centro espalda recorre el largo trazado de nuca a asiento, que ES el zip_length del invisible-zipper de Yantra4D para que el cierre sea exactamente tan largo como la abertura, y zip_length define tanto el herraje COMO la interfaz de centro espalda, limitado bajo el torso para que no se pase; y cada panel se corta con holgura negativa, con las piernas delantera y trasera compartiendo UNA entrepierna y las cabezas de manga resueltas a la sisa. Carril 6 de FC-500 (activo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une combinaison peau de plongée à couverture complète en lycra de bain fin : une peau une pièce à manches et jambes longues portée sous une combinaison de plongée pour la chaleur et l'enfilage facile, ou seule en eau chaude contre le soleil, les piqûres et l'abrasion. Coupée en aisance négative comme une vraie seconde peau, fendue au milieu du dos et fermée par une longue fermeture invisible pour l'enfiler par les épaules et les hanches. Deux choses résolues : la fermeture milieu dos parcourt la longueur tracée de la nuque au siège, ce qui EST le zip_length de l'invisible-zipper Yantra4D pour que la fermeture soit exactement aussi longue que l'ouverture, et zip_length pilote la quincaillerie ET l'interface milieu dos, bridée sous le torse pour ne pas dépasser ; et chaque panneau est coupé en aisance négative, les jambes devant et dos partageant UN entrejambe et les têtes de manche résolues à l'emmanchure. Couloir 6 de FC-500 (actif).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma roupa pele de mergulho de cobertura completa em lycra de banho fina: uma pele de uma peça de manga e perna longas usada sob a roupa de neoprene para calor e fácil vestir, ou sozinha em água quente contra sol, picada e abrasão. Cortada em folga negativa como segunda pele real, aberta no centro das costas e fechada com um zíper invisível longo para vestir pelos ombros e quadris. Duas coisas resolvidas: o zíper de centro das costas percorre o comprimento modelado da nuca ao assento, que É o zip_length do invisible-zipper de Yantra4D para o zíper ser exatamente tão longo quanto a abertura, e zip_length dirige tanto a ferragem QUANTO a interface de centro das costas, limitado sob o torso para não passar; e cada painel é cortado em folga negativa, com as pernas frente e costas compartilhando UM gancho e as cabeças de manga resolvidas à cava. Corredor 6 do FC-500 (ativo).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["active", "diving", "dive-skin", "swim", "lycra", "invisible-zipper", "hardware", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full dive skin", "es": "Piel de buceo completa", "fr": "Peau de plongée complète", "pt": "Pele de mergulho completa"}, "script_file": "main.py", "pieces": ["front", "back", "sleeve", "leg"]}
+  ],
+  "pieces": [
+    {"id": "front", "label": {"en": "Front torso", "es": "Torso delantero", "fr": "Torse devant", "pt": "Torso dianteiro"}, "default_color": "#12384a", "cut": {"quantity": 1, "mirror": false}},
+    {"id": "back", "label": {"en": "Back torso (CB zip)", "es": "Torso trasero (cierre CE)", "fr": "Torse dos (fermeture MD)", "pt": "Torso traseiro (zíper CC)"}, "default_color": "#0e2f40", "cut": {"quantity": 1, "on_fold": true, "mirror": true}},
+    {"id": "sleeve", "label": {"en": "Sleeve", "es": "Manga", "fr": "Manche", "pt": "Manga"}, "default_color": "#164254", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "leg", "label": {"en": "Full leg", "es": "Pierna completa", "fr": "Jambe complète", "pt": "Perna completa"}, "default_color": "#0e2f40", "cut": {"quantity": 2, "mirror": true}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "chest_girth", "type": "slider", "group": "body", "default": 960, "min": 720, "max": 1400, "step": 10, "measurement": {"standard": "iso_8559", "code": "chest_bust_girth"}, "label": {"en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)"}, "tooltip": {"en": "Full chest — the panels at negative ease", "es": "Pecho completo — los paneles con holgura negativa", "fr": "Poitrine complète — les panneaux en aisance négative", "pt": "Peito completo — os painéis com folga negativa"}},
+    {"id": "hip_girth", "type": "slider", "group": "body", "default": 980, "min": 720, "max": 1500, "step": 10, "measurement": {"standard": "iso_8559", "code": "hip_girth"}, "label": {"en": "Hip girth (mm)", "es": "Contorno de cadera (mm)", "fr": "Tour de hanche (mm)", "pt": "Contorno de quadril (mm)"}, "tooltip": {"en": "Fullest hip — the leg tops derive from it", "es": "Cadera más llena — las piernas derivan de ella", "fr": "Hanche la plus forte — les jambes en dérivent", "pt": "Quadril mais cheio — as pernas derivam dele"}},
+    {"id": "torso_length", "type": "slider", "group": "body", "default": 640, "min": 480, "max": 820, "step": 10, "label": {"en": "Torso length (mm)", "es": "Largo de torso (mm)", "fr": "Longueur de torse (mm)", "pt": "Comprimento de torso (mm)"}, "tooltip": {"en": "Shoulder to crotch — the zip is clamped under this", "es": "Del hombro a la entrepierna — el cierre se limita bajo esto", "fr": "De l'épaule à l'entrejambe — la fermeture est bridée sous ceci", "pt": "Do ombro ao gancho — o zíper é limitado sob isto"}},
+    {"id": "inseam", "type": "slider", "group": "body", "default": 760, "min": 560, "max": 940, "step": 10, "measurement": {"standard": "iso_8559", "code": "inside_leg_length"}, "label": {"en": "Inseam (mm)", "es": "Entrepierna (mm)", "fr": "Entrejambe (mm)", "pt": "Gancho interno (mm)"}, "tooltip": {"en": "Crotch to ankle hem", "es": "De la entrepierna al bajo del tobillo", "fr": "De l'entrejambe à l'ourlet cheville", "pt": "Do gancho à barra do tornozelo"}},
+    {"id": "sleeve_length", "type": "slider", "group": "body", "default": 600, "min": 400, "max": 720, "step": 10, "measurement": {"standard": "iso_8559", "code": "arm_length"}, "label": {"en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)", "pt": "Comprimento de manga (mm)"}, "tooltip": {"en": "Shoulder to wrist", "es": "Del hombro a la muñeca", "fr": "De l'épaule au poignet", "pt": "Do ombro ao pulso"}},
+    {"id": "bicep_girth", "type": "slider", "group": "body", "default": 330, "min": 240, "max": 560, "step": 10, "measurement": {"standard": "iso_8559", "code": "bicep_girth"}, "label": {"en": "Bicep girth (mm)", "es": "Contorno de bíceps (mm)", "fr": "Tour de biceps (mm)", "pt": "Contorno de bíceps (mm)"}, "tooltip": {"en": "Sizes the sleeve at negative ease", "es": "Dimensiona la manga con holgura negativa", "fr": "Dimensionne la manche en aisance négative", "pt": "Dimensiona a manga com folga negativa"}},
+    {"id": "ankle_girth", "type": "slider", "group": "body", "default": 260, "min": 180, "max": 400, "step": 10, "measurement": {"standard": "iso_8559", "code": "ankle_girth"}, "label": {"en": "Ankle girth (mm)", "es": "Contorno de tobillo (mm)", "fr": "Tour de cheville (mm)", "pt": "Contorno de tornozelo (mm)"}, "tooltip": {"en": "The leg ankle at negative ease", "es": "El tobillo de la pierna con holgura negativa", "fr": "La cheville de la jambe en aisance négative", "pt": "O tornozelo da perna com folga negativa"}},
+    {"id": "zip_length", "type": "slider", "group": "construction", "default": 560, "min": 300, "max": 800, "step": 10, "label": {"en": "Zip length (mm)", "es": "Largo de cierre (mm)", "fr": "Longueur de fermeture (mm)", "pt": "Comprimento de zíper (mm)"}, "tooltip": {"en": "The centre-back zip — clamped under the torso so it never overruns", "es": "El cierre de centro espalda — limitado bajo el torso para que no se pase", "fr": "La fermeture milieu dos — bridée sous le torse pour ne pas dépasser", "pt": "O zíper de centro das costas — limitado sob o torso para não passar"}},
+    {"id": "negative_ease_pct", "type": "slider", "group": "construction", "default": 12, "min": 4, "max": 22, "step": 1, "label": {"en": "Negative ease (%)", "es": "Holgura negativa (%)", "fr": "Aisance négative (%)", "pt": "Folga negativa (%)"}, "tooltip": {"en": "The lycra grips by being cut smaller than the body", "es": "La licra agarra al cortarse más pequeña que el cuerpo", "fr": "Le lycra tient en étant coupé plus petit que le corps", "pt": "A lycra firma sendo cortada menor que o corpo"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 8, "min": 4, "max": 12, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Narrow flatlocked swim seams", "es": "Costuras de baño angostas con flatlock", "fr": "Coutures de bain étroites en flatlock", "pt": "Costuras de banho estreitas com flatlock"}}
+  ],
+  "presets": [
+    {"id": "under_wetsuit", "label": {"en": "Under wetsuit", "es": "Bajo neopreno", "fr": "Sous combinaison", "pt": "Sob neoprene"}, "values": {"negative_ease_pct": 10}},
+    {"id": "warm_water", "label": {"en": "Warm water", "es": "Agua cálida", "fr": "Eau chaude", "pt": "Água quente"}, "values": {"negative_ease_pct": 14}}
+  ],
+  "constraints": [
+    {"expression": "zip_length <= torso_length + 120", "message": {"en": "Zip length must fit the back run.", "es": "El largo del cierre debe caber en el recorrido de la espalda.", "fr": "La longueur de fermeture doit tenir dans le parcours du dos.", "pt": "O comprimento do zíper deve caber no percurso das costas."}, "severity": "warning"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "zipper",
+    "subtype": "centre-back invisible zipper",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "invisible-zipper",
+      "linked": true,
+      "params_map": {
+        "zip_length": "zip_length",
+        "tape_width": "5"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "center_back", "type": "zipper_tape", "label": {"en": "Centre-back zip (solved to zip_length)", "es": "Cierre de centro espalda (resuelto a zip_length)", "fr": "Fermeture milieu dos (résolue sur zip_length)", "pt": "Zíper de centro das costas (resolvido a zip_length)"}, "edges": [{"piece": "back", "edge": "shoulder"}], "parameters": ["zip_length", "torso_length"]},
+      {"id": "side_seam", "type": "side_seam", "label": {"en": "Side seams (front to back)", "es": "Costuras laterales (delante a trasero)", "fr": "Coutures côté (devant au dos)", "pt": "Costuras laterais (frente ao dorso)"}, "edges": [{"piece": "front", "edge": "side_r"}, {"piece": "back", "edge": "side_r"}], "parameters": ["chest_girth", "negative_ease_pct"]},
+      {"id": "crotch_join", "type": "custom", "label": {"en": "Crotch join (legs, one shared point)", "es": "Unión de entrepierna (piernas, punto compartido)", "fr": "Jonction d'entrejambe (jambes, point partagé)", "pt": "Junção de gancho (pernas, ponto compartilhado)"}, "edges": [{"piece": "leg", "edge": "top"}, {"piece": "front", "edge": "crotch"}], "parameters": ["hip_girth", "inseam"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": true,
+      "zipper_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A dive skin does two humble jobs superbly: it lets a wetsuit slide on over a body that is otherwise impossible to squeeze into neoprene, and it protects swimmers in warm water from jellyfish, coral and hours of sun where a wetsuit would be far too hot. Both jobs depend on a true second-skin fit — a loose dive skin bunches under a wetsuit and lets water flush a warm-water swimmer — and on a back zip that is exactly as long as it needs to be to get on but no longer. Solving the zip to the drafted back run and clamping it so no size overruns, sharing one crotch so the leg never twists, and bridging the zip to a printable, replaceable solid makes a made-to-measure dive skin that fits a real body and can be repaired at the dive shop.",
+      "es": "Una piel de buceo hace dos trabajos humildes de forma soberbia: deja que un neopreno se deslice sobre un cuerpo que de otro modo sería imposible meter en él, y protege a los nadadores en agua cálida de medusas, coral y horas de sol donde un neopreno daría demasiado calor. Ambos trabajos dependen de un ajuste de segunda piel real — una piel de buceo holgada se amontona bajo el neopreno y deja entrar agua al nadador de agua cálida — y de un cierre de espalda exactamente tan largo como se necesita para ponérselo pero no más. Resolver el cierre al recorrido trazado de la espalda y limitarlo para que ninguna talla se pase, compartir una entrepierna para que la pierna no se tuerza, y puentear el cierre a un sólido imprimible y reemplazable hace una piel de buceo a medida que ajusta a un cuerpo real y se repara en la tienda de buceo.",
+      "fr": "Une peau de plongée fait deux humbles travaux à merveille : elle laisse une combinaison glisser sur un corps qu'il serait sinon impossible de faire entrer dans le néoprène, et elle protège les nageurs en eau chaude des méduses, du corail et des heures de soleil là où une combinaison serait bien trop chaude. Les deux dépendent d'un ajustement seconde peau réel — une peau de plongée lâche se bloque sous la combinaison et laisse l'eau circuler pour le nageur en eau chaude — et d'une fermeture dorsale exactement aussi longue qu'il le faut pour l'enfiler mais pas plus. Résoudre la fermeture au parcours dorsal tracé et la brider pour qu'aucune taille ne dépasse, partager un entrejambe pour que la jambe ne vrille jamais, et relier la fermeture à un solide imprimable et remplaçable fait une peau de plongée sur mesure qui va à un corps réel et se répare au magasin de plongée.",
+      "pt": "Uma pele de mergulho faz dois trabalhos humildes com maestria: deixa uma roupa de neoprene deslizar sobre um corpo que de outro modo seria impossível espremer no neoprene, e protege nadadores em água quente de águas-vivas, coral e horas de sol onde uma roupa de neoprene seria quente demais. Ambos dependem de um caimento segunda-pele real — uma pele de mergulho folgada se amontoa sob o neoprene e deixa a água circular para o nadador de água quente — e de um zíper nas costas exatamente tão longo quanto necessário para vestir mas não mais. Resolver o zíper ao percurso modelado das costas e limitá-lo para nenhum tamanho passar, compartilhar um gancho para a perna nunca torcer, e ligar o zíper a um sólido imprimível e substituível faz uma pele de mergulho sob medida que serve a um corpo real e se repara na loja de mergulho."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

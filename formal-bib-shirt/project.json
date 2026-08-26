@@ -1,0 +1,99 @@
+{
+  "project": {
+    "name": "Bib-front formal shirt",
+    "slug": "formal-bib-shirt",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The stiff-fronted evening dress shirt: a marcella piqué or pleated bib panel across the chest, worn under a tailcoat or dinner jacket, with studs down the bib and a wing or turndown collar. The bib is the garment's defining feature — a separate stiffened panel applied to the shirt front, its width and drop solved so it sits inside the jacket opening and above the waistcoat. Two things solved: the bib width is a clamped fraction of the chest so it never exceeds the shirt front (which would push the bib edge past the side seam), and its drop is clamped under the shirt length; and the studs run the bib centre, their ligne the drafted button_ligne that drives the garment's button-stand interface AND the Yantra4D sew-through-button sew face. FC-500 lane 5 (tailoring, T3).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La camisa de vestir de noche con pechera rígida: una pechera de piqué marcella o plisada sobre el pecho, bajo el frac o el esmoquin, con botones de pechera y cuello de pajarita o vuelto. La pechera es el rasgo definitorio — un panel rígido aparte aplicado al frente, con su ancho y caída resueltos para que quede dentro de la abertura del saco y sobre el chaleco. Dos cosas resueltas: el ancho de pechera es una fracción limitada del pecho para que nunca exceda el frente (lo que empujaría el borde más allá de la costura lateral), y su caída se limita bajo el largo de la camisa; y los botones recorren el centro de la pechera, con su ligne el button_ligne trazado que define la interfaz de portada Y la cara de cosido del sew-through-button de Yantra4D. Carril 5 de FC-500 (sastrería, T3).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La chemise de soirée à plastron rigide : un plastron en piqué marcella ou plissé sur la poitrine, porté sous l'habit ou le smoking, avec des boutons de plastron et un col cassé ou rabattu. Le plastron est le trait déterminant — un panneau rigide séparé appliqué sur le devant, sa largeur et sa chute résolues pour qu'il tienne dans l'ouverture de la veste et au-dessus du gilet. Deux choses résolues : la largeur du plastron est une fraction bridée de la poitrine pour ne jamais dépasser le devant (ce qui pousserait le bord au-delà de la couture côté), et sa chute est bridée sous la longueur de la chemise ; et les boutons parcourent le centre du plastron, leur ligne étant le button_ligne tracé qui pilote l'interface de patte ET la face de couture du sew-through-button de Yantra4D. Couloir 5 de FC-500 (tailleur, T3).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A camisa social de noite com peitilho rígido: um peitilho de piqué marcella ou plissado sobre o peito, usado sob o fraque ou o smoking, com botões de peitilho e colarinho de asa ou dobrado. O peitilho é o traço definidor — um painel rígido separado aplicado à frente, com largura e queda resolvidas para caber na abertura do paletó e acima do colete. Duas coisas resolvidas: a largura do peitilho é uma fração limitada do peito para nunca exceder a frente (o que empurraria a borda além da costura lateral), e sua queda é limitada sob o comprimento da camisa; e os botões percorrem o centro do peitilho, com sua ligne o button_ligne modelado que dirige a interface de portada E a face de costura do sew-through-button de Yantra4D. Corredor 5 do FC-500 (alfaiataria, T3).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["tailoring", "formal-shirt", "bib-front", "black-tie", "white-tie", "sew-through-button", "hardware", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full shirt", "es": "Camisa completa", "fr": "Chemise complète", "pt": "Camisa completa"}, "script_file": "main.py", "pieces": ["front", "bib", "back", "sleeve", "collar"]}
+  ],
+  "pieces": [
+    {"id": "front", "label": {"en": "Front (placket)", "es": "Delantero (tapeta)", "fr": "Devant (patte)", "pt": "Frente (carcela)"}, "default_color": "#f0f2f5", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "bib", "label": {"en": "Stiff bib panel", "es": "Pechera rígida", "fr": "Plastron rigide", "pt": "Peitilho rígido"}, "default_color": "#ffffff", "cut": {"quantity": 1, "mirror": false}},
+    {"id": "back", "label": {"en": "Back (cut 1 on fold)", "es": "Espalda (corte 1 al pliegue)", "fr": "Dos (coupé 1 au pli)", "pt": "Costas (corte 1 na dobra)"}, "default_color": "#e8ebef", "cut": {"quantity": 1, "on_fold": true, "mirror": true}},
+    {"id": "sleeve", "label": {"en": "Sleeve", "es": "Manga", "fr": "Manche", "pt": "Manga"}, "default_color": "#f0f2f5", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "collar", "label": {"en": "Wing/turndown collar", "es": "Cuello de pajarita/vuelto", "fr": "Col cassé/rabattu", "pt": "Colarinho de asa/dobrado"}, "default_color": "#ffffff", "cut": {"quantity": 1, "mirror": false}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "chest_girth", "type": "slider", "group": "body", "default": 1040, "min": 800, "max": 1500, "step": 10, "measurement": {"standard": "iso_8559", "code": "chest_bust_girth"}, "label": {"en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)"}, "tooltip": {"en": "Full chest — the body block at shirt ease", "es": "Pecho completo — el bloque con holgura de camisa", "fr": "Poitrine complète — le bloc avec aisance", "pt": "Peito completo — o bloco com folga"}},
+    {"id": "back_length", "type": "slider", "group": "body", "default": 780, "min": 600, "max": 920, "step": 10, "label": {"en": "Back length (mm)", "es": "Largo de espalda (mm)", "fr": "Longueur de dos (mm)", "pt": "Comprimento das costas (mm)"}, "tooltip": {"en": "Nape to hem", "es": "De la nuca al borde", "fr": "De la nuque à l'ourlet", "pt": "Da nuca à barra"}},
+    {"id": "sleeve_length", "type": "slider", "group": "body", "default": 640, "min": 520, "max": 720, "step": 10, "measurement": {"standard": "iso_8559", "code": "arm_length"}, "label": {"en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)", "pt": "Comprimento de manga (mm)"}, "tooltip": {"en": "Shoulder to wrist", "es": "Del hombro a la muñeca", "fr": "De l'épaule au poignet", "pt": "Do ombro ao pulso"}},
+    {"id": "bicep_girth", "type": "slider", "group": "body", "default": 360, "min": 260, "max": 520, "step": 10, "measurement": {"standard": "iso_8559", "code": "bicep_girth"}, "label": {"en": "Bicep girth (mm)", "es": "Contorno de bíceps (mm)", "fr": "Tour de biceps (mm)", "pt": "Contorno de bíceps (mm)"}, "tooltip": {"en": "Sizes the sleeve", "es": "Dimensiona la manga", "fr": "Dimensionne la manche", "pt": "Dimensiona a manga"}},
+    {"id": "neck_girth", "type": "slider", "group": "body", "default": 400, "min": 320, "max": 520, "step": 10, "measurement": {"standard": "iso_8559", "code": "neck_girth"}, "label": {"en": "Neck girth (mm)", "es": "Contorno de cuello (mm)", "fr": "Tour de cou (mm)", "pt": "Contorno de pescoço (mm)"}, "tooltip": {"en": "The collar band length", "es": "El largo de la banda del cuello", "fr": "La longueur du pied de col", "pt": "O comprimento do pé de gola"}},
+    {"id": "bib_width", "type": "slider", "group": "construction", "default": 220, "min": 120, "max": 340, "step": 10, "label": {"en": "Bib width (mm)", "es": "Ancho de pechera (mm)", "fr": "Largeur de plastron (mm)", "pt": "Largura de peitilho (mm)"}, "tooltip": {"en": "Clamped under the front so the bib never exceeds the shirt front", "es": "Limitado bajo el frente para que la pechera no exceda el frente", "fr": "Bridée sous le devant pour que le plastron ne dépasse pas le devant", "pt": "Limitada sob a frente para o peitilho não exceder a frente"}},
+    {"id": "bib_drop", "type": "slider", "group": "construction", "default": 300, "min": 160, "max": 460, "step": 10, "label": {"en": "Bib drop (mm)", "es": "Caída de pechera (mm)", "fr": "Chute de plastron (mm)", "pt": "Queda de peitilho (mm)"}, "tooltip": {"en": "How far the bib drops — clamped under the shirt length", "es": "Cuánto cae la pechera — limitado bajo el largo de la camisa", "fr": "De combien le plastron descend — bridée sous la longueur de la chemise", "pt": "Quanto o peitilho desce — limitada sob o comprimento da camisa"}},
+    {"id": "button_ligne", "type": "slider", "group": "construction", "default": 18, "min": 12, "max": 30, "step": 1, "label": {"en": "Stud ligne", "es": "Ligne del botón", "fr": "Ligne du bouton", "pt": "Ligne do botão"}, "tooltip": {"en": "The bib stud size — drives the hardware and the button-stand interface", "es": "El tamaño del botón de pechera — define el herraje y la interfaz de portada", "fr": "La taille du bouton de plastron — pilote la quincaillerie et l'interface de patte", "pt": "O tamanho do botão de peitilho — dirige a ferragem e a interface de portada"}},
+    {"id": "shirt_ease", "type": "slider", "group": "construction", "default": 160, "min": 80, "max": 280, "step": 10, "label": {"en": "Shirt ease (mm)", "es": "Holgura de camisa (mm)", "fr": "Aisance de chemise (mm)", "pt": "Folga de camisa (mm)"}, "tooltip": {"en": "Wearing ease over the chest", "es": "Holgura de uso sobre el pecho", "fr": "Aisance de port sur la poitrine", "pt": "Folga de uso sobre o peito"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 10, "min": 6, "max": 16, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Shirt seam allowances", "es": "Márgenes de costura de camisa", "fr": "Marges de couture de chemise", "pt": "Margens de costura de camisa"}}
+  ],
+  "presets": [
+    {"id": "white_tie", "label": {"en": "White-tie (marcella)", "es": "Etiqueta blanca (marcella)", "fr": "Cravate blanche (marcella)", "pt": "Gravata branca (marcella)"}, "values": {"bib_drop": 340, "bib_width": 240}},
+    {"id": "black_tie", "label": {"en": "Black-tie (pleated)", "es": "Etiqueta negra (plisada)", "fr": "Cravate noire (plissée)", "pt": "Gravata preta (plissada)"}, "values": {"bib_drop": 280, "bib_width": 200}}
+  ],
+  "constraints": [
+    {"expression": "bib_drop < back_length", "message": {"en": "Bib drop must be shorter than the shirt length.", "es": "La caída de pechera debe ser menor que el largo de la camisa.", "fr": "La chute de plastron doit être inférieure à la longueur de la chemise.", "pt": "A queda de peitilho deve ser menor que o comprimento da camisa."}, "severity": "warning"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "button",
+    "subtype": "bib shirt studs",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "thickness": "button_ligne * 0.12",
+        "hole_count": "2",
+        "hole_dia": "button_ligne * 0.05",
+        "hole_spacing": "button_ligne * 0.18",
+        "dish_depth": "button_ligne * 0.02"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "button_stand", "type": "button_stand", "label": {"en": "Button stand (bib studs)", "es": "Portada (botones de pechera)", "fr": "Patte (boutons de plastron)", "pt": "Portada (botões de peitilho)"}, "edges": [{"piece": "front", "edge": "center_front"}], "parameters": ["button_ligne", "bib_drop"]},
+      {"id": "bib_field", "type": "custom", "label": {"en": "Bib panel (solved to chest)", "es": "Pechera (resuelta al pecho)", "fr": "Plastron (résolu à la poitrine)", "pt": "Peitilho (resolvido ao peito)"}, "edges": [{"piece": "bib", "edge": "top"}], "parameters": ["bib_width", "bib_drop"]},
+      {"id": "armhole", "type": "armscye", "label": {"en": "Armhole / sleeve cap", "es": "Sisa / cabeza de manga", "fr": "Emmanchure / tête de manche", "pt": "Cava / cabeça de manga"}, "edges": [{"piece": "sleeve", "edge": "cap"}, {"piece": "front", "edge": "armhole"}, {"piece": "back", "edge": "armhole"}], "parameters": ["bicep_girth", "back_length"]},
+      {"id": "collar", "type": "neckline", "label": {"en": "Collar / neckline", "es": "Cuello / escote", "fr": "Col / encolure", "pt": "Colarinho / decote"}, "edges": [{"piece": "collar", "edge": "neck_edge"}, {"piece": "back", "edge": "neckline"}], "parameters": ["neck_girth"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "tailoring": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The bib-front shirt is the foundation garment of formal evening dress, and its bib is a small panel with an outsized power to look wrong: too wide and it shows past the jacket, too long and it buckles into the trousers, too short and it rides up above the waistcoat. Solving the bib to the chest and clamping its width and drop so no size sends the panel past the side seam or below the shirt makes the shirt fit the real body it is cut for. Bridging the studs — the visible jewellery of the shirt, and the part most often lost — to a printable, replaceable solid means the whole formal front can be maintained as a made-to-measure commons object.",
+      "es": "La camisa de pechera es la prenda base del traje de noche, y su pechera es un panel pequeño con un poder enorme para verse mal: muy ancha asoma tras el saco, muy larga se arruga en el pantalón, muy corta sube sobre el chaleco. Resolver la pechera al pecho y limitar su ancho y caída para que ninguna talla mande el panel más allá de la costura lateral o bajo la camisa hace que la camisa ajuste al cuerpo real para el que se corta. Puentear los botones — la joyería visible de la camisa y la parte que más se pierde — a un sólido imprimible y reemplazable permite mantener todo el frente formal como objeto común a medida.",
+      "fr": "La chemise à plastron est le vêtement de base de la tenue de soirée, et son plastron est un petit panneau au pouvoir démesuré de mal tomber : trop large il dépasse la veste, trop long il gondole dans le pantalon, trop court il remonte au-dessus du gilet. Résoudre le plastron à la poitrine et brider sa largeur et sa chute pour qu'aucune taille n'envoie le panneau au-delà de la couture côté ou sous la chemise fait que la chemise va au corps réel pour lequel elle est coupée. Relier les boutons — la bijouterie visible de la chemise, et la partie la plus souvent perdue — à un solide imprimable et remplaçable permet d'entretenir tout le devant formel comme objet commun sur mesure.",
+      "pt": "A camisa de peitilho é a peça base do traje de noite, e seu peitilho é um painel pequeno com um poder enorme de parecer errado: largo demais aparece além do paletó, longo demais enruga na calça, curto demais sobe acima do colete. Resolver o peitilho ao peito e limitar sua largura e queda para que nenhum tamanho envie o painel além da costura lateral ou sob a camisa faz a camisa servir ao corpo real para o qual é cortada. Ligar os botões — a joalheria visível da camisa e a parte mais perdida — a um sólido imprimível e substituível permite manter toda a frente formal como objeto comum sob medida."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

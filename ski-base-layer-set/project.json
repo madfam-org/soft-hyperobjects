@@ -1,0 +1,518 @@
+{
+  "project": {
+    "name": "Merino ski base-layer set",
+    "slug": "ski-base-layer-set",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A two-piece merino base-layer set for skiing: a long-sleeve crew top and full-length leggings in fine merino jersey, cut at slight negative ease so they sit as a warm second skin under a shell, with flatlock seams so nothing chafes under load all day. One cartridge, two garments — a top mode and a bottom mode selected by the target_piece parameter. Two things solved: one solver drives both garments so a set drafted together fits together, the measurements and negative-ease shared; and the top's shoulders are congruent front-to-back while the leggings' front and back share ONE crotch so the leg cannot twist, with nothing clamped negative. Pure pattern, no bridged hardware. FC-500 lane 6 (active).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un conjunto de primera capa de merino de dos piezas para esquí: una playera de cuello redondo de manga larga y unas mallas de largo completo en punto de merino fino, cortadas con leve holgura negativa para sentarse como segunda piel cálida bajo un shell, con costuras flatlock para que nada roce bajo carga todo el día. Un cartucho, dos prendas — un modo top y un modo bottom seleccionados por el parámetro target_piece. Dos cosas resueltas: un solo solver impulsa ambas prendas para que un conjunto trazado junto ajuste junto, con medidas y holgura negativa compartidas; y los hombros del top son congruentes delante-atrás mientras el delantero y el trasero de las mallas comparten UNA entrepierna para que la pierna no se tuerza, sin nada limitado en negativo. Patrón puro, sin herraje puenteado. Carril 6 de FC-500 (activo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un ensemble de sous-couche en mérinos deux pièces pour le ski : un haut ras-du-cou à manches longues et un collant pleine longueur en jersey de mérinos fin, coupés en légère aisance négative pour s'asseoir comme une seconde peau chaude sous une coque, avec des coutures flatlock pour que rien ne frotte sous la charge toute la journée. Un cartouche, deux vêtements — un mode haut et un mode bas sélectionnés par le paramètre target_piece. Deux choses résolues : un seul solveur pilote les deux vêtements pour qu'un ensemble tracé ensemble aille ensemble, mesures et aisance négative partagées ; et les épaules du haut sont congruentes devant-dos tandis que le devant et le dos du collant partagent UN entrejambe pour que la jambe ne vrille pas, rien de bridé en négatif. Patron pur, sans quincaillerie reliée. Couloir 6 de FC-500 (actif).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um conjunto de segunda pele de merino de duas peças para esqui: uma camiseta de gola redonda de manga longa e uma legging de comprimento total em malha de merino fino, cortadas em leve folga negativa para assentar como segunda pele quente sob uma casca, com costuras flatlock para nada atritar sob carga o dia todo. Um cartucho, duas peças — um modo top e um modo bottom selecionados pelo parâmetro target_piece. Duas coisas resolvidas: um só solver dirige ambas as peças para um conjunto modelado junto servir junto, com medidas e folga negativa compartilhadas; e os ombros do top são congruentes frente-costas enquanto a frente e as costas da legging compartilham UM gancho para a perna não torcer, sem nada limitado em negativo. Molde puro, sem ferragem ligada. Corredor 6 do FC-500 (ativo).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "active",
+      "ski",
+      "base-layer",
+      "merino",
+      "set",
+      "top",
+      "leggings",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "top",
+      "label": {
+        "en": "Crew top",
+        "es": "Playera de cuello redondo",
+        "fr": "Haut ras-du-cou",
+        "pt": "Camiseta de gola redonda"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "top_front",
+        "top_back",
+        "top_sleeve"
+      ]
+    },
+    {
+      "id": "bottom",
+      "label": {
+        "en": "Leggings",
+        "es": "Mallas",
+        "fr": "Collant",
+        "pt": "Legging"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "leg_front",
+        "leg_back"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "top_front",
+      "label": {
+        "en": "Top front (crew)",
+        "es": "Delantero (cuello redondo)",
+        "fr": "Devant (ras-du-cou)",
+        "pt": "Frente (gola redonda)"
+      },
+      "default_color": "#5a4a3a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "top_back",
+      "label": {
+        "en": "Top back",
+        "es": "Espalda",
+        "fr": "Dos",
+        "pt": "Costas"
+      },
+      "default_color": "#50412f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "top_sleeve",
+      "label": {
+        "en": "Top sleeve",
+        "es": "Manga",
+        "fr": "Manche",
+        "pt": "Manga"
+      },
+      "default_color": "#62523f",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "leg_front",
+      "label": {
+        "en": "Legging front",
+        "es": "Malla delantera",
+        "fr": "Collant devant",
+        "pt": "Legging frente"
+      },
+      "default_color": "#50412f",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "leg_back",
+      "label": {
+        "en": "Legging back",
+        "es": "Malla trasera",
+        "fr": "Collant dos",
+        "pt": "Legging costas"
+      },
+      "default_color": "#46392a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps",
+        "pt": "Medidas corporais"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 960,
+      "min": 700,
+      "max": 1400,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      },
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de peito (mm)"
+      },
+      "tooltip": {
+        "en": "Full chest — the top at slight negative ease",
+        "es": "Pecho completo — el top con leve holgura negativa",
+        "fr": "Poitrine complète — le haut en légère aisance négative",
+        "pt": "Peito completo — o top com leve folga negativa"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 820,
+      "min": 600,
+      "max": 1300,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)",
+        "pt": "Contorno de cintura (mm)"
+      },
+      "tooltip": {
+        "en": "The legging waist",
+        "es": "La cintura de la malla",
+        "fr": "La taille du collant",
+        "pt": "A cintura da legging"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 980,
+      "min": 720,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanche (mm)",
+        "pt": "Contorno de quadril (mm)"
+      },
+      "tooltip": {
+        "en": "Fullest hip — the legging derives from it",
+        "es": "Cadera más llena — la malla deriva de ella",
+        "fr": "Hanche la plus forte — le collant en dérive",
+        "pt": "Quadril mais cheio — a legging deriva dele"
+      }
+    },
+    {
+      "id": "back_length",
+      "type": "slider",
+      "group": "body",
+      "default": 660,
+      "min": 480,
+      "max": 860,
+      "step": 10,
+      "label": {
+        "en": "Top length (mm)",
+        "es": "Largo del top (mm)",
+        "fr": "Longueur du haut (mm)",
+        "pt": "Comprimento do top (mm)"
+      },
+      "tooltip": {
+        "en": "Nape to top hem",
+        "es": "De la nuca al bajo del top",
+        "fr": "De la nuque à l'ourlet du haut",
+        "pt": "Da nuca à barra do top"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "body",
+      "default": 600,
+      "min": 400,
+      "max": 720,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "arm_length"
+      },
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)",
+        "pt": "Comprimento de manga (mm)"
+      },
+      "tooltip": {
+        "en": "Shoulder to wrist",
+        "es": "Del hombro a la muñeca",
+        "fr": "De l'épaule au poignet",
+        "pt": "Do ombro ao pulso"
+      }
+    },
+    {
+      "id": "bicep_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 330,
+      "min": 240,
+      "max": 560,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bicep_girth"
+      },
+      "label": {
+        "en": "Bicep girth (mm)",
+        "es": "Contorno de bíceps (mm)",
+        "fr": "Tour de biceps (mm)",
+        "pt": "Contorno de bíceps (mm)"
+      },
+      "tooltip": {
+        "en": "Sizes the sleeve",
+        "es": "Dimensiona la manga",
+        "fr": "Dimensionne la manche",
+        "pt": "Dimensiona a manga"
+      }
+    },
+    {
+      "id": "outseam",
+      "type": "slider",
+      "group": "body",
+      "default": 1000,
+      "min": 760,
+      "max": 1200,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "outside_leg_length"
+      },
+      "label": {
+        "en": "Outseam (mm)",
+        "es": "Largo exterior (mm)",
+        "fr": "Longueur extérieure (mm)",
+        "pt": "Comprimento externo (mm)"
+      },
+      "tooltip": {
+        "en": "Waist to legging ankle hem",
+        "es": "De la cintura al bajo del tobillo",
+        "fr": "De la taille à l'ourlet cheville",
+        "pt": "Da cintura à barra do tornozelo"
+      }
+    },
+    {
+      "id": "ankle_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 260,
+      "min": 180,
+      "max": 400,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "ankle_girth"
+      },
+      "label": {
+        "en": "Ankle girth (mm)",
+        "es": "Contorno de tobillo (mm)",
+        "fr": "Tour de cheville (mm)",
+        "pt": "Contorno de tornozelo (mm)"
+      },
+      "tooltip": {
+        "en": "The legging ankle at negative ease",
+        "es": "El tobillo de la malla con holgura negativa",
+        "fr": "La cheville du collant en aisance négative",
+        "pt": "O tornozelo da legging com folga negativa"
+      }
+    },
+    {
+      "id": "negative_ease_pct",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 2,
+      "max": 14,
+      "step": 1,
+      "label": {
+        "en": "Negative ease (%)",
+        "es": "Holgura negativa (%)",
+        "fr": "Aisance négative (%)",
+        "pt": "Folga negativa (%)"
+      },
+      "tooltip": {
+        "en": "The merino sits as a second skin by being cut slightly smaller",
+        "es": "El merino se sienta como segunda piel al cortarse algo más pequeño",
+        "fr": "Le mérinos s'assied comme une seconde peau en étant coupé un peu plus petit",
+        "pt": "O merino assenta como segunda pele sendo cortado um pouco menor"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 4,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Narrow flatlocked seams",
+        "es": "Costuras angostas con flatlock",
+        "fr": "Coutures étroites en flatlock",
+        "pt": "Costuras estreitas com flatlock"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "midweight",
+      "label": {
+        "en": "Midweight",
+        "es": "Peso medio",
+        "fr": "Poids moyen",
+        "pt": "Peso médio"
+      },
+      "values": {
+        "negative_ease_pct": 6
+      }
+    },
+    {
+      "id": "race_fit",
+      "label": {
+        "en": "Race fit",
+        "es": "Ajuste de competición",
+        "fr": "Coupe course",
+        "pt": "Caimento de competição"
+      },
+      "values": {
+        "negative_ease_pct": 10
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "chest_girth > 0",
+      "message": {
+        "en": "Chest girth must be positive.",
+        "es": "El contorno de pecho debe ser positivo.",
+        "fr": "Le tour de poitrine doit être positif.",
+        "pt": "O contorno de peito deve ser positivo."
+      },
+      "severity": "warning"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "top_armhole",
+        "type": "armscye",
+        "label": {
+          "en": "Top armhole / sleeve cap",
+          "es": "Sisa del top / cabeza de manga",
+          "fr": "Emmanchure du haut / tête de manche",
+          "pt": "Cava do top / cabeça de manga"
+        },
+        "edges": [
+          {
+            "piece": "top_sleeve",
+            "edge": "cap"
+          },
+          {
+            "piece": "top_front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "top_back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "bicep_girth",
+          "back_length"
+        ]
+      },
+      {
+        "id": "leg_crotch",
+        "type": "custom",
+        "label": {
+          "en": "Legging crotch (one shared point)",
+          "es": "Entrepierna de malla (punto compartido)",
+          "fr": "Entrejambe de collant (point partagé)",
+          "pt": "Gancho de legging (ponto compartilhado)"
+        },
+        "edges": [
+          {
+            "piece": "leg_front",
+            "edge": "inseam"
+          },
+          {
+            "piece": "leg_back",
+            "edge": "inseam"
+          }
+        ],
+        "parameters": [
+          "hip_girth",
+          "outseam"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": false,
+      "compression_support": true,
+      "pull_on": true
+    },
+    "societal_benefit": {
+      "en": "A base layer is the garment closest to the skin in cold-weather sport, and its job is quiet but total: wick sweat, hold warmth, and never chafe over a full day under a pack and a shell. Merino does the wicking and warming; the pattern does the rest, and the rest is fit — a base layer with any slack traps cold air, and any tight seam becomes a hot spot by afternoon. Drafting the top and leggings from one shared solver so a set fits as a set, at a slight negative ease that hugs without binding, with congruent shoulders and a shared crotch so nothing twists, makes a made-to-measure base layer that performs because it fits a real body. That it is a natural fibre, repairable and drafted for longevity rather than a season answers the throwaway churn of technical base layers.",
+      "es": "Una primera capa es la prenda más cercana a la piel en el deporte de frío, y su trabajo es silencioso pero total: absorber el sudor, retener el calor y nunca rozar en un día entero bajo mochila y shell. El merino absorbe y calienta; el patrón hace el resto, y el resto es el ajuste — una primera capa con holgura atrapa aire frío, y cualquier costura apretada se vuelve un punto caliente por la tarde. Trazar el top y las mallas desde un solo solver compartido para que un conjunto ajuste como conjunto, con leve holgura negativa que abraza sin apretar, con hombros congruentes y entrepierna compartida para que nada se tuerza, hace una primera capa a medida que rinde porque ajusta a un cuerpo real. Que sea fibra natural, reparable y trazada para durar en vez de una temporada responde a la rotación desechable de las primeras capas técnicas.",
+      "fr": "Une sous-couche est le vêtement le plus proche de la peau dans le sport par temps froid, et son rôle est discret mais total : évacuer la sueur, retenir la chaleur et ne jamais frotter sur une journée entière sous un sac et une coque. Le mérinos évacue et réchauffe ; le patron fait le reste, et le reste, c'est l'ajustement — une sous-couche avec du jeu emprisonne l'air froid, et toute couture serrée devient un point chaud l'après-midi. Tracer le haut et le collant depuis un seul solveur partagé pour qu'un ensemble aille comme un ensemble, à une légère aisance négative qui épouse sans serrer, avec des épaules congruentes et un entrejambe partagé pour que rien ne vrille, fait une sous-couche sur mesure qui performe parce qu'elle va à un corps réel. Qu'elle soit en fibre naturelle, réparable et tracée pour durer plutôt qu'une saison répond au renouvellement jetable des sous-couches techniques.",
+      "pt": "Uma segunda pele é a peça mais próxima da pele no esporte de frio, e sua função é discreta mas total: absorver o suor, reter o calor e nunca atritar num dia inteiro sob mochila e casca. O merino absorve e aquece; o molde faz o resto, e o resto é o caimento — uma segunda pele com folga prende ar frio, e qualquer costura apertada vira um ponto quente à tarde. Modelar o top e a legging a partir de um só solver compartilhado para um conjunto servir como conjunto, em leve folga negativa que abraça sem apertar, com ombros congruentes e gancho compartilhado para nada torcer, faz uma segunda pele sob medida que rende porque serve a um corpo real. Ser fibra natural, reparável e modelada para durar em vez de uma temporada responde ao descarte das segundas peles técnicas."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

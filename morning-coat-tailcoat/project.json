@@ -1,0 +1,97 @@
+{
+  "project": {
+    "name": "Morning coat",
+    "slug": "morning-coat-tailcoat",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "Formal daywear, the descendant of the riding coat: below the single fastening button the centre-front edge sweeps away in a continuous cutaway curve to the side seam, and the coat continues behind as a long tail skirt. The cutaway curve IS the garment — it changes which edges exist and where the button sits relative to the sweep. Distinct from a tailcoat's square-cut fronts: the morning coat's front is one continuous curve from the button break to the tail. Three things are solved by measurement, not sketched: the cutaway is a clamped span (its run and drop both floored positive so a negative span can never invert the front into geometry the kernel launders into a valid-looking outline); the tail is a separate waist-seamed skirt on its own grain, drafted to the measured back waist so the waist seam closes; and the shank button, faced lapel and set-in sleeve are solved off measurements. Made to measure. FC-500 lane 5 (tailoring, T4).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Vestimenta formal de día, descendiente de la levita de montar: bajo el único botón de cierre el borde del centro delantero se abre en una curva continua hasta la costura lateral, y el saco continúa atrás como faldón de cola. La curva de corte ES la prenda — cambia qué bordes existen y dónde queda el botón respecto al barrido. Distinto de los frentes rectos de un frac: el frente del chaqué es una curva continua del botón a la cola. Tres cosas se resuelven por medida, no a mano: el corte es un tramo limitado (su recorrido y caída con piso positivo para que un tramo negativo no invierta el frente en geometría que el núcleo blanquea como contorno válido); la cola es un faldón aparte con costura de cintura, en su propio hilo, trazado a la cintura trasera medida para que la costura cierre; y el botón de tija, la solapa forrada y la manga montada se resuelven de las medidas. Hecho a medida. Carril 5 de FC-500 (sastrería, T4).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Tenue de jour formelle, descendante de la redingote d'équitation : sous l'unique bouton de fermeture le bord milieu devant s'échancre en une courbe continue jusqu'à la couture côté, et l'habit se poursuit derrière en une longue jupe à queue. La courbe d'échancrure EST le vêtement — elle change quels bords existent et où le bouton se situe par rapport à l'échancrure. Distinct des devants droits d'un frac : le devant de la jaquette est une courbe continue du bouton à la queue. Trois choses sont résolues par la mesure, non esquissées : l'échancrure est un tronçon bridé (son parcours et sa chute planchérisés positifs pour qu'un tronçon négatif n'inverse jamais le devant en géométrie que le noyau blanchit en contour valide) ; la queue est une jupe séparée à couture de taille, sur son propre droit-fil, tracée à la taille dos mesurée pour que la couture ferme ; et le bouton à tige, le revers doublé et la manche montée sont résolus sur les mesures. Fait sur mesure. Couloir 5 de FC-500 (tailleur, T4).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Traje formal de dia, descendente da sobrecasaca de montaria: abaixo do único botão de fecho a borda do centro frontal recorta em curva contínua até a costura lateral, e o casaco continua atrás como uma longa saia de fraque. A curva de recorte É a peça — muda quais bordas existem e onde o botão fica em relação ao recorte. Distinto das frentes retas de um fraque de cauda: a frente do fraque de dia é uma curva contínua do botão à cauda. Três coisas são resolvidas por medida, não esboçadas: o recorte é um trecho limitado (seu percurso e queda com piso positivo para que um trecho negativo nunca inverta a frente em geometria que o núcleo branqueia como contorno válido); a cauda é uma saia separada com costura de cintura, no próprio fio, modelada à cintura traseira medida para a costura fechar; e o botão de pé, a lapela forrada e a manga montada são resolvidos das medidas. Feito sob medida. Corredor 5 do FC-500 (alfaiataria, T4).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["tailoring", "morning-coat", "cutaway", "formalwear", "made-to-measure", "shank-button", "hardware", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full coat", "es": "Chaqué completo", "fr": "Habit complet", "pt": "Fraque completo"}, "script_file": "main.py", "pieces": ["front", "back", "tail", "sleeve", "collar"]}
+  ],
+  "pieces": [
+    {"id": "front", "label": {"en": "Cutaway front", "es": "Frente de corte", "fr": "Devant échancré", "pt": "Frente recortada"}, "default_color": "#2a2a30", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "back", "label": {"en": "Back (cut 1 on fold)", "es": "Espalda (corte 1 al pliegue)", "fr": "Dos (coupé 1 au pli)", "pt": "Costas (corte 1 na dobra)"}, "default_color": "#232329", "cut": {"quantity": 1, "on_fold": true, "mirror": true}},
+    {"id": "tail", "label": {"en": "Tail skirt (cut 1 on fold)", "es": "Faldón de cola (corte 1 al pliegue)", "fr": "Jupe à queue (coupé 1 au pli)", "pt": "Saia de cauda (corte 1 na dobra)"}, "default_color": "#26262c", "cut": {"quantity": 1, "on_fold": true, "mirror": true}},
+    {"id": "sleeve", "label": {"en": "Sleeve", "es": "Manga", "fr": "Manche", "pt": "Manga"}, "default_color": "#2d2d33", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "collar", "label": {"en": "Collar", "es": "Cuello", "fr": "Col", "pt": "Colarinho"}, "default_color": "#1f1f25", "cut": {"quantity": 1, "mirror": false}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "chest_girth", "type": "slider", "group": "body", "default": 1020, "min": 820, "max": 1400, "step": 10, "measurement": {"standard": "iso_8559", "code": "chest_bust_girth"}, "label": {"en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)"}, "tooltip": {"en": "Full chest — the body block is drafted from this at coat ease", "es": "Pecho completo — el bloque se traza de esto con holgura de saco", "fr": "Poitrine complète — le bloc se trace de ceci avec aisance", "pt": "Peito completo — o bloco é modelado disto com folga"}},
+    {"id": "waist_girth", "type": "slider", "group": "body", "default": 880, "min": 640, "max": 1300, "step": 10, "measurement": {"standard": "iso_8559", "code": "waist_girth"}, "label": {"en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)", "pt": "Contorno de cintura (mm)"}, "tooltip": {"en": "Natural waist — the cutaway and the tail seam sit here", "es": "Cintura natural — el corte y la costura de cola quedan aquí", "fr": "Taille naturelle — l'échancrure et la couture de queue sont ici", "pt": "Cintura natural — o recorte e a costura da cauda ficam aqui"}},
+    {"id": "back_length", "type": "slider", "group": "body", "default": 440, "min": 360, "max": 520, "step": 5, "measurement": {"standard": "iso_8559", "code": "back_neck_to_waist"}, "label": {"en": "Back length (nape to waist, mm)", "es": "Largo de espalda (nuca a cintura, mm)", "fr": "Longueur de dos (nuque à taille, mm)", "pt": "Comprimento das costas (nuca à cintura, mm)"}, "tooltip": {"en": "Nape to waist — the body block height", "es": "De la nuca a la cintura — el alto del bloque", "fr": "De la nuque à la taille — la hauteur du bloc", "pt": "Da nuca à cintura — a altura do bloco"}},
+    {"id": "tail_length", "type": "slider", "group": "body", "default": 400, "min": 280, "max": 560, "step": 10, "label": {"en": "Tail length (mm)", "es": "Largo de cola (mm)", "fr": "Longueur de queue (mm)", "pt": "Comprimento da cauda (mm)"}, "tooltip": {"en": "Waist to tail hem", "es": "De la cintura al borde de la cola", "fr": "De la taille à l'ourlet de la queue", "pt": "Da cintura à barra da cauda"}},
+    {"id": "sleeve_length", "type": "slider", "group": "body", "default": 630, "min": 520, "max": 720, "step": 10, "measurement": {"standard": "iso_8559", "code": "arm_length"}, "label": {"en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)", "pt": "Comprimento de manga (mm)"}, "tooltip": {"en": "Shoulder to wrist", "es": "Del hombro a la muñeca", "fr": "De l'épaule au poignet", "pt": "Do ombro ao pulso"}},
+    {"id": "bicep_girth", "type": "slider", "group": "body", "default": 340, "min": 260, "max": 520, "step": 10, "measurement": {"standard": "iso_8559", "code": "bicep_girth"}, "label": {"en": "Bicep girth (mm)", "es": "Contorno de bíceps (mm)", "fr": "Tour de biceps (mm)", "pt": "Contorno de bíceps (mm)"}, "tooltip": {"en": "Sizes the sleeve", "es": "Dimensiona la manga", "fr": "Dimensionne la manche", "pt": "Dimensiona a manga"}},
+    {"id": "button_rise", "type": "slider", "group": "construction", "default": 40, "min": 0, "max": 120, "step": 5, "label": {"en": "Button rise above waist (mm)", "es": "Alto del botón sobre la cintura (mm)", "fr": "Hauteur du bouton au-dessus de la taille (mm)", "pt": "Altura do botão acima da cintura (mm)"}, "tooltip": {"en": "Where the single fastening button sits — the cutaway starts here", "es": "Dónde queda el único botón — el corte empieza aquí", "fr": "Où se situe l'unique bouton — l'échancrure commence ici", "pt": "Onde fica o único botão — o recorte começa aqui"}},
+    {"id": "cutaway_sweep", "type": "slider", "group": "construction", "default": 180, "min": 60, "max": 320, "step": 10, "label": {"en": "Cutaway sweep (mm)", "es": "Barrido del corte (mm)", "fr": "Échancrure (mm)", "pt": "Recorte (mm)"}, "tooltip": {"en": "Horizontal run of the cutaway — floored positive so the front can never invert", "es": "Recorrido horizontal del corte — con piso positivo para que el frente no se invierta", "fr": "Parcours horizontal de l'échancrure — planchérisé pour que le devant ne s'inverse pas", "pt": "Percurso horizontal do recorte — com piso positivo para a frente não inverter"}},
+    {"id": "button_dia", "type": "slider", "group": "construction", "default": 23, "min": 15, "max": 34, "step": 1, "label": {"en": "Button diameter (mm)", "es": "Diámetro de botón (mm)", "fr": "Diamètre de bouton (mm)", "pt": "Diâmetro de botão (mm)"}, "tooltip": {"en": "The shank button disc — drives the hardware and the button-stand interface", "es": "El disco del botón de tija — define el herraje y la interfaz de portada", "fr": "Le disque du bouton à tige — pilote la quincaillerie et l'interface de patte", "pt": "O disco do botão de pé — dirige a ferragem e a interface de portada"}},
+    {"id": "lapel_width", "type": "slider", "group": "construction", "default": 90, "min": 50, "max": 140, "step": 5, "label": {"en": "Lapel width (mm)", "es": "Ancho de solapa (mm)", "fr": "Largeur de revers (mm)", "pt": "Largura de lapela (mm)"}, "tooltip": {"en": "The peak lapel width", "es": "El ancho de la solapa de pico", "fr": "La largeur du revers cranté", "pt": "A largura da lapela de bico"}},
+    {"id": "coat_ease", "type": "slider", "group": "construction", "default": 100, "min": 40, "max": 200, "step": 10, "label": {"en": "Coat ease (mm)", "es": "Holgura de saco (mm)", "fr": "Aisance d'habit (mm)", "pt": "Folga de casaco (mm)"}, "tooltip": {"en": "Wearing ease added to the chest", "es": "Holgura de uso añadida al pecho", "fr": "Aisance de port ajoutée à la poitrine", "pt": "Folga de uso adicionada ao peito"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 8, "max": 18, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Tailoring seam allowances", "es": "Márgenes de costura de sastrería", "fr": "Marges de couture tailleur", "pt": "Margens de costura de alfaiataria"}}
+  ],
+  "presets": [
+    {"id": "wedding", "label": {"en": "Wedding grey", "es": "Gris de boda", "fr": "Gris de mariage", "pt": "Cinza de casamento"}, "values": {"cutaway_sweep": 200, "lapel_width": 100}},
+    {"id": "ascot", "label": {"en": "Ascot black", "es": "Negro de Ascot", "fr": "Noir Ascot", "pt": "Preto Ascot"}, "values": {"cutaway_sweep": 160, "tail_length": 440}}
+  ],
+  "constraints": [
+    {"expression": "chest_girth > waist_girth", "message": {"en": "Chest girth should exceed waist girth for the body shape.", "es": "El contorno de pecho debe superar al de cintura.", "fr": "Le tour de poitrine doit dépasser celui de taille.", "pt": "O contorno de peito deve exceder o de cintura."}, "severity": "warning"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "button",
+    "subtype": "single shank fastening button",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "shank-button-solid",
+      "linked": true,
+      "params_map": {
+        "diameter_mm": "button_dia",
+        "thickness": "max(3, seam_allowance)"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "button_stand", "type": "button_stand", "label": {"en": "Button stand (single fastening button)", "es": "Portada de botón (botón único)", "fr": "Patte de boutonnage (bouton unique)", "pt": "Portada de botão (botão único)"}, "edges": [{"piece": "front", "edge": "lapel_cf"}], "parameters": ["button_dia", "button_rise"]},
+      {"id": "cutaway_front", "type": "hem", "label": {"en": "Cutaway front sweep", "es": "Barrido de corte del frente", "fr": "Échancrure du devant", "pt": "Recorte da frente"}, "edges": [{"piece": "front", "edge": "cutaway"}], "parameters": ["cutaway_sweep", "button_rise"]},
+      {"id": "waist_seam", "type": "custom", "label": {"en": "Waist seam (tail to back)", "es": "Costura de cintura (cola a espalda)", "fr": "Couture de taille (queue au dos)", "pt": "Costura de cintura (cauda às costas)"}, "edges": [{"piece": "tail", "edge": "waist"}, {"piece": "back", "edge": "waist"}], "parameters": ["waist_girth", "tail_length"]},
+      {"id": "armhole", "type": "armscye", "label": {"en": "Armhole / sleeve cap", "es": "Sisa / cabeza de manga", "fr": "Emmanchure / tête de manche", "pt": "Cava / cabeça de manga"}, "edges": [{"piece": "sleeve", "edge": "cap"}, {"piece": "front", "edge": "armhole"}, {"piece": "back", "edge": "armhole"}], "parameters": ["bicep_girth", "back_length"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "tailoring": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The morning coat is the surviving daytime formal coat — worn to weddings, to Ascot, to state occasions — and its defining feature, the cutaway, is exactly the part a flat pattern most easily gets wrong: sketch the sweep by eye and at some sizes it runs backwards, inverting the front into an outline that still closes but no longer describes a coat. Solving the cutaway as a clamped span, seaming the tail to the measured back waist, and bridging the button to a printable solid makes the coat a made-to-measure, repairable commons object: a formal garment that fits a real body's measurements, whose one visible fastening can be reprinted, drafted so no slider can quietly produce a broken cut.",
+      "es": "El chaqué es el saco formal de día que sobrevive — se usa en bodas, en Ascot, en actos de Estado — y su rasgo definitorio, el corte, es justo la parte que un patrón plano más fácilmente equivoca: dibuja el barrido a ojo y en ciertas tallas corre al revés, invirtiendo el frente en un contorno que aún cierra pero ya no describe un saco. Resolver el corte como tramo limitado, coser la cola a la cintura trasera medida y puentear el botón a un sólido imprimible vuelve al saco un objeto común a medida y reparable: una prenda formal que ajusta a las medidas de un cuerpo real, cuyo único cierre visible puede reimprimirse, trazada para que ningún control produzca en silencio un corte roto.",
+      "fr": "La jaquette est l'habit formel de jour qui subsiste — porté aux mariages, à Ascot, aux cérémonies d'État — et son trait déterminant, l'échancrure, est précisément la partie qu'un patron plat rate le plus facilement : esquissez l'échancrure à l'œil et à certaines tailles elle court à l'envers, inversant le devant en un contour qui ferme encore mais ne décrit plus un habit. Résoudre l'échancrure comme un tronçon bridé, coudre la queue à la taille dos mesurée et relier le bouton à un solide imprimable fait de l'habit un objet commun sur mesure et réparable : un vêtement formel qui va aux mesures d'un corps réel, dont l'unique fermeture visible peut être réimprimée, tracé pour qu'aucun curseur ne produise en silence une coupe cassée.",
+      "pt": "O fraque de dia é o casaco formal diurno que sobrevive — usado em casamentos, em Ascot, em ocasiões de Estado — e seu traço definidor, o recorte, é justamente a parte que um molde plano mais facilmente erra: esboce o recorte a olho e em certos tamanhos ele corre ao contrário, invertendo a frente num contorno que ainda fecha mas já não descreve um casaco. Resolver o recorte como trecho limitado, costurar a cauda à cintura traseira medida e ligar o botão a um sólido imprimível torna o casaco um objeto comum sob medida e reparável: uma peça formal que serve às medidas de um corpo real, cujo único fecho visível pode ser reimpresso, modelada para que nenhum controle produza em silêncio um corte quebrado."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

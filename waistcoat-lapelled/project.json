@@ -1,0 +1,96 @@
+{
+  "project": {
+    "name": "Lapelled formal waistcoat",
+    "slug": "waistcoat-lapelled",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A formal evening waistcoat with a proper lapel — the low-cut, lapelled vest worn under a dinner jacket or tailcoat, as opposed to a plain V-neck vest. The lapel changes the front edge: the neckline rolls back into a shawl or peaked lapel above the top button, and the deep V opening below shows the shirt. Points at the hem, a cinch strap at the back. Two things solved: the front hem point drop is clamped under a quarter of the front length so the point can never fall below the hem baseline (which would invert the hem edge); and the sew-through buttons run the front edge below the lapel break, their ligne the drafted button_ligne that drives the garment's button-stand interface AND the Yantra4D sew-through-button sew face — one number, two objects. FC-500 lane 5 (tailoring, T3).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un chaleco de vestir de noche con solapa propia — el chaleco bajo y con solapa que se usa bajo el esmoquin o el frac, a diferencia de un chaleco de pico liso. La solapa cambia el borde delantero: el escote se voltea en una solapa de chal o de pico sobre el primer botón, y la abertura en V profunda de abajo muestra la camisa. Picos en el bajo, cinta de ajuste atrás. Dos cosas resueltas: la caída del pico del bajo se limita bajo un cuarto del largo delantero para que el pico nunca caiga bajo la línea del bajo (lo que invertiría el bajo); y los botones de coser recorren el borde delantero bajo el quiebre de solapa, con su ligne el button_ligne trazado que define la interfaz de portada de la prenda Y la cara de cosido del sew-through-button de Yantra4D — un número, dos objetos. Carril 5 de FC-500 (sastrería, T3).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un gilet de soirée à véritable revers — le gilet bas à revers porté sous le smoking ou l'habit, par opposition à un gilet à col en V uni. Le revers change le bord devant : l'encolure se retourne en un revers châle ou cranté au-dessus du bouton du haut, et l'ouverture en V profonde en dessous montre la chemise. Des pointes à l'ourlet, une martingale au dos. Deux choses résolues : la chute de la pointe d'ourlet est bridée sous un quart de la longueur devant pour que la pointe ne tombe jamais sous la ligne d'ourlet (ce qui inverserait l'ourlet) ; et les boutons cousus parcourent le bord devant sous la cassure du revers, leur ligne étant le button_ligne tracé qui pilote l'interface de patte du vêtement ET la face de couture du sew-through-button de Yantra4D — un nombre, deux objets. Couloir 5 de FC-500 (tailleur, T3).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um colete social de noite com lapela própria — o colete baixo e com lapela usado sob o smoking ou o fraque, ao contrário de um colete de gola V liso. A lapela muda a borda dianteira: o decote vira uma lapela xale ou de bico acima do botão superior, e a abertura em V profunda abaixo mostra a camisa. Bicos na barra, tira de ajuste atrás. Duas coisas resolvidas: a queda do bico da barra é limitada sob um quarto do comprimento dianteiro para o bico nunca cair abaixo da linha da barra (o que inverteria a barra); e os botões de costura percorrem a borda dianteira abaixo da quebra da lapela, com sua ligne o button_ligne modelado que dirige a interface de portada da peça E a face de costura do sew-through-button de Yantra4D — um número, dois objetos. Corredor 5 do FC-500 (alfaiataria, T3).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["tailoring", "waistcoat", "vest", "lapel", "formalwear", "sew-through-button", "hardware", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full waistcoat", "es": "Chaleco completo", "fr": "Gilet complet", "pt": "Colete completo"}, "script_file": "main.py", "pieces": ["front", "back", "strap"]}
+  ],
+  "pieces": [
+    {"id": "front", "label": {"en": "Front (lapel + point)", "es": "Delantero (solapa + pico)", "fr": "Devant (revers + pointe)", "pt": "Frente (lapela + bico)"}, "default_color": "#26262c", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "back", "label": {"en": "Back (cinch strap)", "es": "Espalda (cinta de ajuste)", "fr": "Dos (martingale)", "pt": "Costas (tira de ajuste)"}, "default_color": "#1f1f25", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "strap", "label": {"en": "Cinch strap", "es": "Cinta de ajuste", "fr": "Martingale", "pt": "Tira de ajuste"}, "default_color": "#23232a", "cut": {"quantity": 2, "mirror": true}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "chest_girth", "type": "slider", "group": "body", "default": 1000, "min": 800, "max": 1400, "step": 10, "measurement": {"standard": "iso_8559", "code": "chest_bust_girth"}, "label": {"en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)"}, "tooltip": {"en": "Full chest — the body block at vest ease", "es": "Pecho completo — el bloque con holgura de chaleco", "fr": "Poitrine complète — le bloc avec aisance", "pt": "Peito completo — o bloco com folga"}},
+    {"id": "waist_girth", "type": "slider", "group": "body", "default": 880, "min": 640, "max": 1300, "step": 10, "measurement": {"standard": "iso_8559", "code": "waist_girth"}, "label": {"en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)", "pt": "Contorno de cintura (mm)"}, "tooltip": {"en": "Natural waist — the shaping reference", "es": "Cintura natural — la referencia de entalle", "fr": "Taille naturelle — le repère de galbe", "pt": "Cintura natural — a referência de modelagem"}},
+    {"id": "front_length", "type": "slider", "group": "body", "default": 560, "min": 440, "max": 700, "step": 10, "label": {"en": "Front length (mm)", "es": "Largo delantero (mm)", "fr": "Longueur devant (mm)", "pt": "Comprimento dianteiro (mm)"}, "tooltip": {"en": "Shoulder to front point", "es": "Del hombro al pico delantero", "fr": "De l'épaule à la pointe devant", "pt": "Do ombro ao bico dianteiro"}},
+    {"id": "lapel_width", "type": "slider", "group": "construction", "default": 70, "min": 35, "max": 130, "step": 5, "label": {"en": "Lapel width (mm)", "es": "Ancho de solapa (mm)", "fr": "Largeur de revers (mm)", "pt": "Largura de lapela (mm)"}, "tooltip": {"en": "The lapel peak width", "es": "El ancho del pico de la solapa", "fr": "La largeur du cran du revers", "pt": "A largura do bico da lapela"}},
+    {"id": "lapel_break", "type": "slider", "group": "construction", "default": 280, "min": 140, "max": 460, "step": 10, "label": {"en": "Lapel break (mm below shoulder)", "es": "Quiebre de solapa (mm bajo el hombro)", "fr": "Cassure de revers (mm sous l'épaule)", "pt": "Quebra de lapela (mm abaixo do ombro)"}, "tooltip": {"en": "Where the lapel rolls to the top button — clamped between shoulder and hem", "es": "Dónde la solapa llega al primer botón — limitado entre hombro y bajo", "fr": "Où le revers atteint le bouton du haut — bridé entre épaule et ourlet", "pt": "Onde a lapela chega ao botão superior — limitado entre ombro e barra"}},
+    {"id": "point_drop", "type": "slider", "group": "construction", "default": 60, "min": 20, "max": 140, "step": 5, "label": {"en": "Point drop (mm)", "es": "Caída del pico (mm)", "fr": "Chute de pointe (mm)", "pt": "Queda do bico (mm)"}, "tooltip": {"en": "How far the front points drop below the side hem — clamped so it never inverts", "es": "Cuánto caen los picos bajo el bajo lateral — limitado para que no se invierta", "fr": "De combien les pointes tombent sous l'ourlet côté — bridé pour ne pas s'inverser", "pt": "Quanto os bicos caem abaixo da barra lateral — limitado para não inverter"}},
+    {"id": "strap_width", "type": "slider", "group": "construction", "default": 45, "min": 25, "max": 80, "step": 5, "label": {"en": "Strap width (mm)", "es": "Ancho de cinta (mm)", "fr": "Largeur de martingale (mm)", "pt": "Largura da tira (mm)"}, "tooltip": {"en": "The back cinch strap width", "es": "El ancho de la cinta de ajuste trasera", "fr": "La largeur de la martingale dos", "pt": "A largura da tira de ajuste traseira"}},
+    {"id": "button_ligne", "type": "slider", "group": "construction", "default": 24, "min": 16, "max": 40, "step": 1, "label": {"en": "Button ligne", "es": "Ligne del botón", "fr": "Ligne du bouton", "pt": "Ligne do botão"}, "tooltip": {"en": "The sew-through button size — drives the hardware and the button-stand interface", "es": "El tamaño del botón de coser — define el herraje y la interfaz de portada", "fr": "La taille du bouton cousu — pilote la quincaillerie et l'interface de patte", "pt": "O tamanho do botão de costura — dirige a ferragem e a interface de portada"}},
+    {"id": "vest_ease", "type": "slider", "group": "construction", "default": 60, "min": 20, "max": 140, "step": 10, "label": {"en": "Vest ease (mm)", "es": "Holgura de chaleco (mm)", "fr": "Aisance de gilet (mm)", "pt": "Folga de colete (mm)"}, "tooltip": {"en": "Wearing ease over the shirt", "es": "Holgura de uso sobre la camisa", "fr": "Aisance de port sur la chemise", "pt": "Folga de uso sobre a camisa"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 10, "min": 6, "max": 16, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Tailoring seam allowances", "es": "Márgenes de costura de sastrería", "fr": "Marges de couture tailleur", "pt": "Margens de costura de alfaiataria"}}
+  ],
+  "presets": [
+    {"id": "tailcoat_white", "label": {"en": "White-tie", "es": "Etiqueta blanca", "fr": "Cravate blanche", "pt": "Gravata branca"}, "values": {"lapel_break": 340, "point_drop": 50}},
+    {"id": "dinner_black", "label": {"en": "Black-tie", "es": "Etiqueta negra", "fr": "Cravate noire", "pt": "Gravata preta"}, "values": {"lapel_break": 300, "lapel_width": 60}}
+  ],
+  "constraints": [
+    {"expression": "chest_girth > waist_girth", "message": {"en": "Chest girth should exceed waist girth for the body shape.", "es": "El contorno de pecho debe superar al de cintura.", "fr": "Le tour de poitrine doit dépasser celui de taille.", "pt": "O contorno de peito deve exceder o de cintura."}, "severity": "warning"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "button",
+    "subtype": "front sew-through buttons",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "thickness": "button_ligne * 0.10",
+        "hole_count": "4",
+        "hole_dia": "button_ligne * 0.05",
+        "hole_spacing": "button_ligne * 0.16",
+        "dish_depth": "button_ligne * 0.03"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "button_stand", "type": "button_stand", "label": {"en": "Button stand (front sew-through buttons)", "es": "Portada (botones de coser delanteros)", "fr": "Patte de boutonnage (boutons cousus devant)", "pt": "Portada (botões de costura dianteiros)"}, "edges": [{"piece": "front", "edge": "front_edge"}], "parameters": ["button_ligne", "lapel_break"]},
+      {"id": "lapel_roll", "type": "custom", "label": {"en": "Lapel roll", "es": "Vuelta de solapa", "fr": "Cran de revers", "pt": "Rolo de lapela"}, "edges": [{"piece": "front", "edge": "lapel"}], "parameters": ["lapel_width", "lapel_break"]},
+      {"id": "vest_side", "type": "side_seam", "label": {"en": "Side seams (front to back)", "es": "Costuras laterales (delante a espalda)", "fr": "Coutures côté (devant au dos)", "pt": "Costuras laterais (frente às costas)"}, "edges": [{"piece": "front", "edge": "side"}, {"piece": "back", "edge": "side"}], "parameters": ["chest_girth", "vest_ease"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "tailoring": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The lapelled waistcoat is the piece that distinguishes true evening dress from a rented approximation — the lapel is the detail cheap formalwear drops because it is fiddly to draft and the reason a hired outfit looks hired. Bringing it into a parametric commons, with the lapel roll and the pointed hem solved so no size produces an inverted edge, and the visible buttons bridged to a printable, replaceable solid, puts made-to-measure evening tailoring within reach of anyone who can sew or commission — and makes the one part most likely to be lost or mismatched, the button, reprintable to match. Formal dress that fits and can be maintained rather than owned once and discarded.",
+      "es": "El chaleco con solapa es la pieza que distingue el traje de noche verdadero de una aproximación alquilada — la solapa es el detalle que la ropa formal barata omite porque es engorroso trazarla y la razón por la que un conjunto rentado se ve rentado. Traerlo a un común paramétrico, con la vuelta de solapa y el bajo en pico resueltos para que ninguna talla produzca un borde invertido, y los botones visibles puenteados a un sólido imprimible y reemplazable, pone la sastrería de noche a medida al alcance de quien pueda coser o encargar — y hace reimprimible, a juego, la parte más propensa a perderse o descombinarse: el botón. Traje formal que ajusta y se mantiene, no que se posee una vez y se descarta.",
+      "fr": "Le gilet à revers est la pièce qui distingue la vraie tenue de soirée d'une approximation louée — le revers est le détail que la tenue de soirée bon marché supprime parce qu'il est délicat à tracer, et la raison pour laquelle une tenue louée a l'air louée. L'amener dans un commun paramétrique, avec le cran de revers et l'ourlet en pointe résolus pour qu'aucune taille ne produise un bord inversé, et les boutons visibles reliés à un solide imprimable et remplaçable, met le tailleur de soirée sur mesure à la portée de quiconque sait coudre ou commander — et rend réimprimable, assortie, la pièce la plus susceptible d'être perdue ou dépareillée : le bouton. Une tenue formelle qui va et s'entretient, plutôt que possédée une fois et jetée.",
+      "pt": "O colete com lapela é a peça que distingue o traje de noite verdadeiro de uma aproximação alugada — a lapela é o detalhe que a roupa formal barata omite porque é trabalhosa de modelar, e a razão pela qual um conjunto alugado parece alugado. Trazê-lo a um comum paramétrico, com o rolo de lapela e a barra em bico resolvidos para que nenhum tamanho produza uma borda invertida, e os botões visíveis ligados a um sólido imprimível e substituível, coloca a alfaiataria de noite sob medida ao alcance de quem sabe costurar ou encomendar — e torna reimprimível, combinando, a parte mais sujeita a se perder ou desemparelhar: o botão. Traje formal que serve e se mantém, em vez de possuído uma vez e descartado."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

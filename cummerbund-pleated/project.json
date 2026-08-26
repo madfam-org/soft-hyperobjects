@@ -1,0 +1,88 @@
+{
+  "project": {
+    "name": "Pleated cummerbund",
+    "slug": "cummerbund-pleated",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The pleated silk waist sash of black-tie dress: a wide band of horizontal knife pleats worn over the waistband, pleats facing up (the old crumb-catcher), closing at the back on hooks and eyes. The pleat depth is taken into the pattern so the finished worn height is shorter than the flat cut height — the flat panel is drafted taller by the summed pleat take-up, so the finished sash is exactly the intended height. Two things solved: the flat cut height = finished_height + pleats x 2 x pleat_depth, with the take-up clamped so it can never exceed the flat panel (which would drive the finished height negative); and the back closure is hooks and eyes whose row count is driven by the garment's closure parameter. FC-500 lane 5 (tailoring, T2).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La faja de seda plisada del traje de etiqueta: una banda ancha de pliegues de cuchillo horizontales sobre la pretina, con los pliegues hacia arriba (el antiguo atrapamigas), que cierra atrás con corchetes. La profundidad del pliegue se lleva al patrón para que la altura terminada usada sea menor que la altura plana de corte — el panel plano se traza más alto por la suma de consumo de pliegues, así la faja terminada tiene exactamente la altura buscada. Dos cosas resueltas: la altura plana = altura_terminada + pliegues x 2 x profundidad, con el consumo limitado para que nunca exceda el panel plano (lo que haría negativa la altura terminada); y el cierre trasero son corchetes cuyo número de filas define el parámetro de cierre de la prenda. Carril 5 de FC-500 (sastrería, T2).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La ceinture de smoking en soie plissée : une large bande de plis couchés horizontaux portée sur la ceinture, plis vers le haut (l'ancien ramasse-miettes), fermée au dos par des agrafes. La profondeur du pli est intégrée au patron pour que la hauteur portée finie soit plus courte que la hauteur de coupe à plat — le panneau à plat est tracé plus haut de l'embu total des plis, de sorte que la ceinture finie a exactement la hauteur voulue. Deux choses résolues : la hauteur à plat = hauteur_finie + plis x 2 x profondeur, l'embu bridé pour ne jamais dépasser le panneau à plat (ce qui rendrait la hauteur finie négative) ; et la fermeture dos est en agrafes dont le nombre de rangs est piloté par le paramètre de fermeture du vêtement. Couloir 5 de FC-500 (tailleur, T2).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A faixa de cintura de seda plissada do traje de gala: uma banda larga de pregas de faca horizontais usada sobre o cós, com as pregas para cima (o antigo apanha-migalhas), fechando atrás com colchetes. A profundidade da prega é integrada ao molde para que a altura usada final seja menor que a altura de corte plana — o painel plano é modelado mais alto pela soma do consumo das pregas, então a faixa final tem exatamente a altura pretendida. Duas coisas resolvidas: a altura plana = altura_final + pregas x 2 x profundidade, com o consumo limitado para nunca exceder o painel plano (o que tornaria a altura final negativa); e o fecho traseiro são colchetes cujo número de fileiras é dirigido pelo parâmetro de fecho da peça. Corredor 5 do FC-500 (alfaiataria, T2).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["tailoring", "cummerbund", "black-tie", "pleats", "formalwear", "hook-and-eye", "hardware", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full cummerbund", "es": "Faja completa", "fr": "Ceinture complète", "pt": "Faixa completa"}, "script_file": "main.py", "pieces": ["band", "stay"]}
+  ],
+  "pieces": [
+    {"id": "band", "label": {"en": "Pleated sash", "es": "Faja plisada", "fr": "Bande plissée", "pt": "Faixa plissada"}, "default_color": "#1a1a1f", "cut": {"quantity": 1, "mirror": false}},
+    {"id": "stay", "label": {"en": "Closure stay", "es": "Refuerzo de cierre", "fr": "Renfort de fermeture", "pt": "Reforço de fecho"}, "default_color": "#141418", "cut": {"quantity": 2, "mirror": true}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "waist_girth", "type": "slider", "group": "body", "default": 880, "min": 600, "max": 1400, "step": 10, "measurement": {"standard": "iso_8559", "code": "waist_girth"}, "label": {"en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)", "pt": "Contorno de cintura (mm)"}, "tooltip": {"en": "The sash spans the front and sides of the waist", "es": "La faja abarca el frente y los lados de la cintura", "fr": "La ceinture couvre le devant et les côtés de la taille", "pt": "A faixa cobre a frente e os lados da cintura"}},
+    {"id": "finished_height", "type": "slider", "group": "body", "default": 120, "min": 70, "max": 200, "step": 5, "label": {"en": "Finished height (mm)", "es": "Altura terminada (mm)", "fr": "Hauteur finie (mm)", "pt": "Altura final (mm)"}, "tooltip": {"en": "The worn height after pleating — the flat height is solved taller", "es": "La altura usada tras plisar — la altura plana se resuelve más alta", "fr": "La hauteur portée après plissage — la hauteur à plat est résolue plus haute", "pt": "A altura usada após plissar — a altura plana é resolvida mais alta"}},
+    {"id": "pleat_count", "type": "slider", "group": "construction", "default": 4, "min": 2, "max": 7, "step": 1, "label": {"en": "Pleat count", "es": "Número de pliegues", "fr": "Nombre de plis", "pt": "Número de pregas"}, "tooltip": {"en": "How many horizontal knife pleats", "es": "Cuántos pliegues de cuchillo horizontales", "fr": "Combien de plis couchés horizontaux", "pt": "Quantas pregas de faca horizontais"}},
+    {"id": "pleat_depth", "type": "slider", "group": "construction", "default": 18, "min": 8, "max": 40, "step": 2, "label": {"en": "Pleat depth (mm)", "es": "Profundidad de pliegue (mm)", "fr": "Profondeur de pli (mm)", "pt": "Profundidade de prega (mm)"}, "tooltip": {"en": "Each pleat consumes twice its depth — clamped so the finished height stays positive", "es": "Cada pliegue consume el doble de su profundidad — limitado para que la altura terminada siga positiva", "fr": "Chaque pli consomme deux fois sa profondeur — bridé pour que la hauteur finie reste positive", "pt": "Cada prega consome o dobro de sua profundidade — limitado para a altura final ficar positiva"}},
+    {"id": "closure_overlap", "type": "slider", "group": "construction", "default": 60, "min": 30, "max": 120, "step": 5, "label": {"en": "Closure overlap (mm)", "es": "Solape de cierre (mm)", "fr": "Recouvrement de fermeture (mm)", "pt": "Sobreposição de fecho (mm)"}, "tooltip": {"en": "The back overlap that carries the hooks", "es": "El solape trasero que lleva los corchetes", "fr": "Le recouvrement dos qui porte les agrafes", "pt": "A sobreposição traseira que carrega os colchetes"}},
+    {"id": "hook_rows", "type": "slider", "group": "construction", "default": 3, "min": 2, "max": 5, "step": 1, "label": {"en": "Hook rows", "es": "Filas de corchetes", "fr": "Rangs d'agrafes", "pt": "Fileiras de colchetes"}, "tooltip": {"en": "How many rows of back hooks and eyes — drives the hardware", "es": "Cuántas filas de corchetes traseros — define el herraje", "fr": "Combien de rangs d'agrafes dos — pilote la quincaillerie", "pt": "Quantas fileiras de colchetes traseiros — dirige a ferragem"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 10, "min": 6, "max": 16, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Silk seam allowances", "es": "Márgenes de costura en seda", "fr": "Marges de couture en soie", "pt": "Margens de costura em seda"}}
+  ],
+  "presets": [
+    {"id": "classic", "label": {"en": "Classic 4-pleat", "es": "Clásico 4 pliegues", "fr": "Classique 4 plis", "pt": "Clássico 4 pregas"}, "values": {"pleat_count": 4, "finished_height": 120}},
+    {"id": "deep", "label": {"en": "Deep 5-pleat", "es": "Profundo 5 pliegues", "fr": "Profond 5 plis", "pt": "Profundo 5 pregas"}, "values": {"pleat_count": 5, "finished_height": 150}}
+  ],
+  "constraints": [
+    {"expression": "finished_height > 0", "message": {"en": "Finished height must be positive.", "es": "La altura terminada debe ser positiva.", "fr": "La hauteur finie doit être positive.", "pt": "A altura final deve ser positiva."}, "severity": "warning"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "hook",
+    "subtype": "back hook-and-eye closure",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "hook-and-eye",
+      "linked": true,
+      "params_map": {
+        "rows": "hook_rows",
+        "columns": "2",
+        "wire_d": "seam_allowance * 0.12"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "back_closure", "type": "custom", "label": {"en": "Back hook-and-eye closure", "es": "Cierre trasero de corchetes", "fr": "Fermeture dos à agrafes", "pt": "Fecho traseiro de colchetes"}, "edges": [{"piece": "stay", "edge": "attach"}], "parameters": ["hook_rows", "closure_overlap"]},
+      {"id": "pleat_field", "type": "custom", "label": {"en": "Pleat field (take-up solved)", "es": "Campo de pliegues (consumo resuelto)", "fr": "Champ de plis (embu résolu)", "pt": "Campo de pregas (consumo resolvido)"}, "edges": [{"piece": "band", "edge": "end_r"}], "parameters": ["pleat_count", "pleat_depth", "finished_height"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "tailoring": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A cummerbund looks trivial and hides a real drafting trap: the pleats eat height, so a panel cut to the finished dimension comes out too short once folded, and a beginner over-corrects and gets a sash that gapes. Taking the pleat take-up into the pattern — flat height solved as finished plus the summed consumption, clamped so it can never drive the finished height negative — means the sash is right the first time at any waist and any pleat count. Bridging the back closure to a printable, replaceable hook-and-eye completes the black-tie waist as a made-to-measure commons object whose one fastening can be reprinted.",
+      "es": "Una faja parece trivial y esconde una trampa real de trazado: los pliegues comen altura, así un panel cortado a la medida terminada sale corto al doblarse, y un principiante sobrecorrige y logra una faja que se abre. Llevar el consumo del pliegue al patrón — altura plana resuelta como la terminada más la suma consumida, limitada para que nunca haga negativa la altura terminada — hace que la faja salga bien a la primera en cualquier cintura y número de pliegues. Puentear el cierre trasero a un corchete imprimible y reemplazable completa la cintura de etiqueta como objeto común a medida cuyo único cierre puede reimprimirse.",
+      "fr": "Une ceinture de smoking paraît triviale et cache un vrai piège de tracé : les plis mangent de la hauteur, si bien qu'un panneau coupé à la dimension finie sort trop court une fois plié, et un débutant surcorrige et obtient une ceinture qui bâille. Intégrer l'embu du pli au patron — hauteur à plat résolue comme la finie plus l'embu total, bridée pour ne jamais rendre la hauteur finie négative — fait que la ceinture est juste du premier coup à toute taille et tout nombre de plis. Relier la fermeture dos à une agrafe imprimable et remplaçable achève la taille de smoking comme objet commun sur mesure dont l'unique fermeture peut être réimprimée.",
+      "pt": "Uma faixa parece trivial e esconde uma verdadeira armadilha de modelagem: as pregas comem altura, então um painel cortado à dimensão final sai curto ao dobrar, e um iniciante sobrecorrige e obtém uma faixa que abre. Integrar o consumo da prega ao molde — altura plana resolvida como a final mais o consumo total, limitada para nunca tornar a altura final negativa — faz a faixa sair certa de primeira em qualquer cintura e número de pregas. Ligar o fecho traseiro a um colchete imprimível e substituível completa a cintura de gala como objeto comum sob medida cujo único fecho pode ser reimpresso."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

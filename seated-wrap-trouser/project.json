@@ -1,0 +1,89 @@
+{
+  "project": {
+    "name": "Seated-wear wrap trouser",
+    "slug": "seated-wrap-trouser",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A trouser that dresses from a seated position without standing: instead of pulling a waistband over the hips, the whole front wraps open flat and closes with magnetic clasps, so a wearer who cannot stand lays the trouser under themselves, brings the wrap fronts across, and the clasps snap shut. The rise is drafted for sitting — taller back, lower front — so the waist stays level. The clasps are the Yantra4D magnetic-clasp solid, never modelled here; their disc diameter is driven by the same clasp_diameter that drives the garment's wrap-closure interface — the dimensional handshake. The front and back share one measured SIDE_LEN so the side seam matches despite the differing rises; the wrap overlap is clamped so it can never fold back on itself, and the extra back rise clamped so the waistline can never invert. FC-500 lane 4 (adaptive).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un pantalón que se viste sentado sin ponerse de pie: en vez de subir la pretina por las caderas, todo el frente se abre plano y cierra con broches magnéticos, así quien no puede pararse coloca el pantalón bajo sí, cruza los frentes envolventes y los broches cierran de golpe. El tiro se traza para sentarse — más alto atrás, más bajo adelante — para que la cintura quede a nivel. Los broches son el sólido magnetic-clasp de Yantra4D, nunca modelado aquí; su diámetro de disco lo define el mismo clasp_diameter que define la interfaz de cierre envolvente de la prenda — el apretón de manos dimensional. El delantero y el trasero comparten un SIDE_LEN medido para que la costura lateral coincida pese a los tiros distintos; el solape se limita para que no se pliegue sobre sí y el tiro trasero extra se limita para que la cintura no se invierta. Carril 4 de FC-500 (adaptativo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un pantalon qui s'enfile assis sans se lever : au lieu de remonter une ceinture sur les hanches, tout le devant s'ouvre à plat et se ferme par des fermoirs magnétiques, de sorte qu'une personne qui ne peut se lever glisse le pantalon sous elle, croise les devants portefeuille et les fermoirs se clipsent. La montée est tracée pour la position assise — plus haute au dos, plus basse devant — pour que la taille reste de niveau. Les fermoirs sont le solide magnetic-clasp de Yantra4D, jamais modélisé ici ; leur diamètre de disque est piloté par le même clasp_diameter qui pilote l'interface de fermeture portefeuille du vêtement — la poignée de main dimensionnelle. Le devant et le dos partagent un SIDE_LEN mesuré pour que la couture côté corresponde malgré les montées différentes ; le croisement est bridé pour ne pas se replier et la montée dos supplémentaire bridée pour que la taille ne s'inverse pas. Couloir 4 de FC-500 (adaptatif).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma calça que se veste sentado sem ficar de pé: em vez de subir um cós pelos quadris, toda a frente abre plana e fecha com fechos magnéticos, então quem não consegue se levantar coloca a calça sob si, cruza as frentes transpassadas e os fechos travam. O gancho é modelado para sentar — mais alto atrás, mais baixo à frente — para a cintura ficar nivelada. Os fechos são o sólido magnetic-clasp de Yantra4D, nunca modelado aqui; seu diâmetro de disco é dirigido pelo mesmo clasp_diameter que dirige a interface de fechamento transpassado da peça — o aperto de mão dimensional. A frente e as costas compartilham um SIDE_LEN medido para a costura lateral coincidir apesar dos ganchos diferentes; a sobreposição é limitada para não dobrar sobre si e o gancho traseiro extra limitado para a cintura não inverter. Corredor 4 do FC-500 (adaptativo).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["adaptive", "seated-dressing", "wrap", "magnetic-clasp", "jersey", "hardware", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"},
+        {"source": "seated-wear-trouser (Fashion Cabinet FC-400 #372) — seated rise lineage", "license": "CERN-OHL-W-2.0"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full trouser", "es": "Pantalón completo", "fr": "Pantalon complet", "pt": "Calça completa"}, "script_file": "main.py", "pieces": ["front", "back", "waistband"]}
+  ],
+  "pieces": [
+    {"id": "front", "label": {"en": "Wrap front (low rise)", "es": "Frente envolvente (tiro bajo)", "fr": "Devant portefeuille (montée basse)", "pt": "Frente transpassada (gancho baixo)"}, "default_color": "#4a5a68", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "back", "label": {"en": "Trouser back (raised rise)", "es": "Trasero (tiro alto)", "fr": "Dos (montée haute)", "pt": "Costas (gancho alto)"}, "default_color": "#3f4e5b", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "waistband", "label": {"en": "Waistband (magnetic clasps)", "es": "Pretina (broches magnéticos)", "fr": "Ceinture (fermoirs magnétiques)", "pt": "Cós (fechos magnéticos)"}, "default_color": "#34424e", "cut": {"quantity": 1, "mirror": false}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "waist_girth", "type": "slider", "group": "body", "default": 880, "min": 600, "max": 1400, "step": 10, "measurement": {"standard": "iso_8559", "code": "waist_girth"}, "label": {"en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)", "pt": "Contorno de cintura (mm)"}, "tooltip": {"en": "Natural waist — the clasps close here", "es": "Cintura natural — los broches cierran aquí", "fr": "Taille naturelle — les fermoirs se ferment ici", "pt": "Cintura natural — os fechos fecham aqui"}},
+    {"id": "hip_girth", "type": "slider", "group": "body", "default": 1060, "min": 760, "max": 1560, "step": 10, "measurement": {"standard": "iso_8559", "code": "hip_girth"}, "label": {"en": "Hip girth (mm)", "es": "Contorno de cadera (mm)", "fr": "Tour de hanche (mm)", "pt": "Contorno de quadril (mm)"}, "tooltip": {"en": "Fullest hip — the seat must clear it", "es": "Cadera más llena — el asiento debe librarla", "fr": "Hanche la plus forte — le siège doit la dégager", "pt": "Quadril mais cheio — o assento deve liberá-lo"}},
+    {"id": "outseam", "type": "slider", "group": "body", "default": 980, "min": 700, "max": 1200, "step": 10, "label": {"en": "Outseam (mm)", "es": "Largo exterior (mm)", "fr": "Longueur extérieure (mm)", "pt": "Comprimento externo (mm)"}, "tooltip": {"en": "Side waist to hem", "es": "De la cintura lateral al borde", "fr": "De la taille côté à l'ourlet", "pt": "Da cintura lateral à barra"}},
+    {"id": "front_rise", "type": "slider", "group": "body", "default": 240, "min": 180, "max": 340, "step": 5, "label": {"en": "Front rise (mm)", "es": "Tiro delantero (mm)", "fr": "Montée devant (mm)", "pt": "Gancho dianteiro (mm)"}, "tooltip": {"en": "Lower than a standing trouser so the front sits level seated", "es": "Más bajo que un pantalón de pie para que el frente quede a nivel sentado", "fr": "Plus bas qu'un pantalon debout pour que le devant reste de niveau assis", "pt": "Mais baixo que uma calça em pé para a frente ficar nivelada sentado"}},
+    {"id": "back_rise_extra", "type": "slider", "group": "body", "default": 90, "min": 30, "max": 160, "step": 5, "label": {"en": "Extra back rise (mm)", "es": "Tiro trasero extra (mm)", "fr": "Montée dos supplémentaire (mm)", "pt": "Gancho traseiro extra (mm)"}, "tooltip": {"en": "How much taller the back rise is — clamped under the leg so the waist can't invert", "es": "Cuánto más alto es el tiro trasero — limitado bajo la pierna para que la cintura no se invierta", "fr": "De combien la montée dos est plus haute — bridée sous la jambe pour que la taille ne s'inverse pas", "pt": "Quanto o gancho traseiro é mais alto — limitado sob a perna para a cintura não inverter"}},
+    {"id": "wrap_overlap", "type": "slider", "group": "construction", "default": 150, "min": 80, "max": 260, "step": 10, "label": {"en": "Wrap overlap (mm)", "es": "Solape del envolvente (mm)", "fr": "Croisement du portefeuille (mm)", "pt": "Sobreposição do transpasse (mm)"}, "tooltip": {"en": "How far the fronts cross — clamped under a quarter hip so it never folds back", "es": "Cuánto cruzan los frentes — limitado bajo un cuarto de cadera para que no se pliegue", "fr": "De combien les devants se croisent — bridé sous un quart de hanche pour ne pas se replier", "pt": "Quanto as frentes cruzam — limitado sob um quarto de quadril para não dobrar"}},
+    {"id": "clasp_diameter", "type": "slider", "group": "construction", "default": 24, "min": 14, "max": 40, "step": 2, "label": {"en": "Clasp diameter (mm)", "es": "Diámetro de broche (mm)", "fr": "Diamètre de fermoir (mm)", "pt": "Diâmetro de fecho (mm)"}, "tooltip": {"en": "The magnetic clasp disc diameter — drives the hardware and the closure interface", "es": "El diámetro del disco del broche magnético — define el herraje y la interfaz de cierre", "fr": "Le diamètre du disque du fermoir magnétique — pilote la quincaillerie et l'interface de fermeture", "pt": "O diâmetro do disco do fecho magnético — dirige a ferragem e a interface de fechamento"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 6, "max": 18, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Flat-fell the inseam so it does not chafe a seated wearer", "es": "Costura francesa en la entrepierna para que no roce sentado", "fr": "Couture rabattue à l'entrejambe pour ne pas frotter assis", "pt": "Costura embainhada no gancho para não atritar sentado"}}
+  ],
+  "presets": [
+    {"id": "wheelchair", "label": {"en": "Wheelchair fit", "es": "Ajuste de silla de ruedas", "fr": "Coupe fauteuil roulant", "pt": "Caimento cadeira de rodas"}, "values": {"back_rise_extra": 120, "wrap_overlap": 180}},
+    {"id": "recovery", "label": {"en": "Recovery fit", "es": "Ajuste de recuperación", "fr": "Coupe convalescence", "pt": "Caimento de recuperação"}, "values": {"back_rise_extra": 70, "wrap_overlap": 200}}
+  ],
+  "constraints": [
+    {"expression": "hip_girth > waist_girth", "message": {"en": "Hip girth should exceed waist girth for the body shape.", "es": "El contorno de cadera debe superar al de cintura para la forma del cuerpo.", "fr": "Le tour de hanche doit dépasser celui de taille pour la forme du corps.", "pt": "O contorno de quadril deve exceder o de cintura para a forma do corpo."}, "severity": "warning"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "magnetic clasp wrap closure",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "magnetic-clasp",
+      "linked": true,
+      "params_map": {
+        "disc_dia": "clasp_diameter"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "wrap_closure", "type": "placket", "label": {"en": "Wrap closure (fronts cross, clasps snap)", "es": "Cierre envolvente (los frentes cruzan, broches cierran)", "fr": "Fermeture portefeuille (devants croisés, fermoirs)", "pt": "Fechamento transpassado (frentes cruzam, fechos travam)"}, "edges": [{"piece": "front", "edge": "wrap_edge"}, {"piece": "waistband", "edge": "attach"}], "parameters": ["clasp_diameter", "wrap_overlap"]},
+      {"id": "seated_rise_seam", "type": "custom", "label": {"en": "Seated rise seams (front lower, back higher)", "es": "Costuras de tiro sentado (delante bajo, atrás alto)", "fr": "Coutures de montée assise (devant bas, dos haut)", "pt": "Costuras de gancho sentado (frente baixa, costas altas)"}, "edges": [{"piece": "front", "edge": "side"}, {"piece": "back", "edge": "side"}], "parameters": ["front_rise", "back_rise_extra", "outseam"]},
+      {"id": "waistband", "type": "waistband", "label": {"en": "Waistband", "es": "Pretina", "fr": "Ceinture", "pt": "Cós"}, "edges": [{"piece": "waistband", "edge": "attach"}, {"piece": "back", "edge": "waist"}], "parameters": ["waist_girth", "wrap_overlap"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "Getting dressed lying down or seated is the reality for many wheelchair users and people recovering from surgery, and an ordinary trouser fights it every step: it must be pulled over the hips, which needs a stand or a lift, and its standing rise gaps at the back when the wearer sits. This trouser wraps open completely flat so it can be laid under the body and folded across, closes on magnetic clasps that need no aim, pinch grip, or two hands, and carries a seated rise that keeps the waist level. Solving the clasp to the closure and clamping the wrap and rise so the geometry can never invert makes it a made-to-measure, repairable garment whose closures can be reprinted — dignity in dressing without a carer's hands.",
+      "es": "Vestirse acostado o sentado es la realidad de muchos usuarios de silla de ruedas y de quienes se recuperan de una cirugía, y un pantalón común lo pelea a cada paso: hay que subirlo por las caderas, lo que exige pararse o alzarse, y su tiro de pie deja hueco atrás al sentarse. Este pantalón se abre por completo plano para colocarlo bajo el cuerpo y cruzarlo, cierra con broches magnéticos que no requieren puntería, pinza ni dos manos, y lleva un tiro sentado que mantiene la cintura a nivel. Resolver el broche al cierre y limitar el solape y el tiro para que la geometría nunca se invierta lo vuelve una prenda a medida y reparable cuyos cierres pueden reimprimirse — dignidad al vestir sin las manos de un cuidador.",
+      "fr": "S'habiller allongé ou assis est la réalité de beaucoup d'usagers de fauteuil roulant et de personnes en convalescence, et un pantalon ordinaire s'y oppose à chaque étape : il faut le remonter sur les hanches, ce qui exige de se lever, et sa montée debout bâille au dos une fois assis. Ce pantalon s'ouvre totalement à plat pour être glissé sous le corps et rabattu, se ferme par des fermoirs magnétiques qui ne demandent ni visée, ni pince, ni deux mains, et porte une montée assise qui garde la taille de niveau. Résoudre le fermoir à la fermeture et brider le croisement et la montée pour que la géométrie ne s'inverse jamais en fait un vêtement sur mesure et réparable dont les fermetures peuvent être réimprimées — la dignité de s'habiller sans les mains d'un aidant.",
+      "pt": "Vestir-se deitado ou sentado é a realidade de muitos usuários de cadeira de rodas e de quem se recupera de cirurgia, e uma calça comum resiste a cada passo: precisa ser subida pelos quadris, o que exige ficar de pé ou se erguer, e seu gancho em pé abre vão atrás ao sentar. Esta calça abre completamente plana para ser colocada sob o corpo e dobrada por cima, fecha com fechos magnéticos que não exigem mira, pinça nem duas mãos, e traz um gancho sentado que mantém a cintura nivelada. Resolver o fecho ao fechamento e limitar a sobreposição e o gancho para a geometria nunca inverter torna-a uma peça sob medida e reparável cujos fechos podem ser reimpressos — dignidade ao vestir sem as mãos de um cuidador."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

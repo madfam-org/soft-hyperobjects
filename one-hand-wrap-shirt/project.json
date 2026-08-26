@@ -1,0 +1,91 @@
+{
+  "project": {
+    "name": "One-hand-close wrap shirt",
+    "slug": "one-hand-wrap-shirt",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A wrap shirt a person can close with one hand: the front crosses over (cache-cœur) and fastens with magnetic button covers that look like buttons but snap shut with a magnet, so someone with one working hand, weak pinch or tremor gets a shirt on and closed without threading a button through a hole. The rest is an ordinary set-in-sleeve poplin shirt. The button covers are the Yantra4D magnetic-button-cover solid, never modelled here; their button diameter is driven by the same button_diameter that drives the garment's wrap-closure interface — the dimensional handshake. A true wrap, clamped: the overlap the front crosses is clamped under the half-chest so the wrap can never exceed the body and fold back on itself. FC-500 lane 4 (adaptive).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una camisa cruzada que se cierra con una mano: el frente cruza (cache-cœur) y cierra con cubrebotones magnéticos que parecen botones pero cierran con imán, así alguien con una mano hábil, pinza débil o temblor se pone y cierra la camisa sin pasar un botón por un ojal. El resto es una camisa de popelina de manga montada común. Los cubrebotones son el sólido magnetic-button-cover de Yantra4D, nunca modelado aquí; su diámetro lo define el mismo button_diameter que define la interfaz de cierre cruzado de la prenda — el apretón de manos dimensional. Un cruce verdadero, limitado: el solape se limita bajo el medio pecho para que el cruce no exceda el cuerpo ni se pliegue. Carril 4 de FC-500 (adaptativo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une chemise cache-cœur qu'on ferme d'une main : le devant croise et se ferme par des cache-boutons magnétiques qui ressemblent à des boutons mais se clipsent par aimant, de sorte qu'une personne avec une seule main valide, une pince faible ou un tremblement enfile et ferme la chemise sans passer un bouton dans une boutonnière. Le reste est une chemise en popeline à manches montées ordinaire. Les cache-boutons sont le solide magnetic-button-cover de Yantra4D, jamais modélisé ici ; leur diamètre est piloté par le même button_diameter qui pilote l'interface de fermeture cache-cœur du vêtement — la poignée de main dimensionnelle. Un vrai croisement, bridé : le croisement est bridé sous la demi-poitrine pour ne pas dépasser le corps ni se replier. Couloir 4 de FC-500 (adaptatif).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma camisa transpassada que se fecha com uma mão: a frente cruza (cache-cœur) e fecha com capas de botão magnéticas que parecem botões mas travam com ímã, então alguém com uma mão hábil, pinça fraca ou tremor veste e fecha a camisa sem passar um botão pela casa. O resto é uma camisa de popeline de manga montada comum. As capas de botão são o sólido magnetic-button-cover de Yantra4D, nunca modelado aqui; seu diâmetro é dirigido pelo mesmo button_diameter que dirige a interface de fechamento transpassado da peça — o aperto de mão dimensional. Um transpasse verdadeiro, limitado: a sobreposição é limitada sob o meio peito para o transpasse não exceder o corpo nem dobrar. Corredor 4 do FC-500 (adaptativo).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["adaptive", "one-handed", "wrap", "cache-coeur", "magnetic-button-cover", "poplin", "hardware", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full shirt", "es": "Camisa completa", "fr": "Chemise complète", "pt": "Camisa completa"}, "script_file": "main.py", "pieces": ["front", "back", "sleeve", "collar"]}
+  ],
+  "pieces": [
+    {"id": "front", "label": {"en": "Wrap front (crosses over)", "es": "Frente cruzado", "fr": "Devant cache-cœur", "pt": "Frente transpassada"}, "default_color": "#d8dee6", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "back", "label": {"en": "Back (cut 1 on fold)", "es": "Espalda (corte 1 al pliegue)", "fr": "Dos (coupé 1 au pli)", "pt": "Costas (corte 1 na dobra)"}, "default_color": "#c9d1da", "cut": {"quantity": 1, "on_fold": true, "mirror": true}},
+    {"id": "sleeve", "label": {"en": "Sleeve", "es": "Manga", "fr": "Manche", "pt": "Manga"}, "default_color": "#e0e5ec", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "collar", "label": {"en": "Collar", "es": "Cuello", "fr": "Col", "pt": "Colarinho"}, "default_color": "#c9d1da", "cut": {"quantity": 1, "mirror": false}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "chest_girth", "type": "slider", "group": "body", "default": 1000, "min": 760, "max": 1500, "step": 10, "measurement": {"standard": "iso_8559", "code": "chest_bust_girth"}, "label": {"en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)"}, "tooltip": {"en": "Full chest — the fronts wrap this at ease", "es": "Pecho completo — los frentes lo envuelven con holgura", "fr": "Poitrine complète — les devants l'enveloppent avec aisance", "pt": "Peito completo — as frentes o envolvem com folga"}},
+    {"id": "waist_girth", "type": "slider", "group": "body", "default": 880, "min": 600, "max": 1400, "step": 10, "measurement": {"standard": "iso_8559", "code": "waist_girth"}, "label": {"en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)", "pt": "Contorno de cintura (mm)"}, "tooltip": {"en": "Natural waist — the shaping reference", "es": "Cintura natural — la referencia de entalle", "fr": "Taille naturelle — le repère de galbe", "pt": "Cintura natural — a referência de modelagem"}},
+    {"id": "back_length", "type": "slider", "group": "body", "default": 720, "min": 520, "max": 900, "step": 10, "label": {"en": "Back length (mm)", "es": "Largo de espalda (mm)", "fr": "Longueur de dos (mm)", "pt": "Comprimento das costas (mm)"}, "tooltip": {"en": "Nape to hem", "es": "De la nuca al borde", "fr": "De la nuque à l'ourlet", "pt": "Da nuca à barra"}},
+    {"id": "sleeve_length", "type": "slider", "group": "body", "default": 600, "min": 300, "max": 720, "step": 10, "label": {"en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)", "pt": "Comprimento de manga (mm)"}, "tooltip": {"en": "Shoulder to wrist", "es": "Del hombro a la muñeca", "fr": "De l'épaule au poignet", "pt": "Do ombro ao pulso"}},
+    {"id": "bicep_girth", "type": "slider", "group": "body", "default": 340, "min": 240, "max": 560, "step": 10, "label": {"en": "Bicep girth (mm)", "es": "Contorno de bíceps (mm)", "fr": "Tour de biceps (mm)", "pt": "Contorno de bíceps (mm)"}, "tooltip": {"en": "Sizes the sleeve", "es": "Dimensiona la manga", "fr": "Dimensionne la manche", "pt": "Dimensiona a manga"}},
+    {"id": "neck_girth", "type": "slider", "group": "body", "default": 400, "min": 320, "max": 520, "step": 10, "label": {"en": "Neck girth (mm)", "es": "Contorno de cuello (mm)", "fr": "Tour de cou (mm)", "pt": "Contorno de pescoço (mm)"}, "tooltip": {"en": "The collar opening", "es": "La abertura del cuello", "fr": "L'ouverture du col", "pt": "A abertura da gola"}},
+    {"id": "wrap_overlap", "type": "slider", "group": "construction", "default": 200, "min": 100, "max": 360, "step": 10, "label": {"en": "Wrap overlap (mm)", "es": "Solape del cruce (mm)", "fr": "Croisement (mm)", "pt": "Sobreposição do transpasse (mm)"}, "tooltip": {"en": "How far the fronts cross — clamped under the half-chest so it never folds back", "es": "Cuánto cruzan los frentes — limitado bajo el medio pecho para que no se pliegue", "fr": "De combien les devants se croisent — bridé sous la demi-poitrine pour ne pas se replier", "pt": "Quanto as frentes cruzam — limitado sob o meio peito para não dobrar"}},
+    {"id": "button_diameter", "type": "slider", "group": "construction", "default": 20, "min": 12, "max": 34, "step": 2, "label": {"en": "Button diameter (mm)", "es": "Diámetro de botón (mm)", "fr": "Diamètre de bouton (mm)", "pt": "Diâmetro de botão (mm)"}, "tooltip": {"en": "The magnetic button-cover diameter — drives the hardware and the closure interface", "es": "El diámetro del cubrebotón magnético — define el herraje y la interfaz de cierre", "fr": "Le diamètre du cache-bouton magnétique — pilote la quincaillerie et l'interface de fermeture", "pt": "O diâmetro da capa de botão magnética — dirige a ferragem e a interface de fechamento"}},
+    {"id": "ease_pct", "type": "slider", "group": "construction", "default": 12, "min": 4, "max": 24, "step": 1, "label": {"en": "Ease (%)", "es": "Holgura (%)", "fr": "Aisance (%)", "pt": "Folga (%)"}, "tooltip": {"en": "Wearing ease over the chest", "es": "Holgura de uso sobre el pecho", "fr": "Aisance de port sur la poitrine", "pt": "Folga de uso sobre o peito"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 10, "min": 6, "max": 16, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Shirt seams", "es": "Costuras de camisa", "fr": "Coutures de chemise", "pt": "Costuras de camisa"}}
+  ],
+  "presets": [
+    {"id": "stroke_recovery", "label": {"en": "Stroke recovery", "es": "Recuperación de ictus", "fr": "Récupération AVC", "pt": "Recuperação de AVC"}, "values": {"wrap_overlap": 240, "button_diameter": 24}},
+    {"id": "tremor", "label": {"en": "Tremor / low dexterity", "es": "Temblor / baja destreza", "fr": "Tremblement / faible dextérité", "pt": "Tremor / baixa destreza"}, "values": {"button_diameter": 28, "wrap_overlap": 220}}
+  ],
+  "constraints": [
+    {"expression": "chest_girth > waist_girth", "message": {"en": "Chest girth should exceed waist girth for the body shape.", "es": "El contorno de pecho debe superar al de cintura para la forma del cuerpo.", "fr": "Le tour de poitrine doit dépasser celui de taille pour la forme du corps.", "pt": "O contorno de peito deve exceder o de cintura para a forma do corpo."}, "severity": "warning"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "magnetic button-cover wrap closure",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "magnetic-button-cover",
+      "linked": true,
+      "params_map": {
+        "button_dia": "button_diameter"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "wrap_closure", "type": "placket", "label": {"en": "Wrap closure (fronts cross, magnetic covers)", "es": "Cierre cruzado (frentes cruzan, cubrebotones magnéticos)", "fr": "Fermeture cache-cœur (devants croisés, cache-boutons magnétiques)", "pt": "Fechamento transpassado (frentes cruzam, capas magnéticas)"}, "edges": [{"piece": "front", "edge": "wrap_edge"}], "parameters": ["button_diameter", "wrap_overlap"]},
+      {"id": "armhole", "type": "armscye", "label": {"en": "Armhole / sleeve cap", "es": "Sisa / cabeza de manga", "fr": "Emmanchure / tête de manche", "pt": "Cava / cabeça de manga"}, "edges": [{"piece": "sleeve", "edge": "cap"}, {"piece": "front", "edge": "armhole"}, {"piece": "back", "edge": "armhole"}], "parameters": ["bicep_girth", "back_length"]},
+      {"id": "collar", "type": "neckline", "label": {"en": "Collar / neckline", "es": "Cuello / escote", "fr": "Col / encolure", "pt": "Colarinho / decote"}, "edges": [{"piece": "collar", "edge": "neck_edge"}, {"piece": "back", "edge": "neckline"}], "parameters": ["neck_girth"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A button through a buttonhole is a two-handed, fine-motor task, and it silently excludes anyone with hemiplegia, arthritis, a tremor, or a single working hand from dressing themselves in an ordinary shirt. A cross-front wrap needs no aim: the fronts overlap over a wide margin and the magnetic covers pull themselves shut when they come near, so the shirt closes with one hand and no pinch. Because the covers look exactly like buttons, the wearer is not marked out by adaptive hardware. Solving the cover to the button stand and clamping the wrap so it can never fold back makes it a made-to-measure, repairable shirt whose closures can be reprinted — an ordinary shirt that an extraordinary number of people can finally fasten alone.",
+      "es": "Un botón por un ojal es una tarea a dos manos y de motricidad fina, y excluye en silencio de vestirse con una camisa común a quien tiene hemiplejía, artritis, temblor o una sola mano hábil. Un cruce delantero no necesita puntería: los frentes se solapan con amplio margen y los cubrebotones magnéticos se cierran solos al acercarse, así la camisa cierra con una mano y sin pinza. Como los cubrebotones parecen botones, a quien la usa no lo delata un herraje adaptativo. Resolver el cubrebotón al botón y limitar el cruce para que nunca se pliegue la vuelve una camisa a medida y reparable cuyos cierres pueden reimprimirse — una camisa común que muchísimas personas por fin pueden abrochar solas.",
+      "fr": "Un bouton dans une boutonnière est une tâche à deux mains et de motricité fine, et elle exclut en silence de s'habiller d'une chemise ordinaire quiconque a une hémiplégie, de l'arthrite, un tremblement ou une seule main valide. Un croisement devant ne demande aucune visée : les devants se chevauchent largement et les cache-boutons magnétiques se ferment d'eux-mêmes en s'approchant, de sorte que la chemise se ferme d'une main et sans pince. Comme les cache-boutons ressemblent à des boutons, le porteur n'est pas marqué par une quincaillerie adaptative. Résoudre le cache-bouton au bouton et brider le croisement pour qu'il ne se replie jamais en fait une chemise sur mesure et réparable dont les fermetures peuvent être réimprimées — une chemise ordinaire qu'un nombre extraordinaire de personnes peuvent enfin fermer seules.",
+      "pt": "Um botão por uma casa é uma tarefa a duas mãos e de motricidade fina, e exclui em silêncio de vestir uma camisa comum quem tem hemiplegia, artrite, tremor ou uma só mão hábil. Um transpasse dianteiro não precisa de mira: as frentes se sobrepõem com ampla margem e as capas magnéticas se fecham sozinhas ao se aproximar, então a camisa fecha com uma mão e sem pinça. Como as capas parecem botões, quem a usa não é marcado por ferragem adaptativa. Resolver a capa ao botão e limitar o transpasse para nunca dobrar a torna uma camisa sob medida e reparável cujos fechos podem ser reimpressos — uma camisa comum que um número extraordinário de pessoas enfim pode fechar sozinha."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

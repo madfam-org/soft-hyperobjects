@@ -1,0 +1,89 @@
+{
+  "project": {
+    "name": "Boxing fight short",
+    "slug": "boxing-fight-short",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The wide, high-waisted boxing short of the ring: a loose, long-legged short in satin or lightweight nylon with a broad elastic waistband, deep side vents for the guard and the kick of the leg, and a hook-and-loop waistband tab so it cinches over the wraps and does not drop between rounds. Cut with generous positive ease so it flares and moves; the waistband is the only fitted part. Two things solved: the waistband tab closes on hook-and-loop, the tape strip length the drafted waist_adjust that drives both the Yantra4D hook-loop-tape strip AND the garment's waistband-adjust interface; and the short shares ONE crotch front-to-back so the leg cannot twist, the side vent rise clamped under the leg length so the vent never runs past the waist. FC-500 lane 6 (active).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El short ancho de talle alto del boxeo: un short holgado de pierna larga en satén o nylon ligero con pretina elástica ancha, aberturas laterales profundas para la guardia y la patada, y una lengüeta de velcro en la pretina para ceñirse sobre las vendas y no caerse entre asaltos. Cortado con holgura positiva generosa para que vuele y se mueva; la pretina es la única parte ajustada. Dos cosas resueltas: la lengüeta de la pretina cierra con velcro, con el largo de la tira el waist_adjust trazado que define tanto la tira del hook-loop-tape de Yantra4D COMO la interfaz de ajuste de pretina de la prenda; y el short comparte UNA entrepierna delante-atrás para que la pierna no se tuerza, con la altura de la abertura lateral limitada bajo el largo de la pierna para que la abertura no pase de la cintura. Carril 6 de FC-500 (activo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le short large et taille haute de la boxe : un short ample à longues jambes en satin ou nylon léger avec une large ceinture élastique, des fentes latérales profondes pour la garde et le coup de pied, et une patte auto-agrippante à la ceinture pour se cincher sur les bandes et ne pas tomber entre les rounds. Coupé en aisance positive généreuse pour qu'il s'évase et bouge ; la ceinture est la seule partie ajustée. Deux choses résolues : la patte de ceinture se ferme en auto-agrippant, la longueur de bande étant le waist_adjust tracé qui pilote à la fois la bande du hook-loop-tape de Yantra4D ET l'interface de réglage de ceinture du vêtement ; et le short partage UN entrejambe devant-dos pour que la jambe ne vrille pas, la hauteur de fente latérale bridée sous la longueur de jambe pour que la fente ne dépasse pas la taille. Couloir 6 de FC-500 (actif).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O short largo e de cintura alta do boxe: um short folgado de perna longa em cetim ou nylon leve com cós elástico largo, fendas laterais profundas para a guarda e o chute, e uma lingueta de velcro no cós para cinchar sobre as bandagens e não cair entre os rounds. Cortado em folga positiva generosa para esvoaçar e mover; o cós é a única parte ajustada. Duas coisas resolvidas: a lingueta do cós fecha com velcro, com o comprimento da tira o waist_adjust modelado que dirige tanto a tira do hook-loop-tape de Yantra4D QUANTO a interface de ajuste de cós da peça; e o short compartilha UM gancho frente-costas para a perna não torcer, com a altura da fenda lateral limitada sob o comprimento da perna para a fenda não passar da cintura. Corredor 6 do FC-500 (ativo).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["active", "boxing", "muay-thai", "fight-short", "satin", "hook-loop-tape", "hardware", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full short", "es": "Short completo", "fr": "Short complet", "pt": "Short completo"}, "script_file": "main.py", "pieces": ["front", "back", "waistband"]}
+  ],
+  "pieces": [
+    {"id": "front", "label": {"en": "Fight short front (vent)", "es": "Frente (abertura)", "fr": "Devant (fente)", "pt": "Frente (fenda)"}, "default_color": "#b01c2e", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "back", "label": {"en": "Fight short back (vent)", "es": "Trasero (abertura)", "fr": "Dos (fente)", "pt": "Costas (fenda)"}, "default_color": "#9a1828", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "waistband", "label": {"en": "Broad waistband (hook-loop tab)", "es": "Pretina ancha (lengüeta de velcro)", "fr": "Ceinture large (patte auto-agrippante)", "pt": "Cós largo (lingueta de velcro)"}, "default_color": "#7f1420", "cut": {"quantity": 1, "mirror": false}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "waist_girth", "type": "slider", "group": "body", "default": 880, "min": 600, "max": 1400, "step": 10, "measurement": {"standard": "iso_8559", "code": "waist_girth"}, "label": {"en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)", "pt": "Contorno de cintura (mm)"}, "tooltip": {"en": "The waistband cinches here over the wraps", "es": "La pretina ciñe aquí sobre las vendas", "fr": "La ceinture se cinche ici sur les bandes", "pt": "O cós cincha aqui sobre as bandagens"}},
+    {"id": "hip_girth", "type": "slider", "group": "body", "default": 1040, "min": 760, "max": 1600, "step": 10, "measurement": {"standard": "iso_8559", "code": "hip_girth"}, "label": {"en": "Hip girth (mm)", "es": "Contorno de cadera (mm)", "fr": "Tour de hanche (mm)", "pt": "Contorno de quadril (mm)"}, "tooltip": {"en": "Fullest hip — the short at generous positive ease", "es": "Cadera más llena — el short con holgura positiva generosa", "fr": "Hanche la plus forte — le short en aisance positive généreuse", "pt": "Quadril mais cheio — o short com folga positiva generosa"}},
+    {"id": "leg_length", "type": "slider", "group": "body", "default": 420, "min": 240, "max": 620, "step": 10, "label": {"en": "Leg length (mm)", "es": "Largo de pierna (mm)", "fr": "Longueur de jambe (mm)", "pt": "Comprimento de perna (mm)"}, "tooltip": {"en": "Waistband to leg hem", "es": "De la pretina al bajo de la pierna", "fr": "De la ceinture à l'ourlet de jambe", "pt": "Do cós à barra da perna"}},
+    {"id": "vent_rise", "type": "slider", "group": "construction", "default": 160, "min": 40, "max": 320, "step": 10, "label": {"en": "Side vent rise (mm)", "es": "Altura de abertura lateral (mm)", "fr": "Hauteur de fente latérale (mm)", "pt": "Altura de fenda lateral (mm)"}, "tooltip": {"en": "How high the side vent cuts — clamped under the leg so it never runs past the waist", "es": "Cuánto sube la abertura lateral — limitada bajo la pierna para que no pase de la cintura", "fr": "Jusqu'où la fente latérale monte — bridée sous la jambe pour ne pas dépasser la taille", "pt": "Quanto a fenda lateral sobe — limitada sob a perna para não passar da cintura"}},
+    {"id": "wb_depth", "type": "slider", "group": "construction", "default": 90, "min": 50, "max": 180, "step": 5, "label": {"en": "Waistband depth (mm)", "es": "Alto de pretina (mm)", "fr": "Hauteur de ceinture (mm)", "pt": "Altura de cós (mm)"}, "tooltip": {"en": "The broad waistband depth", "es": "El alto de la pretina ancha", "fr": "La hauteur de la ceinture large", "pt": "A altura do cós largo"}},
+    {"id": "waist_adjust", "type": "slider", "group": "construction", "default": 120, "min": 60, "max": 240, "step": 10, "label": {"en": "Waist adjust (mm)", "es": "Ajuste de cintura (mm)", "fr": "Réglage de taille (mm)", "pt": "Ajuste de cintura (mm)"}, "tooltip": {"en": "The hook-and-loop adjust strip length — drives the hardware and the waistband-adjust interface", "es": "El largo de la tira de velcro — define el herraje y la interfaz de ajuste de pretina", "fr": "La longueur de la bande auto-agrippante — pilote la quincaillerie et l'interface de réglage de ceinture", "pt": "O comprimento da tira de velcro — dirige a ferragem e a interface de ajuste de cós"}},
+    {"id": "positive_ease_pct", "type": "slider", "group": "construction", "default": 40, "min": 15, "max": 90, "step": 5, "label": {"en": "Positive ease (%)", "es": "Holgura positiva (%)", "fr": "Aisance positive (%)", "pt": "Folga positiva (%)"}, "tooltip": {"en": "Generous ease so the short flares over the guard and kick", "es": "Holgura generosa para que el short vuele sobre la guardia y la patada", "fr": "Aisance généreuse pour que le short s'évase sur la garde et le coup de pied", "pt": "Folga generosa para o short esvoaçar sobre a guarda e o chute"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 10, "min": 6, "max": 16, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Satin seam allowances", "es": "Márgenes de costura en satén", "fr": "Marges de couture en satin", "pt": "Margens de costura em cetim"}}
+  ],
+  "presets": [
+    {"id": "boxing", "label": {"en": "Boxing", "es": "Boxeo", "fr": "Boxe", "pt": "Boxe"}, "values": {"leg_length": 400, "vent_rise": 140}},
+    {"id": "muay_thai", "label": {"en": "Muay Thai", "es": "Muay Thai", "fr": "Muay-thaï", "pt": "Muay Thai"}, "values": {"leg_length": 300, "vent_rise": 200, "positive_ease_pct": 55}}
+  ],
+  "constraints": [
+    {"expression": "vent_rise < leg_length", "message": {"en": "Side vent rise must fit within the leg length.", "es": "La altura de la abertura debe caber en el largo de la pierna.", "fr": "La hauteur de fente doit tenir dans la longueur de jambe.", "pt": "A altura da fenda deve caber no comprimento da perna."}, "severity": "warning"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "hook-and-loop waistband tab",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "hook-loop-tape",
+      "linked": true,
+      "params_map": {
+        "strip_length": "waist_adjust",
+        "sew_margin": "seam_allowance"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "waistband_adjust", "type": "waistband", "label": {"en": "Waistband adjust (hook-and-loop tab)", "es": "Ajuste de pretina (lengüeta de velcro)", "fr": "Réglage de ceinture (patte auto-agrippante)", "pt": "Ajuste de cós (lingueta de velcro)"}, "edges": [{"piece": "waistband", "edge": "attach"}], "parameters": ["waist_adjust", "waist_girth", "seam_allowance"]},
+      {"id": "side_vent", "type": "side_seam", "label": {"en": "Side seams / vents (front to back)", "es": "Costuras / aberturas laterales (delante a trasero)", "fr": "Coutures / fentes latérales (devant au dos)", "pt": "Costuras / fendas laterais (frente ao dorso)"}, "edges": [{"piece": "front", "edge": "side"}, {"piece": "back", "edge": "side"}], "parameters": ["vent_rise", "leg_length"]},
+      {"id": "crotch_join", "type": "custom", "label": {"en": "Crotch join (one shared point)", "es": "Unión de entrepierna (punto compartido)", "fr": "Jonction d'entrejambe (point partagé)", "pt": "Junção de gancho (ponto compartilhado)"}, "edges": [{"piece": "front", "edge": "inseam"}, {"piece": "back", "edge": "inseam"}], "parameters": ["hip_girth", "positive_ease_pct"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A fight short looks like the least technical garment in the ring and is quietly the most abused: it must flare wide enough to never catch a knee or a kick, vent deep enough to move, and hold a waist that is being punched, all night, over hand wraps that change its circumference. A drawstring slips and a fixed elastic either cuts or drops; a hook-and-loop tab solved to the waist and adjustable over the wraps is the honest answer. Sharing one crotch so the leg never twists, clamping the vent so it never runs off the waist, and bridging the adjust tape to a printable, replaceable solid makes a made-to-measure fight short that fits a real fighter and can be repaired rather than replaced when the tape wears out.",
+      "es": "Un short de pelea parece la prenda menos técnica del ring y es en silencio la más maltratada: debe volar lo bastante ancho para nunca atrapar una rodilla o patada, ventilar lo bastante para moverse y sostener una cintura que recibe golpes toda la noche sobre vendas que cambian su contorno. Un cordón se afloja y un elástico fijo corta o cae; una lengüeta de velcro resuelta a la cintura y ajustable sobre las vendas es la respuesta honesta. Compartir una entrepierna para que la pierna no se tuerza, limitar la abertura para que no se salga de la cintura y puentear la tira de ajuste a un sólido imprimible y reemplazable hace un short de pelea a medida que ajusta a un peleador real y se repara en vez de reemplazarse cuando el velcro se gasta.",
+      "fr": "Un short de combat paraît le vêtement le moins technique du ring et est en silence le plus malmené : il doit s'évaser assez large pour ne jamais accrocher un genou ou un coup de pied, se fendre assez pour bouger, et tenir une taille qu'on frappe, toute la nuit, sur des bandes qui changent sa circonférence. Un cordon glisse et un élastique fixe coupe ou tombe ; une patte auto-agrippante résolue à la taille et réglable sur les bandes est la réponse honnête. Partager un entrejambe pour que la jambe ne vrille jamais, brider la fente pour qu'elle ne quitte pas la taille, et relier la bande de réglage à un solide imprimable et remplaçable fait un short de combat sur mesure qui va à un vrai combattant et se répare plutôt que de se remplacer quand la bande s'use.",
+      "pt": "Um short de luta parece a peça menos técnica do ringue e é em silêncio a mais maltratada: precisa esvoaçar largo o bastante para nunca prender um joelho ou chute, ventilar o bastante para mover, e segurar uma cintura que apanha, a noite toda, sobre bandagens que mudam sua circunferência. Um cordão escorrega e um elástico fixo corta ou cai; uma lingueta de velcro resolvida à cintura e ajustável sobre as bandagens é a resposta honesta. Compartilhar um gancho para a perna nunca torcer, limitar a fenda para não sair da cintura, e ligar a tira de ajuste a um sólido imprimível e substituível faz um short de luta sob medida que serve a um lutador real e se repara em vez de se substituir quando o velcro gasta."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

@@ -1,0 +1,437 @@
+{
+  "project": {
+    "name": "Cycling bib short",
+    "slug": "cycling-bib-short",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The road cyclist's bib short: a high-compression lycra short held up not by a waistband but by bib straps over the shoulders, so nothing constricts the belly in the aero position and the chamois stays put. A panelled short at strong negative ease, a chamois pad window, and mesh bib straps that cross at the back. No waistband, no drawcord, no hardware. Two things solved: the bib strap length is solved from the measured torso rise plus the shoulder span and floored positive so it always reaches — the strap IS the suspension; and the front and back share ONE crotch point and one inseam so the leg cannot twist, with the chamois window over the shared crotch. Pure pattern, no bridged hardware. FC-500 lane 6 (active).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El culotte con tirantes del ciclista de ruta: un short de licra de alta compresión sostenido no por una pretina sino por tirantes sobre los hombros, para que nada apriete el abdomen en la posición aero y la badana quede en su sitio. Un short panelado con fuerte holgura negativa, ventana para la badana y tirantes de malla que cruzan atrás. Sin pretina, sin cordón, sin herrajes. Dos cosas resueltas: el largo del tirante se resuelve del talle medido más el paso del hombro y con piso positivo para que siempre alcance — el tirante ES la suspensión; y el delantero y el trasero comparten UN punto de entrepierna y una entrepierna para que la pierna no se tuerza, con la ventana de badana sobre la entrepierna compartida. Patrón puro, sin herraje puenteado. Carril 6 de FC-500 (activo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le cuissard à bretelles du cycliste sur route : un cuissard en lycra haute compression tenu non par une ceinture mais par des bretelles sur les épaules, pour que rien ne comprime le ventre en position aéro et que la peau de chamois reste en place. Un cuissard à panneaux en forte aisance négative, une fenêtre pour la peau de chamois, et des bretelles en mesh qui se croisent au dos. Sans ceinture, sans cordon, sans quincaillerie. Deux choses résolues : la longueur de bretelle est résolue à partir de la hauteur de torse mesurée plus l'empan d'épaule et planchérisée positive pour qu'elle atteigne toujours — la bretelle EST la suspension ; et le devant et le dos partagent UN point d'entrejambe et une entrejambe pour que la jambe ne vrille pas, la fenêtre de peau de chamois sur l'entrejambe partagé. Patron pur, sans quincaillerie reliée. Couloir 6 de FC-500 (actif).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O bretelle do ciclista de estrada: um short de lycra de alta compressão sustentado não por um cós mas por alças sobre os ombros, para que nada comprima o abdômen na posição aero e a badana fique no lugar. Um short em painéis com forte folga negativa, janela para a badana e alças de tela que cruzam atrás. Sem cós, sem cordão, sem ferragens. Duas coisas resolvidas: o comprimento da alça é resolvido do tronco medido mais o vão do ombro e com piso positivo para sempre alcançar — a alça É a suspensão; e a frente e as costas compartilham UM ponto de gancho e um gancho para a perna não torcer, com a janela da badana sobre o gancho compartilhado. Molde puro, sem ferragem ligada. Corredor 6 do FC-500 (ativo).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "active",
+      "cycling",
+      "bib-short",
+      "compression",
+      "chamois",
+      "lycra",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full bib short",
+        "es": "Culotte completo",
+        "fr": "Cuissard complet",
+        "pt": "Bretelle completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "strap"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Short front (chamois)",
+        "es": "Frente (badana)",
+        "fr": "Devant (peau de chamois)",
+        "pt": "Frente (badana)"
+      },
+      "default_color": "#222831",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Short back (raised)",
+        "es": "Trasero (alto)",
+        "fr": "Dos (haut)",
+        "pt": "Costas (alto)"
+      },
+      "default_color": "#1c222a",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "strap",
+      "label": {
+        "en": "Bib strap (mesh)",
+        "es": "Tirante (malla)",
+        "fr": "Bretelle (mesh)",
+        "pt": "Alça (tela)"
+      },
+      "default_color": "#2a3038",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps",
+        "pt": "Medidas corporais"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 820,
+      "min": 600,
+      "max": 1300,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      },
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)",
+        "pt": "Contorno de cintura (mm)"
+      },
+      "tooltip": {
+        "en": "The short waist at negative ease",
+        "es": "La cintura del short con holgura negativa",
+        "fr": "La taille du cuissard en aisance négative",
+        "pt": "A cintura do short com folga negativa"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 980,
+      "min": 720,
+      "max": 1500,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      },
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanche (mm)",
+        "pt": "Contorno de quadril (mm)"
+      },
+      "tooltip": {
+        "en": "Fullest hip",
+        "es": "Cadera más llena",
+        "fr": "Hanche la plus forte",
+        "pt": "Quadril mais cheio"
+      }
+    },
+    {
+      "id": "thigh_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 560,
+      "min": 360,
+      "max": 800,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "thigh_girth"
+      },
+      "label": {
+        "en": "Thigh girth (mm)",
+        "es": "Contorno de muslo (mm)",
+        "fr": "Tour de cuisse (mm)",
+        "pt": "Contorno de coxa (mm)"
+      },
+      "tooltip": {
+        "en": "Sizes the leg hem at negative ease",
+        "es": "Dimensiona el bajo con holgura negativa",
+        "fr": "Dimensionne l'ourlet en aisance négative",
+        "pt": "Dimensiona a barra com folga negativa"
+      }
+    },
+    {
+      "id": "inseam",
+      "type": "slider",
+      "group": "body",
+      "default": 220,
+      "min": 120,
+      "max": 360,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "inside_leg_length"
+      },
+      "label": {
+        "en": "Inseam (mm)",
+        "es": "Entrepierna (mm)",
+        "fr": "Entrejambe (mm)",
+        "pt": "Gancho interno (mm)"
+      },
+      "tooltip": {
+        "en": "Crotch to leg hem",
+        "es": "De la entrepierna al bajo",
+        "fr": "De l'entrejambe à l'ourlet",
+        "pt": "Do gancho à barra"
+      }
+    },
+    {
+      "id": "torso_rise",
+      "type": "slider",
+      "group": "body",
+      "default": 520,
+      "min": 360,
+      "max": 720,
+      "step": 10,
+      "label": {
+        "en": "Torso rise (mm)",
+        "es": "Talle (mm)",
+        "fr": "Hauteur de torse (mm)",
+        "pt": "Tronco (mm)"
+      },
+      "tooltip": {
+        "en": "Short waist to shoulder — the strap length is solved from this",
+        "es": "De la cintura del short al hombro — el largo del tirante se resuelve de esto",
+        "fr": "De la taille du cuissard à l'épaule — la longueur de bretelle en découle",
+        "pt": "Da cintura do short ao ombro — o comprimento da alça é resolvido disto"
+      }
+    },
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 60,
+      "min": 30,
+      "max": 120,
+      "step": 5,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de tirante (mm)",
+        "fr": "Largeur de bretelle (mm)",
+        "pt": "Largura de alça (mm)"
+      },
+      "tooltip": {
+        "en": "The mesh bib strap width",
+        "es": "El ancho del tirante de malla",
+        "fr": "La largeur de la bretelle mesh",
+        "pt": "A largura da alça de tela"
+      }
+    },
+    {
+      "id": "negative_ease_pct",
+      "type": "slider",
+      "group": "construction",
+      "default": 14,
+      "min": 6,
+      "max": 26,
+      "step": 1,
+      "label": {
+        "en": "Negative ease (%)",
+        "es": "Holgura negativa (%)",
+        "fr": "Aisance négative (%)",
+        "pt": "Folga negativa (%)"
+      },
+      "tooltip": {
+        "en": "The lycra compresses by being cut smaller than the body",
+        "es": "La licra comprime al cortarse más pequeña que el cuerpo",
+        "fr": "Le lycra comprime en étant coupé plus petit que le corps",
+        "pt": "A lycra comprime sendo cortada menor que o corpo"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 4,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Narrow flatlocked seams",
+        "es": "Costuras angostas con flatlock",
+        "fr": "Coutures étroites en flatlock",
+        "pt": "Costuras estreitas com flatlock"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "race",
+      "label": {
+        "en": "Race",
+        "es": "Competición",
+        "fr": "Course",
+        "pt": "Competição"
+      },
+      "values": {
+        "negative_ease_pct": 20,
+        "inseam": 240
+      }
+    },
+    {
+      "id": "endurance",
+      "label": {
+        "en": "Endurance",
+        "es": "Fondo",
+        "fr": "Endurance",
+        "pt": "Fundo"
+      },
+      "values": {
+        "negative_ease_pct": 12,
+        "inseam": 200
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "hip_girth > waist_girth",
+      "message": {
+        "en": "Hip girth should exceed waist girth.",
+        "es": "El contorno de cadera debe superar al de cintura.",
+        "fr": "Le tour de hanche doit dépasser celui de taille.",
+        "pt": "O contorno de quadril deve exceder o de cintura."
+      },
+      "severity": "warning"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "bib_suspension",
+        "type": "custom",
+        "label": {
+          "en": "Bib strap suspension (solved to torso)",
+          "es": "Suspensión de tirantes (resuelta al torso)",
+          "fr": "Suspension bretelles (résolue au torse)",
+          "pt": "Suspensão de alças (resolvida ao torso)"
+        },
+        "edges": [
+          {
+            "piece": "strap",
+            "edge": "top"
+          }
+        ],
+        "parameters": [
+          "torso_rise",
+          "strap_width"
+        ]
+      },
+      {
+        "id": "side_seam",
+        "type": "side_seam",
+        "label": {
+          "en": "Side seams (front to back)",
+          "es": "Costuras laterales (delante a trasero)",
+          "fr": "Coutures côté (devant au dos)",
+          "pt": "Costuras laterais (frente ao dorso)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "hip_girth",
+          "negative_ease_pct"
+        ]
+      },
+      {
+        "id": "crotch_join",
+        "type": "custom",
+        "label": {
+          "en": "Crotch join (one shared point)",
+          "es": "Unión de entrepierna (punto compartido)",
+          "fr": "Jonction d'entrejambe (point partagé)",
+          "pt": "Junção de gancho (ponto compartilhado)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "inseam"
+          },
+          {
+            "piece": "back",
+            "edge": "inseam"
+          }
+        ],
+        "parameters": [
+          "inseam",
+          "thigh_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": false,
+      "compression_support": true,
+      "pull_on": true
+    },
+    "societal_benefit": {
+      "en": "The bib short is the piece that made long-distance road cycling comfortable: by suspending the short from the shoulders it removes the waistband that a compression short would otherwise dig into the abdomen for hours in a folded-forward position, and it keeps the chamois — the single most important contact point between rider and bike — from shifting. Its correctness is all in two solved numbers: a strap long enough to reach over the torso in the riding position without cutting the shoulder, and a crotch shared front-to-back so the pad sits true and the leg does not twist. Making it a made-to-measure commons pattern, drafted so neither number can go wrong at any size, brings a genuinely ergonomic garment within reach of anyone who sews.",
+      "es": "El culotte con tirantes es la pieza que hizo cómodo el ciclismo de ruta de larga distancia: al suspender el short desde los hombros elimina la pretina que un short de compresión clavaría en el abdomen durante horas en posición flexionada, y evita que la badana — el punto de contacto más importante entre ciclista y bici — se mueva. Su corrección está en dos números resueltos: un tirante bastante largo para alcanzar sobre el torso en posición de pedaleo sin cortar el hombro, y una entrepierna compartida delante-atrás para que la badana quede bien y la pierna no se tuerza. Hacerlo un patrón común a medida, trazado para que ninguno de los dos números falle en ninguna talla, pone una prenda genuinamente ergonómica al alcance de quien cosa.",
+      "fr": "Le cuissard à bretelles est la pièce qui a rendu confortable le cyclisme sur route de longue distance : en suspendant le cuissard aux épaules il supprime la ceinture qu'un cuissard de compression enfoncerait sinon dans l'abdomen pendant des heures en position penchée, et il empêche la peau de chamois — le point de contact le plus important entre le cycliste et le vélo — de bouger. Sa justesse tient à deux nombres résolus : une bretelle assez longue pour atteindre par-dessus le torse en position de pédalage sans couper l'épaule, et un entrejambe partagé devant-dos pour que la peau de chamois soit juste et que la jambe ne vrille pas. En faire un patron commun sur mesure, tracé pour qu'aucun des deux nombres ne se trompe à quelque taille, met un vêtement vraiment ergonomique à la portée de quiconque coud.",
+      "pt": "O bretelle é a peça que tornou confortável o ciclismo de estrada de longa distância: ao suspender o short pelos ombros elimina o cós que um short de compressão fincaria no abdômen por horas em posição inclinada, e impede que a badana — o ponto de contato mais importante entre ciclista e bicicleta — se desloque. Sua correção está em dois números resolvidos: uma alça longa o suficiente para alcançar por cima do tronco na posição de pedalada sem cortar o ombro, e um gancho compartilhado frente-costas para a badana ficar certa e a perna não torcer. Torná-lo um molde comum sob medida, modelado para que nenhum dos dois números erre em qualquer tamanho, coloca uma peça genuinamente ergonômica ao alcance de quem costura."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

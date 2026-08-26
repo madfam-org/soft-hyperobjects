@@ -1,0 +1,91 @@
+{
+  "project": {
+    "name": "Climbing harness short",
+    "slug": "climbing-harness-short",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A stretch climbing short with an integrated soft harness: a durable Cordura short whose waist belt and leg loops are structural webbing channels, adjusted on ladder-lock buckles, so the short IS the harness for bouldering, via ferrata and gym use. Not a certified fall-arrest harness — a soft support short; the load webbing is the drafted structure, the short is its carrier. Two things solved: the waist belt is a webbing channel closed on a ladder-lock, its webbing width the drafted webbing_w that drives both the Yantra4D ladder-lock webbing slots AND the garment's harness-belt interface; and the short is cut at negative ease with front and back sharing ONE crotch so the leg cannot twist, the leg-loop webbing rise clamped under the inseam so the loop never runs past the leg hem. FC-500 lane 6 (active).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un short de escalada elástico con arnés blando integrado: un short de Cordura resistente cuyo cinturón y perneras son canales de cincha estructural, ajustados con hebillas ladder-lock, para que el short SEA el arnés para búlder, vía ferrata y gimnasio. No es un arnés certificado de detención de caídas — un short de soporte blando; la cincha de carga es la estructura trazada y el short su portador. Dos cosas resueltas: el cinturón es un canal de cincha cerrado con ladder-lock, con su ancho el webbing_w trazado que define tanto las ranuras de cincha del ladder-lock de Yantra4D COMO la interfaz de cinturón del arnés; y el short se corta con holgura negativa con delantero y trasero compartiendo UNA entrepierna para que la pierna no se tuerza, con la altura de la cincha de pernera limitada bajo la entrepierna para que el lazo no pase del bajo. Carril 6 de FC-500 (activo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un short d'escalade extensible à baudrier souple intégré : un short en Cordura résistant dont la ceinture et les tours de cuisse sont des canaux de sangle structurelle, réglés par des boucles ladder-lock, de sorte que le short EST le baudrier pour le bloc, la via ferrata et la salle. Pas un baudrier antichute certifié — un short de soutien souple ; la sangle de charge est la structure tracée, le short son support. Deux choses résolues : la ceinture est un canal de sangle fermé par un ladder-lock, sa largeur de sangle étant le webbing_w tracé qui pilote à la fois les fentes de sangle du ladder-lock de Yantra4D ET l'interface de ceinture du baudrier ; et le short est coupé en aisance négative, devant et dos partageant UN entrejambe pour que la jambe ne vrille pas, la hauteur de sangle de tour de cuisse bridée sous l'entrejambe pour que la boucle ne dépasse pas l'ourlet. Couloir 6 de FC-500 (actif).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um short de escalada elástico com cadeirinha macia integrada: um short de Cordura resistente cujo cinto e perneiras são canais de cadarço estrutural, ajustados com fivelas ladder-lock, para que o short SEJA a cadeirinha para boulder, via ferrata e ginásio. Não é uma cadeirinha certificada de detenção de queda — um short de suporte macio; o cadarço de carga é a estrutura modelada, o short seu portador. Duas coisas resolvidas: o cinto é um canal de cadarço fechado com ladder-lock, com sua largura o webbing_w modelado que dirige tanto as fendas de cadarço do ladder-lock de Yantra4D QUANTO a interface de cinto da cadeirinha; e o short é cortado em folga negativa com frente e costas compartilhando UM gancho para a perna não torcer, com a altura do cadarço de perneira limitada sob o gancho para o laço não passar da barra. Corredor 6 do FC-500 (ativo).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["active", "climbing", "harness", "short", "cordura", "ladder-lock", "hardware", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full short", "es": "Short completo", "fr": "Short complet", "pt": "Short completo"}, "script_file": "main.py", "pieces": ["front", "back", "belt"]}
+  ],
+  "pieces": [
+    {"id": "front", "label": {"en": "Short front (leg-loop webbing)", "es": "Frente (cincha de pernera)", "fr": "Devant (sangle tour de cuisse)", "pt": "Frente (cadarço de perneira)"}, "default_color": "#4a4030", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "back", "label": {"en": "Short back (raised)", "es": "Trasero (alto)", "fr": "Dos (haut)", "pt": "Costas (alto)"}, "default_color": "#403829", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "belt", "label": {"en": "Harness belt (webbing)", "es": "Cinturón de arnés (cincha)", "fr": "Ceinture de baudrier (sangle)", "pt": "Cinto de cadeirinha (cadarço)"}, "default_color": "#37301f", "cut": {"quantity": 1, "mirror": false}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "waist_girth", "type": "slider", "group": "body", "default": 840, "min": 600, "max": 1300, "step": 10, "measurement": {"standard": "iso_8559", "code": "waist_girth"}, "label": {"en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)", "pt": "Contorno de cintura (mm)"}, "tooltip": {"en": "The harness belt closes here", "es": "El cinturón del arnés cierra aquí", "fr": "La ceinture du baudrier ferme ici", "pt": "O cinto da cadeirinha fecha aqui"}},
+    {"id": "hip_girth", "type": "slider", "group": "body", "default": 1000, "min": 760, "max": 1500, "step": 10, "measurement": {"standard": "iso_8559", "code": "hip_girth"}, "label": {"en": "Hip girth (mm)", "es": "Contorno de cadera (mm)", "fr": "Tour de hanche (mm)", "pt": "Contorno de quadril (mm)"}, "tooltip": {"en": "Fullest hip", "es": "Cadera más llena", "fr": "Hanche la plus forte", "pt": "Quadril mais cheio"}},
+    {"id": "thigh_girth", "type": "slider", "group": "body", "default": 580, "min": 400, "max": 820, "step": 10, "measurement": {"standard": "iso_8559", "code": "thigh_girth"}, "label": {"en": "Thigh girth (mm)", "es": "Contorno de muslo (mm)", "fr": "Tour de cuisse (mm)", "pt": "Contorno de coxa (mm)"}, "tooltip": {"en": "Sizes the leg and the leg loops", "es": "Dimensiona la pierna y las perneras", "fr": "Dimensionne la jambe et les tours de cuisse", "pt": "Dimensiona a perna e as perneiras"}},
+    {"id": "inseam", "type": "slider", "group": "body", "default": 200, "min": 120, "max": 340, "step": 10, "measurement": {"standard": "iso_8559", "code": "inside_leg_length"}, "label": {"en": "Inseam (mm)", "es": "Entrepierna (mm)", "fr": "Entrejambe (mm)", "pt": "Gancho interno (mm)"}, "tooltip": {"en": "Crotch to leg hem", "es": "De la entrepierna al bajo", "fr": "De l'entrejambe à l'ourlet", "pt": "Do gancho à barra"}},
+    {"id": "loop_rise", "type": "slider", "group": "construction", "default": 90, "min": 40, "max": 180, "step": 10, "label": {"en": "Leg-loop rise (mm)", "es": "Altura de pernera (mm)", "fr": "Hauteur tour de cuisse (mm)", "pt": "Altura de perneira (mm)"}, "tooltip": {"en": "How high the leg-loop webbing sits — clamped under the inseam", "es": "A qué altura queda la cincha de pernera — limitada bajo la entrepierna", "fr": "À quelle hauteur la sangle de tour de cuisse se place — bridée sous l'entrejambe", "pt": "A que altura o cadarço de perneira fica — limitada sob o gancho"}},
+    {"id": "webbing_w", "type": "slider", "group": "construction", "default": 40, "min": 25, "max": 60, "step": 5, "label": {"en": "Webbing width (mm)", "es": "Ancho de cincha (mm)", "fr": "Largeur de sangle (mm)", "pt": "Largura de cadarço (mm)"}, "tooltip": {"en": "The harness webbing width — drives the hardware and the harness-belt interface", "es": "El ancho de la cincha del arnés — define el herraje y la interfaz de cinturón", "fr": "La largeur de sangle du baudrier — pilote la quincaillerie et l'interface de ceinture", "pt": "A largura do cadarço da cadeirinha — dirige a ferragem e a interface de cinto"}},
+    {"id": "negative_ease_pct", "type": "slider", "group": "construction", "default": 8, "min": 2, "max": 18, "step": 1, "label": {"en": "Negative ease (%)", "es": "Holgura negativa (%)", "fr": "Aisance négative (%)", "pt": "Folga negativa (%)"}, "tooltip": {"en": "The short climbs with the body by being cut slightly smaller", "es": "El short trepa con el cuerpo al cortarse algo más pequeño", "fr": "Le short grimpe avec le corps en étant coupé un peu plus petit", "pt": "O short escala com o corpo sendo cortado um pouco menor"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 10, "min": 6, "max": 16, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Bar-tacked load seams", "es": "Costuras de carga con bartack", "fr": "Coutures de charge bar-tackées", "pt": "Costuras de carga com bar-tack"}}
+  ],
+  "presets": [
+    {"id": "boulder", "label": {"en": "Boulder", "es": "Búlder", "fr": "Bloc", "pt": "Boulder"}, "values": {"inseam": 180, "loop_rise": 80}},
+    {"id": "ferrata", "label": {"en": "Via ferrata", "es": "Vía ferrata", "fr": "Via ferrata", "pt": "Via ferrata"}, "values": {"webbing_w": 45, "loop_rise": 110}}
+  ],
+  "constraints": [
+    {"expression": "loop_rise < inseam", "message": {"en": "Leg-loop rise must fit within the inseam.", "es": "La altura de pernera debe caber en la entrepierna.", "fr": "La hauteur de tour de cuisse doit tenir dans l'entrejambe.", "pt": "A altura de perneira deve caber no gancho."}, "severity": "warning"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "buckle",
+    "subtype": "harness ladder-lock adjuster",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "ladder-lock",
+      "linked": true,
+      "params_map": {
+        "webbing_w": "webbing_w",
+        "webbing_t": "3",
+        "frame_t": "5"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "harness_belt", "type": "custom", "label": {"en": "Harness belt (ladder-lock webbing)", "es": "Cinturón de arnés (cincha ladder-lock)", "fr": "Ceinture de baudrier (sangle ladder-lock)", "pt": "Cinto de cadeirinha (cadarço ladder-lock)"}, "edges": [{"piece": "belt", "edge": "attach"}], "parameters": ["webbing_w", "waist_girth"]},
+      {"id": "side_seam", "type": "side_seam", "label": {"en": "Side seams (front to back)", "es": "Costuras laterales (delante a trasero)", "fr": "Coutures côté (devant au dos)", "pt": "Costuras laterais (frente ao dorso)"}, "edges": [{"piece": "front", "edge": "side"}, {"piece": "back", "edge": "side"}], "parameters": ["hip_girth", "negative_ease_pct"]},
+      {"id": "crotch_join", "type": "custom", "label": {"en": "Crotch join (one shared point)", "es": "Unión de entrepierna (punto compartido)", "fr": "Jonction d'entrejambe (point partagé)", "pt": "Junção de gancho (ponto compartilhado)"}, "edges": [{"piece": "front", "edge": "inseam"}, {"piece": "back", "edge": "inseam"}], "parameters": ["inseam", "loop_rise"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true,
+      "compression_support": true
+    },
+    "societal_benefit": {
+      "en": "A soft climbing harness built into a short removes the two frustrations of a rack harness for training, bouldering and via ferrata: the bulk that bunches under a pack, and the guesswork of a belt that never quite sits where the anatomy wants it. Drafting the belt and leg-loop webbing as structural channels solved to a measured waist and clamped so the loop cannot run off the leg, and bridging the adjusters to printable, replaceable ladder-locks, makes a support garment that fits a real body and can be maintained buckle by buckle. It states plainly what it is not — a certified fall-arrest harness — and delivers what it is: a made-to-measure, repairable soft harness short.",
+      "es": "Un arnés blando integrado en un short quita las dos frustraciones de un arnés de anillas para entrenamiento, búlder y vía ferrata: el volumen que se amontona bajo una mochila y la adivinanza de un cinturón que nunca queda donde la anatomía quiere. Trazar la cincha del cinturón y de las perneras como canales estructurales resueltos a una cintura medida y limitados para que el lazo no se salga de la pierna, y puentear los ajustadores a ladder-locks imprimibles y reemplazables, hace una prenda de soporte que ajusta a un cuerpo real y se mantiene hebilla por hebilla. Declara con claridad lo que no es — un arnés certificado de detención de caídas — y entrega lo que es: un short de arnés blando a medida y reparable.",
+      "fr": "Un baudrier souple intégré à un short supprime les deux frustrations d'un baudrier à matériel pour l'entraînement, le bloc et la via ferrata : le volume qui se bloque sous un sac, et l'incertitude d'une ceinture qui ne se place jamais où l'anatomie le veut. Tracer la sangle de ceinture et de tour de cuisse comme des canaux structurels résolus à une taille mesurée et bridés pour que la boucle ne quitte pas la jambe, et relier les réglages à des ladder-locks imprimables et remplaçables, fait un vêtement de soutien qui va à un corps réel et s'entretient boucle par boucle. Il dit clairement ce qu'il n'est pas — un baudrier antichute certifié — et livre ce qu'il est : un short-baudrier souple sur mesure et réparable.",
+      "pt": "Uma cadeirinha macia integrada a um short remove as duas frustrações de uma cadeirinha de material para treino, boulder e via ferrata: o volume que se amontoa sob uma mochila, e o palpite de um cinto que nunca fica onde a anatomia quer. Modelar o cadarço do cinto e das perneiras como canais estruturais resolvidos a uma cintura medida e limitados para o laço não sair da perna, e ligar os ajustes a ladder-locks imprimíveis e substituíveis, faz uma peça de suporte que serve a um corpo real e se mantém fivela por fivela. Diz claramente o que não é — uma cadeirinha certificada de detenção de queda — e entrega o que é: um short-cadeirinha macio sob medida e reparável."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

@@ -1,0 +1,406 @@
+{
+  "project": {
+    "name": "Wrap-front yoga crop",
+    "slug": "yoga-wrap-crop",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A wrap-front yoga crop / bralette: a soft supportive crop whose two front panels cross over the bust (cache-cœur) and tie at the back, giving light support and a flattering line with no clasp, no wire, no hardware — pull on, wrap, tie. Cut at negative ease in a soft nylon/elastane so it moves through every asana. Two things solved: each front panel extends past centre by a wrap amount clamped under the half-bust so the two panels always cross but never fold back on themselves; and the back ties wrap the ribcage and knot, their length solved from the underbust ring plus a knot allowance and floored so they always reach round. Pure pattern, no bridged hardware. FC-500 lane 6 (active).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un top corto cruzado de yoga / bralette: un crop suave y de soporte cuyos dos paneles delanteros cruzan sobre el busto (cache-cœur) y anudan atrás, dando soporte ligero y una línea favorecedora sin broche, sin aro, sin herrajes — se pone jalando, se cruza, se ata. Cortado con holgura negativa en nylon/elastano suave para moverse en cada asana. Dos cosas resueltas: cada panel delantero se extiende más allá del centro por un cruce limitado bajo el medio busto para que los dos paneles siempre crucen pero no se plieguen; y las cintas traseras rodean la caja torácica y anudan, con su largo resuelto del contorno bajo el busto más un margen de nudo y con piso para que siempre alcancen a rodear. Patrón puro, sin herraje puenteado. Carril 6 de FC-500 (activo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une brassière cache-cœur de yoga : une brassière souple et maintenante dont les deux panneaux devant se croisent sur la poitrine (cache-cœur) et se nouent au dos, offrant un maintien léger et une ligne flatteuse sans agrafe, sans armature, sans quincaillerie — s'enfile, se croise, se noue. Coupée en aisance négative dans un nylon/élasthanne doux pour bouger dans chaque asana. Deux choses résolues : chaque panneau devant s'étend au-delà du centre d'un croisement bridé sous la demi-poitrine pour que les deux panneaux se croisent toujours sans se replier ; et les liens dos entourent la cage thoracique et se nouent, leur longueur résolue à partir du tour de dessous de poitrine plus une aisance de nœud et planchérisée pour qu'ils atteignent toujours le tour. Patron pur, sans quincaillerie reliée. Couloir 6 de FC-500 (actif).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um top cropped transpassado de yoga / bralette: um cropped macio e com sustentação cujos dois painéis frontais cruzam sobre o busto (cache-cœur) e amarram atrás, dando sustentação leve e uma linha favorável sem fecho, sem aro, sem ferragens — veste puxando, cruza, amarra. Cortado em folga negativa num nylon/elastano macio para mover em cada asana. Duas coisas resolvidas: cada painel frontal se estende além do centro por uma sobreposição limitada sob o meio busto para os dois painéis sempre cruzarem sem dobrar; e as tiras traseiras envolvem a caixa torácica e amarram, com seu comprimento resolvido do contorno abaixo do busto mais uma folga de nó e com piso para sempre alcançarem a volta. Molde puro, sem ferragem ligada. Corredor 6 do FC-500 (ativo).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "active",
+      "yoga",
+      "wrap",
+      "crop",
+      "bralette",
+      "cache-coeur",
+      "lycra",
+      "commons",
+      "made-to-measure"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full crop",
+        "es": "Crop completo",
+        "fr": "Brassière complète",
+        "pt": "Cropped completo"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "tie"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Wrap front (cache-coeur)",
+        "es": "Delantero cruzado",
+        "fr": "Devant cache-cœur",
+        "pt": "Frente transpassada"
+      },
+      "default_color": "#8a6d9c",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (scoop)",
+        "es": "Espalda (escote)",
+        "fr": "Dos (échancré)",
+        "pt": "Costas (decotada)"
+      },
+      "default_color": "#7c6190",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "tie",
+      "label": {
+        "en": "Back tie",
+        "es": "Cinta trasera",
+        "fr": "Lien dos",
+        "pt": "Tira traseira"
+      },
+      "default_color": "#6f5682",
+      "cut": {
+        "quantity": 2,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body measurements",
+        "es": "Medidas corporales",
+        "fr": "Mesures du corps",
+        "pt": "Medidas corporais"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 920,
+      "min": 680,
+      "max": 1300,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "bust_girth"
+      },
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de poitrine (mm)",
+        "pt": "Contorno de busto (mm)"
+      },
+      "tooltip": {
+        "en": "Full bust — the panels at negative ease",
+        "es": "Busto completo — los paneles con holgura negativa",
+        "fr": "Tour de poitrine complet — les panneaux en aisance négative",
+        "pt": "Busto completo — os painéis com folga negativa"
+      }
+    },
+    {
+      "id": "underbust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 780,
+      "min": 600,
+      "max": 1200,
+      "step": 10,
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "underbust_girth"
+      },
+      "label": {
+        "en": "Underbust girth (mm)",
+        "es": "Contorno bajo el busto (mm)",
+        "fr": "Tour de dessous de poitrine (mm)",
+        "pt": "Contorno abaixo do busto (mm)"
+      },
+      "tooltip": {
+        "en": "The tie length is solved from this ring",
+        "es": "El largo de la cinta se resuelve de este contorno",
+        "fr": "La longueur de lien en découle",
+        "pt": "O comprimento da tira é resolvido deste contorno"
+      }
+    },
+    {
+      "id": "crop_length",
+      "type": "slider",
+      "group": "body",
+      "default": 300,
+      "min": 180,
+      "max": 460,
+      "step": 10,
+      "label": {
+        "en": "Crop length (mm)",
+        "es": "Largo del crop (mm)",
+        "fr": "Longueur de brassière (mm)",
+        "pt": "Comprimento do cropped (mm)"
+      },
+      "tooltip": {
+        "en": "Underbust to shoulder",
+        "es": "Del bajo busto al hombro",
+        "fr": "Du dessous de poitrine à l'épaule",
+        "pt": "Do abaixo do busto ao ombro"
+      }
+    },
+    {
+      "id": "wrap_amount",
+      "type": "slider",
+      "group": "construction",
+      "default": 120,
+      "min": 40,
+      "max": 260,
+      "step": 10,
+      "label": {
+        "en": "Wrap cross (mm)",
+        "es": "Cruce (mm)",
+        "fr": "Croisement (mm)",
+        "pt": "Sobreposição (mm)"
+      },
+      "tooltip": {
+        "en": "How far the fronts cross — clamped under the half-bust so it never folds back",
+        "es": "Cuánto cruzan los frentes — limitado bajo el medio busto para que no se pliegue",
+        "fr": "De combien les devants se croisent — bridé sous la demi-poitrine pour ne pas se replier",
+        "pt": "Quanto as frentes cruzam — limitado sob o meio busto para não dobrar"
+      }
+    },
+    {
+      "id": "strap_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 40,
+      "min": 20,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Strap width (mm)",
+        "es": "Ancho de tirante (mm)",
+        "fr": "Largeur de bretelle (mm)",
+        "pt": "Largura de alça (mm)"
+      },
+      "tooltip": {
+        "en": "The shoulder strap width",
+        "es": "El ancho del tirante de hombro",
+        "fr": "La largeur de la bretelle d'épaule",
+        "pt": "A largura da alça de ombro"
+      }
+    },
+    {
+      "id": "negative_ease_pct",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 4,
+      "max": 24,
+      "step": 1,
+      "label": {
+        "en": "Negative ease (%)",
+        "es": "Holgura negativa (%)",
+        "fr": "Aisance négative (%)",
+        "pt": "Folga negativa (%)"
+      },
+      "tooltip": {
+        "en": "The crop supports by being cut smaller than the body",
+        "es": "El crop sostiene al cortarse más pequeño que el cuerpo",
+        "fr": "La brassière maintient en étant coupée plus petite que le corps",
+        "pt": "O cropped sustenta sendo cortado menor que o corpo"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 4,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)",
+        "pt": "Margem de costura (mm)"
+      },
+      "tooltip": {
+        "en": "Narrow flatlocked seams against the skin",
+        "es": "Costuras angostas con flatlock contra la piel",
+        "fr": "Coutures étroites en flatlock contre la peau",
+        "pt": "Costuras estreitas com flatlock contra a pele"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "flow",
+      "label": {
+        "en": "Flow (light)",
+        "es": "Flow (ligero)",
+        "fr": "Flow (léger)",
+        "pt": "Flow (leve)"
+      },
+      "values": {
+        "negative_ease_pct": 10,
+        "wrap_amount": 100
+      }
+    },
+    {
+      "id": "hot",
+      "label": {
+        "en": "Hot (secure)",
+        "es": "Hot (firme)",
+        "fr": "Hot (ferme)",
+        "pt": "Hot (firme)"
+      },
+      "values": {
+        "negative_ease_pct": 18,
+        "wrap_amount": 160
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "bust_girth > underbust_girth",
+      "message": {
+        "en": "Bust girth should exceed underbust girth.",
+        "es": "El contorno de busto debe superar al bajo busto.",
+        "fr": "Le tour de poitrine doit dépasser le tour de dessous de poitrine.",
+        "pt": "O contorno de busto deve exceder o de abaixo do busto."
+      },
+      "severity": "warning"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "wrap_cross",
+        "type": "custom",
+        "label": {
+          "en": "Wrap cross (fronts cross over)",
+          "es": "Cruce (los frentes cruzan)",
+          "fr": "Croisement (les devants se croisent)",
+          "pt": "Sobreposição (as frentes cruzam)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "wrap_edge"
+          }
+        ],
+        "parameters": [
+          "wrap_amount",
+          "bust_girth"
+        ]
+      },
+      {
+        "id": "back_tie",
+        "type": "custom",
+        "label": {
+          "en": "Back tie (solved to underbust)",
+          "es": "Cinta trasera (resuelta al bajo busto)",
+          "fr": "Lien dos (résolu au dessous de poitrine)",
+          "pt": "Tira traseira (resolvida ao abaixo do busto)"
+        },
+        "edges": [
+          {
+            "piece": "tie",
+            "edge": "top"
+          }
+        ],
+        "parameters": [
+          "underbust_girth",
+          "strap_width"
+        ]
+      },
+      {
+        "id": "armhole",
+        "type": "armscye",
+        "label": {
+          "en": "Armhole / side (front to back)",
+          "es": "Sisa / lateral (delante a espalda)",
+          "fr": "Emmanchure / côté (devant au dos)",
+          "pt": "Cava / lateral (frente às costas)"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "negative_ease_pct"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": false,
+      "compression_support": true,
+      "pull_on": true
+    },
+    "societal_benefit": {
+      "en": "A wrap-front crop is the most forgiving support garment to fit, because the wearer sets the exact cross and tightness by how they wrap and tie — there is no fixed band size to get wrong, no clasp to press a nerve, no wire to fail. Drafting it so the wrap always crosses without folding back and the ties always reach round to knot means the pattern holds at any bust and any underbust, and the whole thing is soft against the skin with nothing hard in it. A supportive top that is made to measure, adjustable by the body wearing it, and free of hardware is a genuinely inclusive piece of activewear — comfortable across sizes, shapes and a changing body.",
+      "es": "Un crop cruzado es la prenda de soporte más indulgente de ajustar, porque quien lo usa fija el cruce y la firmeza exactos según cómo cruza y ata — no hay talla de banda fija que equivocar, ni broche que presione un nervio, ni aro que falle. Trazarlo para que el cruce siempre cruce sin plegarse y las cintas siempre alcancen a rodear y anudar hace que el patrón funcione en cualquier busto y bajo busto, y todo queda suave contra la piel sin nada rígido. Un top de soporte a medida, ajustable por el propio cuerpo y sin herrajes, es una prenda deportiva genuinamente inclusiva — cómoda en tallas, formas y un cuerpo que cambia.",
+      "fr": "Une brassière cache-cœur est le vêtement de maintien le plus indulgent à ajuster, car la porteuse fixe le croisement et le serrage exacts par la façon dont elle croise et noue — pas de taille de bande fixe à rater, pas d'agrafe qui presse un nerf, pas d'armature qui cède. La tracer pour que le croisement se croise toujours sans se replier et que les liens atteignent toujours le tour pour se nouer fait que le patron tient à toute poitrine et tout dessous de poitrine, et le tout reste doux contre la peau sans rien de rigide. Un haut de maintien sur mesure, réglable par le corps qui le porte et sans quincaillerie, est un vêtement de sport vraiment inclusif — confortable à travers les tailles, les formes et un corps qui change.",
+      "pt": "Um cropped transpassado é a peça de sustentação mais tolerante de ajustar, porque quem o usa fixa o cruzamento e a firmeza exatos pelo modo como cruza e amarra — não há tamanho de banda fixo a errar, nem fecho que pressione um nervo, nem aro que falhe. Modelá-lo para o cruzamento sempre cruzar sem dobrar e as tiras sempre alcançarem a volta e amarrar faz o molde valer em qualquer busto e abaixo do busto, e tudo fica macio contra a pele sem nada rígido. Um top de sustentação sob medida, ajustável pelo próprio corpo e sem ferragens, é uma peça esportiva genuinamente inclusiva — confortável em tamanhos, formas e um corpo que muda."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

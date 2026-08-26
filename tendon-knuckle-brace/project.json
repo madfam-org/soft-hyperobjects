@@ -1,0 +1,87 @@
+{
+  "project": {
+    "name": "Tendon-knuckle wrist brace",
+    "slug": "tendon-knuckle-brace",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A wrist-and-knuckle brace that lends a tendon back to a hand that has lost extension: a printed TPU wrap spanning the forearm, wrist and back of the hand, carrying an articulated tendon-knuckle linkage along its dorsal line so a pull at the forearm extends the knuckles. The brace is the soft body drafted here; the articulated knuckle is the Yantra4D tendon-knuckle solid, never modelled here. The channel is SOLVED to the span: linkage_span IS the drafted dorsal run, so the printed linkage is exactly as long as the channel that holds it; linkage_span drives both the hardware and the garment's own linkage-channel interface. A two-girth tapered wrap, clamped: the wrist girth is clamped under the forearm girth so the wrap can never invert. FC-500 lane 4 (adaptive / soft-exo).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una férula de muñeca y nudillos que devuelve un tendón a una mano que perdió la extensión: un envolvente de TPU impreso que abarca antebrazo, muñeca y dorso de la mano, con una articulación tendón-nudillo a lo largo de su línea dorsal para que un tirón en el antebrazo extienda los nudillos. La férula es el cuerpo suave trazado aquí; el nudillo articulado es el sólido tendon-knuckle de Yantra4D, nunca modelado aquí. El canal se RESUELVE al tramo: linkage_span ES el recorrido dorsal trazado, así la articulación impresa es exactamente tan larga como el canal que la aloja; linkage_span define tanto el herraje como la interfaz de canal de articulación de la prenda. Un envolvente cónico de dos contornos, limitado: el contorno de muñeca se limita bajo el de antebrazo para que el envolvente no se invierta. Carril 4 de FC-500 (adaptativo / soft-exo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une attelle de poignet et d'articulations qui rend un tendon à une main qui a perdu l'extension : un enveloppement en TPU imprimé couvrant l'avant-bras, le poignet et le dos de la main, portant une timonerie tendon-articulation le long de sa ligne dorsale pour qu'une traction à l'avant-bras étende les articulations. L'attelle est le corps souple tracé ici ; l'articulation est le solide tendon-knuckle de Yantra4D, jamais modélisé ici. Le canal est RÉSOLU au tronçon : linkage_span EST le parcours dorsal tracé, de sorte que la timonerie imprimée est exactement aussi longue que le canal qui l'accueille ; linkage_span pilote la quincaillerie ET l'interface de canal de timonerie du vêtement. Un enveloppement conique à deux tours, bridé : le tour de poignet est bridé sous celui d'avant-bras pour que l'enveloppement ne s'inverse pas. Couloir 4 de FC-500 (adaptatif / soft-exo).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma órtese de punho e nós que devolve um tendão a uma mão que perdeu a extensão: um envolvimento de TPU impresso cobrindo antebraço, punho e dorso da mão, carregando uma articulação tendão-nó ao longo da linha dorsal para que um puxão no antebraço estenda os nós. A órtese é o corpo macio modelado aqui; o nó articulado é o sólido tendon-knuckle de Yantra4D, nunca modelado aqui. O canal é RESOLVIDO ao trecho: linkage_span É o percurso dorsal modelado, então a articulação impressa é exatamente tão longa quanto o canal que a abriga; linkage_span dirige tanto a ferragem quanto a interface de canal de articulação da peça. Um envolvimento cônico de dois contornos, limitado: o contorno de punho é limitado sob o de antebraço para o envolvimento não inverter. Corredor 4 do FC-500 (adaptativo / soft-exo).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["adaptive", "soft-exo", "brace", "tendon", "wrist-drop", "tpu", "hardware", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full brace", "es": "Férula completa", "fr": "Attelle complète", "pt": "Órtese completa"}, "script_file": "main.py", "pieces": ["forearm", "hand", "strap"]}
+  ],
+  "pieces": [
+    {"id": "forearm", "label": {"en": "Forearm wrap (tendon channel)", "es": "Envolvente de antebrazo (canal de tendón)", "fr": "Enveloppe d'avant-bras (canal de tendon)", "pt": "Envolvimento de antebraço (canal de tendão)"}, "default_color": "#3a4652", "cut": {"quantity": 1, "mirror": false}},
+    {"id": "hand", "label": {"en": "Back-of-hand knuckle band", "es": "Banda de nudillos del dorso", "fr": "Bande d'articulations du dos", "pt": "Banda de nós do dorso"}, "default_color": "#44515e", "cut": {"quantity": 1, "mirror": false}},
+    {"id": "strap", "label": {"en": "Closure strap", "es": "Correa de cierre", "fr": "Sangle de fermeture", "pt": "Tira de fechamento"}, "default_color": "#2e3a45", "cut": {"quantity": 2, "mirror": true}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "forearm_girth", "type": "slider", "group": "body", "default": 260, "min": 180, "max": 380, "step": 5, "measurement": {"standard": "iso_8559", "code": "wrist_girth"}, "label": {"en": "Forearm girth (mm)", "es": "Contorno de antebrazo (mm)", "fr": "Tour d'avant-bras (mm)", "pt": "Contorno de antebraço (mm)"}, "tooltip": {"en": "Around the forearm at the anchor — the wide end of the taper", "es": "Alrededor del antebrazo en el anclaje — el extremo ancho", "fr": "Autour de l'avant-bras à l'ancrage — l'extrémité large", "pt": "Ao redor do antebraço na ancoragem — a extremidade larga"}},
+    {"id": "wrist_girth", "type": "slider", "group": "body", "default": 175, "min": 130, "max": 240, "step": 5, "measurement": {"standard": "iso_8559", "code": "wrist_girth"}, "label": {"en": "Wrist girth (mm)", "es": "Contorno de muñeca (mm)", "fr": "Tour de poignet (mm)", "pt": "Contorno de punho (mm)"}, "tooltip": {"en": "The narrow end of the taper — clamped under the forearm", "es": "El extremo angosto — limitado bajo el antebrazo", "fr": "L'extrémité étroite — bridée sous l'avant-bras", "pt": "A extremidade estreita — limitada sob o antebraço"}},
+    {"id": "brace_length", "type": "slider", "group": "body", "default": 220, "min": 140, "max": 320, "step": 5, "label": {"en": "Brace length (mm)", "es": "Largo de férula (mm)", "fr": "Longueur d'attelle (mm)", "pt": "Comprimento da órtese (mm)"}, "tooltip": {"en": "Forearm anchor to knuckle line", "es": "Del anclaje del antebrazo a la línea de nudillos", "fr": "De l'ancrage de l'avant-bras à la ligne d'articulations", "pt": "Da ancoragem do antebraço à linha dos nós"}},
+    {"id": "hand_span", "type": "slider", "group": "body", "default": 95, "min": 60, "max": 150, "step": 5, "label": {"en": "Hand span (mm)", "es": "Tramo de mano (mm)", "fr": "Empan de main (mm)", "pt": "Vão da mão (mm)"}, "tooltip": {"en": "Wrist to knuckle line — the back-of-hand section", "es": "De muñeca a nudillos — la sección del dorso", "fr": "Du poignet aux articulations — la section du dos", "pt": "Do punho aos nós — a seção do dorso"}},
+    {"id": "linkage_span", "type": "slider", "group": "construction", "default": 150, "min": 80, "max": 280, "step": 5, "label": {"en": "Linkage span (mm)", "es": "Tramo de articulación (mm)", "fr": "Tronçon de timonerie (mm)", "pt": "Trecho de articulação (mm)"}, "tooltip": {"en": "Dorsal linkage run — the tendon-knuckle is solved to this", "es": "Recorrido dorsal de la articulación — el tendón-nudillo se resuelve de esto", "fr": "Parcours dorsal — la timonerie en découle", "pt": "Percurso dorsal — a articulação é resolvida disto"}},
+    {"id": "negative_ease_pct", "type": "slider", "group": "construction", "default": 4, "min": 2, "max": 10, "step": 1, "label": {"en": "Negative ease (%)", "es": "Holgura negativa (%)", "fr": "Aisance négative (%)", "pt": "Folga negativa (%)"}, "tooltip": {"en": "The wrap grips by being cut smaller than the limb", "es": "El envolvente agarra al cortarse más pequeño que el miembro", "fr": "L'enveloppement tient en étant coupé plus petit que le membre", "pt": "O envolvimento firma sendo cortado menor que o membro"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 6, "min": 2, "max": 12, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Narrow sealed brace seams", "es": "Costuras de férula angostas selladas", "fr": "Coutures d'attelle étroites scellées", "pt": "Costuras de órtese estreitas seladas"}}
+  ],
+  "presets": [
+    {"id": "wrist_drop", "label": {"en": "Wrist-drop", "es": "Mano caída", "fr": "Main tombante", "pt": "Mão caída"}, "values": {"linkage_span": 180, "negative_ease_pct": 5}},
+    {"id": "night_rest", "label": {"en": "Night rest", "es": "Reposo nocturno", "fr": "Repos nocturne", "pt": "Repouso noturno"}, "values": {"linkage_span": 120, "negative_ease_pct": 3}}
+  ],
+  "constraints": [
+    {"expression": "wrist_girth < forearm_girth", "message": {"en": "Wrist girth must be smaller than forearm girth for the tapered wrap.", "es": "El contorno de muñeca debe ser menor que el de antebrazo para el envolvente cónico.", "fr": "Le tour de poignet doit être inférieur au tour d'avant-bras pour l'enveloppement conique.", "pt": "O contorno de punho deve ser menor que o de antebraço para o envolvimento cônico."}, "severity": "warning"},
+    {"expression": "hand_span < brace_length", "message": {"en": "Hand span should be shorter than the whole brace length.", "es": "El tramo de mano debe ser menor que el largo total de la férula.", "fr": "L'empan de main doit être inférieur à la longueur totale de l'attelle.", "pt": "O vão da mão deve ser menor que o comprimento total da órtese."}, "severity": "warning"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "tendon-knuckle linkage channel",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "tendon-knuckle",
+      "linked": true,
+      "params_map": {
+        "seg_len": "linkage_span"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "linkage_channel", "type": "custom", "label": {"en": "Dorsal linkage channel (solved to linkage_span)", "es": "Canal dorsal de articulación (resuelto a linkage_span)", "fr": "Canal dorsal de timonerie (résolu sur linkage_span)", "pt": "Canal dorsal de articulação (resolvido a linkage_span)"}, "edges": [{"piece": "hand", "edge": "knuckle"}], "parameters": ["linkage_span", "brace_length"]},
+      {"id": "wrist_join", "type": "custom", "label": {"en": "Wrist join (forearm wrap to hand band)", "es": "Unión de muñeca (antebrazo a mano)", "fr": "Jonction de poignet (avant-bras à main)", "pt": "Junção de punho (antebraço à mão)"}, "edges": [{"piece": "forearm", "edge": "wrist"}, {"piece": "hand", "edge": "wrist"}], "parameters": ["wrist_girth", "negative_ease_pct"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A hand that has lost extension — from radial-nerve palsy, a stroke, or a tendon injury — falls into a wrist-drop that a static splint can only prop, not restore. An articulated tendon linkage restores the motion: a pull at the forearm lifts the knuckles, and a return spring lets them fall. Making the linkage the printable, replaceable part means the brace can be re-tuned as strength returns, and the channel is solved to the span so the printed linkage fits the wrap and the wrap fits the arm. A dynamic brace that is made to measure and repairable becomes a commons object rather than a costly sealed orthosis.",
+      "es": "Una mano que perdió la extensión — por parálisis del nervio radial, un ictus o una lesión de tendón — cae en una mano caída que una férula estática solo apuntala, no restaura. Una articulación tendinosa restaura el movimiento: un tirón en el antebrazo levanta los nudillos y un resorte los deja caer. Hacer de la articulación la parte imprimible y reemplazable permite reafinar la férula conforme vuelve la fuerza, y el canal se resuelve al tramo para que la articulación impresa ajuste al envolvente y el envolvente al brazo. Una férula dinámica a medida y reparable se vuelve un objeto común en vez de una ortesis sellada costosa.",
+      "fr": "Une main qui a perdu l'extension — par paralysie du nerf radial, un AVC ou une lésion tendineuse — tombe en une main tombante qu'une attelle statique ne peut qu'étayer, non restaurer. Une timonerie tendineuse restaure le mouvement : une traction à l'avant-bras lève les articulations et un ressort de rappel les laisse retomber. Faire de la timonerie la pièce imprimable et remplaçable permet de réaccorder l'attelle à mesure que la force revient, et le canal est résolu au tronçon pour que la timonerie imprimée aille à l'enveloppement et l'enveloppement au bras. Une attelle dynamique sur mesure et réparable devient un objet commun plutôt qu'une orthèse scellée coûteuse.",
+      "pt": "Uma mão que perdeu a extensão — por paralisia do nervo radial, um AVC ou lesão de tendão — cai numa mão caída que uma tala estática só escora, não restaura. Uma articulação tendínea restaura o movimento: um puxão no antebraço levanta os nós e uma mola de retorno os deixa cair. Fazer da articulação a peça imprimível e substituível permite reafinar a órtese conforme a força volta, e o canal é resolvido ao trecho para que a articulação impressa sirva ao envolvimento e o envolvimento ao braço. Uma órtese dinâmica sob medida e reparável torna-se um objeto comum em vez de uma órtese selada custosa."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

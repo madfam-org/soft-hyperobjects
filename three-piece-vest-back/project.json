@@ -1,0 +1,93 @@
+{
+  "project": {
+    "name": "Three-piece suit vest",
+    "slug": "three-piece-vest-back",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The waistcoat of a three-piece suit: a plain V-neck single-breasted vest in the suit cloth, worn between shirt and jacket, with the front matched to the suit and a lining back with a buckled cinch strap to nip the waist. The distinguishing feature versus the lapelled evening vest is the higher, straight V-neck and whole-cloth styling. Two things solved: the V-neck depth is clamped above the point so the V can never drop below the top button, and the front point drop is clamped so it never falls below the hem baseline (which would invert the hem edge); and the back strap adjusts on a Yantra4D strap-buckle, its webbing width the drafted strap_width that drives the garment's cinch interface AND the buckle's webbing channel. FC-500 lane 5 (tailoring, T3).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El chaleco de un traje de tres piezas: un chaleco de pico liso sencillo en la tela del traje, entre camisa y saco, con el frente a juego con el traje y una espalda de forro con cinta ajustable de hebilla para ceñir la cintura. Lo distingue del chaleco de noche con solapa el escote en V más alto y recto y el estilo en tela entera. Dos cosas resueltas: la profundidad del escote en V se limita sobre el pico para que la V nunca caiga bajo el primer botón, y la caída del pico se limita para que no caiga bajo la línea del bajo (lo que invertiría el bajo); y la cinta trasera se ajusta en una hebilla strap-buckle de Yantra4D, con su ancho de correa el strap_width trazado que define la interfaz de ceñido de la prenda Y el canal de correa de la hebilla. Carril 5 de FC-500 (sastrería, T3).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le gilet d'un costume trois-pièces : un gilet à col en V uni simple dans le tissu du costume, entre chemise et veste, avec le devant assorti au costume et un dos de doublure à martingale à boucle pour cintrer la taille. Ce qui le distingue du gilet de soirée à revers est le col en V plus haut et droit et le style en tissu plein. Deux choses résolues : la profondeur du col en V est bridée au-dessus de la pointe pour que le V ne tombe jamais sous le bouton du haut, et la chute de pointe est bridée pour ne jamais tomber sous la ligne d'ourlet (ce qui inverserait l'ourlet) ; et la martingale dos s'ajuste sur une boucle strap-buckle de Yantra4D, sa largeur de sangle étant le strap_width tracé qui pilote l'interface de cintrage du vêtement ET le canal de sangle de la boucle. Couloir 5 de FC-500 (tailleur, T3).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O colete de um terno de três peças: um colete de gola V liso simples no tecido do terno, entre camisa e paletó, com a frente combinando com o terno e umas costas de forro com tira de ajuste de fivela para afinar a cintura. O que o distingue do colete de noite com lapela é a gola V mais alta e reta e o estilo em tecido pleno. Duas coisas resolvidas: a profundidade da gola V é limitada acima do bico para o V nunca cair abaixo do botão superior, e a queda do bico é limitada para nunca cair abaixo da linha da barra (o que inverteria a barra); e a tira traseira ajusta numa fivela strap-buckle de Yantra4D, com sua largura de cadarço o strap_width modelado que dirige a interface de ajuste da peça E o canal de cadarço da fivela. Corredor 5 do FC-500 (alfaiataria, T3).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": ["tailoring", "waistcoat", "vest", "three-piece", "suit", "strap-buckle", "hardware", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full vest", "es": "Chaleco completo", "fr": "Gilet complet", "pt": "Colete completo"}, "script_file": "main.py", "pieces": ["front", "back", "strap"]}
+  ],
+  "pieces": [
+    {"id": "front", "label": {"en": "Front (V-neck + point)", "es": "Delantero (V + pico)", "fr": "Devant (col V + pointe)", "pt": "Frente (gola V + bico)"}, "default_color": "#3a3f45", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "back", "label": {"en": "Back (satin, cinch strap)", "es": "Espalda (satén, cinta)", "fr": "Dos (satin, martingale)", "pt": "Costas (cetim, tira)"}, "default_color": "#2f343a", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "strap", "label": {"en": "Cinch strap", "es": "Cinta de ajuste", "fr": "Martingale", "pt": "Tira de ajuste"}, "default_color": "#33383e", "cut": {"quantity": 2, "mirror": true}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "chest_girth", "type": "slider", "group": "body", "default": 1000, "min": 800, "max": 1400, "step": 10, "measurement": {"standard": "iso_8559", "code": "chest_bust_girth"}, "label": {"en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)"}, "tooltip": {"en": "Full chest — the body block at vest ease", "es": "Pecho completo — el bloque con holgura", "fr": "Poitrine complète — le bloc avec aisance", "pt": "Peito completo — o bloco com folga"}},
+    {"id": "waist_girth", "type": "slider", "group": "body", "default": 880, "min": 640, "max": 1300, "step": 10, "measurement": {"standard": "iso_8559", "code": "waist_girth"}, "label": {"en": "Waist girth (mm)", "es": "Contorno de cintura (mm)", "fr": "Tour de taille (mm)", "pt": "Contorno de cintura (mm)"}, "tooltip": {"en": "Natural waist — the cinch reference", "es": "Cintura natural — la referencia del ceñido", "fr": "Taille naturelle — le repère de cintrage", "pt": "Cintura natural — a referência do ajuste"}},
+    {"id": "front_length", "type": "slider", "group": "body", "default": 560, "min": 440, "max": 700, "step": 10, "label": {"en": "Front length (mm)", "es": "Largo delantero (mm)", "fr": "Longueur devant (mm)", "pt": "Comprimento dianteiro (mm)"}, "tooltip": {"en": "Shoulder to front point", "es": "Del hombro al pico delantero", "fr": "De l'épaule à la pointe devant", "pt": "Do ombro ao bico dianteiro"}},
+    {"id": "neck_depth", "type": "slider", "group": "construction", "default": 260, "min": 120, "max": 420, "step": 10, "label": {"en": "V-neck depth (mm)", "es": "Profundidad de V (mm)", "fr": "Profondeur du col V (mm)", "pt": "Profundidade da gola V (mm)"}, "tooltip": {"en": "How far the V drops below the shoulder — clamped above the point", "es": "Cuánto baja la V bajo el hombro — limitada sobre el pico", "fr": "De combien le V descend sous l'épaule — bridée au-dessus de la pointe", "pt": "Quanto o V desce abaixo do ombro — limitada acima do bico"}},
+    {"id": "point_drop", "type": "slider", "group": "construction", "default": 60, "min": 20, "max": 140, "step": 5, "label": {"en": "Point drop (mm)", "es": "Caída del pico (mm)", "fr": "Chute de pointe (mm)", "pt": "Queda do bico (mm)"}, "tooltip": {"en": "How far the front points drop — clamped so it never inverts the hem", "es": "Cuánto caen los picos — limitado para que no invierta el bajo", "fr": "De combien les pointes tombent — bridé pour ne pas inverser l'ourlet", "pt": "Quanto os bicos caem — limitado para não inverter a barra"}},
+    {"id": "strap_width", "type": "slider", "group": "construction", "default": 40, "min": 20, "max": 70, "step": 5, "label": {"en": "Strap width (mm)", "es": "Ancho de cinta (mm)", "fr": "Largeur de martingale (mm)", "pt": "Largura da tira (mm)"}, "tooltip": {"en": "The cinch strap webbing width — drives the hardware and the cinch interface", "es": "El ancho de la cinta de ajuste — define el herraje y la interfaz de ceñido", "fr": "La largeur de sangle de la martingale — pilote la quincaillerie et l'interface de cintrage", "pt": "A largura do cadarço da tira — dirige a ferragem e a interface de ajuste"}},
+    {"id": "button_count", "type": "slider", "group": "construction", "default": 5, "min": 3, "max": 8, "step": 1, "label": {"en": "Button count", "es": "Número de botones", "fr": "Nombre de boutons", "pt": "Número de botões"}, "tooltip": {"en": "How many front buttons", "es": "Cuántos botones delanteros", "fr": "Combien de boutons devant", "pt": "Quantos botões dianteiros"}},
+    {"id": "vest_ease", "type": "slider", "group": "construction", "default": 70, "min": 20, "max": 140, "step": 10, "label": {"en": "Vest ease (mm)", "es": "Holgura de chaleco (mm)", "fr": "Aisance de gilet (mm)", "pt": "Folga de colete (mm)"}, "tooltip": {"en": "Wearing ease over the shirt", "es": "Holgura de uso sobre la camisa", "fr": "Aisance de port sur la chemise", "pt": "Folga de uso sobre a camisa"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 10, "min": 6, "max": 16, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Tailoring seam allowances", "es": "Márgenes de costura de sastrería", "fr": "Marges de couture tailleur", "pt": "Margens de costura de alfaiataria"}}
+  ],
+  "presets": [
+    {"id": "classic", "label": {"en": "Classic 5-button", "es": "Clásico 5 botones", "fr": "Classique 5 boutons", "pt": "Clássico 5 botões"}, "values": {"button_count": 5, "neck_depth": 260}},
+    {"id": "high", "label": {"en": "High-buttoning", "es": "Abotonado alto", "fr": "Boutonnage haut", "pt": "Abotoamento alto"}, "values": {"button_count": 6, "neck_depth": 180}}
+  ],
+  "constraints": [
+    {"expression": "chest_girth > waist_girth", "message": {"en": "Chest girth should exceed waist girth.", "es": "El contorno de pecho debe superar al de cintura.", "fr": "Le tour de poitrine doit dépasser celui de taille.", "pt": "O contorno de peito deve exceder o de cintura."}, "severity": "warning"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "buckle",
+    "subtype": "back cinch strap buckle",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "strap-buckle",
+      "linked": true,
+      "params_map": {
+        "webbing": "strap_width",
+        "web_t": "strap_width * 0.08",
+        "snap_clear": "strap_width * 0.06",
+        "wall": "strap_width * 0.1"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "back_cinch", "type": "custom", "label": {"en": "Back cinch (strap + buckle)", "es": "Ceñido trasero (cinta + hebilla)", "fr": "Cintrage dos (martingale + boucle)", "pt": "Ajuste traseiro (tira + fivela)"}, "edges": [{"piece": "strap", "edge": "attach"}], "parameters": ["strap_width", "waist_girth"]},
+      {"id": "button_stand", "type": "button_stand", "label": {"en": "Button stand", "es": "Portada", "fr": "Patte de boutonnage", "pt": "Portada"}, "edges": [{"piece": "front", "edge": "front_edge"}], "parameters": ["button_count", "neck_depth"]},
+      {"id": "vest_side", "type": "side_seam", "label": {"en": "Side seams (front to back)", "es": "Costuras laterales (delante a espalda)", "fr": "Coutures côté (devant au dos)", "pt": "Costuras laterais (frente às costas)"}, "edges": [{"piece": "front", "edge": "side"}, {"piece": "back", "edge": "side"}], "parameters": ["chest_girth", "vest_ease"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "tailoring": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The waistcoat is what turns a two-piece suit into a three-piece — the layer that lets one suit read as business, formal or relaxed depending on whether it is worn — and its back cinch is the small mechanism that makes it fit a changing waist without alteration. Solving the V-neck and hem point so no size inverts the front edge, and bridging the cinch to a printable, replaceable buckle, makes the vest a made-to-measure commons object that adjusts to the body over years rather than being recut. A garment that extends the life and range of a suit, whose one adjustable fastening can be reprinted, is a quietly sustainable piece of formalwear.",
+      "es": "El chaleco es lo que convierte un traje de dos piezas en uno de tres — la capa que hace que un mismo traje se lea como de negocios, formal o relajado según se use — y su ceñido trasero es el pequeño mecanismo que lo hace ajustar a una cintura cambiante sin arreglos. Resolver el escote en V y el pico del bajo para que ninguna talla invierta el borde delantero, y puentear el ceñido a una hebilla imprimible y reemplazable, vuelve al chaleco un objeto común a medida que se ajusta al cuerpo con los años en vez de recortarse. Una prenda que extiende la vida y el alcance de un traje, cuyo único cierre ajustable puede reimprimirse, es una pieza de vestir formal discretamente sostenible.",
+      "fr": "Le gilet est ce qui transforme un costume deux-pièces en trois-pièces — la couche qui fait qu'un même costume se lit comme professionnel, formel ou décontracté selon qu'il est porté — et sa martingale dos est le petit mécanisme qui le fait aller à une taille changeante sans retouche. Résoudre le col en V et la pointe d'ourlet pour qu'aucune taille n'inverse le bord devant, et relier le cintrage à une boucle imprimable et remplaçable, fait du gilet un objet commun sur mesure qui s'ajuste au corps au fil des ans plutôt que d'être recoupé. Un vêtement qui prolonge la vie et l'étendue d'un costume, dont l'unique fermeture réglable peut être réimprimée, est une pièce de tenue formelle discrètement durable.",
+      "pt": "O colete é o que transforma um terno de duas peças em três — a camada que faz um mesmo terno ler-se como executivo, formal ou relaxado conforme é usado — e seu ajuste traseiro é o pequeno mecanismo que o faz servir a uma cintura mutável sem alteração. Resolver a gola V e o bico da barra para que nenhum tamanho inverta a borda dianteira, e ligar o ajuste a uma fivela imprimível e substituível, torna o colete um objeto comum sob medida que se ajusta ao corpo ao longo dos anos em vez de ser recortado. Uma peça que estende a vida e o alcance de um terno, cujo único fecho ajustável pode ser reimpresso, é uma peça de traje formal discretamente sustentável."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

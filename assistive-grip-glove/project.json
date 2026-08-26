@@ -1,0 +1,87 @@
+{
+  "project": {
+    "name": "Assistive grip glove",
+    "slug": "assistive-grip-glove",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A soft-exoskeleton grip glove for a hand that cannot close on its own: a neoprene glove shell whose palmar side carries Fin-Ray finger ribs that flex the wearer's fingers around an object when a tendon line is pulled and open them on release. The glove is the soft body; the Fin-Ray finger is the Yantra4D finray-gripper solid, printed and slid into a palmar channel, never modelled here. The channel is SOLVED to the finger length: finger_len IS the drafted knuckle-to-tip run, so the printed rib is exactly as long as the channel that holds it; finger_len drives both the hardware and the garment's own finger-channel interface. Negative-ease neoprene shell so it grips; straight, stable channel seams so the rigid rib does not buckle. Made to measure to hand length, palm girth, finger length and wrist girth. FC-500 lane 4 (adaptive / soft-exo).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un guante de agarre soft-exoesqueleto para una mano que no puede cerrarse sola: una funda de neopreno cuyo lado palmar lleva costillas Fin-Ray que flexionan los dedos alrededor de un objeto al tirar de una línea de tendón y los abren al soltar. El guante es el cuerpo suave; el dedo Fin-Ray es el sólido finray-gripper de Yantra4D, impreso y deslizado en un canal palmar, nunca modelado aquí. El canal se RESUELVE al largo del dedo: finger_len ES el recorrido trazado del nudillo a la punta, así la costilla impresa es exactamente tan larga como el canal que la aloja; finger_len define tanto el herraje como la interfaz de canal de dedo de la prenda. Funda de neopreno con holgura negativa para que agarre; costuras de canal rectas y estables para que la costilla rígida no se pandee. Hecho a medida al largo de mano, contorno de palma, largo de dedo y contorno de muñeca. Carril 4 de FC-500 (adaptativo / soft-exo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un gant de préhension soft-exosquelette pour une main qui ne peut se fermer seule : une coque en néoprène dont le côté palmaire porte des nervures Fin-Ray qui fléchissent les doigts autour d'un objet quand on tire un tendon et les ouvrent au relâchement. Le gant est le corps souple ; le doigt Fin-Ray est le solide finray-gripper de Yantra4D, imprimé et glissé dans un canal palmaire, jamais modélisé ici. Le canal est RÉSOLU à la longueur du doigt : finger_len EST le parcours tracé de l'articulation au bout, de sorte que la nervure imprimée est exactement aussi longue que le canal qui l'accueille ; finger_len pilote la quincaillerie ET l'interface de canal de doigt du vêtement. Coque néoprène en aisance négative pour qu'elle tienne ; coutures de canal droites et stables pour que la nervure rigide ne flambe pas. Fait sur mesure à la longueur de main, au tour de paume, à la longueur de doigt et au tour de poignet. Couloir 4 de FC-500 (adaptatif / soft-exo).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma luva de preensão soft-exoesqueleto para uma mão que não consegue fechar sozinha: um casco de neoprene cujo lado palmar carrega costelas Fin-Ray que flexionam os dedos ao redor de um objeto quando uma linha de tendão é puxada e os abrem ao soltar. A luva é o corpo macio; o dedo Fin-Ray é o sólido finray-gripper de Yantra4D, impresso e deslizado num canal palmar, nunca modelado aqui. O canal é RESOLVIDO ao comprimento do dedo: finger_len É o percurso modelado do nó ao topo, então a costela impressa é exatamente tão longa quanto o canal que a abriga; finger_len dirige tanto a ferragem quanto a interface de canal de dedo da peça. Casco de neoprene com folga negativa para firmar; costuras de canal retas e estáveis para a costela rígida não flambar. Feito sob medida ao comprimento de mão, contorno de palma, comprimento de dedo e contorno de punho. Corredor 4 do FC-500 (adaptativo / soft-exo).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["adaptive", "soft-exo", "assistive", "grip", "fin-ray", "neoprene", "hardware", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full glove", "es": "Guante completo", "fr": "Gant complet", "pt": "Luva completa"}, "script_file": "main.py", "pieces": ["palm", "back", "cuff"]}
+  ],
+  "pieces": [
+    {"id": "palm", "label": {"en": "Palm shell (rib channels)", "es": "Funda palmar (canales de costilla)", "fr": "Coque palmaire (canaux de nervure)", "pt": "Casco palmar (canais de costela)"}, "default_color": "#2b3a4a", "cut": {"quantity": 1, "mirror": false}},
+    {"id": "back", "label": {"en": "Back-of-hand shell", "es": "Funda del dorso", "fr": "Coque dos de la main", "pt": "Casco do dorso"}, "default_color": "#34485c", "cut": {"quantity": 1, "mirror": false}},
+    {"id": "cuff", "label": {"en": "Wrist cuff", "es": "Puño de muñeca", "fr": "Poignet", "pt": "Punho"}, "default_color": "#22303d", "cut": {"quantity": 1, "mirror": false}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "hand_length", "type": "slider", "group": "body", "default": 190, "min": 140, "max": 240, "step": 5, "measurement": {"standard": "iso_8559", "code": "arm_length"}, "label": {"en": "Hand length (mm)", "es": "Largo de mano (mm)", "fr": "Longueur de main (mm)", "pt": "Comprimento de mão (mm)"}, "tooltip": {"en": "Wrist crease to fingertip", "es": "Del pliegue de muñeca a la punta del dedo", "fr": "Du pli du poignet au bout du doigt", "pt": "Da dobra do pulso à ponta do dedo"}},
+    {"id": "palm_girth", "type": "slider", "group": "body", "default": 210, "min": 150, "max": 280, "step": 5, "measurement": {"standard": "iso_8559", "code": "wrist_girth"}, "label": {"en": "Palm girth (mm)", "es": "Contorno de palma (mm)", "fr": "Tour de paume (mm)", "pt": "Contorno de palma (mm)"}, "tooltip": {"en": "Around the palm at the knuckles — sized at negative ease", "es": "Alrededor de la palma en los nudillos — con holgura negativa", "fr": "Autour de la paume aux articulations — en aisance négative", "pt": "Ao redor da palma nos nós — com folga negativa"}},
+    {"id": "finger_len", "type": "slider", "group": "body", "default": 80, "min": 50, "max": 110, "step": 5, "label": {"en": "Finger length (mm)", "es": "Largo de dedo (mm)", "fr": "Longueur de doigt (mm)", "pt": "Comprimento de dedo (mm)"}, "tooltip": {"en": "Knuckle line to fingertip — the Fin-Ray rib is solved to this", "es": "De la línea de nudillos a la punta — la costilla Fin-Ray se resuelve de esto", "fr": "De la ligne d'articulations au bout — la nervure Fin-Ray en découle", "pt": "Da linha dos nós à ponta — a costela Fin-Ray é resolvida disto"}},
+    {"id": "wrist_girth", "type": "slider", "group": "body", "default": 170, "min": 130, "max": 240, "step": 5, "measurement": {"standard": "iso_8559", "code": "wrist_girth"}, "label": {"en": "Wrist girth (mm)", "es": "Contorno de muñeca (mm)", "fr": "Tour de poignet (mm)", "pt": "Contorno de punho (mm)"}, "tooltip": {"en": "The cuff opening", "es": "La abertura del puño", "fr": "L'ouverture du poignet", "pt": "A abertura do punho"}},
+    {"id": "cuff_height", "type": "slider", "group": "construction", "default": 70, "min": 30, "max": 130, "step": 5, "label": {"en": "Cuff height (mm)", "es": "Alto del puño (mm)", "fr": "Hauteur du poignet (mm)", "pt": "Altura do punho (mm)"}, "tooltip": {"en": "How far up the wrist the cuff rises", "es": "Cuánto sube el puño por la muñeca", "fr": "Jusqu'où le poignet monte", "pt": "Quanto o punho sobe no pulso"}},
+    {"id": "negative_ease_pct", "type": "slider", "group": "construction", "default": 6, "min": 2, "max": 12, "step": 1, "label": {"en": "Negative ease (%)", "es": "Holgura negativa (%)", "fr": "Aisance négative (%)", "pt": "Folga negativa (%)"}, "tooltip": {"en": "The shell grips by being cut smaller than the hand", "es": "La funda agarra al cortarse más pequeña que la mano", "fr": "La coque tient en étant coupée plus petite que la main", "pt": "O casco firma sendo cortado menor que a mão"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 6, "min": 2, "max": 12, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Narrow flatlocked shell seams", "es": "Costuras de funda angostas con flatlock", "fr": "Coutures de coque étroites en flatlock", "pt": "Costuras de casco estreitas com flatlock"}}
+  ],
+  "presets": [
+    {"id": "left_hand", "label": {"en": "Left hand", "es": "Mano izquierda", "fr": "Main gauche", "pt": "Mão esquerda"}, "values": {"negative_ease_pct": 6}},
+    {"id": "strong_assist", "label": {"en": "Strong assist", "es": "Asistencia fuerte", "fr": "Assistance forte", "pt": "Assistência forte"}, "values": {"finger_len": 95, "negative_ease_pct": 8}}
+  ],
+  "constraints": [
+    {"expression": "finger_len < hand_length", "message": {"en": "Finger length must be shorter than the whole hand length.", "es": "El largo de dedo debe ser menor que el largo total de la mano.", "fr": "La longueur de doigt doit être inférieure à la longueur de la main.", "pt": "O comprimento de dedo deve ser menor que o comprimento da mão."}, "severity": "error"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "fin-ray finger channel",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "finray-gripper",
+      "linked": true,
+      "params_map": {
+        "fin_len": "finger_len"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "finger_channel", "type": "custom", "label": {"en": "Palmar finger channel (solved to finger_len)", "es": "Canal palmar de dedo (resuelto a finger_len)", "fr": "Canal palmaire de doigt (résolu sur finger_len)", "pt": "Canal palmar de dedo (resolvido a finger_len)"}, "edges": [{"piece": "palm", "edge": "fingertips"}], "parameters": ["finger_len", "hand_length"]},
+      {"id": "hand_side", "type": "side_seam", "label": {"en": "Hand side seams (palm to back)", "es": "Costuras laterales (palma a dorso)", "fr": "Coutures côté (paume au dos)", "pt": "Costuras laterais (palma ao dorso)"}, "edges": [{"piece": "palm", "edge": "side_thumb"}, {"piece": "back", "edge": "side_thumb"}], "parameters": ["palm_girth", "negative_ease_pct"]},
+      {"id": "wrist_cuff", "type": "cuff", "label": {"en": "Wrist cuff", "es": "Puño de muñeca", "fr": "Poignet", "pt": "Punho"}, "edges": [{"piece": "cuff", "edge": "attach"}, {"piece": "palm", "edge": "wrist"}], "parameters": ["wrist_girth", "cuff_height"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A grip glove's job is to give a hand that cannot close the ability to hold — a cup, a rail, a tool — and its worst failure is a rigid brace that either forces the fingers to one fixed shape or is so bulky the wearer cannot feel what they hold. This cartridge makes the actuator the printable, replaceable part: the Fin-Ray finger closes softly around whatever shape it meets, and its length IS the drafted finger channel, so the printed rib fits the glove and the glove fits the hand. A soft-exo glove that is made to measure, whose actuators can be reprinted as the hand changes, becomes a repairable commons object rather than a sealed medical device.",
+      "es": "El trabajo de un guante de agarre es dar a una mano que no puede cerrarse la capacidad de sostener — una taza, un pasamanos, una herramienta — y su peor falla es una férula rígida que fuerza los dedos a una sola forma fija o es tan voluminosa que el usuario no siente lo que sostiene. Este cartucho hace del actuador la parte imprimible y reemplazable: el dedo Fin-Ray se cierra suavemente alrededor de la forma que encuentra, y su largo ES el canal de dedo trazado, así la costilla impresa ajusta al guante y el guante a la mano. Un guante soft-exo hecho a medida, cuyos actuadores pueden reimprimirse conforme cambia la mano, se vuelve un objeto común reparable en vez de un dispositivo médico sellado.",
+      "fr": "Le rôle d'un gant de préhension est de donner à une main qui ne peut se fermer la capacité de tenir — une tasse, une rampe, un outil — et son pire échec est une attelle rigide qui force les doigts à une seule forme fixe ou est si encombrante que le porteur ne sent pas ce qu'il tient. Ce cartouche fait de l'actionneur la pièce imprimable et remplaçable : le doigt Fin-Ray se referme doucement autour de la forme qu'il rencontre, et sa longueur EST le canal de doigt tracé, de sorte que la nervure imprimée va au gant et le gant à la main. Un gant soft-exo sur mesure, dont les actionneurs peuvent être réimprimés à mesure que la main change, devient un objet commun réparable plutôt qu'un dispositif médical scellé.",
+      "pt": "A função de uma luva de preensão é dar a uma mão que não fecha a capacidade de segurar — uma xícara, um corrimão, uma ferramenta — e sua pior falha é uma tala rígida que força os dedos a uma única forma fixa ou é tão volumosa que o usuário não sente o que segura. Este cartucho faz do atuador a peça imprimível e substituível: o dedo Fin-Ray se fecha suavemente ao redor da forma que encontra, e seu comprimento É o canal de dedo modelado, então a costela impressa serve à luva e a luva à mão. Uma luva soft-exo sob medida, cujos atuadores podem ser reimpressos conforme a mão muda, torna-se um objeto comum reparável em vez de um dispositivo médico selado."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

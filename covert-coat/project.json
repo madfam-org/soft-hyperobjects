@@ -1,0 +1,93 @@
+{
+  "project": {
+    "name": "Covert coat",
+    "slug": "covert-coat",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The countryman's town coat: a fly-front, knee-length single-breasted covert coat in covert twill, marked by its signature four rows of stitching at the cuff and hem. A straight-hanging coat with a fly placket hiding the buttons, a set-in sleeve, and a whole-length body (no waist seam) that reaches the knee. Two things solved, not sketched: the hem flares from the chest by a clamped flare floored positive so the hem can never come out narrower than the chest (which would invert the side seam); and the fly hides shank buttons whose disc diameter is the drafted button_dia that drives the garment's fly-placket interface — one number, two objects. Made to measure. FC-500 lane 5 (tailoring, T4).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El abrigo de ciudad del hombre de campo: un covert cruzado sencillo con tapeta, a la rodilla, en sarga covert, marcado por sus cuatro hileras de pespunte en puño y bajo. Un abrigo de caída recta con tapeta que oculta los botones, manga montada y cuerpo de una pieza (sin costura de cintura) que llega a la rodilla. Dos cosas resueltas, no dibujadas: el bajo se ensancha desde el pecho con un vuelo limitado con piso positivo para que el bajo nunca salga más angosto que el pecho (lo que invertiría la costura lateral); y la tapeta oculta botones de tija cuyo diámetro es el button_dia trazado que define la interfaz de tapeta de la prenda — un número, dos objetos. Hecho a medida. Carril 5 de FC-500 (sastrería, T4).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le manteau de ville du campagnard : un covert croisé simple à patte, longueur genou, en sergé covert, marqué par ses quatre rangs de piqûre au poignet et à l'ourlet. Un manteau à tombé droit avec une patte cachant les boutons, une manche montée et un corps d'un seul tenant (sans couture de taille) qui atteint le genou. Deux choses résolues, non esquissées : l'ourlet s'évase depuis la poitrine par un évasement bridé planchérisé positif pour que l'ourlet ne sorte jamais plus étroit que la poitrine (ce qui inverserait la couture côté) ; et la patte cache des boutons à tige dont le diamètre est le button_dia tracé qui pilote l'interface de patte du vêtement — un nombre, deux objets. Fait sur mesure. Couloir 5 de FC-500 (tailleur, T4).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O sobretudo urbano do homem do campo: um covert reto simples com carcela, na altura do joelho, em sarja covert, marcado por suas quatro fileiras de pesponto no punho e na barra. Um sobretudo de caimento reto com carcela escondendo os botões, manga montada e corpo inteiriço (sem costura de cintura) que alcança o joelho. Duas coisas resolvidas, não esboçadas: a barra alarga do peito por um evasê limitado com piso positivo para a barra nunca sair mais estreita que o peito (o que inverteria a costura lateral); e a carcela esconde botões de pé cujo diâmetro é o button_dia modelado que dirige a interface de carcela da peça — um número, dois objetos. Feito sob medida. Corredor 5 do FC-500 (alfaiataria, T4).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["tailoring", "covert-coat", "overcoat", "fly-front", "made-to-measure", "shank-button", "hardware", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full coat", "es": "Abrigo completo", "fr": "Manteau complet", "pt": "Sobretudo completo"}, "script_file": "main.py", "pieces": ["front", "back", "sleeve", "collar"]}
+  ],
+  "pieces": [
+    {"id": "front", "label": {"en": "Front (fly extension)", "es": "Frente (extensión de tapeta)", "fr": "Devant (extension de patte)", "pt": "Frente (extensão de carcela)"}, "default_color": "#9a8b6a", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "back", "label": {"en": "Back (cut 1 on fold)", "es": "Espalda (corte 1 al pliegue)", "fr": "Dos (coupé 1 au pli)", "pt": "Costas (corte 1 na dobra)"}, "default_color": "#8f8262", "cut": {"quantity": 1, "on_fold": true, "mirror": true}},
+    {"id": "sleeve", "label": {"en": "Sleeve (four-row cuff)", "es": "Manga (puño de cuatro hileras)", "fr": "Manche (poignet quatre rangs)", "pt": "Manga (punho de quatro fileiras)"}, "default_color": "#a3946f", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "collar", "label": {"en": "Collar", "es": "Cuello", "fr": "Col", "pt": "Colarinho"}, "default_color": "#877a5b", "cut": {"quantity": 1, "mirror": false}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "chest_girth", "type": "slider", "group": "body", "default": 1040, "min": 840, "max": 1400, "step": 10, "measurement": {"standard": "iso_8559", "code": "chest_bust_girth"}, "label": {"en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)"}, "tooltip": {"en": "Full chest — the body block at coat ease", "es": "Pecho completo — el bloque con holgura de abrigo", "fr": "Poitrine complète — le bloc avec aisance", "pt": "Peito completo — o bloco com folga"}},
+    {"id": "hip_girth", "type": "slider", "group": "body", "default": 1080, "min": 860, "max": 1500, "step": 10, "measurement": {"standard": "iso_8559", "code": "hip_girth"}, "label": {"en": "Hip girth (mm)", "es": "Contorno de cadera (mm)", "fr": "Tour de hanche (mm)", "pt": "Contorno de quadril (mm)"}, "tooltip": {"en": "The hem must clear the hip", "es": "El bajo debe librar la cadera", "fr": "L'ourlet doit dégager la hanche", "pt": "A barra deve liberar o quadril"}},
+    {"id": "coat_length", "type": "slider", "group": "body", "default": 1040, "min": 820, "max": 1240, "step": 10, "label": {"en": "Coat length (mm)", "es": "Largo de abrigo (mm)", "fr": "Longueur de manteau (mm)", "pt": "Comprimento do sobretudo (mm)"}, "tooltip": {"en": "Shoulder to knee hem", "es": "Del hombro al bajo de rodilla", "fr": "De l'épaule à l'ourlet genou", "pt": "Do ombro à barra do joelho"}},
+    {"id": "sleeve_length", "type": "slider", "group": "body", "default": 640, "min": 520, "max": 720, "step": 10, "measurement": {"standard": "iso_8559", "code": "arm_length"}, "label": {"en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)", "pt": "Comprimento de manga (mm)"}, "tooltip": {"en": "Shoulder to wrist", "es": "Del hombro a la muñeca", "fr": "De l'épaule au poignet", "pt": "Do ombro ao pulso"}},
+    {"id": "bicep_girth", "type": "slider", "group": "body", "default": 350, "min": 260, "max": 520, "step": 10, "measurement": {"standard": "iso_8559", "code": "bicep_girth"}, "label": {"en": "Bicep girth (mm)", "es": "Contorno de bíceps (mm)", "fr": "Tour de biceps (mm)", "pt": "Contorno de bíceps (mm)"}, "tooltip": {"en": "Sizes the sleeve", "es": "Dimensiona la manga", "fr": "Dimensionne la manche", "pt": "Dimensiona a manga"}},
+    {"id": "hem_flare", "type": "slider", "group": "construction", "default": 90, "min": 20, "max": 220, "step": 10, "label": {"en": "Hem flare per side (mm)", "es": "Vuelo de bajo por lado (mm)", "fr": "Évasement d'ourlet par côté (mm)", "pt": "Evasê de barra por lado (mm)"}, "tooltip": {"en": "Extra hem width over the chest — floored positive so it never inverts", "es": "Ancho extra de bajo sobre el pecho — con piso positivo para que no se invierta", "fr": "Largeur d'ourlet supplémentaire — planchérisée pour ne pas s'inverser", "pt": "Largura extra de barra — com piso positivo para não inverter"}},
+    {"id": "fly_width", "type": "slider", "group": "construction", "default": 55, "min": 30, "max": 90, "step": 5, "label": {"en": "Fly width (mm)", "es": "Ancho de tapeta (mm)", "fr": "Largeur de patte (mm)", "pt": "Largura de carcela (mm)"}, "tooltip": {"en": "The fly extension that hides the buttons", "es": "La extensión de tapeta que oculta los botones", "fr": "L'extension de patte qui cache les boutons", "pt": "A extensão de carcela que esconde os botões"}},
+    {"id": "button_dia", "type": "slider", "group": "construction", "default": 22, "min": 15, "max": 34, "step": 1, "label": {"en": "Button diameter (mm)", "es": "Diámetro de botón (mm)", "fr": "Diamètre de bouton (mm)", "pt": "Diâmetro de botão (mm)"}, "tooltip": {"en": "The shank button disc — drives the hardware and the fly-placket interface", "es": "El disco del botón de tija — define el herraje y la interfaz de tapeta", "fr": "Le disque du bouton à tige — pilote la quincaillerie et l'interface de patte", "pt": "O disco do botão de pé — dirige a ferragem e a interface de carcela"}},
+    {"id": "coat_ease", "type": "slider", "group": "construction", "default": 140, "min": 60, "max": 240, "step": 10, "label": {"en": "Coat ease (mm)", "es": "Holgura de abrigo (mm)", "fr": "Aisance de manteau (mm)", "pt": "Folga de sobretudo (mm)"}, "tooltip": {"en": "Wearing ease over layers", "es": "Holgura de uso sobre capas", "fr": "Aisance de port sur les couches", "pt": "Folga de uso sobre camadas"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 8, "max": 18, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Tailoring seam allowances", "es": "Márgenes de costura de sastrería", "fr": "Marges de couture tailleur", "pt": "Margens de costura de alfaiataria"}}
+  ],
+  "presets": [
+    {"id": "fawn", "label": {"en": "Classic fawn", "es": "Beige clásico", "fr": "Fauve classique", "pt": "Bege clássico"}, "values": {"hem_flare": 90, "coat_length": 1040}},
+    {"id": "town", "label": {"en": "Town length", "es": "Largo de ciudad", "fr": "Longueur ville", "pt": "Comprimento urbano"}, "values": {"coat_length": 960, "hem_flare": 70}}
+  ],
+  "constraints": [
+    {"expression": "hip_girth > 0", "message": {"en": "Hip girth must be positive.", "es": "El contorno de cadera debe ser positivo.", "fr": "Le tour de hanche doit être positif.", "pt": "O contorno de quadril deve ser positivo."}, "severity": "warning"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "button",
+    "subtype": "fly-hidden shank buttons",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "shank-button-solid",
+      "linked": true,
+      "params_map": {
+        "diameter_mm": "button_dia",
+        "thickness": "max(3, seam_allowance)"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "fly_placket", "type": "placket", "label": {"en": "Fly placket (hides shank buttons)", "es": "Tapeta (oculta botones de tija)", "fr": "Patte (cache boutons à tige)", "pt": "Carcela (esconde botões de pé)"}, "edges": [{"piece": "front", "edge": "center_front"}], "parameters": ["button_dia", "fly_width"]},
+      {"id": "coat_hem", "type": "hem", "label": {"en": "Flared knee hem", "es": "Bajo de rodilla ensanchado", "fr": "Ourlet genou évasé", "pt": "Barra de joelho alargada"}, "edges": [{"piece": "front", "edge": "hem"}, {"piece": "back", "edge": "hem"}], "parameters": ["hem_flare", "coat_length"]},
+      {"id": "armhole", "type": "armscye", "label": {"en": "Armhole / sleeve cap", "es": "Sisa / cabeza de manga", "fr": "Emmanchure / tête de manche", "pt": "Cava / cabeça de manga"}, "edges": [{"piece": "sleeve", "edge": "cap"}, {"piece": "front", "edge": "armhole"}, {"piece": "back", "edge": "armhole"}], "parameters": ["bicep_girth", "coat_length"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "tailoring": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The covert coat is a specific, recognisable thing — fawn covert twill, a fly front, four rows of prestige stitching at cuff and hem — and it endures because it is the coat that works in both the field and the city. Its whole-length straight body is where a careless flat pattern fails silently: give the hem too little flare and at some sizes it comes out narrower than the chest, inverting the side seam into an outline that still closes but binds the wearer. Flooring the flare, measuring the collar, and bridging the hidden buttons to a printable solid makes the covert coat a made-to-measure, repairable commons object whose one hidden fastening can be reprinted, drafted so no size produces a coat that cannot be worn.",
+      "es": "El covert es algo específico y reconocible — sarga covert beige, tapeta, cuatro hileras de pespunte de prestigio en puño y bajo — y perdura porque es el abrigo que sirve en el campo y en la ciudad. Su cuerpo recto de una pieza es donde un patrón plano descuidado falla en silencio: da poco vuelo al bajo y en ciertas tallas sale más angosto que el pecho, invirtiendo la costura lateral en un contorno que aún cierra pero aprieta. Poner piso al vuelo, medir el cuello y puentear los botones ocultos a un sólido imprimible vuelve al covert un objeto común a medida y reparable cuyo único cierre oculto puede reimprimirse, trazado para que ninguna talla dé un abrigo imposible de usar.",
+      "fr": "Le covert est une chose précise et reconnaissable — sergé covert fauve, patte, quatre rangs de piqûre de prestige au poignet et à l'ourlet — et il perdure parce que c'est le manteau qui fonctionne aux champs comme en ville. Son corps droit d'un seul tenant est là où un patron plat négligent échoue en silence : donnez trop peu d'évasement à l'ourlet et à certaines tailles il sort plus étroit que la poitrine, inversant la couture côté en un contour qui ferme encore mais serre. Planchériser l'évasement, mesurer le col et relier les boutons cachés à un solide imprimable fait du covert un objet commun sur mesure et réparable dont l'unique fermeture cachée peut être réimprimée, tracé pour qu'aucune taille ne produise un manteau imperméable au port.",
+      "pt": "O covert é algo específico e reconhecível — sarja covert bege, carcela, quatro fileiras de pesponto de prestígio no punho e na barra — e perdura porque é o sobretudo que serve no campo e na cidade. Seu corpo reto inteiriço é onde um molde plano descuidado falha em silêncio: dê pouco evasê à barra e em certos tamanhos ela sai mais estreita que o peito, invertendo a costura lateral num contorno que ainda fecha mas aperta. Pôr piso no evasê, medir a gola e ligar os botões escondidos a um sólido imprimível torna o covert um objeto comum sob medida e reparável cujo único fecho escondido pode ser reimpresso, modelado para que nenhum tamanho produza um sobretudo impossível de vestir."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

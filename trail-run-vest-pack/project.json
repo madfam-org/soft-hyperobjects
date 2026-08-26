@@ -1,0 +1,89 @@
+{
+  "project": {
+    "name": "Trail-running vest pack",
+    "slug": "trail-run-vest-pack",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The trail runner's hydration vest: a light stretch-mesh vest that hugs the torso like a second skin and carries soft flasks and food in front pockets, closing across the sternum on side-release buckles on adjustable webbing so it holds no matter how the ribcage moves running. Not a garment for warmth — a load-carrying vest cut at negative ease so the load does not bounce. Two things solved: the front panels close on webbing across the sternum, the webbing width the drafted webbing_w that drives both the Yantra4D side-release-buckle webbing channel AND the garment's sternum-strap interface; and the vest is cut smaller than the chest so the load rides close, with the front pocket depth clamped under the front length so it never runs past the hem. FC-500 lane 6 (active).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El chaleco de hidratación del corredor de trail: un chaleco ligero de malla elástica que abraza el torso como segunda piel y lleva flasks blandos y comida en bolsillos delanteros, cerrando sobre el esternón con hebillas de liberación lateral en cincha ajustable para que sujete sin importar cómo se mueva la caja torácica al correr. No es prenda de abrigo — un chaleco portacargas cortado con holgura negativa para que la carga no rebote. Dos cosas resueltas: los paneles delanteros cierran con cincha sobre el esternón, con el ancho de cincha el webbing_w trazado que define tanto el canal de cincha del side-release-buckle de Yantra4D COMO la interfaz de tirante de esternón de la prenda; y el chaleco se corta más pequeño que el pecho para que la carga vaya pegada, con la profundidad del bolsillo delantero limitada bajo el largo del frente para que no pase del bajo. Carril 6 de FC-500 (activo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le gilet d'hydratation du traileur : un gilet léger en mesh extensible qui épouse le torse comme une seconde peau et porte des flasques souples et de la nourriture dans des poches devant, se fermant sur le sternum par des boucles à dégagement latéral sur sangle réglable pour qu'il tienne quel que soit le mouvement de la cage thoracique à la course. Pas un vêtement chaud — un gilet porte-charge coupé en aisance négative pour que la charge ne rebondisse pas. Deux choses résolues : les panneaux devant se ferment par sangle sur le sternum, la largeur de sangle étant le webbing_w tracé qui pilote à la fois le canal de sangle du side-release-buckle de Yantra4D ET l'interface de sangle de sternum du vêtement ; et le gilet est coupé plus petit que la poitrine pour que la charge reste près, la profondeur de poche devant bridée sous la longueur du devant pour ne pas dépasser l'ourlet. Couloir 6 de FC-500 (actif).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "O colete de hidratação do corredor de trail: um colete leve de tela elástica que abraça o torso como segunda pele e carrega flasks macios e comida em bolsos frontais, fechando sobre o esterno com fivelas de liberação lateral em cadarço ajustável para segurar não importa como a caixa torácica se mova na corrida. Não é peça de agasalho — um colete porta-carga cortado em folga negativa para a carga não quicar. Duas coisas resolvidas: os painéis frontais fecham com cadarço sobre o esterno, com a largura de cadarço o webbing_w modelado que dirige tanto o canal de cadarço do side-release-buckle de Yantra4D QUANTO a interface de tira de esterno da peça; e o colete é cortado menor que o peito para a carga ir junto, com a profundidade do bolso frontal limitada sob o comprimento da frente para não passar da barra. Corredor 6 do FC-500 (ativo).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["active", "trail-running", "hydration-vest", "pack", "mesh", "side-release-buckle", "hardware", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full vest", "es": "Chaleco completo", "fr": "Gilet complet", "pt": "Colete completo"}, "script_file": "main.py", "pieces": ["front", "back", "strap"]}
+  ],
+  "pieces": [
+    {"id": "front", "label": {"en": "Front (flask pockets)", "es": "Frente (bolsillos de flask)", "fr": "Devant (poches flasques)", "pt": "Frente (bolsos de flask)"}, "default_color": "#c14a24", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "back", "label": {"en": "Back (mesh)", "es": "Espalda (malla)", "fr": "Dos (mesh)", "pt": "Costas (tela)"}, "default_color": "#a83f1f", "cut": {"quantity": 1, "on_fold": true, "mirror": true}},
+    {"id": "strap", "label": {"en": "Sternum strap (webbing)", "es": "Tirante de esternón (cincha)", "fr": "Sangle de sternum", "pt": "Tira de esterno (cadarço)"}, "default_color": "#8f3518", "cut": {"quantity": 4, "mirror": true}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "chest_girth", "type": "slider", "group": "body", "default": 960, "min": 720, "max": 1400, "step": 10, "measurement": {"standard": "iso_8559", "code": "chest_bust_girth"}, "label": {"en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)"}, "tooltip": {"en": "Full chest — the panels at negative ease so the load rides close", "es": "Pecho completo — los paneles con holgura negativa para que la carga vaya pegada", "fr": "Poitrine complète — les panneaux en aisance négative pour que la charge reste près", "pt": "Peito completo — os painéis com folga negativa para a carga ir junto"}},
+    {"id": "torso_length", "type": "slider", "group": "body", "default": 420, "min": 300, "max": 560, "step": 10, "label": {"en": "Torso length (mm)", "es": "Largo de torso (mm)", "fr": "Longueur de torse (mm)", "pt": "Comprimento de torso (mm)"}, "tooltip": {"en": "Shoulder to vest hem", "es": "Del hombro al bajo del chaleco", "fr": "De l'épaule à l'ourlet du gilet", "pt": "Do ombro à barra do colete"}},
+    {"id": "pocket_depth", "type": "slider", "group": "construction", "default": 180, "min": 80, "max": 300, "step": 10, "label": {"en": "Pocket depth (mm)", "es": "Profundidad de bolsillo (mm)", "fr": "Profondeur de poche (mm)", "pt": "Profundidade de bolso (mm)"}, "tooltip": {"en": "The flask pocket depth — clamped under the front length", "es": "La profundidad del bolsillo de flask — limitada bajo el largo del frente", "fr": "La profondeur de poche flasque — bridée sous la longueur du devant", "pt": "A profundidade do bolso de flask — limitada sob o comprimento da frente"}},
+    {"id": "strap_count", "type": "slider", "group": "construction", "default": 2, "min": 1, "max": 4, "step": 1, "label": {"en": "Sternum strap count", "es": "Número de tirantes de esternón", "fr": "Nombre de sangles de sternum", "pt": "Número de tiras de esterno"}, "tooltip": {"en": "How many sternum closures across the chest", "es": "Cuántos cierres de esternón sobre el pecho", "fr": "Combien de fermetures de sternum sur la poitrine", "pt": "Quantos fechos de esterno sobre o peito"}},
+    {"id": "webbing_w", "type": "slider", "group": "construction", "default": 25, "min": 15, "max": 40, "step": 1, "label": {"en": "Webbing width (mm)", "es": "Ancho de cincha (mm)", "fr": "Largeur de sangle (mm)", "pt": "Largura de cadarço (mm)"}, "tooltip": {"en": "The sternum webbing width — drives the hardware and the sternum-strap interface", "es": "El ancho de la cincha de esternón — define el herraje y la interfaz de tirante de esternón", "fr": "La largeur de sangle de sternum — pilote la quincaillerie et l'interface de sangle de sternum", "pt": "A largura do cadarço de esterno — dirige a ferragem e a interface de tira de esterno"}},
+    {"id": "negative_ease_pct", "type": "slider", "group": "construction", "default": 10, "min": 4, "max": 20, "step": 1, "label": {"en": "Negative ease (%)", "es": "Holgura negativa (%)", "fr": "Aisance négative (%)", "pt": "Folga negativa (%)"}, "tooltip": {"en": "The vest grips by being cut smaller than the chest", "es": "El chaleco agarra al cortarse más pequeño que el pecho", "fr": "Le gilet tient en étant coupé plus petit que la poitrine", "pt": "O colete firma sendo cortado menor que o peito"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 8, "min": 4, "max": 12, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Narrow flatlocked seams", "es": "Costuras angostas con flatlock", "fr": "Coutures étroites en flatlock", "pt": "Costuras estreitas com flatlock"}}
+  ],
+  "presets": [
+    {"id": "race", "label": {"en": "Race (minimal)", "es": "Competición (mínimo)", "fr": "Course (minimal)", "pt": "Competição (mínimo)"}, "values": {"pocket_depth": 140, "strap_count": 2}},
+    {"id": "ultra", "label": {"en": "Ultra (loaded)", "es": "Ultra (cargado)", "fr": "Ultra (chargé)", "pt": "Ultra (carregado)"}, "values": {"pocket_depth": 240, "strap_count": 3}}
+  ],
+  "constraints": [
+    {"expression": "pocket_depth < torso_length", "message": {"en": "Pocket depth must fit within the front length.", "es": "La profundidad del bolsillo debe caber en el largo del frente.", "fr": "La profondeur de poche doit tenir dans la longueur du devant.", "pt": "A profundidade do bolso deve caber no comprimento da frente."}, "severity": "warning"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "buckle",
+    "subtype": "sternum side-release buckle",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "side-release-buckle",
+      "linked": true,
+      "params_map": {
+        "webbing_w": "webbing_w",
+        "body_t": "4"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "sternum_strap", "type": "custom", "label": {"en": "Sternum strap (side-release buckle)", "es": "Tirante de esternón (hebilla)", "fr": "Sangle de sternum (boucle)", "pt": "Tira de esterno (fivela)"}, "edges": [{"piece": "strap", "edge": "top"}], "parameters": ["webbing_w", "strap_count"]},
+      {"id": "vest_side", "type": "side_seam", "label": {"en": "Side seams (front to back)", "es": "Costuras laterales (delante a espalda)", "fr": "Coutures côté (devant au dos)", "pt": "Costuras laterais (frente às costas)"}, "edges": [{"piece": "front", "edge": "side"}, {"piece": "back", "edge": "side"}], "parameters": ["chest_girth", "negative_ease_pct"]},
+      {"id": "flask_pocket", "type": "pocket", "label": {"en": "Front flask pockets", "es": "Bolsillos de flask delanteros", "fr": "Poches flasques devant", "pt": "Bolsos de flask frontais"}, "edges": [{"piece": "front", "edge": "center_front"}], "parameters": ["pocket_depth", "torso_length"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": true,
+      "compression_support": true
+    },
+    "societal_benefit": {
+      "en": "A hydration vest is a wearable pack, and the reason a bad one ruins a run is bounce: any slack between the load and the body turns every stride into a small blow to the sternum and the shoulders. Cutting the vest at negative ease so it grips, and solving the sternum webbing so the buckles pull the front panels tight to a measured chest, removes the bounce at its source. Bridging those buckles — the single points of failure that strand a runner mid-race when they crack — to a printable, replaceable solid makes the vest a made-to-measure commons object that can be repaired on the trail rather than replaced whole, and fitted to a real ribcage rather than a size chart.",
+      "es": "Un chaleco de hidratación es una mochila que se viste, y la razón por la que uno malo arruina una carrera es el rebote: cualquier holgura entre la carga y el cuerpo convierte cada zancada en un pequeño golpe al esternón y los hombros. Cortar el chaleco con holgura negativa para que agarre, y resolver la cincha del esternón para que las hebillas aprieten los paneles delanteros a un pecho medido, quita el rebote de raíz. Puentear esas hebillas — los puntos de falla que dejan tirado a un corredor a media carrera cuando se rompen — a un sólido imprimible y reemplazable hace del chaleco un objeto común a medida que se repara en el sendero en vez de reemplazarse entero, y se ajusta a una caja torácica real y no a una tabla de tallas.",
+      "fr": "Un gilet d'hydratation est un sac que l'on porte, et la raison pour laquelle un mauvais gâche une course est le rebond : tout jeu entre la charge et le corps transforme chaque foulée en un petit coup au sternum et aux épaules. Couper le gilet en aisance négative pour qu'il tienne, et résoudre la sangle de sternum pour que les boucles serrent les panneaux devant à une poitrine mesurée, supprime le rebond à la source. Relier ces boucles — les points de défaillance qui immobilisent un coureur en pleine course quand elles cèdent — à un solide imprimable et remplaçable fait du gilet un objet commun sur mesure qui se répare sur le sentier plutôt que de se remplacer entier, et s'ajuste à une vraie cage thoracique plutôt qu'à un tableau de tailles.",
+      "pt": "Um colete de hidratação é uma mochila que se veste, e a razão pela qual um ruim arruína uma corrida é o quique: qualquer folga entre a carga e o corpo transforma cada passada num pequeno golpe ao esterno e aos ombros. Cortar o colete em folga negativa para firmar, e resolver o cadarço do esterno para que as fivelas apertem os painéis frontais a um peito medido, tira o quique pela raiz. Ligar essas fivelas — os pontos de falha que deixam um corredor na mão em plena corrida quando quebram — a um sólido imprimível e substituível faz do colete um objeto comum sob medida que se repara na trilha em vez de se substituir inteiro, e se ajusta a uma caixa torácica real em vez de uma tabela de tamanhos."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "project": {
+    "name": "Zip-hood rash guard",
+    "slug": "rash-guard-zip-hood",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A hooded zip-front rash guard in swim-lycra: the second-skin UV surf top, split down the centre front and closed with a full invisible zipper, topped with an integrated stretch hood for sun and wind on the water. It deepens the FC-400 zip rash guard (a collar, a separating zip) into the hooded version with a clean invisible zip. Negative ease everywhere except the stabilised zip line. Two things solved: the centre-front zip runs the drafted front length plus the hood front, that IS the Yantra4D invisible-zipper zip_length so the zip is exactly as long as the opening, and zip_length drives both the hardware AND the garment's center-front interface, clamped under the total front so it never overruns; and the front halves, back and hood are cut at negative ease with a shared shoulder run keeping the shoulders congruent. FC-500 lane 6 (active).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Una licra con capucha y cierre frontal en licra de baño: el top UV de segunda piel, abierto al centro delantero y cerrado con un cierre invisible completo, rematado con una capucha elástica integrada para sol y viento en el agua. Profundiza la licra con cierre de FC-400 (cuello, cierre separable) en la versión con capucha y cierre invisible limpio. Holgura negativa en todo salvo la línea de cierre estabilizada. Dos cosas resueltas: el cierre delantero recorre el largo del frente más el frente de la capucha, que ES el zip_length del invisible-zipper de Yantra4D para que el cierre sea exactamente tan largo como la abertura, y zip_length define tanto el herraje COMO la interfaz de centro delantero, limitado bajo el total del frente para que no se pase; y los delanteros, la espalda y la capucha se cortan con holgura negativa con un paso de hombro compartido que mantiene los hombros congruentes. Carril 6 de FC-500 (activo).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Un top anti-UV zippé à capuche en lycra de bain : le top UV seconde peau, fendu au milieu devant et fermé par une fermeture invisible complète, coiffé d'une capuche extensible intégrée pour le soleil et le vent sur l'eau. Il approfondit le top zippé de FC-400 (un col, une fermeture séparable) en la version à capuche avec une fermeture invisible nette. Aisance négative partout sauf la ligne de fermeture stabilisée. Deux choses résolues : la fermeture devant parcourt la longueur du devant plus le devant de la capuche, ce qui EST le zip_length de l'invisible-zipper Yantra4D pour que la fermeture soit exactement aussi longue que l'ouverture, et zip_length pilote la quincaillerie ET l'interface milieu devant, bridé sous le total du devant pour ne pas dépasser ; et les devants, le dos et la capuche sont coupés en aisance négative avec un pas d'épaule partagé gardant les épaules congruentes. Couloir 6 de FC-500 (actif).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma camiseta de lycra com capuz e zíper frontal em lycra de banho: o top UV de segunda pele, aberto no centro frontal e fechado com um zíper invisível completo, coroado com um capuz elástico integrado para sol e vento na água. Aprofunda a camiseta com zíper de FC-400 (uma gola, um zíper separável) na versão com capuz e zíper invisível limpo. Folga negativa em tudo exceto a linha do zíper estabilizada. Duas coisas resolvidas: o zíper frontal percorre o comprimento da frente mais a frente do capuz, que É o zip_length do invisible-zipper de Yantra4D para o zíper ser exatamente tão longo quanto a abertura, e zip_length dirige tanto a ferragem QUANTO a interface de centro frontal, limitado sob o total da frente para não passar; e as frentes, as costas e o capuz são cortados em folga negativa com um vão de ombro compartilhado mantendo os ombros congruentes. Corredor 6 do FC-500 (ativo).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["active", "rash-guard", "hood", "zip-front", "surf", "uv", "swim-lycra", "invisible-zipper", "hardware", "commons", "made-to-measure"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"},
+        {"source": "rash-guard-zip (Fashion Cabinet FC-400 #390) — zip rash guard lineage", "license": "CERN-OHL-W-2.0"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full rash guard", "es": "Licra completa", "fr": "Top complet", "pt": "Camiseta completa"}, "script_file": "main.py", "pieces": ["front_left", "front_right", "back", "sleeve", "hood"]}
+  ],
+  "pieces": [
+    {"id": "front_left", "label": {"en": "Front left (zip edge)", "es": "Delantero izquierdo (borde de cierre)", "fr": "Devant gauche (bord de fermeture)", "pt": "Frente esquerda (borda do zíper)"}, "default_color": "#22505c", "cut": {"quantity": 1, "mirror": false}},
+    {"id": "front_right", "label": {"en": "Front right (zip edge)", "es": "Delantero derecho (borde de cierre)", "fr": "Devant droit (bord de fermeture)", "pt": "Frente direita (borda do zíper)"}, "default_color": "#22505c", "cut": {"quantity": 1, "mirror": false}},
+    {"id": "back", "label": {"en": "Back panel", "es": "Panel trasero", "fr": "Panneau dos", "pt": "Painel traseiro"}, "default_color": "#1c4551", "cut": {"quantity": 1, "on_fold": true, "mirror": true}},
+    {"id": "sleeve", "label": {"en": "Sleeve", "es": "Manga", "fr": "Manche", "pt": "Manga"}, "default_color": "#2a6675", "cut": {"quantity": 2, "mirror": true}},
+    {"id": "hood", "label": {"en": "Hood", "es": "Capucha", "fr": "Capuche", "pt": "Capuz"}, "default_color": "#1c4551", "cut": {"quantity": 2, "mirror": true}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "chest_girth", "type": "slider", "group": "body", "default": 960, "min": 700, "max": 1500, "step": 10, "measurement": {"standard": "iso_8559", "code": "chest_bust_girth"}, "label": {"en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)"}, "tooltip": {"en": "Full chest — the panels at negative ease", "es": "Pecho completo — los paneles con holgura negativa", "fr": "Poitrine complète — les panneaux en aisance négative", "pt": "Peito completo — os painéis com folga negativa"}},
+    {"id": "back_length", "type": "slider", "group": "body", "default": 640, "min": 420, "max": 900, "step": 10, "label": {"en": "Back length (mm)", "es": "Largo de espalda (mm)", "fr": "Longueur de dos (mm)", "pt": "Comprimento das costas (mm)"}, "tooltip": {"en": "Nape to hem — the zip length is solved from this + the hood", "es": "De la nuca al borde — el largo del cierre se resuelve de esto + la capucha", "fr": "De la nuque à l'ourlet — la longueur de fermeture en découle + la capuche", "pt": "Da nuca à barra — o comprimento do zíper é resolvido disto + o capuz"}},
+    {"id": "sleeve_length", "type": "slider", "group": "body", "default": 560, "min": 300, "max": 780, "step": 10, "measurement": {"standard": "iso_8559", "code": "arm_length"}, "label": {"en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)", "pt": "Comprimento de manga (mm)"}, "tooltip": {"en": "Shoulder to wrist", "es": "Del hombro a la muñeca", "fr": "De l'épaule au poignet", "pt": "Do ombro ao pulso"}},
+    {"id": "bicep_girth", "type": "slider", "group": "body", "default": 340, "min": 220, "max": 600, "step": 10, "measurement": {"standard": "iso_8559", "code": "bicep_girth"}, "label": {"en": "Bicep girth (mm)", "es": "Contorno de bíceps (mm)", "fr": "Tour de biceps (mm)", "pt": "Contorno de bíceps (mm)"}, "tooltip": {"en": "Sizes the sleeve at negative ease", "es": "Dimensiona la manga con holgura negativa", "fr": "Dimensionne la manche en aisance négative", "pt": "Dimensiona a manga com folga negativa"}},
+    {"id": "neck_girth", "type": "slider", "group": "body", "default": 400, "min": 300, "max": 560, "step": 10, "measurement": {"standard": "iso_8559", "code": "neck_girth"}, "label": {"en": "Neck girth (mm)", "es": "Contorno de cuello (mm)", "fr": "Tour de cou (mm)", "pt": "Contorno de pescoço (mm)"}, "tooltip": {"en": "The hood sets into the measured neckline", "es": "La capucha se monta en el escote medido", "fr": "La capuche se monte sur l'encolure mesurée", "pt": "O capuz se monta no decote medido"}},
+    {"id": "hood_height", "type": "slider", "group": "construction", "default": 340, "min": 220, "max": 460, "step": 10, "label": {"en": "Hood height (mm)", "es": "Alto de capucha (mm)", "fr": "Hauteur de capuche (mm)", "pt": "Altura de capuz (mm)"}, "tooltip": {"en": "How tall the hood rises — the zip continues up its front", "es": "Cuánto sube la capucha — el cierre continúa por su frente", "fr": "Jusqu'où la capuche monte — la fermeture continue sur son devant", "pt": "Quanto o capuz sobe — o zíper continua por sua frente"}},
+    {"id": "zip_length", "type": "slider", "group": "construction", "default": 700, "min": 300, "max": 1200, "step": 10, "label": {"en": "Zip length (mm)", "es": "Largo de cierre (mm)", "fr": "Longueur de fermeture (mm)", "pt": "Comprimento de zíper (mm)"}, "tooltip": {"en": "The invisible zip opening — clamped under the front + hood so it never overruns", "es": "La abertura del cierre invisible — limitada bajo el frente + capucha para que no se pase", "fr": "L'ouverture de la fermeture invisible — bridée sous le devant + capuche pour ne pas dépasser", "pt": "A abertura do zíper invisível — limitada sob a frente + capuz para não passar"}},
+    {"id": "negative_ease_pct", "type": "slider", "group": "construction", "default": 10, "min": 4, "max": 20, "step": 1, "label": {"en": "Negative ease (%)", "es": "Holgura negativa (%)", "fr": "Aisance négative (%)", "pt": "Folga negativa (%)"}, "tooltip": {"en": "The lycra grips by being cut smaller than the body", "es": "La licra agarra al cortarse más pequeña que el cuerpo", "fr": "Le lycra tient en étant coupé plus petit que le corps", "pt": "A lycra firma sendo cortada menor que o corpo"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 8, "min": 4, "max": 12, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Narrow flatlocked swim seams", "es": "Costuras de baño angostas con flatlock", "fr": "Coutures de bain étroites en flatlock", "pt": "Costuras de banho estreitas com flatlock"}}
+  ],
+  "presets": [
+    {"id": "surf", "label": {"en": "Surf fit", "es": "Ajuste de surf", "fr": "Coupe surf", "pt": "Caimento de surfe"}, "values": {"negative_ease_pct": 14, "hood_height": 380}},
+    {"id": "swim", "label": {"en": "Swim fit", "es": "Ajuste de natación", "fr": "Coupe natation", "pt": "Caimento de natação"}, "values": {"negative_ease_pct": 8, "hood_height": 300}}
+  ],
+  "constraints": [
+    {"expression": "zip_length <= back_length + hood_height", "message": {"en": "Zip length must fit the front plus the hood front.", "es": "El largo del cierre debe caber en el frente más el frente de la capucha.", "fr": "La longueur de fermeture doit tenir dans le devant plus le devant de la capuche.", "pt": "O comprimento do zíper deve caber na frente mais a frente do capuz."}, "severity": "warning"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "zipper",
+    "subtype": "invisible front zipper",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "invisible-zipper",
+      "linked": true,
+      "params_map": {
+        "zip_length": "zip_length",
+        "tape_width": "5"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "center_front", "type": "zipper_tape", "label": {"en": "Centre-front zip (solved to zip_length)", "es": "Cierre de centro delantero (resuelto a zip_length)", "fr": "Fermeture milieu devant (résolue sur zip_length)", "pt": "Zíper de centro frontal (resolvido a zip_length)"}, "edges": [{"piece": "front_left", "edge": "center_front"}, {"piece": "front_right", "edge": "center_front"}], "parameters": ["zip_length", "back_length", "hood_height"]},
+      {"id": "side_seam", "type": "side_seam", "label": {"en": "Side seams (fronts to back)", "es": "Costuras laterales (delanteros a trasero)", "fr": "Coutures côté (devants au dos)", "pt": "Costuras laterais (frentes ao dorso)"}, "edges": [{"piece": "front_left", "edge": "side_seam"}, {"piece": "back", "edge": "side_seam"}], "parameters": ["chest_girth", "negative_ease_pct"]},
+      {"id": "hood_neck", "type": "neckline", "label": {"en": "Hood neck (solved to the neckline)", "es": "Escote de capucha (resuelto al escote)", "fr": "Encolure de capuche (résolue à l'encolure)", "pt": "Decote de capuz (resolvido ao decote)"}, "edges": [{"piece": "hood", "edge": "neck_edge"}, {"piece": "back", "edge": "neckline"}], "parameters": ["neck_girth", "hood_height"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "hardware_bridge": true,
+      "zipper_bridge": true
+    },
+    "societal_benefit": {
+      "en": "A rash guard protects against sun, sting and chafe in and out of the water, and adding a hood extends that protection to the head and neck — the parts a surfer or open-water swimmer burns first over a long session. The hood makes the closure harder, because a wet hooded top is the worst of all to drag over the head, which is exactly why the zip matters: solving it to the drafted front plus hood run, so the printable zipper is exactly as long as the opening and clamped so no size overruns, turns a fiddly custom detail into a made-to-measure certainty. A UV top that covers more, zips cleanly, and whose zipper can be reprinted is a repairable commons object.",
+      "es": "Una licra protege del sol, la picadura y la rozadura dentro y fuera del agua, y añadir una capucha extiende esa protección a cabeza y cuello — las partes que un surfista o nadador de aguas abiertas quema primero en una sesión larga. La capucha complica el cierre, porque un top con capucha mojado es el peor de todos para meter por la cabeza, y por eso importa el cierre: resolverlo al frente trazado más el recorrido de la capucha, para que el cierre imprimible sea exactamente tan largo como la abertura y limitado para que ninguna talla se pase, convierte un detalle a medida engorroso en una certeza a medida. Un top UV que cubre más, cierra limpio y cuyo cierre puede reimprimirse es un objeto común reparable.",
+      "fr": "Un top anti-UV protège du soleil, des piqûres et du frottement dans et hors de l'eau, et ajouter une capuche étend cette protection à la tête et au cou — les parties qu'un surfeur ou nageur en eau libre brûle en premier sur une longue session. La capuche complique la fermeture, car un top à capuche mouillé est le pire à passer par la tête, et c'est précisément pourquoi la fermeture compte : la résoudre au devant tracé plus le parcours de la capuche, pour que la fermeture imprimable soit exactement aussi longue que l'ouverture et bridée pour qu'aucune taille ne dépasse, transforme un détail sur mesure délicat en une certitude sur mesure. Un top UV qui couvre plus, se ferme net et dont la fermeture peut être réimprimée est un objet commun réparable.",
+      "pt": "Uma camiseta de lycra protege do sol, da picada e do atrito dentro e fora da água, e adicionar um capuz estende essa proteção à cabeça e ao pescoço — as partes que um surfista ou nadador de águas abertas queima primeiro numa sessão longa. O capuz complica o fecho, porque um top com capuz molhado é o pior de todos para enfiar pela cabeça, e é justamente por isso que o zíper importa: resolvê-lo à frente modelada mais o percurso do capuz, para o zíper imprimível ser exatamente tão longo quanto a abertura e limitado para nenhum tamanho passar, transforma um detalhe sob medida trabalhoso numa certeza sob medida. Um top UV que cobre mais, fecha limpo e cujo zíper pode ser reimpresso é um objeto comum reparável."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "project": {
+    "name": "Opera evening cape",
+    "slug": "opera-cape-formal",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The full-length evening cape worn over white-tie: a sweeping circular cape, often satin-lined, standing away from the shoulders on a tall collar and closing at the throat on a hook and eye. The cape body is a partial annulus — a ring sector whose inner arc is the neck and outer arc the hem — and the kernel trap here is the two arcs: they must share one centre, or the sector degenerates to a zero-area lens that verify() launders into a valid-looking outline. Two things solved: the neck arc (radius r_neck) and the hem arc (radius r_neck + cape_length) are drawn about the SAME centre so the sector is a true annulus of positive area at every sweep, and r_neck is solved from the measured neck so the collar seam closes; and the stand collar closes at the throat on the Yantra4D hook-and-eye. FC-500 lane 5 (tailoring, T3).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La capa de noche de cuerpo entero sobre la etiqueta blanca: una capa circular amplia, a menudo forrada de satén, que se separa de los hombros sobre un cuello alto y cierra en la garganta con corchete. El cuerpo de la capa es un anillo parcial — un sector cuyo arco interior es el cuello y el exterior el bajo — y la trampa del núcleo aquí son los dos arcos: deben compartir un centro, o el sector degenera a una lente de área cero que verify() blanquea como contorno válido. Dos cosas resueltas: el arco del cuello (radio r_neck) y el del bajo (radio r_neck + cape_length) se trazan sobre el MISMO centro para que el sector sea un anillo verdadero de área positiva en cualquier amplitud, y r_neck se resuelve del cuello medido para que la costura del cuello cierre; y el cuello alto cierra en la garganta con el corchete de Yantra4D. Carril 5 de FC-500 (sastrería, T3).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La cape de soirée longue portée sur la cravate blanche : une cape circulaire ample, souvent doublée de satin, s'écartant des épaules sur un col haut et se fermant à la gorge par une agrafe. Le corps de la cape est un anneau partiel — un secteur dont l'arc intérieur est l'encolure et l'extérieur l'ourlet — et le piège du noyau ici, ce sont les deux arcs : ils doivent partager un centre, sinon le secteur dégénère en une lentille d'aire nulle que verify() blanchit en contour valide. Deux choses résolues : l'arc d'encolure (rayon r_neck) et l'arc d'ourlet (rayon r_neck + cape_length) sont tracés autour du MÊME centre pour que le secteur soit un vrai anneau d'aire positive à toute ampleur, et r_neck est résolu à partir du cou mesuré pour que la couture de col ferme ; et le col montant se ferme à la gorge par l'agrafe Yantra4D. Couloir 5 de FC-500 (tailleur, T3).\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "A capa de noite de corpo inteiro usada sobre a gravata branca: uma capa circular ampla, muitas vezes forrada de cetim, que se afasta dos ombros sobre uma gola alta e fecha na garganta com colchete. O corpo da capa é um anel parcial — um setor cujo arco interno é o decote e o externo a barra — e a armadilha do núcleo aqui são os dois arcos: devem compartilhar um centro, ou o setor degenera numa lente de área zero que verify() branqueia como contorno válido. Duas coisas resolvidas: o arco do decote (raio r_neck) e o da barra (raio r_neck + cape_length) são traçados em torno do MESMO centro para o setor ser um anel verdadeiro de área positiva em qualquer amplitude, e r_neck é resolvido do pescoço medido para a costura da gola fechar; e a gola alta fecha na garganta com o colchete de Yantra4D. Corredor 5 do FC-500 (alfaiataria, T3).\n\nVisualizador e configurador oficial: Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": ["tailoring", "opera-cape", "cape", "formalwear", "white-tie", "hook-and-eye", "hardware", "commons"],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {"source": "Original draft for Fashion Cabinet", "license": "original"}
+      ]
+    }
+  },
+  "modes": [
+    {"id": "set", "label": {"en": "Full cape", "es": "Capa completa", "fr": "Cape complète", "pt": "Capa completa"}, "script_file": "main.py", "pieces": ["cape", "collar"]}
+  ],
+  "pieces": [
+    {"id": "cape", "label": {"en": "Cape body (cut 1 on fold)", "es": "Cuerpo de capa (corte 1 al pliegue)", "fr": "Corps de cape (coupé 1 au pli)", "pt": "Corpo de capa (corte 1 na dobra)"}, "default_color": "#1a1a20", "cut": {"quantity": 1, "on_fold": true, "mirror": true}},
+    {"id": "collar", "label": {"en": "Stand collar (hook-and-eye)", "es": "Cuello alto (corchete)", "fr": "Col montant (agrafe)", "pt": "Gola alta (colchete)"}, "default_color": "#141418", "cut": {"quantity": 1, "mirror": false}}
+  ],
+  "parameter_groups": [
+    {"id": "body", "label": {"en": "Body measurements", "es": "Medidas corporales", "fr": "Mesures du corps", "pt": "Medidas corporais"}},
+    {"id": "construction", "label": {"en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção"}}
+  ],
+  "parameters": [
+    {"id": "neck_girth", "type": "slider", "group": "body", "default": 420, "min": 320, "max": 560, "step": 10, "measurement": {"standard": "iso_8559", "code": "neck_girth"}, "label": {"en": "Neck girth (mm)", "es": "Contorno de cuello (mm)", "fr": "Tour de cou (mm)", "pt": "Contorno de pescoço (mm)"}, "tooltip": {"en": "The neck arc is solved from this so the collar closes", "es": "El arco del cuello se resuelve de esto para que el cuello cierre", "fr": "L'arc d'encolure en découle pour que le col ferme", "pt": "O arco do decote é resolvido disto para a gola fechar"}},
+    {"id": "cape_length", "type": "slider", "group": "body", "default": 1100, "min": 600, "max": 1400, "step": 20, "label": {"en": "Cape length (mm)", "es": "Largo de capa (mm)", "fr": "Longueur de cape (mm)", "pt": "Comprimento de capa (mm)"}, "tooltip": {"en": "Neck to hem — the hem radius is neck radius plus this", "es": "Del cuello al bajo — el radio del bajo es el del cuello más esto", "fr": "De l'encolure à l'ourlet — le rayon d'ourlet est celui d'encolure plus ceci", "pt": "Do decote à barra — o raio da barra é o do decote mais isto"}},
+    {"id": "sweep_deg", "type": "slider", "group": "construction", "default": 200, "min": 120, "max": 300, "step": 10, "label": {"en": "Sweep (degrees)", "es": "Amplitud (grados)", "fr": "Ampleur (degrés)", "pt": "Amplitude (graus)"}, "tooltip": {"en": "The sector angle — how full the cape is", "es": "El ángulo del sector — cuán amplia es la capa", "fr": "L'angle du secteur — l'ampleur de la cape", "pt": "O ângulo do setor — quão ampla é a capa"}},
+    {"id": "collar_height", "type": "slider", "group": "construction", "default": 90, "min": 40, "max": 160, "step": 5, "label": {"en": "Collar height (mm)", "es": "Alto de cuello (mm)", "fr": "Hauteur de col (mm)", "pt": "Altura de gola (mm)"}, "tooltip": {"en": "The tall stand collar height", "es": "El alto del cuello alto", "fr": "La hauteur du col montant", "pt": "A altura da gola alta"}},
+    {"id": "hook_rows", "type": "slider", "group": "construction", "default": 2, "min": 1, "max": 4, "step": 1, "label": {"en": "Hook rows", "es": "Filas de corchetes", "fr": "Rangs d'agrafes", "pt": "Fileiras de colchetes"}, "tooltip": {"en": "How many throat hook and eye rows — drives the hardware", "es": "Cuántas filas de corchetes en la garganta — define el herraje", "fr": "Combien de rangs d'agrafes à la gorge — pilote la quincaillerie", "pt": "Quantas fileiras de colchetes na garganta — dirige a ferragem"}},
+    {"id": "seam_allowance", "type": "slider", "group": "construction", "default": 12, "min": 8, "max": 18, "step": 1, "label": {"en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)"}, "tooltip": {"en": "Cape seam allowances", "es": "Márgenes de costura de capa", "fr": "Marges de couture de cape", "pt": "Margens de costura de capa"}}
+  ],
+  "presets": [
+    {"id": "full", "label": {"en": "Full sweep", "es": "Amplitud plena", "fr": "Pleine ampleur", "pt": "Amplitude plena"}, "values": {"sweep_deg": 240, "cape_length": 1200}},
+    {"id": "short", "label": {"en": "Short evening", "es": "Corta de noche", "fr": "Courte de soirée", "pt": "Curta de noite"}, "values": {"cape_length": 800, "sweep_deg": 180}}
+  ],
+  "constraints": [
+    {"expression": "cape_length > 0", "message": {"en": "Cape length must be positive.", "es": "El largo de capa debe ser positivo.", "fr": "La longueur de cape doit être positive.", "pt": "O comprimento de capa deve ser positivo."}, "severity": "warning"}
+  ],
+  "export_formats": ["svg", "dxf", "json"],
+  "fabrics": [],
+  "notion": {
+    "kind": "hook",
+    "subtype": "throat hook-and-eye closure",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "hook-and-eye",
+      "linked": true,
+      "params_map": {
+        "rows": "hook_rows",
+        "columns": "1",
+        "wire_d": "seam_allowance * 0.1"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {"id": "throat_closure", "type": "custom", "label": {"en": "Throat hook-and-eye closure", "es": "Cierre de garganta con corchete", "fr": "Fermeture de gorge à agrafe", "pt": "Fecho de garganta com colchete"}, "edges": [{"piece": "collar", "edge": "end_l"}], "parameters": ["hook_rows", "collar_height"]},
+      {"id": "neck_seam", "type": "neckline", "label": {"en": "Neck seam (collar to cape)", "es": "Costura de cuello (cuello a capa)", "fr": "Couture d'encolure (col à cape)", "pt": "Costura de decote (gola à capa)"}, "edges": [{"piece": "collar", "edge": "neck_edge"}, {"piece": "cape", "edge": "neck"}], "parameters": ["neck_girth", "sweep_deg"]}
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "tailoring": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The opera cape is the most theatrical garment in the formal wardrobe and the one most reduced to costume, because a true circular cape is a hard flat-pattern problem: it is a ring sector, and a ring sector drawn with two arcs about different centres collapses into a shape that still closes but has no drape. Forcing the neck and hem arcs to share one centre — so the sector is always a true annulus of positive area — and solving the neck radius to the measured neck makes the cape hang correctly at any sweep and any length. It restores a garment usually left to fancy dress to the register of real, made-to-measure tailoring, whose one throat fastening can be bridged to a printable, replaceable solid.",
+      "es": "La capa de ópera es la prenda más teatral del guardarropa formal y la más reducida a disfraz, porque una capa circular verdadera es un problema difícil de patrón plano: es un sector de anillo, y un sector dibujado con dos arcos de centros distintos colapsa en una forma que aún cierra pero no cae. Forzar a los arcos del cuello y del bajo a compartir un centro — para que el sector sea siempre un anillo verdadero de área positiva — y resolver el radio del cuello al cuello medido hace que la capa caiga bien en cualquier amplitud y largo. Devuelve una prenda que suele dejarse al disfraz al registro de la sastrería real a medida, cuyo único cierre de garganta puede puentearse a un sólido imprimible y reemplazable.",
+      "fr": "La cape d'opéra est le vêtement le plus théâtral de la garde-robe formelle et le plus réduit au déguisement, car une vraie cape circulaire est un problème difficile de patron plat : c'est un secteur d'anneau, et un secteur tracé avec deux arcs de centres différents s'effondre en une forme qui ferme encore mais ne tombe pas. Forcer les arcs d'encolure et d'ourlet à partager un centre — pour que le secteur soit toujours un vrai anneau d'aire positive — et résoudre le rayon d'encolure au cou mesuré fait tomber la cape correctement à toute ampleur et toute longueur. Cela rend un vêtement d'ordinaire laissé au déguisement au registre du tailleur réel sur mesure, dont l'unique fermeture de gorge peut être reliée à un solide imprimable et remplaçable.",
+      "pt": "A capa de ópera é a peça mais teatral do guarda-roupa formal e a mais reduzida a fantasia, porque uma capa circular verdadeira é um problema difícil de molde plano: é um setor de anel, e um setor traçado com dois arcos de centros diferentes colapsa numa forma que ainda fecha mas não cai. Forçar os arcos do decote e da barra a compartilhar um centro — para o setor ser sempre um anel verdadeiro de área positiva — e resolver o raio do decote ao pescoço medido faz a capa cair corretamente em qualquer amplitude e comprimento. Devolve uma peça geralmente deixada à fantasia ao registro da alfaiataria real sob medida, cujo único fecho de garganta pode ser ligado a um sólido imprimível e substituível."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}
