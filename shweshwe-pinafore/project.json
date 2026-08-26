@@ -1,0 +1,544 @@
+{
+  "project": {
+    "name": "Shweshwe pinafore dress",
+    "slug": "shweshwe-pinafore",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "A pinafore dress in shweshwe printed cotton: the indigo (and later chocolate and red) discharge-printed cloth of Southern Africa, central to Sotho, Xhosa and Tswana dress and to the traditional wedding seshweshwe. A sleeveless bib-front shift with a fitted bodice, a gathered skirt, faced neck and armholes, and a button closure down the centre back. Two things the draft solves honestly. THE WAIST SEAM MUST BALANCE — the skirt waist is SOLVED from the bodice waist times the gather ratio, so the seam that joins them matches by construction rather than by drafting the skirt to a free width and hoping. And THE PINAFORE IS SLEEVELESS AND OPENS AT THE BACK — the armscye is a finished, faced edge, and the centre-back placket is closed with real sew-through buttons sized in lignes (a Yantra4D solid, linked). No specific shweshwe print motif is drawn — the print is the fabric's.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "Un vestido pichi en algodón estampado shweshwe: la tela de descarga estampada en índigo (y luego chocolate y rojo) de África Austral, central en la vestimenta sotho, xhosa y tswana y en el seshweshwe de boda tradicional. Un vestido sin mangas con peto delantero, cuerpo entallado, falda fruncida, escote y sisas forrados, y cierre de botones por el centro de la espalda. Dos cosas resuelve el trazo con honestidad. LA COSTURA DE CINTURA DEBE EQUILIBRAR — el talle de la falda se RESUELVE del talle del cuerpo por la razón de frunce, así que la costura que los une coincide por construcción y no por trazar la falda a un ancho libre y esperar. Y EL PICHI ES SIN MANGAS Y ABRE ATRÁS — la sisa es un canto acabado y forrado, y la tapeta del centro de espalda cierra con botones reales de coser medidos en líneas (un sólido Yantra4D, enlazado). No se dibuja ningún motivo de estampado shweshwe — el estampado es de la tela.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Une robe chasuble en coton imprimé shweshwe : l'étoffe imprimée par rongeage en indigo (puis chocolat et rouge) d'Afrique australe, centrale dans le costume sotho, xhosa et tswana et dans le seshweshwe de mariage traditionnel. Une chasuble sans manches à plastron devant, corsage ajusté, jupe froncée, encolure et emmanchures parementées, et fermeture à boutons au milieu du dos. Le tracé résout honnêtement deux choses. LA COUTURE DE TAILLE DOIT S'ÉQUILIBRER — la taille de la jupe est RÉSOLUE depuis la taille du corsage par le rapport de fronce, la couture qui les joint concorde donc par construction et non en traçant la jupe à une largeur libre en espérant. Et LA CHASUBLE EST SANS MANCHES ET S'OUVRE AU DOS — l'emmanchure est un bord fini et parementé, et la patte de milieu dos se ferme par de vrais boutons à coudre mesurés en lignes (un solide Yantra4D, lié). Aucun motif imprimé shweshwe n'est dessiné — l'imprimé est celui de l'étoffe.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "shweshwe",
+      "seshoeshoe",
+      "pinafore",
+      "heritage",
+      "southern-african",
+      "sotho",
+      "xhosa",
+      "tswana",
+      "printed-cotton",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full pinafore dress",
+        "es": "Vestido pichi completo",
+        "fr": "Robe chasuble complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "facing"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Pinafore front (bib bodice + gathered skirt)",
+        "es": "Delantero del pichi (peto + falda fruncida)",
+        "fr": "Devant de la chasuble (plastron + jupe froncée)"
+      },
+      "default_color": "#3a5a8c",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Pinafore back half (with CB button placket)",
+        "es": "Media espalda del pichi (con tapeta de botones)",
+        "fr": "Demi-dos de la chasuble (avec patte de boutons)"
+      },
+      "default_color": "#324f7a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "facing",
+      "label": {
+        "en": "Neck + armhole facing",
+        "es": "Forro de escote y sisas",
+        "fr": "Parementure encolure et emmanchures"
+      },
+      "default_color": "#5878a8",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps"
+      }
+    },
+    {
+      "id": "shape",
+      "label": {
+        "en": "Neck, armhole & skirt",
+        "es": "Escote, sisa y falda",
+        "fr": "Encolure, emmanchure et jupe"
+      }
+    },
+    {
+      "id": "closure",
+      "label": {
+        "en": "Back closure",
+        "es": "Cierre de espalda",
+        "fr": "Fermeture dos"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 920,
+      "min": 760,
+      "max": 1200,
+      "step": 10,
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the bodice side; the sleeveless armhole is faced, not mounted",
+        "es": "Define el costado del cuerpo; la sisa sin manga va forrada",
+        "fr": "Définit le côté du corsage ; l'emmanchure sans manche est parementée"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 740,
+      "min": 600,
+      "max": 1080,
+      "step": 10,
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "The bodice waist; the skirt is gathered to a multiple of it so the waist seam balances",
+        "es": "El talle del cuerpo; la falda se frunce a un múltiplo para que la costura equilibre",
+        "fr": "La taille du corsage ; la jupe est froncée à un multiple pour que la couture s'équilibre"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      }
+    },
+    {
+      "id": "bodice_length",
+      "type": "slider",
+      "group": "body",
+      "default": 400,
+      "min": 320,
+      "max": 500,
+      "step": 10,
+      "label": {
+        "en": "Bodice length, shoulder to waist (mm)",
+        "es": "Largo del cuerpo, hombro a cintura (mm)",
+        "fr": "Longueur du corsage, épaule à taille (mm)"
+      },
+      "tooltip": {
+        "en": "The bib bodice drop; the back placket reads this length",
+        "es": "La caída del peto; la tapeta de espalda lee este largo",
+        "fr": "La chute du plastron ; la patte dos lit cette longueur"
+      }
+    },
+    {
+      "id": "skirt_length",
+      "type": "slider",
+      "group": "shape",
+      "default": 640,
+      "min": 400,
+      "max": 950,
+      "step": 10,
+      "label": {
+        "en": "Skirt length, waist to hem (mm)",
+        "es": "Largo de la falda, cintura al ruedo (mm)",
+        "fr": "Longueur de la jupe, taille à ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "The gathered skirt drop",
+        "es": "La caída de la falda fruncida",
+        "fr": "La chute de la jupe froncée"
+      }
+    },
+    {
+      "id": "gather_ratio",
+      "type": "slider",
+      "group": "shape",
+      "default": 1.9,
+      "min": 1.3,
+      "max": 2.6,
+      "step": 0.1,
+      "label": {
+        "en": "Skirt gather ratio (fullness vs waist)",
+        "es": "Razón de frunce de la falda (vuelo vs cintura)",
+        "fr": "Rapport de fronce de la jupe (ampleur vs taille)"
+      },
+      "tooltip": {
+        "en": "The skirt waist is the bodice waist times this ratio — SOLVED, so the waist seam matches by construction",
+        "es": "El talle de la falda es el del cuerpo por esta razón — RESUELTO, así la costura coincide por construcción",
+        "fr": "La taille de la jupe vaut celle du corsage par ce rapport — RÉSOLUE, la couture concorde par construction"
+      }
+    },
+    {
+      "id": "neck_width",
+      "type": "slider",
+      "group": "shape",
+      "default": 150,
+      "min": 100,
+      "max": 220,
+      "step": 5,
+      "label": {
+        "en": "Neck opening half-width (mm)",
+        "es": "Media anchura del escote (mm)",
+        "fr": "Demi-largeur de l'encolure (mm)"
+      },
+      "tooltip": {
+        "en": "Clamped inboard of the shoulder tip so the bib never inverts",
+        "es": "Limitada por dentro de la punta del hombro para que el peto no se invierta",
+        "fr": "Bridée en deçà de la pointe d'épaule pour que le plastron ne s'inverse pas"
+      }
+    },
+    {
+      "id": "neck_drop",
+      "type": "slider",
+      "group": "shape",
+      "default": 90,
+      "min": 50,
+      "max": 160,
+      "step": 5,
+      "label": {
+        "en": "Front neck drop (mm)",
+        "es": "Caída delantera del escote (mm)",
+        "fr": "Chute devant de l'encolure (mm)"
+      },
+      "tooltip": {
+        "en": "Clamped below the bodice length; the back neck is shallower",
+        "es": "Limitada bajo el largo del cuerpo; el escote de espalda es más bajo",
+        "fr": "Bridée sous la longueur du corsage ; l'encolure dos est plus basse"
+      }
+    },
+    {
+      "id": "armhole_drop",
+      "type": "slider",
+      "group": "shape",
+      "default": 220,
+      "min": 160,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Armhole drop, shoulder to underarm (mm)",
+        "es": "Caída de sisa, hombro a axila (mm)",
+        "fr": "Chute d'emmanchure, épaule à aisselle (mm)"
+      },
+      "tooltip": {
+        "en": "Clamped within the bodice length so the underarm stays above the waist",
+        "es": "Limitada dentro del largo del cuerpo para que la axila quede sobre la cintura",
+        "fr": "Bridée dans la longueur du corsage pour que l'aisselle reste au-dessus de la taille"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "shape",
+      "default": 195,
+      "min": 150,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Shoulder tip half-width (mm)",
+        "es": "Media anchura a la punta del hombro (mm)",
+        "fr": "Demi-largeur à la pointe d'épaule (mm)"
+      },
+      "tooltip": {
+        "en": "Centre front to the shoulder tip; clamped inboard of the side seam",
+        "es": "Del centro delantero a la punta del hombro; limitada por dentro del costado",
+        "fr": "Du milieu devant à la pointe d'épaule ; bridée en deçà du côté"
+      }
+    },
+    {
+      "id": "button_ligne",
+      "type": "slider",
+      "group": "closure",
+      "default": 24,
+      "min": 14,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Back button size (ligne)",
+        "es": "Tamaño del botón de espalda (línea)",
+        "fr": "Taille du bouton dos (ligne)"
+      },
+      "tooltip": {
+        "en": "The sew-through button diameter in lignes (1 ligne ≈ 0.635 mm); drives the linked Yantra4D solid",
+        "es": "El diámetro del botón de coser en líneas (1 línea ≈ 0,635 mm); dirige el sólido Yantra4D enlazado",
+        "fr": "Le diamètre du bouton à coudre en lignes (1 ligne ≈ 0,635 mm) ; pilote le solide Yantra4D lié"
+      }
+    },
+    {
+      "id": "button_count",
+      "type": "slider",
+      "group": "closure",
+      "default": 6,
+      "min": 3,
+      "max": 10,
+      "step": 1,
+      "label": {
+        "en": "Back button count",
+        "es": "Número de botones de espalda",
+        "fr": "Nombre de boutons dos"
+      },
+      "tooltip": {
+        "en": "Evenly spaced down the centre-back placket over the bodice",
+        "es": "Espaciados uniformemente por la tapeta del centro de espalda sobre el cuerpo",
+        "fr": "Espacés régulièrement le long de la patte de milieu dos sur le corsage"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 6,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Side, shoulder and waist seams",
+        "es": "Costuras de costado, hombro y cintura",
+        "fr": "Coutures de côté, d'épaule et de taille"
+      },
+      "advanced": true
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 45,
+      "min": 15,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de ruedo (mm)",
+        "fr": "Rentré d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Deep, so the frock can be let down as a child grows",
+        "es": "Profundo, para soltar el ruedo según crece quien lo usa",
+        "fr": "Profond, pour rallonger la robe à mesure que l'on grandit"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "neck_width <= shoulder_width - 30",
+      "severity": "warning",
+      "message": {
+        "en": "The neck point sits inboard of the shoulder tip; a wider neck would invert the bib.",
+        "es": "El punto del escote queda por dentro de la punta del hombro; un escote más ancho invierte el peto.",
+        "fr": "Le point d'encolure est en deçà de la pointe d'épaule ; une encolure plus large inverserait le plastron."
+      }
+    },
+    {
+      "expression": "armhole_drop <= bodice_length - 40",
+      "severity": "warning",
+      "message": {
+        "en": "The underarm stays above the waist seam; a deeper armhole would cross into the skirt.",
+        "es": "La axila queda sobre la costura de cintura; una sisa más profunda cruzaría a la falda.",
+        "fr": "L'aisselle reste au-dessus de la couture de taille ; une emmanchure plus profonde passerait dans la jupe."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "sunday_frock",
+      "label": {
+        "en": "Sunday frock",
+        "es": "Vestido de domingo",
+        "fr": "Robe du dimanche"
+      },
+      "values": {
+        "gather_ratio": 2.0,
+        "skirt_length": 680,
+        "button_count": 7
+      }
+    },
+    {
+      "id": "everyday_pinafore",
+      "label": {
+        "en": "Everyday pinafore",
+        "es": "Pichi diario",
+        "fr": "Chasuble de tous les jours"
+      },
+      "values": {
+        "gather_ratio": 1.6,
+        "skirt_length": 560,
+        "button_count": 5
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "button",
+    "subtype": "centre-back sew-through button placket",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "hole_count": "4",
+        "hole_dia": "2",
+        "hole_spacing": "3"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "back_button_placket",
+        "type": "button_stand",
+        "label": {
+          "en": "Centre-back button placket",
+          "es": "Tapeta de botones del centro de espalda",
+          "fr": "Patte de boutons de milieu dos"
+        },
+        "edges": [
+          {
+            "piece": "back",
+            "edge": "cb"
+          }
+        ],
+        "parameters": [
+          "button_ligne",
+          "button_count",
+          "bodice_length"
+        ]
+      },
+      {
+        "id": "waist_seam",
+        "type": "waistband",
+        "label": {
+          "en": "Bodice-to-skirt waist seam",
+          "es": "Costura de cintura cuerpo-falda",
+          "fr": "Couture de taille corsage-jupe"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "waist_step"
+          },
+          {
+            "piece": "back",
+            "edge": "waist_step"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "gather_ratio"
+        ]
+      },
+      {
+        "id": "faced_armhole",
+        "type": "armscye",
+        "label": {
+          "en": "Faced sleeveless armhole",
+          "es": "Sisa sin manga forrada",
+          "fr": "Emmanchure sans manche parementée"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "armhole_drop",
+          "shoulder_width",
+          "bust_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "heritage": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The shweshwe pinafore is a living everyday garment across Southern Africa, and it is usually made from a paper pattern passed hand to hand or copied from an existing dress. Publishing a parametric draft that balances the waist seam by construction, faces the sleeveless armhole honestly, and sizes the back closure to real buttons gives makers a dependable starting block they can fit to a child or an adult, while leaving the shweshwe print — the identity of the cloth — entirely to the fabric. No specific print motif is reproduced; the design of the cloth belongs to its makers and printers.",
+      "es": "El pichi de shweshwe es una prenda viva de uso diario en toda África Austral, y suele hacerse a partir de un patrón de papel que pasa de mano en mano o se copia de un vestido existente. Publicar un trazo paramétrico que equilibra la costura de cintura por construcción, forra con honestidad la sisa sin manga y dimensiona el cierre de espalda a botones reales da a quien cose un bloque de partida fiable para ajustar a un niño o a un adulto, dejando el estampado shweshwe — la identidad de la tela — enteramente a la tela. No se reproduce ningún motivo de estampado; el diseño de la tela pertenece a sus fabricantes e impresores.",
+      "fr": "La chasuble shweshwe est un vêtement vivant du quotidien dans toute l'Afrique australe, généralement réalisé à partir d'un patron de papier transmis de main en main ou copié sur une robe existante. Publier un tracé paramétrique qui équilibre la couture de taille par construction, paremente honnêtement l'emmanchure sans manche et dimensionne la fermeture dos à de vrais boutons donne aux couturières un bloc de départ fiable à ajuster à un enfant ou à un adulte, en laissant l'imprimé shweshwe — l'identité de l'étoffe — entièrement à l'étoffe. Aucun motif imprimé n'est reproduit ; le dessin de l'étoffe appartient à ses fabricants et imprimeurs."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

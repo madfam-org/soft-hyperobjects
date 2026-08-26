@@ -1,0 +1,489 @@
+{
+  "project": {
+    "name": "Vyshyvanka embroidered shirt",
+    "slug": "vyshyvanka-shirt",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The Ukrainian embroidered shirt (вишиванка): a straight, loose linen or hemp shirt built from rectangular panels, gathered at the neck into a narrow band or drawstring, with straight sleeves set on square underarm gussets, worn by men and women alike. It is the embroidery (вишивка) that carries the meaning — the regional patterns and their placement on sleeves, chest, cuffs, collar and hem — and that is exactly what this cartridge does NOT draw. Two facts govern the draft. IT IS PANELS AND GUSSETS, NOT SHAPED PATTERN PIECES — the body is a rectangle folded at the shoulder, the sleeve a rectangle, and the underarm a SQUARE GUSSET (declared square) that lets the straight sleeve meet the straight body without a curved armscye; the gathered neck is solved from the body width, not the neck girth, and the whole body top is gathered into the band. And THE EMBROIDERY IS A MARKED FIELD, NOT DECORATION — the chest, sleeve, cuff and hem zones are drawn as marked fields the maker fills; no specific vyshyvka pattern is drawn or named.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La camisa bordada ucraniana (вишиванка): una camisa recta y holgada de lino o cáñamo hecha de paños rectangulares, fruncida en el cuello en una banda angosta o cordón, con mangas rectas montadas en cuadros de axila, usada por hombres y mujeres. Es el bordado (вишивка) lo que lleva el significado — los patrones regionales y su ubicación en mangas, pecho, puños, cuello y ruedo — y eso es justo lo que este cartucho NO dibuja. Dos hechos gobiernan el trazo. SON PAÑOS Y CUADROS, NO PIEZAS CONFORMADAS — el cuerpo es un rectángulo doblado en el hombro, la manga un rectángulo, y la axila un CUADRO (declarado cuadrado) que deja que la manga recta se junte con el cuerpo recto sin sisa curva; el cuello fruncido se resuelve del ancho del cuerpo, no del contorno de cuello, y todo el alto del cuerpo se frunce en la banda. Y EL BORDADO ES UN CAMPO MARCADO, NO ADORNO — las zonas de pecho, manga, puño y ruedo se dibujan como campos marcados que el artesano llena; no se dibuja ni se nombra ningún patrón vyshyvka.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La chemise brodée ukrainienne (вишиванка) : une chemise droite et ample en lin ou en chanvre bâtie de panneaux rectangulaires, froncée à l'encolure en une bande étroite ou un cordon, avec des manches droites montées sur des goussets d'aisselle carrés, portée par les hommes et les femmes. C'est la broderie (вишивка) qui porte le sens — les motifs régionaux et leur emplacement sur les manches, la poitrine, les poignets, le col et l'ourlet — et c'est précisément ce que ce cartouche NE dessine PAS. Deux faits gouvernent le tracé. CE SONT DES PANNEAUX ET DES GOUSSETS, NON DES PIÈCES FAÇONNÉES — le corps est un rectangle plié à l'épaule, la manche un rectangle, et l'aisselle un GOUSSET CARRÉ (déclaré carré) qui laisse la manche droite rejoindre le corps droit sans emmanchure courbe ; l'encolure froncée est résolue depuis la largeur du corps, non le tour de cou, et tout le haut du corps est froncé dans la bande. Et LA BRODERIE EST UN CHAMP MARQUÉ, NON UN DÉCOR — les zones de poitrine, de manche, de poignet et d'ourlet sont dessinées comme des champs marqués que l'artisan remplit ; aucun motif vyshyvka n'est dessiné ni nommé.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "vyshyvanka",
+      "вишиванка",
+      "heritage",
+      "ukrainian",
+      "embroidered-shirt",
+      "gusset",
+      "peasant-chemise",
+      "panel-width",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full shirt",
+        "es": "Camisa completa",
+        "fr": "Chemise complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "body",
+        "sleeve",
+        "gusset",
+        "collar"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Shirt body (rectangle, gathered neck)",
+        "es": "Cuerpo de la camisa (rectángulo, cuello fruncido)",
+        "fr": "Corps de la chemise (rectangle, encolure froncée)"
+      },
+      "default_color": "#f0ece0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Straight sleeve (gathered top)",
+        "es": "Manga recta (fruncida arriba)",
+        "fr": "Manche droite (froncée en haut)"
+      },
+      "default_color": "#e8e2d2",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "gusset",
+      "label": {
+        "en": "Square underarm gusset",
+        "es": "Cuadro de axila",
+        "fr": "Gousset d'aisselle carré"
+      },
+      "default_color": "#ddd6c2",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Neck band",
+        "es": "Banda de cuello",
+        "fr": "Bande de col"
+      },
+      "default_color": "#d0c8b0",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body & cloth",
+        "es": "Cuerpo y tela",
+        "fr": "Corps et étoffe"
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve, gusset & neck",
+        "es": "Manga, cuadro y cuello",
+        "fr": "Manche, gousset et col"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "body_width",
+      "type": "slider",
+      "group": "body",
+      "default": 620,
+      "min": 460,
+      "max": 820,
+      "step": 10,
+      "label": {
+        "en": "Body half-width (mm)",
+        "es": "Media anchura del cuerpo (mm)",
+        "fr": "Demi-largeur du corps (mm)"
+      },
+      "tooltip": {
+        "en": "The flat width per side; the whole top of the body is gathered into the neck band, so this drives the gather",
+        "es": "El ancho plano por lado; todo el alto del cuerpo se frunce en la banda, así que esto dirige el frunce",
+        "fr": "La largeur à plat par côté ; tout le haut du corps est froncé dans la bande, ce qui pilote la fronce"
+      }
+    },
+    {
+      "id": "shirt_length",
+      "type": "slider",
+      "group": "body",
+      "default": 720,
+      "min": 600,
+      "max": 950,
+      "step": 10,
+      "label": {
+        "en": "Shirt length, shoulder to hem (mm)",
+        "es": "Largo de la camisa, hombro al ruedo (mm)",
+        "fr": "Longueur de la chemise, épaule à ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "The straight body length",
+        "es": "El largo del cuerpo recto",
+        "fr": "La longueur du corps droit"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 400,
+      "min": 320,
+      "max": 480,
+      "step": 5,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the neck band length the body is gathered into",
+        "es": "Fija el largo de la banda de cuello en la que se frunce el cuerpo",
+        "fr": "Fixe la longueur de la bande de col où le corps est froncé"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      }
+    },
+    {
+      "id": "neck_gather",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 2.1,
+      "min": 1.4,
+      "max": 3.2,
+      "step": 0.1,
+      "label": {
+        "en": "Target neck gather ratio",
+        "es": "Razón de frunce de cuello objetivo",
+        "fr": "Rapport de fronce d'encolure cible"
+      },
+      "tooltip": {
+        "en": "The desired fullness; the actual ratio is reported from the body width and the band",
+        "es": "El vuelo deseado; la razón real se reporta del ancho del cuerpo y la banda",
+        "fr": "L'ampleur souhaitée ; le rapport réel est signalé depuis la largeur du corps et la bande"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 560,
+      "min": 420,
+      "max": 680,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "The straight sleeve from the shoulder gather to the cuff",
+        "es": "La manga recta del frunce del hombro al puño",
+        "fr": "La manche droite de la fronce d'épaule au poignet"
+      }
+    },
+    {
+      "id": "sleeve_width",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 440,
+      "min": 320,
+      "max": 560,
+      "step": 10,
+      "label": {
+        "en": "Sleeve flat width (mm)",
+        "es": "Ancho plano de la manga (mm)",
+        "fr": "Largeur à plat de la manche (mm)"
+      },
+      "tooltip": {
+        "en": "Gathered at the top into the shoulder; wide and full",
+        "es": "Fruncida arriba en el hombro; ancha y llena",
+        "fr": "Froncée en haut à l'épaule ; large et ample"
+      }
+    },
+    {
+      "id": "cuff_girth",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 240,
+      "min": 180,
+      "max": 340,
+      "step": 10,
+      "label": {
+        "en": "Cuff girth (mm)",
+        "es": "Contorno del puño (mm)",
+        "fr": "Tour du poignet (mm)"
+      },
+      "tooltip": {
+        "en": "The sleeve gathers to this at the wrist",
+        "es": "La manga se frunce a esto en la muñeca",
+        "fr": "La manche se fronce à ceci au poignet"
+      }
+    },
+    {
+      "id": "gusset_size",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 120,
+      "min": 80,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Underarm gusset size (mm)",
+        "es": "Tamaño del cuadro de axila (mm)",
+        "fr": "Taille du gousset d'aisselle (mm)"
+      },
+      "tooltip": {
+        "en": "The square gusset that lets the straight sleeve meet the straight body without an armscye",
+        "es": "El cuadro que deja que la manga recta se junte con el cuerpo recto sin sisa",
+        "fr": "Le gousset carré qui laisse la manche droite rejoindre le corps droit sans emmanchure"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 28,
+      "min": 18,
+      "max": 50,
+      "step": 1,
+      "label": {
+        "en": "Neck band height (mm)",
+        "es": "Alto de la banda de cuello (mm)",
+        "fr": "Hauteur de la bande de col (mm)"
+      },
+      "tooltip": {
+        "en": "A low band; cut at double this plus turn-of-cloth",
+        "es": "Una banda baja; se corta al doble más el vuelo",
+        "fr": "Une bande basse ; coupée au double plus l'embu"
+      }
+    },
+    {
+      "id": "neck_drop_front",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 90,
+      "min": 40,
+      "max": 180,
+      "step": 5,
+      "label": {
+        "en": "Front slit depth (mm)",
+        "es": "Profundidad de la abertura delantera (mm)",
+        "fr": "Profondeur de la fente devant (mm)"
+      },
+      "tooltip": {
+        "en": "The centre-front opening slit, closed with a tie or embroidered band",
+        "es": "La abertura del centro delantero, cerrada con lazo o banda bordada",
+        "fr": "La fente d'ouverture milieu devant, fermée par un lien ou une bande brodée"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 6,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Flat-felled seams are traditional on linen",
+        "es": "Las costuras rebatidas son tradicionales en lino",
+        "fr": "Les coutures rabattues sont traditionnelles sur le lin"
+      },
+      "advanced": true
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 30,
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de ruedo (mm)",
+        "fr": "Rentré d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "A deep hem, often carrying its own embroidery band",
+        "es": "Un ruedo profundo, que suele llevar su propia banda bordada",
+        "fr": "Un ourlet profond, portant souvent sa propre bande brodée"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "body_width * 2 >= (neck_girth + 20) * 1.4",
+      "severity": "warning",
+      "message": {
+        "en": "The body top must give real fullness when gathered into the neck band; too narrow a body cannot gather.",
+        "es": "El alto del cuerpo debe dar vuelo real al fruncirse en la banda; un cuerpo demasiado angosto no puede fruncirse.",
+        "fr": "Le haut du corps doit donner une vraie ampleur une fois froncé dans la bande ; un corps trop étroit ne peut se froncer."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "chumak_mens",
+      "label": {
+        "en": "Men's shirt",
+        "es": "Camisa de hombre",
+        "fr": "Chemise d'homme"
+      },
+      "values": {
+        "body_width": 680,
+        "shirt_length": 780,
+        "neck_drop_front": 120
+      }
+    },
+    {
+      "id": "womens_sorochka",
+      "label": {
+        "en": "Women's sorochka",
+        "es": "Sorochka de mujer",
+        "fr": "Sorochka de femme"
+      },
+      "values": {
+        "body_width": 600,
+        "sleeve_width": 500,
+        "neck_gather": 2.6
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "closure-free — gathered neck band or drawstring, no hardware"
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "gathered_neck_band",
+        "type": "neckline",
+        "label": {
+          "en": "Gathered neck band",
+          "es": "Banda de cuello fruncida",
+          "fr": "Bande de col froncée"
+        },
+        "edges": [
+          {
+            "piece": "collar",
+            "edge": "neck_edge"
+          },
+          {
+            "piece": "body",
+            "edge": "shoulder_fold"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "neck_gather",
+          "body_width",
+          "collar_height"
+        ]
+      },
+      {
+        "id": "gusset_sleeve",
+        "type": "custom",
+        "label": {
+          "en": "Square-gusset sleeve mount",
+          "es": "Montaje de manga con cuadro",
+          "fr": "Montage de manche à gousset carré"
+        },
+        "edges": [
+          {
+            "piece": "gusset",
+            "edge": "body_lower"
+          },
+          {
+            "piece": "gusset",
+            "edge": "sleeve_lower"
+          }
+        ],
+        "parameters": [
+          "gusset_size",
+          "sleeve_width"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "heritage": true,
+      "hardware_bridge": false,
+      "closure_free": true
+    },
+    "societal_benefit": {
+      "en": "The vyshyvanka's meaning lives entirely in its embroidery — regional patterns that identify a village, a family, a life stage — and the worst thing a pattern generator could do is invent or reproduce those. So this cartridge draws the garment beneath the embroidery honestly (straight panels, square gussets, a gathered neck band) and marks the embroidery fields while drawing no pattern into them at all. It gives makers a correct, cuttable base to embroider in their own tradition, and treats the вишивка as what it is: the maker's and the region's, never the generator's to hand out.",
+      "es": "El significado de la vyshyvanka vive enteramente en su bordado — patrones regionales que identifican una aldea, una familia, una etapa de la vida — y lo peor que un generador de patrones podría hacer es inventarlos o reproducirlos. Por eso este cartucho dibuja con honestidad la prenda bajo el bordado (paños rectos, cuadros de axila, banda de cuello fruncida) y marca los campos de bordado sin dibujar ningún patrón en ellos. Da a quien cose una base correcta y cortable para bordar en su propia tradición, y trata la вишивка como lo que es: del artesano y de la región, nunca del generador para repartir.",
+      "fr": "Le sens de la vyshyvanka réside entièrement dans sa broderie — des motifs régionaux qui identifient un village, une famille, une étape de la vie — et la pire chose qu'un générateur de patrons pourrait faire serait de les inventer ou de les reproduire. Aussi ce cartouche dessine honnêtement le vêtement sous la broderie (panneaux droits, goussets carrés, bande de col froncée) et marque les champs de broderie sans y dessiner aucun motif. Il donne aux couturières une base correcte et coupable à broder dans leur propre tradition, et traite la вишивка pour ce qu'elle est : celle de l'artisan et de la région, jamais celle du générateur à distribuer."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

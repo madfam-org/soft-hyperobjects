@@ -1,0 +1,652 @@
+{
+  "project": {
+    "name": "Baju Melayu set",
+    "slug": "baju-melayu-set",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The Malay men's outfit: a loose, long-sleeved shirt (the baju) with a raised stand collar (the cekak musang, 'civet's grip') and a short buttoned front placket, worn with matching trousers (seluar) and the SAMPING, a short cloth (often songket) wrapped over the trousers at the waist and folded to hang in front. The national dress worn to the mosque, at weddings, and at Hari Raya. This cartridge drafts the baju shirt, its cekak musang collar, and the samping wrap. Two facts govern the draft. THE CEKAK MUSANG COLLAR IS CUT TO THE MEASURED NECKLINE — the raised stand is cut to the MEASURED neck run (both fronts + both back quarters), not to a neck girth, so it stands cleanly at the throat. And THE SLEEVE IS SET IN TO THE MEASURED ARMSCYE, AND THE SAMPING IS SOLVED FROM THE WAIST — the sleeve cap is solved to the measured armhole so it hangs, and the samping wrap length is solved from the waist plus the front-fold overlap so the fold sits right. No songket weave or tekat embroidery is drawn.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El conjunto masculino malayo: una camisa holgada de manga larga (el baju) con cuello alto (cekak musang, 'agarre de civeta') y una tapeta corta de botones, usado con pantalón a juego (seluar) y el SAMPING, un paño corto (a menudo songket) envuelto sobre el pantalón en la cintura y doblado para caer al frente. El traje nacional para la mezquita, bodas y Hari Raya. Este cartucho traza la camisa baju, su cuello cekak musang y el samping. Dos hechos gobiernan el trazo. EL CUELLO CEKAK MUSANG SE CORTA AL ESCOTE MEDIDO — el cuello alto se corta al corrido MEDIDO (ambos delanteros + ambas espaldas), no a un contorno de cuello, para pararse limpio en la garganta. Y LA MANGA VA MONTADA A LA SISA MEDIDA, Y EL SAMPING SE RESUELVE DE LA CINTURA — la copa se resuelve a la sisa medida para caer bien, y el largo del samping se resuelve de la cintura más el cruce del doblez delantero. No se dibuja tejido songket ni bordado tekat.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "L'ensemble masculin malais : une chemise ample à manches longues (le baju) à col montant (cekak musang, « prise de la civette ») et à courte patte de boutons, portée avec un pantalon assorti (seluar) et le SAMPING, un court tissu (souvent songket) enroulé sur le pantalon à la taille et plié pour tomber devant. La tenue nationale portée à la mosquée, aux mariages et à Hari Raya. Ce cartouche trace la chemise baju, son col cekak musang et le samping. Deux faits gouvernent le tracé. LE COL CEKAK MUSANG EST COUPÉ À L'ENCOLURE MESURÉE — le col montant est coupé au développé MESURÉ (les deux devants + les deux dos), non à un tour de cou, pour se tenir net à la gorge. Et LA MANCHE EST MONTÉE À L'EMMANCHURE MESURÉE, ET LE SAMPING EST RÉSOLU DEPUIS LA TAILLE — la tête est résolue à l'emmanchure mesurée pour bien tomber, et la longueur du samping est résolue depuis la taille plus le croisement du pli devant. Aucun tissage songket ni broderie tekat n'est dessiné.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "baju-melayu",
+      "heritage",
+      "malay",
+      "malaysian",
+      "cekak-musang",
+      "samping",
+      "songket",
+      "shirt",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full set (baju + collar + samping)",
+        "es": "Conjunto completo (baju + cuello + samping)",
+        "fr": "Ensemble complet (baju + col + samping)"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "collar",
+        "samping"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Baju front (short buttoned placket)",
+        "es": "Delantero del baju (tapeta corta)",
+        "fr": "Devant du baju (courte patte)"
+      },
+      "default_color": "#7a6a3a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Baju back (cut on fold)",
+        "es": "Espalda del baju (corte al lomo)",
+        "fr": "Dos du baju (coupe au pli)"
+      },
+      "default_color": "#6f6034",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Long sleeve (cap measured to the armscye)",
+        "es": "Manga larga (copa medida a la sisa)",
+        "fr": "Manche longue (tête mesurée à l'emmanchure)"
+      },
+      "default_color": "#87764a",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Cekak musang stand collar",
+        "es": "Cuello alto cekak musang",
+        "fr": "Col montant cekak musang"
+      },
+      "default_color": "#63552e",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "samping",
+      "label": {
+        "en": "Samping wrap cloth (songket)",
+        "es": "Paño samping (songket)",
+        "fr": "Étoffe samping (songket)"
+      },
+      "default_color": "#9a7b2e",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Baju body",
+        "es": "Cuerpo del baju",
+        "fr": "Corps du baju"
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve & collar",
+        "es": "Manga y cuello",
+        "fr": "Manche et col"
+      }
+    },
+    {
+      "id": "samping",
+      "label": {
+        "en": "Samping & closure",
+        "es": "Samping y cierre",
+        "fr": "Samping et fermeture"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 1020,
+      "min": 820,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "The baju is worn loose over the body",
+        "es": "El baju se usa holgado sobre el cuerpo",
+        "fr": "Le baju se porte ample sur le corps"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "baju_length",
+      "type": "slider",
+      "group": "body",
+      "default": 760,
+      "min": 640,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Baju length, nape to hem (mm)",
+        "es": "Largo del baju, nuca al ruedo (mm)",
+        "fr": "Longueur du baju, nuque à ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Hip-length; worn over the seluar and samping",
+        "es": "Hasta la cadera; sobre el seluar y el samping",
+        "fr": "À hauteur de hanche ; porté sur le seluar et le samping"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 410,
+      "min": 340,
+      "max": 480,
+      "step": 5,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "The cekak musang stand is cut to the MEASURED neckline, reported as collar_run_mm",
+        "es": "El cekak musang se corta al escote MEDIDO, reportado como collar_run_mm",
+        "fr": "Le cekak musang est coupé à l'encolure MESURÉE, signalé collar_run_mm"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "body",
+      "default": 470,
+      "min": 400,
+      "max": 540,
+      "step": 5,
+      "label": {
+        "en": "Shoulder width, tip to tip (mm)",
+        "es": "Ancho de hombros, punta a punta (mm)",
+        "fr": "Largeur d'épaules, pointe à pointe (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the shoulder tip and the armscye the sleeve is measured to",
+        "es": "Fija la punta del hombro y la sisa a la que se mide la manga",
+        "fr": "Fixe la pointe d'épaule et l'emmanchure à laquelle la manche est mesurée"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 620,
+      "min": 500,
+      "max": 720,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Long and loose",
+        "es": "Larga y holgada",
+        "fr": "Longue et ample"
+      }
+    },
+    {
+      "id": "armhole_depth",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 260,
+      "min": 220,
+      "max": 320,
+      "step": 5,
+      "label": {
+        "en": "Armhole depth (mm)",
+        "es": "Profundidad de sisa (mm)",
+        "fr": "Profondeur d'emmanchure (mm)"
+      },
+      "tooltip": {
+        "en": "With the shoulder width, sets the measured armscye the cap is solved to",
+        "es": "Con el ancho de hombros, fija la sisa medida a la que se resuelve la copa",
+        "fr": "Avec la largeur d'épaules, fixe l'emmanchure mesurée à laquelle la tête est résolue"
+      }
+    },
+    {
+      "id": "wrist_girth",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 230,
+      "min": 190,
+      "max": 280,
+      "step": 5,
+      "label": {
+        "en": "Wrist / cuff girth (mm)",
+        "es": "Contorno de muñeca / puño (mm)",
+        "fr": "Tour de poignet (mm)"
+      },
+      "tooltip": {
+        "en": "The sleeve mouth; soft, not tightly cuffed",
+        "es": "La boca de manga; suave, no ceñida",
+        "fr": "L'ouverture de manche ; souple, non serrée"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 45,
+      "min": 30,
+      "max": 65,
+      "step": 1,
+      "label": {
+        "en": "Cekak musang collar height (mm)",
+        "es": "Alto del cuello cekak musang (mm)",
+        "fr": "Hauteur du col cekak musang (mm)"
+      },
+      "tooltip": {
+        "en": "A tall raised stand; cut at double this plus turn-of-cloth",
+        "es": "Un cuello alto; se corta al doble más el vuelo",
+        "fr": "Un col montant haut ; coupé au double plus l'embu"
+      }
+    },
+    {
+      "id": "placket_length",
+      "type": "slider",
+      "group": "samping",
+      "default": 200,
+      "min": 120,
+      "max": 320,
+      "step": 10,
+      "label": {
+        "en": "Front placket length (mm)",
+        "es": "Largo de la tapeta delantera (mm)",
+        "fr": "Longueur de la patte devant (mm)"
+      },
+      "tooltip": {
+        "en": "A short buttoned opening below the collar; clamped within the body",
+        "es": "Una abertura corta abotonada bajo el cuello; limitada dentro del cuerpo",
+        "fr": "Une courte ouverture boutonnée sous le col ; bridée dans le corps"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "group": "body",
+      "default": 160,
+      "min": 100,
+      "max": 280,
+      "step": 10,
+      "label": {
+        "en": "Body ease (mm)",
+        "es": "Holgura del cuerpo (mm)",
+        "fr": "Aisance du corps (mm)"
+      },
+      "tooltip": {
+        "en": "Added to the chest; the baju is worn loose",
+        "es": "Añadida al pecho; el baju se usa holgado",
+        "fr": "Ajoutée à la poitrine ; le baju se porte ample"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "samping",
+      "default": 900,
+      "min": 700,
+      "max": 1250,
+      "step": 10,
+      "label": {
+        "en": "Waist girth for the samping (mm)",
+        "es": "Contorno de cintura para el samping (mm)",
+        "fr": "Tour de taille pour le samping (mm)"
+      },
+      "tooltip": {
+        "en": "The samping wraps once round this plus a front-fold overlap",
+        "es": "El samping rodea esto una vez más el cruce del doblez delantero",
+        "fr": "Le samping fait une fois le tour de ceci plus le croisement du pli devant"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      }
+    },
+    {
+      "id": "samping_drop",
+      "type": "slider",
+      "group": "samping",
+      "default": 480,
+      "min": 360,
+      "max": 640,
+      "step": 10,
+      "label": {
+        "en": "Samping length (mm)",
+        "es": "Largo del samping (mm)",
+        "fr": "Longueur du samping (mm)"
+      },
+      "tooltip": {
+        "en": "The samping falls to mid-thigh or knee",
+        "es": "El samping cae a medio muslo o rodilla",
+        "fr": "Le samping tombe à mi-cuisse ou au genou"
+      }
+    },
+    {
+      "id": "button_ligne",
+      "type": "slider",
+      "group": "samping",
+      "default": 20,
+      "min": 14,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Placket button size (ligne)",
+        "es": "Tamaño del botón de tapeta (línea)",
+        "fr": "Taille du bouton de patte (ligne)"
+      },
+      "tooltip": {
+        "en": "The button diameter in lignes; drives the linked Yantra4D solid",
+        "es": "El diámetro del botón en líneas; dirige el sólido Yantra4D enlazado",
+        "fr": "Le diamètre du bouton en lignes ; pilote le solide Yantra4D lié"
+      }
+    },
+    {
+      "id": "button_count",
+      "type": "slider",
+      "group": "samping",
+      "default": 3,
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "label": {
+        "en": "Placket button count",
+        "es": "Número de botones de tapeta",
+        "fr": "Nombre de boutons de patte"
+      },
+      "tooltip": {
+        "en": "A small number on the short placket",
+        "es": "Unos pocos en la tapeta corta",
+        "fr": "Quelques-uns sur la courte patte"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 6,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Body, sleeve, and collar seams",
+        "es": "Costuras de cuerpo, manga y cuello",
+        "fr": "Coutures de corps, de manche et de col"
+      },
+      "advanced": true
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 25,
+      "min": 10,
+      "max": 45,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de ruedo (mm)",
+        "fr": "Rentré d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Hems on the baju and the samping",
+        "es": "Ruedos del baju y del samping",
+        "fr": "Ourlets du baju et du samping"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "placket_length <= baju_length * 0.5",
+      "severity": "warning",
+      "message": {
+        "en": "The front placket is a short opening below the collar, not a full front.",
+        "es": "La tapeta delantera es una abertura corta bajo el cuello, no un frente completo.",
+        "fr": "La patte devant est une courte ouverture sous le col, non un devant entier."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "hari_raya",
+      "label": {
+        "en": "Hari Raya",
+        "es": "Hari Raya",
+        "fr": "Hari Raya"
+      },
+      "values": {
+        "collar_height": 50,
+        "samping_drop": 520,
+        "button_count": 3
+      }
+    },
+    {
+      "id": "everyday_baju",
+      "label": {
+        "en": "Everyday baju",
+        "es": "Baju diario",
+        "fr": "Baju de tous les jours"
+      },
+      "values": {
+        "collar_height": 38,
+        "baju_length": 720,
+        "ease": 140
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "button",
+    "subtype": "short front-placket sew-through buttons",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "hole_count": "4",
+        "hole_dia": "2",
+        "hole_spacing": "3"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "front_placket",
+        "type": "button_stand",
+        "label": {
+          "en": "Short front button placket",
+          "es": "Tapeta corta de botones delantera",
+          "fr": "Courte patte de boutons devant"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "cf"
+          }
+        ],
+        "parameters": [
+          "button_ligne",
+          "button_count",
+          "placket_length"
+        ]
+      },
+      {
+        "id": "cekak_musang",
+        "type": "neckline",
+        "label": {
+          "en": "Cekak musang stand collar",
+          "es": "Cuello alto cekak musang",
+          "fr": "Col montant cekak musang"
+        },
+        "edges": [
+          {
+            "piece": "collar",
+            "edge": "neck_edge"
+          },
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "collar_height"
+        ]
+      },
+      {
+        "id": "set_in_sleeve",
+        "type": "armscye",
+        "label": {
+          "en": "Set-in sleeve (cap ↔ armscye)",
+          "es": "Manga montada (copa ↔ sisa)",
+          "fr": "Manche montée (tête ↔ emmanchure)"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          },
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "shoulder_width",
+          "armhole_depth",
+          "sleeve_length"
+        ]
+      },
+      {
+        "id": "samping_wrap",
+        "type": "waistband",
+        "label": {
+          "en": "Samping wrap",
+          "es": "Envuelto del samping",
+          "fr": "Enroulement du samping"
+        },
+        "edges": [
+          {
+            "piece": "samping",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "samping_drop"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "heritage": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The baju melayu is often drawn as a plain collarless shirt with a sarong, which misses the two things that make it a baju melayu: the raised cekak musang stand collar cut to the measured neckline, and the samping wrap whose fold is sized from the waist. Publishing a draft that measures the neckline for the collar, solves the sleeve cap to the armscye, and solves the samping wrap keeps the outfit correct and cuttable, while the songket weave and tekat embroidery — the pride of Malay textile art — are left entirely to the weaver. No state-specific or royal motif is drawn.",
+      "es": "El baju melayu se dibuja a menudo como una camisa lisa sin cuello con un sarong, lo que pierde las dos cosas que lo hacen baju melayu: el cuello alto cekak musang cortado al escote medido, y el samping cuyo doblez se dimensiona de la cintura. Publicar un trazo que mide el escote para el cuello, resuelve la copa de la manga a la sisa y resuelve el samping mantiene el conjunto correcto y cortable, mientras el tejido songket y el bordado tekat — el orgullo del arte textil malayo — quedan enteramente al tejedor. No se dibuja ningún motivo estatal ni real.",
+      "fr": "Le baju melayu est souvent dessiné comme une chemise unie sans col avec un sarong, ce qui manque les deux choses qui en font un baju melayu : le col montant cekak musang coupé à l'encolure mesurée, et le samping dont le pli est dimensionné depuis la taille. Publier un tracé qui mesure l'encolure pour le col, résout la tête de manche à l'emmanchure et résout le samping garde l'ensemble correct et coupable, tandis que le tissage songket et la broderie tekat — la fierté de l'art textile malais — sont laissés entièrement au tisserand. Aucun motif étatique ou royal n'est dessiné."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

@@ -1,0 +1,709 @@
+{
+  "project": {
+    "name": "Sherwani",
+    "slug": "nehru-sherwani",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The fitted long formal coat of South Asia — the men's ceremonial dress of weddings and state occasions across India, Pakistan and Bangladesh, worn over a kurta and churidar. It is a TAILORED, made-to-measure garment: fitted through the waist, buttoned all the way up to a raised stand collar (the Nehru / bandhgala collar), with set-in sleeves and a flared skirt below the waist. Three things the draft solves honestly. THE BODY IS FITTED AND THE WAIST IS SOLVED FROM THE MEASURES — the waist is solved from the chest-waist-hip measurements and suppressed with a side take-in plus a vertical dart, drafted from the body, not a size chart. THE SLEEVE CAP IS CUT TO THE MEASURED ARMSCYE — the cap is solved to the MEASURED front + back armhole so it hangs, and the declared seam proves it. And THE STAND COLLAR IS CUT TO THE MEASURED NECKLINE — the bandhgala stand closes cleanly at the throat. No zardozi or thread embroidery is drawn.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El abrigo largo y entallado de gala del Sur de Asia — la vestimenta ceremonial masculina de bodas y actos de estado en India, Pakistán y Bangladés, usado sobre un kurta y churidar. Es una prenda SASTRE, a medida: entallada en la cintura, abotonada hasta un cuello alto (Nehru / bandhgala), con mangas montadas y falda acampanada bajo la cintura. Tres cosas resuelve el trazo con honestidad. EL CUERPO VA ENTALLADO Y LA CINTURA SE RESUELVE DE LAS MEDIDAS — la cintura se resuelve de pecho-cintura-cadera y se suprime con entrada al costado más pinza vertical, trazada del cuerpo, no de una tabla de tallas. LA COPA DE LA MANGA SE CORTA A LA SISA MEDIDA — se resuelve a la sisa MEDIDA de delantero y espalda para caer bien, y la costura declarada lo prueba. Y EL CUELLO ALTO SE CORTA AL ESCOTE MEDIDO — el bandhgala cierra limpio en la garganta. No se dibuja zardozi ni bordado de hilo.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le long manteau ajusté de cérémonie d'Asie du Sud — la tenue masculine des mariages et des occasions d'État en Inde, au Pakistan et au Bangladesh, porté sur un kurta et un churidar. C'est un vêtement TAILLÉ, sur mesure : ajusté à la taille, boutonné jusqu'à un col montant (Nehru / bandhgala), à manches montées et jupe évasée sous la taille. Le tracé résout honnêtement trois choses. LE CORPS EST AJUSTÉ ET LA TAILLE EST RÉSOLUE DEPUIS LES MESURES — la taille est résolue depuis poitrine-taille-hanches et supprimée par une reprise au côté plus une pince verticale, tracée depuis le corps, non depuis un tableau de tailles. LA TÊTE DE MANCHE EST COUPÉE À L'EMMANCHURE MESURÉE — elle est résolue à l'emmanchure MESURÉE devant et dos pour bien tomber, et la couture déclarée le prouve. Et LE COL MONTANT EST COUPÉ À L'ENCOLURE MESURÉE — le bandhgala ferme net à la gorge. Aucun zardozi ni broderie de fil n'est dessiné.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "sherwani",
+      "bandhgala",
+      "heritage",
+      "south-asian",
+      "indian",
+      "pakistani",
+      "formal-coat",
+      "made-to-measure",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full coat",
+        "es": "Abrigo completo",
+        "fr": "Manteau complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "collar"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Fitted front (full button front, flared skirt)",
+        "es": "Delantero entallado (frente abotonado, falda acampanada)",
+        "fr": "Devant ajusté (devant boutonné, jupe évasée)"
+      },
+      "default_color": "#2e3a54",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Fitted back (flared skirt, centre vent)",
+        "es": "Espalda entallada (falda acampanada, abertura central)",
+        "fr": "Dos ajusté (jupe évasée, fente milieu)"
+      },
+      "default_color": "#28334b",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Long sleeve (cap measured to the armscye)",
+        "es": "Manga larga (copa medida a la sisa)",
+        "fr": "Manche longue (tête mesurée à l'emmanchure)"
+      },
+      "default_color": "#354363",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Bandhgala stand collar",
+        "es": "Cuello alto bandhgala",
+        "fr": "Col montant bandhgala"
+      },
+      "default_color": "#212c42",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "measures",
+      "label": {
+        "en": "Body measures",
+        "es": "Medidas del cuerpo",
+        "fr": "Mesures du corps"
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve & collar",
+        "es": "Manga y cuello",
+        "fr": "Manche et col"
+      }
+    },
+    {
+      "id": "detail",
+      "label": {
+        "en": "Skirt, vent & closure",
+        "es": "Falda, abertura y cierre",
+        "fr": "Jupe, fente et fermeture"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "measures",
+      "default": 1000,
+      "min": 840,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "One of the three measures the fitted waist is solved from",
+        "es": "Una de las tres medidas de las que se resuelve la cintura",
+        "fr": "L'une des trois mesures d'où la taille ajustée est résolue"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "measures",
+      "default": 880,
+      "min": 680,
+      "max": 1200,
+      "step": 10,
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "The suppression is the chest-to-waist difference; a waist wider than the chest gives no dart, not a reversed one",
+        "es": "La supresión es la diferencia pecho-cintura; una cintura mayor que el pecho da sin pinza, no una invertida",
+        "fr": "La reprise est l'écart poitrine-taille ; une taille plus large que la poitrine donne aucune pince, non une inversée"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "measures",
+      "default": 1020,
+      "min": 860,
+      "max": 1350,
+      "step": 10,
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the hip; the skirt flares below it by skirt_flare",
+        "es": "Fija la cadera; la falda se acampana bajo ella por skirt_flare",
+        "fr": "Fixe la hanche ; la jupe s'évase sous elle de skirt_flare"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      }
+    },
+    {
+      "id": "sherwani_length",
+      "type": "slider",
+      "group": "measures",
+      "default": 1140,
+      "min": 1000,
+      "max": 1350,
+      "step": 10,
+      "label": {
+        "en": "Coat length, nape to hem (mm)",
+        "es": "Largo del abrigo, nuca al ruedo (mm)",
+        "fr": "Longueur du manteau, nuque à ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Knee to mid-calf",
+        "es": "De la rodilla a media pantorrilla",
+        "fr": "Du genou à mi-mollet"
+      }
+    },
+    {
+      "id": "nape_to_waist",
+      "type": "slider",
+      "group": "measures",
+      "default": 440,
+      "min": 400,
+      "max": 500,
+      "step": 5,
+      "label": {
+        "en": "Nape to waist (mm)",
+        "es": "Nuca a cintura (mm)",
+        "fr": "Nuque à taille (mm)"
+      },
+      "tooltip": {
+        "en": "Places the waist, where the suppression is taken",
+        "es": "Ubica la cintura, donde se toma la supresión",
+        "fr": "Place la taille, où la reprise est prise"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "back_neck_to_waist"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "measures",
+      "default": 410,
+      "min": 360,
+      "max": 480,
+      "step": 5,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "The bandhgala stand is cut to the MEASURED neckline, reported as collar_run_mm",
+        "es": "El bandhgala se corta al escote MEDIDO, reportado como collar_run_mm",
+        "fr": "Le bandhgala est coupé à l'encolure MESURÉE, signalé collar_run_mm"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "measures",
+      "default": 460,
+      "min": 400,
+      "max": 520,
+      "step": 5,
+      "label": {
+        "en": "Shoulder width, tip to tip (mm)",
+        "es": "Ancho de hombros, punta a punta (mm)",
+        "fr": "Largeur d'épaules, pointe à pointe (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the shoulder tip and the armscye the sleeve is measured to",
+        "es": "Fija la punta del hombro y la sisa a la que se mide la manga",
+        "fr": "Fixe la pointe d'épaule et l'emmanchure à laquelle la manche est mesurée"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "shoulder_length"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 640,
+      "min": 560,
+      "max": 720,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "The tailored sleeve to the wrist",
+        "es": "La manga sastre hasta la muñeca",
+        "fr": "La manche taillée jusqu'au poignet"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "arm_length"
+      }
+    },
+    {
+      "id": "armhole_depth",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 250,
+      "min": 220,
+      "max": 320,
+      "step": 5,
+      "label": {
+        "en": "Armhole depth (mm)",
+        "es": "Profundidad de sisa (mm)",
+        "fr": "Profondeur d'emmanchure (mm)"
+      },
+      "tooltip": {
+        "en": "Clamped above the waist; with the shoulder width sets the measured armscye",
+        "es": "Limitada sobre la cintura; con el ancho de hombros fija la sisa medida",
+        "fr": "Bridée au-dessus de la taille ; avec la largeur d'épaules fixe l'emmanchure mesurée"
+      }
+    },
+    {
+      "id": "wrist_girth",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 220,
+      "min": 180,
+      "max": 280,
+      "step": 5,
+      "label": {
+        "en": "Wrist girth (mm)",
+        "es": "Contorno de muñeca (mm)",
+        "fr": "Tour de poignet (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the sleeve mouth",
+        "es": "Fija la boca de manga",
+        "fr": "Fixe l'ouverture de manche"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 48,
+      "min": 32,
+      "max": 65,
+      "step": 1,
+      "label": {
+        "en": "Bandhgala collar height (mm)",
+        "es": "Alto del cuello bandhgala (mm)",
+        "fr": "Hauteur du col bandhgala (mm)"
+      },
+      "tooltip": {
+        "en": "A tall raised stand; cut at double this plus turn-of-cloth",
+        "es": "Un cuello alto; se corta al doble más el vuelo",
+        "fr": "Un col montant haut ; coupé au double plus l'embu"
+      }
+    },
+    {
+      "id": "skirt_flare",
+      "type": "slider",
+      "group": "detail",
+      "default": 120,
+      "min": 40,
+      "max": 240,
+      "step": 10,
+      "label": {
+        "en": "Skirt flare per side (mm)",
+        "es": "Vuelo de la falda por lado (mm)",
+        "fr": "Évasement de la jupe par côté (mm)"
+      },
+      "tooltip": {
+        "en": "How much wider the hem is than the hip; the sherwani skirt flares below the waist",
+        "es": "Cuánto más ancho es el ruedo que la cadera; la falda del sherwani se acampana bajo la cintura",
+        "fr": "De combien l'ourlet dépasse la hanche ; la jupe du sherwani s'évase sous la taille"
+      }
+    },
+    {
+      "id": "chest_ease",
+      "type": "slider",
+      "group": "detail",
+      "default": 90,
+      "min": 50,
+      "max": 160,
+      "step": 10,
+      "label": {
+        "en": "Chest ease (mm)",
+        "es": "Holgura de pecho (mm)",
+        "fr": "Aisance de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Tailored ease; the sherwani is fitted but worn over a kurta",
+        "es": "Holgura sastre; el sherwani es entallado pero se usa sobre un kurta",
+        "fr": "Aisance taillée ; le sherwani est ajusté mais porté sur un kurta"
+      }
+    },
+    {
+      "id": "button_diameter",
+      "type": "slider",
+      "group": "detail",
+      "default": 16,
+      "min": 11,
+      "max": 26,
+      "step": 1,
+      "label": {
+        "en": "Shank button diameter (mm)",
+        "es": "Diámetro del botón de espiga (mm)",
+        "fr": "Diamètre du bouton à queue (mm)"
+      },
+      "tooltip": {
+        "en": "The shank button diameter; drives the linked Yantra4D shank-button-solid",
+        "es": "El diámetro del botón de espiga; dirige el sólido Yantra4D enlazado",
+        "fr": "Le diamètre du bouton à queue ; pilote le solide Yantra4D lié"
+      }
+    },
+    {
+      "id": "button_count",
+      "type": "slider",
+      "group": "detail",
+      "default": 6,
+      "min": 4,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Front button count",
+        "es": "Número de botones delanteros",
+        "fr": "Nombre de boutons devant"
+      },
+      "tooltip": {
+        "en": "The full run up the front to the collar",
+        "es": "La hilera completa por el frente hasta el cuello",
+        "fr": "La rangée complète sur le devant jusqu'au col"
+      }
+    },
+    {
+      "id": "back_vent",
+      "type": "slider",
+      "group": "detail",
+      "default": 300,
+      "min": 150,
+      "max": 500,
+      "step": 10,
+      "label": {
+        "en": "Centre back vent height (mm)",
+        "es": "Alto de la abertura central trasera (mm)",
+        "fr": "Hauteur de la fente milieu dos (mm)"
+      },
+      "tooltip": {
+        "en": "A vent for walking; capped below the waist",
+        "es": "Una abertura para caminar; limitada bajo la cintura",
+        "fr": "Une fente de marche ; plafonnée sous la taille"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 8,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Tailored seams",
+        "es": "Costuras sastre",
+        "fr": "Coutures taillées"
+      },
+      "advanced": true
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 40,
+      "min": 15,
+      "max": 70,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de ruedo (mm)",
+        "fr": "Rentré d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "A tailored hem on the lined coat",
+        "es": "Un ruedo sastre en el abrigo forrado",
+        "fr": "Un ourlet taillé sur le manteau doublé"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "armhole_depth <= nape_to_waist - 40",
+      "severity": "warning",
+      "message": {
+        "en": "The underarm stays above the waist so the armscye and the fitted waist do not collide.",
+        "es": "La axila queda sobre la cintura para que la sisa y la cintura no choquen.",
+        "fr": "L'aisselle reste au-dessus de la taille pour que l'emmanchure et la taille ne se heurtent pas."
+      }
+    },
+    {
+      "expression": "back_vent <= (sherwani_length - nape_to_waist) * 0.9",
+      "severity": "warning",
+      "message": {
+        "en": "The back vent is a skirt vent, capped below the waist.",
+        "es": "La abertura trasera es de la falda, limitada bajo la cintura.",
+        "fr": "La fente dos est une fente de jupe, plafonnée sous la taille."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "wedding_brocade",
+      "label": {
+        "en": "Wedding brocade",
+        "es": "Brocado de boda",
+        "fr": "Brocart de mariage"
+      },
+      "values": {
+        "sherwani_length": 1180,
+        "collar_height": 52,
+        "skirt_flare": 160,
+        "button_count": 7
+      }
+    },
+    {
+      "id": "nehru_bandhgala",
+      "label": {
+        "en": "Nehru bandhgala",
+        "es": "Bandhgala Nehru",
+        "fr": "Bandhgala Nehru"
+      },
+      "values": {
+        "sherwani_length": 1040,
+        "skirt_flare": 80,
+        "chest_ease": 70
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "button",
+    "subtype": "full front shank buttons (metal or self-covered)",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "shank-button-solid",
+      "linked": true,
+      "params_map": {
+        "diameter_mm": "button_diameter",
+        "thickness": "3",
+        "holes": "0",
+        "hole_dia": "1",
+        "rim": "1"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "full_button_front",
+        "type": "button_stand",
+        "label": {
+          "en": "Full shank-button front",
+          "es": "Frente completo de botones de espiga",
+          "fr": "Devant complet à boutons à queue"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "cf"
+          }
+        ],
+        "parameters": [
+          "button_diameter",
+          "button_count",
+          "sherwani_length"
+        ]
+      },
+      {
+        "id": "bandhgala_collar",
+        "type": "neckline",
+        "label": {
+          "en": "Bandhgala stand collar",
+          "es": "Cuello alto bandhgala",
+          "fr": "Col montant bandhgala"
+        },
+        "edges": [
+          {
+            "piece": "collar",
+            "edge": "neck_edge"
+          },
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "collar_height"
+        ]
+      },
+      {
+        "id": "set_in_sleeve",
+        "type": "armscye",
+        "label": {
+          "en": "Set-in sleeve (cap ↔ armscye)",
+          "es": "Manga montada (copa ↔ sisa)",
+          "fr": "Manche montée (tête ↔ emmanchure)"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          },
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "shoulder_width",
+          "armhole_depth",
+          "sleeve_length"
+        ]
+      },
+      {
+        "id": "fitted_side",
+        "type": "side_seam",
+        "label": {
+          "en": "Fitted side seam and flared skirt",
+          "es": "Costado entallado y falda acampanada",
+          "fr": "Côté ajusté et jupe évasée"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "waist_girth",
+          "hip_girth",
+          "skirt_flare"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "heritage": true,
+      "hardware_bridge": true,
+      "tailored": true
+    },
+    "societal_benefit": {
+      "en": "The sherwani is a tailored coat, and a tailored coat drawn from a size chart rather than the body fits no one well. Publishing a made-to-measure draft that solves the waist from the chest-waist-hip measures, hangs the sleeve from a measured armscye, and cuts the bandhgala stand to the measured neckline gives makers a dependable, fitted block for a garment that matters — a wedding coat — while the zardozi and thread embroidery that make a particular sherwani are left entirely to the karigar (the embroiderer). No surface motif is drawn.",
+      "es": "El sherwani es un abrigo sastre, y un abrigo sastre trazado de una tabla de tallas y no del cuerpo no le queda bien a nadie. Publicar un trazo a medida que resuelve la cintura de pecho-cintura-cadera, cuelga la manga de una sisa medida y corta el bandhgala al escote medido da a quien cose un bloque fiable y entallado para una prenda que importa — un abrigo de boda — mientras el zardozi y el bordado de hilo que hacen un sherwani concreto quedan enteramente al karigar (el bordador). No se dibuja ningún motivo de superficie.",
+      "fr": "Le sherwani est un manteau taillé, et un manteau taillé tracé depuis un tableau de tailles plutôt que depuis le corps ne va bien à personne. Publier un tracé sur mesure qui résout la taille depuis poitrine-taille-hanches, suspend la manche à une emmanchure mesurée et coupe le bandhgala à l'encolure mesurée donne aux tailleurs un bloc fiable et ajusté pour un vêtement qui compte — un manteau de mariage — tandis que le zardozi et la broderie de fil qui font un sherwani précis sont laissés entièrement au karigar (le brodeur). Aucun motif de surface n'est dessiné."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

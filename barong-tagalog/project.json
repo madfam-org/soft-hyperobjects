@@ -1,0 +1,665 @@
+{
+  "project": {
+    "name": "Barong Tagalog",
+    "slug": "barong-tagalog",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The Philippine formal shirt: a sheer, untucked, straight-cut shirt of piña (pineapple-leaf fibre) or jusi (banana/abacá-silk), worn open at the hem over a plain undershirt (camisa de chino), with an embroidered chest panel (the pechera), a front button placket, a band collar, long sleeves with cuffs, and side slits. The national formal dress of Filipino men. Two facts govern the draft. THE SLEEVE CAP IS CUT TO THE MEASURED ARMSCYE — a set-in sleeve only hangs cleanly when the cap seam equals the armhole it sews into, so the front and back armholes are drafted and MEASURED and the cap width is iterated until the drawn cap curve hits that length plus a little ease; the declared seam proves it. And THE FINISH IS THE GARMENT — the placket, band collar and pechera are the worked zones, and the pechera is a MARKED embroidery field, not drawn decoration (calado, sombrado, and hand embroidery are the embroiderer's).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La camisa formal filipina: una camisa recta, translúcida, por fuera, de piña (fibra de hoja de piña) o jusi (seda de abacá/plátano), usada abierta en el ruedo sobre una camiseta lisa (camisa de chino), con un panel bordado al pecho (la pechera), tapeta de botones delantera, cuello de banda, mangas largas con puños y aberturas laterales. El traje formal nacional del hombre filipino. Dos hechos gobiernan el trazo. LA COPA DE LA MANGA SE CORTA A LA SISA MEDIDA — una manga montada sólo cae limpia cuando la costura de copa iguala la sisa donde se cose, así que las sisas de delantero y espalda se trazan y se MIDEN y el ancho de copa se itera hasta que la curva dibujada alcanza esa longitud más una holgura leve; la costura declarada lo prueba. Y EL ACABADO ES LA PRENDA — la tapeta, el cuello de banda y la pechera son las zonas trabajadas, y la pechera es un campo de bordado MARCADO, no adorno dibujado (calado, sombrado y bordado a mano son del bordador).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La chemise de cérémonie philippine : une chemise droite, transparente, portée par-dessus, en piña (fibre de feuille d'ananas) ou jusi (soie d'abaca/banane), portée ouverte à l'ourlet sur un maillot uni (camisa de chino), avec un plastron brodé (la pechera), une patte de boutons devant, un col bande, des manches longues à poignets et des fentes latérales. La tenue de cérémonie nationale de l'homme philippin. Deux faits gouvernent le tracé. LA TÊTE DE MANCHE EST COUPÉE À L'EMMANCHURE MESURÉE — une manche montée ne tombe proprement que si la couture de tête égale l'emmanchure où elle se coud, aussi les emmanchures devant et dos sont tracées et MESURÉES et la largeur de tête est itérée jusqu'à ce que la courbe tracée atteigne cette longueur plus une légère aisance ; la couture déclarée le prouve. Et LA FINITION EST LE VÊTEMENT — la patte, le col bande et la pechera sont les zones travaillées, et la pechera est un champ de broderie MARQUÉ, non un décor dessiné (calado, sombrado et broderie main sont du brodeur).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "barong",
+      "barong-tagalog",
+      "heritage",
+      "filipino",
+      "philippines",
+      "pina",
+      "jusi",
+      "formal-shirt",
+      "pechera",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full barong",
+        "es": "Barong completo",
+        "fr": "Barong complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "cuff",
+        "collar"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Shirt front (placket + pechera)",
+        "es": "Delantero (tapeta + pechera)",
+        "fr": "Devant (patte + pechera)"
+      },
+      "default_color": "#f2ecdd",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Shirt back (cut on fold)",
+        "es": "Espalda (corte al lomo)",
+        "fr": "Dos (coupe au pli)"
+      },
+      "default_color": "#ece5d4",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Long sleeve (cap measured to the armscye)",
+        "es": "Manga larga (copa medida a la sisa)",
+        "fr": "Manche longue (tête mesurée à l'emmanchure)"
+      },
+      "default_color": "#e5ddca",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "cuff",
+      "label": {
+        "en": "Sleeve cuff",
+        "es": "Puño de manga",
+        "fr": "Poignet de manche"
+      },
+      "default_color": "#d8cfba",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Band collar",
+        "es": "Cuello de banda",
+        "fr": "Col bande"
+      },
+      "default_color": "#cdc3ac",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps"
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve & cuff",
+        "es": "Manga y puño",
+        "fr": "Manche et poignet"
+      }
+    },
+    {
+      "id": "finish",
+      "label": {
+        "en": "Collar, pechera & closure",
+        "es": "Cuello, pechera y cierre",
+        "fr": "Col, pechera et fermeture"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 1000,
+      "min": 800,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "The straight body is a quarter of chest + ease per side",
+        "es": "El cuerpo recto es un cuarto de pecho + holgura por lado",
+        "fr": "Le corps droit vaut un quart de poitrine + aisance par côté"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "shirt_length",
+      "type": "slider",
+      "group": "body",
+      "default": 760,
+      "min": 650,
+      "max": 900,
+      "step": 10,
+      "label": {
+        "en": "Shirt length, nape to hem (mm)",
+        "es": "Largo de la camisa, nuca al ruedo (mm)",
+        "fr": "Longueur de la chemise, nuque à ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Worn untucked; the hem is straight with side slits",
+        "es": "Se usa por fuera; el ruedo es recto con aberturas laterales",
+        "fr": "Portée par-dessus ; l'ourlet est droit avec fentes latérales"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 400,
+      "min": 340,
+      "max": 480,
+      "step": 5,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "The band collar is cut to the MEASURED neckline, reported as collar_run_mm",
+        "es": "El cuello de banda se corta al escote MEDIDO, reportado como collar_run_mm",
+        "fr": "Le col bande est coupé à l'encolure MESURÉE, signalé collar_run_mm"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "body",
+      "default": 460,
+      "min": 380,
+      "max": 540,
+      "step": 5,
+      "label": {
+        "en": "Shoulder width, tip to tip (mm)",
+        "es": "Ancho de hombros, punta a punta (mm)",
+        "fr": "Largeur d'épaules, pointe à pointe (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the shoulder tip and, with the armhole depth, the armscye the sleeve is measured to",
+        "es": "Fija la punta del hombro y, con la profundidad de sisa, la sisa a la que se mide la manga",
+        "fr": "Fixe la pointe d'épaule et, avec la profondeur d'emmanchure, l'emmanchure à laquelle la manche est mesurée"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 620,
+      "min": 500,
+      "max": 720,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length, shoulder to wrist (mm)",
+        "es": "Largo de manga, hombro a muñeca (mm)",
+        "fr": "Longueur de manche, épaule à poignet (mm)"
+      },
+      "tooltip": {
+        "en": "The finished sleeve ends in a cuff at the wrist",
+        "es": "La manga acabada termina en puño en la muñeca",
+        "fr": "La manche finie se termine par un poignet au poignet"
+      }
+    },
+    {
+      "id": "armhole_depth",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 250,
+      "min": 210,
+      "max": 310,
+      "step": 5,
+      "label": {
+        "en": "Armhole depth, shoulder to underarm (mm)",
+        "es": "Profundidad de sisa, hombro a axila (mm)",
+        "fr": "Profondeur d'emmanchure, épaule à aisselle (mm)"
+      },
+      "tooltip": {
+        "en": "With the shoulder width, this sets the measured armscye the sleeve cap is solved to",
+        "es": "Con el ancho de hombros, fija la sisa medida a la que se resuelve la copa",
+        "fr": "Avec la largeur d'épaules, fixe l'emmanchure mesurée à laquelle la tête est résolue"
+      }
+    },
+    {
+      "id": "wrist_girth",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 190,
+      "min": 160,
+      "max": 240,
+      "step": 5,
+      "label": {
+        "en": "Wrist girth (mm)",
+        "es": "Contorno de muñeca (mm)",
+        "fr": "Tour de poignet (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the cuff length and the sleeve base above it",
+        "es": "Fija el largo del puño y la base de la manga sobre él",
+        "fr": "Fixe la longueur du poignet et la base de manche au-dessus"
+      }
+    },
+    {
+      "id": "cuff_height",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 65,
+      "min": 45,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Cuff height (mm)",
+        "es": "Alto del puño (mm)",
+        "fr": "Hauteur du poignet (mm)"
+      },
+      "tooltip": {
+        "en": "Cut at double this plus turn-of-cloth",
+        "es": "Se corta al doble más el vuelo de tela",
+        "fr": "Coupé au double plus l'embu"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "group": "finish",
+      "default": 38,
+      "min": 28,
+      "max": 52,
+      "step": 1,
+      "label": {
+        "en": "Band collar height (mm)",
+        "es": "Alto del cuello de banda (mm)",
+        "fr": "Hauteur du col bande (mm)"
+      },
+      "tooltip": {
+        "en": "Cut at double this plus turn-of-cloth; interfaced to stand",
+        "es": "Se corta al doble más el vuelo; entretelado para pararse",
+        "fr": "Coupé au double plus l'embu ; entoilé pour se tenir"
+      }
+    },
+    {
+      "id": "pechera_width",
+      "type": "slider",
+      "group": "finish",
+      "default": 300,
+      "min": 200,
+      "max": 420,
+      "step": 10,
+      "label": {
+        "en": "Pechera (embroidery field) width (mm)",
+        "es": "Ancho de la pechera (campo bordado) (mm)",
+        "fr": "Largeur de la pechera (champ brodé) (mm)"
+      },
+      "tooltip": {
+        "en": "The embroidered chest field, a MARKED zone; the embroidery itself is the maker's",
+        "es": "El campo bordado al pecho, una zona MARCADA; el bordado es del artesano",
+        "fr": "Le champ brodé de poitrine, une zone MARQUÉE ; la broderie est de l'artisan"
+      }
+    },
+    {
+      "id": "side_slit",
+      "type": "slider",
+      "group": "construction",
+      "default": 130,
+      "min": 40,
+      "max": 240,
+      "step": 10,
+      "label": {
+        "en": "Side slit height (mm)",
+        "es": "Alto de la abertura lateral (mm)",
+        "fr": "Hauteur de la fente latérale (mm)"
+      },
+      "tooltip": {
+        "en": "A walking slit; capped below the underarm",
+        "es": "Una abertura para caminar; limitada bajo la axila",
+        "fr": "Une fente de marche ; plafonnée sous l'aisselle"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "group": "construction",
+      "default": 140,
+      "min": 80,
+      "max": 240,
+      "step": 10,
+      "label": {
+        "en": "Body ease (mm)",
+        "es": "Holgura del cuerpo (mm)",
+        "fr": "Aisance du corps (mm)"
+      },
+      "tooltip": {
+        "en": "Total added to the chest girth; a barong is worn loose",
+        "es": "Total añadido al contorno de pecho; el barong se usa holgado",
+        "fr": "Total ajouté au tour de poitrine ; le barong se porte ample"
+      }
+    },
+    {
+      "id": "button_ligne",
+      "type": "slider",
+      "group": "finish",
+      "default": 18,
+      "min": 12,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Placket button size (ligne)",
+        "es": "Tamaño del botón de tapeta (línea)",
+        "fr": "Taille du bouton de patte (ligne)"
+      },
+      "tooltip": {
+        "en": "The sew-through button diameter in lignes; drives the linked Yantra4D solid (mother-of-pearl traditional)",
+        "es": "El diámetro del botón de coser en líneas; dirige el sólido Yantra4D enlazado (nácar tradicional)",
+        "fr": "Le diamètre du bouton à coudre en lignes ; pilote le solide Yantra4D lié (nacre traditionnelle)"
+      }
+    },
+    {
+      "id": "button_count",
+      "type": "slider",
+      "group": "finish",
+      "default": 6,
+      "min": 4,
+      "max": 9,
+      "step": 1,
+      "label": {
+        "en": "Placket button count",
+        "es": "Número de botones de tapeta",
+        "fr": "Nombre de boutons de patte"
+      },
+      "tooltip": {
+        "en": "Evenly spaced down the front placket",
+        "es": "Espaciados uniformemente por la tapeta delantera",
+        "fr": "Espacés régulièrement le long de la patte devant"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 6,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Fine, because sheer piña is French-seamed",
+        "es": "Fino, porque la piña translúcida lleva costura francesa",
+        "fr": "Fine, car la piña transparente se coud en couture anglaise"
+      },
+      "advanced": true
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 20,
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de ruedo (mm)",
+        "fr": "Rentré d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "A narrow rolled hem on sheer cloth",
+        "es": "Un ruedo enrollado estrecho en tela translúcida",
+        "fr": "Un ourlet roulé étroit sur étoffe transparente"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "side_slit <= (shirt_length - armhole_depth) * 0.7",
+      "severity": "warning",
+      "message": {
+        "en": "The side slit is a walking slit, capped below the underarm.",
+        "es": "La abertura lateral es para caminar, limitada bajo la axila.",
+        "fr": "La fente latérale est une fente de marche, plafonnée sous l'aisselle."
+      }
+    },
+    {
+      "expression": "pechera_width <= chest_girth * 0.5",
+      "severity": "warning",
+      "message": {
+        "en": "The pechera field fits across the two fronts; a wider field runs past the side seams.",
+        "es": "La pechera cabe sobre los dos delanteros; un campo más ancho pasa de los costados.",
+        "fr": "La pechera tient sur les deux devants ; un champ plus large dépasse les coutures de côté."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "formal_pina",
+      "label": {
+        "en": "Formal piña",
+        "es": "Piña formal",
+        "fr": "Piña de cérémonie"
+      },
+      "values": {
+        "pechera_width": 340,
+        "collar_height": 42,
+        "ease": 160,
+        "button_count": 7
+      }
+    },
+    {
+      "id": "polo_barong",
+      "label": {
+        "en": "Polo barong (everyday)",
+        "es": "Polo barong (diario)",
+        "fr": "Polo barong (quotidien)"
+      },
+      "values": {
+        "pechera_width": 220,
+        "shirt_length": 700,
+        "ease": 120,
+        "button_count": 5
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "button",
+    "subtype": "front-placket sew-through buttons (mother-of-pearl)",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "hole_count": "4",
+        "hole_dia": "2",
+        "hole_spacing": "3"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "set_in_sleeve",
+        "type": "armscye",
+        "label": {
+          "en": "Set-in sleeve (cap ↔ armscye)",
+          "es": "Manga montada (copa ↔ sisa)",
+          "fr": "Manche montée (tête ↔ emmanchure)"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          },
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "shoulder_width",
+          "armhole_depth",
+          "chest_girth",
+          "sleeve_length"
+        ]
+      },
+      {
+        "id": "front_placket",
+        "type": "button_stand",
+        "label": {
+          "en": "Front button placket",
+          "es": "Tapeta de botones delantera",
+          "fr": "Patte de boutons devant"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "cf"
+          }
+        ],
+        "parameters": [
+          "button_ligne",
+          "button_count",
+          "shirt_length"
+        ]
+      },
+      {
+        "id": "band_collar",
+        "type": "neckline",
+        "label": {
+          "en": "Band collar neckline",
+          "es": "Escote del cuello de banda",
+          "fr": "Encolure du col bande"
+        },
+        "edges": [
+          {
+            "piece": "collar",
+            "edge": "neck_edge"
+          },
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "collar_height"
+        ]
+      },
+      {
+        "id": "cuffed_sleeve",
+        "type": "cuff",
+        "label": {
+          "en": "Cuffed sleeve wrist",
+          "es": "Muñeca de manga con puño",
+          "fr": "Poignet de manche à manchette"
+        },
+        "edges": [
+          {
+            "piece": "cuff",
+            "edge": "wrist_edge"
+          },
+          {
+            "piece": "sleeve",
+            "edge": "cuff_edge"
+          }
+        ],
+        "parameters": [
+          "wrist_girth",
+          "cuff_height"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "heritage": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The barong tagalog is frequently reproduced from the outside as a plain shirt with a diagonal panel of print stitched on, which misses the two things that make it a barong: a true set-in sleeve hung on a measured armscye, and a worked pechera that is embroidered rather than printed. Publishing a draft that solves the sleeve cap to the measured armhole, cuts the band collar to the measured neckline, and marks the pechera as an embroidery field the maker fills keeps the garment honest and cuttable in sheer piña or jusi. No embroidery pattern is drawn — calado, sombrado and hand embroidery belong to the embroiderers who make them.",
+      "es": "El barong tagalog se reproduce con frecuencia desde afuera como una camisa lisa con un panel diagonal de estampado cosido encima, lo que pierde las dos cosas que lo hacen barong: una verdadera manga montada colgada de una sisa medida y una pechera trabajada que se borda, no se estampa. Publicar un trazo que resuelve la copa de la manga a la sisa medida, corta el cuello de banda al escote medido y marca la pechera como campo de bordado que el artesano llena mantiene la prenda honesta y cortable en piña o jusi translúcidos. No se dibuja ningún patrón de bordado — el calado, el sombrado y el bordado a mano pertenecen a los bordadores que los hacen.",
+      "fr": "Le barong tagalog est souvent reproduit de l'extérieur comme une chemise unie avec un panneau diagonal imprimé cousu par-dessus, ce qui manque les deux choses qui en font un barong : une vraie manche montée suspendue à une emmanchure mesurée, et une pechera travaillée qui est brodée et non imprimée. Publier un tracé qui résout la tête de manche à l'emmanchure mesurée, coupe le col bande à l'encolure mesurée et marque la pechera comme un champ de broderie que l'artisan remplit garde le vêtement honnête et coupable en piña ou jusi transparents. Aucun motif de broderie n'est dessiné — le calado, le sombrado et la broderie main appartiennent aux brodeurs qui les font."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

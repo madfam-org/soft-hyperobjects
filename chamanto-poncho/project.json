@@ -1,0 +1,379 @@
+{
+  "project": {
+    "name": "Chamanto poncho",
+    "slug": "chamanto-poncho",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The fine dress poncho of the Chilean huaso — the elegant counterpart to the everyday manta, woven in fine wool and silk. Its defining features are that it is REVERSIBLE (a light day face and a dark night face, woven double so both sides show), it is banded with the LISTADO field of fine coloured stripes, and it is edged with the woven TRENCILLA border. Two things the draft solves honestly. THE NECK SLIT IS CENTRED AND SIZED FROM THE HEAD — the slit length is solved from the head girth so it clears the head but no more, and it is centred on the cloth; an off-centre or oversized slit is the first thing a poncho draft gets wrong. And IT IS REVERSIBLE, SO THE BORDER IS SYMMETRIC — because both faces show, the trencilla border and the listado are drawn symmetric front-to-back and both faces are finished. No specific listado colourway or trencilla motif is drawn — those are the weaver's.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El fino poncho de gala del huaso chileno — la contraparte elegante de la manta diaria, tejido en fina lana y seda. Sus rasgos distintivos son que es REVERSIBLE (una cara de día clara y una de noche oscura, tejido doble para que ambas caras se vean), va bandeado con el campo del LISTADO de finas rayas de color, y va orillado con la TRENCILLA tejida. Dos cosas resuelve el trazo con honestidad. LA ABERTURA DEL CUELLO VA CENTRADA Y DIMENSIONADA DESDE LA CABEZA — el largo de la abertura se resuelve del contorno de cabeza para que pase la cabeza y no más, y va centrada en la tela; una abertura descentrada o grande de más es lo primero que un trazo de poncho equivoca. Y ES REVERSIBLE, ASÍ QUE EL ORILLO ES SIMÉTRICO — como ambas caras se ven, la trencilla y el listado se dibujan simétricos delante-atrás y ambas caras se rematan. No se dibuja ningún colorido de listado ni motivo de trencilla — son del tejedor.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le fin poncho d'apparat du huaso chilien — le pendant élégant de la manta de tous les jours, tissé en fine laine et soie. Ses traits caractéristiques : il est RÉVERSIBLE (une face jour claire et une face nuit sombre, tissé double pour que les deux faces se voient), il est bandé du champ du LISTADO de fines rayures de couleur, et il est bordé de la TRENCILLA tissée. Deux choses résolues honnêtement. L'OUVERTURE DU COU EST CENTRÉE ET DIMENSIONNÉE DEPUIS LA TÊTE — la longueur de l'ouverture est résolue depuis le tour de tête pour qu'elle passe la tête sans plus, et elle est centrée sur l'étoffe ; une ouverture décentrée ou trop grande est la première chose qu'un tracé de poncho rate. Et IL EST RÉVERSIBLE, DONC LE BORD EST SYMÉTRIQUE — comme les deux faces se voient, la trencilla et le listado sont tracés symétriques devant-derrière et les deux faces sont finies. Aucun coloris de listado ni motif de trencilla n'est dessiné — ils sont du tisserand.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "chamanto",
+      "heritage",
+      "chilean",
+      "huaso",
+      "poncho",
+      "reversible",
+      "listado",
+      "trencilla",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full chamanto",
+        "es": "Chamanto completo",
+        "fr": "Chamanto complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "cloth",
+        "border"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "cloth",
+      "label": {
+        "en": "Chamanto cloth (reversible, listado + trencilla)",
+        "es": "Tela del chamanto (reversible, listado + trencilla)",
+        "fr": "Étoffe du chamanto (réversible, listado + trencilla)"
+      },
+      "default_color": "#e8e0d0",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "border",
+      "label": {
+        "en": "Trencilla border strip",
+        "es": "Tira de trencilla",
+        "fr": "Bande de trencilla"
+      },
+      "default_color": "#3a3020",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "cloth",
+      "label": {
+        "en": "Cloth & drape",
+        "es": "Tela y caída",
+        "fr": "Étoffe et tombé"
+      }
+    },
+    {
+      "id": "weave",
+      "label": {
+        "en": "Listado & trencilla",
+        "es": "Listado y trencilla",
+        "fr": "Listado et trencilla"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "cloth_width",
+      "type": "slider",
+      "group": "cloth",
+      "default": 1500,
+      "min": 1100,
+      "max": 1900,
+      "step": 20,
+      "label": {
+        "en": "Cloth width, tip to tip (mm)",
+        "es": "Ancho de la tela, punta a punta (mm)",
+        "fr": "Largeur de l'étoffe, pointe à pointe (mm)"
+      },
+      "tooltip": {
+        "en": "Across the shoulders; the chamanto covers the arms to the elbow",
+        "es": "A través de los hombros; el chamanto cubre los brazos hasta el codo",
+        "fr": "En travers des épaules ; le chamanto couvre les bras jusqu'au coude"
+      }
+    },
+    {
+      "id": "cloth_length",
+      "type": "slider",
+      "group": "cloth",
+      "default": 1150,
+      "min": 850,
+      "max": 1450,
+      "step": 20,
+      "label": {
+        "en": "Cloth length, front/back drop (mm)",
+        "es": "Largo de la tela, caída delantera/trasera (mm)",
+        "fr": "Longueur de l'étoffe, chute devant/dos (mm)"
+      },
+      "tooltip": {
+        "en": "The drop of each face from the shoulder line",
+        "es": "La caída de cada cara desde la línea del hombro",
+        "fr": "La chute de chaque face depuis la ligne d'épaule"
+      }
+    },
+    {
+      "id": "head_girth",
+      "type": "slider",
+      "group": "cloth",
+      "default": 580,
+      "min": 500,
+      "max": 660,
+      "step": 5,
+      "label": {
+        "en": "Head girth (mm)",
+        "es": "Contorno de cabeza (mm)",
+        "fr": "Tour de tête (mm)"
+      },
+      "tooltip": {
+        "en": "The neck slit is solved from this so it clears the head but no more",
+        "es": "La abertura del cuello se resuelve de esto para que pase la cabeza y no más",
+        "fr": "L'ouverture du cou est résolue depuis ceci pour passer la tête sans plus"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "head_girth"
+      }
+    },
+    {
+      "id": "neck_slit_ease",
+      "type": "slider",
+      "group": "cloth",
+      "default": 60,
+      "min": 20,
+      "max": 140,
+      "step": 10,
+      "label": {
+        "en": "Neck slit ease (mm)",
+        "es": "Holgura de la abertura del cuello (mm)",
+        "fr": "Aisance de l'ouverture du cou (mm)"
+      },
+      "tooltip": {
+        "en": "Added to half the head girth; capped at half the drop",
+        "es": "Añadida a la mitad del contorno de cabeza; limitada a la mitad de la caída",
+        "fr": "Ajoutée à la moitié du tour de tête ; plafonnée à la moitié de la chute"
+      }
+    },
+    {
+      "id": "trencilla_width",
+      "type": "slider",
+      "group": "weave",
+      "default": 80,
+      "min": 40,
+      "max": 140,
+      "step": 5,
+      "label": {
+        "en": "Trencilla border width (mm)",
+        "es": "Ancho de la trencilla (mm)",
+        "fr": "Largeur de la trencilla (mm)"
+      },
+      "tooltip": {
+        "en": "The woven border round the whole perimeter; symmetric because the cloth is reversible",
+        "es": "El orillo tejido en todo el perímetro; simétrico porque la tela es reversible",
+        "fr": "Le bord tissé sur tout le périmètre ; symétrique car l'étoffe est réversible"
+      }
+    },
+    {
+      "id": "listado_count",
+      "type": "slider",
+      "group": "weave",
+      "default": 7,
+      "min": 3,
+      "max": 14,
+      "step": 1,
+      "label": {
+        "en": "Listado stripe bands",
+        "es": "Bandas de rayas del listado",
+        "fr": "Bandes de rayures du listado"
+      },
+      "tooltip": {
+        "en": "The number of fine coloured stripe bands in the listado field; the colours are the weaver's",
+        "es": "El número de bandas de rayas finas del listado; los colores son del tejedor",
+        "fr": "Le nombre de bandes de fines rayures du listado ; les couleurs sont du tisserand"
+      }
+    },
+    {
+      "id": "fringe_depth",
+      "type": "slider",
+      "group": "construction",
+      "default": 40,
+      "min": 0,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Fringe depth (mm)",
+        "es": "Profundidad del fleco (mm)",
+        "fr": "Profondeur de la frange (mm)"
+      },
+      "tooltip": {
+        "en": "Optional fringe at the front and back hems",
+        "es": "Fleco opcional en los ruedos delantero y trasero",
+        "fr": "Frange optionnelle aux ourlets devant et dos"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "label": {
+        "en": "Loom-seam allowance (mm)",
+        "es": "Margen de costura de telar (mm)",
+        "fr": "Marge de couture de métier (mm)"
+      },
+      "tooltip": {
+        "en": "The centre seam joining the two loom halves; the perimeter is finished, not hemmed",
+        "es": "La costura central que une las dos mitades de telar; el perímetro se remata, no se ruedo",
+        "fr": "La couture centrale joignant les deux moitiés de métier ; le périmètre est fini, non ourlé"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "head_girth / 2 + neck_slit_ease <= cloth_length * 0.5",
+      "severity": "warning",
+      "message": {
+        "en": "The neck slit is capped at half the drop; a longer slit would open the cloth past the shoulder.",
+        "es": "La abertura se limita a la mitad de la caída; una más larga abriría la tela más allá del hombro.",
+        "fr": "L'ouverture est plafonnée à la moitié de la chute ; plus longue, elle ouvrirait l'étoffe au-delà de l'épaule."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "donihue_formal",
+      "label": {
+        "en": "Doñihue formal",
+        "es": "Doñihue de gala",
+        "fr": "Doñihue d'apparat"
+      },
+      "values": {
+        "trencilla_width": 100,
+        "listado_count": 9,
+        "cloth_length": 1200
+      }
+    },
+    {
+      "id": "everyday_chamanto",
+      "label": {
+        "en": "Everyday chamanto",
+        "es": "Chamanto diario",
+        "fr": "Chamanto de tous les jours"
+      },
+      "values": {
+        "trencilla_width": 60,
+        "listado_count": 5,
+        "fringe_depth": 30
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "closure-free — a poncho has no closure"
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "neck_slit",
+        "type": "neckline",
+        "label": {
+          "en": "Centred neck slit",
+          "es": "Abertura de cuello centrada",
+          "fr": "Ouverture de cou centrée"
+        },
+        "edges": [
+          {
+            "piece": "cloth",
+            "edge": "shoulder_line"
+          }
+        ],
+        "parameters": [
+          "head_girth",
+          "neck_slit_ease",
+          "cloth_length"
+        ]
+      },
+      {
+        "id": "trencilla_edge",
+        "type": "hem",
+        "label": {
+          "en": "Trencilla border",
+          "es": "Orillo de trencilla",
+          "fr": "Bord de trencilla"
+        },
+        "edges": [
+          {
+            "piece": "cloth",
+            "edge": "selvedge_l"
+          },
+          {
+            "piece": "border",
+            "edge": "inner"
+          }
+        ],
+        "parameters": [
+          "trencilla_width",
+          "cloth_width",
+          "cloth_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "heritage": true,
+      "hardware_bridge": false,
+      "closure_free": true,
+      "reversible": true
+    },
+    "societal_benefit": {
+      "en": "The chamanto is often reproduced as a printed one-sided poncho, which loses the two things that make it a chamanto: it is woven reversible, and it is finished so both a light day face and a dark night face show. Publishing a draft that centres and sizes the neck slit from the head, keeps the trencilla and listado symmetric because the cloth is reversible, and marks both faces as finished keeps the garment's real logic legible — while the listado colourways and trencilla motifs, the work of the master weavers of Doñihue, are left entirely to the weaver.",
+      "es": "El chamanto se reproduce a menudo como un poncho estampado de una cara, lo que pierde las dos cosas que lo hacen chamanto: se teje reversible y se remata para que se vean una cara de día clara y una de noche oscura. Publicar un trazo que centra y dimensiona la abertura del cuello desde la cabeza, mantiene la trencilla y el listado simétricos porque la tela es reversible, y marca ambas caras como rematadas conserva la lógica real de la prenda — mientras los coloridos del listado y los motivos de la trencilla, obra de las maestras tejedoras de Doñihue, quedan enteramente al tejedor.",
+      "fr": "Le chamanto est souvent reproduit comme un poncho imprimé à une face, ce qui perd les deux choses qui en font un chamanto : il est tissé réversible et fini pour qu'une face jour claire et une face nuit sombre se voient. Publier un tracé qui centre et dimensionne l'ouverture du cou depuis la tête, garde la trencilla et le listado symétriques parce que l'étoffe est réversible, et marque les deux faces comme finies conserve la logique réelle du vêtement — tandis que les coloris du listado et les motifs de la trencilla, œuvre des maîtres tisserandes de Doñihue, sont laissés entièrement au tisserand."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

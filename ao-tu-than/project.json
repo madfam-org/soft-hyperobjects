@@ -1,0 +1,515 @@
+{
+  "project": {
+    "name": "Áo tứ thân (four-panel dress)",
+    "slug": "ao-tu-than",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The four-panel long dress of northern Vietnam's countryside — the everyday and festival dress of the Kinh before the fitted áo dài, worn with the yếm bib, a wide waist sash, and the flat nón quai thao hat. Its name is its construction: TỨ THÂN, four panels — two BACK panels seamed at centre back, and two FRONT panels left free as flaps knotted or crossed low over the sash. Two facts govern the draft. IT IS FOUR PANELS, AND THE BACK CENTRE SEAM IS REAL — the garment is not a fold-cut body but four separate panels; the panel width is a real parameter and a loom too narrow to make the flap overlap is reported rather than silently widened. And THE FRONT IS FLAPS, NOT A CLOSED FRONT — the two front panels are worn open, crossed low and tied; only a small throat hook holds the collar band, and the body is held by the waist sash. The neck band is cut to the MEASURED neckline (both back quarters + both flap necks).\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El vestido largo de cuatro paños del campo del norte de Vietnam — vestimenta diaria y de fiesta de los kinh antes del entallado áo dài, usado con el yếm (peto), una faja ancha y el sombrero plano nón quai thao. Su nombre es su construcción: TỨ THÂN, cuatro paños — dos paños de ESPALDA cosidos al centro de espalda y dos paños DELANTEROS libres como faldones anudados o cruzados bajo la faja. Dos hechos gobiernan el trazo. SON CUATRO PAÑOS, Y LA COSTURA CENTRAL DE ESPALDA ES REAL — no es un cuerpo doblado sino cuatro paños separados; el ancho de paño es un parámetro real y un telar demasiado angosto para el cruce de faldones se reporta en vez de ensancharse. Y EL FRENTE SON FALDONES, NO UN FRENTE CERRADO — los dos paños delanteros van abiertos, cruzados bajo y atados; sólo un corchetito de garganta sujeta la banda de cuello, y el cuerpo lo sostiene la faja. La banda de cuello se corta al escote MEDIDO (ambas espaldas + ambos faldones).\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La longue robe à quatre pans des campagnes du nord du Vietnam — tenue quotidienne et de fête des Kinh avant l'áo dài ajusté, portée avec le yếm (bavette), une large ceinture et le chapeau plat nón quai thao. Son nom est sa construction : TỨ THÂN, quatre pans — deux pans DE DOS cousus au milieu du dos, et deux pans DEVANT laissés libres en pans noués ou croisés bas sur la ceinture. Deux faits gouvernent le tracé. CE SONT QUATRE PANS, ET LA COUTURE MILIEU DOS EST RÉELLE — ce n'est pas un corps plié mais quatre pans séparés ; la largeur de pan est un paramètre réel et un métier trop étroit pour le croisement des pans est signalé plutôt qu'élargi. Et LE DEVANT EST FAIT DE PANS, NON D'UN DEVANT FERMÉ — les deux pans devant se portent ouverts, croisés bas et noués ; seule une petite agrafe de gorge tient la bande de col, et le corps est tenu par la ceinture. La bande de col est coupée à l'encolure MESURÉE (les deux dos + les deux pans).\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "ao-tu-than",
+      "tu-than",
+      "heritage",
+      "vietnamese",
+      "four-panel",
+      "robe",
+      "flap-front",
+      "panel-width",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full dress",
+        "es": "Vestido completo",
+        "fr": "Robe complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "back",
+        "flap",
+        "collar"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (two panels seamed at CB)",
+        "es": "Espalda (dos paños cosidos al centro)",
+        "fr": "Dos (deux pans cousus au milieu)"
+      },
+      "default_color": "#6a4a63",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "flap",
+      "label": {
+        "en": "Front flap (free crossing panel)",
+        "es": "Faldón delantero (paño libre cruzado)",
+        "fr": "Pan devant (panneau libre croisé)"
+      },
+      "default_color": "#7a566f",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Neck band",
+        "es": "Banda de cuello",
+        "fr": "Bande de col"
+      },
+      "default_color": "#573b52",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "cloth",
+      "label": {
+        "en": "Cloth & body",
+        "es": "Tela y cuerpo",
+        "fr": "Étoffe et corps"
+      }
+    },
+    {
+      "id": "front",
+      "label": {
+        "en": "Flaps & closure",
+        "es": "Faldones y cierre",
+        "fr": "Pans et fermeture"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "panel_width",
+      "type": "slider",
+      "group": "cloth",
+      "default": 380,
+      "min": 300,
+      "max": 520,
+      "step": 10,
+      "label": {
+        "en": "Loom panel width (mm)",
+        "es": "Ancho del paño de telar (mm)",
+        "fr": "Largeur du panneau de métier (mm)"
+      },
+      "tooltip": {
+        "en": "Each of the four panels is close to a loom width; the body circuit is computed from it, and a loom too narrow to make the flap overlap is reported",
+        "es": "Cada uno de los cuatro paños es casi un ancho de telar; el circuito se calcula de él, y un telar demasiado angosto para el cruce se reporta",
+        "fr": "Chacun des quatre pans avoisine une largeur de métier ; le circuit se calcule depuis lui, et un métier trop étroit pour le croisement est signalé"
+      }
+    },
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "cloth",
+      "default": 880,
+      "min": 720,
+      "max": 1200,
+      "step": 10,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Checked against the four-panel circuit, not used to shape it",
+        "es": "Se contrasta contra el circuito de cuatro paños, no se usa para conformarlo",
+        "fr": "Vérifié face au circuit à quatre pans, non utilisé pour le façonner"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "dress_length",
+      "type": "slider",
+      "group": "cloth",
+      "default": 1180,
+      "min": 950,
+      "max": 1450,
+      "step": 10,
+      "label": {
+        "en": "Dress length, shoulder to hem (mm)",
+        "es": "Largo del vestido, hombro al ruedo (mm)",
+        "fr": "Longueur de la robe, épaule à ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "The long panels reach mid-calf to ankle",
+        "es": "Los paños largos llegan a media pantorrilla o tobillo",
+        "fr": "Les longs pans descendent à mi-mollet ou cheville"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "cloth",
+      "default": 360,
+      "min": 300,
+      "max": 440,
+      "step": 5,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "The band is cut to the MEASURED neckline, reported as collar_run_mm",
+        "es": "La banda se corta al escote MEDIDO, reportado como collar_run_mm",
+        "fr": "La bande est coupée à l'encolure MESURÉE, signalée collar_run_mm"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "group": "cloth",
+      "default": 30,
+      "min": 18,
+      "max": 55,
+      "step": 1,
+      "label": {
+        "en": "Neck band height (mm)",
+        "es": "Alto de la banda de cuello (mm)",
+        "fr": "Hauteur de la bande de col (mm)"
+      },
+      "tooltip": {
+        "en": "A low, soft stand; cut at double this plus turn-of-cloth",
+        "es": "Un cuello bajo y suave; se corta al doble más el vuelo",
+        "fr": "Un col bas et souple ; coupé au double plus l'embu"
+      }
+    },
+    {
+      "id": "shoulder_slope",
+      "type": "slider",
+      "group": "cloth",
+      "default": 40,
+      "min": 20,
+      "max": 70,
+      "step": 5,
+      "label": {
+        "en": "Shoulder slope (mm)",
+        "es": "Caída del hombro (mm)",
+        "fr": "Pente d'épaule (mm)"
+      },
+      "tooltip": {
+        "en": "The drop of the shoulder line from neck to the one-piece sleeve",
+        "es": "La caída de la línea de hombro del cuello a la manga en una pieza",
+        "fr": "La chute de la ligne d'épaule du cou à la manche d'une pièce"
+      }
+    },
+    {
+      "id": "sleeve_reach",
+      "type": "slider",
+      "group": "cloth",
+      "default": 480,
+      "min": 300,
+      "max": 640,
+      "step": 10,
+      "label": {
+        "en": "Sleeve reach past the panel (mm)",
+        "es": "Alcance de la manga más allá del paño (mm)",
+        "fr": "Portée de manche au-delà du panneau (mm)"
+      },
+      "tooltip": {
+        "en": "The sleeve is cut in one with the body; this is how far the panel runs past the side",
+        "es": "La manga va en una pieza con el cuerpo; esto es cuánto sigue el paño más allá del costado",
+        "fr": "La manche est d'une pièce avec le corps ; c'est la longueur du panneau au-delà du côté"
+      }
+    },
+    {
+      "id": "armhole_depth",
+      "type": "slider",
+      "group": "cloth",
+      "default": 260,
+      "min": 200,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Underarm depth (mm)",
+        "es": "Profundidad de axila (mm)",
+        "fr": "Profondeur d'aisselle (mm)"
+      },
+      "tooltip": {
+        "en": "The corner level of the one-piece sleeve",
+        "es": "El nivel de la esquina de la manga en una pieza",
+        "fr": "Le niveau de l'angle de la manche d'une pièce"
+      }
+    },
+    {
+      "id": "flap_overlap",
+      "type": "slider",
+      "group": "front",
+      "default": 0.55,
+      "min": 0.35,
+      "max": 0.8,
+      "step": 0.01,
+      "label": {
+        "en": "Flap crossing reach (fraction of half-panel)",
+        "es": "Alcance del cruce del faldón (fracción del medio paño)",
+        "fr": "Portée du croisement du pan (fraction du demi-panneau)"
+      },
+      "tooltip": {
+        "en": "How far each free front flap crosses toward the centre; part of the body circuit",
+        "es": "Cuánto cruza cada faldón libre hacia el centro; parte del circuito del cuerpo",
+        "fr": "Jusqu'où chaque pan libre croise vers le centre ; part du circuit du corps"
+      }
+    },
+    {
+      "id": "closure_span",
+      "type": "slider",
+      "group": "front",
+      "default": 18,
+      "min": 10,
+      "max": 34,
+      "step": 1,
+      "label": {
+        "en": "Throat hook-and-eye size (mm)",
+        "es": "Tamaño del corchete de garganta (mm)",
+        "fr": "Taille de l'agrafe de gorge (mm)"
+      },
+      "tooltip": {
+        "en": "The single hook at the collar band; drives the linked Yantra4D solid. The dress is otherwise held by the sash and tied flaps",
+        "es": "El único corchete de la banda de cuello; dirige el sólido Yantra4D enlazado. El vestido lo sostiene además la faja y los faldones atados",
+        "fr": "L'unique agrafe de la bande de col ; pilote le solide Yantra4D lié. La robe est par ailleurs tenue par la ceinture et les pans noués"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 6,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "The CB seam, the side seams, and the sleeve seams",
+        "es": "La costura central, las de costado y las de manga",
+        "fr": "La couture milieu, celles de côté et de manche"
+      },
+      "advanced": true
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 30,
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de ruedo (mm)",
+        "fr": "Rentré d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "A narrow hem on the long panels and the flaps",
+        "es": "Un ruedo estrecho en los paños largos y los faldones",
+        "fr": "Un ourlet étroit sur les longs pans et les pans devant"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "panel_width * 2 + panel_width * 2 * flap_overlap >= chest_girth + 40",
+      "severity": "warning",
+      "message": {
+        "en": "The two back panels plus the flaps' crossing must reach round the wearer with ease; a narrower loom is reported as panel_sufficient=false.",
+        "es": "Los dos paños de espalda más el cruce de faldones deben rodear al portador con holgura; un telar más angosto se reporta como panel_sufficient=false.",
+        "fr": "Les deux pans de dos plus le croisement des pans doivent faire le tour du porteur avec aisance ; un métier plus étroit est signalé panel_sufficient=false."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "kinh_festival",
+      "label": {
+        "en": "Kinh festival",
+        "es": "Fiesta kinh",
+        "fr": "Fête kinh"
+      },
+      "values": {
+        "panel_width": 400,
+        "dress_length": 1220,
+        "flap_overlap": 0.6
+      }
+    },
+    {
+      "id": "narrow_handloom",
+      "label": {
+        "en": "Narrow handloom",
+        "es": "Telar manual angosto",
+        "fr": "Métier à bras étroit"
+      },
+      "values": {
+        "panel_width": 320,
+        "chest_girth": 820,
+        "flap_overlap": 0.7
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "hook",
+    "subtype": "throat hook-and-eye on the collar band",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "hook-and-eye",
+      "linked": true,
+      "params_map": {
+        "size_mm": "closure_span",
+        "columns": "1",
+        "rows": "1",
+        "plate_t": "1"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "throat_closure",
+        "type": "placket",
+        "label": {
+          "en": "Throat hook closure",
+          "es": "Cierre de corchete de garganta",
+          "fr": "Fermeture à agrafe de gorge"
+        },
+        "edges": [
+          {
+            "piece": "collar",
+            "edge": "end_r"
+          },
+          {
+            "piece": "flap",
+            "edge": "crossing"
+          }
+        ],
+        "parameters": [
+          "closure_span",
+          "flap_overlap"
+        ]
+      },
+      {
+        "id": "neck_band",
+        "type": "neckline",
+        "label": {
+          "en": "Neck band neckline",
+          "es": "Escote de la banda de cuello",
+          "fr": "Encolure de la bande de col"
+        },
+        "edges": [
+          {
+            "piece": "collar",
+            "edge": "neck_edge"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          },
+          {
+            "piece": "flap",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "collar_height"
+        ]
+      },
+      {
+        "id": "one_piece_sleeve",
+        "type": "custom",
+        "label": {
+          "en": "One-piece sleeve and side",
+          "es": "Manga en una pieza y costado",
+          "fr": "Manche d'une pièce et côté"
+        },
+        "edges": [
+          {
+            "piece": "back",
+            "edge": "sleeve_under"
+          },
+          {
+            "piece": "flap",
+            "edge": "sleeve_under"
+          }
+        ],
+        "parameters": [
+          "panel_width",
+          "sleeve_reach",
+          "armhole_depth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": true,
+      "heritage": true,
+      "hardware_bridge": true,
+      "panel_width_native": true
+    },
+    "societal_benefit": {
+      "en": "The áo tứ thân is often flattened into a single-piece robe with a diagonal edge, which erases the one thing its name records: it is four panels, two seamed at the back and two hanging free as flaps, fitted by the sash rather than by shaping. Publishing a draft that treats the panel width as the unit, declares the centre-back seam, measures the neck run, and reports when a loom is too narrow to make the flaps cross keeps the garment's logic legible for people making and wearing it. The yếm bib is a separate garment, and no brocade motif is drawn — the cloth is the maker's.",
+      "es": "El áo tứ thân se aplana a menudo en una túnica de una pieza con un canto diagonal, lo que borra lo único que su nombre registra: son cuatro paños, dos cosidos atrás y dos colgando libres como faldones, ajustados por la faja y no por entallado. Publicar un trazo que toma el ancho de paño como unidad, declara la costura central de espalda, mide el corrido del cuello y reporta cuando un telar es demasiado angosto para cruzar los faldones mantiene legible la lógica de la prenda para quien la hace y la viste. El yếm es una prenda aparte, y no se dibuja ningún motivo de brocado — la tela es del artesano.",
+      "fr": "L'áo tứ thân est souvent aplati en une robe d'une pièce à bord diagonal, ce qui efface la seule chose que son nom consigne : ce sont quatre pans, deux cousus au dos et deux pendant libres en pans, ajustés par la ceinture et non par cintrage. Publier un tracé qui prend la largeur de pan pour unité, déclare la couture milieu dos, mesure le développé de col et signale quand un métier est trop étroit pour croiser les pans garde la logique du vêtement lisible pour qui le fait et le porte. Le yếm est un vêtement à part, et aucun motif de brocart n'est dessiné — l'étoffe est celle de l'artisan."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

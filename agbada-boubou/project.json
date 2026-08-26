@@ -1,0 +1,492 @@
+{
+  "project": {
+    "name": "Agbada (grand boubou)",
+    "slug": "agbada-boubou",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The West African grand gown: an enormous width of cloth folded once at the shoulder, with an opening cut for the head, worn as the widest layer over a long-sleeved tunic and drawstring trousers — the Yoruba agbada over the bùbá and ṣòkòtò, the Senegambian grand boubou (mbubb) over the caftan and tubay. There is no shoulder seam and no armscye: the sleeves are the sides of the rectangle, and the arm reaches out through the open sides while the cloth cascades past the fingertips. Two facts govern the draft, and both are African rather than Western. THE GARMENT IS A WIDTH, FOLDED — the cloth is folded at the shoulder line, the head-hole is cut on that fold, and the spread of the cloth (wing_span) is a real parameter; a bolt too narrow to make the wing is reported, not silently widened. And THE OPENING IS FACED, NOT COLLARED — the neck is a wide, deep opening bound with the worked yoke, and the facing is cut to the MEASURED neckline, not to a neck girth, because a folded-cloth neckline is two curves plus a deep front drop, not a circle.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La gran túnica de África Occidental: una enorme anchura de tela doblada una vez en el hombro, con una abertura cortada para la cabeza, vestida como la capa más amplia sobre una túnica de manga larga y un pantalón de cordón — el agbada yoruba sobre la bùbá y el ṣòkòtò, el gran bubú senegambiano (mbubb) sobre el caftán y el tubay. No hay costura de hombro ni sisa: las mangas son los lados del rectángulo, y el brazo sale por los costados abiertos mientras la tela cae más allá de la punta de los dedos. Dos hechos gobiernan el trazo, y ambos son africanos y no occidentales. LA PRENDA ES UNA ANCHURA, DOBLADA — la tela se dobla en la línea del hombro, la abertura de la cabeza se corta sobre ese doblez y el despliegue de la tela (wing_span) es un parámetro real; un lienzo demasiado angosto para formar el ala se reporta, no se ensancha en silencio. Y LA ABERTURA VA FORRADA, NO ACUELLADA — el escote es una abertura amplia y profunda ribeteada con el canesú bordado, y el forro se corta al escote MEDIDO, no a un contorno de cuello, porque un escote de tela doblada son dos curvas más una caída delantera profunda, no un círculo.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La grande robe d'Afrique de l'Ouest : une immense largeur d'étoffe pliée une fois à l'épaule, avec une ouverture taillée pour la tête, portée comme la couche la plus ample par-dessus une tunique à manches longues et un pantalon à cordon — l'agbada yoruba sur le bùbá et le ṣòkòtò, le grand boubou sénégambien (mbubb) sur le caftan et le tubay. Il n'y a ni couture d'épaule ni emmanchure : les manches sont les côtés du rectangle, et le bras passe par les côtés ouverts tandis que l'étoffe descend au-delà des doigts. Deux faits gouvernent le tracé, et tous deux sont africains et non occidentaux. LE VÊTEMENT EST UNE LARGEUR, PLIÉE — l'étoffe est pliée à la ligne d'épaule, l'ouverture de tête est taillée sur ce pli, et le déploiement de l'étoffe (wing_span) est un paramètre réel ; un lé trop étroit pour former l'aile est signalé, non élargi en silence. Et L'OUVERTURE EST PAREMENTÉE, NON COLLETÉE — l'encolure est une large ouverture profonde bordée du plastron brodé, et la parementure est coupée à l'encolure MESURÉE, non à un tour de cou, car une encolure d'étoffe pliée est deux courbes plus une chute devant, non un cercle.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "agbada",
+      "grand-boubou",
+      "mbubb",
+      "heritage",
+      "west-african",
+      "yoruba",
+      "wolof",
+      "robe",
+      "faced-neck",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full gown",
+        "es": "Túnica completa",
+        "fr": "Robe complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "gown",
+        "facing",
+        "pocket"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "gown",
+      "label": {
+        "en": "Grand boubou body (one width, folded at the shoulder)",
+        "es": "Cuerpo del gran bubú (una anchura, doblada en el hombro)",
+        "fr": "Corps du grand boubou (une largeur, pliée à l'épaule)"
+      },
+      "default_color": "#e6ddc9",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "facing",
+      "label": {
+        "en": "Neck facing / worked yoke",
+        "es": "Forro del escote / canesú bordado",
+        "fr": "Parementure d'encolure / plastron brodé"
+      },
+      "default_color": "#d8caae",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "pocket",
+      "label": {
+        "en": "Chest patch pocket",
+        "es": "Bolsillo de parche al pecho",
+        "fr": "Poche plaquée poitrine"
+      },
+      "default_color": "#cbbc9d",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "cloth",
+      "label": {
+        "en": "Cloth & drape",
+        "es": "Tela y caída",
+        "fr": "Étoffe et tombé"
+      }
+    },
+    {
+      "id": "neck",
+      "label": {
+        "en": "Neck & yoke",
+        "es": "Escote y canesú",
+        "fr": "Encolure et plastron"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "wing_span",
+      "type": "slider",
+      "group": "cloth",
+      "default": 1150,
+      "min": 800,
+      "max": 1500,
+      "step": 10,
+      "label": {
+        "en": "Wing span, centre front to cloth edge (mm)",
+        "es": "Envergadura, centro delantero al borde (mm)",
+        "fr": "Envergure, milieu devant au bord (mm)"
+      },
+      "tooltip": {
+        "en": "The half-span of the spread cloth. The 'sleeve' is the side of the rectangle running out this far — a bolt too narrow to reach is reported as bolt_sufficient=false, not silently widened",
+        "es": "La media envergadura de la tela desplegada. La 'manga' es el lado del rectángulo que llega hasta aquí — un lienzo demasiado angosto se reporta como bolt_sufficient=false, no se ensancha",
+        "fr": "La demi-envergure de l'étoffe déployée. La 'manche' est le côté du rectangle qui court jusque-là — un lé trop étroit est signalé bolt_sufficient=false, non élargi"
+      }
+    },
+    {
+      "id": "gown_length",
+      "type": "slider",
+      "group": "cloth",
+      "default": 1360,
+      "min": 1000,
+      "max": 1650,
+      "step": 10,
+      "label": {
+        "en": "Gown length, shoulder fold to hem (mm)",
+        "es": "Largo de la túnica, doblez del hombro al ruedo (mm)",
+        "fr": "Longueur de la robe, pli d'épaule à l'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Ankle-length for the grand form; the cloth is folded here at the shoulder, so this is the drop of one side",
+        "es": "Hasta el tobillo en la forma grande; la tela se dobla aquí en el hombro, así que es la caída de un lado",
+        "fr": "Jusqu'à la cheville pour la grande forme ; l'étoffe se plie ici à l'épaule, c'est donc la chute d'un côté"
+      }
+    },
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "cloth",
+      "default": 1080,
+      "min": 800,
+      "max": 1500,
+      "step": 10,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Checked for the neck depth and pocket placement, never used to size the drape — the cloth is the unit here, not the body",
+        "es": "Se usa para la profundidad del escote y la ubicación del bolsillo, nunca para dimensionar la caída — la tela es la unidad, no el cuerpo",
+        "fr": "Vérifié pour la profondeur d'encolure et la pose de la poche, jamais pour dimensionner le tombé — l'étoffe est l'unité, non le corps"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "neck",
+      "default": 400,
+      "min": 320,
+      "max": 520,
+      "step": 5,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "Reported against the MEASURED opening as facing_vs_neck_estimate_mm — the facing is cut to the drawn neckline, not to this circle",
+        "es": "Se reporta contra la abertura MEDIDA como facing_vs_neck_estimate_mm — el forro se corta al escote trazado, no a este círculo",
+        "fr": "Signalé face à l'ouverture MESURÉE comme facing_vs_neck_estimate_mm — la parementure est coupée à l'encolure tracée, non à ce cercle"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      }
+    },
+    {
+      "id": "neck_front_drop",
+      "type": "slider",
+      "group": "neck",
+      "default": 250,
+      "min": 140,
+      "max": 360,
+      "step": 10,
+      "label": {
+        "en": "Front neck drop (mm)",
+        "es": "Caída delantera del escote (mm)",
+        "fr": "Chute devant de l'encolure (mm)"
+      },
+      "tooltip": {
+        "en": "The deep front opening that shows the chest field; clamped above the waist so it cannot fall past the worked yoke",
+        "es": "La abertura delantera profunda que muestra el campo del pecho; limitada por encima de la cintura",
+        "fr": "L'ouverture devant profonde qui découvre le champ de poitrine ; plafonnée au-dessus de la taille"
+      }
+    },
+    {
+      "id": "neck_width",
+      "type": "slider",
+      "group": "neck",
+      "default": 200,
+      "min": 130,
+      "max": 300,
+      "step": 5,
+      "label": {
+        "en": "Head-hole half-width at the shoulder (mm)",
+        "es": "Media anchura de la abertura de cabeza (mm)",
+        "fr": "Demi-largeur de l'ouverture de tête (mm)"
+      },
+      "tooltip": {
+        "en": "Where the head-hole meets the shoulder fold; the opening must clear the head, so it is wide",
+        "es": "Donde la abertura de cabeza toca el doblez del hombro; debe pasar la cabeza, así que es ancha",
+        "fr": "Où l'ouverture de tête rejoint le pli d'épaule ; elle doit passer la tête, donc large"
+      }
+    },
+    {
+      "id": "facing_depth",
+      "type": "slider",
+      "group": "neck",
+      "default": 120,
+      "min": 70,
+      "max": 200,
+      "step": 5,
+      "label": {
+        "en": "Worked-yoke facing depth (mm)",
+        "es": "Profundidad del forro del canesú (mm)",
+        "fr": "Profondeur de la parementure du plastron (mm)"
+      },
+      "tooltip": {
+        "en": "The depth of the embroidered field around the neck; the embroidery itself is the maker's, none is drafted",
+        "es": "La profundidad del campo bordado alrededor del cuello; el bordado es del artesano, no se traza",
+        "fr": "La profondeur du champ brodé autour du cou ; la broderie est celle de l'artisan, aucune n'est tracée"
+      }
+    },
+    {
+      "id": "pocket_width",
+      "type": "slider",
+      "group": "construction",
+      "default": 240,
+      "min": 150,
+      "max": 340,
+      "step": 10,
+      "label": {
+        "en": "Chest pocket width (mm)",
+        "es": "Ancho del bolsillo al pecho (mm)",
+        "fr": "Largeur de la poche poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "The large chest patch pocket; placed on the measured chest field",
+        "es": "El gran bolsillo de parche al pecho; ubicado en el campo del pecho medido",
+        "fr": "La grande poche plaquée poitrine ; posée sur le champ de poitrine mesuré"
+      }
+    },
+    {
+      "id": "pocket_drop",
+      "type": "slider",
+      "group": "construction",
+      "default": 300,
+      "min": 180,
+      "max": 480,
+      "step": 10,
+      "label": {
+        "en": "Neck-to-pocket drop (mm)",
+        "es": "Caída del cuello al bolsillo (mm)",
+        "fr": "Chute du cou à la poche (mm)"
+      },
+      "tooltip": {
+        "en": "How far below the neck the pocket top sits",
+        "es": "Cuánto baja el borde del bolsillo respecto al cuello",
+        "fr": "À quelle distance sous le cou se pose le haut de la poche"
+      }
+    },
+    {
+      "id": "side_seam",
+      "type": "slider",
+      "group": "construction",
+      "default": 520,
+      "min": 200,
+      "max": 800,
+      "step": 10,
+      "label": {
+        "en": "Closed side seam height (mm)",
+        "es": "Alto de la costura de costado cerrada (mm)",
+        "fr": "Hauteur de la couture de côté fermée (mm)"
+      },
+      "tooltip": {
+        "en": "The side is sewn only up to here; above it the side is OPEN for the arm to reach out — clamped below the neck depth",
+        "es": "El costado se cose sólo hasta aquí; arriba queda ABIERTO para sacar el brazo — limitado bajo la profundidad del escote",
+        "fr": "Le côté n'est cousu que jusqu'ici ; au-dessus il reste OUVERT pour sortir le bras — plafonné sous l'encolure"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 12,
+      "min": 6,
+      "max": 20,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "The side seams and the facing seam; hems are set separately",
+        "es": "Las costuras de costado y del forro; los ruedos se ponen aparte",
+        "fr": "Les coutures de côté et de la parementure ; les ourlets sont réglés à part"
+      },
+      "advanced": true
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 40,
+      "min": 15,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de ruedo (mm)",
+        "fr": "Rentré d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Deep, so the long gown can be let down and outlast one wearer's height",
+        "es": "Profundo, para poder soltar el ruedo de la túnica larga",
+        "fr": "Profond, pour pouvoir rallonger la longue robe"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "neck_front_drop <= gown_length * 0.42",
+      "severity": "warning",
+      "message": {
+        "en": "The front neck drop shows the chest field but must stay above the waist; a drop approaching half the gown is a different opening.",
+        "es": "La caída delantera muestra el campo del pecho pero debe quedar sobre la cintura; una caída cercana a media túnica es otra abertura.",
+        "fr": "La chute devant découvre le champ de poitrine mais doit rester au-dessus de la taille ; une chute approchant la moitié de la robe est une autre ouverture."
+      }
+    },
+    {
+      "expression": "side_seam <= gown_length - neck_front_drop - 120",
+      "severity": "warning",
+      "message": {
+        "en": "The side is sewn only below the arm; the closed side seam is capped so the open arm-gap remains.",
+        "es": "El costado se cose sólo bajo el brazo; la costura cerrada se limita para dejar el hueco del brazo.",
+        "fr": "Le côté n'est cousu que sous le bras ; la couture fermée est plafonnée pour laisser l'ouverture du bras."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "yoruba_agbada",
+      "label": {
+        "en": "Yoruba agbada",
+        "es": "Agbada yoruba",
+        "fr": "Agbada yoruba"
+      },
+      "values": {
+        "wing_span": 1200,
+        "gown_length": 1360,
+        "neck_front_drop": 260,
+        "facing_depth": 130,
+        "pocket_width": 260
+      }
+    },
+    {
+      "id": "senegambian_boubou",
+      "label": {
+        "en": "Senegambian grand boubou",
+        "es": "Gran bubú senegambiano",
+        "fr": "Grand boubou sénégambien"
+      },
+      "values": {
+        "wing_span": 1400,
+        "gown_length": 1500,
+        "neck_front_drop": 200,
+        "facing_depth": 110
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "closure-free — the grand boubou is pulled over the head, no notion"
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "faced_neckline",
+        "type": "neckline",
+        "label": {
+          "en": "Faced neck opening (worked yoke)",
+          "es": "Abertura de escote forrada (canesú)",
+          "fr": "Ouverture d'encolure parementée (plastron)"
+        },
+        "edges": [
+          {
+            "piece": "facing",
+            "edge": "neck_inner"
+          },
+          {
+            "piece": "gown",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "neck_front_drop",
+          "neck_width",
+          "facing_depth"
+        ]
+      },
+      {
+        "id": "shoulder_fold",
+        "type": "shoulder",
+        "label": {
+          "en": "Shoulder fold and open sides",
+          "es": "Doblez del hombro y costados abiertos",
+          "fr": "Pli d'épaule et côtés ouverts"
+        },
+        "edges": [
+          {
+            "piece": "gown",
+            "edge": "shoulder_fold"
+          },
+          {
+            "piece": "gown",
+            "edge": "underarm_open"
+          }
+        ],
+        "parameters": [
+          "wing_span",
+          "gown_length",
+          "side_seam"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "heritage": true,
+      "hardware_bridge": false,
+      "closure_free": true
+    },
+    "societal_benefit": {
+      "en": "The grand boubou is often redrawn from the outside as a caftan with wide sleeves set into an armscye — which loses the whole logic of the garment: one width of cloth folded at the shoulder, no shoulder seam, the arm reaching out through open sides, the neck faced rather than collared. Publishing a draft that takes the cloth width as the unit, cuts the head-hole on the fold, faces the neck to the measured opening, and reports honestly when a bolt is too narrow to make the wing keeps that logic legible and cuttable for people who make and wear this gown. The embroidered yoke, the named wax-prints, and any tribal or regional mark are deliberately out of scope — those belong to weavers, embroiderers and communities, not to a pattern generator.",
+      "es": "El gran bubú se redibuja a menudo desde afuera como un caftán con mangas anchas montadas en una sisa — lo que pierde la lógica entera de la prenda: una anchura de tela doblada en el hombro, sin costura de hombro, el brazo saliendo por los costados abiertos, el escote forrado y no acuellado. Publicar un trazo que toma el ancho de la tela como unidad, corta la abertura de cabeza sobre el doblez, forra el escote a la abertura medida y reporta con honestidad cuando un lienzo es demasiado angosto para el ala mantiene esa lógica legible y cortable para quien hace y viste esta túnica. El canesú bordado, los estampados de cera con nombre y cualquier marca tribal o regional quedan deliberadamente fuera de alcance — pertenecen a tejedores, bordadores y comunidades, no a un generador de patrones.",
+      "fr": "Le grand boubou est souvent redessiné de l'extérieur comme un caftan à larges manches montées dans une emmanchure — ce qui perd toute la logique du vêtement : une largeur d'étoffe pliée à l'épaule, sans couture d'épaule, le bras passant par les côtés ouverts, l'encolure parementée et non colletée. Publier un tracé qui prend la largeur d'étoffe pour unité, taille l'ouverture de tête sur le pli, paremente l'encolure à l'ouverture mesurée et signale honnêtement quand un lé est trop étroit pour l'aile garde cette logique lisible et coupable pour qui fait et porte cette robe. Le plastron brodé, les wax nommés et toute marque tribale ou régionale sont délibérément hors périmètre — ils appartiennent aux tisserands, aux brodeurs et aux communautés, non à un générateur de patrons."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

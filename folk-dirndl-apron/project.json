@@ -1,0 +1,436 @@
+{
+  "project": {
+    "name": "Dirndl apron overlay",
+    "slug": "folk-dirndl-apron",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The dirndl apron (Dirndlschürze): the front overlay worn over the dirndl dress across the Alpine regions of Bavaria, Austria, South Tyrol and beyond — a rectangular panel of cloth, gathered onto a waistband, tied at the waist with long ties whose BOW carries a social message (left = single/available, right = taken/married, centre-front = a child or a server, back = a widow). This cartridge drafts the apron only — the overlay, its waistband and its ties — not the dirndl dress beneath it. Two things it solves honestly. THE APRON IS GATHERED, AND THE GATHER IS SOLVED — the panel width is SOLVED from the waistband length times the gather ratio, so the gathered top matches the band by construction rather than by drafting the panel to a free width and hoping. And THE BOW SIDE IS A CHOICE, AND IT IS MARKED — the tie exit and a bow-position guide are marked so the socially meaningful placement is recorded as information, never imposed.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El delantal del dirndl (Dirndlschürze): la capa delantera que se lleva sobre el vestido dirndl en las regiones alpinas de Baviera, Austria, Tirol del Sur y más allá — un paño rectangular de tela, fruncido en una pretina, atado a la cintura con lazos largos cuyo MOÑO lleva un mensaje social (izquierda = soltera/disponible, derecha = comprometida/casada, centro delantero = una niña o camarera, atrás = viuda). Este cartucho traza sólo el delantal — la capa, su pretina y sus lazos — no el vestido dirndl debajo. Dos cosas resuelve con honestidad. EL DELANTAL VA FRUNCIDO, Y EL FRUNCE SE RESUELVE — el ancho del paño se RESUELVE del largo de la pretina por la razón de frunce, así el borde fruncido coincide con la pretina por construcción. Y EL LADO DEL MOÑO ES UNA ELECCIÓN, Y SE MARCA — la salida del lazo y una guía de posición del moño se marcan para que la colocación socialmente significativa quede como información, nunca impuesta.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "Le tablier de dirndl (Dirndlschürze) : l'élément de devant porté par-dessus la robe dirndl dans les régions alpines de Bavière, d'Autriche, du Tyrol du Sud et au-delà — un panneau rectangulaire d'étoffe, froncé sur une ceinture, noué à la taille par de longs liens dont le NŒUD porte un message social (gauche = célibataire/disponible, droite = prise/mariée, milieu devant = une enfant ou une serveuse, arrière = une veuve). Ce cartouche ne trace que le tablier — l'élément, sa ceinture et ses liens — non la robe dirndl dessous. Deux choses résolues honnêtement. LE TABLIER EST FRONCÉ, ET LA FRONCE EST RÉSOLUE — la largeur du panneau est RÉSOLUE depuis la longueur de la ceinture par le rapport de fronce, le bord froncé concorde donc avec la ceinture par construction. Et LE CÔTÉ DU NŒUD EST UN CHOIX, ET IL EST MARQUÉ — la sortie du lien et un repère de position du nœud sont marqués pour que le placement socialement significatif reste une information, jamais imposée.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "beginner",
+    "tags": [
+      "dirndl",
+      "schurze",
+      "heritage",
+      "alpine",
+      "bavarian",
+      "austrian",
+      "apron",
+      "gathered",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full apron",
+        "es": "Delantal completo",
+        "fr": "Tablier complet"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "apron",
+        "band",
+        "tie"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "apron",
+      "label": {
+        "en": "Gathered apron panel",
+        "es": "Paño de delantal fruncido",
+        "fr": "Panneau de tablier froncé"
+      },
+      "default_color": "#b83a4a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "band",
+      "label": {
+        "en": "Apron waistband",
+        "es": "Pretina del delantal",
+        "fr": "Ceinture du tablier"
+      },
+      "default_color": "#a2303e",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "tie",
+      "label": {
+        "en": "Waist tie (into the bow)",
+        "es": "Lazo de cintura (para el moño)",
+        "fr": "Lien de taille (pour le nœud)"
+      },
+      "default_color": "#8f2837",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "apron",
+      "label": {
+        "en": "Apron & gather",
+        "es": "Delantal y frunce",
+        "fr": "Tablier et fronce"
+      }
+    },
+    {
+      "id": "ties",
+      "label": {
+        "en": "Band, ties & bow",
+        "es": "Pretina, lazos y moño",
+        "fr": "Ceinture, liens et nœud"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "apron",
+      "default": 720,
+      "min": 560,
+      "max": 1080,
+      "step": 10,
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "The apron waistband covers part of it (apron_span); the ties reach round the rest",
+        "es": "La pretina cubre parte (apron_span); los lazos rodean el resto",
+        "fr": "La ceinture en couvre une part (apron_span) ; les liens font le tour du reste"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      }
+    },
+    {
+      "id": "apron_span",
+      "type": "slider",
+      "group": "apron",
+      "default": 0.72,
+      "min": 0.5,
+      "max": 0.95,
+      "step": 0.01,
+      "label": {
+        "en": "Apron front coverage (fraction of waist)",
+        "es": "Cobertura delantera del delantal (fracción de cintura)",
+        "fr": "Couverture devant du tablier (fraction de la taille)"
+      },
+      "tooltip": {
+        "en": "How much of the waist the apron band covers; the ties fill the rest",
+        "es": "Cuánto de la cintura cubre la pretina; los lazos llenan el resto",
+        "fr": "La part de taille couverte par la ceinture ; les liens complètent le reste"
+      }
+    },
+    {
+      "id": "apron_length",
+      "type": "slider",
+      "group": "apron",
+      "default": 560,
+      "min": 380,
+      "max": 780,
+      "step": 10,
+      "label": {
+        "en": "Apron length, waist to hem (mm)",
+        "es": "Largo del delantal, cintura al ruedo (mm)",
+        "fr": "Longueur du tablier, taille à ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "The apron is a little shorter than the dirndl skirt beneath it",
+        "es": "El delantal es algo más corto que la falda del dirndl debajo",
+        "fr": "Le tablier est un peu plus court que la jupe du dirndl dessous"
+      }
+    },
+    {
+      "id": "gather_ratio",
+      "type": "slider",
+      "group": "apron",
+      "default": 1.8,
+      "min": 1.3,
+      "max": 2.8,
+      "step": 0.1,
+      "label": {
+        "en": "Gather ratio (panel width / band)",
+        "es": "Razón de frunce (ancho del paño / pretina)",
+        "fr": "Rapport de fronce (largeur du panneau / ceinture)"
+      },
+      "tooltip": {
+        "en": "The panel width is SOLVED from the band times this ratio, so the gathered top matches the band",
+        "es": "El ancho del paño se RESUELVE de la pretina por esta razón, así el borde fruncido coincide",
+        "fr": "La largeur du panneau est RÉSOLUE depuis la ceinture par ce rapport, le bord froncé concorde donc"
+      }
+    },
+    {
+      "id": "band_height",
+      "type": "slider",
+      "group": "ties",
+      "default": 30,
+      "min": 20,
+      "max": 55,
+      "step": 1,
+      "label": {
+        "en": "Waistband height (mm)",
+        "es": "Alto de la pretina (mm)",
+        "fr": "Hauteur de la ceinture (mm)"
+      },
+      "tooltip": {
+        "en": "Cut at double this plus turn-of-cloth",
+        "es": "Se corta al doble más el vuelo",
+        "fr": "Coupée au double plus l'embu"
+      }
+    },
+    {
+      "id": "tie_length",
+      "type": "slider",
+      "group": "ties",
+      "default": 900,
+      "min": 600,
+      "max": 1400,
+      "step": 20,
+      "label": {
+        "en": "Tie length, each (mm)",
+        "es": "Largo del lazo, cada uno (mm)",
+        "fr": "Longueur du lien, chacun (mm)"
+      },
+      "tooltip": {
+        "en": "Long enough to reach round the waist and tie the meaningful bow",
+        "es": "Suficiente para rodear la cintura y atar el moño significativo",
+        "fr": "Assez long pour faire le tour de la taille et nouer le nœud significatif"
+      }
+    },
+    {
+      "id": "tie_width",
+      "type": "slider",
+      "group": "ties",
+      "default": 70,
+      "min": 40,
+      "max": 110,
+      "step": 5,
+      "label": {
+        "en": "Tie width (mm)",
+        "es": "Ancho del lazo (mm)",
+        "fr": "Largeur du lien (mm)"
+      },
+      "tooltip": {
+        "en": "Cut at double this plus turn-of-cloth for a folded tie",
+        "es": "Se corta al doble más el vuelo para un lazo doblado",
+        "fr": "Coupé au double plus l'embu pour un lien plié"
+      }
+    },
+    {
+      "id": "bow_side",
+      "type": "slider",
+      "group": "ties",
+      "default": 0,
+      "min": -1,
+      "max": 1,
+      "step": 0.1,
+      "label": {
+        "en": "Bow side (−1 left, 0 centre, +1 right)",
+        "es": "Lado del moño (−1 izq., 0 centro, +1 der.)",
+        "fr": "Côté du nœud (−1 gauche, 0 centre, +1 droite)"
+      },
+      "tooltip": {
+        "en": "Left = single, right = taken, centre = child/server; a marked convention, never imposed",
+        "es": "Izquierda = soltera, derecha = comprometida, centro = niña/camarera; convención marcada, no impuesta",
+        "fr": "Gauche = célibataire, droite = prise, centre = enfant/serveuse ; convention marquée, non imposée"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 6,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "The band and tie seams",
+        "es": "Las costuras de pretina y lazos",
+        "fr": "Les coutures de ceinture et de liens"
+      },
+      "advanced": true
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 30,
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de ruedo (mm)",
+        "fr": "Rentré d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "A deep hem, often carrying a contrast band",
+        "es": "Un ruedo profundo, que suele llevar una banda de contraste",
+        "fr": "Un ourlet profond, portant souvent une bande contrastante"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "gather_ratio >= 1.3",
+      "severity": "warning",
+      "message": {
+        "en": "The apron wants real fullness; a gather ratio below 1.3 reads as a flat panel, not a gathered apron.",
+        "es": "El delantal quiere vuelo real; una razón bajo 1.3 se lee como paño plano, no como delantal fruncido.",
+        "fr": "Le tablier veut une vraie ampleur ; un rapport sous 1,3 se lit comme un panneau plat, non un tablier froncé."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "bavarian_festival",
+      "label": {
+        "en": "Bavarian festival",
+        "es": "Fiesta bávara",
+        "fr": "Fête bavaroise"
+      },
+      "values": {
+        "gather_ratio": 2.0,
+        "apron_length": 600,
+        "tie_length": 1000
+      }
+    },
+    {
+      "id": "everyday_apron",
+      "label": {
+        "en": "Everyday apron",
+        "es": "Delantal diario",
+        "fr": "Tablier de tous les jours"
+      },
+      "values": {
+        "gather_ratio": 1.6,
+        "apron_length": 500,
+        "apron_span": 0.68
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "closure-free — the apron ties, no hardware"
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "gathered_waist",
+        "type": "waistband",
+        "label": {
+          "en": "Gathered apron waist",
+          "es": "Cintura fruncida del delantal",
+          "fr": "Taille froncée du tablier"
+        },
+        "edges": [
+          {
+            "piece": "apron",
+            "edge": "top"
+          },
+          {
+            "piece": "band",
+            "edge": "gathered_edge"
+          }
+        ],
+        "parameters": [
+          "waist_girth",
+          "apron_span",
+          "gather_ratio"
+        ]
+      },
+      {
+        "id": "waist_ties",
+        "type": "custom",
+        "label": {
+          "en": "Waist ties and bow",
+          "es": "Lazos de cintura y moño",
+          "fr": "Liens de taille et nœud"
+        },
+        "edges": [
+          {
+            "piece": "tie",
+            "edge": "attach"
+          },
+          {
+            "piece": "band",
+            "edge": "end_r"
+          }
+        ],
+        "parameters": [
+          "tie_length",
+          "tie_width",
+          "bow_side"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "heritage": true,
+      "hardware_bridge": false,
+      "closure_free": true
+    },
+    "societal_benefit": {
+      "en": "The dirndl apron is simple to draft but easy to get subtly wrong — a panel gathered onto a band it does not match, or a bow whose meaning the maker never learned. Publishing a draft that solves the panel width to the band and records the socially meaningful bow position as a marking gives makers a correct, cuttable apron and treats the convention (left = single, right = taken) as information the wearer signals, never a rule the pattern imposes. The dirndl dress itself is a separate garment; the printed dirndl fabric is the maker's.",
+      "es": "El delantal del dirndl es simple de trazar pero fácil de equivocar sutilmente — un paño fruncido en una pretina que no coincide, o un moño cuyo significado quien lo hace nunca aprendió. Publicar un trazo que resuelve el ancho del paño a la pretina y registra la posición socialmente significativa del moño como marca da a quien cose un delantal correcto y cortable, y trata la convención (izquierda = soltera, derecha = comprometida) como información que la persona señala, nunca una regla que el patrón imponga. El vestido dirndl es una prenda aparte; la tela estampada del dirndl es del artesano.",
+      "fr": "Le tablier de dirndl est simple à tracer mais facile à rater subtilement — un panneau froncé sur une ceinture qu'il ne rejoint pas, ou un nœud dont le sens n'a jamais été appris. Publier un tracé qui résout la largeur du panneau à la ceinture et consigne la position socialement significative du nœud comme un marquage donne aux couturières un tablier correct et coupable, et traite la convention (gauche = célibataire, droite = prise) comme une information que la personne signale, jamais une règle que le patron impose. La robe dirndl est un vêtement à part ; l'étoffe imprimée du dirndl est celle de l'artisan."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

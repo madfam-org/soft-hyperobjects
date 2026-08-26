@@ -1,0 +1,630 @@
+{
+  "project": {
+    "name": "Cheongsam (qipao)",
+    "slug": "cheongsam-qipao",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The fitted women's Chinese dress (Cantonese 長衫 cheongsam / Mandarin 旗袍 qipao) that evolved in 1920s Shanghai from the looser Manchu banner gown: a body-skimming sheath with a stand collar (立領), the curved 大襟 (dàjīn) diagonal opening from the throat across the chest to the right underarm, hook-and-eye and knotted-frog closures along that curve, and high side slits. Unlike the men's changpao (a panel garment), the qipao is SHAPED. Two facts govern the draft. THE BODY IS FITTED, THROUGH THE WAIST — the waist is SOLVED from the three girths (bust, waist, hip) and suppressed with a side take-in plus a vertical dart, so the sheath follows the figure rather than being guessed. And THE 大襟 IS DRAFTED ONCE AND MEASURED — the curved overlap that carries the closure is drawn once and its length measured, the panel beneath cut to exactly that length, and the stand collar cut to the MEASURED neckline (left front + both backs + the dajin's own neck run), not to a neck girth. The hook-and-eye is real hardware, spaced along the measured curve.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El vestido chino femenino entallado (cantonés 長衫 cheongsam / mandarín 旗袍 qipao) que evolucionó en el Shanghái de los años 1920 a partir de la túnica manchú más holgada: una vaina ceñida al cuerpo con cuello alto (立領), la abertura diagonal curva 大襟 (dàjīn) de la garganta cruzando el pecho hasta la axila derecha, cierres de corchete y alamares anudados por esa curva, y aberturas laterales altas. A diferencia del changpao masculino (prenda de paños), el qipao va CONFORMADO. Dos hechos gobiernan el trazo. EL CUERPO VA ENTALLADO, POR LA CINTURA — la cintura se RESUELVE de los tres contornos (busto, cintura, cadera) y se suprime con una entrada al costado más una pinza vertical, así que la vaina sigue la figura y no se adivina. Y EL 大襟 SE TRAZA UNA VEZ Y SE MIDE — el cruce curvo que lleva el cierre se dibuja una vez y su longitud se mide, el paño bajo él se corta a esa longitud exacta, y el cuello alto se corta al escote MEDIDO (delantero izquierdo + ambas espaldas + el corrido de cuello del dajin), no a un contorno de cuello. El corchete es hardware real, espaciado por la curva medida.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La robe chinoise féminine ajustée (cantonais 長衫 cheongsam / mandarin 旗袍 qipao) née dans le Shanghai des années 1920 de la robe mandchoue plus ample : un fourreau près du corps à col montant (立領), l'ouverture diagonale courbe 大襟 (dàjīn) de la gorge à travers la poitrine jusqu'à l'aisselle droite, des agrafes et des brandebourgs noués le long de cette courbe, et de hautes fentes latérales. Contrairement au changpao masculin (vêtement de panneaux), le qipao est FAÇONNÉ. Deux faits gouvernent le tracé. LE CORPS EST AJUSTÉ, À LA TAILLE — la taille est RÉSOLUE depuis les trois tours (poitrine, taille, hanches) et supprimée par une reprise au côté plus une pince verticale, le fourreau suit donc la silhouette au lieu d'être deviné. Et LE 大襟 EST TRACÉ UNE FOIS ET MESURÉ — le croisement courbe qui porte la fermeture est dessiné une fois et sa longueur mesurée, le panneau dessous coupé à cette longueur exacte, et le col montant coupé à l'encolure MESURÉE (devant gauche + les deux dos + le développé de col du dajin), non à un tour de cou. L'agrafe est un vrai matériel, espacée le long de la courbe mesurée.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "cheongsam",
+      "qipao",
+      "旗袍",
+      "長衫",
+      "heritage",
+      "chinese",
+      "fitted-dress",
+      "dajin",
+      "stand-collar",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full dress",
+        "es": "Vestido completo",
+        "fr": "Robe complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "dajin",
+        "back",
+        "collar"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Fitted front (waist dart + 大襟 seat)",
+        "es": "Delantero entallado (pinza + asiento del 大襟)",
+        "fr": "Devant ajusté (pince + assise du 大襟)"
+      },
+      "default_color": "#8c2f3a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "dajin",
+      "label": {
+        "en": "Dajin overlap panel (大襟)",
+        "es": "Paño de cruce dajin (大襟)",
+        "fr": "Panneau de croisement dajin (大襟)"
+      },
+      "default_color": "#7a2833",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Fitted back (waist dart, high slit)",
+        "es": "Espalda entallada (pinza, abertura alta)",
+        "fr": "Dos ajusté (pince, fente haute)"
+      },
+      "default_color": "#82272f",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Stand collar (立領)",
+        "es": "Cuello alto (立領)",
+        "fr": "Col montant (立領)"
+      },
+      "default_color": "#6b1f27",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body & fit",
+        "es": "Cuerpo y ajuste",
+        "fr": "Corps et ajustement"
+      }
+    },
+    {
+      "id": "dajin",
+      "label": {
+        "en": "Dajin & closure",
+        "es": "Dajin y cierre",
+        "fr": "Dajin et fermeture"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 900,
+      "min": 760,
+      "max": 1200,
+      "step": 10,
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "One of the three girths the fitted waist is solved from",
+        "es": "Uno de los tres contornos de los que se resuelve la cintura entallada",
+        "fr": "L'un des trois tours d'où la taille ajustée est résolue"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 720,
+      "min": 580,
+      "max": 1080,
+      "step": 10,
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "The waist suppression is the bust-to-waist difference; a waist wider than the bust just gives no dart, not a reversed one",
+        "es": "La supresión de cintura es la diferencia busto-cintura; una cintura mayor que el busto sólo da sin pinza, no una invertida",
+        "fr": "La reprise de taille est l'écart poitrine-taille ; une taille plus large que la poitrine donne juste aucune pince, non une pince inversée"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 960,
+      "min": 820,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      },
+      "tooltip": {
+        "en": "The hem width follows the hip; the side seam curves through bust, waist and hip",
+        "es": "El ancho del ruedo sigue la cadera; el costado curva por busto, cintura y cadera",
+        "fr": "La largeur d'ourlet suit la hanche ; le côté courbe par poitrine, taille et hanche"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      }
+    },
+    {
+      "id": "qipao_length",
+      "type": "slider",
+      "group": "body",
+      "default": 1200,
+      "min": 900,
+      "max": 1500,
+      "step": 10,
+      "label": {
+        "en": "Dress length, shoulder to hem (mm)",
+        "es": "Largo del vestido, hombro al ruedo (mm)",
+        "fr": "Longueur de la robe, épaule à ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Ankle-length for the classic form",
+        "es": "Hasta el tobillo en la forma clásica",
+        "fr": "Jusqu'à la cheville pour la forme classique"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 360,
+      "min": 300,
+      "max": 440,
+      "step": 5,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "Reported against the MEASURED collar run as collar_vs_neck_estimate_mm",
+        "es": "Se reporta contra el corrido MEDIDO del cuello como collar_vs_neck_estimate_mm",
+        "fr": "Signalé face au développé MESURÉ du col comme collar_vs_neck_estimate_mm"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "group": "body",
+      "default": 45,
+      "min": 28,
+      "max": 70,
+      "step": 1,
+      "label": {
+        "en": "Stand collar height (mm)",
+        "es": "Alto del cuello alto (mm)",
+        "fr": "Hauteur du col montant (mm)"
+      },
+      "tooltip": {
+        "en": "Cut at double this plus turn-of-cloth; the 立領 must stand by itself",
+        "es": "Se corta al doble más el vuelo; el 立領 debe sostenerse solo",
+        "fr": "Coupé au double plus l'embu ; le 立領 doit se tenir seul"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "body",
+      "default": 380,
+      "min": 320,
+      "max": 460,
+      "step": 5,
+      "label": {
+        "en": "Shoulder width, tip to tip (mm)",
+        "es": "Ancho de hombros, punta a punta (mm)",
+        "fr": "Largeur d'épaules, pointe à pointe (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the shoulder tip; the armscye is a finished (or short-sleeved) edge",
+        "es": "Fija la punta del hombro; la sisa es un canto acabado (o de manga corta)",
+        "fr": "Fixe la pointe d'épaule ; l'emmanchure est un bord fini (ou à manche courte)"
+      }
+    },
+    {
+      "id": "armhole_depth",
+      "type": "slider",
+      "group": "body",
+      "default": 220,
+      "min": 180,
+      "max": 290,
+      "step": 5,
+      "label": {
+        "en": "Armhole depth, shoulder to underarm (mm)",
+        "es": "Profundidad de sisa, hombro a axila (mm)",
+        "fr": "Profondeur d'emmanchure, épaule à aisselle (mm)"
+      },
+      "tooltip": {
+        "en": "Clamped above the waist so the underarm stays on the bodice",
+        "es": "Limitada sobre la cintura para que la axila quede en el cuerpo",
+        "fr": "Bridée au-dessus de la taille pour que l'aisselle reste sur le corsage"
+      }
+    },
+    {
+      "id": "bust_to_waist",
+      "type": "slider",
+      "group": "body",
+      "default": 360,
+      "min": 300,
+      "max": 440,
+      "step": 5,
+      "label": {
+        "en": "Shoulder-line to waist (mm)",
+        "es": "Línea de hombro a cintura (mm)",
+        "fr": "Ligne d'épaule à taille (mm)"
+      },
+      "tooltip": {
+        "en": "Places the waist, where the suppression is taken",
+        "es": "Ubica la cintura, donde se toma la supresión",
+        "fr": "Place la taille, où la reprise est prise"
+      }
+    },
+    {
+      "id": "dajin_drop",
+      "type": "slider",
+      "group": "dajin",
+      "default": 260,
+      "min": 160,
+      "max": 380,
+      "step": 10,
+      "label": {
+        "en": "Dajin drop, neck to underarm (mm)",
+        "es": "Caída del dajin, cuello a axila (mm)",
+        "fr": "Chute du dajin, cou à aisselle (mm)"
+      },
+      "tooltip": {
+        "en": "The vertical run of the 大襟 curve; the deeper it goes the more the curve exceeds its chord",
+        "es": "El recorrido vertical de la curva 大襟; cuanto más baja, más excede la curva a su cuerda",
+        "fr": "Le parcours vertical de la courbe 大襟 ; plus elle descend, plus la courbe excède sa corde"
+      }
+    },
+    {
+      "id": "slit_height",
+      "type": "slider",
+      "group": "dajin",
+      "default": 380,
+      "min": 0,
+      "max": 700,
+      "step": 10,
+      "label": {
+        "en": "Side slit height (mm)",
+        "es": "Alto de la abertura lateral (mm)",
+        "fr": "Hauteur de la fente latérale (mm)"
+      },
+      "tooltip": {
+        "en": "The high slit of the qipao; capped below the underarm",
+        "es": "La abertura alta del qipao; limitada bajo la axila",
+        "fr": "La fente haute du qipao ; plafonnée sous l'aisselle"
+      }
+    },
+    {
+      "id": "bust_ease",
+      "type": "slider",
+      "group": "body",
+      "default": 80,
+      "min": 40,
+      "max": 160,
+      "step": 10,
+      "label": {
+        "en": "Bust ease (mm)",
+        "es": "Holgura de busto (mm)",
+        "fr": "Aisance de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Small; the qipao is close-fitting",
+        "es": "Pequeña; el qipao es ceñido",
+        "fr": "Faible ; le qipao est près du corps"
+      }
+    },
+    {
+      "id": "closure_span",
+      "type": "slider",
+      "group": "dajin",
+      "default": 22,
+      "min": 12,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Hook-and-eye size (mm)",
+        "es": "Tamaño del corchete (mm)",
+        "fr": "Taille de l'agrafe (mm)"
+      },
+      "tooltip": {
+        "en": "The hook-and-eye set size; drives the linked Yantra4D solid and the closure spacing",
+        "es": "El tamaño del juego de corchete; dirige el sólido Yantra4D enlazado y el espaciado",
+        "fr": "La taille du jeu d'agrafe ; pilote le solide Yantra4D lié et l'espacement"
+      }
+    },
+    {
+      "id": "closure_count",
+      "type": "slider",
+      "group": "dajin",
+      "default": 4,
+      "min": 3,
+      "max": 8,
+      "step": 1,
+      "label": {
+        "en": "Closure count along the dajin",
+        "es": "Número de cierres sobre el dajin",
+        "fr": "Nombre de fermetures le long du dajin"
+      },
+      "tooltip": {
+        "en": "Spaced by ARC LENGTH along the measured 大襟 curve",
+        "es": "Espaciados por LONGITUD DE ARCO sobre la curva 大襟 medida",
+        "fr": "Espacés par LONGUEUR D'ARC le long de la courbe 大襟 mesurée"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 6,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Fitted seams and the collar",
+        "es": "Costuras entalladas y el cuello",
+        "fr": "Coutures ajustées et le col"
+      },
+      "advanced": true
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 40,
+      "min": 15,
+      "max": 80,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de ruedo (mm)",
+        "fr": "Rentré d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "A deep hem on the long sheath",
+        "es": "Un ruedo profundo en la vaina larga",
+        "fr": "Un ourlet profond sur le long fourreau"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "armhole_depth <= bust_to_waist - 40",
+      "severity": "warning",
+      "message": {
+        "en": "The underarm stays above the waist; a deeper armhole would cross the waistline.",
+        "es": "La axila queda sobre la cintura; una sisa más profunda cruzaría la línea de cintura.",
+        "fr": "L'aisselle reste au-dessus de la taille ; une emmanchure plus profonde franchirait la ligne de taille."
+      }
+    },
+    {
+      "expression": "slit_height <= (qipao_length - bust_to_waist) * 0.85",
+      "severity": "warning",
+      "message": {
+        "en": "The side slit is high but capped below the underarm.",
+        "es": "La abertura lateral es alta pero limitada bajo la axila.",
+        "fr": "La fente latérale est haute mais plafonnée sous l'aisselle."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "shanghai_1930s",
+      "label": {
+        "en": "Shanghai 1930s",
+        "es": "Shanghái años 1930",
+        "fr": "Shanghai années 1930"
+      },
+      "values": {
+        "bust_ease": 60,
+        "slit_height": 460,
+        "collar_height": 50,
+        "closure_count": 5
+      }
+    },
+    {
+      "id": "modern_fitted",
+      "label": {
+        "en": "Modern fitted",
+        "es": "Entallado moderno",
+        "fr": "Ajusté moderne"
+      },
+      "values": {
+        "bust_ease": 50,
+        "qipao_length": 1050,
+        "slit_height": 400
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "hook",
+    "subtype": "hook-and-eye along the 大襟 dajin curve",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "hook-and-eye",
+      "linked": true,
+      "params_map": {
+        "size_mm": "closure_span",
+        "rows": "closure_count",
+        "columns": "1",
+        "plate_t": "1"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "dajin_closure",
+        "type": "placket",
+        "label": {
+          "en": "Dajin overlap closure (大襟)",
+          "es": "Cierre de cruce dajin (大襟)",
+          "fr": "Fermeture de croisement dajin (大襟)"
+        },
+        "edges": [
+          {
+            "piece": "dajin",
+            "edge": "dajin"
+          },
+          {
+            "piece": "front",
+            "edge": "cf"
+          }
+        ],
+        "parameters": [
+          "dajin_drop",
+          "closure_span",
+          "closure_count"
+        ]
+      },
+      {
+        "id": "stand_collar",
+        "type": "neckline",
+        "label": {
+          "en": "Stand collar neckline (立領)",
+          "es": "Escote del cuello alto (立領)",
+          "fr": "Encolure du col montant (立領)"
+        },
+        "edges": [
+          {
+            "piece": "collar",
+            "edge": "neck_edge"
+          },
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          },
+          {
+            "piece": "dajin",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "collar_height"
+        ]
+      },
+      {
+        "id": "fitted_side",
+        "type": "side_seam",
+        "label": {
+          "en": "Fitted side seam and slit",
+          "es": "Costado entallado y abertura",
+          "fr": "Côté ajusté et fente"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "waist_girth",
+          "hip_girth",
+          "slit_height"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "heritage": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The qipao is often drawn as a Western sheath with a mandarin collar and a printed diagonal edge added on top, which misses the two things that make it a qipao: a body solved from the three girths and suppressed honestly, and a 大襟 whose curve is measured so the overlap lies flat. Publishing a fitted draft that solves the waist, measures the dajin, cuts the stand collar to the measured neckline, and sizes real hook-and-eye closures gives makers a dependable, cuttable block, while dragon roundels, embroidered motifs and clan marks stay out of scope — those are the maker's cloth and choice, not a pattern generator's to hand out.",
+      "es": "El qipao se dibuja a menudo como una vaina occidental con cuello mandarín y un canto diagonal estampado encima, lo que pierde las dos cosas que lo hacen qipao: un cuerpo resuelto de los tres contornos y suprimido con honestidad, y un 大襟 cuya curva se mide para que el cruce asiente plano. Publicar un trazo entallado que resuelve la cintura, mide el dajin, corta el cuello alto al escote medido y dimensiona corchetes reales da a quien cose un bloque fiable y cortable, mientras los medallones de dragón, los motivos bordados y las marcas de clan quedan fuera de alcance — son la tela y la elección del artesano, no algo que un generador de patrones deba repartir.",
+      "fr": "Le qipao est souvent dessiné comme un fourreau occidental à col mandarin avec un bord diagonal imprimé ajouté par-dessus, ce qui manque les deux choses qui en font un qipao : un corps résolu depuis les trois tours et supprimé honnêtement, et un 大襟 dont la courbe est mesurée pour que le croisement repose à plat. Publier un tracé ajusté qui résout la taille, mesure le dajin, coupe le col montant à l'encolure mesurée et dimensionne de vraies agrafes donne aux couturières un bloc fiable et coupable, tandis que médaillons de dragon, motifs brodés et marques de clan restent hors périmètre — ce sont l'étoffe et le choix de l'artisan, non l'affaire d'un générateur de patrons."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

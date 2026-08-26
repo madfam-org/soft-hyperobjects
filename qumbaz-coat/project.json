@@ -1,0 +1,595 @@
+{
+  "project": {
+    "name": "Qumbaz linen robe",
+    "slug": "qumbaz-coat",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The long men's coat-robe of the Levant (قمباز, also kumbaz / qombaz): ankle-length, opening all the way down the centre front, crossed right-over-left and held with a long sash (and, in many regions, a row of small buttons and loops up the chest), with long straight sleeves and side slits for walking and riding. Worn over a shirt, in linen or striped silk-cotton, across Palestine, Syria, Jordan and Lebanon. Two facts govern the draft. THE FRONT WRAPS AND THE OVERLAP IS REAL — each front is drafted with an overlap past centre front so the right front crosses and the left sits under it, and the buttons run up the crossing edge; the overlap is a real parameter, checked so the fronts always meet with a genuine cross. And THE STAND COLLAR IS CUT TO THE MEASURED NECKLINE — the low stand is cut to the MEASURED neck run (both fronts with their overlaps + both back quarters), so it sits without gaping. The set-in sleeve cap is solved to the measured armscye.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La larga túnica-abrigo masculina del Levante (قمباز, también kumbaz / qombaz): hasta el tobillo, abierta por todo el centro delantero, cruzada derecha sobre izquierda y sujeta con una faja larga (y, en muchas regiones, una hilera de botoncitos y presillas al pecho), con mangas largas rectas y aberturas laterales para caminar y montar. Se usa sobre una camisa, en lino o en seda-algodón a rayas, por Palestina, Siria, Jordania y el Líbano. Dos hechos gobiernan el trazo. EL FRENTE CRUZA Y EL SOLAPE ES REAL — cada delantero se traza con un solape más allá del centro para que el derecho cruce y el izquierdo quede debajo, y los botones suben por el canto de cruce; el solape es un parámetro real, verificado para que los delanteros siempre se junten con un cruce genuino. Y EL CUELLO ALTO SE CORTA AL ESCOTE MEDIDO — el cuello bajo se corta al corrido MEDIDO (ambos delanteros con sus solapes + ambas espaldas), para asentar sin abrirse. La copa de la manga montada se resuelve a la sisa medida.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La longue robe-manteau masculine du Levant (قمباز, aussi kumbaz / qombaz) : jusqu'à la cheville, ouverte sur tout le milieu devant, croisée droite sur gauche et tenue par une longue ceinture (et, dans beaucoup de régions, une rangée de petits boutons et brides sur la poitrine), avec de longues manches droites et des fentes latérales pour marcher et monter. Portée sur une chemise, en lin ou en soie-coton rayé, à travers la Palestine, la Syrie, la Jordanie et le Liban. Deux faits gouvernent le tracé. LE DEVANT CROISE ET LE CROISEMENT EST RÉEL — chaque devant est tracé avec un croisement au-delà du milieu pour que le droit croise et le gauche passe dessous, et les boutons montent sur le bord de croisement ; le croisement est un paramètre réel, vérifié pour que les devants se rejoignent toujours par un vrai croisement. Et LE COL MONTANT EST COUPÉ À L'ENCOLURE MESURÉE — le col bas est coupé au développé MESURÉ (les deux devants avec leurs croisements + les deux dos), pour se poser sans bâiller. La tête de manche montée est résolue à l'emmanchure mesurée.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "qumbaz",
+      "kumbaz",
+      "heritage",
+      "levantine",
+      "palestinian",
+      "syrian",
+      "coat-robe",
+      "wrap-front",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full robe",
+        "es": "Túnica completa",
+        "fr": "Robe complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve",
+        "collar"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (centre-front overlap, button run)",
+        "es": "Delantero (solape central, hilera de botones)",
+        "fr": "Devant (croisement milieu, rangée de boutons)"
+      },
+      "default_color": "#c9b896",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (side slits)",
+        "es": "Espalda (aberturas laterales)",
+        "fr": "Dos (fentes latérales)"
+      },
+      "default_color": "#bfad8a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Long straight sleeve",
+        "es": "Manga larga recta",
+        "fr": "Manche longue droite"
+      },
+      "default_color": "#d3c3a2",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "collar",
+      "label": {
+        "en": "Low stand collar",
+        "es": "Cuello alto bajo",
+        "fr": "Col montant bas"
+      },
+      "default_color": "#b0a07d",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps"
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve & collar",
+        "es": "Manga y cuello",
+        "fr": "Manche et col"
+      }
+    },
+    {
+      "id": "closure",
+      "label": {
+        "en": "Wrap & closure",
+        "es": "Cruce y cierre",
+        "fr": "Croisement et fermeture"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 1020,
+      "min": 820,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "The body quarter, plus the front overlap on each front",
+        "es": "El cuarto del cuerpo, más el solape en cada delantero",
+        "fr": "Le quart du corps, plus le croisement sur chaque devant"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "robe_length",
+      "type": "slider",
+      "group": "body",
+      "default": 1360,
+      "min": 1100,
+      "max": 1600,
+      "step": 10,
+      "label": {
+        "en": "Robe length, nape to hem (mm)",
+        "es": "Largo de la túnica, nuca al ruedo (mm)",
+        "fr": "Longueur de la robe, nuque à ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Ankle-length",
+        "es": "Hasta el tobillo",
+        "fr": "Jusqu'à la cheville"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 410,
+      "min": 340,
+      "max": 480,
+      "step": 5,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "The stand collar is cut to the MEASURED neckline, reported as collar_run_mm",
+        "es": "El cuello se corta al escote MEDIDO, reportado como collar_run_mm",
+        "fr": "Le col est coupé à l'encolure MESURÉE, signalé collar_run_mm"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "body",
+      "default": 460,
+      "min": 400,
+      "max": 540,
+      "step": 5,
+      "label": {
+        "en": "Shoulder width, tip to tip (mm)",
+        "es": "Ancho de hombros, punta a punta (mm)",
+        "fr": "Largeur d'épaules, pointe à pointe (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the shoulder tip and the armscye the sleeve is measured to",
+        "es": "Fija la punta del hombro y la sisa a la que se mide la manga",
+        "fr": "Fixe la pointe d'épaule et l'emmanchure à laquelle la manche est mesurée"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 600,
+      "min": 480,
+      "max": 700,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Long and straight",
+        "es": "Larga y recta",
+        "fr": "Longue et droite"
+      }
+    },
+    {
+      "id": "sleeve_width",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 380,
+      "min": 300,
+      "max": 480,
+      "step": 10,
+      "label": {
+        "en": "Sleeve cuff width (mm)",
+        "es": "Ancho del puño de manga (mm)",
+        "fr": "Largeur de poignet de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Wide and open; the qumbaz sleeve is not cuffed tight",
+        "es": "Ancho y abierto; la manga del qumbaz no se ciñe",
+        "fr": "Large et ouverte ; la manche du qumbaz n'est pas serrée"
+      }
+    },
+    {
+      "id": "armhole_depth",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 260,
+      "min": 220,
+      "max": 340,
+      "step": 5,
+      "label": {
+        "en": "Armhole depth (mm)",
+        "es": "Profundidad de sisa (mm)",
+        "fr": "Profondeur d'emmanchure (mm)"
+      },
+      "tooltip": {
+        "en": "With the shoulder width, sets the measured armscye the cap is solved to",
+        "es": "Con el ancho de hombros, fija la sisa medida a la que se resuelve la copa",
+        "fr": "Avec la largeur d'épaules, fixe l'emmanchure mesurée à laquelle la tête est résolue"
+      }
+    },
+    {
+      "id": "collar_height",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 40,
+      "min": 25,
+      "max": 60,
+      "step": 1,
+      "label": {
+        "en": "Stand collar height (mm)",
+        "es": "Alto del cuello alto (mm)",
+        "fr": "Hauteur du col montant (mm)"
+      },
+      "tooltip": {
+        "en": "A low stand; cut at double this plus turn-of-cloth",
+        "es": "Un cuello bajo; se corta al doble más el vuelo",
+        "fr": "Un col bas ; coupé au double plus l'embu"
+      }
+    },
+    {
+      "id": "front_overlap",
+      "type": "slider",
+      "group": "closure",
+      "default": 140,
+      "min": 60,
+      "max": 260,
+      "step": 10,
+      "label": {
+        "en": "Front overlap past centre (mm)",
+        "es": "Solape delantero más allá del centro (mm)",
+        "fr": "Croisement devant au-delà du milieu (mm)"
+      },
+      "tooltip": {
+        "en": "How far the right front crosses past centre front; the buttons run up the crossing edge",
+        "es": "Cuánto cruza el delantero derecho más allá del centro; los botones suben por el canto de cruce",
+        "fr": "Jusqu'où le devant droit croise au-delà du milieu ; les boutons montent sur le bord de croisement"
+      }
+    },
+    {
+      "id": "side_slit",
+      "type": "slider",
+      "group": "closure",
+      "default": 420,
+      "min": 150,
+      "max": 700,
+      "step": 10,
+      "label": {
+        "en": "Side slit height (mm)",
+        "es": "Alto de la abertura lateral (mm)",
+        "fr": "Hauteur de la fente latérale (mm)"
+      },
+      "tooltip": {
+        "en": "For walking and riding; capped below the underarm",
+        "es": "Para caminar y montar; limitada bajo la axila",
+        "fr": "Pour marcher et monter ; plafonnée sous l'aisselle"
+      }
+    },
+    {
+      "id": "ease",
+      "type": "slider",
+      "group": "body",
+      "default": 160,
+      "min": 100,
+      "max": 300,
+      "step": 10,
+      "label": {
+        "en": "Body ease (mm)",
+        "es": "Holgura del cuerpo (mm)",
+        "fr": "Aisance du corps (mm)"
+      },
+      "tooltip": {
+        "en": "Added to the chest; the qumbaz is worn loose over a shirt",
+        "es": "Añadida al pecho; el qumbaz se usa holgado sobre una camisa",
+        "fr": "Ajoutée à la poitrine ; le qumbaz se porte ample sur une chemise"
+      }
+    },
+    {
+      "id": "button_ligne",
+      "type": "slider",
+      "group": "closure",
+      "default": 16,
+      "min": 12,
+      "max": 26,
+      "step": 1,
+      "label": {
+        "en": "Front button size (ligne)",
+        "es": "Tamaño del botón delantero (línea)",
+        "fr": "Taille du bouton devant (ligne)"
+      },
+      "tooltip": {
+        "en": "Small ball or cloth buttons in lignes; drives the linked Yantra4D solid",
+        "es": "Botoncitos de bola o de tela en líneas; dirige el sólido Yantra4D enlazado",
+        "fr": "Petits boutons boule ou de tissu en lignes ; pilote le solide Yantra4D lié"
+      }
+    },
+    {
+      "id": "button_count",
+      "type": "slider",
+      "group": "closure",
+      "default": 8,
+      "min": 4,
+      "max": 14,
+      "step": 1,
+      "label": {
+        "en": "Front button count",
+        "es": "Número de botones delanteros",
+        "fr": "Nombre de boutons devant"
+      },
+      "tooltip": {
+        "en": "A row of small buttons up the crossing edge",
+        "es": "Una hilera de botoncitos por el canto de cruce",
+        "fr": "Une rangée de petits boutons sur le bord de croisement"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 6,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Body, sleeve, and collar seams",
+        "es": "Costuras de cuerpo, manga y cuello",
+        "fr": "Coutures de corps, de manche et de col"
+      },
+      "advanced": true
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 40,
+      "min": 15,
+      "max": 80,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de ruedo (mm)",
+        "fr": "Rentré d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "A deep hem on the long robe",
+        "es": "Un ruedo profundo en la túnica larga",
+        "fr": "Un ourlet profond sur la longue robe"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "side_slit <= (robe_length - armhole_depth) * 0.7",
+      "severity": "warning",
+      "message": {
+        "en": "The side slit is a walking/riding slit, capped below the underarm.",
+        "es": "La abertura lateral es para caminar/montar, limitada bajo la axila.",
+        "fr": "La fente latérale est une fente de marche/monte, plafonnée sous l'aisselle."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "palestinian_linen",
+      "label": {
+        "en": "Palestinian linen",
+        "es": "Lino palestino",
+        "fr": "Lin palestinien"
+      },
+      "values": {
+        "front_overlap": 150,
+        "side_slit": 460,
+        "button_count": 9
+      }
+    },
+    {
+      "id": "damascus_striped",
+      "label": {
+        "en": "Damascus striped silk",
+        "es": "Seda a rayas de Damasco",
+        "fr": "Soie rayée de Damas"
+      },
+      "values": {
+        "front_overlap": 180,
+        "collar_height": 45,
+        "robe_length": 1420
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "button",
+    "subtype": "front crossing-edge sew-through buttons (with loops)",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "hole_count": "2",
+        "hole_dia": "2",
+        "hole_spacing": "3"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "wrap_front",
+        "type": "button_stand",
+        "label": {
+          "en": "Wrapped front with button run",
+          "es": "Frente cruzado con hilera de botones",
+          "fr": "Devant croisé avec rangée de boutons"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "cross_edge"
+          }
+        ],
+        "parameters": [
+          "front_overlap",
+          "button_ligne",
+          "button_count"
+        ]
+      },
+      {
+        "id": "stand_collar",
+        "type": "neckline",
+        "label": {
+          "en": "Low stand collar",
+          "es": "Cuello alto bajo",
+          "fr": "Col montant bas"
+        },
+        "edges": [
+          {
+            "piece": "collar",
+            "edge": "neck_edge"
+          },
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "collar_height"
+        ]
+      },
+      {
+        "id": "set_in_sleeve",
+        "type": "armscye",
+        "label": {
+          "en": "Set-in sleeve (cap ↔ armscye)",
+          "es": "Manga montada (copa ↔ sisa)",
+          "fr": "Manche montée (tête ↔ emmanchure)"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          },
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "shoulder_width",
+          "armhole_depth",
+          "sleeve_length"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "heritage": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The qumbaz is often drawn as an edge-to-edge coat, which loses the wrap that defines it: the right front crosses past centre and the whole robe is held by that cross and the sash. Publishing a draft that gives each front a real overlap, runs the buttons up the crossing edge, solves the sleeve cap to the measured armscye, and cuts the collar to the measured neckline keeps the garment correct and cuttable in linen or striped silk-cotton. No woven-stripe (atlas) colourway or regional trim is drawn — the cloth is the maker's, and the striped silks of Damascus and the linens of Palestine are the weavers'.",
+      "es": "El qumbaz se dibuja a menudo como un abrigo a tope, lo que pierde el cruce que lo define: el delantero derecho cruza más allá del centro y toda la túnica se sujeta por ese cruce y la faja. Publicar un trazo que da a cada delantero un solape real, sube los botones por el canto de cruce, resuelve la copa a la sisa medida y corta el cuello al escote medido mantiene la prenda correcta y cortable en lino o seda-algodón a rayas. No se dibuja ningún colorido de rayas (atlas) ni guarda regional — la tela es del artesano, y las sedas rayadas de Damasco y los linos de Palestina son de los tejedores.",
+      "fr": "Le qumbaz est souvent dessiné comme un manteau bord à bord, ce qui perd le croisement qui le définit : le devant droit croise au-delà du milieu et toute la robe est tenue par ce croisement et la ceinture. Publier un tracé qui donne à chaque devant un vrai croisement, monte les boutons sur le bord de croisement, résout la tête de manche à l'emmanchure mesurée et coupe le col à l'encolure mesurée garde le vêtement correct et coupable en lin ou en soie-coton rayé. Aucun coloris de rayure (atlas) ni bordure régionale n'est dessiné — l'étoffe est celle de l'artisan, et les soies rayées de Damas et les lins de Palestine sont ceux des tisserands."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

@@ -1,0 +1,577 @@
+{
+  "project": {
+    "name": "Hanbok magoja overjacket",
+    "slug": "hanbok-magoja",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The Korean overjacket (마고자) worn over the jeogori: a hip-length jacket, straight down the centre front (NOT wrapped and tied like the jeogori), fastened with a small number of buttons — traditionally amber or knotted — with the same soft one-piece sleeve carrying the gentle 배래 (baerae) curved underarm, and short side vents. Adopted into Korean dress in the late 19th century and worn as a warm outer layer by men and women. Two facts govern the draft. THE SLEEVE IS CUT IN ONE, WITH THE 배래 CURVE — there is no set-in armscye; the sleeve runs straight out from the shoulder and the underarm is the soft baerae curve, declared and MEASURED so front and back agree. And THE FRONT IS STRAIGHT AND BUTTONED, NOT WRAPPED — the magoja meets at centre front and buttons; there are no goreum ties. The 깃 (git) collar band is cut to the MEASURED neckline, and the white 동정 (dongjeong) strip is marked on top of it.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La sobrechaqueta coreana (마고자) que se lleva sobre el jeogori: una chaqueta hasta la cadera, recta por el centro delantero (NO cruzada y atada como el jeogori), abrochada con unos pocos botones — de ámbar o anudados tradicionalmente — con la misma manga suave en una pieza que lleva la curva 배래 (baerae) de axila, y aberturas laterales cortas. Adoptada en la vestimenta coreana a finales del siglo XIX y usada como capa exterior abrigada por hombres y mujeres. Dos hechos gobiernan el trazo. LA MANGA VA EN UNA PIEZA, CON LA CURVA 배래 — no hay sisa montada; la manga sale recta del hombro y la axila es la suave curva baerae, declarada y MEDIDA para que delantero y espalda coincidan. Y EL FRENTE ES RECTO Y ABOTONADO, NO CRUZADO — el magoja se junta al centro y abotona; no hay lazos goreum. La banda de cuello 깃 (git) se corta al escote MEDIDO, y la tira blanca 동정 (dongjeong) se marca encima.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La surveste coréenne (마고자) portée sur le jeogori : une veste à hauteur de hanche, droite au milieu devant (NON croisée et nouée comme le jeogori), fermée par quelques boutons — d'ambre ou noués traditionnellement — avec la même manche souple d'une pièce portant la douce courbe 배래 (baerae) d'aisselle, et de courtes fentes latérales. Adoptée dans le costume coréen à la fin du XIXe siècle et portée comme couche extérieure chaude par les hommes et les femmes. Deux faits gouvernent le tracé. LA MANCHE EST D'UNE PIÈCE, AVEC LA COURBE 배래 — il n'y a pas d'emmanchure montée ; la manche part droit de l'épaule et l'aisselle est la douce courbe baerae, déclarée et MESURÉE pour que devant et dos concordent. Et LE DEVANT EST DROIT ET BOUTONNÉ, NON CROISÉ — le magoja se rejoint au milieu et se boutonne ; il n'y a pas de liens goreum. La bande de col 깃 (git) est coupée à l'encolure MESURÉE, et la bande blanche 동정 (dongjeong) est marquée par-dessus.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "magoja",
+      "마고자",
+      "hanbok",
+      "heritage",
+      "korean",
+      "overjacket",
+      "baerae",
+      "git",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full overjacket",
+        "es": "Sobrechaqueta completa",
+        "fr": "Surveste complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "back",
+        "front",
+        "git"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "back",
+      "label": {
+        "en": "Back (one-piece sleeve, 배래 curve)",
+        "es": "Espalda (manga en una pieza, curva 배래)",
+        "fr": "Dos (manche d'une pièce, courbe 배래)"
+      },
+      "default_color": "#4a6a5a",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "front",
+      "label": {
+        "en": "Front (straight buttoned CF)",
+        "es": "Delantero (centro recto abotonado)",
+        "fr": "Devant (milieu droit boutonné)"
+      },
+      "default_color": "#557a68",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "git",
+      "label": {
+        "en": "깃 collar band (동정 strip marked)",
+        "es": "Banda de cuello 깃 (tira 동정 marcada)",
+        "fr": "Bande de col 깃 (bande 동정 marquée)"
+      },
+      "default_color": "#3c5a4c",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body",
+        "es": "Cuerpo",
+        "fr": "Corps"
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve & collar",
+        "es": "Manga y cuello",
+        "fr": "Manche et col"
+      }
+    },
+    {
+      "id": "closure",
+      "label": {
+        "en": "Front closure",
+        "es": "Cierre delantero",
+        "fr": "Fermeture devant"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 960,
+      "min": 780,
+      "max": 1200,
+      "step": 10,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "The magoja is an outer layer, worn over the jeogori, so it takes generous ease",
+        "es": "El magoja es capa exterior, sobre el jeogori, así que lleva holgura generosa",
+        "fr": "Le magoja est une couche extérieure, sur le jeogori, il prend donc une aisance généreuse"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "magoja_length",
+      "type": "slider",
+      "group": "body",
+      "default": 620,
+      "min": 520,
+      "max": 780,
+      "step": 10,
+      "label": {
+        "en": "Jacket length, nape to hem (mm)",
+        "es": "Largo de la chaqueta, nuca al ruedo (mm)",
+        "fr": "Longueur de la veste, nuque à ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Hip-length; longer than the jeogori",
+        "es": "Hasta la cadera; más largo que el jeogori",
+        "fr": "À hauteur de hanche ; plus long que le jeogori"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 400,
+      "min": 340,
+      "max": 480,
+      "step": 5,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "Reported against the MEASURED git run as git_vs_neck_estimate_mm",
+        "es": "Se reporta contra el corrido MEDIDO del git como git_vs_neck_estimate_mm",
+        "fr": "Signalé face au développé MESURÉ du git comme git_vs_neck_estimate_mm"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      }
+    },
+    {
+      "id": "back_neck_width",
+      "type": "slider",
+      "group": "body",
+      "default": 180,
+      "min": 130,
+      "max": 240,
+      "step": 5,
+      "label": {
+        "en": "Back neck half-width (mm)",
+        "es": "Media anchura del escote de espalda (mm)",
+        "fr": "Demi-largeur de l'encolure dos (mm)"
+      },
+      "tooltip": {
+        "en": "Where the neck meets the shoulder; clamped inboard of the body",
+        "es": "Donde el cuello toca el hombro; limitada por dentro del cuerpo",
+        "fr": "Où le cou rejoint l'épaule ; bridée en deçà du corps"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 560,
+      "min": 420,
+      "max": 680,
+      "step": 10,
+      "label": {
+        "en": "Sleeve reach past the body (mm)",
+        "es": "Alcance de la manga más allá del cuerpo (mm)",
+        "fr": "Portée de manche au-delà du corps (mm)"
+      },
+      "tooltip": {
+        "en": "The one-piece sleeve runs out this far from the side; there is no armscye",
+        "es": "La manga en una pieza sale hasta aquí del costado; no hay sisa",
+        "fr": "La manche d'une pièce court jusque-là depuis le côté ; il n'y a pas d'emmanchure"
+      }
+    },
+    {
+      "id": "sleeve_depth",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 280,
+      "min": 220,
+      "max": 360,
+      "step": 5,
+      "label": {
+        "en": "Underarm depth (mm)",
+        "es": "Profundidad de axila (mm)",
+        "fr": "Profondeur d'aisselle (mm)"
+      },
+      "tooltip": {
+        "en": "The body level of the underarm, where the 배래 curve begins",
+        "es": "El nivel de la axila en el cuerpo, donde empieza la curva 배래",
+        "fr": "Le niveau de l'aisselle sur le corps, où commence la courbe 배래"
+      }
+    },
+    {
+      "id": "cuff_opening",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 260,
+      "min": 180,
+      "max": 360,
+      "step": 10,
+      "label": {
+        "en": "Sleeve mouth (mm)",
+        "es": "Boca de manga (mm)",
+        "fr": "Ouverture de manche (mm)"
+      },
+      "tooltip": {
+        "en": "Wide and soft; the magoja sleeve is not cuffed tight",
+        "es": "Ancha y suave; la manga del magoja no se ciñe con puño",
+        "fr": "Large et souple ; la manche du magoja n'est pas serrée au poignet"
+      }
+    },
+    {
+      "id": "baerae_curve",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 40,
+      "min": 10,
+      "max": 90,
+      "step": 5,
+      "label": {
+        "en": "배래 underarm curve depth (mm)",
+        "es": "Profundidad de la curva 배래 (mm)",
+        "fr": "Profondeur de la courbe 배래 (mm)"
+      },
+      "tooltip": {
+        "en": "The gentle dip of the Korean sleeve underseam; declared equal front to back",
+        "es": "El suave descenso de la costura inferior de la manga coreana; declarada igual delante y detrás",
+        "fr": "Le doux creux de la couture inférieure de la manche coréenne ; déclarée égale devant et dos"
+      }
+    },
+    {
+      "id": "git_width",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 55,
+      "min": 35,
+      "max": 85,
+      "step": 5,
+      "label": {
+        "en": "깃 collar band width (mm)",
+        "es": "Ancho de la banda 깃 (mm)",
+        "fr": "Largeur de la bande 깃 (mm)"
+      },
+      "tooltip": {
+        "en": "Cut at double this plus turn-of-cloth; the 동정 white strip sits over it",
+        "es": "Se corta al doble más el vuelo; la tira blanca 동정 va encima",
+        "fr": "Coupée au double plus l'embu ; la bande blanche 동정 se pose dessus"
+      }
+    },
+    {
+      "id": "wrap_ease",
+      "type": "slider",
+      "group": "body",
+      "default": 120,
+      "min": 60,
+      "max": 220,
+      "step": 10,
+      "label": {
+        "en": "Body ease over the jeogori (mm)",
+        "es": "Holgura sobre el jeogori (mm)",
+        "fr": "Aisance sur le jeogori (mm)"
+      },
+      "tooltip": {
+        "en": "Added to the chest so the magoja sits over the inner jacket",
+        "es": "Añadida al pecho para que el magoja quede sobre la chaqueta interior",
+        "fr": "Ajoutée à la poitrine pour que le magoja passe sur la veste intérieure"
+      }
+    },
+    {
+      "id": "side_vent",
+      "type": "slider",
+      "group": "construction",
+      "default": 90,
+      "min": 0,
+      "max": 220,
+      "step": 10,
+      "label": {
+        "en": "Side vent height (mm)",
+        "es": "Alto de la abertura lateral (mm)",
+        "fr": "Hauteur de la fente latérale (mm)"
+      },
+      "tooltip": {
+        "en": "A short vent at the hem; capped below the underarm",
+        "es": "Una abertura corta en el ruedo; limitada bajo la axila",
+        "fr": "Une courte fente à l'ourlet ; plafonnée sous l'aisselle"
+      }
+    },
+    {
+      "id": "button_ligne",
+      "type": "slider",
+      "group": "closure",
+      "default": 26,
+      "min": 16,
+      "max": 40,
+      "step": 1,
+      "label": {
+        "en": "Front button size (ligne)",
+        "es": "Tamaño del botón delantero (línea)",
+        "fr": "Taille du bouton devant (ligne)"
+      },
+      "tooltip": {
+        "en": "The button diameter in lignes; drives the linked Yantra4D solid (amber/shell traditional)",
+        "es": "El diámetro del botón en líneas; dirige el sólido Yantra4D enlazado (ámbar/concha tradicional)",
+        "fr": "Le diamètre du bouton en lignes ; pilote le solide Yantra4D lié (ambre/nacre traditionnel)"
+      }
+    },
+    {
+      "id": "button_count",
+      "type": "slider",
+      "group": "closure",
+      "default": 3,
+      "min": 2,
+      "max": 5,
+      "step": 1,
+      "label": {
+        "en": "Front button count",
+        "es": "Número de botones delanteros",
+        "fr": "Nombre de boutons devant"
+      },
+      "tooltip": {
+        "en": "A small number, straight down the centre front",
+        "es": "Unos pocos, rectos por el centro delantero",
+        "fr": "Quelques-uns, droit au milieu devant"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 6,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Side, sleeve, and collar seams",
+        "es": "Costuras de costado, manga y cuello",
+        "fr": "Coutures de côté, de manche et de col"
+      },
+      "advanced": true
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 25,
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de ruedo (mm)",
+        "fr": "Rentré d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "A neat hem on the lined jacket",
+        "es": "Un ruedo pulcro en la chaqueta forrada",
+        "fr": "Un ourlet net sur la veste doublée"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "side_vent <= (magoja_length - sleeve_depth) * 0.8",
+      "severity": "warning",
+      "message": {
+        "en": "The side vent is a short hem vent, capped below the underarm.",
+        "es": "La abertura lateral es una abertura corta de ruedo, limitada bajo la axila.",
+        "fr": "La fente latérale est une courte fente d'ourlet, plafonnée sous l'aisselle."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "mens_magoja",
+      "label": {
+        "en": "Men's magoja",
+        "es": "Magoja de hombre",
+        "fr": "Magoja d'homme"
+      },
+      "values": {
+        "magoja_length": 660,
+        "wrap_ease": 140,
+        "button_count": 3
+      }
+    },
+    {
+      "id": "womens_magoja",
+      "label": {
+        "en": "Women's magoja",
+        "es": "Magoja de mujer",
+        "fr": "Magoja de femme"
+      },
+      "values": {
+        "magoja_length": 560,
+        "wrap_ease": 100,
+        "git_width": 50
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "button",
+    "subtype": "straight centre-front buttons (amber / shell)",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "sew-through-button",
+      "linked": true,
+      "params_map": {
+        "button_ligne": "button_ligne",
+        "hole_count": "2",
+        "hole_dia": "2",
+        "hole_spacing": "3"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "front_placket",
+        "type": "button_stand",
+        "label": {
+          "en": "Straight centre-front closure",
+          "es": "Cierre recto del centro delantero",
+          "fr": "Fermeture droite du milieu devant"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "cf"
+          }
+        ],
+        "parameters": [
+          "button_ligne",
+          "button_count",
+          "magoja_length"
+        ]
+      },
+      {
+        "id": "git_collar",
+        "type": "neckline",
+        "label": {
+          "en": "깃 collar band neckline",
+          "es": "Escote de la banda 깃",
+          "fr": "Encolure de la bande 깃"
+        },
+        "edges": [
+          {
+            "piece": "git",
+            "edge": "neck_edge"
+          },
+          {
+            "piece": "front",
+            "edge": "neck"
+          },
+          {
+            "piece": "back",
+            "edge": "neck"
+          }
+        ],
+        "parameters": [
+          "neck_girth",
+          "git_width"
+        ]
+      },
+      {
+        "id": "baerae_sleeve",
+        "type": "custom",
+        "label": {
+          "en": "One-piece sleeve, 배래 underseam",
+          "es": "Manga en una pieza, costura 배래",
+          "fr": "Manche d'une pièce, couture 배래"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "baerae"
+          },
+          {
+            "piece": "back",
+            "edge": "baerae"
+          }
+        ],
+        "parameters": [
+          "sleeve_length",
+          "sleeve_depth",
+          "cuff_opening",
+          "baerae_curve"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "heritage": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The magoja is often conflated with the jeogori it is worn over, and drawn with the jeogori's wrap-and-tie front, which is wrong: the magoja meets straight at centre front and buttons, and that is what distinguishes it. Publishing a draft that gives the magoja its straight buttoned front, the soft 배래 one-piece sleeve, and a 깃 collar band cut to the measured neckline keeps the two garments distinct and cuttable. No woven or embroidered motif is drawn — the cloth is the maker's, and the family's dye and pattern choices are theirs.",
+      "es": "El magoja se confunde a menudo con el jeogori sobre el que se lleva, y se dibuja con el frente cruzado y atado del jeogori, lo cual es incorrecto: el magoja se junta recto al centro delantero y abotona, y eso es lo que lo distingue. Publicar un trazo que da al magoja su frente recto abotonado, la suave manga 배래 en una pieza y una banda 깃 cortada al escote medido mantiene las dos prendas distintas y cortables. No se dibuja ningún motivo tejido o bordado — la tela es del artesano, y las elecciones de tinte y patrón de la familia son suyas.",
+      "fr": "Le magoja est souvent confondu avec le jeogori sur lequel on le porte, et dessiné avec le devant croisé-noué du jeogori, ce qui est faux : le magoja se rejoint droit au milieu devant et se boutonne, et c'est ce qui le distingue. Publier un tracé qui donne au magoja son devant droit boutonné, la douce manche 배래 d'une pièce et une bande 깃 coupée à l'encolure mesurée garde les deux vêtements distincts et coupables. Aucun motif tissé ou brodé n'est dessiné — l'étoffe est celle de l'artisan, et les choix de teinture et de motif de la famille leur appartiennent."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

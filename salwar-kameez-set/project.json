@@ -1,0 +1,542 @@
+{
+  "project": {
+    "name": "Salwar kameez set",
+    "slug": "salwar-kameez-set",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The two-piece everyday and formal dress of Punjab and much of South Asia: the KAMEEZ (a long straight tunic with side slits) over the SALWAR (a loose, pleated trouser drawn in at the waist and gathered narrow at the ankle), worn with a dupatta scarf (a separate garment, not drafted here). Two facts govern the salwar draft. THE SALWAR IS PANELS AND A GUSSET, GATHERED AT BOTH ENDS — the wide leg is drawn in at the waist by a drawstring and at the ankle by a narrow cuff, not cut to the body's crotch curve; the generous crotch is a DIAMOND GUSSET (miyani/nala) declared square-on-point so it stays a symmetric diamond, not a lopsided wedge. And THE WAIST AND ANKLE ARE SOLVED FROM THE LEG WIDTH — the waist and ankle fullness are fractions of the flat leg width, gathered in, real and reported. No embroidery, phulkari, or print motif is drawn.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "El conjunto de dos piezas diario y formal del Punjab y gran parte del Sur de Asia: el KAMEEZ (una túnica larga recta con aberturas laterales) sobre el SALWAR (un pantalón holgado, plisado, recogido en la cintura y estrechado en el tobillo), usado con una dupatta (prenda aparte, no trazada aquí). Dos hechos gobiernan el trazo del salwar. EL SALWAR ES PAÑOS Y CUADRO, FRUNCIDO EN AMBOS EXTREMOS — la pierna ancha se recoge en la cintura con un cordón y en el tobillo con un puño estrecho, no se corta a la curva de tiro del cuerpo; el tiro generoso es un CUADRO EN DIAMANTE (miyani/nala) declarado cuadrado en punta para que quede un diamante simétrico, no una cuña torcida. Y LA CINTURA Y EL TOBILLO SE RESUELVEN DEL ANCHO DE PIERNA — la amplitud de cintura y tobillo son fracciones del ancho plano de la pierna, fruncidas, reales y reportadas. No se dibuja bordado, phulkari ni estampado.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "L'ensemble deux pièces du quotidien et de cérémonie du Pendjab et d'une grande partie de l'Asie du Sud : le KAMEEZ (une longue tunique droite à fentes latérales) sur le SALWAR (un pantalon ample, plissé, resserré à la taille et froncé à la cheville), porté avec une dupatta (un vêtement à part, non tracé ici). Deux faits gouvernent le tracé du salwar. LE SALWAR EST DES PANNEAUX ET UN GOUSSET, FRONCÉ AUX DEUX BOUTS — la jambe large est resserrée à la taille par un cordon et à la cheville par un poignet étroit, non coupée à la courbe d'entrejambe du corps ; l'entrejambe généreux est un GOUSSET EN LOSANGE (miyani/nala) déclaré carré sur pointe pour rester un losange symétrique, non un coin déséquilibré. Et LA TAILLE ET LA CHEVILLE SONT RÉSOLUES DEPUIS LA LARGEUR DE JAMBE — les ampleurs de taille et de cheville sont des fractions de la largeur à plat de la jambe, froncées, réelles et signalées. Aucune broderie, phulkari ou motif imprimé n'est dessiné.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "salwar-kameez",
+      "shalwar",
+      "heritage",
+      "south-asian",
+      "punjabi",
+      "tunic",
+      "trouser",
+      "gusset",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full set (kameez + salwar)",
+        "es": "Conjunto completo (kameez + salwar)",
+        "fr": "Ensemble complet (kameez + salwar)"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "kameez_f",
+        "kameez_b",
+        "salwar",
+        "gusset"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "kameez_f",
+      "label": {
+        "en": "Kameez front (side slit, faced V-neck)",
+        "es": "Delantero del kameez (abertura, escote en V forrado)",
+        "fr": "Devant du kameez (fente, encolure en V parementée)"
+      },
+      "default_color": "#3f7c8c",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "kameez_b",
+      "label": {
+        "en": "Kameez back (side slit)",
+        "es": "Espalda del kameez (abertura)",
+        "fr": "Dos du kameez (fente)"
+      },
+      "default_color": "#376b79",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "salwar",
+      "label": {
+        "en": "Salwar leg (full waist, narrow ankle)",
+        "es": "Pierna del salwar (cintura amplia, tobillo estrecho)",
+        "fr": "Jambe du salwar (taille ample, cheville étroite)"
+      },
+      "default_color": "#2f5b67",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "gusset",
+      "label": {
+        "en": "Crotch gusset (miyani / nala)",
+        "es": "Cuadro de tiro (miyani / nala)",
+        "fr": "Gousset d'entrejambe (miyani / nala)"
+      },
+      "default_color": "#274a54",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "kameez",
+      "label": {
+        "en": "Kameez tunic",
+        "es": "Túnica kameez",
+        "fr": "Tunique kameez"
+      }
+    },
+    {
+      "id": "salwar",
+      "label": {
+        "en": "Salwar trouser",
+        "es": "Pantalón salwar",
+        "fr": "Pantalon salwar"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "chest_girth",
+      "type": "slider",
+      "group": "kameez",
+      "default": 960,
+      "min": 760,
+      "max": 1300,
+      "step": 10,
+      "label": {
+        "en": "Chest girth (mm)",
+        "es": "Contorno de pecho (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "The kameez body is a quarter of chest + ease per side",
+        "es": "El cuerpo del kameez es un cuarto de pecho + holgura por lado",
+        "fr": "Le corps du kameez vaut un quart de poitrine + aisance par côté"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "kameez_length",
+      "type": "slider",
+      "group": "kameez",
+      "default": 980,
+      "min": 800,
+      "max": 1250,
+      "step": 10,
+      "label": {
+        "en": "Kameez length, shoulder to hem (mm)",
+        "es": "Largo del kameez, hombro al ruedo (mm)",
+        "fr": "Longueur du kameez, épaule à ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Knee-length or longer; worn over the salwar",
+        "es": "Hasta la rodilla o más; sobre el salwar",
+        "fr": "Jusqu'au genou ou plus ; porté sur le salwar"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "kameez",
+      "default": 400,
+      "min": 320,
+      "max": 480,
+      "step": 5,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the faced neck opening",
+        "es": "Fija el escote forrado",
+        "fr": "Fixe l'encolure parementée"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      }
+    },
+    {
+      "id": "neck_v_depth",
+      "type": "slider",
+      "group": "kameez",
+      "default": 180,
+      "min": 80,
+      "max": 300,
+      "step": 10,
+      "label": {
+        "en": "Front neck depth (mm)",
+        "es": "Profundidad del escote delantero (mm)",
+        "fr": "Profondeur de l'encolure devant (mm)"
+      },
+      "tooltip": {
+        "en": "The V or scoop depth; clamped within the body",
+        "es": "La profundidad de la V o escote; limitada dentro del cuerpo",
+        "fr": "La profondeur du V ou décolleté ; bridée dans le corps"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "kameez",
+      "default": 400,
+      "min": 340,
+      "max": 480,
+      "step": 5,
+      "label": {
+        "en": "Shoulder width, tip to tip (mm)",
+        "es": "Ancho de hombros, punta a punta (mm)",
+        "fr": "Largeur d'épaules, pointe à pointe (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the neck opening and the grown-on short sleeve",
+        "es": "Fija el escote y la manga corta cortada en una pieza",
+        "fr": "Fixe l'encolure et la manche courte coupée d'une pièce"
+      }
+    },
+    {
+      "id": "side_slit",
+      "type": "slider",
+      "group": "kameez",
+      "default": 300,
+      "min": 120,
+      "max": 500,
+      "step": 10,
+      "label": {
+        "en": "Side slit height (mm)",
+        "es": "Alto de la abertura lateral (mm)",
+        "fr": "Hauteur de la fente latérale (mm)"
+      },
+      "tooltip": {
+        "en": "The chaak side slit; capped below the underarm",
+        "es": "La abertura chaak; limitada bajo la axila",
+        "fr": "La fente chaak ; plafonnée sous l'aisselle"
+      }
+    },
+    {
+      "id": "body_ease",
+      "type": "slider",
+      "group": "kameez",
+      "default": 140,
+      "min": 80,
+      "max": 260,
+      "step": 10,
+      "label": {
+        "en": "Kameez body ease (mm)",
+        "es": "Holgura del cuerpo del kameez (mm)",
+        "fr": "Aisance du corps du kameez (mm)"
+      },
+      "tooltip": {
+        "en": "Added to the chest; a kameez is worn loose",
+        "es": "Añadida al pecho; el kameez se usa holgado",
+        "fr": "Ajoutée à la poitrine ; le kameez se porte ample"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "salwar",
+      "default": 1000,
+      "min": 820,
+      "max": 1400,
+      "step": 10,
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the flat leg width of the salwar; the leg is generously wide and gathered",
+        "es": "Fija el ancho plano de la pierna del salwar; la pierna es amplia y fruncida",
+        "fr": "Fixe la largeur à plat de la jambe du salwar ; la jambe est ample et froncée"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      }
+    },
+    {
+      "id": "salwar_length",
+      "type": "slider",
+      "group": "salwar",
+      "default": 980,
+      "min": 820,
+      "max": 1150,
+      "step": 10,
+      "label": {
+        "en": "Salwar length, waist to ankle (mm)",
+        "es": "Largo del salwar, cintura al tobillo (mm)",
+        "fr": "Longueur du salwar, taille à cheville (mm)"
+      },
+      "tooltip": {
+        "en": "The leg length before the ankle gather",
+        "es": "El largo de la pierna antes del frunce del tobillo",
+        "fr": "La longueur de jambe avant la fronce de cheville"
+      }
+    },
+    {
+      "id": "ankle_girth",
+      "type": "slider",
+      "group": "salwar",
+      "default": 260,
+      "min": 200,
+      "max": 400,
+      "step": 10,
+      "label": {
+        "en": "Ankle cuff girth (mm)",
+        "es": "Contorno del puño de tobillo (mm)",
+        "fr": "Tour du poignet de cheville (mm)"
+      },
+      "tooltip": {
+        "en": "The leg gathers into this narrow cuff; the gather ratio is reported",
+        "es": "La pierna se frunce en este puño estrecho; la razón de frunce se reporta",
+        "fr": "La jambe se fronce dans ce poignet étroit ; le rapport de fronce est signalé"
+      }
+    },
+    {
+      "id": "gusset_size",
+      "type": "slider",
+      "group": "salwar",
+      "default": 260,
+      "min": 160,
+      "max": 380,
+      "step": 10,
+      "label": {
+        "en": "Crotch gusset size (mm)",
+        "es": "Tamaño del cuadro de tiro (mm)",
+        "fr": "Taille du gousset d'entrejambe (mm)"
+      },
+      "tooltip": {
+        "en": "The diamond gusset (miyani); declared square-on-point so the crotch stays symmetric",
+        "es": "El cuadro en diamante (miyani); declarado cuadrado en punta para un tiro simétrico",
+        "fr": "Le gousset en losange (miyani) ; déclaré carré sur pointe pour un entrejambe symétrique"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 6,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "The kameez side/shoulder seams and the salwar seams",
+        "es": "Las costuras del kameez y del salwar",
+        "fr": "Les coutures du kameez et du salwar"
+      },
+      "advanced": true
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 30,
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de ruedo (mm)",
+        "fr": "Rentré d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "Hems on the kameez and the salwar ankle",
+        "es": "Ruedos del kameez y del tobillo del salwar",
+        "fr": "Ourlets du kameez et de la cheville du salwar"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "ankle_girth <= hip_girth * 0.62",
+      "severity": "warning",
+      "message": {
+        "en": "The salwar gathers narrow at the ankle; an ankle wider than the leg would have nothing to gather.",
+        "es": "El salwar se frunce estrecho en el tobillo; un tobillo más ancho que la pierna no tendría qué fruncir.",
+        "fr": "Le salwar se fronce étroit à la cheville ; une cheville plus large que la jambe n'aurait rien à froncer."
+      }
+    },
+    {
+      "expression": "side_slit <= kameez_length * 0.5",
+      "severity": "warning",
+      "message": {
+        "en": "The kameez side slit is capped below the underarm.",
+        "es": "La abertura del kameez se limita bajo la axila.",
+        "fr": "La fente du kameez est plafonnée sous l'aisselle."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "punjabi_everyday",
+      "label": {
+        "en": "Punjabi everyday",
+        "es": "Diario punyabí",
+        "fr": "Quotidien pendjabi"
+      },
+      "values": {
+        "kameez_length": 980,
+        "hip_girth": 1000,
+        "ankle_girth": 260
+      }
+    },
+    {
+      "id": "patiala_full",
+      "label": {
+        "en": "Fuller salwar",
+        "es": "Salwar más amplio",
+        "fr": "Salwar plus ample"
+      },
+      "values": {
+        "hip_girth": 1200,
+        "gusset_size": 320,
+        "ankle_girth": 240
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "custom",
+    "subtype": "closure-free — the salwar draws with a cord (naala); the kameez pulls over the head"
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "salwar_gusset",
+        "type": "custom",
+        "label": {
+          "en": "Diamond crotch gusset",
+          "es": "Cuadro de tiro en diamante",
+          "fr": "Gousset d'entrejambe en losange"
+        },
+        "edges": [
+          {
+            "piece": "gusset",
+            "edge": "leg_r_lower"
+          },
+          {
+            "piece": "salwar",
+            "edge": "inseam"
+          }
+        ],
+        "parameters": [
+          "gusset_size",
+          "hip_girth"
+        ]
+      },
+      {
+        "id": "drawstring_waist",
+        "type": "waistband",
+        "label": {
+          "en": "Salwar drawstring waist",
+          "es": "Cintura de cordón del salwar",
+          "fr": "Taille à cordon du salwar"
+        },
+        "edges": [
+          {
+            "piece": "salwar",
+            "edge": "waist"
+          }
+        ],
+        "parameters": [
+          "hip_girth",
+          "ankle_girth"
+        ]
+      },
+      {
+        "id": "kameez_side_slit",
+        "type": "side_seam",
+        "label": {
+          "en": "Kameez side seam and slit",
+          "es": "Costado y abertura del kameez",
+          "fr": "Côté et fente du kameez"
+        },
+        "edges": [
+          {
+            "piece": "kameez_f",
+            "edge": "side"
+          },
+          {
+            "piece": "kameez_b",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "chest_girth",
+          "side_slit"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "heritage": true,
+      "hardware_bridge": false,
+      "closure_free": true
+    },
+    "societal_benefit": {
+      "en": "A salwar is often mis-drafted as a Western trouser with a curved crotch, which loses the two things that make it a salwar: it is gathered at both ends, and its crotch is a diamond gusset rather than a shaped seam. Publishing a draft that solves the waist and ankle fullness from the leg width and declares the crotch gusset square-on-point gives makers a correct, cuttable trouser that actually moves, paired with a straight kameez. The embroidery, phulkari and prints — the identity of a particular salwar kameez — are left entirely to the maker; none is drawn.",
+      "es": "Un salwar se traza a menudo mal como un pantalón occidental con tiro curvo, lo que pierde las dos cosas que lo hacen salwar: se frunce en ambos extremos y su tiro es un cuadro en diamante, no una costura conformada. Publicar un trazo que resuelve la amplitud de cintura y tobillo del ancho de pierna y declara el cuadro de tiro cuadrado en punta da a quien cose un pantalón correcto y cortable que de verdad se mueve, con un kameez recto. El bordado, el phulkari y los estampados — la identidad de un salwar kameez concreto — quedan enteramente al artesano; no se dibuja ninguno.",
+      "fr": "Un salwar est souvent mal tracé comme un pantalon occidental à entrejambe courbe, ce qui perd les deux choses qui en font un salwar : il est froncé aux deux bouts, et son entrejambe est un gousset en losange plutôt qu'une couture façonnée. Publier un tracé qui résout les ampleurs de taille et de cheville depuis la largeur de jambe et déclare le gousset d'entrejambe carré sur pointe donne aux couturières un pantalon correct et coupable qui bouge réellement, avec un kameez droit. La broderie, le phulkari et les imprimés — l'identité d'un salwar kameez précis — sont laissés entièrement à l'artisan ; aucun n'est dessiné."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

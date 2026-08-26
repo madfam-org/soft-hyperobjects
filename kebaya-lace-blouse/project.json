@@ -1,0 +1,604 @@
+{
+  "project": {
+    "name": "Kebaya lace blouse",
+    "slug": "kebaya-lace-blouse",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "The fitted front-opening blouse of Indonesia, Malaysia, Brunei, Singapore and the Peranakan world — worn over a kemben or camisole with a batik or songket sarong, and made in sheer embroidered voile, lace, or fine cotton. It is a fitted garment. Two facts govern the draft. THE BODY IS FITTED, THROUGH THE BUST AND WAIST — a bust dart and a waist take-in give the close body, and the waist is SOLVED from the bust-waist-hip girths, not guessed; the front opens straight down centre front and curves away to a point below the waist. And THE SLEEVE IS SET IN, TO THE MEASURED ARMSCYE — the long fitted sleeve's cap is solved to the MEASURED front + back armhole so it hangs cleanly, and the declared seam proves it. The kebaya is held by hooks or by the linked brooches (kerongsang) that are its signature jewellery, not a buttoned placket. No lace pattern or embroidery motif is drawn.\n\nOfficial visualizer and configurator: Fashion Cabinet",
+      "es": "La blusa entallada de abertura delantera de Indonesia, Malasia, Brunéi, Singapur y el mundo peranakan — usada sobre un kemben o camisola con un sarong de batik o songket, y hecha en voile bordado translúcido, encaje o algodón fino. Es una prenda entallada. Dos hechos gobiernan el trazo. EL CUERPO VA ENTALLADO, POR EL BUSTO Y LA CINTURA — una pinza de busto y una entrada de cintura dan el cuerpo ceñido, y la cintura se RESUELVE de los contornos busto-cintura-cadera, no se adivina; el frente abre recto por el centro y se curva a una punta bajo la cintura. Y LA MANGA VA MONTADA, A LA SISA MEDIDA — la copa de la manga larga entallada se resuelve a la sisa MEDIDA de delantero y espalda para caer limpia, y la costura declarada lo prueba. La kebaya se sujeta con corchetes o con los broches enlazados (kerongsang) que son su joya característica, no una tapeta abotonada. No se dibuja ningún encaje ni motivo bordado.\n\nVisualizador y configurador oficial: Fashion Cabinet",
+      "fr": "La blouse ajustée à ouverture devant d'Indonésie, de Malaisie, de Brunei, de Singapour et du monde peranakan — portée sur un kemben ou un caraco avec un sarong de batik ou de songket, et faite en voile brodé transparent, en dentelle ou en coton fin. C'est un vêtement ajusté. Deux faits gouvernent le tracé. LE CORPS EST AJUSTÉ, PAR LA POITRINE ET LA TAILLE — une pince de poitrine et une reprise de taille donnent le corps près du corps, et la taille est RÉSOLUE depuis les tours poitrine-taille-hanches, non devinée ; le devant s'ouvre droit au milieu et s'incurve en pointe sous la taille. Et LA MANCHE EST MONTÉE, À L'EMMANCHURE MESURÉE — la tête de la longue manche ajustée est résolue à l'emmanchure MESURÉE devant + dos pour tomber proprement, et la couture déclarée le prouve. La kebaya est tenue par des agrafes ou par les broches liées (kerongsang) qui sont son bijou caractéristique, non par une patte boutonnée. Aucune dentelle ni motif brodé n'est dessiné.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+    },
+    "difficulty": "advanced",
+    "tags": [
+      "kebaya",
+      "heritage",
+      "indonesian",
+      "malay",
+      "peranakan",
+      "nusantara",
+      "fitted-blouse",
+      "lace",
+      "kerongsang",
+      "commons"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original draft for Fashion Cabinet",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Full blouse",
+        "es": "Blusa completa",
+        "fr": "Blouse complète"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "front",
+        "back",
+        "sleeve"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "front",
+      "label": {
+        "en": "Fitted front (bust dart, curved-away opening)",
+        "es": "Delantero entallado (pinza, abertura curva)",
+        "fr": "Devant ajusté (pince, ouverture incurvée)"
+      },
+      "default_color": "#c8a0b8",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    },
+    {
+      "id": "back",
+      "label": {
+        "en": "Fitted back (waist shaping)",
+        "es": "Espalda entallada (conformado de cintura)",
+        "fr": "Dos ajusté (cintrage de taille)"
+      },
+      "default_color": "#bd93ad",
+      "cut": {
+        "quantity": 1,
+        "on_fold": true,
+        "mirror": true
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Long sleeve (cap measured to the armscye)",
+        "es": "Manga larga (copa medida a la sisa)",
+        "fr": "Manche longue (tête mesurée à l'emmanchure)"
+      },
+      "default_color": "#b083a0",
+      "cut": {
+        "quantity": 2,
+        "on_fold": false,
+        "mirror": true
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "body",
+      "label": {
+        "en": "Body & fit",
+        "es": "Cuerpo y ajuste",
+        "fr": "Corps et ajustement"
+      }
+    },
+    {
+      "id": "sleeve",
+      "label": {
+        "en": "Sleeve & opening",
+        "es": "Manga y abertura",
+        "fr": "Manche et ouverture"
+      }
+    },
+    {
+      "id": "closure",
+      "label": {
+        "en": "Closure",
+        "es": "Cierre",
+        "fr": "Fermeture"
+      }
+    },
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "bust_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 900,
+      "min": 740,
+      "max": 1150,
+      "step": 10,
+      "label": {
+        "en": "Bust girth (mm)",
+        "es": "Contorno de busto (mm)",
+        "fr": "Tour de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "One of the three girths the fitted waist is solved from",
+        "es": "Uno de los tres contornos de los que se resuelve la cintura",
+        "fr": "L'un des trois tours d'où la taille ajustée est résolue"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "chest_bust_girth"
+      }
+    },
+    {
+      "id": "waist_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 740,
+      "min": 560,
+      "max": 1020,
+      "step": 10,
+      "label": {
+        "en": "Waist girth (mm)",
+        "es": "Contorno de cintura (mm)",
+        "fr": "Tour de taille (mm)"
+      },
+      "tooltip": {
+        "en": "The suppression is the bust-to-waist difference; a waist wider than the bust gives no dart, not a reversed one",
+        "es": "La supresión es la diferencia busto-cintura; una cintura mayor que el busto da sin pinza, no una invertida",
+        "fr": "La reprise est l'écart poitrine-taille ; une taille plus large que la poitrine donne aucune pince, non une inversée"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "waist_girth"
+      }
+    },
+    {
+      "id": "hip_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 960,
+      "min": 800,
+      "max": 1250,
+      "step": 10,
+      "label": {
+        "en": "Hip girth (mm)",
+        "es": "Contorno de cadera (mm)",
+        "fr": "Tour de hanches (mm)"
+      },
+      "tooltip": {
+        "en": "The hem width follows the hip",
+        "es": "El ancho del ruedo sigue la cadera",
+        "fr": "La largeur d'ourlet suit la hanche"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "hip_girth"
+      }
+    },
+    {
+      "id": "kebaya_length",
+      "type": "slider",
+      "group": "body",
+      "default": 620,
+      "min": 520,
+      "max": 780,
+      "step": 10,
+      "label": {
+        "en": "Blouse length, nape to point (mm)",
+        "es": "Largo de la blusa, nuca a la punta (mm)",
+        "fr": "Longueur de la blouse, nuque à la pointe (mm)"
+      },
+      "tooltip": {
+        "en": "Hip-length; the front curves away to a point below the waist",
+        "es": "Hasta la cadera; el frente se curva a una punta bajo la cintura",
+        "fr": "À hauteur de hanche ; le devant s'incurve en pointe sous la taille"
+      }
+    },
+    {
+      "id": "neck_girth",
+      "type": "slider",
+      "group": "body",
+      "default": 360,
+      "min": 300,
+      "max": 440,
+      "step": 5,
+      "label": {
+        "en": "Neck girth (mm)",
+        "es": "Contorno de cuello (mm)",
+        "fr": "Tour de cou (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the neck opening; the kebaya has a collarless V or shallow scoop",
+        "es": "Fija el escote; la kebaya tiene V sin cuello o escote suave",
+        "fr": "Fixe l'encolure ; la kebaya a un V sans col ou un décolleté doux"
+      },
+      "measurement": {
+        "standard": "iso_8559",
+        "code": "neck_girth"
+      }
+    },
+    {
+      "id": "shoulder_width",
+      "type": "slider",
+      "group": "body",
+      "default": 380,
+      "min": 320,
+      "max": 460,
+      "step": 5,
+      "label": {
+        "en": "Shoulder width, tip to tip (mm)",
+        "es": "Ancho de hombros, punta a punta (mm)",
+        "fr": "Largeur d'épaules, pointe à pointe (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the shoulder tip and the armscye the sleeve is measured to",
+        "es": "Fija la punta del hombro y la sisa a la que se mide la manga",
+        "fr": "Fixe la pointe d'épaule et l'emmanchure à laquelle la manche est mesurée"
+      }
+    },
+    {
+      "id": "armhole_depth",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 210,
+      "min": 180,
+      "max": 280,
+      "step": 5,
+      "label": {
+        "en": "Armhole depth (mm)",
+        "es": "Profundidad de sisa (mm)",
+        "fr": "Profondeur d'emmanchure (mm)"
+      },
+      "tooltip": {
+        "en": "Clamped above the waist; with the shoulder width it sets the measured armscye",
+        "es": "Limitada sobre la cintura; con el ancho de hombros fija la sisa medida",
+        "fr": "Bridée au-dessus de la taille ; avec la largeur d'épaules fixe l'emmanchure mesurée"
+      }
+    },
+    {
+      "id": "bust_to_waist",
+      "type": "slider",
+      "group": "body",
+      "default": 300,
+      "min": 260,
+      "max": 400,
+      "step": 5,
+      "label": {
+        "en": "Shoulder-line to waist (mm)",
+        "es": "Línea de hombro a cintura (mm)",
+        "fr": "Ligne d'épaule à taille (mm)"
+      },
+      "tooltip": {
+        "en": "Places the waist where the suppression is taken",
+        "es": "Ubica la cintura donde se toma la supresión",
+        "fr": "Place la taille où la reprise est prise"
+      }
+    },
+    {
+      "id": "sleeve_length",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 560,
+      "min": 420,
+      "max": 660,
+      "step": 10,
+      "label": {
+        "en": "Sleeve length (mm)",
+        "es": "Largo de manga (mm)",
+        "fr": "Longueur de manche (mm)"
+      },
+      "tooltip": {
+        "en": "The kebaya sleeve is typically long and fitted",
+        "es": "La manga de la kebaya suele ser larga y entallada",
+        "fr": "La manche de la kebaya est en général longue et ajustée"
+      }
+    },
+    {
+      "id": "wrist_girth",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 200,
+      "min": 160,
+      "max": 260,
+      "step": 5,
+      "label": {
+        "en": "Wrist girth (mm)",
+        "es": "Contorno de muñeca (mm)",
+        "fr": "Tour de poignet (mm)"
+      },
+      "tooltip": {
+        "en": "Sets the sleeve mouth",
+        "es": "Fija la boca de la manga",
+        "fr": "Fixe l'ouverture de manche"
+      }
+    },
+    {
+      "id": "front_point",
+      "type": "slider",
+      "group": "sleeve",
+      "default": 120,
+      "min": 40,
+      "max": 260,
+      "step": 10,
+      "label": {
+        "en": "Front point drop below the hem (mm)",
+        "es": "Caída de la punta delantera bajo el ruedo (mm)",
+        "fr": "Chute de la pointe devant sous l'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "How far the centre-front point hangs below the level side hem",
+        "es": "Cuánto baja la punta del centro delantero respecto al ruedo del costado",
+        "fr": "De combien la pointe milieu devant descend sous l'ourlet de côté"
+      }
+    },
+    {
+      "id": "bust_ease",
+      "type": "slider",
+      "group": "body",
+      "default": 70,
+      "min": 30,
+      "max": 140,
+      "step": 10,
+      "label": {
+        "en": "Bust ease (mm)",
+        "es": "Holgura de busto (mm)",
+        "fr": "Aisance de poitrine (mm)"
+      },
+      "tooltip": {
+        "en": "Small; the kebaya is close-fitting",
+        "es": "Pequeña; la kebaya es ceñida",
+        "fr": "Faible ; la kebaya est près du corps"
+      }
+    },
+    {
+      "id": "closure_span",
+      "type": "slider",
+      "group": "closure",
+      "default": 20,
+      "min": 12,
+      "max": 36,
+      "step": 1,
+      "label": {
+        "en": "Hook-and-eye size (mm)",
+        "es": "Tamaño del corchete (mm)",
+        "fr": "Taille de l'agrafe (mm)"
+      },
+      "tooltip": {
+        "en": "The front hook-and-eye set size; drives the linked Yantra4D solid",
+        "es": "El tamaño del juego de corchete delantero; dirige el sólido Yantra4D enlazado",
+        "fr": "La taille du jeu d'agrafe devant ; pilote le solide Yantra4D lié"
+      }
+    },
+    {
+      "id": "closure_count",
+      "type": "slider",
+      "group": "closure",
+      "default": 5,
+      "min": 3,
+      "max": 8,
+      "step": 1,
+      "label": {
+        "en": "Closure count",
+        "es": "Número de cierres",
+        "fr": "Nombre de fermetures"
+      },
+      "tooltip": {
+        "en": "Evenly spaced up the centre front; kerongsang brooches are the traditional alternative",
+        "es": "Espaciados por el centro delantero; los broches kerongsang son la alternativa tradicional",
+        "fr": "Espacés le long du milieu devant ; les broches kerongsang sont l'alternative traditionnelle"
+      }
+    },
+    {
+      "id": "seam_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 10,
+      "min": 6,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Seam allowance (mm)",
+        "es": "Margen de costura (mm)",
+        "fr": "Marge de couture (mm)"
+      },
+      "tooltip": {
+        "en": "Fine on sheer voile or lace",
+        "es": "Fino en voile o encaje translúcidos",
+        "fr": "Fine sur voile ou dentelle transparents"
+      },
+      "advanced": true
+    },
+    {
+      "id": "hem_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 20,
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "label": {
+        "en": "Hem allowance (mm)",
+        "es": "Margen de ruedo (mm)",
+        "fr": "Rentré d'ourlet (mm)"
+      },
+      "tooltip": {
+        "en": "A narrow hem, often finished with lace edging",
+        "es": "Un ruedo estrecho, a menudo rematado con encaje",
+        "fr": "Un ourlet étroit, souvent fini d'un bord de dentelle"
+      },
+      "advanced": true
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "armhole_depth <= bust_to_waist - 30",
+      "severity": "warning",
+      "message": {
+        "en": "The underarm stays above the waist so the armscye and the fitted waist do not collide.",
+        "es": "La axila queda sobre la cintura para que la sisa y la cintura no choquen.",
+        "fr": "L'aisselle reste au-dessus de la taille pour que l'emmanchure et la taille ne se heurtent pas."
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "kebaya_nyonya",
+      "label": {
+        "en": "Kebaya nyonya (Peranakan)",
+        "es": "Kebaya nyonya (peranakan)",
+        "fr": "Kebaya nyonya (peranakan)"
+      },
+      "values": {
+        "bust_ease": 50,
+        "front_point": 160,
+        "closure_count": 3
+      }
+    },
+    {
+      "id": "kebaya_kartini",
+      "label": {
+        "en": "Kebaya kartini",
+        "es": "Kebaya kartini",
+        "fr": "Kebaya kartini"
+      },
+      "values": {
+        "front_point": 80,
+        "kebaya_length": 660,
+        "closure_count": 6
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json"
+  ],
+  "fabrics": [],
+  "notion": {
+    "kind": "hook",
+    "subtype": "front hook-and-eye (kerongsang brooches traditional)",
+    "hardware_ref": {
+      "platform": "yantra4d",
+      "project_slug": "hook-and-eye",
+      "linked": true,
+      "params_map": {
+        "size_mm": "closure_span",
+        "rows": "closure_count",
+        "columns": "1",
+        "plate_t": "1"
+      }
+    }
+  },
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "garment",
+    "interfaces": [
+      {
+        "id": "front_closure",
+        "type": "placket",
+        "label": {
+          "en": "Front hook / kerongsang closure",
+          "es": "Cierre de corchete / kerongsang",
+          "fr": "Fermeture à agrafe / kerongsang"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "cf"
+          }
+        ],
+        "parameters": [
+          "closure_span",
+          "closure_count"
+        ]
+      },
+      {
+        "id": "set_in_sleeve",
+        "type": "armscye",
+        "label": {
+          "en": "Set-in sleeve (cap ↔ armscye)",
+          "es": "Manga montada (copa ↔ sisa)",
+          "fr": "Manche montée (tête ↔ emmanchure)"
+        },
+        "edges": [
+          {
+            "piece": "sleeve",
+            "edge": "cap"
+          },
+          {
+            "piece": "front",
+            "edge": "armhole"
+          },
+          {
+            "piece": "back",
+            "edge": "armhole"
+          }
+        ],
+        "parameters": [
+          "shoulder_width",
+          "armhole_depth",
+          "sleeve_length"
+        ]
+      },
+      {
+        "id": "fitted_side",
+        "type": "side_seam",
+        "label": {
+          "en": "Fitted side seam",
+          "es": "Costado entallado",
+          "fr": "Côté ajusté"
+        },
+        "edges": [
+          {
+            "piece": "front",
+            "edge": "side"
+          },
+          {
+            "piece": "back",
+            "edge": "side"
+          }
+        ],
+        "parameters": [
+          "bust_girth",
+          "waist_girth",
+          "hip_girth"
+        ]
+      }
+    ],
+    "capabilities": {
+      "made_to_measure": true,
+      "fold_cutting": true,
+      "fabric_compensation": false,
+      "heritage": true,
+      "hardware_bridge": true
+    },
+    "societal_benefit": {
+      "en": "The kebaya is often reduced to a boxy lace top, which loses its two defining qualities: a close, darted fit and a set-in sleeve that hangs from a measured armscye. Publishing a fitted draft that solves the waist from the three girths, sets the sleeve into the measured armhole, and sizes the front hooks honestly gives makers a dependable, cuttable block, while the lace and embroidery — the identity of a kebaya — are left entirely to the maker and the fabric. In 2023 the kebaya was jointly inscribed on UNESCO's list of intangible heritage by several Southeast Asian nations; this cartridge respects that shared heritage and reproduces none of the region-specific motifs.",
+      "es": "La kebaya se reduce a menudo a un top de encaje sin forma, lo que pierde sus dos cualidades definitorias: un ajuste ceñido con pinzas y una manga montada que cae de una sisa medida. Publicar un trazo entallado que resuelve la cintura de los tres contornos, monta la manga en la sisa medida y dimensiona con honestidad los corchetes delanteros da a quien cose un bloque fiable y cortable, dejando el encaje y el bordado — la identidad de una kebaya — enteramente al artesano y a la tela. En 2023 la kebaya fue inscrita conjuntamente en la lista de patrimonio inmaterial de la UNESCO por varias naciones del Sudeste Asiático; este cartucho respeta ese patrimonio compartido y no reproduce ninguno de los motivos regionales.",
+      "fr": "La kebaya est souvent réduite à un haut de dentelle sans forme, ce qui perd ses deux qualités définitoires : un ajustement près du corps à pinces et une manche montée qui tombe d'une emmanchure mesurée. Publier un tracé ajusté qui résout la taille depuis les trois tours, monte la manche dans l'emmanchure mesurée et dimensionne honnêtement les agrafes devant donne aux couturières un bloc fiable et coupable, en laissant la dentelle et la broderie — l'identité d'une kebaya — entièrement à l'artisan et à l'étoffe. En 2023 la kebaya a été inscrite conjointement sur la liste du patrimoine immatériel de l'UNESCO par plusieurs nations d'Asie du Sud-Est ; ce cartouche respecte ce patrimoine partagé et ne reproduit aucun des motifs régionaux."
+    },
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}
