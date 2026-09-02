@@ -29,9 +29,10 @@ detail.
 
 **The maedeup closure is a knot-and-loop, not a button through a hole.** A maedeup-danchu is a
 cloth knot on one lap that passes through a corded loop on the other. This cartridge draws the
-loop tab and the knot-button seat and wires them to the Yantra4D `frog-closure` solid as a
-**co-creation** (`linked: false`, the FC-300 frog-closure carry-over): `span` = the closure
-width, `knots` = the knot count.
+loop tab and the knot-button seat and wires them to the Yantra4D `frog-closure` solid — a
+**live bridge** (`linked: true` since 2026-09-02, once the solid was built upstream and
+vendored; it began life as the FC-300 co-create placeholder): `span` = the closure width,
+`knots` = the knot count.
 
 ## Construction notes
 
@@ -47,8 +48,11 @@ the armhole), **git** (collar band, cut 1), **dongjeong** (white strip, cut 1), 
 
 ## Hardware
 
-The maedeup knot-and-loop closure is a Yantra4D **co-creation** (`notion.hardware_ref →
-frog-closure`, `linked: false`): `span → closure_span`, `knots → knot_count`. The maedeup
+The maedeup knot-and-loop closure bridges to Yantra4D (`notion.hardware_ref →
+frog-closure`, **`linked: true`**): `span → closure_span`, `knots → knot_count`. It was a
+co-create placeholder until the solid landed upstream and the claim was re-pointed against
+the freshly pinned catalog slice. `tail_w`/`tail_t` are the finding's own printed tail
+dimensions and no parameter here determines them, so they stay unmapped. The maedeup
 knotwork itself is the maker's craft and is not drawn here.
 
 ## Made to measure

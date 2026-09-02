@@ -128,18 +128,21 @@ all-min, all-max, cross extremes, and every `target_piece` at both defaults and 
 
 ## Hardware
 
-**Unlinked, by design.** The closures are **盤扣** — knotted cloth frogs, made from bias
-strip of the robe's own fabric. There is no hard-goods fastener here at all.
+**Bridged.** The closures are **盤扣** — knotted cloth frogs, made from bias strip of
+the robe's own fabric. There is no hard-goods fastener here at all; what the bridge
+carries is the *former* — the Yantra4D `frog-closure` solid the knot is made over.
 
-The manifest nevertheless declares a `notion.hardware_ref` naming
-`yantra4d/frog-closure` with **`linked: false`**, which is the form FC-200's co-create
-garments established for a solid that does not yet exist on the shelf. This is the one
-honestly-unbridged claim in the FC-300 long-tail band, and the flag is what keeps it
-honest: the hardware-link lane resolves only `linked: true` references, so an unbuilt
-slug cannot silently register as a working bridge. When a frog-closure solid is
-co-created upstream — a former or a knotting jig, most usefully, since the frog itself
-is cloth — the garment side is already wired with the two dimensions that matter
-(`span` ← `frog_width`, `knots` ← `frog_count`).
+The manifest declares a `notion.hardware_ref` naming `yantra4d/frog-closure` with
+**`linked: true`**. This was an honest `linked: false` co-create placeholder — the
+FC-200 form for a solid not yet on the shelf — until the solid was built upstream and
+vendored into the pinned snapshot; the claim was re-pointed on 2026-09-02 (PR #140)
+and now resolves. The garment side was already wired with the two dimensions that
+matter, and they are what the map drives: `span` ← `frog_width`, `knots` ←
+`frog_count`. Both couple to this robe's own closure interface, which is what makes
+the flange a driven flange rather than a coincidence.
+
+`tail_w` and `tail_t` are the finding's own printed tail dimensions; no parameter of
+this garment determines them, so they stay **unmapped** rather than invented.
 
 **The frogs stay hand-knotted cloth**, which is what they are.
 
