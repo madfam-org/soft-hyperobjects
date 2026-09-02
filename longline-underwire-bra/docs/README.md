@@ -6,7 +6,7 @@ same dimensional handshake to the printed Yantra4D underwire, extended down into
 structural long band.
 
 Part of the **Fashion Cabinet Commons** (FC-400, lane 9 — structured intimates). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > A longline is not a bra with a wider band bolted on. The long band is a structural member
 > — its own negative ease and vertical boning are what let it support a larger cup without

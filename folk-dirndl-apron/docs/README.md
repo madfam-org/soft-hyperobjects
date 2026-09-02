@@ -5,7 +5,7 @@ Alpine regions of Bavaria, Austria, South Tyrol and beyond — a rectangular pan
 a waistband and tied with long ties whose **bow** carries a social message.
 
 Part of the **Fashion Cabinet Commons** (FC-500, heritage — Alpine).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > A draft that solves the gathered panel to its band and records the meaningful bow position
 > as a marking — the apron only, not the dirndl dress beneath it.

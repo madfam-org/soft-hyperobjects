@@ -7,7 +7,7 @@ to the garment); the fastener **solid** is the Yantra4D
 `notion.hardware_ref`.
 
 Part of the **Fashion Cabinet Commons** (FC-200, Lane 1 — findings & fasteners).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 ## What this cartridge produces
 

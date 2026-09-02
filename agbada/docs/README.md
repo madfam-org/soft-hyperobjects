@@ -7,7 +7,7 @@ Mande **grand boubou** — and share this construction logic, though the naming 
 embroidery vocabulary used here are Yorùbá.
 
 Part of the **Fashion Cabinet Commons** (FC-300, long-tail — heritage — West African).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > A draft that solves the strip count as an integer tells a weaver and a tailor exactly
 > what the garment will consume before a thread is cut.

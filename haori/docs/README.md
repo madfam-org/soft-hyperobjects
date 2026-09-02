@@ -4,7 +4,7 @@ The hip- or thigh-length jacket worn **open** over a kimono, closed only by a sh
 braided cord (**羽織紐**, *haori-himo*) tied between two small cloth loops at the chest.
 
 Part of the **Fashion Cabinet Commons** (FC-300, long-tail — heritage — Japanese). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open draft that keeps the bolt as the unit preserves the unpick-wash-resew logic
 > instead of quietly translating the garment into shaped Western panels.

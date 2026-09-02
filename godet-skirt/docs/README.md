@@ -3,7 +3,7 @@
 The godet skirt: a slim skirt with triangular godets (flared inserts) set into slashes so the hem flares dramatically while the hip stays close — a mermaid/trumpet line. Each godet is isosceles with equal seam edges (the slash length) so its seams balance. Distinct from FC-100's straight and gathered skirts — the flare comes from inserted wedges. A soft-goods garment — a side zip is the maker's hardware. FC-200 long-tail (skirt gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — skirt). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure godet skirt computes each flared insert to fit the wearer's own slim skirt, so a dramatic mermaid line — usually a couture technique — becomes a repeatable commons object anyone can cut and set.
 

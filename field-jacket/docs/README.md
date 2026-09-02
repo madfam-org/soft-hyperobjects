@@ -3,7 +3,7 @@
 The M-65-style utility field jacket: a boxy, hip-length jacket with a zip-and-snap centre-front placket, four bellows patch pockets (two chest, two lower), grown-roomy fit to layer over, and waist/hem drawcords. Distinct from FC-100's bomber, chore coat, and denim jacket. A soft-goods garment — the zip and snaps are the maker's hardware. FC-200 long-tail (workwear gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — workwear/utility, utility).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure field jacket gives a rugged, four-pocket layer sized to the wearer, so a hard-wearing utility staple becomes a repairable commons object made in tough cloth rather than bought and thrown away.
 

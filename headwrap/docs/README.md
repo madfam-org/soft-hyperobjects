@@ -3,7 +3,7 @@
 The pre-tied headwrap (turban-style): a fitted back cap gathered to a wide band that ties or knots at the front — worn across the African diaspora and in many cultures for protection, faith, and expression, so the wrap holds its shape without re-tying each time. This cartridge drafts the cap + band geometry only; the tie styles and the meanings they carry are the wearer's and are not prescribed here. Offered with respect. A soft-goods garment — no hardware. FC-200 long-tail (accessory).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — accessory). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure headwrap gives a pre-tied cap that holds its shape, sized to the wearer, so a garment of protection and expression stays makeable and mendable in fabrics the wearer chooses — leaving every tie style and its meaning to them.
 

@@ -3,7 +3,7 @@
 Rain trousers with the seat and crotch left out: two independent waterproof leg tubes, each tapered thigh to ankle on a single outseam and hung from the waist belt by a webbing hanger that ends in a side-release buckle. Cyclists, anglers, and field crews pull them on over boots without taking anything off, and the open seat vents the heat full rain trousers trap. Made to measure from ISO 8559 thigh, knee, ankle, and inside-leg. FC-300 (technical & outdoor).
 
 Part of the **Fashion Cabinet Commons** (FC-300, technical & outdoor).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 The side-release buckle is a **Yantra4D** hard good (`strap-buckle`, via `notion.hardware_ref`); `webbing` drives its slot and this garment's `waist_hanger` interface alike.
 

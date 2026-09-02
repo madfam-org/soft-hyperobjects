@@ -12,7 +12,7 @@ side: the first FC notion that is *also* a Yantra4D object. One material identit
 so the same panel is a Fashion Cabinet fabric and a Yantra4D object at once.
 
 Part of the **Fashion Cabinet Commons**. Official visualizer and configurator:
-[Fashion Cabinet](https://fashioncabinet.app).
+[Fashion Cabinet](https://fashioncabi.net).
 
 ## What this cartridge produces
 

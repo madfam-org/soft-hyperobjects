@@ -3,7 +3,7 @@
 The boat-neck (bateau) top: a wide, shallow neckline running straight across from shoulder to shoulder (Breton/ballet line), with a slightly dropped shoulder and a three-quarter set sleeve. Distinct from FC-100's crew and scoop tees. Front and back share the body width so the shoulder and side seams balance by construction. A soft-goods garment — no hardware. FC-200 long-tail (neckline gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — neckline). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure boat-neck top brings the timeless Breton line within reach of any home sewist, sized to the wearer and finished with simple bands, keeping a wardrobe classic makeable and mendable.
 

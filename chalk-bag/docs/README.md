@@ -3,7 +3,7 @@
 The climber's chalk bag: a stiff fleece-lined cylinder worn at the small of the back, with a rolled fleece cuff at the mouth that keeps the dust in and a drawcord through a top casing that a cord-lock pinches shut between climbs. A brush loop and a belt loop finish it. FC-300 (technical & outdoor).
 
 Part of the **Fashion Cabinet Commons** (FC-300, technical & outdoor).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 The cord-lock is a **Yantra4D** hard good (`cord-lock`, via `notion.hardware_ref`) — point hardware with no sewn flange, so it needs no edge coupling; `cord_dia` drives its bore and the garment's mouth casing alike.
 

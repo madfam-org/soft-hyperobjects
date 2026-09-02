@@ -5,7 +5,7 @@ zip, and a webbing belt threaded through two loops. The zip bridges to the Yantr
 [`zipper`](https://app.yantra4d.com), **sized to the bag's own length**.
 
 Part of the **Fashion Cabinet Commons** (FC-200, Lane 3 — accessories). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 ## Pieces
 

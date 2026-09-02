@@ -5,7 +5,7 @@ dress of the Kinh before the fitted **áo dài** — worn with the **yếm** (bi
 sash (**thắt lưng**) and the flat **nón quai thao** hat.
 
 Part of the **Fashion Cabinet Commons** (FC-500, heritage — Vietnamese).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > A four-panel draft that declares the centre-back seam and hangs the front as free flaps —
 > instead of flattening the dress into a single-piece robe with a diagonal edge.

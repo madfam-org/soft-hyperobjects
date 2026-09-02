@@ -5,7 +5,7 @@ straight and flowing, with long set-in sleeves, a short front placket closed by 
 and a slim stand collar.
 
 Part of the **Fashion Cabinet Commons** (FC-400, lane 10 — heritage). Official visualizer and
-configurator: [Fashion Cabinet](https://fashioncabinet.app).
+configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > What makes a good thobe — the way it hangs plumb and flares clean to the ankle — is a
 > construction fact, not a fabric one. The flare has to be godets, or the robe pulls sideways.

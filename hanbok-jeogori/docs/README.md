@@ -6,7 +6,7 @@ a high-waisted, boxy top with wide straight-cut sleeves, a wrapped front closed 
 front, tipped with the white **dongjeong**.
 
 Part of the **Fashion Cabinet Commons** (FC-200, Lane 4 — heritage). Official visualizer
-and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > **Heritage note.** This cartridge drafts the **garment geometry only**. The silk, the
 > colour pairings (saekdong), and the white dongjeong collar tip that carry the jeogori's

@@ -4,7 +4,7 @@ A wireless soft-cup bralette in cotton-modal: two **true triangles** of doubled 
 elastic underband, held by adjustable ring-and-slider straps.
 
 Part of the **Fashion Cabinet Commons** (FC-400, lane 9 — structured intimates). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > The honest opposite of the underwire bra. Where that garment *solves* a wire, this one
 > places a soft triangle and says plainly that it does not lift.

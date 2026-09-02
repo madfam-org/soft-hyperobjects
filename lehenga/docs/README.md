@@ -6,7 +6,7 @@ The long, full, **gored** skirt of northern and western South Asia — also **gh
 over.
 
 Part of the **Fashion Cabinet Commons** (FC-300, long-tail — heritage — South Asian).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > Solving the true cone puts a correct, made-to-measure leheṅgā within reach of anyone
 > with cloth and a table — at any waist and any height, not only at the sizes a shop

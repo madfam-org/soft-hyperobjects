@@ -5,7 +5,7 @@ flat-fronted (two overlapping aprons) with the whole surplus pleated across the 
 natural waist, closed by leather **straps and buckles**.
 
 Part of the **Fashion Cabinet Commons** (FC-400, lane 10 — heritage). Official visualizer and
-configurator: [Fashion Cabinet](https://fashioncabinet.app).
+configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > What makes an eight-yard kilt correct is **pleating to the sett** — each pleat showing one full
 > tartan repeat. That is a discrete count tied to the cloth's own repeat, not a free "fullness".

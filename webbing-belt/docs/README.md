@@ -8,7 +8,7 @@ the measured waist**); the buckle **solid** is the Yantra4D
 `notion.hardware_ref`.
 
 Part of the **Fashion Cabinet Commons** (FC-200, Lane 3 — accessories). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 ## Modes
 

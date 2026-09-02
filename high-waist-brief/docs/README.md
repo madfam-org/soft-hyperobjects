@@ -5,7 +5,7 @@ A high-waisted control brief in **power-mesh**: a deep tapered band above the na
 drags down at the seat.
 
 Part of the **Fashion Cabinet Commons** (FC-400, lane 9 — structured intimates). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > Control is negative ease. A cartridge that prints the ease per zone as an auditable
 > number replaces the size-letter-and-adjective lottery with something a wearer can

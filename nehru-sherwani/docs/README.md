@@ -6,7 +6,7 @@ made-to-measure** garment: fitted through the waist, buttoned all the way up to 
 collar (the **Nehru** / **bandhgala** collar), with set-in sleeves and a flared skirt.
 
 Part of the **Fashion Cabinet Commons** (FC-500, heritage — South Asian; made-to-measure).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > A made-to-measure coat block — waist solved from the body, sleeve hung from a measured
 > armscye, collar cut to the measured neckline — for a garment that has to fit: a wedding coat.

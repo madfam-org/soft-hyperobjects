@@ -3,7 +3,7 @@
 The sleeveless knit column dress: a tank bodice (wide straps, scooped neck, deep armholes) extended straight to dress length in a soft knit, with a gentle A-line release built equally into both side seams so they balance. The everyday pull-on knit dress. A soft-goods garment — no hardware. FC-200 long-tail (dress silhouette gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — dress). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure tank dress is the simplest knit dress — two panels, bound edges, no fasteners — sized to the wearer, so an everyday garment is makeable and mendable from a single soft knit at any body shape.
 

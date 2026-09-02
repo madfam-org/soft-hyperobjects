@@ -4,7 +4,7 @@ A halter top: a shaped front rising to a self-fabric neck strap tied behind the 
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — everyday silhouette
 gap, summer). Official visualizer and configurator:
-[Fashion Cabinet](https://fashioncabinet.app).
+[Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure halter sizes the body band to the wearer's own under-bust and ties at the neck with a self-fabric strap, keeping a warm-weather staple makeable and adjustable from a firm woven without proprietary sizing.
 

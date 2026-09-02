@@ -6,7 +6,7 @@ edge-to-edge — a large lower wrapper (**ntoma**) wound round from the waist, a
 upper wrapper worn over it or as a cover-cloth.
 
 Part of the **Fashion Cabinet Commons** (FC-500, heritage — Ghana / Togo, Akan & Ewe).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > A strip-assembly draft keeps the logic of kente — the loom-width strip as the real unit,
 > the wrapper as a whole number of strips, the field never cut — instead of treating it as

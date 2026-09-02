@@ -3,7 +3,7 @@
 The top-loading camera holster: a padded pouch deep enough for a body with a lens mounted, tapered at the base to the lens barrel so nothing rattles. A shaped lid closes over the mouth, and a swivelling snap hook anchors the holster to a belt loop or a pack's daisy chain so it moves between carries without unthreading anything. FC-300 (technical & outdoor).
 
 Part of the **Fashion Cabinet Commons** (FC-300, technical & outdoor).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 The swivelling snap hook is a **Yantra4D** hard good (`carabiner`, via `notion.hardware_ref`) — point hardware with no sewn flange, so it needs no edge coupling; `anchor_width` drives its inner width and the garment's anchor tab alike.
 

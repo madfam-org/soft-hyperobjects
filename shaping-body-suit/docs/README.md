@@ -5,7 +5,7 @@ shoulders to a **hook-and-eye gusset** at the crotch, so it cannot ride up out o
 trousers.
 
 Part of the **Fashion Cabinet Commons** (FC-400, lane 9 — structured intimates). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > Where the FC-300 [shaping bodysuit](../../shaping-bodysuit/docs/README.md) is a
 > princess-seamed shapewear piece, this is the everyday tank-cut version worn as a top —

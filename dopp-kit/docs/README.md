@@ -5,7 +5,7 @@ two end gussets that give it its rigid box shape, and a top zip. The zip bridges
 Yantra4D [`zipper`](https://app.yantra4d.com), **sized to the bag's own length**.
 
 Part of the **Fashion Cabinet Commons** (FC-200, Lane 3 — accessories). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 ## Pieces
 

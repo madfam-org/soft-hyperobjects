@@ -3,7 +3,7 @@
 Knit arm warmers: tapered stretch tubes worn on the forearms from wrist to above the elbow, often with a thumbhole, for warmth without a full sleeve. Cut with negative ease so they stay up. Distinct from FC-100 (no arm warmers) — front and back are the same tapered panel with one balanced join seam. A soft-goods garment — no hardware. FC-200 long-tail (accessory).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — accessory). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure pair of arm warmers is a ten-minute make that adds warmth exactly where a sleeveless top leaves off, sized to the wearer's own arm, keeping a useful layer makeable and mendable from a scrap of rib knit.
 

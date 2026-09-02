@@ -3,7 +3,7 @@
 The barong tagalog is the formal embroidered shirt of the Philippines: a lightweight, sheer, untucked shirt worn over an undershirt, with a band collar, a front placket, cuffed sleeves, and side slits — traditionally in piña or jusi with chest embroidery. This cartridge drafts the garment geometry and marks (does not reproduce) the embroidery panel. Offered with respect for the living tradition. A soft-goods garment — buttons are the maker's hardware. FC-200 long-tail (heritage).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — heritage). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure barong keeps a national formal garment makeable to real measurements in the sheer fibres it belongs to, so a piece central to Filipino ceremony stays in the hands of its makers rather than only its retailers — with the embroidery that carries its identity left to them.
 

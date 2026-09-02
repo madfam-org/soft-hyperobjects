@@ -3,7 +3,7 @@
 The load-bearing hip belt of a backpack: two padded wings that wrap the iliac crest and transfer the pack's weight off the shoulders onto the pelvis, joined at the centre front by a side-release buckle and pulled tight by webbing tails running through ladder-lock adjusters. The wing is widest over the crest and tapers to the buckle so it never folds at the belly. Made to measure from ISO 8559 waist and hip girths. FC-300 (technical & outdoor).
 
 Part of the **Fashion Cabinet Commons** (FC-300, technical & outdoor).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 The buckle and the ladder-lock adjusters are **Yantra4D** hard goods (`strap-buckle`, via `notion.hardware_ref`); `webbing` drives their slots and this garment's `buckle_joint` interface alike.
 

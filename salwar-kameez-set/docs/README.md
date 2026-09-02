@@ -6,7 +6,7 @@ the waist and gathered narrow at the ankle), worn with a **dupatta** scarf (a se
 garment, not drafted here).
 
 Part of the **Fashion Cabinet Commons** (FC-500, heritage — South Asian).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > A salwar drafted as it actually is — gathered at both ends, with a diamond crotch gusset —
 > not a Western trouser with a curved crotch stitched under a tunic.

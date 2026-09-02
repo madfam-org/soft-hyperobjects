@@ -6,7 +6,7 @@ straps. An optional length-adjustable strap bridges to the Yantra4D
 [`strap-buckle`](https://app.yantra4d.com).
 
 Part of the **Fashion Cabinet Commons** (FC-200, Lane 3 — accessories). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 ## Pieces
 

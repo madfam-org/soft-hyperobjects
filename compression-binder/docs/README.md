@@ -4,7 +4,7 @@ A pull-on chest binder in **breathable power-mesh**: a full-torso tube from the 
 to the ribcage that flattens the chest by **even, distributed** compression.
 
 Part of the **Fashion Cabinet Commons** (FC-400, lane 9 — structured intimates). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > A binder is the one intimates object where wrong compression is a safety question, not a
 > fit preference. A cartridge that puts the two safety rules into the geometry — and caps

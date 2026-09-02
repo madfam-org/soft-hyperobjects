@@ -3,7 +3,7 @@
 The cropped open bolero (shrug jacket): a very short, open-front jacket ending above the waist, with curved fronts that meet only at the top (no closure) and grown sleeves — worn over a dress or top for the shoulders and arms. Distinct from FC-100's hip-length button cardigan. Front and back share the body width so the shoulder, side, and underarm seams balance. A soft-goods garment — no hardware. FC-200 long-tail (layer gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — layer). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure bolero adds warmth and coverage to a sleeveless dress from a tiny amount of cloth and no fastenings, so a versatile layer is makeable and mendable by anyone and pairs with garments they already own.
 

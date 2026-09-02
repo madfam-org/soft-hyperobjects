@@ -3,7 +3,7 @@
 The knit beanie: a stretch tube that hugs the head, seamed up the back and gathered closed at the crown, with a folded ribbed brim. Cut with negative ease so it grips. Distinct from FC-100's structured caps — the beanie is a knit stretch cap; the back seam is a balanced self-seam. A soft-goods garment — no hardware. FC-200 long-tail (accessory).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — accessory). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure beanie is a first project anyone can finish — one panel, one seam, a gathered crown — sized to grip the wearer, keeping a warm everyday cap makeable and mendable from a scrap of rib knit.
 

@@ -5,7 +5,7 @@ band (**git**) faced in a removable white strip (**dongjeong**) and wide gently-
 in the variant fastened by **maedeup-danchu** (knotted cloth-button) closure.
 
 Part of the **Fashion Cabinet Commons** (FC-400, lane 10 — heritage). Official visualizer and
-configurator: [Fashion Cabinet](https://fashioncabinet.app).
+configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > The FC-300 [hanbok-jeogori](../../hanbok-jeogori/docs/README.md) ties with **goreum** ribbons.
 > This one closes with a Korean **knot-and-loop** — a distinct garment in the same family, and

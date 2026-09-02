@@ -6,7 +6,7 @@ few buttons, with the soft one-piece sleeve carrying the gentle **배래** (*bae
 underarm, and short side vents.
 
 Part of the **Fashion Cabinet Commons** (FC-500, heritage — Korean).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > A draft that gives the magoja its *own* straight buttoned front and soft baerae sleeve —
 > instead of borrowing the jeogori's wrap-and-tie, which is the very thing the magoja is not.

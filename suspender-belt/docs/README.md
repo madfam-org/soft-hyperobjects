@@ -5,7 +5,7 @@ sits at the natural waist and hangs **six** suspender straps — a front pair, a
 a back pair — each ending in a clip that grips a stocking welt.
 
 Part of the **Fashion Cabinet Commons** (FC-400, lane 9 — structured intimates). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > The four-strap [garter belt](../../garter-belt/docs/README.md) sits low and holds a
 > stocking well enough. Six straps at the **waist** hold a fully-fashioned stocking dead

@@ -6,7 +6,7 @@ drawstring trousers — the Yoruba **agbада** over the **bùbá** and **ṣò
 Senegambian **grand boubou** (Wolof **mbubb**) over the caftan and the **tubay**.
 
 Part of the **Fashion Cabinet Commons** (FC-500, heritage — West African).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > A width-and-fold draft keeps the logic of the gown — the cloth as the unit, no shoulder
 > seam, the arm reaching out through open sides, the neck faced rather than collared —

@@ -4,7 +4,7 @@ The hip- or thigh-length jacket worn **open** over a kimono, closed only by a sh
 (**haori-himo**) tied between two chest loops (**chi**) — in the women's **lined (awase)** version.
 
 Part of the **Fashion Cabinet Commons** (FC-400, lane 10 — heritage). Official visualizer and
-configurator: [Fashion Cabinet](https://fashioncabinet.app).
+configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > The FC-300 [haori](../../haori/docs/README.md) got the hardest thing right — keeping the bolt as
 > the unit — but left the lining as bolt goods. In a women's haori the lining is the whole point.

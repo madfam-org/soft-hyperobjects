@@ -6,7 +6,7 @@ undershirt (**camisa de chino**), with an embroidered chest panel (the **pechera
 button placket, a band collar, long sleeves with cuffs, and side slits.
 
 Part of the **Fashion Cabinet Commons** (FC-500, heritage — Philippines).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > A shirt draft that hangs the sleeve on a *measured* armscye and marks the pechera as an
 > embroidery field the maker fills — instead of a plain shirt with a diagonal panel of print

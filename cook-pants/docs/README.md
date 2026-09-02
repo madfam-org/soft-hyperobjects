@@ -3,7 +3,7 @@
 The baggy pull-on kitchen trouser: a roomy, straight, elastic-waist pant cut for long shifts on your feet — generous hip and thigh, a full straight leg (no athletic taper), an elastic (optionally drawcord) waistband, and a deep side-towel patch pocket. Distinct from FC-100's athletic joggers/sweatpants. A soft-goods garment — no hardware. FC-200 long-tail (workwear gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — workwear/utility, kitchen).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure kitchen trouser sizes a durable, comfortable work pant to the wearer's own hip and rise, so a shift-worker staple is makeable and repairable from washable cloth instead of bought as short-lived uniform stock.
 

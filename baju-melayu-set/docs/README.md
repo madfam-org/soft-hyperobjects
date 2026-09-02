@@ -6,7 +6,7 @@ trousers (**seluar**) and the **samping** — a short cloth, often **songket**, 
 trousers at the waist and folded to hang in front.
 
 Part of the **Fashion Cabinet Commons** (FC-500, heritage — Malay).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > A draft that gives the baju melayu its raised cekak musang collar, its measured-armscye
 > sleeve, and a samping whose fold is solved from the waist — not a collarless shirt with a

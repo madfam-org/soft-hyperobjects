@@ -6,7 +6,7 @@ Deccan from the medieval period onward, in forms running from a hip-length every
 to a full-skirted formal garment.
 
 Part of the **Fashion Cabinet Commons** (FC-300, long-tail — heritage — South Asian).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An asymmetric garment cannot be drafted by mirroring half a pattern — which is exactly
 > why the asymmetry is the first thing lost when heritage clothing is industrialised.

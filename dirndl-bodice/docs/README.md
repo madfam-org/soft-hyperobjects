@@ -4,7 +4,7 @@ The fitted, lightly-boned upper of the Alpine dirndl (**Mieder**) — a shaped c
 the centre front by a lace crossed through two columns of metal eyelets, worn over a blouse.
 
 Part of the **Fashion Cabinet Commons** (FC-400, lane 10 — heritage). Official visualizer and
-configurator: [Fashion Cabinet](https://fashioncabinet.app).
+configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > A laced bodice is the garment where the fastener and the pattern have to be designed together:
 > draft the fronts to meet, punch eyelets afterward, and there is no gap for the lace.

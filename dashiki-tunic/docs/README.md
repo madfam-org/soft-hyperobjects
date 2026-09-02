@@ -5,7 +5,7 @@ head, cut from a small number of **rectangular** panels and defined by the embro
 around its V-neck and its short sleeves cut in one with the body.
 
 Part of the **Fashion Cabinet Commons** (FC-400, lane 10 — heritage). Official visualizer and
-configurator: [Fashion Cabinet](https://fashioncabinet.app).
+configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > Two defining traits a Western tee-block draft erases: the rectangular cut-in-one construction,
 > and the embroidered neck panel. This cartridge keeps the first and leaves the second — the

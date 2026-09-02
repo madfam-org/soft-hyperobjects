@@ -3,7 +3,7 @@
 A structured, boned corset drafted as a ring of shaped panels that nip the waist, with boning channels marked at each seam, a front busk closure, and back lacing. The busk (the rigid front-opening steel hardware) is a Yantra4D solid (`corset-busk`); Fashion Cabinet owns the fabric panels and the busk placement, and the corset's centre-front length drives the busk length (dimensional handshake). FC-200 long-tail (foundation). 
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — foundation). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure corset computes each shaped panel to a wearer's own bust, waist, and hip and sizes the printable busk to match, so a precisely fitted foundation garment — historically bespoke and costly — becomes a repairable commons object made from firm cloth and open hardware.
 

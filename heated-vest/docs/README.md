@@ -3,7 +3,7 @@
 A softshell vest prepared for heating: a sleeveless front + back with a front opening, overlaid with conductive heating routes (marked serpentine traces a heating element follows) and a battery pocket sized to the Yantra4D `battery-holder`. Fashion Cabinet owns the vest + routing; Yantra4D owns the printable battery holder. Routes and pocket are marked for the maker; no electronics/heating element is drafted here. FC-200 e-textile capsule.
 
 Part of the **Fashion Cabinet Commons** (FC-200, Lane 5 — e-textile). Official visualizer
-and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > **E-textile note.** This cartridge drafts the **garment geometry + a routing/pocket
 > plan** only. Conductive routes, electronics pockets, and channels are **marked** for the

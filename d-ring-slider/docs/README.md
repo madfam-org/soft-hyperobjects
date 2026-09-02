@@ -6,7 +6,7 @@ the flat-bottomed D-ring loop that anchors straps and webbing on a bag or overal
 as a Yantra4D object, referenced through `notion.hardware_ref`.
 
 Part of the **Fashion Cabinet Commons** (FC-200, Lane 1 — findings). Official visualizer
-and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 ## The cross-commons bridge
 

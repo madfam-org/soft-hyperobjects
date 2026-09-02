@@ -3,7 +3,7 @@
 The full circle skirt: cut as an annulus so the hem is a full circle and the skirt falls in even waves with no gathers. The waist arc is solved so its inner radius = waist ÷ (2π × fullness); a fullness slider trades a full circle for a half/three-quarter. Distinct from FC-100's gathered and A-line skirts — the volume is pure geometry. A soft-goods garment — a side zip is the maker's hardware. FC-200 long-tail (skirt gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — skirt). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure circle skirt solves the exact radius for the wearer's own waist, so a skirt whose fit depends entirely on one precise curve becomes a reliable commons object anyone can cut to size.
 

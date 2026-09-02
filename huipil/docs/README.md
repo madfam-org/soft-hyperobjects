@@ -6,7 +6,7 @@ by straight seams, with a boat/keyhole neck. Its identity is rectangular constru
 the economy of the web; the artistry lives in the woven and embroidered bands.
 
 Part of the **Fashion Cabinet Commons** (FC-200, Lane 4 — heritage). Official visualizer
-and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > **Heritage note.** This cartridge drafts the rectangular **garment geometry only**. The
 > woven and embroidered designs that give each huipil its community identity are the

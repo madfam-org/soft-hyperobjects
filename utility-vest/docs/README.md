@@ -3,7 +3,7 @@
 The multi-pocket work/field vest: a sleeveless zip-front vest built as a carrier of pockets — chest pockets, a pen row, and big lower bellows cargo pockets — with a deep armhole to layer over, for trades, field work, photography, and fishing. Distinct from FC-100's puffer-vest, hi-vis vest, and tailored waistcoat. A soft-goods garment — the zip is the maker's hardware. FC-200 long-tail (workwear gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — workwear/utility, field).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure utility vest turns a carrier of tool and cargo pockets into a repairable commons object sized to the wearer, so field and trade workers can make and mend their own gear from tough cloth instead of buying fixed-size kit.
 

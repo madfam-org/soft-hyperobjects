@@ -6,7 +6,7 @@ the right underarm, fastened with knotted cloth frogs (**盤扣**, *pánkòu*), 
 both sides for walking.
 
 Part of the **Fashion Cabinet Commons** (FC-300, long-tail band — heritage — Chinese).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > A panel-width draft keeps the logic of the garment — cloth as the unit, the sleeve cut
 > in one, fit from where the straight seams fall — instead of translating the robe into

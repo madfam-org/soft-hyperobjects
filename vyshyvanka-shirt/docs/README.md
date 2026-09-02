@@ -5,7 +5,7 @@ from rectangular panels, gathered at the neck into a narrow band, with straight 
 square underarm gussets — worn by men and women alike.
 
 Part of the **Fashion Cabinet Commons** (FC-500, heritage — Ukrainian).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > The garment beneath the embroidery, drafted honestly — straight panels, square gussets, a
 > gathered band — with the embroidery marked but never drawn, because the вишивка is the

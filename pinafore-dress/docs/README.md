@@ -4,7 +4,7 @@ A pinafore (jumper) dress: a bib front + low back bodice on over-shoulder straps
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — everyday silhouette
 gap, layering). Official visualizer and configurator:
-[Fashion Cabinet](https://fashioncabinet.app).
+[Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure pinafore is a forgiving layering dress with no fitted side seam — held by crossed straps and a waist seam — so it fits a wide range of bodies and grows with a child, makeable from sturdy everyday cloth.
 

@@ -3,7 +3,7 @@
 The short shoulder cape: a circular (partial-annulus) cape covering the shoulders and upper arms, opening at centre front with a small stand collar. Drafted as a ring segment whose inner arc equals the neck opening (solved) and whose outer arc gives the sweep. Distinct from FC-100's ponchos (sarape-poncho) — the capelet is a short, neat shoulder layer with no side seams. A soft-goods garment — a neck tie/hook is the maker's choice. FC-200 long-tail (layer gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — layer). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure capelet computes a clean circular sweep from the wearer's own neck measurement, so a graceful shoulder layer — the kind that usually needs careful drafting — becomes a single-seam commons object anyone can cut and finish.
 

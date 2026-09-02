@@ -3,7 +3,7 @@
 A protective work glove drafted in the traditional trank style: a folded hand piece (palm and back one piece) with four fingers marked as slits and a set-in thumb, plus a gauntlet cuff. A simplified, honest teaching draft sized from hand length and span; fourchette gussets are an advanced option noted in the README. Distinct from FC-100 (no gloves). A soft-goods garment — no hardware. FC-200 long-tail (accessory).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — accessory). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure work glove sizes real hand protection to the wearer's own hand from tough offcuts of leather or canvas, so durable, repairable gloves stay makeable at home instead of bought in fixed sizes and thrown away.
 

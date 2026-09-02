@@ -6,7 +6,7 @@ drafts the **馬乗り** (*umanori*, "horse-riding") form — the **divided** ha
 two legs.
 
 Part of the **Fashion Cabinet Commons** (FC-300, long-tail — heritage — Japanese). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure draft puts the pleat geometry back in the hands of the people
 > who wear the garment — practitioners who need it to fit their own body and their own

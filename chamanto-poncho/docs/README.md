@@ -5,7 +5,7 @@ The fine dress poncho of the Chilean **huaso** — the elegant counterpart to th
 fine coloured stripes, and edged with the woven **trencilla** border.
 
 Part of the **Fashion Cabinet Commons** (FC-500, heritage — Chilean).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > A poncho draft that centres and sizes the neck slit from the head and keeps the border
 > symmetric because the cloth is reversible — the two things a one-sided printed copy loses.

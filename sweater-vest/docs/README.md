@@ -3,7 +3,7 @@
 The knit pullover V-neck vest: a sleeveless cut-and-sew knit layer with a deep V neck and ribbed neck/armhole/hem bands, worn over a shirt. Distinct from FC-100's woven vests (waistcoat, puffer-vest, hi-vis, utility-vest) — this is a knit pullover. Front and back share the body width so the seams balance; the bands are cut to the measured openings. A soft-goods garment — no hardware. FC-200 long-tail (knitwear gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — knitwear). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure sweater vest brings a cut-and-sew knit layer within reach of anyone with a sewing machine — no knitting machine needed — sized to the wearer and finished with simple ribbed bands, keeping a wardrobe staple makeable and mendable.
 

@@ -3,7 +3,7 @@
 The dropped-crotch harem pant: a very full, low-crotch trouser gathered onto an elastic waist and into narrow ankle cuffs so the leg blouses dramatically between (şalvar/harem/patiala line). Worn across many cultures. Distinct from FC-100's joggers/track pants — the dropped crotch and blousing are the point; the front inseam bow is solved to the back. A soft-goods garment — no hardware. FC-200 long-tail (bottoms gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — bottoms). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure harem pant makes a comfortable, deeply forgiving garment worn across many cultures adjustable to the wearer, so a breathable everyday trouser stays makeable and mendable from a single drapey cloth.
 

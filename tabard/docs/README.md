@@ -3,7 +3,7 @@
 A simple over-garment of a front and a back panel joined only at the shoulders, open down both sides and side-tied or belted — the workwear/heraldic over-layer and the shape of a market/warehouse over-apron. Distinct from FC-100's hi-vis vest (minimal bias-bound safety tabard) and bib-apron: the tabard covers front and back and joins only at the shoulders. Only the shoulder seam is sewn. A soft-goods garment — no hardware. FC-200 long-tail (over-garment gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — workwear/utility, over-garment).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure tabard is the simplest possible over-garment — two panels and one seam — so a protective or identifying over-layer is makeable by anyone, at any size, from a single width of sturdy cloth with almost no waste.
 

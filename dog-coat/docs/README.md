@@ -3,7 +3,7 @@
 A working dog's coat: a shaped back panel cut on the spine fold with a neck scoop and a tail taper so it lies flat over a moving back, a belly strap under the ribs, and a chest strap ahead of the shoulder — both closed with hook-and-loop tape so the coat goes on and off over an existing harness with cold hands and no buckles to freeze. FC-300 (technical & outdoor).
 
 Part of the **Fashion Cabinet Commons** (FC-300, technical & outdoor).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 The hook-and-loop tape is a **Yantra4D** hard good (`hook-loop-tape`, via `notion.hardware_ref`). This is the fully enforced flange handshake: the tape's sewn `sew_face` flange is driven by `strip_length`, `strip_width`, and `sew_margin`, all fed from `tape_run` and `tape_width` — the same parameters that drive this garment's `tape_run` interface. Hook goes on the strap, loop on the panel, so the hooks never face the dog.
 

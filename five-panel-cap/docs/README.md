@@ -8,7 +8,7 @@ the Yantra4D [`snap-fit`](https://app.yantra4d.com) cartridge, bridged through
 `notion.hardware_ref`.
 
 Part of the **Fashion Cabinet Commons** (FC-200, Lane 3 — accessories). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 ## Modes
 

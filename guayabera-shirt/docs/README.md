@@ -5,7 +5,7 @@ linen or cotton, and defined by its two vertical bands of fine pleats (**alforza
 front and the back, its four patch pockets, and its side vents.
 
 Part of the **Fashion Cabinet Commons** (FC-400, lane 10 — heritage). Official visualizer and
-configurator: [Fashion Cabinet](https://fashioncabinet.app).
+configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > The one detail that defines a guayabera is the one a naive draft gets wrong: the alforzas.
 > Pleats consume cloth, so this cartridge solves the take-up into the cut width rather than

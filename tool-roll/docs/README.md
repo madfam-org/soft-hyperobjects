@@ -3,7 +3,7 @@
 The pocket-row tool roll: a flat panel of tough cloth with one continuous pocket strip stitched down at every divider, so each pocket takes the exact width of the tool it carries and **the divider pitch is the tool list**. A flap covers the tool tips, and the whole roll winds around its own contents and ties on a cord whose ends carry pressed-on strap-end tips. FC-300 (technical & outdoor).
 
 Part of the **Fashion Cabinet Commons** (FC-300, technical & outdoor).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 The strap-end tip is a **Yantra4D** hard good (`cord-end`, via `notion.hardware_ref`). The bridge is dimensional, not just nominal: `tie_cord_dia` drives the cord-end's sewn `cord_mouth` flange **and** this garment's `tie_closure` interface, so the tip is sized to the cord that actually passes through the roll's tie channel.
 

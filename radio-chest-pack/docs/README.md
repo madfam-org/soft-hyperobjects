@@ -3,7 +3,7 @@
 The chest-mounted radio pouch: a boxed pouch riding high on the sternum where a hand finds it without looking, carried on an **H-harness** whose four straps run through ladder-lock adjusters so one rig fits over a shell, a puffy, or bare shoulders. A storm flap covers the radio head with an antenna slot, and the mic lead exits clear of a pack's shoulder straps and hip belt. Made to measure from ISO 8559 chest girth and across-front. FC-300 (technical & outdoor).
 
 Part of the **Fashion Cabinet Commons** (FC-300, technical & outdoor).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 The ladder-lock adjuster is a **Yantra4D** hard good (`strap-buckle`, via `notion.hardware_ref`); `webbing` drives its slot and this garment's `harness_strap` interface alike.
 

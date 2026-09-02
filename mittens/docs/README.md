@@ -3,7 +3,7 @@
 Warm mittens: a rounded hand pouch that pools all four fingers in one chamber for warmth, with a set-in thumb and a ribbed or folded cuff. Simpler and warmer than a five-finger glove. Distinct from FC-100 (no gloves) and the work-glove. A soft-goods garment — no hardware. FC-200 long-tail (accessory).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — accessory). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure mitten sizes real winter warmth to the wearer's own hand from warm offcuts of fleece or wool, so cosy, repairable hand-wear stays makeable at home instead of bought in fixed sizes.
 

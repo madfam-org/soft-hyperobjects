@@ -5,7 +5,7 @@ bodice, a gathered skirt, faced neck and armholes, and a button closure down the
 back — the everyday and Sunday form of the Southern African shweshwe frock.
 
 Part of the **Fashion Cabinet Commons** (FC-500, heritage — Southern Africa: Sotho, Xhosa,
-Tswana). Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Tswana). Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > A parametric bodice-and-skirt draft that balances the waist seam by construction, faces
 > the sleeveless armhole honestly, and sizes the back closure to real buttons — while the

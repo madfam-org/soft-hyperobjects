@@ -3,7 +3,7 @@
 The chef's and bushcraft knife roll: the tool roll's harder sibling. Where a tool roll divides one strip into pockets, a knife roll builds **padded slots** — each blade rides in its own batting-quilted channel so edges never touch each other or the cloth — under a long tip flap that folds down past every point, with the whole roll winding up and tying on a cord whose ends carry pressed-on tips. FC-300 (technical & outdoor).
 
 Part of the **Fashion Cabinet Commons** (FC-300, technical & outdoor).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 The cord-end tip is a **Yantra4D** hard good (`cord-end`, via `notion.hardware_ref`). The bridge is dimensional: `cord_dia` drives the cord-end's sewn `cord_mouth` flange **and** this garment's `tie_closure` interface, so the tip is sized to the cord the roll actually ties with.
 

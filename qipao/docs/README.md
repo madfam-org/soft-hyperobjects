@@ -5,7 +5,7 @@ The **qipao** (cheongsam) — the fitted Chinese dress with its unmistakable sig
 hand-knotted **frog (pankou)** fastenings, bust and waist shaping, and side slits.
 
 Part of the **Fashion Cabinet Commons** (FC-200, Lane 4 — heritage). Official visualizer
-and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > **Heritage note.** This cartridge drafts the fitted **garment geometry only**. The silk
 > brocade, the frog (pankou) knots, and the piped edges that carry its identity are the

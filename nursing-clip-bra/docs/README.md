@@ -5,7 +5,7 @@ unclipping a ring at the top, **hinged** at the band so it re-seats, over a stab
 sling and a wide soft band.
 
 Part of the **Fashion Cabinet Commons** (FC-400, lane 9 — structured intimates). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > Deepens the FC-300 [nursing bra](../../nursing-bra/docs/README.md) (a drop-cup on a wired
 > cradle) into the softer, wire-free everyday version worn around the clock.

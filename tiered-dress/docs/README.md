@@ -3,7 +3,7 @@
 The gathered tiered (prairie) dress: a simple bodice seamed to a skirt of three stacked rectangular tiers, each wider than the one above and gathered onto it, so fullness grows toward the hem. Distinct from FC-100's dresses (none are tiered) — the gather, not shaping, makes the volume. A soft-goods garment — a back closure is the maker's hardware. FC-200 long-tail (dress silhouette gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — dress). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure tiered dress builds volume from plain rectangles gathered in stages, so a full, forgiving dress is makeable from straight cuts of light cloth with almost no shaping skill and very little waste.
 

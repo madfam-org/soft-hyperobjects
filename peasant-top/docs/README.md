@@ -3,7 +3,7 @@
 The peasant (folk) top: a loose blouse gathered onto an elasticated or drawstring neckline that can be worn on or off the shoulder, with full gathered sleeves ending in elastic or a cuff — the European/Latin American folk-blouse line. The volume is the gather; front and back share the body width so the side seams balance by construction. A soft-goods garment — no hardware. FC-200 long-tail (neckline gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — neckline). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure peasant top builds a soft, adjustable folk blouse from gathered rectangles, so a forgiving garment that fits many bodies and can be worn on or off the shoulder stays makeable from light cloth with almost no shaping.
 

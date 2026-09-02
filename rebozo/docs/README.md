@@ -5,7 +5,7 @@ used to carry children or goods, finished with the **rapacejo**, an elaborate ha
 fringe often as prized as the weave. Its construction is a single long web.
 
 Part of the **Fashion Cabinet Commons** (FC-200, Lane 4 — heritage). Official visualizer
-and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > **Heritage note.** This cartridge drafts the **one-rectangle garment geometry only**.
 > The jaspe (ikat) or brocade weave and the rapacejo (knotted fringe) that carry the

@@ -5,7 +5,7 @@ Asia: close-fitting to the bust with a short hem above the midriff, short set-in
 a back opening, and its signature **bust darts**.
 
 Part of the **Fashion Cabinet Commons** (FC-200, Lane 4 — heritage). Official visualizer
-and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > **Heritage note.** This cartridge drafts the fitted **garment geometry only**. The silk,
 > the border, the mirror (shisha) work, and the embroidery that carry its identity are the

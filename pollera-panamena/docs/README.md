@@ -6,7 +6,7 @@ skirt of several loom widths, both worked in fine white cotton with **calado** (
 and **sombreado** (appliqué) embroidery and edged with lace.
 
 Part of the **Fashion Cabinet Commons** (FC-500, heritage — Panamanian; made-to-measure).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > A made-to-measure draft that solves every gather to its band and sizes the off-shoulder
 > band from the shoulder span — a correct base for a national treasure, with none of the

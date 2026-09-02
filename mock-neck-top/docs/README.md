@@ -4,7 +4,7 @@ A fitted knit top with a mock neck: a short stand collar (~50-70 mm) that stands
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — everyday silhouette
 gap, knit). Official visualizer and configurator:
-[Fashion Cabinet](https://fashioncabinet.app).
+[Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure mock-neck top solves the neckband length from the wearer's own neckline so the collar sits clean, turning a knit staple into a repeatable commons object without factory grading.
 

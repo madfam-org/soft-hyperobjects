@@ -3,7 +3,7 @@
 The cocoon coat: a rounded coat that bows OUT at the hip and pulls IN at the hem, wrapping the body like a cocoon, with grown dropped sleeves and a minimal collar. Distinct from FC-100's straight overcoat and the swing coat (which flares out). Front and back share the identical curved side seam so it balances by construction; the front laps for a minimal closure. A soft-goods garment — buttons/tie are the maker's hardware. FC-200 long-tail (outerwear gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — outerwear). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure cocoon coat gives a soft, enveloping winter silhouette from a single curved side seam, sized to the wearer, so a cosy architectural coat stays makeable and mendable from a soft wool at any body shape.
 

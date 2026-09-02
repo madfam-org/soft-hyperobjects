@@ -3,7 +3,7 @@
 The gaucho: a very wide, cropped, mid-calf trouser cut so full and straight it reads almost as a divided skirt (1970s riding-inspired line), with a fitted waistband. Distinct from FC-100's culottes (shorter, more skirt-like) and full-length palazzo/wide-leg pants — the gaucho is the specific cropped mid-calf wide cut; the front inseam bow is solved to the back. A soft-goods garment — a zip is the maker's hardware. FC-200 long-tail (bottoms gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — bottoms). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure gaucho gives the ease of a skirt with the practicality of trousers, sized to the wearer, so a comfortable, movement-friendly cut stays makeable and mendable from a single length of drapey cloth.
 

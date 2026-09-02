@@ -7,7 +7,7 @@ Cabinet owns the cord (cut length, crimp allowance, channel entry and exit); the
 referenced through `notion.hardware_ref`.
 
 Part of the **Fashion Cabinet Commons** (Wave T — findings II).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 ## What this cartridge produces
 

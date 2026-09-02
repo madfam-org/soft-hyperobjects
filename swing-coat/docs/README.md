@@ -3,7 +3,7 @@
 The swing coat: a coat that flares dramatically from a fitted shoulder to a wide swinging hem (1950s A-line/trapeze line), with a set sleeve and a small collar. Distinct from FC-100's straight overcoat/trench/parka. The flare is in the side seam — front and back release to the same wide hem so the side balances by construction; the front laps for buttons. A soft-goods garment — buttons are the maker's hardware. FC-200 long-tail (outerwear gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — outerwear). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure swing coat brings a dramatic mid-century silhouette within reach of a home maker, sized to the wearer over layers, so a striking winter coat is makeable and mendable rather than bought at a premium.
 

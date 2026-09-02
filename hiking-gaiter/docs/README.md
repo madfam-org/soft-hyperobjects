@@ -3,7 +3,7 @@
 The full-height gaiter: a truncated-cone sleeve that wraps the boot top and the lower leg to keep scree, snow, mud, and burrs out of the boot. It opens down the front on a lacing-hook column seated in eyelets so the wearer can step in and cinch it closed over the laces, draws in at the top on a drawcord stopped by a cord-lock, and is held down by an instep strap under the boot arch. Made to measure from ISO 8559 calf and ankle girths. FC-300 (technical & outdoor).
 
 Part of the **Fashion Cabinet Commons** (FC-300, technical & outdoor).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 The eyelet that seats each lacing hook is a **Yantra4D** hard good (`garment-eyelet`, via `notion.hardware_ref`) — Fashion Cabinet never re-implements solids. The bridge is dimensional, not just nominal: `hook_dia` drives both the eyelet's set-face flange and this garment's `front_opening` interface, so one dimension flows to both sewn edges.
 

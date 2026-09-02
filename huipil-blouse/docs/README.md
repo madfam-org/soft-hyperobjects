@@ -5,7 +5,7 @@ rectangular tunic assembled from straight-woven webs. This is the classic **thre
 blouse-length huipil of the Maya and other highland peoples.
 
 Part of the **Fashion Cabinet Commons** (FC-400, lane 10 — heritage). Official visualizer and
-configurator: [Fashion Cabinet](https://fashioncabinet.app).
+configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > Where the FC-300 [huipil](../../huipil/docs/README.md) is a two-web tunic, this is the
 > three-web blouse — a centre web carrying the neck flanked by two side webs, joined by the randa.

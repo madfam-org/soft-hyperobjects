@@ -3,7 +3,7 @@
 The tulip (petal) skirt: a short, rounded skirt whose front is two overlapping curved petal panels that wrap over each other like tulip leaves and round in at the hem, over a darted back. Distinct from FC-100's straight/gathered skirts — the shape is the overlapping curved petals; the straight side seam balances by construction. A soft-goods garment — a side zip is the maker's hardware. FC-200 long-tail (skirt gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — skirt). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure tulip skirt builds a soft, rounded silhouette from two overlapping curved panels sized to the wearer, so a playful shape usually cut by eye becomes a repeatable, well-fitting commons object.
 

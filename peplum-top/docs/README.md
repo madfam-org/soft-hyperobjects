@@ -4,7 +4,7 @@ A fitted darted bodice seamed at the natural waist to a flared peplum — a shor
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — everyday silhouette
 gap, fitted). Official visualizer and configurator:
-[Fashion Cabinet](https://fashioncabinet.app).
+[Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure peplum top computes a true circular flounce whose inner arc matches the wearer's own waist, so a shape that usually needs pattern-drafting skill becomes a repeatable commons object anyone can cut to fit.
 

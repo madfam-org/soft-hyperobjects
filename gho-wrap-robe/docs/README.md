@@ -5,7 +5,7 @@ crossed right-over-left, and then **hitched up** and belted at the waist with th
 so the hem sits at the knee and the excess blouses over the belt to form the gho's front pouch.
 
 Part of the **Fashion Cabinet Commons** (FC-500, heritage — Bhutanese).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > A draft that takes the wearer's height and knee height, cuts the robe long, and reports the
 > pouch that forms over the belt — because the gho's whole silhouette comes from how it is

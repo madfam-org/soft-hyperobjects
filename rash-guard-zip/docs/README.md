@@ -5,7 +5,7 @@ centre front and closed with a full **separating zipper** so it comes on and off
 dragging over the head.
 
 Part of the **Fashion Cabinet Commons** (FC-400, lane 9 — active/structured intimates).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > Deepens the FC-100 [rash guard](../../rash-guard/docs/README.md) (a pull-on UV top, no
 > hardware) into the zip version surfers and swimmers actually reach for — because a wet

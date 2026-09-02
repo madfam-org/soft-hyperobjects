@@ -3,7 +3,7 @@
 The pull-over craft/artist smock: a loose protective over-garment with a shoulder yoke, a gathered body hanging from the yoke for room, a wide pull-over neck, grown dropped sleeves, and a big divided front kangaroo pocket. Distinct from FC-100's buttoned coats — the smock pulls over, is gathered, and needs no closure. A soft-goods garment — no hardware. FC-200 long-tail (workwear gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — workwear/utility, craft).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure smock protects clothing and gives room to work from a simple yoke-and-gathered-body cut with no fasteners, so a maker, cook, or child can pull on a durable, mendable cover made in any wipeable cloth.
 

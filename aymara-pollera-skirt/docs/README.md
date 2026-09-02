@@ -5,7 +5,7 @@ altiplano — the **cholita's pollera**, worn in layers over the enagua underski
 manta shawl and the bowler hat.
 
 Part of the **Fashion Cabinet Commons** (FC-500, heritage — Aymara / Quechua, Bolivia & Peru).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > A draft that treats the pollera's fullness as a *solved* dimension and adds the alforza
 > tucks' take-up to the cut length — the two things an ordinary-skirt draft leaves out.

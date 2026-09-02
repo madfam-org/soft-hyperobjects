@@ -3,7 +3,7 @@
 The knit balaclava (ski mask): a close hood covering head and neck with a shaped face opening, seamed up the back. Cut with negative ease so it hugs; the back is a balanced self-seam and the whole head is wrapped with just the face exposed. Distinct from FC-100's open hoodie hoods. A soft-goods garment — no hardware. FC-200 long-tail (accessory).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — accessory). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure balaclava lets anyone make cold-weather head-and-neck protection sized to their own head and face opening, keeping warm, functional gear makeable and mendable from a scrap of merino or fleece.
 

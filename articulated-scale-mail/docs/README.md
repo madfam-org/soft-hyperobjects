@@ -10,7 +10,7 @@ guide); the scale-and-neck field itself is the Yantra4D
 
 Part of the **Fashion Cabinet Commons** (FC-200, Lane 2 — AM-fashion). One material
 identity, **Bambu TPU 95A**, spans this notion and that solid. Official visualizer and
-configurator: [Fashion Cabinet](https://fashioncabinet.app).
+configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 ## Modes
 

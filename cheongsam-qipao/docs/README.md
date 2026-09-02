@@ -7,7 +7,7 @@ chest to the right underarm, hook-and-eye and knotted-frog closures along that c
 high side slits.
 
 Part of the **Fashion Cabinet Commons** (FC-500, heritage — Chinese).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > A fitted draft that solves the waist from the three girths and measures the 大襟 so the
 > overlap lies flat — instead of a Western sheath with a mandarin collar and a printed

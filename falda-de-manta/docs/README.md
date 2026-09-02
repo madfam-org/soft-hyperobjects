@@ -5,7 +5,7 @@ manta (plain cotton) or woven cloth gathered onto a fitted waistband, full and s
 finished with embroidered or ribbon bands at the hem. The fullness is the point.
 
 Part of the **Fashion Cabinet Commons** (FC-200, Lane 4 — heritage). Official visualizer
-and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > **Heritage note.** This cartridge drafts the gathered **garment geometry only**. The
 > deshilado (drawn-work), embroidery, and ribbon (listón) decoration that carries regional

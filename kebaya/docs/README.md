@@ -3,7 +3,7 @@
 The kebaya is the fitted, open-front blouse worn across Indonesia, Malaysia, Brunei, Singapore and beyond — often in embroidered lace or voile, shaped close with bust and waist darts, an open curved front worn over a camisole, and fitted sleeves. Recognised by UNESCO. This cartridge drafts the garment geometry and marks (does not reproduce) the sulaman embroidery. Offered with respect. A soft-goods garment — brooches/hooks are the maker's hardware. FC-200 long-tail (heritage).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — heritage). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure kebaya computes a precisely darted, close-fitting heritage blouse to a wearer's own figure, keeping a garment recognised across Southeast Asia makeable in the lace and voile it belongs to — with the embroidery and brooches that carry identity left to the wearer.
 

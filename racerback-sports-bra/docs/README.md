@@ -5,7 +5,7 @@ A pull-on **compression** sports bra in power-mesh: a single front panel, a conv
 is the support.
 
 Part of the **Fashion Cabinet Commons** (FC-400, lane 9 — active/structured intimates).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > "High impact" is an adjective. The band grip that actually carries the load is a number,
 > solved from the ribcage — and this cartridge prints it.

@@ -6,7 +6,7 @@ rectangle. The men's wearing cloth is that **whole uncut rectangle**, draped ove
 shoulder and wound round the body.
 
 Part of the **Fashion Cabinet Commons** (FC-400, lane 10 — heritage). Official visualizer and
-configurator: [Fashion Cabinet](https://fashioncabinet.app).
+configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > The single most important fact about the wearing cloth is that it is **not cut**. Cutting kente
 > destroys the strip weave and the meaning woven into it — so this cartridge cuts nothing.

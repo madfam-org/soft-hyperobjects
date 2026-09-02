@@ -3,7 +3,7 @@
 The fitted sheath: a close, straight dress shaped by bust and waist darts (marked over a common fitted side seam, so it balances by construction), a jewel neck, and a straight knee-length skirt with a back walking vent. Distinct from FC-100's loose shift — the sheath is darted and body-skimming. A soft-goods garment — a back zip is the maker's hardware. FC-200 long-tail (dress silhouette gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — dress). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure sheath computes bust, waist, and hip shaping to the wearer's own figure, so a precisely fitted dress — usually the product of professional pattern-drafting — becomes a repeatable commons object anyone can cut to fit.
 

@@ -6,7 +6,7 @@ edge.
 
 Part of the **Fashion Cabinet Commons** (FC-300, long-tail band — heritage — Mexican).
 **Rank 300: the closing entry of the FC-300 catalog.** Official visualizer and
-configurator: [Fashion Cabinet](https://fashioncabinet.app).
+configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > The length is set by the trouser, not by the torso, and the front closes edge to edge.
 > Get either wrong and it reads as a costume from across an arena.

@@ -3,7 +3,7 @@
 The áo dài is the Vietnamese national dress: a long, close-fitting tunic split high at both sides into front and back ankle panels, worn over wide trousers, with a mandarin collar and fitted sleeves. This is the 200th Fashion Cabinet hyperobject. The cartridge drafts the tunic geometry; the trousers are drafted separately, and the motifs that carry regional and personal identity are the maker's and are not reproduced here. Offered with respect. A soft-goods garment — snaps/hooks are the maker's hardware. FC-200 long-tail (heritage).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — heritage). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure áo dài computes a very close, split-panel national dress to a wearer's own figure — the kind of fit that traditionally demands a tailor — keeping a garment central to Vietnamese identity makeable and repairable by the people who wear it, the motifs left to them. A fitting 200th object for a commons built to keep clothing in its makers' hands.
 

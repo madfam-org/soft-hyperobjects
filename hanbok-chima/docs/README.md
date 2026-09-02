@@ -6,7 +6,7 @@ with the short **jeogori** jacket, drafted separately in this commons as
 [`hanbok-jeogori`](../../hanbok-jeogori/).
 
 Part of the **Fashion Cabinet Commons** (FC-300, long-tail — heritage — Korean). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure chima keeps a living Korean garment makeable and repairable by
 > the people who wear it — the draft tells a maker exactly how much cloth to buy and

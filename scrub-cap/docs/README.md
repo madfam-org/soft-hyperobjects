@@ -3,7 +3,7 @@
 The surgical scrub cap (tie-back): a domed cap that covers the hair, with a brow band at the front and a gathered, bound, tie-back at the nape, worn in operating rooms and kitchens. Woven and gathered, distinct from FC-100's structured caps and the knit beanie. A soft-goods garment — no hardware. FC-200 long-tail (accessory).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — accessory). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure scrub cap lets clinical and kitchen workers make their own washable, comfortable head cover in fabrics they choose, sized to fit, replacing disposable caps with a repairable commons object.
 

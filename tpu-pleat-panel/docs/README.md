@@ -10,7 +10,7 @@ Yantra4D [`tpu-pleat-panel`](https://app.yantra4d.com) solid, referenced through
 Part of the **Fashion Cabinet Commons** (FC-200, Lane 2 — AM-fashion). One material
 identity, **Bambu TPU 95A**, spans this notion and that solid — the same panel is a
 Fashion Cabinet fabric and a Yantra4D object at once. Official visualizer and
-configurator: [Fashion Cabinet](https://fashioncabinet.app).
+configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 ## What this cartridge produces
 

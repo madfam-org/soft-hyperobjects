@@ -3,7 +3,7 @@
 The tube (bandeau) top: a strapless band of stretch fabric around the bust, held by elasticated top and bottom edges — the simplest possible top. Cut with negative ease so it grips; front and back are the same panel with one balanced join seam. Distinct from FC-100's strapped camisole and crop-top. A soft-goods garment — no hardware. FC-200 long-tail (neckline gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — neckline). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure tube top is the most minimal garment in the commons — one panel, one seam, two elastic casings — sized to grip the wearer, so even a first-time maker can produce a wearable piece from a scrap of stretch fabric.
 

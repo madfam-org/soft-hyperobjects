@@ -3,7 +3,7 @@
 The neck gaiter (buff/tube scarf): a simple stretch tube worn around the neck and pulled up over the face, seamed into a loop. Its circumference equals the head girth so it pulls over the head. Distinct from FC-100 (no scarves) — the simplest worn tube; front and back are the same panel with one balanced join seam. A soft-goods garment — no hardware. FC-200 long-tail (accessory).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — accessory). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure neck gaiter is a ten-minute make that turns a strip of technical knit into warmth and sun/dust protection sized to the wearer, keeping useful gear makeable and mendable rather than bought disposable.
 

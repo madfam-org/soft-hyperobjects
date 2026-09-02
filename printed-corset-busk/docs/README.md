@@ -6,7 +6,7 @@ guide); the printed part itself is the Yantra4D
 [`corset-busk`](https://app.yantra4d.com) solid, referenced through `notion.hardware_ref`.
 
 Part of the **Fashion Cabinet Commons** (FC-200, Lane 2 — AM-fashion). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 ## What this cartridge produces
 

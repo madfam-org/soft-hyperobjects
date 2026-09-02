@@ -3,7 +3,7 @@
 The utility painter's trouser: a straight, roomy work pant with the trade's signature marks — a hammer/tool loop on the outer thigh, a double-knee reinforcement zone, and a long thigh tool pocket. Distinct from FC-100's slim chinos and bellows-pocket cargo pants. A soft-goods garment — buttons are the maker's hardware. FC-200 long-tail (workwear gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — workwear/utility, utility).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure painter's pant puts the trade's own tool carry — hammer loop, double knee, thigh pocket — into a sturdy trouser sized to the wearer, so working clothes stay makeable and mendable rather than disposable.
 

@@ -6,7 +6,7 @@ Its construction is the simplest possible: one rectangle, a head slit, finished 
 fringed) edges.
 
 Part of the **Fashion Cabinet Commons** (FC-200, Lane 4 — heritage). Official visualizer
-and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > **Heritage note.** This cartridge drafts the **one-rectangle garment geometry and the
 > head slit only**. The weave — bands, the ojo (diamond), colour gradients — that carries

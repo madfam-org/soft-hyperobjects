@@ -5,7 +5,7 @@ and fastened along a diagonal, worn with a long sash (**бүс**, *büs*) wound 
 Related forms are worn by Buryat, Kalmyk and Tuvan communities.
 
 Part of the **Fashion Cabinet Commons** (FC-300, long-tail — heritage — Mongolian).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > The two things an outside pattern most often gets wrong are the enger's diagonal and the
 > blousing. This draft solves both from measurements rather than estimates.

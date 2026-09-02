@@ -3,7 +3,7 @@
 The off-shoulder (bardot) top: a wide horizontal neckline that sits below the shoulders on the upper arm, held by an elasticated top edge with an optional flounce, so the shoulders are bare. Front and back are the same wide panel; the top edge is a continuous casing and the side seams balance by construction. Distinct from FC-100's strapped tops. A soft-goods garment — no hardware. FC-200 long-tail (neckline gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — neckline). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure off-shoulder top is one of the easiest garments to make — two panels and an elastic edge — sized to the wearer, so a warm-weather staple is makeable and mendable from a single soft fabric at any body shape.
 

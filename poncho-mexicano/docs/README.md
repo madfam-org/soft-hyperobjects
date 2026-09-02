@@ -5,7 +5,7 @@ The Mexican gabán/sarape poncho: a **closed** rectangle of sarape wool with a c
 
 Part of the **Fashion Cabinet Commons** (FC-400, lane 10 — heritage; **rank 400**, closing the
 fourth hundred). Official visualizer and configurator:
-[Fashion Cabinet](https://fashioncabinet.app).
+[Fashion Cabinet](https://fashioncabi.net).
 
 > It differs from the FC-300 [ruana](../../poncho-ruana/docs/README.md) in exactly one decisive
 > way that the ruana itself names: a ruana is **open** down the front; a poncho is **closed** — a

@@ -5,7 +5,7 @@ world — worn over a **kemben** or camisole with a batik or **songket** sarong,
 sheer embroidered voile, lace, or fine cotton.
 
 Part of the **Fashion Cabinet Commons** (FC-500, heritage — Nusantara / Southeast Asia).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > A fitted draft with a set-in sleeve hung from a *measured* armscye — instead of a boxy
 > lace top that keeps neither the kebaya's close fit nor its clean-hanging sleeve.

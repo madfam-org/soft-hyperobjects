@@ -5,7 +5,7 @@ opening all the way down the centre front, crossed right-over-left and held with
 and a row of small buttons, with long straight sleeves and side slits for walking and riding.
 
 Part of the **Fashion Cabinet Commons** (FC-500, heritage — Levantine).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > A wrap-front draft that gives each front a real overlap and runs the buttons up the crossing
 > edge — not an edge-to-edge coat that loses the cross the qumbaz is built around.

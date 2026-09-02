@@ -3,7 +3,7 @@
 The pointed-hem handkerchief skirt: square-ish panels hung from a solved circular waist arc so their outer corners drop into handkerchief points below the side hem. Distinct from FC-100's straight/gathered skirts — the points are the square geometry, not shaping. A soft-goods garment — a side zip is the maker's hardware. FC-200 long-tail (skirt gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — skirt). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure handkerchief skirt gets its floating pointed hem from plain square panels and a solved waist arc, so an airy, movement-rich skirt is makeable from a light fabric with only straight cuts and one curve.
 

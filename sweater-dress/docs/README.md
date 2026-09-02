@@ -3,7 +3,7 @@
 The knit sweater dress: a long-sleeved knit column dress with a ribbed crew or funnel neck and ribbed cuffs/hem, cut close and cosy in a sweater knit — the winter pull-on dress. Distinct from FC-100's sleeveless tank-dress and the woven dresses. Front and back share the body width so the shoulder and side seams balance; a set sleeve joins at the armhole. A soft-goods garment — no hardware. FC-200 long-tail (dress gap).
 
 Part of the **Fashion Cabinet Commons** (FC-200, long-tail — dress). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > An open, made-to-measure sweater dress puts a warm, cover-you knit dress within reach of a home sewist with a stretch machine, sized to the wearer and finished with simple ribbed bands, keeping a winter staple makeable and mendable.
 

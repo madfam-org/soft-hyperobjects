@@ -7,7 +7,7 @@ Cabinet's classic reversible summer hat, sized to the wearer. A pure soft-goods 
 — **no hardware**.
 
 Part of the **Fashion Cabinet Commons** (FC-200, Lane 3 — accessories). Official
-visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 ## Modes
 

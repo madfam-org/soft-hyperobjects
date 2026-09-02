@@ -3,7 +3,7 @@
 A load-carrying harness vest: a shoulder **yoke** that spans the trapezius and takes the whole load off the neck, with webbing channels running down the front and back panels through ladder-lock adjusters so one vest fits a range of torsos and layer thicknesses. Guides, surveyors, camera crews, and search teams wear it over anything. Made to measure from ISO 8559 chest girth, across-back, shoulder length, and neck girth. FC-300 (technical & outdoor).
 
 Part of the **Fashion Cabinet Commons** (FC-300, technical & outdoor).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 The ladder-lock adjuster is a **Yantra4D** hard good (`strap-buckle`, via `notion.hardware_ref`); `webbing` drives its slot and this garment's `webbing_channel` interface alike.
 

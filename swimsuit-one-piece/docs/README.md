@@ -4,7 +4,7 @@ A **structured** one-piece maillot in swim-lycra: a full-torso swimsuit with a b
 bra and **adjustable** ring-and-slider straps.
 
 Part of the **Fashion Cabinet Commons** (FC-400, lane 9 — active/structured intimates).
-Official visualizer and configurator: [Fashion Cabinet](https://fashioncabinet.app).
+Official visualizer and configurator: [Fashion Cabinet](https://fashioncabi.net).
 
 > Distinct from the FC-100 [one-piece swimsuit](../../one-piece-swimsuit/docs/README.md), a
 > pull-on maillot with no hardware. Here the structure — the shelf bra and adjustable straps —
