@@ -40,8 +40,8 @@ tacked to the centre of the top edge as a short strap, not seamed across the who
 
 The rigid insert is Yantra4D **`folding-board`** (`notion.hardware_ref`): its `fold_w` and
 `fold_h` are driven by this folder's `board_width` and `board_length`. The board arrived on
-the yantra4d 500-push shelf; the FC-400 index logs it `(co-create)` from the pinned-snapshot
-state, and this cartridge links it live now that it resolves.
+the yantra4d 500-push shelf; it resolves in the pinned snapshot and this cartridge links it
+live, so the FC-400 index carries it with no `(co-create)` suffix.
 
 ## Provenance
 

@@ -38,8 +38,8 @@ the buckles nest inward and the stud strap closes over the roll.
 
 Yantra4D **`belt-hanger`** (`notion.hardware_ref`): its `hook_count` is driven by this
 keeper's `belt_count` — the rack always has exactly one hook per belt slot. The rack arrived
-on the yantra4d 500-push shelf; the FC-400 index logs it `(co-create)`, and this cartridge
-links it live.
+on the yantra4d 500-push shelf; it resolves in the pinned snapshot and this cartridge links
+it live, so the FC-400 index carries it with no `(co-create)` suffix.
 
 ## Provenance
 

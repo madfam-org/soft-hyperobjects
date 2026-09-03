@@ -36,10 +36,12 @@ holds the toe shape; a soft muslin sags once filled.
 
 ## Cross-commons bridge
 
-**None.** A printable shoe-tree body is the natural bridge, but `shoe-tree` is **not** in the
-pinned Yantra4D snapshot (`docs/interfaces/yantra4d-hardware.snapshot.json`). Rather than
-declare a dangling reference, this cartridge stays pattern-only — see the FC-400 index's
-`(co-create)` note for `shoe-tree`.
+**None.** `shoe-tree` *does* resolve in the pinned Yantra4D snapshot
+(`docs/interfaces/yantra4d-hardware.snapshot.json`), but this cartridge still declares no
+`notion.hardware_ref`, and that is the honest state rather than a gap: the stuffer is a
+fabric *substitute* for a shoe tree, not a consumer of one. It is drafted from its own
+foot measurements, so there is no dimensional handshake to make. The FC-400 index agrees —
+entry 365 carries `hardware: null` and `needs: ["pattern"]`, with no `(co-create)` note.
 
 ## Provenance
 

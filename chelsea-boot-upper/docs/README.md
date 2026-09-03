@@ -36,13 +36,14 @@ balances.
 quarters join at the centre back. The lasting edge is a stitch-down (declared as an
 interface).
 
-## Cross-commons bridge (co-create)
+## Cross-commons bridge
 
-`notion.hardware_ref` → **`side-release-buckle`** *(co-create)* — the wearable buckle exists
-in the yantra4d-500 catalog; this is its first Fashion Cabinet boot use, as the elastic
-gusset tension element. Maps `webbing_w → webbing_w` (a flange param, driven by the
-`gusset_tension` interface, so the **dimensional handshake** holds) and `wall_t → max(2,
-seam_allowance)`.
+`notion.hardware_ref` → **`side-release-buckle`** — the wearable buckle exists in the
+yantra4d-500 catalog and resolves in the pinned snapshot, and this cartridge links it live,
+so the FC-400 index carries it with no `(co-create)` suffix. This is its first Fashion
+Cabinet boot use, as the elastic gusset tension element. Maps `webbing_w →
+webbing_w` (a flange param, driven by the `gusset_tension` interface, so the
+**dimensional handshake** holds) and `wall_t → max(2, seam_allowance)`.
 
 ## Parameters
 

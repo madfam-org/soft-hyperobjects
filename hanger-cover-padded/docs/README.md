@@ -39,8 +39,8 @@ cuff loosely enough to slide the cover off for washing.
 
 Yantra4D **`garment-hanger`** (`notion.hardware_ref`): its `shoulder_w` and `slope` are
 driven by this cover's `hanger_span` and `shoulder_drop`. The hanger body arrived on the
-yantra4d 500-push shelf; the FC-400 index logs it `(co-create)` from the pinned-snapshot
-state, and this cartridge links it live now that it resolves.
+yantra4d 500-push shelf; it resolves in the pinned snapshot and this cartridge links it
+live, so the FC-400 index carries it with no `(co-create)` suffix.
 
 ## Provenance
 

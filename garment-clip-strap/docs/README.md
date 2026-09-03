@@ -38,7 +38,8 @@ closed with the clip's spring free to open.
 
 Yantra4D **`garment-clip`** (`notion.hardware_ref`): its `jaw_len` and `jaw_w` are driven by
 this carrier's `clip_jaw_len` and `clip_jaw_width`. The clip arrived on the yantra4d 500-push
-shelf; the FC-400 index logs it `(co-create)`, and this cartridge links it live.
+shelf; it resolves in the pinned snapshot and this cartridge links it live, so the FC-400
+index carries it with no `(co-create)` suffix.
 
 ## Provenance
 
