@@ -179,6 +179,33 @@ context must include the submodule's contents.
 4. **Role addresses** — the `conduct@` and `security@` placeholders came across
    unresolved, as they are in the platform.
 
+## Cross-lane note: the platform pin is one commit behind
+
+While this lane ran, the platform-side lane (L4) landed the submodule mount:
+`madfam-org/fashion-cabinet` commit `5fab252`
+("feat(commons)!: projects/ becomes one submodule pinned at soft-hyperobjects")
+replaces `projects/` with a gitlink and adds a `.gitmodules` entry for it.
+
+That pin is **`e2e4cb0`** — this repository's *extraction* commit, captured
+before the skeleton commit existed. This repository's `main` is now
+**`69c1d2f`** (extraction + skeleton). The platform therefore pins a commit whose
+tree is the 516 cartridges and nothing else.
+
+**This is correct as far as it goes and needs one coordinator action:** advance
+the platform's submodule pin from `e2e4cb0` to `69c1d2f` so the mounted commons
+carries its own LICENSE, NOTICE and governance files. Nothing breaks in the
+meantime — every cartridge path is identical between the two commits, so the
+platform's lanes resolve exactly the same content either way.
+
+Two further coordinator items follow from L4's commit:
+
+- `.gitmodules` currently carries `url = file:///Users/aldoruizluna/labspace/.stab-clones/l2-soft/soft-hyperobjects`, a local path from this session. It must become the real remote before anyone else clones the platform.
+- The tree-equality proof in this document is unaffected: the source commit
+  `e56247b` remains reachable in the platform and `e56247b:projects` still
+  resolves to `8e53962a8353683c4f0397ec335ba5b61f607125`. Verify against that
+  commit, not against the platform's current `HEAD`, where `projects` is a
+  gitlink rather than a tree.
+
 ## What this extraction did not do
 
 No push, no remote, no repository creation, no archive, no pull request. The
