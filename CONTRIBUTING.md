@@ -176,7 +176,7 @@ modelled as pattern pieces.
 
 ```bash
 python3 -m venv .venv && . .venv/bin/activate
-pip install "hyperobjects-spec @ git+https://github.com/madfam-org/hyperobjects-spec@cb19e515c4d9b6a603e7d3863a7e6027e6877c59"
+pip install "hyperobjects-spec @ git+https://github.com/madfam-org/hyperobjects-spec@308efae80b0e8d03d6e4d018d2d9c1ebce9406d6"
 
 fc-spec check garment-manifest <slug>/project.json
 ```
