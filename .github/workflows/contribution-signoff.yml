@@ -58,7 +58,7 @@ jobs:
     if: vars.FC_CONTRIBUTION_SIGNOFF == 'dco'
     # ADR-010: self-hosted pool once the ARC bootstrap is complete; the
     # fallback keeps the lane runnable on a freshly-created repository.
-    runs-on: ${{ vars.ARC_BOOTSTRAP_COMPLETE == 'true' && 'madfam-runners-blue' || 'ubuntu-latest' }}
+    runs-on: ${{ vars.CI_RUNNER_LABEL != '' && vars.CI_RUNNER_LABEL || 'madfam-runners-blue' }}
     steps:
       - uses: actions/checkout@v4
         with:

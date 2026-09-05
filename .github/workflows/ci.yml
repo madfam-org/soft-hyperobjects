@@ -39,7 +39,7 @@ jobs:
     name: Manifest conformance (fc-spec)
     # ADR-010: prefer the self-hosted pool once the ARC bootstrap is complete,
     # fall back to GitHub-hosted so the lane still runs before/if it is not.
-    runs-on: ${{ vars.ARC_BOOTSTRAP_COMPLETE == 'true' && 'madfam-runners-blue' || 'ubuntu-latest' }}
+    runs-on: ${{ vars.CI_RUNNER_LABEL != '' && vars.CI_RUNNER_LABEL || 'madfam-runners-blue' }}
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
@@ -49,8 +49,20 @@ jobs:
           python-version: "3.12"
 
       - name: Install the keystone (no platform checkout)
+        env:
+          SPEC_READ_TOKEN: ${{ secrets.MADFAM_BOT_PAT }}
         run: |
-          pip install "hyperobjects-spec @ git+https://github.com/madfam-org/hyperobjects-spec@${SPEC_PIN}"
+          # hyperobjects-spec is private today: use the read token when the secret is set,
+          # fall back to the public URL, and fail LOUD naming the operator step otherwise.
+          if [ -n "${SPEC_READ_TOKEN}" ]; then
+            SPEC_URL="git+https://x-access-token:${SPEC_READ_TOKEN}@github.com/madfam-org/hyperobjects-spec@${SPEC_PIN}"
+          else
+            SPEC_URL="git+https://github.com/madfam-org/hyperobjects-spec@${SPEC_PIN}"
+          fi
+          if ! pip install "hyperobjects-spec @ ${SPEC_URL}"; then
+            echo "::error title=keystone not installable::hyperobjects-spec could not be cloned at ${SPEC_PIN} — the repo is private and no read token reached this job. Operator step: make madfam-org/hyperobjects-spec public (RFC 0038 §9 keystone posture) or set the repository secret MADFAM_BOT_PAT with read access to it."
+            exit 1
+          fi
           fc-spec list
 
       - name: Every cartridge is a complete triple
@@ -92,7 +104,7 @@ jobs:
 
   patterns:
     name: Pattern verification (render + seam parity)
-    runs-on: ${{ vars.ARC_BOOTSTRAP_COMPLETE == 'true' && 'madfam-runners-blue' || 'ubuntu-latest' }}
+    runs-on: ${{ vars.CI_RUNNER_LABEL != '' && vars.CI_RUNNER_LABEL || 'madfam-runners-blue' }}
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
