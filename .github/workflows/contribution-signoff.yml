@@ -1,0 +1,203 @@
+# Contribution sign-off — the third-party contribution gate.
+#
+# ─────────────────────────────────────────────────────────────────────────────
+#  [RULING PENDING: CLA vs DCO]
+#
+#  How a contributor signs work into the soft commons is an OPERATOR
+#  ruling (GOVERNANCE.md § "Rulings this pipeline is waiting on", item 1). It is
+#  not a maintainer's call and not an agent's. Until it is ruled, this workflow
+#  is INERT: every job is gated on the repository variable
+#  FC_CONTRIBUTION_SIGNOFF, which is unset.
+#
+#    unset (today) → nothing runs. Third-party merges are blocked by policy.
+#    'dco'         → the DCO job below runs and blocks on a missing Signed-off-by.
+#    'cla'         → the CLA job (commented out below) — needs decisions first.
+#
+#  To rule DCO:  Settings → Secrets and variables → Actions → Variables →
+#                FC_CONTRIBUTION_SIGNOFF = dco, then add the check
+#                "Contribution sign-off / DCO — every commit is signed off"
+#                to main's required status checks. docs/policies/DCO.txt already
+#                ships. Nothing in this file needs to change.
+#
+#  To rule CLA:  see CONTRIBUTING.md § 8 Variant B — the CLA text, the
+#                licence-vs-assignment question, and where signatures live must
+#                be settled BEFORE the job below can be correct. It ships
+#                commented out rather than disabled for exactly that reason.
+#
+#  Contributor-facing documentation: CONTRIBUTING.md § 8.
+#
+#  WHERE THIS GATE NOW APPLIES (RFC 0038 § 9 P2, tranche 1)
+#  The commons left this repository: cartridges live in
+#  madfam-org/soft-hyperobjects and are mounted here at a pin. Third-party
+#  contribution — the thing this gate exists to govern — therefore happens THERE,
+#  and this repository's PRs are platform changes plus pin bumps.
+#
+#  The ruling and its mechanics are unchanged, and this workflow is kept rather
+#  than deleted for two reasons: platform PRs are still contributions worth
+#  signing off once the operator rules, and the ruling is a commons-wide one that
+#  soft-hyperobjects will mirror. What DOES change is that a PR here which
+#  touches no cartridge must not be asked cartridge questions — see the
+#  "commons-scope" step below, which reports that plainly instead of silently
+#  passing.
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: Contribution sign-off
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+jobs:
+  dco:
+    name: DCO — every commit is signed off
+    # Inert until the operator rules. `vars` is empty on a repository that has
+    # not set it, so this evaluates false and the job is skipped.
+    if: vars.FC_CONTRIBUTION_SIGNOFF == 'dco'
+    # ADR-010: self-hosted pool once the ARC bootstrap is complete; the
+    # fallback keeps the lane runnable on a freshly-created repository.
+    runs-on: ${{ vars.ARC_BOOTSTRAP_COMPLETE == 'true' && 'madfam-runners-blue' || 'ubuntu-latest' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # the base..head range must be walkable
+          # No `submodules:` — this job reads commit messages, never cartridges.
+          # Cloning the private commons here would add a token dependency for no
+          # gain, and a gate that needs a secret is a gate that breaks on forks.
+
+      - name: Where this PR's contribution lands
+        # Says out loud which repository the sign-off is being asked about. A pin
+        # bump touches `projects` (the gitlink) and nothing under it: the objects
+        # in that range were signed off in soft-hyperobjects, not here. This step
+        # never fails the PR — it exists so the DCO result below is read with the
+        # right scope rather than mistaken for a commons-wide sign-off.
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          changed=$(git diff --name-only "$BASE_SHA" "$HEAD_SHA" | wc -l | tr -d ' ')
+          pin=$(git diff --name-only "$BASE_SHA" "$HEAD_SHA" | grep -cx 'projects' || true)
+          echo "commons-scope: files=$changed pin_bump=$pin"
+          if [ "$changed" -eq 0 ]; then
+            echo "::warning::diff is empty over $BASE_SHA..$HEAD_SHA — the DCO result \
+          below is about commit messages only."
+          fi
+          if [ "$pin" -gt 0 ]; then
+            echo "This PR moves the commons pin. The cartridges it brings in were \
+          signed off in madfam-org/soft-hyperobjects; this gate covers only the commits \
+          in THIS repository." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Every commit carries a valid Signed-off-by
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          python3 - <<'PY'
+          # Developer Certificate of Origin 1.1 (docs/policies/DCO.txt).
+          #
+          # Every non-merge commit in base..head must carry a well-formed
+          # `Signed-off-by: Name <email>` trailer, and at least one of those
+          # trailers must match the commit author's email. Read-proof and
+          # fail-closed in the house style: it prints how many commits it
+          # checked, and checking zero commits is itself a failure.
+          import os, re, subprocess, sys
+
+          BASE, HEAD = os.environ["BASE_SHA"], os.environ["HEAD_SHA"]
+          SEP, REC = "\x1e", "\x1f"
+          TRAILER = re.compile(r"^\s*Signed-off-by:\s*(.+?)\s*<([^<>]+)>\s*$",
+                               re.IGNORECASE | re.MULTILINE)
+
+          fmt = REC.join(["%H", "%an", "%ae", "%P", "%B"]) + SEP
+          try:
+              raw = subprocess.run(
+                  ["git", "log", f"--format={fmt}", f"{BASE}..{HEAD}"],
+                  check=True, capture_output=True, text=True).stdout
+          except subprocess.CalledProcessError as exc:
+              print(f"  ERROR could not walk {BASE}..{HEAD} — {exc.stderr.strip()}")
+              print("dco: commits=0 unsigned=0 — refusing to pass on a failed read")
+              sys.exit(1)
+
+          problems, checked, skipped = [], 0, 0
+          for chunk in raw.split(SEP):
+              if not chunk.strip():
+                  continue
+              sha, author, email, parents, body = chunk.lstrip("\n").split(REC, 4)
+              if len(parents.split()) > 1:        # merge commits carry no sign-off
+                  skipped += 1
+                  continue
+              checked += 1
+              subject = body.strip().splitlines()[0] if body.strip() else "(no subject)"
+              signers = [e.strip().lower() for _, e in TRAILER.findall(body)]
+              if not signers:
+                  problems.append(f"{sha[:8]} {subject}\n      no Signed-off-by trailer")
+              elif email.strip().lower() not in signers:
+                  problems.append(
+                      f"{sha[:8]} {subject}\n      signed off by {', '.join(signers)} "
+                      f"but authored by {author} <{email}>")
+
+          print(f"  scanned {checked} commit(s) in {BASE[:8]}..{HEAD[:8]}"
+                f" ({skipped} merge commit(s) skipped)")
+          if checked == 0:
+              problems.append("checked=0 commits — refusing to report success on an empty read")
+
+          print(f"dco: commits={checked} unsigned={len(problems)}")
+          for p in problems:
+              print(f"  FAIL {p}")
+
+          if problems:
+              print("""
+          ── How to fix ────────────────────────────────────────────────────────
+          This commons uses the Developer Certificate of Origin 1.1
+          (docs/policies/DCO.txt). Every commit needs a trailer matching the
+          commit author:
+
+              Signed-off-by: Your Name <your@email>
+
+          which `git commit -s` writes for you.
+
+          To fix the commits already on this branch:
+
+              git rebase --signoff origin/main      # sign off every commit
+              git push --force-with-lease
+
+          Signing off certifies that you wrote the contribution or have the
+          right to submit it under the commons licence (CERN-OHL-W-2.0), and
+          that the contribution and its record are public and permanent.
+          ──────────────────────────────────────────────────────────────────────""")
+              sys.exit(1)
+          PY
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # Variant B — CLA. Ships COMMENTED OUT, not merely disabled: unlike the DCO
+  # job above, this one cannot be written correctly until the operator settles
+  # (1) the CLA text and whether it takes a copyright LICENCE or an ASSIGNMENT,
+  # (2) the individual/corporate split, and (3) where signatures are recorded.
+  # Shipping a job that would go green — or red — against decisions nobody has
+  # made would be worse than shipping nothing. CONTRIBUTING.md § 8 Variant B
+  # carries the full checklist.
+  #
+  # cla:
+  #   name: CLA — the author has signed
+  #   if: vars.FC_CONTRIBUTION_SIGNOFF == 'cla'
+  #   runs-on: madfam-runners-blue
+  #   permissions:
+  #     contents: read
+  #     pull-requests: write        # to post the "please sign" comment
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Resolve the PR author against the signature record
+  #       env:
+  #         PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+  #       run: |
+  #         # Read the ruled signature record — an in-repo signatories file, or
+  #         # an external CLA service — and fail with a link to sign when the
+  #         # author is absent. Read-proof: print how many signatories were read
+  #         # and fail on a zero read, so "record unreadable" can never look like
+  #         # "author is signed".
+  #         echo "unimplemented — pending the ruling in GOVERNANCE.md item 1"
+  #         exit 1
+  # ───────────────────────────────────────────────────────────────────────────

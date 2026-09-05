@@ -1,0 +1,202 @@
+name: CI
+
+# The commons verification bar. This repository holds objects, not platform code,
+# so its CI reads the bar from an installable package (`hyperobjects-spec`) and
+# never checks out a platform — that is the "keystone rule" of RFC 0038 §9.
+#
+# Two jobs, and the split between them is the honest one:
+#
+#   manifests  — conformance over every cartridge. Needs nothing but the keystone
+#                package. ALWAYS runs, always blocking.
+#   patterns   — render + seam parity. Needs the `fc` drafting kernel, which lives
+#                in the PRIVATE platform repository. SKIPS WITH A VISIBLE NOTICE
+#                while the read token is unset (see the job's own comment).
+#
+# ADR-010: no GitHub-hosted compute for our own lanes. Jobs run on the self-hosted
+# pool; the `ARC_BOOTSTRAP_COMPLETE` expression is the standard bootstrap fallback
+# so a brand-new repository is not dead-in-the-water before the pool is attached.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  # The keystone pin. Bumping it is a deliberate act: it changes the bar every
+  # cartridge in this repository is held to.
+  SPEC_PIN: cb19e515c4d9b6a603e7d3863a7e6027e6877c59
+
+jobs:
+  manifests:
+    name: Manifest conformance (fc-spec)
+    # ADR-010: prefer the self-hosted pool once the ARC bootstrap is complete,
+    # fall back to GitHub-hosted so the lane still runs before/if it is not.
+    runs-on: ${{ vars.ARC_BOOTSTRAP_COMPLETE == 'true' && 'madfam-runners-blue' || 'ubuntu-latest' }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install the keystone (no platform checkout)
+        run: |
+          pip install "hyperobjects-spec @ git+https://github.com/madfam-org/hyperobjects-spec@${SPEC_PIN}"
+          fc-spec list
+
+      - name: Every cartridge is a complete triple
+        # Read-proof, in the house style: it prints what it scanned and a zero
+        # read is itself a failure. `fc-spec` checks the manifests it is handed;
+        # nothing but this step notices a cartridge that ships NO manifest.
+        run: |
+          python3 - <<'PY'
+          import pathlib, sys
+
+          root = pathlib.Path(".")
+          slugs = sorted(
+              p.name for p in root.iterdir()
+              if p.is_dir() and not p.name.startswith((".", "_"))
+              and p.name not in {"docs"}
+          )
+          problems = []
+          for slug in slugs:
+              for rel in ("project.json", "main.py", "docs/README.md"):
+                  if not (root / slug / rel).is_file():
+                      problems.append(f"{slug}: missing {rel}")
+              for stray in (root / slug).rglob("*"):
+                  if stray.name in {"LICENSE", "LICENSE.txt", "COPYING"}:
+                      problems.append(
+                          f"{slug}: stray {stray.relative_to(root)} — an in-repo object "
+                          f"declares its licence in the manifest, never as a file")
+
+          print(f"triples: cartridges={len(slugs)} problems={len(problems)}")
+          for p in problems:
+              print(f"  FAIL {p}")
+          if not slugs:
+              print("  FAIL scanned 0 cartridges — refusing to report success on an empty read")
+              sys.exit(1)
+          sys.exit(1 if problems else 0)
+          PY
+
+      - name: fc-spec check garment-manifest — every cartridge
+        run: fc-spec check garment-manifest */project.json
+
+  patterns:
+    name: Pattern verification (render + seam parity)
+    runs-on: ${{ vars.ARC_BOOTSTRAP_COMPLETE == 'true' && 'madfam-runners-blue' || 'ubuntu-latest' }}
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      # ─────────────────────────────────────────────────────────────────────────
+      #  Render verification needs the `fc` drafting kernel and the sandbox, and
+      #  both live in madfam-org/fashion-cabinet, which is PRIVATE. A default
+      #  GITHUB_TOKEN cannot read another repository, so this job needs a token
+      #  that does not exist yet: secrets.FC_PLATFORM_READ_TOKEN.
+      #
+      #  OPERATOR ITEM (GOVERNANCE.md, "Rulings this pipeline is waiting on" #5):
+      #  mint a read-only token for madfam-org/fashion-cabinet and set it as the
+      #  repository secret FC_PLATFORM_READ_TOKEN — or publish the kernel, which
+      #  removes the need for a token at all.
+      #
+      #  Until then this job SKIPS LOUDLY. It does not silently pass: the notice
+      #  below is written to the job summary, so a green tick on this repository
+      #  never means "the patterns were verified" when they were not. A lane that
+      #  did not run and a lane that passed must never look the same.
+      # ─────────────────────────────────────────────────────────────────────────
+      - name: Is the platform kernel reachable?
+        id: gate
+        env:
+          FC_PLATFORM_READ_TOKEN: ${{ secrets.FC_PLATFORM_READ_TOKEN }}
+        run: |
+          if [ -n "${FC_PLATFORM_READ_TOKEN}" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+            echo "patterns: kernel token present — the render lane will run."
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "patterns: SKIPPED — no kernel, nothing was rendered or seam-checked."
+            {
+              echo "### Pattern verification: SKIPPED — not verified"
+              echo
+              echo "The render + seam-parity lane did **not** run. It needs the \`fc\`"
+              echo "drafting kernel from the private platform repository, and the"
+              echo "repository secret \`FC_PLATFORM_READ_TOKEN\` is not set."
+              echo
+              echo "**This job being green does not mean the patterns are verified.**"
+              echo "Only manifest conformance was checked on this run."
+              echo
+              echo "Operator step: GOVERNANCE.md → *Rulings this pipeline is waiting on* → item 5."
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - uses: actions/setup-python@v5
+        if: steps.gate.outputs.available == 'true'
+        with:
+          python-version: "3.12"
+
+      - name: Install the kernel + sandbox from the platform (pinned)
+        if: steps.gate.outputs.available == 'true'
+        env:
+          FC_PLATFORM_READ_TOKEN: ${{ secrets.FC_PLATFORM_READ_TOKEN }}
+          # The platform pin. Bump deliberately — it changes the kernel every
+          # cartridge here is rendered against.
+          FC_PLATFORM_PIN: e56247bee457b2e3adbb9dc5a4f88b33b21676f2
+        run: |
+          BASE="git+https://x-access-token:${FC_PLATFORM_READ_TOKEN}@github.com/madfam-org/fashion-cabinet@${FC_PLATFORM_PIN}"
+          pip install "${BASE}#subdirectory=packages/kernel"
+          pip install "${BASE}#subdirectory=packages/commons-sandbox"
+          python -c "import fc; print('fc kernel available:', fc.__name__)"
+
+      - name: Render + verify every cartridge
+        if: steps.gate.outputs.available == 'true'
+        # Read-proof and fail-closed: PatternSet.verify() error-level issues — an
+        # open outline, a degenerate piece, a seam-length mismatch, a dangling
+        # seam reference — are failures, and rendering zero cartridges is a
+        # failure in its own right.
+        run: |
+          python3 - <<'PY'
+          import json, pathlib, sys, traceback
+
+          import fc
+
+          root = pathlib.Path(".")
+          slugs = sorted(
+              p.name for p in root.iterdir()
+              if p.is_dir() and (p / "main.py").is_file())
+
+          rendered, problems = 0, []
+          for slug in slugs:
+              script = root / slug / "main.py"
+              namespace = {"fc": fc, "math": __import__("math")}
+              try:
+                  exec(compile(script.read_text("utf-8"), str(script), "exec"), namespace)
+                  result = namespace.get("result")
+                  if result is None:
+                      problems.append(f"{slug}: script assigned no top-level `result`")
+                      continue
+                  issues = [i for i in result.verify() if getattr(i, "level", "error") == "error"]
+                  if issues:
+                      problems.append(f"{slug}: {len(issues)} error-level issue(s): "
+                                      + "; ".join(str(i) for i in issues[:3]))
+                  else:
+                      rendered += 1
+              except Exception:
+                  problems.append(f"{slug}: raised\n" + traceback.format_exc(limit=3))
+
+          print(f"patterns: cartridges={len(slugs)} rendered={rendered} failures={len(problems)}")
+          for p in problems:
+              print(f"  FAIL {p}")
+          if not slugs:
+              print("  FAIL rendered 0 cartridges — refusing to report success on an empty read")
+              sys.exit(1)
+          sys.exit(1 if problems else 0)
+          PY
