@@ -20,7 +20,20 @@ on:
   push:
     branches: [main]
   pull_request:
+  schedule:
+    # Nightly full pattern sweep, 09:30Z (03:30 CDMX). The per-PR `patterns`
+    # job below verifies every cartridge too, but it is gated on a kernel token
+    # that may be absent; the nightly is the lane whose RED reaches a human.
+    - cron: "30 9 * * *"
   workflow_dispatch:
+    inputs:
+      report_fixture:
+        description: >-
+          Exercise the tracking-issue reporter against a committed fixture log
+          instead of rendering (e.g. .github/fixtures/nightly-fail-sample.txt).
+          Leave blank for a normal run.
+        required: false
+        default: ""
 
 permissions:
   contents: read
@@ -37,6 +50,8 @@ env:
 jobs:
   manifests:
     name: Manifest conformance (fc-spec)
+    # The PR bar. The nightly sweep is `patterns-nightly` below.
+    if: github.event_name != 'schedule'
     # ADR-010: prefer the self-hosted pool once the ARC bootstrap is complete,
     # fall back to GitHub-hosted so the lane still runs before/if it is not.
     runs-on: ${{ vars.CI_RUNNER_LABEL != '' && vars.CI_RUNNER_LABEL || 'madfam-runners-blue' }}
@@ -104,6 +119,8 @@ jobs:
 
   patterns:
     name: Pattern verification (render + seam parity)
+    # The PR bar. The nightly sweep is `patterns-nightly` below.
+    if: github.event_name != 'schedule'
     runs-on: ${{ vars.CI_RUNNER_LABEL != '' && vars.CI_RUNNER_LABEL || 'madfam-runners-blue' }}
     timeout-minutes: 45
     steps:
@@ -212,3 +229,167 @@ jobs:
               sys.exit(1)
           sys.exit(1 if problems else 0)
           PY
+
+  # ───────────────────────────────────────────────────────────────────────────
+  #  A red sweep must reach a human.
+  #
+  #  The 2026-08-26 availability audit found that no alert from this estate ever
+  #  had. `patterns` above verifies every cartridge on a pull request, but it
+  #  fails into a run log on a branch nobody revisits — and it SKIPS entirely
+  #  while the kernel token is unset. Neither shape tells anyone that the
+  #  commons went red.
+  #
+  #  This job is the same verification, run nightly over all cartridges, whose
+  #  RED opens or updates ONE tracking issue labelled `nightly-sweep` in this
+  #  repository — the table of failing patterns and a comment naming what broke
+  #  and what got fixed since the previous red run. A green sweep closes it, so
+  #  the alert clears itself instead of training everyone to ignore it.
+  #  See .github/scripts/nightly_report.py.
+  # ───────────────────────────────────────────────────────────────────────────
+  patterns-nightly:
+    name: Nightly pattern sweep (all cartridges)
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ${{ vars.CI_RUNNER_LABEL != '' && vars.CI_RUNNER_LABEL || 'madfam-runners-blue' }}
+    timeout-minutes: 90
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+
+      # Dispatch-only escape hatch: feed the reporter a committed fixture log so
+      # the issue open/update/close path can be exercised without a kernel and
+      # without inventing a fake failure in a real cartridge. Every step below
+      # is skipped on a fixture run.
+      - name: Reporter dry run (fixture, no rendering)
+        if: inputs.report_fixture != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN_FALLBACK: ${{ secrets.MADFAM_BOT_PAT }}
+        run: |
+          fixture="${{ inputs.report_fixture }}"
+          test -f "$fixture" || { echo "::error::fixture $fixture not found"; exit 1; }
+          python3 .github/scripts/nightly_report.py --selftest "$fixture"
+          python3 .github/scripts/nightly_report.py \
+            --log "$fixture" --workflow "CI · nightly pattern sweep (FIXTURE)"
+
+      # Same gate as `patterns`, and for the same reason: the `fc` drafting
+      # kernel lives in the PRIVATE platform repository. A nightly that cannot
+      # render must not report a green sweep — it reports NOTHING, loudly, and
+      # leaves any open tracking issue alone. "Did not run" and "passed" must
+      # never look the same, and neither may close an alert.
+      - name: Is the platform kernel reachable?
+        id: gate
+        if: inputs.report_fixture == ''
+        env:
+          FC_PLATFORM_READ_TOKEN: ${{ secrets.FC_PLATFORM_READ_TOKEN }}
+        run: |
+          if [ -n "${FC_PLATFORM_READ_TOKEN}" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+            echo "nightly: kernel token present — the sweep will run."
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "nightly: SKIPPED — no kernel, nothing was rendered or seam-checked."
+            {
+              echo "### Nightly pattern sweep: SKIPPED — not verified"
+              echo
+              echo "The sweep did **not** run: the repository secret"
+              echo "\`FC_PLATFORM_READ_TOKEN\` is unset, so the \`fc\` kernel could not"
+              echo "be installed. No tracking issue was opened OR closed — a lane that"
+              echo "did not run must not clear an alert."
+              echo
+              echo "Operator step: GOVERNANCE.md → *Rulings this pipeline is waiting on* → item 5."
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - uses: actions/setup-python@v5
+        if: inputs.report_fixture == '' && steps.gate.outputs.available == 'true'
+        with:
+          python-version: "3.12"
+
+      - name: Install the kernel + sandbox from the platform (pinned)
+        if: inputs.report_fixture == '' && steps.gate.outputs.available == 'true'
+        env:
+          FC_PLATFORM_READ_TOKEN: ${{ secrets.FC_PLATFORM_READ_TOKEN }}
+          # The platform pin — the same one the per-PR `patterns` job uses.
+          FC_PLATFORM_PIN: e56247bee457b2e3adbb9dc5a4f88b33b21676f2
+        run: |
+          BASE="git+https://x-access-token:${FC_PLATFORM_READ_TOKEN}@github.com/madfam-org/fashion-cabinet@${FC_PLATFORM_PIN}"
+          pip install "${BASE}#subdirectory=packages/kernel"
+          pip install "${BASE}#subdirectory=packages/commons-sandbox"
+          python -c "import fc; print('fc kernel available:', fc.__name__)"
+
+      - name: Render + verify every cartridge
+        id: sweep
+        if: inputs.report_fixture == '' && steps.gate.outputs.available == 'true'
+        # The same verification the per-PR `patterns` job runs, over the whole
+        # commons — tee'd to a file so the reporter below has something to parse.
+        # `status` rather than `set -e`: the summary and the report must run
+        # even when — especially when — the sweep failed. The default shell is
+        # `bash -e -o pipefail`, so `$?` after the pipe is the SWEEP's code.
+        run: |
+          status=0
+          python3 - <<'PY' | tee sweep-report.txt || status=$?
+          import pathlib, sys, traceback
+
+          import fc
+
+          root = pathlib.Path(".")
+          slugs = sorted(
+              p.name for p in root.iterdir()
+              if p.is_dir() and (p / "main.py").is_file())
+
+          rendered, problems = 0, []
+          for slug in slugs:
+              script = root / slug / "main.py"
+              namespace = {"fc": fc, "math": __import__("math")}
+              try:
+                  exec(compile(script.read_text("utf-8"), str(script), "exec"), namespace)
+                  result = namespace.get("result")
+                  if result is None:
+                      problems.append(f"{slug}: script assigned no top-level `result`")
+                      continue
+                  issues = [i for i in result.verify() if getattr(i, "level", "error") == "error"]
+                  if issues:
+                      problems.append(f"{slug}: {len(issues)} error-level issue(s): "
+                                      + "; ".join(str(i) for i in issues[:3]))
+                  else:
+                      rendered += 1
+              except Exception:
+                  problems.append(f"{slug}: raised " + " ".join(
+                      traceback.format_exc(limit=3).split()))
+
+          print(f"patterns: cartridges={len(slugs)} rendered={rendered} failures={len(problems)}")
+          for p in problems:
+              print(f"  FAIL {p}")
+          if not slugs:
+              print("  FAIL rendered 0 cartridges — refusing to report success on an empty read")
+              sys.exit(1)
+          sys.exit(1 if problems else 0)
+          PY
+          {
+            echo "### Nightly pattern sweep"
+            tail -1 sweep-report.txt
+            grep "FAIL" sweep-report.txt | head -40 || true
+          } >> "$GITHUB_STEP_SUMMARY"
+          exit $status
+
+      # Reporting never fails the sweep: the script exits 0 after an
+      # `::error::` annotation if it cannot reach the API. An alerting path that
+      # turns a green sweep red is worse than the silence it replaces.
+      - name: Report the red sweep to its tracking issue
+        if: failure() && steps.sweep.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN_FALLBACK: ${{ secrets.MADFAM_BOT_PAT }}
+        run: |
+          python3 .github/scripts/nightly_report.py \
+            --log sweep-report.txt \
+            --workflow "CI · nightly pattern sweep"
+
+      - name: Close the tracking issue when the sweep is green
+        if: success() && steps.sweep.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN_FALLBACK: ${{ secrets.MADFAM_BOT_PAT }}
+        run: python3 .github/scripts/nightly_report.py --green
