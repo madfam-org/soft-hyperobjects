@@ -42,7 +42,7 @@ joined by the bridge and a shared material identity.
 this repository's CI never touches platform code:
 
 ```bash
-pip install "hyperobjects-spec @ git+https://github.com/madfam-org/hyperobjects-spec@308efae80b0e8d03d6e4d018d2d9c1ebce9406d6"
+pip install "hyperobjects-spec @ git+https://github.com/madfam-org/hyperobjects-spec@db65cf1e7a2732d7263efd6eb6ba533640eb536f"
 fc-spec check garment-manifest */project.json
 ```
 
@@ -63,7 +63,7 @@ Manifest conformance needs nothing but the keystone package:
 
 ```bash
 python3 -m venv .venv && . .venv/bin/activate
-pip install "hyperobjects-spec @ git+https://github.com/madfam-org/hyperobjects-spec@308efae80b0e8d03d6e4d018d2d9c1ebce9406d6"
+pip install "hyperobjects-spec @ git+https://github.com/madfam-org/hyperobjects-spec@db65cf1e7a2732d7263efd6eb6ba533640eb536f"
 
 fc-spec check garment-manifest my-garment/project.json   # one cartridge
 fc-spec check garment-manifest */project.json            # the whole commons
