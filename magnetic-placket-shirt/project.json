@@ -7,7 +7,8 @@
     "description": {
       "en": "A button-front shirt that never asks a hand to pinch. Real buttons are sewn to the outside of the placket as the visible face; underneath, a column of magnetic button covers does the closing, so the shirt reads as an ordinary dress shirt and shuts with a nudge of a knuckle. The cover bridges to the Yantra4D `magnetic-button-cover` solid, whose snap lip grips a conventional shank button — meaning an existing shirt can be converted with the same hardware, not only one cut from this pattern. A magnetic pair holds only if the two magnet centres land on top of each other, so the placket stands are mirror-equal about centre front and the magnet pitch is recomputed from whole intervals across the measured closure run instead of drifting. The sleeve cap height is likewise bisected against the measured armholes.\n\nOfficial visualizer and configurator: Fashion Cabinet",
       "es": "Una camisa de botonadura que nunca pide a la mano que pellizque. Los botones reales van cosidos por fuera de la tapeta como cara visible; debajo, una columna de cubrebotones magnéticos hace el cierre, de modo que la camisa se lee como una camisa de vestir corriente y cierra con un empujón de nudillo. El cubrebotón se puentea al sólido `magnetic-button-cover` de Yantra4D, cuyo labio de presión agarra un botón de pie convencional — así una camisa existente puede convertirse con el mismo herraje, no solo una cortada con este patrón. Un par magnético solo sujeta si los dos centros de imán caen uno sobre otro, así que las tapetas son espejo exacto respecto al centro delantero y el paso de imanes se recalcula en intervalos enteros sobre el recorrido de cierre medido, en vez de acumular deriva. La altura de copa de la manga se biseca igualmente contra las sisas medidas.\n\nVisualizador y configurador oficial: Fashion Cabinet",
-      "fr": "Une chemise à boutonnage qui ne demande jamais à une main de pincer. De vrais boutons sont cousus à l'extérieur de la patte comme face visible ; en dessous, une colonne de cache-boutons magnétiques assure la fermeture, si bien que la chemise se lit comme une chemise de ville ordinaire et se ferme d'une poussée de phalange. Le cache-bouton fait le pont vers le solide `magnetic-button-cover` de Yantra4D, dont la lèvre de clipsage saisit un bouton à queue classique — une chemise existante peut donc être convertie avec la même quincaillerie, et pas seulement une coupée sur ce patron. Une paire magnétique ne tient que si les deux centres d'aimant tombent l'un sur l'autre : les pattes sont donc en miroir exact autour du milieu devant et le pas des aimants est recalculé en intervalles entiers sur la course de fermeture mesurée, sans dérive. La hauteur de tête de manche est de même bissectée contre les emmanchures mesurées.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+      "fr": "Une chemise à boutonnage qui ne demande jamais à une main de pincer. De vrais boutons sont cousus à l'extérieur de la patte comme face visible ; en dessous, une colonne de cache-boutons magnétiques assure la fermeture, si bien que la chemise se lit comme une chemise de ville ordinaire et se ferme d'une poussée de phalange. Le cache-bouton fait le pont vers le solide `magnetic-button-cover` de Yantra4D, dont la lèvre de clipsage saisit un bouton à queue classique — une chemise existante peut donc être convertie avec la même quincaillerie, et pas seulement une coupée sur ce patron. Une paire magnétique ne tient que si les deux centres d'aimant tombent l'un sur l'autre : les pattes sont donc en miroir exact autour du milieu devant et le pas des aimants est recalculé en intervalles entiers sur la course de fermeture mesurée, sans dérive. La hauteur de tête de manche est de même bissectée contre les emmanchures mesurées.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Uma camisa de abotoamento frontal que nunca pede a uma mão que belisque. Botões de verdade são costurados por fora da carcela como face visível; por baixo, uma coluna de capas de botão magnéticas faz o fechamento, de modo que a camisa se lê como uma camisa social comum e fecha com um toque do nó do dedo. A capa faz a ponte para o sólido `magnetic-button-cover` da Yantra4D, cujo lábio de pressão agarra um botão de pé convencional — o que significa que uma camisa já existente pode ser convertida com a mesma ferragem, e não apenas uma cortada deste molde. Um par magnético só segura se os dois centros de ímã caírem um sobre o outro, então as portadas da carcela são espelho exato em relação ao centro da frente e o passo dos ímãs é recalculado por intervalos inteiros ao longo do trecho de fecho medido em vez de acumular desvio. A altura da cabeça de manga é igualmente bissetada contra as cavas medidas.\n\nVisualizador e configurador oficial: Fashion Cabinet"
     },
     "difficulty": "advanced",
     "tags": [
@@ -38,7 +39,8 @@
       "label": {
         "en": "Full shirt",
         "es": "Camisa completa",
-        "fr": "Chemise complète"
+        "fr": "Chemise complète",
+        "pt": "Camisa completa"
       },
       "script_file": "main.py",
       "pieces": ["front", "back", "sleeve", "collar"]
@@ -50,34 +52,35 @@
       "label": {
         "en": "Shirt front (magnetic placket)",
         "es": "Delantero (tapeta magnética)",
-        "fr": "Devant (patte magnétique)"
+        "fr": "Devant (patte magnétique)",
+        "pt": "Frente (carcela magnética)"
       },
       "default_color": "#5f7488",
       "cut": { "quantity": 2, "on_fold": false, "mirror": true }
     },
     {
       "id": "back",
-      "label": { "en": "Shirt back", "es": "Espalda", "fr": "Dos" },
+      "label": { "en": "Shirt back", "es": "Espalda", "fr": "Dos", "pt": "Costas" },
       "default_color": "#4f6376",
       "cut": { "quantity": 1, "on_fold": true, "mirror": false }
     },
     {
       "id": "sleeve",
-      "label": { "en": "Sleeve", "es": "Manga", "fr": "Manche" },
+      "label": { "en": "Sleeve", "es": "Manga", "fr": "Manche", "pt": "Manga" },
       "default_color": "#6b8098",
       "cut": { "quantity": 2, "on_fold": false, "mirror": true }
     },
     {
       "id": "collar",
-      "label": { "en": "Convertible collar", "es": "Cuello convertible", "fr": "Col convertible" },
+      "label": { "en": "Convertible collar", "es": "Cuello convertible", "fr": "Col convertible", "pt": "Gola conversível" },
       "default_color": "#7c91a8",
       "cut": { "quantity": 2, "on_fold": false, "mirror": false }
     }
   ],
   "parameter_groups": [
-    { "id": "fit", "label": { "en": "Fit", "es": "Ajuste", "fr": "Ajustement" } },
-    { "id": "closure", "label": { "en": "Closure", "es": "Cierre", "fr": "Fermeture" } },
-    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction" } }
+    { "id": "fit", "label": { "en": "Fit", "es": "Ajuste", "fr": "Ajustement", "pt": "Caimento" } },
+    { "id": "closure", "label": { "en": "Closure", "es": "Cierre", "fr": "Fermeture", "pt": "Fecho" } },
+    { "id": "construction", "label": { "en": "Construction", "es": "Construcción", "fr": "Construction", "pt": "Construção" } }
   ],
   "parameters": [
     {
@@ -88,11 +91,12 @@
       "min": 760,
       "max": 1500,
       "step": 10,
-      "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)" },
+      "label": { "en": "Chest girth (mm)", "es": "Contorno de pecho (mm)", "fr": "Tour de poitrine (mm)", "pt": "Contorno de peito (mm)" },
       "tooltip": {
         "en": "Body chest; 160 mm of ease is added — a dressing-friendly shirt is a loose shirt",
         "es": "Pecho del cuerpo; se añaden 160 mm de holgura — una camisa fácil de poner es una camisa suelta",
-        "fr": "Poitrine du corps ; 160 mm d'aisance sont ajoutés — une chemise facile à enfiler est une chemise ample"
+        "fr": "Poitrine du corps ; 160 mm d'aisance sont ajoutés — une chemise facile à enfiler est une chemise ample",
+        "pt": "Peito do corpo; são acrescentados 160 mm de folga — uma camisa fácil de vestir é uma camisa solta"
       },
       "measurement": { "standard": "iso_8559", "code": "chest_bust_girth" }
     },
@@ -104,11 +108,12 @@
       "min": 560,
       "max": 900,
       "step": 10,
-      "label": { "en": "Shirt length (mm)", "es": "Largo de camisa (mm)", "fr": "Longueur de chemise (mm)" },
+      "label": { "en": "Shirt length (mm)", "es": "Largo de camisa (mm)", "fr": "Longueur de chemise (mm)", "pt": "Comprimento da camisa (mm)" },
       "tooltip": {
         "en": "Neck to hem; this sets the closure run the magnet column is solved across",
         "es": "Del cuello al bajo; define el recorrido de cierre sobre el que se resuelve la columna de imanes",
-        "fr": "Du col à l'ourlet ; définit la course de fermeture sur laquelle la colonne d'aimants est résolue"
+        "fr": "Du col à l'ourlet ; définit la course de fermeture sur laquelle la colonne d'aimants est résolue",
+        "pt": "Do decote à barra; define o trecho de fecho ao longo do qual a coluna de ímãs é resolvida"
       }
     },
     {
@@ -119,11 +124,12 @@
       "min": 340,
       "max": 580,
       "step": 5,
-      "label": { "en": "Shoulder width (mm)", "es": "Ancho de hombros (mm)", "fr": "Largeur d'épaules (mm)" },
+      "label": { "en": "Shoulder width (mm)", "es": "Ancho de hombros (mm)", "fr": "Largeur d'épaules (mm)", "pt": "Largura de ombros (mm)" },
       "tooltip": {
         "en": "Point to point; the shoulder is dropped, so this reads generously",
         "es": "De punta a punta; el hombro es caído, así que se lee holgado",
-        "fr": "D'un bout à l'autre ; l'épaule est tombante, ce qui se lit généreusement"
+        "fr": "D'un bout à l'autre ; l'épaule est tombante, ce qui se lit généreusement",
+        "pt": "De ponta a ponta; o ombro é caído, então esta medida se lê generosa"
       },
       "measurement": { "standard": "iso_8559", "code": "across_back" }
     },
@@ -135,11 +141,12 @@
       "min": 200,
       "max": 700,
       "step": 10,
-      "label": { "en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)" },
+      "label": { "en": "Sleeve length (mm)", "es": "Largo de manga (mm)", "fr": "Longueur de manche (mm)", "pt": "Comprimento de manga (mm)" },
       "tooltip": {
         "en": "Cap to cuff; the cuff is open (no button) so a hand passes without help",
         "es": "De la copa al puño; el puño va abierto (sin botón) para que la mano pase sin ayuda",
-        "fr": "De la tête au poignet ; le poignet est ouvert (sans bouton) pour que la main passe sans aide"
+        "fr": "De la tête au poignet ; le poignet est ouvert (sans bouton) pour que la main passe sans aide",
+        "pt": "Da cabeça de manga ao punho; o punho é aberto (sem botão) para que a mão passe sem ajuda"
       }
     },
     {
@@ -150,11 +157,12 @@
       "min": 300,
       "max": 520,
       "step": 5,
-      "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)", "fr": "Tour de cou (mm)" },
+      "label": { "en": "Neck girth (mm)", "es": "Contorno de cuello (mm)", "fr": "Tour de cou (mm)", "pt": "Contorno de pescoço (mm)" },
       "tooltip": {
         "en": "Sets the neckline; the collar is then cut to the MEASURED neckline, not to this",
         "es": "Define el escote; el cuello se corta luego al escote MEDIDO, no a esta medida",
-        "fr": "Définit l'encolure ; le col est ensuite coupé à l'encolure MESURÉE, non à cette valeur"
+        "fr": "Définit l'encolure ; le col est ensuite coupé à l'encolure MESURÉE, non à cette valeur",
+        "pt": "Define o decote; a gola é então cortada ao decote MEDIDO, não a esta medida"
       },
       "measurement": { "standard": "iso_8559", "code": "neck_girth" }
     },
@@ -166,11 +174,12 @@
       "min": 11,
       "max": 25,
       "step": 1,
-      "label": { "en": "Button diameter (mm)", "es": "Diámetro del botón (mm)", "fr": "Diamètre du bouton (mm)" },
+      "label": { "en": "Button diameter (mm)", "es": "Diámetro del botón (mm)", "fr": "Diamètre du bouton (mm)", "pt": "Diâmetro de botão (mm)" },
       "tooltip": {
         "en": "Drives the Yantra4D cover's snap lip and sew ring, and the placket stand width",
         "es": "Define el labio de presión y el anillo de costura del cubrebotón Yantra4D, y el ancho de la tapeta",
-        "fr": "Pilote la lèvre de clipsage et l'anneau de couture du cache-bouton Yantra4D, et la largeur de patte"
+        "fr": "Pilote la lèvre de clipsage et l'anneau de couture du cache-bouton Yantra4D, et la largeur de patte",
+        "pt": "Comanda o lábio de pressão e o anel de costura da capa Yantra4D, e a largura da portada da carcela"
       }
     },
     {
@@ -181,11 +190,12 @@
       "min": 60,
       "max": 140,
       "step": 5,
-      "label": { "en": "Requested magnet pitch (mm)", "es": "Paso de imanes solicitado (mm)", "fr": "Pas d'aimants demandé (mm)" },
+      "label": { "en": "Requested magnet pitch (mm)", "es": "Paso de imanes solicitado (mm)", "fr": "Pas d'aimants demandé (mm)", "pt": "Passo de ímãs solicitado (mm)" },
       "tooltip": {
         "en": "A target, not a result: whole intervals are fitted to the closure run and the pitch recomputed",
         "es": "Un objetivo, no un resultado: se ajustan intervalos enteros al recorrido y se recalcula el paso",
-        "fr": "Une cible, pas un résultat : des intervalles entiers sont ajustés à la course et le pas recalculé"
+        "fr": "Une cible, pas un résultat : des intervalles entiers sont ajustés à la course et le pas recalculé",
+        "pt": "Um alvo, não um resultado: intervalos inteiros são ajustados ao trecho de fecho e o passo é recalculado"
       }
     },
     {
@@ -196,11 +206,12 @@
       "min": 6,
       "max": 16,
       "step": 1,
-      "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)" },
+      "label": { "en": "Seam allowance (mm)", "es": "Margen de costura (mm)", "fr": "Marge de couture (mm)", "pt": "Margem de costura (mm)" },
       "tooltip": {
         "en": "Hem takes 22 mm and the cuff 30 mm; the placket fold takes none",
         "es": "El bajo lleva 22 mm y el puño 30 mm; el doblez de la tapeta no lleva",
-        "fr": "L'ourlet prend 22 mm et le poignet 30 mm ; le pli de patte n'en prend aucune"
+        "fr": "L'ourlet prend 22 mm et le poignet 30 mm ; le pli de patte n'en prend aucune",
+        "pt": "A barra leva 22 mm e o punho 30 mm; a dobra da carcela não leva nada"
       },
       "advanced": true
     }
@@ -212,7 +223,8 @@
       "message": {
         "en": "A shoulder wider than half the chest gives an armhole with no shape left in it.",
         "es": "Un hombro más ancho que medio pecho deja una sisa sin forma.",
-        "fr": "Une épaule plus large que la demi-poitrine laisse une emmanchure sans forme."
+        "fr": "Une épaule plus large que la demi-poitrine laisse une emmanchure sans forme.",
+        "pt": "Um ombro mais largo que meio peito dá uma cava sem forma nenhuma."
       }
     },
     {
@@ -221,7 +233,8 @@
       "message": {
         "en": "Fewer than four magnets leaves the placket gaping between them.",
         "es": "Menos de cuatro imanes deja la tapeta abierta entre ellos.",
-        "fr": "Moins de quatre aimants laisse la patte bâiller entre eux."
+        "fr": "Moins de quatre aimants laisse la patte bâiller entre eux.",
+        "pt": "Menos de quatro ímãs deixa a carcela abrindo entre eles."
       }
     },
     {
@@ -230,24 +243,25 @@
       "message": {
         "en": "Covers this large at this pitch will crowd each other on the stand.",
         "es": "Cubrebotones de este tamaño a este paso se estorban en la tapeta.",
-        "fr": "Des cache-boutons de cette taille à ce pas se gênent sur la patte."
+        "fr": "Des cache-boutons de cette taille à ce pas se gênent sur la patte.",
+        "pt": "Capas de botão deste tamanho neste passo se atrapalham na portada."
       }
     }
   ],
   "presets": [
     {
       "id": "office-shirt",
-      "label": { "en": "Office shirt", "es": "Camisa de oficina", "fr": "Chemise de bureau" },
+      "label": { "en": "Office shirt", "es": "Camisa de oficina", "fr": "Chemise de bureau", "pt": "Camisa de escritório" },
       "values": { "chest_girth": 1020, "shirt_length": 720, "button_diameter": 18, "magnet_pitch": 95 }
     },
     {
       "id": "short-sleeve-summer",
-      "label": { "en": "Short-sleeve summer", "es": "Manga corta de verano", "fr": "Manches courtes d'été" },
+      "label": { "en": "Short-sleeve summer", "es": "Manga corta de verano", "fr": "Manches courtes d'été", "pt": "Manga curta de verão" },
       "values": { "sleeve_length": 240, "shirt_length": 680, "magnet_pitch": 90 }
     },
     {
       "id": "close-pitch-tremor",
-      "label": { "en": "Close pitch (tremor)", "es": "Paso cerrado (temblor)", "fr": "Pas serré (tremblement)" },
+      "label": { "en": "Close pitch (tremor)", "es": "Paso cerrado (temblor)", "fr": "Pas serré (tremblement)", "pt": "Passo fechado (tremor)" },
       "values": { "magnet_pitch": 65, "button_diameter": 22, "chest_girth": 1120 }
     }
   ],
@@ -278,7 +292,8 @@
         "label": {
           "en": "Magnetic placket stand",
           "es": "Tapeta magnética",
-          "fr": "Patte magnétique"
+          "fr": "Patte magnétique",
+          "pt": "Portada magnética"
         },
         "edges": [{ "piece": "front", "edge": "placket_fold" }],
         "parameters": ["button_diameter", "magnet_pitch", "shirt_length", "seam_allowance"]
@@ -289,7 +304,8 @@
         "label": {
           "en": "Neckline to collar",
           "es": "Escote al cuello",
-          "fr": "Encolure au col"
+          "fr": "Encolure au col",
+          "pt": "Decote à gola"
         },
         "edges": [
           { "piece": "front", "edge": "neck" },
@@ -304,7 +320,8 @@
         "label": {
           "en": "Dropped armscye",
           "es": "Sisa caída",
-          "fr": "Emmanchure tombante"
+          "fr": "Emmanchure tombante",
+          "pt": "Cava caída"
         },
         "edges": [
           { "piece": "front", "edge": "armhole" },
@@ -323,7 +340,8 @@
     "societal_benefit": {
       "en": "A shirt that looks like everyone else's is not a cosmetic concern — adaptive clothing that announces itself is clothing people decline to wear. This shirt keeps the visible buttons and moves the work to magnets behind them, so the wearer keeps both the function and the anonymity. Because the Yantra4D cover clips onto an ordinary shank button, the same open hardware converts shirts a person already owns; the pattern is one route to the result, not a requirement for it.",
       "es": "Que una camisa parezca la de cualquiera no es una cuestión estética: la ropa adaptativa que se anuncia es ropa que la gente decide no ponerse. Esta camisa conserva los botones visibles y traslada el trabajo a imanes detrás de ellos, de modo que quien la usa conserva a la vez la función y el anonimato. Como el cubrebotón de Yantra4D se clipa a un botón de pie corriente, el mismo herraje abierto convierte camisas que la persona ya tiene; el patrón es una vía al resultado, no un requisito.",
-      "fr": "Qu'une chemise ressemble à celle de tout le monde n'est pas une question cosmétique : un vêtement adaptatif qui s'annonce est un vêtement que les gens refusent de porter. Cette chemise garde les boutons visibles et déplace le travail vers des aimants placés derrière, si bien que la personne conserve à la fois la fonction et l'anonymat. Comme le cache-bouton Yantra4D se clipse sur un bouton à queue ordinaire, la même quincaillerie ouverte convertit des chemises déjà possédées ; le patron est une voie vers le résultat, non une condition."
+      "fr": "Qu'une chemise ressemble à celle de tout le monde n'est pas une question cosmétique : un vêtement adaptatif qui s'annonce est un vêtement que les gens refusent de porter. Cette chemise garde les boutons visibles et déplace le travail vers des aimants placés derrière, si bien que la personne conserve à la fois la fonction et l'anonymat. Comme le cache-bouton Yantra4D se clipse sur un bouton à queue ordinaire, la même quincaillerie ouverte convertit des chemises déjà possédées ; le patron est une voie vers le résultat, non une condition.",
+      "pt": "Que uma camisa se pareça com a de todo mundo não é uma preocupação cosmética — roupa adaptativa que se anuncia é roupa que as pessoas se recusam a usar. Esta camisa mantém os botões visíveis e transfere o trabalho para ímãs atrás deles, de modo que quem a veste conserva tanto a função quanto o anonimato. Como a capa Yantra4D se encaixa num botão de pé comum, a mesma ferragem aberta converte camisas que a pessoa já tem; o molde é um caminho para o resultado, não um requisito dele."
     },
     "commons_license": "CERN-OHL-W-2.0"
   }
