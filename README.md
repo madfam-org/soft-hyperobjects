@@ -42,7 +42,7 @@ joined by the bridge and a shared material identity.
 this repository's CI never touches platform code:
 
 ```bash
-pip install "hyperobjects-spec @ git+https://github.com/madfam-org/hyperobjects-spec@db65cf1e7a2732d7263efd6eb6ba533640eb536f"
+pip install "hyperobjects-spec @ git+https://github.com/madfam-org/hyperobjects-spec@3aa57133186573b26279417f8de59b6c47ed9027"
 fc-spec check garment-manifest */project.json
 ```
 
@@ -63,7 +63,7 @@ Manifest conformance needs nothing but the keystone package:
 
 ```bash
 python3 -m venv .venv && . .venv/bin/activate
-pip install "hyperobjects-spec @ git+https://github.com/madfam-org/hyperobjects-spec@db65cf1e7a2732d7263efd6eb6ba533640eb536f"
+pip install "hyperobjects-spec @ git+https://github.com/madfam-org/hyperobjects-spec@3aa57133186573b26279417f8de59b6c47ed9027"
 
 fc-spec check garment-manifest my-garment/project.json   # one cartridge
 fc-spec check garment-manifest */project.json            # the whole commons
@@ -83,6 +83,59 @@ you have platform access:
 pip install "git+https://github.com/madfam-org/fashion-cabinet@main#subdirectory=packages/kernel"
 pip install "git+https://github.com/madfam-org/fashion-cabinet@main#subdirectory=packages/commons-sandbox"
 ```
+
+---
+
+## How CI verifies a change
+
+The keystone pin is `SPEC_PIN` in
+[`.github/workflows/ci.yml`](.github/workflows/ci.yml) — today
+`3aa57133` (the keystone moved; `fc-spec` itself is unchanged). Read it from
+there, never from memory.
+
+Three lanes, all on own-runners (ADR-010: `madfam-runners-blue` unless the
+repository variable `CI_RUNNER_LABEL` overrides it):
+
+- **`manifests`** — every PR. Checks every cartridge carries its
+  `project.json` / `main.py` / `docs/README.md` triple and no stray `LICENSE`
+  file (an in-repo object declares its licence in the manifest), then runs
+  `fc-spec check garment-manifest */project.json` over all 516. Both halves
+  refuse to pass on an empty read. Needs only the keystone package, so it
+  always runs.
+- **`patterns`** — every PR. Renders every cartridge through the `fc` drafting
+  kernel and checks seam parity: `PatternSet.verify()` error-level issues (an
+  open outline, a degenerate piece, a seam-length mismatch, a dangling seam
+  reference) are failures, and rendering zero cartridges is a failure in its
+  own right. The kernel lives in the **private** platform repository, so this
+  job **skips cleanly when `FC_PLATFORM_READ_TOKEN` is absent** — and says so
+  loudly. A skipped `patterns` job being green never means the patterns were
+  verified.
+- **`patterns-nightly`** — 09:30Z (03:30 CDMX). The same verification over the
+  whole commons, on a schedule, because the per-PR lane can silently skip when
+  the token is missing. This is the lane whose red is meant to reach a human.
+
+### A red nightly opens one tracking issue
+
+[`.github/scripts/nightly_report.py`](.github/scripts/nightly_report.py)
+(stdlib only) parses the sweep log's `FAIL` lines into a table and maintains a
+**single** open issue labelled `nightly-sweep`: it creates the issue, rewrites
+the body on later red runs (latest table on top, dated history below) with a
+comment naming what broke and what got fixed, and closes it when the sweep goes
+green. Auth is the job's `GITHUB_TOKEN`, falling back to `MADFAM_BOT_PAT`. A
+reporting failure never turns a green sweep red — an alerting path that reddens
+a green run is worse than the silence it replaces.
+
+> **Known gap — the nightly's verdict does not currently fail.** The sweep step
+> pipes through `tee` and captures `|| status=$?`, then ends with
+> `exit $status`. Its comment states the default shell is `bash -e -o pipefail`;
+> it is not. GitHub Actions runs `bash -e {0}` — `-e` only — and this workflow
+> declares no `shell:` or `defaults:` anywhere, so `$?` after the pipe is
+> **`tee`'s** exit code, always `0`. A failing sweep therefore exits 0, the
+> reporter step (`if: failure()`) never fires, and the "close the tracking
+> issue" step runs instead. The fix is one line — `set -o pipefail` in that
+> step, exactly as `solid-hyperobjects` does after its own false green (run
+> 34023334942: 67 green jobs standing over 62 FAIL rows). Tracked separately;
+> this repository's per-PR `patterns` job is unaffected (it has no pipe).
 
 ---
 

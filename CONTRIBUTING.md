@@ -145,6 +145,15 @@ generated and pasted. Attest in your PR which of the four you can vouch for and
 which you cannot — an honest "I do not speak Portuguese, these need review" is
 useful; a silent machine translation is not.
 
+> **The pt-BR backfill is in flight — do not duplicate it.**
+> [#7](https://github.com/madfam-org/soft-hyperobjects/pull/7)
+> (`i18n/pt-backfill`, supersedes fashion-cabinet #142) backfills
+> Brazilian-Portuguese strings across **all** manifests. It is open and
+> **pending the B15 doctrine ruling**, so it is neither merged nor abandoned.
+> Do not open a competing pt PR, and do not rebase or retouch #7; if your new
+> object needs `pt`, write it in your own manifest as usual and say in your PR
+> that it was not reviewed by a pt speaker.
+
 ### 3.4 `hardware_ref` — never re-implement a hard good
 
 A button, a zipper, a buckle, a rivet, a piece of boning is a **solid**
@@ -176,7 +185,7 @@ modelled as pattern pieces.
 
 ```bash
 python3 -m venv .venv && . .venv/bin/activate
-pip install "hyperobjects-spec @ git+https://github.com/madfam-org/hyperobjects-spec@db65cf1e7a2732d7263efd6eb6ba533640eb536f"
+pip install "hyperobjects-spec @ git+https://github.com/madfam-org/hyperobjects-spec@3aa57133186573b26279417f8de59b6c47ed9027"
 
 fc-spec check garment-manifest <slug>/project.json
 ```
