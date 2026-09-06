@@ -125,17 +125,15 @@ green. Auth is the job's `GITHUB_TOKEN`, falling back to `MADFAM_BOT_PAT`. A
 reporting failure never turns a green sweep red — an alerting path that reddens
 a green run is worse than the silence it replaces.
 
-> **Known gap — the nightly's verdict does not currently fail.** The sweep step
-> pipes through `tee` and captures `|| status=$?`, then ends with
-> `exit $status`. Its comment states the default shell is `bash -e -o pipefail`;
-> it is not. GitHub Actions runs `bash -e {0}` — `-e` only — and this workflow
-> declares no `shell:` or `defaults:` anywhere, so `$?` after the pipe is
-> **`tee`'s** exit code, always `0`. A failing sweep therefore exits 0, the
-> reporter step (`if: failure()`) never fires, and the "close the tracking
-> issue" step runs instead. The fix is one line — `set -o pipefail` in that
-> step, exactly as `solid-hyperobjects` does after its own false green (run
-> 34023334942: 67 green jobs standing over 62 FAIL rows). Tracked separately;
-> this repository's per-PR `patterns` job is unaffected (it has no pipe).
+> **Why the sweep step starts with `set -o pipefail`.** The sweep pipes through
+> `tee` and captures `|| status=$?`, then ends with `exit $status`. GitHub
+> Actions runs `run:` steps under `bash -e {0}` — `-e` only — so without
+> pipefail `$?` after the pipe is **`tee`'s** exit code, always `0`: a failing
+> sweep would exit 0, the reporter step (`if: failure()`) would never fire, and
+> the "close the tracking issue" step would run instead. That false green
+> happened to `solid-hyperobjects` (run 34023334942: 67 green jobs standing
+> over 62 FAIL rows) and was latent here until 2026-09-06. The per-PR
+> `patterns` job has no pipe and was never affected.
 
 ---
 
