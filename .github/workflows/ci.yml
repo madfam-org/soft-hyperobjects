@@ -325,9 +325,14 @@ jobs:
         # The same verification the per-PR `patterns` job runs, over the whole
         # commons — tee'd to a file so the reporter below has something to parse.
         # `status` rather than `set -e`: the summary and the report must run
-        # even when — especially when — the sweep failed. The default shell is
-        # `bash -e -o pipefail`, so `$?` after the pipe is the SWEEP's code.
+        # even when — especially when — the sweep failed. GitHub's default
+        # shell for `run:` is `bash -e {0}` — `-e` only, NO pipefail — so
+        # without `set -o pipefail` `$?` after the pipe is tee's (always 0)
+        # and a red sweep would exit 0: the reporter never fires and the
+        # "close the tracking issue" step runs instead. solid-hyperobjects
+        # hit exactly that (run 34023334942: 67 green jobs over 62 FAIL rows).
         run: |
+          set -o pipefail
           status=0
           python3 - <<'PY' | tee sweep-report.txt || status=$?
           import pathlib, sys, traceback
