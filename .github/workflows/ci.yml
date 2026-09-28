@@ -45,7 +45,7 @@ concurrency:
 env:
   # The keystone pin. Bumping it is a deliberate act: it changes the bar every
   # cartridge in this repository is held to.
-  SPEC_PIN: 3aa57133186573b26279417f8de59b6c47ed9027
+  SPEC_PIN: 38df6b49424f41def96a84168d78b5ed7e868e87
 
 jobs:
   manifests:
@@ -64,18 +64,11 @@ jobs:
           python-version: "3.12"
 
       - name: Install the keystone (no platform checkout)
-        env:
-          SPEC_READ_TOKEN: ${{ secrets.MADFAM_BOT_PAT }}
         run: |
-          # hyperobjects-spec is private today: use the read token when the secret is set,
-          # fall back to the public URL, and fail LOUD naming the operator step otherwise.
-          if [ -n "${SPEC_READ_TOKEN}" ]; then
-            SPEC_URL="git+https://x-access-token:${SPEC_READ_TOKEN}@github.com/madfam-org/hyperobjects-spec@${SPEC_PIN}"
-          else
-            SPEC_URL="git+https://github.com/madfam-org/hyperobjects-spec@${SPEC_PIN}"
-          fi
+          # The keystone is public; installing it needs no private read credential.
+          SPEC_URL="git+https://github.com/madfam-org/hyperobjects-spec@${SPEC_PIN}"
           if ! pip install "hyperobjects-spec @ ${SPEC_URL}"; then
-            echo "::error title=keystone not installable::hyperobjects-spec could not be cloned at ${SPEC_PIN} — the repo is private and no read token reached this job. Operator step: make madfam-org/hyperobjects-spec public (RFC 0038 §9 keystone posture) or set the repository secret MADFAM_BOT_PAT with read access to it."
+            echo "::error title=keystone not installable::hyperobjects-spec could not be cloned at ${SPEC_PIN} — check the public package revision and installation error above."
             exit 1
           fi
           fc-spec list
