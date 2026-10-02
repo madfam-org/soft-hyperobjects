@@ -29,7 +29,7 @@ def PARAM(getter, default):
 # ── Parameters ───────────────────────────────────────────────────────────────
 target_piece = str(PARAM(lambda: target_piece, "set"))    # panel|set
 
-head_girth   = float(PARAM(lambda: head_girth, 560.0))
+head_girth   = float(PARAM(lambda: head_girth, 570.0))
 beanie_height = float(PARAM(lambda: beanie_height, 240.0))  # brim fold to crown
 brim_fold    = float(PARAM(lambda: brim_fold, 60.0))       # folded ribbed brim depth
 neg_ease     = float(PARAM(lambda: neg_ease, 40.0))        # negative ease so it grips
