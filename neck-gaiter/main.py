@@ -29,7 +29,7 @@ def PARAM(getter, default):
 # ── Parameters ───────────────────────────────────────────────────────────────
 target_piece = str(PARAM(lambda: target_piece, "set"))    # panel|set
 
-head_girth   = float(PARAM(lambda: head_girth, 580.0))    # must pull over the head
+head_girth   = float(PARAM(lambda: head_girth, 570.0))    # must pull over the head
 gaiter_height = float(PARAM(lambda: gaiter_height, 380.0)) # neck-to-nose coverage
 neg_ease     = float(PARAM(lambda: neg_ease, 40.0))       # slight negative ease (stretch)
 seam_allowance = float(PARAM(lambda: seam_allowance, 10.0))
