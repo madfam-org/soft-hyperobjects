@@ -7,7 +7,8 @@
     "description": {
       "en": "A Yantra4D-bridged notion for the additive-manufacturing frontier of the fabric library: a 3D-printed TPU armor lattice — rigid tiles on flexible bridges — that drapes like a scale garment. Fashion Cabinet owns the fashion (finished panel dimensions, the tile grid from the panel size, the sewable-edge placement guide) while the tile-and-bridge lattice itself is a Yantra4D solid (`tpu-lattice-panel`). One material identity, Bambu TPU 95A, spans this notion and that solid — the same panel is a Fashion Cabinet fabric and a Yantra4D object at once.\n\nOfficial visualizer and configurator: Fashion Cabinet",
       "es": "Un avío puenteado con Yantra4D para la frontera de manufactura aditiva de la biblioteca de telas: una retícula de armadura TPU impresa en 3D — placas rígidas sobre puentes flexibles — que cae como una prenda de escamas. Fashion Cabinet posee la moda (dimensiones terminadas, la cuadrícula de placas según el tamaño del panel, la guía de colocación del canto cosible) mientras la retícula de placas y puentes es un sólido de Yantra4D (`tpu-lattice-panel`). Una identidad de material, Bambu TPU 95A, abarca este avío y ese sólido.\n\nVisualizador y configurador oficial: Fashion Cabinet",
-      "fr": "Une fourniture pontée avec Yantra4D pour la frontière de fabrication additive de la bibliothèque de tissus : un treillis d'armure en TPU imprimé en 3D — des tuiles rigides sur des ponts souples — qui drape comme un vêtement à écailles. Fashion Cabinet possède la mode (dimensions du panneau fini, la grille de tuiles issue de la taille du panneau, le guide de placement du bord cousable) tandis que le treillis de tuiles et ponts lui-même est un solide Yantra4D (`tpu-lattice-panel`). Une seule identité de matériau, le Bambu TPU 95A, couvre cette fourniture et ce solide — le même panneau est à la fois un tissu Fashion Cabinet et un objet Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+      "fr": "Une fourniture pontée avec Yantra4D pour la frontière de fabrication additive de la bibliothèque de tissus : un treillis d'armure en TPU imprimé en 3D — des tuiles rigides sur des ponts souples — qui drape comme un vêtement à écailles. Fashion Cabinet possède la mode (dimensions du panneau fini, la grille de tuiles issue de la taille du panneau, le guide de placement du bord cousable) tandis que le treillis de tuiles et ponts lui-même est un solide Yantra4D (`tpu-lattice-panel`). Une seule identité de matériau, le Bambu TPU 95A, couvre cette fourniture et ce solide — le même panneau est à la fois un tissu Fashion Cabinet et un objet Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um aviamento com ponte para a Yantra4D na fronteira de manufatura aditiva da biblioteca de tecidos: uma treliça de armadura de TPU impressa em 3D — ladrilhos rígidos sobre pontes flexíveis — que cai como uma peça de escamas. A Fashion Cabinet é dona da moda (dimensões acabadas do painel, a grade de ladrilhos a partir do tamanho do painel, o guia de posicionamento da borda costurável), enquanto a própria treliça de ladrilhos e pontes é um sólido da Yantra4D (`tpu-lattice-panel`). Uma identidade de material, Bambu TPU 95A, abrange este aviamento e esse sólido — o mesmo painel é um tecido da Fashion Cabinet e um objeto da Yantra4D ao mesmo tempo.\n\nVisualizador e configurador oficial: Fashion Cabinet"
     },
     "difficulty": "intermediate",
     "tags": [
@@ -37,7 +38,8 @@
       "label": {
         "en": "Panel Placement Guide",
         "es": "Guía de colocación del panel",
-        "fr": "Guide de placement du panneau"
+        "fr": "Guide de placement du panneau",
+        "pt": "Guia de colocação do painel"
       },
       "script_file": "main.py",
       "pieces": [
@@ -51,7 +53,8 @@
       "label": {
         "en": "Lattice Panel Placement Guide",
         "es": "Guía de colocación de panel reticular",
-        "fr": "Guide de placement du panneau à claire-voie"
+        "fr": "Guide de placement du panneau à claire-voie",
+        "pt": "Guia de colocação do painel de treliça"
       },
       "default_color": "#6f7f8a",
       "cut": {
@@ -67,7 +70,8 @@
       "label": {
         "en": "Construction",
         "es": "Construcción",
-        "fr": "Construction"
+        "fr": "Construction",
+        "pt": "Construção"
       }
     }
   ],
@@ -83,12 +87,14 @@
       "label": {
         "en": "Panel width (mm, ≤ print bed)",
         "es": "Ancho del panel (mm, ≤ cama)",
-        "fr": "Largeur du panneau (mm, ≤ plateau)"
+        "fr": "Largeur du panneau (mm, ≤ plateau)",
+        "pt": "Largura do painel (mm, ≤ mesa de impressão)"
       },
       "tooltip": {
         "en": "Finished width across the tiles; capped at the printed panel's bed width",
         "es": "Ancho terminado a través de las placas; limitado al ancho de cama",
-        "fr": "Largeur finie à travers les tuiles ; plafonnée à la largeur de plateau du panneau imprimé"
+        "fr": "Largeur finie à travers les tuiles ; plafonnée à la largeur de plateau du panneau imprimé",
+        "pt": "Largura acabada ao longo das placas; limitada à largura de mesa do painel impresso"
       }
     },
     {
@@ -102,12 +108,14 @@
       "label": {
         "en": "Panel height (mm)",
         "es": "Alto del panel (mm)",
-        "fr": "Hauteur du panneau (mm)"
+        "fr": "Hauteur du panneau (mm)",
+        "pt": "Altura do painel (mm)"
       },
       "tooltip": {
         "en": "Finished height down the body; the tile rows follow",
         "es": "Alto terminado por el cuerpo; las filas de placas siguen",
-        "fr": "Hauteur finie le long du corps ; les rangées de tuiles suivent"
+        "fr": "Hauteur finie le long du corps ; les rangées de tuiles suivent",
+        "pt": "Altura acabada ao longo do corpo; as fileiras de placas a seguem"
       }
     },
     {
@@ -121,12 +129,14 @@
       "label": {
         "en": "Tile size (mm)",
         "es": "Tamaño de placa (mm)",
-        "fr": "Taille de plaque (mm)"
+        "fr": "Taille de plaque (mm)",
+        "pt": "Tamanho do ladrilho (mm)"
       },
       "tooltip": {
         "en": "Passed to the Yantra4D panel; larger tiles = stiffer, more armored",
         "es": "Se pasa al panel de Yantra4D; placas mayores = más rígidas y protegidas",
-        "fr": "Transmis au panneau Yantra4D ; tuiles plus grandes = plus rigide, plus blindé"
+        "fr": "Transmis au panneau Yantra4D ; tuiles plus grandes = plus rigide, plus blindé",
+        "pt": "Passada ao painel Yantra4D; placas maiores = mais rígidas e mais blindadas"
       }
     },
     {
@@ -140,12 +150,14 @@
       "label": {
         "en": "Tile gap (mm)",
         "es": "Separación de placas (mm)",
-        "fr": "Écart entre plaques (mm)"
+        "fr": "Écart entre plaques (mm)",
+        "pt": "Separação entre placas (mm)"
       },
       "tooltip": {
         "en": "Gap the flexure bridge spans; more = more drape",
         "es": "Separación que cruza el puente de flexión; más = más caída",
-        "fr": "Écart que franchit le pont de flexion ; plus = plus de tombé"
+        "fr": "Écart que franchit le pont de flexion ; plus = plus de tombé",
+        "pt": "Vão que a ponte de flexão atravessa; mais = mais caimento"
       }
     },
     {
@@ -159,12 +171,14 @@
       "label": {
         "en": "Sew-edge allowance (mm)",
         "es": "Margen de canto cosible (mm)",
-        "fr": "Marge de bord à coudre (mm)"
+        "fr": "Marge de bord à coudre (mm)",
+        "pt": "Margem da borda costurável (mm)"
       },
       "tooltip": {
         "en": "Tape-bound edge allowance where the panel sews to a garment",
         "es": "Margen de canto rematado donde el panel se cose a la prenda",
-        "fr": "Marge de bord bordé où le panneau se coud à un vêtement"
+        "fr": "Marge de bord bordé où le panneau se coud à un vêtement",
+        "pt": "Margem de borda debruada onde o painel é costurado a uma peça"
       },
       "advanced": true
     }
@@ -175,7 +189,8 @@
       "label": {
         "en": "Chest guard (180×260)",
         "es": "Peto (180×260)",
-        "fr": "Plastron (180×260)"
+        "fr": "Plastron (180×260)",
+        "pt": "Peitoral (180×260)"
       },
       "values": {
         "panel_width_mm": 180,
@@ -188,7 +203,8 @@
       "label": {
         "en": "Fine drape (10 mm tiles)",
         "es": "Caída fina (placas 10 mm)",
-        "fr": "Tombé fin (mailles 10 mm)"
+        "fr": "Tombé fin (mailles 10 mm)",
+        "pt": "Caimento fino (placas de 10 mm)"
       },
       "values": {
         "tile_size": 10,
@@ -203,7 +219,8 @@
       "message": {
         "en": "Panel width exceeds the printed panel's bed-bound width — split into panels",
         "es": "El ancho excede el ancho de cama del panel impreso — divide en paneles",
-        "fr": "La largeur du panneau dépasse la largeur de plateau du panneau imprimé — divisez en panneaux"
+        "fr": "La largeur du panneau dépasse la largeur de plateau du panneau imprimé — divisez en panneaux",
+        "pt": "A largura do painel excede a largura de mesa do painel impresso — divida em painéis"
       }
     }
   ],
@@ -239,7 +256,8 @@
         "label": {
           "en": "Sewable panel edge",
           "es": "Canto cosible del panel",
-          "fr": "Bord à coudre du panneau"
+          "fr": "Bord à coudre du panneau",
+          "pt": "Borda costurável do painel"
         },
         "edges": [
           {
@@ -266,7 +284,8 @@
     "societal_benefit": {
       "en": "A flexible protective lattice anyone can print turns scale armor and impact-protective wear from a specialist craft into an open, made-to-measure pattern: rigid tiles where you need protection, thin bridges where you need to move. It closes the loop from a Fashion Cabinet fabric card to a printable Yantra4D solid — the same panel is cloth and object.",
       "es": "Una retícula protectora flexible que cualquiera puede imprimir convierte la armadura de escamas y la ropa de protección de un oficio especializado en un patrón abierto a la medida: placas rígidas donde necesitas protección, puentes delgados donde necesitas moverte. Cierra el ciclo de una ficha de tela de Fashion Cabinet a un sólido imprimible de Yantra4D — el mismo panel es tela y objeto.",
-      "fr": "Un treillis protecteur souple que quiconque peut imprimer transforme l'armure à écailles et les vêtements de protection contre les impacts, d'un artisanat spécialisé en un patron ouvert et sur mesure : des tuiles rigides là où il faut de la protection, de fins ponts là où il faut bouger. Il boucle la chaîne d'une fiche de tissu Fashion Cabinet vers un solide Yantra4D imprimable — le même panneau est à la fois étoffe et objet."
+      "fr": "Un treillis protecteur souple que quiconque peut imprimer transforme l'armure à écailles et les vêtements de protection contre les impacts, d'un artisanat spécialisé en un patron ouvert et sur mesure : des tuiles rigides là où il faut de la protection, de fins ponts là où il faut bouger. Il boucle la chaîne d'une fiche de tissu Fashion Cabinet vers un solide Yantra4D imprimable — le même panneau est à la fois étoffe et objet.",
+      "pt": "Uma treliça protetora flexível que qualquer pessoa pode imprimir transforma a armadura de escamas e a roupa de proteção contra impacto de um ofício especializado num molde aberto e sob medida: placas rígidas onde você precisa de proteção, pontes finas onde você precisa se mover. Fecha o ciclo de uma ficha de tecido do Fashion Cabinet a um sólido imprimível da Yantra4D — o mesmo painel é tecido e objeto."
     },
     "commons_license": "CERN-OHL-W-2.0"
   }
