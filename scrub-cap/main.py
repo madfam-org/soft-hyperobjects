@@ -30,7 +30,7 @@ def PARAM(getter, default):
 # ── Parameters ───────────────────────────────────────────────────────────────
 target_piece = str(PARAM(lambda: target_piece, "set"))    # cap|tie|set
 
-head_girth   = float(PARAM(lambda: head_girth, 580.0))
+head_girth   = float(PARAM(lambda: head_girth, 570.0))
 cap_depth    = float(PARAM(lambda: cap_depth, 240.0))     # brow to crown depth
 brow_band    = float(PARAM(lambda: brow_band, 40.0))      # front brow band height
 seam_allowance = float(PARAM(lambda: seam_allowance, 10.0))
