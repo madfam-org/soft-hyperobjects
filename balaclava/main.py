@@ -29,7 +29,7 @@ def PARAM(getter, default):
 # ── Parameters ───────────────────────────────────────────────────────────────
 target_piece = str(PARAM(lambda: target_piece, "set"))    # hood|set
 
-head_girth   = float(PARAM(lambda: head_girth, 580.0))
+head_girth   = float(PARAM(lambda: head_girth, 570.0))
 face_height  = float(PARAM(lambda: face_height, 460.0))   # crown to neck-base coverage
 face_open_w  = float(PARAM(lambda: face_open_w, 130.0))   # face opening half-width
 face_open_h  = float(PARAM(lambda: face_open_h, 150.0))   # face opening height
