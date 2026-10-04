@@ -90,7 +90,7 @@ pip install "git+https://github.com/madfam-org/fashion-cabinet@main#subdirectory
 
 The keystone pin is `SPEC_PIN` in
 [`.github/workflows/ci.yml`](.github/workflows/ci.yml) — today
-`8c121940` (the keystone moved; `fc-spec` itself is unchanged). Read it from
+`f7e1947d` (the keystone moved; `fc-spec` itself is unchanged). Read it from
 there, never from memory.
 
 Three lanes, all on own-runners (ADR-010: `madfam-runners-blue` unless the
