@@ -194,6 +194,9 @@ Each link goes to the document that defines the contract on the other side.
 | The solid commons and its assemblies | solid-hyperobjects [`README.md`](https://github.com/madfam-org/solid-hyperobjects/blob/main/README.md), [`assemblies/README.md`](https://github.com/madfam-org/solid-hyperobjects/blob/main/assemblies/README.md) | the printable counterparts a `hardware_ref` links to |
 | Who consumes the solid side's cartridges from Fashion Cabinet | yantra4d [`docs/reference/fashion-cabinet-consumers.md`](https://github.com/madfam-org/yantra4d/blob/main/docs/reference/fashion-cabinet-consumers.md) | the bridge back-edge, and what breaks its CI |
 
+Where the repository stands (dated, with open PRs in merge order and the next `SPEC_PIN`
+bump) is in [`docs/STATUS.md`](./docs/STATUS.md); the open-PR list on GitHub is authoritative.
+
 ---
 
 ## Contributing
