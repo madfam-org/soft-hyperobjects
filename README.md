@@ -42,7 +42,7 @@ joined by the bridge and a shared material identity.
 this repository's CI never touches platform code:
 
 ```bash
-pip install "hyperobjects-spec @ git+https://github.com/madfam-org/hyperobjects-spec@3aa57133186573b26279417f8de59b6c47ed9027"
+pip install "hyperobjects-spec @ git+https://github.com/madfam-org/hyperobjects-spec@142db1802bbf9e1135ceae6c9c531c469f2d295b"
 fc-spec check garment-manifest */project.json
 ```
 
@@ -63,7 +63,7 @@ Manifest conformance needs nothing but the keystone package:
 
 ```bash
 python3 -m venv .venv && . .venv/bin/activate
-pip install "hyperobjects-spec @ git+https://github.com/madfam-org/hyperobjects-spec@3aa57133186573b26279417f8de59b6c47ed9027"
+pip install "hyperobjects-spec @ git+https://github.com/madfam-org/hyperobjects-spec@142db1802bbf9e1135ceae6c9c531c469f2d295b"
 
 fc-spec check garment-manifest my-garment/project.json   # one cartridge
 fc-spec check garment-manifest */project.json            # the whole commons
@@ -181,6 +181,18 @@ declaration in the manifest is the normative statement.
 
 Platform code is a different thing under a different licence (AGPL-3.0) and
 stays in the platform repositories.
+
+---
+
+## Related repositories and contracts
+
+Each link goes to the document that defines the contract on the other side.
+
+| Contract | Defined in | What this repository relies on |
+|---|---|---|
+| `fc-spec` conformance, the identity key, the hardware-link bridge (`ho-bridge`) | hyperobjects-spec [`README.md`](https://github.com/madfam-org/hyperobjects-spec/blob/main/README.md) (*`fc-spec`*, *`ho-bridge`*, *The identity key*) | the checks CI runs at `SPEC_PIN` |
+| The solid commons and its assemblies | solid-hyperobjects [`README.md`](https://github.com/madfam-org/solid-hyperobjects/blob/main/README.md), [`assemblies/README.md`](https://github.com/madfam-org/solid-hyperobjects/blob/main/assemblies/README.md) | the printable counterparts a `hardware_ref` links to |
+| Who consumes the solid side's cartridges from Fashion Cabinet | yantra4d [`docs/reference/fashion-cabinet-consumers.md`](https://github.com/madfam-org/yantra4d/blob/main/docs/reference/fashion-cabinet-consumers.md) | the bridge back-edge, and what breaks its CI |
 
 ---
 
