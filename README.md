@@ -93,8 +93,8 @@ The keystone pin is `SPEC_PIN` in
 `142db180` (the keystone moved; `fc-spec` itself is unchanged). Read it from
 there, never from memory.
 
-Three lanes, all on own-runners (ADR-010: `madfam-runners-blue` unless the
-repository variable `CI_RUNNER_LABEL` overrides it):
+Three lanes, all on GitHub-hosted `ubuntu-24.04` (R116, ruled 2026-10-05:
+public repositories never run on the self-hosted ARC pool):
 
 - **`manifests`** — every PR. Checks every cartridge carries its
   `project.json` / `main.py` / `docs/README.md` triple and no stray `LICENSE`

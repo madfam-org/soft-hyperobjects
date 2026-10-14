@@ -12,9 +12,15 @@ name: CI
 #                in the PRIVATE platform repository. SKIPS WITH A VISIBLE NOTICE
 #                while the read token is unset (see the job's own comment).
 #
-# ADR-010: no GitHub-hosted compute for our own lanes. Jobs run on the self-hosted
-# pool; the `ARC_BOOTSTRAP_COMPLETE` expression is the standard bootstrap fallback
-# so a brand-new repository is not dead-in-the-water before the pool is attached.
+# Runners (R116, ruled 2026-10-05): this repository is public, so every job here
+# runs on GitHub-hosted ubuntu-24.04 and never on MADFAM's self-hosted ARC pool.
+# Each `runs-on` is the ADR-010 expression enclii and janua use: the org variable
+# ARC_BOOTSTRAP_COMPLETE is not visible to public repositories, so it resolves to
+# `ubuntu-24.04`. There is deliberately no repository-variable override in front
+# of it (the old CI_RUNNER_LABEL): this workflow runs pull-request code, forks
+# included, and a variable must not be able to route that onto self-hosted
+# runners. No job here renders OpenSCAD, so none needs the render environment
+# the ARC image carried.
 
 on:
   push:
@@ -52,9 +58,8 @@ jobs:
     name: Manifest conformance (fc-spec)
     # The PR bar. The nightly sweep is `patterns-nightly` below.
     if: github.event_name != 'schedule'
-    # ADR-010: prefer the self-hosted pool once the ARC bootstrap is complete,
-    # fall back to GitHub-hosted so the lane still runs before/if it is not.
-    runs-on: ${{ vars.CI_RUNNER_LABEL != '' && vars.CI_RUNNER_LABEL || 'madfam-runners-blue' }}
+    # R116: GitHub-hosted (see the header).
+    runs-on: ${{ vars.ARC_BOOTSTRAP_COMPLETE == 'true' && 'madfam-runners-blue' || 'ubuntu-24.04' }}
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
@@ -114,7 +119,7 @@ jobs:
     name: Pattern verification (render + seam parity)
     # The PR bar. The nightly sweep is `patterns-nightly` below.
     if: github.event_name != 'schedule'
-    runs-on: ${{ vars.CI_RUNNER_LABEL != '' && vars.CI_RUNNER_LABEL || 'madfam-runners-blue' }}
+    runs-on: ${{ vars.ARC_BOOTSTRAP_COMPLETE == 'true' && 'madfam-runners-blue' || 'ubuntu-24.04' }}
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
@@ -242,7 +247,7 @@ jobs:
   patterns-nightly:
     name: Nightly pattern sweep (all cartridges)
     if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
-    runs-on: ${{ vars.CI_RUNNER_LABEL != '' && vars.CI_RUNNER_LABEL || 'madfam-runners-blue' }}
+    runs-on: ${{ vars.ARC_BOOTSTRAP_COMPLETE == 'true' && 'madfam-runners-blue' || 'ubuntu-24.04' }}
     timeout-minutes: 90
     permissions:
       contents: read

@@ -56,9 +56,11 @@ jobs:
     # Inert until the operator rules. `vars` is empty on a repository that has
     # not set it, so this evaluates false and the job is skipped.
     if: vars.FC_CONTRIBUTION_SIGNOFF == 'dco'
-    # ADR-010: self-hosted pool once the ARC bootstrap is complete; the
-    # fallback keeps the lane runnable on a freshly-created repository.
-    runs-on: ${{ vars.CI_RUNNER_LABEL != '' && vars.CI_RUNNER_LABEL || 'madfam-runners-blue' }}
+    # R116 (ruled 2026-10-05): this repository is public, so the job runs on
+    # GitHub-hosted runners. ARC_BOOTSTRAP_COMPLETE is not visible to public
+    # repositories, so this resolves to ubuntu-24.04 (the ADR-010 expression
+    # enclii and janua use). It reads pull-request commits, forks included.
+    runs-on: ${{ vars.ARC_BOOTSTRAP_COMPLETE == 'true' && 'madfam-runners-blue' || 'ubuntu-24.04' }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -183,7 +185,7 @@ jobs:
   # cla:
   #   name: CLA — the author has signed
   #   if: vars.FC_CONTRIBUTION_SIGNOFF == 'cla'
-  #   runs-on: madfam-runners-blue
+  #   runs-on: ${{ vars.ARC_BOOTSTRAP_COMPLETE == 'true' && 'madfam-runners-blue' || 'ubuntu-24.04' }}
   #   permissions:
   #     contents: read
   #     pull-requests: write        # to post the "please sign" comment
