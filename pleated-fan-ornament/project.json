@@ -1,0 +1,141 @@
+{
+  "project": {
+    "name": "Pleated fan ornament",
+    "slug": "pleated-fan-ornament",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "Pleated fan ornament. Original native pattern study; physical assembly unverified.",
+      "es": "Adorno de abanico plisado. Estudio de patrón nativo original; montaje físico sin verificar.",
+      "fr": "Ornement en éventail plissé. Étude de patron original ; assemblage physique non vérifié.",
+      "pt": "Ornamento de leque plissado. Estudo de molde original; montagem física não verificada."
+    },
+    "tags": [
+      "jewelry",
+      "jewelry-studio",
+      "ornament",
+      "unranked-enabler"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original first-principles jewellery pattern construction",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "pattern",
+      "label": {
+        "en": "Pattern",
+        "es": "Patrón",
+        "fr": "Patron",
+        "pt": "Molde"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "fan",
+        "binding"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "fan",
+      "label": {
+        "en": "Pleated fan",
+        "es": "Abanico plisado",
+        "fr": "Éventail plissé",
+        "pt": "Leque plissado"
+      },
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "binding",
+      "label": {
+        "en": "Binding strip",
+        "es": "Tira de ribete",
+        "fr": "Bande de bordure",
+        "pt": "Tira de acabamento"
+      },
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "length",
+      "type": "slider",
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)",
+        "pt": "Comprimento (mm)"
+      },
+      "default": 120,
+      "min": 96.0,
+      "max": 144.0,
+      "step": 0.1
+    },
+    {
+      "id": "width",
+      "type": "slider",
+      "label": {
+        "en": "Width (mm)",
+        "es": "Ancho (mm)",
+        "fr": "Largeur (mm)",
+        "pt": "Largura (mm)"
+      },
+      "default": 45,
+      "min": 36.0,
+      "max": 54.0,
+      "step": 0.1
+    }
+  ],
+  "presets": [
+    {
+      "id": "expanded",
+      "label": {
+        "en": "Expanded study",
+        "es": "Estudio ampliado",
+        "fr": "Étude agrandie",
+        "pt": "Estudo ampliado"
+      },
+      "values": {
+        "length": 132.0,
+        "width": 40.5
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "length > width",
+      "message": {
+        "en": "Length must exceed width",
+        "es": "El largo debe superar el ancho",
+        "fr": "La longueur doit dépasser la largeur",
+        "pt": "O comprimento deve superar a largura"
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "technique",
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}
