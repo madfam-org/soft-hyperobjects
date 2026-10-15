@@ -1,0 +1,128 @@
+{
+  "project": {
+    "name": "Felt cutwork pendant",
+    "slug": "felt-cutwork-pendant",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "Felt cutwork pendant. Original native pattern study; physical assembly unverified.",
+      "es": "Dije calado de fieltro. Estudio de patrón nativo original; montaje físico sin verificar.",
+      "fr": "Pendentif en feutre ajouré. Étude de patron original ; assemblage physique non vérifié.",
+      "pt": "Pingente vazado de feltro. Estudo de molde original; montagem física não verificada."
+    },
+    "tags": [
+      "jewelry",
+      "jewelry-studio",
+      "ornament",
+      "unranked-enabler"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original first-principles jewellery pattern construction",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "pattern",
+      "label": {
+        "en": "Pattern",
+        "es": "Patrón",
+        "fr": "Patron",
+        "pt": "Molde"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "pendant"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "pendant",
+      "label": {
+        "en": "Felt cutwork pendant",
+        "es": "Dije calado de fieltro",
+        "fr": "Pendentif en feutre ajouré",
+        "pt": "Pingente vazado de feltro"
+      },
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "length",
+      "type": "slider",
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)",
+        "pt": "Comprimento (mm)"
+      },
+      "default": 60,
+      "min": 48.0,
+      "max": 72.0,
+      "step": 0.1
+    },
+    {
+      "id": "width",
+      "type": "slider",
+      "label": {
+        "en": "Width (mm)",
+        "es": "Ancho (mm)",
+        "fr": "Largeur (mm)",
+        "pt": "Largura (mm)"
+      },
+      "default": 40,
+      "min": 32.0,
+      "max": 48.0,
+      "step": 0.1
+    }
+  ],
+  "presets": [
+    {
+      "id": "expanded",
+      "label": {
+        "en": "Expanded study",
+        "es": "Estudio ampliado",
+        "fr": "Étude agrandie",
+        "pt": "Estudo ampliado"
+      },
+      "values": {
+        "length": 66.0,
+        "width": 36.0
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "length > width",
+      "message": {
+        "en": "Length must exceed width",
+        "es": "El largo debe superar el ancho",
+        "fr": "La longueur doit dépasser la largeur",
+        "pt": "O comprimento deve superar a largura"
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "technique",
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}
