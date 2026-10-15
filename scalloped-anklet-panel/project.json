@@ -1,0 +1,128 @@
+{
+  "project": {
+    "name": "Scalloped anklet panel",
+    "slug": "scalloped-anklet-panel",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "Scalloped anklet panel. Original native pattern study; physical assembly unverified.",
+      "es": "Panel festoneado para tobillera. Estudio de patrón nativo original; montaje físico sin verificar.",
+      "fr": "Panneau festonné de cheville. Étude de patron original ; assemblage physique non vérifié.",
+      "pt": "Painel festonado para tornozeleira. Estudo de molde original; montagem física não verificada."
+    },
+    "tags": [
+      "jewelry",
+      "jewelry-studio",
+      "ornament",
+      "unranked-enabler"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original first-principles jewellery pattern construction",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "pattern",
+      "label": {
+        "en": "Pattern",
+        "es": "Patrón",
+        "fr": "Patron",
+        "pt": "Molde"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "anklet"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "anklet",
+      "label": {
+        "en": "Scalloped anklet panel",
+        "es": "Panel festoneado para tobillera",
+        "fr": "Panneau festonné de cheville",
+        "pt": "Painel festonado para tornozeleira"
+      },
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "length",
+      "type": "slider",
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)",
+        "pt": "Comprimento (mm)"
+      },
+      "default": 230,
+      "min": 184.0,
+      "max": 276.0,
+      "step": 0.1
+    },
+    {
+      "id": "width",
+      "type": "slider",
+      "label": {
+        "en": "Width (mm)",
+        "es": "Ancho (mm)",
+        "fr": "Largeur (mm)",
+        "pt": "Largura (mm)"
+      },
+      "default": 25,
+      "min": 20.0,
+      "max": 30.0,
+      "step": 0.1
+    }
+  ],
+  "presets": [
+    {
+      "id": "expanded",
+      "label": {
+        "en": "Expanded study",
+        "es": "Estudio ampliado",
+        "fr": "Étude agrandie",
+        "pt": "Estudo ampliado"
+      },
+      "values": {
+        "length": 253.0,
+        "width": 22.5
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "length > width",
+      "message": {
+        "en": "Length must exceed width",
+        "es": "El largo debe superar el ancho",
+        "fr": "La longueur doit dépasser la largeur",
+        "pt": "O comprimento deve superar a largura"
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "technique",
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}
