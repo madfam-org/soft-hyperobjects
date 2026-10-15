@@ -1,0 +1,141 @@
+{
+  "project": {
+    "name": "Ruffled mesh collar strip",
+    "slug": "ruffled-mesh-collar",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "Ruffled mesh collar strip. Original native pattern study; physical assembly unverified.",
+      "es": "Tira de collar de malla fruncida. Estudio de patrón nativo original; montaje físico sin verificar.",
+      "fr": "Bande de collier en résille froncée. Étude de patron original ; assemblage physique non vérifié.",
+      "pt": "Tira de colar de malha franzida. Estudo de molde original; montagem física não verificada."
+    },
+    "tags": [
+      "jewelry",
+      "jewelry-studio",
+      "ornament",
+      "unranked-enabler"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original first-principles jewellery pattern construction",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "pattern",
+      "label": {
+        "en": "Pattern",
+        "es": "Patrón",
+        "fr": "Patron",
+        "pt": "Molde"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "mesh",
+        "binding"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "mesh",
+      "label": {
+        "en": "Gathered mesh",
+        "es": "Malla para fruncir",
+        "fr": "Résille à froncer",
+        "pt": "Malha para franzir"
+      },
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "binding",
+      "label": {
+        "en": "Binding strip",
+        "es": "Tira de ribete",
+        "fr": "Bande de bordure",
+        "pt": "Tira de acabamento"
+      },
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "length",
+      "type": "slider",
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)",
+        "pt": "Comprimento (mm)"
+      },
+      "default": 500,
+      "min": 400.0,
+      "max": 600.0,
+      "step": 0.1
+    },
+    {
+      "id": "width",
+      "type": "slider",
+      "label": {
+        "en": "Width (mm)",
+        "es": "Ancho (mm)",
+        "fr": "Largeur (mm)",
+        "pt": "Largura (mm)"
+      },
+      "default": 70,
+      "min": 56.0,
+      "max": 84.0,
+      "step": 0.1
+    }
+  ],
+  "presets": [
+    {
+      "id": "expanded",
+      "label": {
+        "en": "Expanded study",
+        "es": "Estudio ampliado",
+        "fr": "Étude agrandie",
+        "pt": "Estudo ampliado"
+      },
+      "values": {
+        "length": 550.0,
+        "width": 63.0
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "length > width",
+      "message": {
+        "en": "Length must exceed width",
+        "es": "El largo debe superar el ancho",
+        "fr": "La longueur doit dépasser la largeur",
+        "pt": "O comprimento deve superar a largura"
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "technique",
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}
