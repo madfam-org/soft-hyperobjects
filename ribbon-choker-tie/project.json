@@ -1,0 +1,154 @@
+{
+  "project": {
+    "name": "Ribbon tie choker",
+    "slug": "ribbon-choker-tie",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "Ribbon tie choker. Original native pattern study; physical assembly unverified.",
+      "es": "Gargantilla de listón anudado. Estudio de patrón nativo original; montaje físico sin verificar.",
+      "fr": "Ras-de-cou à ruban noué. Étude de patron original ; assemblage physique non vérifié.",
+      "pt": "Gargantilha de fita amarrada. Estudo de molde original; montagem física não verificada."
+    },
+    "tags": [
+      "jewelry",
+      "jewelry-studio",
+      "ornament",
+      "unranked-enabler"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original first-principles jewellery pattern construction",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "pattern",
+      "label": {
+        "en": "Pattern",
+        "es": "Patrón",
+        "fr": "Patron",
+        "pt": "Molde"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "band",
+        "left-tie",
+        "right-tie"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "band",
+      "label": {
+        "en": "Neck band",
+        "es": "Banda de cuello",
+        "fr": "Bande de cou",
+        "pt": "Faixa do pescoço"
+      },
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "left-tie",
+      "label": {
+        "en": "Left tie",
+        "es": "Lazo izquierdo",
+        "fr": "Lien gauche",
+        "pt": "Tira esquerda"
+      },
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "right-tie",
+      "label": {
+        "en": "Right tie",
+        "es": "Lazo derecho",
+        "fr": "Lien droit",
+        "pt": "Tira direita"
+      },
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "length",
+      "type": "slider",
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)",
+        "pt": "Comprimento (mm)"
+      },
+      "default": 350,
+      "min": 280.0,
+      "max": 420.0,
+      "step": 0.1
+    },
+    {
+      "id": "width",
+      "type": "slider",
+      "label": {
+        "en": "Width (mm)",
+        "es": "Ancho (mm)",
+        "fr": "Largeur (mm)",
+        "pt": "Largura (mm)"
+      },
+      "default": 20,
+      "min": 16.0,
+      "max": 24.0,
+      "step": 0.1
+    }
+  ],
+  "presets": [
+    {
+      "id": "expanded",
+      "label": {
+        "en": "Expanded study",
+        "es": "Estudio ampliado",
+        "fr": "Étude agrandie",
+        "pt": "Estudo ampliado"
+      },
+      "values": {
+        "length": 385.0,
+        "width": 18.0
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "length > width",
+      "message": {
+        "en": "Length must exceed width",
+        "es": "El largo debe superar el ancho",
+        "fr": "La longueur doit dépasser la largeur",
+        "pt": "O comprimento deve superar a largura"
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "technique",
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}
