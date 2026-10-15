@@ -1,0 +1,244 @@
+{
+  "platform": "macOS local",
+  "maker_qualified": false,
+  "ci_linux_verified": false,
+  "manifest": "files=1 failures=0",
+  "ruff": "All checks passed!",
+  "runner": "verify: pieces=2 errors=0 warnings=0 (8 renders; two parameter cases and four formats)",
+  "cases": [
+    {
+      "case": "default",
+      "resolved_parameters": {
+        "length": 70.0,
+        "width": 45.0,
+        "embroidery_margin": 5.0,
+        "attachment_spacing": 18.0
+      },
+      "pieces": [
+        {
+          "name": "foundation",
+          "area_mm2": 2472.8,
+          "bbox_mm": [
+            45.0,
+            70.0
+          ]
+        },
+        {
+          "name": "backing",
+          "area_mm2": 2472.8,
+          "bbox_mm": [
+            45.0,
+            70.0
+          ]
+        }
+      ],
+      "seams": [
+        {
+          "a": "foundation.lower-left",
+          "b": "backing.lower-left",
+          "ease_mm": 0.0,
+          "tol_mm": 0.2,
+          "length_a_mm": 33.3,
+          "length_b_mm": 33.3,
+          "ok": true
+        },
+        {
+          "a": "foundation.lower-right",
+          "b": "backing.lower-right",
+          "ease_mm": 0.0,
+          "tol_mm": 0.2,
+          "length_a_mm": 33.3,
+          "length_b_mm": 33.3,
+          "ok": true
+        },
+        {
+          "a": "foundation.right",
+          "b": "backing.right",
+          "ease_mm": 0.0,
+          "tol_mm": 0.2,
+          "length_a_mm": 31.5,
+          "length_b_mm": 31.5,
+          "ok": true
+        },
+        {
+          "a": "foundation.shoulder-right",
+          "b": "backing.shoulder-right",
+          "ease_mm": 0.0,
+          "tol_mm": 0.2,
+          "length_a_mm": 16.6,
+          "length_b_mm": 16.6,
+          "ok": true
+        },
+        {
+          "a": "foundation.top",
+          "b": "backing.top",
+          "ease_mm": 0.0,
+          "tol_mm": 0.2,
+          "length_a_mm": 27.0,
+          "length_b_mm": 27.0,
+          "ok": true
+        },
+        {
+          "a": "foundation.shoulder-left",
+          "b": "backing.shoulder-left",
+          "ease_mm": 0.0,
+          "tol_mm": 0.2,
+          "length_a_mm": 16.6,
+          "length_b_mm": 16.6,
+          "ok": true
+        },
+        {
+          "a": "foundation.left",
+          "b": "backing.left",
+          "ease_mm": 0.0,
+          "tol_mm": 0.2,
+          "length_a_mm": 31.5,
+          "length_b_mm": 31.5,
+          "ok": true
+        }
+      ],
+      "issues": [],
+      "solved": {
+        "field_scale": 0.7777777777777778,
+        "attachment_y_mm": 58.099999999999994,
+        "attachment_spacing_mm": 18.0,
+        "foundation_area_mm2": 2472.75
+      },
+      "exports": {
+        "svg": {
+          "bytes": 2507,
+          "sha256": "3c8d0747c225a47f49e8480115992a4b5439f9fb0e8cfb7c91ce7ceeb1f03a3e"
+        },
+        "dxf": {
+          "bytes": 3601,
+          "sha256": "e6c5aafcf86e8ce7c5eba4354ced7e50aa9557bc4228e03d6fe1deb7a40e1441"
+        },
+        "json": {
+          "bytes": 4521,
+          "sha256": "c29d340c4264515842ffcefc83c5bcaf863fb0bd05a395e9a7426d6bd0fab62c"
+        },
+        "pdf": {
+          "bytes": 3812,
+          "sha256": "8ac033b9ac54ce9f20ede66371110debdc34b0ec74c6d695d5a16e444a53d55e"
+        }
+      }
+    },
+    {
+      "case": "changed",
+      "resolved_parameters": {
+        "length": 95.0,
+        "width": 60.0,
+        "embroidery_margin": 7.0,
+        "attachment_spacing": 28.0
+      },
+      "pieces": [
+        {
+          "name": "foundation",
+          "area_mm2": 4474.5,
+          "bbox_mm": [
+            60.0,
+            95.0
+          ]
+        },
+        {
+          "name": "backing",
+          "area_mm2": 4474.5,
+          "bbox_mm": [
+            60.0,
+            95.0
+          ]
+        }
+      ],
+      "seams": [
+        {
+          "a": "foundation.lower-left",
+          "b": "backing.lower-left",
+          "ease_mm": 0.0,
+          "tol_mm": 0.2,
+          "length_a_mm": 44.8,
+          "length_b_mm": 44.8,
+          "ok": true
+        },
+        {
+          "a": "foundation.lower-right",
+          "b": "backing.lower-right",
+          "ease_mm": 0.0,
+          "tol_mm": 0.2,
+          "length_a_mm": 44.8,
+          "length_b_mm": 44.8,
+          "ok": true
+        },
+        {
+          "a": "foundation.right",
+          "b": "backing.right",
+          "ease_mm": 0.0,
+          "tol_mm": 0.2,
+          "length_a_mm": 42.8,
+          "length_b_mm": 42.8,
+          "ok": true
+        },
+        {
+          "a": "foundation.shoulder-right",
+          "b": "backing.shoulder-right",
+          "ease_mm": 0.0,
+          "tol_mm": 0.2,
+          "length_a_mm": 22.5,
+          "length_b_mm": 22.5,
+          "ok": true
+        },
+        {
+          "a": "foundation.top",
+          "b": "backing.top",
+          "ease_mm": 0.0,
+          "tol_mm": 0.2,
+          "length_a_mm": 36.0,
+          "length_b_mm": 36.0,
+          "ok": true
+        },
+        {
+          "a": "foundation.shoulder-left",
+          "b": "backing.shoulder-left",
+          "ease_mm": 0.0,
+          "tol_mm": 0.2,
+          "length_a_mm": 22.5,
+          "length_b_mm": 22.5,
+          "ok": true
+        },
+        {
+          "a": "foundation.left",
+          "b": "backing.left",
+          "ease_mm": 0.0,
+          "tol_mm": 0.2,
+          "length_a_mm": 42.8,
+          "length_b_mm": 42.8,
+          "ok": true
+        }
+      ],
+      "issues": [],
+      "solved": {
+        "field_scale": 0.7666666666666666,
+        "attachment_y_mm": 78.85,
+        "attachment_spacing_mm": 28.0,
+        "foundation_area_mm2": 4474.5
+      },
+      "exports": {
+        "svg": {
+          "bytes": 2491,
+          "sha256": "547c57eade638b1f87722e9abe1efca65e4d4ee494eb52939f94c888317ffa12"
+        },
+        "dxf": {
+          "bytes": 3618,
+          "sha256": "153e6dd63af95f449dac7166abdf4af732242978219552fc077d33dadfa0a4b1"
+        },
+        "json": {
+          "bytes": 4507,
+          "sha256": "0b7f6fd9c06081d876b4f6101f6377a33fc8c749cdb5d80c73cf9da1653a224f"
+        },
+        "pdf": {
+          "bytes": 3818,
+          "sha256": "66010809145fde396ed8d18ae1179e2b41d3a9558ed20c45128d8bb5ff0e0946"
+        }
+      }
+    }
+  ]
+}
