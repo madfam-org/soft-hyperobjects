@@ -9,3 +9,5 @@ Unranked jewellery enabler for Jewelry Studio; no FC band slot is claimed. Censu
 Provenance: original first-principles draft, not copied from a cultural garment or designer pattern. CERN-OHL-W-2.0 under the commons root licence. Four-language labels are draft translations; human language review is pending (including French and Portuguese). No reviewed-translation attestation or public acceptance is claimed.
 
 Making: select material, inspect pattern and marked operations, make a sample, resolve attachment and wearer fit before use. Native outline/seam checks do not establish physical strength, comfort or material behaviour.
+
+Native metadata marks `output_role=reference-guide` and `material_cutting_required=false`. The outline bounds a printed positioning reference, not a textile cut. The BOM counts one reference guide; eight warp threads and the 80%-of-length working region are specified, but warp cut length and allowance remain unresolved.

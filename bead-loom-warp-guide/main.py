@@ -59,8 +59,8 @@ def poly(name, points, sa=0, qty=1, marks=None):
         {
             "item": name,
             "qty": qty,
-            "unit": "count",
-            "note": "Cut in selected textile; physical making unqualified",
+            "unit": "reference-guide",
+            "note": "Print or transfer as a positioning reference; do not cut textile from this guide",
         }
     )
     return piece
@@ -81,6 +81,11 @@ result.metadata = {
     "length_mm": L,
     "width_mm": W,
     "making_qualified": False,
-    "representation": "native flat pattern or construction guide",
+    "representation": "non-cutting positioning guide",
+    "output_role": "reference-guide",
+    "material_cutting_required": False,
+    "warp_threads": 8,
+    "working_length_mm": L * 0.8,
+    "warp_cut_length_mm": None,
     "construction": "This non-cutting guide locates eight warp threads and two working-length stations. Measure warp allowance separately. Beads and interlacing are not rendered or solver-verified.",
 }
