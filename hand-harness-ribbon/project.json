@@ -1,0 +1,154 @@
+{
+  "project": {
+    "name": "Hand ornament ribbon layout",
+    "slug": "hand-harness-ribbon",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "Hand ornament ribbon layout. Original native pattern study; physical assembly unverified.",
+      "es": "Tiras para adorno de mano. Estudio de patrón nativo original; montaje físico sin verificar.",
+      "fr": "Rubans pour ornement de main. Étude de patron original ; assemblage physique non vérifié.",
+      "pt": "Fitas para ornamento de mão. Estudo de molde original; montagem física não verificada."
+    },
+    "tags": [
+      "jewelry",
+      "jewelry-studio",
+      "ornament",
+      "unranked-enabler"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original first-principles jewellery pattern construction",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "pattern",
+      "label": {
+        "en": "Pattern",
+        "es": "Patrón",
+        "fr": "Patron",
+        "pt": "Molde"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "wrist",
+        "bridge",
+        "finger"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "wrist",
+      "label": {
+        "en": "Hand ornament ribbon layout",
+        "es": "Tiras para adorno de mano",
+        "fr": "Rubans pour ornement de main",
+        "pt": "Fitas para ornamento de mão"
+      },
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "bridge",
+      "label": {
+        "en": "Hand ornament ribbon layout",
+        "es": "Tiras para adorno de mano",
+        "fr": "Rubans pour ornement de main",
+        "pt": "Fitas para ornamento de mão"
+      },
+      "cut": {
+        "quantity": 1
+      }
+    },
+    {
+      "id": "finger",
+      "label": {
+        "en": "Hand ornament ribbon layout",
+        "es": "Tiras para adorno de mano",
+        "fr": "Rubans pour ornement de main",
+        "pt": "Fitas para ornamento de mão"
+      },
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "length",
+      "type": "slider",
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)",
+        "pt": "Comprimento (mm)"
+      },
+      "default": 170,
+      "min": 136.0,
+      "max": 204.0,
+      "step": 0.1
+    },
+    {
+      "id": "width",
+      "type": "slider",
+      "label": {
+        "en": "Width (mm)",
+        "es": "Ancho (mm)",
+        "fr": "Largeur (mm)",
+        "pt": "Largura (mm)"
+      },
+      "default": 10,
+      "min": 8.0,
+      "max": 12.0,
+      "step": 0.1
+    }
+  ],
+  "presets": [
+    {
+      "id": "expanded",
+      "label": {
+        "en": "Expanded study",
+        "es": "Estudio ampliado",
+        "fr": "Étude agrandie",
+        "pt": "Estudo ampliado"
+      },
+      "values": {
+        "length": 187.0,
+        "width": 9.0
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "length > width",
+      "message": {
+        "en": "Length must exceed width",
+        "es": "El largo debe superar el ancho",
+        "fr": "La longueur doit dépasser la largeur",
+        "pt": "O comprimento deve superar a largura"
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "technique",
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}
