@@ -1,0 +1,262 @@
+{
+  "project": {
+    "name": "Cord-couching ornament",
+    "slug": "cord-couching-ornament",
+    "version": "0.1.0",
+    "engine": "fc",
+    "difficulty": "intermediate",
+    "tags": [
+      "jewelry",
+      "ornament",
+      "couching",
+      "cord",
+      "textile",
+      "unranked-enabler"
+    ],
+    "description": {
+      "en": "A textile jewellery foundation with a measured wavy cord route and arc-spaced couching stitch marks. Local construction draft; human language review pending.",
+      "es": "Base textil para joyería con recorrido ondulado de cordón medido y marcas de puntadas distribuidas por longitud de arco. Borrador local de construcción; revisión lingüística humana pendiente.",
+      "fr": "Support textile pour bijou avec trajet ondulé mesuré du cordon et repères de points espacés selon la longueur du trajet. Proposition locale de construction ; révision linguistique humaine en attente.",
+      "pt": "Base têxtil para joia com percurso ondulado medido do cordão e marcas de pontos espaçadas pelo comprimento do percurso. Proposta local de construção; revisão linguística humana pendente."
+    },
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original geometric draft: sampled sinusoidal cord centerline and arc-length stitch stations; no traditional motif or named cultural pattern reproduced",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "foundation",
+      "label": {
+        "en": "Cord-couching ornament",
+        "es": "Adorno de cordón aplicado",
+        "fr": "Ornement en cordon couché",
+        "pt": "Ornamento de cordão aplicado"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "foundation"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "foundation",
+      "label": {
+        "en": "Non-fraying textile foundation",
+        "es": "Base textil que no se deshilacha",
+        "fr": "Support textile non effilochable",
+        "pt": "Base têxtil que não desfia"
+      },
+      "default_color": "#c49082",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameter_groups": [
+    {
+      "id": "construction",
+      "label": {
+        "en": "Construction",
+        "es": "Construcción",
+        "fr": "Construction",
+        "pt": "Construção"
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "width",
+      "type": "slider",
+      "group": "construction",
+      "default": 50,
+      "min": 30,
+      "max": 150,
+      "step": 1,
+      "label": {
+        "en": "Foundation width (mm)",
+        "es": "Ancho de la base (mm)",
+        "fr": "Largeur du support (mm)",
+        "pt": "Largura da base (mm)"
+      }
+    },
+    {
+      "id": "height",
+      "type": "slider",
+      "group": "construction",
+      "default": 26,
+      "min": 16,
+      "max": 80,
+      "step": 1,
+      "label": {
+        "en": "Foundation height (mm)",
+        "es": "Alto de la base (mm)",
+        "fr": "Hauteur du support (mm)",
+        "pt": "Altura da base (mm)"
+      }
+    },
+    {
+      "id": "amplitude",
+      "type": "slider",
+      "group": "construction",
+      "default": 6,
+      "min": 2,
+      "max": 25,
+      "step": 0.5,
+      "label": {
+        "en": "Wave amplitude (mm)",
+        "es": "Amplitud de la onda (mm)",
+        "fr": "Amplitude de la vague (mm)",
+        "pt": "Amplitude da onda (mm)"
+      }
+    },
+    {
+      "id": "waves",
+      "type": "slider",
+      "group": "construction",
+      "default": 3,
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "label": {
+        "en": "Wave count",
+        "es": "Número de ondas",
+        "fr": "Nombre de vagues",
+        "pt": "Número de ondas"
+      }
+    },
+    {
+      "id": "cord_diameter",
+      "type": "slider",
+      "group": "construction",
+      "default": 1.5,
+      "min": 0.5,
+      "max": 3,
+      "step": 0.25,
+      "label": {
+        "en": "Cord diameter (mm)",
+        "es": "Diámetro del cordón (mm)",
+        "fr": "Diamètre du cordon (mm)",
+        "pt": "Diâmetro do cordão (mm)"
+      }
+    },
+    {
+      "id": "stitch_spacing",
+      "type": "slider",
+      "group": "construction",
+      "default": 4,
+      "min": 2,
+      "max": 8,
+      "step": 0.5,
+      "label": {
+        "en": "Maximum stitch spacing (mm)",
+        "es": "Separación máxima entre puntadas (mm)",
+        "fr": "Espacement maximal des points (mm)",
+        "pt": "Espaçamento máximo dos pontos (mm)"
+      }
+    },
+    {
+      "id": "tail_allowance",
+      "type": "slider",
+      "group": "construction",
+      "default": 8,
+      "min": 3,
+      "max": 25,
+      "step": 1,
+      "label": {
+        "en": "Allowance at each cord end (mm)",
+        "es": "Margen en cada extremo del cordón (mm)",
+        "fr": "Réserve à chaque bout du cordon (mm)",
+        "pt": "Margem em cada ponta do cordão (mm)"
+      }
+    }
+  ],
+  "presets": [
+    {
+      "id": "pendant-panel",
+      "label": {
+        "en": "Pendant panel",
+        "es": "Panel para colgante",
+        "fr": "Panneau de pendentif",
+        "pt": "Painel de pingente"
+      },
+      "values": {
+        "width": 50,
+        "height": 26,
+        "amplitude": 6,
+        "waves": 3,
+        "cord_diameter": 1.5,
+        "stitch_spacing": 4,
+        "tail_allowance": 8
+      }
+    },
+    {
+      "id": "cuff-insert",
+      "label": {
+        "en": "Cuff insert",
+        "es": "Inserto para brazalete",
+        "fr": "Insert de bracelet",
+        "pt": "Inserto de bracelete"
+      },
+      "values": {
+        "width": 90,
+        "height": 40,
+        "amplitude": 11,
+        "waves": 4,
+        "cord_diameter": 2,
+        "stitch_spacing": 5,
+        "tail_allowance": 12
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "2 * (amplitude + 4 + cord_diameter / 2) <= height",
+      "severity": "error",
+      "message": {
+        "en": "The foundation must contain the wave and cord margin.",
+        "es": "La base debe contener la onda y el margen del cordón.",
+        "fr": "Le support doit contenir la vague et la marge du cordon.",
+        "pt": "A base deve conter a onda e a margem do cordão."
+      }
+    },
+    {
+      "expression": "(width - 8 - cord_diameter) / waves >= 4 * cord_diameter",
+      "severity": "error",
+      "message": {
+        "en": "Wave pitch must be at least four cord diameters.",
+        "es": "El paso de onda debe ser al menos cuatro diámetros de cordón.",
+        "fr": "Le pas de la vague doit être au moins quatre diamètres du cordon.",
+        "pt": "O passo da onda deve ser de pelo menos quatro diâmetros do cordão."
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "technique",
+    "commons_license": "CERN-OHL-W-2.0",
+    "interfaces": [],
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": false
+    }
+  }
+}
