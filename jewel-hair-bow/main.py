@@ -94,3 +94,31 @@ result.metadata = {
     "representation": "native flat pattern or construction guide",
     "construction": "Join bow ends into a loop, flatten, place the tails and wrap the centre. Jewel and hair clip attachment are placement tasks requiring separate solid findings.",
 }
+
+# Verify the complete construction before selecting a single-piece export.
+# Cross-piece seams omitted from a subset are not claimed as subset checks.
+selected = str(PARAM(lambda: target_piece, "pattern"))  # noqa: F821
+if selected not in ["pattern", "bow", "tails", "wrap"]:
+    raise ValueError("Unknown target_piece")
+full_pattern = result
+if any(issue["level"] == "error" for issue in full_pattern.verify()):
+    raise ValueError("Full pattern verification failed before piece selection")
+full_seam_count = len(full_pattern.seam_checks)
+if selected != "pattern":
+    result = fc.PatternSet(full_pattern.name)
+    result.add(full_pattern.piece(selected))
+    for seam in full_pattern.seam_checks:
+        if all(name == selected for name, edge in seam.side_a + seam.side_b):
+            result.declare_seam(
+                seam.side_a, seam.side_b, tol=seam.tol_mm, ease=seam.ease_mm
+            )
+    result.bom = [item for item in full_pattern.bom if item["item"] == selected]
+    result.metadata = dict(full_pattern.metadata)
+result.metadata["dispatch"] = {
+    "target_piece": selected,
+    "scope": "full-set" if selected == "pattern" else "single-piece",
+    "full_set_seams_verified": full_seam_count,
+    "exported_seams": len(result.seam_checks),
+    "cross_piece_seams_excluded": full_seam_count - len(result.seam_checks),
+    "bom_scope": "full-assembly" if selected == "pattern" else "selected-pieces",
+}
