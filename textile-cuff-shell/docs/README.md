@@ -9,3 +9,7 @@ Unranked jewellery enabler for Jewelry Studio; no FC band slot is claimed. Censu
 Provenance: original first-principles draft, not copied from a cultural garment or designer pattern. CERN-OHL-W-2.0 under the commons root licence. Four-language labels are draft translations; human language review is pending (including French and Portuguese). No reviewed-translation attestation or public acceptance is claimed.
 
 Making: select material, inspect pattern and marked operations, make a sample, resolve attachment and wearer fit before use. Native outline/seam checks do not establish physical strength, comfort or material behaviour.
+
+## Piece dispatch
+
+`target_piece="pattern"` exports the complete set. `outer`, `lining` are individual-piece targets; an unknown target fails. The complete construction is checked before selection. A subset retains only seams whose two sides are present; omitted cross-piece seams are counted explicitly in native `metadata.dispatch`. Subset BOM rows cover only the selected piece. Full-set geometry and seam declarations are preserved. The per-cartridge `tests/verify_native.py` checks default and changed full sets, every single-piece branch, retained/omitted seam scope, quantities and invalid-target rejection through the native runner.
