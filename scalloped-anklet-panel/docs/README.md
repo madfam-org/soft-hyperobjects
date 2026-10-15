@@ -9,3 +9,5 @@ Unranked jewellery enabler for Jewelry Studio; no FC band slot is claimed. Censu
 Provenance: original first-principles draft, not copied from a cultural garment or designer pattern. CERN-OHL-W-2.0 under the commons root licence. Four-language labels are draft translations; human language review is pending (including French and Portuguese). No reviewed-translation attestation or public acceptance is claimed.
 
 Making: select material, inspect pattern and marked operations, make a sample, resolve attachment and wearer fit before use. Native outline/seam checks do not establish physical strength, comfort or material behaviour.
+
+The lower edge has ten rounded cosine lobes, each sampled by twenty straight chord segments. It is a polygonal approximation to a smooth scallop, not ten triangular teeth. Pitch is `length / 10`, depth is `width / 2`, and the native 1 mm allowance is retained. This approximation does not qualify a toolpath or material edge durability.

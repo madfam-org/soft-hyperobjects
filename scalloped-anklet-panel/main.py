@@ -72,12 +72,16 @@ def rect(name, l, w, sa=0, qty=1, marks=None):
 
 
 points = [(0, W), (L, W), (L, 0)]
-for i in range(19, 0, -1):
-    points.append((L * i / 20, W * 0.25 * (1 - math.cos(i * math.pi))))
+for i in range(199, 0, -1):
+    points.append((L * i / 200, W * 0.25 * (1 - math.cos(i * math.pi / 10))))
 poly("anklet", points + [(0, 0)], 1)
 result.metadata = {
     "length_mm": L,
     "width_mm": W,
+    "scallop_count": 10,
+    "segments_per_scallop": 20,
+    "scallop_depth_mm": W / 2,
+    "scallop_pitch_mm": L / 10,
     "making_qualified": False,
     "representation": "native flat pattern or construction guide",
     "construction": "Cut the scalloped strip and finish its edge. End attachment and ankle fit require a separate closure and physical sample; no closure is modeled here.",
