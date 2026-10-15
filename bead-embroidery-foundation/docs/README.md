@@ -94,3 +94,7 @@ production readiness or maker qualification. Material stiffness, bead weight,
 needle/thread suitability, edge durability, skin contact and attachment strength
 need physical sampling. No price, body-fit guarantee or manufacturing approval is
 asserted.
+
+## Piece dispatch
+
+`target_piece="pattern"` exports the complete set. `foundation`, `backing` are individual-piece targets; an unknown target fails. The complete construction is checked before selection. A subset retains only seams whose two sides are present; omitted cross-piece seams are counted explicitly in native `metadata.dispatch`. Subset exports retain the full-assembly BOM, explicitly labelled as such. Full-set geometry and seam declarations are preserved. The per-cartridge `tests/verify_native.py` checks default and changed full sets, every single-piece branch, retained/omitted seam scope, quantities and invalid-target rejection through the native runner.
