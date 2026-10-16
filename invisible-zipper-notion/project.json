@@ -7,7 +7,8 @@
     "description": {
       "en": "A Yantra4D-bridged notion: the concealed coil zipper solid lives in the Yantra4D commons (CadQuery, STL/3MF), while Fashion Cabinet owns the installation — the stitch line that sits one coil radius off the seam so the coil rolls under and the stitching disappears — and renders a printable installation guide carrying that offset, the tape width, and notches at the top stop, any crossing seam, and the bottom stop.\n\nOfficial visualizer and configurator: Fashion Cabinet",
       "es": "Un avío puenteado con Yantra4D: el cierre de espiral oculta sólido vive en el commons de Yantra4D (CadQuery, STL/3MF), mientras Fashion Cabinet posee la instalación — la línea de pespunte a un radio de espiral de la costura, para que la espiral se enrolle debajo y el pespunte desaparezca — y genera una guía de instalación imprimible con ese desplazamiento, el ancho de cinta y piquetes en el tope superior, cualquier costura cruzada y el tope inferior.\n\nVisualizador y configurador oficial: Fashion Cabinet",
-      "fr": "Une fourniture pontée vers Yantra4D : la fermeture à glissière invisible pleine vit dans le commun Yantra4D (CadQuery, STL/3MF), tandis que Fashion Cabinet possède la pose — la ligne de piqûre placée à un rayon de spirale de la couture, pour que la spirale s'enroule dessous et que la piqûre disparaisse — et génère un guide de pose imprimable portant ce décalage, la largeur du ruban et des crans aux arrêts haut et bas ainsi qu'à toute couture transversale.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+      "fr": "Une fourniture pontée vers Yantra4D : la fermeture à glissière invisible pleine vit dans le commun Yantra4D (CadQuery, STL/3MF), tandis que Fashion Cabinet possède la pose — la ligne de piqûre placée à un rayon de spirale de la couture, pour que la spirale s'enroule dessous et que la piqûre disparaisse — et génère un guide de pose imprimable portant ce décalage, la largeur du ruban et des crans aux arrêts haut et bas ainsi qu'à toute couture transversale.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um aviamento com ponte para a Yantra4D: o zíper invisível de espiral sólido vive no commons da Yantra4D (CadQuery, STL/3MF), enquanto a Fashion Cabinet é dona da instalação — a linha de pesponto que fica a um raio de espiral da costura, para que a espiral role por baixo e o pesponto desapareça — e gera um guia de instalação imprimível que carrega esse deslocamento, a largura da fita e piquetes no batente superior, em qualquer costura cruzada e no batente inferior.\n\nVisualizador e configurador oficial: Fashion Cabinet"
     },
     "difficulty": "intermediate",
     "tags": [
@@ -35,7 +36,8 @@
       "label": {
         "en": "Installation Guide",
         "es": "Guía de instalación",
-        "fr": "Guide de pose"
+        "fr": "Guide de pose",
+        "pt": "Guia de instalação"
       },
       "script_file": "main.py",
       "pieces": [
@@ -49,7 +51,8 @@
       "label": {
         "en": "Zipper Installation Guide",
         "es": "Guía de instalación del cierre",
-        "fr": "Guide de pose de la fermeture"
+        "fr": "Guide de pose de la fermeture",
+        "pt": "Guia de instalação do zíper"
       },
       "default_color": "#4a6b8a",
       "cut": {
@@ -65,7 +68,8 @@
       "label": {
         "en": "Construction",
         "es": "Construcción",
-        "fr": "Construction"
+        "fr": "Construction",
+        "pt": "Construção"
       }
     }
   ],
@@ -81,12 +85,14 @@
       "label": {
         "en": "Zipper length, stop to stop (mm)",
         "es": "Largo del cierre, tope a tope (mm)",
-        "fr": "Longueur de la fermeture, arrêt à arrêt (mm)"
+        "fr": "Longueur de la fermeture, arrêt à arrêt (mm)",
+        "pt": "Comprimento do zíper, batente a batente (mm)"
       },
       "tooltip": {
         "en": "Measured between the metal stops, not the tape ends.",
         "es": "Medido entre los topes metálicos, no entre los extremos de la cinta.",
-        "fr": "Mesurée entre les arrêts métalliques, pas entre les extrémités du ruban."
+        "fr": "Mesurée entre les arrêts métalliques, pas entre les extrémités du ruban.",
+        "pt": "Medido entre os batentes metálicos, não entre as pontas da fita."
       }
     },
     {
@@ -100,12 +106,14 @@
       "label": {
         "en": "Tape width (mm)",
         "es": "Ancho de la cinta (mm)",
-        "fr": "Largeur du ruban (mm)"
+        "fr": "Largeur du ruban (mm)",
+        "pt": "Largura da fita (mm)"
       },
       "tooltip": {
         "en": "Full width of one zipper tape — sets how much seam allowance the seam needs.",
         "es": "Ancho total de una cinta del cierre — define cuánto margen necesita la costura.",
-        "fr": "Largeur totale d'un ruban — détermine la valeur de couture nécessaire."
+        "fr": "Largeur totale d'un ruban — détermine la valeur de couture nécessaire.",
+        "pt": "Largura total de uma fita do zíper — define quanta margem a costura precisa."
       }
     },
     {
@@ -119,12 +127,14 @@
       "label": {
         "en": "Coil diameter (mm)",
         "es": "Diámetro de la espiral (mm)",
-        "fr": "Diamètre de la spirale (mm)"
+        "fr": "Diamètre de la spirale (mm)",
+        "pt": "Diâmetro da espiral (mm)"
       },
       "tooltip": {
         "en": "Sets the stitch offset: the foot rides half a coil off the seam line.",
         "es": "Define el desplazamiento del pespunte: el prensatelas va a media espiral de la costura.",
-        "fr": "Détermine le décalage de piqûre : le pied passe à une demi-spirale de la couture."
+        "fr": "Détermine le décalage de piqûre : le pied passe à une demi-spirale de la couture.",
+        "pt": "Define o deslocamento do pesponto: o calcador corre a meia espiral da linha de costura."
       }
     },
     {
@@ -138,12 +148,14 @@
       "label": {
         "en": "Guide margin past each stop (mm)",
         "es": "Margen de la guía más allá de cada tope (mm)",
-        "fr": "Marge du guide au-delà de chaque arrêt (mm)"
+        "fr": "Marge du guide au-delà de chaque arrêt (mm)",
+        "pt": "Margem do guia além de cada batente (mm)"
       },
       "tooltip": {
         "en": "Extra guide length so the template can be pinned beyond the zipper itself.",
         "es": "Largo extra de la guía para poder prenderla más allá del cierre.",
-        "fr": "Longueur supplémentaire pour épingler le gabarit au-delà de la fermeture."
+        "fr": "Longueur supplémentaire pour épingler le gabarit au-delà de la fermeture.",
+        "pt": "Comprimento extra do guia para que o gabarito possa ser preso além do próprio zíper."
       }
     },
     {
@@ -157,12 +169,14 @@
       "label": {
         "en": "Crossing seam, from top stop (mm; 0 = none)",
         "es": "Costura cruzada, desde el tope superior (mm; 0 = ninguna)",
-        "fr": "Couture transversale, depuis l'arrêt haut (mm ; 0 = aucune)"
+        "fr": "Couture transversale, depuis l'arrêt haut (mm ; 0 = aucune)",
+        "pt": "Costura cruzada, a partir do batente superior (mm; 0 = nenhuma)"
       },
       "tooltip": {
         "en": "A waist or midriff seam the zipper crosses — it must match across the opening.",
         "es": "Una costura de cintura o talle que cruza el cierre — debe casar de un lado al otro.",
-        "fr": "Une couture de taille que la fermeture traverse — elle doit se raccorder de part et d'autre."
+        "fr": "Une couture de taille que la fermeture traverse — elle doit se raccorder de part et d'autre.",
+        "pt": "Uma costura de cintura ou de talhe que o zíper cruza — ela precisa casar dos dois lados da abertura."
       }
     }
   ],
@@ -172,7 +186,8 @@
       "label": {
         "en": "Dress centre back (560 mm, waist seam)",
         "es": "Centro espalda de vestido (560 mm, costura de cintura)",
-        "fr": "Milieu dos de robe (560 mm, couture de taille)"
+        "fr": "Milieu dos de robe (560 mm, couture de taille)",
+        "pt": "Centro das costas de vestido (560 mm, costura de cintura)"
       },
       "values": {
         "zipper_length": 560,
@@ -186,7 +201,8 @@
       "label": {
         "en": "Skirt side seam (180 mm)",
         "es": "Costado de falda (180 mm)",
-        "fr": "Couture côté de jupe (180 mm)"
+        "fr": "Couture côté de jupe (180 mm)",
+        "pt": "Costura lateral da saia (180 mm)"
       },
       "values": {
         "zipper_length": 180,
@@ -203,7 +219,8 @@
       "message": {
         "en": "The crossing seam falls outside the zipper run",
         "es": "La costura cruzada cae fuera del tramo del cierre",
-        "fr": "La couture transversale tombe hors de la course de la fermeture"
+        "fr": "La couture transversale tombe hors de la course de la fermeture",
+        "pt": "A costura cruzada cai fora do trecho do zíper"
       }
     },
     {
@@ -212,7 +229,8 @@
       "message": {
         "en": "The coil cannot be wider than the tape it sits on",
         "es": "La espiral no puede ser más ancha que la cinta que la soporta",
-        "fr": "La spirale ne peut pas être plus large que le ruban qui la porte"
+        "fr": "La spirale ne peut pas être plus large que le ruban qui la porte",
+        "pt": "A espiral não pode ser mais larga que a fita que a apoia"
       }
     }
   ],
@@ -247,7 +265,8 @@
         "label": {
           "en": "Zipper tape seam",
           "es": "Costura de la cinta del cierre",
-          "fr": "Couture du ruban de fermeture"
+          "fr": "Couture du ruban de fermeture",
+          "pt": "Costura da fita do zíper"
         },
         "edges": [
           {
@@ -272,7 +291,8 @@
     "societal_benefit": {
       "en": "The invisible zipper is the closure home sewers most often abandon a project over, because the one thing that makes it work — stitching a coil radius off the seam line — is invisible in every finished garment they can inspect. Publishing that offset as a printable guide, parametric in the coil size actually bought, turns a craft secret into a commons.",
       "es": "El cierre oculto es la abertura que más proyectos caseros hace abandonar, porque lo único que lo hace funcionar — coser a un radio de espiral de la costura — es invisible en toda prenda terminada que se pueda examinar. Publicar ese desplazamiento como guía imprimible, paramétrica según la espiral realmente comprada, convierte un secreto de oficio en un bien común.",
-      "fr": "La fermeture invisible est la fermeture qui fait le plus souvent abandonner un projet à la maison, car la seule chose qui la fait fonctionner — piquer à un rayon de spirale de la couture — est invisible sur tout vêtement fini que l'on peut examiner. Publier ce décalage comme guide imprimable, paramétré sur la spirale réellement achetée, transforme un secret de métier en bien commun."
+      "fr": "La fermeture invisible est la fermeture qui fait le plus souvent abandonner un projet à la maison, car la seule chose qui la fait fonctionner — piquer à un rayon de spirale de la couture — est invisible sur tout vêtement fini que l'on peut examiner. Publier ce décalage comme guide imprimable, paramétré sur la spirale réellement achetée, transforme un secret de métier en bien commun.",
+      "pt": "O zíper invisível é o fecho por causa do qual quem costura em casa mais abandona um projeto, porque a única coisa que o faz funcionar — costurar a um raio de espiral fora da linha de costura — é invisível em qualquer peça pronta que se possa examinar. Publicar esse deslocamento como um guia imprimível, paramétrico no tamanho de espiral realmente comprado, transforma um segredo de ofício num bem comum."
     },
     "commons_license": "CERN-OHL-W-2.0"
   }
