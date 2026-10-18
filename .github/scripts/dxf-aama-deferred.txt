@@ -1,0 +1,20 @@
+# Cartridges NOT opted in to `dxf-aama` by the commons sweep (opt_in_export_format.py).
+#
+# Each one fails the platform's DXF-AAMA conformance lane (fashion-cabinet
+# `scripts/qa/verify_dxf_aama.py --all`, run over commons 79c3d1b with the fc
+# kernel at fashion-cabinet main 22d147b): the named piece is authored with
+# `grainline=None`, so its file would carry no layer-7 grain line and a cutter
+# could not lay it. Fix = add a `fc.Grainline` to that piece in the cartridge's
+# main.py (one object per PR), then add "dxf-aama" to its manifest and delete
+# its line here.
+adaptive-magnetic-shirt  # piece "back" is authored with grainline=None
+anorak-smock             # piece "back" is authored with grainline=None
+battery-pocket-liner     # piece "bag" is authored with grainline=None
+button-aid-cuff-shirt    # piece "back" is authored with grainline=None
+cape-coat                # piece "back" is authored with grainline=None
+duffle-coat              # piece "back" is authored with grainline=None
+magnetic-placket-shirt   # piece "back" is authored with grainline=None
+one-handed-jacket        # piece "back" is authored with grainline=None
+packable-rain-shell      # piece "back" is authored with grainline=None
+quilted-liner-jacket     # piece "back" is authored with grainline=None
+wrap-recovery-top        # piece "back" is authored with grainline=None
