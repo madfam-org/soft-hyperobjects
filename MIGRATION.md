@@ -169,9 +169,10 @@ context must include the submodule's contents.
 
 1. **`FC_PLATFORM_READ_TOKEN`** — the render + seam-parity lane in
    [`.github/workflows/ci.yml`](./.github/workflows/ci.yml) needs the `fc` kernel
-   from the private platform repo. The job is written and skips with a visible
-   job-summary notice while the secret is unset, so a green run never implies the
-   patterns were verified. Mint a read-only token, or publish the kernel.
+   from the private platform repo. The job is written; while the secret is unset
+   a PR check is named "Pattern verification — NOT VERIFIED (no kernel)" (warning,
+   exit 0) and the nightly fails, so a green run never implies the patterns were
+   verified. Mint a read-only token, or publish the kernel.
 2. **Repository visibility.** RFC 0038 §9 recommends the commons goes fully
    public. This extraction does not presume it.
 3. **`FC_CONTRIBUTION_SIGNOFF`** — the DCO lane ships inert, exactly as in the

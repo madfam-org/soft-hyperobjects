@@ -1,0 +1,22 @@
+# Dependabot keeps the SHA-pinned actions in .github/workflows current: each
+# `uses:` is pinned by commit SHA with its release tag in a trailing comment,
+# and Dependabot rewrites both together.
+#
+# There is no pip entry on purpose. This repository has no Python dependency
+# manifest (no requirements*.txt / pyproject.toml): its two Python inputs are
+# git revisions written into ci.yml — `SPEC_PIN` (hyperobjects-spec) and
+# `FC_PLATFORM_PIN` (the fc kernel) — which Dependabot cannot bump, and a pip
+# entry with no manifest only produces a failing Dependabot job every week.
+# Those pins are bumped deliberately, by PR, with the manifest lane re-run at
+# the new revision (see README.md, "How CI verifies a change").
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      github-actions:
+        patterns: ["*"]
+    commit-message:
+      prefix: ci

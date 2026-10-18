@@ -219,9 +219,10 @@ reference — abort the render. Declare every sewn relationship with
 `pattern.declare_seam(...)`; an undeclared seam is an unverified seam.
 
 > **Operator item, recorded honestly.** The kernel is not public today, so the
-> render job in this repository's CI **skips with a visible notice** when the
-> platform read token is absent. A contributor without platform access can get
-> manifest conformance green here and cannot self-serve the render lane. See
+> render job in this repository's CI reports **"Pattern verification — NOT
+> VERIFIED (no kernel)"** (a warning, exit 0) when the platform read token is
+> absent; fork PRs never receive it. A contributor without platform access can
+> get manifest conformance green here and cannot self-serve the render lane. See
 > [.github/workflows/ci.yml](./.github/workflows/ci.yml) and
 > [MIGRATION.md](./MIGRATION.md).
 
