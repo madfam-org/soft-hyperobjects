@@ -62,7 +62,7 @@ jobs:
     # enclii and janua use). It reads pull-request commits, forks included.
     runs-on: ${{ vars.ARC_BOOTSTRAP_COMPLETE == 'true' && 'madfam-runners-blue' || 'ubuntu-24.04' }}
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 0          # the base..head range must be walkable
           # No `submodules:` — this job reads commit messages, never cartridges.
@@ -190,7 +190,7 @@ jobs:
   #     contents: read
   #     pull-requests: write        # to post the "please sign" comment
   #   steps:
-  #     - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+  #     - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
   #     - name: Resolve the PR author against the signature record
   #       env:
   #         PR_AUTHOR: ${{ github.event.pull_request.user.login }}
