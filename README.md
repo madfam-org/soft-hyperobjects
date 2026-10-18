@@ -75,9 +75,9 @@ conformance problem; `2` a usage or read error.
 
 **Pattern verification — rendering the draft and checking seam parity — needs
 the `fc` kernel**, which lives in the Fashion Cabinet platform repository. CI
-runs it as a separate job that skips cleanly when the platform read token is
-absent (see [.github/workflows/ci.yml](.github/workflows/ci.yml)). Locally, if
-you have platform access:
+runs it as a separate job that reports **NOT VERIFIED** when the platform read
+token is absent (see [How CI verifies a change](#how-ci-verifies-a-change)).
+Locally, if you have platform access:
 
 ```bash
 pip install "git+https://github.com/madfam-org/fashion-cabinet@main#subdirectory=packages/kernel"
@@ -90,8 +90,7 @@ pip install "git+https://github.com/madfam-org/fashion-cabinet@main#subdirectory
 
 The keystone pin is `SPEC_PIN` in
 [`.github/workflows/ci.yml`](.github/workflows/ci.yml) — today
-`142db180` (the keystone moved; `fc-spec` itself is unchanged). Read it from
-there, never from memory.
+`70fe8213` (hyperobjects-spec 0.15.0). Read it from there, never from memory.
 
 Three lanes, all on GitHub-hosted `ubuntu-24.04` (R116, ruled 2026-10-05:
 public repositories never run on the self-hosted ARC pool):
@@ -107,12 +106,25 @@ public repositories never run on the self-hosted ARC pool):
   open outline, a degenerate piece, a seam-length mismatch, a dangling seam
   reference) are failures, and rendering zero cartridges is a failure in its
   own right. The kernel lives in the **private** platform repository, so this
-  job **skips cleanly when `FC_PLATFORM_READ_TOKEN` is absent** — and says so
-  loudly. A skipped `patterns` job being green never means the patterns were
-  verified.
+  job **does not run without `FC_PLATFORM_READ_TOKEN`** (fork PRs never get it).
 - **`patterns-nightly`** — 09:30Z (03:30 CDMX). The same verification over the
-  whole commons, on a schedule, because the per-PR lane can silently skip when
-  the token is missing. This is the lane whose red is meant to reach a human.
+  whole commons, on a schedule. This is the lane whose red is meant to reach a
+  human, and **without the kernel it fails** rather than going green.
+
+**Pattern verification runs only with the kernel token. How to read the
+check:** a pull request or push shows exactly one of two check names.
+*Pattern verification (render + seam parity)* means every cartridge was
+rendered and seam-checked. *Pattern verification — NOT VERIFIED (no kernel)*
+means nothing was rendered: the job exits 0 so a contributor is not blocked by a
+secret they cannot set, but it raises a warning annotation and a "NOT VERIFIED:
+no kernel" block in the job summary, and only manifest conformance was checked.
+The `kernel` probe job (*Kernel probe (FC_PLATFORM_READ_TOKEN present?)*)
+decides which name appears. A green *Nightly pattern sweep* always means a
+real sweep; a red one whose summary says "NOT VERIFIED: no kernel" means the
+token is missing, not that a cartridge broke (no tracking issue is touched).
+The logic is [`.github/scripts/kernel_gate.py`](.github/scripts/kernel_gate.py),
+tested with `python3 -m pytest .github/scripts`. Today the token is unset, so
+render coverage comes from the platform's own CI at its commons pin.
 
 ### A red nightly opens one tracking issue
 

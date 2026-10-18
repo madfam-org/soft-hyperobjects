@@ -212,9 +212,10 @@ or an agent, and each is marked in place in the files it affects.
       [CONTRIBUTING.md § 5.2](./CONTRIBUTING.md#52-the-ranked-index-rule).
 - [ ] **5. The platform read token for the render lane.** Pattern verification
       needs the `fc` kernel, which is in the private platform repository. The CI
-      job that installs it is written and **skips with a visible notice** while
-      `FC_PLATFORM_READ_TOKEN` is unset, so this repository's CI is honest about
-      what it did not check rather than green on a lane that never ran. Minting
+      job that installs it is written and reports **NOT VERIFIED** (the
+      nightly fails) while `FC_PLATFORM_READ_TOKEN` is unset, so this
+      repository's CI is honest about what it did not check rather than
+      green on a lane that never ran. Minting
       that token — or making the kernel installable publicly, which would remove
       the need for it — is an operator step. See
       [MIGRATION.md](./MIGRATION.md).

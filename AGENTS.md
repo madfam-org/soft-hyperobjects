@@ -1,11 +1,20 @@
 # Soft Hyperobjects Agent Operating Guide
 
-> Last Updated: 2026-09-28
+> Last Updated: 2026-10-18
 
 Read [README.md](./README.md), [CONTRIBUTING.md](./CONTRIBUTING.md), and
 [GOVERNANCE.md](./GOVERNANCE.md) before changing cartridges or verification rules.
 Preserve unrelated work. Keep verification fail-closed; missing kernel access is
 an explicit unverified result, never successful geometry evidence.
+
+Pattern verification (render + seam parity) runs only when the repository
+secret `FC_PLATFORM_READ_TOKEN` can install the private `fc` kernel. Read the
+check name: *Pattern verification (render + seam parity)* is a real pass;
+*Pattern verification — NOT VERIFIED (no kernel)* rendered nothing (warning +
+job-summary block, exit 0), and a nightly without the kernel fails on purpose.
+Never cite either of the latter as geometry evidence. The rules live in
+`.github/scripts/kernel_gate.py`; run `python3 -m pytest .github/scripts` after
+changing CI scripts. See README.md, "How CI verifies a change".
 
 ## Repository boundary
 
