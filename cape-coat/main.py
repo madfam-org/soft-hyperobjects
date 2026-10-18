@@ -150,7 +150,8 @@ def build_back():
         allowances={"hem": 40.0, "cb_fold": 0.0},
         notches=[fc.Notch("side", 0.5, "arm-slit level"),
                  fc.Notch("neck", 0.5, "collar match")],
-        grainline=None,
+        grainline=fc.Grainline(fc.P(HALF_CHEST * 0.4, 60.0),
+                               fc.P(HALF_CHEST * 0.4, p_shoulder.y - 60.0)),
         cut=fc.CutSpec(quantity=1, on_fold=True, fold_edge="cb_fold"),
         label="Cape Back (A-line)",
     )
