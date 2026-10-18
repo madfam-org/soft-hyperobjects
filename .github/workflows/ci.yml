@@ -9,8 +9,15 @@ name: CI
 #   manifests  — conformance over every cartridge. Needs nothing but the keystone
 #                package. ALWAYS runs, always blocking.
 #   patterns   — render + seam parity. Needs the `fc` drafting kernel, which lives
-#                in the PRIVATE platform repository. SKIPS WITH A VISIBLE NOTICE
-#                while the read token is unset (see the job's own comment).
+#                in the PRIVATE platform repository. While the read token is
+#                unset it does NOT pass: the check is named "Pattern
+#                verification — NOT VERIFIED (no kernel)", it raises a
+#                ::warning:: and a job-summary block, and only then exits 0 (a
+#                contributor cannot set the secret). The nightly sweep FAILS
+#                without the kernel. See .github/scripts/kernel_gate.py.
+#
+# Actions are pinned by commit SHA (tag in the trailing comment); Dependabot
+# (.github/dependabot.yml) proposes the bumps.
 #
 # Runners (R116, ruled 2026-10-05): this repository is public, so every job here
 # runs on GitHub-hosted ubuntu-24.04 and never on MADFAM's self-hosted ARC pool.
@@ -49,9 +56,9 @@ concurrency:
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 env:
-  # The keystone pin. Bumping it is a deliberate act: it changes the bar every
-  # cartridge in this repository is held to.
-  SPEC_PIN: 142db1802bbf9e1135ceae6c9c531c469f2d295b
+  # The keystone pin (hyperobjects-spec 0.15.0). Bumping it is a deliberate
+  # act: it changes the bar every cartridge in this repository is held to.
+  SPEC_PIN: 70fe8213de20bc9a699b2bde2c32ee0b02a6d52d
 
 jobs:
   manifests:
@@ -62,9 +69,9 @@ jobs:
     runs-on: ${{ vars.ARC_BOOTSTRAP_COMPLETE == 'true' && 'madfam-runners-blue' || 'ubuntu-24.04' }}
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
         with:
           python-version: "3.12"
 
@@ -77,6 +84,16 @@ jobs:
             exit 1
           fi
           fc-spec list
+
+      # The CI scripts' own unit tests, on every PR (as solid-hyperobjects runs
+      # them): a regression in what a missing kernel means, or in the nightly
+      # reporter's verdict, must fail a PR rather than land green.
+      - name: Unit tests for the CI scripts
+        run: |
+          pip install --quiet pytest
+          python -m pytest .github/scripts -q
+          python .github/scripts/nightly_report.py --selftest \
+            .github/fixtures/nightly-fail-sample.txt
 
       - name: Every cartridge is a complete triple
         # Read-proof, in the house style: it prints what it scanned and a zero
@@ -115,14 +132,38 @@ jobs:
       - name: fc-spec check garment-manifest — every cartridge
         run: fc-spec check garment-manifest */project.json
 
+  # A job-level `if:` and a job `name:` cannot read `secrets`, so this probe
+  # turns "is FC_PLATFORM_READ_TOKEN set?" into an output the `patterns` job
+  # can name itself after. The token value is never printed.
+  kernel:
+    name: Kernel probe (FC_PLATFORM_READ_TOKEN present?)
+    if: github.event_name != 'schedule'
+    runs-on: ${{ vars.ARC_BOOTSTRAP_COMPLETE == 'true' && 'madfam-runners-blue' || 'ubuntu-24.04' }}
+    timeout-minutes: 5
+    outputs:
+      available: ${{ steps.probe.outputs.available }}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - name: Probe
+        id: probe
+        env:
+          FC_PLATFORM_READ_TOKEN: ${{ secrets.FC_PLATFORM_READ_TOKEN }}
+        run: python3 .github/scripts/kernel_gate.py --lane probe
+
   patterns:
-    name: Pattern verification (render + seam parity)
+    # The check NAME carries the verdict. Without the kernel this check is
+    # "Pattern verification — NOT VERIFIED (no kernel)": it exits 0 (a
+    # contributor cannot set the secret) but can never be mistaken for, or
+    # satisfy a required check on, "Pattern verification (render + seam
+    # parity)", which only exists when the kernel actually rendered.
+    name: ${{ needs.kernel.outputs.available == 'true' && 'Pattern verification (render + seam parity)' || 'Pattern verification — NOT VERIFIED (no kernel)' }}
     # The PR bar. The nightly sweep is `patterns-nightly` below.
+    needs: kernel
     if: github.event_name != 'schedule'
     runs-on: ${{ vars.ARC_BOOTSTRAP_COMPLETE == 'true' && 'madfam-runners-blue' || 'ubuntu-24.04' }}
     timeout-minutes: 45
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
       # ─────────────────────────────────────────────────────────────────────────
       #  Render verification needs the `fc` drafting kernel and the sandbox, and
@@ -135,37 +176,19 @@ jobs:
       #  repository secret FC_PLATFORM_READ_TOKEN — or publish the kernel, which
       #  removes the need for a token at all.
       #
-      #  Until then this job SKIPS LOUDLY. It does not silently pass: the notice
-      #  below is written to the job summary, so a green tick on this repository
-      #  never means "the patterns were verified" when they were not. A lane that
-      #  did not run and a lane that passed must never look the same.
+      #  Until then this job is NOT VERIFIED, and says so three ways: its check
+      #  name (from the `kernel` probe), a ::warning:: annotation, and a
+      #  "NOT VERIFIED: no kernel" job-summary block. It exits 0 only after
+      #  all three. A lane that did not run and a lane that passed must never
+      #  look the same.
       # ─────────────────────────────────────────────────────────────────────────
       - name: Is the platform kernel reachable?
         id: gate
         env:
           FC_PLATFORM_READ_TOKEN: ${{ secrets.FC_PLATFORM_READ_TOKEN }}
-        run: |
-          if [ -n "${FC_PLATFORM_READ_TOKEN}" ]; then
-            echo "available=true" >> "$GITHUB_OUTPUT"
-            echo "patterns: kernel token present — the render lane will run."
-          else
-            echo "available=false" >> "$GITHUB_OUTPUT"
-            echo "patterns: SKIPPED — no kernel, nothing was rendered or seam-checked."
-            {
-              echo "### Pattern verification: SKIPPED — not verified"
-              echo
-              echo "The render + seam-parity lane did **not** run. It needs the \`fc\`"
-              echo "drafting kernel from the private platform repository, and the"
-              echo "repository secret \`FC_PLATFORM_READ_TOKEN\` is not set."
-              echo
-              echo "**This job being green does not mean the patterns are verified.**"
-              echo "Only manifest conformance was checked on this run."
-              echo
-              echo "Operator step: GOVERNANCE.md → *Rulings this pipeline is waiting on* → item 5."
-            } >> "$GITHUB_STEP_SUMMARY"
-          fi
+        run: python3 .github/scripts/kernel_gate.py --lane pr
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
         if: steps.gate.outputs.available == 'true'
         with:
           python-version: "3.12"
@@ -233,9 +256,9 @@ jobs:
   #
   #  The 2026-08-26 availability audit found that no alert from this estate ever
   #  had. `patterns` above verifies every cartridge on a pull request, but it
-  #  fails into a run log on a branch nobody revisits — and it SKIPS entirely
-  #  while the kernel token is unset. Neither shape tells anyone that the
-  #  commons went red.
+  #  fails into a run log on a branch nobody revisits — and it is NOT VERIFIED
+  #  (warning, exit 0) while the kernel token is unset. Neither shape tells
+  #  anyone that the commons went red. Without the kernel this job FAILS.
   #
   #  This job is the same verification, run nightly over all cartridges, whose
   #  RED opens or updates ONE tracking issue labelled `nightly-sweep` in this
@@ -253,7 +276,7 @@ jobs:
       contents: read
       issues: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
 
       # Dispatch-only escape hatch: feed the reporter a committed fixture log so
       # the issue open/update/close path can be exercised without a kernel and
@@ -271,36 +294,21 @@ jobs:
           python3 .github/scripts/nightly_report.py \
             --log "$fixture" --workflow "CI · nightly pattern sweep (FIXTURE)"
 
-      # Same gate as `patterns`, and for the same reason: the `fc` drafting
-      # kernel lives in the PRIVATE platform repository. A nightly that cannot
-      # render must not report a green sweep — it reports NOTHING, loudly, and
-      # leaves any open tracking issue alone. "Did not run" and "passed" must
-      # never look the same, and neither may close an alert.
+      # Same kernel question as `patterns`, with the opposite answer: this
+      # lane exists to render everything, so a missing kernel FAILS it
+      # (::error:: + a "NOT VERIFIED: no kernel" summary, exit 1). A green
+      # nightly therefore always means a real sweep. The tracking issue is
+      # left alone — the report/close steps below key on the sweep step,
+      # which never ran — so "did not run" neither raises nor clears a
+      # render alert; the red run itself is the signal.
       - name: Is the platform kernel reachable?
         id: gate
         if: inputs.report_fixture == ''
         env:
           FC_PLATFORM_READ_TOKEN: ${{ secrets.FC_PLATFORM_READ_TOKEN }}
-        run: |
-          if [ -n "${FC_PLATFORM_READ_TOKEN}" ]; then
-            echo "available=true" >> "$GITHUB_OUTPUT"
-            echo "nightly: kernel token present — the sweep will run."
-          else
-            echo "available=false" >> "$GITHUB_OUTPUT"
-            echo "nightly: SKIPPED — no kernel, nothing was rendered or seam-checked."
-            {
-              echo "### Nightly pattern sweep: SKIPPED — not verified"
-              echo
-              echo "The sweep did **not** run: the repository secret"
-              echo "\`FC_PLATFORM_READ_TOKEN\` is unset, so the \`fc\` kernel could not"
-              echo "be installed. No tracking issue was opened OR closed — a lane that"
-              echo "did not run must not clear an alert."
-              echo
-              echo "Operator step: GOVERNANCE.md → *Rulings this pipeline is waiting on* → item 5."
-            } >> "$GITHUB_STEP_SUMMARY"
-          fi
+        run: python3 .github/scripts/kernel_gate.py --lane nightly
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
         if: inputs.report_fixture == '' && steps.gate.outputs.available == 'true'
         with:
           python-version: "3.12"
