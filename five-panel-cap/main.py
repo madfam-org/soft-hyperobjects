@@ -121,6 +121,15 @@ def build():
     pattern.add(_gore("back-panel", 2, True, "Back Panel"))
     pattern.add(build_peak())
     pattern.add(build_snap_tab())
+    # The five gores seam into the crown (docs/README.md). Around the head, seen from
+    # outside: front, side, back, back (mirrored), side (mirrored). A mirrored copy keeps
+    # its edge names, so the centre-back seam joins seam_r to the other back's seam_r.
+    # Every gore is the same symmetric shape, so each pair is equal by construction.
+    pattern.declare_seam(("front-panel", "seam_r"), ("side-panel", "seam_l"), tol=0.5)
+    pattern.declare_seam(("side-panel", "seam_r"), ("back-panel", "seam_l"), tol=0.5)
+    pattern.declare_seam(("back-panel", "seam_r"), ("back-panel", "seam_r"), tol=0.5)
+    pattern.declare_seam(("back-panel", "seam_l"), ("side-panel", "seam_r"), tol=0.5)
+    pattern.declare_seam(("side-panel", "seam_l"), ("front-panel", "seam_l"), tol=0.5)
     pattern.bom = [
         {"item": "shell fabric (twill)", "qty": 300, "unit": "mm_length",
          "note": "≈ at 1400 mm width for all panels + peak + tab"},
