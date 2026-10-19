@@ -99,6 +99,15 @@ def build():
         pattern.add(build_body())
     if all_pieces or target_piece == "end":
         pattern.add(build_end())
+    if all_pieces:
+        # Each body side runs front (height) → base (depth) → back (height): one end
+        # gusset's left edge, bottom and right edge, in that order (2 × kit_height +
+        # kit_depth on both sides). The two top edges take the zip tape.
+        for side in ("left", "right"):
+            pattern.declare_seam(("body", side),
+                                 [("end", "attach_l"), ("end", "bottom"), ("end", "attach_r")],
+                                 tol=1.0)
+        pattern.declare_seam(("body", "zip_front"), ("body", "zip_back"), tol=0.5)
 
     fabric_width = 1400.0
     total_area = sum(p.area() * p.cut.quantity for p in pattern.pieces)
