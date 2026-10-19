@@ -117,6 +117,17 @@ def build():
     pattern.add(build_crown())
     pattern.add(build_side_band())
     pattern.add(build_brim())
+    # The construction in docs/README.md, declared so the render verifies it: the side
+    # band wraps to a tube and seams to the crown (top) and the brim (bottom); the brim
+    # is a half-annulus cut on the fold, so one full ring is two mirrored halves, closed
+    # by the radial seam at the top of the fold. The 48-gon crown and brim edges run
+    # 0.07 % short of the band's straight edges (< 0.5 mm at the largest head).
+    pattern.declare_seam(("side-band", "seam_a"), ("side-band", "seam_b"), tol=0.5)
+    pattern.declare_seam(("side-band", "top"),
+                         [("crown", "crown_seam_a"), ("crown", "crown_seam_b")], tol=1.0)
+    pattern.declare_seam(("side-band", "bottom"), [("brim", "inner"), ("brim", "inner")],
+                         tol=1.0)
+    pattern.declare_seam(("brim", "center_top"), ("brim", "center_top"), tol=0.5)
     fabric_width = 1400.0
     total_area = sum(
         p.area() * p.cut.quantity * (2.0 if p.cut.on_fold else 1.0) for p in pattern.pieces
