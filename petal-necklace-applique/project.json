@@ -1,0 +1,141 @@
+{
+  "project": {
+    "name": "Petal necklace appliqué",
+    "slug": "petal-necklace-applique",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "Petal necklace appliqué. Original native pattern study; physical assembly unverified.",
+      "es": "Aplicación de pétalos para collar. Estudio de patrón nativo original; montaje físico sin verificar.",
+      "fr": "Appliqué de pétales pour collier. Étude de patron original ; assemblage physique non vérifié.",
+      "pt": "Aplicação de pétalas para colar. Estudo de molde original; montagem física não verificada."
+    },
+    "tags": [
+      "jewelry",
+      "jewelry-studio",
+      "ornament",
+      "unranked-enabler"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original first-principles jewellery pattern construction",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "pattern",
+      "label": {
+        "en": "Pattern",
+        "es": "Patrón",
+        "fr": "Patron",
+        "pt": "Molde"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "petal",
+        "bridge"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "petal",
+      "label": {
+        "en": "Petal",
+        "es": "Pétalo",
+        "fr": "Pétale",
+        "pt": "Pétala"
+      },
+      "cut": {
+        "quantity": 5
+      }
+    },
+    {
+      "id": "bridge",
+      "label": {
+        "en": "Connecting strip",
+        "es": "Tira de unión",
+        "fr": "Bande de liaison",
+        "pt": "Tira de ligação"
+      },
+      "cut": {
+        "quantity": 1
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "length",
+      "type": "slider",
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)",
+        "pt": "Comprimento (mm)"
+      },
+      "default": 100,
+      "min": 80.0,
+      "max": 120.0,
+      "step": 0.1
+    },
+    {
+      "id": "width",
+      "type": "slider",
+      "label": {
+        "en": "Width (mm)",
+        "es": "Ancho (mm)",
+        "fr": "Largeur (mm)",
+        "pt": "Largura (mm)"
+      },
+      "default": 50,
+      "min": 40.0,
+      "max": 60.0,
+      "step": 0.1
+    }
+  ],
+  "presets": [
+    {
+      "id": "expanded",
+      "label": {
+        "en": "Expanded study",
+        "es": "Estudio ampliado",
+        "fr": "Étude agrandie",
+        "pt": "Estudo ampliado"
+      },
+      "values": {
+        "length": 110.0,
+        "width": 45.0
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "length > width",
+      "message": {
+        "en": "Length must exceed width",
+        "es": "El largo debe superar el ancho",
+        "fr": "La longueur doit dépasser la largeur",
+        "pt": "O comprimento deve superar a largura"
+      },
+      "severity": "error"
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "fabrics": [],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "technique",
+    "commons_license": "CERN-OHL-W-2.0"
+  }
+}

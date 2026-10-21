@@ -1,0 +1,204 @@
+{
+  "project": {
+    "name": "Woven Ribbon Jewel Panel",
+    "slug": "woven-ribbon-jewel-panel",
+    "version": "0.1.0",
+    "engine": "fc",
+    "difficulty": "intermediate",
+    "description": {
+      "en": "Original plain-weave ribbon ornament: cut strips, textile backing and an explicit over-under table. Flat guide; no drape or take-up prediction.",
+      "es": "Adorno original de cintas con ligamento tafetán: tiras de corte, base textil y tabla explícita de cruces por encima y por debajo. Guía plana; no predice la caída ni el consumo del entrelazado.",
+      "fr": "Ornement original en rubans à armure toile : bandes à couper, support textile et tableau explicite dessus-dessous. Guide à plat ; sans calcul du drapé ni de l’embuvage.",
+      "pt": "Adorno original de fitas em ligamento tela: tiras de corte, base têxtil e tabela explícita por cima e por baixo. Guia plano; sem previsão de caimento ou consumo do entrelaçamento."
+    },
+    "tags": [
+      "jewelry-studio",
+      "jewellery",
+      "ribbon",
+      "weaving",
+      "unranked-enabler"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original first-principles rectangular strip geometry and alternating crossing rule; no third-party pattern copied",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "set",
+      "label": {
+        "en": "Cutting and placement set",
+        "es": "Juego de corte y colocación",
+        "fr": "Ensemble de coupe et placement",
+        "pt": "Conjunto de corte e posicionamento"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "warp",
+        "weft",
+        "backing"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "warp",
+      "label": {
+        "en": "Warp strips",
+        "es": "Tiras de urdimbre",
+        "fr": "Bandes de chaîne",
+        "pt": "Tiras de urdume"
+      },
+      "default_color": "#ba85b8"
+    },
+    {
+      "id": "weft",
+      "label": {
+        "en": "Weft strips",
+        "es": "Tiras de trama",
+        "fr": "Bandes de trame",
+        "pt": "Tiras de trama"
+      },
+      "default_color": "#d2ab60"
+    },
+    {
+      "id": "backing",
+      "label": {
+        "en": "Marked textile backing",
+        "es": "Base textil marcada",
+        "fr": "Support textile marqué",
+        "pt": "Base têxtil marcada"
+      },
+      "default_color": "#536479"
+    }
+  ],
+  "parameters": [
+    {
+      "id": "ribbon_width",
+      "type": "slider",
+      "default": 6,
+      "min": 4,
+      "max": 12,
+      "step": 0.5,
+      "label": {
+        "en": "Ribbon width (mm)",
+        "es": "Ancho de cinta (mm)",
+        "fr": "Largeur du ruban (mm)",
+        "pt": "Largura da fita (mm)"
+      }
+    },
+    {
+      "id": "columns",
+      "type": "slider",
+      "default": 5,
+      "min": 4,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Warp columns",
+        "es": "Columnas de urdimbre",
+        "fr": "Colonnes de chaîne",
+        "pt": "Colunas de urdume"
+      }
+    },
+    {
+      "id": "rows",
+      "type": "slider",
+      "default": 7,
+      "min": 4,
+      "max": 16,
+      "step": 1,
+      "label": {
+        "en": "Weft rows",
+        "es": "Filas de trama",
+        "fr": "Rangées de trame",
+        "pt": "Fileiras de trama"
+      }
+    },
+    {
+      "id": "gap",
+      "type": "slider",
+      "default": 0.5,
+      "min": 0,
+      "max": 3,
+      "step": 0.5,
+      "label": {
+        "en": "Flat spacing (mm)",
+        "es": "Separación plana (mm)",
+        "fr": "Espacement à plat (mm)",
+        "pt": "Espaçamento plano (mm)"
+      }
+    },
+    {
+      "id": "tail",
+      "type": "slider",
+      "default": 12,
+      "min": 10,
+      "max": 30,
+      "step": 1,
+      "label": {
+        "en": "Reserve at each end (mm)",
+        "es": "Reserva en cada extremo (mm)",
+        "fr": "Réserve à chaque extrémité (mm)",
+        "pt": "Reserva em cada extremidade (mm)"
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "technique",
+    "commons_license": "CERN-OHL-W-2.0",
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": false
+    }
+  },
+  "presets": [
+    {
+      "id": "brooch-panel",
+      "label": {
+        "en": "Small ornament panel",
+        "es": "Panel ornamental pequeño",
+        "fr": "Petit panneau ornemental",
+        "pt": "Painel ornamental pequeno"
+      },
+      "values": {
+        "columns": 5,
+        "rows": 7,
+        "ribbon_width": 6,
+        "gap": 0.5,
+        "tail": 12
+      }
+    },
+    {
+      "id": "wide-panel",
+      "label": {
+        "en": "Wide ornament panel",
+        "es": "Panel ornamental ancho",
+        "fr": "Panneau ornemental large",
+        "pt": "Painel ornamental largo"
+      },
+      "values": {
+        "columns": 8,
+        "rows": 6,
+        "ribbon_width": 8,
+        "gap": 1,
+        "tail": 15
+      }
+    }
+  ]
+}
