@@ -7,7 +7,8 @@
     "description": {
       "en": "A Yantra4D-bridged notion for the additive-manufacturing frontier of the fabric library: a 3D-printed TPU accordion-pleated panel that concertinas like pleated cloth. Fashion Cabinet owns the fashion (finished panel dimensions, the pleat count from the panel height, the sewable-edge placement guide) while the pleated wall itself is a Yantra4D solid (`tpu-pleat-panel`) printed flat. One material identity, Bambu TPU 95A, spans this notion and that solid — the same panel is a Fashion Cabinet fabric and a Yantra4D object at once.\n\nOfficial visualizer and configurator: Fashion Cabinet",
       "es": "Un avío puenteado con Yantra4D para la frontera de manufactura aditiva de la biblioteca de telas: un panel plisado en acordeón TPU impreso en 3D que se pliega como tela plisada. Fashion Cabinet posee la moda (dimensiones terminadas, el número de pliegues según la altura, la guía de colocación del canto cosible) mientras la pared plisada es un sólido de Yantra4D (`tpu-pleat-panel`) impreso plano. Una identidad de material, Bambu TPU 95A, abarca este avío y ese sólido.\n\nVisualizador y configurador oficial: Fashion Cabinet",
-      "fr": "Une fourniture reliée à Yantra4D pour la frontière de fabrication additive de la bibliothèque de tissus : un panneau plissé en accordéon en TPU imprimé en 3D qui se plie comme un tissu plissé. Fashion Cabinet possède la mode (dimensions finies du panneau, le nombre de plis d'après la hauteur du panneau, le guide de placement du bord cousable) tandis que la paroi plissée elle-même est un solide Yantra4D (`tpu-pleat-panel`) imprimé à plat. Une seule identité de matériau, Bambu TPU 95A, couvre cette fourniture et ce solide — le même panneau est à la fois un tissu Fashion Cabinet et un objet Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet"
+      "fr": "Une fourniture reliée à Yantra4D pour la frontière de fabrication additive de la bibliothèque de tissus : un panneau plissé en accordéon en TPU imprimé en 3D qui se plie comme un tissu plissé. Fashion Cabinet possède la mode (dimensions finies du panneau, le nombre de plis d'après la hauteur du panneau, le guide de placement du bord cousable) tandis que la paroi plissée elle-même est un solide Yantra4D (`tpu-pleat-panel`) imprimé à plat. Une seule identité de matériau, Bambu TPU 95A, couvre cette fourniture et ce solide — le même panneau est à la fois un tissu Fashion Cabinet et un objet Yantra4D.\n\nVisualiseur et configurateur officiel : Fashion Cabinet",
+      "pt": "Um aviamento com ponte para a Yantra4D na fronteira de manufatura aditiva da biblioteca de tecidos: um painel de pregas em acordeão de TPU impresso em 3D que se recolhe como tecido plissado. A Fashion Cabinet é dona da moda (dimensões acabadas do painel, a quantidade de pregas a partir da altura do painel, o guia de posicionamento da borda costurável), enquanto a própria parede plissada é um sólido da Yantra4D (`tpu-pleat-panel`) impresso plano. Uma identidade de material, Bambu TPU 95A, abrange este aviamento e esse sólido — o mesmo painel é um tecido da Fashion Cabinet e um objeto da Yantra4D ao mesmo tempo.\n\nVisualizador e configurador oficial: Fashion Cabinet"
     },
     "difficulty": "intermediate",
     "tags": [
@@ -37,7 +38,8 @@
       "label": {
         "en": "Panel Placement Guide",
         "es": "Guía de colocación del panel",
-        "fr": "Guide de placement du panneau"
+        "fr": "Guide de placement du panneau",
+        "pt": "Guia de colocação do painel"
       },
       "script_file": "main.py",
       "pieces": [
@@ -51,7 +53,8 @@
       "label": {
         "en": "Pleat Panel Placement Guide",
         "es": "Guía de colocación de panel plisado",
-        "fr": "Guide de placement du panneau plissé"
+        "fr": "Guide de placement du panneau plissé",
+        "pt": "Guia de colocação do painel pregueado"
       },
       "default_color": "#8f86a8",
       "cut": {
@@ -67,7 +70,8 @@
       "label": {
         "en": "Construction",
         "es": "Construcción",
-        "fr": "Construction"
+        "fr": "Construction",
+        "pt": "Construção"
       }
     }
   ],
@@ -83,12 +87,14 @@
       "label": {
         "en": "Panel width (mm, ≤ print bed)",
         "es": "Ancho del panel (mm, ≤ cama)",
-        "fr": "Largeur du panneau (mm, ≤ plateau)"
+        "fr": "Largeur du panneau (mm, ≤ plateau)",
+        "pt": "Largura do painel (mm, ≤ mesa de impressão)"
       },
       "tooltip": {
         "en": "Finished width across the pleats; capped at the printed panel's bed width",
         "es": "Ancho terminado a través de los pliegues; limitado al ancho de cama",
-        "fr": "Largeur finie à travers les plis ; plafonnée à la largeur de plateau du panneau imprimé"
+        "fr": "Largeur finie à travers les plis ; plafonnée à la largeur de plateau du panneau imprimé",
+        "pt": "Largura acabada ao longo das pregas; limitada à largura de mesa do painel impresso"
       }
     },
     {
@@ -102,12 +108,14 @@
       "label": {
         "en": "Panel height / drop (mm)",
         "es": "Alto / caída del panel (mm)",
-        "fr": "Hauteur / tombant du panneau (mm)"
+        "fr": "Hauteur / tombant du panneau (mm)",
+        "pt": "Altura / queda do painel (mm)"
       },
       "tooltip": {
         "en": "Relaxed drop down the body; the pleat count follows",
         "es": "Caída en reposo por el cuerpo; el número de pliegues sigue",
-        "fr": "Tombé au repos le long du corps ; le nombre de plis suit"
+        "fr": "Tombé au repos le long du corps ; le nombre de plis suit",
+        "pt": "Queda em repouso ao longo do corpo; o número de pregas a acompanha"
       }
     },
     {
@@ -121,12 +129,14 @@
       "label": {
         "en": "Pleat depth (mm)",
         "es": "Profundidad de pliegue (mm)",
-        "fr": "Profondeur de pli (mm)"
+        "fr": "Profondeur de pli (mm)",
+        "pt": "Profundidade de prega (mm)"
       },
       "tooltip": {
         "en": "Passed to the Yantra4D panel; deeper = more compression",
         "es": "Se pasa al panel de Yantra4D; mayor = más compresión",
-        "fr": "Transmis au panneau Yantra4D ; plus profond = plus de compression"
+        "fr": "Transmis au panneau Yantra4D ; plus profond = plus de compression",
+        "pt": "Passada ao painel Yantra4D; maior = mais compressão"
       }
     },
     {
@@ -140,12 +150,14 @@
       "label": {
         "en": "Printed wall (mm)",
         "es": "Pared impresa (mm)",
-        "fr": "Paroi imprimée (mm)"
+        "fr": "Paroi imprimée (mm)",
+        "pt": "Parede impressa (mm)"
       },
       "tooltip": {
         "en": "Facet wall; thinner = softer folds",
         "es": "Pared de faceta; más delgada = pliegues más suaves",
-        "fr": "Paroi de facette ; plus fine = plis plus souples"
+        "fr": "Paroi de facette ; plus fine = plis plus souples",
+        "pt": "Parede da faceta; mais fina = dobras mais macias"
       }
     },
     {
@@ -159,12 +171,14 @@
       "label": {
         "en": "Sew-edge allowance (mm)",
         "es": "Margen de canto cosible (mm)",
-        "fr": "Marge de bord à coudre (mm)"
+        "fr": "Marge de bord à coudre (mm)",
+        "pt": "Margem da borda costurável (mm)"
       },
       "tooltip": {
         "en": "Tape-bound edge allowance where the panel sews to a garment",
         "es": "Margen de canto rematado donde el panel se cose a la prenda",
-        "fr": "Marge de bord gansé de ruban là où le panneau se coud à un vêtement"
+        "fr": "Marge de bord gansé de ruban là où le panneau se coud à un vêtement",
+        "pt": "Margem de borda debruada onde o painel é costurado a uma peça"
       },
       "advanced": true
     }
@@ -175,7 +189,8 @@
       "label": {
         "en": "Skirt panel (200×320)",
         "es": "Panel de falda (200×320)",
-        "fr": "Panneau de jupe (200×320)"
+        "fr": "Panneau de jupe (200×320)",
+        "pt": "Painel de saia (200×320)"
       },
       "values": {
         "panel_width_mm": 200,
@@ -188,7 +203,8 @@
       "label": {
         "en": "Collar frill (140×90)",
         "es": "Volante de cuello (140×90)",
-        "fr": "Volant de col (140×90)"
+        "fr": "Volant de col (140×90)",
+        "pt": "Babado de gola (140×90)"
       },
       "values": {
         "panel_width_mm": 140,
@@ -204,7 +220,8 @@
       "message": {
         "en": "Panel width exceeds the printed panel's bed-bound width — split into panels",
         "es": "El ancho excede el ancho de cama del panel impreso — divide en paneles",
-        "fr": "La largeur du panneau dépasse la largeur de plateau du panneau imprimé — divisez en panneaux"
+        "fr": "La largeur du panneau dépasse la largeur de plateau du panneau imprimé — divisez en panneaux",
+        "pt": "A largura do painel excede a largura de mesa do painel impresso — divida em painéis"
       }
     }
   ],
@@ -241,7 +258,8 @@
         "label": {
           "en": "Sewable panel edge",
           "es": "Canto cosible del panel",
-          "fr": "Bord à coudre du panneau"
+          "fr": "Bord à coudre du panneau",
+          "pt": "Borda costurável do painel"
         },
         "edges": [
           {
@@ -267,7 +285,8 @@
     "societal_benefit": {
       "en": "A permanently-pleated fabric anyone can print turns heat-set pleating — a specialist craft — into an open, made-to-measure pattern whose pleats never fall out, washable and recyclable. It closes the loop from a Fashion Cabinet fabric card to a printable Yantra4D solid: the same panel is cloth and object.",
       "es": "Una tela de pliegue permanente que cualquiera puede imprimir convierte el plisado por termofijado — un oficio especializado — en un patrón abierto a la medida cuyos pliegues nunca se caen, lavable y reciclable. Cierra el ciclo de una ficha de tela de Fashion Cabinet a un sólido imprimible de Yantra4D: el mismo panel es tela y objeto.",
-      "fr": "Un tissu plissé en permanence que chacun peut imprimer transforme le plissage thermofixé — un artisanat de spécialiste — en un patron ouvert et sur mesure dont les plis ne s'effacent jamais, lavable et recyclable. Il boucle la boucle d'une fiche de tissu Fashion Cabinet à un solide imprimable Yantra4D : le même panneau est tissu et objet."
+      "fr": "Un tissu plissé en permanence que chacun peut imprimer transforme le plissage thermofixé — un artisanat de spécialiste — en un patron ouvert et sur mesure dont les plis ne s'effacent jamais, lavable et recyclable. Il boucle la boucle d'une fiche de tissu Fashion Cabinet à un solide imprimable Yantra4D : le même panneau est tissu et objet.",
+      "pt": "Um tecido permanentemente pregueado que qualquer pessoa pode imprimir transforma o pregueado por termofixação — um ofício especializado — num molde aberto e sob medida cujas pregas nunca caem, lavável e reciclável. Fecha o ciclo de uma ficha de tecido do Fashion Cabinet a um sólido imprimível da Yantra4D: o mesmo painel é tecido e objeto."
     },
     "commons_license": "CERN-OHL-W-2.0"
   }
