@@ -1,0 +1,177 @@
+{
+  "project": {
+    "name": "Bead Embroidery Foundation",
+    "slug": "bead-embroidery-foundation",
+    "version": "0.1.0",
+    "engine": "fc",
+    "description": {
+      "en": "Shield-shaped beadwork foundation and flush backing with registration marks and matched overcast edges.",
+      "es": "Base de bordado con cuentas en forma de escudo y respaldo al ras, con marcas de registro y bordes coincidentes para sobrehilado.",
+      "fr": "Support de broderie de perles en forme d’écu et doublure affleurante, avec repères et bords assortis pour le surjet.",
+      "pt": "Base para bordado com contas em forma de escudo e forro rente, com marcas de registro e bordas correspondentes para chuleado."
+    },
+    "difficulty": "intermediate",
+    "tags": [
+      "jewelry",
+      "beadwork",
+      "embroidery",
+      "foundation",
+      "unranked-enabler"
+    ],
+    "attribution": {
+      "author": "Innovaciones MADFAM",
+      "license": "CERN-OHL-W-2.0",
+      "lineage": [
+        {
+          "source": "Original design: dimensional shield outline and matched backing generated from first principles for Jewelry Studio",
+          "license": "original"
+        }
+      ]
+    }
+  },
+  "modes": [
+    {
+      "id": "pattern",
+      "label": {
+        "en": "Foundation and backing",
+        "es": "Base y respaldo",
+        "fr": "Support et doublure",
+        "pt": "Base e forro"
+      },
+      "script_file": "main.py",
+      "pieces": [
+        "foundation",
+        "backing"
+      ]
+    }
+  ],
+  "pieces": [
+    {
+      "id": "foundation",
+      "label": {
+        "en": "Beadwork foundation",
+        "es": "Base para bordado con cuentas",
+        "fr": "Support de broderie de perles",
+        "pt": "Base para bordado com contas"
+      },
+      "default_color": "#bd8b67",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    },
+    {
+      "id": "backing",
+      "label": {
+        "en": "Flush backing",
+        "es": "Respaldo al ras",
+        "fr": "Doublure affleurante",
+        "pt": "Forro rente"
+      },
+      "default_color": "#8d6878",
+      "cut": {
+        "quantity": 1,
+        "on_fold": false,
+        "mirror": false
+      }
+    }
+  ],
+  "parameters": [
+    {
+      "id": "length",
+      "type": "slider",
+      "default": 70,
+      "min": 35,
+      "max": 140,
+      "step": 1,
+      "label": {
+        "en": "Length (mm)",
+        "es": "Largo (mm)",
+        "fr": "Longueur (mm)",
+        "pt": "Comprimento (mm)"
+      }
+    },
+    {
+      "id": "width",
+      "type": "slider",
+      "default": 45,
+      "min": 25,
+      "max": 100,
+      "step": 1,
+      "label": {
+        "en": "Width (mm)",
+        "es": "Ancho (mm)",
+        "fr": "Largeur (mm)",
+        "pt": "Largura (mm)"
+      }
+    },
+    {
+      "id": "embroidery_margin",
+      "type": "slider",
+      "default": 5,
+      "min": 3,
+      "max": 12,
+      "step": 1,
+      "label": {
+        "en": "Field contraction (mm)",
+        "es": "Contracción del campo (mm)",
+        "fr": "Contraction du champ (mm)",
+        "pt": "Contração do campo (mm)"
+      }
+    },
+    {
+      "id": "attachment_spacing",
+      "type": "slider",
+      "default": 18,
+      "min": 8,
+      "max": 50,
+      "step": 1,
+      "label": {
+        "en": "Attachment spacing (mm)",
+        "es": "Separación entre fijaciones (mm)",
+        "fr": "Écartement des attaches (mm)",
+        "pt": "Distância entre fixações (mm)"
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "expression": "embroidery_margin < width / 4 and embroidery_margin < length / 4",
+      "severity": "error",
+      "message": {
+        "en": "Contraction must be below one quarter of the smaller dimension.",
+        "es": "La contracción debe ser menor que un cuarto de la dimensión más pequeña.",
+        "fr": "La contraction doit être inférieure au quart de la plus petite dimension.",
+        "pt": "A contração deve ser menor que um quarto da menor dimensão."
+      }
+    },
+    {
+      "expression": "attachment_spacing <= width * 0.6",
+      "severity": "error",
+      "message": {
+        "en": "Attachment spacing must fit within 60 percent of the width.",
+        "es": "La separación debe caber dentro del 60 por ciento del ancho.",
+        "fr": "L’écartement doit rester dans 60 pour cent de la largeur.",
+        "pt": "A distância deve caber em 60 por cento da largura."
+      }
+    }
+  ],
+  "export_formats": [
+    "svg",
+    "dxf",
+    "json",
+    "pdf"
+  ],
+  "hyperobject": {
+    "is_hyperobject": true,
+    "domain": "technique",
+    "commons_license": "CERN-OHL-W-2.0",
+    "capabilities": {
+      "made_to_measure": false,
+      "fold_cutting": false,
+      "fabric_compensation": false,
+      "hardware_bridge": false
+    }
+  }
+}
